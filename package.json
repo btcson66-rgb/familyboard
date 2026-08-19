@@ -1,0 +1,45 @@
+{
+  "name": "familyboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "npm run import:content && astro build && npm run postbuild",
+    "preview": "astro preview",
+    "import:content": "node scripts/import-master.mjs docs/launch-content-master.md",
+    "postbuild": "node scripts/postbuild-audit.mjs",
+    "check": "npm run typecheck && npm run test && npm run audit:content && npm run build",
+    "typecheck": "astro check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "audit:content": "node scripts/content-audit.mjs",
+    "audit:similarity": "node scripts/content-similarity-audit.mjs",
+    "audit:seo": "node scripts/postbuild-audit.mjs",
+    "e2e": "playwright test",
+    "e2e:install": "playwright install chromium"
+  },
+  "dependencies": {
+    "@astrojs/react": "latest",
+    "@astrojs/sitemap": "latest",
+    "@fontsource-variable/manrope": "latest",
+    "astro": "latest",
+    "dexie": "latest",
+    "marked": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@astrojs/check": "latest",
+    "@axe-core/playwright": "latest",
+    "@playwright/test": "latest",
+    "@testing-library/react": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "fake-indexeddb": "latest",
+    "jsdom": "^29.0.0",
+    "typescript": "latest",
+    "vitest": "latest"
+  }
+}

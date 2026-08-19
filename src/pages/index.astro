@@ -1,0 +1,24 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pages = await getCollection('pages');
+const home = pages.find((entry) => entry.data.route === '/');
+if (!home) throw new Error('Home content missing');
+const { Content } = await render(home);
+const featuredRoutes = ['/features/home-inventory-tracker/', '/features/maintenance-tracker/', '/features/household-handoff/', '/tools/home-maintenance-schedule-generator/', '/tools/warranty-expiration-calculator/', '/templates/printable-home-inventory-template/'];
+const featured = featuredRoutes.map((route) => pages.find((entry) => entry.data.route === route)).filter(Boolean);
+---
+<BaseLayout title={home.data.title} description={home.data.description} canonicalPath="/">
+  <section class="hero"><div class="shell">
+    <span class="eyebrow">Private household operations</span>
+    <p class="hero-title">Everything your household needs to remember.</p>
+    <p class="lede">Keep maintenance, warranties, assets, subscriptions, responsibilities and emergency information together—without creating an account or sending household records to a server.</p>
+    <div class="hero-actions"><a class="button" href="/app/">Open the free app</a><a class="button secondary" href="/features/">See how it works</a></div>
+    <ul class="trust-row"><li>No account</li><li>Local-first storage</li><li>Offline-capable</li><li>Backup and restore</li><li>Private app stays ad-free</li></ul>
+  </div></section>
+  <section class="section"><div class="narrow article"><Content /></div></section>
+  <section class="section tint"><div class="shell"><div class="section-head"><div><span class="eyebrow">Start small</span><h2>Build household memory one useful record at a time</h2></div><a href="/guides/">Browse all guides →</a></div>
+    <div class="card-grid">{featured.map((entry) => <a class="card" href={entry!.data.route}><span class="card-tag">{entry!.data.cluster.replace('-', ' ')}</span><h3>{entry!.data.title.replace(/ \|.*$/, '')}</h3><p>{entry!.data.description}</p></a>)}</div>
+  </div></section>
+  <section class="section"><div class="narrow"><div class="card"><span class="eyebrow">Local-first by design</span><h2>Your home records stay on your device</h2><p>Public guides and tools can be discovered on the web. The private household workspace uses browser storage, excludes its state from the sitemap and does not load public-site analytics.</p><p><a href="/privacy/">Read the privacy boundary</a> · <a href="/security/">Understand browser-storage limits</a></p></div></div></section>
+</BaseLayout>

@@ -1,0 +1,9 @@
+---
+interface Props { route: string; title: string; }
+const { route, title } = Astro.props;
+const parts = route.split('/').filter(Boolean);
+const parent = parts[0];
+const labels: Record<string,string> = { guides: 'Guides', features: 'Features', tools: 'Tools', checklists: 'Checklists', templates: 'Templates' };
+---
+<nav class="breadcrumbs shell" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{parent && labels[parent] && <><a href={`/${parent}/`}>{labels[parent]}</a><span aria-hidden="true">/</span></>}<span aria-current="page">{title.replace(/ \|.*$/, '')}</span></nav>
+

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://familyboard.win/sitemap-index.xml
+

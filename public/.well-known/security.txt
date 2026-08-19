@@ -1,0 +1,6 @@
+Contact: https://github.com/btcson66-rgb/familyboard/security/advisories/new
+Canonical: https://familyboard.win/.well-known/security.txt
+Preferred-Languages: en
+Policy: https://familyboard.win/security/
+Expires: 2027-08-19T00:00:00.000Z
+

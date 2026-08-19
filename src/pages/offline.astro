@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="You are offline | FamilyBoard" description="FamilyBoard is offline. Previously loaded app records may still be available." canonicalPath="/offline/" indexable={false}>
+  <section class="hero"><div class="narrow"><span class="eyebrow">Offline</span><h1>The public library needs a connection.</h1><p class="lede">If you previously opened the local app on this device, its cached shell and household records may still be available.</p><div class="hero-actions"><a class="button" href="/app/">Try the app</a><button class="secondary" onclick="location.reload()">Try again</button></div></div></section>
+</BaseLayout>
+

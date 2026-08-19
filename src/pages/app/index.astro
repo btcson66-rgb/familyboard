@@ -1,0 +1,8 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FamilyApp from '../../components/FamilyApp';
+---
+<BaseLayout title="FamilyBoard App — Private Local Household Dashboard" description="Track household assets, maintenance, warranties, subscriptions, tasks, emergency contacts and handoffs in a free local-first app." canonicalPath="/app/" indexable={false} pageType="app" bodyClass="app-body">
+  <FamilyApp client:only="react" />
+</BaseLayout>
+

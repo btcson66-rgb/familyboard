@@ -1,0 +1,194 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
+const source = path.resolve(process.argv[2] || 'docs/launch-content-master.md');
+const outputDir = path.resolve('src/content/pages');
+const searchOutput = path.resolve('src/generated/search-index.json');
+const launchDate = '2026-08-19';
+
+if (!fs.existsSync(source)) throw new Error(`Master brief not found: ${source}`);
+const raw = fs.readFileSync(source, 'utf8').replace(/\r\n/g, '\n');
+const lines = raw.split('\n');
+
+function yaml(value) {
+  return JSON.stringify(String(value).replace(/`/g, ''));
+}
+
+function field(block, label) {
+  const match = block.match(new RegExp(`\\*\\*${label}:\\*\\*\\s*(?:\\\`([^\\\`]*)\\\`|([^\\n]+))`, 'i'));
+  return (match?.[1] || match?.[2] || '').trim();
+}
+
+function bodyFrom(block) {
+  const offset = block.search(/^# /m);
+  if (offset < 0) return '';
+  return block.slice(offset).split(/\n---\n\s*(?=# (?:CLUSTER|PART))/)[0].replace(/\n---\s*$/s, '').trim();
+}
+
+function clusterFor(number) {
+  if (number <= 20) return 'product';
+  if (number <= 50) return 'maintenance';
+  if (number <= 80) return 'appliances';
+  if (number <= 105) return 'inventory-warranty';
+  if (number <= 130) return 'records-emergency';
+  if (number <= 155) return 'household-operations';
+  if (number <= 180) return 'tools';
+  return 'printables';
+}
+
+function normalizeRoute(value) {
+  if (value === '/') return '/';
+  return `/${value.replace(/^\/+|\/+$/g, '')}/`;
+}
+
+function idFor(route, prefix = '') {
+  return `${prefix}${route === '/' ? 'home' : route.replace(/^\/+|\/+$/g, '').replaceAll('/', '--')}`;
+}
+
+const headingIndexes = [];
+for (let i = 0; i < lines.length; i += 1) {
+  if (/^## Page \d{3} — /.test(lines[i])) headingIndexes.push(i);
+}
+
+const records = headingIndexes.map((start, index) => {
+  const end = headingIndexes[index + 1] ?? lines.findIndex((line, i) => i > start && line.startsWith('# PART III'));
+  const heading = lines[start];
+  const match = heading.match(/^## Page (\d{3}) — (.+)$/);
+  const number = Number(match[1]);
+  const name = match[2].trim();
+  const block = lines.slice(start + 1, end < 0 ? lines.length : end).join('\n');
+  const route = normalizeRoute(field(block, 'Slug'));
+  const title = field(block, 'Title tag') || name;
+  const description = field(block, 'Meta description');
+  const primaryIntent = field(block, 'Primary intent');
+  const primaryKeyword = field(block, 'Primary keyword concept');
+  const relatedRaw = field(block, 'Suggested internal links');
+  const related = [...relatedRaw.matchAll(/`(\/[^`]+)`/g)].map((m) => normalizeRoute(m[1]));
+  const cluster = clusterFor(number);
+  return {
+    id: `${String(number).padStart(3, '0')}-${idFor(route)}`,
+    number,
+    title,
+    description,
+    route,
+    primaryIntent,
+    primaryKeyword,
+    cluster,
+    pageType: cluster === 'tools' ? 'tool' : cluster === 'printables' ? 'printable' : 'content',
+    indexable: true,
+    related,
+    body: bodyFrom(block)
+  };
+});
+
+const partThreeStart = lines.findIndex((line) => line.startsWith('# PART III'));
+const partFourStart = lines.findIndex((line) => line.startsWith('# PART IV'));
+const supportLines = lines.slice(partThreeStart, partFourStart);
+const supportIndexes = [];
+for (let i = 0; i < supportLines.length; i += 1) {
+  if (/^## Supporting Page [A-Z]+ — /.test(supportLines[i])) supportIndexes.push(i);
+}
+
+const supportRecords = supportIndexes.map((start, index) => {
+  const end = supportIndexes[index + 1] ?? supportLines.length;
+  const heading = supportLines[start];
+  const name = heading.replace(/^## Supporting Page [A-Z]+ — /, '').trim();
+  const block = supportLines.slice(start + 1, end).join('\n');
+  const route = normalizeRoute(field(block, 'Slug'));
+  const title = field(block, 'Title tag') || name;
+  const description = field(block, 'Meta description') || `${name} for the free, local-first FamilyBoard household organizer.`;
+  const indexable = !/No/i.test(field(block, 'Indexable'));
+  return {
+    id: `support-${idFor(route)}`,
+    title,
+    description,
+    route,
+    primaryIntent: 'support FamilyBoard users',
+    primaryKeyword: '',
+    cluster: 'support',
+    pageType: 'support',
+    indexable,
+    related: [],
+    body: bodyFrom(block)
+  };
+}).filter((record) => record.route !== '/app/');
+
+const supportEnhancements = {
+  '/changelog/': `\n\n## Version 1.0.0 — August 19, 2026\n\nThe first production release adds the complete local-first household dashboard, assets, maintenance history, tasks, calendar events, warranty and subscription records, emergency contacts, document references, handoff and family display modes, versioned backup/restore, encrypted exports, offline support, 200 launch content pages, 25 working public tools and 20 printable resources. Known limitation: v1 uses one household in one browser and does not provide cloud sync or accounts.`,
+  '/templates/': `\n\n## How to use a template well\n\nStart with the smallest set of fields needed for the household decision. Date the sheet, name the person responsible for reviewing it and avoid copying sensitive account or identity information into a document that will be displayed or stored openly. The digital app can connect a record to its asset and history; the printable version is useful for a temporary handoff, meeting or offline reference. Review the final sheet before sharing and destroy outdated sensitive copies appropriately.`
+};
+for (const record of supportRecords) if (supportEnhancements[record.route]) record.body += supportEnhancements[record.route];
+
+const extraRecords = [
+  {
+    id: 'support-editorial-policy', title: 'Editorial Policy | FamilyBoard',
+    description: 'How FamilyBoard plans, edits, sources and corrects household-management content.', route: '/editorial-policy/',
+    primaryIntent: 'understand FamilyBoard editorial standards', primaryKeyword: 'FamilyBoard editorial policy', cluster: 'support', pageType: 'support', indexable: true, related: ['/about/', '/contact/'],
+    body: `# Editorial Policy\n\nFamilyBoard publishes practical household-organization content to support the software's main purpose: helping people keep home records, recurring responsibilities and maintenance information understandable.\n\n## How pages are prepared\n\nSome first-draft writing and content organization may be assisted by AI tools. Each launch page starts with a distinct user question supplied in the approved editorial plan and is checked for consistency, duplicate-content risk, unsupported claims, working links and product relevance before publication. Automation is not a reason to publish a page that adds no distinct value.\n\n## Safety and accuracy\n\nFor maintenance, safety, legal, medical, insurance or manufacturer-specific questions, FamilyBoard avoids presenting generic advice as authoritative when the correct answer depends on equipment, jurisdiction or professional guidance. Follow manufacturer documentation, official local guidance and qualified professionals where appropriate.\n\n## Corrections\n\nFound an error? [Send the page URL and a reliable supporting source](/contact/). We update review dates only after a meaningful editorial review.`
+  },
+  {
+    id: 'support-affiliate-disclosure', title: 'Affiliate Disclosure | FamilyBoard',
+    description: 'How contextual product recommendations and affiliate links support FamilyBoard without changing editorial advice.', route: '/affiliate-disclosure/',
+    primaryIntent: 'understand FamilyBoard affiliate relationships', primaryKeyword: 'FamilyBoard affiliate disclosure', cluster: 'support', pageType: 'support', indexable: true, related: ['/editorial-policy/', '/privacy/'],
+    body: `# Affiliate Disclosure\n\nSome public FamilyBoard pages may contain clearly labeled affiliate links to household products that directly support the task described on that page. If you follow one of those links and make a qualifying purchase, FamilyBoard may earn a commission at no additional cost to you.\n\n## Editorial independence\n\nA commission never determines maintenance advice, safety guidance or which pages are published. FamilyBoard does not call a product “best” without a documented comparison method, and a recommendation block is omitted when it does not help the page's main job.\n\n## Product and price checks\n\nProduct availability, specifications and prices can change. Confirm the current listing, compatibility, model number, manufacturer instructions and seller terms before buying. Replacement parts and filters must match the exact equipment model.\n\nAffiliate recommendations never appear inside the private household app, emergency handoff views or print-only sheets.`
+  },
+  {
+    id: 'support-terms', title: 'Terms of Use | FamilyBoard',
+    description: 'Terms for using the free FamilyBoard website, local-first app, tools and printables.', route: '/terms/',
+    primaryIntent: 'review FamilyBoard terms', primaryKeyword: 'FamilyBoard terms', cluster: 'support', pageType: 'support', indexable: true, related: ['/privacy/', '/disclaimer/'],
+    body: `# Terms of Use\n\nFamilyBoard is a free informational website and local-first household organizer. You remain responsible for reviewing records, backups, reminders and generated checklists before relying on them.\n\n## Local data\n\nThe v1 app stores household records in your browser. You are responsible for maintaining current exports and protecting access to your device. Clearing browser storage may remove local records.\n\n## Acceptable use\n\nDo not use the site to harm others, interfere with service, probe systems without authorization or present FamilyBoard outputs as professional certification.\n\n## Availability\n\nThe service may change as defects are fixed and the product develops. Roadmap items are plans, not promises of delivery dates.`
+  },
+  {
+    id: 'support-disclaimer', title: 'Household Information Disclaimer | FamilyBoard',
+    description: 'Limits of FamilyBoard household, maintenance, emergency, legal, insurance and safety information.', route: '/disclaimer/',
+    primaryIntent: 'understand the limits of household guidance', primaryKeyword: 'household information disclaimer', cluster: 'support', pageType: 'support', indexable: true, related: ['/editorial-policy/', '/security/'],
+    body: `# Household Information Disclaimer\n\nFamilyBoard organizes information; it does not replace manufacturer instructions, emergency services, licensed trades, legal advice, medical advice, insurance advice or local authority guidance.\n\nIntervals, compatibility and safe procedures vary by product, building, climate and jurisdiction. Verify the exact model and follow authoritative instructions. In an emergency, contact the appropriate local service. Generated tools and checklists are editable planning aids, not inspections or certifications.\n\n## Use records as a prompt to verify\n\nA reminder date, cost calculation or generated checklist can help a household remember a question, but it cannot inspect equipment, diagnose a condition or determine responsibility. Keep the source of each important instruction with the record, update facts when circumstances change and ask an appropriately qualified professional when consequences are significant. Product links and affiliate relationships do not change these limits.`
+  },
+  {
+    id: 'support-search', title: 'Search Household Guides and Tools | FamilyBoard',
+    description: 'Search FamilyBoard household guides, calculators, generators, checklists and templates.', route: '/search/',
+    primaryIntent: 'search FamilyBoard content', primaryKeyword: 'search home management guides', cluster: 'support', pageType: 'support', indexable: true, related: ['/guides/', '/tools/'],
+    body: `# Search FamilyBoard\n\nFind a guide, calculator, generator, checklist or printable by the household job you need to complete.`
+  }
+];
+
+const all = [...records, ...supportRecords, ...extraRecords];
+if (records.length !== 200) throw new Error(`Expected 200 launch pages, found ${records.length}`);
+if (new Set(all.map((record) => record.route)).size !== all.length) throw new Error('Duplicate routes found in imported content');
+
+fs.rmSync(outputDir, { recursive: true, force: true });
+fs.mkdirSync(outputDir, { recursive: true });
+fs.mkdirSync(path.dirname(searchOutput), { recursive: true });
+
+for (const record of all) {
+  if (!record.body) throw new Error(`No visible body for ${record.route}`);
+  const frontmatter = [
+    '---',
+    `title: ${yaml(record.title)}`,
+    `description: ${yaml(record.description)}`,
+    `route: ${yaml(record.route)}`,
+    `primaryIntent: ${yaml(record.primaryIntent)}`,
+    `primaryKeyword: ${yaml(record.primaryKeyword)}`,
+    `cluster: ${yaml(record.cluster)}`,
+    `pageType: ${yaml(record.pageType)}`,
+    `indexable: ${record.indexable}`,
+    `publishedAt: ${yaml(launchDate)}`,
+    `lastReviewedAt: ${yaml(launchDate)}`,
+    'related:',
+    ...(record.related.length ? record.related.map((item) => `  - ${yaml(item)}`) : ['  []']),
+    'contentVersion: 1',
+    '---',
+    ''
+  ].join('\n');
+  fs.writeFileSync(path.join(outputDir, `${record.id}.md`), `${frontmatter}${record.body.trim()}\n`);
+}
+
+const search = all.filter((record) => record.indexable).map((record) => ({
+  title: record.title,
+  description: record.description,
+  route: record.route,
+  cluster: record.cluster,
+  keywords: record.primaryKeyword
+}));
+fs.writeFileSync(searchOutput, `${JSON.stringify(search, null, 2)}\n`);
+console.log(`Imported ${records.length} core pages + ${supportRecords.length + extraRecords.length} support pages.`);

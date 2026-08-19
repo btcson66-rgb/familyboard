@@ -1,0 +1,7 @@
+---
+import { monetization } from '../config/monetization';
+interface Props { placement: string; }
+const { placement } = Astro.props;
+---
+{monetization.adsEnabled && <aside class="ad-slot" aria-label="Advertisement" data-placement={placement}></aside>}
+

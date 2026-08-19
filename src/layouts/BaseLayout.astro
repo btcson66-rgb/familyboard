@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+import { brand } from '../config/brand';
+import { monetization } from '../config/monetization';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  indexable?: boolean;
+  pageType?: 'website' | 'article' | 'app';
+  bodyClass?: string;
+}
+
+const {
+  title,
+  description,
+  canonicalPath = Astro.url.pathname,
+  indexable = true,
+  pageType = 'website',
+  bodyClass = ''
+} = Astro.props;
+const canonical = new URL(canonicalPath, brand.origin).toString();
+const isApp = canonicalPath.startsWith('/app/');
+const ga4Id = import.meta.env.PROD && !isApp ? import.meta.env.PUBLIC_GA4_MEASUREMENT_ID?.trim() : '';
+const adsenseAccount = !isApp && monetization.adsensePublisherId ? `ca-${monetization.adsensePublisherId.replace(/^ca-/, '')}` : '';
+const schema = pageType === 'app'
+  ? { '@context': 'https://schema.org', '@type': 'WebApplication', name: brand.name, url: canonical, applicationCategory: 'LifestyleApplication', operatingSystem: 'Any', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, description }
+  : { '@context': 'https://schema.org', '@type': pageType === 'article' ? 'Article' : 'WebPage', name: title, url: canonical, description, publisher: { '@type': 'Organization', name: brand.name, url: brand.origin } };
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#176b52" />
+    <meta name="description" content={description} />
+    <meta name="robots" content={indexable ? 'index,follow,max-image-preview:large' : 'noindex,follow'} />
+    {adsenseAccount && <meta name="google-adsense-account" content={adsenseAccount} />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta property="og:type" content={pageType === 'article' ? 'article' : 'website'} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={`${brand.origin}/og-default.svg`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    {ga4Id && <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>}
+    {ga4Id && <script is:inline define:vars={{ ga4Id }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', ga4Id, { anonymize_ip: true, allow_google_signals: false });
+    </script>}
+    <slot name="head" />
+  </head>
+  <body class:list={[bodyClass]}>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {!isApp && <Header />}
+    <main id="main-content"><slot /></main>
+    {!isApp && <Footer />}
+    <script is:inline>
+      if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+    </script>
+  </body>
+</html>
+
