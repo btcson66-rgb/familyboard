@@ -1,13 +1,20 @@
-# Analytics setup — FamilyBoard
+# FamilyBoard Analytics Setup
 
-Target Google configuration:
+## Required dedicated resource
 
-- GA4 property: `FamilyBoard`
-- Web stream: `FamilyBoard Web`
-- URL: `https://familyboard.win/`
-- Repository variable: `PUBLIC_GA4_MEASUREMENT_ID`
+- Existing company Analytics account: `accounts/399522869`
+- Required property: `FamilyBoard`
+- Required web stream: `FamilyBoard Web`
+- Default URL: `https://familyboard.win/`
+- Deployment variable: `PUBLIC_GA4_MEASUREMENT_ID`
 
-The public layout loads GA4 only in a production build with a valid Measurement ID. The private `/app/` layout never loads the tag in v1. Allowed tool events contain only the tool slug and generic completion state—never names, addresses, asset details, serial numbers, notes, subscription values, emergency information, document data or backup contents.
+The 2026-08-19 account read-back found the existing RoomFeng, WorthCalc and FunnyTools properties but no FamilyBoard property. The authorized create attempt returned `HTTP 403: Request had insufficient authentication scopes` because the current token has `analytics.readonly`, not `analytics.edit`. No fake property, stream or Measurement ID was created.
 
-Realtime traffic must be read back after production launch before this integration is marked verified.
+## Privacy boundary
 
+- Public content may load GA4 only when a real production Measurement ID is configured.
+- `/app/` never loads GA4 by default.
+- Tool events may contain event names and page/tool identifiers only, never entered values.
+- Household names, addresses, assets, notes, documents, emergency data, subscriptions and financial values must never be sent.
+
+Current live read-back: public site GA4 absent (expected while pending); `/app/` GA4 absent (required and passing).

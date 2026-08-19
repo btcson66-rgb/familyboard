@@ -9,7 +9,10 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      filter: (page) => !page.startsWith('https://familyboard.win/app/')
+      filter: (page) => ![
+        'https://familyboard.win/app/',
+        'https://familyboard.win/offline/',
+      ].some((excluded) => page.startsWith(excluded))
     })
   ],
   build: {
@@ -21,4 +24,3 @@ export default defineConfig({
     }
   }
 });
-
