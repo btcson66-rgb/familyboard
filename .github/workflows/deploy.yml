@@ -28,6 +28,8 @@ jobs:
           PUBLIC_GA4_MEASUREMENT_ID: ${{ vars.PUBLIC_GA4_MEASUREMENT_ID }}
           PUBLIC_ADSENSE_PUBLISHER_ID: ${{ vars.PUBLIC_ADSENSE_PUBLISHER_ID }}
           PUBLIC_AMAZON_ASSOCIATES_TAG: ${{ vars.PUBLIC_AMAZON_ASSOCIATES_TAG }}
+      - run: npx playwright install --with-deps chromium
+      - run: npm run e2e
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: ./dist }
@@ -41,4 +43,3 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
-

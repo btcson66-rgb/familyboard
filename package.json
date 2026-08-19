@@ -1,12 +1,13 @@
 {
   "name": "familyboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "npm run import:content && astro build && npm run postbuild",
     "preview": "astro preview",
+    "serve:test": "node scripts/serve-dist.mjs",
     "import:content": "node scripts/import-master.mjs docs/launch-content-master.md",
     "postbuild": "node scripts/postbuild-audit.mjs",
     "check": "npm run typecheck && npm run test && npm run audit:content && npm run build",
@@ -16,6 +17,7 @@
     "audit:content": "node scripts/content-audit.mjs",
     "audit:similarity": "node scripts/content-similarity-audit.mjs",
     "audit:seo": "node scripts/postbuild-audit.mjs",
+    "monitor:live": "node scripts/monitor-live.mjs",
     "e2e": "playwright test",
     "e2e:install": "playwright install chromium"
   },
