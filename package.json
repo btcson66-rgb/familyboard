@@ -1,6 +1,6 @@
 {
   "name": "familyboard",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "type": "module",
   "scripts": {
@@ -20,6 +20,7 @@
     "audit:similarity": "node scripts/content-similarity-audit.mjs",
     "audit:seo": "node scripts/postbuild-audit.mjs",
     "monitor:live": "node scripts/monitor-live.mjs",
+    "indexnow:submit": "node scripts/submit-indexnow.mjs",
     "gsc:bootstrap": "node scripts/gsc-bootstrap.mjs",
     "ga4:bootstrap": "node scripts/ga4-bootstrap.mjs",
     "e2e": "playwright test",

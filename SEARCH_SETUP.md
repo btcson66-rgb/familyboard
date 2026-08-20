@@ -22,3 +22,10 @@ The deployed HTTP origin returned 200 for the homepage, a feature, a guide, an i
 ## Learning loop
 
 The Codex heartbeat `FamilyBoard 上線與成效巡檢` runs daily at 09:15 Asia/Taipei. The repository workflow `FamilyBoard Live Health` checks live availability twice per hour. GSC query/page data must remain marked unavailable until ownership, sitemap processing and actual impressions exist.
+
+## IndexNow discovery
+
+- Public key location: `https://familyboard.win/06049c9105ef4f959d905baefcd0b0be.txt`.
+- Submission command: `npm run indexnow:submit -- --initial-full` for the one-time launch set, or `npm run indexnow:submit -- --url <absolute-url>` for a genuinely changed URL.
+- The script refuses an implicit full-site submission, validates the public key and host, and enforces IndexNow's 10,000-URL batch limit.
+- An accepted IndexNow response proves receipt only; it does not prove crawling, indexing, ranking or traffic.

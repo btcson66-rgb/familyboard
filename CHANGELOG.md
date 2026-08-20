@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.2 — 2026-08-20
+
+Add an official root-level IndexNow ownership key and an explicit, guarded bulk/selected-URL submission tool for Bing and other participating search engines; synchronize HTTPS and GSC launch evidence.
+
 ## 1.2.1 — 2026-08-20
 
 Synchronize launch, search, analytics and AdSense evidence with the deployed bilingual site; record the HTTPS certificate restart and current provider-authentication gates.
