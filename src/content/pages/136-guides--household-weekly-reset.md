@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-admin-day/"
+  - "/guides/recurring-household-tasks/"
+  - "/features/home-dashboard/"
+  - "/features/family-display-mode/"
 contentVersion: 1
 ---
 # A weekly reset is the smallest routine that can keep a household system current

@@ -1,9 +1,17 @@
 ---
+import { brand } from '../config/brand';
 interface Props { route: string; title: string; }
 const { route, title } = Astro.props;
 const parts = route.split('/').filter(Boolean);
-const parent = parts[0];
+const parent = parts[0] || '';
 const labels: Record<string,string> = { guides: 'Guides', features: 'Features', tools: 'Tools', checklists: 'Checklists', templates: 'Templates' };
+const showParent = parts.length > 1 && Boolean(parent && labels[parent]);
+const currentLabel = title.replace(/ \|.*$/, '');
+const items = [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: brand.origin },
+  ...(showParent ? [{ '@type': 'ListItem', position: 2, name: labels[parent], item: `${brand.origin}/${parent}/` }] : []),
+  { '@type': 'ListItem', position: showParent ? 3 : 2, name: currentLabel, item: new URL(route, brand.origin).toString() }
+];
 ---
-<nav class="breadcrumbs shell" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{parent && labels[parent] && <><a href={`/${parent}/`}>{labels[parent]}</a><span aria-hidden="true">/</span></>}<span aria-current="page">{title.replace(/ \|.*$/, '')}</span></nav>
-
+<nav class="breadcrumbs shell" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{showParent && <><a href={`/${parent}/`}>{labels[parent]}</a><span aria-hidden="true">/</span></>}<span aria-current="page">{currentLabel}</span></nav>
+<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items })} />

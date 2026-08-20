@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-budget/"
+  - "/guides/home-repair-history/"
+  - "/tools/home-repair-cost-log/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # Home Maintenance Cost Tracker

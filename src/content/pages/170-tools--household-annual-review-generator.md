@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/annual-home-review/"
+  - "/guides/household-management-checklist/"
+  - "/guides/annual-renewal-calendar/"
+  - "/features/home-dashboard/"
 contentVersion: 1
 ---
 # Household Annual Review Generator

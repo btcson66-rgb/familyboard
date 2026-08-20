@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/vacation-home-shutdown-checklist/"
+  - "/guides/returning-home-after-travel-checklist/"
+  - "/guides/travel-household-handoff/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # Returning home is the right time for a quick condition check

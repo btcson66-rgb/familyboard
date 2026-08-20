@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/robot-vacuum-maintenance-guide/"
+  - "/guides/household-supplies-inventory/"
+  - "/features/maintenance-tracker/"
+  - "/guides/appliance-inventory/"
 contentVersion: 1
 ---
 # Vacuum maintenance is mostly about remembering what the machine uses

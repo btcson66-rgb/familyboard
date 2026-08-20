@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/storm-preparation-home-checklist/"
+  - "/guides/emergency-supply-inventory/"
+  - "/guides/pet-sitter-information/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # Evacuation planning should be based on local hazards and official guidance

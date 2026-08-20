@@ -16,7 +16,6 @@ const link = (query: string) => `https://www.amazon.com/s?k=${encodeURIComponent
   <div class="affiliate-label">Affiliate recommendation</div>
   <h2 id="recommended-heading">Useful shopping categories for this task</h2>
   <p>These links help you compare relevant products. Verify compatibility, current specifications, price and manufacturer guidance before buying.</p>
-  <div class="recommendation-grid">{group.items.map(([label, query]) => <a class="recommendation-link" href={link(query)} rel="sponsored nofollow noopener" target="_blank"><strong>{label}</strong><span>Compare current listings →</span></a>)}</div>
+  <div class="recommendation-grid">{group.items.map(([label, query]) => <a class="recommendation-link" data-affiliate-category={label} href={link(query)} rel="sponsored nofollow noopener" target="_blank"><strong>{label}</strong><span>Compare current listings →</span></a>)}</div>
   <p class="help">As an affiliate, FamilyBoard may earn from qualifying purchases. <a href="/affiliate-disclosure/">Read the full disclosure.</a></p>
 </aside>}
-

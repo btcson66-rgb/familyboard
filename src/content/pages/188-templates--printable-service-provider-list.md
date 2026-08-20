@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-service-provider-list/"
+  - "/guides/service-provider-contact-list/"
+  - "/guides/contractor-records/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # Printable Home Service Provider List
@@ -20,7 +23,7 @@ contentVersion: 1
 | | | | | | |
 | | | | | | |
 
-### Useful categories
+## Useful categories
 - Plumbing
 - Heating/cooling
 - Appliance repair

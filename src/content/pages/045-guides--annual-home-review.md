@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/household-annual-review-generator/"
+  - "/guides/home-maintenance-budget/"
+  - "/guides/annual-renewal-calendar/"
+  - "/guides/digital-home-inventory-backup/"
 contentVersion: 1
 ---
 # The annual review is where household records turn into planning

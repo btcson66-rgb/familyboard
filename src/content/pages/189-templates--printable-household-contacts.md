@@ -10,12 +10,15 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-contact-list/"
+  - "/guides/family-emergency-contacts/"
+  - "/templates/printable-emergency-contacts/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # Printable Household Contact List
 
-### Household
+## Household
 | Name | Role | Phone | Alternate contact |
 |---|---|---|---|
 | | | | |

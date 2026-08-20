@@ -1,16 +1,18 @@
 {
   "name": "familyboard",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run import:content && astro build && npm run postbuild",
+    "build": "npm run import:content && astro build",
     "preview": "astro preview",
     "serve:test": "node scripts/serve-dist.mjs",
     "import:content": "node scripts/import-master.mjs docs/launch-content-master.md",
     "postbuild": "node scripts/postbuild-audit.mjs",
-    "check": "npm run typecheck && npm run test && npm run audit:content && npm run build",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run audit:content && npm run audit:similarity && npm run build",
+    "preflight": "npm run check && npm run e2e",
+    "lint": "eslint . --max-warnings=0",
     "typecheck": "astro check",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -26,7 +28,6 @@
   "dependencies": {
     "@astrojs/react": "latest",
     "@astrojs/sitemap": "latest",
-    "@fontsource-variable/manrope": "latest",
     "astro": "latest",
     "dexie": "latest",
     "marked": "latest",
@@ -37,13 +38,18 @@
   "devDependencies": {
     "@astrojs/check": "latest",
     "@axe-core/playwright": "latest",
+    "@eslint/js": "^10.0.1",
     "@playwright/test": "latest",
     "@testing-library/react": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "eslint": "^10.8.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "fake-indexeddb": "latest",
+    "globals": "^17.11.0",
     "jsdom": "^29.0.0",
     "typescript": "latest",
+    "typescript-eslint": "^8.67.0",
     "vitest": "latest"
   }
 }

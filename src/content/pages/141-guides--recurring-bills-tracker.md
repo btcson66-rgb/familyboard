@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/annual-renewal-calendar/"
+  - "/guides/household-account-list/"
+  - "/guides/organize-utility-account-information/"
+  - "/features/home-dashboard/"
 contentVersion: 1
 ---
 # A household bills tracker can be useful without handling money

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/rental-home-maintenance-log/"
+  - "/guides/move-in-maintenance-checklist/"
+  - "/guides/moving-inventory/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # Apartment maintenance is partly about upkeep and partly about documentation

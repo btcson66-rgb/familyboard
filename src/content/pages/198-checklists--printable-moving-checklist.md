@@ -10,12 +10,15 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/moving-house-organizer/"
+  - "/guides/moving-inventory/"
+  - "/tools/move-in-checklist-generator/"
+  - "/guides/move-out-home-records/"
 contentVersion: 1
 ---
 # Printable Moving Checklist
 
-### Before the move
+## Before the move
 - [ ] Confirm move/closing/lease timeline.
 - [ ] Book moving/transport help if needed.
 - [ ] Plan utility/service start and stop dates.

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/household-subscription-cost-calculator/"
+  - "/guides/organize-household-subscriptions/"
+  - "/guides/subscription-renewal-tracker/"
+  - "/features/household-subscription-tracker/"
 contentVersion: 1
 ---
 # Printable Subscription Tracker
@@ -20,7 +23,7 @@ contentVersion: 1
 | | | | | | | |
 | | | | | | | |
 
-### Review questions
+## Review questions
 - Do we still use it?
 - Is someone else paying for a duplicate?
 - Is the renewal annual and easy to forget?

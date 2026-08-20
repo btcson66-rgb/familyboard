@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/preventive-home-maintenance/"
+  - "/guides/home-maintenance-budget/"
+  - "/guides/home-maintenance-delegation/"
+  - "/features/home-dashboard/"
 contentVersion: 1
 ---
 # Not every maintenance task deserves the same urgency

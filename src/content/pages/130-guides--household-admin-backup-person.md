@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/family-continuity-plan/"
+  - "/guides/household-handoff/"
+  - "/guides/what-spouse-needs-to-know/"
+  - "/tools/home-handoff-summary-generator/"
 contentVersion: 1
 ---
 # Every important household system should have a second person who can find the map

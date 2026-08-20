@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-delegation/"
+  - "/guides/recurring-household-tasks/"
+  - "/guides/household-handoff/"
+  - "/features/family-task-manager/"
 contentVersion: 1
 ---
 # Household work is easier to divide when the invisible parts are named

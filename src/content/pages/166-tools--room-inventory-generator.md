@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/room-by-room-home-inventory/"
+  - "/tools/home-inventory-checklist-generator/"
+  - "/guides/photo-home-inventory/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Room Inventory Generator

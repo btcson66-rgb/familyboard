@@ -33,9 +33,9 @@ Local browser storage is not a guaranteed archival backup. Browser data can be c
 
 Where local attachment support is available, users should understand device/browser storage limits. Important original documents should also exist in an appropriate durable location under the user's control.
 
-## Future sync
+## No cloud sync today
 
-If encrypted sync is added later, this policy must be updated before launch of that service. The sync design should aim to minimize the provider's ability to read household content.
+FamilyBoard does not currently send household records to a sync service. Any future change to that boundary would require a policy and security review before release.
 
 ## Contact
 

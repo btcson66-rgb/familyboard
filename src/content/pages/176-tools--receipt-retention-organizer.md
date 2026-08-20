@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/how-long-to-keep-household-records/"
+  - "/guides/purchase-receipt-organizer/"
+  - "/guides/home-improvement-receipts/"
+  - "/features/household-documents-organizer/"
 contentVersion: 1
 ---
 # Receipt Retention Organizer

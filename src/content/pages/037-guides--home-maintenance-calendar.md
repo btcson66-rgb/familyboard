@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-schedule/"
+  - "/guides/annual-home-review/"
+  - "/tools/home-maintenance-schedule-generator/"
+  - "/features/household-calendar/"
 contentVersion: 1
 ---
 # A maintenance calendar works best when it is the view, not the database

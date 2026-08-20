@@ -10,14 +10,17 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/house-sitter-instruction-generator/"
+  - "/guides/house-sitter-information/"
+  - "/guides/travel-household-handoff/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # Printable House Sitter Checklist
 
 **Dates:** __________ to __________
 
-### Daily
+## Daily
 - [ ] Pets: __________
 - [ ] Plants: __________
 - [ ] Mail/deliveries: __________

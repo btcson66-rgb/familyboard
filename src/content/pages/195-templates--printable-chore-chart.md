@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/recurring-chore-planner/"
+  - "/guides/family-chore-system/"
+  - "/guides/chore-chart-for-adults/"
+  - "/features/family-task-manager/"
 contentVersion: 1
 ---
 # Printable Household Chore Chart
@@ -21,7 +24,7 @@ contentVersion: 1
 | | | | |
 | | | | |
 
-### Weekly review
+## Weekly review
 - [ ] Tasks are still appropriate for each person.
 - [ ] Nobody is carrying invisible admin that is missing from the chart.
 - [ ] Repeatedly skipped tasks are simplified or reassigned.

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/fall-home-maintenance-checklist/"
+  - "/guides/hvac-filter-tracker/"
+  - "/guides/home-service-provider-list/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # Furnace records are valuable because service history can span many years

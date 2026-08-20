@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/room-inventory-generator/"
+  - "/guides/home-inventory-checklist/"
+  - "/guides/photo-home-inventory/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Room-by-room inventory works because it gives the project a visible finish line

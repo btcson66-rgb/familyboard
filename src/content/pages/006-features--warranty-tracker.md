@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/how-to-track-product-warranties/"
+  - "/guides/warranty-expiration/"
+  - "/tools/warranty-expiration-calculator/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # The worst time to look for warranty information is after something stops working

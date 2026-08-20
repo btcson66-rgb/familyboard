@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/annual-renewal-calendar/"
+  - "/guides/subscription-renewal-tracker/"
+  - "/guides/recurring-bills-tracker/"
+  - "/features/household-calendar/"
 contentVersion: 1
 ---
 # Printable Annual Renewals Calendar

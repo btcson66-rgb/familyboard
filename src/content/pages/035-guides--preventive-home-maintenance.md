@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-schedule/"
+  - "/guides/maintenance-priorities/"
+  - "/guides/home-maintenance-reminders/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # Preventive maintenance is not about doing more work; it is about doing the right work before failure

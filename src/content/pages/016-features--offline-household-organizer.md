@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/local-first-home-organizer/"
+  - "/features/family-display-mode/"
+  - "/guides/digital-home-inventory-backup/"
+  - "/app/"
 contentVersion: 1
 ---
 # Household information should still exist when the internet does not

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/emergency-information-sheet/"
+  - "/guides/family-emergency-contacts/"
+  - "/privacy/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # Medical information deserves a stricter privacy boundary than ordinary household notes

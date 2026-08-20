@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/digital-home-binder/"
+  - "/guides/home-maintenance-records/"
+  - "/templates/printable-service-provider-list/"
+  - "/features/household-documents-organizer/"
 contentVersion: 1
 ---
 # A home maintenance binder should help someone operate the home

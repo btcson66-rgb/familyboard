@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-documents-organizer/"
+  - "/guides/digital-home-binder/"
+  - "/features/household-documents-organizer/"
+  - "/templates/printable-household-contacts/"
 contentVersion: 1
 ---
 # Household Document Index Generator

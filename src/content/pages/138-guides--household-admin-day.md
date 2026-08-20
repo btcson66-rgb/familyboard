@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-weekly-reset/"
+  - "/guides/annual-renewal-calendar/"
+  - "/guides/household-documents-organizer/"
+  - "/features/family-task-manager/"
 contentVersion: 1
 ---
 # Household admin is easier when it has a container

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/home-maintenance-schedule-generator/"
+  - "/guides/home-maintenance-calendar/"
+  - "/guides/preventive-home-maintenance/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # How to build a home maintenance schedule you will actually keep

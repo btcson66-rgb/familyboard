@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-weekly-reset/"
+  - "/features/home-dashboard/"
+  - "/features/household-calendar/"
+  - "/app/"
 contentVersion: 1
 ---
 # Your old tablet can become the household screen

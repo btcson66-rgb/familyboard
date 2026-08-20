@@ -1,6 +1,6 @@
 ---
 title: "Contact FamilyBoard"
-description: "Contact the FamilyBoard project about bugs, accessibility, content corrections, privacy questions or product feedback."
+description: "Report a FamilyBoard bug, accessibility issue, content correction, privacy concern or security vulnerability through a working support route."
 route: "/contact/"
 primaryIntent: "support FamilyBoard users"
 primaryKeyword: ""
@@ -13,20 +13,25 @@ related:
   []
 contentVersion: 1
 ---
-# Contact
+# Contact FamilyBoard
 
-Use `support@familyboard.win` only after a real mailbox or forwarding route is configured and tested; otherwise provide a working contact route that does not require exposing a personal email.
+FamilyBoard currently uses its public GitHub repository for product and content support. Do not include household records, passwords, backup files, private contact details or other sensitive information in a public report.
 
-Suggested contact categories:
+## Product, accessibility and content reports
 
-- Product bug
-- Backup/restore issue
-- Accessibility problem
-- Security/privacy concern
-- Content correction
-- Feature suggestion
-- Business/affiliate inquiry
+[Open a public FamilyBoard issue](https://github.com/btcson66-rgb/familyboard/issues/new) and include:
 
-Do not promise response times the project cannot guarantee.
+- the affected page URL or app section;
+- what you expected and what happened;
+- browser and device type when relevant;
+- for a content correction, a reliable supporting source.
 
-For content corrections involving maintenance or safety information, ask the sender to include the page URL and a reliable source.
+GitHub requires an account to submit an issue. Existing reports can be read without an account.
+
+## Security reports
+
+Do not publish a suspected vulnerability or sensitive reproduction data in a normal issue. [Send a private vulnerability report](https://github.com/btcson66-rgb/familyboard/security/advisories/new) through GitHub Security Advisories.
+
+## Response expectations
+
+FamilyBoard does not promise a fixed response time. Confirm urgent household, safety or emergency questions with the relevant official service or qualified professional rather than waiting for website support.

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/private-family-organizer/"
+  - "/features/offline-household-organizer/"
+  - "/security/"
+  - "/privacy/"
 contentVersion: 1
 ---
 # Your household database does not have to begin in someone else's cloud
@@ -29,8 +32,8 @@ Browsers can clear site data. Devices can fail. Users can delete storage acciden
 
 A local-first design reduces unnecessary centralized collection, while export makes the data portable. A user should be able to leave the product with a meaningful backup rather than being locked into a remote account.
 
-## Future sync can be optional
+## Portability works today
 
-If encrypted cloud sync is built later, it should be an opt-in service that extends the local model rather than making the existing free app suddenly dependent on a server.
+Exported backups let a household move its records without depending on an account or server. Keep a durable copy outside the browser and test restores periodically.
 
 **Contextual CTA:** Read the security and backup pages before storing important household information. Privacy is most useful when the user also understands the recovery plan.

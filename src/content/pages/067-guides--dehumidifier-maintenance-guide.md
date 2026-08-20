@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/humidifier-maintenance-guide/"
+  - "/guides/water-leak-response-home-records/"
+  - "/features/maintenance-tracker/"
+  - "/guides/home-maintenance-reminders/"
 contentVersion: 1
 ---
 # Dehumidifiers combine air handling and water collection, so both sides deserve attention

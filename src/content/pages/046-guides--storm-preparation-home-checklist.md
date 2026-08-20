@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/power-outage-home-preparedness/"
+  - "/guides/emergency-supply-inventory/"
+  - "/guides/family-emergency-contacts/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # Storm preparation is local; household organization makes it easier to act

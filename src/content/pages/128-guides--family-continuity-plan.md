@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-handoff/"
+  - "/guides/household-admin-backup-person/"
+  - "/guides/what-spouse-needs-to-know/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # Continuity planning is not only for businesses

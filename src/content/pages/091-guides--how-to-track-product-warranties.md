@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/warranty-tracker/"
+  - "/tools/warranty-expiration-calculator/"
+  - "/guides/purchase-receipt-organizer/"
+  - "/guides/product-registration-tracker/"
 contentVersion: 1
 ---
 # Warranty tracking is a small amount of work at purchase time that can save a large search later

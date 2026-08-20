@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/emergency-binder/"
+  - "/checklists/printable-emergency-binder-checklist/"
+  - "/guides/family-emergency-contacts/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # Emergency Binder Generator

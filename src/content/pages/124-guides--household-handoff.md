@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/household-handoff/"
+  - "/guides/what-spouse-needs-to-know/"
+  - "/guides/household-admin-backup-person/"
+  - "/tools/home-handoff-summary-generator/"
 contentVersion: 1
 ---
 # A household handoff is the operational version of “here is what you need to know”

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/cleaning-schedule/"
+  - "/guides/deep-cleaning-tracker/"
+  - "/templates/printable-cleaning-schedule/"
+  - "/features/family-task-manager/"
 contentVersion: 1
 ---
 # Cleaning Schedule Generator

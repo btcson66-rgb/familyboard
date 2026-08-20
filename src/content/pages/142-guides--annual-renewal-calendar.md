@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/household-annual-review-generator/"
+  - "/guides/subscription-renewal-tracker/"
+  - "/guides/recurring-bills-tracker/"
+  - "/features/household-calendar/"
 contentVersion: 1
 ---
 # Annual obligations are the easiest recurring tasks to forget

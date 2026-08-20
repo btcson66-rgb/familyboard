@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/air-conditioner-maintenance-checklist/"
+  - "/guides/hvac-filter-tracker/"
+  - "/guides/home-maintenance-calendar/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # Heat pumps deserve one continuous record across heating and cooling seasons

@@ -1,6 +1,6 @@
 ---
-title: "FamilyBoard Pricing — Free Local-First Web App and Future Pro Options"
-description: "FamilyBoard is free to use in its first local-first web release. See what is free today and which optional local Pro or encrypted sync features may come later."
+title: "FamilyBoard Is Free — No Account or Paid Plan Required"
+description: "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate."
 route: "/pricing/"
 primaryIntent: "support FamilyBoard users"
 primaryKeyword: ""
@@ -13,33 +13,23 @@ related:
   []
 contentVersion: 1
 ---
-# Simple now. Optional paid upgrades later.
+# FamilyBoard is free
 
-The first release of `FamilyBoard` is free. You can use the local-first household dashboard, track home assets, maintenance, warranties, subscriptions, tasks, emergency information and create backups without an account.
+The public guides, browser tools, printables and local-first household app are available without an account, checkout or subscription.
 
-## Free web/PWA — available in v1
+## What is included
 
-- One household
-- Home dashboard
-- Household members
-- Assets and appliance records
-- Maintenance schedules and history
-- Warranty tracking
-- Subscriptions and recurring obligations
-- Tasks and simple household calendar
-- Emergency information
-- Household handoff view
-- Family/tablet display
-- Local-first storage
-- Backup and restore
-- Offline-capable PWA
+- The local household dashboard and member list
+- Asset, maintenance, task, warranty and subscription records
+- Emergency contacts, document references, handoff and family display views
+- Versioned JSON backups and optional encrypted exports
+- Offline-capable browser access after the first successful load
+- Public guides, calculators, generators and printables
 
-## Pro Local Edition — planned, not yet for sale
+## No payment details are collected
 
-A future downloadable desktop/local edition may add multiple properties, advanced export, richer document workflows, batch import, printable report packs, expanded local archive features and desktop packaging. It is intended to be a one-time-purchase style product where practical.
+FamilyBoard does not currently sell software or collect payment information. Product recommendations on selected public pages may use clearly labeled affiliate links, but they do not change access to the free app.
 
-## Encrypted Sync — planned, separate service
+## The practical limit
 
-Cross-device family sharing creates ongoing infrastructure cost, so an optional future sync service may use recurring pricing. The goal is to keep the core local organizer useful without forcing every user into a subscription.
-
-> No fake checkout should appear before a real payment channel exists. “Planned” means planned, not available.
+Data stays in the current browser profile unless you export and move a backup yourself. There is no account or cross-device cloud storage. Read the [privacy explanation](/privacy/) and [security limits](/security/) before storing important records.

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/room-by-room-home-inventory/"
+  - "/guides/serial-number-tracker/"
+  - "/guides/home-inventory-for-insurance/"
+  - "/tools/room-inventory-generator/"
 contentVersion: 1
 ---
 # Photos are powerful evidence, but only if you can find the right one later

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/warranty-expiration/"
+  - "/guides/how-to-track-product-warranties/"
+  - "/features/warranty-tracker/"
+  - "/app/"
 contentVersion: 1
 ---
 # Warranty Expiration Calculator

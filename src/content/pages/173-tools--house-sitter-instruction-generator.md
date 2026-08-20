@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/house-sitter-information/"
+  - "/checklists/printable-house-sitter-checklist/"
+  - "/guides/travel-household-handoff/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # House Sitter Instructions Generator

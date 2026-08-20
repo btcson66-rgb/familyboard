@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/divide-household-responsibilities/"
+  - "/guides/recurring-household-tasks/"
+  - "/tools/recurring-chore-planner/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # Household work includes far more than chores

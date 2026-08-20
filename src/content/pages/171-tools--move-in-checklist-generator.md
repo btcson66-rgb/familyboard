@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/move-in-maintenance-checklist/"
+  - "/guides/new-home-setup-checklist/"
+  - "/guides/first-time-homeowner-maintenance-guide/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # Move-In Checklist Generator

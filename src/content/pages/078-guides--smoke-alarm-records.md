@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/carbon-monoxide-alarm-records/"
+  - "/guides/fire-extinguisher-records/"
+  - "/guides/emergency-supply-inventory/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # Safety-device records should support official guidance, not replace it

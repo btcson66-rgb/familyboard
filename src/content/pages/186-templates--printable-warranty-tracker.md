@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/how-to-track-product-warranties/"
+  - "/tools/warranty-expiration-calculator/"
+  - "/features/warranty-tracker/"
+  - "/guides/purchase-receipt-organizer/"
 contentVersion: 1
 ---
 # Printable Warranty Tracker
@@ -20,7 +23,7 @@ contentVersion: 1
 | | | | | | | |
 | | | | | | | |
 
-### Before relying on the date
+## Before relying on the date
 - [ ] Confirm what event starts the warranty.
 - [ ] Keep the written warranty terms.
 - [ ] Confirm whether registration or service conditions apply.

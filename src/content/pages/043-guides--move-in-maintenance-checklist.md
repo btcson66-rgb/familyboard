@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/first-time-homeowner-maintenance-guide/"
+  - "/guides/new-home-setup-checklist/"
+  - "/tools/move-in-checklist-generator/"
+  - "/guides/home-inventory-checklist/"
 contentVersion: 1
 ---
 # The first maintenance job in a new home is learning what you have

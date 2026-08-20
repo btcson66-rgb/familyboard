@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/home-handoff-summary-generator/"
+  - "/guides/household-handoff/"
+  - "/guides/family-continuity-plan/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # Printable Household Handoff Sheet
@@ -19,7 +22,7 @@ contentVersion: 1
 **Prepared by:** ____________________
 **Last reviewed:** ____________________
 
-### Next 30 days
+## Next 30 days
 | Date | Obligation | Owner / next action | Notes |
 |---|---|---|---|
 | | | | |

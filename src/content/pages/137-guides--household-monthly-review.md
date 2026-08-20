@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/monthly-home-maintenance-checklist/"
+  - "/guides/organize-household-subscriptions/"
+  - "/guides/digital-home-inventory-backup/"
+  - "/features/home-dashboard/"
 contentVersion: 1
 ---
 # Monthly is a good cadence for the household work that is important but not urgent

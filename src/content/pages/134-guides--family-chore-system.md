@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/recurring-chore-planner/"
+  - "/templates/printable-chore-chart/"
+  - "/features/family-display-mode/"
+  - "/features/family-task-manager/"
 contentVersion: 1
 ---
 # A chore system should reduce reminders, not create a new management job

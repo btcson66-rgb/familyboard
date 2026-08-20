@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/digital-home-binder/"
+  - "/guides/important-household-documents/"
+  - "/guides/organize-appliance-manuals/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Organize documents by what they help you do

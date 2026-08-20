@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/dishwasher-maintenance-checklist/"
+  - "/guides/water-leak-response-home-records/"
+  - "/features/home-record-keeper/"
+  - "/guides/home-service-provider-list/"
 contentVersion: 1
 ---
 # A garbage-disposal record is primarily about safe troubleshooting context

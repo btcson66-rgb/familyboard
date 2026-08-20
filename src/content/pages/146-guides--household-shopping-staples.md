@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/pantry-restock-system/"
+  - "/guides/household-supplies-inventory/"
+  - "/features/family-task-manager/"
+  - "/guides/household-weekly-reset/"
 contentVersion: 1
 ---
 # A staples list is about remembering what the household repeatedly runs out of

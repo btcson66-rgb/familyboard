@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/pet-sitter-instruction-generator/"
+  - "/guides/pet-sitter-information/"
+  - "/guides/organize-pet-records/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # Printable Pet Sitter Checklist
@@ -18,7 +21,7 @@ contentVersion: 1
 **Pet:** __________
 **Last reviewed:** __________
 
-### Feeding
+## Feeding
 Time/amount as provided by owner: ____________________
 
 ### Routine

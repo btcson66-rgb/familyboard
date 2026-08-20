@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/refrigerator-maintenance-checklist/"
+  - "/guides/power-outage-home-preparedness/"
+  - "/guides/appliance-inventory/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # A freezer record is useful for both maintenance and disruption planning

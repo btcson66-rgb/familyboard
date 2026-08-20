@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/home-maintenance-cost-tracker/"
+  - "/guides/appliance-replacement-planning/"
+  - "/guides/home-repair-history/"
+  - "/guides/maintenance-priorities/"
 contentVersion: 1
 ---
 # Your own maintenance history is more useful than a universal percentage rule

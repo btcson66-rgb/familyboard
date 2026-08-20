@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/household-documents-organizer/"
+  - "/guides/digital-home-binder/"
+  - "/guides/important-household-documents/"
+  - "/tools/household-document-index-generator/"
 contentVersion: 1
 ---
 # Household documents are easier to manage when the filing system mirrors real decisions

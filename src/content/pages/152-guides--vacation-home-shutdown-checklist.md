@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/vacation-shutdown-checklist-generator/"
+  - "/guides/travel-household-handoff/"
+  - "/guides/house-sitter-information/"
+  - "/guides/home-maintenance-after-vacation/"
 contentVersion: 1
 ---
 # A vacation shutdown checklist is about reducing loose ends before absence

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/emergency-information-sheet/"
+  - "/guides/organize-utility-account-information/"
+  - "/features/emergency-information-organizer/"
+  - "/guides/household-handoff/"
 contentVersion: 1
 ---
 # Knowing where a household control is located can be useful; knowing when to use it is a separate question

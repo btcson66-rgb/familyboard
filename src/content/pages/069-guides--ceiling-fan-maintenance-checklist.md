@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-reminders/"
+  - "/guides/home-service-provider-list/"
+  - "/features/home-inventory-tracker/"
+  - "/guides/annual-home-review/"
 contentVersion: 1
 ---
 # Ceiling fans need a light-touch maintenance record

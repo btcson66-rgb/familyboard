@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/divide-household-responsibilities/"
+  - "/guides/recurring-household-tasks/"
+  - "/guides/household-handoff/"
+  - "/features/family-task-manager/"
 contentVersion: 1
 ---
 # “Someone should handle that” is not a maintenance plan

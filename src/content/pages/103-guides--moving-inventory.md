@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/moving-house-organizer/"
+  - "/guides/room-by-room-home-inventory/"
+  - "/tools/room-inventory-generator/"
+  - "/checklists/printable-moving-checklist/"
 contentVersion: 1
 ---
 # A moving inventory has a different job from a permanent home inventory

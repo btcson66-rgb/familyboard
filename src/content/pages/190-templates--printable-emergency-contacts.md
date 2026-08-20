@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/emergency-contact-sheet-generator/"
+  - "/guides/family-emergency-contacts/"
+  - "/guides/emergency-information-sheet/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # Printable Emergency Contact Sheet
@@ -18,7 +21,7 @@ contentVersion: 1
 **Home address:** ____________________
 **Last reviewed:** ____________________
 
-### Primary contacts
+## Primary contacts
 1. ____________________ Phone: ____________________
 2. ____________________ Phone: ____________________
 

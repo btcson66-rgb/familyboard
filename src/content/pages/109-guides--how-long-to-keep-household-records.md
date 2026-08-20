@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/how-long-to-keep-household-records/"
+  - "/guides/home-purchase-records/"
+  - "/guides/household-documents-organizer/"
+  - "/tools/receipt-retention-organizer/"
 contentVersion: 1
 ---
 # There is no single correct retention period for every household document

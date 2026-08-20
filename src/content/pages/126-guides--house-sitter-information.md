@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/house-sitter-instruction-generator/"
+  - "/checklists/printable-house-sitter-checklist/"
+  - "/guides/travel-household-handoff/"
+  - "/guides/emergency-information-sheet/"
 contentVersion: 1
 ---
 # A house sitter needs a role-specific packet, not full household access

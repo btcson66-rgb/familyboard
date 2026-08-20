@@ -1,6 +1,6 @@
 ---
-title: "FamilyBoard Roadmap — What Is Available, Planned and Only Being Explored"
-description: "See the transparent FamilyBoard roadmap for the free local-first PWA, desktop edition, exports, encrypted sync and future mobile options."
+title: "FamilyBoard Free Product Roadmap"
+description: "See the current improvement roadmap for the free FamilyBoard local-first household organizer, tools and content library."
 route: "/roadmap/"
 primaryIntent: "support FamilyBoard users"
 primaryKeyword: ""
@@ -13,35 +13,20 @@ related:
   []
 contentVersion: 1
 ---
-# Roadmap
+# A roadmap for the free product
 
-Use three statuses only: **Available**, **Planned**, **Exploring**. Do not publish fake dates.
+FamilyBoard is concentrating on reliability, useful household workflows and discoverable public resources before considering any different business model.
 
-## Available in v1
+## Current priorities
 
-- Local-first household database
-- Assets, maintenance, warranties and service history
-- Subscriptions and recurring tasks
-- Household handoff
-- Emergency information
-- Backup/restore
-- Offline PWA
-- Public guides, calculators and printable templates
+- Validate backup and restore behavior across browser updates
+- Improve maintenance history, handoff profiles and shared display clarity
+- Expand accessibility, keyboard and offline testing
+- Add Traditional Chinese navigation, tools and genuinely localized guides
+- Use Search Console and privacy-safe analytics to improve pages people actually find useful
 
-## Planned
+## How priorities are chosen
 
-- More advanced local exports
-- More flexible property/multiple-home architecture
-- Desktop/local edition
-- Better import tools
-- Expanded printable report packs
+Reliability and user evidence come before feature volume. Search impressions, tool completion, app opens, support reports and test failures will guide the next work. The roadmap is directional and does not promise release dates.
 
-## Exploring
-
-- End-to-end encrypted sync
-- Household invitations/permissions
-- Push notifications
-- Native-enhanced mobile apps
-- Optional integrations
-
-Only move an item to “Available” in the same release that actually ships it.
+See the [changelog](/changelog/) for changes that are already shipped.

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/"
+  - "/guides/home-maintenance-schedule/"
+  - "/tools/home-maintenance-schedule-generator/"
+  - "/app/"
 contentVersion: 1
 ---
 # A home has hundreds of moving parts. Keep the important ones in one place.

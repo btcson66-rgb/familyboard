@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/repair-history/"
+  - "/guides/home-repair-history/"
+  - "/tools/home-maintenance-cost-tracker/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # Home Repair Cost Log

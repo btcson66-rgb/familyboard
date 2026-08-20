@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/moving-inventory/"
+  - "/guides/valuable-item-inventory/"
+  - "/guides/digital-home-inventory-backup/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Off-site storage becomes expensive and frustrating when nobody remembers what is inside

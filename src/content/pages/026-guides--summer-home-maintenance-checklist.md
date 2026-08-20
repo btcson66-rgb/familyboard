@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/vacation-home-shutdown-checklist/"
+  - "/guides/air-conditioner-maintenance-checklist/"
+  - "/guides/house-sitter-information/"
+  - "/features/family-display-mode/"
 contentVersion: 1
 ---
 # Summer maintenance is often about high-use systems and interrupted routines

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/water-softener-maintenance-records/"
+  - "/tools/home-service-reminder-generator/"
+  - "/features/maintenance-tracker/"
+  - "/guides/household-supplies-inventory/"
 contentVersion: 1
 ---
 # “Change the water filter” is not specific enough for a modern household

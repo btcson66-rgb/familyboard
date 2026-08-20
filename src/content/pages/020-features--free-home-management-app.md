@@ -1,6 +1,6 @@
 ---
-title: "Free Home Management App — Local-First Household Tracking Without an Account | FamilyBoard"
-description: "Use a free local-first home management app for assets, maintenance, warranties, subscriptions, tasks and household records."
+title: "Free Home Management App — Useful Without an Account | FamilyBoard"
+description: "Use a free local-first home management app for assets, maintenance, household tasks, warranties, documents and handoffs."
 route: "/features/free-home-management-app/"
 primaryIntent: "find a free home management app"
 primaryKeyword: "free home management app"
@@ -10,25 +10,24 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/app/"
+  - "/features/local-first-home-organizer/"
+  - "/features/home-dashboard/"
+  - "/features/free-home-management-app/"
 contentVersion: 1
 ---
-# A free home management app should be useful before it asks you to upgrade
+# A free home management app should be useful from the first day
 
-The free first version of `FamilyBoard` is intended to provide the core household system rather than a demo that expires after a few days. Users should be able to organize assets, maintenance, warranties, subscriptions, tasks, emergency information and backups without creating a subscription.
+FamilyBoard does not hide core household organization behind an account or checkout. The current product is a practical browser app supported by a public library of guides, tools and printables.
 
-## Why keep the first version free?
+## What the free app does
 
-The product is being built around a local-first architecture. When the user's household records stay on the device, there is no need to fund a large central database simply to let someone organize their own home. That makes a genuinely useful free tier more sustainable.
+Track household members, assets, maintenance completions, tasks, events, warranties, subscriptions, contacts and document locations. Build a privacy-filtered handoff, use a low-sensitivity family display and export portable backups.
 
-## What future paid versions could add
+## Local-first has a clear boundary
 
-A paid local desktop edition can reasonably charge for advanced exports, multiple homes, bulk tools, richer archive workflows and desktop packaging. A future encrypted sync service can charge recurring fees because cross-device storage and delivery create real ongoing infrastructure costs.
-
-That is a healthier boundary than disabling basic household maintenance tracking just to force an upgrade.
+Core records stay in IndexedDB in the current browser profile. There is no account or cloud copy. Browser clearing, device loss or profile damage can remove local data, so important households need regular exported backups.
 
 ## Free does not mean disposable
 
-The free app still needs data migrations, reliable backups, accessibility, offline testing and long-term URL stability. A user may trust it with years of household history, so engineering quality matters even before monetization.
-
-**Contextual CTA:** Start with the free PWA. If it becomes part of your household routine, export regular backups and watch the roadmap for optional local Pro and sync features later.
+The app uses versioned database migrations, validated backup packages, automated tests and an explicit privacy model. [Open the free app](/app/) and start with only the records that solve a real household problem.

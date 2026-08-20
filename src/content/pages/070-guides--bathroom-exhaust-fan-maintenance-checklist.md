@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-reminders/"
+  - "/guides/home-service-provider-list/"
+  - "/guides/annual-home-review/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # Bathroom exhaust fans are small systems with an important job

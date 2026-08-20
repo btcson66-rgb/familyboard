@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/warranty-expiration-calculator/"
+  - "/features/warranty-tracker/"
+  - "/guides/purchase-receipt-organizer/"
+  - "/guides/repair-history/"
 contentVersion: 1
 ---
 # A warranty expiration date is useful, but it is not the same as a coverage decision

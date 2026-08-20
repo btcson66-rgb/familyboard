@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-repair-history/"
+  - "/guides/home-service-provider-list/"
+  - "/templates/printable-repair-log/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # A leak record helps preserve the timeline while the household focuses on the problem

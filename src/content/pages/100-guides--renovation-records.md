@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/contractor-records/"
+  - "/guides/home-improvement-receipts/"
+  - "/guides/home-repair-history/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # Renovation history becomes valuable long after the dust is gone

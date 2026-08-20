@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/organize-household-subscriptions/"
+  - "/guides/subscription-renewal-tracker/"
+  - "/tools/household-subscription-cost-calculator/"
+  - "/guides/annual-renewal-calendar/"
 contentVersion: 1
 ---
 # Subscriptions are household obligations, not just expenses

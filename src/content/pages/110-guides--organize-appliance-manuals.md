@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/appliance-inventory/"
+  - "/features/household-documents-organizer/"
+  - "/guides/serial-number-tracker/"
+  - "/tools/household-document-index-generator/"
 contentVersion: 1
 ---
 # Appliance manuals make more sense as part of the appliance record than as a separate collection

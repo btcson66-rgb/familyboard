@@ -1,9 +1,38 @@
 # Accessibility report
 
-- Target: WCAG 2.2 AA design principles.
-- Automated axe checks covered homepage, long guide, tool and printable on desktop and Pixel 7 profiles.
-- Serious/critical violations: 0.
-- Keyboard-visible focus, skip link, semantic headings, labels, live tool results and table headers are implemented.
-- Destructive reset requires explicit household-name confirmation.
-- Manual follow-up after production: install flow, print preview and screen-reader smoke test on one physical mobile browser.
+## Automated evidence
 
+Playwright + axe ran on desktop Chromium and a Pixel 7 profile for the homepage, a long guide, an interactive tool, a printable and the free-product page.
+
+- Serious violations: 0
+- Critical violations: 0
+- Lighthouse accessibility: 100 on all six representative performance routes
+- Command evidence: `npm run e2e` — 5 passed, 1 intentionally skipped duplicate mobile lifecycle
+
+## Keyboard and focus checklist
+
+- Skip link is the first keyboard target and moves focus to `#main-content`.
+- All app navigation controls, forms, export/restore actions and public tool actions use native interactive elements.
+- `:focus-visible` provides a three-pixel high-contrast outline.
+- The destructive reset remains disabled until the exact household name is entered.
+- No modal or custom dialog is shipped; therefore there is no focus trap to validate.
+
+## Forms, results and errors
+
+- Inputs have programmatic labels and required fields use native validation.
+- Calculator/generator output is inside `aria-live="polite"`.
+- Save, validation, import and backup results use status or alert roles.
+- IndexedDB, quota, invalid backup and wrong-password failures return actionable text and do not instruct users to clear existing storage.
+
+## Print and screen-reader structure
+
+- Printable tables use `<thead>` and `<th scope="col">`.
+- Heading-order normalization prevents skipped heading levels in generated content.
+- Print media hides navigation/actions and preserves worksheet tables.
+- App and shared-display views use semantic headings; sensitive fields are excluded from handoff/display output.
+
+## Known limitations and manual follow-up
+
+- Native browser file pickers, download dialogs and print-preview UI are platform-owned and cannot be fully audited by axe.
+- Complete spoken-output quality still needs one manual smoke test with NVDA or VoiceOver on production.
+- A physical mobile browser install/update flow remains a production follow-up; the automated test covers service-worker offline reload.

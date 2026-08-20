@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/family-emergency-contacts/"
+  - "/templates/printable-emergency-contacts/"
+  - "/guides/emergency-information-sheet/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # Emergency Contact Sheet Generator

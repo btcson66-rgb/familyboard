@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-handoff/"
+  - "/guides/pet-sitter-information/"
+  - "/guides/house-sitter-information/"
+  - "/tools/home-handoff-summary-generator/"
 contentVersion: 1
 ---
 # A caregiver handoff should describe the current routine, not the entire family history

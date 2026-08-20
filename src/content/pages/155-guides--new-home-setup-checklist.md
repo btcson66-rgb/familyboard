@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/move-in-checklist-generator/"
+  - "/guides/move-in-maintenance-checklist/"
+  - "/guides/first-time-homeowner-maintenance-guide/"
+  - "/features/home-dashboard/"
 contentVersion: 1
 ---
 # The first weeks in a home are when useful information is easiest to capture

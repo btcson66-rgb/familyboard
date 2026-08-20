@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/winter-home-maintenance-checklist/"
+  - "/guides/storm-preparation-home-checklist/"
+  - "/guides/furnace-maintenance-records/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # Fall is the season for dealing with problems while they are still easy to schedule

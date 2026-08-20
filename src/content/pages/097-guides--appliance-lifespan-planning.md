@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/appliance-age-calculator/"
+  - "/tools/appliance-replacement-planner/"
+  - "/guides/appliance-replacement-planning/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Appliances do not expire on schedule

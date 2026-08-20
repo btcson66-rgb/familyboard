@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/hvac-filter-tracker/"
+  - "/guides/household-supplies-inventory/"
+  - "/features/maintenance-tracker/"
+  - "/guides/appliance-inventory/"
 contentVersion: 1
 ---
 # Air-purifier maintenance is mostly a filter-identification problem

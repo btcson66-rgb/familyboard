@@ -10,14 +10,17 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/seasonal-home-maintenance-checklist/"
+  - "/guides/spring-home-maintenance-checklist/"
+  - "/guides/fall-home-maintenance-checklist/"
+  - "/tools/home-maintenance-schedule-generator/"
 contentVersion: 1
 ---
 # Printable Seasonal Home Checklist
 
 Use the same worksheet four times a year and let the actual tasks change with your climate.
 
-### Systems entering heavy use
+## Systems entering heavy use
 - [ ] System/equipment: __________
 - [ ] Manual/service requirement to review: __________
 - [ ] Appointment or preparation needed: __________

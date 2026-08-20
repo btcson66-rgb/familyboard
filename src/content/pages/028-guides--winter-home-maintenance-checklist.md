@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/power-outage-home-preparedness/"
+  - "/guides/water-leak-response-home-records/"
+  - "/guides/furnace-maintenance-records/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # Winter maintenance is often less about projects and more about monitoring

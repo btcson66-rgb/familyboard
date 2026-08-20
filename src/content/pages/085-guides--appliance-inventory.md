@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/templates/printable-appliance-inventory/"
+  - "/guides/serial-number-tracker/"
+  - "/guides/how-to-track-product-warranties/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # An appliance inventory becomes truly useful when it connects to maintenance

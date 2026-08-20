@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/dryer-maintenance-checklist/"
+  - "/guides/water-leak-response-home-records/"
+  - "/guides/how-to-track-product-warranties/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # A washing machine maintenance record should help prevent repeated surprises

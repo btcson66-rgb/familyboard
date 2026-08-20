@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-inventory-for-insurance/"
+  - "/guides/photo-home-inventory/"
+  - "/guides/purchase-receipt-organizer/"
+  - "/guides/digital-home-inventory-backup/"
 contentVersion: 1
 ---
 # A valuable-item inventory is about evidence and identification, not self-appraisal

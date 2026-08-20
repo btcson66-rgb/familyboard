@@ -10,14 +10,17 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/monthly-home-maintenance-checklist/"
+  - "/guides/household-monthly-review/"
+  - "/features/home-dashboard/"
+  - "/tools/household-annual-review-generator/"
 contentVersion: 1
 ---
 # Printable Monthly Home Checklist
 
 This one-page review is designed to keep the household current without creating a full inspection routine.
 
-### Home condition
+## Home condition
 - [ ] Anything leaking, damaged or visibly changed?
 - [ ] Any appliance or system making a new sound, smell or error?
 - [ ] Any open repair that needs a next action?

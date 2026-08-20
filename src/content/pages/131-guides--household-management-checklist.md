@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/household-annual-review-generator/"
+  - "/guides/recurring-household-tasks/"
+  - "/guides/divide-household-responsibilities/"
+  - "/features/home-dashboard/"
 contentVersion: 1
 ---
 # Household management is easier when responsibilities are visible

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/appliance-replacement-planning/"
+  - "/guides/home-maintenance-budget/"
+  - "/tools/appliance-replacement-planner/"
+  - "/guides/annual-home-review/"
 contentVersion: 1
 ---
 # Replacement planning is easier when it is separate from emergency panic

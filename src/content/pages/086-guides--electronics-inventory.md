@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/computer-electronics-inventory/"
+  - "/guides/serial-number-tracker/"
+  - "/guides/purchase-receipt-organizer/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Electronics move between people, rooms and uses more often than most home assets

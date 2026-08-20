@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/renovation-records/"
+  - "/guides/purchase-receipt-organizer/"
+  - "/guides/home-purchase-records/"
+  - "/features/household-documents-organizer/"
 contentVersion: 1
 ---
 # Project context makes a home-improvement receipt worth keeping

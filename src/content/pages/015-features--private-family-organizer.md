@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/privacy/"
+  - "/security/"
+  - "/features/local-first-home-organizer/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # Privacy matters more when the app knows how your household works

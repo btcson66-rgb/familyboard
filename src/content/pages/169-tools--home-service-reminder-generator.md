@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-reminders/"
+  - "/guides/home-service-provider-list/"
+  - "/features/maintenance-tracker/"
+  - "/guides/home-maintenance-calendar/"
 contentVersion: 1
 ---
 # Home Service Reminder Generator

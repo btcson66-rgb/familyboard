@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/seasonal-home-maintenance-checklist/"
+  - "/guides/home-maintenance-after-vacation/"
+  - "/tools/home-maintenance-schedule-generator/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # Spring is a good time to look for what the previous season changed

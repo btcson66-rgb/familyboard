@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-shopping-staples/"
+  - "/guides/water-filter-replacement-guide/"
+  - "/guides/robot-vacuum-maintenance-guide/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # A supplies inventory is most useful for items that must match equipment

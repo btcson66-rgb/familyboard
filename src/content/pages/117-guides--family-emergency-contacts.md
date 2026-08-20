@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/emergency-contact-sheet-generator/"
+  - "/templates/printable-emergency-contacts/"
+  - "/guides/emergency-information-sheet/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # An emergency contact list should answer “who do I call next?”

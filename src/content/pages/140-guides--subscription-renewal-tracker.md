@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/household-subscription-tracker/"
+  - "/tools/annual-subscription-cost-calculator/"
+  - "/guides/organize-household-subscriptions/"
+  - "/guides/annual-renewal-calendar/"
 contentVersion: 1
 ---
 # A renewal reminder should create a decision window

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/emergency-binder-generator/"
+  - "/checklists/printable-emergency-binder-checklist/"
+  - "/guides/family-emergency-contacts/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # An emergency binder should be short enough to use under pressure

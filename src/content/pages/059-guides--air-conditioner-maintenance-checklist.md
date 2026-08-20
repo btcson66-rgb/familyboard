@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/hvac-filter-tracker/"
+  - "/guides/summer-home-maintenance-checklist/"
+  - "/guides/home-service-provider-list/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # Air-conditioning maintenance should distinguish user care from technical service

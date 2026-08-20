@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/move-in-maintenance-checklist/"
+  - "/guides/home-inventory-checklist/"
+  - "/guides/home-service-provider-list/"
+  - "/tools/home-maintenance-schedule-generator/"
 contentVersion: 1
 ---
 # Your first home does not arrive with an operating manual

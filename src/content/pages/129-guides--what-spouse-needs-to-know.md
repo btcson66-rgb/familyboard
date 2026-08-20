@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/divide-household-responsibilities/"
+  - "/guides/household-handoff/"
+  - "/guides/household-admin-backup-person/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # The goal is not equal memory; it is shared recoverability

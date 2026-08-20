@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-handoff/"
+  - "/guides/what-spouse-needs-to-know/"
+  - "/tools/home-handoff-summary-generator/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # If the household organizer vanished for a week, what would everyone else miss?

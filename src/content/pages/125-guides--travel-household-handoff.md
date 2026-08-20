@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/vacation-home-shutdown-checklist/"
+  - "/guides/house-sitter-information/"
+  - "/guides/pet-sitter-information/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # Travel handoff should focus on the unusual responsibilities created by absence

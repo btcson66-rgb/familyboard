@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/how-to-track-product-warranties/"
+  - "/guides/appliance-inventory/"
+  - "/guides/household-account-list/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Product registration is easy to forget because it happens once

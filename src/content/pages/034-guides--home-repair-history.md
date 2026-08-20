@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-records/"
+  - "/guides/repair-history/"
+  - "/templates/printable-repair-log/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # Repair history is most valuable when a problem happens twice

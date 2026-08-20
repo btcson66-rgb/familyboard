@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-documents-organizer/"
+  - "/guides/home-purchase-records/"
+  - "/guides/organize-insurance-documents/"
+  - "/guides/emergency-information-sheet/"
 contentVersion: 1
 ---
 # The important document list depends on what your household owns and manages

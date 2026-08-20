@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/how-long-to-keep-household-records/"
+  - "/guides/warranty-expiration/"
+  - "/guides/home-improvement-receipts/"
+  - "/features/household-documents-organizer/"
 contentVersion: 1
 ---
 # The best way to find a receipt is often through the item, not the date

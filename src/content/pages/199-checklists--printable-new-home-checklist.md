@@ -10,12 +10,15 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/new-home-setup-checklist/"
+  - "/guides/move-in-maintenance-checklist/"
+  - "/tools/move-in-checklist-generator/"
+  - "/features/home-dashboard/"
 contentVersion: 1
 ---
 # Printable New Home Checklist
 
-### First day
+## First day
 - [ ] Confirm essential utilities/services.
 - [ ] Identify building/property contact where relevant.
 - [ ] Keep keys/access records organized securely.

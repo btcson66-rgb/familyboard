@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-service-provider-list/"
+  - "/guides/family-emergency-contacts/"
+  - "/templates/printable-household-contacts/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # A home contact list is useful when it is curated rather than complete

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/appliance-inventory/"
+  - "/guides/serial-number-tracker/"
+  - "/guides/how-to-track-product-warranties/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Printable Appliance Inventory
@@ -20,7 +23,7 @@ contentVersion: 1
 | | | | | | | | |
 | | | | | | | | |
 
-### Maintenance/service box
+## Maintenance/service box
 **Appliance:** __________
 
 - Last maintenance: __________

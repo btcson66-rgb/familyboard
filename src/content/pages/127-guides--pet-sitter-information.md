@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/pet-sitter-instruction-generator/"
+  - "/checklists/printable-pet-sitter-checklist/"
+  - "/guides/organize-pet-records/"
+  - "/guides/travel-household-handoff/"
 contentVersion: 1
 ---
 # Pet-sitter instructions should remove guesswork from normal routines

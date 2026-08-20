@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/cleaning-schedule/"
+  - "/tools/cleaning-schedule-generator/"
+  - "/features/family-task-manager/"
+  - "/guides/seasonal-home-maintenance-checklist/"
 contentVersion: 1
 ---
 # Deep-cleaning tasks disappear because they are too infrequent to become habit

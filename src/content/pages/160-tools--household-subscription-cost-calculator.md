@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/organize-household-subscriptions/"
+  - "/guides/subscription-renewal-tracker/"
+  - "/features/household-subscription-tracker/"
+  - "/tools/annual-subscription-cost-calculator/"
 contentVersion: 1
 ---
 # Household Subscription Cost Calculator

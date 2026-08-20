@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/appliance-lifespan-planning/"
+  - "/guides/appliance-replacement-planning/"
+  - "/tools/appliance-replacement-planner/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Appliance Age Calculator

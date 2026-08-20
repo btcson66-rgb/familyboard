@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/appliance-inventory/"
+  - "/guides/home-maintenance-schedule/"
+  - "/features/maintenance-tracker/"
+  - "/tools/home-service-reminder-generator/"
 contentVersion: 1
 ---
 # Appliance Maintenance Checklist Generator

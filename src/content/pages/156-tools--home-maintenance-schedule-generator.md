@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-schedule/"
+  - "/guides/seasonal-home-maintenance-checklist/"
+  - "/features/maintenance-tracker/"
+  - "/app/"
 contentVersion: 1
 ---
 # Free Home Maintenance Schedule Generator

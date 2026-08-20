@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/washing-machine-maintenance-checklist/"
+  - "/guides/home-service-provider-list/"
+  - "/guides/repair-history/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # Dryer maintenance should be easy to record because some tasks happen frequently

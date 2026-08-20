@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/maintenance-tracker/"
+  - "/features/warranty-tracker/"
+  - "/guides/household-weekly-reset/"
+  - "/app/"
 contentVersion: 1
 ---
 # A home dashboard should tell you what needs attention, not just show pretty charts

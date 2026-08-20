@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/home-inventory-checklist-generator/"
+  - "/guides/room-by-room-home-inventory/"
+  - "/guides/home-inventory-for-insurance/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # A home inventory should be selective enough to finish

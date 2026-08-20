@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/templates/printable-service-provider-list/"
+  - "/guides/home-maintenance-records/"
+  - "/guides/contractor-records/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # The best service contact is often the person who has already seen the problem

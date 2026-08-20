@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-inventory-checklist/"
+  - "/guides/photo-home-inventory/"
+  - "/tools/home-inventory-checklist-generator/"
+  - "/features/warranty-tracker/"
 contentVersion: 1
 ---
 # A useful home inventory is not a list of everything you own

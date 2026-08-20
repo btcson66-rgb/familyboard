@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/household-subscription-cost-calculator/"
+  - "/guides/subscription-renewal-tracker/"
+  - "/guides/annual-renewal-calendar/"
+  - "/features/household-subscription-tracker/"
 contentVersion: 1
 ---
 # A household subscription list should answer who owns it, what it costs and what happens next

@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/emergency-supply-inventory/"
+  - "/guides/ups-battery-backup-records/"
+  - "/guides/emergency-information-sheet/"
+  - "/features/offline-household-organizer/"
 contentVersion: 1
 ---
 # The first outage problem is often information, not electricity

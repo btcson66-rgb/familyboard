@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/home-inventory-tracker/"
+  - "/features/maintenance-tracker/"
+  - "/features/household-handoff/"
+  - "/features/local-first-home-organizer/"
 contentVersion: 1
 ---
 # One household dashboard, built around the work behind the calendar

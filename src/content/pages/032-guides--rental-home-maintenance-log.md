@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/apartment-maintenance-checklist/"
+  - "/templates/printable-repair-log/"
+  - "/guides/move-out-home-records/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # A rental maintenance log is a timeline, not a legal argument

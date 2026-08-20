@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-inventory-checklist/"
+  - "/tools/home-inventory-checklist-generator/"
+  - "/guides/photo-home-inventory/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Printable Home Inventory Template
@@ -23,7 +26,7 @@ This worksheet is for items worth identifying later. Do not try to list every ob
 | | | | | | | |
 | | | | | | | |
 
-### Optional additional fields
+## Optional additional fields
 - Purchase price: __________
 - Warranty end: __________
 - Current household owner/user: __________

@@ -1,5 +1,180 @@
-import { test, expect } from '@playwright/test';
-import AxeBuilder from '@axe-core/playwright';
-test('public site has canonical content and working tools',async({page})=>{await page.goto('/');await expect(page).toHaveTitle(/FamilyBoard/);await expect(page.locator('main h1:visible')).toHaveCount(1);await page.goto('/tools/warranty-expiration-calculator/');await page.getByLabel('Purchase date').fill('2026-01-01');await page.getByRole('button',{name:'Generate result'}).click();await expect(page.locator('.result')).toContainText('Estimated term end');});
-test('representative pages have no serious accessibility violations',async({page})=>{for(const route of ['/', '/guides/home-maintenance-schedule/', '/tools/appliance-age-calculator/', '/templates/printable-home-inventory-template/']){await page.goto(route);const results=await new AxeBuilder({page}).analyze();expect(results.violations.filter((item)=>['serious','critical'].includes(item.impact||'')),route).toEqual([]);}});
-test('private app completes onboarding and local CRUD',async({page})=>{await page.goto('/app/');await page.getByLabel('Home name').fill('E2E Home');await page.getByLabel('Household members').fill('Alex, Sam');await page.getByRole('button',{name:'Create local household'}).click();await expect(page.getByRole('heading',{name:'Today'})).toBeVisible();await page.getByRole('button',{name:'Assets'}).click();await page.getByLabel('Asset name').fill('Refrigerator');await page.getByRole('button',{name:'Add record'}).click();await expect(page.getByRole('heading',{name:'Refrigerator'})).toBeVisible();await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content','noindex,follow');});
+import { expect, test } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+
+test("public SEO, keyboard and five production tools work", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await expect(page).toHaveTitle(/FamilyBoard/);
+  await expect(page.locator("main h1:visible")).toHaveCount(1);
+  await page.keyboard.press("Tab");
+  await expect(
+    page.getByRole("link", { name: "Skip to content" }),
+  ).toBeFocused();
+  await page.keyboard.press("Enter");
+  await expect(page.locator("#main-content")).toBeFocused();
+
+  for (const route of [
+    "/tools/home-maintenance-schedule-generator/",
+    "/tools/household-subscription-cost-calculator/",
+    "/tools/room-inventory-generator/",
+    "/tools/recurring-chore-planner/",
+    "/tools/emergency-binder-generator/",
+  ]) {
+    await page.goto(route);
+    await page.getByRole("button", { name: "Generate result" }).click();
+    await expect(page.locator(".result")).not.toBeEmpty();
+  }
+
+  await page.goto("/tools/warranty-expiration-calculator/");
+  await page.getByLabel("Purchase date").fill("2026-01-01");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Estimated term end");
+
+  await page.goto("/templates/printable-home-inventory-template/");
+  await expect(page.locator(".printable thead th")).toHaveCount(5);
+  await page.emulateMedia({ media: "print" });
+  await expect(page.locator(".printable table")).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Print this worksheet" }),
+  ).toBeHidden();
+  await page.emulateMedia({ media: "screen" });
+
+  const sitemap = await (await page.request.get("/sitemap-0.xml")).text();
+  expect(sitemap).not.toContain("/app/");
+  expect(sitemap).not.toContain("/offline/");
+  await page.goto("/app/");
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    "content",
+    "noindex,follow",
+  );
+  await expect(page.locator('meta[name="google-adsense-account"]')).toHaveCount(
+    0,
+  );
+  await expect(page.locator('script[src*="googletagmanager"]')).toHaveCount(0);
+});
+
+test("representative routes have no serious accessibility violations", async ({
+  page,
+}) => {
+  for (const route of [
+    "/",
+    "/guides/home-maintenance-schedule/",
+    "/tools/appliance-age-calculator/",
+    "/templates/printable-home-inventory-template/",
+    "/pricing/",
+  ]) {
+    await page.goto(route);
+    await page.waitForLoadState("networkidle");
+    const results = await new AxeBuilder({ page }).analyze();
+    expect(
+      results.violations.filter((item) =>
+        ["serious", "critical"].includes(item.impact || ""),
+      ),
+      route,
+    ).toEqual([]);
+  }
+});
+
+test("complete local app lifecycle survives backup, reset, restore and offline reload", async ({
+  page,
+  context,
+}, testInfo) => {
+  test.setTimeout(90_000);
+  test.skip(
+    testInfo.project.name !== "chromium",
+    "One full browser lifecycle is sufficient; public smoke runs in every project.",
+  );
+
+  await page.goto("/app/");
+  await expect(
+    page.getByRole("heading", { name: /Set up your home/ }),
+  ).toBeVisible();
+  await page.getByLabel("Home name").fill("E2E Home");
+  await page.getByLabel("Household members").fill("Alex");
+  await page.getByRole("button", { name: "Create local household" }).click();
+  await expect(page.getByRole("heading", { name: "Today" })).toBeVisible();
+
+  await page.getByRole("button", { name: "Members" }).click();
+  await page.getByLabel("Member name").fill("Sam");
+  await page.getByRole("button", { name: "Add record" }).click();
+  await expect(page.getByRole("heading", { name: "Sam" })).toBeVisible();
+
+  await page.getByRole("button", { name: "Assets" }).click();
+  await page.getByLabel("Asset name").fill("Refrigerator");
+  await page.getByLabel("Brand").fill("Test Brand");
+  await page.getByRole("button", { name: "Add record" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Refrigerator" }),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: "Maintenance" }).click();
+  await page.getByLabel("Maintenance task").fill("Clean refrigerator coils");
+  await page.getByLabel("Related asset").selectOption({ index: 1 });
+  await page.getByLabel("Repeat months after completion").fill("6");
+  await page.getByRole("button", { name: "Add record" }).click();
+  await page.getByRole("button", { name: "Complete" }).click();
+  await expect(page.getByText("1 completions")).toBeVisible();
+  await expect(page.getByText(/Completed /).last()).toBeVisible();
+
+  await page.getByRole("button", { name: "Warranties" }).click();
+  await page
+    .getByRole("combobox", { name: "Asset" })
+    .selectOption({ index: 1 });
+  await page.getByLabel("Provider").fill("Test Warranty Co");
+  await page.getByLabel("Ends").fill("2027-08-19");
+  await page.getByRole("button", { name: "Add record" }).click();
+  await expect(page.getByText("Test Warranty Co")).toBeVisible();
+
+  await page.getByRole("button", { name: "Subscriptions" }).click();
+  await page.getByLabel("Service").fill("Household Test Service");
+  await page.getByLabel("Cost").fill("12");
+  await page.getByRole("button", { name: "Add record" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Household Test Service" }),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: "Tasks" }).click();
+  await page.getByLabel("Responsibility").fill("Take bins out");
+  await page.getByRole("button", { name: "Add record" }).first().click();
+  await expect(
+    page.getByRole("heading", { name: "Take bins out" }),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: "Handoff" }).click();
+  await expect(page.getByText("E2E Home household handoff")).toBeVisible();
+  await expect(page.getByText("Take bins out")).toBeVisible();
+  await expect(page.getByText("Clean refrigerator coils")).toBeVisible();
+
+  await page.getByRole("button", { name: "Display" }).click();
+  await expect(
+    page.getByText("Shared view · refreshes every minute"),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Household tasks" }),
+  ).toBeVisible();
+
+  await page.getByRole("button", { name: "Settings" }).click();
+  const downloadPromise = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Export JSON" }).click();
+  const download = await downloadPromise;
+  const backupPath = await download.path();
+  expect(backupPath).toBeTruthy();
+  await expect(page.getByText(/Backup exported/)).toBeVisible();
+
+  await page.getByLabel(/Type “E2E Home” to confirm/).fill("E2E Home");
+  await page.getByRole("button", { name: "Delete local data" }).click();
+  await expect(
+    page.getByRole("heading", { name: /Set up your home/ }),
+  ).toBeVisible();
+  await page.getByLabel("Backup file").setInputFiles(backupPath!);
+  await expect(page.getByRole("heading", { name: "Today" })).toBeVisible();
+  await page.reload();
+  await expect(page.getByText("E2E Home").first()).toBeVisible();
+
+  await page.evaluate(() => navigator.serviceWorker.ready);
+  await context.setOffline(true);
+  await page.reload({ waitUntil: "domcontentloaded" });
+  await expect(page.getByRole("heading", { name: "Today" })).toBeVisible();
+  await context.setOffline(false);
+});

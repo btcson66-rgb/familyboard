@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/spring-home-maintenance-checklist/"
+  - "/guides/summer-home-maintenance-checklist/"
+  - "/guides/fall-home-maintenance-checklist/"
+  - "/guides/winter-home-maintenance-checklist/"
 contentVersion: 1
 ---
 # Seasonal maintenance is about transitions, not four identical calendar quarters

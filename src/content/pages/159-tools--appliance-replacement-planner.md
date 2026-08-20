@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/appliance-replacement-planning/"
+  - "/guides/household-replacement-reserve/"
+  - "/tools/appliance-age-calculator/"
+  - "/features/home-dashboard/"
 contentVersion: 1
 ---
 # Appliance Replacement Planner

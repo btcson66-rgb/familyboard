@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-account-list/"
+  - "/guides/family-emergency-contacts/"
+  - "/guides/annual-renewal-calendar/"
+  - "/features/household-documents-organizer/"
 contentVersion: 1
 ---
 # School information changes often, so the household needs an index more than an archive

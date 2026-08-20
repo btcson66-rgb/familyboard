@@ -1,23 +1,27 @@
 # Performance report
 
-The public site uses static Astro HTML, a system/self-hosted variable font and no hydrated JavaScript on ordinary guide text. React loads only for tools, search, print controls and `/app/`. AdSense rendering is off, GA4 is environment-gated and affiliate cards use plain links with no third-party ad script.
+Measured on 2026-08-20 against the exact `dist/` production artifact over local HTTP with Lighthouse 13.4.1 mobile simulation. These are artifact results, not claims about production CDN or TLS latency.
 
-Representative production Lighthouse measurements are recorded after the custom-domain deployment so CDN, TLS and compression are included. The build artifact must remain far below the GitHub Pages 1 GB limit.
+| Representative view | Route | Performance | Accessibility | Best practices | SEO | FCP | LCP | CLS | TBT |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Homepage | `/` | 100 | 100 | 100 | 100 | 0.75 s | 0.90 s | 0.000 | 0 ms |
+| Long guide | `/guides/home-maintenance-schedule/` | 100 | 100 | 100 | 100 | 0.75 s | 0.90 s | 0.000 | 0 ms |
+| Interactive tool | `/tools/warranty-expiration-calculator/` | 97 | 100 | 100 | 100 | 1.43 s | 2.40 s | 0.000 | 0 ms |
+| Printable | `/templates/printable-home-inventory-template/` | 98 | 100 | 100 | 100 | 1.58 s | 2.25 s | 0.000 | 0 ms |
+| App dashboard shell | `/app/` | 91 | 100 | 100 | 66 | 1.95 s | 3.31 s | 0.000 | 0 ms |
+| Family-display shell | `/app/?view=display` | 91 | 100 | 100 | 66 | 1.95 s | 3.30 s | 0.000 | 0 ms |
 
-## 2026-08-19 release artifact baseline
+All representative performance scores meet the plan’s `>= 90` launch gate. The app’s SEO score is intentionally lower because `/app/` is private-state UI with `noindex,follow`; it is excluded from the sitemap and is not an SEO landing page.
 
-Lighthouse was run against the exact static release artifact on local HTTP before HTTPS certificate provisioning completed:
+The app and display measurements use a clean browser profile, so Lighthouse sees the first-run local shell. The full populated display is covered by Playwright. Public guides remain static HTML; React loads only for tools, search, print controls and the app. Ad rendering is disabled, GA4 is environment-gated and no analytics code loads in `/app/`.
 
-| Category | Score |
-|---|---:|
-| Performance | 100 |
-| Accessibility | 100 |
-| Best Practices | 100 |
-| SEO | 100 |
+Raw evidence:
 
-- Largest Contentful Paint: 1.1 s
-- Cumulative Layout Shift: 0
-- Total Blocking Time: 0 ms
-- Raw result: `reports/lighthouse-home.json`
+- `reports/lighthouse-home.json`
+- `reports/lighthouse-guide.json`
+- `reports/lighthouse-tool.json`
+- `reports/lighthouse-printable.json`
+- `reports/lighthouse-app.json`
+- `reports/lighthouse-display.json`
 
-These are artifact-level results, not a claim about production CDN/TLS performance. The live-domain run remains part of the post-certificate monitor.
+Known production follow-up: repeat the six-route run after HTTPS provisioning so CDN, TLS and cache headers are measured separately from this artifact baseline.

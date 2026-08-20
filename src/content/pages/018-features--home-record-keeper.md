@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-repair-history/"
+  - "/guides/home-maintenance-records/"
+  - "/guides/renovation-records/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # A home has a history, but most of it disappears into receipts and memory

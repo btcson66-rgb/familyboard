@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/important-household-documents/"
+  - "/guides/renovation-records/"
+  - "/guides/digital-home-binder/"
+  - "/features/household-documents-organizer/"
 contentVersion: 1
 ---
 # Home-purchase documents deserve their own archive

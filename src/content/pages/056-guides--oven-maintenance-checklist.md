@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/range-hood-maintenance-checklist/"
+  - "/guides/appliance-inventory/"
+  - "/guides/repair-history/"
+  - "/features/household-documents-organizer/"
 contentVersion: 1
 ---
 # An oven checklist should respect the appliance's cleaning and safety instructions

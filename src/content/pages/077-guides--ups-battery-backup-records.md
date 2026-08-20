@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/power-outage-home-preparedness/"
+  - "/guides/computer-electronics-inventory/"
+  - "/features/maintenance-tracker/"
+  - "/guides/emergency-binder/"
 contentVersion: 1
 ---
 # Backup power is only useful if the household remembers what it protects and whether it still works

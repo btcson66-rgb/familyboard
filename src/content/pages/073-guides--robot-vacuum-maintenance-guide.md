@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/vacuum-cleaner-maintenance-guide/"
+  - "/guides/household-supplies-inventory/"
+  - "/features/maintenance-tracker/"
+  - "/guides/appliance-replacement-planning/"
 contentVersion: 1
 ---
 # Robot vacuums create a small ecosystem of parts worth tracking

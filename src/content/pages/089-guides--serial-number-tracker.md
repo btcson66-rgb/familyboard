@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/appliance-inventory/"
+  - "/guides/electronics-inventory/"
+  - "/tools/room-inventory-generator/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # A serial number without context is just a string of characters

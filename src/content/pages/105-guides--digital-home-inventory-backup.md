@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/local-first-home-organizer/"
+  - "/features/private-family-organizer/"
+  - "/guides/photo-home-inventory/"
+  - "/security/"
 contentVersion: 1
 ---
 # A digital home inventory is only as durable as its backup

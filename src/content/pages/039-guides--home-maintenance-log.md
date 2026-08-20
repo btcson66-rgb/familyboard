@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/templates/printable-repair-log/"
+  - "/guides/home-maintenance-records/"
+  - "/guides/home-repair-history/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # A maintenance log should capture decisions, not just dates

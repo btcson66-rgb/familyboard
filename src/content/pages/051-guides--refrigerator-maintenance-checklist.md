@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/appliance-maintenance-checklist-generator/"
+  - "/guides/appliance-inventory/"
+  - "/guides/repair-history/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # Refrigerator maintenance is easier when the model and history stay with the task

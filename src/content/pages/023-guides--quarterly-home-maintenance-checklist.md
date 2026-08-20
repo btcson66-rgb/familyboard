@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/monthly-home-maintenance-checklist/"
+  - "/guides/seasonal-home-maintenance-checklist/"
+  - "/guides/home-maintenance-records/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # Quarterly maintenance is the bridge between monthly awareness and annual projects

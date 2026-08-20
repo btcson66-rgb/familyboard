@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-supplies-inventory/"
+  - "/tools/appliance-maintenance-checklist-generator/"
+  - "/features/maintenance-tracker/"
+  - "/guides/appliance-inventory/"
 contentVersion: 1
 ---
 # Coffee makers are maintenance-heavy because water and consumables vary by machine

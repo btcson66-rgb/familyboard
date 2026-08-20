@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/water-filter-replacement-guide/"
+  - "/guides/household-supplies-inventory/"
+  - "/features/maintenance-tracker/"
+  - "/guides/home-service-provider-list/"
 contentVersion: 1
 ---
 # Water-treatment systems are easy to forget until water quality changes

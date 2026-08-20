@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/smoke-alarm-records/"
+  - "/guides/emergency-supply-inventory/"
+  - "/guides/emergency-information-sheet/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # A fire-extinguisher inventory is useful only when the household knows what is actually present

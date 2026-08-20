@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/how-to-track-product-warranties/"
+  - "/tools/warranty-expiration-calculator/"
+  - "/features/warranty-tracker/"
+  - "/guides/purchase-receipt-organizer/"
 contentVersion: 1
 ---
 # Warranty Checklist Generator

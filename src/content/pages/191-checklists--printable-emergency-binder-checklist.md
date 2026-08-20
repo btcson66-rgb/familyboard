@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/emergency-binder/"
+  - "/tools/emergency-binder-generator/"
+  - "/templates/printable-emergency-contacts/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # Printable Emergency Binder Checklist
@@ -28,7 +31,7 @@ contentVersion: 1
 - [ ] Local official preparedness information relevant to the household
 - [ ] Last-reviewed date on every time-sensitive page
 
-### Privacy review
+## Privacy review
 - [ ] Remove passwords and access codes from casual copies.
 - [ ] Decide which pages can be visible and which remain private.
 - [ ] Protect identity, financial and medical information appropriately.

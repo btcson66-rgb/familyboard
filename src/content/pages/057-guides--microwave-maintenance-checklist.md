@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/appliance-inventory/"
+  - "/guides/how-to-track-product-warranties/"
+  - "/guides/appliance-replacement-planning/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Microwave maintenance is simple, which makes it easy to ignore the record entirely

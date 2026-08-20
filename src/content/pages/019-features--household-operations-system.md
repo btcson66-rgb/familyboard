@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/"
+  - "/guides/household-management-checklist/"
+  - "/features/household-handoff/"
+  - "/features/home-dashboard/"
 contentVersion: 1
 ---
 # Household operations are the repeatable systems behind everyday home life

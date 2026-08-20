@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/pet-sitter-information/"
+  - "/tools/pet-sitter-instruction-generator/"
+  - "/guides/household-handoff/"
+  - "/features/emergency-information-organizer/"
 contentVersion: 1
 ---
 # Pet records become most valuable when someone else needs to care for the animal

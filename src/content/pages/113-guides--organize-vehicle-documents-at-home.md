@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/annual-renewal-calendar/"
+  - "/guides/home-service-provider-list/"
+  - "/features/home-record-keeper/"
+  - "/guides/important-household-documents/"
 contentVersion: 1
 ---
 # Vehicles are household assets with more recurring paperwork than most appliances

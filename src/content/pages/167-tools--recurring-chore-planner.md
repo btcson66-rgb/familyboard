@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/family-chore-system/"
+  - "/guides/chore-chart-for-adults/"
+  - "/templates/printable-chore-chart/"
+  - "/features/family-task-manager/"
 contentVersion: 1
 ---
 # Recurring Chore Planner

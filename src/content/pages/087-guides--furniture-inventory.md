@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/moving-inventory/"
+  - "/guides/home-inventory-for-insurance/"
+  - "/guides/photo-home-inventory/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Furniture inventory should focus on items with a reason to be remembered

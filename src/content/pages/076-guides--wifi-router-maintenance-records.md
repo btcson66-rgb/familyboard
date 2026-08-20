@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/computer-electronics-inventory/"
+  - "/guides/household-account-list/"
+  - "/guides/power-outage-home-preparedness/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Your router is a household asset, but its passwords should live somewhere else

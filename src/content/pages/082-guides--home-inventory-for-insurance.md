@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/photo-home-inventory/"
+  - "/guides/valuable-item-inventory/"
+  - "/guides/digital-home-inventory-backup/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # A home inventory can improve your records, but your policy determines what an insurer actually needs

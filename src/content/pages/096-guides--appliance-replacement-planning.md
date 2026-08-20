@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/appliance-replacement-planner/"
+  - "/guides/appliance-lifespan-planning/"
+  - "/guides/repair-history/"
+  - "/guides/home-maintenance-budget/"
 contentVersion: 1
 ---
 # Replacement planning is not the same as predicting a failure date

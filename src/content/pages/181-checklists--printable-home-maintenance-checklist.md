@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-schedule/"
+  - "/tools/home-maintenance-schedule-generator/"
+  - "/guides/maintenance-priorities/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # Printable Home Maintenance Checklist

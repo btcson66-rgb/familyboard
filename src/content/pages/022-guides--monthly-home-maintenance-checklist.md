@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/checklists/printable-monthly-home-checklist/"
+  - "/guides/household-monthly-review/"
+  - "/guides/home-maintenance-records/"
+  - "/features/home-dashboard/"
 contentVersion: 1
 ---
 # A monthly home maintenance checklist should be short enough to repeat

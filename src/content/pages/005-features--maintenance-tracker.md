@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-schedule/"
+  - "/guides/home-maintenance-records/"
+  - "/tools/home-maintenance-schedule-generator/"
+  - "/features/home-dashboard/"
 contentVersion: 1
 ---
 # Stop relying on “I think we did that recently”

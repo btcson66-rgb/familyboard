@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/smoke-alarm-records/"
+  - "/guides/furnace-maintenance-records/"
+  - "/guides/emergency-information-sheet/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # Carbon-monoxide alarm records should be simple, clear and safety-first

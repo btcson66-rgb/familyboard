@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-maintenance-calendar/"
+  - "/tools/home-service-reminder-generator/"
+  - "/features/maintenance-tracker/"
+  - "/guides/recurring-household-tasks/"
 contentVersion: 1
 ---
 # A reminder without context becomes notification clutter

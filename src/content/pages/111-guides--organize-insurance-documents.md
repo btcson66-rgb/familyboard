@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/home-inventory-for-insurance/"
+  - "/guides/annual-renewal-calendar/"
+  - "/guides/important-household-documents/"
+  - "/features/household-documents-organizer/"
 contentVersion: 1
 ---
 # Insurance documents need both findability and restraint

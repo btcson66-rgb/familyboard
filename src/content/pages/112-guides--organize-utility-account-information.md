@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-account-list/"
+  - "/guides/household-handoff/"
+  - "/guides/power-outage-home-preparedness/"
+  - "/features/household-handoff/"
 contentVersion: 1
 ---
 # Utility information becomes surprisingly important when the usual account holder is unavailable

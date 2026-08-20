@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/home-dashboard/"
+  - "/features/family-task-manager/"
+  - "/guides/annual-renewal-calendar/"
+  - "/features/family-display-mode/"
 contentVersion: 1
 ---
 # A calendar is useful when it stays connected to the work around it

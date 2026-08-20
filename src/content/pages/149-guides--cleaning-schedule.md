@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/tools/cleaning-schedule-generator/"
+  - "/templates/printable-cleaning-schedule/"
+  - "/guides/deep-cleaning-tracker/"
+  - "/features/family-task-manager/"
 contentVersion: 1
 ---
 # A cleaning schedule should reflect how the household lives

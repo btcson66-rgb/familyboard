@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/dehumidifier-maintenance-guide/"
+  - "/guides/household-supplies-inventory/"
+  - "/features/maintenance-tracker/"
+  - "/guides/home-maintenance-reminders/"
 contentVersion: 1
 ---
 # Humidifier care should be based on the exact design and water-contact parts

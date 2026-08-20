@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/features/local-first-home-organizer/"
+  - "/features/private-family-organizer/"
+  - "/app/"
+  - "/privacy/"
 contentVersion: 1
 ---
 # Sometimes the best onboarding form is no form at all
@@ -27,12 +30,12 @@ A useful onboarding flow can ask for the home name, optional household members a
 
 Without a central account, the service cannot magically restore local data after a device is lost. The product must make backups visible early and explain that responsibility clearly.
 
-## No account does not mean no future sync
+## No account means backups matter
 
-A separate account-based sync service could exist later for households that want cross-device collaboration. The key is that the free local product should not be held hostage to that future service.
+Because there is no server account, the browser is not an archival copy. Export a backup after meaningful changes and keep it somewhere durable.
 
 ## The product can earn trust before asking for anything
 
-A user who has already organized useful household records has a much clearer reason to consider a future paid local desktop edition or optional sync service than a visitor who has only seen a signup page.
+A user who has already organized useful household records can judge the product by its reliability, portability and day-to-day usefulness rather than by a signup promise.
 
 **Contextual CTA:** Open the app without creating an account, add one household record and export a backup. That three-step experience should communicate the product philosophy immediately.

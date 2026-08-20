@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/repair-history/"
+  - "/guides/home-repair-history/"
+  - "/tools/home-repair-cost-log/"
+  - "/features/home-record-keeper/"
 contentVersion: 1
 ---
 # Printable Repair Log
@@ -22,7 +25,7 @@ contentVersion: 1
 | | | | | | | |
 | | | | | | | |
 
-### Attach/reference
+## Attach/reference
 - Invoice: __________
 - Photos: __________
 - Part/model information: __________

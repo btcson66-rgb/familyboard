@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/oven-maintenance-checklist/"
+  - "/tools/appliance-maintenance-checklist-generator/"
+  - "/guides/home-maintenance-reminders/"
+  - "/features/maintenance-tracker/"
 contentVersion: 1
 ---
 # Range-hood maintenance is a good example of why model-specific records matter

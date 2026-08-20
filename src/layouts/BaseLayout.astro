@@ -12,6 +12,8 @@ interface Props {
   indexable?: boolean;
   pageType?: 'website' | 'article' | 'app';
   bodyClass?: string;
+  publishedAt?: Date;
+  lastReviewedAt?: Date;
 }
 
 const {
@@ -20,7 +22,9 @@ const {
   canonicalPath = Astro.url.pathname,
   indexable = true,
   pageType = 'website',
-  bodyClass = ''
+  bodyClass = '',
+  publishedAt,
+  lastReviewedAt
 } = Astro.props;
 const canonical = new URL(canonicalPath, brand.origin).toString();
 const isApp = canonicalPath.startsWith('/app/');
@@ -28,7 +32,18 @@ const ga4Id = import.meta.env.PROD && !isApp ? import.meta.env.PUBLIC_GA4_MEASUR
 const adsenseAccount = !isApp && monetization.adsensePublisherId ? `ca-${monetization.adsensePublisherId.replace(/^ca-/, '')}` : '';
 const schema = pageType === 'app'
   ? { '@context': 'https://schema.org', '@type': 'WebApplication', name: brand.name, url: canonical, applicationCategory: 'LifestyleApplication', operatingSystem: 'Any', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, description }
-  : { '@context': 'https://schema.org', '@type': pageType === 'article' ? 'Article' : 'WebPage', name: title, url: canonical, description, publisher: { '@type': 'Organization', name: brand.name, url: brand.origin } };
+  : {
+      '@context': 'https://schema.org',
+      '@type': pageType === 'article' ? 'Article' : 'WebPage',
+      name: title,
+      headline: pageType === 'article' ? title.replace(/ \|.*$/, '') : undefined,
+      url: canonical,
+      description,
+      author: pageType === 'article' ? { '@type': 'Organization', name: 'FamilyBoard Editorial Team', url: `${brand.origin}/editorial-policy/` } : undefined,
+      datePublished: publishedAt?.toISOString(),
+      dateModified: lastReviewedAt?.toISOString(),
+      publisher: { '@type': 'Organization', name: brand.name, url: brand.origin }
+    };
 ---
 
 <!doctype html>
@@ -57,7 +72,7 @@ const schema = pageType === 'app'
     {ga4Id && <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>}
     {ga4Id && <script is:inline define:vars={{ ga4Id }}>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      window.gtag = function(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', ga4Id, { anonymize_ip: true, allow_google_signals: false });
     </script>}
@@ -66,11 +81,37 @@ const schema = pageType === 'app'
   <body class:list={[bodyClass]}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     {!isApp && <Header />}
-    <main id="main-content"><slot /></main>
+    <main id="main-content" tabindex="-1"><slot /></main>
     {!isApp && <Footer />}
+    <div id="pwa-update" class="pwa-update" role="status" hidden>
+      <span>A newer FamilyBoard version is ready.</span>
+      <button id="pwa-update-button" type="button">Update now</button>
+    </div>
     <script is:inline>
-      if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+      if ('serviceWorker' in navigator) window.addEventListener('load', async () => {
+        const registration = await navigator.serviceWorker.register('/sw.js');
+        const banner = document.querySelector('#pwa-update');
+        const button = document.querySelector('#pwa-update-button');
+        let refreshing = false;
+        const offerUpdate = () => {
+          if (registration.waiting && navigator.serviceWorker.controller) banner.hidden = false;
+        };
+        offerUpdate();
+        registration.addEventListener('updatefound', () => {
+          registration.installing?.addEventListener('statechange', offerUpdate);
+        });
+        button?.addEventListener('click', () => {
+          refreshing = true;
+          registration.waiting?.postMessage('SKIP_WAITING');
+        });
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (refreshing) location.reload();
+        });
+      });
+    </script>
+    <script>
+      import { initPublicAnalytics } from '../lib/public-analytics';
+      initPublicAnalytics();
     </script>
   </body>
 </html>
-

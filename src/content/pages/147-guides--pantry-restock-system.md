@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/household-shopping-staples/"
+  - "/guides/household-weekly-reset/"
+  - "/features/family-task-manager/"
+  - "/templates/printable-household-contacts/"
 contentVersion: 1
 ---
 # Most households do not need warehouse software for the pantry

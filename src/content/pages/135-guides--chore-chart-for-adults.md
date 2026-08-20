@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/templates/printable-chore-chart/"
+  - "/guides/divide-household-responsibilities/"
+  - "/guides/household-admin-day/"
+  - "/features/family-task-manager/"
 contentVersion: 1
 ---
 # Adult chore charts work best when they look like shared operations, not classroom behavior charts

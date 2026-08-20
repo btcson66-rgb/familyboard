@@ -10,7 +10,10 @@ indexable: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
-  []
+  - "/guides/storm-preparation-home-checklist/"
+  - "/guides/power-outage-home-preparedness/"
+  - "/tools/emergency-binder-generator/"
+  - "/features/home-inventory-tracker/"
 contentVersion: 1
 ---
 # Preparedness starts with knowing what is already in the house
