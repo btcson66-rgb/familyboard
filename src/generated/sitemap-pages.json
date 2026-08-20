@@ -178,7 +178,7 @@
   {
     "route": "/guides/quarterly-home-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""

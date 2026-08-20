@@ -25,7 +25,7 @@ Streaming services are only one category. Internet/security services, membership
 
 ## Find subscriptions from several sources
 
-Review bank/card statements, app-store subscriptions, email renewal notices and household memory. Do not connect financial accounts to `FamilyBoard` in v1; manually create the list.
+Review bank/card statements, app-store subscriptions, email renewal notices and household memory. FamilyBoard does not connect to financial accounts — build the list manually from what you find in those sources.
 
 ## Normalize the annual cost
 

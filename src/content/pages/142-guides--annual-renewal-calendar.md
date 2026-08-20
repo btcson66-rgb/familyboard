@@ -31,9 +31,9 @@ Insurance, memberships, vehicle/property-related renewals where applicable, soft
 
 The date you want to *decide* may be weeks before the actual renewal. Store both where useful.
 
-## Avoid country-specific automatic rules in v1
+## Enter real dates from your own documents
 
-Legal registration and inspection deadlines vary. Let users enter the real dates from their official documents.
+Legal registration and inspection deadlines vary by location and change over time, so FamilyBoard doesn't calculate them automatically. Enter the actual dates from your official documents rather than relying on a generic assumed schedule.
 
 ## Review once per year
 

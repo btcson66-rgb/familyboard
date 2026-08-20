@@ -56,3 +56,7 @@ The generator has no manufacturer database and doesn't know your climate, your h
 ## What to save with the finished list
 
 A schedule only stays useful if the numbers in it came from somewhere real. For each system, keep three things together: the manual or support page you checked, the interval it actually specified, and the date you last completed the task. The result panel's **Save for app** button stores the generated text locally in your browser as a scratch copy; the version worth keeping long-term is the one where you've replaced every placeholder with a real number and attached it to that system's own asset record.
+
+## Working through a long list without stalling out
+
+If you type in a dozen systems at once, the generator hands you back two dozen prompts, and reading a manual for every single one in one sitting is exactly the kind of project that gets abandoned halfway. It's fine to generate the full list up front and then work through it in a different order than it printed in — start with whatever would cause the most disruption if it failed unexpectedly, like a water heater or an HVAC system, confirm its real interval first, and let lower-stakes items like light fixtures or small appliances wait a week or two without any harm done.

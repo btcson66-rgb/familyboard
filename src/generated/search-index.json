@@ -24,6 +24,14 @@
     "headings": "How to build a home maintenance schedule you will actually keep Begin with systems, not months A starting interval for the systems almost every home has Separate fixed dates from condition-based work Give high-consequence work more visibility Keep a completion history Group by season without losing the underlying system What a rental or a newly purchased home should do differently"
   },
   {
+    "title": "Quarterly Home Maintenance Checklist: Review the Systems Monthly Checks Miss",
+    "description": "A quarterly household maintenance review for equipment records, recurring services, supplies, safety information and seasonal changes.",
+    "route": "/guides/quarterly-home-maintenance-checklist/",
+    "cluster": "maintenance",
+    "keywords": "quarterly home maintenance checklist",
+    "headings": "Quarterly maintenance is the bridge between monthly awareness and annual projects The items every household checks, regardless of climate What changes by climate Looking back before looking forward"
+  },
+  {
     "title": "Refrigerator Maintenance Checklist: Coils, Temperature, Seals and Service History",
     "description": "A real refrigerator maintenance checklist: coil cleaning intervals, food-safe temperatures, seal checks and lifespan figures, with sources for each.",
     "route": "/guides/refrigerator-maintenance-checklist/",
@@ -117,7 +125,7 @@
     "route": "/tools/home-maintenance-schedule-generator/",
     "cluster": "tools",
     "keywords": "home maintenance schedule generator",
-    "headings": "Free Home Maintenance Schedule Generator What you actually get Worked example What it can't determine What to save with the finished list"
+    "headings": "Free Home Maintenance Schedule Generator What you actually get Worked example What it can't determine What to save with the finished list Working through a long list without stalling out"
   },
   {
     "title": "Free Warranty Expiration Calculator | Purchase Date + Warranty Term",
@@ -125,7 +133,7 @@
     "route": "/tools/warranty-expiration-calculator/",
     "cluster": "tools",
     "keywords": "warranty expiration calculator",
-    "headings": "Warranty Expiration Calculator Tool inputs Output Calculation behavior Limitation copy Example"
+    "headings": "Warranty Expiration Calculator Find the real start date first How the calculator works Worked example What the result can't tell you What to save alongside the date"
   },
   {
     "title": "Free Appliance Age Calculator | Calculate Age from Purchase or Installation Date",
@@ -133,7 +141,7 @@
     "route": "/tools/appliance-age-calculator/",
     "cluster": "tools",
     "keywords": "appliance age calculator",
-    "headings": "Appliance Age Calculator Tool inputs Output Planning guidance Limitation copy"
+    "headings": "Appliance Age Calculator What you enter and what comes back Worked example What the calculator does not do Age is not a failure forecast What to record alongside the age Purchase date versus installation date"
   },
   {
     "title": "Free Appliance Replacement Planner | Build a Household Watch List",
@@ -141,7 +149,7 @@
     "route": "/tools/appliance-replacement-planner/",
     "cluster": "tools",
     "keywords": "appliance replacement planner",
-    "headings": "Appliance Replacement Planner Inputs per appliance Output Useful result actions"
+    "headings": "Appliance Replacement Planner What goes in, and how the flag is decided Worked example What the planner can't determine What a Review flag should lead to Choosing a planning horizon that means something"
   },
   {
     "title": "Household Subscription Cost Calculator | Monthly and Annual Total",
@@ -149,7 +157,7 @@
     "route": "/tools/household-subscription-cost-calculator/",
     "cluster": "tools",
     "keywords": "household subscription calculator",
-    "headings": "Household Subscription Cost Calculator Inputs Output Privacy behavior Useful interpretation Export"
+    "headings": "Household Subscription Cost Calculator How to enter your list, and how it's calculated Worked example What it doesn't do What the total is actually for What to save with the total Grouping subscriptions by category yourself"
   },
   {
     "title": "Annual Subscription Cost Calculator | Convert Monthly, Weekly or Quarterly Pricing",
@@ -157,7 +165,7 @@
     "route": "/tools/annual-subscription-cost-calculator/",
     "cluster": "tools",
     "keywords": "annual subscription cost calculator",
-    "headings": "Annual Subscription Cost Calculator Inputs Output Caveat SEO value"
+    "headings": "Annual Subscription Cost Calculator What it converts, and how Worked example What the number doesn't account for When one subscription isn't the real question Reading the annualized number against your budget What to keep with the number"
   },
   {
     "title": "Free Home Maintenance Cost Tracker | Repairs, Service and Planned Work",
@@ -165,7 +173,7 @@
     "route": "/tools/home-maintenance-cost-tracker/",
     "cluster": "tools",
     "keywords": "home maintenance cost tracker",
-    "headings": "Home Maintenance Cost Tracker Inputs Output Keep categories separate No financial advice Export"
+    "headings": "Home Maintenance Cost Tracker How to enter costs, and what comes back What it deliberately doesn't do Keeping the numbers meaningful What to record with each line Pairing this with a repair-specific record Reviewing planned versus completed over time"
   },
   {
     "title": "Home Repair Cost Log | Track Repairs by Appliance, System and Date",
@@ -173,7 +181,7 @@
     "route": "/tools/home-repair-cost-log/",
     "cluster": "tools",
     "keywords": "home repair cost log",
-    "headings": "Home Repair Cost Log Inputs Output Example Privacy"
+    "headings": "Home Repair Cost Log What to enter, and what you get back Worked example Why the outcome column matters as much as the cost What to keep with each entry Reading the average with the entry count in mind One log per appliance, or one log for the household"
   },
   {
     "title": "Free Emergency Binder Generator | Build a Household Information Packet",
@@ -181,7 +189,7 @@
     "route": "/tools/emergency-binder-generator/",
     "cluster": "tools",
     "keywords": "emergency binder generator",
-    "headings": "Emergency Binder Generator User-selected sections Output design Privacy controls No medical generation"
+    "headings": "Emergency Binder Generator What it builds, and what it doesn't Worked example Handling anything sensitive What to do with the finished outline Physical copy versus digital copy"
   },
   {
     "title": "Free Home Inventory Checklist Generator | Room-by-Room Starter List",
@@ -189,7 +197,7 @@
     "route": "/tools/home-inventory-checklist-generator/",
     "cluster": "tools",
     "keywords": "home inventory checklist generator",
-    "headings": "Home Inventory Checklist Generator Inputs Output Download and app bridge"
+    "headings": "Home Inventory Checklist Generator How the room list is built Worked example What it doesn't decide for you Finishing one room before starting the next When the goal is insurance documentation Revisiting the inventory after you buy something new"
   },
   {
     "title": "Room Inventory Generator | Build a Checklist for Any Room in Your Home",
@@ -197,7 +205,7 @@
     "route": "/tools/room-inventory-generator/",
     "cluster": "tools",
     "keywords": "room inventory generator",
-    "headings": "Room Inventory Generator Inputs Output Unique value Save behavior"
+    "headings": "Room Inventory Generator How it's different from a full-house checklist Worked example Where the generic fallback shows up Deciding what's actually worth recording Revisiting a room after the first pass Combining rooms into one household pass"
   },
   {
     "title": "Free Recurring Chore Planner | Build a Household Routine by Frequency and Owner",
@@ -205,7 +213,7 @@
     "route": "/tools/recurring-chore-planner/",
     "cluster": "tools",
     "keywords": "recurring chore planner",
-    "headings": "Recurring Chore Planner Inputs Output Important behavior Product bridge"
+    "headings": "Recurring Chore Planner How the pairing actually works Worked example What the round-robin doesn't account for Treat the first version as a draft, not a rulebook Using anonymous labels instead of names Handling chores nobody wants to claim"
   },
   {
     "title": "Free Cleaning Schedule Generator | Daily, Weekly and Deep-Cleaning Plan",
@@ -213,7 +221,7 @@
     "route": "/tools/cleaning-schedule-generator/",
     "cluster": "tools",
     "keywords": "cleaning schedule generator",
-    "headings": "Cleaning Schedule Generator Inputs Output Smart simplification Print and save"
+    "headings": "Cleaning Schedule Generator How the three layers are built Worked example Why only three rooms get a daily line Making the generated schedule realistic Adjusting the rotation pace after a trial run"
   },
   {
     "title": "Home Service Reminder Generator | Create Clear Maintenance and Renewal Reminders",
@@ -221,7 +229,7 @@
     "route": "/tools/home-service-reminder-generator/",
     "cluster": "tools",
     "keywords": "home maintenance reminder generator",
-    "headings": "Home Service Reminder Generator Inputs Output Rule"
+    "headings": "Home Service Reminder Generator What it builds from four fields Worked example What \"lead time\" is actually for What the generator won't invent Making it useful to someone other than you Stacking several reminders for the same system"
   },
   {
     "title": "Household Annual Review Generator | Maintenance, Renewals, Records and Backups",
@@ -229,7 +237,7 @@
     "route": "/tools/household-annual-review-generator/",
     "cluster": "tools",
     "keywords": "annual household review generator",
-    "headings": "Household Annual Review Generator Inputs Output sections Product integration"
+    "headings": "Household Annual Review Generator What the generator checks Worked example Why this is different from a task list What \"test a backup export\" actually means here Making the review count Picking a consistent date to run it What to do if the review turns up a lot at once"
   },
   {
     "title": "Free Move-In Checklist Generator | Utilities, Records, Inventory and Home Setup",
@@ -237,7 +245,7 @@
     "route": "/tools/move-in-checklist-generator/",
     "cluster": "tools",
     "keywords": "move in checklist generator",
-    "headings": "Move-In Checklist Generator Inputs Output phases Legal boundary"
+    "headings": "Move-In Checklist Generator What it generates Worked example Why \"first day\" matters more than it seems What it deliberately leaves out Turning the checklist into lasting records Renting versus owning changes what matters most"
   },
   {
     "title": "Vacation Home Shutdown Checklist Generator | Build a Pre-Travel Household List",
@@ -245,7 +253,7 @@
     "route": "/tools/vacation-shutdown-checklist-generator/",
     "cluster": "tools",
     "keywords": "vacation shutdown checklist generator",
-    "headings": "Vacation Home Shutdown Checklist Generator Inputs Output Safety rule"
+    "headings": "Vacation Home Shutdown Checklist Generator What it generates Worked example Why it says \"review the appropriate setting\" instead of giving you one What \"handoff details\" should actually contain Making it reusable Matching the list to how long you're actually gone"
   },
   {
     "title": "Free House Sitter Instructions Generator | Home, Pets, Contacts and Daily Tasks",
@@ -253,7 +261,7 @@
     "route": "/tools/house-sitter-instruction-generator/",
     "cluster": "tools",
     "keywords": "house sitter instructions generator",
-    "headings": "House Sitter Instructions Generator Inputs Sensitive-data warning Output"
+    "headings": "House Sitter Instructions Generator What it generates Worked example What deliberately isn't in this packet Keeping it role-scoped Before you hand it over A short walkthrough beats a packet alone"
   },
   {
     "title": "Free Pet Sitter Instructions Generator | Routine, Supplies and Vet Contacts",
@@ -261,7 +269,7 @@
     "route": "/tools/pet-sitter-instruction-generator/",
     "cluster": "tools",
     "keywords": "pet sitter instructions generator",
-    "headings": "Pet Sitter Instructions Generator Inputs Output Privacy"
+    "headings": "Pet Sitter Instructions Generator What it generates Worked example Why medication is handled the way it is Why \"None listed\" instead of a blank line Keeping it current Multiple pets on one sheet What belongs in \"temperament and household notes\""
   },
   {
     "title": "Warranty Checklist Generator | Capture the Right Purchase Information Before You Forget",
@@ -269,7 +277,7 @@
     "route": "/tools/warranty-checklist-generator/",
     "cluster": "tools",
     "keywords": "warranty checklist",
-    "headings": "Warranty Checklist Generator Inputs Output No legal interpretation"
+    "headings": "Warranty Checklist Generator What it generates Worked example Why \"registration completed only if actually required\" is worded that way How this differs from the other warranty tools Doing this before the packaging is gone For contractor-installed items specifically"
   },
   {
     "title": "Receipt Retention Organizer | Sort Household Receipts by Purpose and Review Date",
@@ -277,7 +285,7 @@
     "route": "/tools/receipt-retention-organizer/",
     "cluster": "tools",
     "keywords": "receipt retention organizer",
-    "headings": "Receipt Retention Organizer Inputs Output Safety/legal boundary No auto deletion"
+    "headings": "Receipt Retention Organizer How it works Worked example Real retention periods, where they actually exist What the organizer never does Keeping the reason attached to the receipt"
   },
   {
     "title": "Household Document Index Generator | Build a Digital Home Binder Structure",
@@ -285,7 +293,7 @@
     "route": "/tools/household-document-index-generator/",
     "cluster": "tools",
     "keywords": "household document index template",
-    "headings": "Household Document Index Generator Inputs Output Security reminders"
+    "headings": "Household Document Index Generator What it generates Worked example What belongs in the index, and what doesn't Why designing the categories first matters Keeping the index itself current How many categories is too many"
   },
   {
     "title": "Free Emergency Contact Sheet Generator | Household, Utility and Care Contacts",
@@ -293,7 +301,7 @@
     "route": "/tools/emergency-contact-sheet-generator/",
     "cluster": "tools",
     "keywords": "emergency contact sheet generator",
-    "headings": "Emergency Contact Sheet Generator Contact sections Privacy options Output Important disclaimer"
+    "headings": "Emergency Contact Sheet Generator What it generates Worked example Why it doesn't include a default emergency number What this sheet is, and isn't Keeping it usable Who else needs a copy Splitting a long list into a short and a full version"
   },
   {
     "title": "Appliance Maintenance Checklist Generator | Create Model-Aware Starter Tasks",
@@ -301,7 +309,7 @@
     "route": "/tools/appliance-maintenance-checklist-generator/",
     "cluster": "tools",
     "keywords": "appliance maintenance checklist generator",
-    "headings": "Appliance Maintenance Checklist Generator Inputs Output style Product bridge"
+    "headings": "Appliance Maintenance Checklist Generator What it generates Worked example Why it won't tell you a specific interval Turning \"confirmed\" into \"recurring\" What to keep separate Using it across several appliances"
   },
   {
     "title": "Home Handoff Summary Generator | What Another Person Needs to Run the Household",
@@ -309,7 +317,7 @@
     "route": "/tools/home-handoff-summary-generator/",
     "cluster": "tools",
     "keywords": "household handoff template generator",
-    "headings": "Home Handoff Summary Generator Input modes Sections Privacy controls Output"
+    "headings": "Home Handoff Summary Generator What it builds Worked example What it does and doesn't pull in automatically Why \"intentionally omitted\" is its own line Before you actually hand it over Writing tasks the recipient can actually act on Deciding who this handoff is actually for"
   },
   {
     "title": "Printable Home Maintenance Checklist | Editable Household Maintenance Planner",
