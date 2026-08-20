@@ -29,6 +29,14 @@ Each release entry should include:
 
 Content updates belong here only when they represent meaningful site-wide work. Individual article review dates should stay on those articles.
 
+## Version 1.3.0 — August 20, 2026
+
+This interface and discoverability release adds a complete Traditional Chinese application at /zh-tw/app/, with localized onboarding, navigation, forms, dynamic status text, handoff, display and backup workflows sharing the same local database as the English interface. It also introduces the generated FamilyBoard brand mark, a clearer homepage and app visual hierarchy, direct-answer content blocks, Organization/WebSite/WebApplication structured data, bilingual app privacy monitoring and expanded desktop/mobile accessibility coverage.
+
+## Version 1.2.3 — August 20, 2026
+
+This analytics activation release connects the dedicated FamilyBoard GA4 property and Web stream through a protected build variable while preserving the analytics-free private application boundary.
+
 ## Version 1.2.0 — August 20, 2026
 
 This bilingual discovery release adds a Traditional Chinese (Taiwan) locale foundation and three independently written, indexable pages: the FamilyBoard introduction, a Taiwan-focused home-maintenance schedule guide and a working warranty-expiration calculator. Direct English/zh-TW pairs publish reciprocal hreflang and x-default links, localized navigation, in-language article and FAQ structured data, Taiwan-government sources, CJK-aware content inventory and desktop/mobile accessibility coverage. The live monitor now checks both locales and sitemap inclusion.

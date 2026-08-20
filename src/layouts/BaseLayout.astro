@@ -4,6 +4,7 @@ import { brand } from '../config/brand';
 import { monetization } from '../config/monetization';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { APP_VERSION } from '../config/app';
 
 interface Props {
   title: string;
@@ -38,14 +39,18 @@ const isZhTw = locale === 'zh-TW';
 const englishUrl = isZhTw ? alternate : canonical;
 const zhTwUrl = isZhTw ? canonical : alternate;
 const languageSwitchPath = alternatePath || (isZhTw ? '/' : '/zh-tw/');
-const isApp = canonicalPath.startsWith('/app/');
+const isApp = /^\/(?:zh-tw\/)?app\//.test(canonicalPath);
 const ga4Id = import.meta.env.PROD && !isApp ? import.meta.env.PUBLIC_GA4_MEASUREMENT_ID?.trim() : '';
 const adsenseAccount = !isApp && monetization.adsensePublisherId ? `ca-${monetization.adsensePublisherId.replace(/^ca-/, '')}` : '';
+const organizationId = `${brand.origin}/#organization`;
+const websiteId = `${brand.origin}/#website`;
+const logoUrl = `${brand.origin}/brand/familyboard-mark.png`;
 const schema = pageType === 'app'
-  ? { '@context': 'https://schema.org', '@type': 'WebApplication', name: brand.name, url: canonical, applicationCategory: 'LifestyleApplication', operatingSystem: 'Any', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, description }
+  ? { '@context': 'https://schema.org', '@type': 'WebApplication', '@id': `${canonical}#app`, name: brand.name, url: canonical, applicationCategory: 'LifestyleApplication', operatingSystem: 'Any', browserRequirements: 'Requires a modern browser with IndexedDB and Web Crypto support', softwareVersion: APP_VERSION, isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, description, image: logoUrl, publisher: { '@id': organizationId } }
   : {
       '@context': 'https://schema.org',
       '@type': pageType === 'article' ? 'Article' : 'WebPage',
+      '@id': `${canonical}#webpage`,
       name: title,
       headline: pageType === 'article' ? title.replace(/ \|.*$/, '') : undefined,
       url: canonical,
@@ -54,8 +59,27 @@ const schema = pageType === 'app'
       author: pageType === 'article' ? { '@type': 'Organization', name: isZhTw ? 'FamilyBoard 編輯團隊' : 'FamilyBoard Editorial Team', url: `${brand.origin}/editorial-policy/` } : undefined,
       datePublished: publishedAt?.toISOString(),
       dateModified: lastReviewedAt?.toISOString(),
-      publisher: { '@type': 'Organization', name: brand.name, url: brand.origin }
+      isPartOf: { '@id': websiteId },
+      publisher: { '@id': organizationId }
     };
+const organizationSchema = canonicalPath === '/' ? {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': organizationId,
+  name: brand.name,
+  url: brand.origin,
+  logo: { '@type': 'ImageObject', url: logoUrl, width: 256, height: 256 },
+  description: brand.productDescription
+} : null;
+const websiteSchema = canonicalPath === '/' ? {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': websiteId,
+  name: brand.name,
+  url: brand.origin,
+  publisher: { '@id': organizationId },
+  inLanguage: ['en', 'zh-TW']
+} : null;
 const faqSchema = faq.length > 0 ? {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -98,6 +122,8 @@ const faqSchema = faq.length > 0 ? {
     <meta name="twitter:card" content="summary_large_image" />
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    {organizationSchema && <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />}
+    {websiteSchema && <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />}
     {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
     {ga4Id && <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>}
     {ga4Id && <script is:inline define:vars={{ ga4Id }}>

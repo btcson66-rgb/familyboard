@@ -14,7 +14,7 @@ lastReviewedAt: "2026-08-20"
 related:
   - "/zh-tw/guides/home-maintenance-schedule/"
   - "/zh-tw/tools/warranty-expiration-calculator/"
-  - "/app/"
+  - "/zh-tw/app/"
 contentVersion: 1
 faq:
   - question: "FamilyBoard 現在需要付費或註冊嗎？"
@@ -84,4 +84,4 @@ FamilyBoard 現階段沒有帳號、雲端同步或多人即時協作。它也�
 
 不會。FamilyBoard 目前沒有帳號與雲端同步；更換裝置或清除瀏覽器前，必須先匯出備份，再於新環境還原。
 
-**下一步：** [開啟免費 FamilyBoard App](/app/)，先建立一筆你最不想遺失保固或保養紀錄的設備。
+**下一步：** [開啟繁中 FamilyBoard App](/zh-tw/app/)，先建立一筆你最不想遺失保固或保養紀錄的設備。

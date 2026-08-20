@@ -66,6 +66,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/",
     "/zh-tw/guides/home-maintenance-schedule/",
     "/zh-tw/tools/warranty-expiration-calculator/",
+    "/zh-tw/app/",
   ]) {
     await page.goto(route);
     await page.waitForLoadState("networkidle");
@@ -128,6 +129,34 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/",
   );
+  expect(sitemap).not.toContain("https://familyboard.win/zh-tw/app/");
+
+  await page.goto("/zh-tw/app/");
+  await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    "content",
+    "noindex,follow",
+  );
+  await expect(page.locator('meta[name="google-adsense-account"]')).toHaveCount(0);
+  await expect(page.locator('script[src*="googletagmanager"]')).toHaveCount(0);
+  await expect(
+    page.getByRole("heading", { name: "不用註冊帳號，立即建立家庭工作區。" }),
+  ).toBeVisible();
+  await expect(page.getByLabel("家庭名稱")).toBeVisible();
+  await expect(page.getByRole("link", { name: "English" })).toHaveAttribute(
+    "href",
+    "/app/",
+  );
+  await page.getByLabel("家庭名稱").fill("繁中測試家庭");
+  await page.getByRole("button", { name: "建立本機家庭" }).click();
+  await expect(page.getByRole("heading", { name: "今日總覽" })).toBeVisible();
+  await page.getByRole("button", { name: "家庭資產" }).click();
+  await expect(page.getByLabel("資產名稱")).toBeVisible();
+  await page.getByRole("button", { name: "交接" }).click();
+  await expect(page.getByText("繁中測試家庭 家庭交接摘要")).toBeVisible();
+  await page.getByRole("button", { name: "設定" }).click();
+  await expect(page.getByRole("heading", { name: "匯出備份" })).toBeVisible();
+  await expect(page.getByText("App 版本：")).toBeVisible();
 });
 
 test("complete local app lifecycle survives backup, reset, restore and offline reload", async ({

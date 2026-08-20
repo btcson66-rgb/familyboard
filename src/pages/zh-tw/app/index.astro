@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FamilyApp from '../../../components/FamilyApp';
+---
+<BaseLayout
+  title="FamilyBoard App 繁體中文版｜免費本機家庭管理工具"
+  description="在免費、免帳號的本機優先 App 中整理家庭資產、保養、保固、訂閱、任務、緊急聯絡人與交接摘要。"
+  canonicalPath="/zh-tw/app/"
+  alternatePath="/app/"
+  locale="zh-TW"
+  indexable={false}
+  pageType="app"
+  bodyClass="app-body"
+>
+  <FamilyApp locale="zh-TW" client:load />
+</BaseLayout>

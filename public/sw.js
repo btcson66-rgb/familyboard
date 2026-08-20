@@ -1,7 +1,8 @@
-const CACHE = "familyboard-v1.2.3";
+const CACHE = "familyboard-v1.3.0";
 const CORE = [
   "/",
   "/app/",
+  "/zh-tw/app/",
   "/offline/",
   "/manifest.webmanifest",
   "/favicon.svg",

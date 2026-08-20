@@ -46,6 +46,6 @@ const pageType = entry.data.pageType === 'content' ? 'article' : 'website';
       {related.length > 0 && <section class="section"><div class="section-head"><h2>繼續使用 FamilyBoard</h2></div><div class="card-grid">{related.map((item) => <a class="card" href={item.data.route}><h3>{item.data.title.replace(/｜.*$/, '')}</h3><p>{item.data.description}</p></a>)}</div></section>}
       <p class="notice">發現錯誤或過期資訊？<a href="/contact/">請提供頁面網址與可靠來源（聯絡頁為英文）。</a></p>
     </article>
-    <aside class="toc-card"><strong>FamilyBoard</strong><p>免費、免帳號的家庭保養、保固與責任管理工具。</p><a class="button" href="/app/">開啟免費 App</a><p class="help">核心家庭紀錄保留在目前瀏覽器；請定期自行匯出備份。</p>{entry.data.pageType === 'tool' && <p><a href="/zh-tw/">查看繁中首頁</a></p>}</aside>
+    <aside class="toc-card"><strong>FamilyBoard</strong><p>免費、免帳號的家庭保養、保固與責任管理工具。</p><a class="button" href="/zh-tw/app/">開啟繁中 App</a><p class="help">核心家庭紀錄保留在目前瀏覽器；請定期自行匯出備份。</p>{entry.data.pageType === 'tool' && <p><a href="/zh-tw/">查看繁中首頁</a></p>}</aside>
   </div>
 </BaseLayout>

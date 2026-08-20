@@ -11,6 +11,7 @@ export default defineConfig({
     sitemap({
       filter: (page) => ![
         'https://familyboard.win/app/',
+        'https://familyboard.win/zh-tw/app/',
         'https://familyboard.win/offline/',
       ].some((excluded) => page.startsWith(excluded))
     })

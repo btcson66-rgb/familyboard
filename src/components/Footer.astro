@@ -16,7 +16,7 @@ const links = isZhTw ? zhTwLinks : englishLinks;
 ---
 <footer class="site-footer">
   <div class="shell footer-grid">
-    <div><a class="brand" href={isZhTw ? '/zh-tw/' : '/'}><span class="brand-mark" aria-hidden="true">⌂</span>{brand.name}</a><p>{isZhTw ? '把居家保養、保固與家庭責任整理在自己的裝置上。' : brand.primaryTagline}</p><p>{isZhTw ? '免費、local-first，不需註冊帳號。' : 'Free, local-first and useful without an account.'}</p></div>
+    <div><a class="brand" href={isZhTw ? '/zh-tw/' : '/'}><img class="brand-logo" src="/brand/familyboard-mark.png" width="46" height="46" alt="" />{brand.name}</a><p>{isZhTw ? '把居家保養、保固與家庭責任整理在自己的裝置上。' : brand.primaryTagline}</p><p>{isZhTw ? '免費、local-first，不需註冊帳號。' : 'Free, local-first and useful without an account.'}</p></div>
     <nav class="footer-links" aria-label={isZhTw ? '頁尾導覽' : 'Footer navigation'}>{links.map(([href, label]) => <a href={href}>{label}</a>)}</nav>
   </div>
 </footer>

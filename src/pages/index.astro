@@ -11,13 +11,20 @@ const featuredRoutes = ['/features/home-inventory-tracker/', '/features/maintena
 const featured = featuredRoutes.map((route) => pages.find((entry) => entry.data.route === route)).filter(Boolean);
 ---
 <BaseLayout title={home.data.title} description={home.data.description} canonicalPath="/" alternatePath={zhTwHome?.data.route} faq={home.data.faq}>
-  <section class="hero"><div class="shell">
-    <span class="eyebrow">Private household operations</span>
-    <p class="hero-title">Everything your household needs to remember.</p>
-    <p class="lede">Keep maintenance, warranties, assets, subscriptions, responsibilities and emergency information together—without creating an account or sending household records to a server.</p>
-    <div class="hero-actions"><a class="button" href="/app/">Open the free app</a><a class="button secondary" href="/features/">See how it works</a></div>
-    <ul class="trust-row"><li>No account</li><li>Local-first storage</li><li>Offline-capable</li><li>Backup and restore</li><li>Private app stays ad-free</li></ul>
+  <section class="hero"><div class="shell hero-grid">
+    <div><span class="eyebrow">Private household operations</span>
+      <p class="hero-title">Everything your household needs to remember.</p>
+      <p class="lede">Keep maintenance, warranties, assets, subscriptions, responsibilities and emergency information together—without creating an account or sending household records to a server.</p>
+      <div class="hero-actions"><a class="button" href="/app/">Open the free app</a><a class="button secondary" href="/features/">See how it works</a></div>
+      <ul class="trust-row"><li>No account</li><li>Local-first storage</li><li>Offline-capable</li><li>Backup and restore</li><li>Private app stays ad-free</li></ul>
+    </div>
+    <div class="hero-brand-visual" aria-label="FamilyBoard home operations logo"><img src="/brand/familyboard-mark.png" width="256" height="256" alt="" fetchpriority="high" /><p class="hero-visual-note">Home assets · upkeep · responsibilities · handoff</p></div>
   </div></section>
+  <section class="section" aria-labelledby="quick-answers"><div class="shell"><div class="section-head"><div><span class="eyebrow">Quick answers</span><h2 id="quick-answers">Understand FamilyBoard in under a minute</h2></div></div><div class="answer-grid">
+    <article class="answer-card"><h2>What is FamilyBoard?</h2><p>A free household operations app for keeping asset, maintenance, warranty, subscription, task, emergency-contact and handoff records together.</p></article>
+    <article class="answer-card"><h2>Where is household data stored?</h2><p>Core app records stay in this browser’s local database by default. FamilyBoard has no account or household-data server in the current version.</p></article>
+    <article class="answer-card"><h2>How much does it cost?</h2><p>The current web app is free. Its core features are not hidden behind checkout, and the private workspace remains free of advertising.</p></article>
+  </div></div></section>
   <section class="section"><div class="narrow article"><Content /></div></section>
   <section class="section tint"><div class="shell"><div class="section-head"><div><span class="eyebrow">Start small</span><h2>Build household memory one useful record at a time</h2></div><a href="/guides/">Browse all guides →</a></div>
     <div class="card-grid">{featured.map((entry) => <a class="card" href={entry!.data.route}><span class="card-tag">{entry!.data.cluster.replace('-', ' ')}</span><h3>{entry!.data.title.replace(/ \|.*$/, '')}</h3><p>{entry!.data.description}</p></a>)}</div>

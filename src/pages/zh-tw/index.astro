@@ -20,13 +20,20 @@ const featured = pages
   publishedAt={home.data.publishedAt}
   lastReviewedAt={home.data.lastReviewedAt}
 >
-  <section class="hero"><div class="shell">
-    <span class="eyebrow">免費 · 免帳號 · Local-first</span>
-    <p class="hero-title">把家庭需要記住的事，整理成可以交接的紀錄。</p>
-    <p class="lede">集中管理居家保養、設備、保固、訂閱與家庭責任；核心紀錄預設保留在目前瀏覽器，不必先建立帳號。</p>
-    <div class="hero-actions"><a class="button" href="/app/">開啟免費 App</a><a class="button secondary" href="/zh-tw/guides/home-maintenance-schedule/">先看居家保養指南</a></div>
-    <ul class="trust-row"><li>不需帳號</li><li>本機優先儲存</li><li>可離線使用</li><li>可備份與還原</li><li>私密工作區不放廣告</li></ul>
+  <section class="hero"><div class="shell hero-grid">
+    <div><span class="eyebrow">免費 · 免帳號 · Local-first</span>
+      <p class="hero-title">把家庭需要記住的事，整理成可以交接的紀錄。</p>
+      <p class="lede">集中管理居家保養、設備、保固、訂閱與家庭責任；核心紀錄預設保留在目前瀏覽器，不必先建立帳號。</p>
+      <div class="hero-actions"><a class="button" href="/zh-tw/app/">開啟繁中 App</a><a class="button secondary" href="/zh-tw/guides/home-maintenance-schedule/">先看居家保養指南</a></div>
+      <ul class="trust-row"><li>不需帳號</li><li>本機優先儲存</li><li>可離線使用</li><li>可備份與還原</li><li>私密工作區不放廣告</li></ul>
+    </div>
+    <div class="hero-brand-visual" aria-label="FamilyBoard 家庭營運識別圖"><img src="/brand/familyboard-mark.png" width="256" height="256" alt="" fetchpriority="high" /><p class="hero-visual-note">家庭資產 · 居家保養 · 責任分工 · 交接</p></div>
   </div></section>
+  <section class="section" aria-labelledby="quick-answers"><div class="shell"><div class="section-head"><div><span class="eyebrow">快速解答</span><h2 id="quick-answers">一分鐘認識 FamilyBoard</h2></div></div><div class="answer-grid">
+    <article class="answer-card"><h2>FamilyBoard 是什麼？</h2><p>一套免費的家庭營運工具，用來集中整理設備、保養、保固、訂閱、任務、緊急聯絡人與家庭交接紀錄。</p></article>
+    <article class="answer-card"><h2>家庭資料存在哪裡？</h2><p>核心 App 紀錄預設保存在這個瀏覽器的本機資料庫。目前版本沒有帳號，也沒有集中保存家庭資料的伺服器。</p></article>
+    <article class="answer-card"><h2>現在需要付費嗎？</h2><p>目前網頁版可免費使用，核心功能沒有結帳牆；私密家庭工作區也不顯示廣告。</p></article>
+  </div></div></section>
   <section class="section"><div class="narrow article"><div class="meta"><span><a href="/editorial-policy/">FamilyBoard 編輯團隊</a></span><span>發布與複查日期：2026 年 8 月 20 日</span><span>繁體中文（台灣）</span></div><Content /></div></section>
   <section class="section tint"><div class="shell"><div class="section-head"><div><span class="eyebrow">繁中首批內容</span><h2>先解決高意圖、能立即使用的家庭問題</h2></div></div>
     <div class="card-grid">{featured.map((entry) => <a class="card" href={entry.data.route}><span class="card-tag">{entry.data.pageType === 'tool' ? '免費工具' : '實用指南'}</span><h3>{entry.data.title.replace(/｜.*$/, '')}</h3><p>{entry.data.description}</p></a>)}</div>

@@ -7,6 +7,8 @@ const checks = [
       '<html lang="en">',
       "<h1",
       "FamilyBoard",
+      "/brand/familyboard-mark.png",
+      "Understand FamilyBoard in under a minute",
       'rel="canonical"',
       'hreflang="zh-TW"',
     ],
@@ -19,6 +21,8 @@ const checks = [
       'href="https://familyboard.win/zh-tw/"',
       'hreflang="en"',
       '"@type":"FAQPage"',
+      "/zh-tw/app/",
+      "一分鐘認識 FamilyBoard",
     ],
   },
   {
@@ -37,7 +41,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-schedule/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/</loc>",
     ],
-    forbid: ["<loc>https://familyboard.win/app/</loc>"],
+    forbid: [
+      "<loc>https://familyboard.win/app/</loc>",
+      "<loc>https://familyboard.win/zh-tw/app/</loc>",
+    ],
   },
   {
     path: "/ads.txt",
@@ -46,6 +53,16 @@ const checks = [
   {
     path: "/app/",
     require: ['name="robots" content="noindex,follow"', "FamilyBoard"],
+    forbid: ["googletagmanager.com", "adsbygoogle"],
+  },
+  {
+    path: "/zh-tw/app/",
+    require: [
+      '<html lang="zh-TW">',
+      'name="robots" content="noindex,follow"',
+      "不用註冊帳號，立即建立家庭工作區。",
+      "/brand/familyboard-mark.png",
+    ],
     forbid: ["googletagmanager.com", "adsbygoogle"],
   },
   {

@@ -14,7 +14,7 @@ lastReviewedAt: "2026-08-20"
 related:
   - "/zh-tw/guides/home-maintenance-schedule/"
   - "/zh-tw/"
-  - "/app/"
+  - "/zh-tw/app/"
 contentVersion: 1
 faq:
   - question: "購買日一定等於保固起算日嗎？"
@@ -73,4 +73,4 @@ FamilyBoard 的私密工作區可保存設備、保固提供者、截止日與�
 
 不可以。結果只是依輸入日期與月數做日期運算，不能判定涵蓋範圍、排除條款、登錄要求、法律權利或業者是否接受申請。
 
-**下一步：** 算出日期後，[開啟免費 FamilyBoard App](/app/)，把結果和收據、型號及書面來源放在同一筆設備紀錄中。
+**下一步：** 算出日期後，[開啟繁中 FamilyBoard App](/zh-tw/app/)，把結果和收據、型號及書面來源放在同一筆設備紀錄中。

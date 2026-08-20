@@ -14,7 +14,7 @@ lastReviewedAt: "2026-08-20"
 related:
   - "/zh-tw/tools/warranty-expiration-calculator/"
   - "/zh-tw/"
-  - "/app/"
+  - "/zh-tw/app/"
 contentVersion: 1
 faq:
   - question: "居家保養排程應該多久檢查一次？"
@@ -103,4 +103,4 @@ faq:
 
 涉及電力、瓦斯、冷媒、消防設備、結構、高處或其他危險作業時，排程的任務應是確認狀況與聯絡合格專業人員，而不是提供自行拆修步驟。
 
-**下一步：** [開啟免費 FamilyBoard App](/app/)，先為家中五個高價值或高風險項目建立可追蹤的保養紀錄。
+**下一步：** [開啟繁中 FamilyBoard App](/zh-tw/app/)，先為家中五個高價值或高風險項目建立可追蹤的保養紀錄。

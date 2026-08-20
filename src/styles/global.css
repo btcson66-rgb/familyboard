@@ -73,6 +73,17 @@ button,
 .skip-link:focus {
   top: 1rem;
 }
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 .shell {
   width: min(1160px, calc(100% - 2rem));
   margin-inline: auto;
@@ -105,15 +116,11 @@ button,
   text-decoration: none;
   letter-spacing: -0.02em;
 }
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  background: var(--leaf);
-  color: white;
-  box-shadow: 7px 7px 0 color-mix(in srgb, var(--sun) 70%, white);
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  object-fit: contain;
 }
 .nav-links {
   display: flex;
@@ -363,6 +370,60 @@ button.secondary {
 }
 .card {
   padding: 1.35rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card[href]:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--leaf) 38%, var(--line));
+  box-shadow: 0 22px 55px rgba(27, 55, 47, 0.14);
+}
+.answer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.answer-card {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+}
+.answer-card h2 {
+  margin: 0 0 .45rem;
+  font-size: 1.08rem;
+}
+.answer-card p {
+  margin: 0;
+  color: var(--muted);
+}
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+.hero-brand-visual {
+  display: grid;
+  place-items: center;
+  min-height: 340px;
+  padding: 1.5rem;
+  border: 1px solid rgba(23, 107, 82, .14);
+  border-radius: 36px;
+  background: rgba(255,255,255,.62);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+.hero-brand-visual img {
+  width: min(280px, 78%);
+  height: auto;
+}
+.hero-visual-note {
+  margin: .5rem 0 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: .86rem;
 }
 .card h2,
 .card h3 {
@@ -520,6 +581,12 @@ textarea {
   .footer-grid {
     grid-template-columns: 1fr;
   }
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-brand-visual {
+    min-height: 250px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -529,7 +596,8 @@ textarea {
   }
   .card-grid,
   .form-grid,
-  .recommendation-grid {
+  .recommendation-grid,
+  .answer-grid {
     grid-template-columns: 1fr;
   }
   .hero {

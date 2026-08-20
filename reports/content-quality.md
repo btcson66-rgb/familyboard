@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-20T05:25:39.231Z
+Generated: 2026-08-20T06:12:04.154Z
 
 ## Summary
 
 - Indexable pages: 219
-- Generated HTML routes: 222
+- Generated HTML routes: 223
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 17
+- Pages without a contextual product/tool link: 19
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -61,7 +61,9 @@ Generated: 2026-08-20T05:25:39.231Z
 - /roadmap/
 - /security/
 - /terms/
+- /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/
+- /zh-tw/tools/warranty-expiration-calculator/
 
 ## Blockers
 

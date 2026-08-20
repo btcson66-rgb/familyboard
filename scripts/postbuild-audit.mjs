@@ -24,6 +24,7 @@ if (fs.existsSync(swPath)) {
   const coreAssets = [
     "/",
     "/app/",
+    "/zh-tw/app/",
     "/offline/",
     "/manifest.webmanifest",
     "/favicon.svg",
@@ -235,7 +236,7 @@ else {
         (item) =>
           item.indexable &&
           item.status === 200 &&
-          !["/app/", "/offline/"].includes(new URL(item.url).pathname),
+          !["/app/", "/zh-tw/app/", "/offline/"].includes(new URL(item.url).pathname),
       )
       .map((item) => item.url),
   );

@@ -15,7 +15,7 @@ This report separates deployed evidence from provider work that still requires a
 | `www` DNS/redirect | PASS | `www` CNAME points to `btcson66-rgb.github.io`; HTTP returns 301 to the apex |
 | HTTPS certificate | PASS | GitHub Pages certificate is approved for `familyboard.win` and `www.familyboard.win`, expiring 2026-11-18 |
 | Enforce HTTPS | PASS | Pages API returns `https_enforced: true`; HTTP and `www` redirect to the canonical HTTPS apex |
-| Canonical origin audit | PASS | Build audit passed 222 HTML routes and 219 indexable URLs; live English and Traditional Chinese representatives use `https://familyboard.win/` canonicals |
+| Canonical origin audit | PASS | Build audit passed 223 HTML routes and 219 indexable URLs; live English and Traditional Chinese representatives use `https://familyboard.win/` canonicals |
 | `robots.txt` | PASS | Live HTTP 200 and declares only `sitemap-index.xml` |
 | Production sitemap | PASS | Live HTTP 200; generated index contains the production sitemap |
 | GSC Domain Property | PASS | Company service account completed Cloudflare DNS TXT verification and reads back `siteOwner` |
@@ -24,7 +24,7 @@ This report separates deployed evidence from provider work that still requires a
 | GA4 FamilyBoard Web stream | PASS | Analytics Admin API created and read back stream `15468194519`, display name `FamilyBoard Web`, default URL `https://familyboard.win/` |
 | GA4 Measurement ID installed | PASS | GitHub variable `PUBLIC_GA4_MEASUREMENT_ID` reads back as `G-D624R3YVEV`; production English and Traditional Chinese HTML contain this exact ID |
 | GA4 production traffic verified | PASS, INTERNAL VALIDATION INCLUDED | Browser collection request returned HTTP 204 and Realtime API returned data. Activation checks are marked `codex_launch_validation`; do not interpret them as natural traffic |
-| Private `/app/` GA4 exclusion | PASS | Live `/app/` has `noindex,follow`, no GA4 tag and no AdSense tag |
+| Private App analytics exclusion | PASS | `/app/` and `/zh-tw/app/` build artifacts have `noindex,follow`, no GA4 tag and no AdSense tag; production verification follows the v1.3.0 deploy |
 | Bing / IndexNow | RECEIVED, INDEXING UNKNOWN | Root verification key and guarded 219-URL bulk submission tool ship in v1.2.2; initial full submission returned HTTP 200. Receipt is not proof of indexing or ranking |
 | AdSense technical connection | PASS | Public pages expose `ca-pub-7052036786750044` account meta; `ads.txt` is live; ad script remains disabled |
 | AdSense review requested | PENDING | AdSense OAuth client is disabled; a controllable browser is open at Google sign-in but still requires the owner's interactive login |
@@ -33,18 +33,16 @@ This report separates deployed evidence from provider work that still requires a
 ## Product and quality evidence
 
 - 216 indexable English content/support pages and three independently written Traditional Chinese indexable pages.
-- 222 generated HTML routes, including the local-first application and offline/404 routes; 219 routes are indexable.
+- 223 generated HTML routes, including English and Traditional Chinese local-first application shells plus offline/404 routes; 219 routes are indexable.
 - 25 distinct interactive tools and 20 printable resources.
 - Reciprocal English/Traditional Chinese hreflang pairs, localized FAQ schema, visible answers and Taiwan official sources are verified for the first Chinese tranche.
 - Content, route, metadata, similarity, internal-link, localized-source, unit, accessibility and browser tests pass.
-- The CI release runs seven Playwright checks; one duplicate mobile lifecycle case is deliberately skipped after equivalent coverage.
+- The CI release runs eight Playwright checks across desktop and mobile; one duplicate mobile lifecycle case is deliberately skipped after equivalent coverage.
 - Household values remain in browser IndexedDB and are excluded from public analytics and advertising code.
 
 ## Release evidence
 
 - Repository: `https://github.com/btcson66-rgb/familyboard`
-- Current release: `v1.2.3`
-- Backup tag: `backup/pre-v1.2.3`
-- Local backup: `D:\Fable company\backups\familyboard-v1.2.3-source-20260820-132455.zip`
+- Release candidate: `v1.3.0` (production evidence is added after CI and live verification)
 
 Provider approval is not guaranteed. AdSense review commonly depends on both technical access and Google's qualitative policy review.

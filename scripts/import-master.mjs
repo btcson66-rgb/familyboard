@@ -153,13 +153,17 @@ const supportRecords = supportIndexes
   })
   .filter((record) => record.route !== "/app/");
 
+const currentReleaseNotes = `\n\n## Version 1.3.0 — August 20, 2026\n\nThis interface and discoverability release adds a complete Traditional Chinese application at /zh-tw/app/, with localized onboarding, navigation, forms, dynamic status text, handoff, display and backup workflows sharing the same local database as the English interface. It also introduces the generated FamilyBoard brand mark, a clearer homepage and app visual hierarchy, direct-answer content blocks, Organization/WebSite/WebApplication structured data, bilingual app privacy monitoring and expanded desktop/mobile accessibility coverage.\n\n## Version 1.2.3 — August 20, 2026\n\nThis analytics activation release connects the dedicated FamilyBoard GA4 property and Web stream through a protected build variable while preserving the analytics-free private application boundary.`;
+
 const supportEnhancements = {
   "/changelog/": `\n\n## Version 1.2.0 — August 20, 2026\n\nThis bilingual discovery release adds a Traditional Chinese (Taiwan) locale foundation and three independently written, indexable pages: the FamilyBoard introduction, a Taiwan-focused home-maintenance schedule guide and a working warranty-expiration calculator. Direct English/zh-TW pairs publish reciprocal hreflang and x-default links, localized navigation, in-language article and FAQ structured data, Taiwan-government sources, CJK-aware content inventory and desktop/mobile accessibility coverage. The live monitor now checks both locales and sitemap inclusion.\n\n## Version 1.1.0 — August 20, 2026\n\nThis reliability release adds a tested v1-to-v2 IndexedDB migration, migration history, metadata-only attachment records, authenticated backup metadata, validate-only backup summaries, restore-from-first-run, storage health, household member management, handoff profiles, maintenance history detail, tool copy/download/save-to-app actions, an explicit PWA update flow and pre-cached offline app assets. It also adds linting, full app-lifecycle E2E coverage, breadcrumb and article structured data, privacy-safe analytics events, complete URL inventory fields and six-route Lighthouse evidence. Public paid-product promotion was removed while the free product builds usage evidence.\n\n## Version 1.0.0 — August 19, 2026\n\nThe first production release adds the complete local-first household dashboard, assets, maintenance history, tasks, calendar events, warranty and subscription records, emergency contacts, document references, handoff and family display modes, versioned backup/restore, encrypted exports, offline support, 200 launch content pages, 25 working public tools and 20 printable resources. Known limitation: v1 uses one household in one browser and does not provide cloud sync or accounts.`,
   "/templates/": `\n\n## How to use a template well\n\nStart with the smallest set of fields needed for the household decision. Date the sheet, name the person responsible for reviewing it and avoid copying sensitive account or identity information into a document that will be displayed or stored openly. The digital app can connect a record to its asset and history; the printable version is useful for a temporary handoff, meeting or offline reference. Review the final sheet before sharing and destroy outdated sensitive copies appropriately.`,
 };
-for (const record of supportRecords)
+for (const record of supportRecords) {
+  if (record.route === "/changelog/") record.body += currentReleaseNotes;
   if (supportEnhancements[record.route])
     record.body += supportEnhancements[record.route];
+}
 
 const extraRecords = [
   {

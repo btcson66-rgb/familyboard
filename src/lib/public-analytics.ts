@@ -16,7 +16,7 @@ export function trackPublicEvent(
   name: string,
   parameters: SafeParameters = {},
 ) {
-  if (location.pathname.startsWith("/app/") || !allowedEvents.has(name)) return;
+  if (/^\/(?:zh-tw\/)?app\//.test(location.pathname) || !allowedEvents.has(name)) return;
   const safe = Object.fromEntries(
     Object.entries(parameters).filter(
       ([key, value]) =>
@@ -28,7 +28,7 @@ export function trackPublicEvent(
 }
 
 export function initPublicAnalytics() {
-  if (location.pathname.startsWith("/app/")) return;
+  if (/^\/(?:zh-tw\/)?app\//.test(location.pathname)) return;
   window.addEventListener("familyboard:tool-completed", (event) => {
     const slug = (event as CustomEvent<{ slug?: string }>).detail?.slug;
     if (slug) trackPublicEvent("tool_complete", { tool_slug: slug });

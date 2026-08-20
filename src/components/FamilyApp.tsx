@@ -40,6 +40,12 @@ import {
   restoreBackup,
   summarizeBackup,
 } from "../lib/backup";
+import {
+  AppLocaleProvider,
+  Localize,
+  useAppLocale,
+  type AppLocale,
+} from "./app-i18n";
 
 type Tab =
   | "today"
@@ -86,20 +92,6 @@ const empty: AppSnapshot = {
   settings: [],
   migrations: [],
 };
-const labelDate = (value: string) =>
-  value
-    ? new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(
-        new Date(`${value}T12:00:00`),
-      )
-    : "No date";
-const dueStatus = (value: string) =>
-  !value
-    ? "No date"
-    : value < new Date().toISOString().slice(0, 10)
-      ? "Overdue"
-      : value === new Date().toISOString().slice(0, 10)
-        ? "Due today"
-        : `Due ${labelDate(value)}`;
 const download = (name: string, value: unknown) => {
   const href = URL.createObjectURL(
     new Blob([JSON.stringify(value, null, 2)], { type: "application/json" }),
@@ -135,6 +127,12 @@ function QuickForm({
   const [values, setValues] = useState<Record<string, string>>(initial);
   const [busy, setBusy] = useState(false);
   return (
+    <Localize>
+    <details className="app-form-shell" open>
+      <summary>
+        <span>{title}</span>
+        <span className="form-toggle" aria-hidden="true">＋</span>
+      </summary>
     <form
       className="app-form"
       onSubmit={async (event) => {
@@ -148,7 +146,7 @@ function QuickForm({
         }
       }}
     >
-      <h2>{title}</h2>
+      <h2 className="visually-hidden">{title}</h2>
       <div className="form-grid">
         {fields.map((field) => (
           <label key={field.name}>
@@ -192,6 +190,8 @@ function QuickForm({
         {busy ? "Saving…" : submitLabel}
       </button>
     </form>
+    </details>
+    </Localize>
   );
 }
 
@@ -199,7 +199,21 @@ function Empty({ children }: { children: ReactNode }) {
   return <div className="app-empty">{children}</div>;
 }
 
-export default function FamilyApp() {
+export default function FamilyApp({ locale = "en" }: { locale?: AppLocale }) {
+  return (
+    <AppLocaleProvider locale={locale}>
+      <FamilyAppBody />
+    </AppLocaleProvider>
+  );
+}
+
+function FamilyAppBody() {
+  const {
+    locale,
+    date: labelDate,
+    due: dueStatus,
+    dateTime,
+  } = useAppLocale();
   const [data, setData] = useState<AppSnapshot>(empty);
   const [ready, setReady] = useState(false);
   const [fatalError, setFatalError] = useState("");
@@ -215,13 +229,17 @@ export default function FamilyApp() {
       setFatalError("");
     } catch (caught) {
       setFatalError(
-        caught instanceof Error
-          ? `FamilyBoard could not open its local database: ${caught.message}. Do not clear browser data; keep any existing backups and try a supported browser profile.`
-          : "FamilyBoard could not open its local database. Do not clear browser data; keep any existing backups.",
+        locale === "zh-TW"
+          ? caught instanceof Error
+            ? `FamilyBoard 無法開啟本機資料庫：${caught.message}。請勿清除瀏覽器資料；保留既有備份，並改用受支援的瀏覽器設定檔再試一次。`
+            : "FamilyBoard 無法開啟本機資料庫。請勿清除瀏覽器資料，並保留所有既有備份。"
+          : caught instanceof Error
+            ? `FamilyBoard could not open its local database: ${caught.message}. Do not clear browser data; keep any existing backups and try a supported browser profile.`
+            : "FamilyBoard could not open its local database. Do not clear browser data; keep any existing backups.",
       );
       setReady(true);
     }
-  }, []);
+  }, [locale]);
   useEffect(() => {
     refresh();
     navigator.storage?.persist?.().catch(() => false);
@@ -255,23 +273,17 @@ export default function FamilyApp() {
     [data.assets],
   );
 
-  if (!ready)
-    return (
-      <div className="onboarding">
-        <section className="onboarding-panel">
-          <h1>FamilyBoard local household dashboard</h1>
-          <p>Opening your local household database…</p>
-        </section>
-      </div>
-    );
+  if (!ready) return <Onboarding onComplete={refresh} checking />;
   if (fatalError)
     return (
+      <Localize>
       <div className="onboarding">
         <section className="onboarding-panel">
           <h1>Local storage could not be opened</h1>
           <p role="alert">{fatalError}</p>
         </section>
       </div>
+      </Localize>
     );
   if (!household) return <Onboarding onComplete={refresh} />;
 
@@ -342,12 +354,21 @@ export default function FamilyApp() {
   ];
 
   return (
+    <Localize>
     <div className="app-shell">
       <header className="app-topbar">
-        <a className="brand" href="/">
-          <span className="brand-mark">⌂</span>FamilyBoard
+        <a className="brand" href={locale === "zh-TW" ? "/zh-tw/" : "/"}>
+          <img className="brand-logo" src="/brand/familyboard-mark.png" alt="" />
+          <span>FamilyBoard</span>
         </a>
         <span className="privacy-pill">Local data · no app analytics</span>
+        <a
+          className="app-language"
+          href={locale === "zh-TW" ? "/app/" : "/zh-tw/app/"}
+          lang={locale === "zh-TW" ? "en" : "zh-TW"}
+        >
+          {locale === "zh-TW" ? "English" : "繁體中文"}
+        </a>
         <span>{household.name}</span>
       </header>
       <div className="app-layout">
@@ -379,6 +400,11 @@ export default function FamilyApp() {
           ))}
         </nav>
         <main className="app-main">
+          <div className="app-context" role="note">
+            <span>Saved on this device</span>
+            <span>No account</span>
+            <span>Offline-ready</span>
+          </div>
           <div className="app-title">
             <div>
               <h1>{title[tab][0]}</h1>
@@ -612,7 +638,7 @@ export default function FamilyApp() {
                       .map((event) => (
                         <p className="detail" key={event.id}>
                           Completed{" "}
-                          {new Date(event.completedAt).toLocaleString()}
+                          {dateTime(event.completedAt)}
                           {event.cost
                             ? ` · ${new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(event.cost)}`
                             : ""}
@@ -954,17 +980,39 @@ export default function FamilyApp() {
         </main>
       </div>
     </div>
+    </Localize>
   );
 }
 
-function Onboarding({ onComplete }: { onComplete: () => Promise<void> }) {
+function Onboarding({
+  onComplete,
+  checking = false,
+}: {
+  onComplete: () => Promise<void>;
+  checking?: boolean;
+}) {
+  const { locale } = useAppLocale();
   const [name, setName] = useState("");
   const [members, setMembers] = useState("");
   const [busy, setBusy] = useState(false);
   const [restorePassword, setRestorePassword] = useState("");
   const [restoreError, setRestoreError] = useState("");
   return (
+    <Localize>
     <div className="onboarding">
+      <div className="onboarding-toolbar">
+        <a className="brand" href={locale === "zh-TW" ? "/zh-tw/" : "/"}>
+          <img className="brand-logo" src="/brand/familyboard-mark.png" alt="" />
+          <span>FamilyBoard</span>
+        </a>
+        <a
+          className="app-language"
+          href={locale === "zh-TW" ? "/app/" : "/zh-tw/app/"}
+          lang={locale === "zh-TW" ? "en" : "zh-TW"}
+        >
+          {locale === "zh-TW" ? "English" : "繁體中文"}
+        </a>
+      </div>
       <form
         className="onboarding-panel"
         onSubmit={async (event) => {
@@ -1001,10 +1049,16 @@ function Onboarding({ onComplete }: { onComplete: () => Promise<void> }) {
           and the people who share it. Export a backup after adding anything
           important.
         </p>
+        {checking && (
+          <p className="app-success" role="status">
+            Opening your local household database…
+          </p>
+        )}
         <label>
           Home name
           <input
             required
+            disabled={checking}
             value={name}
             onChange={(event) => setName(event.target.value)}
             placeholder="Our home"
@@ -1014,6 +1068,7 @@ function Onboarding({ onComplete }: { onComplete: () => Promise<void> }) {
           Household members{" "}
           <span className="help">Optional, separated by commas</span>
           <input
+            disabled={checking}
             value={members}
             onChange={(event) => setMembers(event.target.value)}
             placeholder="Alex, Sam"
@@ -1023,8 +1078,12 @@ function Onboarding({ onComplete }: { onComplete: () => Promise<void> }) {
           Browser data can be cleared and devices can fail. FamilyBoard will
           remind you to export backups.
         </p>
-        <button disabled={busy}>
-          {busy ? "Creating local home…" : "Create local household"}
+        <button disabled={busy || checking}>
+          {checking
+            ? "Opening local data…"
+            : busy
+              ? "Creating local home…"
+              : "Create local household"}
         </button>
       </form>
       <section className="onboarding-panel">
@@ -1037,6 +1096,7 @@ function Onboarding({ onComplete }: { onComplete: () => Promise<void> }) {
           Password for encrypted backup
           <input
             type="password"
+            disabled={checking}
             value={restorePassword}
             onChange={(event) => setRestorePassword(event.target.value)}
           />
@@ -1045,6 +1105,7 @@ function Onboarding({ onComplete }: { onComplete: () => Promise<void> }) {
           Backup file
           <input
             type="file"
+            disabled={checking}
             accept="application/json,.json"
             onChange={async (event) => {
               const file = event.currentTarget.files?.[0];
@@ -1062,7 +1123,9 @@ function Onboarding({ onComplete }: { onComplete: () => Promise<void> }) {
                 setRestoreError(
                   caught instanceof Error
                     ? caught.message
-                    : "Restore failed. No data was changed.",
+                    : locale === "zh-TW"
+                      ? "還原失敗，資料未被更動。"
+                      : "Restore failed. No data was changed.",
                 );
               }
             }}
@@ -1075,6 +1138,7 @@ function Onboarding({ onComplete }: { onComplete: () => Promise<void> }) {
         )}
       </section>
     </div>
+    </Localize>
   );
 }
 
@@ -1088,6 +1152,7 @@ function MembersView({
   save: (action: () => Promise<unknown>) => Promise<void>;
 }) {
   return (
+    <Localize>
     <>
       <QuickForm
         title="Add a household member"
@@ -1132,6 +1197,7 @@ function MembersView({
         ))}
       </div>
     </>
+    </Localize>
   );
 }
 
@@ -1146,6 +1212,7 @@ function Today({
   assets: Record<string, string>;
   setTab: (tab: Tab) => void;
 }) {
+  const { due: dueStatus } = useAppLocale();
   const active = data.tasks.filter((item) => !item.completedAt);
   const overdue = active.filter(
     (item) =>
@@ -1158,6 +1225,7 @@ function Today({
         new Date(Date.now() + 7 * 86400000).toISOString().slice(0, 10),
   );
   return (
+    <Localize>
     <>
       <div className="metric-grid">
         <div className="metric">
@@ -1232,6 +1300,7 @@ function Today({
         </section>
       </div>
     </>
+    </Localize>
   );
 }
 
@@ -1248,7 +1317,9 @@ function TasksView({
   names: Record<string, string>;
   save: (action: () => Promise<unknown>) => Promise<void>;
 }) {
+  const { due: dueStatus, dateTime } = useAppLocale();
   return (
+    <Localize>
     <>
       <QuickForm
         title="Add a task"
@@ -1329,13 +1400,14 @@ function TasksView({
             <span className="card-tag">Calendar event</span>
             <h2>{item.title}</h2>
             <p>
-              {new Date(item.startsAt).toLocaleString()} ·{" "}
+              {dateTime(item.startsAt)} ·{" "}
               {item.location || "No location"}
             </p>
           </div>
         ))}
       </div>
     </>
+    </Localize>
   );
 }
 
@@ -1352,12 +1424,14 @@ function HandoffView({
   householdId: string;
   save: (action: () => Promise<unknown>) => Promise<void>;
 }) {
+  const { due: dueStatus, dateTime } = useAppLocale();
   const profile = data.handoffProfiles[0];
   const { tasks, contacts, maintenanceTasks, documents } = buildHandoffSnapshot(
     data,
     profile,
   );
   return (
+    <Localize>
     <>
       <QuickForm
         title="Create a sharing profile"
@@ -1407,7 +1481,7 @@ function HandoffView({
           {profile
             ? `Profile: ${profile.name} · `
             : "Default privacy profile · "}
-          Generated {new Date().toLocaleString()} · Confirm dates before
+          Generated {dateTime(new Date())} · Confirm dates before
           sharing.
         </p>
         <h3>Responsibilities</h3>
@@ -1452,6 +1526,7 @@ function HandoffView({
         <button onClick={() => window.print()}>Print handoff</button>
       </div>
     </>
+    </Localize>
   );
 }
 
@@ -1462,7 +1537,8 @@ function DisplayView({
   data: AppSnapshot;
   names: Record<string, string>;
 }) {
-  const today = new Date().toLocaleDateString(undefined, {
+  const { locale, due: dueStatus } = useAppLocale();
+  const today = new Date().toLocaleDateString(locale === "zh-TW" ? "zh-TW" : "en", {
     weekday: "long",
     month: "long",
     day: "numeric",
@@ -1472,6 +1548,7 @@ function DisplayView({
     item.startsAt.startsWith(todayKey),
   );
   return (
+    <Localize>
     <div className="display-mode">
       <p className="privacy-pill">Shared view · refreshes every minute</p>
       <p>{data.households[0]?.name}</p>
@@ -1496,7 +1573,7 @@ function DisplayView({
             events.slice(0, 6).map((item) => (
               <p key={item.id}>
                 <strong>{item.title}</strong> ·{" "}
-                {new Date(item.startsAt).toLocaleTimeString([], {
+                {new Date(item.startsAt).toLocaleTimeString(locale === "zh-TW" ? "zh-TW" : "en", {
                   hour: "numeric",
                   minute: "2-digit",
                 })}
@@ -1523,6 +1600,7 @@ function DisplayView({
         Private records and sensitive contacts are hidden from this display.
       </p>
     </div>
+    </Localize>
   );
 }
 
@@ -1537,6 +1615,7 @@ function SettingsView({
   householdName: string;
   setMessage: (value: string) => void;
 }) {
+  const { locale, dateTime } = useAppLocale();
   const [password, setPassword] = useState("");
   const [restorePassword, setRestorePassword] = useState("");
   const [mode, setMode] = useState<"merge" | "replace">("merge");
@@ -1592,7 +1671,9 @@ function SettingsView({
       setError("");
       const summary = summarizeBackup(await readBackupFile(file));
       setValidation(
-        `Valid backup from ${new Date(summary.exportedAt).toLocaleString()} · schema ${summary.schemaVersion} · ${summary.totalRecords} records. No data was changed.`,
+        locale === "zh-TW"
+          ? `有效備份：匯出於 ${dateTime(summary.exportedAt)} · 架構 ${summary.schemaVersion} · ${summary.totalRecords} 筆紀錄。資料未被更動。`
+          : `Valid backup from ${dateTime(summary.exportedAt)} · schema ${summary.schemaVersion} · ${summary.totalRecords} records. No data was changed.`,
       );
     } catch (caught) {
       setValidation("");
@@ -1614,7 +1695,11 @@ function SettingsView({
       await restoreBackup(parsed, mode);
       await db.settings.put(baseSetting("lastRestore", now()));
       await refresh();
-      setMessage(`Backup restored in ${mode} mode.`);
+      setMessage(
+        locale === "zh-TW"
+          ? `備份已用${mode === "merge" ? "合併" : "取代"}模式還原。`
+          : `Backup restored in ${mode} mode.`,
+      );
     } catch (caught) {
       setError(
         caught instanceof Error
@@ -1624,6 +1709,7 @@ function SettingsView({
     }
   };
   return (
+    <Localize>
     <div className="app-grid">
       <section className="app-card">
         <h2>Storage health</h2>
@@ -1646,15 +1732,15 @@ function SettingsView({
         <p>
           Last backup:{" "}
           {lastBackup
-            ? new Date(lastBackup).toLocaleString()
+            ? dateTime(lastBackup)
             : "No successful export recorded"}
         </p>
         <p>
           Last restore:{" "}
           {data.settings.find((item) => item.id === "lastRestore")?.value
-            ? new Date(
+            ? dateTime(
                 data.settings.find((item) => item.id === "lastRestore")!.value,
-              ).toLocaleString()
+              )
             : "None"}
         </p>
       </section>
@@ -1757,5 +1843,6 @@ function SettingsView({
         </p>
       )}
     </div>
+    </Localize>
   );
 }
