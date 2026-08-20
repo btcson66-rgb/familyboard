@@ -6,14 +6,17 @@ primaryIntent: "back up a digital home inventory safely"
 primaryKeyword: "home inventory backup"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create your first backup soon after setup, then make “last backup date” visible on the dashboard so protection does not depend on memory."
 related:
   - "/features/local-first-home-organizer/"
   - "/features/private-family-organizer/"
   - "/guides/photo-home-inventory/"
   - "/security/"
+faq: []
 contentVersion: 1
 ---
 # A digital home inventory is only as durable as its backup
@@ -35,5 +38,3 @@ A backup that has never been validated is an assumption. The app should preview 
 ## Protect the password separately
 
 If the encrypted backup password is lost, the product should not pretend it can recover the file without a recovery mechanism. Be explicit about that tradeoff.
-
-**Contextual CTA:** Create your first backup soon after setup, then make “last backup date” visible on the dashboard so protection does not depend on memory.

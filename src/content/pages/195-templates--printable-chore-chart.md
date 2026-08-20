@@ -7,6 +7,7 @@ primaryKeyword: "printable chore chart"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/family-chore-system/"
   - "/guides/chore-chart-for-adults/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # Printable Household Chore Chart

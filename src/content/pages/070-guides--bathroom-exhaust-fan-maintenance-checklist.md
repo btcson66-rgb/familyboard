@@ -6,14 +6,17 @@ primaryIntent: "clean and monitor bathroom exhaust fans"
 primaryKeyword: "bathroom exhaust fan maintenance"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add a light recurring inspection task and create a service record only if the fan's condition changes."
 related:
   - "/guides/home-maintenance-reminders/"
   - "/guides/home-service-provider-list/"
   - "/guides/annual-home-review/"
   - "/features/maintenance-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Bathroom exhaust fans are small systems with an important job
@@ -31,5 +34,3 @@ A note such as “fan noticeably louder than last month” gives a future servic
 ## Keep room and model clear
 
 Multiple bathrooms may have different fans. Label each by room and preserve the model where accessible.
-
-**Contextual CTA:** Add a light recurring inspection task and create a service record only if the fan's condition changes.

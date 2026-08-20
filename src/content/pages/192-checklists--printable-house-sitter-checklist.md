@@ -7,6 +7,7 @@ primaryKeyword: "printable house sitter checklist"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/house-sitter-information/"
   - "/guides/travel-household-handoff/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Printable House Sitter Checklist

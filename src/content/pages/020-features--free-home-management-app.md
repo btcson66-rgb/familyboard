@@ -6,14 +6,17 @@ primaryIntent: "find a free home management app"
 primaryKeyword: "free home management app"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Start with the free PWA. If it becomes part of your household routine, export regular backups and watch the roadmap for optional local Pro and sync features later."
 related:
   - "/app/"
   - "/features/local-first-home-organizer/"
   - "/features/home-dashboard/"
   - "/features/free-home-management-app/"
+faq: []
 contentVersion: 1
 ---
 # A free home management app should be useful from the first day

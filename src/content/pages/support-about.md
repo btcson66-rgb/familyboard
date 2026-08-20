@@ -7,10 +7,11 @@ primaryKeyword: ""
 cluster: "support"
 pageType: "support"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
-related:
-  []
+related: []
+faq: []
 contentVersion: 1
 ---
 # Homes run on information that usually has no home

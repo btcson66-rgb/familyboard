@@ -6,14 +6,17 @@ primaryIntent: "design a chore system for a family"
 primaryKeyword: "family chore system"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Start with five recurring chores that currently require repeated verbal reminders and test the system for two weeks before expanding it."
 related:
   - "/tools/recurring-chore-planner/"
   - "/templates/printable-chore-chart/"
   - "/features/family-display-mode/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # A chore system should reduce reminders, not create a new management job
@@ -35,5 +38,3 @@ Points and rewards can be useful in some households, but the core product should
 ## Use the display for visibility
 
 A kitchen tablet can show today's chores without exposing private household information.
-
-**Contextual CTA:** Start with five recurring chores that currently require repeated verbal reminders and test the system for two weeks before expanding it.

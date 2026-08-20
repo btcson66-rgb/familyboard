@@ -6,14 +6,17 @@ primaryIntent: "organize home contractor contacts and work history"
 primaryKeyword: "contractor records organizer"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the last provider who performed significant work and connect the contact to the project or equipment they actually know."
 related:
   - "/guides/home-service-provider-list/"
   - "/guides/renovation-records/"
   - "/guides/home-maintenance-records/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Contractor information is most valuable when attached to the work they performed
@@ -35,5 +38,3 @@ Maintenance instructions or future recommendations should become tasks instead o
 ## Keep private notes professional and factual
 
 The household contact record is not a public review platform. Avoid unnecessary personal information.
-
-**Contextual CTA:** Add the last provider who performed significant work and connect the contact to the project or equipment they actually know.

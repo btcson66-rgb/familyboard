@@ -6,14 +6,17 @@ primaryIntent: "create an inventory of household appliances"
 primaryKeyword: "appliance inventory"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the five appliances most likely to need service. A high-value inventory can begin long before the rest of the house is cataloged."
 related:
   - "/templates/printable-appliance-inventory/"
   - "/guides/serial-number-tracker/"
   - "/guides/how-to-track-product-warranties/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # An appliance inventory becomes truly useful when it connects to maintenance
@@ -35,5 +38,3 @@ Do not move heavy appliances or reach unsafe areas simply to obtain a serial num
 ## Archive rather than delete replaced appliances
 
 An archived record preserves repair and cost history and can help evaluate future purchasing decisions.
-
-**Contextual CTA:** Add the five appliances most likely to need service. A high-value inventory can begin long before the rest of the house is cataloged.

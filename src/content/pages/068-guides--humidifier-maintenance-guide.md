@@ -6,14 +6,17 @@ primaryIntent: "organize humidifier cleaning and consumables"
 primaryKeyword: "humidifier maintenance guide"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Turn the humidifier's real manual into two or three named tasks instead of adopting a generic “clean humidifier” reminder."
 related:
   - "/guides/dehumidifier-maintenance-guide/"
   - "/guides/household-supplies-inventory/"
   - "/features/maintenance-tracker/"
   - "/guides/home-maintenance-reminders/"
+faq: []
 contentVersion: 1
 ---
 # Humidifier care should be based on the exact design and water-contact parts
@@ -35,5 +38,3 @@ For equipment used only in dry months, a start-of-season and end-of-season task 
 ## Keep humidity decisions outside the organizer
 
 The product should not prescribe medical humidity targets. Users should follow reliable health, building and manufacturer guidance appropriate to their situation.
-
-**Contextual CTA:** Turn the humidifier's real manual into two or three named tasks instead of adopting a generic “clean humidifier” reminder.

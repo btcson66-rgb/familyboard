@@ -6,14 +6,17 @@ primaryIntent: "decide which furniture to record"
 primaryKeyword: "furniture inventory"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the furniture pieces you would measure, insure, sell or specially protect during a move. Leave ordinary low-value pieces out."
 related:
   - "/guides/moving-inventory/"
   - "/guides/home-inventory-for-insurance/"
   - "/guides/photo-home-inventory/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Furniture inventory should focus on items with a reason to be remembered
@@ -35,5 +38,3 @@ A specialty surface or upholstered piece may have specific care guidance. Keep i
 ## Avoid over-cataloging
 
 If the record would never be consulted again, skip it. The home inventory should remain a tool, not a museum database.
-
-**Contextual CTA:** Add the furniture pieces you would measure, insure, sell or specially protect during a move. Leave ordinary low-value pieces out.

@@ -6,14 +6,17 @@ primaryIntent: "prepare a home for spring conditions"
 primaryKeyword: "spring home maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Save a “Spring Home Review” in the maintenance tracker and attach notes to the actual systems that need attention instead of maintaining a disconnected checklist."
 related:
   - "/guides/seasonal-home-maintenance-checklist/"
   - "/guides/home-maintenance-after-vacation/"
   - "/tools/home-maintenance-schedule-generator/"
   - "/features/maintenance-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Spring is a good time to look for what the previous season changed
@@ -35,5 +38,3 @@ Spring is also a useful point to check warranties on items purchased during holi
 ## Make the checklist local
 
 Pollen, rain, storms, heat and cold affect homes differently. Keep the categories but adapt the actual tasks to the climate, building and equipment.
-
-**Contextual CTA:** Save a “Spring Home Review” in the maintenance tracker and attach notes to the actual systems that need attention instead of maintaining a disconnected checklist.

@@ -80,6 +80,9 @@ for (const contentRoot of contentRoots) {
       cluster: frontmatterValue(raw, "cluster"),
       primaryKeyword: frontmatterValue(raw, "primaryKeyword"),
       lastReviewed: frontmatterValue(raw, "lastReviewedAt"),
+      indexable: frontmatterValue(raw, "indexable") !== "false",
+      alternateRoute: frontmatterValue(raw, "alternateRoute"),
+      locale: frontmatterValue(raw, "locale") || "en",
       wordCount: wordCount(body),
     });
   }
@@ -159,6 +162,8 @@ for (const file of htmlFiles) {
     errors.push(`${route}: no registered production tool definition`);
   if (/\b(TODO|FIXME|Lorem ipsum|example\.com|localhost)\b/i.test(html))
     placeholders.push(route);
+  if (/Contextual CTA/i.test(html))
+    errors.push(`${route}: contains the Contextual CTA authoring artifact`);
 
   for (const match of html.matchAll(/href="(\/[^"#?]*)/g)) {
     const target = match[1];
@@ -225,11 +230,26 @@ errors.push(...placeholders.map((route) => `${route}: placeholder token`));
 const sitemapFile = path.join(root, "sitemap-0.xml");
 if (!fs.existsSync(sitemapFile)) errors.push("sitemap-0.xml missing");
 else {
-  const actual = new Set(
-    [
-      ...fs.readFileSync(sitemapFile, "utf8").matchAll(/<loc>([^<]+)<\/loc>/g),
-    ].map((match) => match[1]),
+  const sitemapXml = fs.readFileSync(sitemapFile, "utf8");
+  const sitemapEntries = new Map(
+    [...sitemapXml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => {
+      const block = match[1];
+      const loc = block.match(/<loc>([^<]+)<\/loc>/)?.[1] || "";
+      const lastmod = block.match(/<lastmod>([^<]+)<\/lastmod>/)?.[1] || "";
+      const links = [...block.matchAll(/<xhtml:link\s+([^>]+?)\s*\/?\s*>/g)].map(
+        (linkMatch) => {
+          const attributes = Object.fromEntries(
+            [...linkMatch[1].matchAll(/([\w-]+)="([^"]*)"/g)].map(
+              (attribute) => [attribute[1], attribute[2]],
+            ),
+          );
+          return { lang: attributes.hreflang || "", href: attributes.href || "" };
+        },
+      );
+      return [loc, { loc, lastmod, links }];
+    }),
   );
+  const actual = new Set(sitemapEntries.keys());
   const expected = new Set(
     records
       .filter(
@@ -244,6 +264,68 @@ else {
     if (!actual.has(url)) errors.push(`sitemap missing ${url}`);
   for (const url of actual)
     if (!expected.has(url)) errors.push(`sitemap unexpected ${url}`);
+
+  for (const [url, entry] of sitemapEntries) {
+    const route = normalizeRoute(new URL(url).pathname);
+    const metadata = contentByRoute.get(route);
+    if (!metadata?.lastReviewed)
+      errors.push(`sitemap ${url}: missing lastReviewedAt source metadata`);
+    else if (!entry.lastmod)
+      errors.push(`sitemap ${url}: missing lastmod`);
+    else if (!entry.lastmod.startsWith(metadata.lastReviewed))
+      errors.push(
+        `sitemap ${url}: lastmod ${entry.lastmod} does not match ${metadata.lastReviewed}`,
+      );
+
+    const sourceLanguage = entry.links.find(
+      (link) => link.href === url && link.lang !== "x-default",
+    )?.lang;
+    for (const link of entry.links.filter(
+      (item) => item.href !== url && item.lang !== "x-default",
+    )) {
+      const target = sitemapEntries.get(link.href);
+      if (!target) {
+        errors.push(`sitemap ${url}: hreflang target missing ${link.href}`);
+        continue;
+      }
+      if (
+        !sourceLanguage ||
+        !target.links.some(
+          (candidate) =>
+            candidate.href === url && candidate.lang === sourceLanguage,
+        )
+      )
+        errors.push(
+          `sitemap ${url}: hreflang target is not reciprocal ${link.href}`,
+        );
+    }
+  }
+
+  for (const [localizedRoute, metadata] of contentByRoute) {
+    if (!metadata.alternateRoute) continue;
+    const englishUrl = new URL(metadata.alternateRoute, "https://familyboard.win").toString();
+    const localizedUrl = new URL(localizedRoute, "https://familyboard.win").toString();
+    const englishEntry = sitemapEntries.get(englishUrl);
+    const localizedEntry = sitemapEntries.get(localizedUrl);
+    if (!englishEntry || !localizedEntry) continue;
+    const required = [
+      { lang: "en", href: englishUrl },
+      { lang: "zh-TW", href: localizedUrl },
+    ];
+    for (const entry of [englishEntry, localizedEntry]) {
+      for (const link of required) {
+        if (
+          !entry.links.some(
+            (candidate) =>
+              candidate.lang === link.lang && candidate.href === link.href,
+          )
+        )
+          errors.push(
+            `sitemap ${entry.loc}: missing reciprocal ${link.lang} alternate ${link.href}`,
+          );
+      }
+    }
+  }
 }
 
 fs.mkdirSync("reports", { recursive: true });

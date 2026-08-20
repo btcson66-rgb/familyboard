@@ -7,6 +7,7 @@ primaryKeyword: "appliance replacement planner"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/household-replacement-reserve/"
   - "/tools/appliance-age-calculator/"
   - "/features/home-dashboard/"
+faq: []
 contentVersion: 1
 ---
 # Appliance Replacement Planner

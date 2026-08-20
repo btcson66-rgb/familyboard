@@ -6,14 +6,17 @@ primaryIntent: "build a family emergency contact list"
 primaryKeyword: "family emergency contacts list"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create a ten-contact emergency sheet rather than exporting the entire phone book."
 related:
   - "/tools/emergency-contact-sheet-generator/"
   - "/templates/printable-emergency-contacts/"
   - "/guides/emergency-information-sheet/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # An emergency contact list should answer “who do I call next?”
@@ -35,5 +38,3 @@ A printable sheet or exported offline view can be useful if internet access is l
 ## Test the list
 
 Ask another household member to locate a specific contact without coaching. If the contact is hard to find, the structure needs improvement.
-
-**Contextual CTA:** Create a ten-contact emergency sheet rather than exporting the entire phone book.

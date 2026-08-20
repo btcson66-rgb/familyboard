@@ -7,6 +7,7 @@ primaryKeyword: "recurring chore planner"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/chore-chart-for-adults/"
   - "/templates/printable-chore-chart/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # Recurring Chore Planner

@@ -6,14 +6,17 @@ primaryIntent: "split household work more clearly between adults/family members"
 primaryKeyword: "divide household responsibilities"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Build a shared list of invisible admin tasks first. Many household workload problems become clearer before any reassignment happens."
 related:
   - "/guides/home-maintenance-delegation/"
   - "/guides/recurring-household-tasks/"
   - "/guides/household-handoff/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # Household work is easier to divide when the invisible parts are named
@@ -35,5 +38,3 @@ Equal numbers of tasks do not necessarily mean equal effort. Time, physical abil
 ## Keep a backup path
 
 Critical responsibilities should be understandable to another person even if one person normally owns them.
-
-**Contextual CTA:** Build a shared list of invisible admin tasks first. Many household workload problems become clearer before any reassignment happens.

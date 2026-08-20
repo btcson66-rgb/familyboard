@@ -7,6 +7,7 @@ primaryKeyword: "household subscription calculator"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/subscription-renewal-tracker/"
   - "/features/household-subscription-tracker/"
   - "/tools/annual-subscription-cost-calculator/"
+faq: []
 contentVersion: 1
 ---
 # Household Subscription Cost Calculator

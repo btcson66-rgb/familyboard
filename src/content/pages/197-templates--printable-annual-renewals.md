@@ -7,6 +7,7 @@ primaryKeyword: "printable annual renewal calendar"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/subscription-renewal-tracker/"
   - "/guides/recurring-bills-tracker/"
   - "/features/household-calendar/"
+faq: []
 contentVersion: 1
 ---
 # Printable Annual Renewals Calendar

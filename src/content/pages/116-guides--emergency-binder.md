@@ -6,14 +6,17 @@ primaryIntent: "build a household emergency binder"
 primaryKeyword: "emergency binder"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Generate the binder outline, fill the contacts first and test whether another household member can understand it without explanation."
 related:
   - "/tools/emergency-binder-generator/"
   - "/checklists/printable-emergency-binder-checklist/"
   - "/guides/family-emergency-contacts/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # An emergency binder should be short enough to use under pressure
@@ -39,5 +42,3 @@ Evacuation, shelter, disaster supplies and medical action should follow local au
 ## Review on a schedule
 
 An emergency binder with an old phone number creates false confidence. Add a review date.
-
-**Contextual CTA:** Generate the binder outline, fill the contacts first and test whether another household member can understand it without explanation.

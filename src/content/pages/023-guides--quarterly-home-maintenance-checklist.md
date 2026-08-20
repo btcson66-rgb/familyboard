@@ -6,14 +6,17 @@ primaryIntent: "perform a deeper home review every three months"
 primaryKeyword: "quarterly home maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the quarterly review to clean up the maintenance tracker: close stale tasks, update service history and add only the next season's relevant work."
 related:
   - "/guides/monthly-home-maintenance-checklist/"
   - "/guides/seasonal-home-maintenance-checklist/"
   - "/guides/home-maintenance-records/"
   - "/features/maintenance-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Quarterly maintenance is the bridge between monthly awareness and annual projects
@@ -35,5 +38,3 @@ Think about the items you do not want to discover are missing during a problem: 
 ## Review contact and document accuracy
 
 Quarterly is also a good cadence for checking whether important household contacts, service providers and upcoming renewals are still current. A maintenance system is only as useful as the information around it.
-
-**Contextual CTA:** Use the quarterly review to clean up the maintenance tracker: close stale tasks, update service history and add only the next season's relevant work.

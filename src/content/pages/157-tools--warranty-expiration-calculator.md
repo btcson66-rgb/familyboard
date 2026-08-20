@@ -7,6 +7,7 @@ primaryKeyword: "warranty expiration calculator"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/how-to-track-product-warranties/"
   - "/features/warranty-tracker/"
   - "/app/"
+faq: []
 contentVersion: 1
 ---
 # Warranty Expiration Calculator

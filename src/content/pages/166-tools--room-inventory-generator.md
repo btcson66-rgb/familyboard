@@ -7,6 +7,7 @@ primaryKeyword: "room inventory generator"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/tools/home-inventory-checklist-generator/"
   - "/guides/photo-home-inventory/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Room Inventory Generator

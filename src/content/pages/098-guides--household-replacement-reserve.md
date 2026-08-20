@@ -6,14 +6,17 @@ primaryIntent: "plan money for future household replacements"
 primaryKeyword: "household replacement reserve"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add only the major items that would create a meaningful financial shock if they failed tomorrow."
 related:
   - "/guides/appliance-replacement-planning/"
   - "/guides/home-maintenance-budget/"
   - "/tools/appliance-replacement-planner/"
   - "/guides/annual-home-review/"
+faq: []
 contentVersion: 1
 ---
 # Replacement planning is easier when it is separate from emergency panic
@@ -35,5 +38,3 @@ When an item is replaced, record the actual cost. Over time, household-specific 
 ## Keep financial guidance separate
 
 The organizer can total planned amounts but should not tell users how much emergency savings they personally require.
-
-**Contextual CTA:** Add only the major items that would create a meaningful financial shock if they failed tomorrow.

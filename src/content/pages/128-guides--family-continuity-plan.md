@@ -6,14 +6,17 @@ primaryIntent: "plan how a household continues if the usual organizer is unavail
 primaryKeyword: "family continuity plan"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Choose the five household responsibilities with the most single-person knowledge and create a backup path for each."
 related:
   - "/guides/household-handoff/"
   - "/guides/household-admin-backup-person/"
   - "/guides/what-spouse-needs-to-know/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Continuity planning is not only for businesses
@@ -35,5 +38,3 @@ A useful continuity record says not only “car insurance,” but “policy owne
 ## Review after major life changes
 
 Moves, new dependents, new jobs or changed care responsibilities can make the continuity plan outdated quickly.
-
-**Contextual CTA:** Choose the five household responsibilities with the most single-person knowledge and create a backup path for each.

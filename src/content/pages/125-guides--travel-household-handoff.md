@@ -6,14 +6,17 @@ primaryIntent: "hand household operations to someone while traveling"
 primaryKeyword: "household handoff for travel"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Generate the handoff 48 hours before departure, then do a final update on the day you leave."
 related:
   - "/guides/vacation-home-shutdown-checklist/"
   - "/guides/house-sitter-information/"
   - "/guides/pet-sitter-information/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Travel handoff should focus on the unusual responsibilities created by absence
@@ -35,5 +38,3 @@ Travel documents should not be publicly shared. Avoid placing absence dates and 
 ## Close the handoff after return
 
 Mark temporary responsibilities complete and capture any issue that occurred while away.
-
-**Contextual CTA:** Generate the handoff 48 hours before departure, then do a final update on the day you leave.

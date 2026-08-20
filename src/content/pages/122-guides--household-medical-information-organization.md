@@ -6,14 +6,17 @@ primaryIntent: "organize household medical information cautiously"
 primaryKeyword: "organize family medical information"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Store only what another trusted caregiver truly needs and keep the rest in the appropriate secure health-record system."
 related:
   - "/guides/emergency-information-sheet/"
   - "/guides/family-emergency-contacts/"
   - "/privacy/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Medical information deserves a stricter privacy boundary than ordinary household notes
@@ -35,5 +38,3 @@ Medical notes should never appear on a wall display or general household dashboa
 ## Use specialized systems where needed
 
 For complex care, a dedicated health or clinical record system may be more appropriate. `FamilyBoard` can serve as a pointer in the household continuity plan.
-
-**Contextual CTA:** Store only what another trusted caregiver truly needs and keep the rest in the appropriate secure health-record system.

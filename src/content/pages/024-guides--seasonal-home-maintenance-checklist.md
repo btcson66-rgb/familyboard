@@ -6,14 +6,17 @@ primaryIntent: "plan home upkeep around seasonal change"
 primaryKeyword: "seasonal home maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Browse the four seasonal guides, choose only what applies to your home and save a customized recurring plan."
 related:
   - "/guides/spring-home-maintenance-checklist/"
   - "/guides/summer-home-maintenance-checklist/"
   - "/guides/fall-home-maintenance-checklist/"
   - "/guides/winter-home-maintenance-checklist/"
+faq: []
 contentVersion: 1
 ---
 # Seasonal maintenance is about transitions, not four identical calendar quarters
@@ -35,5 +38,3 @@ Seasonal change also affects supplies, subscriptions, travel, school routines, o
 ## Use a recurring seasonal review
 
 Create four flexible seasonal review tasks and customize them after the first year. By year two, the checklist will reflect the actual home rather than generic advice.
-
-**Contextual CTA:** Browse the four seasonal guides, choose only what applies to your home and save a customized recurring plan.

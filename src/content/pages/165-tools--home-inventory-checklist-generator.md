@@ -7,6 +7,7 @@ primaryKeyword: "home inventory checklist generator"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/room-by-room-home-inventory/"
   - "/tools/room-inventory-generator/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Home Inventory Checklist Generator

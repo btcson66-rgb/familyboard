@@ -6,14 +6,17 @@ primaryIntent: "check a home after returning from travel"
 primaryKeyword: "home checklist after vacation"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Treat each trip as a small improvement cycle: one return-home note can make the next household handoff much smoother."
 related:
   - "/guides/vacation-home-shutdown-checklist/"
   - "/guides/returning-home-after-travel-checklist/"
   - "/guides/travel-household-handoff/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Returning home is the right time for a quick condition check
@@ -35,5 +38,3 @@ Review upcoming trash, deliveries, household subscriptions, appointments and mai
 ## Update the next travel checklist
 
 If you forgot to turn off a delivery, left unclear pet instructions or discovered another recurring issue, edit the shutdown/handoff template now while the experience is fresh.
-
-**Contextual CTA:** Treat each trip as a small improvement cycle: one return-home note can make the next household handoff much smoother.

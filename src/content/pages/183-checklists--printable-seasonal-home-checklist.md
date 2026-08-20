@@ -7,6 +7,7 @@ primaryKeyword: "printable seasonal home checklist"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/spring-home-maintenance-checklist/"
   - "/guides/fall-home-maintenance-checklist/"
   - "/tools/home-maintenance-schedule-generator/"
+faq: []
 contentVersion: 1
 ---
 # Printable Seasonal Home Checklist

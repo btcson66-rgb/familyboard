@@ -7,6 +7,7 @@ primaryKeyword: "house sitter instructions generator"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/checklists/printable-house-sitter-checklist/"
   - "/guides/travel-household-handoff/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # House Sitter Instructions Generator

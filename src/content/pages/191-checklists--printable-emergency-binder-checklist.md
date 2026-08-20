@@ -7,6 +7,7 @@ primaryKeyword: "printable emergency binder checklist"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/tools/emergency-binder-generator/"
   - "/templates/printable-emergency-contacts/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Printable Emergency Binder Checklist

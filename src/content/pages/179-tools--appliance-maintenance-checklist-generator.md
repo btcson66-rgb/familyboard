@@ -7,6 +7,7 @@ primaryKeyword: "appliance maintenance checklist generator"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/home-maintenance-schedule/"
   - "/features/maintenance-tracker/"
   - "/tools/home-service-reminder-generator/"
+faq: []
 contentVersion: 1
 ---
 # Appliance Maintenance Checklist Generator

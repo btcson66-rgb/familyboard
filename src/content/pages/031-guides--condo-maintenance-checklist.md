@@ -6,14 +6,17 @@ primaryIntent: "understand maintenance responsibilities in a condo"
 primaryKeyword: "condo maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add a “Building/Association” contact group and separate unit assets from shared systems so the household knows who is responsible for what."
 related:
   - "/guides/home-service-provider-list/"
   - "/guides/important-household-documents/"
   - "/guides/annual-home-review/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Condo maintenance starts with knowing the boundary of responsibility
@@ -35,5 +38,3 @@ Some work may require building approval, access scheduling or communication with
 ## Preserve official documents separately
 
 Association rules, notices and legal records can matter, but the product should organize references rather than interpret legal obligations. When responsibility is unclear, the governing documents and qualified local advice should control.
-
-**Contextual CTA:** Add a “Building/Association” contact group and separate unit assets from shared systems so the household knows who is responsible for what.

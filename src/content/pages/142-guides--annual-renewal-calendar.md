@@ -6,14 +6,17 @@ primaryIntent: "create one calendar of annual household renewals"
 primaryKeyword: "annual renewal calendar"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use your email search and last year's calendar to find annual obligations, then create one consolidated timeline."
 related:
   - "/tools/household-annual-review-generator/"
   - "/guides/subscription-renewal-tracker/"
   - "/guides/recurring-bills-tracker/"
   - "/features/household-calendar/"
+faq: []
 contentVersion: 1
 ---
 # Annual obligations are the easiest recurring tasks to forget
@@ -35,5 +38,3 @@ Legal registration and inspection deadlines vary. Let users enter the real dates
 ## Review once per year
 
 An annual calendar itself needs maintenance. Remove cancelled services and add new obligations.
-
-**Contextual CTA:** Use your email search and last year's calendar to find annual obligations, then create one consolidated timeline.

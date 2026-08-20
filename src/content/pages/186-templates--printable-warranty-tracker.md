@@ -7,6 +7,7 @@ primaryKeyword: "printable warranty tracker"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/tools/warranty-expiration-calculator/"
   - "/features/warranty-tracker/"
   - "/guides/purchase-receipt-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Printable Warranty Tracker

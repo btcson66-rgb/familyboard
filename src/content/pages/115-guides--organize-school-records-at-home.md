@@ -6,14 +6,17 @@ primaryIntent: "organize school-related household information"
 primaryKeyword: "organize school records at home"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Treat school information as a current operations layer, not a permanent dump of every document the school sends."
 related:
   - "/guides/household-account-list/"
   - "/guides/family-emergency-contacts/"
   - "/guides/annual-renewal-calendar/"
   - "/features/household-documents-organizer/"
+faq: []
 contentVersion: 1
 ---
 # School information changes often, so the household needs an index more than an archive
@@ -35,5 +38,3 @@ At the end of the school year, archive old contacts and remove outdated schedule
 ## Create handoff notes for caregivers
 
 Pickup procedures, authorized-contact reminders or activity logistics can be included when appropriate, but follow school rules and protect sensitive access information.
-
-**Contextual CTA:** Treat school information as a current operations layer, not a permanent dump of every document the school sends.

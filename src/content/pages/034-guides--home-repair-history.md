@@ -6,14 +6,17 @@ primaryIntent: "keep a history of repairs to a home or appliance"
 primaryKeyword: "home repair history"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the most recent repair to the asset it affected and include one sentence describing the original symptom. That small habit creates surprisingly useful history."
 related:
   - "/guides/home-maintenance-records/"
   - "/guides/repair-history/"
   - "/templates/printable-repair-log/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Repair history is most valuable when a problem happens twice
@@ -35,5 +38,3 @@ A home-wide chronological list is useful, but asset history is where patterns be
 ## Costs are optional but informative
 
 Tracking repair cost can help with later replace-versus-repair decisions, but the app should not make that decision automatically without context.
-
-**Contextual CTA:** Add the most recent repair to the asset it affected and include one sentence describing the original symptom. That small habit creates surprisingly useful history.

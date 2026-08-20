@@ -7,6 +7,7 @@ primaryKeyword: "printable home service provider list"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/service-provider-contact-list/"
   - "/guides/contractor-records/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Printable Home Service Provider List

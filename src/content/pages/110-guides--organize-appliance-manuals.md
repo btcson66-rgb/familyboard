@@ -6,14 +6,17 @@ primaryIntent: "keep appliance manuals easy to find"
 primaryKeyword: "organize appliance manuals"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Start by organizing manuals for appliances with recurring maintenance; those are the documents most likely to be needed again."
 related:
   - "/guides/appliance-inventory/"
   - "/features/household-documents-organizer/"
   - "/guides/serial-number-tracker/"
   - "/tools/household-document-index-generator/"
+faq: []
 contentVersion: 1
 ---
 # Appliance manuals make more sense as part of the appliance record than as a separate collection
@@ -35,5 +38,3 @@ If the manual specifies a user-permitted maintenance procedure, the task can lin
 ## Archive manuals with retired assets
 
 When an appliance leaves the home, archive the manual reference with the asset rather than leaving obsolete files in the active folder.
-
-**Contextual CTA:** Start by organizing manuals for appliances with recurring maintenance; those are the documents most likely to be needed again.

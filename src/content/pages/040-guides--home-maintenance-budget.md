@@ -6,14 +6,17 @@ primaryIntent: "plan and track home maintenance spending"
 primaryKeyword: "home maintenance budget"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Start with the Home Maintenance Cost Tracker and let one year of real household data teach you more than a generic estimate ever could."
 related:
   - "/tools/home-maintenance-cost-tracker/"
   - "/guides/appliance-replacement-planning/"
   - "/guides/home-repair-history/"
   - "/guides/maintenance-priorities/"
+faq: []
 contentVersion: 1
 ---
 # Your own maintenance history is more useful than a universal percentage rule
@@ -37,5 +40,3 @@ Known warranty expirations, recurring services and aging equipment can inform a 
 ## Avoid false precision
 
 The tool can summarize history and planned items, but it should not imply financial advice or guarantee a suitable emergency fund.
-
-**Contextual CTA:** Start with the Home Maintenance Cost Tracker and let one year of real household data teach you more than a generic estimate ever could.

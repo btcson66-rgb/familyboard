@@ -6,14 +6,17 @@ primaryIntent: "family organizer focused on privacy"
 primaryKeyword: "private family organizer"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Read the privacy architecture before using the app for sensitive household records. The product should make its boundaries understandable without requiring a security degree."
 related:
   - "/privacy/"
   - "/security/"
   - "/features/local-first-home-organizer/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Privacy matters more when the app knows how your household works
@@ -37,5 +40,3 @@ If someone can unlock the device and browser, local data may be accessible. User
 ## Be honest instead of making impossible promises
 
 The site should explain what is stored, where it is stored and what the limitations are. Avoid slogans such as “100% secure” or “unhackable.” Trust is built by clarity.
-
-**Contextual CTA:** Read the privacy architecture before using the app for sensitive household records. The product should make its boundaries understandable without requiring a security degree.

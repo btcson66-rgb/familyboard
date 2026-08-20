@@ -6,14 +6,17 @@ primaryIntent: "maintain a household dehumidifier"
 primaryKeyword: "dehumidifier maintenance guide"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Record whether your unit drains to a tank, hose or pump; that single detail makes its maintenance plan much more specific."
 related:
   - "/guides/humidifier-maintenance-guide/"
   - "/guides/water-leak-response-home-records/"
   - "/features/maintenance-tracker/"
   - "/guides/home-maintenance-reminders/"
+faq: []
 contentVersion: 1
 ---
 # Dehumidifiers combine air handling and water collection, so both sides deserve attention
@@ -35,5 +38,3 @@ If the dehumidifier is used only during part of the year, add a storage/end-of-s
 ## Preserve service and warranty information
 
 A portable appliance can be easy to replace and therefore easy to neglect in the inventory. If it is expensive or important to moisture control, the record is worth keeping.
-
-**Contextual CTA:** Record whether your unit drains to a tank, hose or pump; that single detail makes its maintenance plan much more specific.

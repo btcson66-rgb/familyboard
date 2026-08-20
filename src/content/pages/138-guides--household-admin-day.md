@@ -6,14 +6,17 @@ primaryIntent: "batch household administrative tasks"
 primaryKeyword: "household admin day"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create an “Admin” tag and move every vague household paperwork task into one queue for the next session."
 related:
   - "/guides/household-weekly-reset/"
   - "/guides/annual-renewal-calendar/"
   - "/guides/household-documents-organizer/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # Household admin is easier when it has a container
@@ -35,5 +38,3 @@ If a service is scheduled or a renewal changes, update the original record immed
 ## Keep the session optional
 
 Some households need a weekly admin block; others need one monthly. The system should fit the workload.
-
-**Contextual CTA:** Create an “Admin” tag and move every vague household paperwork task into one queue for the next session.

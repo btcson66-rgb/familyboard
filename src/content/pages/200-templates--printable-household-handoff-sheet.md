@@ -7,6 +7,7 @@ primaryKeyword: "printable household handoff sheet"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/household-handoff/"
   - "/guides/family-continuity-plan/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Printable Household Handoff Sheet

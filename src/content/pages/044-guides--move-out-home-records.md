@@ -6,14 +6,17 @@ primaryIntent: "organize records before leaving a home"
 primaryKeyword: "move out home checklist records"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create an export first, then work through the move-out checklist. Data deletion should always happen after a recoverable backup, never before."
 related:
   - "/guides/moving-house-organizer/"
   - "/guides/moving-inventory/"
   - "/tools/household-document-index-generator/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Moving out is partly a data-cleanup project
@@ -35,5 +38,3 @@ Create a verified backup of the household database before removing the old home.
 ## Keep a move-out timeline
 
 For rentals, preserve official condition documentation and communications according to applicable requirements. For owners, keep relevant sale and property records in the appropriate long-term archive.
-
-**Contextual CTA:** Create an export first, then work through the move-out checklist. Data deletion should always happen after a recoverable backup, never before.

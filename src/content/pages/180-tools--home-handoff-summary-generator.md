@@ -7,6 +7,7 @@ primaryKeyword: "household handoff template generator"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/family-continuity-plan/"
   - "/features/household-handoff/"
   - "/templates/printable-household-handoff-sheet/"
+faq: []
 contentVersion: 1
 ---
 # Home Handoff Summary Generator

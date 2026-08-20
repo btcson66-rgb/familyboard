@@ -6,14 +6,17 @@ primaryIntent: "clean and track range-hood filters and service"
 primaryKeyword: "range hood maintenance checklist"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Check the hood manual once and turn its real maintenance requirements into clear, named tasks instead of relying on a generic kitchen checklist."
 related:
   - "/guides/oven-maintenance-checklist/"
   - "/tools/appliance-maintenance-checklist-generator/"
   - "/guides/home-maintenance-reminders/"
   - "/features/maintenance-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Range-hood maintenance is a good example of why model-specific records matter
@@ -35,5 +38,3 @@ Reduced airflow, unusual noise or controls that stop working should become servi
 ## Keep the hood connected to kitchen records
 
 If the hood is part of a remodel or was installed with other appliances, preserving the installation date and contractor can be useful later.
-
-**Contextual CTA:** Check the hood manual once and turn its real maintenance requirements into clear, named tasks instead of relying on a generic kitchen checklist.

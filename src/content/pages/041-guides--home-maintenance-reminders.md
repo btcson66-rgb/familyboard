@@ -6,14 +6,17 @@ primaryIntent: "set reminders for home maintenance"
 primaryKeyword: "home maintenance reminders"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Rewrite your three vaguest home reminders so each one names the item, the action and the next step."
 related:
   - "/guides/home-maintenance-calendar/"
   - "/tools/home-service-reminder-generator/"
   - "/features/maintenance-tracker/"
   - "/guides/recurring-household-tasks/"
+faq: []
 contentVersion: 1
 ---
 # A reminder without context becomes notification clutter
@@ -35,5 +38,3 @@ A reminder should not simply disappear. Recording completion creates the next us
 ## Reduce reminders that do not lead to action
 
 If a household repeatedly dismisses the same low-value task, review whether the task belongs in the system at all or whether its timing is wrong.
-
-**Contextual CTA:** Rewrite your three vaguest home reminders so each one names the item, the action and the next step.

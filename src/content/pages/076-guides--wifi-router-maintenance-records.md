@@ -6,14 +6,17 @@ primaryIntent: "organize home router records without storing insecure credential
 primaryKeyword: "home router inventory tracker"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the router as an asset with the ISP support details, then put credentials where they belong: a dedicated secure password system."
 related:
   - "/guides/computer-electronics-inventory/"
   - "/guides/household-account-list/"
   - "/guides/power-outage-home-preparedness/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Your router is a household asset, but its passwords should live somewhere else
@@ -31,5 +34,3 @@ Wi-Fi passwords, router admin credentials and account recovery codes should be s
 ## Record changes
 
 If equipment is replaced, note the old and new models and the date. During recurring connection issues, support history can prevent the household from repeating the same troubleshooting story.
-
-**Contextual CTA:** Add the router as an asset with the ISP support details, then put credentials where they belong: a dedicated secure password system.

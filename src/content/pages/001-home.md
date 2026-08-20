@@ -7,13 +7,16 @@ primaryKeyword: "home management system"
 cluster: "product"
 pageType: "content"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Open the free local-first app and add the first thing in your home you would hate to lose the receipt, warranty or maintenance history for."
 related:
   - "/features/"
   - "/guides/home-maintenance-schedule/"
   - "/tools/home-maintenance-schedule-generator/"
   - "/app/"
+faq: []
 contentVersion: 1
 ---
 # A home has hundreds of moving parts. Keep the important ones in one place.
@@ -37,5 +40,3 @@ The free web app is built to work without an account. Core household data is sto
 ## Useful even if you never become a “home organization person”
 
 You do not need a perfect system. Start with one refrigerator, one vehicle, one insurance contact or one maintenance task. The dashboard becomes more useful as you add the parts of your home that are actually worth remembering.
-
-**Contextual CTA:** Open the free local-first app and add the first thing in your home you would hate to lose the receipt, warranty or maintenance history for.

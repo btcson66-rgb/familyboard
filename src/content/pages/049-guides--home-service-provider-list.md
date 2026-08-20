@@ -6,14 +6,17 @@ primaryIntent: "create a list of trusted home service providers"
 primaryKeyword: "home service provider list"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the last three service providers who worked on your home and connect each one to the asset or area they actually serviced."
 related:
   - "/templates/printable-service-provider-list/"
   - "/guides/home-maintenance-records/"
   - "/guides/contractor-records/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # The best service contact is often the person who has already seen the problem
@@ -35,5 +38,3 @@ A technician becomes much easier to identify when their prior work appears on th
 ## Verify before emergencies
 
 A contact from five years ago may no longer operate. Review critical service contacts periodically rather than assuming the number still works.
-
-**Contextual CTA:** Add the last three service providers who worked on your home and connect each one to the asset or area they actually serviced.

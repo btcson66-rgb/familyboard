@@ -7,6 +7,7 @@ primaryKeyword: "move in checklist generator"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/new-home-setup-checklist/"
   - "/guides/first-time-homeowner-maintenance-guide/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Move-In Checklist Generator

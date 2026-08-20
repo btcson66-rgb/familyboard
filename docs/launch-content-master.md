@@ -1063,33 +1063,67 @@ The free app still needs data migrations, reliable backups, accessibility, offli
 **Slug:** `/guides/home-maintenance-schedule/`
 **Primary intent:** build a realistic home maintenance schedule
 **Title tag:** `How to Build a Home Maintenance Schedule You Will Actually Keep`
-**Meta description:** `Create a practical home maintenance schedule by grouping recurring work by system, season, urgency and the instructions for your actual equipment.`
+**Meta description:** `Build a home maintenance schedule with real intervals for filters, water heaters, smoke alarms and washer hoses, sourced from ENERGY STAR, USFA and manufacturers.`
 **Primary keyword concept:** home maintenance schedule
+**Depth:** verified
 **Suggested internal links:** `/tools/home-maintenance-schedule-generator/`, `/guides/home-maintenance-calendar/`, `/guides/preventive-home-maintenance/`, `/features/maintenance-tracker/`
 
 # How to build a home maintenance schedule you will actually keep
 
-A useful maintenance schedule is not a giant list copied from the internet. Homes differ by climate, building type, equipment, age, ownership status and manufacturer requirements. The best schedule starts with **your actual home** and then turns recurring work into a manageable rhythm.
+A useful maintenance schedule is not a giant list copied from the internet. Homes differ by climate, building type, equipment, age, ownership status and manufacturer requirements. But "it depends on your home" is not an excuse to skip real numbers — most systems have a published starting interval from the manufacturer, a standards body or a government safety agency, and the schedule should start there before it gets adjusted to your household.
 
 ## Begin with systems, not months
 
-Walk through the home and identify the systems that create ongoing upkeep: heating and cooling, water, kitchen appliances, laundry equipment, safety devices, filters, exterior areas and any special equipment. For each one, ask three questions: What needs routine attention? What instruction does the manufacturer give? What signs would tell us that service is needed sooner?
+Walk through the home and identify the systems that create ongoing upkeep: heating and cooling, water, kitchen appliances, laundry equipment, safety devices, filters, exterior areas and any special equipment. For each one, record what needs routine attention, what the manufacturer's documentation says about timing, and what symptoms would mean service is needed sooner than scheduled.
+
+## A starting interval for the systems almost every home has
+
+These are the published starting points to build a schedule from, not one-size-fits-all rules — check your own manuals for anything model-specific:
+
+| System | Task | Typical interval | Source |
+|---|---|---|---|
+| HVAC | Check the filter; replace within 3 months at the outside | Check monthly, replace at least every 1–3 months | [ENERGY STAR](https://www.energystar.gov/saveathome/heating-cooling) |
+| HVAC | Full system tune-up | Once a year | [ENERGY STAR](https://www.energystar.gov/saveathome/heating-cooling) |
+| Water heater (tank) | Flush sediment from the tank | Once a year | [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html) |
+| Water heater (tank) | Inspect anode rod; test temperature-pressure relief valve | Anode: yearly inspection. T&P valve: yearly by the homeowner, every 5 years by a professional | [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html) |
+| Smoke alarms | Press the test button | Once a month | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Smoke alarms | Replace 9-volt battery (or hardwired backup battery) | Once a year | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Smoke alarms | Replace the whole unit | 10 years from the manufacture date | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Washing machine | Inspect supply hoses; replace regardless of visible wear | Inspect monthly, replace every 3–5 years | [South Carolina Farm Bureau Insurance](https://www.scfbins.com/articles/washing-machine-hose-inspection-and-replacement) |
 
 ## Separate fixed dates from condition-based work
 
-Some responsibilities fit a calendar well. Others do not. A seasonal inspection may happen every spring, while a filter may depend on model, environment and usage. A maintenance tracker should allow both a recurring date and a note such as “inspect and replace if needed.”
+Some responsibilities fit a calendar well — an HVAC tune-up or a smoke alarm test can sit on a fixed monthly or annual date. Others are condition-based: a filter's real life depends on the model, pets, dust and how many months of heavy heating or cooling season it saw. A maintenance tracker should hold both a recurring date and a note like "inspect and replace if needed" rather than pretending every task fits a calendar equally well.
 
 ## Give high-consequence work more visibility
 
-Do not bury safety-related or damage-prevention items under cosmetic tasks. Work that can affect water intrusion, fire safety, heating, cooling or other essential systems deserves clearer reminders and appropriate professional guidance.
+Do not bury safety-related or damage-prevention items under cosmetic tasks. Smoke alarm testing, water heater relief-valve checks and washing machine hose inspection all guard against outcomes — fire, scalding, flooding — that are far more expensive than a missed dusting task. Give those items clearer reminders, and treat any professional-only work (gas lines, electrical panels, roofing) as a scheduling and record-keeping item rather than a DIY project: log when it was last done and who did it, and schedule the next call.
 
 ## Keep a completion history
 
-The schedule becomes far more useful when each completed task records a date and note. You no longer need to guess whether something was done last month or last year.
+The schedule becomes far more useful when each completed task records a date and a note. You no longer need to guess whether the filter was changed last month or four months ago, or whether the water heater's relief valve has ever actually been tested.
 
-A simple starting workflow is: inventory important systems, create only the recurring tasks you understand, complete them for a few months, then add more once the routine proves useful.
+A simple starting workflow: inventory the systems above, create only the recurring tasks you understand and can verify against your own manuals, complete them for a few months, then add more once the routine proves useful.
 
-**Contextual CTA:** Use the Home Maintenance Schedule Generator to create a starter list, then edit it to match the manuals, climate and equipment in your own home.
+## Group by season without losing the underlying system
+
+Once the core recurring tasks are running, it can help to view the same list by season rather than by system — a spring pass that covers the HVAC tune-up and exterior checks, a fall pass that covers the water heater flush and smoke alarm battery swap before the year turns over. This is a view, not a separate schedule: the interval still belongs to the system (the water heater doesn't care what season it is), but grouping by season matches how most households actually sit down and do a batch of maintenance in one afternoon rather than one task at a time.
+
+## What a rental or a newly purchased home should do differently
+
+A renter typically owns only the condition-based, easily reversible tasks — smoke alarm testing, filter checks if the lease allows access, hose inspection on an in-unit washer — while professional and structural service is the landlord's responsibility to schedule; the household record should still log what was reported and when. A newly purchased home should start by confirming installation and last-service dates for the water heater and HVAC system from the seller's disclosures or a home inspection report, since "unknown" install dates make every one of the intervals above impossible to plan against. Write down what's confirmed, and label what's estimated as an estimate, rather than guessing an exact date.
+
+**Contextual CTA:** Use the Home Maintenance Schedule Generator to create a starter list from the intervals above, then edit it to match the manuals, climate and equipment in your own home.
+
+**FAQ:**
+- Q: How often should I really change my HVAC filter?
+  A: Check it monthly and replace at least every 1 to 3 months for a standard 1-inch filter, per ENERGY STAR guidance. Thicker 4-inch media filters last longer, often 6 to 9 months, because they have more surface area. Homes with pets, dust or allergy sufferers should lean toward the shorter end of any range.
+- Q: Do I really need to test smoke alarms every month?
+  A: Yes. The U.S. Fire Administration recommends pressing the test button monthly, replacing 9-volt or hardwired backup batteries at least once a year, and replacing the entire alarm 10 years from its manufacture date, printed on the back of the unit. A dead or missing battery means you have no working alarm at all.
+- Q: Is it really necessary to replace washing machine hoses that look fine?
+  A: Insurance carriers commonly recommend replacing supply hoses every 3 to 5 years regardless of visible wear, because deterioration can start from the inside and isn't always visible before failure. A burst hose can release a large volume of water in a short time, which is why this is treated as a scheduled replacement, not a wait-and-see item.
+- Q: What should I do with tasks that don't fit a fixed schedule, like filters?
+  A: Record both a target check-in date and a condition note. Inspect at the interval, then log whether you replaced the part or decided it still had life left. Over a few cycles this builds a household-specific pattern that's more useful than any generic number.
 
 ---
 
@@ -2037,32 +2071,56 @@ For important recurring responsibilities, record the provider, relevant asset an
 ## Page 051 — Refrigerator Maintenance Checklist
 **Slug:** `/guides/refrigerator-maintenance-checklist/`
 **Primary intent:** organize refrigerator maintenance and records
-**Title tag:** `Refrigerator Maintenance Checklist: Keep Cleaning, Filters and Service History Together`
-**Meta description:** `A practical refrigerator maintenance checklist for cleaning, filter records, model information, warning signs and repair history.`
+**Title tag:** `Refrigerator Maintenance Checklist: Coils, Temperature, Seals and Service History`
+**Meta description:** `A real refrigerator maintenance checklist: coil cleaning intervals, food-safe temperatures, seal checks and lifespan figures, with sources for each.`
 **Primary keyword concept:** refrigerator maintenance checklist
+**Depth:** verified
 **Suggested internal links:** `/tools/appliance-maintenance-checklist-generator/`, `/guides/appliance-inventory/`, `/guides/repair-history/`, `/features/maintenance-tracker/`
 
-# Refrigerator maintenance is easier when the model and history stay with the task
+# Refrigerator maintenance checklist: what to actually do, and when
 
-A refrigerator is used every day, yet its maintenance information is often split between a manual, a phone reminder and a replacement filter box. A better system keeps the refrigerator record, recurring upkeep and repair history together.
+A refrigerator runs every day of the year, yet most maintenance checklists for it say almost nothing concrete. Here is an itemized one, with the interval and the source for each item, plus where to keep the record so the next problem is easier to diagnose.
 
-## Start with the exact appliance
+## The checklist
 
-Record the brand, model and serial number where accessible. Keep a link or local reference to the official manual. Different models have different cleaning instructions, filter types and service requirements, so the manufacturer guidance should control the details.
+- **Check refrigerator temperature.** Keep it at 40°F (4°C) or below; keep the freezer at 0°F (-18°C) or below. Verify with an appliance thermometer rather than trusting the dial, since few built-in controls display the actual temperature. Check monthly. Source: [Minnesota Department of Health](https://www.health.mn.gov/people/foodsafety/store/coldstore.html).
+- **Clean the condenser coils.** In a normal home, Whirlpool's own guidance says routine coil cleaning usually isn't required. If the household has pets, heavy kitchen traffic or construction dust, inspect and clean every 3 to 6 months. On many current bottom-freezer and French-door models the coils sit behind a base grille at the bottom of the unit; on older top-freezer models they're often at the rear. Check your model's use-and-care guide before assuming a location. Source: [Whirlpool](https://producthelp.whirlpool.com/Refrigeration/Full-Size_Refrigerators/Product_Info/Cleaning_and_Care/How_and_When_to_Safely_Clean_the_Condenser_Coils).
+- **Wipe door gaskets/seals** and check that they seal fully (a dollar-bill test — close it on a bill and see if it slides out easily — is a common household check). Do this monthly; a loose seal makes the compressor run longer and raises temperature.
+- **Clean or replace the water/ice filter** if the model has one, on the interval printed on the filter or in the manual (commonly every 6 months, but this varies by model — check the actual part).
+- **Keep vents inside the unit unobstructed** so cold air can circulate; overpacking a shelf in front of a vent is a common cause of uneven cooling.
+- **Log unusual noise, temperature swings, frost buildup, condensation or water pooling** the day you notice them, rather than waiting to see if it resolves.
 
-## Track the work that actually applies
+## Why the 15-year mark matters
 
-Useful recurring records may include cleaning accessible surfaces and seals, checking the condition of replaceable filters if the model uses them, keeping vents unobstructed and noting unusual temperature, noise or leakage changes. Do not invent a fixed universal interval when the appliance manual gives model-specific instructions.
+The Association of Home Appliance Manufacturers cites an average refrigerator lifespan of 10 to 14 years, and notes that a unit 15 years old or older can use roughly twice the energy of a new ENERGY STAR-certified model — commonly cited savings are around $260 over five years after switching. That's not a failure prediction; it's an efficiency signal. A 16-year-old fridge that's still cold and quiet doesn't need to be replaced on a birthday, but it's worth weighing energy cost against repair cost once it passes that mark. Source: [AHAM](https://blog.aham.org/want-to-save-energy-it-might-be-time-to-flip-your-fridge/).
+
+## Keep the model tied to the record
+
+Record the brand, model and serial number, and keep a reference to the official use-and-care manual — coil location, filter type and gasket-cleaning method all vary by model, so the manufacturer's own instructions should override any generic checklist above where they conflict.
 
 ## Keep filter and repair history visible
 
-If a filter is replaced, record the date and compatible part reference. If a technician repairs the appliance, capture the symptom, service date and outcome. A future problem becomes easier to explain when the prior history is one tap away.
+If a filter is replaced, record the date and the exact compatible part number — filter part numbers are not interchangeable between similar-looking models. If a technician repairs the appliance, capture the symptom, the service date and the outcome, so a repeat problem is easy to recognize instead of feeling like a new mystery each time.
 
-## Plan for replacement without predicting failure
+## What counts as a warning sign worth logging immediately
 
-Age, repair frequency and performance history can inform planning, but the app should not claim to know exactly when a refrigerator will fail.
+Not every refrigerator noise or fluctuation needs a service call, but a few patterns are worth writing down the day they appear rather than waiting: the compressor cycling on and off much more frequently than usual, condensation pooling inside the cabinet or on the floor beneath the unit, a warm spot in one area while the rest stays cold, or a temperature reading above 40°F that doesn't return to normal within a few hours of the door staying closed. None of these confirm a specific cause on their own, but a dated log of when each one started makes the eventual technician visit — or the decision to plan a replacement — much faster than trying to reconstruct "it's been doing that for a while, I think."
 
-**Contextual CTA:** Add the refrigerator as an asset first, then create only the maintenance tasks that match its manual and your actual use.
+## Freezer-side specifics that differ from the fridge side
+
+A combination unit's freezer compartment has its own concerns worth tracking separately: frost buildup thicker than about a quarter inch on non-frost-free models signals the door seal or defrost cycle needs attention, and food that's freezer-burned throughout (not just on one item) points to a seal or temperature problem rather than an individual packaging failure. Log freezer temperature at the same time as the fridge check, since the two compartments can drift out of range independently even though they share one compressor system.
+
+**Contextual CTA:** Add the refrigerator as an asset with its model and serial number, then create the coil-cleaning and temperature-check tasks above on the interval that matches your household.
+
+**FAQ:**
+- Q: How often should refrigerator condenser coils be cleaned?
+  A: In a typical home, Whirlpool says routine coil cleaning usually isn't needed. Homes with pets, heavy kitchen use or dust should clean every 3 to 6 months. Check the manual first, because coil placement differs: many current bottom-freezer and French-door units put the coils behind a base grille, while older top-freezer models often have rear-mounted coils.
+- Q: What temperature should my refrigerator and freezer actually be set to?
+  A: The refrigerator should stay at 40°F (4°C) or below, and the freezer at 0°F (-18°C) or below, per Minnesota Department of Health food-safety guidance that mirrors federal recommendations. Use a separate appliance thermometer to check, since the dial setting doesn't always reflect the true internal temperature.
+- Q: How long should a refrigerator actually last before I plan to replace it?
+  A: The Association of Home Appliance Manufacturers cites an average lifespan of 10 to 14 years. Units 15 years or older typically use about twice the energy of a new ENERGY STAR model, which is a strong efficiency argument for replacement even before the compressor actually fails.
+- Q: My refrigerator seal doesn't look torn — how do I know if it's actually failing?
+  A: Close the door on a piece of paper or a dollar bill at several points around the door; if it slides out with little resistance, the seal isn't holding well even without visible tearing. A weak seal lets warm air in, makes the compressor run more, and can raise the internal temperature above the 40°F safety line.
 
 ---
 
@@ -2101,64 +2159,120 @@ A compressor, seal or control repair should remain attached to the unit record s
 ## Page 053 — Washing Machine Maintenance Checklist
 **Slug:** `/guides/washing-machine-maintenance-checklist/`
 **Primary intent:** organize washing-machine upkeep
-**Title tag:** `Washing Machine Maintenance Checklist: Cleaning, Hoses, Filters and Service Records`
-**Meta description:** `Keep washing-machine cleaning, accessible hose/filter checks, warranty details and repair history organized around your actual model.`
+**Title tag:** `Washing Machine Maintenance Checklist: Hoses, Gasket Mold and Drain Filter`
+**Meta description:** `A washing machine maintenance checklist covering supply-hose replacement, gasket mold prevention and drain-filter cleaning, each with a real interval and source.`
 **Primary keyword concept:** washing machine maintenance checklist
+**Depth:** verified
 **Suggested internal links:** `/guides/dryer-maintenance-checklist/`, `/guides/water-leak-response-home-records/`, `/guides/how-to-track-product-warranties/`, `/features/maintenance-tracker/`
 
-# A washing machine maintenance record should help prevent repeated surprises
+# Washing machine maintenance checklist: the three failure points that actually cause trouble
 
-Laundry equipment combines water, moving parts and frequent use. The exact care routine varies by machine type and model, so start with the manual rather than a copied checklist.
+Washing machines fail in a small number of predictable ways: a burst supply hose that floods a room, a moldy door gasket that makes every load smell, and a clogged drain filter or pump that stops the cycle mid-wash. Each has a real, sourced maintenance interval below.
 
-## Keep cleaning instructions with the machine
+## The checklist
 
-Record any manufacturer-recommended cleaning cycle, detergent guidance and accessible filter-cleaning procedure. If the machine has a user-serviceable drain filter, note where it is and the safe procedure from the manual.
+- **Inspect supply hoses monthly**; **replace them every 3 to 5 years regardless of visible wear.** Deterioration can start on the inside of the hose and isn't visible until it fails. A burst hose can release a large volume of water quickly, which is why insurers treat this as a scheduled replacement rather than a wait-for-a-leak item. Keep at least 4 inches of clearance between the machine and the wall to prevent kinking, and shut off the water supply valves when the household will be away for an extended period. Source: [South Carolina Farm Bureau Insurance](https://www.scfbins.com/articles/washing-machine-hose-inspection-and-replacement).
+- **Wipe the door gasket dry and leave the door open after every load** on front-load machines, so trapped moisture can evaporate instead of feeding mold in the folds of the rubber seal. **Do a full gasket clean at least once a month**: check the groove at the bottom of the gasket for lodged debris, then clean with a diluted oxygen-bleach or similar solution and dry thoroughly. Source: [LG](https://www.lg.com/us/support/help-library/lg-front-load-washing-machine-gasket-there-are-stains-and-mold-in-the-door-gasket--20154848247928).
+- **Clean the drain pump filter periodically** — most manufacturers describe this as an occasional task rather than giving a fixed number of days, but the clearest trigger is behavioral: if water isn't draining fully, you see a drain-related error code, the machine smells, or clothes come out still wet, that's the filter (or something caught in it) asking to be cleaned. Source: [Whirlpool product help](https://producthelp.whirlpool.com/Laundry/Washers/Front_Load_Washers/Wash_Performance_or_Clothing_Results/Cleaning_and_Maintenance/Cleaning_the_Drain_Pump_Filter).
 
-## Make water-related observations visible
+## Why gasket mold is specific to washing machines, not a generic "appliance cleaning" problem
 
-If you notice seepage, damaged accessible hoses, repeated drain errors or unusual moisture, create a repair task and document the observation. Do not perform plumbing or electrical work beyond your competence.
+Front-load washers trap water in the folds of the door boot seal after every cycle; top-load machines and dryers don't have this geometry, which is why gasket mold is a washer-specific maintenance item rather than something that applies equally to laundry appliances in general. If the smell persists after cleaning, run an empty hot cycle with a washer-cleaner tablet or affresh-style product, then re-check the gasket folds.
 
-## Record recurring faults by symptom
+## Record recurring faults by symptom, not by feeling
 
-A note such as “did not drain at end of cycle” is more useful than “washer broken.” If the issue returns, the timeline becomes clearer.
+A note such as "did not drain at end of cycle, code F9 E1" is far more useful later than "washer broken." If the same symptom returns within a few months, the pattern points a technician (or you) straight at the drain filter or pump rather than starting the diagnosis over.
 
-## Link warranty and service records
+## Keep warranty and service records with the same asset
 
-Laundry appliances often receive service during their useful life. Keep technician visits, invoices and warranty information attached to the same asset.
+Laundry appliances often get serviced more than once during their useful life. Keep technician visits, invoices, warranty terms and the purchase receipt attached to the same washing machine record so nobody has to hunt through email during a breakdown.
 
-**Contextual CTA:** Add the washer's model and one cleaning reminder today. The first useful record is better than an elaborate schedule you never follow.
+## Top-load vs. front-load: the gasket item mostly doesn't apply
+
+The gasket-mold item above is specific to front-load machines, which trap water in a rubber door boot after every cycle. Top-load washers don't have that geometry and are far less prone to the same mold problem, though they still benefit from an occasional empty hot-water cleaning cycle to clear detergent residue from the tub. Know which type you have before assuming a checklist item applies — a front-load-specific routine wasted on a top-load machine, or skipped on a front-load machine because it "seemed like extra work," both miss the point.
+
+## Overloading and detergent choice affect all of the above
+
+Two habits make every item on this checklist worse, regardless of machine type: consistently overloading the drum, which strains the motor and bearings and can push more lint and debris toward the drain filter, and using more detergent than a load actually needs, which leaves residue that feeds gasket mold and can clog the drain filter faster. Neither is a maintenance task with its own interval, but both are worth a household habit note alongside the dated checklist items, since they change how often the scheduled tasks above actually need attention.
+
+## What to do before an extended trip away from home
+
+Shutting off the water supply valves to the washer before a multi-week absence removes the single biggest water-damage risk this checklist covers — a hose failure with nobody home to notice it can run for days rather than minutes. If the household has a habit of leaving valves open year-round "for convenience," weigh that against the Farm Bureau guidance above: the failure risk exists whether or not anyone's watching, and an unattended failure is exactly the scenario the monthly hose inspection can't catch in time.
+
+**Contextual CTA:** Add the washer as an asset, log today's date as the hose-inspection baseline, and set a monthly reminder for the gasket wipe-down.
+
+**FAQ:**
+- Q: How often should washing machine supply hoses really be replaced?
+  A: Insurance industry guidance commonly recommends replacing rubber or braided supply hoses every 3 to 5 years, regardless of whether they look fine, because internal deterioration isn't visible from the outside. Inspect them monthly for bulges, cracks or loose fittings in the meantime, and replace immediately if you see any of those signs.
+- Q: Why does my front-load washer smell even though I clean it?
+  A: The most common cause is trapped moisture in the door gasket folds. Wipe the gasket dry and leave the door open after every load so it can air out, and do a full clean with a diluted oxygen-bleach solution at least monthly, paying attention to the bottom groove where debris collects.
+- Q: How do I know if the drain filter needs cleaning?
+  A: Watch for symptoms rather than a calendar: water not draining, a drain-related error code, unusual noise, a bad smell, or clothes still soaked at the end of a cycle. Manufacturers describe cleaning as an occasional task rather than giving a fixed day count, so let these signs set the schedule.
+- Q: Is a washing machine drain filter the same thing as a lint filter?
+  A: No. A washing machine's drain pump filter traps debris, coins and lint from wash water before it reaches the pump, and is usually accessed behind a small panel at the front-bottom of the machine. A lint filter is a dryer part; the two are unrelated and serviced differently.
 
 ---
 
 ## Page 054 — Dryer Maintenance Checklist
 **Slug:** `/guides/dryer-maintenance-checklist/`
 **Primary intent:** organize dryer care and lint-related maintenance
-**Title tag:** `Dryer Maintenance Checklist: Keep Routine Cleaning and Service History Easy to Track`
-**Meta description:** `A dryer maintenance framework for routine user cleaning, model guidance, vent-service records and repair history, with safety-first escalation.`
+**Title tag:** `Dryer Maintenance Checklist: Lint Trap, Vent Cleaning and Fire-Risk Basics`
+**Meta description:** `A dryer maintenance checklist built around fire-prevention data: lint trap habits, exhaust vent cleaning intervals and the warning signs that mean stop using it.`
 **Primary keyword concept:** dryer maintenance checklist
+**Depth:** verified
 **Suggested internal links:** `/guides/washing-machine-maintenance-checklist/`, `/guides/home-service-provider-list/`, `/guides/repair-history/`, `/features/maintenance-tracker/`
 
-# Dryer maintenance should be easy to record because some tasks happen frequently
+# Dryer maintenance checklist: this is a fire-prevention task, not just tidiness
 
-The most useful dryer checklist separates routine user actions from periodic inspection or professional service. The appliance manual and local safety guidance should determine what the household performs itself.
+A dryer is the one laundry appliance where skipped maintenance is a documented fire-safety issue, not just an inconvenience. Failure to clean was the leading contributing factor — 31% — in U.S. home clothes-dryer fires between 2018 and 2020, according to the U.S. Fire Administration. That single fact should set the priority order for everything below.
 
-## Record routine care that applies to the model
+## The checklist
 
-Keep the manufacturer's instructions for user-cleanable lint areas, sensors or filters accessible. Because some actions occur very frequently, they may not need a formal database entry every time; reserve history for periodic maintenance and service events where the date is useful.
+- **Clean the lint trap after every load.** This is the single highest-value habit for both fire prevention and drying performance; a blocked trap forces the dryer to run longer and hotter. Source: [AHAM](https://blog.aham.org/Save-Energy-and-Money-When-Doing-Laundry-By-Following-These-Tips/).
+- **Clean the exhaust vent (the ductwork running from the dryer to the outside) every 1 to 2 years**, or sooner if you notice the warning signs below. Source: [Whirlpool](https://producthelp.whirlpool.com/Laundry/Dryers/Product_Info/Dryer_Product_Assistance/How_to_Check_Venting).
+- **Watch for these warning signs that the vent needs attention now, not on schedule:** clothes take noticeably longer to dry than they used to; the dryer or laundry room feels hotter than normal during a cycle; you smell a burning odor; little or no air is felt coming from the outside exhaust hood; the exhaust hood flap doesn't open properly when the dryer runs. Source: [Whirlpool](https://producthelp.whirlpool.com/Laundry/Dryers/Product_Info/Dryer_Product_Assistance/How_to_Check_Venting).
+- **Check the outside exhaust hood for nests, debris or a stuck flap** a few times a year — animals and debris blocking the exterior vent are a common, easily missed cause of restricted airflow.
+- **Keep the area around the dryer clear of lint buildup, boxes and hanging fabric**, since lint failure-to-clean is the leading ignition factor identified by federal fire data, not an isolated household risk.
 
-## Keep vent and service history separate from the appliance body
+## Why this list is different from a washing machine's
 
-If a vent system is professionally inspected or cleaned, record the service date and provider. That history may be useful even if the dryer itself is later replaced.
+A washing machine's failure points are water-related — hoses, gaskets, drains. A dryer's are heat- and airflow-related — restricted venting causes overheating, and overheating combined with accumulated lint is what federal fire statistics point to as the dominant cause pattern. Treat the two appliances as genuinely separate maintenance problems even though they usually sit side by side.
 
-## Note performance changes early
+## Keep vent service history separate from the appliance itself
 
-Changes in drying time, heat, odor or noise deserve attention. Record the symptom without diagnosing the cause and use qualified service where appropriate.
+If a vent system is professionally inspected or cleaned, record the service date and provider separately from the dryer's own record. That vent history stays useful even if the dryer itself is replaced later, since the ductwork usually isn't.
 
-## Store model and warranty information
+## Note performance changes immediately
 
-When service is needed, model and serial details are often the first questions asked. Capture them before the label becomes inconvenient to access.
+Longer drying time, unusual heat, a burning smell or new noise are not "wait and see" items for a dryer the way they might be for other appliances — write down the date and symptom, and if a burning smell or visible heat/scorching ever appears, stop using the dryer and get it inspected before running it again.
 
-**Contextual CTA:** Create two records: one for the dryer itself and one for any separately serviced vent system if your home has one.
+## Gas dryers add one more professional-only item
+
+Gas dryers have a combustion component that electric dryers don't — the gas line connection and burner assembly are professional-only territory, not a household maintenance task. The household record's job for that part of the appliance is purely administrative: log the installation date, the installer, and the date of any professional inspection or repair, and treat any gas odor as an immediate call-a-professional situation rather than something to note and revisit later. This is a real answer, not a hedge — the record-keeping and scheduling role is exactly what a household organizer should do here, while the hands-on work belongs to a licensed technician.
+
+## Vent length and configuration change how often cleaning matters
+
+A dryer with a long vent run, several turns, or a vent that travels through an attic or crawlspace collects lint faster relative to its length than a short, straight run to an exterior wall. If your specific configuration is long or has multiple bends, treat the 1-to-2-year interval as the outer limit rather than the target, and lean toward the more frequent end, especially if you've noticed any of the warning signs above even once.
+
+## Record the vent configuration once, not just the cleaning date
+
+Because vent length and routing change how often cleaning actually matters, it's worth writing down the configuration itself alongside the cleaning history — roughly how long the run is, how many turns it has, and whether it passes through an unconditioned space. A household that moves or renovates and ends up with a longer, more indirect vent run than before should treat that as a reason to shorten the interval going forward, not just a one-time note.
+
+## Combination washer-dryer units still split into two checklists
+
+An all-in-one washer-dryer unit doesn't get a blended maintenance list — the wash side still follows the hose, gasket and drain-filter items that apply to a standalone washer, and the dry side still follows the lint-trap and venting items here, even though both live in one cabinet. Keep the two halves as separate line items in the record so a technician call for a drain problem isn't confused with a venting problem.
+
+**Contextual CTA:** Log today as the vent-cleaning baseline, set a reminder for 1 to 2 years out, and add a standing note to check the lint trap after every load.
+
+**FAQ:**
+- Q: How big a fire risk is an uncleaned dryer, really?
+  A: The U.S. Fire Administration reports that failure to clean was the leading contributing factor in 31% of home clothes-dryer fires from 2018 to 2020. That makes lint-trap and vent maintenance a genuine fire-prevention task, not just a performance issue, and it's why the vent-cleaning interval below is worth keeping on a real schedule.
+- Q: How often should the dryer exhaust vent actually be cleaned?
+  A: Whirlpool recommends cleaning the exhaust ductwork every 1 to 2 years under normal use, and sooner if drying performance drops. Longer dry times, a hot laundry room, weak airflow at the outside hood, or a burning smell are all signs the vent needs attention before the scheduled date.
+- Q: Is cleaning the lint trap after every load really necessary, or just nice to have?
+  A: It's the single most effective routine habit for both drying performance and fire prevention. A blocked trap forces the dryer to run hotter and longer to finish a load, and lint buildup is central to the fire statistics cited above, so this is worth treating as non-negotiable rather than optional tidiness.
+- Q: My clothes take much longer to dry than they used to — is that a lint problem or a vent problem?
+  A: Check the lint trap first, since it's the fastest thing to rule out. If the trap is clean and drying time is still long, the exhaust vent is the more likely cause — weak airflow at the outside hood is a strong sign. If neither resolves it, that points to a mechanical issue worth a technician's diagnosis rather than repeated cycles.
 
 ---
 
@@ -2321,28 +2435,66 @@ Record provider, date, work performed and recommended follow-up. Cooling history
 ## Page 060 — HVAC Filter Tracker
 **Slug:** `/guides/hvac-filter-tracker/`
 **Primary intent:** remember HVAC filter sizes and replacement history
-**Title tag:** `HVAC Filter Tracker: Record Filter Size, Replacement History and Real-World Condition`
-**Meta description:** `Keep HVAC filter size, product reference, replacement dates and condition notes attached to the correct system.`
+**Title tag:** `HVAC Filter Tracker: Real Replacement Intervals by Filter Thickness and MERV`
+**Meta description:** `Track HVAC filter size and replacement history with real intervals by thickness and MERV rating, sourced from ENERGY STAR and Carrier.`
 **Primary keyword concept:** HVAC filter tracker
+**Depth:** verified
 **Suggested internal links:** `/tools/home-service-reminder-generator/`, `/guides/air-conditioner-maintenance-checklist/`, `/guides/furnace-maintenance-records/`, `/features/maintenance-tracker/`
 
-# The first thing a filter tracker should remember is which filter you actually need
+# HVAC filter tracker: the interval depends on thickness and MERV rating, not guesswork
 
-Households often know a filter is due but forget the size, type or location. Record the confirmed specification once and keep it attached to the HVAC system.
+Households often know a filter is "due" but forget the size, the interval that actually applies to it, or whether they checked it last month or four months ago. The interval is not arbitrary — it depends mostly on how thick the filter is and how tightly it's rated to filter, both of which are on the filter itself.
 
-## Avoid a universal replacement interval
+## Replacement intervals by filter type
 
-Filter life varies with the equipment, filter design, household conditions and manufacturer guidance. A tracker can record the household's chosen inspection or replacement cadence, but the product should not present one interval as correct for everyone.
+| Filter type | Typical replacement interval | Notes |
+|---|---|---|
+| Standard 1-inch filter | Every 1–3 months | Check monthly; ENERGY STAR advises never going past 3 months even if it still looks clean | 
+| MERV 8 (common standard rating) | Every 2–3 months | Monthly in homes with pets, smoke or heavy dust |
+| MERV 11–13 (allergy/pet-oriented) | Shorter than MERV 8 at the same thickness | Higher-efficiency media catches more, and clogs faster, per cubic foot of air processed |
+| 4-inch media filter | Every 6–9 months | Larger surface area holds more debris before airflow drops |
 
-## Record both date and condition
+Sources: [ENERGY STAR](https://www.energystar.gov/saveathome/heating-cooling), [Carrier](https://www.carrier.com/us/en/residential/hvac-resources/what-is-merv-rating/).
 
-If you inspect a filter and decide it does not need replacement yet, that observation can still be useful. A simple note helps the household learn its real pattern over time.
+## Check monthly regardless of the target interval
 
-## Keep purchase information optional
+ENERGY STAR's guidance is to check the filter every month, especially during heavy heating and cooling months, and replace it as soon as it looks dirty — never waiting past 3 months for a standard 1-inch filter even if it looks fine. A dirty filter forces the system to work harder, which wastes energy and can shorten equipment life through added strain. Pair the monthly check with an annual full system tune-up, which ENERGY STAR also recommends.
 
-A household may want to record the part number or preferred replacement product, but the maintenance record should remain useful even without shopping links.
+## Record the exact specification once
 
-**Contextual CTA:** Confirm the filter specification directly from the system/manual, then save it once so nobody has to measure or guess at the store again.
+Measure or read the size printed on the filter's cardboard frame (length x width x depth, e.g., 16x25x1) and the MERV rating if shown, then save both. Filter sizes are not standardized enough to guess from the equipment brand, and getting it wrong at the store is one of the most common reasons a filter change gets postponed.
+
+## Record condition, not just date
+
+If you inspect a filter and decide it doesn't need replacing yet, that observation is still worth a note — a household running mostly MERV 8 in a low-dust home may genuinely stretch past 2 months, while a home with pets and a MERV 11 filter may need monthly changes despite the "up to 3 months" ceiling for a lower-rated filter. Tracking actual condition over a few cycles reveals the household's real pattern faster than any general guideline can.
+
+## Higher MERV isn't automatically better
+
+Carrier's own guidance cautions that a higher MERV rating can restrict airflow if the HVAC system wasn't designed for it, and recommends checking with an HVAC professional before jumping to a MERV 13 filter on a system built around MERV 8. More filtration is not free — it comes with a shorter usable life per filter and, on the wrong system, reduced airflow.
+
+## One HVAC system, multiple filters — track them separately
+
+Some homes have more than one HVAC system (a separate unit for an upper floor, a mini-split, a supplemental air purifier with its own filter), and each one deserves its own tracked size, rating and interval rather than one blended household filter schedule. A whole-house system's 1-inch filter and a room mini-split's washable filter don't share a replacement rhythm, and treating them as one task invites the less-visible one to get forgotten.
+
+## What actually happens when a filter is neglected too long
+
+Beyond wasted energy, a badly clogged filter can let airflow drop enough that the system's evaporator coil ices over in cooling mode or the heat exchanger runs hotter than designed in heating mode — both of which turn a $15 filter into a much larger repair bill. If a filter has clearly gone well past its interval, treat the next inspection as a chance to check the coil and airflow as well as swap the filter, rather than assuming a fresh filter alone resets everything to normal.
+
+## Seasonal use changes the real-world interval more than the calendar does
+
+A filter installed at the start of a mild spring, when the system barely runs, ages differently than one installed at the start of a heavy summer cooling season or a cold winter heating season — the "1 to 3 months" range exists partly because runtime, not calendar time, is what actually loads a filter with debris. A household that only runs HVAC heavily for four months a year may genuinely stretch toward the long end of any range during the off-season, while the same filter during peak season should be checked at the short end. Logging the check date alongside a rough note of how heavily the system has been running helps separate a filter that's dirty from one that's simply been sitting unused.
+
+**Contextual CTA:** Save the confirmed filter size and MERV rating once, then log each check-in with a date and a condition note so the real replacement pattern for your home builds up over time.
+
+**FAQ:**
+- Q: How often should I really change a standard 1-inch HVAC filter?
+  A: ENERGY STAR recommends checking it every month and replacing it at least every 1 to 3 months, more often during heavy heating or cooling season or in homes with pets. Never let it go past 3 months even if it still looks visually clean, since airflow resistance builds up before it's obvious to the eye.
+- Q: Does a thicker filter really last longer than a 1-inch one?
+  A: Yes. A 4-inch media filter typically lasts 6 to 9 months because it has substantially more surface area to hold debris before airflow drops, compared to 1 to 3 months for a standard 1-inch filter. The thicker filter isn't better at filtering by default — it just clogs more slowly.
+- Q: Should I just buy the highest MERV rating available?
+  A: Not automatically. Carrier's guidance recommends MERV 8 for typical homes and MERV 11–13 for households with pets or allergies, but warns that a rating higher than your system was designed for can restrict airflow. Check with an HVAC professional before upgrading, and expect higher-MERV filters to need more frequent replacement.
+- Q: How do I find the right replacement filter size?
+  A: Pull the current filter out and read the printed dimensions on its cardboard frame — typically length by width by depth, such as 16x25x1. Don't assume the size based on the HVAC brand or a previous home's filter; sizes vary by installation, and buying the wrong one is a common reason filter changes get delayed.
 
 ---
 
@@ -2413,32 +2565,62 @@ Repeated service notes across seasons can provide useful context for a qualified
 ## Page 063 — Water Heater Maintenance Records
 **Slug:** `/guides/water-heater-maintenance-records/`
 **Primary intent:** organize water-heater information and service history
-**Title tag:** `Water Heater Maintenance Records: Model, Service, Warranty and Replacement History`
-**Meta description:** `Keep water-heater model information, installation date, professional service history, warranty and household notes organized safely.`
+**Title tag:** `Water Heater Maintenance Records: Flush, Anode Rod and T&P Valve Intervals`
+**Meta description:** `Water heater maintenance records with real intervals for tank flushing, anode rod inspection, T&P valve testing and expected lifespan, sourced from manufacturers.`
 **Primary keyword concept:** water heater maintenance records
+**Depth:** verified
 **Suggested internal links:** `/guides/water-leak-response-home-records/`, `/guides/appliance-replacement-planning/`, `/guides/home-service-provider-list/`, `/features/home-record-keeper/`
 
-# Water-heater records are more important than a generic maintenance checklist
+# Water heater maintenance records: the tasks that actually extend its life
 
-Water heaters vary by fuel, design and installation. Because improper service can create serious hazards, the household organizer should focus on identity, professional service history and manufacturer-approved user tasks.
+A tank water heater has three maintenance tasks that manufacturers consistently publish real intervals for, plus a temperature setting that affects both safety and cost. Because a water heater involves gas, electricity and pressurized hot water, anything beyond these homeowner-level checks is professional-only work — the record-keeping angle below is the real answer for that part.
 
-## Keep installation details if known
+## The checklist
 
-Record model, serial number, installation date, installer and warranty information. If the date is uncertain, say so.
+- **Flush the tank once a year** to remove sediment buildup, which reduces heating efficiency over time. Source: [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html).
+- **Inspect the anode rod once a year**; replace it once it shows several inches of exposed core wire or heavy deterioration. The anode rod is a sacrificial component that corrodes so the tank itself doesn't. Source: [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html).
+- **Test the temperature-pressure relief (T&P) valve once a year yourself**, by lifting the lever and confirming water discharges, and have it professionally inspected **every 5 years**. This valve is a core safety device that releases pressure if the tank overheats. Source: [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html).
+- **Set the temperature to 120°F.** This is the commonly cited balance between scald prevention and limiting bacterial growth in the tank, and it also reduces standby energy loss. Sources: [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html), [AHAM](https://blog.aham.org/Save-Energy-and-Money-When-Doing-Laundry-By-Following-These-Tips/).
+
+## What lifespan to plan around
+
+Rheem, a major manufacturer, publishes 8 to 12 years as the typical lifespan for a tank water heater, versus 15 to 20+ years for a tankless unit. A unit 10 to 15+ years old that starts developing recurring issues is a strong candidate for replacement rather than repeated repair. Source: [Rheem](https://www.rheem.com/water-heating/articles/water-heater-lifespan-when-to-repair-vs-replace/).
+
+## Treat these as replace-now signs, not maintenance items
+
+Rheem lists specific signs that point to replacement over repair: water leaking from the base of the tank, rusty or discolored hot water, and persistent rumbling or popping sounds (often caused by sediment buildup hardening against the tank bottom). If repair costs would exceed roughly half the price of a new unit, or the household has needed multiple repairs in a short window, that pattern points to replacement rather than another service call.
+
+## Keep installation details even when uncertain
+
+Record model, serial number, installation date, installer and warranty terms. If the installation date is uncertain, record your best estimate and say so explicitly — an honest "approximately 2019, unconfirmed" is more useful later than a blank field or a guessed exact date presented as fact.
 
 ## Preserve professional service history
 
-Record inspections, repairs, replaced components and any recommendation about future service. Link invoices or references to the same asset.
+Record every inspection, repair, replaced component and any technician recommendation about future service, and link invoices to the same asset record. A water heater that has had two anode rods and one T&P valve replacement has a different repair-vs-replace calculation than one with no service history at all — but only if that history was actually written down.
 
-## Treat unusual water or equipment behavior as a service issue
+## Gas vs. electric changes what's professional-only, not whether records matter
 
-Leaks, unusual sounds, error codes or major performance changes should prompt appropriate professional guidance rather than generic DIY instructions.
+A gas water heater adds a burner, a flue and a gas-line connection to the professional-only list — any repair touching those components, or any gas odor, is an immediate call-a-professional situation, not a scheduled task. An electric unit swaps that risk for high-voltage electrical work, which carries its own professional-only line. Either way, the household record's job is the same: log what was done, by whom, and when, rather than attempting the combustion or electrical work directly. Where the two types genuinely differ for a household record is service history detail — a gas unit's technician visit should note whether the flue and venting were inspected, since blocked venting on a gas water heater is a carbon-monoxide risk in a way an electric unit's service history never has to consider.
 
-## Use age as context, not a countdown
+## Tankless units follow the checklist differently
 
-An older unit may deserve replacement planning, but the app should not claim a precise remaining lifespan.
+A tankless water heater doesn't hold standing water the same way a tank does, so the annual full-tank flush above becomes a periodic descaling instead — how often depends heavily on local water hardness, with harder-water households needing it more frequently. The T&P valve and anode-rod items are tank-specific and generally don't apply to tankless units at all; check your specific model's manual for its own maintenance list rather than assuming the tank checklist above transfers directly.
 
-**Contextual CTA:** Add the installation date and last service event now; those two facts are often the hardest to reconstruct when a water heater problem appears.
+## Water hardness is worth recording alongside the unit itself
+
+Hard water accelerates sediment buildup in a tank and scaling in a tankless unit's heat exchanger, which means two households with identical water heaters on identical schedules can have genuinely different real-world maintenance needs. If you know your local water is hard — or a plumber has mentioned it during a service visit — record that alongside the unit, since it's a reasonable justification for flushing or descaling more often than the baseline annual interval above.
+
+**Contextual CTA:** Add the installation date and the date of the last flush or inspection now — those two facts are often the hardest to reconstruct once a water heater problem appears.
+
+**FAQ:**
+- Q: How often should a water heater tank actually be flushed?
+  A: Manufacturer guidance from A.O. Smith recommends flushing sediment from the tank once a year. Skipping this reduces heating efficiency over time as sediment insulates the bottom of the tank from the heat source, and in gas units it can also contribute to the rumbling or popping noises that signal a tank nearing the end of its service life.
+- Q: What temperature should a home water heater be set to?
+  A: 120°F is the commonly cited setting that balances scald prevention against limiting bacterial growth in the tank, and it also reduces standby energy loss compared to higher settings like 140°F. Households with very young children or older adults sometimes go slightly lower for additional scald protection.
+- Q: How long should a tank water heater actually last?
+  A: Rheem, a major manufacturer, publishes a typical lifespan of 8 to 12 years for tank water heaters, versus 15 to 20-plus years for tankless units. A unit past 10 to 15 years that develops recurring problems is generally a stronger candidate for replacement than for another repair.
+- Q: What water heater problems mean I should call a professional immediately rather than wait?
+  A: Water leaking from the base of the tank, rusty or discolored hot water, and persistent rumbling or popping sounds are signs manufacturers associate with a unit nearing failure rather than routine maintenance. Any gas smell, unusual gas-line behavior or electrical issue is professional-only and should be treated as urgent, not scheduled maintenance.
 
 ---
 
@@ -2869,85 +3051,197 @@ The household should know where backup power is available and what its limitatio
 ## Page 078 — Smoke Alarm Records
 **Slug:** `/guides/smoke-alarm-records/`
 **Primary intent:** organize smoke-alarm locations, models and replacement/service records
-**Title tag:** `Smoke Alarm Records: Keep Locations, Models and Test/Replacement History Organized`
-**Meta description:** `Organize smoke-alarm locations, model information and household test or replacement records while following manufacturer and local fire-safety guidance.`
+**Title tag:** `Smoke Alarm Records: Test Monthly, Replace at 10 Years (USFA Guidance)`
+**Meta description:** `Smoke alarm record-keeping built around U.S. Fire Administration guidance: test monthly, replace batteries yearly, replace the whole unit at 10 years.`
 **Primary keyword concept:** smoke alarm maintenance records
+**Depth:** verified
 **Suggested internal links:** `/guides/carbon-monoxide-alarm-records/`, `/guides/fire-extinguisher-records/`, `/guides/emergency-supply-inventory/`, `/features/emergency-information-organizer/`
 
-# Safety-device records should support official guidance, not replace it
+# Smoke alarm records: the U.S. Fire Administration's numbers, kept against each device
 
-Smoke alarms vary by power source, sensor design, interconnection and manufacturer requirements. Local codes and fire-safety guidance can also differ. The household organizer's job is to keep device identity and history clear.
+Smoke alarm guidance is unusually well standardized for a home-safety topic. The U.S. Fire Administration publishes exact intervals, and the household organizer's job is simple: attach those intervals to each physical device by location, so nobody has to remember which hallway alarm is six years old and which is nine.
 
-## Name each device by location
+## The schedule, by task
 
-Use labels such as “upstairs hallway smoke alarm” rather than “alarm 2.” Record model and installation/replacement date if known.
+| Task | Interval | Source |
+|---|---|---|
+| Press the test button | Every month | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Replace 9-volt battery | At least once a year | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Replace hardwired unit's backup battery | At least once a year | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| 10-year sealed lithium battery models | No annual battery swap — non-replaceable, built-in | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Replace the entire alarm unit | 10 years from the manufacture date printed on the back | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html); [Kidde](https://www.kidde.com/support/smoke-alarms/alarms-replacement-time) |
 
-## Follow official test and replacement instructions
+The USFA states plainly that "a smoke alarm with a dead or missing battery is the same as having no smoke alarm at all" — a device that looks installed but isn't maintained provides zero protection, which is the core reason to track this rather than trust memory.
 
-Do not publish one universal schedule unless supported by the relevant authority and product. Link the household record to manufacturer instructions and applicable local fire-safety guidance.
+## Name each device by location, not by number
 
-## Record meaningful events
+Use labels such as "upstairs hallway smoke alarm" rather than "alarm 2." When one alarm in an interconnected set reaches its 10-year replacement date before the others, a location-based name makes it obvious which physical unit needs swapping, without opening a panel to check date codes on all of them.
 
-Battery replacement where applicable, device replacement, professional inspection or repeated false-alarm issues can be logged. Safety concerns should be escalated, not merely noted.
+## Read the manufacture date correctly
 
-**Contextual CTA:** Create a location-based inventory of alarms, then verify the real testing and replacement requirements from reliable sources for your devices and jurisdiction.
+The 10-year clock starts from the manufacture date printed on the back of the unit, not the installation date, and not the purchase date. If you don't know when a device was installed, check the back of the alarm itself — that date is the authoritative one for the replacement countdown.
+
+## Record meaningful events, and escalate safety concerns
+
+Battery replacement (where applicable), full unit replacement, professional inspection and repeated false-alarm issues are all worth a dated note. A pattern of repeated false alarms or an alarm that fails its monthly test after a fresh battery is a safety issue to resolve immediately — replace the unit rather than disabling it, since disabling any home alarm removes protection rather than fixing a nuisance.
+
+## Interconnected alarms need a household-wide view, not just a per-device one
+
+Many homes have interconnected smoke alarms — when one senses smoke, all of them sound. That's a safety feature, but it also means the household record should show the full set at a glance: how many alarms exist, where, and whether they're all the same age or a mix of older and newer replacements. A household that replaced only the hallway unit after a false-alarm problem but left three bedroom units from the original 10-year batch has a fact worth knowing before all three age out in the same month.
+
+## What a smoke alarm cannot do, and why other devices still matter
+
+A smoke alarm detects smoke; it does not detect natural gas, carbon monoxide or a slow electrical fire that hasn't produced visible smoke yet. Treat this record as one part of a broader home-safety inventory alongside carbon monoxide alarms and fire extinguishers, rather than assuming one category of device covers every risk. A kitchen with a smoke alarm but no nearby fire extinguisher, or a gas furnace with smoke alarms but no CO alarm, has a real gap that a location-based device inventory makes visible in a way memory alone doesn't.
+
+## Placement basics worth recording alongside the device
+
+General guidance calls for at least one smoke alarm on every level of the home, including inside or immediately outside each sleeping area — record which rooms currently have coverage and which don't, since gaps are easy to create during a renovation or an added bedroom and easy to miss without a written inventory.
+
+## A finished basement, an added bedroom or a converted attic needs its own check
+
+Home changes are one of the most common ways smoke alarm coverage quietly falls behind reality. A finished basement used as a bedroom, an attic converted into livable space, or an addition that added a new sleeping area all need their own alarm coverage, and none of them retroactively get one just because the rest of the house is covered. Treat any renovation or room-use change as a trigger to review the location inventory, the same way a major purchase is a trigger to update a home inventory for insurance.
+
+**Contextual CTA:** Add each smoke alarm as a location-based record with its manufacture date, then set the monthly test and annual battery reminders from the table above.
+
+**FAQ:**
+- Q: How often should smoke alarms actually be tested?
+  A: The U.S. Fire Administration recommends testing every smoke alarm monthly by pressing the test button and confirming the alert sound. This is separate from battery replacement — testing confirms the alarm currently works, while the annual battery swap (or built-in 10-year sealed battery on newer units) is about power supply.
+- Q: When should a smoke alarm be fully replaced, not just given a new battery?
+  A: Replace the entire unit 10 years from its manufacture date, which is printed on the back of the alarm — not from the install date or purchase date. A new battery does not extend the sensor's usable life past that 10-year mark, per USFA and manufacturer guidance including Kidde.
+- Q: Do 10-year lithium battery smoke alarms need any battery maintenance?
+  A: No annual battery swap — their sealed lithium battery is designed to last the alarm's full service life. You still test the unit monthly, and you still replace the entire alarm 10 years after its manufacture date, since the sensor itself ages out even though the battery doesn't need changing.
+- Q: What does it mean if a smoke alarm keeps giving false alarms after a fresh battery?
+  A: That's a signal to replace the unit rather than to keep resetting or disabling it. Repeated false alarms after confirming the battery is fresh often indicate a sensor nearing the end of its useful life, and disabling an alarm to stop the nuisance removes real fire protection from that location.
 
 ---
 
 ## Page 079 — Carbon Monoxide Alarm Records
 **Slug:** `/guides/carbon-monoxide-alarm-records/`
 **Primary intent:** keep CO alarm inventory and service records
-**Title tag:** `Carbon Monoxide Alarm Records: Locations, Models and Replacement History`
-**Meta description:** `Keep carbon-monoxide alarm locations, model information and replacement history organized while relying on manufacturer and local safety guidance.`
+**Title tag:** `Carbon Monoxide Alarm Records: Placement, Testing and 7–10 Year Replacement`
+**Meta description:** `Carbon monoxide alarm records built on EPA placement guidance and manufacturer replacement data: one per floor, weekly test, replace every 7 to 10 years.`
 **Primary keyword concept:** carbon monoxide alarm records
+**Depth:** verified
 **Suggested internal links:** `/guides/smoke-alarm-records/`, `/guides/furnace-maintenance-records/`, `/guides/emergency-information-sheet/`, `/features/home-record-keeper/`
 
-# Carbon-monoxide alarm records should be simple, clear and safety-first
+# Carbon monoxide alarm records: placement, testing and a shorter replacement clock than smoke alarms
 
-The household may have several devices with different installation dates or manufacturers. A location-based record helps identify which unit an alert or end-of-life signal refers to.
+CO alarms have a genuinely different maintenance profile from smoke alarms: the sensor itself has a shorter usable life, the placement logic is different (near sleeping areas, not near combustion sources), and there's a built-in end-of-life signal worth knowing before it goes off in the middle of the night.
 
-## Record location and exact model
+## Placement, per the EPA
 
-Keep the manufacturer, model and install/replacement date where known. If the device has a documented end-of-life signal, preserve the official instructions.
+- **One alarm per floor**, including near — not necessarily inside — each separate sleeping area.
+- If you only have one alarm, **place it near the sleeping areas** so the alert is loud enough to wake the household.
+- Install per the manufacturer's instructions; plug-in or high-on-the-wall placement both work, because CO mixes evenly with room air rather than rising or sinking the way heat or smoke does.
 
-## Do not use the app to interpret an active alarm
+Source: [EPA](https://www.epa.gov/indoor-air-quality-iaq/where-should-i-place-carbon-monoxide-detector).
 
-An active carbon-monoxide alarm is an emergency situation that requires following the device instructions and local emergency guidance. The organizer is for preparation and recordkeeping, not real-time diagnosis.
+## Testing and replacement
+
+| Task | Interval | Source |
+|---|---|---|
+| Test the alarm | Weekly (EPA) / monthly (CPSC) — check your model's manual, and default to the shorter interval if in doubt | [EPA](https://www.epa.gov/indoor-air-quality-iaq/where-should-i-place-carbon-monoxide-detector) |
+| Replace battery | At least once a year | [EPA](https://www.epa.gov/indoor-air-quality-iaq/where-should-i-place-carbon-monoxide-detector) |
+| Replace the entire unit | 7–10 years depending on the model — 10 years for units made after 2013 on some product lines, 7 years for older ones | [Kidde](https://www.kidde.com/support/carbon-monoxide-alarms/replacement) |
+
+Check the manufacture date on the back of the device to start that clock, the same way you would for a smoke alarm — the two devices are replaced on different schedules, so don't assume they match.
+
+## Know the end-of-life signal before you hear it
+
+Kidde's alarms produced after August 2009 include a built-in end-of-life warning: a chirp roughly every 30 seconds on non-digital models, or an "ERR"/"END" code on digital-display models. If a household member hears that pattern in the middle of the night and doesn't recognize it, it can be genuinely alarming — record which signal your specific model uses so everyone in the house knows the difference between "replace me" and "there's CO in the house."
+
+## Never use this record to interpret an active alarm
+
+An active CO alarm is an emergency: get to fresh air immediately and call emergency services from outside, following the device's printed instructions. The household organizer is for preparation and recordkeeping between events — location inventory, battery dates, replacement countdown — not for diagnosing what's happening while an alarm is sounding.
 
 ## Keep replacement history visible
 
-When a device is replaced, archive the old record rather than silently editing the installation date. The history shows what changed and when.
+When a device is replaced, add a new record rather than silently editing the old installation date. Seeing "unit A: installed 2017, replaced 2026" tells you something the previous household member won't have to reconstruct from memory.
 
-**Contextual CTA:** Inventory the devices by room/location and keep the official manufacturer instructions accessible outside the private app as well.
+## Why CO alarms deserve a separate record from smoke alarms, not a shared one
+
+It's tempting to treat "alarms" as one household category, but CO and smoke alarms protect against different hazards, sound different alert patterns, and — critically for a maintenance record — run on different replacement clocks (7–10 years for CO versus 10 years for smoke, and the CO clock can start at 7 years on older models). A combined smoke/CO alarm unit simplifies installation but doesn't simplify the record: log both replacement dates for a combo unit, since the two sensors inside it can be rated differently depending on the model.
+
+## Sources of CO worth knowing about when placing alarms
+
+CO comes from incomplete combustion — a gas furnace or water heater with a blocked flue, a running car left in an attached garage, a portable generator used too close to the house, or a charcoal grill used indoors. This isn't a reason to add alarms in unusual places beyond the EPA guidance above; it's a reason to make sure the household understands why alarms sit where they do, and to treat any fuel-burning appliance installation or venting change as a moment to double check alarm coverage and battery status, not just a one-time install-and-forget event.
+
+## What to do if you're not sure an alarm's chirp is low-battery or end-of-life
+
+If the pattern doesn't clearly match either signal described above, treat it as end-of-life and replace the unit rather than guessing — a low-battery chirp and an end-of-life chirp can sound similar on some models, and continuing to use a unit that's actually past its detection life is a real risk that a fresh battery won't fix.
+
+## Renters and multi-unit buildings still need a working record
+
+If a landlord or building management installed the CO alarms, a household may not know the manufacture date offhand — that's worth checking and recording anyway, since the household is usually the one who'll hear the alarm and needs to know whether a chirp means a dying battery or an expired unit. Note who's responsible for replacement (landlord vs. tenant) alongside the device record, so a maintenance request doesn't stall on uncertainty about whose job it is.
+
+**Contextual CTA:** Inventory each CO alarm by location with its manufacture date, and keep the manufacturer's printed instructions accessible outside the app too, in case of a power or device failure.
+
+**FAQ:**
+- Q: Where should carbon monoxide alarms actually be placed in a home?
+  A: The EPA recommends one alarm on each floor of the home, including near each separate sleeping area. If you only have one alarm, place it near the bedrooms so it's loud enough to wake the household. Installation should follow the manufacturer's instructions — plug-in or high-on-the-wall placement both work.
+- Q: How often should a CO alarm actually be replaced?
+  A: Manufacturer guidance from Kidde puts full replacement at 7 to 10 years depending on the model, with newer product lines (generally made after 2013) rated for 10 years and older ones for 7. Check the manufacture date printed on the back of the unit — that starts the clock, not the installation date.
+- Q: How is CO alarm testing different from a smoke alarm's schedule?
+  A: EPA guidance suggests testing weekly, more frequent than the monthly test typically recommended for smoke alarms, though CPSC materials describe monthly testing as sufficient for some models — check your specific manual. Battery replacement is the same either way: at least once a year for models with a replaceable battery.
+- Q: What does it mean if my CO alarm beeps every 30 seconds?
+  A: On many Kidde alarms made after August 2009, a chirp roughly every 30 seconds (or an "ERR"/"END" code on digital-display models) is the built-in end-of-life signal, meaning the alarm can no longer reliably detect CO and needs replacement. This is different from an active CO alert — check your specific model's manual to be sure which signal you're hearing.
 
 ---
 
 ## Page 080 — Fire Extinguisher Records
 **Slug:** `/guides/fire-extinguisher-records/`
 **Primary intent:** organize household fire-extinguisher inventory and inspection records
-**Title tag:** `Home Fire Extinguisher Records: Locations, Types and Inspection History`
-**Meta description:** `Organize household fire-extinguisher locations, identifying information and inspection/service records while following local fire-safety guidance.`
+**Title tag:** `Home Fire Extinguisher Records: Monthly Checks and Annual Service (NFPA 10)`
+**Meta description:** `Fire extinguisher inspection records built on NFPA 10 and OSHA guidance: monthly visual checks, annual professional service, and when to use vs. evacuate.`
 **Primary keyword concept:** home fire extinguisher inspection record
+**Depth:** verified
 **Suggested internal links:** `/guides/smoke-alarm-records/`, `/guides/emergency-supply-inventory/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`
 
-# A fire-extinguisher inventory is useful only when the household knows what is actually present
+# Fire extinguisher records: NFPA 10's monthly and annual intervals, applied to a home inventory
 
-Extinguishers differ by type, rating, serviceability and local requirements. The home organizer should record identifying information and service history, not teach users to fight fires beyond official guidance.
+Fire extinguisher inspection has a real published standard behind it — NFPA 10 — and it's specific enough to build a household record around directly, rather than guessing at "check it sometimes."
 
-## Label by location
+## The checklist
 
-Record where each extinguisher is stored and the identifying information shown on the unit. Avoid moving equipment simply to create a prettier inventory if the placement follows a safety plan.
+- **Visual inspection every ~30 days (monthly).** OSHA's own regulation, 29 CFR 1910.157(e)(2), requires monthly visual inspection and explicitly calls NFPA 10's 30-day interval "not only explicit, but reasonable." A household member, not a licensed technician, can do this. Check that: the unit is in its designated spot and not blocked; the pressure gauge needle sits in the operable range; the tamper seal and pin are intact; there's no corrosion, dents or damage; the instructions are legible. Source: [OSHA](https://www.osha.gov/laws-regs/standardinterpretations/2006-11-29).
+- **Professional annual maintenance.** NFPA 10 calls for a full annual examination by a certified fire-equipment technician, covering everything in the monthly check plus mechanical parts, the condition of the extinguishing agent, and hose/nozzle integrity. Source: [OSHA](https://www.osha.gov/laws-regs/standardinterpretations/2006-11-29) (referencing NFPA 10).
+- **Know the type before you need it.** Class A is for ordinary combustibles (wood, paper, cloth); Class B for flammable liquids (grease, gasoline, oil-based paints); Class C for live electrical equipment. Most homes use a multipurpose A-B-C unit, widely available at home-improvement stores, and should carry a UL or ULC listing. Source: [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/fire-extinguishers/index.html).
 
-## Keep inspection or service history
+## Log by location, not as one household total
 
-Where the manufacturer or local guidance calls for periodic checks or professional service, record the date and outcome. Replace or service units according to the applicable instructions.
+Record where each extinguisher is stored (kitchen, garage, each floor) and the identifying information printed on the unit — type, rating, manufacture date. Don't relocate a unit just to make a tidier inventory; extinguisher placement often follows a deliberate escape-route safety plan, and the record should describe the plan, not override it.
 
-## Make emergency guidance primary
+## When to actually use one — and when not to
 
-Household members should understand local fire-safety advice, evacuation priorities and when not to attempt extinguisher use. The app is a record, not a training substitute.
+USFA guidance is specific: only attempt to use an extinguisher when others have been alerted and the fire department called, the fire is small and confined to a single object or surface, you have a clear escape route behind you, and you're not exposed to toxic smoke. Otherwise: alert everyone, leave the building, and call 911. The technique, if you do use one, is PASS — Pull the pin, Aim low at the base, Squeeze the lever, Sweep side to side. This app is a record of what's in the house and when it was last checked; it is not a substitute for that judgment call in the moment.
 
-**Contextual CTA:** Add location-based extinguisher records and link each one to the reliable instructions that apply to that actual device.
+## Keep service history attached to the exact unit
 
+Where an annual professional service or recharge happens, record the date, provider and outcome against that specific extinguisher's location record — a kitchen unit serviced in March and a garage unit serviced in July shouldn't be tracked as one blended household date.
+
+## Longer-term service intervals a home inventory should still know about
+
+Beyond the monthly and annual items, NFPA 10 also defines less-frequent checks that matter over an extinguisher's full life: an internal examination roughly every 6 years for rechargeable models, and a hydrostatic pressure test roughly every 12 years for the cylinder itself. Most households will replace a disposable home extinguisher long before either of those dates arrives, but if you own a rechargeable unit, recording its manufacture date makes it possible to know when those longer-term services come due instead of discovering it only when a technician flags it.
+
+## Where to actually put extinguishers, and how many
+
+Common household guidance is one per level of the home plus one in or very near the kitchen, since cooking fires are among the most frequent home fire causes. A garage with flammable liquids or a workshop with power tools is a reasonable second location beyond the per-floor baseline. Record the count and location of each unit against this baseline so a gap — a home with a garage extinguisher but nothing near the kitchen — is visible at a glance rather than assumed to be covered.
+
+## Reading the pressure gauge correctly
+
+Most home extinguishers have a simple gauge with a colored operable range, typically green; a needle in the red zone on either side means the unit is over- or under-charged and needs professional attention before you'd rely on it. Note the gauge reading each month as part of the visual check above, since a slow pressure drop over several months is easier to catch with a logged history than by memory alone.
+
+**Contextual CTA:** Add each extinguisher as a location-based record with its type and manufacture date, then log the monthly visual check and the annual professional service separately.
+
+**FAQ:**
+- Q: How often does a home fire extinguisher actually need to be inspected?
+  A: NFPA 10 calls for a visual inspection at approximately 30-day intervals, which OSHA's own regulation also mandates and describes as "not only explicit, but reasonable." A household member can do this monthly check — confirming the gauge reads in range, the seal is intact and there's no visible damage — without needing a licensed technician.
+- Q: Do home fire extinguishers need professional servicing, or is the monthly check enough?
+  A: Both are required under NFPA 10. The monthly visual check can be done by anyone in the household, but a certified fire-equipment technician should perform a full annual maintenance examination covering the mechanical parts, the extinguishing agent's condition, and the hose and nozzle — items a visual check alone won't catch.
+- Q: What type of fire extinguisher should a home actually have?
+  A: Most homes use a multipurpose "A-B-C" extinguisher, which covers ordinary combustibles (Class A), flammable liquids like grease or gasoline (Class B), and live electrical equipment (Class C) in one unit. Look for a UL or ULC listing, and choose the largest size you can comfortably lift and operate.
+- Q: When should I use a fire extinguisher versus just leaving the house?
+  A: Only attempt it if everyone else has been alerted and 911 called, the fire is small and confined to one object or surface, you have a clear escape route behind you, and you're not breathing smoke. If any of those aren't true, leave immediately and call from outside — a fire extinguisher is for small, contained fires, not a reason to stay in a dangerous situation.
 
 ---
 
@@ -2986,32 +3280,69 @@ A home inventory stored only on one device is vulnerable to device loss. Export 
 ## Page 082 — Home Inventory for Insurance
 **Slug:** `/guides/home-inventory-for-insurance/`
 **Primary intent:** create an inventory that may help with insurance documentation
-**Title tag:** `Home Inventory for Insurance: Build Better Records Without Guessing Policy Requirements`
-**Meta description:** `Organize household possessions, photos, purchase details and serial numbers so you have better records if an insurer later asks for documentation.`
+**Title tag:** `Home Inventory for Insurance: What to Record, Photograph and Back Up`
+**Meta description:** `Build a home inventory for insurance with the specific fields, photo methods and off-site backup practice recommended by the Insurance Information Institute.`
 **Primary keyword concept:** home inventory for insurance
+**Depth:** verified
 **Suggested internal links:** `/guides/photo-home-inventory/`, `/guides/valuable-item-inventory/`, `/guides/digital-home-inventory-backup/`, `/features/home-inventory-tracker/`
 
-# A home inventory can improve your records, but your policy determines what an insurer actually needs
+# Home inventory for insurance: what to actually record, per the Insurance Information Institute
 
-The safest goal is to preserve clear information rather than try to predict every claim requirement. Insurance policies, documentation standards and coverage vary, so confirm specific questions with your insurer or qualified adviser.
+A home inventory can meaningfully improve your position after a loss, but your specific policy — not this page — determines what your insurer requires. What follows is what the Insurance Information Institute (Triple-I), an industry research organization, recommends recording and how, plus where a local-only inventory falls short.
 
-## Capture identity and evidence
+## What to record for each item
 
-For meaningful items, record what the item is, brand/model where relevant, serial number, purchase information if available and clear photos. Receipts can be referenced when they are easy to preserve.
+- **Description**: what the item is, where you bought it, the make/model, and what you paid.
+- **Serial numbers**: found on major appliances and electronics, useful for identification and claims.
+- **Clothing**: count by category rather than item-by-item ("5 pairs of jeans, 3 pairs of sneakers") — itemizing every garment individually isn't practical or necessary.
+- **Valuables flagged separately**: jewelry, art and collectibles often need supplemental coverage beyond a standard policy's per-category limits, so flag them rather than burying them in a general list.
+- **Off-site belongings**: items in a self-storage unit count too, and are easy to forget since they're out of sight.
 
-## Photograph context as well as details
+Source: [Insurance Information Institute](https://www.iii.org/article/how-to-create-a-home-inventory).
 
-A room overview can show that items existed in the household, while close-ups can capture model or serial labels. Do not rely on a single photo type.
+## Photograph context, not just objects
 
-## Keep a backup away from the primary device
+Triple-I recommends two photo types, not one: individual item photos labeled with what's pictured, where it was bought and the make/model; and room or closet overview photos or a video walkthrough with a spoken description of contents. The overview shows that items existed in the household at all, which close-ups of individual items don't establish on their own — a claims conversation benefits from both.
 
-If the event that damages household property also damages your computer or phone, a local-only inventory may be unavailable. Export a protected backup to a separate location you control.
+## Keep proof of value where you can
 
-## Do not inflate values
+Store sales receipts and purchase contracts, and keep appraisals for high-value items where you have them. Record the known purchase cost or the supporting document reference — don't estimate a replacement value and present it as fact; that's a job for an adjuster or appraiser, not the household record.
 
-Record known purchase cost or supporting documentation when available. Do not invent replacement values or treat the app as an appraisal tool.
+## Back the inventory up somewhere the household itself can't destroy
 
-**Contextual CTA:** Build the inventory around verifiable information, then ask your insurer what additional documentation is useful for your specific policy.
+Triple-I's guidance is specific here: keep a paper copy in a safe deposit box outside the home, and create digital backups on external drives or cloud storage, updated regularly after significant purchases. The reasoning matters for a local-first tool — if the event that damages your belongings (fire, flood, theft of electronics) also destroys the only computer or phone holding the inventory, a local-only record is unavailable exactly when you need it. Export a backup to a location physically separate from the household.
+
+## Do not inflate or estimate values
+
+Record what you actually know — purchase price, a receipt, an appraisal — and leave a field blank or marked unknown rather than guessing a number that will look inconsistent if an adjuster asks how it was calculated.
+
+## Prioritize rooms and categories instead of trying to finish in one sitting
+
+A whole-home inventory is a big task, and most households abandon it if they try to do every drawer in one weekend. Start with the categories most likely to matter in a claim and hardest to reconstruct from memory afterward: electronics and major appliances (serial numbers are easy to lose track of once the box is gone), jewelry and collectibles (values are easy to underestimate without documentation), and any recent large purchase. Add rooms incrementally — finishing the living room and kitchen this month is more useful than an inventory that's 10% done everywhere and complete nowhere.
+
+## What an adjuster actually works from after a loss
+
+While policies and processes vary by insurer, a claims adjuster generally needs to establish what was lost, its condition before the loss, and a reasonable value — which is exactly what the description, photo and value fields above are built to support. An inventory doesn't replace the adjuster's own assessment or your policy's specific documentation requirements, but a household that can produce dated photos and a clear item list is starting the claims conversation from evidence rather than from memory under stress.
+
+## A room-overview video is worth more than it seems
+
+A slow walkthrough video, narrating what's in each room as you go, is one of the fastest ways to build baseline coverage — it captures far more items per minute than photographing each one individually, even though it won't replace close-up photos of high-value items or serial-number labels. Doing this once as a starting point, then following up with detailed entries for the categories above, covers more ground in less time than trying to do a complete detailed entry for every item on the first pass.
+
+## Update the inventory on a trigger, not just a calendar reminder
+
+Beyond a periodic review, treat any major purchase, renovation or received gift as an immediate trigger to add a record while the receipt and details are still easy to find — waiting for an annual review means reconstructing purchase details for a dozen items at once instead of one at a time.
+
+**Contextual CTA:** Build the inventory around the Triple-I fields above, export a backup to a location outside the home, then ask your insurer what additional documentation your specific policy requires.
+
+**FAQ:**
+- Q: What information does a home inventory for insurance actually need to include?
+  A: Per Insurance Information Institute guidance, record what each item is, where it was bought, the make and model, what you paid, and the serial number for appliances and electronics. Group clothing by category rather than item-by-item, and flag high-value items like jewelry, art and collectibles since they often need supplemental coverage.
+- Q: Are photos alone enough, or do I need receipts too?
+  A: Photos and receipts serve different purposes. Photos (both room overviews and item close-ups) establish that items existed and show condition and model details; receipts and appraisals establish value. Triple-I recommends keeping both where available, rather than relying on photos alone to answer a value question.
+- Q: Where should a home inventory be backed up?
+  A: Somewhere outside the home. The Insurance Information Institute specifically recommends a paper copy in a safe deposit box plus a digital backup on an external drive or cloud storage. If the same event that damages your belongings also destroys the device holding a local-only inventory, that record becomes unavailable exactly when you'd need it.
+- Q: Should I write down what I think my belongings are worth?
+  A: Only if you have a real basis for the number — a receipt, a purchase price you remember accurately, or a professional appraisal. Don't estimate replacement value and record it as fact; valuation is properly an adjuster's or appraiser's job, and an unsupported number can look inconsistent during a claim.
 
 ---
 
@@ -3246,32 +3577,68 @@ Do not expose them in public pages, shared display mode or analytics.
 ## Page 090 — Purchase Receipt Organizer
 **Slug:** `/guides/purchase-receipt-organizer/`
 **Primary intent:** organize household purchase receipts
-**Title tag:** `Purchase Receipt Organizer: Keep Receipts Connected to the Things You Bought`
-**Meta description:** `Organize important household receipts by asset, warranty and purchase record instead of relying on one giant receipt folder.`
+**Title tag:** `Purchase Receipt Organizer: How Long to Actually Keep Each Receipt (IRS Rules)`
+**Meta description:** `Organize household receipts by purchase, with the actual IRS retention periods — 3, 6 or 7 years — for tax-relevant receipts instead of one guessed rule.`
 **Primary keyword concept:** receipt organizer for home purchases
+**Depth:** verified
 **Suggested internal links:** `/guides/how-long-to-keep-household-records/`, `/guides/warranty-expiration/`, `/guides/home-improvement-receipts/`, `/features/household-documents-organizer/`
 
-# The best way to find a receipt is often through the item, not the date
+# Purchase receipt organizer: the actual retention periods, not a guessed rule
 
-A folder called “Receipts” eventually becomes hundreds of scans. A better household system links the receipt to the purchase it proves.
+A folder called "Receipts" eventually becomes hundreds of unsearchable scans. A better system links each receipt to the purchase it proves and keeps it only as long as it has a real reason to exist — which, for anything tax-relevant, is a period the IRS actually publishes.
 
-## Keep high-value or high-purpose receipts
+## How long to keep a receipt, by reason
 
-Receipts are especially useful for warranties, returns, insurance documentation, tax/property records where applicable and major household purchases. There is little value in digitizing every low-value receipt without a reason.
+| Reason you're keeping it | Retention period | Source |
+|---|---|---|
+| Standard tax return support (you reported income correctly) | 3 years from filing | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
+| You filed a claim for credit or refund after filing | 3 years from filing, or 2 years from the date you paid the tax, whichever is later | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
+| You underreported income by more than 25% of gross income shown | 6 years | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
+| You claimed a loss from worthless securities or a bad-debt deduction | 7 years | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
+| Property-related receipts (home improvements, major purchases affecting basis) | Until the limitations period expires for the year you dispose of the property — often many years | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
+| You didn't file a return, or filed a fraudulent one | No limit — keep indefinitely | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
 
-## Use meaningful names
+Warranty and insurance receipts follow a different clock entirely — keep those for the length of the warranty or policy coverage, not the IRS tax-record schedule, since they're solving a different problem.
 
-Include date and item, such as `2026-04-18-washing-machine-receipt.pdf`. File naming should remain understandable even if the file leaves the app.
+## The best way to find a receipt is through the item, not the date
 
-## Record seller and purchase date as fields
+Link each receipt to the asset it proves — the specific washing machine, the specific home-improvement project — rather than filing purely by date. A generic "April 2026 receipts" folder is far harder to search two years later than a washing machine record with its receipt, warranty and repair history attached in one place.
 
-Do not force the future user to open the PDF just to discover where the item was bought.
+## Keep high-value or high-purpose receipts; skip the rest
 
-## Follow real retention requirements
+Receipts earn their keep for warranties, returns, insurance documentation, the tax-relevant categories above, and major household purchases. There's little value in scanning every small grocery or takeout receipt without a specific reason — that effort is better spent on the receipts that actually matter later.
 
-Tax, legal, warranty and insurance needs vary. The app should not invent one universal “keep for seven years” rule for every receipt.
+## Use meaningful file names and searchable fields
 
-**Contextual CTA:** Start by organizing receipts for active warranties and expensive household purchases; those have the clearest future use.
+Include the date and item in the file name, such as `2026-04-18-washing-machine-receipt.pdf`, so the file stays understandable even outside the app. Record the seller and purchase date as separate fields too — don't force a future search to mean opening every PDF to find out where something was bought.
+
+## Paper receipts fade — capture them before they're unreadable
+
+Thermal-printer receipts, the kind most retail registers still print, are notorious for fading to blank within a year or two, well before most of the retention periods above expire. If a receipt matters for a tax record, a warranty claim or an insurance file, photograph or scan it soon after purchase rather than filing the paper original and assuming it will still be legible when you need it — a faded receipt is functionally the same as no receipt at all.
+
+## Digital and emailed receipts need the same organization as paper ones
+
+An emailed order confirmation or a PDF invoice is just as easy to lose in a crowded inbox as a paper receipt is to lose in a drawer. Save a copy into the household record at the time of purchase rather than relying on email search later — email providers change, accounts get migrated, and a purchase confirmation from a retailer that later closes its online order history isn't guaranteed to stay retrievable years down the line.
+
+## When a receipt's job is done, let it go
+
+Not every receipt needs to survive with the file forever. Once a return window has closed, a warranty has expired and the item has been discarded or sold, and no tax-relevant retention period applies, the receipt has finished its job — removing it keeps the collection useful instead of turning into the same unsearchable pile the folder system was meant to replace.
+
+## A quick sort for the receipts already piled up
+
+Facing an existing shoebox or downloads folder full of receipts is different from starting fresh. Rather than processing them in date order, sort first by whether the purchase is still under warranty or return window (keep and attach to the asset), still tax-relevant under the table above (keep, filed by year and reason), or neither (safe to discard once you've confirmed there's no ongoing need). This three-way sort clears the backlog faster than trying to make a permanent filing decision on every single receipt in the pile.
+
+**Contextual CTA:** Start with receipts for active warranties, tax-relevant purchases and expensive household items — attach each one to its asset record rather than filing by date alone.
+
+**FAQ:**
+- Q: How long does the IRS actually say to keep a receipt?
+  A: It depends on why you're keeping it. Standard tax support is 3 years from filing; underreporting income by more than 25% extends that to 6 years; a worthless-securities or bad-debt claim extends it to 7 years; and if you never filed a return, there's no time limit at all. There's no single universal number.
+- Q: Do warranty receipts follow the same retention rule as tax receipts?
+  A: No — keep a warranty receipt for as long as the warranty itself runs, which has nothing to do with the IRS's tax-record schedule. A receipt can matter for two entirely different reasons (proving a tax position vs. proving a warranty claim), so it's worth tracking which reason applies to each one you keep.
+- Q: Should I scan every receipt to be safe?
+  A: Not necessarily. Receipts earn their keep for warranties, returns, insurance documentation, tax-relevant purchases and major household items. Digitizing every small day-to-day receipt without a specific future use mostly creates clutter that makes the receipts that do matter harder to find.
+- Q: What's the best way to organize receipts so I can actually find one later?
+  A: Attach the receipt to the specific item or asset it proves, rather than filing purely by date. A washing machine record that holds its receipt, warranty terms and repair history together is far easier to search two years later than a generic monthly receipts folder.
 
 ---
 
@@ -3470,32 +3837,68 @@ Archive the outgoing appliance and create a new asset. That preserves real house
 ## Page 097 — Appliance Lifespan Planning
 **Slug:** `/guides/appliance-lifespan-planning/`
 **Primary intent:** understand appliance lifespan estimates responsibly
-**Title tag:** `Appliance Lifespan Planning: How to Use Age Estimates Without Treating Them as Expiration Dates`
-**Meta description:** `Use appliance age and lifespan estimates as planning context while relying on real condition, repair history and manufacturer information.`
+**Title tag:** `Appliance Lifespan Planning: Real Ranges by Appliance, Not a Guess`
+**Meta description:** `Appliance lifespan ranges by type — refrigerator, washer, dryer, dishwasher, water heater — sourced from AHAM, Rheem and manufacturer data, used for planning.`
 **Primary keyword concept:** appliance lifespan planning
+**Depth:** verified
 **Suggested internal links:** `/tools/appliance-age-calculator/`, `/tools/appliance-replacement-planner/`, `/guides/appliance-replacement-planning/`, `/features/home-inventory-tracker/`
 
-# Appliances do not expire on schedule
+# Appliance lifespan planning: real published ranges, used as planning input, not a countdown
 
-A lifespan estimate describes a population, not your exact refrigerator or washer. Some units fail earlier; others remain useful much longer. The right use of lifespan information is planning.
+A lifespan estimate describes a population of appliances, not your exact unit. Some fail early; some outlast the range entirely. But "it varies" isn't a reason to withhold the actual published ranges — it's a reason to use them as one input alongside your appliance's real condition and repair history, rather than as a prediction.
+
+## Published lifespan ranges by appliance
+
+| Appliance | Typical range | Source |
+|---|---|---|
+| Refrigerator | 10–14 years (13–17 per one manufacturer estimate) | [AHAM](https://blog.aham.org/want-to-save-energy-it-might-be-time-to-flip-your-fridge/); [Bosch](https://www.boschappliance.support/guides/appliance-lifespans-guide/) |
+| Washing machine | Well over a decade for most units, roughly 10–14 years | [AHAM](https://blog.aham.org/Save-Energy-and-Money-When-Doing-Laundry-By-Following-These-Tips/); [Bosch](https://www.boschappliance.support/guides/appliance-lifespans-guide/) |
+| Dryer | Well over a decade for most units, roughly 10–14 years | [AHAM](https://blog.aham.org/Save-Energy-and-Money-When-Doing-Laundry-By-Following-These-Tips/); [Bosch](https://www.boschappliance.support/guides/appliance-lifespans-guide/) |
+| Dishwasher | 10–13 years | [Bosch](https://www.boschappliance.support/guides/appliance-lifespans-guide/) |
+| Water heater (tank) | 8–12 years | [Rheem](https://www.rheem.com/water-heating/articles/water-heater-lifespan-when-to-repair-vs-replace/) |
+| Water heater (tankless) | 15–20+ years | [Rheem](https://www.rheem.com/water-heating/articles/water-heater-lifespan-when-to-repair-vs-replace/) |
+
+These are typical manufacturer- and trade-association-published ranges, not predictions for any specific unit — treat the low end as "worth watching more closely" and the high end as "not unusual," rather than either end as a deadline.
 
 ## Calculate age accurately first
 
-If the purchase or installation date is known, calculate current age. If it is estimated, label it as such. Serial-number decoding may be manufacturer-specific and should not be guessed.
+If the purchase or installation date is known, use it directly. If it's estimated, label it as an estimate rather than presenting a guess as fact — "installed approximately 2016, unconfirmed" is more honest and more useful later than a fabricated exact date. Serial-number date decoding is manufacturer-specific and shouldn't be guessed from a generic formula; check the manufacturer's own lookup tool or documentation.
 
-## Add real household evidence
+## The 15-year efficiency signal for refrigerators specifically
 
-Repair frequency, changes in performance, parts availability and household needs are more actionable than age alone.
+AHAM notes that a refrigerator 15 years or older typically uses about twice the energy of a new ENERGY STAR-certified model, with commonly cited savings around $260 over five years after switching. That's a genuinely different kind of signal than "it might fail soon" — it's a running-cost argument that applies even to a refrigerator that's working perfectly.
 
-## Use ranges and uncertainty
+## Add real household evidence on top of the range
 
-If public reference ranges are shown, cite reliable sources and explain that they are not predictions. Never tell a user “replace in 8 months” based solely on age.
+Repair frequency, recent performance changes, parts availability and how critical the appliance is to daily household function are more actionable than age alone. Two units of the same age with different repair histories are not equally close to replacement — the one with two service calls in the past year deserves more attention than the one with zero, regardless of what the published range says.
 
-## Plan the disruption
+## Plan the disruption, not just the number
 
-For critical appliances, saving measurements, connection information and a replacement budget can be more useful than obsessing over an exact lifespan.
+For critical appliances — the water heater, the refrigerator — saving measurements, connection type, model number and a rough replacement budget ahead of time is more useful than obsessing over an exact remaining lifespan. When a water heater does fail, most households need a replacement fast; having the specs on hand already turns a stressful same-day decision into a five-minute lookup.
 
-**Contextual CTA:** Use the Appliance Age Calculator to establish the known age, then add repair and condition history before making a replacement plan.
+## A simple decision framework instead of a single cutoff age
+
+Rather than picking one age as a hard replacement trigger, weigh three questions together: is the appliance inside or past its published range, has it needed repairs recently or more than once, and does a repair estimate approach roughly half the cost of a new unit? An appliance that's young but has already needed two repairs is a weaker bet than an older one with a clean history. None of these questions alone should decide a replacement — the combination is what actually informs the decision, which is why a written repair history matters as much as the age figure itself.
+
+## Why the ranges above differ between sources
+
+You'll notice the table gives a range rather than one number, and even reputable sources don't fully agree — AHAM's refrigerator figure (10–14 years) and one manufacturer's own estimate (13–17 years) both come from real data, just measured differently: trade-association averages tend to reflect a broad population including heavily used units, while a single manufacturer's estimate may lean toward their own product line's typical performance. Neither is wrong; it's a reason to treat any single number as an approximation rather than a precise fact, and to weight your own appliance's real condition more heavily than the exact midpoint of a published range.
+
+## Maintenance history changes where a unit sits in its own range
+
+An appliance that's received the maintenance described in this site's other checklists — coil cleaning, filter changes, hose replacement, annual water heater service — has a real reason to land toward the upper end of its published range rather than the midpoint, while one with a history of skipped maintenance has a real reason to land toward the lower end. This isn't a guarantee either way, but it's the most concrete lever a household actually controls, which is why the maintenance checklists throughout this site and the lifespan ranges here are meant to be used together rather than as separate topics.
+
+**Contextual CTA:** Use the Appliance Age Calculator to establish the known age against the ranges above, then add repair and condition history before deciding on a replacement timeline.
+
+**FAQ:**
+- Q: How long should a refrigerator actually be expected to last?
+  A: AHAM, a major appliance trade association, cites an average lifespan of 10 to 14 years, with some manufacturer estimates running as high as 13 to 17. A unit 15 years or older typically uses about twice the energy of a new ENERGY STAR model, which is often a stronger replacement argument than an actual breakdown.
+- Q: Do washers and dryers really last as long as a water heater?
+  A: Roughly, yes — trade association guidance describes washers and dryers as commonly lasting well over a decade, in the same general 10 to 14 year range as a tank water heater's 8 to 12 years. Tankless water heaters are the outlier, commonly rated for 15 to 20-plus years.
+- Q: Should I replace an appliance just because it's past its "typical lifespan"?
+  A: Not automatically. These ranges describe a population average, not a prediction for your specific unit. Use age alongside real evidence — repair frequency, recent performance changes, and how critical the appliance is — rather than replacing a unit that's working fine purely because it passed a published number.
+- Q: What should I actually record to prepare for an appliance replacement?
+  A: Save the model number, measurements, connection type (gas/electric, voltage, plumbing size) and a rough budget for the appliances most critical to daily life, especially the water heater and refrigerator. When one fails unexpectedly, having those specs already on hand turns a stressful same-day decision into a quick lookup instead.
 
 ---
 

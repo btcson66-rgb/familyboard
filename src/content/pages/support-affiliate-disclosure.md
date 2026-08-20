@@ -7,11 +7,13 @@ primaryKeyword: "FamilyBoard affiliate disclosure"
 cluster: "support"
 pageType: "support"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
   - "/editorial-policy/"
   - "/privacy/"
+faq: []
 contentVersion: 1
 ---
 # Affiliate Disclosure

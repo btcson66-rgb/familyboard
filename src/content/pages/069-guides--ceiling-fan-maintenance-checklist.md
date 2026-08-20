@@ -6,14 +6,17 @@ primaryIntent: "care for ceiling fans and document issues"
 primaryKeyword: "ceiling fan maintenance checklist"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use lightweight records for low-maintenance assets. The system should scale down as well as up."
 related:
   - "/guides/home-maintenance-reminders/"
   - "/guides/home-service-provider-list/"
   - "/features/home-inventory-tracker/"
   - "/guides/annual-home-review/"
+faq: []
 contentVersion: 1
 ---
 # Ceiling fans need a light-touch maintenance record
@@ -31,5 +34,3 @@ The app should never encourage unqualified users to open electrical connections.
 ## Group by room
 
 In homes with many fans, room-based naming keeps records understandable: “Primary bedroom ceiling fan,” not “Fan 3.”
-
-**Contextual CTA:** Use lightweight records for low-maintenance assets. The system should scale down as well as up.

@@ -6,14 +6,17 @@ primaryIntent: "organize household documents digitally"
 primaryKeyword: "household documents organizer"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Build a Digital Home Binder index first. Once the categories make sense, add records and local file references only for the documents that are genuinely worth keeping close to the household record."
 related:
   - "/guides/digital-home-binder/"
   - "/guides/important-household-documents/"
   - "/guides/organize-appliance-manuals/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Organize documents by what they help you do
@@ -35,5 +38,3 @@ Helpful categories include purchase records, warranties, manuals, service invoic
 A browser-based local-first app can keep document metadata and selected local attachments, but users should be told clearly that browser storage is not the same as an archival backup. Important files should also exist in a durable backup location the user controls.
 
 That limitation is part of the product's privacy-first philosophy: the app should not quietly turn itself into an unannounced cloud document vault.
-
-**Contextual CTA:** Build a Digital Home Binder index first. Once the categories make sense, add records and local file references only for the documents that are genuinely worth keeping close to the household record.

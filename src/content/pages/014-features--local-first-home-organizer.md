@@ -6,14 +6,17 @@ primaryIntent: "find a local-first home organizer"
 primaryKeyword: "local-first home organizer"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Read the security and backup pages before storing important household information. Privacy is most useful when the user also understands the recovery plan."
 related:
   - "/features/private-family-organizer/"
   - "/features/offline-household-organizer/"
   - "/security/"
   - "/privacy/"
+faq: []
 contentVersion: 1
 ---
 # Your household database does not have to begin in someone else's cloud
@@ -35,5 +38,3 @@ A local-first design reduces unnecessary centralized collection, while export ma
 ## Portability works today
 
 Exported backups let a household move its records without depending on an account or server. Keep a durable copy outside the browser and test restores periodically.
-
-**Contextual CTA:** Read the security and backup pages before storing important household information. Privacy is most useful when the user also understands the recovery plan.

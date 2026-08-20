@@ -6,14 +6,17 @@ primaryIntent: "track air-purifier filters and cleaning"
 primaryKeyword: "air purifier maintenance guide"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add each purifier as a separate asset named by room, then save its exact filter reference once."
 related:
   - "/guides/hvac-filter-tracker/"
   - "/guides/household-supplies-inventory/"
   - "/features/maintenance-tracker/"
   - "/guides/appliance-inventory/"
+faq: []
 contentVersion: 1
 ---
 # Air-purifier maintenance is mostly a filter-identification problem
@@ -35,5 +38,3 @@ A filter indicator reset is easy to forget. Adding the date creates a household 
 ## Avoid health claims
 
 The organizer can track equipment; it should not claim that a particular purifier or filter treats medical conditions.
-
-**Contextual CTA:** Add each purifier as a separate asset named by room, then save its exact filter reference once.

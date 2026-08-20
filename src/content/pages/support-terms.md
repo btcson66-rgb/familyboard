@@ -7,11 +7,13 @@ primaryKeyword: "FamilyBoard terms"
 cluster: "support"
 pageType: "support"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
   - "/privacy/"
   - "/disclaimer/"
+faq: []
 contentVersion: 1
 ---
 # Terms of Use

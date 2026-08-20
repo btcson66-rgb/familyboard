@@ -6,14 +6,17 @@ primaryIntent: "organize home maintenance documents in a binder"
 primaryKeyword: "home maintenance binder"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create a one-page index first. If the index is confusing, adding more files will not fix the organization problem."
 related:
   - "/guides/digital-home-binder/"
   - "/guides/home-maintenance-records/"
   - "/templates/printable-service-provider-list/"
   - "/features/household-documents-organizer/"
+faq: []
 contentVersion: 1
 ---
 # A home maintenance binder should help someone operate the home
@@ -35,5 +38,3 @@ Someone unfamiliar with the home should be able to understand the section names 
 ## Paper and digital can coexist
 
 A printable summary can be valuable during outages or handoffs, while detailed records remain digital. The product should support both rather than treating paper as obsolete.
-
-**Contextual CTA:** Create a one-page index first. If the index is confusing, adding more files will not fix the organization problem.

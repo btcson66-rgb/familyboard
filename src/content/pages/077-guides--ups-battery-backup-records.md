@@ -6,14 +6,17 @@ primaryIntent: "track household backup-power devices"
 primaryKeyword: "UPS battery replacement tracker"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the UPS record to the outage plan and record its last battery change so “backup power” is a known capability rather than an assumption."
 related:
   - "/guides/power-outage-home-preparedness/"
   - "/guides/computer-electronics-inventory/"
   - "/features/maintenance-tracker/"
   - "/guides/emergency-binder/"
+faq: []
 contentVersion: 1
 ---
 # Backup power is only useful if the household remembers what it protects and whether it still works
@@ -35,5 +38,3 @@ A battery replacement is a meaningful event worth recording, especially when the
 ## Include the device in outage planning
 
 The household should know where backup power is available and what its limitations are. Do not assume it can power equipment beyond its rating.
-
-**Contextual CTA:** Add the UPS record to the outage plan and record its last battery change so “backup power” is a known capability rather than an assumption.

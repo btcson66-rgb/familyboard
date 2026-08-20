@@ -7,6 +7,7 @@ primaryKeyword: "printable appliance inventory"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/serial-number-tracker/"
   - "/guides/how-to-track-product-warranties/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Printable Appliance Inventory

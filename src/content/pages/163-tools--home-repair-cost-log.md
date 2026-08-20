@@ -7,6 +7,7 @@ primaryKeyword: "home repair cost log"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/home-repair-history/"
   - "/tools/home-maintenance-cost-tracker/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Home Repair Cost Log

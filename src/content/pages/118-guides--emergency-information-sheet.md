@@ -6,14 +6,17 @@ primaryIntent: "make a one-page household emergency information sheet"
 primaryKeyword: "emergency information sheet"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the generator to create two versions: a limited shared-sheet version and a more complete private household version."
 related:
   - "/tools/emergency-contact-sheet-generator/"
   - "/templates/printable-emergency-contacts/"
   - "/guides/emergency-binder/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # One page forces the household to decide what is truly important
@@ -35,5 +38,3 @@ Instead of placing policy documents or identity numbers on the sheet, write wher
 ## Print carefully
 
 A paper sheet is convenient but can be seen by anyone with access to it. Decide what belongs on a refrigerator, in a private binder or only in the app.
-
-**Contextual CTA:** Use the generator to create two versions: a limited shared-sheet version and a more complete private household version.

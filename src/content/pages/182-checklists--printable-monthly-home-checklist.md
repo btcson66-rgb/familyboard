@@ -7,6 +7,7 @@ primaryKeyword: "printable monthly home checklist"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/household-monthly-review/"
   - "/features/home-dashboard/"
   - "/tools/household-annual-review-generator/"
+faq: []
 contentVersion: 1
 ---
 # Printable Monthly Home Checklist

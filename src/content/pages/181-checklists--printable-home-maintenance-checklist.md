@@ -7,6 +7,7 @@ primaryKeyword: "printable home maintenance checklist"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/tools/home-maintenance-schedule-generator/"
   - "/guides/maintenance-priorities/"
   - "/features/maintenance-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Printable Home Maintenance Checklist

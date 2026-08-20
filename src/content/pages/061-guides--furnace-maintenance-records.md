@@ -6,14 +6,17 @@ primaryIntent: "keep furnace service records"
 primaryKeyword: "furnace maintenance records"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the last known furnace service event and provider. If you cannot remember it, that is exactly why the record is worth starting now."
 related:
   - "/guides/fall-home-maintenance-checklist/"
   - "/guides/hvac-filter-tracker/"
   - "/guides/home-service-provider-list/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Furnace records are valuable because service history can span many years
@@ -35,5 +38,3 @@ If a service visit results in a recommendation for future inspection, part monit
 ## Track filters separately when useful
 
 Filter records can have their own recurring history while remaining connected to the furnace or air-handling system.
-
-**Contextual CTA:** Add the last known furnace service event and provider. If you cannot remember it, that is exactly why the record is worth starting now.

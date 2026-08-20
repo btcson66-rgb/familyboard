@@ -6,14 +6,17 @@ primaryIntent: "prepare household information and responsibilities for a power o
 primaryKeyword: "power outage preparedness home"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create an offline Emergency Information Sheet and confirm that at least two household members know where it can be found."
 related:
   - "/guides/emergency-supply-inventory/"
   - "/guides/ups-battery-backup-records/"
   - "/guides/emergency-information-sheet/"
   - "/features/offline-household-organizer/"
+faq: []
 contentVersion: 1
 ---
 # The first outage problem is often information, not electricity
@@ -35,5 +38,3 @@ Record the actual devices the home owns and include safe manufacturer-approved t
 ## Document unusual events after power returns
 
 If an appliance, router or other system behaved abnormally after the outage, add a note to its history so a repeated issue has context.
-
-**Contextual CTA:** Create an offline Emergency Information Sheet and confirm that at least two household members know where it can be found.

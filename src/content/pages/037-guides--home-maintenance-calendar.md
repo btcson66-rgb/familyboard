@@ -6,14 +6,17 @@ primaryIntent: "convert maintenance into a calendar"
 primaryKeyword: "home maintenance calendar"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Build the schedule in the maintenance tracker, then use the calendar as a filtered view of what is due rather than a second independent list."
 related:
   - "/guides/home-maintenance-schedule/"
   - "/guides/annual-home-review/"
   - "/tools/home-maintenance-schedule-generator/"
   - "/features/household-calendar/"
+faq: []
 contentVersion: 1
 ---
 # A maintenance calendar works best when it is the view, not the database
@@ -35,5 +38,3 @@ When a calendar event is completed, the history belongs on the appliance, system
 ## Keep the family calendar readable
 
 Only surface maintenance dates that someone needs to act on. Background records can remain in the tracker.
-
-**Contextual CTA:** Build the schedule in the maintenance tracker, then use the calendar as a filtered view of what is due rather than a second independent list.

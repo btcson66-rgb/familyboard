@@ -6,14 +6,17 @@ primaryIntent: "organize household preparations before severe weather"
 primaryKeyword: "storm preparation home checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the Emergency Binder Generator to organize contacts and household-specific information, then align the actual storm actions with your local emergency-management guidance."
 related:
   - "/guides/power-outage-home-preparedness/"
   - "/guides/emergency-supply-inventory/"
   - "/guides/family-emergency-contacts/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Storm preparation is local; household organization makes it easier to act
@@ -35,5 +38,3 @@ Review the household's existing emergency supplies and devices. Confirm conditio
 ## Protect household records
 
 Make sure an offline backup or appropriately protected copy of essential information is accessible if internet service is disrupted.
-
-**Contextual CTA:** Use the Emergency Binder Generator to organize contacts and household-specific information, then align the actual storm actions with your local emergency-management guidance.

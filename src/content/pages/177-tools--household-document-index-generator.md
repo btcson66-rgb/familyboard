@@ -7,6 +7,7 @@ primaryKeyword: "household document index template"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/digital-home-binder/"
   - "/features/household-documents-organizer/"
   - "/templates/printable-household-contacts/"
+faq: []
 contentVersion: 1
 ---
 # Household Document Index Generator

@@ -6,14 +6,17 @@ primaryIntent: "create a short weekly household planning routine"
 primaryKeyword: "household weekly reset"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Put a 20-minute Weekly Reset on the household calendar and make it the moment when the dashboard is cleaned, not another daily obligation."
 related:
   - "/guides/household-admin-day/"
   - "/guides/recurring-household-tasks/"
   - "/features/home-dashboard/"
   - "/features/family-display-mode/"
+faq: []
 contentVersion: 1
 ---
 # A weekly reset is the smallest routine that can keep a household system current
@@ -35,5 +38,3 @@ Groceries, household staples, pet supplies or other essentials can be reviewed w
 ## Surface one home issue
 
 If maintenance or repair has been postponed, decide the next action: buy a part, book service, gather information or intentionally defer.
-
-**Contextual CTA:** Put a 20-minute Weekly Reset on the household calendar and make it the moment when the dashboard is cleaned, not another daily obligation.

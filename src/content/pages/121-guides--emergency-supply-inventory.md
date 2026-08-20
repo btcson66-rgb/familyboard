@@ -6,14 +6,17 @@ primaryIntent: "know what emergency supplies a household actually has"
 primaryKeyword: "emergency supply inventory"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Inventory first, buy second. Knowing what you already have is the easiest way to make preparedness spending more deliberate."
 related:
   - "/guides/storm-preparation-home-checklist/"
   - "/guides/power-outage-home-preparedness/"
   - "/tools/emergency-binder-generator/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Preparedness starts with knowing what is already in the house
@@ -35,5 +38,3 @@ A household may store medications or medical supplies, but the app should not pr
 ## Review after use
 
 If supplies are consumed during an outage or trip, create a restock task rather than waiting for the next annual review.
-
-**Contextual CTA:** Inventory first, buy second. Knowing what you already have is the easiest way to make preparedness spending more deliberate.

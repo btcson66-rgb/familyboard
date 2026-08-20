@@ -6,14 +6,17 @@ primaryIntent: "keep a household list of recurring bills and due dates"
 primaryKeyword: "recurring bills tracker"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the bills list as a household continuity map: another trusted person should know what obligations exist even if they cannot access every account."
 related:
   - "/guides/annual-renewal-calendar/"
   - "/guides/household-account-list/"
   - "/guides/organize-utility-account-information/"
   - "/features/home-dashboard/"
+faq: []
 contentVersion: 1
 ---
 # A household bills tracker can be useful without handling money
@@ -35,5 +38,3 @@ The household dashboard can show “electric bill due” without exposing financ
 ## Use actual statements for money questions
 
 The tracker is not a ledger and should not claim to verify whether a payment cleared.
-
-**Contextual CTA:** Use the bills list as a household continuity map: another trusted person should know what obligations exist even if they cannot access every account.

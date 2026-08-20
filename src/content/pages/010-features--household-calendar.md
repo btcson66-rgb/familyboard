@@ -6,14 +6,17 @@ primaryIntent: "simple household calendar inside a broader home system"
 primaryKeyword: "household calendar"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Keep using your favorite full calendar if it works for you. Use FamilyBoard for the dates that only make sense when connected to household records."
 related:
   - "/features/home-dashboard/"
   - "/features/family-task-manager/"
   - "/guides/annual-renewal-calendar/"
   - "/features/family-display-mode/"
+faq: []
 contentVersion: 1
 ---
 # A calendar is useful when it stays connected to the work around it
@@ -33,5 +36,3 @@ A calendar entry reading “Technician 2 PM” becomes more useful when the rela
 ## Display mode makes the calendar more accessible
 
 A household tablet does not need every detail. It needs a large daily view that shows what the family should know today: events, chores, maintenance and notices. The same underlying records can feed that simplified view.
-
-**Contextual CTA:** Keep using your favorite full calendar if it works for you. Use `FamilyBoard` for the dates that only make sense when connected to household records.

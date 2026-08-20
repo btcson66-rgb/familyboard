@@ -6,14 +6,17 @@ primaryIntent: "understand preventive maintenance for a home"
 primaryKeyword: "preventive home maintenance"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Review your three most consequential home systems and create one realistic recurring check for each rather than copying a giant generic list."
 related:
   - "/guides/home-maintenance-schedule/"
   - "/guides/maintenance-priorities/"
   - "/guides/home-maintenance-reminders/"
   - "/features/maintenance-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Preventive maintenance is not about doing more work; it is about doing the right work before failure
@@ -35,5 +38,3 @@ Maintenance is not always “replace X every Y months.” Changes in sound, temp
 ## Measure success by fewer surprises and better records
 
 A preventive system succeeds when the household notices issues earlier, remembers what was done and can explain the history to the next person involved.
-
-**Contextual CTA:** Review your three most consequential home systems and create one realistic recurring check for each rather than copying a giant generic list.

@@ -6,14 +6,17 @@ primaryIntent: "organize household documents into a useful system"
 primaryKeyword: "how to organize household documents"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Generate a Household Document Index before moving files. A clear index prevents the folder structure from becoming another form of clutter."
 related:
   - "/features/household-documents-organizer/"
   - "/guides/digital-home-binder/"
   - "/guides/important-household-documents/"
   - "/tools/household-document-index-generator/"
+faq: []
 contentVersion: 1
 ---
 # Household documents are easier to manage when the filing system mirrors real decisions
@@ -35,5 +38,3 @@ The home organizer can index or locally attach documents, but legal originals, i
 ## Review the index once a year
 
 Delete obsolete duplicates, update service providers and make sure important records still point to files that exist.
-
-**Contextual CTA:** Generate a Household Document Index before moving files. A clear index prevents the folder structure from becoming another form of clutter.

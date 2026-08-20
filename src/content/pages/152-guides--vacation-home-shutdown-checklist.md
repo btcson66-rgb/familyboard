@@ -6,14 +6,17 @@ primaryIntent: "prepare the home before leaving for vacation"
 primaryKeyword: "vacation home shutdown checklist"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Generate the shutdown list from your own household systems, then save the finished list as a reusable travel template."
 related:
   - "/tools/vacation-shutdown-checklist-generator/"
   - "/guides/travel-household-handoff/"
   - "/guides/house-sitter-information/"
   - "/guides/home-maintenance-after-vacation/"
+faq: []
 contentVersion: 1
 ---
 # A vacation shutdown checklist is about reducing loose ends before absence
@@ -35,5 +38,3 @@ Give the sitter or trusted contact the information needed to respond to a proble
 ## Protect absence information
 
 Do not display travel dates on publicly visible screens or social feeds.
-
-**Contextual CTA:** Generate the shutdown list from your own household systems, then save the finished list as a reusable travel template.

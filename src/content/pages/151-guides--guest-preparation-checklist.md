@@ -6,14 +6,17 @@ primaryIntent: "prepare a home for overnight guests"
 primaryKeyword: "guest preparation checklist"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Save a guest-preparation template only if you host repeatedly; otherwise use the printable checklist and keep the app lightweight."
 related:
   - "/tools/cleaning-schedule-generator/"
   - "/guides/household-weekly-reset/"
   - "/guides/house-sitter-information/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # Guest preparation works best when it focuses on comfort and logistics
@@ -35,5 +38,3 @@ Ask about allergies, dietary needs and accessibility considerations rather than 
 ## Reset after departure
 
 Create a small follow-up task for laundry, returned keys or anything borrowed.
-
-**Contextual CTA:** Save a guest-preparation template only if you host repeatedly; otherwise use the printable checklist and keep the app lightweight.

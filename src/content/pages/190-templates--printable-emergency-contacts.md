@@ -7,6 +7,7 @@ primaryKeyword: "printable emergency contact sheet"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/family-emergency-contacts/"
   - "/guides/emergency-information-sheet/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Printable Emergency Contact Sheet

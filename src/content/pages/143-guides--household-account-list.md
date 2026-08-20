@@ -6,14 +6,17 @@ primaryIntent: "list household services and account owners without storing passw
 primaryKeyword: "household account list"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Build an account map first. You can improve credential continuity separately using a dedicated secure password-management solution."
 related:
   - "/guides/organize-utility-account-information/"
   - "/guides/organize-household-subscriptions/"
   - "/guides/household-handoff/"
   - "/features/household-subscription-tracker/"
+faq: []
 contentVersion: 1
 ---
 # A household needs an account map even if the passwords live elsewhere
@@ -35,5 +38,3 @@ If a service is critical and only one person has access, note the secure process
 ## Review after account changes
 
 When an email address or owner changes, update the index immediately.
-
-**Contextual CTA:** Build an account map first. You can improve credential continuity separately using a dedicated secure password-management solution.

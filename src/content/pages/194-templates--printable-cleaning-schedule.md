@@ -7,6 +7,7 @@ primaryKeyword: "printable cleaning schedule"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/cleaning-schedule/"
   - "/guides/deep-cleaning-tracker/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # Printable Cleaning Schedule

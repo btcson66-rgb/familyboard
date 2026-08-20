@@ -7,6 +7,7 @@ primaryKeyword: "home maintenance cost tracker"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/home-repair-history/"
   - "/tools/home-repair-cost-log/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Home Maintenance Cost Tracker

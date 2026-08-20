@@ -6,14 +6,17 @@ primaryIntent: "decide what to include in a home inventory"
 primaryKeyword: "home inventory checklist"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the Home Inventory Checklist Generator to create a room-by-room starter list, then save only the items with real future value."
 related:
   - "/tools/home-inventory-checklist-generator/"
   - "/guides/room-by-room-home-inventory/"
   - "/guides/home-inventory-for-insurance/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # A home inventory should be selective enough to finish
@@ -35,5 +38,3 @@ If you do not know the purchase date, leave it unknown or approximate with a cle
 ## Back up the inventory
 
 A home inventory stored only on one device is vulnerable to device loss. Export a backup and keep a protected copy in a separate location you control.
-
-**Contextual CTA:** Use the Home Inventory Checklist Generator to create a room-by-room starter list, then save only the items with real future value.

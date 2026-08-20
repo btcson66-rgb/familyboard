@@ -6,14 +6,17 @@ primaryIntent: "find an appliance or product warranty tracker"
 primaryKeyword: "warranty tracker"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the Warranty Expiration Calculator for a quick date, then create a full asset record if the purchase is important enough to track long-term."
 related:
   - "/guides/how-to-track-product-warranties/"
   - "/guides/warranty-expiration/"
   - "/tools/warranty-expiration-calculator/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # The worst time to look for warranty information is after something stops working
@@ -39,5 +42,3 @@ If an item has already been repaired, the repair note may be as useful as the or
 ## Manufacturer terms always win
 
 Warranty rules vary by product, seller and jurisdiction. The tracker should never infer legal coverage from a date alone. It should encourage the user to confirm the actual terms when making a claim.
-
-**Contextual CTA:** Use the Warranty Expiration Calculator for a quick date, then create a full asset record if the purchase is important enough to track long-term.

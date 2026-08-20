@@ -1,0 +1,1751 @@
+[
+  {
+    "route": "/",
+    "alternateRoute": "/zh-tw/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/home-dashboard/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/home-inventory-tracker/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/maintenance-tracker/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/warranty-tracker/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/household-documents-organizer/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/household-subscription-tracker/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/family-task-manager/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/household-calendar/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/emergency-information-organizer/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/household-handoff/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/family-display-mode/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/local-first-home-organizer/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/private-family-organizer/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/offline-household-organizer/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/no-account-family-organizer/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/home-record-keeper/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/household-operations-system/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/features/free-home-management-app/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-maintenance-schedule/",
+    "alternateRoute": "/zh-tw/guides/home-maintenance-schedule/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/monthly-home-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/quarterly-home-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/seasonal-home-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/spring-home-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/summer-home-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/fall-home-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/winter-home-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/first-time-homeowner-maintenance-guide/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/apartment-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/condo-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/rental-home-maintenance-log/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-maintenance-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-repair-history/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/preventive-home-maintenance/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/maintenance-priorities/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-maintenance-calendar/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-maintenance-binder/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-maintenance-log/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-maintenance-budget/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-maintenance-reminders/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-maintenance-after-vacation/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/move-in-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/move-out-home-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/annual-home-review/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/storm-preparation-home-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/power-outage-home-preparedness/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/water-leak-response-home-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-service-provider-list/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-maintenance-delegation/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/refrigerator-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/freezer-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/washing-machine-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/dryer-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/dishwasher-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/oven-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/microwave-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/range-hood-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/air-conditioner-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/hvac-filter-tracker/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/furnace-maintenance-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/heat-pump-maintenance-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/water-heater-maintenance-records/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/water-softener-maintenance-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/water-filter-replacement-guide/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/air-purifier-maintenance-guide/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/dehumidifier-maintenance-guide/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/humidifier-maintenance-guide/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/ceiling-fan-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/bathroom-exhaust-fan-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/garbage-disposal-maintenance-guide/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/coffee-maker-maintenance-guide/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/robot-vacuum-maintenance-guide/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/vacuum-cleaner-maintenance-guide/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/computer-electronics-inventory/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/wifi-router-maintenance-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/ups-battery-backup-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/smoke-alarm-records/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/carbon-monoxide-alarm-records/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/fire-extinguisher-records/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-inventory-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-inventory-for-insurance/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/photo-home-inventory/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/room-by-room-home-inventory/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/appliance-inventory/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/electronics-inventory/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/furniture-inventory/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/valuable-item-inventory/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/serial-number-tracker/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/purchase-receipt-organizer/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/how-to-track-product-warranties/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/warranty-expiration/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/product-registration-tracker/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/repair-history/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/service-history/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/appliance-replacement-planning/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/appliance-lifespan-planning/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-replacement-reserve/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-purchase-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/renovation-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/contractor-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-improvement-receipts/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/moving-inventory/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/storage-unit-inventory/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/digital-home-inventory-backup/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-documents-organizer/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/digital-home-binder/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/important-household-documents/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/how-long-to-keep-household-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/organize-appliance-manuals/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/organize-insurance-documents/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/organize-utility-account-information/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/organize-vehicle-documents-at-home/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/organize-pet-records/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/organize-school-records-at-home/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/emergency-binder/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/family-emergency-contacts/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/emergency-information-sheet/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-evacuation-information/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/utility-shutoff-information/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/emergency-supply-inventory/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-medical-information-organization/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/caregiver-handoff-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-handoff/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/travel-household-handoff/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/house-sitter-information/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/pet-sitter-information/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/family-continuity-plan/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/what-spouse-needs-to-know/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-admin-backup-person/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-management-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/divide-household-responsibilities/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/recurring-household-tasks/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/family-chore-system/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/chore-chart-for-adults/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-weekly-reset/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-monthly-review/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-admin-day/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/organize-household-subscriptions/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/subscription-renewal-tracker/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/recurring-bills-tracker/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/annual-renewal-calendar/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-account-list/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/home-contact-list/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/service-provider-contact-list/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-shopping-staples/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/pantry-restock-system/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/household-supplies-inventory/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/cleaning-schedule/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/deep-cleaning-tracker/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/guest-preparation-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/vacation-home-shutdown-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/returning-home-after-travel-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/moving-house-organizer/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/new-home-setup-checklist/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/home-maintenance-schedule-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/warranty-expiration-calculator/",
+    "alternateRoute": "/zh-tw/tools/warranty-expiration-calculator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/appliance-age-calculator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/appliance-replacement-planner/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/household-subscription-cost-calculator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/annual-subscription-cost-calculator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/home-maintenance-cost-tracker/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/home-repair-cost-log/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/emergency-binder-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/home-inventory-checklist-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/room-inventory-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/recurring-chore-planner/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/cleaning-schedule-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/home-service-reminder-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/household-annual-review-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/move-in-checklist-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/vacation-shutdown-checklist-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/house-sitter-instruction-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/pet-sitter-instruction-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/warranty-checklist-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/receipt-retention-organizer/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/household-document-index-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/emergency-contact-sheet-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/appliance-maintenance-checklist-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/home-handoff-summary-generator/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/checklists/printable-home-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/checklists/printable-monthly-home-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/checklists/printable-seasonal-home-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-home-inventory-template/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-appliance-inventory/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-warranty-tracker/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-repair-log/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-service-provider-list/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-household-contacts/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-emergency-contacts/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/checklists/printable-emergency-binder-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/checklists/printable-house-sitter-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/checklists/printable-pet-sitter-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-cleaning-schedule/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-chore-chart/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-subscription-tracker/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-annual-renewals/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/checklists/printable-moving-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/checklists/printable-new-home-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/printable-household-handoff-sheet/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/pricing/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/privacy/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/security/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/about/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/contact/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/roadmap/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/changelog/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/checklists/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/templates/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/editorial-policy/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/affiliate-disclosure/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/terms/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/disclaimer/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/search/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/guides/home-maintenance-schedule/",
+    "alternateRoute": "/guides/home-maintenance-schedule/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-20",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/",
+    "alternateRoute": "/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-20",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/warranty-expiration-calculator/",
+    "alternateRoute": "/tools/warranty-expiration-calculator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-20",
+    "locale": "zh-TW"
+  }
+]

@@ -6,14 +6,17 @@ primaryIntent: "understand and calculate a warranty end date"
 primaryKeyword: "warranty expiration date"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the Warranty Expiration Calculator for the date, then save the source document and lead-time reminder with the asset."
 related:
   - "/tools/warranty-expiration-calculator/"
   - "/features/warranty-tracker/"
   - "/guides/purchase-receipt-organizer/"
   - "/guides/repair-history/"
+faq: []
 contentVersion: 1
 ---
 # A warranty expiration date is useful, but it is not the same as a coverage decision
@@ -35,5 +38,3 @@ A reminder 30 or 60 days before the end may be more actionable than a notificati
 ## Record uncertainty
 
 If the start date is unclear, mark the calculated date as estimated rather than presenting it as exact.
-
-**Contextual CTA:** Use the Warranty Expiration Calculator for the date, then save the source document and lead-time reminder with the asset.

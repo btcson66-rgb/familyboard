@@ -6,14 +6,17 @@ primaryIntent: "keep contractor and service contacts by household system"
 primaryKeyword: "home service provider contact list"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Build the list from people who have already worked successfully on your home before searching for new providers."
 related:
   - "/guides/home-service-provider-list/"
   - "/guides/contractor-records/"
   - "/templates/printable-service-provider-list/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # A service contact is more useful when you know what they worked on
@@ -35,5 +38,3 @@ A contact card can show “last worked on water heater — 2025” to remind the
 ## Avoid public ratings inside the private record
 
 The household can keep short factual notes. Public review data can go stale and creates unnecessary complexity.
-
-**Contextual CTA:** Build the list from people who have already worked successfully on your home before searching for new providers.

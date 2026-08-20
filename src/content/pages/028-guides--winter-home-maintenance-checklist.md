@@ -6,14 +6,17 @@ primaryIntent: "manage a home during winter or peak heating season"
 primaryKeyword: "winter home maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use winter as a documentation season: record service, problems and follow-up tasks while they happen instead of reconstructing the story months later."
 related:
   - "/guides/power-outage-home-preparedness/"
   - "/guides/water-leak-response-home-records/"
   - "/guides/furnace-maintenance-records/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Winter maintenance is often less about projects and more about monitoring
@@ -35,5 +38,3 @@ Winter storms can expose the weakness of scattered household contacts. Keep util
 ## Avoid unsafe DIY work
 
 A checklist is not a license to perform electrical, gas, roof, combustion or other hazardous work without appropriate expertise. The system should help organize the task and professional contact when necessary.
-
-**Contextual CTA:** Use winter as a documentation season: record service, problems and follow-up tasks while they happen instead of reconstructing the story months later.

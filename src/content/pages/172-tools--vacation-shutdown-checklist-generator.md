@@ -7,6 +7,7 @@ primaryKeyword: "vacation shutdown checklist generator"
 cluster: "tools"
 pageType: "tool"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/travel-household-handoff/"
   - "/tools/house-sitter-instruction-generator/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Vacation Home Shutdown Checklist Generator

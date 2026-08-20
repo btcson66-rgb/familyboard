@@ -6,14 +6,17 @@ primaryIntent: "restart household routines after travel"
 primaryKeyword: "returning home after vacation checklist"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Treat travel as a repeatable household workflow; every return can make the next departure easier."
 related:
   - "/guides/home-maintenance-after-vacation/"
   - "/guides/vacation-home-shutdown-checklist/"
   - "/guides/household-weekly-reset/"
   - "/features/home-dashboard/"
+faq: []
 contentVersion: 1
 ---
 # The return-home checklist should be shorter than the departure checklist
@@ -35,5 +38,3 @@ Deliveries, waste, groceries, calendar and postponed maintenance may need attent
 ## Improve the travel template
 
 Any problem that occurred can become a new item in the next departure checklist.
-
-**Contextual CTA:** Treat travel as a repeatable household workflow; every return can make the next departure easier.

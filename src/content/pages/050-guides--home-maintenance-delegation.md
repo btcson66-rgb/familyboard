@@ -6,14 +6,17 @@ primaryIntent: "divide home maintenance responsibilities among household members
 primaryKeyword: "divide home maintenance responsibilities"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Pick five recurring maintenance responsibilities and assign an owner for the *next action*, not merely a name beside the task."
 related:
   - "/guides/divide-household-responsibilities/"
   - "/guides/recurring-household-tasks/"
   - "/guides/household-handoff/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # “Someone should handle that” is not a maintenance plan
@@ -35,5 +38,3 @@ A task list can reveal that one person is carrying most of the invisible admin. 
 ## Always have a handoff path
 
 For important recurring responsibilities, record the provider, relevant asset and next due date so another person can take over temporarily.
-
-**Contextual CTA:** Pick five recurring maintenance responsibilities and assign an owner for the *next action*, not merely a name beside the task.

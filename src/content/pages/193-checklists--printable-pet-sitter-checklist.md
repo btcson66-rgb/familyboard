@@ -7,6 +7,7 @@ primaryKeyword: "printable pet sitter checklist"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
@@ -14,6 +15,7 @@ related:
   - "/guides/pet-sitter-information/"
   - "/guides/organize-pet-records/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Printable Pet Sitter Checklist

@@ -6,14 +6,17 @@ primaryIntent: "inventory items for a move"
 primaryKeyword: "moving inventory checklist"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use a room-based box ID system and keep permanent asset records only for the possessions that still matter after unpacking."
 related:
   - "/guides/moving-house-organizer/"
   - "/guides/room-by-room-home-inventory/"
   - "/tools/room-inventory-generator/"
   - "/checklists/printable-moving-checklist/"
+faq: []
 contentVersion: 1
 ---
 # A moving inventory has a different job from a permanent home inventory
@@ -35,5 +38,3 @@ Label where the box should go in the new home. This improves unloading and makes
 ## Archive the moving layer later
 
 Once unpacking is complete, box records can be archived or deleted while permanent asset records remain.
-
-**Contextual CTA:** Use a room-based box ID system and keep permanent asset records only for the possessions that still matter after unpacking.

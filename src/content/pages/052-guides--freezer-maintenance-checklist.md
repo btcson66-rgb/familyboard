@@ -6,14 +6,17 @@ primaryIntent: "maintain and document a standalone or refrigerator freezer"
 primaryKeyword: "freezer maintenance checklist"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Connect the freezer to both the appliance inventory and the household outage plan if it is a meaningful part of your food storage."
 related:
   - "/guides/refrigerator-maintenance-checklist/"
   - "/guides/power-outage-home-preparedness/"
   - "/guides/appliance-inventory/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # A freezer record is useful for both maintenance and disruption planning
@@ -35,5 +38,3 @@ A household with significant frozen food may want the freezer listed in its powe
 ## Preserve repair history
 
 A compressor, seal or control repair should remain attached to the unit record so future decisions have context.
-
-**Contextual CTA:** Connect the freezer to both the appliance inventory and the household outage plan if it is a meaningful part of your food storage.
