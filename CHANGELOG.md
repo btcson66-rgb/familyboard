@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0 — 2026-08-20
+
+Add a safe household master-table workflow to both app languages: export all supported local records to a single UTF-8 CSV, download a blank template, preview and validate imports, merge by stable ID or append with relationship remapping, and automatically download a full JSON safety snapshot before any write. Add durable-storage status/request controls, stale-backup reminders, fully localized file pickers, relationship-integrity checks, spreadsheet-formula protection and end-to-end round-trip coverage.
+
 ## 1.3.0 — 2026-08-20
 
 Add a complete Traditional Chinese application at `/zh-tw/app/`, with localized onboarding, navigation, forms, status messages, handoff, display and backup workflows sharing the same local database as the English interface. Introduce the generated FamilyBoard brand mark, refresh homepage and app UI/UX, add direct-answer content blocks, strengthen Organization/WebSite/WebApplication structured data, extend privacy-safe monitoring to both app locales and expand desktop/mobile accessibility tests.

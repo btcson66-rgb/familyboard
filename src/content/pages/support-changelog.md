@@ -29,6 +29,10 @@ Each release entry should include:
 
 Content updates belong here only when they represent meaningful site-wide work. Individual article review dates should stay on those articles.
 
+## Version 1.4.0 — August 20, 2026
+
+This data-durability release adds a single household master-table CSV for bulk review and editing, with a blank template, pre-import preview, row-level validation, stable-ID merge and safe append modes. Every import first downloads a complete JSON safety snapshot, then commits valid rows in one local database transaction. The app also adds browser durable-storage controls, stale-backup reminders, localized file selectors and relationship-integrity checks. CSV is intended for spreadsheet workflows; JSON and encrypted JSON remain the complete disaster-recovery formats.
+
 ## Version 1.3.0 — August 20, 2026
 
 This interface and discoverability release adds a complete Traditional Chinese application at /zh-tw/app/, with localized onboarding, navigation, forms, dynamic status text, handoff, display and backup workflows sharing the same local database as the English interface. It also introduces the generated FamilyBoard brand mark, a clearer homepage and app visual hierarchy, direct-answer content blocks, Organization/WebSite/WebApplication structured data, bilingual app privacy monitoring and expanded desktop/mobile accessibility coverage.

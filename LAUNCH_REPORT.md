@@ -24,7 +24,7 @@ This report separates deployed evidence from provider work that still requires a
 | GA4 FamilyBoard Web stream | PASS | Analytics Admin API created and read back stream `15468194519`, display name `FamilyBoard Web`, default URL `https://familyboard.win/` |
 | GA4 Measurement ID installed | PASS | GitHub variable `PUBLIC_GA4_MEASUREMENT_ID` reads back as `G-D624R3YVEV`; production English and Traditional Chinese HTML contain this exact ID |
 | GA4 production traffic verified | PASS, INTERNAL VALIDATION INCLUDED | Browser collection request returned HTTP 204 and Realtime API returned data. Activation checks are marked `codex_launch_validation`; do not interpret them as natural traffic |
-| Private App analytics exclusion | PASS | `/app/` and `/zh-tw/app/` build artifacts have `noindex,follow`, no GA4 tag and no AdSense tag; production verification follows the v1.3.0 deploy |
+| Private App analytics exclusion | PASS | `/app/` and `/zh-tw/app/` build artifacts have `noindex,follow`, no GA4 tag and no AdSense tag; v1.4.0 production verification is required after deploy |
 | Bing / IndexNow | RECEIVED, INDEXING UNKNOWN | Root verification key and guarded 219-URL bulk submission tool ship in v1.2.2; initial full submission returned HTTP 200. Receipt is not proof of indexing or ranking |
 | AdSense technical connection | PASS | Public pages expose `ca-pub-7052036786750044` account meta; `ads.txt` is live; ad script remains disabled |
 | AdSense review requested | PENDING | AdSense OAuth client is disabled; a controllable browser is open at Google sign-in but still requires the owner's interactive login |
@@ -39,10 +39,13 @@ This report separates deployed evidence from provider work that still requires a
 - Content, route, metadata, similarity, internal-link, localized-source, unit, accessibility and browser tests pass.
 - The CI release runs eight Playwright checks across desktop and mobile; one duplicate mobile lifecycle case is deliberately skipped after equivalent coverage.
 - Household values remain in browser IndexedDB and are excluded from public analytics and advertising code.
+- v1.4.0 adds CSV master-table export/import with preflight preview, stable-ID merge or relationship-safe append, plus an automatic JSON safety snapshot before each import.
+- JSON and encrypted JSON remain the complete disaster-recovery formats; CSV is the human-editable bulk workflow.
 
 ## Release evidence
 
 - Repository: `https://github.com/btcson66-rgb/familyboard`
-- Release candidate: `v1.3.0` (production evidence is added after CI and live verification)
+- Current production release: `v1.3.0`
+- Release candidate: `v1.4.0` (production evidence is added after CI and live verification)
 
 Provider approval is not guaranteed. AdSense review commonly depends on both technical access and Google's qualitative policy review.

@@ -175,6 +175,8 @@ const zhTw: Record<string, string> = {
     "選擇 FamilyBoard JSON 備份；系統會先驗證，再寫入任何紀錄。",
   "Password for encrypted backup": "加密備份密碼",
   "Backup file": "備份檔案",
+  "Choose file": "選擇檔案",
+  "No file selected": "尚未選擇檔案",
   "Restore failed. No data was changed.": "還原失敗，資料未被更動。",
   "Add a household member": "新增家庭成員",
   "Member name": "成員姓名",
@@ -242,6 +244,9 @@ const zhTw: Record<string, string> = {
   "Persistent storage:": "持久儲存：",
   Granted: "已授權",
   "Not guaranteed by this browser": "此瀏覽器未保證",
+  "Request durable storage": "要求持久儲存",
+  "No recovery backup yet. Export JSON before adding irreplaceable records.":
+    "尚未建立復原備份。新增無法取代的重要紀錄前，請先匯出 JSON。",
   "Records:": "紀錄總數：",
   "Last backup:": "上次備份：",
   "No successful export recorded": "尚無成功匯出紀錄",
@@ -253,6 +258,20 @@ const zhTw: Record<string, string> = {
   "Export JSON": "匯出 JSON",
   "Export encrypted": "匯出加密備份",
   "A forgotten encrypted-backup password cannot be recovered.": "加密備份密碼一旦忘記便無法復原。",
+  "Household master table": "家庭資料總表",
+  "Export one UTF-8 CSV for spreadsheet review and bulk editing. Import it back only after the preview is clean. CSV does not replace the complete JSON backup.":
+    "匯出一份 UTF-8 CSV，方便用試算表檢查與批次編輯；預覽沒有錯誤後才能匯回。CSV 不能取代完整 JSON 備份。",
+  "Export master CSV": "匯出家庭總表 CSV",
+  "Download blank template": "下載空白範本",
+  "Supported record types: member, asset, maintenance_task, maintenance_event, task, event, warranty, subscription, contact, document, attachment and handoff_profile. Keep the format and recordType columns unchanged.":
+    "支援的紀錄類型：成員、資產、保養工作、保養完成紀錄、任務、事件、保固、訂閱、聯絡人、文件、附件索引與交接設定。請勿更改 format 與 recordType 欄位。",
+  "Import master CSV for preview": "選擇家庭總表 CSV 並預覽",
+  "Import preview": "匯入預覽",
+  "Import behavior": "匯入方式",
+  "Merge and update by stable record ID": "依穩定紀錄 ID 合併並更新",
+  "Add copies with new record IDs": "用新紀錄 ID 加入副本",
+  "Fix these rows before importing:": "匯入前請修正以下資料列：",
+  "Download safety snapshot and import": "下載安全快照並匯入",
   "Restore backup": "還原備份",
   Mode: "模式",
   "Merge by record ID": "依紀錄 ID 合併",
@@ -271,6 +290,12 @@ const zhTw: Record<string, string> = {
   "Backup failed.": "備份失敗。",
   "Backup validation failed.": "備份驗證失敗。",
   "Restore failed. No changes were applied.": "還原失敗，未套用任何變更。",
+  "Persistent storage is not supported by this browser.": "此瀏覽器不支援持久儲存要求。",
+  "Persistent storage request failed.": "持久儲存要求失敗。",
+  "Master export failed.": "家庭總表匯出失敗。",
+  "Master CSV could not be read.": "無法讀取家庭總表 CSV。",
+  "Fix every CSV validation error before importing.": "請先修正所有 CSV 驗證錯誤再匯入。",
+  "Master import failed. Existing data was left in place.": "家庭總表匯入失敗；原有資料未被更動。",
 };
 
 function translateExact(value: string, locale: AppLocale) {
@@ -293,6 +318,10 @@ function translateExact(value: string, locale: AppLocale) {
     [/^Type “(.+)” to confirm$/, (item) => `輸入「${item[1]}」以確認`],
     [/^(.+) household handoff$/, (item) => `${item[1]} 家庭交接摘要`],
     [/^(\d+) saved tool results?$/, (item) => `${item[1]} 筆已儲存的工具結果`],
+    [/^Your last recovery backup is (\d+) days old\. Export a fresh JSON backup\.$/, (item) => `上次復原備份是 ${item[1]} 天前。請匯出新的 JSON 備份。`],
+    [/^(.+) · (\d+) rows · (\d+) new · (\d+) updates · (\d+) household descriptor skipped$/, (item) => `${item[1]} · ${item[2]} 列 · 新增 ${item[3]} 筆 · 更新 ${item[4]} 筆 · 略過 ${item[5]} 筆家庭描述`],
+    [/^Unknown column “(.+)” was ignored\.$/, (item) => `已忽略未知欄位「${item[1]}」。`],
+    [/^Row (\d+): (.+)$/, (item) => `第 ${item[1]} 列：${item[2]}`],
   ];
   for (const [pattern, replacement] of patterns) {
     const found = core.match(pattern);

@@ -1,7 +1,9 @@
 import {
   useCallback,
   useEffect,
+  useId,
   useMemo,
+  useRef,
   useState,
   type ChangeEvent,
   type ReactNode,
@@ -40,6 +42,16 @@ import {
   restoreBackup,
   summarizeBackup,
 } from "../lib/backup";
+import {
+  MASTER_TABLE_MAX_BYTES,
+  emptyMasterTableTemplate,
+  exportMasterTable,
+  importMasterTable,
+  parseMasterTable,
+  previewMasterImport,
+  type MasterImportMode,
+  type ParsedMasterTable,
+} from "../lib/master-table";
 import {
   AppLocaleProvider,
   Localize,
@@ -92,9 +104,9 @@ const empty: AppSnapshot = {
   settings: [],
   migrations: [],
 };
-const download = (name: string, value: unknown) => {
+const downloadFile = (name: string, body: BlobPart, type: string) => {
   const href = URL.createObjectURL(
-    new Blob([JSON.stringify(value, null, 2)], { type: "application/json" }),
+    new Blob([body], { type }),
   );
   const anchor = document.createElement("a");
   anchor.href = href;
@@ -102,6 +114,62 @@ const download = (name: string, value: unknown) => {
   anchor.click();
   setTimeout(() => URL.revokeObjectURL(href), 1000);
 };
+const download = (name: string, value: unknown) =>
+  downloadFile(
+    name,
+    JSON.stringify(value, null, 2),
+    "application/json;charset=utf-8",
+  );
+
+function FilePicker({
+  label,
+  accept,
+  disabled = false,
+  onChange,
+}: {
+  label: string;
+  accept: string;
+  disabled?: boolean;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void | Promise<void>;
+}) {
+  const input = useRef<HTMLInputElement>(null);
+  const labelId = useId();
+  const buttonId = useId();
+  const [fileName, setFileName] = useState("");
+  return (
+    <Localize>
+      <div className="file-picker">
+        <span className="file-picker-label" id={labelId}>{label}</span>
+        <div className="app-actions">
+          <button
+            type="button"
+            className="secondary"
+            disabled={disabled}
+            aria-labelledby={`${labelId} ${buttonId}`}
+            onClick={() => input.current?.click()}
+          >
+            <span id={buttonId}>Choose file</span>
+          </button>
+          <span className="file-picker-name" role="status">
+            {fileName || "No file selected"}
+          </span>
+        </div>
+        <input
+          ref={input}
+          hidden
+          type="file"
+          disabled={disabled}
+          aria-label={label}
+          accept={accept}
+          onChange={(event) => {
+            setFileName(event.currentTarget.files?.[0]?.name || "");
+            void onChange(event);
+          }}
+        />
+      </div>
+    </Localize>
+  );
+}
 
 function QuickForm({
   title,
@@ -1101,13 +1169,11 @@ function Onboarding({
             onChange={(event) => setRestorePassword(event.target.value)}
           />
         </label>
-        <label>
-          Backup file
-          <input
-            type="file"
-            disabled={checking}
-            accept="application/json,.json"
-            onChange={async (event) => {
+        <FilePicker
+          label="Backup file"
+          disabled={checking}
+          accept="application/json,.json"
+          onChange={async (event) => {
               const file = event.currentTarget.files?.[0];
               if (!file) return;
               try {
@@ -1129,8 +1195,7 @@ function Onboarding({
                 );
               }
             }}
-          />
-        </label>
+        />
         {restoreError && (
           <p className="app-error" role="alert">
             {restoreError}
@@ -1619,6 +1684,9 @@ function SettingsView({
   const [password, setPassword] = useState("");
   const [restorePassword, setRestorePassword] = useState("");
   const [mode, setMode] = useState<"merge" | "replace">("merge");
+  const [masterMode, setMasterMode] = useState<MasterImportMode>("merge");
+  const [masterFileName, setMasterFileName] = useState("");
+  const [masterTable, setMasterTable] = useState<ParsedMasterTable | null>(null);
   const [confirm, setConfirm] = useState("");
   const [error, setError] = useState("");
   const [validation, setValidation] = useState("");
@@ -1642,6 +1710,17 @@ function SettingsView({
   const lastBackup = data.settings.find(
     (item) => item.id === "lastBackup",
   )?.value;
+  const householdId = data.households[0]?.id || "";
+  const masterPreview = useMemo(
+    () =>
+      masterTable && householdId
+        ? previewMasterImport(masterTable, masterMode, data, householdId)
+        : null,
+    [data, householdId, masterMode, masterTable],
+  );
+  const backupDays = lastBackup
+    ? Math.floor((Date.now() - new Date(lastBackup).getTime()) / 86400000)
+    : null;
   const exportData = async (encrypted: boolean) => {
     try {
       setError("");
@@ -1708,6 +1787,102 @@ function SettingsView({
       );
     }
   };
+  const exportMaster = async () => {
+    try {
+      setError("");
+      const csv = exportMasterTable(data, householdId);
+      downloadFile(
+        `familyboard-master-${new Date().toISOString().slice(0, 10)}.csv`,
+        csv,
+        "text/csv;charset=utf-8",
+      );
+      await db.settings.put(baseSetting("lastMasterExport", now()));
+      await refresh();
+      setMessage(
+        locale === "zh-TW"
+          ? "家庭總表已匯出，可用試算表編輯後再匯入。JSON 備份仍是完整災難復原檔。"
+          : "Master table exported. You can edit it in a spreadsheet and import it again. JSON remains the complete disaster-recovery backup.",
+      );
+    } catch (caught) {
+      setError(
+        caught instanceof Error ? caught.message : "Master export failed.",
+      );
+    }
+  };
+  const readMaster = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.currentTarget.files?.[0];
+    if (!file) return;
+    try {
+      setError("");
+      setValidation("");
+      setMasterFileName(file.name);
+      if (file.size > MASTER_TABLE_MAX_BYTES)
+        throw new Error("Master CSV is larger than the 5 MB safety limit.");
+      setMasterTable(parseMasterTable(await file.text()));
+    } catch (caught) {
+      setMasterTable(null);
+      setError(
+        caught instanceof Error ? caught.message : "Master CSV could not be read.",
+      );
+    }
+  };
+  const applyMaster = async () => {
+    if (!masterTable || !masterPreview || !householdId) return;
+    try {
+      setError("");
+      if (masterPreview.errors.length)
+        throw new Error("Fix every CSV validation error before importing.");
+      const safety = await createBackup();
+      download(`familyboard-before-master-import-${Date.now()}.json`, safety);
+      const result = await importMasterTable(
+        masterTable,
+        masterMode,
+        householdId,
+      );
+      await Promise.all([
+        db.settings.put(baseSetting("lastBackup", now())),
+        db.settings.put(baseSetting("lastMasterImport", now())),
+      ]);
+      setMasterTable(null);
+      setMasterFileName("");
+      await refresh();
+      setMessage(
+        locale === "zh-TW"
+          ? `家庭總表匯入完成：新增 ${result.newRecords} 筆、更新 ${result.updatedRecords} 筆。匯入前安全快照已下載。`
+          : `Master import complete: ${result.newRecords} added, ${result.updatedRecords} updated. A pre-import safety snapshot was downloaded.`,
+      );
+    } catch (caught) {
+      setError(
+        caught instanceof Error
+          ? caught.message
+          : "Master import failed. Existing data was left in place.",
+      );
+    }
+  };
+  const requestPersistentStorage = async () => {
+    try {
+      setError("");
+      if (!navigator.storage?.persist)
+        throw new Error("Persistent storage is not supported by this browser.");
+      const persisted = await navigator.storage.persist();
+      setStorage((current) => ({ ...current, persisted }));
+      setMessage(
+        persisted
+          ? locale === "zh-TW"
+            ? "瀏覽器已授予持久儲存；仍請定期匯出備份。"
+            : "Persistent storage granted. Keep exporting backups regularly."
+          : locale === "zh-TW"
+            ? "瀏覽器目前未授予持久儲存；請安裝 PWA、持續使用並定期匯出備份。"
+            : "Persistent storage was not granted. Install the PWA, keep using it and export backups regularly.",
+      );
+    } catch (caught) {
+      setError(
+        caught instanceof Error
+          ? caught.message
+          : "Persistent storage request failed.",
+      );
+    }
+  };
   return (
     <Localize>
     <div className="app-grid">
@@ -1725,6 +1900,11 @@ function SettingsView({
           Persistent storage:{" "}
           {storage.persisted ? "Granted" : "Not guaranteed by this browser"}
         </p>
+        {!storage.persisted && (
+          <button className="secondary" onClick={requestPersistentStorage}>
+            Request durable storage
+          </button>
+        )}
         <p>
           Records:{" "}
           {Object.values(data).reduce((sum, items) => sum + items.length, 0)}
@@ -1735,6 +1915,13 @@ function SettingsView({
             ? dateTime(lastBackup)
             : "No successful export recorded"}
         </p>
+        {(backupDays === null || backupDays >= 7) && (
+          <p className="app-warning" role="status">
+            {backupDays === null
+              ? "No recovery backup yet. Export JSON before adding irreplaceable records."
+              : `Your last recovery backup is ${backupDays} days old. Export a fresh JSON backup.`}
+          </p>
+        )}
         <p>
           Last restore:{" "}
           {data.settings.find((item) => item.id === "lastRestore")?.value
@@ -1743,6 +1930,85 @@ function SettingsView({
               )
             : "None"}
         </p>
+      </section>
+      <section className="app-card master-table-card">
+        <h2>Household master table</h2>
+        <p>
+          Export one UTF-8 CSV for spreadsheet review and bulk editing. Import
+          it back only after the preview is clean. CSV does not replace the
+          complete JSON backup.
+        </p>
+        <div className="app-actions">
+          <button onClick={exportMaster}>Export master CSV</button>
+          <button
+            className="secondary"
+            onClick={() =>
+              downloadFile(
+                "familyboard-master-template.csv",
+                emptyMasterTableTemplate(),
+                "text/csv;charset=utf-8",
+              )
+            }
+          >
+            Download blank template
+          </button>
+        </div>
+        <p className="help">
+          Supported record types: member, asset, maintenance_task,
+          maintenance_event, task, event, warranty, subscription, contact,
+          document, attachment and handoff_profile. Keep the format and
+          recordType columns unchanged.
+        </p>
+        <FilePicker
+          label="Import master CSV for preview"
+          accept="text/csv,.csv"
+          onChange={readMaster}
+        />
+        {masterTable && masterPreview && (
+          <div className="import-preview" aria-live="polite">
+            <h3>Import preview</h3>
+            <p>
+              {locale === "zh-TW"
+                ? `${masterFileName} · ${masterPreview.totalRows} 列 · 新增 ${masterPreview.newRecords} 筆 · 更新 ${masterPreview.updatedRecords} 筆 · 略過 ${masterPreview.skippedHouseholds} 筆家庭描述`
+                : `${masterFileName} · ${masterPreview.totalRows} rows · ${masterPreview.newRecords} new · ${masterPreview.updatedRecords} updates · ${masterPreview.skippedHouseholds} household descriptor skipped`}
+            </p>
+            <label>
+              Import behavior
+              <select
+                value={masterMode}
+                onChange={(event) =>
+                  setMasterMode(event.target.value as MasterImportMode)
+                }
+              >
+                <option value="merge">Merge and update by stable record ID</option>
+                <option value="append">Add copies with new record IDs</option>
+              </select>
+            </label>
+            {masterTable.warnings.map((warning) => (
+              <p className="app-warning" key={warning}>
+                {warning}
+              </p>
+            ))}
+            {masterPreview.errors.length > 0 && (
+              <div className="app-error" role="alert">
+                <strong>Fix these rows before importing:</strong>
+                <ul>
+                  {masterPreview.errors.slice(0, 12).map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <button
+              disabled={
+                masterPreview.totalRows === 0 || masterPreview.errors.length > 0
+              }
+              onClick={applyMaster}
+            >
+              Download safety snapshot and import
+            </button>
+          </div>
+        )}
       </section>
       <section className="app-card">
         <h2>Export backup</h2>
@@ -1790,27 +2056,21 @@ function SettingsView({
             onChange={(event) => setRestorePassword(event.target.value)}
           />
         </label>
-        <label>
-          Validate backup without restoring
-          <input
-            type="file"
-            accept="application/json,.json"
-            onChange={validate}
-          />
-        </label>
+        <FilePicker
+          label="Validate backup without restoring"
+          accept="application/json,.json"
+          onChange={validate}
+        />
         {validation && (
           <p className="app-success" role="status">
             {validation}
           </p>
         )}
-        <label>
-          Choose backup
-          <input
-            type="file"
-            accept="application/json,.json"
-            onChange={restore}
-          />
-        </label>
+        <FilePicker
+          label="Choose backup"
+          accept="application/json,.json"
+          onChange={restore}
+        />
       </section>
       <section className="app-card danger-zone">
         <h2>Reset local household</h2>

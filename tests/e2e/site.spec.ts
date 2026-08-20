@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
+import { readFile } from "node:fs/promises";
 
 test("public SEO, keyboard and five production tools work", async ({
   page,
@@ -156,6 +157,8 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(page.getByText("繁中測試家庭 家庭交接摘要")).toBeVisible();
   await page.getByRole("button", { name: "設定" }).click();
   await expect(page.getByRole("heading", { name: "匯出備份" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "家庭資料總表" })).toBeVisible();
+  await expect(page.getByText("選擇家庭總表 CSV 並預覽")).toBeVisible();
   await expect(page.getByText("App 版本：")).toBeVisible();
 });
 
@@ -238,6 +241,29 @@ test("complete local app lifecycle survives backup, reset, restore and offline r
   ).toBeVisible();
 
   await page.getByRole("button", { name: "Settings" }).click();
+  const masterDownloadPromise = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Export master CSV" }).click();
+  const masterDownload = await masterDownloadPromise;
+  const masterPath = await masterDownload.path();
+  expect(masterPath).toBeTruthy();
+  const masterText = await readFile(masterPath!, "utf8");
+  expect(masterText).toContain("familyboard-master-v1");
+  expect(masterText).toContain("Refrigerator");
+  expect(masterText).toContain("Clean refrigerator coils");
+
+  await page
+    .locator('input[type="file"][aria-label="Import master CSV for preview"]')
+    .setInputFiles(masterPath!);
+  await expect(page.getByRole("heading", { name: "Import preview" })).toBeVisible();
+  await expect(page.getByText(/0 new · \d+ updates/)).toBeVisible();
+  const safetyDownloadPromise = page.waitForEvent("download");
+  await page
+    .getByRole("button", { name: "Download safety snapshot and import" })
+    .click();
+  const safetyDownload = await safetyDownloadPromise;
+  expect(await safetyDownload.path()).toBeTruthy();
+  await expect(page.getByText(/Master import complete/)).toBeVisible();
+
   const downloadPromise = page.waitForEvent("download");
   await page.getByRole("button", { name: "Export JSON" }).click();
   const download = await downloadPromise;
@@ -250,7 +276,9 @@ test("complete local app lifecycle survives backup, reset, restore and offline r
   await expect(
     page.getByRole("heading", { name: /Set up your home/ }),
   ).toBeVisible();
-  await page.getByLabel("Backup file").setInputFiles(backupPath!);
+  await page
+    .locator('input[type="file"][aria-label="Backup file"]')
+    .setInputFiles(backupPath!);
   await expect(page.getByRole("heading", { name: "Today" })).toBeVisible();
   await page.reload();
   await expect(page.getByText("E2E Home").first()).toBeVisible();

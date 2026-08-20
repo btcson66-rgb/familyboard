@@ -54,6 +54,14 @@
 .danger-zone { border-color: #d88c82; }
 .app-error { padding: .8rem; border-radius: 10px; background: #ffe1dc; color: #7a2e25; }
 .app-success { padding: .8rem; border-radius: 10px; background: #e4f5ea; color: #0f5a40; }
+.app-warning { padding: .8rem; border: 1px solid #e8ca86; border-radius: 10px; background: #fff7df; color: #755116; }
+.master-table-card { grid-column: 1 / -1; }
+.import-preview { margin-top: 1rem; padding: 1rem; border: 1px solid #c9d9d3; border-radius: 14px; background: #f5faf8; }
+.import-preview h3 { margin-top: 0; }
+.import-preview ul { margin-bottom: 0; padding-left: 1.25rem; }
+.file-picker { display: grid; gap: .45rem; margin-top: .75rem; }
+.file-picker-label { font-weight: 700; }
+.file-picker-name { align-self: center; color: #365c53; overflow-wrap: anywhere; }
 @media (max-width: 850px) { .app-layout { grid-template-columns: 1fr; } .app-nav { display: flex; overflow-x: auto; position: sticky; top: 68px; z-index: 20; border-right: 0; border-bottom: 1px solid #d4ddd7; padding: .5rem; scrollbar-width: thin; } .app-nav button { width: auto; white-space: nowrap; margin: 0 .15rem; } .app-nav button:hover { transform: none; } .metric-grid { grid-template-columns: repeat(2, 1fr); } .onboarding { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .app-grid, .metric-grid { grid-template-columns: 1fr; } .privacy-pill, .app-topbar > span:last-child { display: none; } .app-main { padding: .8rem; } .app-topbar { gap: .55rem; } .app-language { padding-inline: .55rem; } .app-title { align-items: start; } }
 @media print { .app-topbar, .app-nav, .app-form, .app-actions, .app-title .no-print { display: none !important; } .app-layout { display: block; } .app-main { padding: 0; width: 100%; } .handoff-sheet, .display-mode { border: 0; color: black; background: white; } }
