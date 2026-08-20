@@ -8,7 +8,7 @@
 - Default URL: `https://familyboard.win/`
 - Deployment variable: `PUBLIC_GA4_MEASUREMENT_ID`
 
-The 2026-08-19 account read-back found the existing RoomFeng, WorthCalc and FunnyTools properties but no FamilyBoard property. The authorized create attempt returned `HTTP 403: Request had insufficient authentication scopes` because the current token has `analytics.readonly`, not `analytics.edit`. No fake property, stream or Measurement ID was created.
+The 2026-08-20 account read-back found the existing company Analytics account but no FamilyBoard property. The current token scopes are `analytics.readonly` and `webmasters`; it cannot create a property because `analytics.edit` is absent. No fake property, stream or Measurement ID was created.
 
 ## Privacy boundary
 

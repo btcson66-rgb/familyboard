@@ -1,11 +1,11 @@
 # FamilyBoard AdSense Readiness
 
-Status on 2026-08-19: **technically prepared; provider review not yet requested or approved**.
+Status on 2026-08-20: **technically prepared; provider review not yet requested or approved**.
 
 ## Passing evidence
 
 - Original free local-first household product with functional tools, exports and private browser storage.
-- 200 substantive core pages, 25 tools, 20 printables and complete About, Contact, Privacy, Terms, Disclaimer, Editorial Policy, Security and affiliate disclosure pages.
+- 216 substantive English pages, three independently written Traditional Chinese pages, 25 English tools, 20 printables and complete About, Contact, Privacy, Terms, Disclaimer, Editorial Policy, Security and affiliate disclosure pages.
 - Unique route/title/description checks and content-similarity audit pass.
 - Public publisher account meta and `ads.txt` use `pub-7052036786750044`.
 - AdSense script and visible ad slots remain disabled before approval.
@@ -15,7 +15,7 @@ Status on 2026-08-19: **technically prepared; provider review not yet requested 
 ## Pending provider evidence
 
 - The current AdSense OAuth client returns `disabled_client`.
-- No authenticated controllable AdSense browser session was available.
+- A controllable Chrome session is open at Google sign-in, but the owner has not yet completed the interactive login.
 - Therefore `familyboard.win` has not been provider-read-back as added, submitted or approved.
 
 Google's current guidance requires policy-compliant, unique and valuable content and warns that affiliate material should remain secondary unless the publisher adds meaningful value. Passing this technical audit does not promise approval.
