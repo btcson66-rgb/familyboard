@@ -1,4 +1,4 @@
-const CACHE = "familyboard-v1.2.2";
+const CACHE = "familyboard-v1.2.3";
 const CORE = [
   "/",
   "/app/",

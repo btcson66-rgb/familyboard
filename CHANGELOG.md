@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.3 — 2026-08-20
+
+Activate the dedicated FamilyBoard GA4 property and web stream through the protected GitHub build variable; preserve the analytics-free private `/app/` boundary and synchronize provider evidence.
+
 ## 1.2.2 — 2026-08-20
 
 Add an official root-level IndexNow ownership key and an explicit, guarded bulk/selected-URL submission tool for Bing and other participating search engines; synchronize HTTPS and GSC launch evidence.
