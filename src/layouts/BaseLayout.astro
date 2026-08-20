@@ -9,24 +9,35 @@ interface Props {
   title: string;
   description: string;
   canonicalPath?: string;
+  alternatePath?: string;
+  locale?: 'en' | 'zh-TW';
   indexable?: boolean;
   pageType?: 'website' | 'article' | 'app';
   bodyClass?: string;
   publishedAt?: Date;
   lastReviewedAt?: Date;
+  faq?: Array<{ question: string; answer: string }>;
 }
 
 const {
   title,
   description,
   canonicalPath = Astro.url.pathname,
+  alternatePath,
+  locale = 'en',
   indexable = true,
   pageType = 'website',
   bodyClass = '',
   publishedAt,
-  lastReviewedAt
+  lastReviewedAt,
+  faq = []
 } = Astro.props;
 const canonical = new URL(canonicalPath, brand.origin).toString();
+const alternate = alternatePath ? new URL(alternatePath, brand.origin).toString() : '';
+const isZhTw = locale === 'zh-TW';
+const englishUrl = isZhTw ? alternate : canonical;
+const zhTwUrl = isZhTw ? canonical : alternate;
+const languageSwitchPath = alternatePath || (isZhTw ? '/' : '/zh-tw/');
 const isApp = canonicalPath.startsWith('/app/');
 const ga4Id = import.meta.env.PROD && !isApp ? import.meta.env.PUBLIC_GA4_MEASUREMENT_ID?.trim() : '';
 const adsenseAccount = !isApp && monetization.adsensePublisherId ? `ca-${monetization.adsensePublisherId.replace(/^ca-/, '')}` : '';
@@ -39,15 +50,26 @@ const schema = pageType === 'app'
       headline: pageType === 'article' ? title.replace(/ \|.*$/, '') : undefined,
       url: canonical,
       description,
-      author: pageType === 'article' ? { '@type': 'Organization', name: 'FamilyBoard Editorial Team', url: `${brand.origin}/editorial-policy/` } : undefined,
+      inLanguage: locale,
+      author: pageType === 'article' ? { '@type': 'Organization', name: isZhTw ? 'FamilyBoard 編輯團隊' : 'FamilyBoard Editorial Team', url: `${brand.origin}/editorial-policy/` } : undefined,
       datePublished: publishedAt?.toISOString(),
       dateModified: lastReviewedAt?.toISOString(),
       publisher: { '@type': 'Organization', name: brand.name, url: brand.origin }
     };
+const faqSchema = faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  inLanguage: locale,
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer }
+  }))
+} : null;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -56,6 +78,11 @@ const schema = pageType === 'app'
     <meta name="robots" content={indexable ? 'index,follow,max-image-preview:large' : 'noindex,follow'} />
     {adsenseAccount && <meta name="google-adsense-account" content={adsenseAccount} />}
     <link rel="canonical" href={canonical} />
+    {alternate && <>
+      <link rel="alternate" hreflang="en" href={englishUrl} />
+      <link rel="alternate" hreflang="zh-TW" href={zhTwUrl} />
+      <link rel="alternate" hreflang="x-default" href={englishUrl} />
+    </>}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/icons/icon-192.png" />
@@ -65,10 +92,13 @@ const schema = pageType === 'app'
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={isZhTw ? 'zh_TW' : 'en_US'} />
+    {alternate && <meta property="og:locale:alternate" content={isZhTw ? 'en_US' : 'zh_TW'} />}
     <meta property="og:image" content={`${brand.origin}/og-default.svg`} />
     <meta name="twitter:card" content="summary_large_image" />
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
     {ga4Id && <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>}
     {ga4Id && <script is:inline define:vars={{ ga4Id }}>
       window.dataLayer = window.dataLayer || [];
@@ -79,13 +109,13 @@ const schema = pageType === 'app'
     <slot name="head" />
   </head>
   <body class:list={[bodyClass]}>
-    <a class="skip-link" href="#main-content">Skip to content</a>
-    {!isApp && <Header />}
+    <a class="skip-link" href="#main-content">{isZhTw ? '跳到主要內容' : 'Skip to content'}</a>
+    {!isApp && <Header locale={locale} languageSwitchPath={languageSwitchPath} />}
     <main id="main-content" tabindex="-1"><slot /></main>
-    {!isApp && <Footer />}
+    {!isApp && <Footer locale={locale} />}
     <div id="pwa-update" class="pwa-update" role="status" hidden>
-      <span>A newer FamilyBoard version is ready.</span>
-      <button id="pwa-update-button" type="button">Update now</button>
+      <span>{isZhTw ? '有新版 FamilyBoard 可以使用。' : 'A newer FamilyBoard version is ready.'}</span>
+      <button id="pwa-update-button" type="button">{isZhTw ? '立即更新' : 'Update now'}</button>
     </div>
     <script is:inline>
       if ('serviceWorker' in navigator) window.addEventListener('load', async () => {

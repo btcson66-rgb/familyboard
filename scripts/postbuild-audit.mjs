@@ -2,7 +2,10 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = path.resolve("dist");
-const contentRoot = path.resolve("src/content/pages");
+const contentRoots = [
+  path.resolve("src/content/pages"),
+  path.resolve("src/content/pages-zh-tw"),
+].filter((directory) => fs.existsSync(directory));
 if (!fs.existsSync(root)) throw new Error("dist missing");
 
 const walk = (dir) =>
@@ -42,7 +45,21 @@ const clean = (value) =>
     .replace(/&(?:nbsp|amp|quot|#39|lt|gt);/g, " ")
     .replace(/\s+/g, " ")
     .trim();
-const wordCount = (value) => clean(value).split(/\s+/).filter(Boolean).length;
+const wordCount = (value) => {
+  const cleaned = clean(value);
+  const cjkCharacters =
+    cleaned.match(
+      /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/gu,
+    )?.length || 0;
+  const nonCjkWords = cleaned
+    .replace(
+      /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/gu,
+      " ",
+    )
+    .split(/\s+/)
+    .filter(Boolean).length;
+  return cjkCharacters + nonCjkWords;
+};
 const frontmatterValue = (raw, key) =>
   (raw.match(new RegExp(`^${key}:\\s*(.+)$`, "m"))?.[1] || "")
     .replace(/^"|"$/g, "")
@@ -51,21 +68,20 @@ const normalizeRoute = (route) =>
   route === "/" ? "/" : `/${route.replace(/^\/+|\/+$/g, "")}/`;
 
 const contentByRoute = new Map();
-for (const file of fs
-  .readdirSync(contentRoot)
-  .filter((name) => name.endsWith(".md"))) {
-  const raw = fs.readFileSync(path.join(contentRoot, file), "utf8");
-  const body = raw.replace(/^---[\s\S]*?---\s*/, "");
-  const route = normalizeRoute(frontmatterValue(raw, "route"));
-  contentByRoute.set(route, {
-    cluster: frontmatterValue(raw, "cluster"),
-    primaryKeyword: frontmatterValue(raw, "primaryKeyword"),
-    lastReviewed: frontmatterValue(raw, "lastReviewedAt"),
-    wordCount: body
-      .replace(/[^\p{L}\p{N}\s]/gu, " ")
-      .split(/\s+/)
-      .filter(Boolean).length,
-  });
+for (const contentRoot of contentRoots) {
+  for (const file of fs
+    .readdirSync(contentRoot)
+    .filter((name) => name.endsWith(".md"))) {
+    const raw = fs.readFileSync(path.join(contentRoot, file), "utf8");
+    const body = raw.replace(/^---[\s\S]*?---\s*/, "");
+    const route = normalizeRoute(frontmatterValue(raw, "route"));
+    contentByRoute.set(route, {
+      cluster: frontmatterValue(raw, "cluster"),
+      primaryKeyword: frontmatterValue(raw, "primaryKeyword"),
+      lastReviewed: frontmatterValue(raw, "lastReviewedAt"),
+      wordCount: wordCount(body),
+    });
+  }
 }
 
 const toolSource = fs.readFileSync("src/components/ToolWorkbench.tsx", "utf8");
@@ -111,11 +127,13 @@ for (const file of htmlFiles) {
   const indexable = !/name="robots"\s+content="noindex/i.test(html);
   const status = route === "/404/" ? 404 : 200;
   const meta = contentByRoute.get(route);
-  const routeType = route.startsWith("/tools/")
+  const localeNeutralRoute = route.replace(/^\/zh-tw(?=\/)/, "");
+  const routeType = localeNeutralRoute.startsWith("/tools/")
     ? "tool"
-    : route.startsWith("/templates/") || route.startsWith("/checklists/")
+    : localeNeutralRoute.startsWith("/templates/") ||
+        localeNeutralRoute.startsWith("/checklists/")
       ? "printable"
-      : route.startsWith("/app/")
+      : localeNeutralRoute.startsWith("/app/")
         ? "app"
         : route === "/404/"
           ? "error"

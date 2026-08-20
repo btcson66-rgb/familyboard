@@ -1,17 +1,22 @@
 ---
 import { brand } from '../config/brand';
-interface Props { route: string; title: string; }
-const { route, title } = Astro.props;
-const parts = route.split('/').filter(Boolean);
+interface Props { route: string; title: string; locale?: 'en' | 'zh-TW'; }
+const { route, title, locale = 'en' } = Astro.props;
+const isZhTw = locale === 'zh-TW';
+const parts = route.split('/').filter(Boolean).filter((part) => part !== 'zh-tw');
 const parent = parts[0] || '';
-const labels: Record<string,string> = { guides: 'Guides', features: 'Features', tools: 'Tools', checklists: 'Checklists', templates: 'Templates' };
-const showParent = parts.length > 1 && Boolean(parent && labels[parent]);
+const labels: Record<string,string> = isZhTw
+  ? { guides: '指南', features: '功能', tools: '工具', checklists: '檢查表', templates: '範本' }
+  : { guides: 'Guides', features: 'Features', tools: 'Tools', checklists: 'Checklists', templates: 'Templates' };
+const showParent = !isZhTw && parts.length > 1 && Boolean(parent && labels[parent]);
 const currentLabel = title.replace(/ \|.*$/, '');
+const homePath = isZhTw ? '/zh-tw/' : '/';
+const parentPath = isZhTw ? `/zh-tw/${parent}/` : `/${parent}/`;
 const items = [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: brand.origin },
-  ...(showParent ? [{ '@type': 'ListItem', position: 2, name: labels[parent], item: `${brand.origin}/${parent}/` }] : []),
+  { '@type': 'ListItem', position: 1, name: isZhTw ? '首頁' : 'Home', item: new URL(homePath, brand.origin).toString() },
+  ...(showParent ? [{ '@type': 'ListItem', position: 2, name: labels[parent], item: new URL(parentPath, brand.origin).toString() }] : []),
   { '@type': 'ListItem', position: showParent ? 3 : 2, name: currentLabel, item: new URL(route, brand.origin).toString() }
 ];
 ---
-<nav class="breadcrumbs shell" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{showParent && <><a href={`/${parent}/`}>{labels[parent]}</a><span aria-hidden="true">/</span></>}<span aria-current="page">{currentLabel}</span></nav>
+<nav class="breadcrumbs shell" aria-label={isZhTw ? '麵包屑導覽' : 'Breadcrumb'}><a href={homePath}>{isZhTw ? '首頁' : 'Home'}</a><span aria-hidden="true">/</span>{showParent && <><a href={parentPath}>{labels[parent]}</a><span aria-hidden="true">/</span></>}<span aria-current="page">{currentLabel}</span></nav>
 <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items })} />

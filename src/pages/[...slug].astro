@@ -18,6 +18,8 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const pages = await getCollection('pages');
+const zhTwPages = await getCollection('pagesZhTw');
+const alternatePath = zhTwPages.find((candidate) => candidate.data.alternateRoute === entry.data.route)?.data.route;
 const related = entry.data.related.map((route: string) => pages.find((candidate) => candidate.data.route === route)).filter((item): item is NonNullable<typeof item> => Boolean(item));
 const routeSlug = entry.data.route.split('/').filter(Boolean).at(-1) || '';
 const isHub = ['/guides/', '/tools/', '/checklists/', '/templates/'].includes(entry.data.route);
@@ -27,7 +29,7 @@ const hubItems = isHub ? pages.filter((candidate) => {
 }).sort((a, b) => a.data.title.localeCompare(b.data.title)) : [];
 const pageType = entry.data.pageType === 'content' ? 'article' : 'website';
 ---
-<BaseLayout title={entry.data.title} description={entry.data.description} canonicalPath={entry.data.route} indexable={entry.data.indexable} pageType={pageType} publishedAt={entry.data.publishedAt} lastReviewedAt={entry.data.lastReviewedAt}>
+<BaseLayout title={entry.data.title} description={entry.data.description} canonicalPath={entry.data.route} alternatePath={alternatePath} indexable={entry.data.indexable} pageType={pageType} publishedAt={entry.data.publishedAt} lastReviewedAt={entry.data.lastReviewedAt} faq={entry.data.faq}>
   <Breadcrumbs route={entry.data.route} title={entry.data.title} />
   <div class="shell page-grid">
     <article class="article">

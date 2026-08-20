@@ -2,13 +2,15 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pages = await getCollection('pages');
+const zhTwPages = await getCollection('pagesZhTw');
 const home = pages.find((entry) => entry.data.route === '/');
 if (!home) throw new Error('Home content missing');
+const zhTwHome = zhTwPages.find((entry) => entry.data.alternateRoute === '/');
 const { Content } = await render(home);
 const featuredRoutes = ['/features/home-inventory-tracker/', '/features/maintenance-tracker/', '/features/household-handoff/', '/tools/home-maintenance-schedule-generator/', '/tools/warranty-expiration-calculator/', '/templates/printable-home-inventory-template/'];
 const featured = featuredRoutes.map((route) => pages.find((entry) => entry.data.route === route)).filter(Boolean);
 ---
-<BaseLayout title={home.data.title} description={home.data.description} canonicalPath="/">
+<BaseLayout title={home.data.title} description={home.data.description} canonicalPath="/" alternatePath={zhTwHome?.data.route} faq={home.data.faq}>
   <section class="hero"><div class="shell">
     <span class="eyebrow">Private household operations</span>
     <p class="hero-title">Everything your household needs to remember.</p>

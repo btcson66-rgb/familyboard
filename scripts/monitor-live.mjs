@@ -3,7 +3,23 @@ const origin = process.env.FAMILYBOARD_ORIGIN || "https://familyboard.win";
 const checks = [
   {
     path: "/",
-    require: ["<h1", "FamilyBoard", 'rel="canonical"'],
+    require: [
+      '<html lang="en">',
+      "<h1",
+      "FamilyBoard",
+      'rel="canonical"',
+      'hreflang="zh-TW"',
+    ],
+  },
+  {
+    path: "/zh-tw/",
+    require: [
+      '<html lang="zh-TW">',
+      "免費的家庭管理工具",
+      'href="https://familyboard.win/zh-tw/"',
+      'hreflang="en"',
+      '"@type":"FAQPage"',
+    ],
   },
   {
     path: "/robots.txt",
@@ -12,6 +28,16 @@ const checks = [
   {
     path: "/sitemap-index.xml",
     require: ["<sitemapindex"],
+  },
+  {
+    path: "/sitemap-0.xml",
+    require: [
+      "<loc>https://familyboard.win/</loc>",
+      "<loc>https://familyboard.win/zh-tw/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-schedule/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/</loc>",
+    ],
+    forbid: ["<loc>https://familyboard.win/app/</loc>"],
   },
   {
     path: "/ads.txt",
@@ -25,6 +51,24 @@ const checks = [
   {
     path: "/tools/home-maintenance-cost-tracker/",
     require: ["Home Maintenance Cost Tracker", 'rel="canonical"'],
+  },
+  {
+    path: "/zh-tw/guides/home-maintenance-schedule/",
+    require: [
+      "居家保養排程怎麼做",
+      'hreflang="en"',
+      "https://www.nfa.gov.tw/",
+      "https://www.bsmi.gov.tw/",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/warranty-expiration-calculator/",
+    require: [
+      "免費保固到期日計算器",
+      'hreflang="en"',
+      "保固起算日",
+      "消費者保護法",
+    ],
   },
 ];
 

@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pages = await getCollection('pagesZhTw');
+const home = pages.find((entry) => entry.data.route === '/zh-tw/');
+if (!home) throw new Error('Traditional Chinese home content missing');
+const { Content } = await render(home);
+const featured = pages
+  .filter((entry) => entry.data.route !== '/zh-tw/')
+  .sort((a, b) => a.data.title.localeCompare(b.data.title, 'zh-TW'));
+---
+<BaseLayout
+  title={home.data.title}
+  description={home.data.description}
+  canonicalPath={home.data.route}
+  alternatePath={home.data.alternateRoute}
+  locale="zh-TW"
+  faq={home.data.faq}
+  publishedAt={home.data.publishedAt}
+  lastReviewedAt={home.data.lastReviewedAt}
+>
+  <section class="hero"><div class="shell">
+    <span class="eyebrow">免費 · 免帳號 · Local-first</span>
+    <p class="hero-title">把家庭需要記住的事，整理成可以交接的紀錄。</p>
+    <p class="lede">集中管理居家保養、設備、保固、訂閱與家庭責任；核心紀錄預設保留在目前瀏覽器，不必先建立帳號。</p>
+    <div class="hero-actions"><a class="button" href="/app/">開啟免費 App</a><a class="button secondary" href="/zh-tw/guides/home-maintenance-schedule/">先看居家保養指南</a></div>
+    <ul class="trust-row"><li>不需帳號</li><li>本機優先儲存</li><li>可離線使用</li><li>可備份與還原</li><li>私密工作區不放廣告</li></ul>
+  </div></section>
+  <section class="section"><div class="narrow article"><div class="meta"><span><a href="/editorial-policy/">FamilyBoard 編輯團隊</a></span><span>發布與複查日期：2026 年 8 月 20 日</span><span>繁體中文（台灣）</span></div><Content /></div></section>
+  <section class="section tint"><div class="shell"><div class="section-head"><div><span class="eyebrow">繁中首批內容</span><h2>先解決高意圖、能立即使用的家庭問題</h2></div></div>
+    <div class="card-grid">{featured.map((entry) => <a class="card" href={entry.data.route}><span class="card-tag">{entry.data.pageType === 'tool' ? '免費工具' : '實用指南'}</span><h3>{entry.data.title.replace(/｜.*$/, '')}</h3><p>{entry.data.description}</p></a>)}</div>
+  </div></section>
+  <section class="section"><div class="narrow"><div class="card"><span class="eyebrow">資料界線</span><h2>公開內容可被搜尋，私密紀錄留在裝置</h2><p>繁中指南與工具是公開且可索引的內容；家庭工作區本身不進 sitemap、不載入公開站分析或廣告程式碼。更換裝置前仍必須自行匯出備份。</p><p><a href="/privacy/">閱讀隱私說明（英文）</a> · <a href="/security/">了解瀏覽器儲存限制（英文）</a></p></div></div></section>
+</BaseLayout>

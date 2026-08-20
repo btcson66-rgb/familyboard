@@ -13,6 +13,7 @@ type Definition = {
   fields: Field[];
   run: (values: Record<string, string>) => string;
 };
+type Locale = "en" | "zh-TW";
 
 const date = (value: string) => {
   const parsed = new Date(`${value}T12:00:00`);
@@ -741,14 +742,103 @@ const definitions: Record<string, Definition> = {
   },
 };
 
+const zhTwDefinitions: Record<string, Definition> = {
+  "warranty-expiration-calculator": {
+    intro:
+      "依你確認的保固起算日與書面月數，計算預估期間終點及提前複查日；實際權利仍以保證書與適用規則為準。",
+    fields: [
+      { name: "purchase", label: "保固起算日", type: "date" },
+      {
+        name: "months",
+        label: "保固月數",
+        type: "number",
+        value: "12",
+      },
+      {
+        name: "reviewDays",
+        label: "到期前幾天複查",
+        type: "number",
+        value: "30",
+      },
+    ],
+    run: (values) => {
+      const start = date(values.purchase);
+      if (!start) return "請輸入有效的保固起算日。";
+      const end = addMonths(start, Number(values.months || 0));
+      const review = new Date(end);
+      review.setDate(review.getDate() - Number(values.reviewDays || 0));
+      const format = (value: Date) =>
+        new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" }).format(value);
+      return `預估期間終點：${format(end)}\n建議複查日：${format(review)}\n\n請以書面保證確認涵蓋範圍、起算方式、登錄要求與真正的截止規則。`;
+    },
+  },
+};
+
+const interfaceCopy: Record<
+  Locale,
+  {
+    unavailable: string;
+    tag: string;
+    usePrefix: string;
+    privacy: string;
+    generate: string;
+    reset: string;
+    print: string;
+    copy: string;
+    download: string;
+    save: string;
+    copied: string;
+    downloaded: string;
+    saved: string;
+  }
+> = {
+  en: {
+    unavailable:
+      "This tool is unavailable because its production logic has not been registered.",
+    tag: "Private browser tool",
+    usePrefix: "Use the",
+    privacy:
+      "Your entries stay in this browser and are not sent to FamilyBoard.",
+    generate: "Generate result",
+    reset: "Reset",
+    print: "Print result",
+    copy: "Copy result",
+    download: "Download result",
+    save: "Save for app",
+    copied: "Copied to clipboard.",
+    downloaded: "Downloaded as a text file.",
+    saved: "Saved locally for your FamilyBoard app.",
+  },
+  "zh-TW": {
+    unavailable: "這項工具尚未登錄可上線的計算邏輯，因此目前無法使用。",
+    tag: "資料留在瀏覽器的免費工具",
+    usePrefix: "使用",
+    privacy: "你的輸入只在目前瀏覽器運算，不會傳送給 FamilyBoard。",
+    generate: "產生結果",
+    reset: "清除重填",
+    print: "列印結果",
+    copy: "複製結果",
+    download: "下載結果",
+    save: "儲存至 App",
+    copied: "已複製到剪貼簿。",
+    downloaded: "已下載文字檔。",
+    saved: "已儲存到目前瀏覽器的 FamilyBoard App。",
+  },
+};
+
 export default function ToolWorkbench({
   slug,
   title,
+  locale = "en",
 }: {
   slug: string;
   title: string;
+  locale?: Locale;
 }) {
-  const definition = definitions[slug];
+  const definition =
+    (locale === "zh-TW" ? zhTwDefinitions[slug] : undefined) ||
+    definitions[slug];
+  const copy = interfaceCopy[locale];
   const initial = useMemo(
     () =>
       Object.fromEntries(
@@ -765,10 +855,7 @@ export default function ToolWorkbench({
   if (!definition)
     return (
       <section className="tool-shell">
-        <p className="notice">
-          This tool is unavailable because its production logic has not been
-          registered.
-        </p>
+        <p className="notice">{copy.unavailable}</p>
       </section>
     );
   const run = () => {
@@ -779,14 +866,12 @@ export default function ToolWorkbench({
   };
   return (
     <section className="tool-shell" aria-labelledby="tool-heading">
-      <span className="card-tag">Private browser tool</span>
+      <span className="card-tag">{copy.tag}</span>
       <h2 id="tool-heading">
-        Use the {title.replace(/^Free /, "").replace(/ \|.*$/, "")}
+        {copy.usePrefix} {title.replace(/^Free /, "").replace(/ [|｜].*$/, "")}
       </h2>
       <p>{definition.intro}</p>
-      <div className="notice">
-        Your entries stay in this browser and are not sent to FamilyBoard.
-      </div>
+      <div className="notice">{copy.privacy}</div>
       <form
         className="tool-form"
         onSubmit={(event) => {
@@ -839,7 +924,7 @@ export default function ToolWorkbench({
           ))}
         </div>
         <div>
-          <button type="submit">Generate result</button>{" "}
+          <button type="submit">{copy.generate}</button>{" "}
           <button
             className="secondary"
             type="button"
@@ -848,7 +933,7 @@ export default function ToolWorkbench({
               setResult("");
             }}
           >
-            Reset
+            {copy.reset}
           </button>
         </div>
       </form>
@@ -858,16 +943,16 @@ export default function ToolWorkbench({
       {result && (
         <div className="no-print app-actions" style={{ marginTop: "1rem" }}>
           <button className="secondary" onClick={() => window.print()}>
-            Print result
+            {copy.print}
           </button>
           <button
             className="secondary"
             onClick={async () => {
               await navigator.clipboard.writeText(result);
-              setStatus("Copied to clipboard.");
+              setStatus(copy.copied);
             }}
           >
-            Copy result
+            {copy.copy}
           </button>
           <button
             className="secondary"
@@ -880,10 +965,10 @@ export default function ToolWorkbench({
               anchor.download = `${slug}-result.txt`;
               anchor.click();
               URL.revokeObjectURL(href);
-              setStatus("Downloaded as a text file.");
+              setStatus(copy.downloaded);
             }}
           >
-            Download result
+            {copy.download}
           </button>
           <button
             className="secondary"
@@ -897,10 +982,10 @@ export default function ToolWorkbench({
                 savedAt: new Date().toISOString(),
               });
               localStorage.setItem(key, JSON.stringify(current.slice(-20)));
-              setStatus("Saved locally for your FamilyBoard app.");
+              setStatus(copy.saved);
             }}
           >
-            Save for app
+            {copy.save}
           </button>
         </div>
       )}

@@ -1,6 +1,6 @@
 # FamilyBoard
 
-FamilyBoard is a free, privacy-first household operations system. The public Astro site contains 200 purpose-specific launch pages, working browser tools and printable resources. The `/app/` PWA stores household data in IndexedDB without an account or household-data backend.
+FamilyBoard is a free, privacy-first household operations system. The public Astro site contains 200 purpose-specific English launch pages, independently written Traditional Chinese (Taiwan) pages, working browser tools and printable resources. The `/app/` PWA stores household data in IndexedDB without an account or household-data backend.
 
 ## Architecture
 
@@ -12,6 +12,7 @@ FamilyBoard is a free, privacy-first household operations system. The public Ast
 - Public GA4 is environment-gated; `/app/` does not load GA4.
 - Ad rendering remains off until AdSense approval. Affiliate cards require a real public affiliate tag and remain contextual.
 - A generated URL inventory proves status, canonical, metadata, H1, cluster, keyword, word count, tool registration and review date for every route.
+- Paired English and `zh-TW` pages publish reciprocal hreflang, localized navigation, visible FAQ answers and in-language structured data.
 
 ## Local development
 
@@ -21,7 +22,7 @@ npm.cmd run import:content
 npm.cmd run dev
 ```
 
-The approved source is `docs/launch-content-master.md`. `scripts/import-master.mjs` preserves it and regenerates `src/content/pages/`; do not hand-edit generated content files.
+The approved English source is `docs/launch-content-master.md`. `scripts/import-master.mjs` preserves it and regenerates `src/content/pages/`; do not hand-edit generated English content files. Independently reviewed Taiwan content lives in `src/content/pages-zh-tw/` and is not generated from the English master.
 
 ## Verification
 

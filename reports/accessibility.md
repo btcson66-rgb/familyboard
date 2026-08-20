@@ -2,12 +2,12 @@
 
 ## Automated evidence
 
-Playwright + axe ran on desktop Chromium and a Pixel 7 profile for the homepage, a long guide, an interactive tool, a printable and the free-product page.
+Playwright + axe ran on desktop Chromium and a Pixel 7 profile for the English homepage, long guide, interactive tool, printable and free-product page, plus the Traditional Chinese homepage, guide and interactive tool.
 
 - Serious violations: 0
 - Critical violations: 0
-- Lighthouse accessibility: 100 on all six representative performance routes
-- Command evidence: `npm run e2e` — 5 passed, 1 intentionally skipped duplicate mobile lifecycle
+- Lighthouse accessibility: 100 on all nine representative performance routes
+- Command evidence: `npm run e2e` — 7 passed, 1 intentionally skipped duplicate mobile lifecycle
 
 ## Keyboard and focus checklist
 
@@ -29,6 +29,7 @@ Playwright + axe ran on desktop Chromium and a Pixel 7 profile for the homepage,
 - Printable tables use `<thead>` and `<th scope="col">`.
 - Heading-order normalization prevents skipped heading levels in generated content.
 - Print media hides navigation/actions and preserves worksheet tables.
+- English and Traditional Chinese pages expose the correct document language, reciprocal language links on paired pages and localized skip/navigation labels.
 - App and shared-display views use semantic headings; sensitive fields are excluded from handoff/display output.
 
 ## Known limitations and manual follow-up

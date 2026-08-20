@@ -1,15 +1,22 @@
 ---
 import { brand } from '../config/brand';
-const links = [
+interface Props { locale?: 'en' | 'zh-TW'; }
+const { locale = 'en' } = Astro.props;
+const isZhTw = locale === 'zh-TW';
+const englishLinks = [
   ['/features/', 'Features'], ['/guides/', 'Guides'], ['/tools/', 'Tools'], ['/checklists/', 'Checklists'], ['/templates/', 'Templates'],
   ['/privacy/', 'Privacy'], ['/security/', 'Security'], ['/editorial-policy/', 'Editorial policy'], ['/affiliate-disclosure/', 'Affiliate disclosure'],
   ['/roadmap/', 'Roadmap'], ['/changelog/', 'Changelog'], ['/terms/', 'Terms'], ['/disclaimer/', 'Disclaimer'], ['/contact/', 'Contact']
 ];
+const zhTwLinks = [
+  ['/zh-tw/', '繁中首頁'], ['/zh-tw/guides/home-maintenance-schedule/', '居家保養指南'], ['/zh-tw/tools/warranty-expiration-calculator/', '保固到期計算器'],
+  ['/privacy/', '隱私說明（英文）'], ['/security/', '安全說明（英文）'], ['/affiliate-disclosure/', '聯盟揭露（英文）'], ['/contact/', '聯絡我們（英文）']
+];
+const links = isZhTw ? zhTwLinks : englishLinks;
 ---
 <footer class="site-footer">
   <div class="shell footer-grid">
-    <div><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">⌂</span>{brand.name}</a><p>{brand.primaryTagline}</p><p>Free, local-first and useful without an account.</p></div>
-    <nav class="footer-links" aria-label="Footer navigation">{links.map(([href, label]) => <a href={href}>{label}</a>)}</nav>
+    <div><a class="brand" href={isZhTw ? '/zh-tw/' : '/'}><span class="brand-mark" aria-hidden="true">⌂</span>{brand.name}</a><p>{isZhTw ? '把居家保養、保固與家庭責任整理在自己的裝置上。' : brand.primaryTagline}</p><p>{isZhTw ? '免費、local-first，不需註冊帳號。' : 'Free, local-first and useful without an account.'}</p></div>
+    <nav class="footer-links" aria-label={isZhTw ? '頁尾導覽' : 'Footer navigation'}>{links.map(([href, label]) => <a href={href}>{label}</a>)}</nav>
   </div>
 </footer>
-

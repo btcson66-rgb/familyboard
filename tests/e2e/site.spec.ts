@@ -63,6 +63,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/appliance-age-calculator/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
+    "/zh-tw/",
+    "/zh-tw/guides/home-maintenance-schedule/",
+    "/zh-tw/tools/warranty-expiration-calculator/",
   ]) {
     await page.goto(route);
     await page.waitForLoadState("networkidle");
@@ -74,6 +77,57 @@ test("representative routes have no serious accessibility violations", async ({
       route,
     ).toEqual([]);
   }
+});
+
+test("Traditional Chinese pages are indexable, paired and functional", async ({
+  page,
+}) => {
+  await page.goto("/zh-tw/");
+  await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    "href",
+    "https://familyboard.win/zh-tw/",
+  );
+  await expect(
+    page.locator('link[rel="alternate"][hreflang="en"]'),
+  ).toHaveAttribute("href", "https://familyboard.win/");
+  await expect(
+    page.getByRole("link", { name: "Switch to English" }),
+  ).toHaveAttribute("href", "/");
+  const structuredData = await page
+    .locator('script[type="application/ld+json"]')
+    .allTextContents();
+  expect(structuredData.join(" ")).toContain('"@type":"FAQPage"');
+
+  await page.goto("/tools/warranty-expiration-calculator/");
+  await expect(
+    page.locator('link[rel="alternate"][hreflang="zh-TW"]'),
+  ).toHaveAttribute(
+    "href",
+    "https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/",
+  );
+  await expect(page.getByRole("link", { name: "切換至繁體中文" })).toHaveAttribute(
+    "href",
+    "/zh-tw/tools/warranty-expiration-calculator/",
+  );
+
+  await page.goto("/zh-tw/tools/warranty-expiration-calculator/");
+  await page.getByLabel("保固起算日").fill("2026-01-31");
+  await page
+    .getByRole("spinbutton", { name: "保固月數", exact: true })
+    .fill("1");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("2026年2月28日");
+  await expect(page.locator(".result")).toContainText("預估期間終點");
+
+  const sitemap = await (await page.request.get("/sitemap-0.xml")).text();
+  expect(sitemap).toContain("https://familyboard.win/zh-tw/");
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/home-maintenance-schedule/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/",
+  );
 });
 
 test("complete local app lifecycle survives backup, reset, restore and offline reload", async ({
