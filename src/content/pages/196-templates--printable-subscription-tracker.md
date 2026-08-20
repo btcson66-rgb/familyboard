@@ -10,6 +10,7 @@ indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the calculator to normalize annual cost, then keep the active list in the local subscription tracker."
 related:
   - "/tools/household-subscription-cost-calculator/"
   - "/guides/organize-household-subscriptions/"
@@ -32,5 +33,3 @@ contentVersion: 1
 - Is the management account owned by the right person?
 
 > Do not write passwords on this sheet.
-
-**CTA:** Use the calculator to normalize annual cost, then keep the active list in the local subscription tracker.

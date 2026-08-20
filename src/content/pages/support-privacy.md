@@ -1,6 +1,6 @@
 ---
-title: "Privacy — How FamilyBoard Handles Household Data"
-description: "Understand what household data stays on your device, what public-site analytics may collect, and how backups work in the local-first FamilyBoard app."
+title: "Privacy Policy — What FamilyBoard Collects and What Never Leaves Your Device"
+description: "What the public site measures, which third parties are involved, and why household records in the FamilyBoard app never reach a server. Written to be checkable."
 route: "/privacy/"
 primaryIntent: "support FamilyBoard users"
 primaryKeyword: ""
@@ -14,30 +14,56 @@ related: []
 faq: []
 contentVersion: 1
 ---
-# Privacy should be understandable before you trust the app
+# Privacy Policy
 
-`FamilyBoard` is designed so the free core household organizer can work without a user account or central household database.
+FamilyBoard has two clearly separated halves, and they are governed differently. This page describes both, and it describes what the site does today rather than what it might do later.
 
-## Private app data
+- The **public website** at `familyboard.win` publishes guides, calculators and printables. It uses Google Analytics 4 and is being prepared to show Google advertising.
+- The **private app** at `/app/` and `/zh-tw/app/` stores your household records in your own browser. It loads no analytics and no advertising code at all.
 
-Household members, asset names, maintenance records, warranty information, subscriptions, emergency notes and other private app records are stored locally in the browser database in v1.
+## Household records never reach a server
 
-## Public website analytics
+Household members, asset names, maintenance records, warranty details, subscriptions, contacts, documents and emergency notes are written to your browser's own IndexedDB storage on your device. FamilyBoard has no account system, no household database and no server that receives these records. Nobody operating FamilyBoard can read them, because they are never transmitted.
 
-The public content site may later use analytics to understand page visits and feature usage. Analytics must never include private household values such as names, addresses, asset notes, document contents, emergency details, subscription names or financial information.
+The practical consequence is that your data is exactly as private, and exactly as fragile, as your browser profile. Clearing site data, losing the device or using a different browser means those records are gone. Export a JSON backup, or an encrypted JSON backup, and keep it somewhere durable.
 
-## Browser storage limitations
+## What the public site measures
 
-Local browser storage is not a guaranteed archival backup. Browser data can be cleared, devices can fail and users can remove site data. `FamilyBoard` therefore provides export/restore tools and should display the last-backup status prominently.
+The public pages load Google Analytics 4. It records ordinary web-analytics information such as pages viewed, approximate location derived from IP address, device and browser type, and how you arrived at the site. FamilyBoard configures GA4 with IP anonymisation on and Google Signals off.
 
-## Attachments
+Beyond page views, the site sends exactly two custom events, and they carry nothing you typed:
 
-Where local attachment support is available, users should understand device/browser storage limits. Important original documents should also exist in an appropriate durable location under the user's control.
+- `tool_complete`, with the slug of the tool — for example `warranty-expiration-calculator` — so we know which tools people finish.
+- `affiliate_outbound`, with a product category, if you click a labelled affiliate link.
 
-## No cloud sync today
+Values you enter into a calculator, generator or printable are processed in your browser and are not sent anywhere. The analytics code refuses to run on any `/app/` path, so nothing in the private app is measured, and the event allow-list rejects any parameter other than the tool slug and the category.
 
-FamilyBoard does not currently send household records to a sync service. Any future change to that boundary would require a policy and security review before release.
+## Cookies and third-party vendors
 
-## Contact
+Google Analytics sets cookies on the public site to distinguish visitors and sessions.
 
-Provide the project support contact only after a real FamilyBoard mailbox or forwarding route is configured and tested. Do not publish the developer's personal email.
+FamilyBoard's publisher identifier is `pub-7052036786750044` and the site publishes an `ads.txt` file naming Google as an authorised seller. Advertising is not being displayed at the time of writing: the ad script is disabled in the site configuration and no ad slots render. When advertising is enabled, Google and its partners will use cookies or similar technologies to serve and measure ads, including personalised advertising where you have permitted it.
+
+You can control this independently of FamilyBoard:
+
+- Google's own description of how it uses information from sites that use its services is published at [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites).
+- Ad personalisation can be turned off at [myadcenter.google.com](https://myadcenter.google.com/).
+- Your browser's own settings can block or delete cookies, which will not stop the private app from working, because it does not depend on them.
+
+Advertising and affiliate links never appear inside the private app, the household handoff views or the print-only sheets.
+
+## Affiliate links
+
+Some public pages may carry clearly labelled affiliate links, marked `rel="sponsored nofollow noopener"`. Following one takes you to a third-party retailer whose own privacy policy then applies. FamilyBoard records only that a link in a given product category was clicked, never which page you were on or anything about you.
+
+## Attachments and offline caching
+
+Attachment records in the app are references and metadata describing your original documents; the originals stay wherever you keep them. A service worker caches the app shell and pages you have already visited so the app keeps working offline. That cache lives on your device and is cleared when you clear site data.
+
+## No sync today
+
+FamilyBoard does not send household records to any sync service. If that ever changes, this page will be updated before such a service launches, and the change will be visible in the site changelog.
+
+## Questions and corrections
+
+Reach us through the [contact page](/contact/). Please do not include household records, document contents, account numbers or emergency details in any message — we do not need them to answer a question, and a support channel is the wrong place for them.

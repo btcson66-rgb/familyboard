@@ -10,6 +10,7 @@ indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the generator when the sitter needs more than a one-page checklist."
 related:
   - "/tools/house-sitter-instruction-generator/"
   - "/guides/house-sitter-information/"
@@ -42,5 +43,3 @@ Building/service contact: __________
 Write the household's approved escalation instruction here: ____________________
 
 > Provide access credentials separately using an appropriate secure method.
-
-**CTA:** Use the generator when the sitter needs more than a one-page checklist.

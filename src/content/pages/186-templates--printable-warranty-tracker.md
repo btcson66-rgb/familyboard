@@ -10,6 +10,7 @@ indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the online calculator for date arithmetic, then save the source information—not just the final date."
 related:
   - "/guides/how-to-track-product-warranties/"
   - "/tools/warranty-expiration-calculator/"
@@ -34,5 +35,3 @@ contentVersion: 1
 ## Use review dates
 
 Set a review date before expiration so the household has time to find documents and address known issues.
-
-**CTA:** Use the online calculator for date arithmetic, then save the source information—not just the final date.

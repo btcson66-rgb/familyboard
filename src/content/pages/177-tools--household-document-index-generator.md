@@ -54,6 +54,3 @@ An index is only useful if it's actually kept up to date when a document changes
 ## How many categories is too many
 
 A household document index with thirty narrow categories is about as hard to use as no index at all — nobody can remember where "Appliance manuals — kitchen" ends and "Appliance manuals — laundry" begins. Aim for somewhere between six and twelve categories broad enough to actually remember without looking them up, and let each one hold a genuinely varied set of documents rather than splitting hairs between near-identical categories.
-
-
-**CTA:** Use the generated index as a map. Do not create empty folders for categories your household does not need.

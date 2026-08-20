@@ -10,6 +10,7 @@ indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the annual renewals to the digital dashboard if you want lead-time reminders instead of checking the sheet manually."
 related:
   - "/guides/annual-renewal-calendar/"
   - "/guides/subscription-renewal-tracker/"
@@ -38,5 +39,3 @@ contentVersion: 1
 ## Use decision dates
 
 The decision date may be more important than the payment date. Give the household time to compare, cancel or gather documents.
-
-**CTA:** Add the annual renewals to the digital dashboard if you want lead-time reminders instead of checking the sheet manually.

@@ -10,6 +10,7 @@ indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "For recurring reminders and a shared tablet view, save agreed chores to the app."
 related:
   - "/tools/recurring-chore-planner/"
   - "/guides/family-chore-system/"
@@ -34,5 +35,3 @@ contentVersion: 1
 ## Avoid unnecessary scoring
 
 Use checkmarks if the household wants them. Points, rewards and leaderboards are optional, not required for a functioning chore system.
-
-**CTA:** For recurring reminders and a shared tablet view, save agreed chores to the app.

@@ -488,12 +488,12 @@
     "headings": "FamilyBoard is free What is included No payment details are collected The practical limit"
   },
   {
-    "title": "Privacy — How FamilyBoard Handles Household Data",
-    "description": "Understand what household data stays on your device, what public-site analytics may collect, and how backups work in the local-first FamilyBoard app.",
+    "title": "Privacy Policy — What FamilyBoard Collects and What Never Leaves Your Device",
+    "description": "What the public site measures, which third parties are involved, and why household records in the FamilyBoard app never reach a server. Written to be checkable.",
     "route": "/privacy/",
     "cluster": "support",
     "keywords": "",
-    "headings": "Privacy should be understandable before you trust the app Private app data Public website analytics Browser storage limitations Attachments No cloud sync today Contact"
+    "headings": "Privacy Policy Household records never reach a server What the public site measures Cookies and third-party vendors Affiliate links Attachments and offline caching No sync today Questions and corrections"
   },
   {
     "title": "Security and Local-First Architecture | FamilyBoard",
@@ -589,7 +589,7 @@
     "route": "/terms/",
     "cluster": "support",
     "keywords": "FamilyBoard terms",
-    "headings": "Terms of Use Local data Acceptable use Availability"
+    "headings": "Terms of Use What FamilyBoard provides, and what it does not No account, and no service holding your data Your data is your responsibility Acceptable use Content, and what you may do with it Third-party links and recommendations Availability and changes Updates to these terms"
   },
   {
     "title": "Household Information Disclaimer | FamilyBoard",

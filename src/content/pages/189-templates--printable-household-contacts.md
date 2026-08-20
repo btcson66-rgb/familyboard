@@ -10,6 +10,7 @@ indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the emergency version for crisis contacts and the private app for the fuller household contact directory."
 related:
   - "/guides/home-contact-list/"
   - "/guides/family-emergency-contacts/"
@@ -38,5 +39,3 @@ contentVersion: 1
 ## Keep visible copies limited
 
 Do not include sensitive account numbers, access codes or information that does not belong on a shared paper sheet.
-
-**CTA:** Use the emergency version for crisis contacts and the private app for the fuller household contact directory.

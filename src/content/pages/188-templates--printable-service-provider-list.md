@@ -10,6 +10,7 @@ indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Keep the printed version limited; detailed private service history belongs with the relevant asset/project."
 related:
   - "/guides/home-service-provider-list/"
   - "/guides/service-provider-contact-list/"
@@ -38,5 +39,3 @@ contentVersion: 1
 ## Verify before relying on old contacts
 
 Businesses change numbers, hours and ownership. Mark a `Last verified` date for critical contacts.
-
-**CTA:** Keep the printed version limited; detailed private service history belongs with the relevant asset/project.

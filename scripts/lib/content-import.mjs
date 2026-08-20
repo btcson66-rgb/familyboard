@@ -14,6 +14,15 @@ export function authoringField(block, label) {
   return /^`[^`]*`$/.test(value) ? value.slice(1, -1).trim() : value;
 }
 
+// The master uses two spellings of the same next-step marker: **Contextual CTA:**
+// on guide and tool blocks, and a bare **CTA:** on the printable blocks. Both must
+// be lifted into the rendered callout, or the bare one prints as literal body text.
+export function nextStepField(block) {
+  return (
+    authoringField(block, "Contextual CTA") || authoringField(block, "CTA")
+  );
+}
+
 export function parseFaq(block) {
   const lines = String(block).split("\n");
   const start = lines.findIndex((line) => /^\*\*FAQ:\*\*\s*$/i.test(line.trim()));
@@ -38,7 +47,7 @@ export function parseFaq(block) {
   for (const line of lines.slice(start + 1)) {
     if (
       /^---\s*$/.test(line) ||
-      /^\*\*(?:Contextual CTA|Depth|Redirects to):\*\*/i.test(line)
+      /^\*\*(?:Contextual CTA|CTA|Depth|Redirects to):\*\*/i.test(line)
     ) {
       break;
     }
@@ -81,12 +90,12 @@ export function bodyFromMasterBlock(block) {
     if (
       inFaq &&
       (/^---\s*$/.test(line) ||
-        /^\*\*(?:Contextual CTA|Depth|Redirects to):\*\*/i.test(line))
+        /^\*\*(?:Contextual CTA|CTA|Depth|Redirects to):\*\*/i.test(line))
     ) {
       inFaq = false;
     }
     if (inFaq) continue;
-    if (/^\*\*(?:Contextual CTA|Depth|Redirects to):\*\*.*$/i.test(line))
+    if (/^\*\*(?:Contextual CTA|CTA|Depth|Redirects to):\*\*.*$/i.test(line))
       continue;
     body.push(line);
   }

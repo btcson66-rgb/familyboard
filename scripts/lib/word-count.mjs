@@ -15,7 +15,7 @@ function stripFaqAuthoringBlock(markdown) {
     if (
       inFaq &&
       (/^---\s*$/.test(line) ||
-        /^\*\*(?:Contextual CTA|Depth|Redirects to):\*\*/i.test(line))
+        /^\*\*(?:Contextual CTA|CTA|Depth|Redirects to):\*\*/i.test(line))
     ) {
       inFaq = false;
     }
@@ -28,7 +28,7 @@ function stripFaqAuthoringBlock(markdown) {
 export function textForBodyWordCount(markdown) {
   return stripFaqAuthoringBlock(stripFrontmatter(String(markdown)))
     .replace(/^(?:```|~~~)[^\n]*\n[\s\S]*?^(?:```|~~~)\s*$/gm, " ")
-    .replace(/^\*\*(?:Contextual CTA|Depth|Redirects to):\*\*.*$/gim, " ")
+    .replace(/^\*\*(?:Contextual CTA|CTA|Depth|Redirects to):\*\*.*$/gim, " ")
     .replace(/<!--([\s\S]*?)-->/g, " ")
     .replace(/<[^>]+>/g, " ")
     .replace(/!\[([^\]]*)\]\([^)]+\)/g, "$1")

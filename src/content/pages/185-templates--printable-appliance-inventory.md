@@ -10,6 +10,7 @@ indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "For appliances with repeated maintenance, move the record into the app so completion dates become a timeline."
 related:
   - "/guides/appliance-inventory/"
   - "/guides/serial-number-tracker/"
@@ -37,5 +38,3 @@ contentVersion: 1
 ## Why this template is different from a general inventory
 
 Appliances create recurring service and warranty history. Capture the information a technician or household member is likely to ask for later.
-
-**CTA:** For appliances with repeated maintenance, move the record into the app so completion dates become a timeline.

@@ -164,6 +164,9 @@ for (const file of htmlFiles) {
     placeholders.push(route);
   if (/Contextual CTA/i.test(html))
     errors.push(`${route}: contains the Contextual CTA authoring artifact`);
+  // The bare **CTA:** marker renders as "<strong>CTA:</strong>" once Markdown runs.
+  if (/<strong>CTA:<\/strong>/i.test(html))
+    errors.push(`${route}: contains the bare CTA authoring artifact`);
 
   for (const match of html.matchAll(/href="(\/[^"#?]*)/g)) {
     const target = match[1];

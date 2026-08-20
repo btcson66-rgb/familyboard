@@ -10,6 +10,7 @@ indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Print it for the household admin area or create one recurring Monthly Review task in the app."
 related:
   - "/guides/monthly-home-maintenance-checklist/"
   - "/guides/household-monthly-review/"
@@ -48,5 +49,3 @@ This one-page review is designed to keep the household current without creating 
 ## Keep it short
 
 If your monthly review repeatedly takes more than an hour, reduce the checklist or move complex projects to separate tasks.
-
-**CTA:** Print it for the household admin area or create one recurring Monthly Review task in the app.

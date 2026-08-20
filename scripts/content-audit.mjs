@@ -57,8 +57,12 @@ for (const file of files) {
     errors.push(`${file}: missing H1`);
   if (/\b(TODO|FIXME|Lorem ipsum|example\.com|localhost)\b/i.test(raw))
     errors.push(`${file}: placeholder`);
+  // Both spellings of the next-step marker. The bare **CTA:** form shipped as
+  // literal body text on 21 printable pages because only the long form was checked.
   if (/Contextual CTA/i.test(raw))
     errors.push(`${file}: contains the Contextual CTA authoring artifact`);
+  if (/^\*\*CTA:\*\*/im.test(raw))
+    errors.push(`${file}: contains the bare CTA authoring artifact`);
 
   if (record.indexable && record.pageType === "content") {
     // depthVerified is an additional requirement, never an escape hatch from the

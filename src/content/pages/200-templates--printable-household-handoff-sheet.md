@@ -10,6 +10,7 @@ indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the digital Handoff Summary Generator when you want the next-30-days section to update from live local household records."
 related:
   - "/tools/home-handoff-summary-generator/"
   - "/guides/household-handoff/"
@@ -54,5 +55,3 @@ Where important credentials/documents are managed: ____________________
 ## How to test the handoff
 
 Give the sheet to the backup person and ask them to locate one service provider, one upcoming deadline and one emergency contact. If they still need the primary organizer to explain the system, update the handoff.
-
-**CTA:** Use the digital Handoff Summary Generator when you want the next-30-days section to update from live local household records.

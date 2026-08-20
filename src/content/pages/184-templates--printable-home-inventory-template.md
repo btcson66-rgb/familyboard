@@ -10,6 +10,7 @@ indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the digital tracker when you want maintenance, warranty and repair history attached to the same item."
 related:
   - "/guides/home-inventory-checklist/"
   - "/tools/home-inventory-checklist-generator/"
@@ -38,5 +39,3 @@ This worksheet is for items worth identifying later. Do not try to list every ob
 ## What to record first
 
 Prioritize appliances, electronics, valuable items, tools, vehicles and home systems. Use photos for context and labels. If a serial number is difficult or unsafe to reach, leave it blank until service makes it accessible.
-
-**CTA:** Use the digital tracker when you want maintenance, warranty and repair history attached to the same item.
