@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-21T05:46:49.509Z
+Generated: 2026-08-21T06:25:02.116Z
 
 ## Summary
 
-- Indexable pages: 136
+- Indexable pages: 158
 - Generated HTML routes: 223
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 28
+- Pages without a contextual product/tool link: 29
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,7 +20,7 @@ Generated: 2026-08-21T05:46:49.509Z
 - printables: 20
 - product: 16
 - appliances: 30
-- inventory-warranty: 3
+- inventory-warranty: 25
 - records-emergency: 22
 - maintenance: 3
 - tools: 26
@@ -51,6 +51,7 @@ Generated: 2026-08-21T05:46:49.509Z
 - /disclaimer/
 - /editorial-policy/
 - /guides/chore-chart-for-adults/
+- /guides/digital-home-inventory-backup/
 - /guides/family-emergency-contacts/
 - /guides/household-admin-day/
 - /guides/household-handoff/

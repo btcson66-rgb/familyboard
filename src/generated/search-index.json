@@ -376,12 +376,76 @@
     "headings": "Fire extinguisher records: NFPA 10's monthly and annual intervals, applied to a home inventory The checklist Log by location, not as one household total When to actually use one — and when not to Keep service history attached to the exact unit Longer-term service intervals a home inventory should still know about Where to actually put extinguishers, and how many Reading the pressure gauge correctly"
   },
   {
+    "title": "Home Inventory Checklist: What Is Worth Recording and What You Can Skip",
+    "description": "Create a useful home inventory by prioritizing appliances, electronics, valuable items, serial numbers, purchase records and household systems.",
+    "route": "/guides/home-inventory-checklist/",
+    "cluster": "inventory-warranty",
+    "keywords": "home inventory checklist",
+    "headings": "A home inventory checklist is defined by what it leaves out The two-minute test A starting priority list by category What to actually type into each record Where this checklist gets more serious: valuables Do not let the checklist become a museum catalog The checklist is a starting point, not a fixed list forever Record uncertainty honestly instead of guessing A practical order of operations"
+  },
+  {
     "title": "Home Inventory for Insurance: What to Record, Photograph and Back Up",
     "description": "Build a home inventory for insurance with the specific fields, photo methods and off-site backup practice recommended by the Insurance Information Institute.",
     "route": "/guides/home-inventory-for-insurance/",
     "cluster": "inventory-warranty",
     "keywords": "home inventory for insurance",
     "headings": "Home inventory for insurance: what to actually record, per the Insurance Information Institute What to record for each item Photograph context, not just objects Keep proof of value where you can Back the inventory up somewhere the household itself can't destroy Do not inflate or estimate values Prioritize rooms and categories instead of trying to finish in one sitting What an adjuster actually works from after a loss A room-overview video is worth more than it seems Update the inventory on a trigger, not just a calendar reminder"
+  },
+  {
+    "title": "How to Make a Photo Home Inventory Without Creating an Unsearchable Camera Roll",
+    "description": "Use room photos, item close-ups and structured labels to create a home inventory that remains searchable and useful later.",
+    "route": "/guides/photo-home-inventory/",
+    "cluster": "inventory-warranty",
+    "keywords": "photo home inventory",
+    "headings": "A photo home inventory is only as useful as your ability to find one photo again Three photo types, and when each one earns its place The walkthrough video is the fastest way to get real coverage An unlabeled photo is worth a fraction of a labeled one Review before you treat a photo as a permanent record Phone photos can embed more location data than you'd want to share You do not need to re-photograph the whole house on a schedule A realistic first session"
+  },
+  {
+    "title": "Room-by-Room Home Inventory: A Practical Way to Finish the Job",
+    "description": "Build a home inventory room by room using a simple priority system for appliances, electronics, furniture and other meaningful assets.",
+    "route": "/guides/room-by-room-home-inventory/",
+    "cluster": "inventory-warranty",
+    "keywords": "room by room home inventory",
+    "headings": "A room-by-room inventory finishes because it has a visible end point Three priority levels, applied per room Kitchen: 15–20 minutes Living and dining areas: 10–15 minutes Bedrooms and home office: 10–15 minutes per room Utility, garage and storage spaces: 15–20 minutes Bathrooms and entryways: usually five minutes or less Do the rooms in the order that reduces the most risk first Revisit a finished room only when something actually changes A finished kitchen beats an abandoned whole house"
+  },
+  {
+    "title": "Appliance Inventory: Models, Serial Numbers, Warranties and Maintenance in One List",
+    "description": "Create an appliance inventory that links models, serial numbers, purchase details, warranties, manuals, maintenance and repair history.",
+    "route": "/guides/appliance-inventory/",
+    "cluster": "inventory-warranty",
+    "keywords": "appliance inventory",
+    "headings": "An appliance inventory earns its keep by connecting to what happens after purchase The field set that actually gets used Where to find the serial label without guessing Build a timeline, not just a snapshot Purchase date and installed date are not always the same thing Attach the manual instead of retyping it Warranty terms and appliance lifespan are different questions — record both Record who to call, not just what to record Archive instead of deleting a replaced appliance"
+  },
+  {
+    "title": "Electronics Inventory: Track Devices, Owners, Serial Numbers and Warranties",
+    "description": "Organize household electronics with model, serial number, owner, purchase date, warranty, repair history and safe credential boundaries.",
+    "route": "/guides/electronics-inventory/",
+    "cluster": "inventory-warranty",
+    "keywords": "electronics inventory template",
+    "headings": "Electronics change hands and locations more than any other category in the house What to record, and why the serial number is worth the extra step Credentials do not belong in a general household inventory Repair and battery history changes replacement decisions Devices turn over faster than appliances — plan the record for that A shared family device still needs one owner field Wipe data before a device leaves the household Electronics are usually covered under general property limits, not a special sub-limit A starting order that matches real risk"
+  },
+  {
+    "title": "Furniture Inventory: What Is Worth Recording for Moving, Insurance and Home Records",
+    "description": "Create a selective furniture inventory with room, purchase details, dimensions, photos and receipts for pieces where future identification matters.",
+    "route": "/guides/furniture-inventory/",
+    "cluster": "inventory-warranty",
+    "keywords": "furniture inventory",
+    "headings": "Furniture is the category where dimensions matter more than serial numbers Not every chair needs a record The fields that actually get used later Dimensions save real time during a move Furniture is covered differently than jewelry or electronics under most policies Mattresses carry their own identifying tag — photograph it, don't remove it Keep care instructions with the piece, not as a generic task A photo from more than one angle earns its place here Avoid turning the inventory into a museum catalog"
+  },
+  {
+    "title": "Valuable Item Inventory: Build Clear Records Without Turning the App into an Appraisal Tool",
+    "description": "Organize valuable household items with photos, identifying details, purchase records and document references while leaving valuation to qualified sources.",
+    "route": "/guides/valuable-item-inventory/",
+    "cluster": "inventory-warranty",
+    "keywords": "valuable item inventory",
+    "headings": "A valuable-item inventory's job is evidence, not valuation Why this category needs its own page, not just a line in the general inventory What to actually record Purchase price and current value are not the same number Art and collectibles need provenance, not just a photo Appraisals age — note when one was done, not just that one exists A detailed valuables list is itself worth protecting Update on real triggers, not a calendar"
+  },
+  {
+    "title": "Serial Number Tracker for Appliances, Electronics and Household Equipment",
+    "description": "Keep serial numbers connected to the correct household asset, model, purchase record and photo so they remain useful later.",
+    "route": "/guides/serial-number-tracker/",
+    "cluster": "inventory-warranty",
+    "keywords": "serial number tracker",
+    "headings": "A serial number by itself is just a string of characters What a serial number is actually needed for Serial number and model number are not the same thing Store it with the item, never as a standalone list Photograph the label instead of trusting a single transcription A serial number alone doesn't prove you own the item Don't create risk chasing a label A serial number is what makes a recall check possible Treat the full serial list as private, not public, information"
   },
   {
     "title": "Purchase Receipt Organizer: How Long to Actually Keep Each Receipt (IRS Rules)",
@@ -392,12 +456,124 @@
     "headings": "Purchase receipt organizer: the actual retention periods, not a guessed rule How long to keep a receipt, by reason The best way to find a receipt is through the item, not the date Keep high-value or high-purpose receipts; skip the rest Use meaningful file names and searchable fields Paper receipts fade — capture them before they're unreadable Digital and emailed receipts need the same organization as paper ones When a receipt's job is done, let it go A quick sort for the receipts already piled up"
   },
   {
+    "title": "How to Track Product Warranties Without Keeping Every Box",
+    "description": "Track product warranties using what US federal law actually requires — proof of purchase, not registration or the original box — plus what the FTC says about \"warranty void\" stickers.",
+    "route": "/guides/how-to-track-product-warranties/",
+    "cluster": "inventory-warranty",
+    "keywords": "how to track warranties",
+    "headings": "Warranty tracking works because of what the law actually requires, not what packaging implies What a warranty claim actually needs as proof Registration is not required for coverage to be valid \"Warranty void if removed\" stickers are largely unenforceable What to record while the purchase is fresh The record needs a provider, not just a product A tracker calculates a date; it doesn't decide a claim Set a reminder before the date, not on it Preserve what happened when a claim is filed"
+  },
+  {
+    "title": "Warranty Expiration: How to Track the Date Without Assuming Coverage",
+    "description": "Understand what actually starts a warranty clock, how long common product categories typically run, and why the calculated date is a planning aid, not a coverage decision.",
+    "route": "/guides/warranty-expiration/",
+    "cluster": "inventory-warranty",
+    "keywords": "warranty expiration date",
+    "headings": "A warranty expiration date answers \"when,\" not \"what's covered\" What actually starts the clock Typical warranty term lengths, as a planning reference Registration doesn't move the start date \"Full\" and \"limited\" change what the expiration date actually guarantees Multi-year and split terms are common enough to expect Keep the original document, not just the typed term Mark an uncertain start date as an estimate"
+  },
+  {
+    "title": "Product Registration Tracker: Keep Household Registrations and Reference Numbers Organized",
+    "description": "Track product registrations even though they're rarely legally required for warranty coverage — because recalls, support access and transfer rules still depend on it.",
+    "route": "/guides/product-registration-tracker/",
+    "cluster": "inventory-warranty",
+    "keywords": "product registration tracker",
+    "headings": "Registration doesn't decide your warranty — but it still does real things What registration actually affects Record what happened, not just that you meant to do it Why recall notification specifically depends on registration Track registration state, not just registration completion Keep the account reference; skip the password Registration often comes with a marketing choice — record it if it matters to your household Not every product is worth the effort Archive, don't delete, when a product leaves the household"
+  },
+  {
+    "title": "Repair History Tracker: Know What Was Fixed, When and Whether the Problem Returned",
+    "description": "Build an asset-level repair history that separates symptom from diagnosis, tracks cost and outcome, and uses the widely cited 50% rule correctly when a repair recurs.",
+    "route": "/guides/repair-history/",
+    "cluster": "inventory-warranty",
+    "keywords": "repair history tracker",
+    "headings": "Repair history turns isolated failures into a pattern you can actually act on Record the symptom before the diagnosis Record what was actually done, not just what it cost Use the 50% rule as a starting point, not a formula Repeated repairs are a signal, not an automatic verdict Note whether a repair was covered by warranty or paid out of pocket Keep the provider attached to the work, not just a contact list Photograph error codes and visible damage while they're still there"
+  },
+  {
+    "title": "Service History Tracker for Home Systems and Appliances",
+    "description": "Track inspections, maintenance, repairs and professional service in one timeline for each household asset — and why some manufacturer warranties require proof of it.",
+    "route": "/guides/service-history/",
+    "cluster": "inventory-warranty",
+    "keywords": "home service history tracker",
+    "headings": "Service history is the record that proves the maintenance actually happened Why this record can matter even when nothing's broken Use event types to keep a long timeline scannable A provider's name alone doesn't tell you much later Turn \"check this next time\" into an actual task Keep historical providers even after switching companies Seasonal patterns become visible only with a full timeline Multiple systems, one household timeline Distinguish \"this was serviced\" from \"this was serviced well\" Older history is worth adding selectively, not all at once"
+  },
+  {
+    "title": "Appliance Replacement Planning: Use Age, Repair History and Household Needs Without Predicting Failure",
+    "description": "Plan appliance replacement by combining published lifespan ranges, the widely cited 50% repair rule and real repair history — instead of relying on any single number.",
+    "route": "/guides/appliance-replacement-planning/",
+    "cluster": "inventory-warranty",
+    "keywords": "appliance replacement planning",
+    "headings": "Replacement planning combines three signals — none of them alone is reliable Where the appliance sits in its published range The widely cited 50% rule, used correctly Repair history changes where a unit actually sits, regardless of age A watch list, not a verdict Save the practical constraints before you need them in a hurry Household disruption is a real factor, not a soft one Energy and feature changes can justify replacement on their own Archive the old, start fresh with the new"
+  },
+  {
     "title": "Appliance Lifespan Planning: Real Ranges by Appliance, Not a Guess",
     "description": "Appliance lifespan ranges by type — refrigerator, washer, dryer, dishwasher, water heater — sourced from AHAM, Rheem and manufacturer data, used for planning.",
     "route": "/guides/appliance-lifespan-planning/",
     "cluster": "inventory-warranty",
     "keywords": "appliance lifespan planning",
     "headings": "Appliance lifespan planning: real published ranges, used as planning input, not a countdown Published lifespan ranges by appliance Calculate age accurately first The 15-year efficiency signal for refrigerators specifically Add real household evidence on top of the range Plan the disruption, not just the number A simple decision framework instead of a single cutoff age Why the ranges above differ between sources Maintenance history changes where a unit sits in its own range"
+  },
+  {
+    "title": "Household Replacement Reserve: Plan for Known Big Purchases Without Pretending to Predict Them",
+    "description": "Build a household replacement reserve list from published appliance lifespan ranges and real repair history, without pretending to forecast exact failure dates or savings targets.",
+    "route": "/guides/household-replacement-reserve/",
+    "cluster": "inventory-warranty",
+    "keywords": "household replacement reserve",
+    "headings": "A replacement reserve is a list, not a forecast Build the list from what's already aging Use the same age signals that drive replacement planning Three honest categories, not a countdown Real household history beats generic budgeting rules over time Separate \"big and known\" from \"big and possible\" Review the list alongside other household planning, not on its own This is a planning list, not financial advice A short list held for years beats a long list abandoned in months"
+  },
+  {
+    "title": "Home Purchase Records: Build a Clean Property Archive After Closing",
+    "description": "Organize home-purchase documents around what the IRS says they're actually for: establishing the cost basis you'll need when the property is eventually sold.",
+    "route": "/guides/home-purchase-records/",
+    "cluster": "inventory-warranty",
+    "keywords": "home purchase records organizer",
+    "headings": "Home-purchase records exist to prove a number you won't need for years What actually belongs in the closing archive Why \"keep it forever\" is closer to correct than any fixed number Inspection and disclosure documents connect to later work This category feeds directly into renovation and improvement records Retention specifics beyond basis are genuinely jurisdiction-dependent A well-organized purchase archive makes the improvement records that follow easier What a title company or attorney provided is worth keeping intact These documents deserve real access protection An index is enough to start — the originals can stay where they are"
+  },
+  {
+    "title": "Renovation Records: Keep Contractors, Materials, Dates, Warranties and Before/After History",
+    "description": "Organize renovation records around what the IRS actually counts as a capital improvement — the categories that add to your home's cost basis, not just project logistics.",
+    "route": "/guides/renovation-records/",
+    "cluster": "inventory-warranty",
+    "keywords": "renovation records organizer",
+    "headings": "A renovation record does two jobs: future maintenance and future taxes What actually counts as a capital improvement, per the IRS Create one project record, not a scattered pile of receipts Preserve the exact product details, while they're still easy to find New assets created by a renovation get their own record Before and after photos are evidence, not just memory A renovation record should survive a change in contractor Permits are a resale-relevant record, even though the rules vary by place A renovation record is also a maintenance record's origin story"
+  },
+  {
+    "title": "Contractor Records: Keep Quotes, Work History and Household Context Organized",
+    "description": "Track household contractors by project, work history and lien-waiver status — including why paying the general contractor in full doesn't always end the household's risk.",
+    "route": "/guides/contractor-records/",
+    "cluster": "inventory-warranty",
+    "keywords": "contractor records organizer",
+    "headings": "A contractor record needs to answer more than \"how do I reach them\" Why a lien waiver matters even after you've paid in full Keep quotes separate from completed work Verify licensing and insurance before work begins, not after Product and warranty details belong on the asset, not just the contact Note the estimate you were quoted alongside the final cost Turn follow-up recommendations into tasks, not lost emails A payment schedule tied to milestones reduces risk on both sides Keep the notes factual, not a public review A short list of trusted providers is worth more than a long list of one-time contacts"
+  },
+  {
+    "title": "Home Improvement Receipts: Organize Costs and Proof by Project, Not by Shopping Trip",
+    "description": "Keep home-improvement receipts attached to the renovation project they belong to — the specific evidence the IRS says supports your home's cost basis when you sell.",
+    "route": "/guides/home-improvement-receipts/",
+    "cluster": "inventory-warranty",
+    "keywords": "organize home improvement receipts",
+    "headings": "An improvement receipt's real job is proving your cost basis later Group receipts by project, not by shopping trip Capture the exact product details while the receipt is still in hand Retention for improvement receipts follows the property, not a fixed number of years Distinguish an estimate, an order confirmation and the final receipt Match each receipt to a real improvement category, not a vague \"renovation\" bucket Photograph paper receipts before they fade, especially from smaller suppliers A materials receipt and a labor invoice both count A running project total catches problems while they're still fixable"
+  },
+  {
+    "title": "Moving Inventory: Track Boxes, Rooms, Valuable Items and What Needs Special Handling",
+    "description": "Create a moving inventory that separates box-level tracking from valuable-item documentation — and understand what federal law actually protects if a mover loses something.",
+    "route": "/guides/moving-inventory/",
+    "cluster": "inventory-warranty",
+    "keywords": "moving inventory checklist",
+    "headings": "A moving inventory answers \"where is it,\" not \"what do we own\" Box-level records are enough for ordinary contents What federal law actually protects if something goes wrong Keep valuable or fragile items separate from the box system Destination labeling does double duty A numbering system beats a purely descriptive one Photograph anything you disassemble The first-night box is its own separate category The moving layer is temporary; archive it once you're settled"
+  },
+  {
+    "title": "Storage Unit Inventory: Know What Is Off-Site Without Opening Every Box",
+    "description": "Track storage-unit contents with zones, box IDs and photos — and understand what your homeowners or renters policy does and doesn't cover for off-site storage.",
+    "route": "/guides/storage-unit-inventory/",
+    "cluster": "inventory-warranty",
+    "keywords": "storage unit inventory",
+    "headings": "Off-site storage becomes expensive and frustrating when nobody remembers what's inside Insurance coverage for storage units is real, but limited Zones and box IDs make retrieval possible without a full unpack Photograph major items and box labels Access credentials do not belong in the item inventory Storage climate matters for what gets recorded there Note what actually needs climate control, and what doesn't A storage inventory is also useful for insurance claims, not just retrieval Let the inventory prompt the \"is this still worth it\" question A unit that's hard to search in person should be easy to search on paper"
+  },
+  {
+    "title": "Digital Home Inventory Backup: Protect the Records That Describe Your Home",
+    "description": "Back up a local-first home inventory with the 3-2-1 rule, understand what FamilyBoard's encrypted export actually does, and why no cloud means backups are your responsibility.",
+    "route": "/guides/digital-home-inventory-backup/",
+    "cluster": "inventory-warranty",
+    "keywords": "home inventory backup",
+    "headings": "There is no cloud copy — the backup you make is the only one that exists What an export actually contains The 3-2-1 rule, applied to a household inventory A password you forget means data you can't recover A backup that's never been restored is an assumption, not a plan A stronger password matters more here than almost anywhere else Export after real changes, not on an arbitrary calendar Make \"last backup\" a visible fact, not a remembered one"
   },
   {
     "title": "How to Organize Household Documents Without Building a Giant Digital Junk Drawer",

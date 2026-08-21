@@ -642,7 +642,7 @@
   {
     "route": "/guides/home-inventory-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -658,7 +658,7 @@
   {
     "route": "/guides/photo-home-inventory/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -666,7 +666,7 @@
   {
     "route": "/guides/room-by-room-home-inventory/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -674,7 +674,7 @@
   {
     "route": "/guides/appliance-inventory/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -682,7 +682,7 @@
   {
     "route": "/guides/electronics-inventory/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -690,7 +690,7 @@
   {
     "route": "/guides/furniture-inventory/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -698,7 +698,7 @@
   {
     "route": "/guides/valuable-item-inventory/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -706,7 +706,7 @@
   {
     "route": "/guides/serial-number-tracker/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -722,7 +722,7 @@
   {
     "route": "/guides/how-to-track-product-warranties/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -730,7 +730,7 @@
   {
     "route": "/guides/warranty-expiration/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -738,7 +738,7 @@
   {
     "route": "/guides/product-registration-tracker/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -746,7 +746,7 @@
   {
     "route": "/guides/repair-history/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -754,7 +754,7 @@
   {
     "route": "/guides/service-history/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -762,7 +762,7 @@
   {
     "route": "/guides/appliance-replacement-planning/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -778,7 +778,7 @@
   {
     "route": "/guides/household-replacement-reserve/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -786,7 +786,7 @@
   {
     "route": "/guides/home-purchase-records/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -794,7 +794,7 @@
   {
     "route": "/guides/renovation-records/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -802,7 +802,7 @@
   {
     "route": "/guides/contractor-records/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -810,7 +810,7 @@
   {
     "route": "/guides/home-improvement-receipts/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -818,7 +818,7 @@
   {
     "route": "/guides/moving-inventory/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -826,7 +826,7 @@
   {
     "route": "/guides/storage-unit-inventory/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -834,7 +834,7 @@
   {
     "route": "/guides/digital-home-inventory-backup/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
