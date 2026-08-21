@@ -232,6 +232,134 @@
     "headings": "Home repair history: the fault-and-fix trail on one asset The first repair is an event; the second is a pattern Write the symptom the way you actually experienced it Every entry needs an outcome, not just a description A worked example Track cost, but let a person make the replace-or-repair call Why this is different from a general maintenance log"
   },
   {
+    "title": "Preventive Home Maintenance: Build Small Routines Around Real Risks",
+    "description": "Use preventive home maintenance to reduce avoidable surprises by monitoring condition, following equipment guidance and keeping recurring work visible.",
+    "route": "/guides/preventive-home-maintenance/",
+    "cluster": "maintenance",
+    "keywords": "preventive home maintenance",
+    "headings": "Preventive home maintenance: build small routines around real risks Sort by consequence, not by how easy the task feels The manufacturer's own guidance beats a generic article every time Learn to read leading indicators, not just fixed intervals Success looks like fewer surprises, not a perfect checklist Start with the systems that matter most, not the longest list"
+  },
+  {
+    "title": "How to Prioritize Home Maintenance When the List Is Too Long",
+    "description": "Prioritize home maintenance by safety, damage prevention, system importance, urgency, season and effort instead of treating every task equally.",
+    "route": "/guides/maintenance-priorities/",
+    "cluster": "maintenance",
+    "keywords": "home maintenance priorities",
+    "headings": "How to prioritize home maintenance when the list is too long Rank by consequence first, not by how annoying the task is Factor in timing and season, not just severity Ask whether delay compounds the problem Separate \"needs action\" from \"needs information\" Make the priority field mean something"
+  },
+  {
+    "title": "Home Maintenance Calendar: Turn Recurring Upkeep into a Manageable Year",
+    "description": "Create a home maintenance calendar that spreads work across the year and keeps completion history attached to each household system.",
+    "route": "/guides/home-maintenance-calendar/",
+    "cluster": "maintenance",
+    "keywords": "home maintenance calendar",
+    "headings": "Home maintenance calendar: turn recurring upkeep into a manageable year Keep the calendar as a view, not a second database Spread work across the year instead of stacking it Use the real trigger date, not a convenient one Completion always writes back to the source record Keep the visible calendar uncluttered How this differs from a log"
+  },
+  {
+    "title": "Home Maintenance Binder: What to Include in a Digital or Paper Home Record",
+    "description": "Build a home maintenance binder with system information, service history, warranties, contacts and recurring tasks without turning it into a paperwork archive.",
+    "route": "/guides/home-maintenance-binder/",
+    "cluster": "maintenance",
+    "keywords": "home maintenance binder",
+    "headings": "Home maintenance binder: what to include in a collection you hand someone else Build it around the handoff test, not around completeness The sections that earn their place Test it on someone who doesn't already know the house Paper still has a real job here How this differs from every other record type on this site"
+  },
+  {
+    "title": "Home Maintenance Log: A Simple Format for Work, Dates, Costs and Follow-Up",
+    "description": "Keep a concise home maintenance log with completion dates, assets, service notes, costs and next actions.",
+    "route": "/guides/home-maintenance-log/",
+    "cluster": "maintenance",
+    "keywords": "home maintenance log",
+    "headings": "Home maintenance log: a simple format for work, dates, costs and follow-up \"Changed filter — August\" is better than nothing, but barely Five parts make an entry actually useful The difference a real entry makes Distinguish the type of event, even within one timeline Log it while it's fresh, not during a monthly cleanup One record, two useful views"
+  },
+  {
+    "title": "Home Maintenance Budget: Build a Record Before You Guess a Perfect Number",
+    "description": "Track actual maintenance and repair spending, separate recurring service from replacement projects and use your own history to plan future household costs.",
+    "route": "/guides/home-maintenance-budget/",
+    "cluster": "maintenance",
+    "keywords": "home maintenance budget",
+    "headings": "Home maintenance budget: build a record before you guess a perfect number Separate spending into categories that don't blur together Track enough detail on larger costs to actually learn something Use what you already know to plan ahead, without pretending to more precision than you have Avoid false precision, especially around emergency funds What a year of real tracking actually replaces"
+  },
+  {
+    "title": "Home Maintenance Reminders: How to Make Them Useful Instead of Annoying",
+    "description": "Create home maintenance reminders that include context, realistic timing and completion history so they do more than generate notifications.",
+    "route": "/guides/home-maintenance-reminders/",
+    "cluster": "maintenance",
+    "keywords": "home maintenance reminders",
+    "headings": "Home maintenance reminders: what FamilyBoard can and can't actually do What FamilyBoard is genuinely good at: the record, not the alert The workaround that actually works: let a real notification tool do the alerting Make the calendar alert itself useful, not just present Give yourself real lead time, not the ideal date Close the loop back into the record If a reminder keeps getting ignored, the fix usually isn't a louder alert"
+  },
+  {
+    "title": "Home Maintenance After Vacation: A Quick Return-Home Check",
+    "description": "Use a short after-vacation home check to spot changes, restart household routines and close out travel handoff tasks.",
+    "route": "/guides/home-maintenance-after-vacation/",
+    "cluster": "maintenance",
+    "keywords": "home checklist after vacation",
+    "headings": "Home maintenance after vacation: a quick return-home check Walk the normal living areas with fresh eyes Close out every temporary arrangement, not just the obvious ones Restart what travel put on pause Use the return to make the next trip's checklist better Why this check exists separately from a routine maintenance check"
+  },
+  {
+    "title": "Move-In Maintenance Checklist: Learn the Home Before You Start Adding Tasks",
+    "description": "A move-in home maintenance checklist for identifying systems, recording condition, finding manuals and creating the first practical maintenance schedule.",
+    "route": "/guides/move-in-maintenance-checklist/",
+    "cluster": "maintenance",
+    "keywords": "move in maintenance checklist",
+    "headings": "Move-in maintenance checklist: learn the home before you start adding tasks Identify major equipment while it's easy to reach Document the starting condition, the right way for your situation Find the essentials before you need them in an emergency Resist creating a huge task list on day one What this checklist is not"
+  },
+  {
+    "title": "Move-Out Home Records: What to Close, Export, Transfer and Keep",
+    "description": "Use a move-out record plan to close subscriptions, preserve repair history, export household data and separate property-specific information from personal records.",
+    "route": "/guides/move-out-home-records/",
+    "cluster": "maintenance",
+    "keywords": "move out home checklist records",
+    "headings": "Move-out home records: what to close, export, transfer and keep Close what's tied to the location, deliberately Keep what's yours; summarize what's staying behind Export a verified backup before you touch anything else Build a move-out timeline appropriate to your situation The order matters: backup, then close, then delete"
+  },
+  {
+    "title": "Annual Home Review: A Once-a-Year Check of Maintenance, Records and Recurring Costs",
+    "description": "Run an annual household review covering maintenance history, assets, warranties, subscriptions, contacts, backups and the next year's priorities.",
+    "route": "/guides/annual-home-review/",
+    "cluster": "maintenance",
+    "keywords": "annual home review checklist",
+    "headings": "Annual home review: a once-a-year check of maintenance, records and recurring costs Look for patterns across the full year, not just the last quarter Reconcile the asset inventory against reality Audit recurring costs the household has stopped noticing Confirm contacts and emergency information are still accurate Verify backups actually work, not just that they exist Turn the review into next year's task list, not one overwhelming day"
+  },
+  {
+    "title": "Storm Preparation Home Checklist: Organize Information, Supplies and Household Responsibilities",
+    "description": "A household storm-preparation framework for contacts, devices, supplies, property tasks and family responsibilities, with local official guidance taking priority.",
+    "route": "/guides/storm-preparation-home-checklist/",
+    "cluster": "maintenance",
+    "keywords": "storm preparation home checklist",
+    "headings": "Storm preparation home checklist: organize information, supplies and responsibilities Get your alerts from a source that doesn't depend on cell towers or the internet Follow local authorities for every actual safety decision Assign specific responsibilities before the storm, not during it Inventory what you have before buying more Protect your household records before the storm, not after If the storm knocks out power, that's its own checklist"
+  },
+  {
+    "title": "Power Outage Home Preparedness: Organize the Household Before the Lights Go Out",
+    "description": "Prepare for a household power outage by organizing contacts, backup devices, responsibilities, offline information and post-outage notes.",
+    "route": "/guides/power-outage-home-preparedness/",
+    "cluster": "maintenance",
+    "keywords": "power outage preparedness home",
+    "headings": "Power outage home preparedness: organize the household before the lights go out If you use a portable generator, this is the one rule that actually matters Keep utility and outage contacts reachable without the internet Know which specific needs in your household actually depend on power Test backup devices on a schedule, not just when you remember Document anything unusual once power comes back"
+  },
+  {
+    "title": "Water Leak Response Records: What to Document While You Arrange Repair",
+    "description": "Keep a clear timeline of a household water leak, observations, photos, contacts, service visits and repair outcomes while following safety and professional guidance.",
+    "route": "/guides/water-leak-response-home-records/",
+    "cluster": "maintenance",
+    "keywords": "water leak documentation checklist",
+    "headings": "Water leak response records: what to document while you arrange repair If water is anywhere near electrical outlets, panels or wiring, stop and get out Once the area is safe, document what you actually observed Act on the 24-to-48-hour drying window Keep every contact and response on the same timeline Connect the eventual repair to the asset or area, not just the incident Capture the follow-up work too, not just the stop-the-leak moment The record documents; it doesn't decide who pays or what's required"
+  },
+  {
+    "title": "Home Service Provider List: Keep the People Who Know Your Home Easy to Find",
+    "description": "Organize household service providers with contact details, specialties, prior work, asset relationships and notes without turning the list into public reviews.",
+    "route": "/guides/home-service-provider-list/",
+    "cluster": "maintenance",
+    "keywords": "home service provider list",
+    "headings": "Home service provider list: keep the people who know your home easy to find Store more than a name and a phone number Keep it factual, not a review platform Link every provider to the work they actually did Verify before you're in an emergency, not during one Why this list is different from repair history"
+  },
+  {
+    "title": "Home Maintenance Delegation: Assign Ownership Without Turning the Home into a Workplace",
+    "description": "Divide recurring home maintenance and household admin by clear ownership, next actions and shared visibility rather than vague assumptions.",
+    "route": "/guides/home-maintenance-delegation/",
+    "cluster": "maintenance",
+    "keywords": "divide home maintenance responsibilities",
+    "headings": "Home maintenance delegation: assign ownership without turning the home into a workplace Own the outcome, not necessarily the labor Draw a hard line between routine work and expertise Make the invisible workload visible before it becomes a source of resentment Build a handoff path before someone actually needs it Revisit assignments as the household changes"
+  },
+  {
     "title": "Refrigerator Maintenance Checklist: Coils, Temperature, Seals and Service History",
     "description": "A real refrigerator maintenance checklist: coil cleaning intervals, food-safe temperatures, seal checks and lifespan figures, with sources for each.",
     "route": "/guides/refrigerator-maintenance-checklist/",
