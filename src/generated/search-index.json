@@ -144,6 +144,14 @@
     "headings": "Refrigerator maintenance checklist: what to actually do, and when The checklist Why the 15-year mark matters Keep the model tied to the record Keep filter and repair history visible What counts as a warning sign worth logging immediately Freezer-side specifics that differ from the fridge side"
   },
   {
+    "title": "Freezer Maintenance Checklist: Defrosting, Coils and the Power-Outage Math",
+    "description": "A standalone freezer maintenance checklist with real defrost and coil-cleaning intervals, plus the 48-hour/24-hour outage rule that decides whether food is safe.",
+    "route": "/guides/freezer-maintenance-checklist/",
+    "cluster": "appliances",
+    "keywords": "freezer maintenance checklist",
+    "headings": "Freezer maintenance checklist: defrosting, coils and the outage math the fridge doesn't need The checklist Manual-defrost vs. frost-free changes the whole list Chest vs. upright: different failure points The power-outage math that makes this appliance different What lifespan to plan around Freezer burn on more than one item is a signal, not bad luck What to record"
+  },
+  {
     "title": "Washing Machine Maintenance Checklist: Hoses, Gasket Mold and Drain Filter",
     "description": "A washing machine maintenance checklist covering supply-hose replacement, gasket mold prevention and drain-filter cleaning, each with a real interval and source.",
     "route": "/guides/washing-machine-maintenance-checklist/",
@@ -160,6 +168,46 @@
     "headings": "Dryer maintenance checklist: this is a fire-prevention task, not just tidiness The checklist Why this list is different from a washing machine's Keep vent service history separate from the appliance itself Note performance changes immediately Gas dryers add one more professional-only item Vent length and configuration change how often cleaning matters Record the vent configuration once, not just the cleaning date Combination washer-dryer units still split into two checklists"
   },
   {
+    "title": "Dishwasher Maintenance Checklist: The Filter Most Owners Never Knew Existed",
+    "description": "A real dishwasher maintenance checklist: the filter-cleaning interval most owners never learn, spray-arm care, leak response and lifespan, with sources.",
+    "route": "/guides/dishwasher-maintenance-checklist/",
+    "cluster": "appliances",
+    "keywords": "dishwasher maintenance checklist",
+    "headings": "Dishwasher maintenance checklist: the filter most owners never knew existed The checklist Why the filter is the first thing to check, not the last Treat water where it shouldn't be as a dated event, not routine cleanup What lifespan to plan around Keep installation and repair notes attached Review the warranty before paying for a service call"
+  },
+  {
+    "title": "Oven Maintenance Checklist: Self-Clean Frequency, Gasket Life and Gas Safety",
+    "description": "A real oven maintenance checklist: how often self-clean actually should run, why it ages the door gasket, and what's professional-only on a gas oven.",
+    "route": "/guides/oven-maintenance-checklist/",
+    "cluster": "appliances",
+    "keywords": "oven maintenance checklist",
+    "headings": "Oven maintenance checklist: what self-clean actually costs, and what gas rules out The checklist Why a self-clean cycle sometimes \"kills\" an oven Gasket replacement: a real number, not a shrug Gas ovens: burner and gas-line work is professional-only Electric ovens shift the risk, not the caution What to record"
+  },
+  {
+    "title": "Microwave Maintenance Checklist: Waveguide Cover, Turntable and Door Safety",
+    "description": "A real microwave maintenance checklist: waveguide-cover care, why running it empty causes damage, turntable troubleshooting and when door damage means stop using it.",
+    "route": "/guides/microwave-maintenance-checklist/",
+    "cluster": "appliances",
+    "keywords": "microwave maintenance checklist",
+    "headings": "Microwave maintenance checklist: the waveguide cover, the turntable and the door The checklist Why the waveguide cover matters more than it looks Never operate it empty Door and control damage is a stop-using-it signal, not a cleaning task What lifespan and location tell you What to record"
+  },
+  {
+    "title": "Range Hood Maintenance Checklist: Grease Filters and the Fire Risk of Skipping Them",
+    "description": "A real range-hood maintenance checklist: grease-filter cleaning intervals, dishwasher-safety guidance, charcoal-filter replacement and the fire risk of buildup.",
+    "route": "/guides/range-hood-maintenance-checklist/",
+    "cluster": "appliances",
+    "keywords": "range hood maintenance checklist",
+    "headings": "Range hood maintenance checklist: grease filters, and why skipping them is a fire question, not just a cleaning one The checklist Grease buildup is a fire-safety fact, not a cleanliness preference Identify the system before assuming an interval Watch for performance changes Keep the hood connected to kitchen records"
+  },
+  {
+    "title": "Air Conditioner Maintenance Checklist: Filters, Coils and the 15-20 Year Question",
+    "description": "A real air-conditioner maintenance checklist: ENERGY STAR filter and coil intervals, condensate-drain care, refrigerant rules and how long a system should last.",
+    "route": "/guides/air-conditioner-maintenance-checklist/",
+    "cluster": "appliances",
+    "keywords": "air conditioner maintenance checklist",
+    "headings": "Air conditioner maintenance checklist: filters, coils and how long the system should actually last The checklist Central air conditioners: a real lifespan range Window and portable units run a shorter, harder-working life Mini-splits and heat pump-based cooling need their own filter check Record performance symptoms without trying to diagnose them Keep service history with the system, not scattered across seasons"
+  },
+  {
     "title": "HVAC Filter Tracker: Real Replacement Intervals by Filter Thickness and MERV",
     "description": "Track HVAC filter size and replacement history with real intervals by thickness and MERV rating, sourced from ENERGY STAR and Carrier.",
     "route": "/guides/hvac-filter-tracker/",
@@ -168,12 +216,140 @@
     "headings": "HVAC filter tracker: the interval depends on thickness and MERV rating, not guesswork Replacement intervals by filter type Check monthly regardless of the target interval Record the exact specification once Record condition, not just date Higher MERV isn't automatically better One HVAC system, multiple filters — track them separately What actually happens when a filter is neglected too long Seasonal use changes the real-world interval more than the calendar does"
   },
   {
+    "title": "Furnace Maintenance Records: The Heat Exchanger Inspection That Actually Matters",
+    "description": "Furnace maintenance records built around the one inspection that matters most: the heat exchanger crack that's a carbon-monoxide risk. Real intervals, real warning signs.",
+    "route": "/guides/furnace-maintenance-records/",
+    "cluster": "appliances",
+    "keywords": "furnace maintenance records",
+    "headings": "Furnace maintenance records: the heat exchanger inspection that actually matters The checklist Signs that mean call a professional now, not at the next scheduled visit Why this is professional-only work, and what the record's real job is Track filters on their own recurring schedule What to record"
+  },
+  {
+    "title": "Heat Pump Maintenance Records: The Defrost Cycle, and No Heat Exchanger to Worry About",
+    "description": "Heat pump maintenance records built around the one thing that's genuinely different about this equipment: the winter defrost cycle, plus filter and service intervals.",
+    "route": "/guides/heat-pump-maintenance-records/",
+    "cluster": "appliances",
+    "keywords": "heat pump maintenance records",
+    "headings": "Heat pump maintenance records: the defrost cycle, and no heat exchanger to worry about The checklist When the defrost cycle is normal, and when it isn't The one thing a heat pump doesn't have that a furnace does Multi-zone and ductless systems need per-unit records What to record"
+  },
+  {
     "title": "Water Heater Maintenance Records: Flush, Anode Rod and T&P Valve Intervals",
     "description": "Water heater maintenance records with real intervals for tank flushing, anode rod inspection, T&P valve testing and expected lifespan, sourced from manufacturers.",
     "route": "/guides/water-heater-maintenance-records/",
     "cluster": "appliances",
     "keywords": "water heater maintenance records",
     "headings": "Water heater maintenance records: the tasks that actually extend its life The checklist What lifespan to plan around Treat these as replace-now signs, not maintenance items Keep installation details even when uncertain Preserve professional service history Gas vs. electric changes what's professional-only, not whether records matter Tankless units follow the checklist differently Water hardness is worth recording alongside the unit itself"
+  },
+  {
+    "title": "Water Softener Maintenance Records: Salt, Brine Tank and Resin Bed Intervals",
+    "description": "Real water-softener maintenance intervals: how often to check salt, clean the brine tank, and when resin actually needs replacing, with sources.",
+    "route": "/guides/water-softener-maintenance-records/",
+    "cluster": "appliances",
+    "keywords": "water softener maintenance tracker",
+    "headings": "Water softener maintenance records: salt, brine tank and resin — three different schedules The checklist Salt bridging is the trap that defeats a \"check the tank\" habit Resin bed vs. system lifespan: two different numbers Signs hard water is getting through Keep water-treatment records separate from health claims What to record"
+  },
+  {
+    "title": "Water Filter Replacement Guide: Real Intervals by Filter Type",
+    "description": "Real replacement intervals for refrigerator, under-sink, whole-home and pitcher water filters — because a household can own four different filters on four different schedules.",
+    "route": "/guides/water-filter-replacement-guide/",
+    "cluster": "appliances",
+    "keywords": "water filter replacement tracker",
+    "headings": "Water filter replacement guide: a household can have four filters on four different schedules The checklist by filter type Why \"the filter\" needs a location, not just a date NSF certification tells you what a filter actually reduces, not when to change it Follow the confirmed interval for the actual product What to record"
+  },
+  {
+    "title": "Air Purifier Maintenance Guide: HEPA and Pre-Filter Replacement Intervals",
+    "description": "Real air-purifier maintenance intervals: HEPA filter replacement, pre-filter cleaning versus replacement, and why washing a HEPA filter usually ruins it.",
+    "route": "/guides/air-purifier-maintenance-guide/",
+    "cluster": "appliances",
+    "keywords": "air purifier maintenance guide",
+    "headings": "Air purifier maintenance guide: HEPA and pre-filter intervals, and why washing a HEPA filter usually ruins it The checklist Name the device by room, not just by model Cleaning vs. replacement is not the same maintenance task Replacement dates matter more than indicator lights Keep health claims out of the maintenance record What to record"
+  },
+  {
+    "title": "Dehumidifier Maintenance Guide: Filter, Coil and the 30-50% Humidity Target",
+    "description": "A real dehumidifier maintenance guide: filter-cleaning interval, why coil frost isn't always a fault, bucket/biofilm care, and the EPA's 30-50% humidity target.",
+    "route": "/guides/dehumidifier-maintenance-guide/",
+    "cluster": "appliances",
+    "keywords": "dehumidifier maintenance guide",
+    "headings": "Dehumidifier maintenance guide: filter, coil, and the humidity number this appliance exists to hit The checklist Frost on the coil isn't automatically a malfunction The bucket is a biofilm risk, not just a container Why 30-50% is the number that matters Drainage setup changes what \"maintenance\" even means Seasonal storage"
+  },
+  {
+    "title": "Humidifier Maintenance Guide: The EPA's Every-Third-Day Cleaning Rule",
+    "description": "A real humidifier maintenance guide built on EPA cleaning guidance: daily tank care, the every-third-day deep clean, and the 50% humidity ceiling.",
+    "route": "/guides/humidifier-maintenance-guide/",
+    "cluster": "appliances",
+    "keywords": "humidifier maintenance guide",
+    "headings": "Humidifier maintenance guide: the EPA's every-third-day rule, and why standing water is the actual risk The checklist Why the interval is measured in days, not weeks Filters, wicks and cartridges run on their own separate schedule The 50% ceiling matters as much as the cleaning schedule Seasonal units need startup and shutdown tasks, not monthly reminders Keep humidity targets separate from medical claims"
+  },
+  {
+    "title": "Ceiling Fan Maintenance Checklist: Wobble Fixes, Lubrication and the 30-Inch Rule",
+    "description": "A real ceiling fan maintenance checklist: why fans wobble, the balancing-kit fix, motor lubrication interval, and the clearance rule most installs get wrong.",
+    "route": "/guides/ceiling-fan-maintenance-checklist/",
+    "cluster": "appliances",
+    "keywords": "ceiling fan maintenance checklist",
+    "headings": "Ceiling fan maintenance checklist: wobble, lubrication and the clearance rule The checklist The correct order for fixing a wobble Electrical work stays with qualified help Group multi-fan homes by room, not model number What to record"
+  },
+  {
+    "title": "Bathroom Exhaust Fan Maintenance Checklist: CFM Sizing and the Attic-Venting Mistake",
+    "description": "A real bathroom exhaust fan checklist: HVI's CFM sizing rule, the 20-minute run time, cleaning interval, and why attic venting is a code violation, not a style choice.",
+    "route": "/guides/bathroom-exhaust-fan-maintenance-checklist/",
+    "cluster": "appliances",
+    "keywords": "bathroom exhaust fan maintenance",
+    "headings": "Bathroom exhaust fan maintenance checklist: CFM sizing and the attic-venting mistake The checklist Why attic venting is a real problem, not a cosmetic one Undersized fans look like a cleaning problem but aren't Clean only what's user-accessible Track by room, not just by model What to record"
+  },
+  {
+    "title": "Garbage Disposal Maintenance Guide: What Never to Grind, and the Reset Button",
+    "description": "A real garbage disposal maintenance guide: what InSinkErator says never to grind, how the reset/overload button works, and a real 8-15 year lifespan range.",
+    "route": "/guides/garbage-disposal-maintenance-guide/",
+    "cluster": "appliances",
+    "keywords": "garbage disposal maintenance guide",
+    "headings": "Garbage disposal maintenance guide: what never to grind, and the reset button The checklist The reset button is the first troubleshooting step, not a repair What a household can safely do, and where that stops A leak might not even be the disposal What lifespan to plan around What to record"
+  },
+  {
+    "title": "Coffee Maker Maintenance Guide: The Descaling Interval Most Owners Skip",
+    "description": "A real coffee maker maintenance guide: Keurig's 3-6 month descaling interval, vinegar versus citric acid, and why hard water changes everything.",
+    "route": "/guides/coffee-maker-maintenance-guide/",
+    "cluster": "appliances",
+    "keywords": "coffee maker maintenance guide",
+    "headings": "Coffee maker maintenance guide: the descaling interval most owners skip entirely The checklist Why skipping this doesn't show up right away Vinegar works but has a real tradeoff Water conditions change the real-world interval more than the machine does Daily cleaning doesn't need a logged record; descaling does What to record"
+  },
+  {
+    "title": "Robot Vacuum Maintenance Guide: Filter, Brush and Battery Intervals",
+    "description": "Real robot vacuum maintenance intervals: filter replacement every 2 months, brush cleaning weekly, and why the battery has its own separate lifespan.",
+    "route": "/guides/robot-vacuum-maintenance-guide/",
+    "cluster": "appliances",
+    "keywords": "robot vacuum maintenance guide",
+    "headings": "Robot vacuum maintenance guide: filter, brushes and the battery that wears out on its own schedule The checklist The battery is a separate clock from everything else Why filters and brushes get confused with each other Sensors cause more stuck-robot problems than motors do What to record"
+  },
+  {
+    "title": "Vacuum Cleaner Maintenance Guide: Filter Intervals and the Belt Most Owners Forget",
+    "description": "A real vacuum cleaner maintenance guide: filter rinse intervals by type, the drive belt owners forget exists, and bagged versus bagless differences.",
+    "route": "/guides/vacuum-cleaner-maintenance-guide/",
+    "cluster": "appliances",
+    "keywords": "vacuum cleaner maintenance guide",
+    "headings": "Vacuum cleaner maintenance guide: filter intervals, and the belt most owners forget exists The checklist Why the belt is the part everyone forgets Bagged vs. bagless changes what \"clean\" means Performance symptoms point to different parts What to record"
+  },
+  {
+    "title": "Household Electronics Inventory: What a Claims Adjuster Actually Asks For",
+    "description": "A real electronics inventory guide built for insurance claims: serial numbers, purchase proof, photo documentation, and what NAIC recommends recording.",
+    "route": "/guides/computer-electronics-inventory/",
+    "cluster": "appliances",
+    "keywords": "household electronics inventory",
+    "headings": "Household electronics inventory: what a claims adjuster actually asks for What to record for each item Why the serial number is the detail that actually matters Documentation speeds up claims, not just proves ownership Keep company-owned and personally owned devices clearly separated Never store passwords or recovery codes in the inventory itself Keep a backup copy somewhere other than the house itself What to record"
+  },
+  {
+    "title": "Wi-Fi Router Records: The 5-Year Security Clock Most Households Never Check",
+    "description": "Real router maintenance guidance: why a router's security support ends years before it stops working, and what to record without storing passwords.",
+    "route": "/guides/wifi-router-maintenance-records/",
+    "cluster": "appliances",
+    "keywords": "home router inventory tracker",
+    "headings": "Wi-Fi router records: the security clock that runs out long before the hardware does The checklist Why \"it still works\" isn't the right test What to record without becoming a password vault Track equipment changes as a real event Keep ISP-owned equipment marked separately"
+  },
+  {
+    "title": "UPS Battery Backup Records: The 3-5 Year Battery Clock Behind the \"Working\" Light",
+    "description": "Real UPS maintenance guidance: the 3-5 year battery replacement window, self-test intervals, temperature effects on battery life, and what to record.",
+    "route": "/guides/ups-battery-backup-records/",
+    "cluster": "appliances",
+    "keywords": "UPS battery replacement tracker",
+    "headings": "UPS battery backup records: the battery clock that runs out behind a light that still says \"OK\" The checklist Why the indicator light is not the whole story Heat is the variable most households never account for Record what it protects, without doing electrical-load math Track battery changes as their own event Include it in outage planning honestly"
   },
   {
     "title": "Smoke Alarm Records: Test Monthly, Replace at 10 Years (USFA Guidance)",

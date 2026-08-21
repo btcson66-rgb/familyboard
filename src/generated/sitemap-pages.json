@@ -410,7 +410,7 @@
   {
     "route": "/guides/freezer-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -434,7 +434,7 @@
   {
     "route": "/guides/dishwasher-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -442,7 +442,7 @@
   {
     "route": "/guides/oven-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -450,7 +450,7 @@
   {
     "route": "/guides/microwave-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -458,7 +458,7 @@
   {
     "route": "/guides/range-hood-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -466,7 +466,7 @@
   {
     "route": "/guides/air-conditioner-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -482,7 +482,7 @@
   {
     "route": "/guides/furnace-maintenance-records/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -490,7 +490,7 @@
   {
     "route": "/guides/heat-pump-maintenance-records/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -506,7 +506,7 @@
   {
     "route": "/guides/water-softener-maintenance-records/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -514,7 +514,7 @@
   {
     "route": "/guides/water-filter-replacement-guide/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -522,7 +522,7 @@
   {
     "route": "/guides/air-purifier-maintenance-guide/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -530,7 +530,7 @@
   {
     "route": "/guides/dehumidifier-maintenance-guide/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -538,7 +538,7 @@
   {
     "route": "/guides/humidifier-maintenance-guide/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -546,7 +546,7 @@
   {
     "route": "/guides/ceiling-fan-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -554,7 +554,7 @@
   {
     "route": "/guides/bathroom-exhaust-fan-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -562,7 +562,7 @@
   {
     "route": "/guides/garbage-disposal-maintenance-guide/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -570,7 +570,7 @@
   {
     "route": "/guides/coffee-maker-maintenance-guide/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -578,7 +578,7 @@
   {
     "route": "/guides/robot-vacuum-maintenance-guide/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -586,7 +586,7 @@
   {
     "route": "/guides/vacuum-cleaner-maintenance-guide/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -594,7 +594,7 @@
   {
     "route": "/guides/computer-electronics-inventory/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -602,7 +602,7 @@
   {
     "route": "/guides/wifi-router-maintenance-records/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -610,7 +610,7 @@
   {
     "route": "/guides/ups-battery-backup-records/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
