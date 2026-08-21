@@ -224,6 +224,102 @@
     "headings": "Appliance lifespan planning: real published ranges, used as planning input, not a countdown Published lifespan ranges by appliance Calculate age accurately first The 15-year efficiency signal for refrigerators specifically Add real household evidence on top of the range Plan the disruption, not just the number A simple decision framework instead of a single cutoff age Why the ranges above differ between sources Maintenance history changes where a unit sits in its own range"
   },
   {
+    "title": "How to Organize Household Documents Without Building a Giant Digital Junk Drawer",
+    "description": "Organize household documents by purpose, asset, property and responsibility so important records stay findable.",
+    "route": "/guides/household-documents-organizer/",
+    "cluster": "records-emergency",
+    "keywords": "how to organize household documents",
+    "headings": "Household documents are easier to manage when the filing system mirrors real decisions Build around household areas of responsibility, not file type Connect documents to the thing they describe, not to a generic bin Understand what the organizer actually stores Keep sensitive originals in appropriate storage Set a review date instead of guessing when to declean Test the system with someone who didn't build it"
+  },
+  {
+    "title": "Digital Home Binder: A Practical Structure for Home Records, Maintenance and Emergency Information",
+    "description": "Build a digital home binder that combines a household index, asset records, maintenance history, contacts and emergency information.",
+    "route": "/guides/digital-home-binder/",
+    "cluster": "records-emergency",
+    "keywords": "digital home binder",
+    "headings": "A digital home binder should help operate the home, not merely store files The ten sections that make a binder complete Put quick-reference information before archives Use links between sections instead of duplicating data Decide what belongs in the binder versus a secure vault Keep paper where paper still helps Build it incrementally, not all at once"
+  },
+  {
+    "title": "Important Household Documents: What Deserves a Reliable Place to Live",
+    "description": "Identify household documents that are worth organizing, from property and insurance records to warranties, service history and emergency references.",
+    "route": "/guides/important-household-documents/",
+    "cluster": "records-emergency",
+    "keywords": "important household documents",
+    "headings": "The important document list depends on what your household owns and manages Property and housing Household purchases: warranties, receipts, manuals Services and recurring obligations Vehicles and pets Emergency and continuity information Sensitive identity records need extra care, not extra convenience Build the list around your household, not a generic checklist Revisit the list once a year, or after a major change"
+  },
+  {
+    "title": "How Long Should You Keep Household Records? Use the Reason for the Record, Not One Magic Number",
+    "description": "Decide how long to keep household records by warranty, legal, tax, insurance, property and practical needs rather than applying one universal retention period.",
+    "route": "/guides/how-long-to-keep-household-records/",
+    "cluster": "records-emergency",
+    "keywords": "how long to keep household records",
+    "headings": "The retention period depends on what the record proves — here are the actual numbers Retention periods by document type Why property records outlast the purchase itself Tax records: the three-year default, and when it's longer Warranties and receipts follow the product, not the calendar Separate \"must keep\" from \"useful to keep\" Review rather than auto-delete"
+  },
+  {
+    "title": "How to Organize Appliance Manuals So You Can Find the Right One During a Problem",
+    "description": "Organize appliance manuals by the actual asset and model, using official digital manuals where possible and preserving only the versions you need.",
+    "route": "/guides/organize-appliance-manuals/",
+    "cluster": "records-emergency",
+    "keywords": "organize appliance manuals",
+    "headings": "Appliance manuals make more sense linked to the appliance than filed as a separate collection Model numbers are not interchangeable — get the exact one Save the operating and maintenance sections, skip the rest Link maintenance tasks back to their source Archive manuals with retired assets instead of deleting them The manuals worth prioritizing first Check recall status while you have the model number in hand Manuals for built-in and installed appliances need an installer reference too"
+  },
+  {
+    "title": "How to Organize Household Insurance Documents Without Exposing Sensitive Details",
+    "description": "Create a household insurance index with policy type, provider, renewal date and secure document references while keeping sensitive information protected.",
+    "route": "/guides/organize-insurance-documents/",
+    "cluster": "records-emergency",
+    "keywords": "organize insurance documents",
+    "headings": "Insurance documents need both findability and restraint Build the insurance index around what a renewal decision needs Separate the shared summary from the protected original Use the home inventory as the other half of the insurance record Use renewal dates as review checkpoints, not just reminders The organizer should never interpret coverage What a claims adjuster actually asks for first Bundled and multi-policy households need one index, not several"
+  },
+  {
+    "title": "How to Organize Utility Account Information for a Household Handoff",
+    "description": "Keep utility providers, service contacts, account ownership, billing dates and non-sensitive management notes in one household index.",
+    "route": "/guides/organize-utility-account-information/",
+    "cluster": "records-emergency",
+    "keywords": "organize utility account information",
+    "headings": "Utility information becomes surprisingly important when the usual account holder is unavailable Record the service, not the credential Separate the outage line from the billing line Build a moving checklist from the same records Keep account numbers out of shared views Why this list matters most during a handoff A vacant or lightly used home needs its own utility notes Review the utility list annually, the same way you'd review insurance"
+  },
+  {
+    "title": "How to Organize Vehicle Documents, Maintenance and Renewals at Home",
+    "description": "Keep household vehicle registration references, insurance, maintenance history, warranty and renewal reminders organized without storing unnecessary sensitive data.",
+    "route": "/guides/organize-vehicle-documents-at-home/",
+    "cluster": "records-emergency",
+    "keywords": "organize vehicle documents",
+    "headings": "Vehicles carry more recurring paperwork than most household appliances Title proves ownership; registration proves road legality — keep both, understand the difference Registration renews on its own clock — often every single year Track maintenance by mileage, not just date Keep renewal-due dates on the shared dashboard, keep the numbers private Build in the handoff for shared vehicles What a vehicle sale actually requires, and why the record helps Multiple vehicles need distinct records, not one shared note"
+  },
+  {
+    "title": "How to Organize Pet Records for Everyday Care, Sitters and Emergencies",
+    "description": "Keep pet identification, care contacts, routine records, sitter instructions and document references organized for household handoffs.",
+    "route": "/guides/organize-pet-records/",
+    "cluster": "records-emergency",
+    "keywords": "organize pet records",
+    "headings": "Pet records become most valuable the moment someone else has to take over care Build a profile around identification and vaccination status, not just a name Separate the daily routine from medical instructions Build a sitter-ready export that leaves out unrelated household data Review before every trip, not just once at setup One record can serve several roles"
+  },
+  {
+    "title": "How to Organize School Records at Home Without Mixing Them into General Household Clutter",
+    "description": "Create a household index for school contacts, schedules, permissions and document references while keeping sensitive student records protected.",
+    "route": "/guides/organize-school-records-at-home/",
+    "cluster": "records-emergency",
+    "keywords": "organize school records at home",
+    "headings": "School information changes every year, so the household needs a current index, not a permanent archive What FERPA actually covers, and why it matters for home organization Store current contacts and key dates, not a running archive Keep the sensitive record categories separate from the shared index Do the reset at the end of every school year Build handoff notes for anyone who isn't the usual parent at pickup Households with children at multiple schools need separate entries, not one merged note Recurring annual forms deserve a reminder, not just a folder"
+  },
+  {
+    "title": "Emergency Information Sheet: What Belongs on One Household Page",
+    "description": "Create a one-page household emergency information sheet with contacts, address, important household notes and clear references to secure documents.",
+    "route": "/guides/emergency-information-sheet/",
+    "cluster": "records-emergency",
+    "keywords": "emergency information sheet",
+    "headings": "One page forces the household to decide what is truly important What a real emergency information card contains — a published model Include basic identity and location on the household version Add the operational contacts that matter in the first five minutes Reference sensitive documents instead of exposing them Build two versions on purpose: shared and private Review it like you'd review a smoke alarm — on a schedule, not by memory"
+  },
+  {
+    "title": "Home Evacuation Information: Organize People, Pets, Contacts and Go-Bag Records",
+    "description": "Organize household evacuation information around local official guidance, family roles, pet needs, contacts and essential records.",
+    "route": "/guides/home-evacuation-information/",
+    "cluster": "records-emergency",
+    "keywords": "home evacuation information checklist",
+    "headings": "Evacuation logistics are a household record; evacuation routes are a local authority's call What official go-bag guidance actually specifies Record household logistics before the moment you need them Keep the essential-document list ready, not scattered Keep essential references portable and offline-accessible Keep evacuation records private, not published Review after every household change, not on a fixed calendar"
+  },
+  {
     "title": "Free Home Maintenance Schedule Generator | Build a Custom Household Plan",
     "description": "Create a starter home maintenance schedule based on your home type, systems and seasons, then edit it to match actual manuals and local conditions.",
     "route": "/tools/home-maintenance-schedule-generator/",

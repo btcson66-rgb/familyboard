@@ -842,7 +842,7 @@
   {
     "route": "/guides/household-documents-organizer/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -850,7 +850,7 @@
   {
     "route": "/guides/digital-home-binder/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -858,7 +858,7 @@
   {
     "route": "/guides/important-household-documents/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -866,7 +866,7 @@
   {
     "route": "/guides/how-long-to-keep-household-records/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -874,7 +874,7 @@
   {
     "route": "/guides/organize-appliance-manuals/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -882,7 +882,7 @@
   {
     "route": "/guides/organize-insurance-documents/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -890,7 +890,7 @@
   {
     "route": "/guides/organize-utility-account-information/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -898,7 +898,7 @@
   {
     "route": "/guides/organize-vehicle-documents-at-home/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -906,7 +906,7 @@
   {
     "route": "/guides/organize-pet-records/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -914,7 +914,7 @@
   {
     "route": "/guides/organize-school-records-at-home/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -938,7 +938,7 @@
   {
     "route": "/guides/emergency-information-sheet/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -946,7 +946,7 @@
   {
     "route": "/guides/home-evacuation-information/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""

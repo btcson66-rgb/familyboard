@@ -1,10 +1,10 @@
 # Content quality report
 
-Generated: 2026-08-21T03:02:03.621Z
+Generated: 2026-08-21T05:03:31.521Z
 
 ## Summary
 
-- Indexable pages: 92
+- Indexable pages: 104
 - Generated HTML routes: 223
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
@@ -21,6 +21,7 @@ Generated: 2026-08-21T03:02:03.621Z
 - product: 16
 - inventory-warranty: 3
 - appliances: 8
+- records-emergency: 12
 - maintenance: 3
 - tools: 26
 
