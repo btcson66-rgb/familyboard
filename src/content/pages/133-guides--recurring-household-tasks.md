@@ -6,14 +6,17 @@ primaryIntent: "create a list of recurring home tasks"
 primaryKeyword: "recurring household tasks"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add recurring tasks only when the reminder solves a coordination or memory problem. If everyone already remembers it, the app does not need to supervise it."
 related:
   - "/tools/recurring-chore-planner/"
   - "/guides/family-chore-system/"
   - "/guides/household-weekly-reset/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # Repetition is a good reason to build a system—but not every repeated action needs a notification
@@ -35,5 +38,3 @@ Maintenance, renewals, registrations, planned service and emergency-plan reviews
 ## Use the right trigger
 
 Some tasks should recur after completion rather than on a fixed calendar date. Others depend on season, mileage, usage or an external renewal date.
-
-**Contextual CTA:** Add recurring tasks only when the reminder solves a coordination or memory problem. If everyone already remembers it, the app does not need to supervise it.

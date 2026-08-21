@@ -6,14 +6,17 @@ primaryIntent: "catalog household electronics"
 primaryKeyword: "electronics inventory template"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Start with portable devices because they are easiest to lose, lend, repair or move between family members."
 related:
   - "/guides/computer-electronics-inventory/"
   - "/guides/serial-number-tracker/"
   - "/guides/purchase-receipt-organizer/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Electronics move between people, rooms and uses more often than most home assets
@@ -35,5 +38,3 @@ A screen replacement, battery service or warranty claim can influence later repl
 ## Archive retired devices
 
 If a device is sold, donated or recycled, archive the record and note the disposition. This avoids confusing old serial numbers with equipment still in the home.
-
-**Contextual CTA:** Start with portable devices because they are easiest to lose, lend, repair or move between family members.

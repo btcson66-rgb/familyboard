@@ -6,14 +6,17 @@ primaryIntent: "keep a concise list of household contacts"
 primaryKeyword: "home contact list"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Build a 15-contact household list that another trusted person can understand without your phone's address book."
 related:
   - "/guides/home-service-provider-list/"
   - "/guides/family-emergency-contacts/"
   - "/templates/printable-household-contacts/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # A home contact list is useful when it is curated rather than complete
@@ -35,5 +38,3 @@ Remove or archive service contacts that no longer work with the household.
 ## Print a limited version if useful
 
 A paper list may contain fewer details than the private app. Use role-based export rather than printing the whole database.
-
-**Contextual CTA:** Build a 15-contact household list that another trusted person can understand without your phone's address book.

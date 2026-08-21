@@ -6,14 +6,17 @@ primaryIntent: "maintain dishwasher and track service"
 primaryKeyword: "dishwasher maintenance checklist"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the dishwasher's model, manual link and last known service event. Those three pieces make future troubleshooting much easier."
 related:
   - "/guides/water-leak-response-home-records/"
   - "/guides/appliance-inventory/"
   - "/tools/warranty-expiration-calculator/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Dishwasher maintenance is mostly about knowing what the model expects
@@ -35,5 +38,3 @@ Dishwasher problems can involve the appliance or its installation. Record what a
 ## Review the warranty before paying for service
 
 The warranty tracker can surface the timeline, but the household should confirm the actual terms before assuming coverage.
-
-**Contextual CTA:** Add the dishwasher's model, manual link and last known service event. Those three pieces make future troubleshooting much easier.

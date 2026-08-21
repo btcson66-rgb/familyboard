@@ -6,14 +6,17 @@ primaryIntent: "keep household utility information easy to hand off"
 primaryKeyword: "organize utility account information"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Build the utility index before travel or moving so another trusted household member can identify every active service without searching old bills."
 related:
   - "/guides/household-account-list/"
   - "/guides/household-handoff/"
   - "/guides/power-outage-home-preparedness/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Utility information becomes surprisingly important when the usual account holder is unavailable
@@ -35,5 +38,3 @@ Utility records can include start/stop notes and the date service was opened. Du
 ## Keep account numbers private
 
 If you store account identifiers, do not display them on a family wall screen or send them through analytics.
-
-**Contextual CTA:** Build the utility index before travel or moving so another trusted household member can identify every active service without searching old bills.

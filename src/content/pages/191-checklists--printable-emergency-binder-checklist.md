@@ -7,13 +7,16 @@ primaryKeyword: "printable emergency binder checklist"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the generator to build the actual binder after this checklist identifies the sections your household needs."
 related:
   - "/guides/emergency-binder/"
   - "/tools/emergency-binder-generator/"
   - "/templates/printable-emergency-contacts/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Printable Emergency Binder Checklist
@@ -35,5 +38,3 @@ contentVersion: 1
 - [ ] Remove passwords and access codes from casual copies.
 - [ ] Decide which pages can be visible and which remain private.
 - [ ] Protect identity, financial and medical information appropriately.
-
-**CTA:** Use the generator to build the actual binder after this checklist identifies the sections your household needs.

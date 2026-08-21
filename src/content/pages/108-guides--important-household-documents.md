@@ -6,14 +6,17 @@ primaryIntent: "identify which household documents deserve organized storage"
 primaryKeyword: "important household documents"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "List the ten documents you would be most frustrated to reconstruct. Those should become the first entries in the household document index."
 related:
   - "/guides/household-documents-organizer/"
   - "/guides/home-purchase-records/"
   - "/guides/organize-insurance-documents/"
   - "/guides/emergency-information-sheet/"
+faq: []
 contentVersion: 1
 ---
 # The important document list depends on what your household owns and manages
@@ -39,5 +42,3 @@ Emergency contacts, pet/caregiver instructions and other continuity information 
 ## Sensitive identity records need extra care
 
 Do not treat identity documents, financial account secrets or medical records like ordinary household notes. Use appropriate security and storage systems.
-
-**Contextual CTA:** List the ten documents you would be most frustrated to reconstruct. Those should become the first entries in the household document index.

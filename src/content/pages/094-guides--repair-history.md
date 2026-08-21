@@ -6,14 +6,17 @@ primaryIntent: "track repeated repairs for an asset"
 primaryKeyword: "repair history tracker"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the last repair to the exact asset and include both the original symptom and final outcome."
 related:
   - "/guides/home-repair-history/"
   - "/templates/printable-repair-log/"
   - "/guides/appliance-replacement-planning/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Repair history turns a series of isolated failures into a story
@@ -35,5 +38,3 @@ Repeated repairs can influence replacement planning, but age, performance, avail
 ## Link service providers
 
 A provider who has already worked on the asset may be the best first call for a recurrence.
-
-**Contextual CTA:** Add the last repair to the exact asset and include both the original symptom and final outcome.

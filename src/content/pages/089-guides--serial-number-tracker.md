@@ -6,14 +6,17 @@ primaryIntent: "store serial numbers for household equipment"
 primaryKeyword: "serial number tracker"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "When adding a new major purchase, capture the serial once—before installation makes the label difficult to reach."
 related:
   - "/guides/appliance-inventory/"
   - "/guides/electronics-inventory/"
   - "/tools/room-inventory-generator/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # A serial number without context is just a string of characters
@@ -35,5 +38,3 @@ Serial labels often mix zero/O or one/I. When accuracy matters, keep the label p
 ## Treat serials as private household information
 
 Do not expose them in public pages, shared display mode or analytics.
-
-**Contextual CTA:** When adding a new major purchase, capture the serial once—before installation makes the label difficult to reach.

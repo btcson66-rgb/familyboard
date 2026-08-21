@@ -6,14 +6,17 @@ primaryIntent: "create records for higher-value household possessions"
 primaryKeyword: "valuable item inventory"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Record verifiable facts first. If insurance or estate planning requires valuation, use the appropriate professional process outside the app."
 related:
   - "/guides/home-inventory-for-insurance/"
   - "/guides/photo-home-inventory/"
   - "/guides/purchase-receipt-organizer/"
   - "/guides/digital-home-inventory-backup/"
+faq: []
 contentVersion: 1
 ---
 # A valuable-item inventory is about evidence and identification, not self-appraisal
@@ -35,5 +38,3 @@ Detailed lists of valuables can create security risk. Use device security, encry
 ## Review after major changes
 
 Update when an item is sold, gifted, inherited, professionally appraised or moved to another location.
-
-**Contextual CTA:** Record verifiable facts first. If insurance or estate planning requires valuation, use the appropriate professional process outside the app.

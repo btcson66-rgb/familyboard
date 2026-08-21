@@ -6,14 +6,17 @@ primaryIntent: "maintain vacuum filters, bags and brushes"
 primaryKeyword: "vacuum cleaner maintenance guide"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the asset page as the vacuum's memory: model, filters, last deep maintenance and any repair history."
 related:
   - "/guides/robot-vacuum-maintenance-guide/"
   - "/guides/household-supplies-inventory/"
   - "/features/maintenance-tracker/"
   - "/guides/appliance-inventory/"
+faq: []
 contentVersion: 1
 ---
 # Vacuum maintenance is mostly about remembering what the machine uses
@@ -31,5 +34,3 @@ Filter replacement, deep brush cleaning, battery replacement or repair may be wo
 ## Note performance changes
 
 Reduced suction, overheating, unusual noise or repeated blockages can be documented and escalated according to the manual or service guidance.
-
-**Contextual CTA:** Use the asset page as the vacuum's memory: model, filters, last deep maintenance and any repair history.

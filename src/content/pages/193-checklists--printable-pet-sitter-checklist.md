@@ -7,13 +7,16 @@ primaryKeyword: "printable pet sitter checklist"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Review the sheet immediately before travel; do not assume last year's pet routine is still current."
 related:
   - "/tools/pet-sitter-instruction-generator/"
   - "/guides/pet-sitter-information/"
   - "/guides/organize-pet-records/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Printable Pet Sitter Checklist
@@ -42,5 +45,3 @@ Emergency clinic: ____________________
 
 ### Medication/treatment
 Only copy current veterinarian/owner instructions here. Do not generate new medical directions.
-
-**CTA:** Review the sheet immediately before travel; do not assume last year's pet routine is still current.

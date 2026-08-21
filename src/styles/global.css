@@ -501,6 +501,26 @@ textarea {
   background: #fff5df;
   color: #5f4820;
 }
+.next-step {
+  margin: 2rem 0;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid color-mix(in srgb, var(--leaf) 32%, var(--line));
+  border-left: 6px solid var(--leaf);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: #eef7f1;
+}
+.next-step h2 {
+  margin: 0 0 0.4rem;
+  color: var(--leaf-dark);
+  font-size: 1.15rem;
+}
+.next-step p {
+  margin: 0;
+}
+.redirect-stub {
+  grid-column: 1 / -1;
+  max-width: 760px;
+}
 .affiliate-label {
   color: var(--muted);
   font-size: 0.76rem;

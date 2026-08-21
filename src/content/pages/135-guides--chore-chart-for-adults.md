@@ -6,14 +6,17 @@ primaryIntent: "divide chores between adult housemates or partners"
 primaryKeyword: "chore chart for adults"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the printable adult chore chart as a conversation tool, then put only the recurring agreed responsibilities into the app."
 related:
   - "/templates/printable-chore-chart/"
   - "/guides/divide-household-responsibilities/"
   - "/guides/household-admin-day/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # Adult chore charts work best when they look like shared operations, not classroom behavior charts
@@ -35,5 +38,3 @@ Some tasks are efficient to keep with one owner because they require context. Ot
 ## Review the system when life changes
 
 Work schedules, health, caregiving and travel can change capacity. A chore chart should be editable without framing the change as failure.
-
-**Contextual CTA:** Use the printable adult chore chart as a conversation tool, then put only the recurring agreed responsibilities into the app.

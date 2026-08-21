@@ -6,14 +6,17 @@ primaryIntent: "understand software for running household operations"
 primaryKeyword: "household operations system"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the Household Management Checklist to identify which recurring responsibilities currently have no reliable place to live."
 related:
   - "/features/"
   - "/guides/household-management-checklist/"
   - "/features/household-handoff/"
   - "/features/home-dashboard/"
+faq: []
 contentVersion: 1
 ---
 # Household operations are the repeatable systems behind everyday home life
@@ -40,5 +43,3 @@ A planner is centered on schedules. An operations system is centered on continui
 ## Keep the system lightweight enough to survive
 
 If every light bulb change requires a six-field form, the system will fail. The best household database records only information with future value.
-
-**Contextual CTA:** Use the Household Management Checklist to identify which recurring responsibilities currently have no reliable place to live.

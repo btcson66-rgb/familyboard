@@ -6,14 +6,17 @@ primaryIntent: "learn how to start maintaining a first home"
 primaryKeyword: "first time homeowner maintenance guide"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the Move-In Maintenance Checklist and Home Inventory Checklist together to create the first version of your home's operating record."
 related:
   - "/guides/move-in-maintenance-checklist/"
   - "/guides/home-inventory-checklist/"
   - "/guides/home-service-provider-list/"
   - "/tools/home-maintenance-schedule-generator/"
+faq: []
 contentVersion: 1
 ---
 # Your first home does not arrive with an operating manual
@@ -39,5 +42,3 @@ Keep names and numbers for relevant utilities, building management if applicable
 ## Keep documents connected to the house
 
 Instead of storing purchase records and service invoices in random folders, build a simple index from the beginning.
-
-**Contextual CTA:** Use the Move-In Maintenance Checklist and Home Inventory Checklist together to create the first version of your home's operating record.

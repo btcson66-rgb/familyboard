@@ -1,39 +1,30 @@
 import fs from "node:fs";
 import path from "node:path";
+import {
+  authoringField,
+  bodyFromMasterBlock,
+  nextStepField,
+  parseFaq,
+  renderGeneratedMarkdown,
+} from "./lib/content-import.mjs";
+import { countBodyWords } from "./lib/word-count.mjs";
 
 const source = path.resolve(process.argv[2] || "docs/launch-content-master.md");
 const outputDir = path.resolve("src/content/pages");
 const searchOutput = path.resolve("src/generated/search-index.json");
+const sitemapOutput = path.resolve("src/generated/sitemap-pages.json");
 const launchDate = "2026-08-19";
+const minimumCorePages = 200;
+// Navigational entry points. These are how crawlers reach everything else, so they
+// stay indexable regardless of body length; a short hub is not the thin-content
+// problem the depth hold exists to solve. They still owe real depth — see
+// docs/CONTENT_DEPTH_STANDARD.md — but they must never be dropped from the index.
+const structuralRoutes = new Set(["/", "/features/"]);
 
 if (!fs.existsSync(source))
   throw new Error(`Master brief not found: ${source}`);
 const raw = fs.readFileSync(source, "utf8").replace(/\r\n/g, "\n");
 const lines = raw.split("\n");
-
-function yaml(value) {
-  return JSON.stringify(String(value).replace(/`/g, ""));
-}
-
-function field(block, label) {
-  const match = block.match(
-    new RegExp(
-      `\\*\\*${label}:\\*\\*\\s*(?:\\\`([^\\\`]*)\\\`|([^\\n]+))`,
-      "i",
-    ),
-  );
-  return (match?.[1] || match?.[2] || "").trim();
-}
-
-function bodyFrom(block) {
-  const offset = block.search(/^# /m);
-  if (offset < 0) return "";
-  return block
-    .slice(offset)
-    .split(/\n---\n\s*(?=# (?:CLUSTER|PART))/)[0]
-    .replace(/\n---\s*$/s, "")
-    .trim();
-}
 
 function clusterFor(number) {
   if (number <= 20) return "product";
@@ -84,11 +75,12 @@ const records = headingIndexes.map((start, index) => {
   const number = Number(match[1]);
   const name = match[2].trim();
   const block = lines.slice(start + 1, end < 0 ? lines.length : end).join("\n");
-  const route = normalizeRoute(field(block, "Slug"));
-  const title = field(block, "Title tag") || name;
-  const description = field(block, "Meta description");
-  const primaryIntent = field(block, "Primary intent");
-  const primaryKeyword = field(block, "Primary keyword concept");
+  const route = normalizeRoute(authoringField(block, "Slug"));
+  const title = authoringField(block, "Title tag") || name;
+  const description = authoringField(block, "Meta description");
+  const primaryIntent = authoringField(block, "Primary intent");
+  const primaryKeyword = authoringField(block, "Primary keyword concept");
+  const redirectValue = authoringField(block, "Redirects to");
   const relatedRaw =
     block.match(/\*\*Suggested internal links:\*\*\s*([^\n]+)/i)?.[1] || "";
   const related = [...relatedRaw.matchAll(/`(\/[^`]+)`/g)].map((m) =>
@@ -111,8 +103,12 @@ const records = headingIndexes.map((start, index) => {
           ? "printable"
           : "content",
     indexable: true,
+    depthVerified: authoringField(block, "Depth").toLowerCase() === "verified",
+    redirectTo: redirectValue ? normalizeRoute(redirectValue) : "",
+    nextStep: nextStepField(block).replaceAll("`", ""),
+    faq: parseFaq(block),
     related,
-    body: bodyFrom(block),
+    body: bodyFromMasterBlock(block),
   };
 });
 
@@ -131,12 +127,13 @@ const supportRecords = supportIndexes
     const heading = supportLines[start];
     const name = heading.replace(/^## Supporting Page [A-Z]+ — /, "").trim();
     const block = supportLines.slice(start + 1, end).join("\n");
-    const route = normalizeRoute(field(block, "Slug"));
-    const title = field(block, "Title tag") || name;
+    const route = normalizeRoute(authoringField(block, "Slug"));
+    const title = authoringField(block, "Title tag") || name;
     const description =
-      field(block, "Meta description") ||
+      authoringField(block, "Meta description") ||
       `${name} for the free, local-first FamilyBoard household organizer.`;
-    const indexable = !/No/i.test(field(block, "Indexable"));
+    const indexable = !/No/i.test(authoringField(block, "Indexable"));
+    const redirectValue = authoringField(block, "Redirects to");
     return {
       id: `support-${idFor(route)}`,
       title,
@@ -147,8 +144,12 @@ const supportRecords = supportIndexes
       cluster: "support",
       pageType: "support",
       indexable,
+      depthVerified: false,
+      redirectTo: redirectValue ? normalizeRoute(redirectValue) : "",
+      nextStep: nextStepField(block).replaceAll("`", ""),
+      faq: parseFaq(block),
       related: [],
-      body: bodyFrom(block),
+      body: bodyFromMasterBlock(block),
     };
   })
   .filter((record) => record.route !== "/app/");
@@ -206,7 +207,7 @@ const extraRecords = [
     pageType: "support",
     indexable: true,
     related: ["/privacy/", "/disclaimer/"],
-    body: `# Terms of Use\n\nFamilyBoard is a free informational website and local-first household organizer. You remain responsible for reviewing records, backups, reminders and generated checklists before relying on them.\n\n## Local data\n\nThe v1 app stores household records in your browser. You are responsible for maintaining current exports and protecting access to your device. Clearing browser storage may remove local records.\n\n## Acceptable use\n\nDo not use the site to harm others, interfere with service, probe systems without authorization or present FamilyBoard outputs as professional certification.\n\n## Availability\n\nThe service may change as defects are fixed and the product develops. Roadmap items are plans, not promises of delivery dates.`,
+    body: `# Terms of Use\n\nFamilyBoard is a free informational website and a local-first household organizer. Using the site means accepting the terms below. They are written plainly because a term nobody reads protects nobody.\n\n## What FamilyBoard provides, and what it does not\n\nFamilyBoard provides guides, calculators, generators, printable sheets and a browser-based app for keeping household records. It does not provide professional inspection, legal, medical, tax, insurance or trade services, and its output is not a certification, an inspection report or a compliance document. See the [disclaimer](/disclaimer/) for the limits of the information itself.\n\n## No account, and no service holding your data\n\nThere is no registration, no login and no server storing household records. Everything you enter into the app is written to your own browser's storage on your own device. Because there is no account, there is also nothing for FamilyBoard to suspend, recover or restore on your behalf.\n\n## Your data is your responsibility\n\nYou are responsible for keeping current exports and for protecting access to your device. Clearing site data, browser privacy modes, storage-eviction by the browser, device loss or device failure can each remove local records permanently. A browser profile is not an archival backup. The app can export plain JSON and password-encrypted JSON; keeping at least one durable copy elsewhere is your responsibility, not ours.\n\nIf you set a backup password and lose it, the encrypted file cannot be recovered. The encryption is performed in your browser and no key is escrowed anywhere.\n\n## Acceptable use\n\nDo not use the site to harm others, to interfere with its operation, to probe or attack systems without authorisation, to scrape it at a rate that degrades service for others, or to present FamilyBoard output as professional certification. Do not upload or transmit content you have no right to use.\n\n## Content, and what you may do with it\n\nThe written guides, page designs, code and branding are FamilyBoard's. You may print, save and use the generated checklists, schedules and printable sheets freely for your own household or workplace, including printing copies for family members, sitters or caregivers. Republishing the site's written guides wholesale as your own content is not permitted.\n\nAnything you type into a tool is yours; it never reaches us, so we claim no rights over it.\n\n## Third-party links and recommendations\n\nSome pages link to manufacturers, standards bodies, government agencies and retailers, and some links may be affiliate links, always labelled as such. FamilyBoard does not control those sites and is not responsible for their content, availability, terms or prices. See the [affiliate disclosure](/affiliate-disclosure/).\n\n## Availability and changes\n\nThe site is provided as-is and as-available, without warranty of any kind, and may change, break or be interrupted while defects are fixed and the product develops. Roadmap items are plans, not commitments to a delivery date. To the fullest extent permitted by applicable law, FamilyBoard is not liable for indirect or consequential loss, or for loss of data resulting from browser storage being cleared, evicted or lost.\n\nNothing here limits any right you have under consumer-protection law that cannot be limited by agreement.\n\n## Updates to these terms\n\nMaterial changes are recorded in the [changelog](/changelog/). Continuing to use the site after a change means accepting the updated terms. Questions go to the [contact page](/contact/).`,
   },
   {
     id: "support-disclaimer",
@@ -338,6 +339,10 @@ FamilyBoard does not promise a fixed response time. Confirm urgent household, sa
 };
 
 for (const record of all) {
+  record.faq ||= [];
+  record.nextStep ||= "";
+  record.redirectTo ||= "";
+  record.depthVerified ||= false;
   const override = publicOverrides[record.route];
   if (override) Object.assign(record, override);
   record.related = record.related.map((route) =>
@@ -365,43 +370,86 @@ for (const record of all) {
       "## No cloud sync today\n\nFamilyBoard does not currently send household records to a sync service. Any future change to that boundary would require a policy and security review before release.",
     );
   record.body = normalizeHeadingOrder(record.body);
+  record.wordCount = countBodyWords(record.body);
+  // A content page earns the index by clearing the word floor AND carrying the
+  // editorial sign-off. depthVerified is an extra requirement, not a bypass —
+  // otherwise the marker alone could ship a 200-word page.
+  record.heldUnderDepth =
+    record.pageType === "content" &&
+    !structuralRoutes.has(record.route) &&
+    !record.redirectTo &&
+    (record.wordCount < 500 || !record.depthVerified);
+  if (record.redirectTo) record.indexable = false;
+  else if (record.pageType === "content")
+    record.indexable = !record.heldUnderDepth;
 }
-if (records.length !== 200)
-  throw new Error(`Expected 200 launch pages, found ${records.length}`);
+if (records.length < minimumCorePages)
+  throw new Error(
+    `Expected at least ${minimumCorePages} launch pages, found ${records.length}`,
+  );
 if (new Set(all.map((record) => record.route)).size !== all.length)
   throw new Error("Duplicate routes found in imported content");
+const routeSet = new Set(all.map((record) => record.route));
+for (const record of all.filter((item) => item.redirectTo)) {
+  if (record.redirectTo === record.route)
+    throw new Error(`Redirect cannot target itself: ${record.route}`);
+  if (!routeSet.has(record.redirectTo))
+    throw new Error(
+      `Redirect target does not match an imported route: ${record.route} -> ${record.redirectTo}`,
+    );
+}
 
 fs.rmSync(outputDir, { recursive: true, force: true });
 fs.mkdirSync(outputDir, { recursive: true });
 fs.mkdirSync(path.dirname(searchOutput), { recursive: true });
 
 for (const record of all) {
-  if (!record.body) throw new Error(`No visible body for ${record.route}`);
-  const frontmatter = [
-    "---",
-    `title: ${yaml(record.title)}`,
-    `description: ${yaml(record.description)}`,
-    `route: ${yaml(record.route)}`,
-    `primaryIntent: ${yaml(record.primaryIntent)}`,
-    `primaryKeyword: ${yaml(record.primaryKeyword)}`,
-    `cluster: ${yaml(record.cluster)}`,
-    `pageType: ${yaml(record.pageType)}`,
-    `indexable: ${record.indexable}`,
-    `publishedAt: ${yaml(launchDate)}`,
-    `lastReviewedAt: ${yaml(launchDate)}`,
-    "related:",
-    ...(record.related.length
-      ? record.related.map((item) => `  - ${yaml(item)}`)
-      : ["  []"]),
-    "contentVersion: 1",
-    "---",
-    "",
-  ].join("\n");
+  if (!record.body && !record.redirectTo)
+    throw new Error(`No visible body for ${record.route}`);
   fs.writeFileSync(
     path.join(outputDir, `${record.id}.md`),
-    `${frontmatter}${record.body.trim()}\n`,
+    renderGeneratedMarkdown(record, launchDate),
   );
 }
+
+const frontmatterValue = (markdown, key) =>
+  (markdown.match(new RegExp(`^${key}:\\s*(.+)$`, "m"))?.[1] || "")
+    .trim()
+    .replace(/^"|"$/g, "")
+    .replaceAll('\\"', '"');
+const zhTwDir = path.resolve("src/content/pages-zh-tw");
+const zhTwPages = fs.existsSync(zhTwDir)
+  ? fs
+      .readdirSync(zhTwDir)
+      .filter((file) => file.endsWith(".md"))
+      .map((file) => {
+        const markdown = fs.readFileSync(path.join(zhTwDir, file), "utf8");
+        return {
+          route: normalizeRoute(frontmatterValue(markdown, "route")),
+          alternateRoute: normalizeRoute(
+            frontmatterValue(markdown, "alternateRoute"),
+          ),
+          indexable: frontmatterValue(markdown, "indexable") !== "false",
+          lastReviewedAt: frontmatterValue(markdown, "lastReviewedAt"),
+          locale: "zh-TW",
+        };
+      })
+  : [];
+const zhTwByEnglishRoute = new Map(
+  zhTwPages.map((page) => [page.alternateRoute, page.route]),
+);
+const sitemapPages = [
+  ...all.map((record) => ({
+    route: record.route,
+    alternateRoute: zhTwByEnglishRoute.get(record.route) || "",
+    indexable: record.indexable,
+    lastReviewedAt: launchDate,
+    locale: "en",
+    redirectTo: record.redirectTo,
+  })),
+  ...zhTwPages,
+];
+fs.writeFileSync(sitemapOutput, `${JSON.stringify(sitemapPages, null, 2)}\n`);
 
 const search = all
   .filter((record) => record.indexable)
@@ -417,5 +465,5 @@ const search = all
   }));
 fs.writeFileSync(searchOutput, `${JSON.stringify(search, null, 2)}\n`);
 console.log(
-  `Imported ${records.length} core pages + ${supportRecords.length + extraRecords.length} support pages.`,
+  `Import: ${all.length} pages, ${all.filter((record) => record.pageType === "content" && record.indexable).length} indexable content pages, ${all.filter((record) => record.heldUnderDepth).length} held back as under-depth.`,
 );

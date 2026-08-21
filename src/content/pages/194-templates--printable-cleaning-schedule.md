@@ -7,13 +7,16 @@ primaryKeyword: "printable cleaning schedule"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the generator if you want suggestions by room and household type."
 related:
   - "/tools/cleaning-schedule-generator/"
   - "/guides/cleaning-schedule/"
   - "/guides/deep-cleaning-tracker/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # Printable Cleaning Schedule
@@ -37,5 +40,3 @@ contentVersion: 1
 ## Make it realistic
 
 Do not fill every row. Start with the minimum routine that keeps the home comfortable, then add only tasks that repeatedly matter.
-
-**CTA:** Use the generator if you want suggestions by room and household type.

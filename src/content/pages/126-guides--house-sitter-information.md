@@ -6,14 +6,17 @@ primaryIntent: "prepare instructions for a house sitter"
 primaryKeyword: "house sitter information sheet"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the House Sitter Instruction Generator to create a minimal packet, then remove anything the sitter does not actually need."
 related:
   - "/tools/house-sitter-instruction-generator/"
   - "/checklists/printable-house-sitter-checklist/"
   - "/guides/travel-household-handoff/"
   - "/guides/emergency-information-sheet/"
+faq: []
 contentVersion: 1
 ---
 # A house sitter needs a role-specific packet, not full household access
@@ -35,5 +38,3 @@ Access codes, alarm information and keys require careful handling. Use an approp
 ## Show less, not more
 
 There is no reason for a sitter to see warranty files, financial notes or unrelated family records.
-
-**Contextual CTA:** Use the House Sitter Instruction Generator to create a minimal packet, then remove anything the sitter does not actually need.

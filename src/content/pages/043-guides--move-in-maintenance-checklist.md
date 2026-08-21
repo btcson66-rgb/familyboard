@@ -6,14 +6,17 @@ primaryIntent: "create maintenance records when moving into a new home"
 primaryKeyword: "move in maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the Move-In Checklist Generator on your phone while walking through the new home, then convert only meaningful findings into permanent records."
 related:
   - "/guides/first-time-homeowner-maintenance-guide/"
   - "/guides/new-home-setup-checklist/"
   - "/tools/move-in-checklist-generator/"
   - "/guides/home-inventory-checklist/"
+faq: []
 contentVersion: 1
 ---
 # The first maintenance job in a new home is learning what you have
@@ -35,5 +38,3 @@ Know how to contact utilities, building management where relevant, and service p
 ## Wait before creating hundreds of recurring tasks
 
 Live in the home long enough to learn how it behaves. Start with a small set of known maintenance requirements and add more over the first season.
-
-**Contextual CTA:** Use the Move-In Checklist Generator on your phone while walking through the new home, then convert only meaningful findings into permanent records.

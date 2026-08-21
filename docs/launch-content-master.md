@@ -1063,33 +1063,67 @@ The free app still needs data migrations, reliable backups, accessibility, offli
 **Slug:** `/guides/home-maintenance-schedule/`
 **Primary intent:** build a realistic home maintenance schedule
 **Title tag:** `How to Build a Home Maintenance Schedule You Will Actually Keep`
-**Meta description:** `Create a practical home maintenance schedule by grouping recurring work by system, season, urgency and the instructions for your actual equipment.`
+**Meta description:** `Build a home maintenance schedule with real intervals for filters, water heaters, smoke alarms and washer hoses, sourced from ENERGY STAR, USFA and manufacturers.`
 **Primary keyword concept:** home maintenance schedule
+**Depth:** verified
 **Suggested internal links:** `/tools/home-maintenance-schedule-generator/`, `/guides/home-maintenance-calendar/`, `/guides/preventive-home-maintenance/`, `/features/maintenance-tracker/`
 
 # How to build a home maintenance schedule you will actually keep
 
-A useful maintenance schedule is not a giant list copied from the internet. Homes differ by climate, building type, equipment, age, ownership status and manufacturer requirements. The best schedule starts with **your actual home** and then turns recurring work into a manageable rhythm.
+A useful maintenance schedule is not a giant list copied from the internet. Homes differ by climate, building type, equipment, age, ownership status and manufacturer requirements. But "it depends on your home" is not an excuse to skip real numbers — most systems have a published starting interval from the manufacturer, a standards body or a government safety agency, and the schedule should start there before it gets adjusted to your household.
 
 ## Begin with systems, not months
 
-Walk through the home and identify the systems that create ongoing upkeep: heating and cooling, water, kitchen appliances, laundry equipment, safety devices, filters, exterior areas and any special equipment. For each one, ask three questions: What needs routine attention? What instruction does the manufacturer give? What signs would tell us that service is needed sooner?
+Walk through the home and identify the systems that create ongoing upkeep: heating and cooling, water, kitchen appliances, laundry equipment, safety devices, filters, exterior areas and any special equipment. For each one, record what needs routine attention, what the manufacturer's documentation says about timing, and what symptoms would mean service is needed sooner than scheduled.
+
+## A starting interval for the systems almost every home has
+
+These are the published starting points to build a schedule from, not one-size-fits-all rules — check your own manuals for anything model-specific:
+
+| System | Task | Typical interval | Source |
+|---|---|---|---|
+| HVAC | Check the filter; replace within 3 months at the outside | Check monthly, replace at least every 1–3 months | [ENERGY STAR](https://www.energystar.gov/saveathome/heating-cooling) |
+| HVAC | Full system tune-up | Once a year | [ENERGY STAR](https://www.energystar.gov/saveathome/heating-cooling) |
+| Water heater (tank) | Flush sediment from the tank | Once a year | [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html) |
+| Water heater (tank) | Inspect anode rod; test temperature-pressure relief valve | Anode: yearly inspection. T&P valve: yearly by the homeowner, every 5 years by a professional | [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html) |
+| Smoke alarms | Press the test button | Once a month | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Smoke alarms | Replace 9-volt battery (or hardwired backup battery) | Once a year | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Smoke alarms | Replace the whole unit | 10 years from the manufacture date | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Washing machine | Inspect supply hoses; replace regardless of visible wear | Inspect monthly, replace every 3–5 years | [South Carolina Farm Bureau Insurance](https://www.scfbins.com/articles/washing-machine-hose-inspection-and-replacement) |
 
 ## Separate fixed dates from condition-based work
 
-Some responsibilities fit a calendar well. Others do not. A seasonal inspection may happen every spring, while a filter may depend on model, environment and usage. A maintenance tracker should allow both a recurring date and a note such as “inspect and replace if needed.”
+Some responsibilities fit a calendar well — an HVAC tune-up or a smoke alarm test can sit on a fixed monthly or annual date. Others are condition-based: a filter's real life depends on the model, pets, dust and how many months of heavy heating or cooling season it saw. A maintenance tracker should hold both a recurring date and a note like "inspect and replace if needed" rather than pretending every task fits a calendar equally well.
 
 ## Give high-consequence work more visibility
 
-Do not bury safety-related or damage-prevention items under cosmetic tasks. Work that can affect water intrusion, fire safety, heating, cooling or other essential systems deserves clearer reminders and appropriate professional guidance.
+Do not bury safety-related or damage-prevention items under cosmetic tasks. Smoke alarm testing, water heater relief-valve checks and washing machine hose inspection all guard against outcomes — fire, scalding, flooding — that are far more expensive than a missed dusting task. Give those items clearer reminders, and treat any professional-only work (gas lines, electrical panels, roofing) as a scheduling and record-keeping item rather than a DIY project: log when it was last done and who did it, and schedule the next call.
 
 ## Keep a completion history
 
-The schedule becomes far more useful when each completed task records a date and note. You no longer need to guess whether something was done last month or last year.
+The schedule becomes far more useful when each completed task records a date and a note. You no longer need to guess whether the filter was changed last month or four months ago, or whether the water heater's relief valve has ever actually been tested.
 
-A simple starting workflow is: inventory important systems, create only the recurring tasks you understand, complete them for a few months, then add more once the routine proves useful.
+A simple starting workflow: inventory the systems above, create only the recurring tasks you understand and can verify against your own manuals, complete them for a few months, then add more once the routine proves useful.
 
-**Contextual CTA:** Use the Home Maintenance Schedule Generator to create a starter list, then edit it to match the manuals, climate and equipment in your own home.
+## Group by season without losing the underlying system
+
+Once the core recurring tasks are running, it can help to view the same list by season rather than by system — a spring pass that covers the HVAC tune-up and exterior checks, a fall pass that covers the water heater flush and smoke alarm battery swap before the year turns over. This is a view, not a separate schedule: the interval still belongs to the system (the water heater doesn't care what season it is), but grouping by season matches how most households actually sit down and do a batch of maintenance in one afternoon rather than one task at a time.
+
+## What a rental or a newly purchased home should do differently
+
+A renter typically owns only the condition-based, easily reversible tasks — smoke alarm testing, filter checks if the lease allows access, hose inspection on an in-unit washer — while professional and structural service is the landlord's responsibility to schedule; the household record should still log what was reported and when. A newly purchased home should start by confirming installation and last-service dates for the water heater and HVAC system from the seller's disclosures or a home inspection report, since "unknown" install dates make every one of the intervals above impossible to plan against. Write down what's confirmed, and label what's estimated as an estimate, rather than guessing an exact date.
+
+**Contextual CTA:** Use the Home Maintenance Schedule Generator to create a starter list from the intervals above, then edit it to match the manuals, climate and equipment in your own home.
+
+**FAQ:**
+- Q: How often should I really change my HVAC filter?
+  A: Check it monthly and replace at least every 1 to 3 months for a standard 1-inch filter, per ENERGY STAR guidance. Thicker 4-inch media filters last longer, often 6 to 9 months, because they have more surface area. Homes with pets, dust or allergy sufferers should lean toward the shorter end of any range.
+- Q: Do I really need to test smoke alarms every month?
+  A: Yes. The U.S. Fire Administration recommends pressing the test button monthly, replacing 9-volt or hardwired backup batteries at least once a year, and replacing the entire alarm 10 years from its manufacture date, printed on the back of the unit. A dead or missing battery means you have no working alarm at all.
+- Q: Is it really necessary to replace washing machine hoses that look fine?
+  A: Insurance carriers commonly recommend replacing supply hoses every 3 to 5 years regardless of visible wear, because deterioration can start from the inside and isn't always visible before failure. A burst hose can release a large volume of water in a short time, which is why this is treated as a scheduled replacement, not a wait-and-see item.
+- Q: What should I do with tasks that don't fit a fixed schedule, like filters?
+  A: Record both a target check-in date and a condition note. Inspect at the interval, then log whether you replaced the part or decided it still had life left. Over a few cycles this builds a household-specific pattern that's more useful than any generic number.
 
 ---
 
@@ -1135,25 +1169,47 @@ A monthly checklist succeeds when it prevents surprises without becoming another
 
 # Quarterly maintenance is the bridge between monthly awareness and annual projects
 
-A quarterly review gives you enough distance to notice patterns that a monthly check can miss. It is a good time to review systems, supplies, recurring services and household records without turning the day into a full inspection.
+A monthly check catches what's obviously wrong right now. A quarterly review catches something different: the pattern that only shows up once you have three months of history to look back over, and the seasonal work that needs a few weeks of lead time to schedule before it becomes urgent. Here is the actual list, broken out by what changes with climate and what doesn't.
 
-## Review what changed during the last three months
+## The items every household checks, regardless of climate
 
-Look at completed maintenance and repairs. Did one appliance need repeated attention? Did a service provider recommend follow-up work? Are there tasks that were postponed more than once? A maintenance history is valuable because it reveals recurring friction rather than isolated dates.
+These belong on every quarterly review no matter where you live:
 
-## Check the next season before it arrives
+- **Test every smoke and CO alarm** using its test button, and confirm the household knows the battery-replacement or unit-replacement schedule for each one. If any alarm is silent, chirping, or approaching the age at which the manufacturer says to replace the whole unit rather than just the battery, deal with it immediately rather than waiting for the next quarter.
+- **Clean the dryer lint trap after every load, and check the exterior vent line for lint buildup quarterly.** A vent that's visibly restricted or a dryer that's taking noticeably longer to finish a load than it used to are both signs the line needs a full cleaning, not just the trap.
+- **Check under sinks and around the water heater for any sign of a slow leak** — a damp cabinet floor, mineral staining, or a musty smell are all worth investigating before they become a larger repair.
+- **Walk the exterior of the home** looking for anything that's changed since last quarter: a new crack, a loose gutter section, peeling caulk around a window or door.
+- **Review your indoor humidity**, especially in any room that's felt damp or shown condensation. The EPA recommends keeping indoor relative humidity below 60%, ideally between 30% and 50%, since sustained higher humidity supports mold growth; a basic humidity gauge makes this easy to check rather than guess at. Source: [EPA — humidity control for mold prevention](https://www.epa.gov/mold/mold-course-chapter-2).
+- **Restock consumables tied to your actual equipment** — the specific filter size your HVAC system uses, batteries for the devices your household has approved, and any cleaning or maintenance supplies you've already confirmed you need. Record what your equipment actually uses rather than stockpiling a generic assortment.
+- **Confirm household contacts, service providers, and upcoming renewals are still current.** A maintenance system built on stale contact information is only useful until the first time someone tries to use it.
 
-Quarterly planning is most useful when it looks forward. Before weather changes, identify equipment or exterior work that becomes harder to handle later. The exact list depends on climate and home type, so use local conditions and manufacturer guidance rather than a generic national checklist.
+## What changes by climate
 
-## Audit household consumables and spares
+The next season's prep list is genuinely different depending on where you live — here's the shape of it for three common patterns:
 
-Think about the items you do not want to discover are missing during a problem: compatible filters, batteries for approved devices, basic cleaning or maintenance supplies and other household-specific consumables. Do not stockpile blindly; record what your actual equipment uses.
+- **Cold-winter climates:** before the season that's approaching, check exterior faucets and irrigation lines for freeze protection, confirm heating equipment has had its filter checked, and clear gutters before ice can back water up under roofing. Heading into warmer months, inspect for any winter damage to exterior surfaces, gutters, and roofing that only becomes visible once snow and ice are gone.
+- **Hot-humid climates:** before cooling season, have AC equipment checked and confirm condensate drains aren't clogged, since a blocked drain is a common cause of water damage in humid regions. Through the humid months, watch indoor humidity and ventilation closely using the range above, since mold risk here is a year-round concern rather than a seasonal one.
+- **Mild climates:** the seasonal swings are smaller, but exterior wood, paint, and irrigation systems still age with sun and occasional rain exposure — use the quieter season to catch up on exterior maintenance that colder or wetter climates have to schedule around weather windows.
 
-## Review contact and document accuracy
+Manufacturer guidance for your specific equipment always overrides a generic list like this one where the two disagree.
 
-Quarterly is also a good cadence for checking whether important household contacts, service providers and upcoming renewals are still current. A maintenance system is only as useful as the information around it.
+## Looking back before looking forward
 
-**Contextual CTA:** Use the quarterly review to clean up the maintenance tracker: close stale tasks, update service history and add only the next season's relevant work.
+Before planning the next quarter, look at what you actually completed in the last one. An appliance that needed attention twice, a service provider who flagged follow-up work, or a task postponed more than once are all patterns a single month's view won't show you — three months of history is usually the minimum needed to tell a pattern from a coincidence.
+
+**FAQ:**
+- Q: What's the difference between a monthly and a quarterly home maintenance check?
+  A: A monthly check catches things that are obviously wrong right now — a strange noise, a full filter, a low battery. A quarterly review looks back over three months of history to spot recurring patterns a single month wouldn't show, and looks forward to the next season's prep work, which needs more lead time than a month provides.
+- Q: What indoor humidity level should I actually be aiming for?
+  A: The EPA recommends keeping indoor relative humidity below 60%, and ideally between 30% and 50%, since sustained higher humidity supports mold growth. A basic humidity gauge is an inexpensive way to check this rather than relying on how a room feels.
+- Q: Do I need a different quarterly checklist for every season?
+  A: The year-round items — alarms, dryer vent, leak checks, exterior walk-through, humidity, consumables, contacts — stay the same every quarter. What changes is the season-specific prep: what needs checking before cooling season is different from what needs checking before winter, and that part of the list should reflect your actual climate.
+- Q: What should I do if the quarterly review finds the same problem it found last time?
+  A: Treat a repeated finding as more urgent than a new one. A leak, a noise, or a repair that's shown up two quarters in a row is a pattern worth addressing properly rather than logging again and moving on — that's exactly the kind of thing a single month's check would miss but three months of history reveals.
+
+**Contextual CTA:** Use the quarterly review to clean up the maintenance tracker: close stale tasks, update service history, and add only the next season's relevant work.
+
+**Depth:** verified
 
 ---
 
@@ -2037,32 +2093,56 @@ For important recurring responsibilities, record the provider, relevant asset an
 ## Page 051 — Refrigerator Maintenance Checklist
 **Slug:** `/guides/refrigerator-maintenance-checklist/`
 **Primary intent:** organize refrigerator maintenance and records
-**Title tag:** `Refrigerator Maintenance Checklist: Keep Cleaning, Filters and Service History Together`
-**Meta description:** `A practical refrigerator maintenance checklist for cleaning, filter records, model information, warning signs and repair history.`
+**Title tag:** `Refrigerator Maintenance Checklist: Coils, Temperature, Seals and Service History`
+**Meta description:** `A real refrigerator maintenance checklist: coil cleaning intervals, food-safe temperatures, seal checks and lifespan figures, with sources for each.`
 **Primary keyword concept:** refrigerator maintenance checklist
+**Depth:** verified
 **Suggested internal links:** `/tools/appliance-maintenance-checklist-generator/`, `/guides/appliance-inventory/`, `/guides/repair-history/`, `/features/maintenance-tracker/`
 
-# Refrigerator maintenance is easier when the model and history stay with the task
+# Refrigerator maintenance checklist: what to actually do, and when
 
-A refrigerator is used every day, yet its maintenance information is often split between a manual, a phone reminder and a replacement filter box. A better system keeps the refrigerator record, recurring upkeep and repair history together.
+A refrigerator runs every day of the year, yet most maintenance checklists for it say almost nothing concrete. Here is an itemized one, with the interval and the source for each item, plus where to keep the record so the next problem is easier to diagnose.
 
-## Start with the exact appliance
+## The checklist
 
-Record the brand, model and serial number where accessible. Keep a link or local reference to the official manual. Different models have different cleaning instructions, filter types and service requirements, so the manufacturer guidance should control the details.
+- **Check refrigerator temperature.** Keep it at 40°F (4°C) or below; keep the freezer at 0°F (-18°C) or below. Verify with an appliance thermometer rather than trusting the dial, since few built-in controls display the actual temperature. Check monthly. Source: [Minnesota Department of Health](https://www.health.mn.gov/people/foodsafety/store/coldstore.html).
+- **Clean the condenser coils.** In a normal home, Whirlpool's own guidance says routine coil cleaning usually isn't required. If the household has pets, heavy kitchen traffic or construction dust, inspect and clean every 3 to 6 months. On many current bottom-freezer and French-door models the coils sit behind a base grille at the bottom of the unit; on older top-freezer models they're often at the rear. Check your model's use-and-care guide before assuming a location. Source: [Whirlpool](https://producthelp.whirlpool.com/Refrigeration/Full-Size_Refrigerators/Product_Info/Cleaning_and_Care/How_and_When_to_Safely_Clean_the_Condenser_Coils).
+- **Wipe door gaskets/seals** and check that they seal fully (a dollar-bill test — close it on a bill and see if it slides out easily — is a common household check). Do this monthly; a loose seal makes the compressor run longer and raises temperature.
+- **Clean or replace the water/ice filter** if the model has one, on the interval printed on the filter or in the manual (commonly every 6 months, but this varies by model — check the actual part).
+- **Keep vents inside the unit unobstructed** so cold air can circulate; overpacking a shelf in front of a vent is a common cause of uneven cooling.
+- **Log unusual noise, temperature swings, frost buildup, condensation or water pooling** the day you notice them, rather than waiting to see if it resolves.
 
-## Track the work that actually applies
+## Why the 15-year mark matters
 
-Useful recurring records may include cleaning accessible surfaces and seals, checking the condition of replaceable filters if the model uses them, keeping vents unobstructed and noting unusual temperature, noise or leakage changes. Do not invent a fixed universal interval when the appliance manual gives model-specific instructions.
+The Association of Home Appliance Manufacturers cites an average refrigerator lifespan of 10 to 14 years, and notes that a unit 15 years old or older can use roughly twice the energy of a new ENERGY STAR-certified model — commonly cited savings are around $260 over five years after switching. That's not a failure prediction; it's an efficiency signal. A 16-year-old fridge that's still cold and quiet doesn't need to be replaced on a birthday, but it's worth weighing energy cost against repair cost once it passes that mark. Source: [AHAM](https://blog.aham.org/want-to-save-energy-it-might-be-time-to-flip-your-fridge/).
+
+## Keep the model tied to the record
+
+Record the brand, model and serial number, and keep a reference to the official use-and-care manual — coil location, filter type and gasket-cleaning method all vary by model, so the manufacturer's own instructions should override any generic checklist above where they conflict.
 
 ## Keep filter and repair history visible
 
-If a filter is replaced, record the date and compatible part reference. If a technician repairs the appliance, capture the symptom, service date and outcome. A future problem becomes easier to explain when the prior history is one tap away.
+If a filter is replaced, record the date and the exact compatible part number — filter part numbers are not interchangeable between similar-looking models. If a technician repairs the appliance, capture the symptom, the service date and the outcome, so a repeat problem is easy to recognize instead of feeling like a new mystery each time.
 
-## Plan for replacement without predicting failure
+## What counts as a warning sign worth logging immediately
 
-Age, repair frequency and performance history can inform planning, but the app should not claim to know exactly when a refrigerator will fail.
+Not every refrigerator noise or fluctuation needs a service call, but a few patterns are worth writing down the day they appear rather than waiting: the compressor cycling on and off much more frequently than usual, condensation pooling inside the cabinet or on the floor beneath the unit, a warm spot in one area while the rest stays cold, or a temperature reading above 40°F that doesn't return to normal within a few hours of the door staying closed. None of these confirm a specific cause on their own, but a dated log of when each one started makes the eventual technician visit — or the decision to plan a replacement — much faster than trying to reconstruct "it's been doing that for a while, I think."
 
-**Contextual CTA:** Add the refrigerator as an asset first, then create only the maintenance tasks that match its manual and your actual use.
+## Freezer-side specifics that differ from the fridge side
+
+A combination unit's freezer compartment has its own concerns worth tracking separately: frost buildup thicker than about a quarter inch on non-frost-free models signals the door seal or defrost cycle needs attention, and food that's freezer-burned throughout (not just on one item) points to a seal or temperature problem rather than an individual packaging failure. Log freezer temperature at the same time as the fridge check, since the two compartments can drift out of range independently even though they share one compressor system.
+
+**Contextual CTA:** Add the refrigerator as an asset with its model and serial number, then create the coil-cleaning and temperature-check tasks above on the interval that matches your household.
+
+**FAQ:**
+- Q: How often should refrigerator condenser coils be cleaned?
+  A: In a typical home, Whirlpool says routine coil cleaning usually isn't needed. Homes with pets, heavy kitchen use or dust should clean every 3 to 6 months. Check the manual first, because coil placement differs: many current bottom-freezer and French-door units put the coils behind a base grille, while older top-freezer models often have rear-mounted coils.
+- Q: What temperature should my refrigerator and freezer actually be set to?
+  A: The refrigerator should stay at 40°F (4°C) or below, and the freezer at 0°F (-18°C) or below, per Minnesota Department of Health food-safety guidance that mirrors federal recommendations. Use a separate appliance thermometer to check, since the dial setting doesn't always reflect the true internal temperature.
+- Q: How long should a refrigerator actually last before I plan to replace it?
+  A: The Association of Home Appliance Manufacturers cites an average lifespan of 10 to 14 years. Units 15 years or older typically use about twice the energy of a new ENERGY STAR model, which is a strong efficiency argument for replacement even before the compressor actually fails.
+- Q: My refrigerator seal doesn't look torn — how do I know if it's actually failing?
+  A: Close the door on a piece of paper or a dollar bill at several points around the door; if it slides out with little resistance, the seal isn't holding well even without visible tearing. A weak seal lets warm air in, makes the compressor run more, and can raise the internal temperature above the 40°F safety line.
 
 ---
 
@@ -2101,64 +2181,120 @@ A compressor, seal or control repair should remain attached to the unit record s
 ## Page 053 — Washing Machine Maintenance Checklist
 **Slug:** `/guides/washing-machine-maintenance-checklist/`
 **Primary intent:** organize washing-machine upkeep
-**Title tag:** `Washing Machine Maintenance Checklist: Cleaning, Hoses, Filters and Service Records`
-**Meta description:** `Keep washing-machine cleaning, accessible hose/filter checks, warranty details and repair history organized around your actual model.`
+**Title tag:** `Washing Machine Maintenance Checklist: Hoses, Gasket Mold and Drain Filter`
+**Meta description:** `A washing machine maintenance checklist covering supply-hose replacement, gasket mold prevention and drain-filter cleaning, each with a real interval and source.`
 **Primary keyword concept:** washing machine maintenance checklist
+**Depth:** verified
 **Suggested internal links:** `/guides/dryer-maintenance-checklist/`, `/guides/water-leak-response-home-records/`, `/guides/how-to-track-product-warranties/`, `/features/maintenance-tracker/`
 
-# A washing machine maintenance record should help prevent repeated surprises
+# Washing machine maintenance checklist: the three failure points that actually cause trouble
 
-Laundry equipment combines water, moving parts and frequent use. The exact care routine varies by machine type and model, so start with the manual rather than a copied checklist.
+Washing machines fail in a small number of predictable ways: a burst supply hose that floods a room, a moldy door gasket that makes every load smell, and a clogged drain filter or pump that stops the cycle mid-wash. Each has a real, sourced maintenance interval below.
 
-## Keep cleaning instructions with the machine
+## The checklist
 
-Record any manufacturer-recommended cleaning cycle, detergent guidance and accessible filter-cleaning procedure. If the machine has a user-serviceable drain filter, note where it is and the safe procedure from the manual.
+- **Inspect supply hoses monthly**; **replace them every 3 to 5 years regardless of visible wear.** Deterioration can start on the inside of the hose and isn't visible until it fails. A burst hose can release a large volume of water quickly, which is why insurers treat this as a scheduled replacement rather than a wait-for-a-leak item. Keep at least 4 inches of clearance between the machine and the wall to prevent kinking, and shut off the water supply valves when the household will be away for an extended period. Source: [South Carolina Farm Bureau Insurance](https://www.scfbins.com/articles/washing-machine-hose-inspection-and-replacement).
+- **Wipe the door gasket dry and leave the door open after every load** on front-load machines, so trapped moisture can evaporate instead of feeding mold in the folds of the rubber seal. **Do a full gasket clean at least once a month**: check the groove at the bottom of the gasket for lodged debris, then clean with a diluted oxygen-bleach or similar solution and dry thoroughly. Source: [LG](https://www.lg.com/us/support/help-library/lg-front-load-washing-machine-gasket-there-are-stains-and-mold-in-the-door-gasket--20154848247928).
+- **Clean the drain pump filter periodically** — most manufacturers describe this as an occasional task rather than giving a fixed number of days, but the clearest trigger is behavioral: if water isn't draining fully, you see a drain-related error code, the machine smells, or clothes come out still wet, that's the filter (or something caught in it) asking to be cleaned. Source: [Whirlpool product help](https://producthelp.whirlpool.com/Laundry/Washers/Front_Load_Washers/Wash_Performance_or_Clothing_Results/Cleaning_and_Maintenance/Cleaning_the_Drain_Pump_Filter).
 
-## Make water-related observations visible
+## Why gasket mold is specific to washing machines, not a generic "appliance cleaning" problem
 
-If you notice seepage, damaged accessible hoses, repeated drain errors or unusual moisture, create a repair task and document the observation. Do not perform plumbing or electrical work beyond your competence.
+Front-load washers trap water in the folds of the door boot seal after every cycle; top-load machines and dryers don't have this geometry, which is why gasket mold is a washer-specific maintenance item rather than something that applies equally to laundry appliances in general. If the smell persists after cleaning, run an empty hot cycle with a washer-cleaner tablet or affresh-style product, then re-check the gasket folds.
 
-## Record recurring faults by symptom
+## Record recurring faults by symptom, not by feeling
 
-A note such as “did not drain at end of cycle” is more useful than “washer broken.” If the issue returns, the timeline becomes clearer.
+A note such as "did not drain at end of cycle, code F9 E1" is far more useful later than "washer broken." If the same symptom returns within a few months, the pattern points a technician (or you) straight at the drain filter or pump rather than starting the diagnosis over.
 
-## Link warranty and service records
+## Keep warranty and service records with the same asset
 
-Laundry appliances often receive service during their useful life. Keep technician visits, invoices and warranty information attached to the same asset.
+Laundry appliances often get serviced more than once during their useful life. Keep technician visits, invoices, warranty terms and the purchase receipt attached to the same washing machine record so nobody has to hunt through email during a breakdown.
 
-**Contextual CTA:** Add the washer's model and one cleaning reminder today. The first useful record is better than an elaborate schedule you never follow.
+## Top-load vs. front-load: the gasket item mostly doesn't apply
+
+The gasket-mold item above is specific to front-load machines, which trap water in a rubber door boot after every cycle. Top-load washers don't have that geometry and are far less prone to the same mold problem, though they still benefit from an occasional empty hot-water cleaning cycle to clear detergent residue from the tub. Know which type you have before assuming a checklist item applies — a front-load-specific routine wasted on a top-load machine, or skipped on a front-load machine because it "seemed like extra work," both miss the point.
+
+## Overloading and detergent choice affect all of the above
+
+Two habits make every item on this checklist worse, regardless of machine type: consistently overloading the drum, which strains the motor and bearings and can push more lint and debris toward the drain filter, and using more detergent than a load actually needs, which leaves residue that feeds gasket mold and can clog the drain filter faster. Neither is a maintenance task with its own interval, but both are worth a household habit note alongside the dated checklist items, since they change how often the scheduled tasks above actually need attention.
+
+## What to do before an extended trip away from home
+
+Shutting off the water supply valves to the washer before a multi-week absence removes the single biggest water-damage risk this checklist covers — a hose failure with nobody home to notice it can run for days rather than minutes. If the household has a habit of leaving valves open year-round "for convenience," weigh that against the Farm Bureau guidance above: the failure risk exists whether or not anyone's watching, and an unattended failure is exactly the scenario the monthly hose inspection can't catch in time.
+
+**Contextual CTA:** Add the washer as an asset, log today's date as the hose-inspection baseline, and set a monthly reminder for the gasket wipe-down.
+
+**FAQ:**
+- Q: How often should washing machine supply hoses really be replaced?
+  A: Insurance industry guidance commonly recommends replacing rubber or braided supply hoses every 3 to 5 years, regardless of whether they look fine, because internal deterioration isn't visible from the outside. Inspect them monthly for bulges, cracks or loose fittings in the meantime, and replace immediately if you see any of those signs.
+- Q: Why does my front-load washer smell even though I clean it?
+  A: The most common cause is trapped moisture in the door gasket folds. Wipe the gasket dry and leave the door open after every load so it can air out, and do a full clean with a diluted oxygen-bleach solution at least monthly, paying attention to the bottom groove where debris collects.
+- Q: How do I know if the drain filter needs cleaning?
+  A: Watch for symptoms rather than a calendar: water not draining, a drain-related error code, unusual noise, a bad smell, or clothes still soaked at the end of a cycle. Manufacturers describe cleaning as an occasional task rather than giving a fixed day count, so let these signs set the schedule.
+- Q: Is a washing machine drain filter the same thing as a lint filter?
+  A: No. A washing machine's drain pump filter traps debris, coins and lint from wash water before it reaches the pump, and is usually accessed behind a small panel at the front-bottom of the machine. A lint filter is a dryer part; the two are unrelated and serviced differently.
 
 ---
 
 ## Page 054 — Dryer Maintenance Checklist
 **Slug:** `/guides/dryer-maintenance-checklist/`
 **Primary intent:** organize dryer care and lint-related maintenance
-**Title tag:** `Dryer Maintenance Checklist: Keep Routine Cleaning and Service History Easy to Track`
-**Meta description:** `A dryer maintenance framework for routine user cleaning, model guidance, vent-service records and repair history, with safety-first escalation.`
+**Title tag:** `Dryer Maintenance Checklist: Lint Trap, Vent Cleaning and Fire-Risk Basics`
+**Meta description:** `A dryer maintenance checklist built around fire-prevention data: lint trap habits, exhaust vent cleaning intervals and the warning signs that mean stop using it.`
 **Primary keyword concept:** dryer maintenance checklist
+**Depth:** verified
 **Suggested internal links:** `/guides/washing-machine-maintenance-checklist/`, `/guides/home-service-provider-list/`, `/guides/repair-history/`, `/features/maintenance-tracker/`
 
-# Dryer maintenance should be easy to record because some tasks happen frequently
+# Dryer maintenance checklist: this is a fire-prevention task, not just tidiness
 
-The most useful dryer checklist separates routine user actions from periodic inspection or professional service. The appliance manual and local safety guidance should determine what the household performs itself.
+A dryer is the one laundry appliance where skipped maintenance is a documented fire-safety issue, not just an inconvenience. Failure to clean was the leading contributing factor — 31% — in U.S. home clothes-dryer fires between 2018 and 2020, according to the U.S. Fire Administration. That single fact should set the priority order for everything below.
 
-## Record routine care that applies to the model
+## The checklist
 
-Keep the manufacturer's instructions for user-cleanable lint areas, sensors or filters accessible. Because some actions occur very frequently, they may not need a formal database entry every time; reserve history for periodic maintenance and service events where the date is useful.
+- **Clean the lint trap after every load.** This is the single highest-value habit for both fire prevention and drying performance; a blocked trap forces the dryer to run longer and hotter. Source: [AHAM](https://blog.aham.org/Save-Energy-and-Money-When-Doing-Laundry-By-Following-These-Tips/).
+- **Clean the exhaust vent (the ductwork running from the dryer to the outside) every 1 to 2 years**, or sooner if you notice the warning signs below. Source: [Whirlpool](https://producthelp.whirlpool.com/Laundry/Dryers/Product_Info/Dryer_Product_Assistance/How_to_Check_Venting).
+- **Watch for these warning signs that the vent needs attention now, not on schedule:** clothes take noticeably longer to dry than they used to; the dryer or laundry room feels hotter than normal during a cycle; you smell a burning odor; little or no air is felt coming from the outside exhaust hood; the exhaust hood flap doesn't open properly when the dryer runs. Source: [Whirlpool](https://producthelp.whirlpool.com/Laundry/Dryers/Product_Info/Dryer_Product_Assistance/How_to_Check_Venting).
+- **Check the outside exhaust hood for nests, debris or a stuck flap** a few times a year — animals and debris blocking the exterior vent are a common, easily missed cause of restricted airflow.
+- **Keep the area around the dryer clear of lint buildup, boxes and hanging fabric**, since lint failure-to-clean is the leading ignition factor identified by federal fire data, not an isolated household risk.
 
-## Keep vent and service history separate from the appliance body
+## Why this list is different from a washing machine's
 
-If a vent system is professionally inspected or cleaned, record the service date and provider. That history may be useful even if the dryer itself is later replaced.
+A washing machine's failure points are water-related — hoses, gaskets, drains. A dryer's are heat- and airflow-related — restricted venting causes overheating, and overheating combined with accumulated lint is what federal fire statistics point to as the dominant cause pattern. Treat the two appliances as genuinely separate maintenance problems even though they usually sit side by side.
 
-## Note performance changes early
+## Keep vent service history separate from the appliance itself
 
-Changes in drying time, heat, odor or noise deserve attention. Record the symptom without diagnosing the cause and use qualified service where appropriate.
+If a vent system is professionally inspected or cleaned, record the service date and provider separately from the dryer's own record. That vent history stays useful even if the dryer itself is replaced later, since the ductwork usually isn't.
 
-## Store model and warranty information
+## Note performance changes immediately
 
-When service is needed, model and serial details are often the first questions asked. Capture them before the label becomes inconvenient to access.
+Longer drying time, unusual heat, a burning smell or new noise are not "wait and see" items for a dryer the way they might be for other appliances — write down the date and symptom, and if a burning smell or visible heat/scorching ever appears, stop using the dryer and get it inspected before running it again.
 
-**Contextual CTA:** Create two records: one for the dryer itself and one for any separately serviced vent system if your home has one.
+## Gas dryers add one more professional-only item
+
+Gas dryers have a combustion component that electric dryers don't — the gas line connection and burner assembly are professional-only territory, not a household maintenance task. The household record's job for that part of the appliance is purely administrative: log the installation date, the installer, and the date of any professional inspection or repair, and treat any gas odor as an immediate call-a-professional situation rather than something to note and revisit later. This is a real answer, not a hedge — the record-keeping and scheduling role is exactly what a household organizer should do here, while the hands-on work belongs to a licensed technician.
+
+## Vent length and configuration change how often cleaning matters
+
+A dryer with a long vent run, several turns, or a vent that travels through an attic or crawlspace collects lint faster relative to its length than a short, straight run to an exterior wall. If your specific configuration is long or has multiple bends, treat the 1-to-2-year interval as the outer limit rather than the target, and lean toward the more frequent end, especially if you've noticed any of the warning signs above even once.
+
+## Record the vent configuration once, not just the cleaning date
+
+Because vent length and routing change how often cleaning actually matters, it's worth writing down the configuration itself alongside the cleaning history — roughly how long the run is, how many turns it has, and whether it passes through an unconditioned space. A household that moves or renovates and ends up with a longer, more indirect vent run than before should treat that as a reason to shorten the interval going forward, not just a one-time note.
+
+## Combination washer-dryer units still split into two checklists
+
+An all-in-one washer-dryer unit doesn't get a blended maintenance list — the wash side still follows the hose, gasket and drain-filter items that apply to a standalone washer, and the dry side still follows the lint-trap and venting items here, even though both live in one cabinet. Keep the two halves as separate line items in the record so a technician call for a drain problem isn't confused with a venting problem.
+
+**Contextual CTA:** Log today as the vent-cleaning baseline, set a reminder for 1 to 2 years out, and add a standing note to check the lint trap after every load.
+
+**FAQ:**
+- Q: How big a fire risk is an uncleaned dryer, really?
+  A: The U.S. Fire Administration reports that failure to clean was the leading contributing factor in 31% of home clothes-dryer fires from 2018 to 2020. That makes lint-trap and vent maintenance a genuine fire-prevention task, not just a performance issue, and it's why the vent-cleaning interval below is worth keeping on a real schedule.
+- Q: How often should the dryer exhaust vent actually be cleaned?
+  A: Whirlpool recommends cleaning the exhaust ductwork every 1 to 2 years under normal use, and sooner if drying performance drops. Longer dry times, a hot laundry room, weak airflow at the outside hood, or a burning smell are all signs the vent needs attention before the scheduled date.
+- Q: Is cleaning the lint trap after every load really necessary, or just nice to have?
+  A: It's the single most effective routine habit for both drying performance and fire prevention. A blocked trap forces the dryer to run hotter and longer to finish a load, and lint buildup is central to the fire statistics cited above, so this is worth treating as non-negotiable rather than optional tidiness.
+- Q: My clothes take much longer to dry than they used to — is that a lint problem or a vent problem?
+  A: Check the lint trap first, since it's the fastest thing to rule out. If the trap is clean and drying time is still long, the exhaust vent is the more likely cause — weak airflow at the outside hood is a strong sign. If neither resolves it, that points to a mechanical issue worth a technician's diagnosis rather than repeated cycles.
 
 ---
 
@@ -2321,28 +2457,66 @@ Record provider, date, work performed and recommended follow-up. Cooling history
 ## Page 060 — HVAC Filter Tracker
 **Slug:** `/guides/hvac-filter-tracker/`
 **Primary intent:** remember HVAC filter sizes and replacement history
-**Title tag:** `HVAC Filter Tracker: Record Filter Size, Replacement History and Real-World Condition`
-**Meta description:** `Keep HVAC filter size, product reference, replacement dates and condition notes attached to the correct system.`
+**Title tag:** `HVAC Filter Tracker: Real Replacement Intervals by Filter Thickness and MERV`
+**Meta description:** `Track HVAC filter size and replacement history with real intervals by thickness and MERV rating, sourced from ENERGY STAR and Carrier.`
 **Primary keyword concept:** HVAC filter tracker
+**Depth:** verified
 **Suggested internal links:** `/tools/home-service-reminder-generator/`, `/guides/air-conditioner-maintenance-checklist/`, `/guides/furnace-maintenance-records/`, `/features/maintenance-tracker/`
 
-# The first thing a filter tracker should remember is which filter you actually need
+# HVAC filter tracker: the interval depends on thickness and MERV rating, not guesswork
 
-Households often know a filter is due but forget the size, type or location. Record the confirmed specification once and keep it attached to the HVAC system.
+Households often know a filter is "due" but forget the size, the interval that actually applies to it, or whether they checked it last month or four months ago. The interval is not arbitrary — it depends mostly on how thick the filter is and how tightly it's rated to filter, both of which are on the filter itself.
 
-## Avoid a universal replacement interval
+## Replacement intervals by filter type
 
-Filter life varies with the equipment, filter design, household conditions and manufacturer guidance. A tracker can record the household's chosen inspection or replacement cadence, but the product should not present one interval as correct for everyone.
+| Filter type | Typical replacement interval | Notes |
+|---|---|---|
+| Standard 1-inch filter | Every 1–3 months | Check monthly; ENERGY STAR advises never going past 3 months even if it still looks clean | 
+| MERV 8 (common standard rating) | Every 2–3 months | Monthly in homes with pets, smoke or heavy dust |
+| MERV 11–13 (allergy/pet-oriented) | Shorter than MERV 8 at the same thickness | Higher-efficiency media catches more, and clogs faster, per cubic foot of air processed |
+| 4-inch media filter | Every 6–9 months | Larger surface area holds more debris before airflow drops |
 
-## Record both date and condition
+Sources: [ENERGY STAR](https://www.energystar.gov/saveathome/heating-cooling), [Carrier](https://www.carrier.com/us/en/residential/hvac-resources/what-is-merv-rating/).
 
-If you inspect a filter and decide it does not need replacement yet, that observation can still be useful. A simple note helps the household learn its real pattern over time.
+## Check monthly regardless of the target interval
 
-## Keep purchase information optional
+ENERGY STAR's guidance is to check the filter every month, especially during heavy heating and cooling months, and replace it as soon as it looks dirty — never waiting past 3 months for a standard 1-inch filter even if it looks fine. A dirty filter forces the system to work harder, which wastes energy and can shorten equipment life through added strain. Pair the monthly check with an annual full system tune-up, which ENERGY STAR also recommends.
 
-A household may want to record the part number or preferred replacement product, but the maintenance record should remain useful even without shopping links.
+## Record the exact specification once
 
-**Contextual CTA:** Confirm the filter specification directly from the system/manual, then save it once so nobody has to measure or guess at the store again.
+Measure or read the size printed on the filter's cardboard frame (length x width x depth, e.g., 16x25x1) and the MERV rating if shown, then save both. Filter sizes are not standardized enough to guess from the equipment brand, and getting it wrong at the store is one of the most common reasons a filter change gets postponed.
+
+## Record condition, not just date
+
+If you inspect a filter and decide it doesn't need replacing yet, that observation is still worth a note — a household running mostly MERV 8 in a low-dust home may genuinely stretch past 2 months, while a home with pets and a MERV 11 filter may need monthly changes despite the "up to 3 months" ceiling for a lower-rated filter. Tracking actual condition over a few cycles reveals the household's real pattern faster than any general guideline can.
+
+## Higher MERV isn't automatically better
+
+Carrier's own guidance cautions that a higher MERV rating can restrict airflow if the HVAC system wasn't designed for it, and recommends checking with an HVAC professional before jumping to a MERV 13 filter on a system built around MERV 8. More filtration is not free — it comes with a shorter usable life per filter and, on the wrong system, reduced airflow.
+
+## One HVAC system, multiple filters — track them separately
+
+Some homes have more than one HVAC system (a separate unit for an upper floor, a mini-split, a supplemental air purifier with its own filter), and each one deserves its own tracked size, rating and interval rather than one blended household filter schedule. A whole-house system's 1-inch filter and a room mini-split's washable filter don't share a replacement rhythm, and treating them as one task invites the less-visible one to get forgotten.
+
+## What actually happens when a filter is neglected too long
+
+Beyond wasted energy, a badly clogged filter can let airflow drop enough that the system's evaporator coil ices over in cooling mode or the heat exchanger runs hotter than designed in heating mode — both of which turn a $15 filter into a much larger repair bill. If a filter has clearly gone well past its interval, treat the next inspection as a chance to check the coil and airflow as well as swap the filter, rather than assuming a fresh filter alone resets everything to normal.
+
+## Seasonal use changes the real-world interval more than the calendar does
+
+A filter installed at the start of a mild spring, when the system barely runs, ages differently than one installed at the start of a heavy summer cooling season or a cold winter heating season — the "1 to 3 months" range exists partly because runtime, not calendar time, is what actually loads a filter with debris. A household that only runs HVAC heavily for four months a year may genuinely stretch toward the long end of any range during the off-season, while the same filter during peak season should be checked at the short end. Logging the check date alongside a rough note of how heavily the system has been running helps separate a filter that's dirty from one that's simply been sitting unused.
+
+**Contextual CTA:** Save the confirmed filter size and MERV rating once, then log each check-in with a date and a condition note so the real replacement pattern for your home builds up over time.
+
+**FAQ:**
+- Q: How often should I really change a standard 1-inch HVAC filter?
+  A: ENERGY STAR recommends checking it every month and replacing it at least every 1 to 3 months, more often during heavy heating or cooling season or in homes with pets. Never let it go past 3 months even if it still looks visually clean, since airflow resistance builds up before it's obvious to the eye.
+- Q: Does a thicker filter really last longer than a 1-inch one?
+  A: Yes. A 4-inch media filter typically lasts 6 to 9 months because it has substantially more surface area to hold debris before airflow drops, compared to 1 to 3 months for a standard 1-inch filter. The thicker filter isn't better at filtering by default — it just clogs more slowly.
+- Q: Should I just buy the highest MERV rating available?
+  A: Not automatically. Carrier's guidance recommends MERV 8 for typical homes and MERV 11–13 for households with pets or allergies, but warns that a rating higher than your system was designed for can restrict airflow. Check with an HVAC professional before upgrading, and expect higher-MERV filters to need more frequent replacement.
+- Q: How do I find the right replacement filter size?
+  A: Pull the current filter out and read the printed dimensions on its cardboard frame — typically length by width by depth, such as 16x25x1. Don't assume the size based on the HVAC brand or a previous home's filter; sizes vary by installation, and buying the wrong one is a common reason filter changes get delayed.
 
 ---
 
@@ -2413,32 +2587,62 @@ Repeated service notes across seasons can provide useful context for a qualified
 ## Page 063 — Water Heater Maintenance Records
 **Slug:** `/guides/water-heater-maintenance-records/`
 **Primary intent:** organize water-heater information and service history
-**Title tag:** `Water Heater Maintenance Records: Model, Service, Warranty and Replacement History`
-**Meta description:** `Keep water-heater model information, installation date, professional service history, warranty and household notes organized safely.`
+**Title tag:** `Water Heater Maintenance Records: Flush, Anode Rod and T&P Valve Intervals`
+**Meta description:** `Water heater maintenance records with real intervals for tank flushing, anode rod inspection, T&P valve testing and expected lifespan, sourced from manufacturers.`
 **Primary keyword concept:** water heater maintenance records
+**Depth:** verified
 **Suggested internal links:** `/guides/water-leak-response-home-records/`, `/guides/appliance-replacement-planning/`, `/guides/home-service-provider-list/`, `/features/home-record-keeper/`
 
-# Water-heater records are more important than a generic maintenance checklist
+# Water heater maintenance records: the tasks that actually extend its life
 
-Water heaters vary by fuel, design and installation. Because improper service can create serious hazards, the household organizer should focus on identity, professional service history and manufacturer-approved user tasks.
+A tank water heater has three maintenance tasks that manufacturers consistently publish real intervals for, plus a temperature setting that affects both safety and cost. Because a water heater involves gas, electricity and pressurized hot water, anything beyond these homeowner-level checks is professional-only work — the record-keeping angle below is the real answer for that part.
 
-## Keep installation details if known
+## The checklist
 
-Record model, serial number, installation date, installer and warranty information. If the date is uncertain, say so.
+- **Flush the tank once a year** to remove sediment buildup, which reduces heating efficiency over time. Source: [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html).
+- **Inspect the anode rod once a year**; replace it once it shows several inches of exposed core wire or heavy deterioration. The anode rod is a sacrificial component that corrodes so the tank itself doesn't. Source: [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html).
+- **Test the temperature-pressure relief (T&P) valve once a year yourself**, by lifting the lever and confirming water discharges, and have it professionally inspected **every 5 years**. This valve is a core safety device that releases pressure if the tank overheats. Source: [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html).
+- **Set the temperature to 120°F.** This is the commonly cited balance between scald prevention and limiting bacterial growth in the tank, and it also reduces standby energy loss. Sources: [A.O. Smith](https://www.hotwater.com/info-center/water-heater-maintenance.html), [AHAM](https://blog.aham.org/Save-Energy-and-Money-When-Doing-Laundry-By-Following-These-Tips/).
+
+## What lifespan to plan around
+
+Rheem, a major manufacturer, publishes 8 to 12 years as the typical lifespan for a tank water heater, versus 15 to 20+ years for a tankless unit. A unit 10 to 15+ years old that starts developing recurring issues is a strong candidate for replacement rather than repeated repair. Source: [Rheem](https://www.rheem.com/water-heating/articles/water-heater-lifespan-when-to-repair-vs-replace/).
+
+## Treat these as replace-now signs, not maintenance items
+
+Rheem lists specific signs that point to replacement over repair: water leaking from the base of the tank, rusty or discolored hot water, and persistent rumbling or popping sounds (often caused by sediment buildup hardening against the tank bottom). If repair costs would exceed roughly half the price of a new unit, or the household has needed multiple repairs in a short window, that pattern points to replacement rather than another service call.
+
+## Keep installation details even when uncertain
+
+Record model, serial number, installation date, installer and warranty terms. If the installation date is uncertain, record your best estimate and say so explicitly — an honest "approximately 2019, unconfirmed" is more useful later than a blank field or a guessed exact date presented as fact.
 
 ## Preserve professional service history
 
-Record inspections, repairs, replaced components and any recommendation about future service. Link invoices or references to the same asset.
+Record every inspection, repair, replaced component and any technician recommendation about future service, and link invoices to the same asset record. A water heater that has had two anode rods and one T&P valve replacement has a different repair-vs-replace calculation than one with no service history at all — but only if that history was actually written down.
 
-## Treat unusual water or equipment behavior as a service issue
+## Gas vs. electric changes what's professional-only, not whether records matter
 
-Leaks, unusual sounds, error codes or major performance changes should prompt appropriate professional guidance rather than generic DIY instructions.
+A gas water heater adds a burner, a flue and a gas-line connection to the professional-only list — any repair touching those components, or any gas odor, is an immediate call-a-professional situation, not a scheduled task. An electric unit swaps that risk for high-voltage electrical work, which carries its own professional-only line. Either way, the household record's job is the same: log what was done, by whom, and when, rather than attempting the combustion or electrical work directly. Where the two types genuinely differ for a household record is service history detail — a gas unit's technician visit should note whether the flue and venting were inspected, since blocked venting on a gas water heater is a carbon-monoxide risk in a way an electric unit's service history never has to consider.
 
-## Use age as context, not a countdown
+## Tankless units follow the checklist differently
 
-An older unit may deserve replacement planning, but the app should not claim a precise remaining lifespan.
+A tankless water heater doesn't hold standing water the same way a tank does, so the annual full-tank flush above becomes a periodic descaling instead — how often depends heavily on local water hardness, with harder-water households needing it more frequently. The T&P valve and anode-rod items are tank-specific and generally don't apply to tankless units at all; check your specific model's manual for its own maintenance list rather than assuming the tank checklist above transfers directly.
 
-**Contextual CTA:** Add the installation date and last service event now; those two facts are often the hardest to reconstruct when a water heater problem appears.
+## Water hardness is worth recording alongside the unit itself
+
+Hard water accelerates sediment buildup in a tank and scaling in a tankless unit's heat exchanger, which means two households with identical water heaters on identical schedules can have genuinely different real-world maintenance needs. If you know your local water is hard — or a plumber has mentioned it during a service visit — record that alongside the unit, since it's a reasonable justification for flushing or descaling more often than the baseline annual interval above.
+
+**Contextual CTA:** Add the installation date and the date of the last flush or inspection now — those two facts are often the hardest to reconstruct once a water heater problem appears.
+
+**FAQ:**
+- Q: How often should a water heater tank actually be flushed?
+  A: Manufacturer guidance from A.O. Smith recommends flushing sediment from the tank once a year. Skipping this reduces heating efficiency over time as sediment insulates the bottom of the tank from the heat source, and in gas units it can also contribute to the rumbling or popping noises that signal a tank nearing the end of its service life.
+- Q: What temperature should a home water heater be set to?
+  A: 120°F is the commonly cited setting that balances scald prevention against limiting bacterial growth in the tank, and it also reduces standby energy loss compared to higher settings like 140°F. Households with very young children or older adults sometimes go slightly lower for additional scald protection.
+- Q: How long should a tank water heater actually last?
+  A: Rheem, a major manufacturer, publishes a typical lifespan of 8 to 12 years for tank water heaters, versus 15 to 20-plus years for tankless units. A unit past 10 to 15 years that develops recurring problems is generally a stronger candidate for replacement than for another repair.
+- Q: What water heater problems mean I should call a professional immediately rather than wait?
+  A: Water leaking from the base of the tank, rusty or discolored hot water, and persistent rumbling or popping sounds are signs manufacturers associate with a unit nearing failure rather than routine maintenance. Any gas smell, unusual gas-line behavior or electrical issue is professional-only and should be treated as urgent, not scheduled maintenance.
 
 ---
 
@@ -2869,85 +3073,197 @@ The household should know where backup power is available and what its limitatio
 ## Page 078 — Smoke Alarm Records
 **Slug:** `/guides/smoke-alarm-records/`
 **Primary intent:** organize smoke-alarm locations, models and replacement/service records
-**Title tag:** `Smoke Alarm Records: Keep Locations, Models and Test/Replacement History Organized`
-**Meta description:** `Organize smoke-alarm locations, model information and household test or replacement records while following manufacturer and local fire-safety guidance.`
+**Title tag:** `Smoke Alarm Records: Test Monthly, Replace at 10 Years (USFA Guidance)`
+**Meta description:** `Smoke alarm record-keeping built around U.S. Fire Administration guidance: test monthly, replace batteries yearly, replace the whole unit at 10 years.`
 **Primary keyword concept:** smoke alarm maintenance records
+**Depth:** verified
 **Suggested internal links:** `/guides/carbon-monoxide-alarm-records/`, `/guides/fire-extinguisher-records/`, `/guides/emergency-supply-inventory/`, `/features/emergency-information-organizer/`
 
-# Safety-device records should support official guidance, not replace it
+# Smoke alarm records: the U.S. Fire Administration's numbers, kept against each device
 
-Smoke alarms vary by power source, sensor design, interconnection and manufacturer requirements. Local codes and fire-safety guidance can also differ. The household organizer's job is to keep device identity and history clear.
+Smoke alarm guidance is unusually well standardized for a home-safety topic. The U.S. Fire Administration publishes exact intervals, and the household organizer's job is simple: attach those intervals to each physical device by location, so nobody has to remember which hallway alarm is six years old and which is nine.
 
-## Name each device by location
+## The schedule, by task
 
-Use labels such as “upstairs hallway smoke alarm” rather than “alarm 2.” Record model and installation/replacement date if known.
+| Task | Interval | Source |
+|---|---|---|
+| Press the test button | Every month | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Replace 9-volt battery | At least once a year | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Replace hardwired unit's backup battery | At least once a year | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| 10-year sealed lithium battery models | No annual battery swap — non-replaceable, built-in | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html) |
+| Replace the entire alarm unit | 10 years from the manufacture date printed on the back | [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/index.html); [Kidde](https://www.kidde.com/support/smoke-alarms/alarms-replacement-time) |
 
-## Follow official test and replacement instructions
+The USFA states plainly that "a smoke alarm with a dead or missing battery is the same as having no smoke alarm at all" — a device that looks installed but isn't maintained provides zero protection, which is the core reason to track this rather than trust memory.
 
-Do not publish one universal schedule unless supported by the relevant authority and product. Link the household record to manufacturer instructions and applicable local fire-safety guidance.
+## Name each device by location, not by number
 
-## Record meaningful events
+Use labels such as "upstairs hallway smoke alarm" rather than "alarm 2." When one alarm in an interconnected set reaches its 10-year replacement date before the others, a location-based name makes it obvious which physical unit needs swapping, without opening a panel to check date codes on all of them.
 
-Battery replacement where applicable, device replacement, professional inspection or repeated false-alarm issues can be logged. Safety concerns should be escalated, not merely noted.
+## Read the manufacture date correctly
 
-**Contextual CTA:** Create a location-based inventory of alarms, then verify the real testing and replacement requirements from reliable sources for your devices and jurisdiction.
+The 10-year clock starts from the manufacture date printed on the back of the unit, not the installation date, and not the purchase date. If you don't know when a device was installed, check the back of the alarm itself — that date is the authoritative one for the replacement countdown.
+
+## Record meaningful events, and escalate safety concerns
+
+Battery replacement (where applicable), full unit replacement, professional inspection and repeated false-alarm issues are all worth a dated note. A pattern of repeated false alarms or an alarm that fails its monthly test after a fresh battery is a safety issue to resolve immediately — replace the unit rather than disabling it, since disabling any home alarm removes protection rather than fixing a nuisance.
+
+## Interconnected alarms need a household-wide view, not just a per-device one
+
+Many homes have interconnected smoke alarms — when one senses smoke, all of them sound. That's a safety feature, but it also means the household record should show the full set at a glance: how many alarms exist, where, and whether they're all the same age or a mix of older and newer replacements. A household that replaced only the hallway unit after a false-alarm problem but left three bedroom units from the original 10-year batch has a fact worth knowing before all three age out in the same month.
+
+## What a smoke alarm cannot do, and why other devices still matter
+
+A smoke alarm detects smoke; it does not detect natural gas, carbon monoxide or a slow electrical fire that hasn't produced visible smoke yet. Treat this record as one part of a broader home-safety inventory alongside carbon monoxide alarms and fire extinguishers, rather than assuming one category of device covers every risk. A kitchen with a smoke alarm but no nearby fire extinguisher, or a gas furnace with smoke alarms but no CO alarm, has a real gap that a location-based device inventory makes visible in a way memory alone doesn't.
+
+## Placement basics worth recording alongside the device
+
+General guidance calls for at least one smoke alarm on every level of the home, including inside or immediately outside each sleeping area — record which rooms currently have coverage and which don't, since gaps are easy to create during a renovation or an added bedroom and easy to miss without a written inventory.
+
+## A finished basement, an added bedroom or a converted attic needs its own check
+
+Home changes are one of the most common ways smoke alarm coverage quietly falls behind reality. A finished basement used as a bedroom, an attic converted into livable space, or an addition that added a new sleeping area all need their own alarm coverage, and none of them retroactively get one just because the rest of the house is covered. Treat any renovation or room-use change as a trigger to review the location inventory, the same way a major purchase is a trigger to update a home inventory for insurance.
+
+**Contextual CTA:** Add each smoke alarm as a location-based record with its manufacture date, then set the monthly test and annual battery reminders from the table above.
+
+**FAQ:**
+- Q: How often should smoke alarms actually be tested?
+  A: The U.S. Fire Administration recommends testing every smoke alarm monthly by pressing the test button and confirming the alert sound. This is separate from battery replacement — testing confirms the alarm currently works, while the annual battery swap (or built-in 10-year sealed battery on newer units) is about power supply.
+- Q: When should a smoke alarm be fully replaced, not just given a new battery?
+  A: Replace the entire unit 10 years from its manufacture date, which is printed on the back of the alarm — not from the install date or purchase date. A new battery does not extend the sensor's usable life past that 10-year mark, per USFA and manufacturer guidance including Kidde.
+- Q: Do 10-year lithium battery smoke alarms need any battery maintenance?
+  A: No annual battery swap — their sealed lithium battery is designed to last the alarm's full service life. You still test the unit monthly, and you still replace the entire alarm 10 years after its manufacture date, since the sensor itself ages out even though the battery doesn't need changing.
+- Q: What does it mean if a smoke alarm keeps giving false alarms after a fresh battery?
+  A: That's a signal to replace the unit rather than to keep resetting or disabling it. Repeated false alarms after confirming the battery is fresh often indicate a sensor nearing the end of its useful life, and disabling an alarm to stop the nuisance removes real fire protection from that location.
 
 ---
 
 ## Page 079 — Carbon Monoxide Alarm Records
 **Slug:** `/guides/carbon-monoxide-alarm-records/`
 **Primary intent:** keep CO alarm inventory and service records
-**Title tag:** `Carbon Monoxide Alarm Records: Locations, Models and Replacement History`
-**Meta description:** `Keep carbon-monoxide alarm locations, model information and replacement history organized while relying on manufacturer and local safety guidance.`
+**Title tag:** `Carbon Monoxide Alarm Records: Placement, Testing and 7–10 Year Replacement`
+**Meta description:** `Carbon monoxide alarm records built on EPA placement guidance and manufacturer replacement data: one per floor, weekly test, replace every 7 to 10 years.`
 **Primary keyword concept:** carbon monoxide alarm records
+**Depth:** verified
 **Suggested internal links:** `/guides/smoke-alarm-records/`, `/guides/furnace-maintenance-records/`, `/guides/emergency-information-sheet/`, `/features/home-record-keeper/`
 
-# Carbon-monoxide alarm records should be simple, clear and safety-first
+# Carbon monoxide alarm records: placement, testing and a shorter replacement clock than smoke alarms
 
-The household may have several devices with different installation dates or manufacturers. A location-based record helps identify which unit an alert or end-of-life signal refers to.
+CO alarms have a genuinely different maintenance profile from smoke alarms: the sensor itself has a shorter usable life, the placement logic is different (near sleeping areas, not near combustion sources), and there's a built-in end-of-life signal worth knowing before it goes off in the middle of the night.
 
-## Record location and exact model
+## Placement, per the EPA
 
-Keep the manufacturer, model and install/replacement date where known. If the device has a documented end-of-life signal, preserve the official instructions.
+- **One alarm per floor**, including near — not necessarily inside — each separate sleeping area.
+- If you only have one alarm, **place it near the sleeping areas** so the alert is loud enough to wake the household.
+- Install per the manufacturer's instructions; plug-in or high-on-the-wall placement both work, because CO mixes evenly with room air rather than rising or sinking the way heat or smoke does.
 
-## Do not use the app to interpret an active alarm
+Source: [EPA](https://www.epa.gov/indoor-air-quality-iaq/where-should-i-place-carbon-monoxide-detector).
 
-An active carbon-monoxide alarm is an emergency situation that requires following the device instructions and local emergency guidance. The organizer is for preparation and recordkeeping, not real-time diagnosis.
+## Testing and replacement
+
+| Task | Interval | Source |
+|---|---|---|
+| Test the alarm | Weekly (EPA) / monthly (CPSC) — check your model's manual, and default to the shorter interval if in doubt | [EPA](https://www.epa.gov/indoor-air-quality-iaq/where-should-i-place-carbon-monoxide-detector) |
+| Replace battery | At least once a year | [EPA](https://www.epa.gov/indoor-air-quality-iaq/where-should-i-place-carbon-monoxide-detector) |
+| Replace the entire unit | 7–10 years depending on the model — 10 years for units made after 2013 on some product lines, 7 years for older ones | [Kidde](https://www.kidde.com/support/carbon-monoxide-alarms/replacement) |
+
+Check the manufacture date on the back of the device to start that clock, the same way you would for a smoke alarm — the two devices are replaced on different schedules, so don't assume they match.
+
+## Know the end-of-life signal before you hear it
+
+Kidde's alarms produced after August 2009 include a built-in end-of-life warning: a chirp roughly every 30 seconds on non-digital models, or an "ERR"/"END" code on digital-display models. If a household member hears that pattern in the middle of the night and doesn't recognize it, it can be genuinely alarming — record which signal your specific model uses so everyone in the house knows the difference between "replace me" and "there's CO in the house."
+
+## Never use this record to interpret an active alarm
+
+An active CO alarm is an emergency: get to fresh air immediately and call emergency services from outside, following the device's printed instructions. The household organizer is for preparation and recordkeeping between events — location inventory, battery dates, replacement countdown — not for diagnosing what's happening while an alarm is sounding.
 
 ## Keep replacement history visible
 
-When a device is replaced, archive the old record rather than silently editing the installation date. The history shows what changed and when.
+When a device is replaced, add a new record rather than silently editing the old installation date. Seeing "unit A: installed 2017, replaced 2026" tells you something the previous household member won't have to reconstruct from memory.
 
-**Contextual CTA:** Inventory the devices by room/location and keep the official manufacturer instructions accessible outside the private app as well.
+## Why CO alarms deserve a separate record from smoke alarms, not a shared one
+
+It's tempting to treat "alarms" as one household category, but CO and smoke alarms protect against different hazards, sound different alert patterns, and — critically for a maintenance record — run on different replacement clocks (7–10 years for CO versus 10 years for smoke, and the CO clock can start at 7 years on older models). A combined smoke/CO alarm unit simplifies installation but doesn't simplify the record: log both replacement dates for a combo unit, since the two sensors inside it can be rated differently depending on the model.
+
+## Sources of CO worth knowing about when placing alarms
+
+CO comes from incomplete combustion — a gas furnace or water heater with a blocked flue, a running car left in an attached garage, a portable generator used too close to the house, or a charcoal grill used indoors. This isn't a reason to add alarms in unusual places beyond the EPA guidance above; it's a reason to make sure the household understands why alarms sit where they do, and to treat any fuel-burning appliance installation or venting change as a moment to double check alarm coverage and battery status, not just a one-time install-and-forget event.
+
+## What to do if you're not sure an alarm's chirp is low-battery or end-of-life
+
+If the pattern doesn't clearly match either signal described above, treat it as end-of-life and replace the unit rather than guessing — a low-battery chirp and an end-of-life chirp can sound similar on some models, and continuing to use a unit that's actually past its detection life is a real risk that a fresh battery won't fix.
+
+## Renters and multi-unit buildings still need a working record
+
+If a landlord or building management installed the CO alarms, a household may not know the manufacture date offhand — that's worth checking and recording anyway, since the household is usually the one who'll hear the alarm and needs to know whether a chirp means a dying battery or an expired unit. Note who's responsible for replacement (landlord vs. tenant) alongside the device record, so a maintenance request doesn't stall on uncertainty about whose job it is.
+
+**Contextual CTA:** Inventory each CO alarm by location with its manufacture date, and keep the manufacturer's printed instructions accessible outside the app too, in case of a power or device failure.
+
+**FAQ:**
+- Q: Where should carbon monoxide alarms actually be placed in a home?
+  A: The EPA recommends one alarm on each floor of the home, including near each separate sleeping area. If you only have one alarm, place it near the bedrooms so it's loud enough to wake the household. Installation should follow the manufacturer's instructions — plug-in or high-on-the-wall placement both work.
+- Q: How often should a CO alarm actually be replaced?
+  A: Manufacturer guidance from Kidde puts full replacement at 7 to 10 years depending on the model, with newer product lines (generally made after 2013) rated for 10 years and older ones for 7. Check the manufacture date printed on the back of the unit — that starts the clock, not the installation date.
+- Q: How is CO alarm testing different from a smoke alarm's schedule?
+  A: EPA guidance suggests testing weekly, more frequent than the monthly test typically recommended for smoke alarms, though CPSC materials describe monthly testing as sufficient for some models — check your specific manual. Battery replacement is the same either way: at least once a year for models with a replaceable battery.
+- Q: What does it mean if my CO alarm beeps every 30 seconds?
+  A: On many Kidde alarms made after August 2009, a chirp roughly every 30 seconds (or an "ERR"/"END" code on digital-display models) is the built-in end-of-life signal, meaning the alarm can no longer reliably detect CO and needs replacement. This is different from an active CO alert — check your specific model's manual to be sure which signal you're hearing.
 
 ---
 
 ## Page 080 — Fire Extinguisher Records
 **Slug:** `/guides/fire-extinguisher-records/`
 **Primary intent:** organize household fire-extinguisher inventory and inspection records
-**Title tag:** `Home Fire Extinguisher Records: Locations, Types and Inspection History`
-**Meta description:** `Organize household fire-extinguisher locations, identifying information and inspection/service records while following local fire-safety guidance.`
+**Title tag:** `Home Fire Extinguisher Records: Monthly Checks and Annual Service (NFPA 10)`
+**Meta description:** `Fire extinguisher inspection records built on NFPA 10 and OSHA guidance: monthly visual checks, annual professional service, and when to use vs. evacuate.`
 **Primary keyword concept:** home fire extinguisher inspection record
+**Depth:** verified
 **Suggested internal links:** `/guides/smoke-alarm-records/`, `/guides/emergency-supply-inventory/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`
 
-# A fire-extinguisher inventory is useful only when the household knows what is actually present
+# Fire extinguisher records: NFPA 10's monthly and annual intervals, applied to a home inventory
 
-Extinguishers differ by type, rating, serviceability and local requirements. The home organizer should record identifying information and service history, not teach users to fight fires beyond official guidance.
+Fire extinguisher inspection has a real published standard behind it — NFPA 10 — and it's specific enough to build a household record around directly, rather than guessing at "check it sometimes."
 
-## Label by location
+## The checklist
 
-Record where each extinguisher is stored and the identifying information shown on the unit. Avoid moving equipment simply to create a prettier inventory if the placement follows a safety plan.
+- **Visual inspection every ~30 days (monthly).** OSHA's own regulation, 29 CFR 1910.157(e)(2), requires monthly visual inspection and explicitly calls NFPA 10's 30-day interval "not only explicit, but reasonable." A household member, not a licensed technician, can do this. Check that: the unit is in its designated spot and not blocked; the pressure gauge needle sits in the operable range; the tamper seal and pin are intact; there's no corrosion, dents or damage; the instructions are legible. Source: [OSHA](https://www.osha.gov/laws-regs/standardinterpretations/2006-11-29).
+- **Professional annual maintenance.** NFPA 10 calls for a full annual examination by a certified fire-equipment technician, covering everything in the monthly check plus mechanical parts, the condition of the extinguishing agent, and hose/nozzle integrity. Source: [OSHA](https://www.osha.gov/laws-regs/standardinterpretations/2006-11-29) (referencing NFPA 10).
+- **Know the type before you need it.** Class A is for ordinary combustibles (wood, paper, cloth); Class B for flammable liquids (grease, gasoline, oil-based paints); Class C for live electrical equipment. Most homes use a multipurpose A-B-C unit, widely available at home-improvement stores, and should carry a UL or ULC listing. Source: [USFA](https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/fire-extinguishers/index.html).
 
-## Keep inspection or service history
+## Log by location, not as one household total
 
-Where the manufacturer or local guidance calls for periodic checks or professional service, record the date and outcome. Replace or service units according to the applicable instructions.
+Record where each extinguisher is stored (kitchen, garage, each floor) and the identifying information printed on the unit — type, rating, manufacture date. Don't relocate a unit just to make a tidier inventory; extinguisher placement often follows a deliberate escape-route safety plan, and the record should describe the plan, not override it.
 
-## Make emergency guidance primary
+## When to actually use one — and when not to
 
-Household members should understand local fire-safety advice, evacuation priorities and when not to attempt extinguisher use. The app is a record, not a training substitute.
+USFA guidance is specific: only attempt to use an extinguisher when others have been alerted and the fire department called, the fire is small and confined to a single object or surface, you have a clear escape route behind you, and you're not exposed to toxic smoke. Otherwise: alert everyone, leave the building, and call 911. The technique, if you do use one, is PASS — Pull the pin, Aim low at the base, Squeeze the lever, Sweep side to side. This app is a record of what's in the house and when it was last checked; it is not a substitute for that judgment call in the moment.
 
-**Contextual CTA:** Add location-based extinguisher records and link each one to the reliable instructions that apply to that actual device.
+## Keep service history attached to the exact unit
 
+Where an annual professional service or recharge happens, record the date, provider and outcome against that specific extinguisher's location record — a kitchen unit serviced in March and a garage unit serviced in July shouldn't be tracked as one blended household date.
+
+## Longer-term service intervals a home inventory should still know about
+
+Beyond the monthly and annual items, NFPA 10 also defines less-frequent checks that matter over an extinguisher's full life: an internal examination roughly every 6 years for rechargeable models, and a hydrostatic pressure test roughly every 12 years for the cylinder itself. Most households will replace a disposable home extinguisher long before either of those dates arrives, but if you own a rechargeable unit, recording its manufacture date makes it possible to know when those longer-term services come due instead of discovering it only when a technician flags it.
+
+## Where to actually put extinguishers, and how many
+
+Common household guidance is one per level of the home plus one in or very near the kitchen, since cooking fires are among the most frequent home fire causes. A garage with flammable liquids or a workshop with power tools is a reasonable second location beyond the per-floor baseline. Record the count and location of each unit against this baseline so a gap — a home with a garage extinguisher but nothing near the kitchen — is visible at a glance rather than assumed to be covered.
+
+## Reading the pressure gauge correctly
+
+Most home extinguishers have a simple gauge with a colored operable range, typically green; a needle in the red zone on either side means the unit is over- or under-charged and needs professional attention before you'd rely on it. Note the gauge reading each month as part of the visual check above, since a slow pressure drop over several months is easier to catch with a logged history than by memory alone.
+
+**Contextual CTA:** Add each extinguisher as a location-based record with its type and manufacture date, then log the monthly visual check and the annual professional service separately.
+
+**FAQ:**
+- Q: How often does a home fire extinguisher actually need to be inspected?
+  A: NFPA 10 calls for a visual inspection at approximately 30-day intervals, which OSHA's own regulation also mandates and describes as "not only explicit, but reasonable." A household member can do this monthly check — confirming the gauge reads in range, the seal is intact and there's no visible damage — without needing a licensed technician.
+- Q: Do home fire extinguishers need professional servicing, or is the monthly check enough?
+  A: Both are required under NFPA 10. The monthly visual check can be done by anyone in the household, but a certified fire-equipment technician should perform a full annual maintenance examination covering the mechanical parts, the extinguishing agent's condition, and the hose and nozzle — items a visual check alone won't catch.
+- Q: What type of fire extinguisher should a home actually have?
+  A: Most homes use a multipurpose "A-B-C" extinguisher, which covers ordinary combustibles (Class A), flammable liquids like grease or gasoline (Class B), and live electrical equipment (Class C) in one unit. Look for a UL or ULC listing, and choose the largest size you can comfortably lift and operate.
+- Q: When should I use a fire extinguisher versus just leaving the house?
+  A: Only attempt it if everyone else has been alerted and 911 called, the fire is small and confined to one object or surface, you have a clear escape route behind you, and you're not breathing smoke. If any of those aren't true, leave immediately and call from outside — a fire extinguisher is for small, contained fires, not a reason to stay in a dangerous situation.
 
 ---
 
@@ -2986,32 +3302,69 @@ A home inventory stored only on one device is vulnerable to device loss. Export 
 ## Page 082 — Home Inventory for Insurance
 **Slug:** `/guides/home-inventory-for-insurance/`
 **Primary intent:** create an inventory that may help with insurance documentation
-**Title tag:** `Home Inventory for Insurance: Build Better Records Without Guessing Policy Requirements`
-**Meta description:** `Organize household possessions, photos, purchase details and serial numbers so you have better records if an insurer later asks for documentation.`
+**Title tag:** `Home Inventory for Insurance: What to Record, Photograph and Back Up`
+**Meta description:** `Build a home inventory for insurance with the specific fields, photo methods and off-site backup practice recommended by the Insurance Information Institute.`
 **Primary keyword concept:** home inventory for insurance
+**Depth:** verified
 **Suggested internal links:** `/guides/photo-home-inventory/`, `/guides/valuable-item-inventory/`, `/guides/digital-home-inventory-backup/`, `/features/home-inventory-tracker/`
 
-# A home inventory can improve your records, but your policy determines what an insurer actually needs
+# Home inventory for insurance: what to actually record, per the Insurance Information Institute
 
-The safest goal is to preserve clear information rather than try to predict every claim requirement. Insurance policies, documentation standards and coverage vary, so confirm specific questions with your insurer or qualified adviser.
+A home inventory can meaningfully improve your position after a loss, but your specific policy — not this page — determines what your insurer requires. What follows is what the Insurance Information Institute (Triple-I), an industry research organization, recommends recording and how, plus where a local-only inventory falls short.
 
-## Capture identity and evidence
+## What to record for each item
 
-For meaningful items, record what the item is, brand/model where relevant, serial number, purchase information if available and clear photos. Receipts can be referenced when they are easy to preserve.
+- **Description**: what the item is, where you bought it, the make/model, and what you paid.
+- **Serial numbers**: found on major appliances and electronics, useful for identification and claims.
+- **Clothing**: count by category rather than item-by-item ("5 pairs of jeans, 3 pairs of sneakers") — itemizing every garment individually isn't practical or necessary.
+- **Valuables flagged separately**: jewelry, art and collectibles often need supplemental coverage beyond a standard policy's per-category limits, so flag them rather than burying them in a general list.
+- **Off-site belongings**: items in a self-storage unit count too, and are easy to forget since they're out of sight.
 
-## Photograph context as well as details
+Source: [Insurance Information Institute](https://www.iii.org/article/how-to-create-a-home-inventory).
 
-A room overview can show that items existed in the household, while close-ups can capture model or serial labels. Do not rely on a single photo type.
+## Photograph context, not just objects
 
-## Keep a backup away from the primary device
+Triple-I recommends two photo types, not one: individual item photos labeled with what's pictured, where it was bought and the make/model; and room or closet overview photos or a video walkthrough with a spoken description of contents. The overview shows that items existed in the household at all, which close-ups of individual items don't establish on their own — a claims conversation benefits from both.
 
-If the event that damages household property also damages your computer or phone, a local-only inventory may be unavailable. Export a protected backup to a separate location you control.
+## Keep proof of value where you can
 
-## Do not inflate values
+Store sales receipts and purchase contracts, and keep appraisals for high-value items where you have them. Record the known purchase cost or the supporting document reference — don't estimate a replacement value and present it as fact; that's a job for an adjuster or appraiser, not the household record.
 
-Record known purchase cost or supporting documentation when available. Do not invent replacement values or treat the app as an appraisal tool.
+## Back the inventory up somewhere the household itself can't destroy
 
-**Contextual CTA:** Build the inventory around verifiable information, then ask your insurer what additional documentation is useful for your specific policy.
+Triple-I's guidance is specific here: keep a paper copy in a safe deposit box outside the home, and create digital backups on external drives or cloud storage, updated regularly after significant purchases. The reasoning matters for a local-first tool — if the event that damages your belongings (fire, flood, theft of electronics) also destroys the only computer or phone holding the inventory, a local-only record is unavailable exactly when you need it. Export a backup to a location physically separate from the household.
+
+## Do not inflate or estimate values
+
+Record what you actually know — purchase price, a receipt, an appraisal — and leave a field blank or marked unknown rather than guessing a number that will look inconsistent if an adjuster asks how it was calculated.
+
+## Prioritize rooms and categories instead of trying to finish in one sitting
+
+A whole-home inventory is a big task, and most households abandon it if they try to do every drawer in one weekend. Start with the categories most likely to matter in a claim and hardest to reconstruct from memory afterward: electronics and major appliances (serial numbers are easy to lose track of once the box is gone), jewelry and collectibles (values are easy to underestimate without documentation), and any recent large purchase. Add rooms incrementally — finishing the living room and kitchen this month is more useful than an inventory that's 10% done everywhere and complete nowhere.
+
+## What an adjuster actually works from after a loss
+
+While policies and processes vary by insurer, a claims adjuster generally needs to establish what was lost, its condition before the loss, and a reasonable value — which is exactly what the description, photo and value fields above are built to support. An inventory doesn't replace the adjuster's own assessment or your policy's specific documentation requirements, but a household that can produce dated photos and a clear item list is starting the claims conversation from evidence rather than from memory under stress.
+
+## A room-overview video is worth more than it seems
+
+A slow walkthrough video, narrating what's in each room as you go, is one of the fastest ways to build baseline coverage — it captures far more items per minute than photographing each one individually, even though it won't replace close-up photos of high-value items or serial-number labels. Doing this once as a starting point, then following up with detailed entries for the categories above, covers more ground in less time than trying to do a complete detailed entry for every item on the first pass.
+
+## Update the inventory on a trigger, not just a calendar reminder
+
+Beyond a periodic review, treat any major purchase, renovation or received gift as an immediate trigger to add a record while the receipt and details are still easy to find — waiting for an annual review means reconstructing purchase details for a dozen items at once instead of one at a time.
+
+**Contextual CTA:** Build the inventory around the Triple-I fields above, export a backup to a location outside the home, then ask your insurer what additional documentation your specific policy requires.
+
+**FAQ:**
+- Q: What information does a home inventory for insurance actually need to include?
+  A: Per Insurance Information Institute guidance, record what each item is, where it was bought, the make and model, what you paid, and the serial number for appliances and electronics. Group clothing by category rather than item-by-item, and flag high-value items like jewelry, art and collectibles since they often need supplemental coverage.
+- Q: Are photos alone enough, or do I need receipts too?
+  A: Photos and receipts serve different purposes. Photos (both room overviews and item close-ups) establish that items existed and show condition and model details; receipts and appraisals establish value. Triple-I recommends keeping both where available, rather than relying on photos alone to answer a value question.
+- Q: Where should a home inventory be backed up?
+  A: Somewhere outside the home. The Insurance Information Institute specifically recommends a paper copy in a safe deposit box plus a digital backup on an external drive or cloud storage. If the same event that damages your belongings also destroys the device holding a local-only inventory, that record becomes unavailable exactly when you'd need it.
+- Q: Should I write down what I think my belongings are worth?
+  A: Only if you have a real basis for the number — a receipt, a purchase price you remember accurately, or a professional appraisal. Don't estimate replacement value and record it as fact; valuation is properly an adjuster's or appraiser's job, and an unsupported number can look inconsistent during a claim.
 
 ---
 
@@ -3246,32 +3599,68 @@ Do not expose them in public pages, shared display mode or analytics.
 ## Page 090 — Purchase Receipt Organizer
 **Slug:** `/guides/purchase-receipt-organizer/`
 **Primary intent:** organize household purchase receipts
-**Title tag:** `Purchase Receipt Organizer: Keep Receipts Connected to the Things You Bought`
-**Meta description:** `Organize important household receipts by asset, warranty and purchase record instead of relying on one giant receipt folder.`
+**Title tag:** `Purchase Receipt Organizer: How Long to Actually Keep Each Receipt (IRS Rules)`
+**Meta description:** `Organize household receipts by purchase, with the actual IRS retention periods — 3, 6 or 7 years — for tax-relevant receipts instead of one guessed rule.`
 **Primary keyword concept:** receipt organizer for home purchases
+**Depth:** verified
 **Suggested internal links:** `/guides/how-long-to-keep-household-records/`, `/guides/warranty-expiration/`, `/guides/home-improvement-receipts/`, `/features/household-documents-organizer/`
 
-# The best way to find a receipt is often through the item, not the date
+# Purchase receipt organizer: the actual retention periods, not a guessed rule
 
-A folder called “Receipts” eventually becomes hundreds of scans. A better household system links the receipt to the purchase it proves.
+A folder called "Receipts" eventually becomes hundreds of unsearchable scans. A better system links each receipt to the purchase it proves and keeps it only as long as it has a real reason to exist — which, for anything tax-relevant, is a period the IRS actually publishes.
 
-## Keep high-value or high-purpose receipts
+## How long to keep a receipt, by reason
 
-Receipts are especially useful for warranties, returns, insurance documentation, tax/property records where applicable and major household purchases. There is little value in digitizing every low-value receipt without a reason.
+| Reason you're keeping it | Retention period | Source |
+|---|---|---|
+| Standard tax return support (you reported income correctly) | 3 years from filing | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
+| You filed a claim for credit or refund after filing | 3 years from filing, or 2 years from the date you paid the tax, whichever is later | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
+| You underreported income by more than 25% of gross income shown | 6 years | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
+| You claimed a loss from worthless securities or a bad-debt deduction | 7 years | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
+| Property-related receipts (home improvements, major purchases affecting basis) | Until the limitations period expires for the year you dispose of the property — often many years | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
+| You didn't file a return, or filed a fraudulent one | No limit — keep indefinitely | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
 
-## Use meaningful names
+Warranty and insurance receipts follow a different clock entirely — keep those for the length of the warranty or policy coverage, not the IRS tax-record schedule, since they're solving a different problem.
 
-Include date and item, such as `2026-04-18-washing-machine-receipt.pdf`. File naming should remain understandable even if the file leaves the app.
+## The best way to find a receipt is through the item, not the date
 
-## Record seller and purchase date as fields
+Link each receipt to the asset it proves — the specific washing machine, the specific home-improvement project — rather than filing purely by date. A generic "April 2026 receipts" folder is far harder to search two years later than a washing machine record with its receipt, warranty and repair history attached in one place.
 
-Do not force the future user to open the PDF just to discover where the item was bought.
+## Keep high-value or high-purpose receipts; skip the rest
 
-## Follow real retention requirements
+Receipts earn their keep for warranties, returns, insurance documentation, the tax-relevant categories above, and major household purchases. There's little value in scanning every small grocery or takeout receipt without a specific reason — that effort is better spent on the receipts that actually matter later.
 
-Tax, legal, warranty and insurance needs vary. The app should not invent one universal “keep for seven years” rule for every receipt.
+## Use meaningful file names and searchable fields
 
-**Contextual CTA:** Start by organizing receipts for active warranties and expensive household purchases; those have the clearest future use.
+Include the date and item in the file name, such as `2026-04-18-washing-machine-receipt.pdf`, so the file stays understandable even outside the app. Record the seller and purchase date as separate fields too — don't force a future search to mean opening every PDF to find out where something was bought.
+
+## Paper receipts fade — capture them before they're unreadable
+
+Thermal-printer receipts, the kind most retail registers still print, are notorious for fading to blank within a year or two, well before most of the retention periods above expire. If a receipt matters for a tax record, a warranty claim or an insurance file, photograph or scan it soon after purchase rather than filing the paper original and assuming it will still be legible when you need it — a faded receipt is functionally the same as no receipt at all.
+
+## Digital and emailed receipts need the same organization as paper ones
+
+An emailed order confirmation or a PDF invoice is just as easy to lose in a crowded inbox as a paper receipt is to lose in a drawer. Save a copy into the household record at the time of purchase rather than relying on email search later — email providers change, accounts get migrated, and a purchase confirmation from a retailer that later closes its online order history isn't guaranteed to stay retrievable years down the line.
+
+## When a receipt's job is done, let it go
+
+Not every receipt needs to survive with the file forever. Once a return window has closed, a warranty has expired and the item has been discarded or sold, and no tax-relevant retention period applies, the receipt has finished its job — removing it keeps the collection useful instead of turning into the same unsearchable pile the folder system was meant to replace.
+
+## A quick sort for the receipts already piled up
+
+Facing an existing shoebox or downloads folder full of receipts is different from starting fresh. Rather than processing them in date order, sort first by whether the purchase is still under warranty or return window (keep and attach to the asset), still tax-relevant under the table above (keep, filed by year and reason), or neither (safe to discard once you've confirmed there's no ongoing need). This three-way sort clears the backlog faster than trying to make a permanent filing decision on every single receipt in the pile.
+
+**Contextual CTA:** Start with receipts for active warranties, tax-relevant purchases and expensive household items — attach each one to its asset record rather than filing by date alone.
+
+**FAQ:**
+- Q: How long does the IRS actually say to keep a receipt?
+  A: It depends on why you're keeping it. Standard tax support is 3 years from filing; underreporting income by more than 25% extends that to 6 years; a worthless-securities or bad-debt claim extends it to 7 years; and if you never filed a return, there's no time limit at all. There's no single universal number.
+- Q: Do warranty receipts follow the same retention rule as tax receipts?
+  A: No — keep a warranty receipt for as long as the warranty itself runs, which has nothing to do with the IRS's tax-record schedule. A receipt can matter for two entirely different reasons (proving a tax position vs. proving a warranty claim), so it's worth tracking which reason applies to each one you keep.
+- Q: Should I scan every receipt to be safe?
+  A: Not necessarily. Receipts earn their keep for warranties, returns, insurance documentation, tax-relevant purchases and major household items. Digitizing every small day-to-day receipt without a specific future use mostly creates clutter that makes the receipts that do matter harder to find.
+- Q: What's the best way to organize receipts so I can actually find one later?
+  A: Attach the receipt to the specific item or asset it proves, rather than filing purely by date. A washing machine record that holds its receipt, warranty terms and repair history together is far easier to search two years later than a generic monthly receipts folder.
 
 ---
 
@@ -3470,32 +3859,68 @@ Archive the outgoing appliance and create a new asset. That preserves real house
 ## Page 097 — Appliance Lifespan Planning
 **Slug:** `/guides/appliance-lifespan-planning/`
 **Primary intent:** understand appliance lifespan estimates responsibly
-**Title tag:** `Appliance Lifespan Planning: How to Use Age Estimates Without Treating Them as Expiration Dates`
-**Meta description:** `Use appliance age and lifespan estimates as planning context while relying on real condition, repair history and manufacturer information.`
+**Title tag:** `Appliance Lifespan Planning: Real Ranges by Appliance, Not a Guess`
+**Meta description:** `Appliance lifespan ranges by type — refrigerator, washer, dryer, dishwasher, water heater — sourced from AHAM, Rheem and manufacturer data, used for planning.`
 **Primary keyword concept:** appliance lifespan planning
+**Depth:** verified
 **Suggested internal links:** `/tools/appliance-age-calculator/`, `/tools/appliance-replacement-planner/`, `/guides/appliance-replacement-planning/`, `/features/home-inventory-tracker/`
 
-# Appliances do not expire on schedule
+# Appliance lifespan planning: real published ranges, used as planning input, not a countdown
 
-A lifespan estimate describes a population, not your exact refrigerator or washer. Some units fail earlier; others remain useful much longer. The right use of lifespan information is planning.
+A lifespan estimate describes a population of appliances, not your exact unit. Some fail early; some outlast the range entirely. But "it varies" isn't a reason to withhold the actual published ranges — it's a reason to use them as one input alongside your appliance's real condition and repair history, rather than as a prediction.
+
+## Published lifespan ranges by appliance
+
+| Appliance | Typical range | Source |
+|---|---|---|
+| Refrigerator | 10–14 years (13–17 per one manufacturer estimate) | [AHAM](https://blog.aham.org/want-to-save-energy-it-might-be-time-to-flip-your-fridge/); [Bosch](https://www.boschappliance.support/guides/appliance-lifespans-guide/) |
+| Washing machine | Well over a decade for most units, roughly 10–14 years | [AHAM](https://blog.aham.org/Save-Energy-and-Money-When-Doing-Laundry-By-Following-These-Tips/); [Bosch](https://www.boschappliance.support/guides/appliance-lifespans-guide/) |
+| Dryer | Well over a decade for most units, roughly 10–14 years | [AHAM](https://blog.aham.org/Save-Energy-and-Money-When-Doing-Laundry-By-Following-These-Tips/); [Bosch](https://www.boschappliance.support/guides/appliance-lifespans-guide/) |
+| Dishwasher | 10–13 years | [Bosch](https://www.boschappliance.support/guides/appliance-lifespans-guide/) |
+| Water heater (tank) | 8–12 years | [Rheem](https://www.rheem.com/water-heating/articles/water-heater-lifespan-when-to-repair-vs-replace/) |
+| Water heater (tankless) | 15–20+ years | [Rheem](https://www.rheem.com/water-heating/articles/water-heater-lifespan-when-to-repair-vs-replace/) |
+
+These are typical manufacturer- and trade-association-published ranges, not predictions for any specific unit — treat the low end as "worth watching more closely" and the high end as "not unusual," rather than either end as a deadline.
 
 ## Calculate age accurately first
 
-If the purchase or installation date is known, calculate current age. If it is estimated, label it as such. Serial-number decoding may be manufacturer-specific and should not be guessed.
+If the purchase or installation date is known, use it directly. If it's estimated, label it as an estimate rather than presenting a guess as fact — "installed approximately 2016, unconfirmed" is more honest and more useful later than a fabricated exact date. Serial-number date decoding is manufacturer-specific and shouldn't be guessed from a generic formula; check the manufacturer's own lookup tool or documentation.
 
-## Add real household evidence
+## The 15-year efficiency signal for refrigerators specifically
 
-Repair frequency, changes in performance, parts availability and household needs are more actionable than age alone.
+AHAM notes that a refrigerator 15 years or older typically uses about twice the energy of a new ENERGY STAR-certified model, with commonly cited savings around $260 over five years after switching. That's a genuinely different kind of signal than "it might fail soon" — it's a running-cost argument that applies even to a refrigerator that's working perfectly.
 
-## Use ranges and uncertainty
+## Add real household evidence on top of the range
 
-If public reference ranges are shown, cite reliable sources and explain that they are not predictions. Never tell a user “replace in 8 months” based solely on age.
+Repair frequency, recent performance changes, parts availability and how critical the appliance is to daily household function are more actionable than age alone. Two units of the same age with different repair histories are not equally close to replacement — the one with two service calls in the past year deserves more attention than the one with zero, regardless of what the published range says.
 
-## Plan the disruption
+## Plan the disruption, not just the number
 
-For critical appliances, saving measurements, connection information and a replacement budget can be more useful than obsessing over an exact lifespan.
+For critical appliances — the water heater, the refrigerator — saving measurements, connection type, model number and a rough replacement budget ahead of time is more useful than obsessing over an exact remaining lifespan. When a water heater does fail, most households need a replacement fast; having the specs on hand already turns a stressful same-day decision into a five-minute lookup.
 
-**Contextual CTA:** Use the Appliance Age Calculator to establish the known age, then add repair and condition history before making a replacement plan.
+## A simple decision framework instead of a single cutoff age
+
+Rather than picking one age as a hard replacement trigger, weigh three questions together: is the appliance inside or past its published range, has it needed repairs recently or more than once, and does a repair estimate approach roughly half the cost of a new unit? An appliance that's young but has already needed two repairs is a weaker bet than an older one with a clean history. None of these questions alone should decide a replacement — the combination is what actually informs the decision, which is why a written repair history matters as much as the age figure itself.
+
+## Why the ranges above differ between sources
+
+You'll notice the table gives a range rather than one number, and even reputable sources don't fully agree — AHAM's refrigerator figure (10–14 years) and one manufacturer's own estimate (13–17 years) both come from real data, just measured differently: trade-association averages tend to reflect a broad population including heavily used units, while a single manufacturer's estimate may lean toward their own product line's typical performance. Neither is wrong; it's a reason to treat any single number as an approximation rather than a precise fact, and to weight your own appliance's real condition more heavily than the exact midpoint of a published range.
+
+## Maintenance history changes where a unit sits in its own range
+
+An appliance that's received the maintenance described in this site's other checklists — coil cleaning, filter changes, hose replacement, annual water heater service — has a real reason to land toward the upper end of its published range rather than the midpoint, while one with a history of skipped maintenance has a real reason to land toward the lower end. This isn't a guarantee either way, but it's the most concrete lever a household actually controls, which is why the maintenance checklists throughout this site and the lifespan ranges here are meant to be used together rather than as separate topics.
+
+**Contextual CTA:** Use the Appliance Age Calculator to establish the known age against the ranges above, then add repair and condition history before deciding on a replacement timeline.
+
+**FAQ:**
+- Q: How long should a refrigerator actually be expected to last?
+  A: AHAM, a major appliance trade association, cites an average lifespan of 10 to 14 years, with some manufacturer estimates running as high as 13 to 17. A unit 15 years or older typically uses about twice the energy of a new ENERGY STAR model, which is often a stronger replacement argument than an actual breakdown.
+- Q: Do washers and dryers really last as long as a water heater?
+  A: Roughly, yes — trade association guidance describes washers and dryers as commonly lasting well over a decade, in the same general 10 to 14 year range as a tank water heater's 8 to 12 years. Tankless water heaters are the outlier, commonly rated for 15 to 20-plus years.
+- Q: Should I replace an appliance just because it's past its "typical lifespan"?
+  A: Not automatically. These ranges describe a population average, not a prediction for your specific unit. Use age alongside real evidence — repair frequency, recent performance changes, and how critical the appliance is — rather than replacing a unit that's working fine purely because it passed a published number.
+- Q: What should I actually record to prepare for an appliance replacement?
+  A: Save the model number, measurements, connection type (gas/electric, voltage, plumbing size) and a rough budget for the appliances most critical to daily life, especially the water heater and refrigerator. When one fails unexpectedly, having those specs already on hand turns a stressful same-day decision into a quick lookup instead.
 
 ---
 
@@ -4839,7 +5264,7 @@ Streaming services are only one category. Internet/security services, membership
 
 ## Find subscriptions from several sources
 
-Review bank/card statements, app-store subscriptions, email renewal notices and household memory. Do not connect financial accounts to `FamilyBoard` in v1; manually create the list.
+Review bank/card statements, app-store subscriptions, email renewal notices and household memory. FamilyBoard does not connect to financial accounts — build the list manually from what you find in those sources.
 
 ## Normalize the annual cost
 
@@ -4941,9 +5366,9 @@ Insurance, memberships, vehicle/property-related renewals where applicable, soft
 
 The date you want to *decide* may be weeks before the actual renewal. Store both where useful.
 
-## Avoid country-specific automatic rules in v1
+## Enter real dates from your own documents
 
-Legal registration and inspection deadlines vary. Let users enter the real dates from their official documents.
+Legal registration and inspection deadlines vary by location and change over time, so FamilyBoard doesn't calculate them automatically. Enter the actual dates from your official documents rather than relying on a generic assumed schedule.
 
 ## Review once per year
 
@@ -5388,42 +5813,49 @@ Once the household database contains meaningful information, create the first ex
 
 # Free Home Maintenance Schedule Generator
 
-A good home-maintenance schedule starts with the systems you actually have. This generator creates an editable **starter plan**, not a universal maintenance prescription.
+Most home-maintenance advice online gives you either a generic 200-item checklist that ignores what you actually own, or nothing concrete at all. This generator does neither: it takes the specific systems in your home and turns each one into two review prompts you can act on, at whatever cadence you choose.
 
-## Tool inputs
+## What you actually get
 
-Ask the user for:
+Type in your systems and assets — comma-separated, however you'd naturally list them: "HVAC filter, refrigerator, smoke alarms" is enough. Pick a review cadence: monthly, quarterly, or seasonally. For each item you enter, the generator writes two lines — one prompting you to inspect its condition and confirm the correct manufacturer interval, and a second prompting you to record completion, observations, and the next due date. It is a starting skeleton, not a database of intervals. No tool can know that your water heater is a 2019 model with a six-month anode-rod check without you telling it.
 
-- home type: detached house, condo, apartment/rental, other;
-- climate pattern: user-selected broad conditions such as freezing winter, hot/humid, wet/rainy, mild, user-defined;
-- systems present: HVAC/AC, furnace/heating, heat pump, water heater, water treatment, refrigerator, washer/dryer, dishwasher, range hood, smoke/CO alarms, backup power, outdoor areas;
-- preferred review cadence;
-- whether they want household admin reminders included.
+## Worked example
 
-## Tool output
+Enter "HVAC filter, refrigerator, smoke alarms" with a Monthly cadence, and the output reads:
 
-Generate four groups rather than one long list:
+> Monthly starter schedule
+> • HVAC filter: inspect condition and confirm the correct manufacturer interval at the next review.
+> • HVAC filter: record completion, observations and the next due date.
+> • refrigerator: inspect condition and confirm the correct manufacturer interval.
+> • refrigerator: record completion, observations and the next due date.
+> • smoke alarms: inspect condition and confirm the correct manufacturer interval.
+> • smoke alarms: record completion, observations and the next due date.
 
-1. **Review regularly** — condition-based checks.
-2. **Recurring tasks** — only where the user selects or confirms a schedule.
-3. **Seasonal preparation** — based on broad climate choice.
-4. **Manual/professional guidance required** — tasks where no universal interval should be guessed.
+The next step is yours: open each item's manual or manufacturer support page, replace "confirm the correct manufacturer interval" with the actual number you found, and delete the prompt once it's answered.
 
-Each generated item needs `Why it matters`, `Suggested trigger`, `Linked system`, and an editable `Notes` field.
+## What it can't determine
 
-## Important limitation copy
+The generator has no manufacturer database and doesn't know your climate, your home's age, or your specific model numbers. It won't tell you whether a furnace filter is a 1-inch or 4-inch design, and it won't invent a smoke-alarm test interval — figures like that belong on the appliance- and safety-specific guide pages, sourced from the actual manufacturer or standards body, not guessed here.
 
-> This tool produces an organizational starting point. Actual maintenance intervals and procedures depend on your equipment, manufacturer instructions, building, climate and local professional guidance. Review every item before saving it.
+## What to save with the finished list
 
-## Example
+A schedule only stays useful if the numbers in it came from somewhere real. For each system, keep three things together: the manual or support page you checked, the interval it actually specified, and the date you last completed the task. The result panel's **Save for app** button stores the generated text locally in your browser as a scratch copy; the version worth keeping long-term is the one where you've replaced every placeholder with a real number and attached it to that system's own asset record.
 
-A user with a condo, split-system AC, refrigerator, washer/dryer and no outdoor space should receive a very different plan from a detached cold-climate house with a furnace and exterior drainage.
+## Working through a long list without stalling out
 
-## Product bridge
+If you type in a dozen systems at once, the generator hands you back two dozen prompts, and reading a manual for every single one in one sitting is exactly the kind of project that gets abandoned halfway. It's fine to generate the full list up front and then work through it in a different order than it printed in — start with whatever would cause the most disruption if it failed unexpectedly, like a water heater or an HVAC system, confirm its real interval first, and let lower-stakes items like light fixtures or small appliances wait a week or two without any harm done.
 
-Allow the user to download/print the schedule or click **Save to `FamilyBoard`** to create local maintenance records.
+**FAQ:**
+- Q: Does the generator know how often my furnace filter needs changing?
+  A: No. It has no manufacturer database, so it prompts you to check your furnace's manual or support page and enter the real interval yourself. The generated line exists to remind you which systems still need that lookup, not to supply the number.
+- Q: What does the "cadence" setting actually control?
+  A: Cadence (monthly, quarterly, or seasonally) sets how often you revisit the whole list to check items off, not the maintenance interval for each individual system — a monthly review can still include a task you only need to do once a year.
+- Q: Can I list systems that aren't on a standard checklist, like a water softener or a backup generator?
+  A: Yes. The generator has no preset catalog — it accepts anything you type, comma-separated, and creates the same two review prompts for each entry you add.
+- Q: Will FamilyBoard remind me automatically when a maintenance task is due?
+  A: No. FamilyBoard stores data in your browser only, with no account or server, so nothing can notify you while the browser is closed. Treat the generated schedule as a list to revisit yourself, not an alarm.
 
-**CTA:** Generate the plan, delete what does not apply, and save only the tasks you understand and intend to maintain.
+**Contextual CTA:** Generate the schedule, replace each "confirm the correct manufacturer interval" line with the real number from your own manual, and save the finished list to the matching asset record.
 
 ---
 
@@ -5437,37 +5869,53 @@ Allow the user to download/print the schedule or click **Save to `FamilyBoard`**
 
 # Warranty Expiration Calculator
 
-Use this calculator when the warranty document gives a clear start date and term.
+Use this calculator once you know the exact date a warranty starts and how long it runs. It answers one question precisely: given that start date and term, what date does coverage end, and when should you review the paperwork before it does?
 
-## Tool inputs
+## Find the real start date first
 
-- warranty start date;
-- term number;
-- term unit: days, months or years;
-- optional “notify me before” lead time for local export/saved task.
+A purchase date is not automatically a warranty start date. Depending on the product, coverage can start on the transaction date, the delivery date, the installation date, product registration, or another event named in the written terms. Before you type anything in, find the actual warranty card, invoice, order confirmation, or installer paperwork and use whichever date it names as the start — not the date you happen to remember.
 
-## Output
+## How the calculator works
 
-Show:
+Enter the start date, the warranty term in months, and how many days before expiration you want a review flag (30 days by default). The calculator adds the term to the start date to get an estimated end date, then subtracts your review window from that end date to get a review-by date.
 
-- calculated end date;
-- days remaining from the user's device date;
-- a plain-language status: active, approaching, passed;
-- an “estimated” badge unless the user confirms the written terms use that exact start date.
+The one place simple date math goes wrong is the end of a month, and this calculator handles it with an explicit rule rather than letting JavaScript's default date rollover decide for you. If the target month doesn't have the same day number as the start date, the calculator lands on that month's last valid day instead of spilling into the following month. Adding one month to January 31 gives February 28 in a common year, or February 29 in a leap year — never March 3, which is what naive date arithmetic would silently produce. That convergence rule is what makes the output predictable and reproducible every time you run the same dates through it, regardless of which months are involved.
 
-## Calculation behavior
+## Worked example
 
-Date arithmetic must be explicit and tested, especially for leap years and month-end dates. If adding one month to January 31, Codex must define and document the chosen date-handling rule rather than rely on accidental JS rollover behavior.
+Start date: August 19, 2026. Term: 24 months (the calculator's default). Adding 24 months lands on August 19, 2028 — a clean case with no month-end adjustment needed, since both months have a 19th. With the default 30-day review window, the review-by date is July 20, 2028. If your own warranty runs from a month-end date instead — say a March 31 installation with a 6-month term — the end date converges to September 30, since September has no 31st.
 
-## Limitation copy
+## What the result can't tell you
 
-> The calculator handles date arithmetic only. Warranty coverage, start date, exclusions, registration requirements and legal rights depend on the actual written terms and applicable law.
+The calculator only performs date arithmetic on the numbers you give it. It cannot confirm that the product is still within scope, that your use of it hasn't triggered an exclusion, that registration was completed if the terms require it, that parts and labor are both covered, or what other rights you may have under the law that applies to your purchase. Treat the calculated date as a planning marker that tells you when to go re-read the actual warranty terms, not as proof that a claim will be accepted.
 
-## Example
+## What to save alongside the date
 
-Purchase/start date: August 19, 2026. Term: 24 months. The calculator shows the resulting date and encourages the user to verify whether the warranty begins on purchase, delivery, installation or another event.
+A date by itself is hard to defend later if you can't show where it came from. Keep these together with the calculated date, in the same asset record:
 
-**CTA:** Save the date with the receipt, model and warranty source so the number remains meaningful later.
+- brand, model, and serial number of the item;
+- the invoice, order confirmation, or delivery date the warranty is actually based on;
+- where the written warranty terms are stored, and which version;
+- the exact event the terms name as the start (purchase, delivery, installation, registration);
+- the manufacturer's or seller's support contact for filing a claim;
+- any registration, exclusion, or documentation requirement named in the terms;
+- a running log of repairs, replacements, or prior claims.
+
+FamilyBoard's app runs entirely in your browser — there's no account and nothing syncs to a server, so the private workspace where you'd keep this asset record only exists on the device you're using right now. The result panel's **Save for app** button stores the calculated text locally as a quick reference; treat the full asset record, with the receipt and warranty document attached, as the version that actually matters two years from now.
+
+**FAQ:**
+- Q: Does the purchase date always equal the warranty start date?
+  A: No. Coverage can start on the purchase date, the delivery date, the installation date, product registration, or another event entirely, depending on the manufacturer's or seller's written terms. Check the actual warranty card, invoice, or installer paperwork for the date it names before entering anything into the calculator.
+- Q: What happens if I add one month to January 31?
+  A: The calculator uses a month-end convergence rule: when the target month has no matching day number, it lands on that month's last valid day instead of rolling into the next month. Adding one month to January 31 gives February 28 in a common year, or February 29 in a leap year.
+- Q: Can the calculated date prove my warranty is still valid?
+  A: No. The result is date arithmetic only — it cannot confirm coverage scope, exclusions, registration status, whether parts and labor are both included, or any other rights you may have. Use it to know when to go verify the real terms, not as evidence a claim will be accepted.
+- Q: Why does the calculator ask for a review window before the expiration date?
+  A: Warranty claims and paperwork take time to assemble, and problems are easier to catch with coverage still active. The review-by date — 30 days before expiration by default — is a prompt to re-check the item's condition and gather documentation while you can still act on what you find.
+- Q: Will FamilyBoard remind me automatically when the review date arrives?
+  A: No. FamilyBoard stores records in your browser only, with no account or server, so it can't send a notification while the browser is closed. The review-by date is meant to be checked when you next open your household records, not something that alerts you on its own.
+
+**Contextual CTA:** Calculate the date, then save it with the receipt, model, serial number, and the exact warranty-start event so the number still means something when you check back in two years.
 
 ---
 
@@ -5481,35 +5929,43 @@ Purchase/start date: August 19, 2026. Term: 24 months. The calculator shows the 
 
 # Appliance Age Calculator
 
-Age is useful planning context, but it is not a failure prediction.
+Age is one useful fact about an appliance, but it answers a much narrower question than "should I replace this." This calculator tells you exactly how old a unit is, in years and months, from a known start date to today — nothing more.
 
-## Tool inputs
+## What you enter and what comes back
 
-- appliance category;
-- known purchase or installation date;
-- date confidence: exact / approximate;
-- optional current notes.
+Give it the appliance's purchase or installation date and a name for the appliance so the result is easy to recognize later. The calculator counts full elapsed years and months between that date and today's date. It does the counting the way a person would with a calendar, not just by dividing days by 30: it compares the day-of-month you started on to today's day-of-month, and only counts the current month as complete once today's day number has caught up to it.
 
-## Output
+## Worked example
 
-Show age in years and months, the source label (“purchase date” or “installation date”) and an “approximate” badge where appropriate.
+An appliance purchased on March 15, 2019 shows an age of 7 years, 5 months when checked on August 21, 2026 — because August 21 has already passed the 15th, the partial month counts in full. If you checked the same appliance on August 10 instead, the result would read 7 years, 4 months, since the 10th hasn't yet reached the 15th and that month isn't finished.
 
-Do **not** automatically decode serial numbers in v1. Serial date decoding is manufacturer-specific and is easy to get wrong.
+## What the calculator does not do
 
-## Planning guidance
+It does not decode manufacture dates from a serial number. Serial-number date codes vary by manufacturer, and some brands have used more than one scheme over the years — reading one wrong gives you a confidently incorrect age rather than an honest "unknown." If the purchase date itself isn't certain, use your best estimate and note in the appliance record that the date is approximate, rather than treating the calculator's output as more precise than the input you gave it.
 
-The result page should suggest next steps rather than a replacement deadline:
+## Age is not a failure forecast
 
-- review repair history;
-- confirm warranty status;
-- save dimensions/model information;
-- consider replacement planning if condition or repeated repair makes it relevant.
+A 7-year-old appliance and a 15-year-old appliance of the same model can have very different remaining service lives depending on usage, maintenance, and manufacturing variation. This calculator won't tell you when a specific unit will fail, and it doesn't attempt to. Age is most useful paired with the things it can't see on its own: how the appliance is actually performing right now, how many times it's been repaired, and what a qualified technician says about its condition if something has already gone wrong.
 
-## Limitation copy
+## What to record alongside the age
 
-> Appliance age does not tell you how long a specific unit will continue to work. Use real condition, service history, model information and qualified advice for decisions.
+Save the calculated age with the appliance's model and serial number, its warranty status, and a running note of any repairs or service visits. That combination — age plus real history — is what actually supports a replacement decision; age by itself is just one input. If you're weighing whether a specific unit is worth repairing again, the Appliance Replacement Planner takes age, condition, and recent repair cost together rather than relying on age alone.
 
-**CTA:** Save the calculated age to the appliance record and let history—not a generic lifespan number—guide planning.
+## Purchase date versus installation date
+
+For a built-in appliance — a range, a dishwasher, a water heater — the purchase date and the installation date can be weeks apart, and which one you should enter depends on what you're trying to track. If you're planning around warranty coverage, use whichever date the manufacturer's warranty terms actually specify as the start. If you're planning around wear and expected service life, the installation date is usually the more meaningful number, since that's when the appliance actually started running.
+
+**FAQ:**
+- Q: Does the calculator predict when my appliance will fail?
+  A: No. It only calculates elapsed time between a start date and today. Failure timing depends on usage, maintenance, manufacturing variation, and condition — none of which the calculator has access to. Use the age alongside real repair history and current performance, not as a standalone forecast.
+- Q: Why did the age change by a month when I checked it a few days apart?
+  A: The calculator counts a month as complete only once today's day-of-month reaches the day-of-month you started on. If you purchased an appliance on the 15th and check the age on the 10th of a later month, that month isn't counted yet; checking again after the 15th adds it.
+- Q: Can the calculator read the manufacture date off my appliance's serial number?
+  A: No. Serial-number date codes differ by manufacturer, and some manufacturers have used more than one scheme over time. Decoding the wrong scheme produces a confident but incorrect date, so this calculator asks for a known purchase or installation date instead of guessing from the serial number.
+- Q: What should I do with the age once I have it?
+  A: Record it with the appliance's model, serial number, and warranty status, and note whether the start date was exact or approximate. Age on its own doesn't justify a replacement decision — combine it with repair history and current condition using the Appliance Replacement Planner if you're weighing whether to keep repairing the unit.
+
+**Contextual CTA:** Calculate the age, then save it to the appliance record along with the model, serial number, and any repair history so the number has context later.
 
 ---
 
@@ -5523,38 +5979,41 @@ The result page should suggest next steps rather than a replacement deadline:
 
 # Appliance Replacement Planner
 
-This tool prioritizes planning; it does not tell users to replace functioning equipment on a fixed birthday.
+This planner does not tell you to replace equipment on a fixed birthday. It compares how much of your own planning horizon is left against the condition you report, and gives you one of two flags: keep monitoring, or go review it now.
 
-## Inputs per appliance
+## What goes in, and how the flag is decided
 
-- category/name;
-- age if known;
-- recent repair count (user-entered);
-- recent repair cost (optional);
-- current condition: normal / concern / unreliable;
-- disruption if failure occurs: low / medium / high;
-- replacement constraints already known: dimensions, connections, special household needs.
+Give the planner the appliance's name, its purchase date, a planning horizon in years — how long you personally intend to plan around this appliance, not a manufacturer figure — your assessment of its current condition (working normally, watch: performance changed, or repair decision pending), and a recent repair estimate if one applies.
 
-## Output
+From the purchase date it calculates the appliance's current age. It subtracts that age from your planning horizon to get the time remaining in your own plan. The flag comes down to two conditions checked together: if you've marked the appliance as working normally and more than two years remain in your horizon, the result reads **Monitor**. Otherwise — whether because the condition isn't "working normally" or because your horizon is running out regardless of condition — the result reads **Review**. The repair estimate you enter is carried through to the result for your own reference, but it does not by itself change which of the two flags you get.
 
-Place items into:
+## Worked example
 
-- **No immediate planning needed**;
-- **Keep an eye on it**;
-- **Research replacement options**;
-- **Needs professional assessment / current problem**.
+A refrigerator purchased January 10, 2020, checked today with a 12-year planning horizon and "Working normally" selected, is roughly 6.6 years old — leaving about 5.4 years in the horizon. Since that's more than two years and the condition is normal, the result is **Monitor**. The same refrigerator purchased January 10, 2015 instead, checked with the same 12-year horizon, is about 11.6 years old with only 0.4 years remaining — even with "Working normally" still selected, the result flips to **Review**, because the horizon itself is nearly used up.
 
-The scoring logic must be transparent and conservative. Condition and disruption should weigh more than age alone. Never output “this appliance will fail within X months.”
+## What the planner can't determine
 
-## Useful result actions
+It has no diagnostic access to the appliance and no manufacturer lifespan data — it only works with the age, horizon, condition, and repair figure you type in. It can't tell you whether a repair is worth the cost, what a real replacement would cost today, or whether the unit is actually failing. A **Review** flag means "go look at this one," not "this is broken."
 
-- save measurements;
-- add replacement research task;
-- add a reserve estimate manually;
-- link repair history;
-- print household replacement watch list.
+## What a Review flag should lead to
 
-**CTA:** Use the planner to decide what deserves attention—not to throw away equipment that still works well.
+Once something is flagged for review, the next steps are outside the planner: check the appliance's actual condition, pull its repair history, and get a real replacement quote if you're seriously considering it. Record the appliance's dimensions and connection type while you're looking at it, since that's exactly the information you'll need if a replacement search does become necessary later.
+
+## Choosing a planning horizon that means something
+
+There's no universally correct number to enter for the planning horizon — it's meant to reflect how long you actually intend to think about this specific appliance before revisiting the decision, not a manufacturer lifespan claim. A household in a starter home might set a short horizon on an appliance they expect to replace anyway; a household that just renovated a kitchen might set a much longer one. Revisit the horizon itself occasionally, since a number chosen five years ago may no longer reflect your actual plans.
+
+**FAQ:**
+- Q: What's the difference between the planner's "Monitor" and "Review" results?
+  A: Monitor means your appliance is marked as working normally and more than two years remain in the planning horizon you set. Review means either the condition isn't normal or your horizon is nearly used up — it's a prompt to look at the appliance now, not a statement that it has failed.
+- Q: Does the recent repair estimate change whether I get Monitor or Review?
+  A: No. The repair estimate is shown back to you for reference, but only your reported condition and how much time is left in your chosen planning horizon determine the flag. A large repair cost with "Working normally" still selected and years left on the horizon will still show Monitor.
+- Q: What does the "planning horizon" actually represent?
+  A: It's a number of years you choose yourself — how long you personally intend to plan around keeping this appliance — not a manufacturer-published lifespan figure. The planner has no built-in lifespan data; it only compares the appliance's current age against whatever horizon you enter.
+- Q: My appliance got a Review flag but it seems fine — what should I actually do?
+  A: Check its real condition, gather its repair history, and get an actual replacement quote if you're seriously weighing the decision. Review only means "look at this one now" — it doesn't mean the appliance has failed or needs to be replaced immediately.
+
+**Contextual CTA:** Run the planner, and for anything flagged Review, save its dimensions and connection type alongside the repair history so a real replacement search is ready to go if you need it.
 
 ---
 
@@ -5568,41 +6027,43 @@ The scoring logic must be transparent and conservative. Condition and disruption
 
 # Household Subscription Cost Calculator
 
-Different billing cycles make recurring services look cheaper or harder to compare than they are. This tool normalizes the list.
+A household rarely has one subscription to worry about — it has a streaming plan billed monthly, cloud storage billed annually, and maybe a weekly meal box, each quoted in a different unit that makes them hard to add up in your head. This calculator puts every one of them on the same footing and totals the result.
 
-## Inputs
+## How to enter your list, and how it's calculated
 
-For each service:
+List one subscription per line in the format `Name | Amount | frequency`, where frequency is weekly, monthly, quarterly, or annual (yearly also works). The calculator converts each entry to its annualized cost — multiplying weekly amounts by 52, monthly by 12, and quarterly by 4 — then lists every subscription's annual figure individually, sums them into a household annual total, and divides that total by 12 to give you a combined monthly-equivalent number.
 
-- name;
-- cost;
-- billing frequency: weekly, monthly, quarterly, every six months, annual, custom;
-- optional category;
-- optional household owner.
+## Worked example
 
-## Output
+Enter "Streaming | 15.99 | monthly" and "Cloud storage | 29.99 | annual" — the calculator's own starting example — and the result reads: Streaming $191.88 a year, Cloud storage $29.99 a year, for a combined monthly equivalent of $18.49 and an annual total of $221.87. Add a third line, "Meal box | 45 | weekly," and that one entry alone adds $2,340 a year — a clear illustration of why a weekly price is worth converting before you compare it against anything billed less often.
 
-Show:
+## What it doesn't do
 
-- normalized monthly total;
-- annual total;
-- total by category;
-- top five annualized costs;
-- number of services.
+The calculator totals whatever you type; it doesn't pull your subscriptions from a bank statement, categorize them automatically, or flag which ones are "worth it." If you misspell the frequency word or leave it off a line, that entry is treated as costing nothing annualized, so double-check every row's frequency matches one of the four supported words before trusting the total. Everything runs in your browser as you type — nothing is sent anywhere to generate the total.
 
-## Privacy behavior
+## What the total is actually for
 
-All calculations happen client-side. Do not send service names or amounts to analytics.
+An annual number on its own doesn't tell a household anything to act on. The useful next step is deciding, service by service, whether each one is still worth what it costs — and noting the renewal date for the ones you want to reconsider before the next charge hits, rather than after.
 
-## Useful interpretation
+## What to save with the total
 
-Avoid judgmental copy such as “you are wasting $X.” Instead say: “This list gives the household one place to decide which services are still useful.”
+Keep the date you ran the calculation, since subscription prices change and a six-month-old total can be misleading. For any subscription you flag for review, note its renewal or billing date next to the price you entered here, so the reminder lines up with when a cancellation decision actually matters.
 
-## Export
+## Grouping subscriptions by category yourself
 
-Allow CSV/print and **Save selected subscriptions to `FamilyBoard`**.
+The calculator totals every line together into one household number, but it doesn't sort entries into categories like streaming, storage, or memberships on its own. If that breakdown matters to you, group your list manually before entering it — list all your streaming services together, run the total, then do the same for storage and memberships separately. Three smaller totals often reveal more than one combined number, especially in a household with several people's individual subscriptions mixed together.
 
-**CTA:** Find the annual total, then add renewal dates for the services you would want to review before the next charge.
+**FAQ:**
+- Q: What format does the subscription list need to be in?
+  A: One subscription per line, written as Name | Amount | frequency, where frequency must be one of weekly, monthly, quarterly, or annual (yearly also works). If the frequency word doesn't match one of these exactly, that entry annualizes to zero and won't be counted in the total.
+- Q: How is the "monthly equivalent" different from just adding up my monthly bills?
+  A: It converts every subscription — including weekly and annual ones — into its annualized cost first, sums all of them, then divides by 12. That captures the true monthly-equivalent cost of a weekly meal box or an annual cloud-storage plan, which a simple sum of only your monthly-billed services would miss entirely.
+- Q: Does the calculator tell me which subscriptions to cancel?
+  A: No. It only totals the numbers you provide. Deciding which services are still worth their cost is a judgment call for your household — the calculator's job is to make sure that judgment is based on accurate annualized numbers rather than each service's smaller-looking per-charge price.
+- Q: Is my subscription list sent anywhere when I calculate the total?
+  A: No. The calculation runs entirely in your browser as you type. FamilyBoard has no account or server for this tool, so the names and amounts you enter never leave the current page.
+
+**Contextual CTA:** Calculate the household total, then note the renewal date next to each subscription you want to reconsider before its next charge.
 
 ---
 
@@ -5616,30 +6077,43 @@ Allow CSV/print and **Save selected subscriptions to `FamilyBoard`**.
 
 # Annual Subscription Cost Calculator
 
-This lightweight tool answers one question quickly: **What does this recurring price represent over a year?**
+Subscription pricing is deliberately hard to compare at a glance. A $12 weekly charge and a $52 monthly charge sound like different numbers, but one of them is quietly more expensive per year. This calculator answers one narrow question fast: what does this single recurring price actually cost you over twelve months?
 
-## Inputs
+## What it converts, and how
 
-- recurring price;
-- billing interval;
-- optional taxes/fees field if the user knows them;
-- currency selection for display only, with no live exchange-rate assumptions unless a verified FX source is intentionally added later.
+Enter the price and pick how often it's billed — weekly, monthly, quarterly, or annual. The calculator multiplies the price by the number of billing cycles in a year for that frequency (52 for weekly, 12 for monthly, 4 for quarterly, 1 for annual) to get the annualized cost, then divides that annual figure by 12 to give you a monthly-equivalent number you can put side by side with a subscription that's already billed monthly. It also projects a five-year total at the current price, purely as a planning reference — not a prediction, since almost no subscription price stays flat for five years.
 
-## Output
+## Worked example
 
-Show the annualized amount and the average monthly equivalent. Explain the math in one line.
+A $12-a-week service — the calculator's own default — annualizes to $624, which works out to a $52 monthly equivalent and a $3,120 five-year planning total at that price. Compare that against a $15.99-a-month streaming plan: $191.88 a year, already expressed monthly, and $959.40 over five years. Without converting the weekly price, "$12" looks smaller than "$15.99" — the annualized numbers show the opposite is true.
 
-For custom intervals, let the user specify how many charges occur per year rather than inventing billing behavior.
+## What the number doesn't account for
 
-## Caveat
+The result assumes today's price holds steady. It does not build in promotional pricing that reverts after an introductory period, usage-based charges that vary month to month, or the price increases that are common on annual renewal. If a plan has a known future price change, calculate the annual figure separately for the promotional period and the standard period rather than treating one snapshot as the whole year.
 
-The result assumes the price remains unchanged and does not account for promotional periods, variable usage or price increases.
+## When one subscription isn't the real question
 
-## SEO value
+This tool is intentionally built for a single price. If you're trying to see what your whole household spends across every streaming, storage, and membership subscription at once, the Household Subscription Cost Calculator does the same normalization across a full list and totals it — use that one once you're past comparing two individual plans.
 
-The page should include examples for monthly, quarterly and annual plans and a short guide to comparing plans that bill on different schedules.
+## Reading the annualized number against your budget
 
-**CTA:** If you have several subscriptions, switch to the Household Subscription Cost Calculator and review them as one portfolio.
+An annualized figure is most useful compared against something concrete, not viewed in isolation. $624 a year sounds abstract; $624 a year next to your household's total discretionary spending, or next to what a competing service charges for the same thing, actually informs a decision. If a plan's annual cost surprises you, it's worth re-running the calculation with a competitor's monthly price to see the same comparison from the other direction before deciding whether to switch.
+
+## What to keep with the number
+
+An annualized figure is only useful if you remember what it was for. Note the service name, the price you entered, the billing frequency, and the date you calculated it — prices change often enough that a number from eight months ago may no longer be accurate. FamilyBoard's app stores this kind of record locally in your browser, with no account or sync, so it's worth exporting or noting the figure somewhere durable if you want to compare it again at renewal time.
+
+**FAQ:**
+- Q: How does the calculator turn a weekly price into an annual one?
+  A: It multiplies the price by the number of billing cycles in a year for the frequency you select — 52 for weekly, 12 for monthly, 4 for quarterly, or 1 for annual. A $12 weekly charge becomes $624 a year; dividing that by 12 gives a $52 monthly-equivalent figure you can compare against plans already billed monthly.
+- Q: Does the five-year total mean the price is locked in for five years?
+  A: No. The five-year figure is today's annualized price multiplied by five, shown purely as a planning reference. It does not account for promotional pricing that expires, usage-based charges, or the price increases many subscriptions apply at renewal.
+- Q: Why does a $12 weekly subscription cost more than a $15.99 monthly one?
+  A: Because weekly billing happens 52 times a year rather than 12. $12 a week annualizes to $624, versus $191.88 for $15.99 billed monthly — the per-charge price looks smaller, but the annual total is more than three times higher.
+- Q: I have ten subscriptions — should I calculate each one here?
+  A: You can, but the Household Subscription Cost Calculator is built for exactly that case: paste your full list in one pass and it normalizes and totals every subscription together, rather than requiring one calculation per service.
+
+**Contextual CTA:** Calculate the annual figure, then note the service, price, and billing frequency alongside it so you have a real number to compare against at the next renewal.
 
 ---
 
@@ -5653,36 +6127,43 @@ The page should include examples for monthly, quarterly and annual plans and a s
 
 # Home Maintenance Cost Tracker
 
-This tool uses manual household records to show what the home has actually cost to maintain.
+"What did we spend on the house this year" is a question most households can only answer by digging through a stack of receipts. This tracker keeps a running list of maintenance line items and splits the total between what's already been paid and what's still planned.
 
-## Inputs
+## How to enter costs, and what comes back
 
-Each entry:
+List one entry per line as `Task | Cost | planned or completed` — for example, "HVAC service | 180 | completed" and "Gutter inspection | 90 | planned." The tracker echoes each entry back as a labeled line, then adds two running totals: everything marked completed, and everything marked planned. With those two example entries, the result reads $180 completed and $90 planned. Only the exact words "completed" and "planned" are recognized for the totals — a status like "done" or "scheduled" will still show in the list but won't be added into either sum, so it's worth using one of the two recognized words consistently.
 
-- date;
-- amount;
-- category: routine maintenance / repair / inspection-service / replacement / improvement-other;
-- asset or home area;
-- provider optional;
-- note optional.
+## What it deliberately doesn't do
 
-## Output
+This tracker doesn't sort entries by year, category, or which asset they belong to, and it doesn't generate a chart. It's a flat list with two totals — useful for a fast answer to "how much have we spent so far" and "how much is already committed," not a full household accounting system. It also doesn't tell you whether your spending is reasonable for a home your size; that judgment depends on your specific house, climate, and system age, none of which the tracker knows.
 
-Show totals by year, category and asset. Provide a simple line or bar visualization only if it remains accessible and readable without color alone.
+## Keeping the numbers meaningful
 
-## Keep categories separate
+A repair total is easiest to interpret when it isn't mixed with unrelated spending. If you're also tracking a kitchen renovation or another improvement project, keep those entries in a separate list rather than folding them into the same running total as routine maintenance and repairs — combining a $12,000 renovation line with a $180 furnace tune-up makes the total technically accurate but useless for spotting a maintenance pattern.
 
-Do not combine improvement projects with repair unless the user deliberately chooses to. Otherwise the total becomes difficult to interpret.
+## What to record with each line
 
-## No financial advice
+Beyond the task, cost, and status, note the date and which appliance or area of the home the cost applies to. That context is what turns a flat cost list into something you can actually use later — to see, for instance, that the water heater has needed three service calls in two years, which a bare dollar total alone won't show you.
 
-The tool summarizes history. It must not calculate how much the user “should” save or claim a universal home-value percentage is correct.
+## Pairing this with a repair-specific record
 
-## Export
+This tracker is built for a fast running total of planned versus completed spending, not for the narrative of what happened with a specific repair. If a particular appliance keeps showing up in your completed list, the Home Repair Cost Log is the better place to record the actual symptom and outcome for that appliance's repairs — use the cost tracker for the household-wide number, and the repair log for the story behind any one item that keeps recurring.
 
-CSV and print should work without an account. Provide a local save-to-app option.
+## Reviewing planned versus completed over time
 
-**CTA:** Start with the last 12 months of meaningful service and repair costs; there is no need to reconstruct every small purchase.
+The gap between your planned and completed totals is worth watching from one review to the next. A planned total that keeps growing while completed stays flat suggests work is being deferred rather than done; a completed total that regularly exceeds what was planned suggests your household is underestimating maintenance costs when budgeting for the year ahead. Neither is inherently a problem, but both are worth noticing rather than only looking at the final numbers in isolation.
+
+**FAQ:**
+- Q: What exact words does the tracker use to total costs?
+  A: Only "completed" and "planned," matched case-insensitively. An entry labeled with either word is added into its matching total. Any other status word — "done," "scheduled," "pending" — still appears in the itemized list but isn't included in either running total, so it's best to standardize on one of the two recognized words.
+- Q: Does the tracker organize my spending by year or by appliance?
+  A: No. It produces a flat list of the entries you typed, with completed and planned totals underneath. If you want spending broken down by asset or time period, you'll need to group your entries yourself before or after using the tracker — it doesn't sort or filter automatically.
+- Q: Should I include a home renovation project in the same list as routine repairs?
+  A: Better to keep them separate. Mixing a large improvement project with routine maintenance and repair costs produces a technically correct total that's hard to interpret — you lose the ability to see what ordinary upkeep is actually costing versus a one-time project.
+- Q: Does the tracker tell me if I'm spending too much on maintenance?
+  A: No. It only sums the numbers you enter; it has no benchmark for what's normal, since that depends heavily on your home's age, size, climate, and system types. Use the totals as your own household's history, not as a comparison against any external standard.
+
+**Contextual CTA:** Log the last 12 months of meaningful service and repair costs, note which asset each one applies to, and revisit the completed/planned totals before budgeting for next year.
 
 ---
 
@@ -5696,32 +6177,43 @@ CSV and print should work without an account. Provide a local save-to-app option
 
 # Home Repair Cost Log
 
-A repair total is more useful when it includes what failed and what happened afterward.
+A single repair invoice tells you what one visit cost. A log of repairs over time tells you whether a problem is actually resolved or just quiet for now — and that second question is usually the more important one.
 
-## Inputs
+## What to enter, and what you get back
 
-- date;
-- asset/area;
-- symptom/issue;
-- provider;
-- total cost;
-- parts/labor breakdown optional;
-- outcome: resolved / monitoring / follow-up scheduled / replaced;
-- invoice reference.
+List one repair per line as `Date | Item | Cost | Outcome` — for example, "2026-07-12 | Dishwasher | 145 | Pump replaced." The log echoes each entry back in a readable line — date, item, cost, and outcome together — then adds up every cost you've entered into a total, and divides that total by the number of entries to show an average cost per repair.
 
-## Output
+## Worked example
 
-Show per-asset repair history and cumulative repair cost. Do not automatically say “replace” when cost crosses a threshold; the decision depends on condition, household needs and alternatives.
+A dishwasher repaired three times — a $145 pump replacement in July, a $60 seal repair in October, and a $210 control-board swap the following March — logs as three lines with a $415 total and a $138.33 average per entry. Read on its own, the $210 board repair might look like an unusual one-off. Read as the third entry on the same appliance within nine months, it reads very differently: as a signal that repair is starting to cost more than the appliance's value can justify.
 
-## Example
+## Why the outcome column matters as much as the cost
 
-A dishwasher with three repairs can show the dates, symptoms and cumulative cost. The value is the narrative, not only the number.
+The log doesn't judge whether three repairs mean it's time to replace the dishwasher — that decision depends on the appliance's age, how disruptive another failure would be, and what a real replacement costs today, none of which the log calculates for you. What it does is make the pattern visible: without a dated record of "resolved" versus "monitoring" versus "replaced," a household is left trying to remember whether last spring's repair actually fixed the noise or just made it stop for a while.
 
-## Privacy
+## What to keep with each entry
 
-Client-side only. Notes and costs must never be sent to analytics.
+Note the specific symptom that prompted the repair, not just the outcome — "pump replaced" is more useful next time if you also recorded "loud grinding during drain cycle" as the reason for the call. Keep the invoice or provider reference with the entry too, since a repeated problem is exactly the situation where you'll want to reference a prior service record when calling the same provider back.
 
-**CTA:** Use the log when a problem repeats; repeated history is where the value becomes much greater than a single invoice.
+## Reading the average with the entry count in mind
+
+The average-per-repair figure is only as meaningful as the number of entries behind it. Two repairs averaging $175 tells you much less than ten repairs averaging the same number — a small entry count can be skewed heavily by one unusually expensive or unusually cheap visit. Treat the average as a rough signal on a short log, and as a genuinely useful figure once an appliance has enough repair history behind it to smooth out any single outlier.
+
+## One log per appliance, or one log for the household
+
+Either works, but be consistent about which you're doing. A single combined log across every appliance gives you a household-wide repair total; a separate log per appliance makes the per-unit pattern — three visits on the same dishwasher — much easier to spot at a glance. If you're trying to decide whether one specific appliance is worth replacing, a dedicated log for that item alone is the more useful version to keep.
+
+**FAQ:**
+- Q: What format does each repair entry need?
+  A: One line per repair, written as Date | Item | Cost | Outcome — for example, "2026-07-12 | Dishwasher | 145 | Pump replaced." All four parts are needed for the entry to be included in the log and its totals.
+- Q: Does the log tell me when it's time to replace an appliance instead of repairing it again?
+  A: No. It only totals and averages the costs you enter. Recognizing a pattern — like three repairs on the same appliance within a year — is something you read from the dated list yourself; the decision to repair again or replace depends on age, disruption, and a real replacement quote, not on the log's math alone.
+- Q: Why log the symptom and not just the repair that was done?
+  A: Because "pump replaced" alone doesn't help you recognize a repeat problem later, but "loud grinding during drain cycle — pump replaced" does. If the same symptom returns, a dated symptom log makes it obvious this is a repeat issue rather than something new.
+- Q: Is anything I type into the repair log sent anywhere?
+  A: No. The log runs entirely in your browser — costs, notes, and outcomes are calculated on the page as you type and are never sent to an analytics service or server.
+
+**Contextual CTA:** Log the repair with its symptom and outcome, and check the running total the next time the same appliance needs service — repeated history is worth more than any single invoice.
 
 ---
 
@@ -5735,40 +6227,41 @@ Client-side only. Notes and costs must never be sent to analytics.
 
 # Emergency Binder Generator
 
-The generator creates an **information structure**, not emergency-response advice.
+An emergency binder is only useful if the right section exists before you need it — not assembled from memory while something is already going wrong. This generator builds that structure: a fixed set of household-organization sections, plus a line for each specific need you tell it your household has to plan for.
 
-## User-selected sections
+## What it builds, and what it doesn't
 
-- household members;
-- emergency contacts;
-- nearby trusted contacts;
-- utilities/building contacts;
-- pets;
-- caregivers/dependents;
-- important household systems;
-- service providers;
-- document-location references;
-- optional free-form household notes.
+Give it a label for your household and a list of specific things you need to plan for — pets, mobility support, and power-dependent equipment are the built-in starting examples, but you can list anything. The generator returns a fixed set of sections every binder gets — local emergency contacts and official guidance, a household contact tree and meeting information, utility and service contacts with safe official shutoff references, a protected section for medication and care information, insurance contacts and policy locations, and pet or caregiver instructions — followed by one line for each item you listed, phrased as "Plan and authoritative source for:" that item, and a closing line for where the backup copy lives and when it was last reviewed.
 
-## Output design
+It builds the outline and the prompts. It does not write emergency-response instructions itself — for something like what to do during a specific type of emergency, the "authoritative source" line is a deliberate placeholder pointing you to your local emergency management agency or the relevant official guidance, not a substitute for it.
 
-Generate a printable packet with:
+## Worked example
 
-- cover page and last-reviewed date;
-- one-page quick contact sheet;
-- selected detail sections;
-- blank lines or typed values;
-- a footer warning to follow local emergency authorities for actual response instructions.
+With household label "The Chen household" and needs entered as "Pets, Mobility support, Power-dependent equipment," the generator adds three lines to the fixed section list: "Plan and authoritative source for: Pets," "Plan and authoritative source for: Mobility support," and "Plan and authoritative source for: Power-dependent equipment" — each one a prompt to go find and attach the real guidance for that specific situation, whether that's a vet's after-hours line, a mobility-equipment supplier, or a backup-power provider's outage contact.
 
-## Privacy controls
+## Handling anything sensitive
 
-Before printing, display a checklist asking the user to review sensitive fields. Offer a “shared copy” mode that omits designated private data.
+If you're filling in medication or care details, the generator only ever reproduces the exact text you type — it does not generate or suggest treatment instructions of its own. That distinction matters because a binder is sometimes shared with someone other than the person who built it; before printing or sharing a copy, review every field for anything you'd rather keep in a private-only version, since a printed sheet can't be un-shared once it's handed over.
 
-## No medical generation
+## What to do with the finished outline
 
-If the user adds care or medication information, the tool must reproduce user-entered text only and never generate treatment advice.
+Print a limited, shareable version that covers only what someone else genuinely needs to act on your household's behalf, and keep the fuller version — with anything more sensitive — inside your private browser records instead. Note the date you last reviewed it; a binder with a contact who moved two years ago is worse than an obviously incomplete one, because it looks trustworthy right up until someone tries to use it.
 
-**CTA:** Print a limited version for practical access and keep the more complete private record inside the local app.
+## Physical copy versus digital copy
+
+A printed binder works when the power is out or a phone is dead, which is exactly when a purely digital version is least useful — but a physical copy also can't be updated the moment a phone number changes, the way a browser record can. Many households end up keeping both: a printed version reviewed and reprinted on a fixed schedule for true worst-case access, and the fuller digital record you actually edit day to day. Decide which one is the source of truth before the two drift apart from each other.
+
+**FAQ:**
+- Q: What sections does every generated binder include?
+  A: Local emergency contacts and official guidance, a household contact tree and meeting information, utility and service contacts with safe shutoff references, a protected medication and care section, insurance contacts and policy locations, and pet or caregiver instructions. Anything you list as a household need is added as an additional line beyond this fixed set.
+- Q: Does the generator tell me what to actually do in an emergency?
+  A: No. It builds an information structure — contacts, locations, and prompts to attach the right source for each need you list. For actual response guidance, such as what to do during a specific hazard, follow your local emergency management agency or the authoritative source you attach to that section.
+- Q: Can I add medication or care instructions to the binder?
+  A: Yes, but the generator only reproduces exactly what you type — it never writes or suggests treatment advice on its own. Keep this section in the protected part of your record and review it before creating any shared or printed copy.
+- Q: Should everyone who might use the binder see the full version?
+  A: Not necessarily. Print or share a limited version containing only what that specific person needs to act on your household's behalf, and keep the more complete record — with anything sensitive — in your own private browser storage instead.
+
+**Contextual CTA:** Generate the outline, attach a real authoritative source to each need you listed, and keep the complete version in your private records while sharing only a limited printed copy.
 
 ---
 
@@ -5782,34 +6275,43 @@ If the user adds care or medication information, the tool must reproduce user-en
 
 # Home Inventory Checklist Generator
 
-This tool helps the user decide **what is worth recording**, rather than generating thousands of objects.
+Starting a home inventory from a blank page is where most households give up before they finish one room. This generator gives you a room-by-room starting list so you're editing an existing checklist instead of inventing one from nothing.
 
-## Inputs
+## How the room list is built
 
-Select rooms and special categories: kitchen, living, bedroom, office, laundry, garage/storage, outdoor, vehicles, valuables, electronics.
+Type in the rooms or areas you want to inventory, one per line or separated by commas. Six room names carry their own tailored starter list: Kitchen, Laundry, Bedroom, Bathroom, Garage, and Utility. Type one of those exact names and you get items built for that room — a kitchen list includes the refrigerator, range or cooktop, oven, dishwasher, and small appliances worth tracking, while a garage list covers vehicles, tools, the door opener, and seasonal equipment. Any room name outside that set of six — "Home office," "Attic," or a misspelled or lowercase version of one of the six — falls back to a general-purpose list: major furniture, electronics, items with warranties, and items worth identifying. The room name has to match one of the six exactly, so "kitchen" in lowercase gets the generic list, not the tailored one.
 
-Choose inventory goal:
+## Worked example
 
-- maintenance/warranty;
-- moving;
-- general household records;
-- insurance documentation preparation.
+Enter "Kitchen, Laundry, Garage" and the generator returns three tailored sections: Kitchen (refrigerator, range or cooktop, oven, dishwasher, small appliances worth tracking), Laundry (washer, dryer, utility connections, cleaning supplies), and Garage (vehicles, tools, door opener, seasonal equipment) — twelve starting items across three rooms instead of a blank page for each.
 
-## Output
+## What it doesn't decide for you
 
-Generate a prioritized checklist:
+The generator doesn't know which items in a room are actually valuable enough to record individually versus which can be skipped, and it doesn't distinguish between a household building an inventory for insurance purposes versus one preparing for a move — the starter list is the same either way. Use it as the first pass, then delete anything that doesn't apply to your specific home and add anything genuinely valuable that the preset list missed.
 
-- **Record individually**;
-- **Photograph/group**;
-- **Optional**.
+## Finishing one room before starting the next
 
-The list should change depending on goal. For example, a moving list emphasizes dimensions/box destination, while warranty inventory emphasizes model, serial, purchase and receipt.
+A 300-item inventory attempted all at once is exactly the kind of project that stalls. Generate one room, record the items worth keeping — brand, model, serial number, purchase date, and receipt location for anything under warranty — and treat that room as done before moving to the next one. A finished Kitchen list is worth more than a half-finished attempt at the whole house.
 
-## Download and app bridge
+## When the goal is insurance documentation
 
-Allow print/CSV and “Add selected items to `FamilyBoard`.”
+If you're building this inventory in case you ever need to file an insurance claim, the fields worth prioritizing shift slightly: a photo of the item alongside its model and serial number matters more than a precise physical description, since an adjuster is trying to verify what existed and roughly what it was worth, not read a written inventory. Keep photos and the generated checklist together in the same record rather than as separate, disconnected files.
 
-**CTA:** Generate one room, finish it, then come back for another. The tool should encourage completion rather than a 300-item burden.
+## Revisiting the inventory after you buy something new
+
+An inventory is a snapshot of the moment you built it, not a living document unless you actively keep it that way. Get in the habit of adding a new high-value purchase to the relevant room's record as soon as it arrives, rather than waiting for a full re-inventory of the room — the generator is fast enough to rerun any time, but the habit of updating one item at a time is what actually keeps the record current.
+
+**FAQ:**
+- Q: Which room names get a tailored checklist instead of the generic one?
+  A: Six exact names: Kitchen, Laundry, Bedroom, Bathroom, Garage, and Utility. Type one of those exactly and you get items built for that room. Any other room name, including a lowercase or misspelled version of one of the six, falls back to a general list of major furniture, electronics, warrantied items, and items worth identifying.
+- Q: Why did "kitchen" (lowercase) give me the generic list instead of the kitchen-specific one?
+  A: The room name has to match one of the six preset names exactly, including capitalization. Re-enter it as "Kitchen" to get the tailored appliance-focused list instead of the generic fallback.
+- Q: Does the generator know which items are worth recording for insurance versus a move?
+  A: No. It produces the same starter list regardless of why you're building the inventory. Once you have the list, decide item by item which pieces of information matter for your purpose — model and serial number for warranty or insurance records, dimensions for a move.
+- Q: Should I try to inventory the whole house in one sitting?
+  A: It's usually better not to. Generate one room, finish recording what's actually worth keeping in it, and move to the next room afterward. A completed single-room list is more useful than an abandoned attempt at every room at once.
+
+**Contextual CTA:** Generate one room at a time, record model, serial number, and receipt location for anything under warranty, and finish that room before starting the next.
 
 ---
 
@@ -5823,28 +6325,43 @@ Allow print/CSV and “Add selected items to `FamilyBoard`.”
 
 # Room Inventory Generator
 
-Sometimes the fastest path to a complete household inventory is to ignore the rest of the house.
+Sometimes the fastest way to make progress on a whole-house inventory is to ignore the rest of the house and finish exactly one room, including the items that a generic checklist would never think to list.
 
-## Inputs
+## How it's different from a full-house checklist
 
-- room type;
-- purpose;
-- whether to include furniture, electronics, appliances, decor/valuable items, built-in equipment;
-- level of detail: quick / standard / detailed.
+Where the Home Inventory Checklist Generator runs several rooms at once from a fixed preset list, this one focuses on a single room and lets you add categories a preset list can't predict. Enter the room name and, separately, any extra item categories specific to your household — "Coffee equipment, cookware set" for a kitchen with a serious coffee setup, or "Sewing machine, fabric stock" for a craft room. The same six room names — Kitchen, Laundry, Bedroom, Bathroom, Garage, Utility — get a tailored base list; any other room name falls back to a general starting set of major furniture, electronics, fixed equipment, and valuable items. Your custom categories are added on top of whichever base list applies, and every generated checklist ends with the same reminder line: for each item worth recording, capture the brand and model, serial number, purchase date, warranty status, receipt location, and current condition.
 
-## Output
+## Worked example
 
-Create a table with suggested fields for each selected category. The suggestions must reflect the room: a kitchen needs appliance model fields; a home office needs device/owner fields; a storage area needs box/location fields.
+Room "Kitchen" with custom categories "Coffee equipment, cookware set" produces: Refrigerator, Range or cooktop, Oven, Dishwasher, and Small appliances worth tracking from the kitchen preset, followed by Coffee equipment and Cookware set from your custom entry — seven starting items instead of the five the preset alone would give you, because you told the generator about something specific to your household that no general list would guess.
 
-## Unique value
+## Where the generic fallback shows up
 
-This tool should not simply print the same generic columns for every room. It should tailor the information to the item's likely future use.
+Type a room name outside the six presets — "Home office," "Craft room," "Attic" — and you get the same general fallback list every time: major furniture, electronics, fixed equipment, and valuable items. That's intentionally basic, because the generator has no way to guess what matters in a room type it doesn't recognize. Your custom-category field is exactly where you make up that gap — it's the difference between a generic office list and one that actually names your specific desk setup or equipment.
 
-## Save behavior
+## Deciding what's actually worth recording
 
-Allow the user to select rows to convert into local asset records.
+Not everything on the generated list needs a full record. The closing reminder — brand, model, serial number, purchase date, warranty, receipt location, condition — is worth applying to items that are expensive, warrantied, or hard to replace from memory. A $40 lamp probably doesn't need all six fields; a range or a laptop probably does.
 
-**CTA:** Do one room at a time and stop when the information would no longer help a future decision.
+## Revisiting a room after the first pass
+
+A room inventory built in one sitting will usually miss something — a piece of equipment tucked in a cabinet, a valuable item you forgot was even in that room. It's worth regenerating the checklist for a room a few weeks after the first attempt, once you've actually lived with the first version and noticed what it left out, rather than assuming the first pass through any given room was complete.
+
+## Combining rooms into one household pass
+
+If you've already run this generator on several individual rooms, the Home Inventory Checklist Generator can produce the same set of rooms in a single multi-room pass instead — useful once you're past deciding what belongs in each room and just want the whole set assembled together for a full-household record.
+
+**FAQ:**
+- Q: How is this different from the Home Inventory Checklist Generator?
+  A: This one handles a single room at a time and lets you add custom item categories specific to your household on top of the base list. The Home Inventory Checklist Generator instead runs several rooms in one pass from a fixed preset list, without a custom-category field.
+- Q: What happens if I type a room name that isn't one of the six presets?
+  A: You get a general fallback list: major furniture, electronics, fixed equipment, and valuable items. The generator has no tailored data for room types outside Kitchen, Laundry, Bedroom, Bathroom, Garage, and Utility, so use the custom-category field to add anything specific to that room yourself.
+- Q: What fields does the generator recommend recording for each item?
+  A: Brand and model, serial number, purchase date, warranty status, receipt location, and current condition. That line appears at the end of every generated checklist as a reminder — it's most worth applying to items that are expensive, under warranty, or hard to replace from memory alone.
+- Q: Do I have to fill in every field for every item?
+  A: No. Reserve the full set of fields for items that are genuinely valuable or warrantied. A low-cost, easily replaceable item doesn't need the same level of detail as a major appliance or an electronics purchase.
+
+**Contextual CTA:** Generate one room's checklist, add any household-specific categories, and record full details only for the items that are expensive, warrantied, or hard to replace from memory.
 
 ---
 
@@ -5858,30 +6375,43 @@ Allow the user to select rows to convert into local asset records.
 
 # Recurring Chore Planner
 
-The tool should help households create a realistic starting routine, not prescribe one “correct” division of labor.
+There's no single correct way to split up a household's chores — but there is a fast way to get a first draft on paper instead of re-litigating it every week. This planner takes your members and your chore list and pairs them up automatically, in order.
 
-## Inputs
+## How the pairing actually works
 
-- household member names/roles or anonymous labels;
-- rooms/areas;
-- chores selected from an editable library;
-- frequency preference;
-- assignment mode: fixed owner / rotate / unassigned pool;
-- accessibility or “exclude this task for this person” settings without requiring sensitive medical explanation.
+List your household members and your chores, each separated by commas, and pick a frequency: daily, weekly, every two weeks, or monthly. The planner assigns the first chore to the first member, the second chore to the second member, and so on, wrapping back around to the first member once it runs out of names — a simple round-robin, not a workload-balanced assignment. If you list more chores than members, the same people repeat; if you list no members at all, each chore comes back with "Assign an owner" instead of a name so you can fill it in yourself.
 
-## Output
+## Worked example
 
-Show weekly view, recurring-rule view and owner workload summary. Workload summary should count estimated frequency, not rank people publicly.
+Members "Alex, Sam" and chores "Kitchen reset, Laundry, Trash" at a Weekly frequency produces: Kitchen reset paired with Alex, Laundry paired with Sam, and Trash wrapping back around to Alex — three assignments from two people, with Alex getting two of the three because the list order determines the pairing, not chore difficulty or time required.
 
-## Important behavior
+## What the round-robin doesn't account for
 
-The generator must allow deleting suggested chores easily. Default list should be modest.
+The planner doesn't know that "Trash" takes five minutes and "Kitchen reset" takes thirty, so a mechanically fair rotation by count can still be an unfair rotation by effort. It also doesn't track who actually did what last time — each run starts fresh from the order you typed the lists in. If the automatic pairing puts a heavy chore on the same person twice, reorder your chore list or your member list before generating again, or just edit the result directly.
 
-## Product bridge
+## Treat the first version as a draft, not a rulebook
 
-Save selected tasks to the local task manager or print as a chart.
+A generated rotation is a starting point for a two-week trial, not a permanent assignment. After two weeks, look at what actually got done and by whom, and adjust the lists — reorder names, swap chores between people, or change the frequency — before generating the next round. A plan that gets revised after real use is more durable than one that tries to be perfect on the first try.
 
-**CTA:** Create a two-week experiment, not a permanent household constitution. Review what actually worked before adding more chores.
+## Using anonymous labels instead of names
+
+The member field accepts anything you type, so if you'd rather not use real names in a printed or shared version, labels like "Adult 1" and "Adult 2" work exactly the same way in the round-robin logic — the assignment mechanics don't change based on what you call each person. This is worth using for any version of the chart that might be visible to guests or posted somewhere more public than your own kitchen.
+
+## Handling chores nobody wants to claim
+
+The planner assigns every chore you list to someone — it has no "unassigned" state built in. If a specific chore genuinely needs to rotate among only some household members rather than all of them, generate that one separately with just the relevant names listed, rather than trying to exclude a person from a single line in a combined list after the fact.
+
+**FAQ:**
+- Q: How does the planner decide who gets which chore?
+  A: It's a round-robin by list order: the first chore goes to the first member, the second chore to the second member, and so on, wrapping back to the first member if there are more chores than people. It doesn't weigh chore difficulty or time required — only the order you typed the names and chores in.
+- Q: What happens if I have more chores than household members?
+  A: The rotation wraps around, so members further down the list end up with more than one chore. If that produces an uneven split of effort rather than just count, reorder your chore or member list, or edit the generated result directly.
+- Q: What if I don't want to name specific people yet?
+  A: Leave the members field empty, and each chore comes back with "Assign an owner" in place of a name, so you can fill in who's responsible once you've decided, rather than the tool guessing for you.
+- Q: Does the planner remember who did which chore last time?
+  A: No. Each time you generate a plan, it starts fresh from the current order of your member and chore lists — it has no memory of a previous rotation. Track actual completion in your own task records if you want to compare the plan against what really happened.
+
+**Contextual CTA:** Generate a two-week rotation, track what actually got done, and reorder the lists before the next round based on what worked.
 
 ---
 
@@ -5895,36 +6425,39 @@ Save selected tasks to the local task manager or print as a chart.
 
 # Cleaning Schedule Generator
 
-A useful cleaning generator should reduce work, not output every possible task.
+A cleaning schedule that lists every possible task for every room isn't a plan — it's a wall of text nobody opens twice. This generator splits your rooms into three different rhythms instead: a fast daily reset, a full weekly clean, and a slower rotating deep-clean.
 
-## Inputs
+## How the three layers are built
 
-- rooms;
-- household size range;
-- pets yes/no;
-- preferred cleaning days;
-- desired intensity: minimal / balanced / detailed;
-- whether chores are shared or individually owned.
+List your rooms, separated by commas, and choose a deep-clean rotation pace: one area each week, two areas each month, or seasonal. The generator builds three sections from that one room list. The daily reset covers only your first three rooms — the ones you listed first — each with a "clear surfaces and return used items" prompt, on the assumption that a daily pass only makes sense for the highest-traffic spaces, not every room in the house. The weekly clean covers every room you listed, each with a "complete the household-defined clean" prompt — a placeholder for whatever your household's actual weekly routine is for that room. The deep-clean section cycles through every room one at a time under your chosen rotation label, so each room gets a numbered "detail review" turn.
 
-## Output
+## Worked example
 
-Separate:
+Rooms "Kitchen, Bathroom, Living room, Bedroom" with a "One area each week" rotation produces: a daily reset covering only Kitchen, Bathroom, and Living room (Bedroom is left out, since it's the fourth room listed); a weekly clean covering all four rooms; and a "One area each week" deep-clean cycle numbering Kitchen as Cycle 1, Bathroom as Cycle 2, Living room as Cycle 3, and Bedroom as Cycle 4.
 
-- daily reset;
-- weekly cleaning;
-- rotating deep-clean items.
+## Why only three rooms get a daily line
 
-No medical/allergy cleaning claims unless sourced and explicitly outside the generic generator.
+The daily-reset section always takes exactly your first three rooms, regardless of how many you list in total. If you want a specific room in the daily reset, put it among the first three entries — listing it fourth or later means it only appears in the weekly and deep-clean sections, not the daily one. This isn't a bug to work around so much as a deliberate cap: a daily list longer than three or four items is the kind of routine that gets skipped entirely within a week.
 
-## Smart simplification
+## Making the generated schedule realistic
 
-If the user selects “minimal,” the tool should prioritize high-use spaces and remove low-value detail. For “detailed,” still cap the initial workload and warn against adopting too many tasks at once.
+The generator has no idea how many people are in your household, whether you have pets, or how much time you actually have most days — it only works from the room list and rotation choice you give it. Read through the result and delete anything that doesn't match your household's real pace before you start using it; a schedule you've trimmed down to what's achievable gets followed, and one copied verbatim from a generator usually doesn't.
 
-## Print and save
+## Adjusting the rotation pace after a trial run
 
-Provide print CSS and local app import.
+If you pick "One area each week" and find the deep-clean list is consistently skipped, that's useful information — it's telling you the pace doesn't match your household's actual rhythm, not that the schedule has failed. Regenerate with "Two areas each month" or "Seasonal" instead and see whether a slower pace actually gets completed more reliably. A deep-clean rotation that's followed at a slower pace is worth more than an ambitious one that's ignored.
 
-**CTA:** Generate the schedule, remove anything that feels unrealistic, and only then turn tasks into recurring reminders.
+**FAQ:**
+- Q: Why does the daily reset only include some of my rooms?
+  A: The daily-reset section always uses exactly the first three rooms in your list, on the assumption that a daily routine only works for the highest-traffic spaces. List the rooms you most want in the daily reset first; anything listed fourth or later only appears in the weekly and deep-clean sections.
+- Q: What does "complete the household-defined clean" actually mean in the weekly section?
+  A: It's a placeholder prompt, not a specific task list — the generator doesn't know what a full weekly clean looks like for your particular kitchen or bathroom. Replace it with your household's actual weekly routine for that room once you've decided what that includes.
+- Q: How does the deep-clean rotation decide which room comes first?
+  A: It cycles through your rooms in the exact order you listed them, numbering each one Cycle 1, Cycle 2, and so on under your chosen pace (weekly, twice-monthly, or seasonal). Reorder your room list before generating if you want a different room to come up first.
+- Q: Does the generator adjust for pets or household size?
+  A: No. It only works from the room list and deep-clean pace you provide — it has no fields for household size, pets, or available time. Trim the generated list down to what's realistic for your household after generating it.
+
+**Contextual CTA:** Generate the three-layer schedule, delete anything that doesn't match your household's real pace, and only then turn the remaining tasks into recurring records.
 
 ---
 
@@ -5938,31 +6471,43 @@ Provide print CSS and local app import.
 
 # Home Service Reminder Generator
 
-This tool turns “remember later” into an actionable reminder.
+"Remember to deal with the HVAC system sometime" is not a reminder anyone can act on — not even the person who wrote it, three months later. This generator forces the specifics that make a reminder actually usable: what needs doing, by when, and how far ahead you need to start.
 
-## Inputs
+## What it builds from four fields
 
-- item/system;
-- action;
-- target date or recurrence;
-- lead time;
-- service provider optional;
-- part/supply needed optional;
-- notes.
+Enter the item or system, the specific action, a due date, and how many days of advance notice you want. The generator combines the first two into a reminder title — item and action together — then calculates a "review or book by" date by subtracting your lead time from the due date, and lists the due date itself alongside it. It closes with a fixed prompt for what to capture once the work is actually done: date, provider, cost, observations, and the next due date.
 
-## Output
+## Worked example
 
-Generate a clear reminder sentence such as:
+Item "HVAC system," action "Schedule seasonal service," due date November 1, and the default 14-day lead time produces: a reminder titled "HVAC system: Schedule seasonal service," a review-by date of October 18, and a due date of November 1 — enough lead time to actually book an appointment before the date you need the work finished by, rather than discovering on November 1 that the earliest opening is three weeks out.
 
-> `Primary bedroom air purifier — review filter condition on Nov 1. Confirm filter model AP-123 before ordering.`
+## What "lead time" is actually for
 
-Provide calendar `.ics` export where technically practical and local-app save.
+The gap between the review-by date and the due date only matters if it's realistic for the task. Scheduling a seasonal HVAC service might need two weeks of lead time to get an appointment; ordering a specific replacement filter before it runs out might need only a few days. Set the lead time to match how long the action itself typically takes to arrange, not a single default for every kind of reminder.
 
-## Rule
+## What the generator won't invent
 
-The tool never supplies a maintenance interval unless the user selects one or the site has a properly sourced, product-specific rule. It organizes a reminder; it does not invent service requirements.
+It has no manufacturer database and doesn't supply maintenance intervals of its own — you provide the due date, whether that's from a manual, a manufacturer's recommendation, or your own judgment about when something needs attention. The generator's job is turning a date and an action into something specific enough to act on, not deciding when that date should be.
 
-**CTA:** Make the reminder specific enough that another household member could act on it without asking what you meant.
+## Making it useful to someone other than you
+
+A reminder is only as good as its readability to whoever encounters it later — including you, months from now. Name the exact item (not "the HVAC thing"), the exact action (not "deal with it"), and any part number or provider detail you already know, so the reminder can be acted on without anyone having to ask what you meant. Once the work is done, log the completion details the generator prompts for — that record is what makes the next reminder's due date meaningful instead of guessed.
+
+## Stacking several reminders for the same system
+
+A single appliance often needs more than one kind of reminder — a filter change on a short cycle, a full service on a much longer one. Generate a separate reminder for each distinct action rather than trying to combine them into one entry with two due dates; a reminder titled "HVAC system: Replace filter" and a separate one titled "HVAC system: Schedule seasonal service" are each clearer on their own than a single line trying to track both.
+
+**FAQ:**
+- Q: How is the "review or book by" date calculated?
+  A: It's the due date minus your chosen lead time in days. With a November 1 due date and a 14-day lead time, the review-by date is October 18 — enough advance notice to book an appointment or order a part before you actually need the work finished.
+- Q: Does the generator tell me how often to schedule a recurring service?
+  A: No. It has no manufacturer database or interval logic — you supply the due date based on a manual, a manufacturer recommendation, or your own judgment. The generator's job is turning that date and the specific action into a reminder with enough lead time, not deciding when the work is actually due.
+- Q: What should the lead time actually be set to?
+  A: Match it to how long the action itself takes to arrange — a service appointment that books up in advance might need two weeks or more, while ordering an in-stock part might only need a few days. There's no single correct number; the field exists to let you set it per reminder.
+- Q: What happens after I complete the service?
+  A: The generator prompts you to log the completion date, provider, cost, observations, and the next due date. Recording that closes the loop on the current reminder and gives the next one a real due date to work from, instead of an estimate.
+
+**Contextual CTA:** Generate the reminder with a lead time that matches how long the task takes to arrange, and log the completion details afterward so the next due date is based on real history.
 
 ---
 
@@ -5976,37 +6521,47 @@ The tool never supplies a maintenance interval unless the user selects one or th
 
 # Household Annual Review Generator
 
-The generator creates a once-a-year **audit of the household system**, not a cleaning checklist.
+This is an audit of how well your household's record-keeping is holding up — not another cleaning checklist. Once a year, it's worth stepping back from individual tasks and checking whether the system itself still works.
 
-## Inputs
+## What the generator checks
 
-Select areas used by the household:
+Enter the review year and any priorities specific to this year's review, and the generator returns a fixed six-item audit: review maintenance completion and repeated repair patterns, review asset status, warranties, and receipts, review subscriptions, annual renewals, and who owns each one, confirm emergency, utility, and service contacts are still current, test a backup export and record where it's actually stored, and review your handoff and display privacy settings. Each priority you added gets its own line at the end, labeled "Priority:" so it stands apart from the fixed six.
 
-- home assets;
-- maintenance;
-- subscriptions/bills;
-- warranties;
-- insurance/document index;
-- vehicles;
-- pets;
-- school/care;
-- emergency information;
-- backup and privacy.
+## Worked example
 
-## Output sections
+Year 2026 with priorities "Reduce surprise renewals, update emergency contacts" produces the six standard review items followed by "Priority: Reduce surprise renewals" and "Priority: Update emergency contacts" — your household's specific focus for this year, sitting alongside the recurring structural checks every annual review covers.
 
-1. Archive/remove outdated records.
-2. Review upcoming 12-month deadlines.
-3. Check maintenance/repair patterns.
-4. Update contacts and household ownership.
-5. Verify backup and restore readiness.
-6. Create next-year priorities.
+## Why this is different from a task list
 
-## Product integration
+A regular to-do list asks "what needs doing." This audit asks a different question: is the record-keeping itself trustworthy. Repeated repairs that never got logged, a warranty that expired without anyone noticing, a subscription nobody remembers signing up for, an emergency contact who changed their number two years ago — none of these show up as an overdue task, because there was never a task to begin with. That's exactly what an annual system check is for.
 
-If used inside the app, prefill counts such as “3 warranties expire next year” without sending data to a server.
+## What "test a backup export" actually means here
 
-**CTA:** Use the annual review to improve the system itself, not to create another permanent list of unfinished tasks.
+Because FamilyBoard keeps records only in your browser, with no account and no server copy, an export is the only thing standing between your data and a cleared browser cache or a device that stops working. "Test" means more than clicking export once — open the exported file and confirm it actually contains what you expect, then note where that file is stored so a real recovery isn't the first time you find out whether it worked.
+
+## Making the review count
+
+The point of the six-item audit isn't to produce a longer list of things to do — it's to catch the places where your system has quietly drifted from what you think it says. Fix what the audit surfaces, then move on; treat this as a once-a-year check on the process, not a new permanent backlog.
+
+## Picking a consistent date to run it
+
+Tie the annual review to a date that's easy to remember and unlikely to get skipped — a birthday, the start of a new year, or the anniversary of moving in all work, as long as it's the same trigger every year rather than "whenever we get around to it." A review that happens reliably once a year, even a fairly quick one, catches far more drift than a thorough review that only happens sporadically every two or three years.
+
+## What to do if the review turns up a lot at once
+
+The first time you run this review, it's common to find several things out of date at once — that's a sign the review is doing its job, not that your household is unusually disorganized. Work through the six items in whatever order matters most to your household rather than trying to fix everything in one sitting; a review that gets partially completed and picked back up later still beats one abandoned entirely because the list looked too long.
+
+**FAQ:**
+- Q: What are the six things every generated review checks?
+  A: Maintenance completion and repeated repair patterns, asset status and warranties, subscriptions and renewal ownership, emergency and service contacts, whether a backup export actually works, and your handoff and display privacy settings. Anything you add as a priority appears as an additional line labeled "Priority," separate from these six.
+- Q: How is this different from a regular household to-do list?
+  A: A to-do list tracks tasks you already know about. This audit is designed to catch problems that never became a task in the first place — an expired warranty nobody noticed, a subscription nobody remembers, or an emergency contact who's out of date — by checking the record-keeping system itself rather than an existing list.
+- Q: What does "test a backup export" mean in practice?
+  A: Export your household data, then actually open the file and confirm it contains what you expect, rather than assuming the export button working means the backup is good. Note where you're storing that file, since FamilyBoard keeps records only in your browser with no server copy to fall back on.
+- Q: Should I do the annual review even if nothing seems wrong?
+  A: Yes — the value of the review is catching drift you wouldn't otherwise notice, like a repair pattern that's only visible across several logged entries or a contact that quietly went stale. A review that finds nothing wrong still confirms your backup and records are actually reliable.
+
+**Contextual CTA:** Run the annual review, fix what it surfaces, and confirm your backup export actually opens and contains your real data before calling the review done.
 
 ---
 
@@ -6020,32 +6575,43 @@ If used inside the app, prefill counts such as “3 warranties expire next year�
 
 # Move-In Checklist Generator
 
-Move-in priorities differ between a renter, condo owner and detached-home owner. The generator should branch accordingly.
+Moving-day checklists tend to focus entirely on boxes and packing tape. This generator focuses on the part that's easy to skip in the chaos: the records and setup tasks that get much harder to complete once you've settled in and the moving truck is a distant memory.
 
-## Inputs
+## What it generates
 
-- renter / owner;
-- apartment/condo/house/other;
-- household members;
-- pets;
-- utilities that must be activated;
-- appliances included vs personally owned;
-- whether a formal condition inspection is part of the move.
+Pick your home type — House, Apartment, Condo, or Rental home — and list any special setup needs your household has, and the generator returns three phases. Before Arrival covers confirming utilities and access, preserving your lease or closing documents and any condition records, and listing essential contacts. First Day covers locating official emergency and utility information, photographing the home's initial condition where that's appropriate, and identifying the major systems specific to your home type. First Month covers adding high-value assets and warranties, creating only the recurring tasks that genuinely apply to this home, exporting your first backup, and a setup line for each specific need you listed.
 
-## Output phases
+## Worked example
 
-- before move-in day;
-- first 24 hours;
-- first week;
-- first month.
+Home type "House" with needs "Pets, parking permit, water filter" produces a First Day phase that reads "Identify major House systems and equipment," and a First Month phase that adds three setup lines: "Set up: Pets," "Set up: parking permit," and "Set up: water filter" — alongside the standard asset, task, and backup items every home type gets.
 
-Tasks should include records and setup rather than only packing: document condition, identify major systems, save utility contacts, add assets, create initial backup.
+## Why "first day" matters more than it seems
 
-## Legal boundary
+The First Day phase exists because initial-condition documentation has a shelf life of about zero — a photo of a scuff mark or a pre-existing crack is only useful as evidence if it was taken before you moved anything in. If you're renting, this is also the point where a formal condition record protects you later; if you're not sure whether your situation involves a landlord inspection, do the photo documentation anyway. It costs nothing and it's only possible to do right at the start.
 
-Do not provide jurisdiction-specific tenant or property obligations unless sourced through dedicated localized content.
+## What it deliberately leaves out
 
-**CTA:** Generate the checklist before moving day and convert only the long-term items into permanent household records afterward.
+The generator doesn't give jurisdiction-specific advice about tenant rights, security deposit rules, or landlord obligations — those vary by location and change over time, and a generic checklist getting one of them wrong would be worse than not mentioning it. For anything legally specific to your lease or your location, use your actual lease terms and local tenant-law resources rather than this checklist.
+
+## Turning the checklist into lasting records
+
+Most of what's on a move-in checklist is one-time work, but a few items are worth keeping permanently: the utility contacts, the major systems you identified, and the initial condition photos. Convert those into standing records once the move-in phase is done — the rest of the checklist can be discarded once it's checked off.
+
+## Renting versus owning changes what matters most
+
+The generated phases are the same regardless of home type, but what you do with them differs. A renter's First Day condition photos matter for a security-deposit dispute months or years later; an owner's matter more as a baseline for tracking wear and future maintenance. Keep that distinction in mind as you work through the checklist — the tasks are identical, but the reason each one matters isn't.
+
+**FAQ:**
+- Q: What are the three phases the generator produces?
+  A: Before Arrival (utilities, access, lease or closing records, essential contacts), First Day (emergency and utility information, initial condition photos, identifying your home's major systems), and First Month (high-value assets, recurring tasks that actually apply, a first backup export, and a setup line for each specific need you listed).
+- Q: Why does the checklist emphasize photographing the home's condition on the first day?
+  A: Because initial-condition evidence only has value if it's captured before you've moved belongings in or started using the space. Whether or not a formal inspection is part of your move, day-one photos are the only chance to document a pre-existing scuff, crack, or issue before it's unclear whether it happened before or after you arrived.
+- Q: Does the generator tell me my rights as a renter?
+  A: No. It deliberately leaves out jurisdiction-specific tenant or landlord obligations, since those vary by location and change over time. Check your actual lease and your local tenant-law resources for anything legally specific to your situation.
+- Q: What from this checklist is worth keeping after move-in is done?
+  A: The utility contacts, the major systems you identified, and the initial condition photos are worth converting into standing household records. Most other checklist items are one-time move-in tasks that can be discarded once they're completed.
+
+**Contextual CTA:** Generate the checklist before moving day, photograph the home's condition on day one, and convert the utility contacts and major systems into permanent records once you're settled.
 
 ---
 
@@ -6059,34 +6625,43 @@ Do not provide jurisdiction-specific tenant or property obligations unless sourc
 
 # Vacation Home Shutdown Checklist Generator
 
-The generator should ask what exists in the household before suggesting tasks.
+The list of things worth checking before you leave for a week is different from the list for a long weekend, and it changes again depending on what's actually depending on you at home. This generator builds a shutdown list around your specific trip length and care responsibilities.
 
-## Inputs
+## What it generates
 
-- trip length;
-- pets/plants;
-- house sitter or empty home;
-- deliveries/mail services;
-- home type;
-- climate concerns selected by user;
-- scheduled service during absence;
-- household display/security preference.
+Enter how many days you'll be away and list what needs care while you're gone — a pet, houseplants, expected packages, whatever applies. The generator returns a fixed six-item shutdown list — confirm doors, windows, and your household's own security steps; check the weather and official local alerts for your travel window; assign mail, package, pet, and plant responsibilities; clear out time-sensitive food and waste before it becomes a problem; confirm safe equipment settings using your actual manuals rather than guessing; and keep utility and emergency contacts available offline in case you need them without service — followed by a handoff line for each care item you listed, and a closing reminder to inspect the home's condition and close out any temporary tasks when you're back.
 
-## Output
+## Worked example
 
-Group tasks into:
+7 days away with care responsibilities "Cat, houseplants, packages" produces a "7-Day Trip Shutdown" list: the six standard items, followed by "Handoff details for Cat," "Handoff details for houseplants," and "Handoff details for packages," ending with "On return: inspect condition and close temporary tasks."
 
-- 3-7 days before;
-- day before;
-- leaving the house;
-- sitter/trusted-contact handoff;
-- return-home follow-up.
+## Why it says "review the appropriate setting" instead of giving you one
 
-## Safety rule
+The generator deliberately doesn't tell you what temperature to set your thermostat to or which utilities to shut off — a generic instruction like that, applied to the wrong climate, building type, or season, could cause real damage (frozen pipes from a thermostat set too low in winter, for instance). Where a decision genuinely depends on your specific home, climate, and the season you're traveling in, the checklist points you to your own equipment manuals and household judgment instead of guessing on your behalf.
 
-Do not instruct users to shut off utilities, alter heating/cooling or disable security systems based on generic assumptions. Instead say “review the appropriate setting for your home/building and season.”
+## What "handoff details" should actually contain
 
-**CTA:** Save the final version as a reusable travel template, then edit it after each trip based on what you forgot.
+The generated line for each care item is a placeholder, not a finished instruction — "Handoff details for Cat" needs feeding schedule, litter routine, and vet contact behind it before it's useful to anyone else. If a house sitter or trusted neighbor is involved, the House Sitter Instructions Generator builds a fuller, role-specific packet from exactly this kind of detail; use this shutdown checklist for your own pre-departure list, and hand the sitter something more complete.
+
+## Making it reusable
+
+A shutdown list gets more accurate the second time you use it, once you know what you forgot the first time. Keep the generated version as a starting template, and add anything you had to improvise on this trip before your next one — this list is meant to accumulate real experience, not stay fixed at its first draft.
+
+## Matching the list to how long you're actually gone
+
+A 3-day list and a 21-day list share the same six standard items, but what belongs under each care-item handoff changes with trip length. A neighbor checking on a cat for a weekend needs far less detail than a sitter staying for three weeks — feeding amounts, litter routine, and a vet contact become worth writing out in full the longer the trip runs. Use the days-away field honestly rather than rounding down, since it's a cue for how much detail the handoff actually needs.
+
+**FAQ:**
+- Q: What are the six standard items on every generated shutdown list?
+  A: Confirm doors, windows, and your household's security steps; check the weather and official local alerts for your travel window; assign mail, package, pet, and plant responsibilities; clear time-sensitive food and waste; confirm safe equipment settings using your actual manuals; and keep utility and emergency contacts available offline.
+- Q: Why doesn't the generator just tell me what temperature to set before I leave?
+  A: Because the right setting depends on your specific climate, building, season, and equipment — a generic number applied to the wrong situation could cause real damage, like frozen pipes from too low a thermostat setting in winter. The checklist points you to your own equipment manuals and judgment instead of guessing.
+- Q: Is "handoff details for Cat" a complete instruction I can give someone?
+  A: No, it's a placeholder reminding you that a handoff is needed — you still need to fill in the feeding schedule, routine, and vet contact. If someone else, like a sitter, needs the full instructions, the House Sitter Instructions Generator is built specifically for that fuller packet.
+- Q: Should I use the same generated list for every trip?
+  A: Use it as a starting template, but add to it after each trip based on what you actually forgot or had to improvise. A shutdown checklist gets more useful the more real trips it's been refined against.
+
+**Contextual CTA:** Generate the shutdown list for your trip length, fill in real handoff details for each care responsibility, and update your saved version afterward with anything you forgot this time.
 
 ---
 
@@ -6100,28 +6675,43 @@ Do not instruct users to shut off utilities, alter heating/cooling or disable se
 
 # House Sitter Instructions Generator
 
-A sitter packet should be role-based: enough information to care for the home, not a copy of the household database.
+A house sitter needs enough information to keep the home running for a few days — not a copy of everything your household keeps on file. This generator builds a role-scoped packet: your primary contact, the daily routine, and where to turn if something goes wrong.
 
-## Inputs
+## What it generates
 
-- dates;
-- pets/plants;
-- mail/delivery tasks;
-- trash/recycling;
-- basic home routines;
-- primary/backup contacts;
-- relevant service contacts;
-- user-entered access-instruction placeholder.
+Enter a primary contact, your daily home and pet routine as a list, and any useful service contacts. The generator returns two sections: "House-sitter instructions," which states your primary contact and then lists your routine exactly as you entered it — line by line, so "Morning: feed cat" and "Evening: bring in packages" show up as separate daily tasks — and "If something changes," which lists your service contacts, a reminder to use official local emergency services first if something serious happens, and an explicit instruction not to share or photograph private household records.
 
-## Sensitive-data warning
+## Worked example
 
-Do not encourage users to type alarm codes, passwords or lock combinations into a printable document. Provide a field reading “Secure access instructions are provided separately.”
+Primary contact set, routine entered as "Morning: feed cat" and "Evening: bring in packages," and services listed as "Building manager, trusted neighbor" produces an instructions section naming the primary contact followed by both routine lines, and a second section listing the building manager and trusted neighbor as useful contacts, alongside the standard emergency-services reminder and the privacy note.
 
-## Output
+## What deliberately isn't in this packet
 
-One-page daily routine plus a problem/escalation page. Include last-reviewed date.
+The generator only reproduces exactly what you type into the routine and contact fields — it has no separate field for access codes, passwords, or lock combinations, and typing them into a document meant to be printed or handed to someone outside the household is a real risk if that document is later lost or left somewhere visible. If a sitter genuinely needs access instructions, provide those separately and in person, not inside this printed packet.
 
-**CTA:** Generate the packet, then delete every field the sitter does not actually need.
+## Keeping it role-scoped
+
+The point of a sitter-specific packet instead of your full household records is that a sitter doesn't need — and shouldn't have — access to your warranty documents, financial records, or anything unrelated to keeping the house and any pets or plants running while you're away. Generate the packet, then read back through it and remove anything that isn't actually necessary for the sitter's job, even if it would have been convenient to include.
+
+## Before you hand it over
+
+Note the date you generated the packet somewhere on it. A sitter working from a routine that's a year out of date — a cat that's since moved to a different food, a contact who's since changed numbers — is worse off than one working from something they know is current, so treat this as a document you regenerate for each trip rather than one you reuse indefinitely.
+
+## A short walkthrough beats a packet alone
+
+Even a well-written packet leaves gaps a five-minute conversation fills faster than another line of text could — where a specific light switch actually is, which door sticks, what a particular household sound means and doesn't mean. Treat the printed instructions as the reference the sitter checks when they've forgotten something, and a short in-person or video walkthrough before you leave as the thing that actually prevents most questions from coming up in the first place.
+
+**FAQ:**
+- Q: What two sections does the generated packet contain?
+  A: "House-sitter instructions," listing your primary contact and your daily routine exactly as you entered it, and "If something changes," listing your service contacts alongside a reminder to use official emergency services for anything serious and a note not to share or photograph private household records.
+- Q: Can I put an alarm code or lock combination into this generator?
+  A: You can type anything into the routine field, but the generator has no dedicated secure field for access codes, and a printed or shared document is a real risk if it's lost or left visible. Provide access instructions separately and in person rather than including them in this packet.
+- Q: Why shouldn't I just give the sitter my full household records instead?
+  A: A sitter only needs what's relevant to caring for the home and any pets or plants while you're away — not your warranty documents, financial records, or anything else unrelated to that job. Generating a role-scoped packet and trimming it further keeps what you hand over limited to what's actually needed.
+- Q: Should I reuse the same packet for every trip?
+  A: It's better to regenerate it each time and note the date, since routines and contacts change — a sitter working from year-old feeding instructions or an outdated phone number is worse off than one working from something current.
+
+**Contextual CTA:** Generate the packet, remove anything the sitter doesn't actually need, and hand over access instructions separately rather than printing them into this document.
 
 ---
 
@@ -6135,28 +6725,47 @@ One-page daily routine plus a problem/escalation page. Include last-reviewed dat
 
 # Pet Sitter Instructions Generator
 
-The tool organizes instructions the owner already knows. It must never create veterinary dosing or medical advice.
+This generator organizes what you already know about your pet's routine into something a sitter can follow without texting you every hour. It never creates medical instructions of its own — anything about medication comes from you, verbatim.
 
-## Inputs
+## What it generates
 
-- pet name/type;
-- feeding routine;
-- walk/activity routine;
-- supplies and locations;
-- temperament/household notes entered by owner;
-- veterinarian;
-- backup contact;
-- medication/treatment text entered verbatim by owner, optional and clearly labeled “Verify current instructions.”
+Enter the pet's name and species, the feeding and activity routine as a list, your veterinarian's contact, and a medication reference if one applies. The generator returns a pet handoff section — labeled with the pet's name — listing your routine exactly as you entered it, one line per instruction, followed by the veterinary contact and the medication reference on their own lines, and a closing reminder to follow the veterinarian's written instructions and contact the owner or emergency services if the pet's condition changes.
 
-## Output
+## Worked example
 
-Create a daily schedule, supply list and emergency-contact block. Show `Last reviewed` prominently.
+Pet "Milo — cat," routine entered as "07:00 breakfast," "19:00 dinner," and "Refresh water daily," vet contact "Clinic name and phone," and no medication entered produces: "Pet handoff: Milo — cat" followed by the three routine lines, then "Veterinary contact: Clinic name and phone," and "Medication reference: None listed" — the generator explicitly states when nothing was entered, rather than leaving that field blank and ambiguous.
 
-## Privacy
+## Why medication is handled the way it is
 
-Do not place unrelated household address/account data into the output by default.
+The medication field only reproduces exactly the text you type — it does not interpret, calculate, or suggest a dose, and it never generates treatment instructions from a symptom or condition you describe. That's a deliberate limit: correct dosing depends on the specific animal and current veterinary guidance, not a generic instruction from a web tool. The field is explicitly for a reference to the veterinarian's own written instructions — something like "insulin per vet's written schedule, see printed sheet" — not a substitute for those instructions.
 
-**CTA:** Review the generated sheet before every trip; pet routines can change faster than household templates do.
+## Why "None listed" instead of a blank line
+
+When you leave the medication field empty, the generator writes "Medication reference: None listed" rather than omitting the line entirely. A sitter reading a completely blank medication section can't tell whether that means "no medication" or "the owner forgot to fill this in" — an explicit "none listed" removes that ambiguity.
+
+## Keeping it current
+
+A pet's routine can change faster than a saved template does — a diet change, a new medication, a different feeding time. Review and regenerate the sheet before each trip rather than reusing an old printout, and if anything about the routine changed since the last version, make sure that change is reflected before you hand it to the sitter.
+
+## Multiple pets on one sheet
+
+If your household has more than one pet, list each one's routine as its own set of lines rather than combining them into a single entry — "07:00 breakfast, cat" and "07:00 breakfast, dog (separate bowl, other side of kitchen)" prevents a sitter from accidentally feeding the wrong amount to the wrong animal. The pet name field accepts more than one name, but keeping each animal's specifics clearly separated in the routine list matters more than how you fill in that one field.
+
+## What belongs in "temperament and household notes"
+
+Beyond feeding and medical information, a line about how a pet actually behaves — hides under the bed during thunderstorms, is fine off-leash in the backyard but not on walks, doesn't like being picked up — helps a sitter avoid an avoidable bad moment. This is exactly the kind of detail an owner considers too obvious to mention out loud but a first-time sitter has no way of knowing.
+
+**FAQ:**
+- Q: Does the generator create feeding or medication instructions on its own?
+  A: No. It only reproduces exactly what you type into the routine and medication fields. It never calculates a dose or generates treatment advice — the medication field exists to reference the veterinarian's own written instructions, not to replace them.
+- Q: Why does the sheet say "Medication reference: None listed" instead of leaving that line blank?
+  A: So a sitter can tell the difference between "this pet has no medication" and "the owner forgot to fill this in." An explicit "None listed" removes that ambiguity, which matters more for a medication field than almost anywhere else on the sheet.
+- Q: What should go in the medication reference field?
+  A: A pointer to the veterinarian's current written instructions — for example, "insulin per vet's written schedule, see printed sheet" — rather than an attempt to describe the dose or schedule from memory. The field is meant to direct the sitter to the authoritative source, not to be that source itself.
+- Q: How often should I regenerate the sheet?
+  A: Before every trip. Pet routines, diets, and medications can change between trips, and a sitter working from an outdated sheet is a real risk if something important has changed since the last version was printed.
+
+**Contextual CTA:** Generate the care sheet fresh before each trip, point the medication field to the vet's current written instructions, and confirm the routine still matches reality before handing it to the sitter.
 
 ---
 
@@ -6170,32 +6779,43 @@ Do not place unrelated household address/account data into the output by default
 
 # Warranty Checklist Generator
 
-The best time to organize a warranty is the day a major item arrives.
+The best time to organize a warranty is the day the item arrives — while the receipt is still in your inbox and the packaging hasn't gone out with the recycling yet. This generator turns three quick fields into the actual checklist of what to capture before that window closes.
 
-## Inputs
+## What it generates
 
-- product category;
-- purchase channel: store / online / contractor-installed / other;
-- whether product has an accessible model/serial label;
-- whether registration is offered/required according to the user.
+Enter the item, the seller, and the purchase date, and the generator returns a labeled warranty record: your purchase date and seller stated up front, followed by a fixed checklist — the exact brand, model, and serial number; where the receipt is stored, with a reference to your proof of payment that stops short of the full card number; the written warranty term and where that language came from; whether registration was completed, only where it's actually required rather than assumed; the support contact and claim procedure; and a review date to revisit before coverage expires.
 
-## Output
+## Worked example
 
-Checklist:
+Item "Refrigerator," seller "Appliance Depot," purchase date August 19, 2026 produces "Refrigerator warranty record" with "Purchase date: 2026-08-19" and "Seller: Appliance Depot" at the top, followed by the same six-item checklist every generated record gets — model and serial, receipt location, warranty terms, registration status, support contact, and review date — ready for you to fill in against this specific refrigerator.
 
-- save final receipt/order confirmation;
-- record purchase/delivery/installation date as applicable;
-- record model and serial safely;
-- save written warranty terms;
-- record registration status;
-- calculate reminder date only after confirming the correct warranty start rule;
-- create product asset record.
+## Why "registration completed only if actually required" is worded that way
 
-## No legal interpretation
+Some products tie warranty coverage to registration; many don't, and registering something that doesn't require it just adds the manufacturer to a marketing list for no coverage benefit. The checklist deliberately doesn't assume registration matters — it prompts you to check the written terms for your specific item and record what you find, rather than treating registration as a universal step every purchase needs.
 
-Do not imply registration is required for legal consumer rights unless the official terms/local law say so.
+## How this differs from the other warranty tools
 
-**CTA:** Complete the checklist before throwing away packaging or deleting the order email.
+This generator is about what to capture at the moment of purchase — the fields worth writing down while everything is still on hand. The Warranty Expiration Calculator is a separate tool for the date math once you know the start date and term; use this checklist first, and once you have the confirmed start date and term length from what you've recorded here, run those numbers through the calculator.
+
+## Doing this before the packaging is gone
+
+Model and serial numbers are often printed only on a label inside the packaging or on the unit itself — not on the receipt. Once the box is recycled and the installer has left, that information gets meaningfully harder to recover. Complete the checklist the same day the item arrives, not after it's already in daily use.
+
+## For contractor-installed items specifically
+
+When an item is installed rather than simply purchased and carried home — a water heater, built-in appliances, HVAC equipment — the installer's own paperwork often carries information the retail receipt doesn't: the installation date the warranty may actually key off of, and the installer's own contact for a covered repair. Ask for that paperwork explicitly if it isn't handed over automatically, and file it with the same record as the receipt rather than treating it as a separate, easily-misplaced document.
+
+**FAQ:**
+- Q: What does the checklist include besides the item, seller, and date I enter?
+  A: A fixed six-item list: the exact brand, model, and serial number; where the receipt is stored along with a payment-proof reference (not the full card number); the written warranty term and its source; whether registration was completed, only where it's actually required; the support contact and claim procedure; and a review date before coverage expires.
+- Q: Does every product need to be registered for the warranty to be valid?
+  A: Not necessarily — it depends on the specific product's written terms. The checklist prompts you to check whether registration is actually required for this item rather than assuming it is, since registering something that doesn't require it adds no coverage benefit.
+- Q: How is this different from the Warranty Expiration Calculator?
+  A: This generator produces the checklist of information worth capturing at purchase time — model, serial, terms, registration status. The Expiration Calculator is a separate tool that does the date math once you already know the confirmed start date and term length, which this checklist helps you record in the first place.
+- Q: Why should I complete this the same day the item arrives?
+  A: Because model and serial numbers are often printed only on the packaging or the unit itself, not on the receipt. Once the box is gone and the item is in daily use, that information is meaningfully harder to track down than it is on delivery day.
+
+**Contextual CTA:** Complete the checklist the day the item arrives, before the packaging is gone or the order email is deleted, and save the record with the receipt attached.
 
 ---
 
@@ -6209,31 +6829,39 @@ Do not imply registration is required for legal consumer rights unless the offic
 
 # Receipt Retention Organizer
 
-This tool does not answer “keep every receipt for X years.” It helps the user identify **why** the receipt exists.
+"How long should I keep this receipt" doesn't have one answer — a return-window receipt and a tax-relevant receipt follow completely different clocks. This organizer doesn't guess a single number; it asks you to name the reason first, then calculates a review date from a period you supply.
 
-## Inputs
+## How it works
 
-- receipt category;
-- related asset/project;
-- reason to keep: return / warranty / insurance documentation / property-improvement record / tax-related / general reference / user-defined;
-- authoritative retention requirement known by user: optional;
-- review date.
+Enter the item, pick the reason you're keeping it — Warranty, Return window, Home inventory, Repair history, or Tax or legal record — enter the purchase date, and set how many months from now you want to review it (12 months by default). The organizer returns the item name, the category you chose, and a review date calculated from the purchase date plus your review period, along with a reminder of what to store alongside it: the item record, the warranty or return terms, and any related service history.
 
-## Output
+## Worked example
 
-Create a label such as:
+"Dishwasher," category "Warranty," purchase date August 19, 2026, and the default 12-month review period produces a review date of August 19, 2027 — a straightforward addition since neither date lands on a month-end edge case. Set the category to "Tax or legal record — verify official rules" instead, and the organizer still calculates the same way, but the category label itself is a deliberate flag: this receipt's real retention period isn't something the organizer determines.
 
-> `Dishwasher receipt — keep while warranty/service documentation remains useful — review after 2029-04-01.`
+## Real retention periods, where they actually exist
 
-## Safety/legal boundary
+For US federal tax records specifically, the IRS publishes concrete retention guidance rather than a single blanket number: keep records 3 years from filing in most ordinary situations, 6 years if you underreported income by more than 25% of what's on the return, 7 years for claims involving worthless securities or bad-debt deductions, and 4 years for employment tax records after the tax is due or paid. If you never filed a return or filed a fraudulent one, there's no time limit — keep those records indefinitely. Property records need to be kept until the statute of limitations expires for the year you dispose of the property, since they're needed to calculate depreciation and gain or loss. Source: [IRS — How long should I keep records?](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) These are federal tax figures specifically — insurance, state, and other legal retention requirements follow their own separate rules, so a "Tax or legal record" entry is worth checking against the guidance that actually applies to your situation rather than assuming one number covers every case.
 
-For tax, legal or insurance retention, instruct the user to follow the qualified guidance that applies to their jurisdiction and circumstances.
+## What the organizer never does
 
-## No auto deletion
+It calculates a review date; it never deletes anything on its own. A review date arriving just means it's time to look at the receipt again and decide — keep it another period, or let it go — not that anything happens automatically.
 
-The tool may create a review task. It must never delete a file automatically.
+## Keeping the reason attached to the receipt
 
-**CTA:** Give every long-term receipt a reason. Once the reason disappears, the review decision becomes much easier.
+A receipt with no stated reason attached is the hardest kind to make a keep-or-discard decision about later, because by the time you're looking at it again you may not remember why you kept it. Store the reason and the review date with the receipt itself, not as a separate note you'll have to match back up.
+
+**FAQ:**
+- Q: Does the organizer tell me exactly how long to keep every receipt?
+  A: No — retention periods depend on why you're keeping the receipt, and that varies by category. For US federal tax records specifically, the IRS publishes real figures (commonly 3 years, with longer periods for specific situations); for warranty, return, or insurance purposes, the organizer instead has you set your own review period based on the terms that actually apply.
+- Q: What does the IRS actually say about how long to keep tax records?
+  A: In most ordinary situations, 3 years from filing. Longer periods apply in specific cases: 6 years if income was underreported by more than 25%, 7 years for worthless-securities or bad-debt claims, and 4 years for employment tax records. If no return was filed, or a fraudulent one was, there's no time limit. Source: IRS recordkeeping guidance.
+- Q: Does the organizer delete old receipts automatically once the review date passes?
+  A: No. It only calculates a review date and flags when to look at the receipt again. Deciding whether to keep or discard it, and actually doing so, is always a manual decision — nothing is removed automatically.
+- Q: I picked "Tax or legal record" as the category — is that enough to know how long to keep it?
+  A: Not by itself. That category is a deliberate flag that the real retention period depends on rules outside the organizer's scope — federal tax guidance, your state's requirements, or insurance and legal advice specific to your situation. Check the applicable authority rather than relying on the review period alone.
+
+**Contextual CTA:** Classify the receipt by its real reason, set a review period that matches that reason's actual rules, and store the review date with the receipt so the two never get separated.
 
 ---
 
@@ -6247,47 +6875,43 @@ The tool may create a review task. It must never delete a file automatically.
 
 # Household Document Index Generator
 
-Before moving files, design the categories.
+Before you spend an afternoon moving files into folders, it's worth deciding what the folders actually are. This generator turns a list of document categories into an index — one line per category, telling you what to track for each — so you design the structure once instead of reorganizing it three times.
 
-## Inputs
+## What it generates
 
-Select household circumstances:
+List your document categories, separated by commas, and name where the documents themselves are actually stored — an encrypted drive, a physical binder, or wherever that is for your household. The generator returns one line per category, each formatted as the category name followed by what to track for it: the owner, the current version, the renewal or review date, and the backup location.
 
-- renter/homeowner;
-- vehicles;
-- pets;
-- children/school;
-- major appliances;
-- renovation/property records;
-- insurance categories;
-- utilities;
-- emergency/care needs.
+## Worked example
 
-## Output
+With the default category list — "Home purchase or lease, Insurance, Appliances, Repairs, Utilities, Emergency" — and storage location "Encrypted drive / physical binder," the generator returns six lines, each following the same pattern: "Home purchase or lease/ — owner, current version, renewal/review date and backup location," "Insurance/ — owner, current version, renewal/review date and backup location," and so on through all six categories. It's an index of what to track for each category, not the documents themselves — you still decide what actually goes in each one.
 
-Create a concise folder/index structure with descriptions of what belongs in each section and what should **not** be stored there.
+## What belongs in the index, and what doesn't
 
-Example:
+The index tracks metadata — who owns each category of document, which version is current, when to review it, and where the backup lives — not the documents' contents. Keep identity documents, passwords, and sensitive medical or financial records in storage that's actually protected for that purpose; this index can point to where that storage is, but it shouldn't become a place where the sensitive material itself gets typed in alongside everything else.
 
-```text
-Home & Property
-  - purchase/lease references
-  - renovation projects
-Appliances & Assets
-  - warranties
-  - manuals
-  - receipts
-Household Services
-  - utilities
-  - service providers
-Emergency & Handoff
-  - contacts
-  - limited operational information
-```
+## Why designing the categories first matters
 
-## Security reminders
+It's tempting to start by sorting existing paperwork into whatever piles seem natural at the moment, then discover a month later that half of it needs to be re-sorted because the categories didn't hold up. Running the generator first — deciding on category names and what "current" and "backup" mean for each one — gives you a structure to sort into, rather than a structure you invent as you go and have to redo later.
 
-Mark identity documents, passwords and sensitive medical/financial records as “use separate secure storage or an explicitly protected workflow.”
+## Keeping the index itself current
+
+An index is only useful if it's actually kept up to date when a document changes. When you renew insurance, replace an appliance, or update a lease, update that category's "current version" and "renewal/review date" fields at the same time — an index describing last year's insurance policy is worse than no index, because it looks authoritative while being wrong.
+
+## How many categories is too many
+
+A household document index with thirty narrow categories is about as hard to use as no index at all — nobody can remember where "Appliance manuals — kitchen" ends and "Appliance manuals — laundry" begins. Aim for somewhere between six and twelve categories broad enough to actually remember without looking them up, and let each one hold a genuinely varied set of documents rather than splitting hairs between near-identical categories.
+
+**FAQ:**
+- Q: What does the generator actually produce — folders, or something else?
+  A: A text index: one line per category you list, each stating what to track for it — owner, current version, renewal or review date, and backup location. It doesn't create actual folders or move files; it's a reference for how you organize storage you set up yourself.
+- Q: Should I put passwords or identity documents directly into this index?
+  A: No. The index is for metadata about where documents live and when to review them — not for the sensitive material itself. Keep identity documents, passwords, and sensitive medical or financial records in storage actually built for that purpose, and use the index to point to where that storage is.
+- Q: Why generate the index before sorting existing paperwork?
+  A: Deciding on categories first gives you a structure to sort into. Sorting first and inventing categories as you go often means re-sorting everything once you realize the categories you picked partway through don't match what you started with.
+- Q: How do I keep the index accurate over time?
+  A: Update each category's current version and renewal or review date whenever something in it actually changes — a renewed policy, a replaced appliance, an updated lease. An index that isn't updated when the underlying documents change becomes misleading rather than useful.
+
+**Contextual CTA:** Generate the index, decide where each category's documents actually live, and update the current-version and review-date fields whenever something in that category changes.
 
 **CTA:** Use the generated index as a map. Do not create empty folders for categories your household does not need.
 
@@ -6303,32 +6927,47 @@ Mark identity documents, passwords and sensitive medical/financial records as �
 
 # Emergency Contact Sheet Generator
 
-The output should be readable quickly and printable on one or two pages.
+A useful emergency contact sheet is the one that's actually readable at a glance, by someone who's stressed and in a hurry — not a dense document that needs careful reading to find the right number. This generator turns your contact list into exactly that: a plain, printable sheet.
 
-## Contact sections
+## What it generates
 
-- household members;
-- primary/backup emergency contacts;
-- nearby trusted contact;
-- building/property contact;
-- utility outage contacts;
-- school/care contacts;
-- veterinarian/pet contact;
-- service providers selected by user.
+List your contacts, one per line, in the format `Type | Name | Phone` — household contact, utility provider, veterinarian, or whatever categories your household needs. The generator returns each row as a clean line joining the type, name, and phone number, followed by a reminder to add your area's current official emergency number and local authority guidance, and to note when the sheet was last reviewed and keep it somewhere the people who might need it can actually find it.
 
-## Privacy options
+## Worked example
 
-Provide toggles for `Private version` and `Shared/visible version`. The shared version omits designated sensitive notes and account identifiers.
+Entered as "Household contact | Name | Phone," "Utility provider | Provider | Outage number," and "Veterinarian | Clinic | Phone" — the generator's own starting example — the sheet lists three clean lines in that same order, ready for you to replace the placeholder text with real names and numbers.
 
-## Output
+## Why it doesn't include a default emergency number
 
-Large headings, plain phone links on screen, print-safe black-and-white layout, date reviewed.
+The generator deliberately doesn't pre-fill a national or local emergency number, because the correct one depends entirely on where you live — and getting that wrong on a document meant to be used in an actual emergency would be far worse than leaving it blank. Add your area's current official number yourself, and treat it as the first line on the finished sheet, not an afterthought.
 
-## Important disclaimer
+## What this sheet is, and isn't
 
-The sheet supports household organization and does not replace emergency services or official emergency guidance.
+This is an organizational tool — it collects and formats the contacts you already have. It does not replace emergency services, and it does not replace official local emergency guidance about what to do in a specific situation. Use it to make sure the right number is easy to find quickly; use official sources for what to actually do once you've found it.
 
-**CTA:** Print one carefully limited copy and keep the fuller private version in the app.
+## Keeping it usable
+
+A sheet is only useful if it's both current and reachable. Note the date you last reviewed it somewhere on the printed copy, and put it somewhere genuinely accessible — on a refrigerator, in a folder near a phone, wherever the people who'd need it would actually think to look — rather than filed away with less urgent paperwork.
+
+## Who else needs a copy
+
+If children, a regular babysitter, or an aging relative living with you might need this sheet independently of you, they need their own accessible copy — not just knowledge that you have one somewhere. A sheet only you can locate defeats the purpose for anyone who might need to use it when you're not there to hand it to them. Consider a second copy posted somewhere a caregiver or older child would think to check on their own.
+
+## Splitting a long list into a short and a full version
+
+If your full contact list runs past a dozen entries, consider generating two versions: a short one with the handful of numbers someone would need in the first five minutes of an actual emergency, printed large and posted somewhere obvious, and a fuller reference list kept nearby for anything less urgent. A sheet crowded with every possible contact is harder to scan quickly than one that's been deliberately trimmed down.
+
+**FAQ:**
+- Q: What format does the contact list need to be in?
+  A: One contact per line, written as Type | Name | Phone — for example, "Veterinarian | Clinic name | Phone number." Each row is formatted the same way on the generated sheet, so it's readable at a glance.
+- Q: Why doesn't the generator include 911 or a local emergency number automatically?
+  A: Because the correct number depends on your location, and the generator has no way to know where you are. Add your area's current official emergency number yourself as the first entry — getting a default number wrong on a document meant for real emergencies would be a serious problem.
+- Q: Does this sheet replace calling emergency services or following official guidance?
+  A: No. It's an organizational tool that makes your own contacts easy to find quickly. For what to actually do in a specific emergency situation, follow official local guidance and contact emergency services directly — the sheet only helps you reach the right number faster.
+- Q: Where should I keep the printed sheet?
+  A: Somewhere genuinely reachable by anyone who might need it — a refrigerator, a folder near a landline, wherever people would actually think to look under stress — rather than filed away with less time-sensitive paperwork. Note the review date on it so anyone using it knows how current it is.
+
+**Contextual CTA:** Generate the sheet, add your area's current official emergency number as the first line, and post the printed copy somewhere genuinely reachable.
 
 ---
 
@@ -6342,31 +6981,43 @@ The sheet supports household organization and does not replace emergency service
 
 # Appliance Maintenance Checklist Generator
 
-This generator should be intentionally conservative.
+This generator is deliberately conservative: instead of guessing at maintenance intervals for your specific appliance, it hands you a structured checklist for reading the manual and recording what you find, so the numbers you end up with actually apply to your unit.
 
-## Inputs
+## What it generates
 
-Select appliance types and optionally enter model/brand. Ask whether the user has the official manual.
+Select an appliance type — refrigerator, dishwasher, washing machine, dryer, air conditioner, water heater, or other — and optionally enter the brand or model. The generator returns a starter checklist labeled with the appliance type and your model reference (or a prompt to record the exact model if you left it blank): save the official manual and support page; identify only the cleaning or filter tasks the manual actually marks as user-serviceable; record the correct part or consumable identifiers; log condition and performance observations; keep qualified professional service separate from what you do yourself; record completion, cost, provider, and next due date each time something is done; and stop and get qualified help for anything electrical, gas, refrigerant-related, or otherwise hazardous.
 
-## Output style
+## Worked example
 
-For each appliance, generate categories such as:
+Appliance type "Refrigerator" with no model entered produces "Refrigerator maintenance starter — record the exact model," followed by the same seven-item checklist every appliance type gets. Fill in the model, and that heading updates to reflect it — the checklist items don't change based on appliance type, but the record they attach to becomes specific once you've entered the model.
 
-- identify user-cleanable parts;
-- identify filters/consumables;
-- confirm cleaning method;
-- confirm manufacturer interval or condition trigger;
-- record last service;
-- record warranty;
-- note unusual performance changes.
+## Why it won't tell you a specific interval
 
-Do **not** output “replace refrigerator filter every six months” unless the user or a sourced model-specific record provides that rule.
+A generic tool has no way to know whether your refrigerator's coils are behind a rear panel or a bottom grille, whether your specific dishwasher model has a filter that needs monthly cleaning or none at all, or what your particular water heater manufacturer recommends. Inventing a number like "replace the filter every six months" without knowing the actual model would be confidently wrong for a meaningful share of the appliances it's applied to. The checklist's job is to get you to the manual, not to replace it.
 
-## Product bridge
+## Turning "confirmed" into "recurring"
 
-After the user confirms a real interval, let them create a recurring maintenance task.
+Once you've actually checked the manual and found the real interval for your model, that's the moment to create a recurring task — not before. A confirmed, model-specific interval is worth turning into a standing reminder; a guessed one just becomes something you eventually stop trusting and ignore.
 
-**CTA:** Use the generator as a manual-reading checklist, then turn confirmed instructions into reminders.
+## What to keep separate
+
+The checklist explicitly separates user-serviceable tasks from professional service, and that distinction matters for safety, not just convenience. Cleaning a filter or wiping a gasket is typically fine to do yourself once the manual confirms it; anything involving electrical work, gas lines, or refrigerant is professional-only work, and the checklist's record-keeping angle there is to log when service happened and what was found — not to walk you through doing it yourself.
+
+## Using it across several appliances
+
+Generate a separate checklist for each appliance rather than trying to track several under one entry — a refrigerator and a dishwasher have completely different consumables and cleaning methods, and combining their records makes it harder to see either appliance's actual history clearly. Running the generator once per appliance type, each attached to its own model, keeps the resulting records genuinely useful instead of one tangled list.
+
+**FAQ:**
+- Q: Does the generator tell me how often to clean my specific appliance's filter or coils?
+  A: No. It has no model-specific database, so it gives you a checklist for finding that answer in your own appliance's manual rather than guessing a number that might not apply to your unit. Record the real interval once you've confirmed it there.
+- Q: What happens if I don't enter a model?
+  A: The checklist still generates, but its heading reads "record the exact model" as a prompt to fill that in — the model reference matters because it's what makes the checklist attach to a specific, identifiable appliance rather than a generic category.
+- Q: Why does the checklist separate user maintenance from professional service?
+  A: Because that distinction is a safety boundary, not just an organizational one. Tasks the manual confirms as user-serviceable — cleaning, filter changes — are typically safe to do yourself; anything electrical, gas-related, or involving refrigerant needs qualified help, and the checklist exists partly to keep that line clear.
+- Q: When should I turn a checklist item into a recurring reminder?
+  A: After you've confirmed the real interval from the manufacturer's manual or support page — not before. A reminder built on a guessed number tends to get ignored once it turns out to be wrong; one built on a confirmed, model-specific interval is worth trusting.
+
+**Contextual CTA:** Use the checklist to find your appliance's real maintenance intervals in its manual, then turn only the confirmed ones into recurring records.
 
 ---
 
@@ -6380,34 +7031,47 @@ After the user confirms a real interval, let them create a recurring maintenance
 
 # Home Handoff Summary Generator
 
-This is one of the signature tools. It converts a household database—or manual user inputs—into a role-specific briefing.
+The real test of a household's record-keeping is whether someone else could step in for a week without a dozen texts asking where things are. This generator builds that briefing directly from what you type in — a recipient, a task list, safe contacts, and what you're deliberately leaving out.
 
-## Input modes
+## What it builds
 
-**Standalone:** user manually selects categories and enters information.
+Enter who the handoff is for, a list of tasks with their timing, safe contacts the recipient might need, and anything private you're intentionally leaving out. The generator returns a labeled handoff — "Household handoff for" whoever you named — listing your tasks exactly as you entered them, followed by the safe contacts, an explicit line naming what was intentionally omitted, the date the handoff was generated, and a closing reminder to confirm every time-sensitive detail before actually sharing it.
 
-**Inside `FamilyBoard`:** local app reads selected upcoming tasks, maintenance, subscriptions, contacts and household notes entirely on-device.
+## Worked example
 
-## Sections
+Recipient "Partner backup," tasks entered as "Friday | Put bins out" and "Aug 28 | HVAC service appointment," contacts "Building manager, plumber," and omitted items "Passwords, medical records" produces: "Household handoff for Partner backup," the two task lines exactly as typed, "Safe contacts: Building manager, plumber," "Intentionally omitted: Passwords, medical records," the current date, and the reminder to confirm details are still accurate before sharing.
 
-- next 30 days;
-- recurring responsibilities;
-- open home issues;
-- pets/dependents;
-- utilities/services;
-- key contacts;
-- emergency references;
-- “normally handled by” field.
+## What it does and doesn't pull in automatically
 
-## Privacy controls
+This generator works entirely from what you type into its fields — it doesn't reach into your other household records and pull in tasks, maintenance schedules, or contacts on its own. If you want a task from your maintenance tracker included in the handoff, you type it into the task list here yourself. Treat this as a focused summary you assemble deliberately for one specific handoff, not a live view of everything else in your household records.
 
-Every record can be excluded. Private-marked items are excluded by default. Shared export should never include passwords, full financial account details or unrelated private notes.
+## Why "intentionally omitted" is its own line
 
-## Output
+Naming what you left out is as important as what you included, because it tells the recipient there's a boundary rather than leaving them to wonder whether the handoff is complete. "Passwords, medical records" tells your partner backup plainly: don't expect those here, and don't assume their absence is an oversight.
 
-Readable printable/PDF-friendly HTML, plus local saved handoff snapshot with date generated.
+## Before you actually hand it over
 
-**CTA:** Give the handoff to another trusted household member and ask them what still depends on your memory. Use their questions to improve the system.
+Dates and tasks go stale fast — a "Friday" task written on a Tuesday means something different by the time someone reads it a week later. Confirm every date and task is still accurate right before sharing, not when you first drafted the handoff, and regenerate it rather than handing over an old copy if much time has passed.
+
+## Writing tasks the recipient can actually act on
+
+"Friday | Put bins out" works because it names a specific day and a specific action — a task like "Handle the yard stuff" leaves the recipient guessing what's actually expected and when. Write each task the way you'd want an instruction handed to you: what, specifically, and by when, specifically, rather than a category you'd only understand yourself.
+
+## Deciding who this handoff is actually for
+
+A handoff meant for a co-parent covering a work trip looks different from one meant for a neighbor watching the house for a weekend — the co-parent needs the fuller near-term picture, while the neighbor needs a narrow, specific list. Build a separate handoff for each distinct recipient rather than one generic version you hand to everyone, since the right amount of detail and the right omitted items genuinely differ by who's receiving it.
+
+**FAQ:**
+- Q: Does the generator automatically pull in my tasks and contacts from the rest of FamilyBoard?
+  A: No. It only works from what you type directly into its fields — recipient, task list, contacts, and omitted items. If you want something from another part of your household records included, add it to the task list here yourself; the generator has no automatic connection to your other records.
+- Q: Why does the handoff list what was intentionally left out?
+  A: So the recipient knows there's a deliberate boundary rather than wondering if something's missing by accident. Stating "Passwords, medical records" as intentionally omitted is clearer than a handoff that's silently incomplete.
+- Q: How current does the information need to be before I share it?
+  A: Confirm every task and date right before you actually hand it over, not when you first drafted it — a task written for "Friday" reads very differently a week later. If meaningful time has passed since you generated it, regenerate rather than share the old version.
+- Q: Is this meant to replace my full household records for the recipient?
+  A: No. It's a focused, one-time summary for a specific handoff — safe contacts, near-term tasks, and an explicit list of what's deliberately excluded. Anything the recipient needs beyond that scope should be provided separately and deliberately, not assumed to be covered here.
+
+**Contextual CTA:** Generate the handoff, confirm every task and date is still accurate, and give it to the recipient with a chance to ask what still depends on your memory.
 
 
 ---
@@ -7174,36 +7838,62 @@ Cross-device family sharing creates ongoing infrastructure cost, so an optional 
 ## Supporting Page B — Privacy
 **Slug:** `/privacy/`
 **Indexable:** Yes
-**Title tag:** `Privacy — How FamilyBoard Handles Household Data`
-**Meta description:** `Understand what household data stays on your device, what public-site analytics may collect, and how backups work in the local-first FamilyBoard app.`
+**Title tag:** `Privacy Policy — What FamilyBoard Collects and What Never Leaves Your Device`
+**Meta description:** `What the public site measures, which third parties are involved, and why household records in the FamilyBoard app never reach a server. Written to be checkable.`
 
-# Privacy should be understandable before you trust the app
+# Privacy Policy
 
-`FamilyBoard` is designed so the free core household organizer can work without a user account or central household database.
+FamilyBoard has two clearly separated halves, and they are governed differently. This page describes both, and it describes what the site does today rather than what it might do later.
 
-## Private app data
+- The **public website** at `familyboard.win` publishes guides, calculators and printables. It uses Google Analytics 4 and is being prepared to show Google advertising.
+- The **private app** at `/app/` and `/zh-tw/app/` stores your household records in your own browser. It loads no analytics and no advertising code at all.
 
-Household members, asset names, maintenance records, warranty information, subscriptions, emergency notes and other private app records are stored locally in the browser database in v1.
+## Household records never reach a server
 
-## Public website analytics
+Household members, asset names, maintenance records, warranty details, subscriptions, contacts, documents and emergency notes are written to your browser's own IndexedDB storage on your device. FamilyBoard has no account system, no household database and no server that receives these records. Nobody operating FamilyBoard can read them, because they are never transmitted.
 
-The public content site may later use analytics to understand page visits and feature usage. Analytics must never include private household values such as names, addresses, asset notes, document contents, emergency details, subscription names or financial information.
+The practical consequence is that your data is exactly as private, and exactly as fragile, as your browser profile. Clearing site data, losing the device or using a different browser means those records are gone. Export a JSON backup, or an encrypted JSON backup, and keep it somewhere durable.
 
-## Browser storage limitations
+## What the public site measures
 
-Local browser storage is not a guaranteed archival backup. Browser data can be cleared, devices can fail and users can remove site data. `FamilyBoard` therefore provides export/restore tools and should display the last-backup status prominently.
+The public pages load Google Analytics 4. It records ordinary web-analytics information such as pages viewed, approximate location derived from IP address, device and browser type, and how you arrived at the site. FamilyBoard configures GA4 with IP anonymisation on and Google Signals off.
 
-## Attachments
+Beyond page views, the site sends exactly two custom events, and they carry nothing you typed:
 
-Where local attachment support is available, users should understand device/browser storage limits. Important original documents should also exist in an appropriate durable location under the user's control.
+- `tool_complete`, with the slug of the tool — for example `warranty-expiration-calculator` — so we know which tools people finish.
+- `affiliate_outbound`, with a product category, if you click a labelled affiliate link.
 
-## Future sync
+Values you enter into a calculator, generator or printable are processed in your browser and are not sent anywhere. The analytics code refuses to run on any `/app/` path, so nothing in the private app is measured, and the event allow-list rejects any parameter other than the tool slug and the category.
 
-If encrypted sync is added later, this policy must be updated before launch of that service. The sync design should aim to minimize the provider's ability to read household content.
+## Cookies and third-party vendors
 
-## Contact
+Google Analytics sets cookies on the public site to distinguish visitors and sessions.
 
-Provide the project support contact only after a real FamilyBoard mailbox or forwarding route is configured and tested. Do not publish the developer's personal email.
+FamilyBoard's publisher identifier is `pub-7052036786750044` and the site publishes an `ads.txt` file naming Google as an authorised seller. Advertising is not being displayed at the time of writing: the ad script is disabled in the site configuration and no ad slots render. When advertising is enabled, Google and its partners will use cookies or similar technologies to serve and measure ads, including personalised advertising where you have permitted it.
+
+You can control this independently of FamilyBoard:
+
+- Google's own description of how it uses information from sites that use its services is published at [policies.google.com/technologies/partner-sites](https://policies.google.com/technologies/partner-sites).
+- Ad personalisation can be turned off at [myadcenter.google.com](https://myadcenter.google.com/).
+- Your browser's own settings can block or delete cookies, which will not stop the private app from working, because it does not depend on them.
+
+Advertising and affiliate links never appear inside the private app, the household handoff views or the print-only sheets.
+
+## Affiliate links
+
+Some public pages may carry clearly labelled affiliate links, marked `rel="sponsored nofollow noopener"`. Following one takes you to a third-party retailer whose own privacy policy then applies. FamilyBoard records only that a link in a given product category was clicked, never which page you were on or anything about you.
+
+## Attachments and offline caching
+
+Attachment records in the app are references and metadata describing your original documents; the originals stay wherever you keep them. A service worker caches the app shell and pages you have already visited so the app keeps working offline. That cache lives on your device and is cleared when you clear site data.
+
+## No sync today
+
+FamilyBoard does not send household records to any sync service. If that ever changes, this page will be updated before such a service launches, and the change will be visible in the site changelog.
+
+## Questions and corrections
+
+Reach us through the [contact page](/contact/). Please do not include household records, document contents, account numbers or emergency details in any message — we do not need them to answer a question, and a support channel is the wrong place for them.
 
 ---
 

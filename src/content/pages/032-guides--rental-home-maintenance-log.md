@@ -6,14 +6,17 @@ primaryIntent: "document maintenance in a rental property"
 primaryKeyword: "rental maintenance log"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the printable Repair Log or the app's home-record timeline to document an issue once, then update that same record as the situation changes."
 related:
   - "/guides/apartment-maintenance-checklist/"
   - "/templates/printable-repair-log/"
   - "/guides/move-out-home-records/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # A rental maintenance log is a timeline, not a legal argument
@@ -35,5 +38,3 @@ A service invoice provided by management, an inspection record or a written resp
 ## Know that the log does not decide responsibility
 
 Lease terms and local law determine repair obligations. The log simply helps the household preserve accurate information and dates.
-
-**Contextual CTA:** Use the printable Repair Log or the app's home-record timeline to document an issue once, then update that same record as the situation changes.

@@ -6,14 +6,17 @@ primaryIntent: "manage pantry staples simply"
 primaryKeyword: "pantry restock system"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Start with ten staples the household genuinely wants to keep on hand, not the entire grocery store."
 related:
   - "/guides/household-shopping-staples/"
   - "/guides/household-weekly-reset/"
   - "/features/family-task-manager/"
   - "/templates/printable-household-contacts/"
+faq: []
 contentVersion: 1
 ---
 # Most households do not need warehouse software for the pantry
@@ -35,5 +38,3 @@ If an item sits on the list for weeks and nobody buys it, it may not be a true s
 ## Do not mix pantry expiration management into v1 unless needed
 
 Expiration tracking for every food item creates enormous data-entry burden. Keep the product focused.
-
-**Contextual CTA:** Start with ten staples the household genuinely wants to keep on hand, not the entire grocery store.

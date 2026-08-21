@@ -6,14 +6,17 @@ primaryIntent: "create a realistic household cleaning schedule"
 primaryKeyword: "cleaning schedule"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Generate a cleaning schedule from rooms and household preferences, then delete at least 20% of the suggested tasks before adopting it."
 related:
   - "/tools/cleaning-schedule-generator/"
   - "/templates/printable-cleaning-schedule/"
   - "/guides/deep-cleaning-tracker/"
   - "/features/family-task-manager/"
+faq: []
 contentVersion: 1
 ---
 # A cleaning schedule should reflect how the household lives
@@ -35,5 +38,3 @@ If the list is repeatedly ignored, reduce it. A modest routine performed consist
 ## Keep maintenance separate
 
 Cleaning a range hood filter may be maintenance, while wiping the exterior is cleaning. Linking the right kind of history prevents confusion.
-
-**Contextual CTA:** Generate a cleaning schedule from rooms and household preferences, then delete at least 20% of the suggested tasks before adopting it.

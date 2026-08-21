@@ -6,14 +6,17 @@ primaryIntent: "track water-softener supplies and service"
 primaryKeyword: "water softener maintenance tracker"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add the softener model and confirmed consumable type so the next refill does not begin with guesswork."
 related:
   - "/guides/water-filter-replacement-guide/"
   - "/guides/household-supplies-inventory/"
   - "/features/maintenance-tracker/"
   - "/guides/home-service-provider-list/"
+faq: []
 contentVersion: 1
 ---
 # Water-treatment systems are easy to forget until water quality changes
@@ -35,5 +38,3 @@ If a technician changes settings or performs service, record what was done. That
 ## Separate water-treatment records from drinking-water claims
 
 The app should organize maintenance, not make health or water-quality claims. Testing and treatment decisions should use appropriate professional/local guidance.
-
-**Contextual CTA:** Add the softener model and confirmed consumable type so the next refill does not begin with guesswork.

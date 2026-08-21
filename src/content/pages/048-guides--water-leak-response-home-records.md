@@ -6,14 +6,17 @@ primaryIntent: "document a household water leak and response"
 primaryKeyword: "water leak documentation checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create one incident record and update it rather than scattering photos and notes across multiple apps."
 related:
   - "/guides/home-repair-history/"
   - "/guides/home-service-provider-list/"
   - "/templates/printable-repair-log/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # A leak record helps preserve the timeline while the household focuses on the problem
@@ -35,5 +38,3 @@ If a component is repaired or replaced, add that event to the related home recor
 ## Capture follow-up work
 
 Drying, inspection, finishing work or monitoring may occur after the immediate leak is stopped. Keep those tasks tied to the original incident.
-
-**Contextual CTA:** Create one incident record and update it rather than scattering photos and notes across multiple apps.

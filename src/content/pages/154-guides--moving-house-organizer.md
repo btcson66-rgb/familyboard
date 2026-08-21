@@ -6,14 +6,17 @@ primaryIntent: "manage the operational parts of moving house"
 primaryKeyword: "moving house organizer"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use one moving dashboard with sections rather than maintaining separate notes for boxes, utilities and deadlines."
 related:
   - "/tools/move-in-checklist-generator/"
   - "/guides/moving-inventory/"
   - "/guides/move-out-home-records/"
   - "/guides/new-home-setup-checklist/"
+faq: []
 contentVersion: 1
 ---
 # A move is easier when it is divided into workstreams instead of one enormous checklist
@@ -35,5 +38,3 @@ Archive location-specific services from the old home while carrying personal ass
 ## Create a first-week list
 
 Internet, essential utilities, basic supplies, safety information and major appliance setup usually matter before decorative projects.
-
-**Contextual CTA:** Use one moving dashboard with sections rather than maintaining separate notes for boxes, utilities and deadlines.

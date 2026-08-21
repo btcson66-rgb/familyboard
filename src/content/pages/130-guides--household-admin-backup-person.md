@@ -6,14 +6,17 @@ primaryIntent: "choose and prepare a backup household administrator"
 primaryKeyword: "household backup person"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create a backup-person handoff and test three real household questions before an emergency makes the test unavoidable."
 related:
   - "/guides/family-continuity-plan/"
   - "/guides/household-handoff/"
   - "/guides/what-spouse-needs-to-know/"
   - "/tools/home-handoff-summary-generator/"
+faq: []
 contentVersion: 1
 ---
 # Every important household system should have a second person who can find the map
@@ -35,5 +38,3 @@ The brief can reference a password manager, safe or document repository without 
 ## Practice once
 
 Ask the backup person to find a service contact, renewal date and emergency document. A continuity plan that has never been tested may still depend on hidden knowledge.
-
-**Contextual CTA:** Create a backup-person handoff and test three real household questions before an emergency makes the test unavoidable.

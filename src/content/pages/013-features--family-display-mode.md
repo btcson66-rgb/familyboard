@@ -6,14 +6,17 @@ primaryIntent: "use an old tablet as a family dashboard"
 primaryKeyword: "family dashboard tablet"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Try display mode on an old tablet before buying a dedicated household screen. If it already solves the visibility problem, the hardware you own may be enough."
 related:
   - "/guides/household-weekly-reset/"
   - "/features/home-dashboard/"
   - "/features/household-calendar/"
   - "/app/"
+faq: []
 contentVersion: 1
 ---
 # Your old tablet can become the household screen
@@ -35,5 +38,3 @@ Because the product is a PWA, a compatible browser can provide a near-app experi
 ## Treat a shared screen as shared space
 
 A wall tablet is not the place for private notes, sensitive documents or personal account details. Display mode should have a deliberately limited data surface and an easy way to return to a private view only when appropriate.
-
-**Contextual CTA:** Try display mode on an old tablet before buying a dedicated household screen. If it already solves the visibility problem, the hardware you own may be enough.

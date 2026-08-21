@@ -6,14 +6,17 @@ primaryIntent: "maintain a home during hot or high-use months"
 primaryKeyword: "summer home maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the Vacation Shutdown Checklist Generator before travel and update any summer service history in the app when you return."
 related:
   - "/guides/vacation-home-shutdown-checklist/"
   - "/guides/air-conditioner-maintenance-checklist/"
   - "/guides/house-sitter-information/"
   - "/features/family-display-mode/"
+faq: []
 contentVersion: 1
 ---
 # Summer maintenance is often about high-use systems and interrupted routines
@@ -35,5 +38,3 @@ Review household subscriptions, annual services and major purchases made during 
 ## Keep summer tasks realistic
 
 Do not schedule every possible exterior project just because the weather is good. Prioritize work based on condition, consequence and actual availability.
-
-**Contextual CTA:** Use the Vacation Shutdown Checklist Generator before travel and update any summer service history in the app when you return.

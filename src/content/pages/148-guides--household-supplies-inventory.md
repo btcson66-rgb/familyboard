@@ -6,14 +6,17 @@ primaryIntent: "track home maintenance and cleaning consumables"
 primaryKeyword: "household supplies inventory"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Track supplies only when compatibility, scarcity or household continuity makes the record worth maintaining."
 related:
   - "/guides/household-shopping-staples/"
   - "/guides/water-filter-replacement-guide/"
   - "/guides/robot-vacuum-maintenance-guide/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # A supplies inventory is most useful for items that must match equipment
@@ -35,5 +38,3 @@ The product should not encourage users to buy large quantities merely because an
 ## Connect purchase to maintenance
 
 When the last spare is used, create a restock task; when the replacement is installed, record maintenance completion.
-
-**Contextual CTA:** Track supplies only when compatibility, scarcity or household continuity makes the record worth maintaining.

@@ -6,14 +6,17 @@ primaryIntent: "track all service performed on household equipment"
 primaryKeyword: "home service history tracker"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Import the last year of significant service events first. Older history can be added only when it is useful."
 related:
   - "/guides/home-maintenance-records/"
   - "/guides/home-service-provider-list/"
   - "/guides/repair-history/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Service history is broader than repair history
@@ -35,5 +38,3 @@ If a technician says “review this next season,” create a future task connect
 ## Keep historical providers even after switching
 
 Old records can still explain prior work even when the household now uses a different company.
-
-**Contextual CTA:** Import the last year of significant service events first. Older history can be added only when it is useful.

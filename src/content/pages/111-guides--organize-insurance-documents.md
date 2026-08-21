@@ -6,14 +6,17 @@ primaryIntent: "organize household insurance references and policy documents"
 primaryKeyword: "organize insurance documents"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create one insurance index entry per active policy and keep renewal dates visible without turning the shared dashboard into a policy file cabinet."
 related:
   - "/guides/home-inventory-for-insurance/"
   - "/guides/annual-renewal-calendar/"
   - "/guides/important-household-documents/"
   - "/features/household-documents-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Insurance documents need both findability and restraint
@@ -35,5 +38,3 @@ A reminder several weeks before renewal can prompt the household to review the p
 ## Do not interpret coverage
 
 The app should never tell users that a loss is covered. Policies and law control that question.
-
-**Contextual CTA:** Create one insurance index entry per active policy and keep renewal dates visible without turning the shared dashboard into a policy file cabinet.

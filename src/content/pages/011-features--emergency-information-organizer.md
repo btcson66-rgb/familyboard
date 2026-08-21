@@ -6,14 +6,17 @@ primaryIntent: "organize family emergency information"
 primaryKeyword: "household emergency information organizer"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Generate a basic emergency contact sheet first. Then add only the information another trusted household member would actually need under pressure."
 related:
   - "/guides/family-emergency-contacts/"
   - "/guides/emergency-information-sheet/"
   - "/tools/emergency-contact-sheet-generator/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Emergency information is only useful if another person can understand it quickly
@@ -37,5 +40,3 @@ Phone numbers change. Service providers change. People move. An emergency record
 ## Do not replace official emergency guidance
 
 The product organizes the household's information; it does not replace local emergency authorities, medical advice, building safety instructions or professional guidance.
-
-**Contextual CTA:** Generate a basic emergency contact sheet first. Then add only the information another trusted household member would actually need under pressure.

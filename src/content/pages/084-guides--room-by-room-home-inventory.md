@@ -6,14 +6,17 @@ primaryIntent: "build a home inventory one room at a time"
 primaryKeyword: "room by room home inventory"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Generate a checklist for one room and stop when that room is done. A finished partial inventory is better than an abandoned whole-house project."
 related:
   - "/tools/room-inventory-generator/"
   - "/guides/home-inventory-checklist/"
   - "/guides/photo-home-inventory/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Room-by-room inventory works because it gives the project a visible finish line
@@ -39,5 +42,3 @@ Computers, monitors, tablets, cameras and valuable personal items can be recorde
 ## Utility and storage spaces
 
 Tools, backup power, water-treatment equipment and stored seasonal items may be easy to forget because they are not in daily view.
-
-**Contextual CTA:** Generate a checklist for one room and stop when that room is done. A finished partial inventory is better than an abandoned whole-house project.

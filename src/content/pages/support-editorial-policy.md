@@ -7,11 +7,13 @@ primaryKeyword: "FamilyBoard editorial policy"
 cluster: "support"
 pageType: "support"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
   - "/about/"
   - "/contact/"
+faq: []
 contentVersion: 1
 ---
 # Editorial Policy

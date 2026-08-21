@@ -6,14 +6,17 @@ primaryIntent: "prepare a home for cooler, wetter or stormier weather"
 primaryKeyword: "fall home maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create a fall review task and attach each item to the system it affects. The next year, you will know exactly what was done and when."
 related:
   - "/guides/winter-home-maintenance-checklist/"
   - "/guides/storm-preparation-home-checklist/"
   - "/guides/furnace-maintenance-records/"
   - "/features/maintenance-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Fall is the season for dealing with problems while they are still easy to schedule
@@ -35,5 +38,3 @@ Store or record seasonal equipment, note repairs that should happen before next 
 ## Plan around your climate
 
 Fall preparation in a warm coastal area is different from fall in a region with freezing temperatures. A home-maintenance app should help the user customize, not pretend there is one correct national checklist.
-
-**Contextual CTA:** Create a fall review task and attach each item to the system it affects. The next year, you will know exactly what was done and when.

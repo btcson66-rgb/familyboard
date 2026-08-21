@@ -6,14 +6,17 @@ primaryIntent: "plan for replacing household appliances"
 primaryKeyword: "appliance replacement planning"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Put only the two or three most likely near-term replacements on a watch list. Planning works better when it stays selective."
 related:
   - "/tools/appliance-replacement-planner/"
   - "/guides/appliance-lifespan-planning/"
   - "/guides/repair-history/"
   - "/guides/home-maintenance-budget/"
+faq: []
 contentVersion: 1
 ---
 # Replacement planning is not the same as predicting a failure date
@@ -35,5 +38,3 @@ Record dimensions, connection type, household preferences and other practical co
 ## Keep old records after replacement
 
 Archive the outgoing appliance and create a new asset. That preserves real household history and avoids rewriting the old record.
-
-**Contextual CTA:** Put only the two or three most likely near-term replacements on a watch list. Planning works better when it stays selective.

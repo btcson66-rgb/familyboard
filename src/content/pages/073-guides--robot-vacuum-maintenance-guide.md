@@ -6,14 +6,17 @@ primaryIntent: "track robot-vacuum consumables and care"
 primaryKeyword: "robot vacuum maintenance guide"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create one child maintenance record per consumable type. That is more useful than a single recurring task called “robot vacuum maintenance.”"
 related:
   - "/guides/vacuum-cleaner-maintenance-guide/"
   - "/guides/household-supplies-inventory/"
   - "/features/maintenance-tracker/"
   - "/guides/appliance-replacement-planning/"
+faq: []
 contentVersion: 1
 ---
 # Robot vacuums create a small ecosystem of parts worth tracking
@@ -35,5 +38,3 @@ If runtime changes significantly or a battery is replaced, note the date. Over t
 ## Avoid affiliate-driven recommendations
 
 If the public guide later contains product links, accuracy about compatibility must come before commission.
-
-**Contextual CTA:** Create one child maintenance record per consumable type. That is more useful than a single recurring task called “robot vacuum maintenance.”

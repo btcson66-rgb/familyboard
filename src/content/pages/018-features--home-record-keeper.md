@@ -6,14 +6,17 @@ primaryIntent: "keep long-term records about a home"
 primaryKeyword: "home record keeper"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create one record for the most recent repair or major purchase in your home. That is the beginning of a household history you will not have to rebuild later."
 related:
   - "/guides/home-repair-history/"
   - "/guides/home-maintenance-records/"
   - "/guides/renovation-records/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # A home has a history, but most of it disappears into receipts and memory
@@ -37,5 +40,3 @@ If you do not know when something was installed, mark it unknown rather than inv
 ## Start from now
 
 You do not need to reconstruct ten years of household history. Start recording meaningful events today. Old receipts can be added later when they are easy to identify.
-
-**Contextual CTA:** Create one record for the most recent repair or major purchase in your home. That is the beginning of a household history you will not have to rebuild later.

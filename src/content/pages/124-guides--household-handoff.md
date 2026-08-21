@@ -6,14 +6,17 @@ primaryIntent: "create a complete handoff of household operations"
 primaryKeyword: "household handoff"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Run the Home Handoff Summary Generator before your next trip and see which recurring household responsibilities have no backup owner."
 related:
   - "/features/household-handoff/"
   - "/guides/what-spouse-needs-to-know/"
   - "/guides/household-admin-backup-person/"
   - "/tools/home-handoff-summary-generator/"
+faq: []
 contentVersion: 1
 ---
 # A household handoff is the operational version of “here is what you need to know”
@@ -35,5 +38,3 @@ A handoff summary should be generated from selected data, not grant blanket acce
 ## Make it reusable
 
 After the absence, update the handoff template with anything the substitute manager had to ask. The system becomes stronger each time.
-
-**Contextual CTA:** Run the Home Handoff Summary Generator before your next trip and see which recurring household responsibilities have no backup owner.

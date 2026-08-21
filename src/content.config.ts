@@ -20,9 +20,12 @@ const pageSchema = z.object({
   ]),
   pageType: z.enum(["content", "tool", "printable", "support"]),
   indexable: z.boolean().default(true),
+  depthVerified: z.boolean().default(false),
   publishedAt: z.coerce.date(),
   lastReviewedAt: z.coerce.date(),
   related: z.array(z.string()).default([]),
+  nextStep: z.string().default(""),
+  redirectTo: z.string().regex(/^\/(?:$|[^?#].*\/$)/).optional(),
   contentVersion: z.number().int().positive().default(1),
   faq: z
     .array(z.object({ question: z.string(), answer: z.string() }))

@@ -6,14 +6,17 @@ primaryIntent: "find a short monthly home-maintenance routine"
 primaryKeyword: "monthly home maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Print the one-page Monthly Home Checklist or save a recurring “Household Monthly Review” task in the app."
 related:
   - "/checklists/printable-monthly-home-checklist/"
   - "/guides/household-monthly-review/"
   - "/guides/home-maintenance-records/"
   - "/features/home-dashboard/"
+faq: []
 contentVersion: 1
 ---
 # A monthly home maintenance checklist should be short enough to repeat
@@ -35,5 +38,3 @@ If you changed something, record the completion date. If you noticed a problem b
 Before you stop, look at what is due in the next 30 to 45 days. This is where annual subscriptions, service appointments and seasonal tasks can be caught early.
 
 A monthly checklist succeeds when it prevents surprises without becoming another exhausting household ritual.
-
-**Contextual CTA:** Print the one-page Monthly Home Checklist or save a recurring “Household Monthly Review” task in the app.

@@ -6,14 +6,17 @@ primaryIntent: "review the entire household once a year"
 primaryKeyword: "annual home review checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Run the Household Annual Review Generator and save the result as a dated task list rather than trying to fix everything in one day."
 related:
   - "/tools/household-annual-review-generator/"
   - "/guides/home-maintenance-budget/"
   - "/guides/annual-renewal-calendar/"
   - "/guides/digital-home-inventory-backup/"
+faq: []
 contentVersion: 1
 ---
 # The annual review is where household records turn into planning
@@ -39,5 +42,3 @@ Remove outdated providers, confirm essential contacts and make sure another trus
 ## Verify backups
 
 An annual review should include creating a fresh backup and confirming where previous backups are stored.
-
-**Contextual CTA:** Run the Household Annual Review Generator and save the result as a dated task list rather than trying to fix everything in one day.

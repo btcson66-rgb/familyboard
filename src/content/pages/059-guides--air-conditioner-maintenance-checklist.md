@@ -6,14 +6,17 @@ primaryIntent: "organize home air-conditioner upkeep"
 primaryKeyword: "air conditioner maintenance checklist"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Build the record around the exact cooling system you own; then let the maintenance tracker remind you of the tasks its manual actually calls for."
 related:
   - "/guides/hvac-filter-tracker/"
   - "/guides/summer-home-maintenance-checklist/"
   - "/guides/home-service-provider-list/"
   - "/features/maintenance-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Air-conditioning maintenance should distinguish user care from technical service
@@ -35,5 +38,3 @@ Changes in airflow, temperature, drainage, odor or noise can be useful informati
 ## Keep service history with the system
 
 Record provider, date, work performed and recommended follow-up. Cooling history can span years and multiple visits.
-
-**Contextual CTA:** Build the record around the exact cooling system you own; then let the maintenance tracker remind you of the tasks its manual actually calls for.

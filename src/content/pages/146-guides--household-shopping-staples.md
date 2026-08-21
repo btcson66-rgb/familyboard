@@ -6,14 +6,17 @@ primaryIntent: "maintain a list of regularly purchased household items"
 primaryKeyword: "household staples list"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add only the items that repeatedly create an emergency store run; the list should stay small enough to trust."
 related:
   - "/guides/pantry-restock-system/"
   - "/guides/household-supplies-inventory/"
   - "/features/family-task-manager/"
   - "/guides/household-weekly-reset/"
+faq: []
 contentVersion: 1
 ---
 # A staples list is about remembering what the household repeatedly runs out of
@@ -35,5 +38,3 @@ A replacement filter can appear on the shopping list while its installation date
 ## Avoid affiliate influence
 
 A staple record should serve the household first. Product recommendations can be optional and clearly separated.
-
-**Contextual CTA:** Add only the items that repeatedly create an emergency store run; the list should stay small enough to trust.

@@ -6,14 +6,17 @@ primaryIntent: "learn how to keep a home maintenance log"
 primaryKeyword: "home maintenance log"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the printable log if you prefer paper, or record the next completed maintenance task directly on its asset in the app."
 related:
   - "/templates/printable-repair-log/"
   - "/guides/home-maintenance-records/"
   - "/guides/home-repair-history/"
   - "/features/maintenance-tracker/"
+faq: []
 contentVersion: 1
 ---
 # A maintenance log should capture decisions, not just dates
@@ -37,5 +40,3 @@ Do not rely on monthly cleanup if the information will be forgotten. Mobile entr
 ## Keep the log searchable by asset
 
 A whole-home chronology is useful for review, while per-asset history is useful during a failure. The database should support both views from the same underlying record.
-
-**Contextual CTA:** Use the printable log if you prefer paper, or record the next completed maintenance task directly on its asset in the app.

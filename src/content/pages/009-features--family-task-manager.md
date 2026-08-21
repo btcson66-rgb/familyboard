@@ -6,14 +6,17 @@ primaryIntent: "manage recurring household tasks"
 primaryKeyword: "family task manager"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create three recurring tasks that currently live only in someone's memory. If the task belongs to an appliance or subscription, link the two records."
 related:
   - "/guides/divide-household-responsibilities/"
   - "/guides/recurring-household-tasks/"
   - "/tools/recurring-chore-planner/"
   - "/features/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Household work includes far more than chores
@@ -37,5 +40,3 @@ Completion history helps the household know what was done. It should not turn fa
 ## Make the system easy to ignore when nothing is wrong
 
 Good household software should disappear into the background. Only overdue and upcoming work needs regular attention.
-
-**Contextual CTA:** Create three recurring tasks that currently live only in someone's memory. If the task belongs to an appliance or subscription, link the two records.

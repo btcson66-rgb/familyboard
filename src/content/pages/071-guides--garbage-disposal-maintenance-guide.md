@@ -6,14 +6,17 @@ primaryIntent: "safely track garbage-disposal care and repair"
 primaryKeyword: "garbage disposal maintenance guide"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Keep the asset record simple: model, manual, installation/repair history and one safe service contact."
 related:
   - "/guides/dishwasher-maintenance-checklist/"
   - "/guides/water-leak-response-home-records/"
   - "/features/home-record-keeper/"
   - "/guides/home-service-provider-list/"
+faq: []
 contentVersion: 1
 ---
 # A garbage-disposal record is primarily about safe troubleshooting context
@@ -31,5 +34,3 @@ Slow drainage, unusual noise, leaks or repeated resets are useful notes. If the 
 ## Link plumbing-related repairs appropriately
 
 A leak may originate from the disposal, sink connection or another component. Record what the technician actually diagnosed rather than assigning the cause yourself.
-
-**Contextual CTA:** Keep the asset record simple: model, manual, installation/repair history and one safe service contact.

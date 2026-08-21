@@ -6,14 +6,17 @@ primaryIntent: "build a warranty-tracking process"
 primaryKeyword: "how to track warranties"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "The next time you make a major household purchase, spend two minutes adding warranty details immediately instead of promising to do it later."
 related:
   - "/features/warranty-tracker/"
   - "/tools/warranty-expiration-calculator/"
   - "/guides/purchase-receipt-organizer/"
   - "/guides/product-registration-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Warranty tracking is a small amount of work at purchase time that can save a large search later
@@ -35,5 +38,3 @@ An “expiring soon” reminder can encourage the household to locate documents 
 ## Archive claims and repairs
 
 If warranty service occurs, preserve the case/reference number and outcome with the asset history.
-
-**Contextual CTA:** The next time you make a major household purchase, spend two minutes adding warranty details immediately instead of promising to do it later.

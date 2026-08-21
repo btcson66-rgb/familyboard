@@ -6,14 +6,17 @@ primaryIntent: "organize household information related to evacuation plans"
 primaryKeyword: "home evacuation information checklist"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use local emergency guidance to define the real actions, then use FamilyBoard to make sure the household can find the people, records and responsibilities that support them."
 related:
   - "/guides/storm-preparation-home-checklist/"
   - "/guides/emergency-supply-inventory/"
   - "/guides/pet-sitter-information/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Evacuation planning should be based on local hazards and official guidance
@@ -35,5 +38,3 @@ Evacuation records are private. Do not expose them in public dashboards or analy
 ## Review when the household changes
 
 A new pet, caregiver, vehicle or family member can change the plan substantially.
-
-**Contextual CTA:** Use local emergency guidance to define the real actions, then use `FamilyBoard` to make sure the household can find the people, records and responsibilities that support them.

@@ -10,7 +10,7 @@ const { Content } = await render(home);
 const featuredRoutes = ['/features/home-inventory-tracker/', '/features/maintenance-tracker/', '/features/household-handoff/', '/tools/home-maintenance-schedule-generator/', '/tools/warranty-expiration-calculator/', '/templates/printable-home-inventory-template/'];
 const featured = featuredRoutes.map((route) => pages.find((entry) => entry.data.route === route)).filter(Boolean);
 ---
-<BaseLayout title={home.data.title} description={home.data.description} canonicalPath="/" alternatePath={zhTwHome?.data.route} faq={home.data.faq}>
+<BaseLayout title={home.data.title} description={home.data.description} canonicalPath="/" alternatePath={zhTwHome?.data.route} indexable={home.data.indexable} faq={home.data.faq} publishedAt={home.data.publishedAt} lastReviewedAt={home.data.lastReviewedAt}>
   <section class="hero"><div class="shell hero-grid">
     <div><span class="eyebrow">Private household operations</span>
       <p class="hero-title">Everything your household needs to remember.</p>
@@ -25,7 +25,7 @@ const featured = featuredRoutes.map((route) => pages.find((entry) => entry.data.
     <article class="answer-card"><h2>Where is household data stored?</h2><p>Core app records stay in this browser’s local database by default. FamilyBoard has no account or household-data server in the current version.</p></article>
     <article class="answer-card"><h2>How much does it cost?</h2><p>The current web app is free. Its core features are not hidden behind checkout, and the private workspace remains free of advertising.</p></article>
   </div></div></section>
-  <section class="section"><div class="narrow article"><Content /></div></section>
+  <section class="section"><div class="narrow article"><Content />{home.data.nextStep && <aside class="next-step"><h2>Next step in FamilyBoard</h2><p>{home.data.nextStep}</p></aside>}</div></section>
   <section class="section tint"><div class="shell"><div class="section-head"><div><span class="eyebrow">Start small</span><h2>Build household memory one useful record at a time</h2></div><a href="/guides/">Browse all guides →</a></div>
     <div class="card-grid">{featured.map((entry) => <a class="card" href={entry!.data.route}><span class="card-tag">{entry!.data.cluster.replace('-', ' ')}</span><h3>{entry!.data.title.replace(/ \|.*$/, '')}</h3><p>{entry!.data.description}</p></a>)}</div>
   </div></section>

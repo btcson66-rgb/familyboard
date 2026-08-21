@@ -7,13 +7,16 @@ primaryKeyword: "printable new home checklist"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Treat the checklist as a starting point. The real value begins when the new-home information becomes a long-term household record."
 related:
   - "/guides/new-home-setup-checklist/"
   - "/guides/move-in-maintenance-checklist/"
   - "/tools/move-in-checklist-generator/"
   - "/features/home-dashboard/"
+faq: []
 contentVersion: 1
 ---
 # Printable New Home Checklist
@@ -37,5 +40,3 @@ contentVersion: 1
 - [ ] Organize property/lease/purchase records.
 - [ ] Create first household backup.
 - [ ] Schedule an annual home review date.
-
-**CTA:** Treat the checklist as a starting point. The real value begins when the new-home information becomes a long-term household record.

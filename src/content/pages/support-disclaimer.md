@@ -7,11 +7,13 @@ primaryKeyword: "household information disclaimer"
 cluster: "support"
 pageType: "support"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 related:
   - "/editorial-policy/"
   - "/security/"
+faq: []
 contentVersion: 1
 ---
 # Household Information Disclaimer

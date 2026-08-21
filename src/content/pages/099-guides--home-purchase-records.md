@@ -6,14 +6,17 @@ primaryIntent: "organize records associated with buying a home"
 primaryKeyword: "home purchase records organizer"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Create a property archive index even if the original documents remain in another secure storage system."
 related:
   - "/guides/important-household-documents/"
   - "/guides/renovation-records/"
   - "/guides/digital-home-binder/"
   - "/features/household-documents-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Home-purchase documents deserve their own archive
@@ -35,5 +38,3 @@ How long legal and tax documents should be kept depends on jurisdiction and circ
 ## Protect access
 
 Property documents may contain highly sensitive personal information. Do not place them in shared display mode or casual attachments without appropriate security.
-
-**Contextual CTA:** Create a property archive index even if the original documents remain in another secure storage system.

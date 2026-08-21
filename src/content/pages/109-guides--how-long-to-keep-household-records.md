@@ -6,14 +6,17 @@ primaryIntent: "decide when household records can be discarded"
 primaryKeyword: "how long to keep household records"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the Receipt Retention Organizer to assign each record a reason for keeping it before deciding on a review date."
 related:
   - "/guides/how-long-to-keep-household-records/"
   - "/guides/home-purchase-records/"
   - "/guides/household-documents-organizer/"
   - "/tools/receipt-retention-organizer/"
+faq: []
 contentVersion: 1
 ---
 # There is no single correct retention period for every household document
@@ -35,5 +38,3 @@ A retention field can say “review after warranty ends” or “keep with prope
 ## Review rather than auto-delete
 
 The app should never destroy household documents automatically based only on a generic timer.
-
-**Contextual CTA:** Use the Receipt Retention Organizer to assign each record a reason for keeping it before deciding on a review date.

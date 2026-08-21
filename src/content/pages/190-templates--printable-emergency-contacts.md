@@ -7,13 +7,16 @@ primaryKeyword: "printable emergency contact sheet"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Review the page at least when household contacts change and keep sensitive versions out of public view."
 related:
   - "/tools/emergency-contact-sheet-generator/"
   - "/guides/family-emergency-contacts/"
   - "/guides/emergency-information-sheet/"
   - "/features/emergency-information-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Printable Emergency Contact Sheet
@@ -40,5 +43,3 @@ Name: ____________________ Phone: ____________________
 - Other household-specific: ____________________
 
 > Follow local emergency-service and authority guidance in an emergency. This sheet is an organizational reference only.
-
-**CTA:** Review the page at least when household contacts change and keep sensitive versions out of public view.

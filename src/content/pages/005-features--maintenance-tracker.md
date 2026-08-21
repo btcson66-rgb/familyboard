@@ -6,14 +6,17 @@ primaryIntent: "find home maintenance tracking software"
 primaryKeyword: "home maintenance tracker"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Generate a starter schedule with the free Home Maintenance Schedule Generator, then save only the tasks that make sense for your actual home."
 related:
   - "/guides/home-maintenance-schedule/"
   - "/guides/home-maintenance-records/"
   - "/tools/home-maintenance-schedule-generator/"
   - "/features/home-dashboard/"
+faq: []
 contentVersion: 1
 ---
 # Stop relying on “I think we did that recently”
@@ -39,5 +42,3 @@ For equipment with safety implications, the product should encourage users to fo
 ## Make maintenance visible before it becomes urgent
 
 The dashboard can show upcoming and overdue work, while the asset page stores the full history. This separation keeps daily attention focused without losing detail.
-
-**Contextual CTA:** Generate a starter schedule with the free Home Maintenance Schedule Generator, then save only the tasks that make sense for your actual home.

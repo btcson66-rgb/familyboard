@@ -6,14 +6,17 @@ primaryIntent: "home organizer that works offline"
 primaryKeyword: "offline household organizer"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Install the PWA, create sample records, then deliberately test it offline. A privacy-first product should prove its local behavior in normal use."
 related:
   - "/features/local-first-home-organizer/"
   - "/features/family-display-mode/"
   - "/guides/digital-home-inventory-backup/"
   - "/app/"
+faq: []
 contentVersion: 1
 ---
 # Household information should still exist when the internet does not
@@ -33,5 +36,3 @@ The build pipeline should include an offline smoke test: install/cache the app, 
 ## Backups remain essential
 
 Offline availability protects against network failure; it does not protect against device loss or cleared browser data. The product must keep those concepts separate.
-
-**Contextual CTA:** Install the PWA, create sample records, then deliberately test it offline. A privacy-first product should prove its local behavior in normal use.

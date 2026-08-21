@@ -6,14 +6,17 @@ primaryIntent: "maintain an apartment without assuming homeowner responsibilitie
 primaryKeyword: "apartment maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use a Rental Home Maintenance Log to separate “work I completed” from “issues I reported” and keep the timeline attached to the apartment record."
 related:
   - "/guides/rental-home-maintenance-log/"
   - "/guides/move-in-maintenance-checklist/"
   - "/guides/moving-inventory/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Apartment maintenance is partly about upkeep and partly about documentation
@@ -35,5 +38,3 @@ For leaks, appliance failures or building issues, keep a simple record of when t
 ## Keep move-out in mind from the beginning
 
 Receipts, communications and condition notes are much easier to organize as you go than in the final week of a lease.
-
-**Contextual CTA:** Use a Rental Home Maintenance Log to separate “work I completed” from “issues I reported” and keep the timeline attached to the apartment record.

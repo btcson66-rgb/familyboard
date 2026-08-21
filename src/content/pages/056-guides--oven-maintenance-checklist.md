@@ -6,14 +6,17 @@ primaryIntent: "organize oven cleaning, condition and service records"
 primaryKeyword: "oven maintenance checklist"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Keep the manual and service history with the oven record so the next problem begins with context instead of a blind search."
 related:
   - "/guides/range-hood-maintenance-checklist/"
   - "/guides/appliance-inventory/"
   - "/guides/repair-history/"
   - "/features/household-documents-organizer/"
+faq: []
 contentVersion: 1
 ---
 # An oven checklist should respect the appliance's cleaning and safety instructions
@@ -35,5 +38,3 @@ The organizer can remind a household to arrange service; it should never normali
 ## Add service outcomes
 
 Record what the technician reported, any parts replaced and whether follow-up was recommended.
-
-**Contextual CTA:** Keep the manual and service history with the oven record so the next problem begins with context instead of a blind search.

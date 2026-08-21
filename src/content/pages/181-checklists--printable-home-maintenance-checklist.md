@@ -7,13 +7,16 @@ primaryKeyword: "printable home maintenance checklist"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the generator for a personalized version or save confirmed recurring tasks into FamilyBoard so completion becomes history."
 related:
   - "/guides/home-maintenance-schedule/"
   - "/tools/home-maintenance-schedule-generator/"
   - "/guides/maintenance-priorities/"
   - "/features/maintenance-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Printable Home Maintenance Checklist
@@ -49,5 +52,3 @@ Use this page when you want a paper starting point before building a full digita
 ## How to use it
 
 Cross out entire sections that do not apply. Write the actual equipment and interval beside each task. If a checklist item involves hazardous work or an unfamiliar system, use qualified guidance instead of treating the checkbox as DIY instruction.
-
-**CTA:** Use the generator for a personalized version or save confirmed recurring tasks into `FamilyBoard` so completion becomes history.

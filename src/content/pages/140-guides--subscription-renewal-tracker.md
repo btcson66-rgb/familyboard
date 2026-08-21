@@ -6,14 +6,17 @@ primaryIntent: "remember upcoming subscription renewal dates"
 primaryKeyword: "subscription renewal tracker"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add a review reminder before the next annual renewal, not on the day the charge happens."
 related:
   - "/features/household-subscription-tracker/"
   - "/tools/annual-subscription-cost-calculator/"
   - "/guides/organize-household-subscriptions/"
   - "/guides/annual-renewal-calendar/"
+faq: []
 contentVersion: 1
 ---
 # A renewal reminder should create a decision window
@@ -35,5 +38,3 @@ If a price changes or the plan is downgraded, update the record rather than crea
 ## Keep cancellation notes factual
 
 Management links and account owner are useful. Passwords are not.
-
-**Contextual CTA:** Add a review reminder before the next annual renewal, not on the day the charge happens.

@@ -6,14 +6,17 @@ primaryIntent: "understand which home maintenance records to keep"
 primaryKeyword: "home maintenance records"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Pick the last three repairs in your home and create a concise history for each. That exercise reveals what information you wish you had been recording all along."
 related:
   - "/guides/home-repair-history/"
   - "/guides/home-maintenance-log/"
   - "/guides/home-service-provider-list/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Good maintenance records answer the next person's question
@@ -35,5 +38,3 @@ Some records have little future value. Define categories for important home hist
 ## Use consistent naming
 
 Instead of `scan003.pdf`, use a meaningful reference such as “2026-08 dishwasher service invoice.” Consistency helps even outside the app.
-
-**Contextual CTA:** Pick the last three repairs in your home and create a concise history for each. That exercise reveals what information you wish you had been recording all along.

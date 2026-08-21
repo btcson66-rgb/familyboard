@@ -6,14 +6,17 @@ primaryIntent: "organize vehicle records as part of household management"
 primaryKeyword: "organize vehicle documents"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Treat each vehicle as an asset with a document, renewal and service timeline rather than three separate folders."
 related:
   - "/guides/annual-renewal-calendar/"
   - "/guides/home-service-provider-list/"
   - "/features/home-record-keeper/"
   - "/guides/important-household-documents/"
+faq: []
 contentVersion: 1
 ---
 # Vehicles are household assets with more recurring paperwork than most appliances
@@ -35,5 +38,3 @@ Registration, inspection and insurance requirements vary. The app should let the
 ## Include handoff information
 
 If multiple household members drive the vehicle, keep roadside assistance or preferred service-provider information easy to identify.
-
-**Contextual CTA:** Treat each vehicle as an asset with a document, renewal and service timeline rather than three separate folders.

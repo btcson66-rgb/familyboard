@@ -6,14 +6,17 @@ primaryIntent: "find a household dashboard or home command center"
 primaryKeyword: "home dashboard"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Open the app, add two recurring responsibilities and one asset, then use the dashboard to see how scattered household tasks become a single actionable view."
 related:
   - "/features/maintenance-tracker/"
   - "/features/warranty-tracker/"
   - "/guides/household-weekly-reset/"
   - "/app/"
+faq: []
 contentVersion: 1
 ---
 # A home dashboard should tell you what needs attention, not just show pretty charts
@@ -39,5 +42,3 @@ A renter may care about subscriptions, recurring bills and move-in records. A ho
 ## A dashboard can also become a family display
 
 On a wall-mounted or kitchen tablet, the same data can be simplified into a large-format daily view: today's schedule, chores, maintenance alerts and important notes. That makes the system useful even for family members who never open the full organizer.
-
-**Contextual CTA:** Open the app, add two recurring responsibilities and one asset, then use the dashboard to see how scattered household tasks become a single actionable view.

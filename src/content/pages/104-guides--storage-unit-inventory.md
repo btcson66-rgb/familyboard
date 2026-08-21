@@ -6,14 +6,17 @@ primaryIntent: "know what is stored off-site"
 primaryKeyword: "storage unit inventory"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Start with box IDs and major items. If nobody would search for an item individually, it probably does not need its own record."
 related:
   - "/guides/moving-inventory/"
   - "/guides/valuable-item-inventory/"
   - "/guides/digital-home-inventory-backup/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Off-site storage becomes expensive and frustrating when nobody remembers what is inside
@@ -35,5 +38,3 @@ Do not store gate codes, lock combinations or sensitive access credentials in an
 ## Review periodically
 
 An inventory is a good prompt to ask whether stored items still justify the cost of storage.
-
-**Contextual CTA:** Start with box IDs and major items. If nobody would search for an item individually, it probably does not need its own record.

@@ -7,13 +7,16 @@ primaryKeyword: "printable moving checklist"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the moving organizer when you need deadlines and box inventory in one live dashboard."
 related:
   - "/guides/moving-house-organizer/"
   - "/guides/moving-inventory/"
   - "/tools/move-in-checklist-generator/"
   - "/guides/move-out-home-records/"
+faq: []
 contentVersion: 1
 ---
 # Printable Moving Checklist
@@ -42,5 +45,3 @@ contentVersion: 1
 - [ ] Create initial maintenance records.
 - [ ] Update household address/contact sheet.
 - [ ] Export a new backup after setup.
-
-**CTA:** Use the moving organizer when you need deadlines and box inventory in one live dashboard.

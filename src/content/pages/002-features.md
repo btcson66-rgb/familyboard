@@ -7,13 +7,16 @@ primaryKeyword: "household management app features"
 cluster: "product"
 pageType: "content"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "If your biggest pain point is remembering upkeep, start with the Maintenance Tracker. If it is scattered receipts and models, start with Home Inventory."
 related:
   - "/features/home-inventory-tracker/"
   - "/features/maintenance-tracker/"
   - "/features/household-handoff/"
   - "/features/local-first-home-organizer/"
+faq: []
 contentVersion: 1
 ---
 # One household dashboard, built around the work behind the calendar
@@ -51,5 +54,3 @@ Keep the information another trusted household member may need when normal routi
 ## Local-first by default
 
 Core data is designed to live on your device, with backup and restore under your control. The free version does not require a cloud account simply to organize your own home.
-
-**Contextual CTA:** If your biggest pain point is remembering upkeep, start with the Maintenance Tracker. If it is scattered receipts and models, start with Home Inventory.

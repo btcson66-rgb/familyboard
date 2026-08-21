@@ -16,164 +16,12 @@
     "headings": "One household dashboard, built around the work behind the calendar Household dashboard Home inventory and asset records Maintenance history Warranty and receipt organization Household subscriptions and renewals Tasks and shared responsibilities Emergency information and handoff Local-first by default"
   },
   {
-    "title": "Home Dashboard for Maintenance, Warranties, Tasks and Renewals | FamilyBoard",
-    "description": "A practical household dashboard that brings maintenance, warranties, recurring tasks, subscriptions and upcoming home responsibilities into one view.",
-    "route": "/features/home-dashboard/",
-    "cluster": "product",
-    "keywords": "home dashboard",
-    "headings": "A home dashboard should tell you what needs attention, not just show pretty charts Today and next up Attention beats information overload Different households need different signals A dashboard can also become a family display"
-  },
-  {
-    "title": "Private Home Inventory Tracker for Appliances, Electronics and Household Assets | FamilyBoard",
-    "description": "Create a practical home inventory with model numbers, serial numbers, purchase details, warranties, maintenance and local records.",
-    "route": "/features/home-inventory-tracker/",
-    "cluster": "product",
-    "keywords": "home inventory tracker",
-    "headings": "A useful home inventory is not a list of everything you own What is worth adding? Why connect inventory to maintenance? Keep detail proportional to value Build it gradually"
-  },
-  {
-    "title": "Home Maintenance Tracker with Recurring Schedules and Service History | FamilyBoard",
-    "description": "Track recurring home maintenance, completion dates, service history, costs and the assets each task belongs to.",
-    "route": "/features/maintenance-tracker/",
-    "cluster": "product",
-    "keywords": "home maintenance tracker",
-    "headings": "Stop relying on “I think we did that recently” Link every recurring task to a real part of the home Record completion, not only reminders Use flexible schedules Make maintenance visible before it becomes urgent"
-  },
-  {
-    "title": "Warranty Tracker for Appliances and Household Purchases | FamilyBoard",
-    "description": "Track household warranties, purchase dates, receipts and expiration windows before you need them.",
-    "route": "/features/warranty-tracker/",
-    "cluster": "product",
-    "keywords": "warranty tracker",
-    "headings": "The worst time to look for warranty information is after something stops working Record the minimum useful facts early Track “expiring soon,” not just “expired” Keep warranty and repair history together Manufacturer terms always win"
-  },
-  {
-    "title": "Household Documents Organizer for Warranties, Manuals, Receipts and Home Records | FamilyBoard",
-    "description": "Organize household document references around the home, asset or responsibility they belong to instead of relying on disconnected folders.",
-    "route": "/features/household-documents-organizer/",
-    "cluster": "product",
-    "keywords": "household documents organizer",
-    "headings": "Organize documents by what they help you do Attach context, not just files Use categories that match household decisions Local storage has limits"
-  },
-  {
-    "title": "Household Subscription Tracker for Renewals, Costs and Cancellation Notes | FamilyBoard",
-    "description": "Track household subscriptions, renewal dates, billing frequency, ownership and cancellation notes in one private list.",
-    "route": "/features/household-subscription-tracker/",
-    "cluster": "product",
-    "keywords": "household subscription tracker",
-    "headings": "Subscriptions are household obligations, not just expenses Record the next action, not just the price Separate account information from passwords Annual subscriptions deserve special attention Review subscriptions as a household, not only individually"
-  },
-  {
-    "title": "Family Task Manager for Chores, Household Admin and Recurring Responsibilities | FamilyBoard",
-    "description": "Organize household chores and recurring admin tasks by owner, due date, priority and history.",
-    "route": "/features/family-task-manager/",
-    "cluster": "product",
-    "keywords": "family task manager",
-    "headings": "Household work includes far more than chores Give every recurring responsibility an owner Keep recurring work connected to the home Use history for accountability, not surveillance Make the system easy to ignore when nothing is wrong"
-  },
-  {
-    "title": "Simple Household Calendar Connected to Tasks and Home Responsibilities | FamilyBoard",
-    "description": "Use a lightweight household calendar for events that relate to home tasks, maintenance and family responsibilities without turning the product into another calendar clone.",
-    "route": "/features/household-calendar/",
-    "cluster": "product",
-    "keywords": "household calendar",
-    "headings": "A calendar is useful when it stays connected to the work around it Keep the feature intentionally lightweight Dates are more useful with context Display mode makes the calendar more accessible"
-  },
-  {
-    "title": "Household Emergency Information Organizer — Contacts, Utilities and Instructions | FamilyBoard",
-    "description": "Keep important household emergency contacts, utility notes, pet information and operational instructions in one clear local-first record.",
-    "route": "/features/emergency-information-organizer/",
-    "cluster": "product",
-    "keywords": "household emergency information organizer",
-    "headings": "Emergency information is only useful if another person can understand it quickly Focus on operational information Make it readable in an emergency Review instead of assuming it stays correct forever Do not replace official emergency guidance"
-  },
-  {
-    "title": "Household Handoff — Make the Invisible Work of Running a Home Transferable | FamilyBoard",
-    "description": "Create a concise household handoff showing upcoming obligations, recurring responsibilities, service contacts and the information another trusted person needs.",
-    "route": "/features/household-handoff/",
-    "cluster": "product",
-    "keywords": "household handoff checklist",
-    "headings": "If the household organizer vanished for a week, what would everyone else miss? Handoff mode turns records into a briefing Temporary absence and emergency absence are different Make responsibility visible without making it personal A good household system should survive the person who built it"
-  },
-  {
-    "title": "Family Display Mode — Turn an Old Tablet into a Household Dashboard | FamilyBoard",
-    "description": "Use a tablet-friendly full-screen view for today’s events, chores, maintenance alerts and household notices without buying dedicated family calendar hardware.",
-    "route": "/features/family-display-mode/",
-    "cluster": "product",
-    "keywords": "family dashboard tablet",
-    "headings": "Your old tablet can become the household screen Show only what people need at a glance Design for distance, not only touch Reuse existing hardware Treat a shared screen as shared space"
-  },
-  {
-    "title": "Local-First Home Organizer — Keep Household Data on Your Device | FamilyBoard",
-    "description": "A home organizer designed to store core household records locally first, work offline and let users control their own backups.",
-    "route": "/features/local-first-home-organizer/",
-    "cluster": "product",
-    "keywords": "local-first home organizer",
-    "headings": "Your household database does not have to begin in someone else's cloud What “local-first” means here Local-first is not the same as invincible storage Privacy and portability should reinforce each other Portability works today"
-  },
-  {
-    "title": "Private Family Organizer for Household Records, Maintenance and Tasks | FamilyBoard",
-    "description": "Organize household responsibilities without requiring a cloud account for the core free app. Keep family records local and export your own backups.",
-    "route": "/features/private-family-organizer/",
-    "cluster": "product",
-    "keywords": "private family organizer",
-    "headings": "Privacy matters more when the app knows how your household works No account for the core organizer Analytics should stop at the boundary of household content Privacy does not remove the need for device security Be honest instead of making impossible promises"
-  },
-  {
-    "title": "Offline Household Organizer — Access Home Records Without an Internet Connection | FamilyBoard",
-    "description": "Use core household records, tasks and maintenance information offline through a local-first PWA with user-controlled backup.",
-    "route": "/features/offline-household-organizer/",
-    "cluster": "product",
-    "keywords": "offline household organizer",
-    "headings": "Household information should still exist when the internet does not What can work offline Offline should be tested, not merely advertised Backups remain essential"
-  },
-  {
-    "title": "No-Account Family Organizer — Start Managing Your Home Without Signing Up | FamilyBoard",
-    "description": "Start a household dashboard without an account or email. Store core records locally and create your own backup.",
-    "route": "/features/no-account-family-organizer/",
-    "cluster": "product",
-    "keywords": "family organizer without account",
-    "headings": "Sometimes the best onboarding form is no form at all First-run onboarding should take minutes No account changes the support model No account means backups matter The product can earn trust before asking for anything"
-  },
-  {
-    "title": "Home Record Keeper for Repairs, Maintenance, Purchases and Household History | FamilyBoard",
-    "description": "Build a practical history of repairs, maintenance, purchases, warranties and service providers for your home.",
-    "route": "/features/home-record-keeper/",
-    "cluster": "product",
-    "keywords": "home record keeper",
-    "headings": "A home has a history, but most of it disappears into receipts and memory Record events around the home History reduces repeated detective work Keep facts separate from guesses Start from now"
-  },
-  {
-    "title": "What Is a Household Operations System? A Practical Alternative to Scattered Home Notes | FamilyBoard",
-    "description": "A household operations system connects home assets, maintenance, recurring responsibilities, records and handoff information instead of treating them as separate lists.",
-    "route": "/features/household-operations-system/",
-    "cluster": "product",
-    "keywords": "household operations system",
-    "headings": "Household operations are the repeatable systems behind everyday home life The basic building blocks Why this is different from a family planner Keep the system lightweight enough to survive"
-  },
-  {
-    "title": "Free Home Management App — Useful Without an Account | FamilyBoard",
-    "description": "Use a free local-first home management app for assets, maintenance, household tasks, warranties, documents and handoffs.",
-    "route": "/features/free-home-management-app/",
-    "cluster": "product",
-    "keywords": "free home management app",
-    "headings": "A free home management app should be useful from the first day What the free app does Local-first has a clear boundary Free does not mean disposable"
-  },
-  {
     "title": "How to Build a Home Maintenance Schedule You Will Actually Keep",
-    "description": "Create a practical home maintenance schedule by grouping recurring work by system, season, urgency and the instructions for your actual equipment.",
+    "description": "Build a home maintenance schedule with real intervals for filters, water heaters, smoke alarms and washer hoses, sourced from ENERGY STAR, USFA and manufacturers.",
     "route": "/guides/home-maintenance-schedule/",
     "cluster": "maintenance",
     "keywords": "home maintenance schedule",
-    "headings": "How to build a home maintenance schedule you will actually keep Begin with systems, not months Separate fixed dates from condition-based work Give high-consequence work more visibility Keep a completion history"
-  },
-  {
-    "title": "Monthly Home Maintenance Checklist: A 30-Minute Household Review",
-    "description": "Use a simple monthly home maintenance review to catch small issues, update records and keep recurring household work from piling up.",
-    "route": "/guides/monthly-home-maintenance-checklist/",
-    "cluster": "maintenance",
-    "keywords": "monthly home maintenance checklist",
-    "headings": "A monthly home maintenance checklist should be short enough to repeat A practical monthly review Update the record while the work is fresh End with the next month, not the entire year"
+    "headings": "How to build a home maintenance schedule you will actually keep Begin with systems, not months A starting interval for the systems almost every home has Separate fixed dates from condition-based work Give high-consequence work more visibility Keep a completion history Group by season without losing the underlying system What a rental or a newly purchased home should do differently"
   },
   {
     "title": "Quarterly Home Maintenance Checklist: Review the Systems Monthly Checks Miss",
@@ -181,1063 +29,95 @@
     "route": "/guides/quarterly-home-maintenance-checklist/",
     "cluster": "maintenance",
     "keywords": "quarterly home maintenance checklist",
-    "headings": "Quarterly maintenance is the bridge between monthly awareness and annual projects Review what changed during the last three months Check the next season before it arrives Audit household consumables and spares Review contact and document accuracy"
+    "headings": "Quarterly maintenance is the bridge between monthly awareness and annual projects The items every household checks, regardless of climate What changes by climate Looking back before looking forward"
   },
   {
-    "title": "Seasonal Home Maintenance Checklist: Plan Around Weather, Equipment and Your Climate",
-    "description": "Build a seasonal home maintenance plan based on climate, equipment and changing household demands instead of copying a one-size-fits-all list.",
-    "route": "/guides/seasonal-home-maintenance-checklist/",
-    "cluster": "maintenance",
-    "keywords": "seasonal home maintenance checklist",
-    "headings": "Seasonal maintenance is about transitions, not four identical calendar quarters Look at the systems entering heavy use Look at the systems leaving heavy use Prepare the household, not only the building Use a recurring seasonal review"
-  },
-  {
-    "title": "Spring Home Maintenance Checklist: Reset the House After Winter or a Wet Season",
-    "description": "A flexible spring home maintenance guide for moisture, exterior condition, cooling preparation, records and seasonal household reset.",
-    "route": "/guides/spring-home-maintenance-checklist/",
-    "cluster": "maintenance",
-    "keywords": "spring home maintenance checklist",
-    "headings": "Spring is a good time to look for what the previous season changed Start outside and work inward Prepare systems that will be used more often Reset household records Make the checklist local"
-  },
-  {
-    "title": "Summer Home Maintenance Checklist: Cooling, Travel, Outdoor Use and Mid-Year Review",
-    "description": "A practical summer household checklist covering cooling performance, travel preparation, outdoor use, maintenance records and mid-year obligations.",
-    "route": "/guides/summer-home-maintenance-checklist/",
-    "cluster": "maintenance",
-    "keywords": "summer home maintenance checklist",
-    "headings": "Summer maintenance is often about high-use systems and interrupted routines Watch cooling performance instead of waiting for failure Plan for travel before the door closes Use the middle of the year as a record checkpoint Keep summer tasks realistic"
-  },
-  {
-    "title": "Fall Home Maintenance Checklist: Prepare Systems Before Weather Changes",
-    "description": "Use a flexible fall home maintenance review to prepare heating, drainage, household supplies and recurring winter responsibilities.",
-    "route": "/guides/fall-home-maintenance-checklist/",
-    "cluster": "maintenance",
-    "keywords": "fall home maintenance checklist",
-    "headings": "Fall is the season for dealing with problems while they are still easy to schedule Review heating and weather-sensitive systems Check household readiness Close out summer records Plan around your climate"
-  },
-  {
-    "title": "Winter Home Maintenance Checklist: Monitor, Document and Respond Early",
-    "description": "A winter home checklist focused on active monitoring, heating records, moisture, emergency readiness and small problems before they grow.",
-    "route": "/guides/winter-home-maintenance-checklist/",
-    "cluster": "maintenance",
-    "keywords": "winter home maintenance checklist",
-    "headings": "Winter maintenance is often less about projects and more about monitoring Keep heating history visible Watch for water and moisture problems Keep emergency information easy to reach Avoid unsafe DIY work"
-  },
-  {
-    "title": "First-Time Homeowner Maintenance Guide: Build a Simple System Before Problems Pile Up",
-    "description": "A practical first-time homeowner maintenance system for learning your equipment, recording service history and creating manageable recurring tasks.",
-    "route": "/guides/first-time-homeowner-maintenance-guide/",
-    "cluster": "maintenance",
-    "keywords": "first time homeowner maintenance guide",
-    "headings": "Your first home does not arrive with an operating manual Make a systems inventory Learn the service history you inherited Build only the first layer of recurring tasks Create a contact list before an emergency Keep documents connected to the house"
-  },
-  {
-    "title": "Apartment Maintenance Checklist: What to Track, Clean, Report and Document",
-    "description": "A renter-friendly apartment maintenance checklist that separates everyday upkeep from issues that should be documented and reported to the property owner or manager.",
-    "route": "/guides/apartment-maintenance-checklist/",
-    "cluster": "maintenance",
-    "keywords": "apartment maintenance checklist",
-    "headings": "Apartment maintenance is partly about upkeep and partly about documentation Track the condition of the unit Maintain what you are expected to maintain Report problems with a clear timeline Keep move-out in mind from the beginning"
-  },
-  {
-    "title": "Condo Maintenance Checklist: Track What Belongs to Your Unit and What Belongs to the Building",
-    "description": "A condo maintenance framework for unit systems, shared-building responsibilities, association contacts, records and recurring services.",
-    "route": "/guides/condo-maintenance-checklist/",
-    "cluster": "maintenance",
-    "keywords": "condo maintenance checklist",
-    "headings": "Condo maintenance starts with knowing the boundary of responsibility Build a unit-level inventory Keep building contacts visible Record coordination tasks Preserve official documents separately"
-  },
-  {
-    "title": "Rental Home Maintenance Log: Keep a Clear Record of Issues, Reports and Repairs",
-    "description": "Create a rental maintenance log that records problems, communication dates, service visits and tenant-completed upkeep without confusing responsibility.",
-    "route": "/guides/rental-home-maintenance-log/",
-    "cluster": "maintenance",
-    "keywords": "rental maintenance log",
-    "headings": "A rental maintenance log is a timeline, not a legal argument Record observable facts Separate tenant upkeep from reported repairs Keep related documents together Know that the log does not decide responsibility"
-  },
-  {
-    "title": "Home Maintenance Records: What to Keep and How to Make Them Useful",
-    "description": "Learn which maintenance records have future value, from service dates and repair notes to invoices, models and follow-up recommendations.",
-    "route": "/guides/home-maintenance-records/",
-    "cluster": "maintenance",
-    "keywords": "home maintenance records",
-    "headings": "Good maintenance records answer the next person's question Keep the core facts Preserve recommendations that have a future date Do not keep everything forever just because storage is cheap Use consistent naming"
-  },
-  {
-    "title": "How to Keep a Home Repair History That Is Useful Years Later",
-    "description": "Track repair dates, symptoms, service providers, parts, costs and outcomes so recurring household problems are easier to understand.",
-    "route": "/guides/home-repair-history/",
-    "cluster": "maintenance",
-    "keywords": "home repair history",
-    "headings": "Repair history is most valuable when a problem happens twice Record the problem in the user's language Capture the outcome Attach the repair to the asset Costs are optional but informative"
-  },
-  {
-    "title": "Preventive Home Maintenance: Build Small Routines Around Real Risks",
-    "description": "Use preventive home maintenance to reduce avoidable surprises by monitoring condition, following equipment guidance and keeping recurring work visible.",
-    "route": "/guides/preventive-home-maintenance/",
-    "cluster": "maintenance",
-    "keywords": "preventive home maintenance",
-    "headings": "Preventive maintenance is not about doing more work; it is about doing the right work before failure Start with consequence Follow the equipment you actually own Look for leading indicators Measure success by fewer surprises and better records"
-  },
-  {
-    "title": "How to Prioritize Home Maintenance When the List Is Too Long",
-    "description": "Prioritize home maintenance by safety, damage prevention, system importance, urgency, season and effort instead of treating every task equally.",
-    "route": "/guides/maintenance-priorities/",
-    "cluster": "maintenance",
-    "keywords": "home maintenance priorities",
-    "headings": "Not every maintenance task deserves the same urgency Use consequence first Consider timing and season Ask whether delay creates compounding damage Separate “needs action” from “needs information”"
-  },
-  {
-    "title": "Home Maintenance Calendar: Turn Recurring Upkeep into a Manageable Year",
-    "description": "Create a home maintenance calendar that spreads work across the year and keeps completion history attached to each household system.",
-    "route": "/guides/home-maintenance-calendar/",
-    "cluster": "maintenance",
-    "keywords": "home maintenance calendar",
-    "headings": "A maintenance calendar works best when it is the view, not the database Spread work instead of creating a “maintenance weekend” Use real trigger dates where possible Record completion back to the source Keep the family calendar readable"
-  },
-  {
-    "title": "Home Maintenance Binder: What to Include in a Digital or Paper Home Record",
-    "description": "Build a home maintenance binder with system information, service history, warranties, contacts and recurring tasks without turning it into a paperwork archive.",
-    "route": "/guides/home-maintenance-binder/",
-    "cluster": "maintenance",
-    "keywords": "home maintenance binder",
-    "headings": "A home maintenance binder should help someone operate the home Useful sections Avoid becoming an archive of every document Make it transferable Paper and digital can coexist"
-  },
-  {
-    "title": "Home Maintenance Log: A Simple Format for Work, Dates, Costs and Follow-Up",
-    "description": "Keep a concise home maintenance log with completion dates, assets, service notes, costs and next actions.",
-    "route": "/guides/home-maintenance-log/",
-    "cluster": "maintenance",
-    "keywords": "home maintenance log",
-    "headings": "A maintenance log should capture decisions, not just dates A strong maintenance entry has five parts Use consistent categories Log important work immediately Keep the log searchable by asset"
-  },
-  {
-    "title": "Home Maintenance Budget: Build a Record Before You Guess a Perfect Number",
-    "description": "Track actual maintenance and repair spending, separate recurring service from replacement projects and use your own history to plan future household costs.",
-    "route": "/guides/home-maintenance-budget/",
-    "cluster": "maintenance",
-    "keywords": "home maintenance budget",
-    "headings": "Your own maintenance history is more useful than a universal percentage rule Separate categories Track enough detail to learn Use upcoming records for planning Avoid false precision"
-  },
-  {
-    "title": "Home Maintenance Reminders: How to Make Them Useful Instead of Annoying",
-    "description": "Create home maintenance reminders that include context, realistic timing and completion history so they do more than generate notifications.",
-    "route": "/guides/home-maintenance-reminders/",
-    "cluster": "maintenance",
-    "keywords": "home maintenance reminders",
-    "headings": "A reminder without context becomes notification clutter Name the object and action Notify early enough to act Let completion update the history Reduce reminders that do not lead to action"
-  },
-  {
-    "title": "Home Maintenance After Vacation: A Quick Return-Home Check",
-    "description": "Use a short after-vacation home check to spot changes, restart household routines and close out travel handoff tasks.",
-    "route": "/guides/home-maintenance-after-vacation/",
-    "cluster": "maintenance",
-    "keywords": "home checklist after vacation",
-    "headings": "Returning home is the right time for a quick condition check Walk the normal living areas Close temporary responsibilities Restart recurring routines Update the next travel checklist"
-  },
-  {
-    "title": "Move-In Maintenance Checklist: Learn the Home Before You Start Adding Tasks",
-    "description": "A move-in home maintenance checklist for identifying systems, recording condition, finding manuals and creating the first practical maintenance schedule.",
-    "route": "/guides/move-in-maintenance-checklist/",
-    "cluster": "maintenance",
-    "keywords": "move in maintenance checklist",
-    "headings": "The first maintenance job in a new home is learning what you have Identify major equipment Capture initial condition Find household essentials Wait before creating hundreds of recurring tasks"
-  },
-  {
-    "title": "Move-Out Home Records: What to Close, Export, Transfer and Keep",
-    "description": "Use a move-out record plan to close subscriptions, preserve repair history, export household data and separate property-specific information from personal records.",
-    "route": "/guides/move-out-home-records/",
-    "cluster": "maintenance",
-    "keywords": "move out home checklist records",
-    "headings": "Moving out is partly a data-cleanup project Close location-specific obligations Preserve personal purchase and warranty records Export before resetting anything Keep a move-out timeline"
-  },
-  {
-    "title": "Annual Home Review: A Once-a-Year Check of Maintenance, Records and Recurring Costs",
-    "description": "Run an annual household review covering maintenance history, assets, warranties, subscriptions, contacts, backups and the next year's priorities.",
-    "route": "/guides/annual-home-review/",
-    "cluster": "maintenance",
-    "keywords": "annual home review checklist",
-    "headings": "The annual review is where household records turn into planning Review maintenance and repair patterns Review assets and warranties Review recurring money commitments Review contacts and emergency information Verify backups"
-  },
-  {
-    "title": "Storm Preparation Home Checklist: Organize Information, Supplies and Household Responsibilities",
-    "description": "A household storm-preparation framework for contacts, devices, supplies, property tasks and family responsibilities, with local official guidance taking priority.",
-    "route": "/guides/storm-preparation-home-checklist/",
-    "cluster": "maintenance",
-    "keywords": "storm preparation home checklist",
-    "headings": "Storm preparation is local; household organization makes it easier to act Follow local authorities first Assign practical household responsibilities Inventory rather than assume Protect household records"
-  },
-  {
-    "title": "Power Outage Home Preparedness: Organize the Household Before the Lights Go Out",
-    "description": "Prepare for a household power outage by organizing contacts, backup devices, responsibilities, offline information and post-outage notes.",
-    "route": "/guides/power-outage-home-preparedness/",
-    "cluster": "maintenance",
-    "keywords": "power outage preparedness home",
-    "headings": "The first outage problem is often information, not electricity Keep utility and outage contacts available offline Know which household needs depend on power Test backup devices before they are needed Document unusual events after power returns"
-  },
-  {
-    "title": "Water Leak Response Records: What to Document While You Arrange Repair",
-    "description": "Keep a clear timeline of a household water leak, observations, photos, contacts, service visits and repair outcomes while following safety and professional guidance.",
-    "route": "/guides/water-leak-response-home-records/",
-    "cluster": "maintenance",
-    "keywords": "water leak documentation checklist",
-    "headings": "A leak record helps preserve the timeline while the household focuses on the problem Record when and where it was observed Keep contact and service details together Connect repair history to the affected area or system Capture follow-up work"
-  },
-  {
-    "title": "Home Service Provider List: Keep the People Who Know Your Home Easy to Find",
-    "description": "Organize household service providers with contact details, specialties, prior work, asset relationships and notes without turning the list into public reviews.",
-    "route": "/guides/home-service-provider-list/",
-    "cluster": "maintenance",
-    "keywords": "home service provider list",
-    "headings": "The best service contact is often the person who has already seen the problem Store more than a phone number Keep records factual Link providers to service history Verify before emergencies"
-  },
-  {
-    "title": "Home Maintenance Delegation: Assign Ownership Without Turning the Home into a Workplace",
-    "description": "Divide recurring home maintenance and household admin by clear ownership, next actions and shared visibility rather than vague assumptions.",
-    "route": "/guides/home-maintenance-delegation/",
-    "cluster": "maintenance",
-    "keywords": "divide home maintenance responsibilities",
-    "headings": "“Someone should handle that” is not a maintenance plan Assign ownership of the outcome Separate routine work from expertise Make load visible Always have a handoff path"
-  },
-  {
-    "title": "Refrigerator Maintenance Checklist: Keep Cleaning, Filters and Service History Together",
-    "description": "A practical refrigerator maintenance checklist for cleaning, filter records, model information, warning signs and repair history.",
+    "title": "Refrigerator Maintenance Checklist: Coils, Temperature, Seals and Service History",
+    "description": "A real refrigerator maintenance checklist: coil cleaning intervals, food-safe temperatures, seal checks and lifespan figures, with sources for each.",
     "route": "/guides/refrigerator-maintenance-checklist/",
     "cluster": "appliances",
     "keywords": "refrigerator maintenance checklist",
-    "headings": "Refrigerator maintenance is easier when the model and history stay with the task Start with the exact appliance Track the work that actually applies Keep filter and repair history visible Plan for replacement without predicting failure"
+    "headings": "Refrigerator maintenance checklist: what to actually do, and when The checklist Why the 15-year mark matters Keep the model tied to the record Keep filter and repair history visible What counts as a warning sign worth logging immediately Freezer-side specifics that differ from the fridge side"
   },
   {
-    "title": "Freezer Maintenance Checklist: Condition, Defrosting, Records and Backup Planning",
-    "description": "Organize freezer maintenance around the actual model, condition, cleaning requirements, power-outage planning and service history.",
-    "route": "/guides/freezer-maintenance-checklist/",
-    "cluster": "appliances",
-    "keywords": "freezer maintenance checklist",
-    "headings": "A freezer record is useful for both maintenance and disruption planning Record the model and operating notes Watch condition, not only dates Include outage planning Preserve repair history"
-  },
-  {
-    "title": "Washing Machine Maintenance Checklist: Cleaning, Hoses, Filters and Service Records",
-    "description": "Keep washing-machine cleaning, accessible hose/filter checks, warranty details and repair history organized around your actual model.",
+    "title": "Washing Machine Maintenance Checklist: Hoses, Gasket Mold and Drain Filter",
+    "description": "A washing machine maintenance checklist covering supply-hose replacement, gasket mold prevention and drain-filter cleaning, each with a real interval and source.",
     "route": "/guides/washing-machine-maintenance-checklist/",
     "cluster": "appliances",
     "keywords": "washing machine maintenance checklist",
-    "headings": "A washing machine maintenance record should help prevent repeated surprises Keep cleaning instructions with the machine Make water-related observations visible Record recurring faults by symptom Link warranty and service records"
+    "headings": "Washing machine maintenance checklist: the three failure points that actually cause trouble The checklist Why gasket mold is specific to washing machines, not a generic \"appliance cleaning\" problem Record recurring faults by symptom, not by feeling Keep warranty and service records with the same asset Top-load vs. front-load: the gasket item mostly doesn't apply Overloading and detergent choice affect all of the above What to do before an extended trip away from home"
   },
   {
-    "title": "Dryer Maintenance Checklist: Keep Routine Cleaning and Service History Easy to Track",
-    "description": "A dryer maintenance framework for routine user cleaning, model guidance, vent-service records and repair history, with safety-first escalation.",
+    "title": "Dryer Maintenance Checklist: Lint Trap, Vent Cleaning and Fire-Risk Basics",
+    "description": "A dryer maintenance checklist built around fire-prevention data: lint trap habits, exhaust vent cleaning intervals and the warning signs that mean stop using it.",
     "route": "/guides/dryer-maintenance-checklist/",
     "cluster": "appliances",
     "keywords": "dryer maintenance checklist",
-    "headings": "Dryer maintenance should be easy to record because some tasks happen frequently Record routine care that applies to the model Keep vent and service history separate from the appliance body Note performance changes early Store model and warranty information"
+    "headings": "Dryer maintenance checklist: this is a fire-prevention task, not just tidiness The checklist Why this list is different from a washing machine's Keep vent service history separate from the appliance itself Note performance changes immediately Gas dryers add one more professional-only item Vent length and configuration change how often cleaning matters Record the vent configuration once, not just the cleaning date Combination washer-dryer units still split into two checklists"
   },
   {
-    "title": "Dishwasher Maintenance Checklist: Filters, Cleaning, Leaks and Repair History",
-    "description": "Organize dishwasher maintenance around the actual model, including user-cleanable components, cleaning routines, leak observations and service history.",
-    "route": "/guides/dishwasher-maintenance-checklist/",
-    "cluster": "appliances",
-    "keywords": "dishwasher maintenance checklist",
-    "headings": "Dishwasher maintenance is mostly about knowing what the model expects Track user-serviceable cleaning Treat water where it should not be as an event Keep installation and repair notes Review the warranty before paying for service"
-  },
-  {
-    "title": "Oven Maintenance Checklist: Cleaning Records, Model Guidance and Service History",
-    "description": "Keep oven cleaning guidance, model information, condition notes and qualified-service history organized in one household record.",
-    "route": "/guides/oven-maintenance-checklist/",
-    "cluster": "appliances",
-    "keywords": "oven maintenance checklist",
-    "headings": "An oven checklist should respect the appliance's cleaning and safety instructions Preserve the official instructions Track visible changes Keep fuel- and electrical-related work out of casual DIY Add service outcomes"
-  },
-  {
-    "title": "Microwave Maintenance Checklist: Cleaning, Condition and Replacement Records",
-    "description": "A simple microwave maintenance guide focused on cleanliness, door condition, model information and safe escalation when problems appear.",
-    "route": "/guides/microwave-maintenance-checklist/",
-    "cluster": "appliances",
-    "keywords": "microwave maintenance checklist",
-    "headings": "Microwave maintenance is simple, which makes it easy to ignore the record entirely Keep the interior and door area clean according to the manual Pay attention to door and control condition Record purchase and replacement dates"
-  },
-  {
-    "title": "Range Hood Maintenance Checklist: Filters, Cleaning and Model-Specific Care",
-    "description": "Organize range-hood filter cleaning or replacement, exterior care and service history around the actual hood model.",
-    "route": "/guides/range-hood-maintenance-checklist/",
-    "cluster": "appliances",
-    "keywords": "range hood maintenance checklist",
-    "headings": "Range-hood maintenance is a good example of why model-specific records matter Identify the system first Create separate tasks for separate components Watch for performance changes Keep the hood connected to kitchen records"
-  },
-  {
-    "title": "Air Conditioner Maintenance Checklist: Filters, Service History and Seasonal Readiness",
-    "description": "Track air-conditioner filters, model information, seasonal service, performance observations and technician history with manufacturer guidance in view.",
-    "route": "/guides/air-conditioner-maintenance-checklist/",
-    "cluster": "appliances",
-    "keywords": "air conditioner maintenance checklist",
-    "headings": "Air-conditioning maintenance should distinguish user care from technical service Track the correct filters and user-cleanable parts Create a seasonal readiness task Record performance symptoms Keep service history with the system"
-  },
-  {
-    "title": "HVAC Filter Tracker: Record Filter Size, Replacement History and Real-World Condition",
-    "description": "Keep HVAC filter size, product reference, replacement dates and condition notes attached to the correct system.",
+    "title": "HVAC Filter Tracker: Real Replacement Intervals by Filter Thickness and MERV",
+    "description": "Track HVAC filter size and replacement history with real intervals by thickness and MERV rating, sourced from ENERGY STAR and Carrier.",
     "route": "/guides/hvac-filter-tracker/",
     "cluster": "appliances",
     "keywords": "HVAC filter tracker",
-    "headings": "The first thing a filter tracker should remember is which filter you actually need Avoid a universal replacement interval Record both date and condition Keep purchase information optional"
+    "headings": "HVAC filter tracker: the interval depends on thickness and MERV rating, not guesswork Replacement intervals by filter type Check monthly regardless of the target interval Record the exact specification once Record condition, not just date Higher MERV isn't automatically better One HVAC system, multiple filters — track them separately What actually happens when a filter is neglected too long Seasonal use changes the real-world interval more than the calendar does"
   },
   {
-    "title": "Furnace Maintenance Records: Keep Service, Filters and Technician Notes Together",
-    "description": "Organize furnace model details, filter records, professional service history and follow-up recommendations without encouraging unsafe DIY work.",
-    "route": "/guides/furnace-maintenance-records/",
-    "cluster": "appliances",
-    "keywords": "furnace maintenance records",
-    "headings": "Furnace records are valuable because service history can span many years Record identity and service contacts Keep safety boundaries clear Preserve technician recommendations Track filters separately when useful"
-  },
-  {
-    "title": "Heat Pump Maintenance Records: Track Seasonal Service, Filters and Performance Notes",
-    "description": "Keep heat-pump model information, filter history, seasonal service and technician notes in one household record.",
-    "route": "/guides/heat-pump-maintenance-records/",
-    "cluster": "appliances",
-    "keywords": "heat pump maintenance records",
-    "headings": "Heat pumps deserve one continuous record across heating and cooling seasons Record seasonal performance observations Track filters and professional service Preserve configuration and installation information Use history to spot recurring issues"
-  },
-  {
-    "title": "Water Heater Maintenance Records: Model, Service, Warranty and Replacement History",
-    "description": "Keep water-heater model information, installation date, professional service history, warranty and household notes organized safely.",
+    "title": "Water Heater Maintenance Records: Flush, Anode Rod and T&P Valve Intervals",
+    "description": "Water heater maintenance records with real intervals for tank flushing, anode rod inspection, T&P valve testing and expected lifespan, sourced from manufacturers.",
     "route": "/guides/water-heater-maintenance-records/",
     "cluster": "appliances",
     "keywords": "water heater maintenance records",
-    "headings": "Water-heater records are more important than a generic maintenance checklist Keep installation details if known Preserve professional service history Treat unusual water or equipment behavior as a service issue Use age as context, not a countdown"
+    "headings": "Water heater maintenance records: the tasks that actually extend its life The checklist What lifespan to plan around Treat these as replace-now signs, not maintenance items Keep installation details even when uncertain Preserve professional service history Gas vs. electric changes what's professional-only, not whether records matter Tankless units follow the checklist differently Water hardness is worth recording alongside the unit itself"
   },
   {
-    "title": "Water Softener Maintenance Records: Supplies, Settings and Service History",
-    "description": "Organize water-softener model details, consumables, cleaning or service reminders and household water-treatment history.",
-    "route": "/guides/water-softener-maintenance-records/",
-    "cluster": "appliances",
-    "keywords": "water softener maintenance tracker",
-    "headings": "Water-treatment systems are easy to forget until water quality changes Record the exact product and setup Track consumables without creating shopping spam Preserve service notes Separate water-treatment records from drinking-water claims"
-  },
-  {
-    "title": "Water Filter Replacement Guide: Track the Correct Filter, Date and System",
-    "description": "Keep household water-filter models, compatible replacement references and change history organized without relying on one universal interval.",
-    "route": "/guides/water-filter-replacement-guide/",
-    "cluster": "appliances",
-    "keywords": "water filter replacement tracker",
-    "headings": "“Change the water filter” is not specific enough for a modern household Record confirmed part information Follow the system's guidance Use history to reduce duplicate work Keep purchase links secondary"
-  },
-  {
-    "title": "Air Purifier Maintenance Guide: Filter Records, Cleaning and Model-Specific Reminders",
-    "description": "Organize air-purifier filter references, cleaning guidance, replacement history and room location in one household asset record.",
-    "route": "/guides/air-purifier-maintenance-guide/",
-    "cluster": "appliances",
-    "keywords": "air purifier maintenance guide",
-    "headings": "Air-purifier maintenance is mostly a filter-identification problem Name the device by room Distinguish cleaning from replacement Record actual replacement dates Avoid health claims"
-  },
-  {
-    "title": "Dehumidifier Maintenance Guide: Cleaning, Drainage and Service Records",
-    "description": "Track dehumidifier cleaning, drainage setup, filter care, model information and service history with model-specific guidance.",
-    "route": "/guides/dehumidifier-maintenance-guide/",
-    "cluster": "appliances",
-    "keywords": "dehumidifier maintenance guide",
-    "headings": "Dehumidifiers combine air handling and water collection, so both sides deserve attention Keep user-cleanable parts clear Watch the water path Record seasonal storage Preserve service and warranty information"
-  },
-  {
-    "title": "Humidifier Maintenance Guide: Cleaning, Filters and Model-Specific Care",
-    "description": "Organize humidifier cleaning routines, replaceable components, model guidance and service history while avoiding generic health claims.",
-    "route": "/guides/humidifier-maintenance-guide/",
-    "cluster": "appliances",
-    "keywords": "humidifier maintenance guide",
-    "headings": "Humidifier care should be based on the exact design and water-contact parts Follow the manufacturer cleaning procedure Track consumables separately Note seasonal startup and shutdown Keep humidity decisions outside the organizer"
-  },
-  {
-    "title": "Ceiling Fan Maintenance Checklist: Cleaning, Condition and Service Notes",
-    "description": "A simple ceiling-fan maintenance record for cleaning, visible condition, model information and qualified service when electrical or mechanical problems appear.",
-    "route": "/guides/ceiling-fan-maintenance-checklist/",
-    "cluster": "appliances",
-    "keywords": "ceiling fan maintenance checklist",
-    "headings": "Ceiling fans need a light-touch maintenance record Keep routine work simple Electrical work belongs with qualified help Group by room"
-  },
-  {
-    "title": "Bathroom Exhaust Fan Maintenance Checklist: Cleaning, Airflow and Service Records",
-    "description": "Track bathroom exhaust-fan cleaning, visible condition and repair history while keeping electrical and duct work within safe boundaries.",
-    "route": "/guides/bathroom-exhaust-fan-maintenance-checklist/",
-    "cluster": "appliances",
-    "keywords": "bathroom exhaust fan maintenance",
-    "headings": "Bathroom exhaust fans are small systems with an important job Clean only user-accessible parts safely Record changes in noise or performance Keep room and model clear"
-  },
-  {
-    "title": "Garbage Disposal Maintenance Guide: Routine Care, Model Records and Safe Escalation",
-    "description": "Organize garbage-disposal model information, routine manufacturer-approved care and repair history without encouraging unsafe internal work.",
-    "route": "/guides/garbage-disposal-maintenance-guide/",
-    "cluster": "appliances",
-    "keywords": "garbage disposal maintenance guide",
-    "headings": "A garbage-disposal record is primarily about safe troubleshooting context Keep the manual and reset instructions available Record recurring symptoms Link plumbing-related repairs appropriately"
-  },
-  {
-    "title": "Coffee Maker Maintenance Guide: Cleaning, Descaling and Filter Records by Model",
-    "description": "Track coffee-maker cleaning, descaling, water-filter changes and model-specific consumables without using a one-size-fits-all schedule.",
-    "route": "/guides/coffee-maker-maintenance-guide/",
-    "cluster": "appliances",
-    "keywords": "coffee maker maintenance guide",
-    "headings": "Coffee makers are maintenance-heavy because water and consumables vary by machine Store the official cleaning and descaling instructions Separate daily cleaning from trackable maintenance Preserve error or service notes"
-  },
-  {
-    "title": "Robot Vacuum Maintenance Guide: Brushes, Filters, Batteries and Replacement History",
-    "description": "Organize robot-vacuum brushes, filters, consumables, cleaning tasks, model information and service history.",
-    "route": "/guides/robot-vacuum-maintenance-guide/",
-    "cluster": "appliances",
-    "keywords": "robot vacuum maintenance guide",
-    "headings": "Robot vacuums create a small ecosystem of parts worth tracking Record compatible consumables once Track parts separately Keep battery and repair history Avoid affiliate-driven recommendations"
-  },
-  {
-    "title": "Vacuum Cleaner Maintenance Guide: Filters, Bags, Brushes and Service Records",
-    "description": "Track vacuum-cleaner consumables, user-cleanable parts, model details and repair history without assuming every vacuum uses the same system.",
-    "route": "/guides/vacuum-cleaner-maintenance-guide/",
-    "cluster": "appliances",
-    "keywords": "vacuum cleaner maintenance guide",
-    "headings": "Vacuum maintenance is mostly about remembering what the machine uses Save the model and consumable references Track meaningful maintenance events Note performance changes"
-  },
-  {
-    "title": "Household Computer and Electronics Inventory: Models, Serial Numbers, Warranties and Owners",
-    "description": "Create a household electronics inventory with model, serial number, purchase date, warranty, assigned user and backup notes.",
-    "route": "/guides/computer-electronics-inventory/",
-    "cluster": "appliances",
-    "keywords": "household electronics inventory",
-    "headings": "Household electronics deserve better records than a drawer of boxes Record identity and ownership Do not store passwords in the inventory Keep purchase and repair history Add backup status carefully"
-  },
-  {
-    "title": "Wi-Fi Router Records: Model, ISP, Warranty and Household Network Notes",
-    "description": "Keep router model, ISP, purchase, warranty and non-sensitive network notes organized without turning a home-management app into a password vault.",
-    "route": "/guides/wifi-router-maintenance-records/",
-    "cluster": "appliances",
-    "keywords": "home router inventory tracker",
-    "headings": "Your router is a household asset, but its passwords should live somewhere else Useful fields Keep passwords and recovery secrets out Record changes"
-  },
-  {
-    "title": "UPS and Battery Backup Records: Device Age, Battery Changes and Protected Equipment",
-    "description": "Organize household UPS and battery-backup devices by model, protected equipment, battery replacement history and manufacturer test guidance.",
-    "route": "/guides/ups-battery-backup-records/",
-    "cluster": "appliances",
-    "keywords": "UPS battery replacement tracker",
-    "headings": "Backup power is only useful if the household remembers what it protects and whether it still works Record the protected load conceptually Follow manufacturer testing guidance Track battery changes Include the device in outage planning"
-  },
-  {
-    "title": "Smoke Alarm Records: Keep Locations, Models and Test/Replacement History Organized",
-    "description": "Organize smoke-alarm locations, model information and household test or replacement records while following manufacturer and local fire-safety guidance.",
+    "title": "Smoke Alarm Records: Test Monthly, Replace at 10 Years (USFA Guidance)",
+    "description": "Smoke alarm record-keeping built around U.S. Fire Administration guidance: test monthly, replace batteries yearly, replace the whole unit at 10 years.",
     "route": "/guides/smoke-alarm-records/",
     "cluster": "appliances",
     "keywords": "smoke alarm maintenance records",
-    "headings": "Safety-device records should support official guidance, not replace it Name each device by location Follow official test and replacement instructions Record meaningful events"
+    "headings": "Smoke alarm records: the U.S. Fire Administration's numbers, kept against each device The schedule, by task Name each device by location, not by number Read the manufacture date correctly Record meaningful events, and escalate safety concerns Interconnected alarms need a household-wide view, not just a per-device one What a smoke alarm cannot do, and why other devices still matter Placement basics worth recording alongside the device A finished basement, an added bedroom or a converted attic needs its own check"
   },
   {
-    "title": "Carbon Monoxide Alarm Records: Locations, Models and Replacement History",
-    "description": "Keep carbon-monoxide alarm locations, model information and replacement history organized while relying on manufacturer and local safety guidance.",
+    "title": "Carbon Monoxide Alarm Records: Placement, Testing and 7–10 Year Replacement",
+    "description": "Carbon monoxide alarm records built on EPA placement guidance and manufacturer replacement data: one per floor, weekly test, replace every 7 to 10 years.",
     "route": "/guides/carbon-monoxide-alarm-records/",
     "cluster": "appliances",
     "keywords": "carbon monoxide alarm records",
-    "headings": "Carbon-monoxide alarm records should be simple, clear and safety-first Record location and exact model Do not use the app to interpret an active alarm Keep replacement history visible"
+    "headings": "Carbon monoxide alarm records: placement, testing and a shorter replacement clock than smoke alarms Placement, per the EPA Testing and replacement Know the end-of-life signal before you hear it Never use this record to interpret an active alarm Keep replacement history visible Why CO alarms deserve a separate record from smoke alarms, not a shared one Sources of CO worth knowing about when placing alarms What to do if you're not sure an alarm's chirp is low-battery or end-of-life Renters and multi-unit buildings still need a working record"
   },
   {
-    "title": "Home Fire Extinguisher Records: Locations, Types and Inspection History",
-    "description": "Organize household fire-extinguisher locations, identifying information and inspection/service records while following local fire-safety guidance.",
+    "title": "Home Fire Extinguisher Records: Monthly Checks and Annual Service (NFPA 10)",
+    "description": "Fire extinguisher inspection records built on NFPA 10 and OSHA guidance: monthly visual checks, annual professional service, and when to use vs. evacuate.",
     "route": "/guides/fire-extinguisher-records/",
     "cluster": "appliances",
     "keywords": "home fire extinguisher inspection record",
-    "headings": "A fire-extinguisher inventory is useful only when the household knows what is actually present Label by location Keep inspection or service history Make emergency guidance primary"
+    "headings": "Fire extinguisher records: NFPA 10's monthly and annual intervals, applied to a home inventory The checklist Log by location, not as one household total When to actually use one — and when not to Keep service history attached to the exact unit Longer-term service intervals a home inventory should still know about Where to actually put extinguishers, and how many Reading the pressure gauge correctly"
   },
   {
-    "title": "Home Inventory Checklist: What Is Worth Recording and What You Can Skip",
-    "description": "Create a useful home inventory by prioritizing appliances, electronics, valuable items, serial numbers, purchase records and household systems.",
-    "route": "/guides/home-inventory-checklist/",
-    "cluster": "inventory-warranty",
-    "keywords": "home inventory checklist",
-    "headings": "A home inventory should be selective enough to finish Start with high-information items Use room sweeps to avoid forgetting categories Record uncertainty honestly Back up the inventory"
-  },
-  {
-    "title": "Home Inventory for Insurance: Build Better Records Without Guessing Policy Requirements",
-    "description": "Organize household possessions, photos, purchase details and serial numbers so you have better records if an insurer later asks for documentation.",
+    "title": "Home Inventory for Insurance: What to Record, Photograph and Back Up",
+    "description": "Build a home inventory for insurance with the specific fields, photo methods and off-site backup practice recommended by the Insurance Information Institute.",
     "route": "/guides/home-inventory-for-insurance/",
     "cluster": "inventory-warranty",
     "keywords": "home inventory for insurance",
-    "headings": "A home inventory can improve your records, but your policy determines what an insurer actually needs Capture identity and evidence Photograph context as well as details Keep a backup away from the primary device Do not inflate values"
+    "headings": "Home inventory for insurance: what to actually record, per the Insurance Information Institute What to record for each item Photograph context, not just objects Keep proof of value where you can Back the inventory up somewhere the household itself can't destroy Do not inflate or estimate values Prioritize rooms and categories instead of trying to finish in one sitting What an adjuster actually works from after a loss A room-overview video is worth more than it seems Update the inventory on a trigger, not just a calendar reminder"
   },
   {
-    "title": "How to Make a Photo Home Inventory Without Creating an Unsearchable Camera Roll",
-    "description": "Use room photos, item close-ups and structured labels to create a home inventory that remains searchable and useful later.",
-    "route": "/guides/photo-home-inventory/",
-    "cluster": "inventory-warranty",
-    "keywords": "photo home inventory",
-    "headings": "Photos are powerful evidence, but only if you can find the right one later Take three kinds of photo when appropriate Name or link photos to records Avoid unnecessary sensitive detail Update after meaningful changes"
-  },
-  {
-    "title": "Room-by-Room Home Inventory: A Practical Way to Finish the Job",
-    "description": "Build a home inventory room by room using a simple priority system for appliances, electronics, furniture and other meaningful assets.",
-    "route": "/guides/room-by-room-home-inventory/",
-    "cluster": "inventory-warranty",
-    "keywords": "room by room home inventory",
-    "headings": "Room-by-room inventory works because it gives the project a visible finish line Use three priority levels Kitchen Living areas Bedrooms and office Utility and storage spaces"
-  },
-  {
-    "title": "Appliance Inventory: Models, Serial Numbers, Warranties and Maintenance in One List",
-    "description": "Create an appliance inventory that links models, serial numbers, purchase details, warranties, manuals, maintenance and repair history.",
-    "route": "/guides/appliance-inventory/",
-    "cluster": "inventory-warranty",
-    "keywords": "appliance inventory",
-    "headings": "An appliance inventory becomes truly useful when it connects to maintenance Useful fields Create a timeline per appliance Keep labels safe to access Archive rather than delete replaced appliances"
-  },
-  {
-    "title": "Electronics Inventory: Track Devices, Owners, Serial Numbers and Warranties",
-    "description": "Organize household electronics with model, serial number, owner, purchase date, warranty, repair history and safe credential boundaries.",
-    "route": "/guides/electronics-inventory/",
-    "cluster": "inventory-warranty",
-    "keywords": "electronics inventory template",
-    "headings": "Electronics move between people, rooms and uses more often than most home assets Capture device identity Keep credentials elsewhere Preserve repair and battery history Archive retired devices"
-  },
-  {
-    "title": "Furniture Inventory: What Is Worth Recording for Moving, Insurance and Home Records",
-    "description": "Create a selective furniture inventory with room, purchase details, dimensions, photos and receipts for pieces where future identification matters.",
-    "route": "/guides/furniture-inventory/",
-    "cluster": "inventory-warranty",
-    "keywords": "furniture inventory",
-    "headings": "Furniture inventory should focus on items with a reason to be remembered Useful information for selected pieces Dimensions are especially useful during relocation Store care instructions only when they add value Avoid over-cataloging"
-  },
-  {
-    "title": "Valuable Item Inventory: Build Clear Records Without Turning the App into an Appraisal Tool",
-    "description": "Organize valuable household items with photos, identifying details, purchase records and document references while leaving valuation to qualified sources.",
-    "route": "/guides/valuable-item-inventory/",
-    "cluster": "inventory-warranty",
-    "keywords": "valuable item inventory",
-    "headings": "A valuable-item inventory is about evidence and identification, not self-appraisal Record identifying details Separate purchase price from current value Protect sensitive records Review after major changes"
-  },
-  {
-    "title": "Serial Number Tracker for Appliances, Electronics and Household Equipment",
-    "description": "Keep serial numbers connected to the correct household asset, model, purchase record and photo so they remain useful later.",
-    "route": "/guides/serial-number-tracker/",
-    "cluster": "inventory-warranty",
-    "keywords": "serial number tracker",
-    "headings": "A serial number without context is just a string of characters Store serial number, model and item together Photograph the label when practical Verify ambiguous characters Treat serials as private household information"
-  },
-  {
-    "title": "Purchase Receipt Organizer: Keep Receipts Connected to the Things You Bought",
-    "description": "Organize important household receipts by asset, warranty and purchase record instead of relying on one giant receipt folder.",
+    "title": "Purchase Receipt Organizer: How Long to Actually Keep Each Receipt (IRS Rules)",
+    "description": "Organize household receipts by purchase, with the actual IRS retention periods — 3, 6 or 7 years — for tax-relevant receipts instead of one guessed rule.",
     "route": "/guides/purchase-receipt-organizer/",
     "cluster": "inventory-warranty",
     "keywords": "receipt organizer for home purchases",
-    "headings": "The best way to find a receipt is often through the item, not the date Keep high-value or high-purpose receipts Use meaningful names Record seller and purchase date as fields Follow real retention requirements"
+    "headings": "Purchase receipt organizer: the actual retention periods, not a guessed rule How long to keep a receipt, by reason The best way to find a receipt is through the item, not the date Keep high-value or high-purpose receipts; skip the rest Use meaningful file names and searchable fields Paper receipts fade — capture them before they're unreadable Digital and emailed receipts need the same organization as paper ones When a receipt's job is done, let it go A quick sort for the receipts already piled up"
   },
   {
-    "title": "How to Track Product Warranties Without Keeping Every Box",
-    "description": "Track product warranties with purchase dates, proof of purchase, model information, warranty terms and expiration reminders.",
-    "route": "/guides/how-to-track-product-warranties/",
-    "cluster": "inventory-warranty",
-    "keywords": "how to track warranties",
-    "headings": "Warranty tracking is a small amount of work at purchase time that can save a large search later Capture the warranty while the purchase is fresh Do not confuse the tracker with the warranty contract Review before the end date Archive claims and repairs"
-  },
-  {
-    "title": "Warranty Expiration: How to Track the Date Without Assuming Coverage",
-    "description": "Calculate a warranty end date from purchase or start information, then confirm the written terms before relying on the result.",
-    "route": "/guides/warranty-expiration/",
-    "cluster": "inventory-warranty",
-    "keywords": "warranty expiration date",
-    "headings": "A warranty expiration date is useful, but it is not the same as a coverage decision Record the source date Keep the original terms accessible Use reminders before the date Record uncertainty"
-  },
-  {
-    "title": "Product Registration Tracker: Keep Household Registrations and Reference Numbers Organized",
-    "description": "Track product registrations, registration dates, account owner and reference numbers alongside warranties and asset records.",
-    "route": "/guides/product-registration-tracker/",
-    "cluster": "inventory-warranty",
-    "keywords": "product registration tracker",
-    "headings": "Product registration is easy to forget because it happens once Record completion and reference details Avoid storing passwords Keep privacy choices visible Archive when the product leaves the home"
-  },
-  {
-    "title": "Repair History Tracker: Know What Was Fixed, When and Whether the Problem Returned",
-    "description": "Build an asset-level repair history with symptoms, dates, providers, parts, costs and outcomes.",
-    "route": "/guides/repair-history/",
-    "cluster": "inventory-warranty",
-    "keywords": "repair history tracker",
-    "headings": "Repair history turns a series of isolated failures into a story Record symptom before diagnosis Record action and outcome Compare repair cost with context Link service providers"
-  },
-  {
-    "title": "Service History Tracker for Home Systems and Appliances",
-    "description": "Track inspections, maintenance, repairs and professional service in one timeline for each household asset or system.",
-    "route": "/guides/service-history/",
-    "cluster": "inventory-warranty",
-    "keywords": "home service history tracker",
-    "headings": "Service history is broader than repair history Use event types Preserve provider notes Convert recommendations into tasks Keep historical providers even after switching"
-  },
-  {
-    "title": "Appliance Replacement Planning: Use Age, Repair History and Household Needs Without Predicting Failure",
-    "description": "Plan appliance replacement using known age, repair history, performance concerns and household priorities instead of relying on a single lifespan number.",
-    "route": "/guides/appliance-replacement-planning/",
-    "cluster": "inventory-warranty",
-    "keywords": "appliance replacement planning",
-    "headings": "Replacement planning is not the same as predicting a failure date Combine several factors Create a “watch list” instead of declaring items dead Save replacement constraints Keep old records after replacement"
-  },
-  {
-    "title": "Appliance Lifespan Planning: How to Use Age Estimates Without Treating Them as Expiration Dates",
-    "description": "Use appliance age and lifespan estimates as planning context while relying on real condition, repair history and manufacturer information.",
+    "title": "Appliance Lifespan Planning: Real Ranges by Appliance, Not a Guess",
+    "description": "Appliance lifespan ranges by type — refrigerator, washer, dryer, dishwasher, water heater — sourced from AHAM, Rheem and manufacturer data, used for planning.",
     "route": "/guides/appliance-lifespan-planning/",
     "cluster": "inventory-warranty",
     "keywords": "appliance lifespan planning",
-    "headings": "Appliances do not expire on schedule Calculate age accurately first Add real household evidence Use ranges and uncertainty Plan the disruption"
-  },
-  {
-    "title": "Household Replacement Reserve: Plan for Known Big Purchases Without Pretending to Predict Them",
-    "description": "Create a simple household replacement reserve using known asset age, replacement priorities and real costs without turning the tool into financial advice.",
-    "route": "/guides/household-replacement-reserve/",
-    "cluster": "inventory-warranty",
-    "keywords": "household replacement reserve",
-    "headings": "Replacement planning is easier when it is separate from emergency panic Build from the asset list Prioritize, do not forecast exact dates Update after real purchases Keep financial guidance separate"
-  },
-  {
-    "title": "Home Purchase Records: Build a Clean Property Archive After Closing",
-    "description": "Organize important home-purchase documents, inspection references, improvement history and property records without mixing them with everyday household files.",
-    "route": "/guides/home-purchase-records/",
-    "cluster": "inventory-warranty",
-    "keywords": "home purchase records organizer",
-    "headings": "Home-purchase documents deserve their own archive Keep a property-level category Preserve inspection and disclosure references Follow real retention advice Protect access"
-  },
-  {
-    "title": "Renovation Records: Keep Contractors, Materials, Dates, Warranties and Before/After History",
-    "description": "Organize home renovation history with project dates, contractors, invoices, materials, warranties, permits references and future maintenance notes.",
-    "route": "/guides/renovation-records/",
-    "cluster": "inventory-warranty",
-    "keywords": "renovation records organizer",
-    "headings": "Renovation history becomes valuable long after the dust is gone Create one project record Preserve product details that affect future maintenance Link new assets created by the renovation Keep permits and legal documents as references"
-  },
-  {
-    "title": "Contractor Records: Keep Quotes, Work History and Household Context Organized",
-    "description": "Track household contractors by project, service history, contact details, invoices and follow-up recommendations without relying on scattered messages.",
-    "route": "/guides/contractor-records/",
-    "cluster": "inventory-warranty",
-    "keywords": "contractor records organizer",
-    "headings": "Contractor information is most valuable when attached to the work they performed Keep quotes separate from completed work Record important product or warranty information Preserve follow-up notes Keep private notes professional and factual"
-  },
-  {
-    "title": "Home Improvement Receipts: Organize Costs and Proof by Project, Not by Shopping Trip",
-    "description": "Keep home-improvement receipts attached to renovation projects, contractors, materials and installed assets for easier long-term reference.",
-    "route": "/guides/home-improvement-receipts/",
-    "cluster": "inventory-warranty",
-    "keywords": "organize home improvement receipts",
-    "headings": "Project context makes a home-improvement receipt worth keeping Group by project Capture installed product details Keep tax and property questions outside the app Distinguish estimate, order and final receipt"
-  },
-  {
-    "title": "Moving Inventory: Track Boxes, Rooms, Valuable Items and What Needs Special Handling",
-    "description": "Create a moving inventory that focuses on room destination, box contents, valuable items and household records rather than cataloging every object.",
-    "route": "/guides/moving-inventory/",
-    "cluster": "inventory-warranty",
-    "keywords": "moving inventory checklist",
-    "headings": "A moving inventory has a different job from a permanent home inventory Use box-level records for ordinary contents Keep valuable or fragile items separate Use destination rooms Archive the moving layer later"
-  },
-  {
-    "title": "Storage Unit Inventory: Know What Is Off-Site Without Opening Every Box",
-    "description": "Track storage-unit boxes, major items, photos, locations and access notes while keeping sensitive access credentials out of the general household record.",
-    "route": "/guides/storage-unit-inventory/",
-    "cluster": "inventory-warranty",
-    "keywords": "storage unit inventory",
-    "headings": "Off-site storage becomes expensive and frustrating when nobody remembers what is inside Use zones and box IDs Photograph major items and box labels Keep access secrets elsewhere Review periodically"
-  },
-  {
-    "title": "Digital Home Inventory Backup: Protect the Records That Describe Your Home",
-    "description": "Create a safer home-inventory backup strategy using exported files, encryption where appropriate and separate storage locations.",
-    "route": "/guides/digital-home-inventory-backup/",
-    "cluster": "inventory-warranty",
-    "keywords": "home inventory backup",
-    "headings": "A digital home inventory is only as durable as its backup Export a complete household backup Keep more than one copy Test restore, not only export Protect the password separately"
-  },
-  {
-    "title": "How to Organize Household Documents Without Building a Giant Digital Junk Drawer",
-    "description": "Organize household documents by purpose, asset, property and responsibility so important records stay findable.",
-    "route": "/guides/household-documents-organizer/",
-    "cluster": "records-emergency",
-    "keywords": "how to organize household documents",
-    "headings": "Household documents are easier to manage when the filing system mirrors real decisions Build around household areas of responsibility Connect documents to the thing they describe Keep sensitive originals in appropriate storage Review the index once a year"
-  },
-  {
-    "title": "Digital Home Binder: A Practical Structure for Home Records, Maintenance and Emergency Information",
-    "description": "Build a digital home binder that combines a household index, asset records, maintenance history, contacts and emergency information.",
-    "route": "/guides/digital-home-binder/",
-    "cluster": "records-emergency",
-    "keywords": "digital home binder",
-    "headings": "A digital home binder should help operate the home, not merely store files Suggested binder sections Put quick-reference information before archives Use links between sections Keep paper where paper still helps"
-  },
-  {
-    "title": "Important Household Documents: What Deserves a Reliable Place to Live",
-    "description": "Identify household documents that are worth organizing, from property and insurance records to warranties, service history and emergency references.",
-    "route": "/guides/important-household-documents/",
-    "cluster": "records-emergency",
-    "keywords": "important household documents",
-    "headings": "The important document list depends on what your household owns and manages Property and housing Household purchases Services and recurring obligations Emergency and care information Sensitive identity records need extra care"
-  },
-  {
-    "title": "How Long Should You Keep Household Records? Use the Reason for the Record, Not One Magic Number",
-    "description": "Decide how long to keep household records by warranty, legal, tax, insurance, property and practical needs rather than applying one universal retention period.",
-    "route": "/guides/how-long-to-keep-household-records/",
-    "cluster": "records-emergency",
-    "keywords": "how long to keep household records",
-    "headings": "There is no single correct retention period for every household document Ask why you are keeping it Separate “must keep” from “useful to keep” Record disposal rules outside the document itself Review rather than auto-delete"
-  },
-  {
-    "title": "How to Organize Appliance Manuals So You Can Find the Right One During a Problem",
-    "description": "Organize appliance manuals by the actual asset and model, using official digital manuals where possible and preserving only the versions you need.",
-    "route": "/guides/organize-appliance-manuals/",
-    "cluster": "records-emergency",
-    "keywords": "organize appliance manuals",
-    "headings": "Appliance manuals make more sense as part of the appliance record than as a separate collection Keep the correct edition Do not save every marketing booklet Attach maintenance tasks to the source Archive manuals with retired assets"
-  },
-  {
-    "title": "How to Organize Household Insurance Documents Without Exposing Sensitive Details",
-    "description": "Create a household insurance index with policy type, provider, renewal date and secure document references while keeping sensitive information protected.",
-    "route": "/guides/organize-insurance-documents/",
-    "cluster": "records-emergency",
-    "keywords": "organize insurance documents",
-    "headings": "Insurance documents need both findability and restraint Create an insurance index Separate summaries from originals Use renewal tasks as decision points Do not interpret coverage"
-  },
-  {
-    "title": "How to Organize Utility Account Information for a Household Handoff",
-    "description": "Keep utility providers, service contacts, account ownership, billing dates and non-sensitive management notes in one household index.",
-    "route": "/guides/organize-utility-account-information/",
-    "cluster": "records-emergency",
-    "keywords": "organize utility account information",
-    "headings": "Utility information becomes surprisingly important when the usual account holder is unavailable Record the service, not the password Add outage or emergency contacts where relevant Make moving easier Keep account numbers private"
-  },
-  {
-    "title": "How to Organize Vehicle Documents, Maintenance and Renewals at Home",
-    "description": "Keep household vehicle registration references, insurance, maintenance history, warranty and renewal reminders organized without storing unnecessary sensitive data.",
-    "route": "/guides/organize-vehicle-documents-at-home/",
-    "cluster": "records-emergency",
-    "keywords": "organize vehicle documents",
-    "headings": "Vehicles are household assets with more recurring paperwork than most appliances Separate private vehicle documents from the wall dashboard Connect maintenance history Keep jurisdiction-specific deadlines configurable Include handoff information"
-  },
-  {
-    "title": "How to Organize Pet Records for Everyday Care, Sitters and Emergencies",
-    "description": "Keep pet identification, care contacts, routine records, sitter instructions and document references organized for household handoffs.",
-    "route": "/guides/organize-pet-records/",
-    "cluster": "records-emergency",
-    "keywords": "organize pet records",
-    "headings": "Pet records become most valuable when someone else needs to care for the animal Keep a concise pet profile Separate routine from medical instruction Build a sitter-ready view Review before every trip"
-  },
-  {
-    "title": "How to Organize School Records at Home Without Mixing Them into General Household Clutter",
-    "description": "Create a household index for school contacts, schedules, permissions and document references while keeping sensitive student records protected.",
-    "route": "/guides/organize-school-records-at-home/",
-    "cluster": "records-emergency",
-    "keywords": "organize school records at home",
-    "headings": "School information changes often, so the household needs an index more than an archive Store current contacts and key dates Keep sensitive records separate Use annual cleanup Create handoff notes for caregivers"
-  },
-  {
-    "title": "Emergency Binder: What to Organize Before Your Household Is Under Stress",
-    "description": "Build an emergency binder with contacts, household instructions, important references and continuity information, guided by local emergency authorities.",
-    "route": "/guides/emergency-binder/",
-    "cluster": "records-emergency",
-    "keywords": "emergency binder",
-    "headings": "An emergency binder should be short enough to use under pressure Start with contacts Add household operational notes Reference sensitive documents instead of copying everything Keep official emergency guidance separate and authoritative Review on a schedule"
-  },
-  {
-    "title": "Family Emergency Contacts: Build a List People Can Actually Use",
-    "description": "Create a concise family emergency contact list with household members, local support, utilities and care contacts, plus offline access.",
-    "route": "/guides/family-emergency-contacts/",
-    "cluster": "records-emergency",
-    "keywords": "family emergency contacts list",
-    "headings": "An emergency contact list should answer “who do I call next?” Use clear contact roles Include more than one communication path where appropriate Make an offline copy Test the list"
-  },
-  {
-    "title": "Emergency Information Sheet: What Belongs on One Household Page",
-    "description": "Create a one-page household emergency information sheet with contacts, address, important household notes and clear references to secure documents.",
-    "route": "/guides/emergency-information-sheet/",
-    "cluster": "records-emergency",
-    "keywords": "emergency information sheet",
-    "headings": "One page forces the household to decide what is truly important Include basic identity and location Add essential operational contacts Reference rather than expose Print carefully"
-  },
-  {
-    "title": "Home Evacuation Information: Organize People, Pets, Contacts and Go-Bag Records",
-    "description": "Organize household evacuation information around local official guidance, family roles, pet needs, contacts and essential records.",
-    "route": "/guides/home-evacuation-information/",
-    "cluster": "records-emergency",
-    "keywords": "home evacuation information checklist",
-    "headings": "Evacuation planning should be based on local hazards and official guidance Record household logistics Keep essential references portable Avoid publishing exact absence or security details Review when the household changes"
-  },
-  {
-    "title": "Utility Shutoff Information: Document Locations Without Encouraging Unsafe Action",
-    "description": "Keep accurate household references for utility controls and service contacts while leaving hazardous operations to qualified guidance.",
-    "route": "/guides/utility-shutoff-information/",
-    "cluster": "records-emergency",
-    "keywords": "utility shutoff information sheet",
-    "headings": "Knowing where a household control is located can be useful; knowing when to use it is a separate question Record only verified information Label who should act Protect security details Review after renovations or moving"
-  },
-  {
-    "title": "Emergency Supply Inventory: Track What You Have Before Buying More",
-    "description": "Build a household emergency-supply inventory with quantities, locations, condition and review dates while following official preparedness guidance.",
-    "route": "/guides/emergency-supply-inventory/",
-    "cluster": "records-emergency",
-    "keywords": "emergency supply inventory",
-    "headings": "Preparedness starts with knowing what is already in the house Organize by purpose and location Record expiration or condition only where relevant Keep the inventory separate from medical advice Review after use"
-  },
-  {
-    "title": "Household Medical Information Organization: Keep Emergency References Without Overexposing Health Data",
-    "description": "Organize limited household medical emergency references, provider contacts and document locations while keeping sensitive health records in appropriately secure systems.",
-    "route": "/guides/household-medical-information-organization/",
-    "cluster": "records-emergency",
-    "keywords": "organize family medical information",
-    "headings": "Medical information deserves a stricter privacy boundary than ordinary household notes Store the minimum necessary information Keep medication instructions authoritative Protect shared views Use specialized systems where needed"
-  },
-  {
-    "title": "Caregiver Handoff Checklist: Transfer Routines, Contacts and Household Responsibilities Clearly",
-    "description": "Create a caregiver handoff with routines, contacts, household logistics and current instructions while protecting sensitive information.",
-    "route": "/guides/caregiver-handoff-checklist/",
-    "cluster": "records-emergency",
-    "keywords": "caregiver handoff checklist",
-    "headings": "A caregiver handoff should describe the current routine, not the entire family history Organize the day Separate care instructions from household logistics Provide clear contacts Limit access"
-  },
-  {
-    "title": "Household Handoff Guide: Transfer the Invisible Work of Running a Home",
-    "description": "Build a household handoff covering recurring responsibilities, upcoming deadlines, service contacts, assets and emergency information.",
-    "route": "/guides/household-handoff/",
-    "cluster": "records-emergency",
-    "keywords": "household handoff",
-    "headings": "A household handoff is the operational version of “here is what you need to know” Build the handoff from current obligations Include why, not only what Protect private information Make it reusable"
-  },
-  {
-    "title": "Travel Household Handoff: What Someone at Home Needs While You Are Away",
-    "description": "Create a travel handoff for pets, deliveries, household tasks, appointments, service providers and emergency contacts without oversharing.",
-    "route": "/guides/travel-household-handoff/",
-    "cluster": "records-emergency",
-    "keywords": "household handoff for travel",
-    "headings": "Travel handoff should focus on the unusual responsibilities created by absence Review expected events during the trip Give clear escalation paths Minimize security exposure Close the handoff after return"
-  },
-  {
-    "title": "House Sitter Information: Give Clear Instructions Without Sharing Your Entire Household Database",
-    "description": "Create house-sitter instructions for contacts, pets, deliveries, basic home routines and problem escalation while protecting private information.",
-    "route": "/guides/house-sitter-information/",
-    "cluster": "records-emergency",
-    "keywords": "house sitter information sheet",
-    "headings": "A house sitter needs a role-specific packet, not full household access Daily responsibilities Problem escalation Keep security details controlled Show less, not more"
-  },
-  {
-    "title": "Pet Sitter Information: Build a Clear Care Sheet for Feeding, Routine and Emergency Contacts",
-    "description": "Prepare pet-sitter information with feeding routine, walk/care schedule, veterinarian contacts, supplies and household escalation instructions.",
-    "route": "/guides/pet-sitter-information/",
-    "cluster": "records-emergency",
-    "keywords": "pet sitter information sheet",
-    "headings": "Pet-sitter instructions should remove guesswork from normal routines Describe the routine Keep medical instructions current and authoritative Give escalation contacts Review before every trip"
-  },
-  {
-    "title": "Family Continuity Plan: Keep the Household Running When Normal Roles Change",
-    "description": "Build a family continuity plan for recurring obligations, household admin, service contacts, pets, dependents and essential records.",
-    "route": "/guides/family-continuity-plan/",
-    "cluster": "records-emergency",
-    "keywords": "family continuity plan",
-    "headings": "Continuity planning is not only for businesses Identify single-person knowledge Create a backup owner Document the next action Review after major life changes"
-  },
-  {
-    "title": "What Your Spouse or Partner Needs to Know About the Household",
-    "description": "Make invisible household admin transferable by documenting recurring obligations, providers, renewals, maintenance and emergency information.",
-    "route": "/guides/what-spouse-needs-to-know/",
-    "cluster": "records-emergency",
-    "keywords": "household information spouse should know",
-    "headings": "The goal is not equal memory; it is shared recoverability Share the map, not every detail Focus on recurring obligations Use handoff views instead of shared spreadsheets no one updates Respect privacy within partnership"
-  },
-  {
-    "title": "Household Admin Backup Person: How to Prepare Someone to Step In Temporarily",
-    "description": "Choose a backup household administrator and give them a clear view of recurring obligations, contacts, records and upcoming household work.",
-    "route": "/guides/household-admin-backup-person/",
-    "cluster": "records-emergency",
-    "keywords": "household backup person",
-    "headings": "Every important household system should have a second person who can find the map Decide what authority the backup actually needs Create a short operational brief Tell them where secure records live Practice once"
-  },
-  {
-    "title": "Household Management Checklist: The Recurring Work Behind a Well-Run Home",
-    "description": "Use a household management checklist to map maintenance, documents, bills, tasks, supplies, emergency information and recurring responsibilities.",
-    "route": "/guides/household-management-checklist/",
-    "cluster": "household-operations",
-    "keywords": "household management checklist",
-    "headings": "Household management is easier when responsibilities are visible The major areas Do not manage everything at the same level Review the system, not only the tasks"
-  },
-  {
-    "title": "How to Divide Household Responsibilities Without Creating Another Chore Fight",
-    "description": "Divide household responsibilities by ownership, frequency and hidden admin work so recurring tasks are easier to share and hand off.",
-    "route": "/guides/divide-household-responsibilities/",
-    "cluster": "household-operations",
-    "keywords": "divide household responsibilities",
-    "headings": "Household work is easier to divide when the invisible parts are named List responsibilities before assigning them Assign ownership rather than reminders Match tasks to preference and capacity Keep a backup path"
-  },
-  {
-    "title": "Recurring Household Tasks: What Is Worth Automating and What Should Stay Flexible",
-    "description": "Organize recurring household work by daily, weekly, monthly, seasonal and annual responsibilities without turning every routine into an alert.",
-    "route": "/guides/recurring-household-tasks/",
-    "cluster": "household-operations",
-    "keywords": "recurring household tasks",
-    "headings": "Repetition is a good reason to build a system—but not every repeated action needs a notification Daily and weekly Monthly and quarterly Seasonal and annual Use the right trigger"
-  },
-  {
-    "title": "Family Chore System: Build a Routine People Can Understand at a Glance",
-    "description": "Create a family chore system with clear ownership, recurring schedules, age-appropriate expectations and a shared display without over-gamifying normal home life.",
-    "route": "/guides/family-chore-system/",
-    "cluster": "household-operations",
-    "keywords": "family chore system",
-    "headings": "A chore system should reduce reminders, not create a new management job Use clear, concrete tasks Keep assignments appropriate Avoid turning contribution into constant competition Use the display for visibility"
-  },
-  {
-    "title": "Chore Chart for Adults: Use Ownership and Rotation Without Making Home Feel Like Work",
-    "description": "Build an adult household chore chart using responsibilities, rotation, frequency and hidden admin work instead of childish reward systems.",
-    "route": "/guides/chore-chart-for-adults/",
-    "cluster": "household-operations",
-    "keywords": "chore chart for adults",
-    "headings": "Adult chore charts work best when they look like shared operations, not classroom behavior charts Map recurring work by frequency Include admin work Rotate only where rotation helps Review the system when life changes"
-  },
-  {
-    "title": "Household Weekly Reset: A 20-Minute Review of Tasks, Calendar and Home Needs",
-    "description": "Use a short weekly household reset to review upcoming events, chores, supplies, maintenance and unresolved home tasks.",
-    "route": "/guides/household-weekly-reset/",
-    "cluster": "household-operations",
-    "keywords": "household weekly reset",
-    "headings": "A weekly reset is the smallest routine that can keep a household system current Review the next seven days Clear stale tasks Check supplies that affect the week Surface one home issue"
-  },
-  {
-    "title": "Household Monthly Review: Maintenance, Renewals, Records and the Next 30 Days",
-    "description": "Use a monthly household review to clean up tasks, check maintenance, review subscriptions and renewals, update records and create a backup.",
-    "route": "/guides/household-monthly-review/",
-    "cluster": "household-operations",
-    "keywords": "monthly household review",
-    "headings": "Monthly is a good cadence for the household work that is important but not urgent Look at the next 30 to 60 days Review household records Check costs without turning the review into accounting Back up the database"
-  },
-  {
-    "title": "Household Admin Day: Batch the Calls, Renewals and Paperwork You Keep Postponing",
-    "description": "Use a recurring household admin session for service calls, renewals, documents, scheduling and the invisible work that does not fit daily chores.",
-    "route": "/guides/household-admin-day/",
-    "cluster": "household-operations",
-    "keywords": "household admin day",
-    "headings": "Household admin is easier when it has a container Keep an admin queue Prepare context before the call End by recording outcomes Keep the session optional"
-  },
-  {
-    "title": "How to Organize Household Subscriptions Before They Become Invisible Expenses",
-    "description": "Create a household subscription list with owner, cost, billing frequency, renewal date and cancellation notes.",
-    "route": "/guides/organize-household-subscriptions/",
-    "cluster": "household-operations",
-    "keywords": "organize household subscriptions",
-    "headings": "A household subscription list should answer who owns it, what it costs and what happens next Find subscriptions from several sources Normalize the annual cost Record the cancellation path Review ownership"
-  },
-  {
-    "title": "Subscription Renewal Tracker: Review Services Before the Charge Happens",
-    "description": "Track monthly and annual subscription renewals with lead-time reminders, account ownership and cancellation notes.",
-    "route": "/guides/subscription-renewal-tracker/",
-    "cluster": "household-operations",
-    "keywords": "subscription renewal tracker",
-    "headings": "A renewal reminder should create a decision window Annual renewals need longer visibility Monthly renewals may not need individual alerts Track changes Keep cancellation notes factual"
-  },
-  {
-    "title": "Recurring Bills Tracker: Organize Due Dates Without Becoming a Banking App",
-    "description": "Track household recurring bills, due dates, frequency, owner and payment method notes without connecting bank accounts or storing sensitive credentials.",
-    "route": "/guides/recurring-bills-tracker/",
-    "cluster": "household-operations",
-    "keywords": "recurring bills tracker",
-    "headings": "A household bills tracker can be useful without handling money Track the obligation, not transaction-level finance Mark autopay clearly Keep sensitive account numbers out of shared views Use actual statements for money questions"
-  },
-  {
-    "title": "Annual Renewal Calendar: Put Insurance, Memberships, Registrations and Services on One Timeline",
-    "description": "Build an annual household renewal calendar for insurance, memberships, registrations, service plans and other once-a-year obligations.",
-    "route": "/guides/annual-renewal-calendar/",
-    "cluster": "household-operations",
-    "keywords": "annual renewal calendar",
-    "headings": "Annual obligations are the easiest recurring tasks to forget Collect annual obligations across categories Use review dates and due dates Avoid country-specific automatic rules in v1 Review once per year"
-  },
-  {
-    "title": "Household Account List: Know Which Services Exist Without Storing Passwords in the Wrong Place",
-    "description": "Create a household account index with service name, account owner, support link and renewal information while keeping credentials in a password manager.",
-    "route": "/guides/household-account-list/",
-    "cluster": "household-operations",
-    "keywords": "household account list",
-    "headings": "A household needs an account map even if the passwords live elsewhere Record service and account owner Use a password manager for credentials Include continuity notes Review after account changes"
-  },
-  {
-    "title": "Home Contact List: The People and Services Your Household Actually Needs",
-    "description": "Create a household contact list for family, neighbors, building management, utilities, schools, caregivers and service providers.",
-    "route": "/guides/home-contact-list/",
-    "cluster": "household-operations",
-    "keywords": "home contact list",
-    "headings": "A home contact list is useful when it is curated rather than complete Organize by role Add a reason for each contact Review outdated providers Print a limited version if useful"
-  },
-  {
-    "title": "Household Service Provider Contact List: Plumber, HVAC, Electrician and More",
-    "description": "Keep household service-provider contacts linked to the systems and prior work they know, with factual private notes and history.",
-    "route": "/guides/service-provider-contact-list/",
-    "cluster": "household-operations",
-    "keywords": "home service provider contact list",
-    "headings": "A service contact is more useful when you know what they worked on Store trade and relationship Keep availability claims current Preserve the last service event Avoid public ratings inside the private record"
-  },
-  {
-    "title": "Household Shopping Staples: Create a Restock List That Does Not Become a Full Inventory System",
-    "description": "Organize recurring household staples, preferred sizes and restock points without counting every item in the house.",
-    "route": "/guides/household-shopping-staples/",
-    "cluster": "household-operations",
-    "keywords": "household staples list",
-    "headings": "A staples list is about remembering what the household repeatedly runs out of Use categories and preferred units Use restock triggers Separate consumables from maintenance Avoid affiliate influence"
-  },
-  {
-    "title": "Pantry Restock System: Keep Everyday Food Staples Visible Without Tracking Every Can",
-    "description": "Build a simple pantry restock system using staple lists, minimum quantities or “last one opened” triggers rather than full inventory accounting.",
-    "route": "/guides/pantry-restock-system/",
-    "cluster": "household-operations",
-    "keywords": "pantry restock system",
-    "headings": "Most households do not need warehouse software for the pantry Choose a restock method Keep specialty items visible Clean the list regularly Do not mix pantry expiration management into v1 unless needed"
-  },
-  {
-    "title": "Household Supplies Inventory: Filters, Cleaning Products and Maintenance Consumables",
-    "description": "Track household consumables that matter for maintenance and continuity, such as compatible filters, bags and replacement parts.",
-    "route": "/guides/household-supplies-inventory/",
-    "cluster": "household-operations",
-    "keywords": "household supplies inventory",
-    "headings": "A supplies inventory is most useful for items that must match equipment Track compatibility Record storage location Avoid overstocking by default Connect purchase to maintenance"
-  },
-  {
-    "title": "Cleaning Schedule: Build Daily, Weekly and Deep-Cleaning Routines That Fit Your Home",
-    "description": "Create a household cleaning schedule by zone, frequency and owner without generating an unrealistic list of chores.",
-    "route": "/guides/cleaning-schedule/",
-    "cluster": "household-operations",
-    "keywords": "cleaning schedule",
-    "headings": "A cleaning schedule should reflect how the household lives Separate reset, clean and deep clean Assign by room or task type Keep the schedule achievable Keep maintenance separate"
-  },
-  {
-    "title": "Deep Cleaning Tracker: Remember the Jobs That Are Too Rare for Weekly Routines",
-    "description": "Track occasional deep-cleaning tasks by room, season and last-completed date without cluttering the everyday chore list.",
-    "route": "/guides/deep-cleaning-tracker/",
-    "cluster": "household-operations",
-    "keywords": "deep cleaning tracker",
-    "headings": "Deep-cleaning tasks disappear because they are too infrequent to become habit Organize by zone Record the last completion date Avoid fake precision Keep deep cleaning out of the maintenance history unless it affects equipment"
-  },
-  {
-    "title": "Guest Preparation Checklist: A Calm 24-Hour Home Reset Before Visitors Arrive",
-    "description": "Prepare for overnight guests with sleeping space, linens, bathroom basics, access information and household routines without over-cleaning the entire home.",
-    "route": "/guides/guest-preparation-checklist/",
-    "cluster": "household-operations",
-    "keywords": "guest preparation checklist",
-    "headings": "Guest preparation works best when it focuses on comfort and logistics Sleeping and bathroom basics Household access and routines Food and accessibility Reset after departure"
-  },
-  {
-    "title": "Vacation Home Shutdown Checklist: What to Review Before You Leave",
-    "description": "Create a household vacation shutdown routine for deliveries, pets, appliances, temperature, waste, service appointments and handoff contacts.",
-    "route": "/guides/vacation-home-shutdown-checklist/",
-    "cluster": "household-operations",
-    "keywords": "vacation home shutdown checklist",
-    "headings": "A vacation shutdown checklist is about reducing loose ends before absence Stop or redirect routine household flow Review equipment responsibly Create a limited handoff Protect absence information"
-  },
-  {
-    "title": "Returning Home After Travel Checklist: Restart the Household Without Missing a Problem",
-    "description": "Use a short return-home checklist for condition checks, mail, pets, supplies, household tasks and closing temporary travel handoffs.",
-    "route": "/guides/returning-home-after-travel-checklist/",
-    "cluster": "household-operations",
-    "keywords": "returning home after vacation checklist",
-    "headings": "The return-home checklist should be shorter than the departure checklist Check condition first Close handoff tasks Restart the household flow Improve the travel template"
-  },
-  {
-    "title": "Moving House Organizer: Tasks, Utilities, Inventory, Documents and the First Week",
-    "description": "Organize a move by workstream: utilities, addresses, documents, box inventory, service providers, old-home closure and new-home setup.",
-    "route": "/guides/moving-house-organizer/",
-    "cluster": "household-operations",
-    "keywords": "moving house organizer",
-    "headings": "A move is easier when it is divided into workstreams instead of one enormous checklist Build the move around deadlines Keep an inventory for movement, not perfection Separate old and new home records Create a first-week list"
-  },
-  {
-    "title": "New Home Setup Checklist: Build the Household System Before the Details Get Lost",
-    "description": "Set up a new home by organizing utilities, equipment records, maintenance, contacts, documents, emergency information and first-week tasks.",
-    "route": "/guides/new-home-setup-checklist/",
-    "cluster": "household-operations",
-    "keywords": "new home setup checklist",
-    "headings": "The first weeks in a home are when useful information is easiest to capture Establish the operating basics Build the asset list gradually Create the first maintenance tasks Set up emergency information Back up after setup"
+    "headings": "Appliance lifespan planning: real published ranges, used as planning input, not a countdown Published lifespan ranges by appliance Calculate age accurately first The 15-year efficiency signal for refrigerators specifically Add real household evidence on top of the range Plan the disruption, not just the number A simple decision framework instead of a single cutoff age Why the ranges above differ between sources Maintenance history changes where a unit sits in its own range"
   },
   {
     "title": "Free Home Maintenance Schedule Generator | Build a Custom Household Plan",
@@ -1245,7 +125,7 @@
     "route": "/tools/home-maintenance-schedule-generator/",
     "cluster": "tools",
     "keywords": "home maintenance schedule generator",
-    "headings": "Free Home Maintenance Schedule Generator Tool inputs Tool output Important limitation copy Example Product bridge"
+    "headings": "Free Home Maintenance Schedule Generator What you actually get Worked example What it can't determine What to save with the finished list Working through a long list without stalling out"
   },
   {
     "title": "Free Warranty Expiration Calculator | Purchase Date + Warranty Term",
@@ -1253,7 +133,7 @@
     "route": "/tools/warranty-expiration-calculator/",
     "cluster": "tools",
     "keywords": "warranty expiration calculator",
-    "headings": "Warranty Expiration Calculator Tool inputs Output Calculation behavior Limitation copy Example"
+    "headings": "Warranty Expiration Calculator Find the real start date first How the calculator works Worked example What the result can't tell you What to save alongside the date"
   },
   {
     "title": "Free Appliance Age Calculator | Calculate Age from Purchase or Installation Date",
@@ -1261,7 +141,7 @@
     "route": "/tools/appliance-age-calculator/",
     "cluster": "tools",
     "keywords": "appliance age calculator",
-    "headings": "Appliance Age Calculator Tool inputs Output Planning guidance Limitation copy"
+    "headings": "Appliance Age Calculator What you enter and what comes back Worked example What the calculator does not do Age is not a failure forecast What to record alongside the age Purchase date versus installation date"
   },
   {
     "title": "Free Appliance Replacement Planner | Build a Household Watch List",
@@ -1269,7 +149,7 @@
     "route": "/tools/appliance-replacement-planner/",
     "cluster": "tools",
     "keywords": "appliance replacement planner",
-    "headings": "Appliance Replacement Planner Inputs per appliance Output Useful result actions"
+    "headings": "Appliance Replacement Planner What goes in, and how the flag is decided Worked example What the planner can't determine What a Review flag should lead to Choosing a planning horizon that means something"
   },
   {
     "title": "Household Subscription Cost Calculator | Monthly and Annual Total",
@@ -1277,7 +157,7 @@
     "route": "/tools/household-subscription-cost-calculator/",
     "cluster": "tools",
     "keywords": "household subscription calculator",
-    "headings": "Household Subscription Cost Calculator Inputs Output Privacy behavior Useful interpretation Export"
+    "headings": "Household Subscription Cost Calculator How to enter your list, and how it's calculated Worked example What it doesn't do What the total is actually for What to save with the total Grouping subscriptions by category yourself"
   },
   {
     "title": "Annual Subscription Cost Calculator | Convert Monthly, Weekly or Quarterly Pricing",
@@ -1285,7 +165,7 @@
     "route": "/tools/annual-subscription-cost-calculator/",
     "cluster": "tools",
     "keywords": "annual subscription cost calculator",
-    "headings": "Annual Subscription Cost Calculator Inputs Output Caveat SEO value"
+    "headings": "Annual Subscription Cost Calculator What it converts, and how Worked example What the number doesn't account for When one subscription isn't the real question Reading the annualized number against your budget What to keep with the number"
   },
   {
     "title": "Free Home Maintenance Cost Tracker | Repairs, Service and Planned Work",
@@ -1293,7 +173,7 @@
     "route": "/tools/home-maintenance-cost-tracker/",
     "cluster": "tools",
     "keywords": "home maintenance cost tracker",
-    "headings": "Home Maintenance Cost Tracker Inputs Output Keep categories separate No financial advice Export"
+    "headings": "Home Maintenance Cost Tracker How to enter costs, and what comes back What it deliberately doesn't do Keeping the numbers meaningful What to record with each line Pairing this with a repair-specific record Reviewing planned versus completed over time"
   },
   {
     "title": "Home Repair Cost Log | Track Repairs by Appliance, System and Date",
@@ -1301,7 +181,7 @@
     "route": "/tools/home-repair-cost-log/",
     "cluster": "tools",
     "keywords": "home repair cost log",
-    "headings": "Home Repair Cost Log Inputs Output Example Privacy"
+    "headings": "Home Repair Cost Log What to enter, and what you get back Worked example Why the outcome column matters as much as the cost What to keep with each entry Reading the average with the entry count in mind One log per appliance, or one log for the household"
   },
   {
     "title": "Free Emergency Binder Generator | Build a Household Information Packet",
@@ -1309,7 +189,7 @@
     "route": "/tools/emergency-binder-generator/",
     "cluster": "tools",
     "keywords": "emergency binder generator",
-    "headings": "Emergency Binder Generator User-selected sections Output design Privacy controls No medical generation"
+    "headings": "Emergency Binder Generator What it builds, and what it doesn't Worked example Handling anything sensitive What to do with the finished outline Physical copy versus digital copy"
   },
   {
     "title": "Free Home Inventory Checklist Generator | Room-by-Room Starter List",
@@ -1317,7 +197,7 @@
     "route": "/tools/home-inventory-checklist-generator/",
     "cluster": "tools",
     "keywords": "home inventory checklist generator",
-    "headings": "Home Inventory Checklist Generator Inputs Output Download and app bridge"
+    "headings": "Home Inventory Checklist Generator How the room list is built Worked example What it doesn't decide for you Finishing one room before starting the next When the goal is insurance documentation Revisiting the inventory after you buy something new"
   },
   {
     "title": "Room Inventory Generator | Build a Checklist for Any Room in Your Home",
@@ -1325,7 +205,7 @@
     "route": "/tools/room-inventory-generator/",
     "cluster": "tools",
     "keywords": "room inventory generator",
-    "headings": "Room Inventory Generator Inputs Output Unique value Save behavior"
+    "headings": "Room Inventory Generator How it's different from a full-house checklist Worked example Where the generic fallback shows up Deciding what's actually worth recording Revisiting a room after the first pass Combining rooms into one household pass"
   },
   {
     "title": "Free Recurring Chore Planner | Build a Household Routine by Frequency and Owner",
@@ -1333,7 +213,7 @@
     "route": "/tools/recurring-chore-planner/",
     "cluster": "tools",
     "keywords": "recurring chore planner",
-    "headings": "Recurring Chore Planner Inputs Output Important behavior Product bridge"
+    "headings": "Recurring Chore Planner How the pairing actually works Worked example What the round-robin doesn't account for Treat the first version as a draft, not a rulebook Using anonymous labels instead of names Handling chores nobody wants to claim"
   },
   {
     "title": "Free Cleaning Schedule Generator | Daily, Weekly and Deep-Cleaning Plan",
@@ -1341,7 +221,7 @@
     "route": "/tools/cleaning-schedule-generator/",
     "cluster": "tools",
     "keywords": "cleaning schedule generator",
-    "headings": "Cleaning Schedule Generator Inputs Output Smart simplification Print and save"
+    "headings": "Cleaning Schedule Generator How the three layers are built Worked example Why only three rooms get a daily line Making the generated schedule realistic Adjusting the rotation pace after a trial run"
   },
   {
     "title": "Home Service Reminder Generator | Create Clear Maintenance and Renewal Reminders",
@@ -1349,7 +229,7 @@
     "route": "/tools/home-service-reminder-generator/",
     "cluster": "tools",
     "keywords": "home maintenance reminder generator",
-    "headings": "Home Service Reminder Generator Inputs Output Rule"
+    "headings": "Home Service Reminder Generator What it builds from four fields Worked example What \"lead time\" is actually for What the generator won't invent Making it useful to someone other than you Stacking several reminders for the same system"
   },
   {
     "title": "Household Annual Review Generator | Maintenance, Renewals, Records and Backups",
@@ -1357,7 +237,7 @@
     "route": "/tools/household-annual-review-generator/",
     "cluster": "tools",
     "keywords": "annual household review generator",
-    "headings": "Household Annual Review Generator Inputs Output sections Product integration"
+    "headings": "Household Annual Review Generator What the generator checks Worked example Why this is different from a task list What \"test a backup export\" actually means here Making the review count Picking a consistent date to run it What to do if the review turns up a lot at once"
   },
   {
     "title": "Free Move-In Checklist Generator | Utilities, Records, Inventory and Home Setup",
@@ -1365,7 +245,7 @@
     "route": "/tools/move-in-checklist-generator/",
     "cluster": "tools",
     "keywords": "move in checklist generator",
-    "headings": "Move-In Checklist Generator Inputs Output phases Legal boundary"
+    "headings": "Move-In Checklist Generator What it generates Worked example Why \"first day\" matters more than it seems What it deliberately leaves out Turning the checklist into lasting records Renting versus owning changes what matters most"
   },
   {
     "title": "Vacation Home Shutdown Checklist Generator | Build a Pre-Travel Household List",
@@ -1373,7 +253,7 @@
     "route": "/tools/vacation-shutdown-checklist-generator/",
     "cluster": "tools",
     "keywords": "vacation shutdown checklist generator",
-    "headings": "Vacation Home Shutdown Checklist Generator Inputs Output Safety rule"
+    "headings": "Vacation Home Shutdown Checklist Generator What it generates Worked example Why it says \"review the appropriate setting\" instead of giving you one What \"handoff details\" should actually contain Making it reusable Matching the list to how long you're actually gone"
   },
   {
     "title": "Free House Sitter Instructions Generator | Home, Pets, Contacts and Daily Tasks",
@@ -1381,7 +261,7 @@
     "route": "/tools/house-sitter-instruction-generator/",
     "cluster": "tools",
     "keywords": "house sitter instructions generator",
-    "headings": "House Sitter Instructions Generator Inputs Sensitive-data warning Output"
+    "headings": "House Sitter Instructions Generator What it generates Worked example What deliberately isn't in this packet Keeping it role-scoped Before you hand it over A short walkthrough beats a packet alone"
   },
   {
     "title": "Free Pet Sitter Instructions Generator | Routine, Supplies and Vet Contacts",
@@ -1389,7 +269,7 @@
     "route": "/tools/pet-sitter-instruction-generator/",
     "cluster": "tools",
     "keywords": "pet sitter instructions generator",
-    "headings": "Pet Sitter Instructions Generator Inputs Output Privacy"
+    "headings": "Pet Sitter Instructions Generator What it generates Worked example Why medication is handled the way it is Why \"None listed\" instead of a blank line Keeping it current Multiple pets on one sheet What belongs in \"temperament and household notes\""
   },
   {
     "title": "Warranty Checklist Generator | Capture the Right Purchase Information Before You Forget",
@@ -1397,7 +277,7 @@
     "route": "/tools/warranty-checklist-generator/",
     "cluster": "tools",
     "keywords": "warranty checklist",
-    "headings": "Warranty Checklist Generator Inputs Output No legal interpretation"
+    "headings": "Warranty Checklist Generator What it generates Worked example Why \"registration completed only if actually required\" is worded that way How this differs from the other warranty tools Doing this before the packaging is gone For contractor-installed items specifically"
   },
   {
     "title": "Receipt Retention Organizer | Sort Household Receipts by Purpose and Review Date",
@@ -1405,7 +285,7 @@
     "route": "/tools/receipt-retention-organizer/",
     "cluster": "tools",
     "keywords": "receipt retention organizer",
-    "headings": "Receipt Retention Organizer Inputs Output Safety/legal boundary No auto deletion"
+    "headings": "Receipt Retention Organizer How it works Worked example Real retention periods, where they actually exist What the organizer never does Keeping the reason attached to the receipt"
   },
   {
     "title": "Household Document Index Generator | Build a Digital Home Binder Structure",
@@ -1413,7 +293,7 @@
     "route": "/tools/household-document-index-generator/",
     "cluster": "tools",
     "keywords": "household document index template",
-    "headings": "Household Document Index Generator Inputs Output Security reminders"
+    "headings": "Household Document Index Generator What it generates Worked example What belongs in the index, and what doesn't Why designing the categories first matters Keeping the index itself current How many categories is too many"
   },
   {
     "title": "Free Emergency Contact Sheet Generator | Household, Utility and Care Contacts",
@@ -1421,7 +301,7 @@
     "route": "/tools/emergency-contact-sheet-generator/",
     "cluster": "tools",
     "keywords": "emergency contact sheet generator",
-    "headings": "Emergency Contact Sheet Generator Contact sections Privacy options Output Important disclaimer"
+    "headings": "Emergency Contact Sheet Generator What it generates Worked example Why it doesn't include a default emergency number What this sheet is, and isn't Keeping it usable Who else needs a copy Splitting a long list into a short and a full version"
   },
   {
     "title": "Appliance Maintenance Checklist Generator | Create Model-Aware Starter Tasks",
@@ -1429,7 +309,7 @@
     "route": "/tools/appliance-maintenance-checklist-generator/",
     "cluster": "tools",
     "keywords": "appliance maintenance checklist generator",
-    "headings": "Appliance Maintenance Checklist Generator Inputs Output style Product bridge"
+    "headings": "Appliance Maintenance Checklist Generator What it generates Worked example Why it won't tell you a specific interval Turning \"confirmed\" into \"recurring\" What to keep separate Using it across several appliances"
   },
   {
     "title": "Home Handoff Summary Generator | What Another Person Needs to Run the Household",
@@ -1437,7 +317,7 @@
     "route": "/tools/home-handoff-summary-generator/",
     "cluster": "tools",
     "keywords": "household handoff template generator",
-    "headings": "Home Handoff Summary Generator Input modes Sections Privacy controls Output"
+    "headings": "Home Handoff Summary Generator What it builds Worked example What it does and doesn't pull in automatically Why \"intentionally omitted\" is its own line Before you actually hand it over Writing tasks the recipient can actually act on Deciding who this handoff is actually for"
   },
   {
     "title": "Printable Home Maintenance Checklist | Editable Household Maintenance Planner",
@@ -1608,12 +488,12 @@
     "headings": "FamilyBoard is free What is included No payment details are collected The practical limit"
   },
   {
-    "title": "Privacy — How FamilyBoard Handles Household Data",
-    "description": "Understand what household data stays on your device, what public-site analytics may collect, and how backups work in the local-first FamilyBoard app.",
+    "title": "Privacy Policy — What FamilyBoard Collects and What Never Leaves Your Device",
+    "description": "What the public site measures, which third parties are involved, and why household records in the FamilyBoard app never reach a server. Written to be checkable.",
     "route": "/privacy/",
     "cluster": "support",
     "keywords": "",
-    "headings": "Privacy should be understandable before you trust the app Private app data Public website analytics Browser storage limitations Attachments No cloud sync today Contact"
+    "headings": "Privacy Policy Household records never reach a server What the public site measures Cookies and third-party vendors Affiliate links Attachments and offline caching No sync today Questions and corrections"
   },
   {
     "title": "Security and Local-First Architecture | FamilyBoard",
@@ -1709,7 +589,7 @@
     "route": "/terms/",
     "cluster": "support",
     "keywords": "FamilyBoard terms",
-    "headings": "Terms of Use Local data Acceptable use Availability"
+    "headings": "Terms of Use What FamilyBoard provides, and what it does not No account, and no service holding your data Your data is your responsibility Acceptable use Content, and what you may do with it Third-party links and recommendations Availability and changes Updates to these terms"
   },
   {
     "title": "Household Information Disclaimer | FamilyBoard",

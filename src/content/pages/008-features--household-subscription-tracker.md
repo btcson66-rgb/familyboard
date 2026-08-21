@@ -6,14 +6,17 @@ primaryIntent: "track household subscriptions and renewals"
 primaryKeyword: "household subscription tracker"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the Household Subscription Cost Calculator to see the annual total, then move the subscriptions worth monitoring into the private tracker."
 related:
   - "/guides/organize-household-subscriptions/"
   - "/guides/subscription-renewal-tracker/"
   - "/tools/household-subscription-cost-calculator/"
   - "/guides/annual-renewal-calendar/"
+faq: []
 contentVersion: 1
 ---
 # Subscriptions are household obligations, not just expenses
@@ -37,5 +40,3 @@ Annual renewals are easy to forget because they do not appear every month. A das
 ## Review subscriptions as a household, not only individually
 
 Some subscriptions serve one person; others are shared. A monthly or quarterly review can reveal duplicate streaming plans, old memberships or annual services nobody is using. The tracker creates the inventory needed for that conversation.
-
-**Contextual CTA:** Use the Household Subscription Cost Calculator to see the annual total, then move the subscriptions worth monitoring into the private tracker.

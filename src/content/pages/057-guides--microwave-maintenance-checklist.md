@@ -6,14 +6,17 @@ primaryIntent: "maintain microwave cleanliness and records"
 primaryKeyword: "microwave maintenance checklist"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "The microwave may need only a lightweight record: model, purchase date, warranty and one service-history timeline. Not every asset needs a complex maintenance plan."
 related:
   - "/guides/appliance-inventory/"
   - "/guides/how-to-track-product-warranties/"
   - "/guides/appliance-replacement-planning/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Microwave maintenance is simple, which makes it easy to ignore the record entirely
@@ -31,5 +34,3 @@ If the door, latch, seal area or controls appear damaged, stop treating the issu
 ## Record purchase and replacement dates
 
 A simple record helps the household see how long the unit has been in service and preserve the receipt if warranty coverage matters.
-
-**Contextual CTA:** The microwave may need only a lightweight record: model, purchase date, warranty and one service-history timeline. Not every asset needs a complex maintenance plan.

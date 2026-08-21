@@ -6,14 +6,17 @@ primaryIntent: "track household water-filter replacement"
 primaryKeyword: "water filter replacement tracker"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Label each water filter by location and system before creating reminders. Correct identification is more valuable than a large number of alerts."
 related:
   - "/guides/water-softener-maintenance-records/"
   - "/tools/home-service-reminder-generator/"
   - "/features/maintenance-tracker/"
   - "/guides/household-supplies-inventory/"
+faq: []
 contentVersion: 1
 ---
 # “Change the water filter” is not specific enough for a modern household
@@ -35,5 +38,3 @@ Record the replacement date and, if useful, a brief note about condition or supp
 ## Keep purchase links secondary
 
 The product may later support affiliate recommendations, but maintenance accuracy should never depend on a commercial link.
-
-**Contextual CTA:** Label each water filter by location and system before creating reminders. Correct identification is more valuable than a large number of alerts.

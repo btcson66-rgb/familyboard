@@ -6,14 +6,17 @@ primaryIntent: "build a complete list of subscriptions used by a household"
 primaryKeyword: "organize household subscriptions"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Find the top ten recurring services first. The goal is visibility, not perfect forensic accounting."
 related:
   - "/tools/household-subscription-cost-calculator/"
   - "/guides/subscription-renewal-tracker/"
   - "/guides/annual-renewal-calendar/"
   - "/features/household-subscription-tracker/"
+faq: []
 contentVersion: 1
 ---
 # A household subscription list should answer who owns it, what it costs and what happens next
@@ -22,7 +25,7 @@ Streaming services are only one category. Internet/security services, membership
 
 ## Find subscriptions from several sources
 
-Review bank/card statements, app-store subscriptions, email renewal notices and household memory. Do not connect financial accounts to `FamilyBoard` in v1; manually create the list.
+Review bank/card statements, app-store subscriptions, email renewal notices and household memory. FamilyBoard does not connect to financial accounts — build the list manually from what you find in those sources.
 
 ## Normalize the annual cost
 
@@ -35,5 +38,3 @@ A management URL or simple note such as “cancel through App Store account” m
 ## Review ownership
 
 If a subscription depends on one person's account, record that owner so the household knows who can manage it.
-
-**Contextual CTA:** Find the top ten recurring services first. The goal is visibility, not perfect forensic accounting.

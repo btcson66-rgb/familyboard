@@ -6,14 +6,17 @@ primaryIntent: "decide which home maintenance tasks to do first"
 primaryKeyword: "home maintenance priorities"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the dashboard's priority field for decisions, not decoration. If a task is marked high priority, write one sentence explaining why."
 related:
   - "/guides/preventive-home-maintenance/"
   - "/guides/home-maintenance-budget/"
   - "/guides/home-maintenance-delegation/"
   - "/features/home-dashboard/"
+faq: []
 contentVersion: 1
 ---
 # Not every maintenance task deserves the same urgency
@@ -35,5 +38,3 @@ Some jobs remain the same if postponed. Others allow moisture, wear or corrosion
 ## Separate “needs action” from “needs information”
 
 Sometimes the next step is not repair. It is finding the manual, getting an estimate, asking the landlord, identifying the shutoff or scheduling an inspection. Record that next action instead of leaving a vague task called “fix house.”
-
-**Contextual CTA:** Use the dashboard's priority field for decisions, not decoration. If a task is marked high priority, write one sentence explaining why.

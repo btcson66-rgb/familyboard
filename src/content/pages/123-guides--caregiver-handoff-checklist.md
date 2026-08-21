@@ -6,14 +6,17 @@ primaryIntent: "hand off household/care responsibilities temporarily"
 primaryKeyword: "caregiver handoff checklist"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Generate a temporary handoff packet and review it from the caregiver's perspective: what would they have to call you to ask?"
 related:
   - "/guides/household-handoff/"
   - "/guides/pet-sitter-information/"
   - "/guides/house-sitter-information/"
   - "/tools/home-handoff-summary-generator/"
+faq: []
 contentVersion: 1
 ---
 # A caregiver handoff should describe the current routine, not the entire family history
@@ -35,5 +38,3 @@ Primary and backup family contacts, relevant professional contacts and emergency
 ## Limit access
 
 A temporary caregiver should not automatically receive the household's entire private database. Build a handoff view that contains only necessary information.
-
-**Contextual CTA:** Generate a temporary handoff packet and review it from the caregiver's perspective: what would they have to call you to ask?

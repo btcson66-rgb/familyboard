@@ -6,14 +6,17 @@ primaryIntent: "organize heat-pump maintenance history"
 primaryKeyword: "heat pump maintenance records"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Label the system clearly—especially in multi-zone homes—so each service event and maintenance task attaches to the correct component."
 related:
   - "/guides/air-conditioner-maintenance-checklist/"
   - "/guides/hvac-filter-tracker/"
   - "/guides/home-maintenance-calendar/"
   - "/features/maintenance-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Heat pumps deserve one continuous record across heating and cooling seasons
@@ -35,5 +38,3 @@ If the household has multiple indoor units, zones or an outdoor unit, clear labe
 ## Use history to spot recurring issues
 
 Repeated service notes across seasons can provide useful context for a qualified technician and for replacement planning.
-
-**Contextual CTA:** Label the system clearly—especially in multi-zone homes—so each service event and maintenance task attaches to the correct component.

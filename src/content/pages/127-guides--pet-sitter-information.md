@@ -6,14 +6,17 @@ primaryIntent: "create pet-sitter instructions"
 primaryKeyword: "pet sitter information sheet"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Generate the sitter sheet, then give it to someone unfamiliar with the routine and ask what is still unclear."
 related:
   - "/tools/pet-sitter-instruction-generator/"
   - "/checklists/printable-pet-sitter-checklist/"
   - "/guides/organize-pet-records/"
   - "/guides/travel-household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Pet-sitter instructions should remove guesswork from normal routines
@@ -35,5 +38,3 @@ Primary owner, backup household contact, veterinarian and emergency clinic infor
 ## Review before every trip
 
 Pet routines can change. Add a last-reviewed date and do not reuse an old sheet without checking it.
-
-**Contextual CTA:** Generate the sitter sheet, then give it to someone unfamiliar with the routine and ask what is still unclear.

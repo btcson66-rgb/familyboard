@@ -6,14 +6,17 @@ primaryIntent: "organize coffee-maker cleaning and descaling"
 primaryKeyword: "coffee maker maintenance guide"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add only the maintenance events you would want to remember six months later. Routine washing does not need to become bureaucracy."
 related:
   - "/guides/household-supplies-inventory/"
   - "/tools/appliance-maintenance-checklist-generator/"
   - "/features/maintenance-tracker/"
   - "/guides/appliance-inventory/"
+faq: []
 contentVersion: 1
 ---
 # Coffee makers are maintenance-heavy because water and consumables vary by machine
@@ -31,5 +34,3 @@ You do not need a database entry every time a removable part is rinsed. Use hist
 ## Preserve error or service notes
 
 For complex machines, recurring error messages or replaced parts can make a repair history useful.
-
-**Contextual CTA:** Add only the maintenance events you would want to remember six months later. Routine washing does not need to become bureaucracy.

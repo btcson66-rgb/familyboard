@@ -6,14 +6,17 @@ primaryIntent: "record where household utility controls are and who can operate 
 primaryKeyword: "utility shutoff information sheet"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Treat the record as a verified reference, not a DIY emergency manual."
 related:
   - "/guides/emergency-information-sheet/"
   - "/guides/organize-utility-account-information/"
   - "/features/emergency-information-organizer/"
   - "/guides/household-handoff/"
+faq: []
 contentVersion: 1
 ---
 # Knowing where a household control is located can be useful; knowing when to use it is a separate question
@@ -35,5 +38,3 @@ Do not expose building access or utility-control locations on public displays.
 ## Review after renovations or moving
 
 Changes to plumbing, electrical panels or building systems can make old notes incorrect.
-
-**Contextual CTA:** Treat the record as a verified reference, not a DIY emergency manual.

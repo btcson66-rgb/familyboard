@@ -6,14 +6,17 @@ primaryIntent: "organize receipts from renovations and improvements"
 primaryKeyword: "organize home improvement receipts"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Organize receipts around the renovation project first; the project becomes the index that makes the files understandable years later."
 related:
   - "/guides/renovation-records/"
   - "/guides/purchase-receipt-organizer/"
   - "/guides/home-purchase-records/"
   - "/features/household-documents-organizer/"
+faq: []
 contentVersion: 1
 ---
 # Project context makes a home-improvement receipt worth keeping
@@ -35,5 +38,3 @@ Some improvement records may matter for tax or property purposes, but the releva
 ## Distinguish estimate, order and final receipt
 
 Online purchases can produce multiple documents. Label them accurately so the household knows which proves final cost.
-
-**Contextual CTA:** Organize receipts around the renovation project first; the project becomes the index that makes the files understandable years later.

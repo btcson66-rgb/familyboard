@@ -6,14 +6,17 @@ primaryIntent: "track whether household products were registered"
 primaryKeyword: "product registration tracker"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Add a registration status field to major purchases so nobody has to search old emails to remember whether registration was completed."
 related:
   - "/guides/how-to-track-product-warranties/"
   - "/guides/appliance-inventory/"
   - "/guides/household-account-list/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Product registration is easy to forget because it happens once
@@ -35,5 +38,3 @@ Registration may involve marketing consent or optional data. The household can r
 ## Archive when the product leaves the home
 
 A registration record for a disposed device should remain in the asset history but no longer appear as an active household item.
-
-**Contextual CTA:** Add a registration status field to major purchases so nobody has to search old emails to remember whether registration was completed.

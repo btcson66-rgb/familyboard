@@ -6,14 +6,17 @@ primaryIntent: "use a family organizer without signup"
 primaryKeyword: "family organizer without account"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Open the app without creating an account, add one household record and export a backup. That three-step experience should communicate the product philosophy immediately."
 related:
   - "/features/local-first-home-organizer/"
   - "/features/private-family-organizer/"
   - "/app/"
   - "/privacy/"
+faq: []
 contentVersion: 1
 ---
 # Sometimes the best onboarding form is no form at all
@@ -37,5 +40,3 @@ Because there is no server account, the browser is not an archival copy. Export 
 ## The product can earn trust before asking for anything
 
 A user who has already organized useful household records can judge the product by its reliability, portability and day-to-day usefulness rather than by a signup promise.
-
-**Contextual CTA:** Open the app without creating an account, add one household record and export a backup. That three-step experience should communicate the product philosophy immediately.

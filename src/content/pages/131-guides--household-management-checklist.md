@@ -6,14 +6,17 @@ primaryIntent: "understand the recurring systems needed to run a household"
 primaryKeyword: "household management checklist"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use the checklist to identify missing systems, then add only the categories that solve a real household problem."
 related:
   - "/tools/household-annual-review-generator/"
   - "/guides/recurring-household-tasks/"
   - "/guides/divide-household-responsibilities/"
   - "/features/home-dashboard/"
+faq: []
 contentVersion: 1
 ---
 # Household management is easier when responsibilities are visible
@@ -39,5 +42,3 @@ Some responsibilities need a dated recurring task. Others only need a reference 
 ## Review the system, not only the tasks
 
 Once a month or quarter, ask whether important responsibilities still have a clear owner and whether the records remain findable.
-
-**Contextual CTA:** Use the checklist to identify missing systems, then add only the categories that solve a real household problem.

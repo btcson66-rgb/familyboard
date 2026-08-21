@@ -6,14 +6,17 @@ primaryIntent: "catalog household computers and electronics"
 primaryKeyword: "household electronics inventory"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Start with the five electronics you would need to identify quickly after loss, repair or warranty service."
 related:
   - "/guides/electronics-inventory/"
   - "/guides/serial-number-tracker/"
   - "/guides/purchase-receipt-organizer/"
   - "/features/home-inventory-tracker/"
+faq: []
 contentVersion: 1
 ---
 # Household electronics deserve better records than a drawer of boxes
@@ -35,5 +38,3 @@ Battery replacement, screen repair or warranty service can be recorded like any 
 ## Add backup status carefully
 
 A simple note such as “backed up to external drive” can be useful, but avoid storing encryption keys or sensitive recovery codes in ordinary household notes.
-
-**Contextual CTA:** Start with the five electronics you would need to identify quickly after loss, repair or warranty service.

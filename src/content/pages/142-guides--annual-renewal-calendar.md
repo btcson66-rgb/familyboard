@@ -6,14 +6,17 @@ primaryIntent: "create one calendar of annual household renewals"
 primaryKeyword: "annual renewal calendar"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Use your email search and last year's calendar to find annual obligations, then create one consolidated timeline."
 related:
   - "/tools/household-annual-review-generator/"
   - "/guides/subscription-renewal-tracker/"
   - "/guides/recurring-bills-tracker/"
   - "/features/household-calendar/"
+faq: []
 contentVersion: 1
 ---
 # Annual obligations are the easiest recurring tasks to forget
@@ -28,12 +31,10 @@ Insurance, memberships, vehicle/property-related renewals where applicable, soft
 
 The date you want to *decide* may be weeks before the actual renewal. Store both where useful.
 
-## Avoid country-specific automatic rules in v1
+## Enter real dates from your own documents
 
-Legal registration and inspection deadlines vary. Let users enter the real dates from their official documents.
+Legal registration and inspection deadlines vary by location and change over time, so FamilyBoard doesn't calculate them automatically. Enter the actual dates from your official documents rather than relying on a generic assumed schedule.
 
 ## Review once per year
 
 An annual calendar itself needs maintenance. Remove cancelled services and add new obligations.
-
-**Contextual CTA:** Use your email search and last year's calendar to find annual obligations, then create one consolidated timeline.

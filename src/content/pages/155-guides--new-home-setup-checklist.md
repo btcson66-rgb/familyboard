@@ -6,14 +6,17 @@ primaryIntent: "organize the first days and weeks in a new home"
 primaryKeyword: "new home setup checklist"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "Treat the new-home setup as the foundation of future records. Ten accurate entries today can save hours of reconstruction later."
 related:
   - "/tools/move-in-checklist-generator/"
   - "/guides/move-in-maintenance-checklist/"
   - "/guides/first-time-homeowner-maintenance-guide/"
   - "/features/home-dashboard/"
+faq: []
 contentVersion: 1
 ---
 # The first weeks in a home are when useful information is easiest to capture
@@ -39,5 +42,3 @@ Keep household contacts and verified basic property information in a quick-refer
 ## Back up after setup
 
 Once the household database contains meaningful information, create the first export.
-
-**Contextual CTA:** Treat the new-home setup as the foundation of future records. Ten accurate entries today can save hours of reconstruction later.

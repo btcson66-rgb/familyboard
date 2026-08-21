@@ -7,13 +7,16 @@ primaryKeyword: "printable repair log"
 cluster: "printables"
 pageType: "printable"
 indexable: true
+depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
+nextStep: "For equipment repaired more than once, use a digital asset timeline so all service events stay connected."
 related:
   - "/guides/repair-history/"
   - "/guides/home-repair-history/"
   - "/tools/home-repair-cost-log/"
   - "/features/home-record-keeper/"
+faq: []
 contentVersion: 1
 ---
 # Printable Repair Log
@@ -34,5 +37,3 @@ contentVersion: 1
 ## Record symptom before diagnosis
 
 Write what you observed first, then the provider's diagnosis. This makes recurring issues easier to compare.
-
-**CTA:** For equipment repaired more than once, use a digital asset timeline so all service events stay connected.
