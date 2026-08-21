@@ -241,110 +241,21 @@ const extraRecords = [
 
 const all = [...records, ...supportRecords, ...extraRecords];
 
-const publicOverrides = {
-  "/pricing/": {
-    title: "FamilyBoard Is Free — No Account or Paid Plan Required",
-    description:
-      "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
-    body: `# FamilyBoard is free
 
-The public guides, browser tools, printables and local-first household app are available without an account, checkout or subscription.
-
-## What is included
-
-- The local household dashboard and member list
-- Asset, maintenance, task, warranty and subscription records
-- Emergency contacts, document references, handoff and family display views
-- Versioned JSON backups and optional encrypted exports
-- Offline-capable browser access after the first successful load
-- Public guides, calculators, generators and printables
-
-## No payment details are collected
-
-FamilyBoard does not currently sell software or collect payment information. Product recommendations on selected public pages may use clearly labeled affiliate links, but they do not change access to the free app.
-
-## The practical limit
-
-Data stays in the current browser profile unless you export and move a backup yourself. There is no account or cross-device cloud storage. Read the [privacy explanation](/privacy/) and [security limits](/security/) before storing important records.`,
-  },
-  "/roadmap/": {
-    title: "FamilyBoard Free Product Roadmap",
-    description:
-      "See the current improvement roadmap for the free FamilyBoard local-first household organizer, tools and content library.",
-    body: `# A roadmap for the free product
-
-FamilyBoard is concentrating on reliability, useful household workflows and discoverable public resources before considering any different business model.
-
-## Current priorities
-
-- Validate backup and restore behavior across browser updates
-- Improve maintenance history, handoff profiles and shared display clarity
-- Expand accessibility, keyboard and offline testing
-- Add Traditional Chinese navigation, tools and genuinely localized guides
-- Use Search Console and privacy-safe analytics to improve pages people actually find useful
-
-## How priorities are chosen
-
-Reliability and user evidence come before feature volume. Search impressions, tool completion, app opens, support reports and test failures will guide the next work. The roadmap is directional and does not promise release dates.
-
-See the [changelog](/changelog/) for changes that are already shipped.`,
-  },
-  "/features/free-home-management-app/": {
-    title: "Free Home Management App — Useful Without an Account | FamilyBoard",
-    description:
-      "Use a free local-first home management app for assets, maintenance, household tasks, warranties, documents and handoffs.",
-    body: `# A free home management app should be useful from the first day
-
-FamilyBoard does not hide core household organization behind an account or checkout. The current product is a practical browser app supported by a public library of guides, tools and printables.
-
-## What the free app does
-
-Track household members, assets, maintenance completions, tasks, events, warranties, subscriptions, contacts and document locations. Build a privacy-filtered handoff, use a low-sensitivity family display and export portable backups.
-
-## Local-first has a clear boundary
-
-Core records stay in IndexedDB in the current browser profile. There is no account or cloud copy. Browser clearing, device loss or profile damage can remove local data, so important households need regular exported backups.
-
-## Free does not mean disposable
-
-The app uses versioned database migrations, validated backup packages, automated tests and an explicit privacy model. [Open the free app](/app/) and start with only the records that solve a real household problem.`,
-  },
-  "/contact/": {
-    title: "Contact FamilyBoard",
-    description:
-      "Report a FamilyBoard bug, accessibility issue, content correction, privacy concern or security vulnerability through a working support route.",
-    body: `# Contact FamilyBoard
-
-FamilyBoard currently uses its public GitHub repository for product and content support. Do not include household records, passwords, backup files, private contact details or other sensitive information in a public report.
-
-## Product, accessibility and content reports
-
-[Open a public FamilyBoard issue](https://github.com/btcson66-rgb/familyboard/issues/new) and include:
-
-- the affected page URL or app section;
-- what you expected and what happened;
-- browser and device type when relevant;
-- for a content correction, a reliable supporting source.
-
-GitHub requires an account to submit an issue. Existing reports can be read without an account.
-
-## Security reports
-
-Do not publish a suspected vulnerability or sensitive reproduction data in a normal issue. [Send a private vulnerability report](https://github.com/btcson66-rgb/familyboard/security/advisories/new) through GitHub Security Advisories.
-
-## Response expectations
-
-FamilyBoard does not promise a fixed response time. Confirm urgent household, safety or emergency questions with the relevant official service or qualified professional rather than waiting for website support.`,
-  },
-};
 
 for (const record of all) {
   record.faq ||= [];
   record.nextStep ||= "";
   record.redirectTo ||= "";
   record.depthVerified ||= false;
-  const override = publicOverrides[record.route];
-  if (override) Object.assign(record, override);
+  // There used to be a publicOverrides map here that replaced title, description
+  // and body for /pricing/, /roadmap/, /contact/ and
+  // /features/free-home-management-app/ after the master had been parsed. It was
+  // invisible: the master documents itself as the single source of truth, so a
+  // rewrite of one of those four pages was silently discarded, and because the
+  // override only replaced three fields a page could end up carrying a master FAQ
+  // and Depth marker attached to override body text. That content now lives in the
+  // master where it can be seen and edited. Do not reintroduce a second body source.
   record.related = record.related.map((route) =>
     route === "/pricing/" ? "/features/free-home-management-app/" : route,
   );
@@ -452,7 +363,7 @@ const sitemapPages = [
 fs.writeFileSync(sitemapOutput, `${JSON.stringify(sitemapPages, null, 2)}\n`);
 
 const search = all
-  .filter((record) => record.indexable)
+  .filter((record) => record.indexable && !record.redirectTo)
   .map((record) => ({
     title: record.title,
     description: record.description,

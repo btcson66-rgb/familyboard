@@ -81,6 +81,7 @@ for (const contentRoot of contentRoots) {
       primaryKeyword: frontmatterValue(raw, "primaryKeyword"),
       lastReviewed: frontmatterValue(raw, "lastReviewedAt"),
       indexable: frontmatterValue(raw, "indexable") !== "false",
+      redirectTo: frontmatterValue(raw, "redirectTo"),
       alternateRoute: frontmatterValue(raw, "alternateRoute"),
       locale: frontmatterValue(raw, "locale") || "en",
       wordCount: wordCount(body),
@@ -101,6 +102,11 @@ const placeholders = [];
 const sourceWarnings = [];
 const noContextualLink = [];
 const records = [];
+const redirectRoutes = new Set(
+  [...contentByRoute]
+    .filter(([, metadata]) => metadata.redirectTo)
+    .map(([route]) => route),
+);
 
 const routeFor = (file) => {
   const relative = path.relative(root, file).replaceAll("\\", "/");
@@ -119,6 +125,21 @@ const targetExists = (target) => {
         );
 };
 
+for (const [route, metadata] of contentByRoute) {
+  if (!metadata.redirectTo) continue;
+  const target = normalizeRoute(metadata.redirectTo);
+  const targetMetadata = contentByRoute.get(target);
+  if (target === route) errors.push(`${route}: redirect stub targets itself`);
+  if (!targetMetadata)
+    errors.push(`${route}: redirect target route does not exist: ${target}`);
+  else if (targetMetadata.redirectTo)
+    errors.push(
+      `${route}: redirect target is another stub: ${target} -> ${targetMetadata.redirectTo}`,
+    );
+  if (!targetExists(target))
+    errors.push(`${route}: redirect target was not built: ${target}`);
+}
+
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, "utf8");
   const route = normalizeRoute(routeFor(file));
@@ -131,6 +152,31 @@ for (const file of htmlFiles) {
   const indexable = !/name="robots"\s+content="noindex/i.test(html);
   const status = route === "/404/" ? 404 : 200;
   const meta = contentByRoute.get(route);
+  if (meta?.redirectTo) {
+    const expectedCanonical = new URL(
+      meta.redirectTo,
+      "https://familyboard.win",
+    ).toString();
+    const robots = grab(/<meta\s+name="robots"\s+content="([^"]*)"/i);
+    const refresh = grab(
+      /<meta\s+http-equiv="refresh"\s+content="([^"]*)"/i,
+    );
+    if (indexable) errors.push(`${route}: redirect stub must be noindex`);
+    if (robots !== "noindex,follow")
+      errors.push(`${route}: redirect stub has wrong robots content: ${robots}`);
+    if (canonical !== expectedCanonical)
+      errors.push(
+        `${route}: redirect stub canonical ${canonical} does not match ${expectedCanonical}`,
+      );
+    if (refresh !== `0; url=${meta.redirectTo}`)
+      errors.push(`${route}: redirect stub has wrong refresh content: ${refresh}`);
+    if (!html.includes(`href="${meta.redirectTo}"`))
+      errors.push(`${route}: redirect stub has no visible target link`);
+    if (/googletagmanager\.com\/gtag\/js|\bgtag\s*\(/i.test(html))
+      errors.push(`${route}: redirect stub includes GA4`);
+    if (/name="google-adsense-account"/i.test(html))
+      errors.push(`${route}: redirect stub includes AdSense metadata`);
+  }
   const localeNeutralRoute = route.replace(/^\/zh-tw(?=\/)/, "");
   const routeType = localeNeutralRoute.startsWith("/tools/")
     ? "tool"
@@ -172,6 +218,10 @@ for (const file of htmlFiles) {
     const target = match[1];
     if (/\.[a-z0-9]+\/?$/i.test(target)) continue;
     if (!targetExists(target)) brokenLinks.push(`${route} -> ${target}`);
+    if (indexable && redirectRoutes.has(normalizeRoute(target)))
+      errors.push(
+        `${route}: indexable page links to redirect stub ${normalizeRoute(target)}`,
+      );
   }
   const article = html.match(/<article[\s\S]*?<\/article>/i)?.[0] || "";
   if (

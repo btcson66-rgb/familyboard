@@ -6,37 +6,51 @@ primaryIntent: "hand over household responsibilities to spouse, family member or
 primaryKeyword: "household handoff checklist"
 cluster: "product"
 pageType: "content"
-indexable: false
-depthVerified: false
+indexable: true
+depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
-nextStep: "Start with the free Household Handoff Summary Generator and see which missing pieces are still trapped in one person's memory."
+nextStep: "Create a sharing profile for the next time someone else needs to know what's going on in your home, and check the generated sheet before printing or sharing it."
 related:
-  - "/guides/household-handoff/"
-  - "/guides/what-spouse-needs-to-know/"
-  - "/tools/home-handoff-summary-generator/"
   - "/features/emergency-information-organizer/"
-faq: []
+  - "/features/family-task-manager/"
+  - "/features/maintenance-tracker/"
+  - "/features/private-family-organizer/"
+faq:
+  - question: "What's included in the handoff if I haven't set up a sharing profile?"
+    answer: "The default view includes open tasks, all maintenance tasks, and non-sensitive contacts, but leaves out document locations. It's a conservative built-in default, not an unfiltered dump of every record."
+  - question: "Can a sensitive contact ever appear on the handoff sheet?"
+    answer: "No. Contacts marked sensitive are filtered out of every handoff profile, regardless of the \"include contacts\" toggle. This is a hard rule in how the sheet is generated, not a per-profile setting you could accidentally leave open."
+  - question: "Does the handoff sheet show subscription costs or serial numbers?"
+    answer: "No. The handoff's closing section explicitly states these are excluded: sensitive contacts, serial numbers, document details, subscription costs, private notes and backup contents. The sheet is built to show operational summaries, not financial or identifying detail."
+  - question: "Can I have more than one handoff profile for different situations?"
+    answer: "Yes. You can create multiple named profiles — for example, one for a short weekend trip and a broader one for an extended absence — each with its own include/exclude toggles and purpose note, and view whichever one fits the current situation."
 contentVersion: 1
 ---
-# If the household organizer vanished for a week, what would everyone else miss?
+# A printable briefing built from your own records, not a fresh document
 
-In many homes, one person becomes the unofficial operating system. They know when the car needs service, which bill is unusual, who to call about the heater, where the pet records are, which subscription renews annually and what the technician said last time.
+In many homes, one person becomes the unofficial operating system — they know which bill looks wrong, who to call about the heater, and what the technician said last time. FamilyBoard's Handoff tab turns that knowledge into a document by pulling directly from records you've already entered, filtered by an explicit set of privacy rules rather than a blanket export.
 
-That knowledge is valuable, but it is also fragile if it only exists in one person's memory.
+## The default view, with no profile created
 
-## Handoff mode turns records into a briefing
+If you haven't created a sharing profile, the handoff sheet uses a built-in default: it includes open tasks and all maintenance tasks and non-sensitive contacts, but leaves out document locations. That's a deliberately conservative starting point — useful information is shown, but nothing marked private and nothing document-related leaks in by default.
 
-Instead of asking another family member to learn the entire app, `FamilyBoard` can generate a focused view of what matters now: tasks due soon, recurring obligations, important contacts, active maintenance issues, upcoming renewals and selected emergency information.
+## Sharing profiles let you choose what's included
 
-## Temporary absence and emergency absence are different
+You can create a named profile — "Weekend sitter," "Emergency contact for Mom" — with a purpose note and four yes/no toggles: include open tasks, include maintenance, include non-sensitive contacts, include document locations. Each toggle maps directly to a filter: turning off "include contacts," for instance, empties the contacts section of the sheet entirely for that profile. Multiple profiles can exist for different situations — a short weekend trip briefing looks different from a longer absence one — though only one handoff sheet renders at a time, built from whichever profile you're viewing.
 
-A planned travel handoff might include mail, pets, trash day, service appointments and expected deliveries. An emergency handoff may need broader operational information. The user should be able to choose what is included rather than expose the entire household database.
+## What's always excluded, no matter what
 
-## Make responsibility visible without making it personal
+Regardless of profile settings, the handoff sheet's closing section lists exactly what's intentionally left out: "Sensitive contacts, serial numbers, document details, subscription costs, private notes and backup contents." That's a hard boundary baked into how the sheet is built, not a toggle you can turn on — even with every include-flag set to yes, a contact marked sensitive never appears, and no field like serial number or subscription cost is ever pulled into the sheet.
 
-The handoff should answer “what needs to happen?” rather than assign blame for how much each person normally does. It is an operational continuity tool, not a relationship scorecard.
+## What the sheet actually shows
 
-## A good household system should survive the person who built it
+When maintenance is included, it lists up to ten maintenance tasks with their linked asset or home area and due status — not full history, just the operational summary someone would need to know what's coming up. Tasks show title, due status and owner. Contacts show name, category and phone number only — not email or notes. If documents are included, entries show name and location reference, not category or review date.
 
-That is one of the clearest differences between a collection of private notes and a real household management system.
+## Print, don't just view
+
+The tab includes a "Print handoff" button that calls the browser's native print function on the rendered sheet, meant for households that want a physical copy — on the fridge, in a go-bag, or with a house sitter who won't be logging into the app at all.
+
+## A worked example
+
+Before a two-week trip, a household creates a profile named "House sitter — August," purpose "cat care and mail," with tasks and maintenance included, contacts included, documents left off. The generated sheet shows: any open task due during the trip window, upcoming maintenance like a scheduled HVAC filter check, the non-sensitive contacts (the vet, the trusted neighbor) with their phone numbers, and nothing else — no serial numbers, no subscription costs, no sensitive family contacts. They print it and leave it on the counter.

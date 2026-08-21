@@ -11,6 +11,7 @@ depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Create an “Admin” tag and move every vague household paperwork task into one queue for the next session."
+redirectTo: "/guides/household-weekly-reset/"
 related:
   - "/guides/household-weekly-reset/"
   - "/guides/annual-renewal-calendar/"
@@ -19,22 +20,3 @@ related:
 faq: []
 contentVersion: 1
 ---
-# Household admin is easier when it has a container
-
-Calls to a service provider, insurance renewal, document filing and product registration are small individually but expensive in attention. Batching them can reduce context switching.
-
-## Keep an admin queue
-
-Tag tasks that require a phone call, form, research, purchase or document update. During the admin session, work through the queue rather than choosing tasks from scratch.
-
-## Prepare context before the call
-
-Link the task to the relevant appliance, account or service record. Model, prior service and account owner information should be available before contacting support.
-
-## End by recording outcomes
-
-If a service is scheduled or a renewal changes, update the original record immediately.
-
-## Keep the session optional
-
-Some households need a weekly admin block; others need one monthly. The system should fit the workload.

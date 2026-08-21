@@ -6,35 +6,51 @@ primaryIntent: "organize household documents digitally"
 primaryKeyword: "household documents organizer"
 cluster: "product"
 pageType: "content"
-indexable: false
-depthVerified: false
+indexable: true
+depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
-nextStep: "Build a Digital Home Binder index first. Once the categories make sense, add records and local file references only for the documents that are genuinely worth keeping close to the household record."
+nextStep: "Add a document reference for the warranty or manual you'd have the hardest time finding again, and link it to the asset it belongs to."
 related:
-  - "/guides/digital-home-binder/"
-  - "/guides/important-household-documents/"
-  - "/guides/organize-appliance-manuals/"
   - "/features/home-inventory-tracker/"
-faq: []
+  - "/features/warranty-tracker/"
+  - "/features/private-family-organizer/"
+  - "/features/free-home-management-app/"
+faq:
+  - question: "Can I upload the actual PDF or photo to a document record?"
+    answer: "No. The Documents tab stores a name, category, a text location reference, an asset link and a review date — not the file itself. The location reference field is where you note exactly where the real file lives, so you can find it again."
+  - question: "What's a good location reference to write if my documents are just scattered in email?"
+    answer: "Something specific enough to search for later: the sender, subject line and rough date (\"email from LG Support, subject 'Order Confirmation,' March 2026\") works better than \"in email,\" since you can search Gmail or Outlook directly for that phrase."
+  - question: "What happens on the review date — does FamilyBoard remind me?"
+    answer: "The review date is stored as a field on the document record, but the Documents tab doesn't currently show a \"review due\" counter or alert. It's most useful paired with a task you create with a matching due date, which does show up on the dashboard."
+  - question: "Is my document backup safe if my browser data gets cleared?"
+    answer: "Only if you've exported a JSON backup from Settings beforehand — that backup includes your document references and notes. Clearing browser data without a recent backup means losing the index, though any actual files you referenced (stored elsewhere) are unaffected."
 contentVersion: 1
 ---
-# Organize documents by what they help you do
+# A document index, not a file cabinet
 
-Traditional folders are good at storing files but not always good at answering household questions. A PDF named `IMG_4281.pdf` may be a receipt, but months later you may not remember what it was for. A manual may be searchable in a drive, yet still disconnected from the appliance model, service history and warranty date.
+A PDF named `IMG_4281.pdf` might be a receipt, but six months later nobody remembers what it was for. `FamilyBoard`'s Documents tab doesn't try to solve that by storing the file — it stores a short, structured pointer to where the real file already lives, linked to the household thing it's actually about.
 
-`FamilyBoard` approaches household documents as part of a larger record.
+## What a document record stores — and doesn't
 
-## Attach context, not just files
+The quick-add form asks for a record name, a category (defaulting to "Home record"), a location reference (required — where the original actually is), a related asset and a review date. That location reference is a plain-text field: "PDF in Downloads, filename dishwasher-manual.pdf," "printed folder in filing cabinet, tab 3," "email starred, subject 'Insurance renewal.'" There is no file-upload button on this form. The screen itself carries a permanent notice explaining why: "This v1 stores document references, not uploaded document files. Keep durable originals in storage you control." That's an intentional boundary, not a missing feature waiting to be discovered — FamilyBoard is an index of where things are, not a document vault.
 
-For an appliance, the useful context can include purchase date, model, serial number, room, warranty end date, receipt and manual. For a home service, it may include the provider, work performed, cost and related invoice. This makes documents easier to find because you can reach them through the thing or responsibility they describe.
+## Linking a document to an asset is what makes it findable later
 
-## Use categories that match household decisions
+A document with no asset link is just a name and a location string, no more useful than a well-labeled folder. Link it to an asset, though, and it shows up alongside that asset's other records — the same connective pattern the Maintenance and Warranty tabs use. A "Water heater installation manual" document linked to the Water Heater asset becomes something you'd actually find again when a technician asks which model you have.
 
-Helpful categories include purchase records, warranties, manuals, service invoices, insurance references, utility information, emergency documents and property records. Avoid creating fifty categories before you need them. A small, understandable taxonomy is easier for the whole household to maintain.
+## The review date field
 
-## Local storage has limits
+Documents like insurance policies, service contracts or lease agreements benefit from a periodic look, not a one-time filing. The review date field exists for exactly that — set it to when the document should next be checked (a renewal date, an annual review), and it becomes a normal date field you can track the same way you'd track any other household deadline, even though the Documents tab itself doesn't currently surface "review due soon" as a dashboard counter the way maintenance does.
 
-A browser-based local-first app can keep document metadata and selected local attachments, but users should be told clearly that browser storage is not the same as an archival backup. Important files should also exist in a durable backup location the user controls.
+## A worked example
 
-That limitation is part of the product's privacy-first philosophy: the app should not quietly turn itself into an unannounced cloud document vault.
+After a plumbing repair, a household adds a document: name "Water heater repair invoice — March 2026," category "Service invoice," location reference "PDF attached to email from ABC Plumbing, starred," related asset "Water Heater," review date left blank since it's a one-time record. Separately, they add "Water heater manual" with category "Manuals," location reference "Downloads folder, filename whirlpool-wh-manual.pdf," same asset link. Now, opening the Water Heater asset gives context that neither a folder of PDFs nor a manufacturer's app would: the maintenance history, the warranty window and now two document references, all pointing at the same physical unit.
+
+## Categories worth using
+
+A small taxonomy holds up better than a large one: purchase records, warranties, manuals, service invoices, insurance references, utility information, emergency documents and property records cover most households without needing fifty categories nobody remembers the difference between.
+
+## The honest limit
+
+Because documents are references and not uploads, the durable copy of anything irreplaceable — a deed, a passport scan, an insurance policy — needs to live somewhere outside this browser too: cloud storage you control, a physical fireproof folder, or both. FamilyBoard's JSON backup (from Settings) preserves your document references and notes, but not files those references point to.

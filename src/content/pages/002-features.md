@@ -7,7 +7,7 @@ primaryKeyword: "household management app features"
 cluster: "product"
 pageType: "content"
 indexable: true
-depthVerified: false
+depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "If your biggest pain point is remembering upkeep, start with the Maintenance Tracker. If it is scattered receipts and models, start with Home Inventory."
@@ -15,42 +15,63 @@ related:
   - "/features/home-inventory-tracker/"
   - "/features/maintenance-tracker/"
   - "/features/household-handoff/"
-  - "/features/local-first-home-organizer/"
-faq: []
+  - "/features/private-family-organizer/"
+  - "/features/free-home-management-app/"
+faq:
+  - question: "Do I need to fill in every field on every screen to get value from FamilyBoard?"
+    answer: "No. Each quick-add form only requires one or two fields — an asset needs just a name, a task needs just a title. Purchase price, seller, manual reference and similar detail fields are optional and can be filled in later, including in bulk through the Settings CSV export."
+  - question: "Which screen should a new household start with?"
+    answer: "Add your assets first, since maintenance, warranties and documents all link back to an asset record. Start with the handful of appliances or systems you'd actually miss the receipt or manual for, then add maintenance and warranty records against them."
+  - question: "Is there a mobile app, or is this only a website?"
+    answer: "FamilyBoard is a Progressive Web App you use in your browser and can add to your phone or tablet's home screen for an app-like icon and standalone window. There's no separate native app, and no app-store account is involved."
 contentVersion: 1
 ---
 # One household dashboard, built around the work behind the calendar
 
-A family calendar is only one layer of household management. `FamilyBoard` focuses on the information that tends to scatter across drawers, email, notes apps, spreadsheets and memory.
+A family calendar answers "what's happening and when." It doesn't answer "when did we last flush the water heater," "where's the dishwasher receipt," or "what does the new sitter need to know if we're both unreachable for a weekend." `FamilyBoard` is the twelve-screen app built for that second set of questions: Today, Members, Assets, Maintenance, Tasks, Warranties, Subscriptions, Emergency, Documents, Handoff, Display and Settings, all reading from one household database stored in this browser.
 
-## Household dashboard
+Below is what each section actually does, with a link to the full page for each.
 
-See what needs attention without opening five different lists. The dashboard should surface overdue tasks, upcoming maintenance, warranties approaching their end date, recurring subscriptions and important household events. It is designed as a practical “what should we deal with next?” view rather than a decorative analytics screen.
+## Today — the dashboard
 
-## Home inventory and asset records
+Opening the app lands on four counters — overdue tasks, maintenance due within seven days, active assets, active subscriptions — plus two short lists: your next five open responsibilities and your next five maintenance items due soon, each with a one-click link to the full tab. See **[Home Dashboard](/features/home-dashboard/)**.
 
-Track appliances, vehicles, electronics, home systems and other meaningful possessions. Each asset can keep its own identifying details, purchase information, related maintenance and service notes. This creates a record that becomes more valuable when something breaks, needs replacement or has to be described for a claim or move.
+## Assets — the inventory
 
-## Maintenance history
+Every appliance, vehicle or system gets a record: name, category, location, brand, model, serial number, purchase date and notes from the quick-add form, plus purchase price, seller, installed date, manual reference and an active/watch/archived status field the record reserves for deeper tracking. Asset cards carry "Watch" and "Archive" buttons. See **[Home Inventory Tracker](/features/home-inventory-tracker/)**.
 
-Recurring maintenance is linked to the item or part of the home it belongs to. Completion creates history. Instead of only knowing that a filter “should probably be changed,” you can see when you last changed it and what is due next.
+## Maintenance — the recurring work
 
-## Warranty and receipt organization
+A maintenance task links a title to an asset or home area, an owner, a next-due date, a repeat interval in months, a priority and an instructions source. Pressing "Complete" logs a maintenance event with today's date and rolls the next-due date forward by the interval; the card keeps the five most recent completions visible underneath. See **[Maintenance Tracker](/features/maintenance-tracker/)**.
 
-Record the warranty term and purchase date while the information is easy to find. Attach or reference the receipt locally when appropriate. The goal is to make the information retrievable before the product fails, not after.
+## Warranties — coverage windows
 
-## Household subscriptions and renewals
+A warranty record ties a provider, start date, end date, receipt reference and terms reference to an asset. The card flips to an "Expired" status the day after the end date passes and always reminds you that written terms control exact coverage. See **[Warranty Tracker](/features/warranty-tracker/)**.
 
-Track recurring services that are easy to forget: streaming, security monitoring, memberships, annual services or other household contracts. Store the billing frequency, next renewal date and notes about how to cancel or manage the service.
+## Subscriptions — recurring costs
 
-## Tasks and shared responsibilities
+Each subscription stores cost, currency, billing frequency, next renewal, a review-before-days lead time, an owner, a management URL and a payment note — deliberately not a card number. The subscriptions screen totals every active subscription's annualized cost live, so a weekly $12 lawn app and a $180 annual security plan land on the same yearly number. See **[Household Subscription Tracker](/features/household-subscription-tracker/)**.
 
-Household work is not only “take out trash.” It includes recurring administration: arrange service, renew a plan, inspect something, restock a safety item, review documents or prepare for travel. Tasks can be assigned to a household member and linked to a larger home responsibility.
+## Tasks — one-off and recurring responsibilities
 
-## Emergency information and handoff
+Tasks carry a title, an owner, a due date, a free-text recurrence note and completion status; a separate quick-add form on the same screen creates calendar events with a start time, end time and location. See **[Family Task Manager](/features/family-task-manager/)** and **[Household Calendar](/features/household-calendar/)**.
 
-Keep the information another trusted household member may need when normal routines break: important contacts, utility notes, service providers, pet instructions and upcoming obligations. Handoff mode turns scattered records into a concise operational summary.
+## Emergency — contacts that stay local
 
-## Local-first by default
+Emergency contacts hold name, category, phone, email, notes and a sensitive flag. Marking a contact sensitive removes it from the printable handoff sheet by default — nothing about it is ever exposed by the app's design. See **[Emergency Information Organizer](/features/emergency-information-organizer/)**.
 
-Core data is designed to live on your device, with backup and restore under your control. The free version does not require a cloud account simply to organize your own home.
+## Documents — where things actually are
+
+A document record doesn't store a file; it stores a name, category, a plain-text location reference ("fireproof box, hallway closet"), a linked asset and a review date. See **[Household Documents Organizer](/features/household-documents-organizer/)**.
+
+## Handoff and Display — for the rest of the household
+
+Handoff mode builds a printable briefing from a sharing profile that toggles which record types to include; sensitive contacts, serial numbers, document details, subscription costs and private notes are always left out. Display mode renders a large-type, low-sensitivity view of today's tasks, today's events and upcoming maintenance, meant for a kitchen tablet. See **[Household Handoff](/features/household-handoff/)** and **[Family Display Mode](/features/family-display-mode/)**.
+
+## Settings — backups, storage and the master table
+
+Settings shows current storage usage against the browser's quota, lets you request persistent storage, and is where JSON backups (optionally password-encrypted) and a bulk-edit CSV export/import live — the CSV exposes every field on every record type, including the ones the quick-add forms don't ask for.
+
+## What ties the twelve screens together
+
+The spine of the product is that assets, maintenance, warranties and documents all reference each other by ID. A dishwasher asset, its descale-and-filter maintenance task, its two-year warranty and its manual-location document entry are four separate records that all point back to the same asset, so opening the dishwasher's context shows its full story rather than four disconnected lists. See **[Private Family Organizer](/features/private-family-organizer/)** for how the local-only storage model that makes all of this possible actually works, and **[Free Home Management App](/features/free-home-management-app/)** for what's included at no cost.

@@ -13,7 +13,6 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Generate a two-week rotation, track what actually got done, and reorder the lists before the next round based on what worked."
 related:
   - "/guides/family-chore-system/"
-  - "/guides/chore-chart-for-adults/"
   - "/templates/printable-chore-chart/"
   - "/features/family-task-manager/"
 faq:

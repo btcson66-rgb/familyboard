@@ -1,27 +1,29 @@
 # Content quality report
 
-Generated: 2026-08-20T19:03:16.794Z
+Generated: 2026-08-21T16:39:58.595Z
 
 ## Summary
 
-- Indexable pages: 79
+- Indexable pages: 205
 - Generated HTML routes: 223
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 19
+- Pages without a contextual product/tool link: 29
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 16
 - printables: 20
-- product: 3
-- inventory-warranty: 3
-- appliances: 8
-- maintenance: 3
+- product: 16
+- appliances: 30
+- maintenance: 31
+- household-operations: 19
+- inventory-warranty: 25
+- records-emergency: 22
 - tools: 26
 
 ## Word-count range
@@ -49,10 +51,20 @@ Generated: 2026-08-20T19:03:16.794Z
 - /contact/
 - /disclaimer/
 - /editorial-policy/
+- /guides/chore-chart-for-adults/
+- /guides/digital-home-inventory-backup/
+- /guides/family-emergency-contacts/
+- /guides/household-admin-day/
+- /guides/household-handoff/
+- /guides/household-shopping-staples/
 - /guides/important-household-documents/
 - /guides/
+- /guides/recurring-household-tasks/
 - /guides/seasonal-home-maintenance-checklist/
+- /guides/service-provider-contact-list/
+- /guides/subscription-renewal-tracker/
 - /guides/valuable-item-inventory/
+- /guides/what-spouse-needs-to-know/
 - /
 - /pricing/
 - /privacy/

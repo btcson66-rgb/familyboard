@@ -15,7 +15,7 @@ related:
   - "/guides/move-in-maintenance-checklist/"
   - "/guides/new-home-setup-checklist/"
   - "/guides/first-time-homeowner-maintenance-guide/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq:
   - question: "What are the three phases the generator produces?"
     answer: "Before Arrival (utilities, access, lease or closing records, essential contacts), First Day (emergency and utility information, initial condition photos, identifying your home's major systems), and First Month (high-value assets, recurring tasks that actually apply, a first backup export, and a setup line for each specific need you listed)."

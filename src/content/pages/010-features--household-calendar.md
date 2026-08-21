@@ -6,33 +6,47 @@ primaryIntent: "simple household calendar inside a broader home system"
 primaryKeyword: "household calendar"
 cluster: "product"
 pageType: "content"
-indexable: false
-depthVerified: false
+indexable: true
+depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
-nextStep: "Keep using your favorite full calendar if it works for you. Use FamilyBoard for the dates that only make sense when connected to household records."
+nextStep: "Keep using your everyday calendar for personal scheduling. Add a household event here only when it's genuinely tied to a home record — a service appointment, a delivery window, a handoff period."
 related:
-  - "/features/home-dashboard/"
   - "/features/family-task-manager/"
-  - "/guides/annual-renewal-calendar/"
+  - "/features/home-dashboard/"
   - "/features/family-display-mode/"
-faq: []
+  - "/features/free-home-management-app/"
+faq:
+  - question: "Does the household calendar sync with Google Calendar or Outlook?"
+    answer: "No. Events created in FamilyBoard exist only in this browser's local database, like every other record in the app. There's no calendar sync, import from, or export to an external calendar service."
+  - question: "Can I create a recurring event, like a weekly pickup?"
+    answer: "Events don't have a recurrence field. For something that repeats on a schedule, a task with a due date and a free-text recurrence note (\"weekly\") is the closer fit than the calendar event form, which is built for single dated occurrences."
+  - question: "Will I get a reminder before an event starts?"
+    answer: "No. There's no notification, alarm or reminder tied to events — the start and end time are stored for reference and display, but nothing alerts you as the time approaches."
+  - question: "How is an event different from a task with a due date?"
+    answer: "An event has a specific start and end time and no owner or completion status — it either happened or it didn't. A task has a due date, an assigned owner, a completion button and an optional recurrence note, built for tracking who's responsible for what."
 contentVersion: 1
 ---
-# A calendar is useful when it stays connected to the work around it
+# A small calendar for the events that belong to your home records
 
-There are excellent dedicated calendar products already. `FamilyBoard` does not need to replace them. Its household calendar exists for a different reason: to connect dates with the home records that create those dates.
+There are excellent dedicated calendar apps already, and `FamilyBoard` isn't trying to replace Google Calendar or Apple Calendar. Its calendar exists on the Tasks tab for a narrower reason: to hold the events that make more sense sitting next to your household records than buried in a personal calendar full of unrelated meetings.
 
-A service appointment can connect to an appliance. A warranty review can connect to a purchase. A house sitter handoff can connect to a travel period. A recurring household admin day can surface subscriptions and overdue tasks.
+## What an event record actually stores
 
-## Keep the feature intentionally lightweight
+The event quick-add form — the second form on the Tasks tab, below the task form — asks for a title (required), a start date and time (required), an end date and time, a location, and notes. That's the entire event record: `HouseholdEvent` has exactly those five fields plus the standard id and timestamps. There's no recurrence field on events (unlike tasks, which have a free-text repeat note), no owner field, and no reminder setting.
 
-The first version should support normal events, all-day entries, recurring events, household-member ownership and notes. It should not spend months reproducing every feature in Google Calendar or Apple Calendar.
+## Events are not tasks, and the app keeps them visibly separate
 
-## Dates are more useful with context
+On the Tasks tab, event cards are marked with a distinct "Calendar event" tag so they don't blend into the task list. Events don't have a due-status badge or a Complete button — an event either happens at its scheduled time or it doesn't, so there's nothing to mark done. If you need an event to also generate a follow-up responsibility ("confirm the technician the day before"), that's a separate task you create yourself, since the two record types don't auto-link.
 
-A calendar entry reading “Technician 2 PM” becomes more useful when the related asset page contains the model, prior repair notes, serial number and service provider. That is where `FamilyBoard` adds value: the event is only one point in a longer household record.
+## Where events show up
 
-## Display mode makes the calendar more accessible
+Beyond the Tasks tab list, today's events specifically appear on two other screens: the Today dashboard doesn't list them directly, but Display mode does — it filters `data.events` down to whichever ones start today and shows up to six, each with its formatted start time. That makes the calendar useful on a kitchen-tablet display even though it isn't the primary focus of the private dashboard.
 
-A household tablet does not need every detail. It needs a large daily view that shows what the family should know today: events, chores, maintenance and notices. The same underlying records can feed that simplified view.
+## A worked example
+
+A household schedules an HVAC technician: title "HVAC technician visit," starts at 2:00 PM on a specific date, ends at 4:00 PM, location "home — front door access," notes "gate code 4471, dog will be crated." On the day, this event shows on the Tasks tab as a "Calendar event" card and, if a family display is running, on that shared screen with just the time and title — while the fuller detail (gate code) stays in the private app rather than a tablet visible to visitors. Separately, the HVAC unit's asset record can hold the resulting maintenance completion once the visit is done, connecting the appointment to the equipment's actual service history.
+
+## What it deliberately doesn't do
+
+It doesn't sync with Google Calendar, Outlook or iCloud — events created here exist only in this browser's local database, the same as every other record type. It doesn't send a notification before an event starts. And it doesn't support recurring events the way a full calendar app does — a weekly recycling pickup, for instance, is better represented as a task with a recurrence note than as a repeating calendar event, since there's no built-in repeat rule for events.

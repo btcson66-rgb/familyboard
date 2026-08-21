@@ -11,6 +11,7 @@ depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Add only the items that repeatedly create an emergency store run; the list should stay small enough to trust."
+redirectTo: "/guides/household-supplies-inventory/"
 related:
   - "/guides/pantry-restock-system/"
   - "/guides/household-supplies-inventory/"
@@ -19,22 +20,3 @@ related:
 faq: []
 contentVersion: 1
 ---
-# A staples list is about remembering what the household repeatedly runs out of
-
-Toilet paper, cleaning products, pet supplies, filters and other basics do not need precise inventory accounting in most homes. A lightweight list is enough.
-
-## Use categories and preferred units
-
-Record the product type and, where it matters, size or compatibility. “Water filter — model X” is more useful than “filter.”
-
-## Use restock triggers
-
-Some households prefer a minimum quantity, others simply mark an item when the last package is opened. Support both without requiring barcode scanning.
-
-## Separate consumables from maintenance
-
-A replacement filter can appear on the shopping list while its installation date belongs in the maintenance history.
-
-## Avoid affiliate influence
-
-A staple record should serve the household first. Product recommendations can be optional and clearly separated.

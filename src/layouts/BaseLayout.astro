@@ -13,6 +13,7 @@ interface Props {
   alternatePath?: string;
   locale?: 'en' | 'zh-TW';
   indexable?: boolean;
+  robots?: string;
   pageType?: 'website' | 'article' | 'app';
   bodyClass?: string;
   publishedAt?: Date;
@@ -29,6 +30,7 @@ const {
   alternatePath,
   locale = 'en',
   indexable = true,
+  robots,
   pageType = 'website',
   bodyClass = '',
   publishedAt,
@@ -38,6 +40,7 @@ const {
   redirectRefresh
 } = Astro.props;
 const canonical = new URL(canonicalPath, brand.origin).toString();
+const robotsContent = robots ?? (indexable ? 'index,follow,max-image-preview:large' : 'noindex,follow');
 const alternate = alternatePath ? new URL(alternatePath, brand.origin).toString() : '';
 const isZhTw = locale === 'zh-TW';
 const englishUrl = isZhTw ? alternate : canonical;
@@ -103,7 +106,7 @@ const faqSchema = faq.length > 0 ? {
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#176b52" />
     <meta name="description" content={description} />
-    <meta name="robots" content={indexable ? 'index,follow,max-image-preview:large' : 'noindex,follow'} />
+    <meta name="robots" content={robotsContent} />
     {redirectRefresh && <meta http-equiv="refresh" content={redirectRefresh} />}
     {adsenseAccount && <meta name="google-adsense-account" content={adsenseAccount} />}
     <link rel="canonical" href={canonical} />

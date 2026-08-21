@@ -15,7 +15,7 @@ related:
   - "/guides/smoke-alarm-records/"
   - "/guides/furnace-maintenance-records/"
   - "/guides/emergency-information-sheet/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq:
   - question: "Where should carbon monoxide alarms actually be placed in a home?"
     answer: "The EPA recommends one alarm on each floor of the home, including near each separate sleeping area. If you only have one alarm, place it near the bedrooms so it's loud enough to wake the household. Installation should follow the manufacturer's instructions — plug-in or high-on-the-wall placement both work."

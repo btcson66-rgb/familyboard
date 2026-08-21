@@ -15,7 +15,7 @@ related:
   - "/guides/repair-history/"
   - "/guides/home-repair-history/"
   - "/tools/home-maintenance-cost-tracker/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq:
   - question: "What format does each repair entry need?"
     answer: "One line per repair, written as Date | Item | Cost | Outcome — for example, \"2026-07-12 | Dishwasher | 145 | Pump replaced.\" All four parts are needed for the entry to be included in the log and its totals."
