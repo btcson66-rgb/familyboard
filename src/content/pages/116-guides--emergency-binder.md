@@ -6,7 +6,7 @@ primaryIntent: "build a household emergency binder"
 primaryKeyword: "emergency binder"
 cluster: "records-emergency"
 pageType: "content"
-indexable: false
+indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
@@ -46,6 +46,14 @@ The binder should say where insurance policies, identity documents and financial
 ## Build the binder's supply and evacuation sections from official planning documents
 
 Rather than writing generic checklist items from memory, connect this binder's supply section to your actual emergency supply inventory and its evacuation section to your actual evacuation plan — both of which should follow published federal, state or local emergency-management guidance for quantities and procedures rather than a household member's guess. The binder becomes the index that ties those plans together, not a place that reinvents them.
+
+## Decide who gets a copy, and in what form
+
+Not every binder needs to leave the house. A version for a nearby trusted contact or an adult child living elsewhere might be a trimmed summary — contacts and the household's general situation — while the full binder with operational detail stays inside the home. Treat each copy as a deliberate decision about who needs what, rather than photocopying the entire binder for anyone who might conceivably need part of it.
+
+## A binder that's never been opened by anyone but its author has a hidden flaw
+
+The person who assembled the binder already knows where everything is, which means they're the worst judge of whether it's actually usable by someone else. Hand it to a household member who didn't build it and watch where they hesitate — that hesitation is the binder's real weak point, and it's far cheaper to find during a calm afternoon than during the emergency the binder exists for.
 
 ## Review on a schedule, and after any household change
 

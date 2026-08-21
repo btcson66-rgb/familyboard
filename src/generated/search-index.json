@@ -304,6 +304,14 @@
     "headings": "School information changes every year, so the household needs a current index, not a permanent archive What FERPA actually covers, and why it matters for home organization Store current contacts and key dates, not a running archive Keep the sensitive record categories separate from the shared index Do the reset at the end of every school year Build handoff notes for anyone who isn't the usual parent at pickup Households with children at multiple schools need separate entries, not one merged note Recurring annual forms deserve a reminder, not just a folder"
   },
   {
+    "title": "Emergency Binder: What to Organize Before Your Household Is Under Stress",
+    "description": "Build an emergency binder with contacts, household instructions, important references and continuity information, guided by local emergency authorities.",
+    "route": "/guides/emergency-binder/",
+    "cluster": "records-emergency",
+    "keywords": "emergency binder",
+    "headings": "An emergency binder should be short enough to use under pressure Start with contacts, organized by role, not alphabetically Add operational notes that are accurate, not exhaustive Reference sensitive documents instead of duplicating them Build the binder's supply and evacuation sections from official planning documents Decide who gets a copy, and in what form A binder that's never been opened by anyone but its author has a hidden flaw Review on a schedule, and after any household change"
+  },
+  {
     "title": "Emergency Information Sheet: What Belongs on One Household Page",
     "description": "Create a one-page household emergency information sheet with contacts, address, important household notes and clear references to secure documents.",
     "route": "/guides/emergency-information-sheet/",
@@ -318,6 +326,78 @@
     "cluster": "records-emergency",
     "keywords": "home evacuation information checklist",
     "headings": "Evacuation logistics are a household record; evacuation routes are a local authority's call What official go-bag guidance actually specifies Record household logistics before the moment you need them Keep the essential-document list ready, not scattered Keep essential references portable and offline-accessible Keep evacuation records private, not published Review after every household change, not on a fixed calendar"
+  },
+  {
+    "title": "Utility Shutoff Information: Document Locations Without Encouraging Unsafe Action",
+    "description": "Keep accurate household references for utility controls and service contacts while leaving hazardous operations to qualified guidance.",
+    "route": "/guides/utility-shutoff-information/",
+    "cluster": "records-emergency",
+    "keywords": "utility shutoff information sheet",
+    "headings": "Knowing where a shutoff is located is useful. Knowing when to use it is a separate, higher-stakes question What to record for each shutoff, in advance Gas: leave, then call — this is not a hedge, it's the correct answer Electrical: the main breaker is different from a circuit breaker Water: usually the safest of the three to act on yourself Keep the record private, and review it after any renovation"
+  },
+  {
+    "title": "Emergency Supply Inventory: Track What You Have Before Buying More",
+    "description": "Build a household emergency-supply inventory with quantities, locations, condition and review dates while following official preparedness guidance.",
+    "route": "/guides/emergency-supply-inventory/",
+    "cluster": "records-emergency",
+    "keywords": "emergency supply inventory",
+    "headings": "Preparedness starts with knowing what's already in the house, against the actual published quantities Water: the figure that matters most, and where it comes from Food and the rest of the kit Organize the inventory by purpose and location, not just a flat list Record expiration and condition where it's actually relevant Restock immediately after use, not at the next scheduled review"
+  },
+  {
+    "title": "Household Medical Information Organization: Keep Emergency References Without Overexposing Health Data",
+    "description": "Organize limited household medical emergency references, provider contacts and document locations while keeping sensitive health records in appropriately secure systems.",
+    "route": "/guides/household-medical-information-organization/",
+    "cluster": "records-emergency",
+    "keywords": "organize family medical information",
+    "headings": "Medical information needs a stricter privacy boundary than an ordinary household note What a real emergency health information card actually contains Store the minimum a responder or substitute caregiver actually needs Medication instructions should be copied exactly, never generated Keep medical notes off shared displays by default Route complex or ongoing care to a system built for it"
+  },
+  {
+    "title": "Caregiver Handoff Checklist: Transfer Routines, Contacts and Household Responsibilities Clearly",
+    "description": "Create a caregiver handoff with routines, contacts, household logistics and current instructions while protecting sensitive information.",
+    "route": "/guides/caregiver-handoff-checklist/",
+    "cluster": "records-emergency",
+    "keywords": "caregiver handoff checklist",
+    "headings": "A caregiver handoff should describe the current routine, not the entire family history Organize the day the way the caregiver will actually live it Separate care instructions from household logistics — and never generate the former Provide contacts a caregiver can act on immediately, and protect the ones that shouldn't be shared Limit access to what this handoff actually requires Test it from the caregiver's side before you need it"
+  },
+  {
+    "title": "Travel Household Handoff: What Someone at Home Needs While You Are Away",
+    "description": "Create a travel handoff for pets, deliveries, household tasks, appointments, service providers and emergency contacts without oversharing.",
+    "route": "/guides/travel-household-handoff/",
+    "cluster": "records-emergency",
+    "keywords": "household handoff for travel",
+    "headings": "A travel handoff documents what changes because someone is away — not the whole household Walk through the trip's actual calendar, not a generic checklist Give an escalation path more useful than \"text me\" Set a spending or decision boundary in advance Minimize what's exposed about the empty house Close the loop after you're back Short trips and long trips need genuinely different handoffs Coordinate with whoever is actually watching the house, not just whoever agreed in principle"
+  },
+  {
+    "title": "House Sitter Information: Give Clear Instructions Without Sharing Your Entire Household Database",
+    "description": "Create house-sitter instructions for contacts, pets, deliveries, basic home routines and problem escalation while protecting private information.",
+    "route": "/guides/house-sitter-information/",
+    "cluster": "records-emergency",
+    "keywords": "house sitter information sheet",
+    "headings": "A house sitter needs a role-specific packet, not access to the household's full records Lay out daily responsibilities the way a checklist works, not a narrative Give an escalation path that doesn't depend on reaching the homeowner Handle access credentials outside the packet itself Set the boundary on decision-making before it's tested Show only what this specific sitter needs First-time sitters need more written down than a regular one A short walkthrough beats a longer written packet for anything physical"
+  },
+  {
+    "title": "Pet Sitter Information: Build a Clear Care Sheet for Feeding, Routine and Emergency Contacts",
+    "description": "Prepare pet-sitter information with feeding routine, walk/care schedule, veterinarian contacts, supplies and household escalation instructions.",
+    "route": "/guides/pet-sitter-information/",
+    "cluster": "records-emergency",
+    "keywords": "pet sitter information sheet",
+    "headings": "The sitter sheet's job is removing guesswork — \"feed normally\" is not an instruction Write the routine as exact quantities and times, not general habits Set a real authorization boundary for a veterinary emergency Reproduce medical instructions exactly — never paraphrase, never generate Give escalation contacts in the order they'd actually be used Review before every single trip, not just the first time Multiple pets need distinguishable, not merged, instructions Test the sheet on someone who has never met the pet"
+  },
+  {
+    "title": "Family Continuity Plan: Keep the Household Running When Normal Roles Change",
+    "description": "Build a family continuity plan for recurring obligations, household admin, service contacts, pets, dependents and essential records.",
+    "route": "/guides/family-continuity-plan/",
+    "cluster": "records-emergency",
+    "keywords": "family continuity plan",
+    "headings": "Continuity planning isn't only for businesses — a household has single points of failure too Map single-person knowledge before you plan anything else A backup owner needs context, not a new job Write the next action, not just the category name Connect continuity records to protected contacts, not exposed ones Review after every major life change, not on a fixed calendar Start with the five responsibilities that would hurt most if they lapsed A continuity plan is a living document, not a one-time project"
+  },
+  {
+    "title": "Household Admin Backup Person: How to Prepare Someone to Step In Temporarily",
+    "description": "Choose a backup household administrator and give them a clear view of recurring obligations, contacts, records and upcoming household work.",
+    "route": "/guides/household-admin-backup-person/",
+    "cluster": "records-emergency",
+    "keywords": "household backup person",
+    "headings": "Every important household system should have a second person who can find the map The goal is shared recoverability, not equal memory Decide what authority the backup actually needs, and say so explicitly Build a short operational brief, organized by what's due soon Use a generated handoff view instead of a spreadsheet nobody updates Tell them where secure records live without exposing what's in them Respect privacy within the partnership Practice it once, before an emergency forces the first real test"
   },
   {
     "title": "Free Home Maintenance Schedule Generator | Build a Custom Household Plan",

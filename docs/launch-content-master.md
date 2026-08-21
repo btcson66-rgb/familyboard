@@ -5009,6 +5009,14 @@ The binder should say where insurance policies, identity documents and financial
 
 Rather than writing generic checklist items from memory, connect this binder's supply section to your actual emergency supply inventory and its evacuation section to your actual evacuation plan — both of which should follow published federal, state or local emergency-management guidance for quantities and procedures rather than a household member's guess. The binder becomes the index that ties those plans together, not a place that reinvents them.
 
+## Decide who gets a copy, and in what form
+
+Not every binder needs to leave the house. A version for a nearby trusted contact or an adult child living elsewhere might be a trimmed summary — contacts and the household's general situation — while the full binder with operational detail stays inside the home. Treat each copy as a deliberate decision about who needs what, rather than photocopying the entire binder for anyone who might conceivably need part of it.
+
+## A binder that's never been opened by anyone but its author has a hidden flaw
+
+The person who assembled the binder already knows where everything is, which means they're the worst judge of whether it's actually usable by someone else. Hand it to a household member who didn't build it and watch where they hesitate — that hesitation is the binder's real weak point, and it's far cheaper to find during a calm afternoon than during the emergency the binder exists for.
+
 ## Review on a schedule, and after any household change
 
 An emergency binder with a disconnected phone number or an outdated medication list creates false confidence — worse than having no binder, because a person trusts it and acts on stale information. Set a recurring review date, and treat any major household change (a move, a new pet, a new medication, a change in who lives in the house) as an automatic trigger to update it before the next scheduled review.
@@ -5169,29 +5177,44 @@ A new pet, a new caregiver, a new vehicle, or a family member who's started atte
 **Title tag:** `Utility Shutoff Information: Document Locations Without Encouraging Unsafe Action`
 **Meta description:** `Keep accurate household references for utility controls and service contacts while leaving hazardous operations to qualified guidance.`
 **Primary keyword concept:** utility shutoff information sheet
+**Depth:** verified
 **Suggested internal links:** `/guides/emergency-information-sheet/`, `/guides/organize-utility-account-information/`, `/features/emergency-information-organizer/`, `/guides/household-admin-backup-person/`
 
-# Knowing where a household control is located can be useful; knowing when to use it is a separate question
+# Knowing where a shutoff is located is useful. Knowing when to use it is a separate, higher-stakes question
 
-Gas, electricity and water systems can involve serious hazards. A home organizer may record the location of clearly identified controls and relevant service contacts, but it should never turn that record into generic emergency instructions.
+Gas, electrical and water systems can genuinely hurt someone if handled wrong, so this record has one job: make the location and the right contact instantly findable, without turning into a DIY instruction manual for tasks that call for a professional. What to record in advance is straightforward; what to do in the moment is mostly "leave and call," and that answer is worth stating plainly rather than hedging.
 
-## Record only verified information
+## What to record for each shutoff, in advance
 
-Use photos or notes for controls the household can identify accurately. If the system is unclear, ask the utility, building management or qualified professional rather than guessing.
+For each utility, record four things: the exact physical location of the shutoff (with a photo if possible — "gas meter valve, left side of house, behind the hose bib" beats "outside somewhere"), the tool required if any (many gas and water valves need a wrench, not bare hands, and that wrench should have its own known location), the meter or account number printed on the meter itself, and the utility's emergency or outage line, which is usually a different number from general billing support. A household that has these four facts recorded ahead of time can act in seconds; a household reconstructing them during an actual gas smell or burst pipe is losing exactly the time that matters.
 
-## Label who should act
+## Gas: leave, then call — this is not a hedge, it's the correct answer
 
-For some situations, the correct action is to leave the area and contact emergency services or the utility. Store those contacts beside the location note.
+State agencies are consistent on this point. [Connecticut's Public Utilities Regulatory Authority](https://portal.ct.gov/pura/gas-pipeline-safety/what-to-do-if--you-smell-natural-gas) instructs: if the gas odor is strong, "leave the premises immediately and tell others to leave," then call the gas company from a neighbor's home — not from inside, and not using anything electrical along the way, since even a light switch or a doorbell can generate the spark that ignites a leak. The same guidance is explicit about restoration: "NEVER turn the gas back on once it has been shut off due to a safety concern. Call your local gas company for assistance." That's the household's actual role here — know the valve's location and the tool needed for the rare case a professional asks you to act, but treat "shut off my own gas and leave it that way" or "turn my own gas back on" as outside the household's job, not a shortcut.
 
-## Protect security details
+## Electrical: the main breaker is different from a circuit breaker
 
-Do not expose building access or utility-control locations on public displays.
+The main breaker (usually the largest switch in the panel, sometimes at the top) cuts power to the entire house; individual circuit breakers cut power to one area only. Record the panel's location and which breaker is the main, since in a genuine electrical emergency — sparking, a burning smell, standing water near the panel — cutting power at the main is faster and safer than trying to identify the one relevant circuit under stress. If the panel itself is wet, damaged, or the source of the problem, the same leave-and-call principle applies: contact an electrician or emergency services rather than opening the panel.
 
-## Review after renovations or moving
+## Water: usually the safest of the three to act on yourself
 
-Changes to plumbing, electrical panels or building systems can make old notes incorrect.
+A main water shutoff valve — typically near where the supply line enters the home, in a basement, utility closet, or an outdoor box near the street — is generally safe for a household member to close without special training, and doing so promptly during a burst pipe or major leak limits water damage while help is on the way. Record its location and whether it needs a wrench or turns by hand, since this is the one shutoff where "the household can safely act immediately" is actually true, unlike gas.
+
+## Keep the record private, and review it after any renovation
+
+A utility shutoff location can also function as an access detail worth protecting — don't display it on a public-facing dashboard. Any plumbing, electrical panel or gas-line work should trigger an immediate review of this record, since a moved meter or an upgraded panel makes the old note actively wrong rather than just outdated.
 
 **Contextual CTA:** Treat the record as a verified reference, not a DIY emergency manual.
+
+**FAQ:**
+- Q: Should I turn off my own gas if I smell it in my house?
+  A: Leave the house immediately and call the gas company's emergency line from outside or a neighbor's home — do not use any electrical switch on your way out, since even a light switch can spark a leak. Turning the gas off yourself, or back on after a professional shutoff, is not the household's role; only the utility should restore gas service.
+- Q: What should be recorded about each utility shutoff in advance?
+  A: The exact physical location (ideally with a photo), whether a tool like a wrench is needed and where that tool is kept, the meter or account number, and the utility's emergency line — which is usually different from its general billing number. Having all four ready in advance is what makes the record useful during an actual emergency.
+- Q: Is it safe to shut off my home's water main myself?
+  A: Generally yes — the water main is the one shutoff where a household member acting immediately is both safe and helpful, since closing it during a burst pipe limits damage while you wait for a plumber. This is different from gas, where leaving and calling a professional is the correct first response.
+- Q: What's the difference between a main breaker and a circuit breaker?
+  A: The main breaker cuts power to the entire house and is usually the largest switch in the electrical panel; individual circuit breakers control just one area or circuit. In a genuine electrical emergency, cutting power at the main is faster than trying to identify the specific circuit involved.
 
 ---
 
@@ -5201,29 +5224,44 @@ Changes to plumbing, electrical panels or building systems can make old notes in
 **Title tag:** `Emergency Supply Inventory: Track What You Have Before Buying More`
 **Meta description:** `Build a household emergency-supply inventory with quantities, locations, condition and review dates while following official preparedness guidance.`
 **Primary keyword concept:** emergency supply inventory
+**Depth:** verified
 **Suggested internal links:** `/guides/storm-preparation-home-checklist/`, `/guides/power-outage-home-preparedness/`, `/tools/emergency-binder-generator/`, `/features/home-inventory-tracker/`
 
-# Preparedness starts with knowing what is already in the house
+# Preparedness starts with knowing what's already in the house, against the actual published quantities
 
-Generic emergency-kit lists can lead to duplicate purchases while important household-specific needs remain missing. An inventory makes the current state visible.
+Generic "buy this emergency kit" lists lead to duplicate flashlights and three half-used first aid kits while a real gap — no way to purify water, no battery radio — goes unnoticed. An inventory checked against actual published guidance, not a household's memory of what preparedness "usually" involves, makes the real state visible.
 
-## Organize by purpose and location
+## Water: the figure that matters most, and where it comes from
 
-Examples include lighting, communication, food/water supplies, first aid, pet needs, batteries/power and household-specific necessities. Follow current official preparedness recommendations for actual quantities and contents.
+Government and public-health guidance converges on a specific number: at least one gallon of water per person per day, for drinking and sanitation combined. [Island County, Washington's emergency management office](https://www.islandcountywa.gov/485/Water-During-Emergencies) states this plainly and adds an important adjustment — anyone who is "ill, injured, pregnant, nursing, highly active, or exposed to heat should be counted twice," since their water needs roughly double the standard figure. [South Carolina's Department of Insurance](https://doi.sc.gov/964/How-To-Pack-An-Emergency-Kit) frames the same guidance slightly more conservatively for a kit specifically: two gallons per person per day (one for drinking, one for food prep and sanitation) for at least three days, with stored water rotated out every six months. The standard national baseline duration is three days; some regional emergency-management offices with higher local risk — Island County cites earthquake exposure — recommend stretching to as much as two weeks for water specifically. Check your inventory against the duration your own household has decided on, and don't forget pets: [Island County's guidance](https://www.islandcountywa.gov/485/Water-During-Emergencies) also gives a pet water figure of roughly 0.01 gallons per pound of body weight per day.
 
-## Record expiration or condition only where relevant
+## Food and the rest of the kit
 
-Some supplies require periodic review; others do not. Use manufacturer labels and official guidance rather than inventing dates.
+[Maine's Emergency Management Agency](https://www.maine.gov/mema/maine-prepares/home-preparedness/grab-go-bag) recommends planning for 3 to 7 days of supplies at home — non-perishable food with a manual can opener, a battery-powered or hand-crank radio, a flashlight, blankets, sanitation supplies, and a 7-day medication supply where applicable. [Philadelphia's Office of Emergency Management](https://www.phila.gov/departments/oem/ready-or-not/how-to-get-ready/prepare-for-an-emergency/make-a-go-bag/) adds a first-aid kit, sturdy shoes and cash in small denominations to that baseline list. Use these as the checklist to inventory against, category by category, rather than a household member's memory of "we probably have that somewhere."
 
-## Keep the inventory separate from medical advice
+## Organize the inventory by purpose and location, not just a flat list
 
-A household may store medications or medical supplies, but the app should not prescribe quantities or replacement schedules beyond verified instructions.
+Group entries as lighting, communication, water, food, first aid, pet supplies, batteries/power, and medications, each with a quantity and where in the house it's stored. A flat, unorganized list makes it easy to miss that the household has three flashlights in the garage and zero batteries that fit them — organizing by category surfaces mismatches like that immediately.
 
-## Review after use
+## Record expiration and condition where it's actually relevant
 
-If supplies are consumed during an outage or trip, create a restock task rather than waiting for the next annual review.
+Batteries, stored water and some first-aid items benefit from a periodic check; canned food generally doesn't need the same scrutiny within its shelf life. Use the manufacturer's printed date or the rotation guidance above (six months for stored water, for example) rather than inventing a review interval — and don't let medication quantities or replacement schedules in this inventory become anything beyond what a household's own clinician or pharmacist has specified.
+
+## Restock immediately after use, not at the next scheduled review
+
+If supplies were consumed during an actual outage, storm or trip, create a restock task the moment normal routines resume rather than waiting for an annual preparedness check. A kit that's quietly missing half its water because it was used during last winter's outage and never restocked is a kit that will fail the next time it's actually needed.
 
 **Contextual CTA:** Inventory first, buy second. Knowing what you already have is the easiest way to make preparedness spending more deliberate.
+
+**FAQ:**
+- Q: How much water should a household store per person?
+  A: At least one gallon per person per day is the widely used baseline, covering both drinking and sanitation, for a minimum of three days. Anyone who is ill, pregnant, nursing, highly active or exposed to heat should be counted for roughly double that amount, and pets need water too — figure roughly 0.01 gallons per pound of body weight per day.
+- Q: How many days of food and water should an emergency kit cover?
+  A: Three days is the standard national baseline duration cited across state and local emergency-management guidance, though some agencies in higher-risk regions recommend stretching water storage specifically to as much as two weeks. Check your own household's plan against your region's actual risk profile rather than assuming one figure fits everywhere.
+- Q: How often should stored emergency water be replaced?
+  A: Roughly every six months, per guidance from South Carolina's Department of Insurance emergency-kit checklist, since stored water quality can degrade over time even in a sealed container. Rotating it on a fixed schedule is simpler than guessing whether a particular container is still good.
+- Q: What belongs in an emergency kit besides water and food?
+  A: A battery-powered or hand-crank radio, a flashlight, a first-aid kit, blankets, sanitation supplies, a manual can opener, and — where applicable — a several-day supply of any regular medications. State emergency-management checklists consistently include these as the baseline beyond water and food.
 
 ---
 
@@ -5233,29 +5271,44 @@ If supplies are consumed during an outage or trip, create a restock task rather 
 **Title tag:** `Household Medical Information Organization: Keep Emergency References Without Overexposing Health Data`
 **Meta description:** `Organize limited household medical emergency references, provider contacts and document locations while keeping sensitive health records in appropriately secure systems.`
 **Primary keyword concept:** organize family medical information
+**Depth:** verified
 **Suggested internal links:** `/guides/emergency-information-sheet/`, `/privacy/`, `/features/emergency-information-organizer/`
 
-# Medical information deserves a stricter privacy boundary than ordinary household notes
+# Medical information needs a stricter privacy boundary than an ordinary household note
 
-A home-management app may help a caregiver know where an emergency plan or medical document is stored, but it should not become an uncontrolled health-record database by default.
+A home-management app can help a caregiver find where an emergency plan or medical reference is stored. It should never become an uncontrolled health-record database just because a text field is easy to add. The distinction that matters: record enough for someone else to respond correctly in an emergency, and no more.
 
-## Store the minimum necessary information
+## What a real emergency health information card actually contains
 
-Depending on the household, a limited emergency note might include the name of a condition or critical care instruction already provided by a clinician, a physician contact or the location of formal records. Avoid collecting detailed medical history simply because a text field exists.
+Public-health guidance on this exact document gives a useful, tested structure rather than a guess. [Connecticut's Department of Public Health](https://portal.ct.gov/dph/public-health-preparedness/bioterrorism/creating-an-emergency-health-information-card) recommends a front side with name, address, phone numbers, birth date, blood type and health insurance carrier information, and a back side covering emergency contacts, medical conditions or disabilities, current medications with dosage and administration details, allergies and sensitivities, immunization dates, and any special communication or equipment needs — wheelchairs, oxygen, hearing or vision aids. The guidance recommends keeping copies in multiple places: the emergency kit, the car, a wallet or purse, and any bag carried daily, so it's on hand regardless of where the emergency happens.
 
-## Keep medication instructions authoritative
+## Store the minimum a responder or substitute caregiver actually needs
 
-If medication information is recorded for caregiver handoff, it should reproduce current clinician/pharmacy instructions accurately and be reviewed whenever treatment changes. The app must not generate dosing advice.
+For most households, that means: the name of a diagnosed condition where it affects emergency response (a severe allergy, a seizure disorder, diabetes), any critical care instruction already provided by a clinician, the primary physician's name and phone number, and where the full formal medical record is kept if more detail is ever needed. It does not mean transcribing full visit notes, lab results or a complete medical history into a shared household field — those belong in the health system's own record, with only a location reference in the household organizer.
 
-## Protect shared views
+## Medication instructions should be copied exactly, never generated
 
-Medical notes should never appear on a wall display or general household dashboard unless explicitly designed and consented for that purpose.
+Where medication information is recorded for caregiver handoff — a grandparent needs to give an afternoon dose, a sitter needs to know what's in the medicine cabinet — it should reproduce the clinician's or pharmacy's actual instruction verbatim: drug name, dose, timing, exactly as printed on the label or discharge paperwork. Neither a household member's paraphrase nor the app itself should generate, adjust or suggest a dosing schedule. If treatment changes, the record needs updating the same day, not at the next scheduled review — an outdated dose is actively dangerous in a way an outdated phone number is not.
 
-## Use specialized systems where needed
+## Keep medical notes off shared displays by default
 
-For complex care, a dedicated health or clinical record system may be more appropriate. `FamilyBoard` can serve as a pointer in the household continuity plan.
+A family wall screen or a general household dashboard is the wrong place for medical information to appear automatically. If a household genuinely wants a medical note visible on a shared view — a child's severe allergy that every caregiver needs to see immediately — that should be a deliberate, explicit choice for that specific note, not the default behavior for anything tagged "medical."
+
+## Route complex or ongoing care to a system built for it
+
+For a household managing chronic illness, multiple providers, or detailed treatment plans, a dedicated clinical or health-record system is the right tool for the depth that situation needs. The household organizer's role in that case is narrower and still useful: a pointer — "full care plan kept with [provider/system], last updated [date]" — inside the household's broader continuity plan, not an attempt to replace purpose-built medical record software.
 
 **Contextual CTA:** Store only what another trusted caregiver truly needs and keep the rest in the appropriate secure health-record system.
+
+**FAQ:**
+- Q: What should go on the front versus the back of a household medical emergency card?
+  A: Public-health guidance puts identity basics — name, address, phone, birth date, blood type, insurance carrier — on the front, and medical specifics — conditions, current medications with dosage, allergies, immunization dates, equipment needs — on the back. That split keeps the fast-reference identity information separate from the detail a responder needs once they know who they're helping.
+- Q: How much medical detail should a shared household record actually contain?
+  A: The minimum needed for someone else to respond correctly: a relevant condition name, any critical clinician-provided instruction, the primary physician's contact, and where the full record is kept. Full visit notes, lab results and detailed history belong in the formal health-record system, not a shared household field.
+- Q: Should a household app suggest or adjust a medication dose?
+  A: No. Medication instructions recorded for caregiver handoff should reproduce the clinician's or pharmacy's exact instruction, and neither a family member's paraphrase nor the app should generate or modify dosing guidance. Update the record the same day treatment changes — an outdated dose is a safety issue, not a minor inconvenience.
+- Q: Is it okay to display medical information on a shared family dashboard?
+  A: Only as a deliberate, specific choice — for example, a child's severe allergy that every caregiver genuinely needs to see immediately. It shouldn't be the default behavior for anything tagged medical; most medical information should stay out of general shared views.
 
 ---
 
@@ -5265,29 +5318,44 @@ For complex care, a dedicated health or clinical record system may be more appro
 **Title tag:** `Caregiver Handoff Checklist: Transfer Routines, Contacts and Household Responsibilities Clearly`
 **Meta description:** `Create a caregiver handoff with routines, contacts, household logistics and current instructions while protecting sensitive information.`
 **Primary keyword concept:** caregiver handoff checklist
+**Depth:** verified
 **Suggested internal links:** `/guides/household-admin-backup-person/`, `/guides/pet-sitter-information/`, `/guides/house-sitter-information/`, `/tools/home-handoff-summary-generator/`
 
 # A caregiver handoff should describe the current routine, not the entire family history
 
-Whether the caregiver supports a child, older adult, disabled family member or another dependent, the handoff should focus on the information needed for the specific period of care.
+Whether the caregiver supports a child, an older adult, a family member with a disability or another dependent, the handoff exists to answer one question well: what does this specific caregiver need to know for this specific period of care? A handoff that tries to convey the family's entire history ends up too long to actually read before the caregiver arrives, which defeats the purpose as thoroughly as leaving something important out.
 
-## Organize the day
+## Organize the day the way the caregiver will actually live it
 
-Arrival/departure, meals, transportation, school/activity logistics, communication preferences and household routines form the operational layer.
+Arrival and departure times, meal timing and any dietary notes, transportation logistics (who drives, what car seat, what pickup procedure), school or activity schedules, communication preferences (text vs. call, and when it's okay to interrupt), and the household's everyday routines form the operational core. Write it in the order the day unfolds — morning routine, then daytime logistics, then evening — rather than as a flat alphabetical list, since that's how the caregiver will actually reference it in the moment.
 
-## Separate care instructions from household logistics
+## Separate care instructions from household logistics — and never generate the former
 
-Medical, behavioral or clinical instructions should come from qualified sources and current care plans. The household organizer can preserve them exactly where appropriate but must not create its own care recommendations.
+Medical, behavioral or clinical instructions must come from qualified sources: a current care plan, a clinician's written instruction, a therapist's behavioral guidance. The household organizer's job is to preserve that instruction exactly as given — reproducing it, not summarizing or softening it — and it should never generate its own care recommendation or fill a gap with a guess. If a care plan is unclear or seems out of date, that's a signal to check with the qualified source before the handoff happens, not to improvise around it.
 
-## Provide clear contacts
+## Provide contacts a caregiver can act on immediately, and protect the ones that shouldn't be shared
 
-Primary and backup family contacts, relevant professional contacts and emergency guidance should be easy to find.
+Primary and backup family contacts, relevant professional contacts (pediatrician, home-care agency, therapist), and clear emergency guidance should be easy to find without digging. At the same time, not every household contact belongs in a caregiver's hands — a contact marked `sensitive` in the household's records is automatically filtered out of any generated handoff packet, which is exactly the mechanism that keeps, say, a family member's private therapist or an unrelated personal contact from ending up on a document a temporary caregiver walks away with.
 
-## Limit access
+## Limit access to what this handoff actually requires
 
-A temporary caregiver should not automatically receive the household's entire private database. Build a handoff view that contains only necessary information.
+A temporary caregiver should never receive the household's full private database by default. Build the handoff as a filtered export — tasks, relevant care instructions and contacts, specifically — rather than granting broad access and hoping the caregiver only looks at what's relevant. The narrower the handoff, the less there is to worry about if it's misplaced or the caregiving arrangement ends.
+
+## Test it from the caregiver's side before you need it
+
+The best review of a handoff packet isn't rereading it yourself — it's imagining the actual questions a caregiver would have to call and ask if this were all they had. If the packet doesn't answer "what if the child has a meltdown at pickup" or "what if Grandma refuses her afternoon medication," those are the gaps to close before the handoff, not during it.
 
 **Contextual CTA:** Generate a temporary handoff packet and review it from the caregiver's perspective: what would they have to call you to ask?
+
+**FAQ:**
+- Q: What information should a caregiver handoff prioritize?
+  A: The operational rhythm of the day — arrival/departure times, meals, transportation, activity schedules and communication preferences — plus any current, qualified-source care instructions reproduced exactly. Avoid trying to convey the family's full history; a handoff that's too long to actually read before arrival fails the same way an incomplete one does.
+- Q: Can a household app generate medical or behavioral care instructions for a caregiver handoff?
+  A: No. Those instructions must come from a qualified source — a clinician, therapist or current care plan — and the household record should reproduce them exactly rather than summarizing, softening or filling gaps with a guess. If a care plan seems unclear, check with the source before the handoff, not during it.
+- Q: How does a household keep sensitive contacts out of a caregiver's handoff packet?
+  A: By marking those contacts sensitive in the household's records — a contact flagged that way is automatically excluded from any generated handoff snapshot. This keeps private contacts, like a family member's own therapist or an unrelated personal contact, from ending up on a document a temporary caregiver takes with them.
+- Q: Should a temporary caregiver get access to the whole household database?
+  A: No — build a filtered handoff containing only the tasks, care instructions and contacts relevant to that specific caregiving period. A narrower handoff is both easier for the caregiver to actually use and lower-risk if it's misplaced or the arrangement ends.
 
 ---
 
@@ -5330,29 +5398,52 @@ After the absence, update the handoff template with anything the substitute mana
 **Title tag:** `Travel Household Handoff: What Someone at Home Needs While You Are Away`
 **Meta description:** `Create a travel handoff for pets, deliveries, household tasks, appointments, service providers and emergency contacts without oversharing.`
 **Primary keyword concept:** household handoff for travel
+**Depth:** verified
 **Suggested internal links:** `/guides/vacation-home-shutdown-checklist/`, `/guides/house-sitter-information/`, `/guides/pet-sitter-information/`, `/features/household-handoff/`
 
-# Travel handoff should focus on the unusual responsibilities created by absence
+# A travel handoff documents what changes because someone is away — not the whole household
 
-The goal is not to document every household routine. It is to identify what changes because someone is away.
+The goal isn't to write down every household routine before a trip. It's to identify the specific list of things that only need attention because the usual person handling them won't be there: the delivery that needs to be brought in, the appointment that was already on the calendar, the plant that will die without a middle-of-the-week watering. Everything else about the household keeps running on its own.
 
-## Review expected events during the trip
+## Walk through the trip's actual calendar, not a generic checklist
 
-Deliveries, trash/recycling, pet care, plant care, building access, home service appointments and time-sensitive renewals are typical examples. Include only what applies.
+Deliveries expected during the dates away, trash and recycling collection days, pet care, plant care, any scheduled building or home-service appointment, and time-sensitive renewals that fall inside the travel window are the categories worth reviewing — but only the ones that actually apply to this specific trip. A three-day trip with no deliveries expected and no pending appointments needs a much shorter handoff than a three-week trip during which a contractor is scheduled to visit.
 
-## Give clear escalation paths
+## Give an escalation path more useful than "text me"
 
-If a leak appears or an appliance fails, who should the sitter contact? A concise service-provider list is more useful than access to the full asset database.
+If a pipe leaks or an appliance fails while the household is away, whoever is covering needs to know who to call — not just to be told to reach the traveling household member, who may be unreachable, in a different time zone, or simply asleep. A concise list of the actual service providers (plumber, HVAC, the property manager if applicable) with their numbers is more useful during an actual problem than access to the household's full asset database, which the person covering the house has no need to browse.
 
-## Minimize security exposure
+## Set a spending or decision boundary in advance
 
-Travel documents should not be publicly shared. Avoid placing absence dates and access details on a visible family display or unsecured printout.
+For anything beyond a phone call — a repair that needs authorizing, a delivery that needs signing for and paying — decide in advance how much decision-making authority the person covering the house actually has. "Contact me for anything over $200, otherwise use your judgment" is a real, usable boundary; leaving it unstated means either the sitter under-acts on something urgent or over-acts on something that should have waited.
 
-## Close the handoff after return
+## Minimize what's exposed about the empty house
 
-Mark temporary responsibilities complete and capture any issue that occurred while away.
+Absence dates, access codes and security details are exactly the kind of information that shouldn't sit on a visible family display, an unsecured printed note, or anywhere a random visitor to the home might see it. Share this handoff directly and privately with the specific person covering the house, not broadly.
+
+## Close the loop after you're back
+
+When the trip ends, mark the temporary responsibilities complete and capture anything that came up — a delivery that arrived early, a plant that needed more water than expected, a provider who was unreachable when called. That note is what makes next trip's handoff faster to build instead of starting from a blank page each time.
+
+## Short trips and long trips need genuinely different handoffs
+
+A weekend away might need nothing more than "collect the mail and feed the cat." A three-week trip likely intersects with a scheduled home-service appointment, at least one bill cycle, and possibly a delivery that needs to be brought inside before it sits on the porch for days. Don't reuse a long-trip handoff template for a short trip, or a household member covering a quick weekend ends up wading through irrelevant sections; don't reuse a short-trip template for a long one, or something real gets missed.
+
+## Coordinate with whoever is actually watching the house, not just whoever agreed in principle
+
+A neighbor who agreed months ago to "keep an eye on things" is not the same as a neighbor who has the current handoff in hand the week of the trip. Confirm the specific plan close to departure — who's checking on the house, on what days, with what access — rather than relying on a general agreement made far in advance that may have quietly become less certain by the time the trip actually happens.
 
 **Contextual CTA:** Generate the handoff 48 hours before departure, then do a final update on the day you leave.
+
+**FAQ:**
+- Q: What should a travel handoff actually include?
+  A: Only what changes because you're away during this specific trip — expected deliveries, trash days, pet or plant care, any scheduled appointments, and time-sensitive renewals that fall inside the travel window. Skip anything that isn't relevant to these particular dates; a generic checklist adds noise the person covering the house has to sift through.
+- Q: Who should have access to the household's full records while I'm traveling?
+  A: Usually no one needs full access — a filtered handoff with the relevant tasks, care instructions and service-provider contacts covers what a house sitter or covering family member actually needs. Broad access to the whole household database is rarely necessary and adds unnecessary exposure.
+- Q: Should I set a spending limit for someone covering my house?
+  A: Yes — a stated boundary like "contact me for anything over $200, otherwise use your judgment" gives the person covering the house a real decision rule instead of forcing them to guess whether a problem is urgent enough to interrupt your trip or too urgent to wait for a reply.
+- Q: Is it safe to post travel dates and home-access details on a shared family screen?
+  A: No — that information should go directly and privately to whoever is actually covering the house, not on a visible display or an unsecured printout anyone could see. Absence dates and access codes are exactly the details worth protecting most carefully.
 
 ---
 
@@ -5362,29 +5453,52 @@ Mark temporary responsibilities complete and capture any issue that occurred whi
 **Title tag:** `House Sitter Information: Give Clear Instructions Without Sharing Your Entire Household Database`
 **Meta description:** `Create house-sitter instructions for contacts, pets, deliveries, basic home routines and problem escalation while protecting private information.`
 **Primary keyword concept:** house sitter information sheet
+**Depth:** verified
 **Suggested internal links:** `/tools/house-sitter-instruction-generator/`, `/checklists/printable-house-sitter-checklist/`, `/guides/travel-household-handoff/`, `/guides/emergency-information-sheet/`
 
-# A house sitter needs a role-specific packet, not full household access
+# A house sitter needs a role-specific packet, not access to the household's full records
 
-The sitter should know what to do every day, what to watch for and whom to contact if something goes wrong.
+A sitter needs to know three things well: what to do every day, what to watch for that would signal a real problem, and exactly who to contact if something goes wrong. Everything else about the household — financial records, unrelated family information, systems the sitter has no reason to touch — is not just unnecessary to share, it's a liability if shared by default.
 
-## Daily responsibilities
+## Lay out daily responsibilities the way a checklist works, not a narrative
 
-Pets, plants, mail/deliveries, waste collection and any appliance or home routine that cannot simply be left alone can be listed by day.
+Pets (feeding, walks, medication if any), plants, mail and deliveries, trash and recycling collection days, and any appliance or home system that needs regular attention (a pool, a sump pump, a mail slot that jams) belong in a day-by-day or task-by-task list a sitter can check off, not a paragraph they have to parse under time pressure. If a routine happens on a specific day of the week — trash goes out Tuesday night — say the day explicitly rather than "regularly," since a sitter unfamiliar with the neighborhood has no other way to know.
 
-## Problem escalation
+## Give an escalation path that doesn't depend on reaching the homeowner
 
-Include the primary household contact, backup contact, relevant building/landlord information and selected service-provider details.
+The primary household contact matters, but the packet needs a real answer for what happens if that person is unreachable: a backup contact, the property manager or landlord if applicable, and the specific service providers most likely to be needed — a plumber, an HVAC contact, or a neighbor who knows the house. A sitter facing a leak at 11pm needs a name and number they can act on immediately, not just "call the homeowner" as the only instruction.
 
-## Keep security details controlled
+## Handle access credentials outside the packet itself
 
-Access codes, alarm information and keys require careful handling. Use an appropriate secure method rather than leaving credentials in a generic printable sheet.
+Access codes, alarm codes and physical keys are exactly the kind of information that shouldn't live in a generic printable sheet a sitter might leave on a counter or lose. Share these through a more controlled channel — a smart lock's temporary code, a locked key box, or a direct verbal handoff — rather than writing them on the same page as the pet-feeding schedule.
 
-## Show less, not more
+## Set the boundary on decision-making before it's tested
 
-There is no reason for a sitter to see warranty files, financial notes or unrelated family records.
+If something breaks or a delivery needs signing for, does the sitter have authority to act, or should they always check first? A stated rule — "handle anything under $100 yourself, otherwise text me first" — removes the guesswork that otherwise leads a sitter to either escalate every minor thing or quietly under-react to something that actually mattered.
+
+## Show only what this specific sitter needs
+
+There's no reason for a house sitter to see warranty files, financial notes, insurance policy numbers or unrelated family records — none of that helps them do the job, and all of it adds exposure if the packet is misplaced. Build the sitter's view as a deliberately narrow export, not a trimmed-down copy of the full household database.
+
+## First-time sitters need more written down than a regular one
+
+A neighbor who has sat for the house a dozen times already knows where the spare towels are and which door sticks. A first-time sitter, or one found through a service rather than a personal connection, needs everything spelled out that a regular sitter would take for granted — parking arrangements, trash pickup logistics, quirks of specific appliances, and anything about the neighborhood (a dog next door, a gate code) that isn't obvious from inside the house. Match the packet's detail level to how familiar this specific sitter actually is with the house, not to how detailed last time's packet happened to be.
+
+## A short walkthrough beats a longer written packet for anything physical
+
+Some things are faster and clearer to show than to describe — how a finicky garage door opener works, where the water shutoff actually is, what a specific alarm panel's sequence looks like. Where possible, pair the written packet with a brief in-person or video walkthrough for anything physical and slightly unusual; text description of a mechanical quirk is one of the most common places a house-sitter packet quietly fails.
 
 **Contextual CTA:** Use the House Sitter Instruction Generator to create a minimal packet, then remove anything the sitter does not actually need.
+
+**FAQ:**
+- Q: What should a house sitter's daily checklist actually look like?
+  A: A day-by-day or task-by-task list — pet care, plant watering, mail, trash days — with specific days named rather than vague terms like "regularly." A sitter unfamiliar with the household has no way to infer that trash goes out on Tuesday nights unless the packet says so directly.
+- Q: How should access codes and keys be shared with a house sitter?
+  A: Through a more controlled method than the general information packet — a temporary smart-lock code, a locked key box, or a direct handoff — rather than writing codes on the same printed sheet as the feeding schedule. Credentials and daily-routine information have very different sensitivity and shouldn't share a page.
+- Q: Should a house sitter have decision-making authority if something breaks?
+  A: Give them an explicit boundary in advance, like "handle anything under $100 yourself, otherwise text first." Without a stated rule, a sitter either escalates minor issues unnecessarily or hesitates on something that actually needed immediate action.
+- Q: What household information should be kept away from a house sitter?
+  A: Warranty files, financial notes, insurance policy numbers and any unrelated family records — none of it helps the sitter do their job, and all of it is unnecessary exposure if the packet is lost or left somewhere visible. Build a narrow, role-specific export rather than sharing broader household access.
 
 ---
 
@@ -5394,29 +5508,52 @@ There is no reason for a sitter to see warranty files, financial notes or unrela
 **Title tag:** `Pet Sitter Information: Build a Clear Care Sheet for Feeding, Routine and Emergency Contacts`
 **Meta description:** `Prepare pet-sitter information with feeding routine, walk/care schedule, veterinarian contacts, supplies and household escalation instructions.`
 **Primary keyword concept:** pet sitter information sheet
+**Depth:** verified
 **Suggested internal links:** `/tools/pet-sitter-instruction-generator/`, `/checklists/printable-pet-sitter-checklist/`, `/guides/organize-pet-records/`, `/guides/travel-household-handoff/`
 
-# Pet-sitter instructions should remove guesswork from normal routines
+# The sitter sheet's job is removing guesswork — "feed normally" is not an instruction
 
-A sitter should not have to interpret vague notes such as “feed normally.” The useful sheet turns everyday caregiver knowledge into clear actions.
+A pet's everyday caregiver operates on routine and instinct built up over months or years: they know the dog gets slightly less food on light-exercise days, that the cat won't eat near the door, that "normal" bark versus "something's wrong" bark sound different. None of that transfers by saying "feed normally" — it transfers by writing down the actual amount, the actual schedule, and the actual quirks a stranger would otherwise have to guess at.
 
-## Describe the routine
+## Write the routine as exact quantities and times, not general habits
 
-Record feeding amount and schedule exactly as currently used, walk/activity routine, usual sleeping arrangement, location of supplies and any known household rules.
+Feeding amount (by cup or gram measurement, not "the usual scoop"), feeding times, walk or exercise routine and duration, sleeping arrangement, and the specific location of food, leashes and any equipment all belong written down precisely enough that someone who has never met the animal could follow it correctly on the first try. Household rules worth including: furniture access, door/gate habits that matter for safety, and anything the animal reacts to (other pets, specific noises, strangers at the door).
 
-## Keep medical instructions current and authoritative
+## Set a real authorization boundary for a veterinary emergency
 
-If medication or treatment is involved, reproduce current veterinarian instructions accurately. Do not ask the app to generate or modify medical directions.
+This is the detail sitter instructions most often skip, and it matters most: if the pet needs emergency veterinary care while the owner is unreachable, does the sitter have authorization to approve treatment, and up to what cost? A written statement like "authorized to approve emergency treatment up to $500 at [clinic name]; contact me immediately regardless" gives a sitter facing a real crisis a clear, actionable boundary instead of a moment of paralysis over whether they're allowed to act.
 
-## Give escalation contacts
+## Reproduce medical instructions exactly — never paraphrase, never generate
 
-Primary owner, backup household contact, veterinarian and emergency clinic information should be easy to identify.
+Where medication or an ongoing treatment is involved, copy the veterinarian's actual instruction as given: drug name, dose, frequency, method (with food, specific time). Neither the sitter's memory of "something like this" nor the household app itself should generate or adjust that instruction. If it's unclear, the answer is calling the vet's office to confirm before the sitting period starts, not guessing.
 
-## Review before every trip
+## Give escalation contacts in the order they'd actually be used
 
-Pet routines can change. Add a last-reviewed date and do not reuse an old sheet without checking it.
+List the primary owner, a backup household or family contact, the regular veterinarian's number, and — critically — the after-hours emergency clinic's name, address and phone number, since the regular vet's office is very likely closed during an actual after-hours emergency. A sitter who only has the daytime vet's number is stuck exactly when it matters most.
+
+## Review before every single trip, not just the first time
+
+Feeding amounts change with the pet's weight or health, medications get added or adjusted, and a vaccination certificate can quietly expire between trips. Put a visible last-reviewed date on the sheet, and make checking it — not assuming last trip's version is still accurate — a real step before every departure, not just the first time a sitter was used.
+
+## Multiple pets need distinguishable, not merged, instructions
+
+A household with more than one pet should give each animal its own clearly separated section rather than a single merged note — different feeding amounts, different medication schedules, and different personality quirks (one cat hides during thunderstorms, the other doesn't) get lost in a combined paragraph. A sitter juggling two or three animals benefits most from being able to glance at exactly one section per pet without cross-referencing a shared block of text.
+
+## Test the sheet on someone who has never met the pet
+
+The most reliable way to find a gap in a pet-sitter sheet is handing it to a person unfamiliar with the animal — a friend, a family member the pet doesn't know — and watching what they have to ask about. If they can't tell from the sheet alone how much food to give or where the leash is kept, that's the gap to close before an actual sitter arrives without the household there to answer questions in real time.
 
 **Contextual CTA:** Generate the sitter sheet, then give it to someone unfamiliar with the routine and ask what is still unclear.
+
+**FAQ:**
+- Q: What's the most commonly missed detail in pet-sitter instructions?
+  A: A clear authorization boundary for veterinary emergencies — whether the sitter can approve emergency treatment while the owner is unreachable, and up to what cost. Without that stated in advance, a sitter facing a real emergency has to guess whether they're allowed to act, which costs time that matters.
+- Q: How specific should feeding instructions be?
+  A: Exact quantities and times — a measured amount, not "the usual scoop," and specific feeding times rather than "feed normally." Someone who has never met the pet should be able to follow the instructions correctly on the first try without any prior familiarity with the animal's routine.
+- Q: Why does the after-hours emergency clinic matter separately from the regular vet?
+  A: Because the regular veterinarian's office is very likely closed during an actual after-hours emergency, which is exactly when a sitter is most likely to need help. Listing the after-hours clinic's name, address and phone separately ensures the sitter isn't stuck with only a daytime number that won't be answered.
+- Q: How often should a pet-sitter instruction sheet be updated?
+  A: Before every trip — feeding amounts, medications and vaccination status can all change between one sitting period and the next. A visible last-reviewed date, checked and confirmed before each departure, keeps the sheet from being used on autopilot when something about the routine has actually changed.
 
 ---
 
@@ -5426,29 +5563,52 @@ Pet routines can change. Add a last-reviewed date and do not reuse an old sheet 
 **Title tag:** `Family Continuity Plan: Keep the Household Running When Normal Roles Change`
 **Meta description:** `Build a family continuity plan for recurring obligations, household admin, service contacts, pets, dependents and essential records.`
 **Primary keyword concept:** family continuity plan
+**Depth:** verified
 **Suggested internal links:** `/guides/household-admin-backup-person/`, `/features/household-handoff/`
 
-# Continuity planning is not only for businesses
+# Continuity planning isn't only for businesses — a household has single points of failure too
 
-A household can be disrupted by illness, travel, caregiving, work demands or an unexpected emergency. The question is simple: **Can another trusted person find the information required to keep normal responsibilities moving?**
+A household can be disrupted by illness, an unexpected trip, a caregiving demand, a work emergency, or something worse. The question a continuity plan answers is specific and testable: if the person who normally handles something couldn't for a while, could another trusted household member find what they need to keep it moving? Most households have never tested that question, and the honest answer for several responsibilities is usually no.
 
-## Identify single-person knowledge
+## Map single-person knowledge before you plan anything else
 
-List responsibilities that only one person currently understands: utilities, insurance, service providers, school logistics, pet care, repairs, subscriptions or recurring renewals.
+Walk through the household's actual systems — utilities, insurance, service providers, school logistics, pet care, home repairs, subscriptions, recurring renewals — and mark each one "shared knowledge" or "one person only." The one-person-only list is the real continuity gap. Most households find it's longer than expected once they actually do this exercise rather than assuming things are more shared than they are.
 
-## Create a backup owner
+## A backup owner needs context, not a new job
 
-The backup does not need to perform the task every month. They simply need enough context to take over temporarily.
+The backup for a given responsibility doesn't need to take it over permanently or even monthly — they need enough documented context to step in for a stretch of time without having to reconstruct everything from scratch. That's a meaningfully lower bar than "learn to do this job," and naming it that way is what makes people actually agree to be a backup instead of avoiding the ask.
 
-## Document the next action
+## Write the next action, not just the category name
 
-A useful continuity record says not only “car insurance,” but “policy owner is X; renews in October; provider contact is Y; document stored at Z.”
+"Car insurance" tells a backup nothing actionable. "Policy owner is Dana; renews in October; provider is [company], contact number on file; the policy document is in the home office filing cabinet" tells them exactly what to do and where to look. The difference between a continuity plan that works under pressure and one that just lists categories is entirely in this level of specificity — write every entry as if the backup will need to act on it with zero additional context.
 
-## Review after major life changes
+## Connect continuity records to protected contacts, not exposed ones
 
-Moves, new dependents, new jobs or changed care responsibilities can make the continuity plan outdated quickly.
+Some of the people and providers in a continuity plan are sensitive — a family member's private financial advisor, an estranged relative kept on file only for medical history purposes. Marking those contacts `sensitive` in the household's records keeps them out of any handoff snapshot generated from this plan, so a continuity plan built to help a backup person doesn't simultaneously become a document that exposes contacts the household never intended to share broadly.
+
+## Review after every major life change, not on a fixed calendar
+
+A move, a new dependent, a new job, a new pet, or a change in who's providing care can each quietly invalidate parts of the plan. Treat any of those as an immediate trigger to update the affected sections, rather than waiting for whatever periodic review is scheduled — a continuity plan that's technically due for review next quarter but already wrong today isn't actually protecting anyone.
+
+## Start with the five responsibilities that would hurt most if they lapsed
+
+Not every household system needs equal continuity documentation on day one. Prioritize by consequence: what would actually go wrong, and how quickly, if this specific responsibility had no backup for a month? A lapsed streaming subscription is a minor annoyance; a missed insurance renewal, an unpaid mortgage or utility bill, or an unmonitored medical need for a dependent are consequential in a completely different way. Build the continuity records for the highest-consequence items first, and treat the rest as a longer-term project rather than something that has to be finished before the plan has any value.
+
+## A continuity plan is a living document, not a one-time project
+
+The households that get real value from continuity planning treat it as something revisited in minutes each time something changes, not a single exhaustive weekend project completed once and left alone. A plan built in one sitting and never touched again drifts out of date exactly like the "in case something happens" spreadsheet it was meant to replace — the difference is only in how the plan gets maintained, not in how much effort went into building it the first time.
 
 **Contextual CTA:** Choose the five household responsibilities with the most single-person knowledge and create a backup path for each.
+
+**FAQ:**
+- Q: Where should a household start when building a continuity plan?
+  A: List every recurring household responsibility — utilities, insurance, service providers, school logistics, pet care, subscriptions — and mark each as either "shared knowledge" or "one person only." The one-person-only items are the actual continuity gaps, and most households find that list is longer than they expected before doing the exercise.
+- Q: Does a backup person need to learn how to do the task themselves?
+  A: No — they need enough documented context to step in temporarily, which is a meaningfully lower commitment than learning to permanently handle the responsibility. Framing it that way tends to get more people to actually agree to be a backup.
+- Q: What makes a continuity record actually useful versus just a list of categories?
+  A: Specificity. "Car insurance" tells a backup nothing; "policy owner is Dana, renews in October, provider contact on file, document in the home office cabinet" tells them exactly what to do. Write every entry assuming the backup will act on it with no other context available.
+- Q: How does a continuity plan avoid exposing contacts that should stay private?
+  A: By marking sensitive contacts — a private financial advisor, a relative kept on file only for medical history — as sensitive in the household's records. That flag automatically excludes them from any handoff snapshot generated from the continuity plan, so building the plan doesn't accidentally expose contacts the household never meant to share.
 
 ---
 
@@ -5491,29 +5651,54 @@ Shared household operation does not require eliminating all individual privacy. 
 **Title tag:** `Household Admin Backup Person: How to Prepare Someone to Step In Temporarily`
 **Meta description:** `Choose a backup household administrator and give them a clear view of recurring obligations, contacts, records and upcoming household work.`
 **Primary keyword concept:** household backup person
-**Suggested internal links:** `/guides/family-continuity-plan/`, `/guides/household-admin-backup-person/`, `/tools/home-handoff-summary-generator/`
+**Depth:** verified
+**Suggested internal links:** `/guides/family-continuity-plan/`, `/guides/emergency-information-sheet/`, `/tools/home-handoff-summary-generator/`
 
 # Every important household system should have a second person who can find the map
 
-The backup person may be a spouse, adult child, sibling or another trusted individual. Their role is not constant access to everything. It is the ability to step in when the primary organizer cannot.
+The backup person might be a spouse, an adult child, a sibling, or another trusted adult. Their role isn't constant access to everything the household manages — it's the ability to find what they need and act competently when the usual person can't, whether that's a single afternoon or an extended absence. Most households never define this role explicitly, which means the "backup" who eventually gets called on is improvising from nothing.
 
-## Decide what authority the backup actually needs
+## The goal is shared recoverability, not equal memory
 
-Different households may share different levels of access. A backup may only need contacts and upcoming obligations, or may need broader access during an emergency. Make the boundary explicit.
+Partners and households naturally divide responsibilities for efficiency — one person handles vehicles, another handles school administration, another handles insurance or home services. That division is fine and normal. The risk isn't specialization itself; it's that no one else can reconstruct the system if the specialist is unavailable. A backup person doesn't need to know every account number from memory. They need to know what major responsibilities exist, who normally owns each one, where the records live, and what deadlines currently matter — the map, not a duplicate of everything the primary person carries in their head.
 
-## Create a short operational brief
+## Decide what authority the backup actually needs, and say so explicitly
 
-Current utilities, key service providers, major recurring payments, critical appointments, pets/dependents and urgent maintenance are typical categories.
+Different situations call for different levels of access. A backup covering a single weekend trip might only need contacts and anything due that weekend. A backup stepping in during a longer absence or an emergency might need broader visibility — recurring bills, service provider relationships, upcoming renewals. Make that boundary an explicit decision rather than an assumption; an unstated boundary tends to default to either far too little access (the backup can't actually help) or far too much (information gets shared that didn't need to be).
 
-## Tell them where secure records live
+## Build a short operational brief, organized by what's due soon
 
-The brief can reference a password manager, safe or document repository without exposing the secrets themselves.
+The most useful brief isn't a full copy of the household's records — it's current utilities and their support numbers, key service providers, major recurring payments and their due dates, critical upcoming appointments, and anything urgent involving pets, dependents or maintenance. Organize it by what's due or might come up soon, not as a static reference of everything that's ever existed, so a backup person opening it for the first time under real pressure sees what actually matters right now.
 
-## Practice once
+## Use a generated handoff view instead of a spreadsheet nobody updates
 
-Ask the backup person to find a service contact, renewal date and emergency document. A continuity plan that has never been tested may still depend on hidden knowledge.
+A manually maintained "in case something happens to me" document is honest in intent but almost never accurate in practice — it's written once, in a moment of good intentions, and then quietly drifts out of date as the household's actual situation changes. A household system that can generate a current summary directly from live records solves this differently: the backup's view is only ever as stale as the underlying data, not as stale as the last time someone remembered to update a separate document.
+
+## Tell them where secure records live without exposing what's in them
+
+The brief should point to where sensitive originals and credentials are kept — a password manager, a safe, a document repository — without reproducing the secrets themselves inside the brief. And where the backup's view is built from the household's contact list, contacts marked `sensitive` are automatically filtered out of that handoff — a mechanism worth knowing about specifically, since it means the household can maintain private contacts (a personal therapist, an estranged relative kept only for medical-history purposes) without worrying they'll surface in a document meant for a backup administrator.
+
+## Respect privacy within the partnership
+
+Shared household operation doesn't require eliminating every individual's privacy. A backup person needs operational visibility into what the household runs on — not blanket access to every private detail of the primary person's life. Permission design should reflect what each household actually chooses, and "backup access" should mean "can keep things running," not "can see everything."
+
+## Practice it once, before an emergency forces the first real test
+
+Ask the backup person to actually find three things: a specific service contact, a renewal date, and where an emergency document is stored — without coaching, using only what's in the brief. Where they hesitate is the plan's real weak point, and it's far cheaper to discover during a calm afternoon than during the situation that makes the backup role necessary in the first place.
 
 **Contextual CTA:** Create a backup-person handoff and test three real household questions before an emergency makes the test unavoidable.
+
+**FAQ:**
+- Q: What's the difference between a backup person and full shared access to everything?
+  A: A backup person needs operational visibility — what major responsibilities exist, who owns them, where records live, what's due soon — not constant access to every private detail. The goal is shared recoverability: someone else can keep things running temporarily, not that two people carry identical, complete knowledge of everything at all times.
+- Q: How much authority should a household backup person have?
+  A: It depends on the situation and should be an explicit decision, not an assumption. A backup covering a single weekend might only need contacts and what's due that weekend; someone covering a longer absence or genuine emergency might need broader visibility into bills, providers and renewals. State the boundary directly rather than leaving it to be guessed at.
+- Q: Why is a generated handoff view better than a manually written "in case something happens" document?
+  A: A manually written document is accurate the day it's written and drifts out of date from there, since nobody reliably remembers to update a separate file as life changes. A view generated directly from the household's live records is only ever as stale as the data itself, which is a much smaller and more honest gap.
+- Q: How does a backup person's handoff avoid exposing contacts that should stay private?
+  A: Any contact marked sensitive in the household's records is automatically excluded from a generated handoff snapshot. That means a household can keep genuinely private contacts on file — for medical history or personal reasons — without those contacts appearing in a document built for a backup administrator.
+
+---
 
 
 ---
