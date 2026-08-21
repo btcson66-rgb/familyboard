@@ -12,8 +12,8 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Put a 20-minute Weekly Reset on the household calendar and make it the moment when the dashboard is cleaned, not another daily obligation."
 related:
-  - "/guides/household-admin-day/"
-  - "/guides/recurring-household-tasks/"
+  - "/guides/household-weekly-reset/"
+  - "/guides/family-chore-system/"
   - "/features/home-dashboard/"
   - "/features/family-display-mode/"
 faq: []

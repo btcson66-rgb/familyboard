@@ -12,7 +12,6 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Create your first backup soon after setup, then make “last backup date” visible on the dashboard so protection does not depend on memory."
 related:
-  - "/features/local-first-home-organizer/"
   - "/features/private-family-organizer/"
   - "/guides/photo-home-inventory/"
   - "/security/"

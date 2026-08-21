@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Use the emergency version for crisis contacts and the private app for the fuller household contact directory."
 related:
   - "/guides/home-contact-list/"
-  - "/guides/family-emergency-contacts/"
+  - "/guides/emergency-information-sheet/"
   - "/templates/printable-emergency-contacts/"
   - "/features/household-handoff/"
 faq: []

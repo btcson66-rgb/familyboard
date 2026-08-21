@@ -12,8 +12,7 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Start with the free Household Handoff Summary Generator and see which missing pieces are still trapped in one person's memory."
 related:
-  - "/guides/household-handoff/"
-  - "/guides/what-spouse-needs-to-know/"
+  - "/guides/household-admin-backup-person/"
   - "/tools/home-handoff-summary-generator/"
   - "/features/emergency-information-organizer/"
 faq: []

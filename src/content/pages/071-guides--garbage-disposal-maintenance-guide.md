@@ -14,7 +14,7 @@ nextStep: "Keep the asset record simple: model, manual, installation/repair hist
 related:
   - "/guides/dishwasher-maintenance-checklist/"
   - "/guides/water-leak-response-home-records/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
   - "/guides/home-service-provider-list/"
 faq: []
 contentVersion: 1

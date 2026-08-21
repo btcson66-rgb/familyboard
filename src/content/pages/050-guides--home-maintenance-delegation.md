@@ -13,8 +13,8 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Pick five recurring maintenance responsibilities and assign an owner for the *next action*, not merely a name beside the task."
 related:
   - "/guides/divide-household-responsibilities/"
-  - "/guides/recurring-household-tasks/"
-  - "/guides/household-handoff/"
+  - "/guides/family-chore-system/"
+  - "/guides/household-admin-backup-person/"
   - "/features/family-task-manager/"
 faq: []
 contentVersion: 1

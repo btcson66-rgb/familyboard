@@ -413,7 +413,7 @@ You do not need a perfect system. Start with one refrigerator, one vehicle, one 
 **Title tag:** `Household Management Features — Assets, Maintenance, Warranties, Tasks and More | FamilyBoard`
 **Meta description:** `See how FamilyBoard organizes household assets, maintenance, warranties, subscriptions, tasks, emergency information, backups and family handoffs.`
 **Primary keyword concept:** household management app features
-**Suggested internal links:** `/features/home-inventory-tracker/`, `/features/maintenance-tracker/`, `/features/household-handoff/`, `/features/local-first-home-organizer/`
+**Suggested internal links:** `/features/home-inventory-tracker/`, `/features/maintenance-tracker/`, `/features/household-handoff/`, `/features/private-family-organizer/`
 
 # One household dashboard, built around the work behind the calendar
 
@@ -635,7 +635,7 @@ That limitation is part of the product's privacy-first philosophy: the app shoul
 **Title tag:** `Household Subscription Tracker for Renewals, Costs and Cancellation Notes | FamilyBoard`
 **Meta description:** `Track household subscriptions, renewal dates, billing frequency, ownership and cancellation notes in one private list.`
 **Primary keyword concept:** household subscription tracker
-**Suggested internal links:** `/guides/organize-household-subscriptions/`, `/guides/subscription-renewal-tracker/`, `/tools/household-subscription-cost-calculator/`, `/guides/annual-renewal-calendar/`
+**Suggested internal links:** `/guides/organize-household-subscriptions/`, `/tools/household-subscription-cost-calculator/`, `/guides/annual-renewal-calendar/`
 
 # Subscriptions are household obligations, not just expenses
 
@@ -669,7 +669,7 @@ Some subscriptions serve one person; others are shared. A monthly or quarterly r
 **Title tag:** `Family Task Manager for Chores, Household Admin and Recurring Responsibilities | FamilyBoard`
 **Meta description:** `Organize household chores and recurring admin tasks by owner, due date, priority and history.`
 **Primary keyword concept:** family task manager
-**Suggested internal links:** `/guides/divide-household-responsibilities/`, `/guides/recurring-household-tasks/`, `/tools/recurring-chore-planner/`, `/features/household-handoff/`
+**Suggested internal links:** `/guides/divide-household-responsibilities/`, `/guides/family-chore-system/`, `/tools/recurring-chore-planner/`, `/features/household-handoff/`
 
 # Household work includes far more than chores
 
@@ -733,7 +733,7 @@ A household tablet does not need every detail. It needs a large daily view that 
 **Title tag:** `Household Emergency Information Organizer — Contacts, Utilities and Instructions | FamilyBoard`
 **Meta description:** `Keep important household emergency contacts, utility notes, pet information and operational instructions in one clear local-first record.`
 **Primary keyword concept:** household emergency information organizer
-**Suggested internal links:** `/guides/family-emergency-contacts/`, `/guides/emergency-information-sheet/`, `/tools/emergency-contact-sheet-generator/`, `/features/household-handoff/`
+**Suggested internal links:** `/guides/emergency-information-sheet/`, `/tools/emergency-contact-sheet-generator/`, `/features/household-handoff/`
 
 # Emergency information is only useful if another person can understand it quickly
 
@@ -767,7 +767,7 @@ The product organizes the household's information; it does not replace local eme
 **Title tag:** `Household Handoff — Make the Invisible Work of Running a Home Transferable | FamilyBoard`
 **Meta description:** `Create a concise household handoff showing upcoming obligations, recurring responsibilities, service contacts and the information another trusted person needs.`
 **Primary keyword concept:** household handoff checklist
-**Suggested internal links:** `/guides/household-handoff/`, `/guides/what-spouse-needs-to-know/`, `/tools/home-handoff-summary-generator/`, `/features/emergency-information-organizer/`
+**Suggested internal links:** `/guides/household-admin-backup-person/`, `/tools/home-handoff-summary-generator/`, `/features/emergency-information-organizer/`
 
 # If the household organizer vanished for a week, what would everyone else miss?
 
@@ -833,7 +833,8 @@ A wall tablet is not the place for private notes, sensitive documents or persona
 **Title tag:** `Local-First Home Organizer — Keep Household Data on Your Device | FamilyBoard`
 **Meta description:** `A home organizer designed to store core household records locally first, work offline and let users control their own backups.`
 **Primary keyword concept:** local-first home organizer
-**Suggested internal links:** `/features/private-family-organizer/`, `/features/offline-household-organizer/`, `/security/`, `/privacy/`
+**Redirects to:** `/features/private-family-organizer/`
+**Suggested internal links:** `/features/private-family-organizer/`, `/security/`, `/privacy/`
 
 # Your household database does not have to begin in someone else's cloud
 
@@ -865,7 +866,7 @@ If encrypted cloud sync is built later, it should be an opt-in service that exte
 **Title tag:** `Private Family Organizer for Household Records, Maintenance and Tasks | FamilyBoard`
 **Meta description:** `Organize household responsibilities without requiring a cloud account for the core free app. Keep family records local and export your own backups.`
 **Primary keyword concept:** private family organizer
-**Suggested internal links:** `/privacy/`, `/security/`, `/features/local-first-home-organizer/`, `/features/household-handoff/`
+**Suggested internal links:** `/privacy/`, `/security/`, `/features/private-family-organizer/`, `/features/household-handoff/`
 
 # Privacy matters more when the app knows how your household works
 
@@ -899,7 +900,8 @@ The site should explain what is stored, where it is stored and what the limitati
 **Title tag:** `Offline Household Organizer — Access Home Records Without an Internet Connection | FamilyBoard`
 **Meta description:** `Use core household records, tasks and maintenance information offline through a local-first PWA with user-controlled backup.`
 **Primary keyword concept:** offline household organizer
-**Suggested internal links:** `/features/local-first-home-organizer/`, `/features/family-display-mode/`, `/guides/digital-home-inventory-backup/`, `/app/`
+**Redirects to:** `/features/private-family-organizer/`
+**Suggested internal links:** `/features/private-family-organizer/`, `/features/family-display-mode/`, `/guides/digital-home-inventory-backup/`, `/app/`
 
 # Household information should still exist when the internet does not
 
@@ -929,7 +931,8 @@ Offline availability protects against network failure; it does not protect again
 **Title tag:** `No-Account Family Organizer — Start Managing Your Home Without Signing Up | FamilyBoard`
 **Meta description:** `Start a household dashboard without an account or email. Store core records locally and create your own backup.`
 **Primary keyword concept:** family organizer without account
-**Suggested internal links:** `/features/local-first-home-organizer/`, `/features/private-family-organizer/`, `/app/`, `/privacy/`
+**Redirects to:** `/features/private-family-organizer/`
+**Suggested internal links:** `/features/private-family-organizer/`, `/app/`, `/privacy/`
 
 # Sometimes the best onboarding form is no form at all
 
@@ -963,6 +966,7 @@ A user who has already organized useful household records has a much clearer rea
 **Title tag:** `Home Record Keeper for Repairs, Maintenance, Purchases and Household History | FamilyBoard`
 **Meta description:** `Build a practical history of repairs, maintenance, purchases, warranties and service providers for your home.`
 **Primary keyword concept:** home record keeper
+**Redirects to:** `/features/free-home-management-app/`
 **Suggested internal links:** `/guides/home-repair-history/`, `/guides/home-maintenance-records/`, `/guides/renovation-records/`, `/features/home-inventory-tracker/`
 
 # A home has a history, but most of it disappears into receipts and memory
@@ -997,6 +1001,7 @@ You do not need to reconstruct ten years of household history. Start recording m
 **Title tag:** `What Is a Household Operations System? A Practical Alternative to Scattered Home Notes | FamilyBoard`
 **Meta description:** `A household operations system connects home assets, maintenance, recurring responsibilities, records and handoff information instead of treating them as separate lists.`
 **Primary keyword concept:** household operations system
+**Redirects to:** `/features/free-home-management-app/`
 **Suggested internal links:** `/features/`, `/guides/household-management-checklist/`, `/features/household-handoff/`, `/features/home-dashboard/`
 
 # Household operations are the repeatable systems behind everyday home life
@@ -1034,7 +1039,7 @@ If every light bulb change requires a six-field form, the system will fail. The 
 **Title tag:** `Free Home Management App — Local-First Household Tracking Without an Account | FamilyBoard`
 **Meta description:** `Use a free local-first home management app for assets, maintenance, warranties, subscriptions, tasks and household records.`
 **Primary keyword concept:** free home management app
-**Suggested internal links:** `/app/`, `/features/local-first-home-organizer/`, `/features/home-dashboard/`, `/pricing/`
+**Suggested internal links:** `/app/`, `/features/private-family-organizer/`, `/features/home-dashboard/`, `/pricing/`
 
 # A free home management app should be useful before it asks you to upgrade
 
@@ -1415,7 +1420,7 @@ Instead of storing purchase records and service invoices in random folders, buil
 **Title tag:** `Apartment Maintenance Checklist: What to Track, Clean, Report and Document`
 **Meta description:** `A renter-friendly apartment maintenance checklist that separates everyday upkeep from issues that should be documented and reported to the property owner or manager.`
 **Primary keyword concept:** apartment maintenance checklist
-**Suggested internal links:** `/guides/rental-home-maintenance-log/`, `/guides/move-in-maintenance-checklist/`, `/guides/moving-inventory/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/rental-home-maintenance-log/`, `/guides/move-in-maintenance-checklist/`, `/guides/moving-inventory/`, `/features/free-home-management-app/`
 
 # Apartment maintenance is partly about upkeep and partly about documentation
 
@@ -1447,7 +1452,7 @@ Receipts, communications and condition notes are much easier to organize as you 
 **Title tag:** `Condo Maintenance Checklist: Track What Belongs to Your Unit and What Belongs to the Building`
 **Meta description:** `A condo maintenance framework for unit systems, shared-building responsibilities, association contacts, records and recurring services.`
 **Primary keyword concept:** condo maintenance checklist
-**Suggested internal links:** `/guides/home-service-provider-list/`, `/guides/important-household-documents/`, `/guides/annual-home-review/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/home-service-provider-list/`, `/guides/important-household-documents/`, `/guides/annual-home-review/`, `/features/free-home-management-app/`
 
 # Condo maintenance starts with knowing the boundary of responsibility
 
@@ -1479,7 +1484,7 @@ Association rules, notices and legal records can matter, but the product should 
 **Title tag:** `Rental Home Maintenance Log: Keep a Clear Record of Issues, Reports and Repairs`
 **Meta description:** `Create a rental maintenance log that records problems, communication dates, service visits and tenant-completed upkeep without confusing responsibility.`
 **Primary keyword concept:** rental maintenance log
-**Suggested internal links:** `/guides/apartment-maintenance-checklist/`, `/templates/printable-repair-log/`, `/guides/move-out-home-records/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/apartment-maintenance-checklist/`, `/templates/printable-repair-log/`, `/guides/move-out-home-records/`, `/features/free-home-management-app/`
 
 # A rental maintenance log is a timeline, not a legal argument
 
@@ -1511,7 +1516,7 @@ Lease terms and local law determine repair obligations. The log simply helps the
 **Title tag:** `Home Maintenance Records: What to Keep and How to Make Them Useful`
 **Meta description:** `Learn which maintenance records have future value, from service dates and repair notes to invoices, models and follow-up recommendations.`
 **Primary keyword concept:** home maintenance records
-**Suggested internal links:** `/guides/home-repair-history/`, `/guides/home-maintenance-log/`, `/guides/home-service-provider-list/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/home-repair-history/`, `/guides/home-maintenance-log/`, `/guides/home-service-provider-list/`, `/features/free-home-management-app/`
 
 # Good maintenance records answer the next person's question
 
@@ -1543,7 +1548,7 @@ Instead of `scan003.pdf`, use a meaningful reference such as “2026-08 dishwash
 **Title tag:** `How to Keep a Home Repair History That Is Useful Years Later`
 **Meta description:** `Track repair dates, symptoms, service providers, parts, costs and outcomes so recurring household problems are easier to understand.`
 **Primary keyword concept:** home repair history
-**Suggested internal links:** `/guides/home-maintenance-records/`, `/guides/repair-history/`, `/templates/printable-repair-log/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/home-maintenance-records/`, `/guides/repair-history/`, `/templates/printable-repair-log/`, `/features/free-home-management-app/`
 
 # Repair history is most valuable when a problem happens twice
 
@@ -1771,7 +1776,7 @@ The tool can summarize history and planned items, but it should not imply financ
 **Title tag:** `Home Maintenance Reminders: How to Make Them Useful Instead of Annoying`
 **Meta description:** `Create home maintenance reminders that include context, realistic timing and completion history so they do more than generate notifications.`
 **Primary keyword concept:** home maintenance reminders
-**Suggested internal links:** `/guides/home-maintenance-calendar/`, `/tools/home-service-reminder-generator/`, `/features/maintenance-tracker/`, `/guides/recurring-household-tasks/`
+**Suggested internal links:** `/guides/home-maintenance-calendar/`, `/tools/home-service-reminder-generator/`, `/features/maintenance-tracker/`, `/guides/family-chore-system/`
 
 # A reminder without context becomes notification clutter
 
@@ -1867,7 +1872,7 @@ Live in the home long enough to learn how it behaves. Start with a small set of 
 **Title tag:** `Move-Out Home Records: What to Close, Export, Transfer and Keep`
 **Meta description:** `Use a move-out record plan to close subscriptions, preserve repair history, export household data and separate property-specific information from personal records.`
 **Primary keyword concept:** move out home checklist records
-**Suggested internal links:** `/guides/moving-house-organizer/`, `/guides/moving-inventory/`, `/tools/household-document-index-generator/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/moving-house-organizer/`, `/guides/moving-inventory/`, `/tools/household-document-index-generator/`, `/features/free-home-management-app/`
 
 # Moving out is partly a data-cleanup project
 
@@ -1935,7 +1940,7 @@ An annual review should include creating a fresh backup and confirming where pre
 **Title tag:** `Storm Preparation Home Checklist: Organize Information, Supplies and Household Responsibilities`
 **Meta description:** `A household storm-preparation framework for contacts, devices, supplies, property tasks and family responsibilities, with local official guidance taking priority.`
 **Primary keyword concept:** storm preparation home checklist
-**Suggested internal links:** `/guides/power-outage-home-preparedness/`, `/guides/emergency-supply-inventory/`, `/guides/family-emergency-contacts/`, `/features/emergency-information-organizer/`
+**Suggested internal links:** `/guides/power-outage-home-preparedness/`, `/guides/emergency-supply-inventory/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`
 
 # Storm preparation is local; household organization makes it easier to act
 
@@ -1967,7 +1972,7 @@ Make sure an offline backup or appropriately protected copy of essential informa
 **Title tag:** `Power Outage Home Preparedness: Organize the Household Before the Lights Go Out`
 **Meta description:** `Prepare for a household power outage by organizing contacts, backup devices, responsibilities, offline information and post-outage notes.`
 **Primary keyword concept:** power outage preparedness home
-**Suggested internal links:** `/guides/emergency-supply-inventory/`, `/guides/ups-battery-backup-records/`, `/guides/emergency-information-sheet/`, `/features/offline-household-organizer/`
+**Suggested internal links:** `/guides/emergency-supply-inventory/`, `/guides/ups-battery-backup-records/`, `/guides/emergency-information-sheet/`, `/features/private-family-organizer/`
 
 # The first outage problem is often information, not electricity
 
@@ -1999,7 +2004,7 @@ If an appliance, router or other system behaved abnormally after the outage, add
 **Title tag:** `Water Leak Response Records: What to Document While You Arrange Repair`
 **Meta description:** `Keep a clear timeline of a household water leak, observations, photos, contacts, service visits and repair outcomes while following safety and professional guidance.`
 **Primary keyword concept:** water leak documentation checklist
-**Suggested internal links:** `/guides/home-repair-history/`, `/guides/home-service-provider-list/`, `/templates/printable-repair-log/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/home-repair-history/`, `/guides/home-service-provider-list/`, `/templates/printable-repair-log/`, `/features/free-home-management-app/`
 
 # A leak record helps preserve the timeline while the household focuses on the problem
 
@@ -2063,7 +2068,7 @@ A contact from five years ago may no longer operate. Review critical service con
 **Title tag:** `Home Maintenance Delegation: Assign Ownership Without Turning the Home into a Workplace`
 **Meta description:** `Divide recurring home maintenance and household admin by clear ownership, next actions and shared visibility rather than vague assumptions.`
 **Primary keyword concept:** divide home maintenance responsibilities
-**Suggested internal links:** `/guides/divide-household-responsibilities/`, `/guides/recurring-household-tasks/`, `/guides/household-handoff/`, `/features/family-task-manager/`
+**Suggested internal links:** `/guides/divide-household-responsibilities/`, `/guides/family-chore-system/`, `/guides/household-admin-backup-person/`, `/features/family-task-manager/`
 
 # “Someone should handle that” is not a maintenance plan
 
@@ -2152,7 +2157,7 @@ A combination unit's freezer compartment has its own concerns worth tracking sep
 **Title tag:** `Freezer Maintenance Checklist: Condition, Defrosting, Records and Backup Planning`
 **Meta description:** `Organize freezer maintenance around the actual model, condition, cleaning requirements, power-outage planning and service history.`
 **Primary keyword concept:** freezer maintenance checklist
-**Suggested internal links:** `/guides/refrigerator-maintenance-checklist/`, `/guides/power-outage-home-preparedness/`, `/guides/appliance-inventory/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/refrigerator-maintenance-checklist/`, `/guides/power-outage-home-preparedness/`, `/guides/appliance-inventory/`, `/features/free-home-management-app/`
 
 # A freezer record is useful for both maintenance and disruption planning
 
@@ -2304,7 +2309,7 @@ An all-in-one washer-dryer unit doesn't get a blended maintenance list — the w
 **Title tag:** `Dishwasher Maintenance Checklist: Filters, Cleaning, Leaks and Repair History`
 **Meta description:** `Organize dishwasher maintenance around the actual model, including user-cleanable components, cleaning routines, leak observations and service history.`
 **Primary keyword concept:** dishwasher maintenance checklist
-**Suggested internal links:** `/guides/water-leak-response-home-records/`, `/guides/appliance-inventory/`, `/tools/warranty-expiration-calculator/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/water-leak-response-home-records/`, `/guides/appliance-inventory/`, `/tools/warranty-expiration-calculator/`, `/features/free-home-management-app/`
 
 # Dishwasher maintenance is mostly about knowing what the model expects
 
@@ -2526,7 +2531,7 @@ A filter installed at the start of a mild spring, when the system barely runs, a
 **Title tag:** `Furnace Maintenance Records: Keep Service, Filters and Technician Notes Together`
 **Meta description:** `Organize furnace model details, filter records, professional service history and follow-up recommendations without encouraging unsafe DIY work.`
 **Primary keyword concept:** furnace maintenance records
-**Suggested internal links:** `/guides/fall-home-maintenance-checklist/`, `/guides/hvac-filter-tracker/`, `/guides/home-service-provider-list/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/fall-home-maintenance-checklist/`, `/guides/hvac-filter-tracker/`, `/guides/home-service-provider-list/`, `/features/free-home-management-app/`
 
 # Furnace records are valuable because service history can span many years
 
@@ -2591,7 +2596,7 @@ Repeated service notes across seasons can provide useful context for a qualified
 **Meta description:** `Water heater maintenance records with real intervals for tank flushing, anode rod inspection, T&P valve testing and expected lifespan, sourced from manufacturers.`
 **Primary keyword concept:** water heater maintenance records
 **Depth:** verified
-**Suggested internal links:** `/guides/water-leak-response-home-records/`, `/guides/appliance-replacement-planning/`, `/guides/home-service-provider-list/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/water-leak-response-home-records/`, `/guides/appliance-replacement-planning/`, `/guides/home-service-provider-list/`, `/features/free-home-management-app/`
 
 # Water heater maintenance records: the tasks that actually extend its life
 
@@ -2868,7 +2873,7 @@ Multiple bathrooms may have different fans. Label each by room and preserve the 
 **Title tag:** `Garbage Disposal Maintenance Guide: Routine Care, Model Records and Safe Escalation`
 **Meta description:** `Organize garbage-disposal model information, routine manufacturer-approved care and repair history without encouraging unsafe internal work.`
 **Primary keyword concept:** garbage disposal maintenance guide
-**Suggested internal links:** `/guides/dishwasher-maintenance-checklist/`, `/guides/water-leak-response-home-records/`, `/features/home-record-keeper/`, `/guides/home-service-provider-list/`
+**Suggested internal links:** `/guides/dishwasher-maintenance-checklist/`, `/guides/water-leak-response-home-records/`, `/features/free-home-management-app/`, `/guides/home-service-provider-list/`
 
 # A garbage-disposal record is primarily about safe troubleshooting context
 
@@ -3144,7 +3149,7 @@ Home changes are one of the most common ways smoke alarm coverage quietly falls 
 **Meta description:** `Carbon monoxide alarm records built on EPA placement guidance and manufacturer replacement data: one per floor, weekly test, replace every 7 to 10 years.`
 **Primary keyword concept:** carbon monoxide alarm records
 **Depth:** verified
-**Suggested internal links:** `/guides/smoke-alarm-records/`, `/guides/furnace-maintenance-records/`, `/guides/emergency-information-sheet/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/smoke-alarm-records/`, `/guides/furnace-maintenance-records/`, `/guides/emergency-information-sheet/`, `/features/free-home-management-app/`
 
 # Carbon monoxide alarm records: placement, testing and a shorter replacement clock than smoke alarms
 
@@ -3766,7 +3771,7 @@ A registration record for a disposed device should remain in the asset history b
 **Title tag:** `Repair History Tracker: Know What Was Fixed, When and Whether the Problem Returned`
 **Meta description:** `Build an asset-level repair history with symptoms, dates, providers, parts, costs and outcomes.`
 **Primary keyword concept:** repair history tracker
-**Suggested internal links:** `/guides/home-repair-history/`, `/templates/printable-repair-log/`, `/guides/appliance-replacement-planning/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/home-repair-history/`, `/templates/printable-repair-log/`, `/guides/appliance-replacement-planning/`, `/features/free-home-management-app/`
 
 # Repair history turns a series of isolated failures into a story
 
@@ -3798,7 +3803,7 @@ A provider who has already worked on the asset may be the best first call for a 
 **Title tag:** `Service History Tracker for Home Systems and Appliances`
 **Meta description:** `Track inspections, maintenance, repairs and professional service in one timeline for each household asset or system.`
 **Primary keyword concept:** home service history tracker
-**Suggested internal links:** `/guides/home-maintenance-records/`, `/guides/home-service-provider-list/`, `/guides/repair-history/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/home-maintenance-records/`, `/guides/home-service-provider-list/`, `/guides/repair-history/`, `/features/free-home-management-app/`
 
 # Service history is broader than repair history
 
@@ -3994,7 +3999,7 @@ Property documents may contain highly sensitive personal information. Do not pla
 **Title tag:** `Renovation Records: Keep Contractors, Materials, Dates, Warranties and Before/After History`
 **Meta description:** `Organize home renovation history with project dates, contractors, invoices, materials, warranties, permits references and future maintenance notes.`
 **Primary keyword concept:** renovation records organizer
-**Suggested internal links:** `/guides/contractor-records/`, `/guides/home-improvement-receipts/`, `/guides/home-repair-history/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/contractor-records/`, `/guides/home-improvement-receipts/`, `/guides/home-repair-history/`, `/features/free-home-management-app/`
 
 # Renovation history becomes valuable long after the dust is gone
 
@@ -4026,7 +4031,7 @@ Requirements vary by jurisdiction. Store the documents if they exist; do not use
 **Title tag:** `Contractor Records: Keep Quotes, Work History and Household Context Organized`
 **Meta description:** `Track household contractors by project, service history, contact details, invoices and follow-up recommendations without relying on scattered messages.`
 **Primary keyword concept:** contractor records organizer
-**Suggested internal links:** `/guides/home-service-provider-list/`, `/guides/renovation-records/`, `/guides/home-maintenance-records/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/home-service-provider-list/`, `/guides/renovation-records/`, `/guides/home-maintenance-records/`, `/features/free-home-management-app/`
 
 # Contractor information is most valuable when attached to the work they performed
 
@@ -4154,7 +4159,7 @@ An inventory is a good prompt to ask whether stored items still justify the cost
 **Title tag:** `Digital Home Inventory Backup: Protect the Records That Describe Your Home`
 **Meta description:** `Create a safer home-inventory backup strategy using exported files, encryption where appropriate and separate storage locations.`
 **Primary keyword concept:** home inventory backup
-**Suggested internal links:** `/features/local-first-home-organizer/`, `/features/private-family-organizer/`, `/guides/photo-home-inventory/`, `/security/`
+**Suggested internal links:** `/features/private-family-organizer/`, `/guides/photo-home-inventory/`, `/security/`
 
 # A digital home inventory is only as durable as its backup
 
@@ -4219,7 +4224,7 @@ Delete obsolete duplicates, update service providers and make sure important rec
 **Title tag:** `Digital Home Binder: A Practical Structure for Home Records, Maintenance and Emergency Information`
 **Meta description:** `Build a digital home binder that combines a household index, asset records, maintenance history, contacts and emergency information.`
 **Primary keyword concept:** digital home binder
-**Suggested internal links:** `/guides/home-maintenance-binder/`, `/guides/household-documents-organizer/`, `/guides/emergency-binder/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/home-maintenance-binder/`, `/guides/household-documents-organizer/`, `/guides/emergency-binder/`, `/features/free-home-management-app/`
 
 # A digital home binder should help operate the home, not merely store files
 
@@ -4383,7 +4388,7 @@ The app should never tell users that a loss is covered. Policies and law control
 **Title tag:** `How to Organize Utility Account Information for a Household Handoff`
 **Meta description:** `Keep utility providers, service contacts, account ownership, billing dates and non-sensitive management notes in one household index.`
 **Primary keyword concept:** organize utility account information
-**Suggested internal links:** `/guides/household-account-list/`, `/guides/household-handoff/`, `/guides/power-outage-home-preparedness/`, `/features/household-handoff/`
+**Suggested internal links:** `/guides/household-account-list/`, `/guides/household-admin-backup-person/`, `/guides/power-outage-home-preparedness/`, `/features/household-handoff/`
 
 # Utility information becomes surprisingly important when the usual account holder is unavailable
 
@@ -4415,7 +4420,7 @@ If you store account identifiers, do not display them on a family wall screen or
 **Title tag:** `How to Organize Vehicle Documents, Maintenance and Renewals at Home`
 **Meta description:** `Keep household vehicle registration references, insurance, maintenance history, warranty and renewal reminders organized without storing unnecessary sensitive data.`
 **Primary keyword concept:** organize vehicle documents
-**Suggested internal links:** `/guides/annual-renewal-calendar/`, `/guides/home-service-provider-list/`, `/features/home-record-keeper/`, `/guides/important-household-documents/`
+**Suggested internal links:** `/guides/annual-renewal-calendar/`, `/guides/home-service-provider-list/`, `/features/free-home-management-app/`, `/guides/important-household-documents/`
 
 # Vehicles are household assets with more recurring paperwork than most appliances
 
@@ -4447,7 +4452,7 @@ If multiple household members drive the vehicle, keep roadside assistance or pre
 **Title tag:** `How to Organize Pet Records for Everyday Care, Sitters and Emergencies`
 **Meta description:** `Keep pet identification, care contacts, routine records, sitter instructions and document references organized for household handoffs.`
 **Primary keyword concept:** organize pet records
-**Suggested internal links:** `/guides/pet-sitter-information/`, `/tools/pet-sitter-instruction-generator/`, `/guides/household-handoff/`, `/features/emergency-information-organizer/`
+**Suggested internal links:** `/guides/pet-sitter-information/`, `/tools/pet-sitter-instruction-generator/`, `/guides/household-admin-backup-person/`, `/features/emergency-information-organizer/`
 
 # Pet records become most valuable when someone else needs to care for the animal
 
@@ -4479,7 +4484,7 @@ A pet instruction sheet should have a visible review date because routines and m
 **Title tag:** `How to Organize School Records at Home Without Mixing Them into General Household Clutter`
 **Meta description:** `Create a household index for school contacts, schedules, permissions and document references while keeping sensitive student records protected.`
 **Primary keyword concept:** organize school records at home
-**Suggested internal links:** `/guides/household-account-list/`, `/guides/family-emergency-contacts/`, `/guides/annual-renewal-calendar/`, `/features/household-documents-organizer/`
+**Suggested internal links:** `/guides/household-account-list/`, `/guides/emergency-information-sheet/`, `/guides/annual-renewal-calendar/`, `/features/household-documents-organizer/`
 
 # School information changes often, so the household needs an index more than an archive
 
@@ -4511,7 +4516,7 @@ Pickup procedures, authorized-contact reminders or activity logistics can be inc
 **Title tag:** `Emergency Binder: What to Organize Before Your Household Is Under Stress`
 **Meta description:** `Build an emergency binder with contacts, household instructions, important references and continuity information, guided by local emergency authorities.`
 **Primary keyword concept:** emergency binder
-**Suggested internal links:** `/tools/emergency-binder-generator/`, `/checklists/printable-emergency-binder-checklist/`, `/guides/family-emergency-contacts/`, `/features/emergency-information-organizer/`
+**Suggested internal links:** `/tools/emergency-binder-generator/`, `/checklists/printable-emergency-binder-checklist/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`
 
 # An emergency binder should be short enough to use under pressure
 
@@ -4547,6 +4552,7 @@ An emergency binder with an old phone number creates false confidence. Add a rev
 **Title tag:** `Family Emergency Contacts: Build a List People Can Actually Use`
 **Meta description:** `Create a concise family emergency contact list with household members, local support, utilities and care contacts, plus offline access.`
 **Primary keyword concept:** family emergency contacts list
+**Redirects to:** `/guides/emergency-information-sheet/`
 **Suggested internal links:** `/tools/emergency-contact-sheet-generator/`, `/templates/printable-emergency-contacts/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`
 
 # An emergency contact list should answer “who do I call next?”
@@ -4643,7 +4649,7 @@ A new pet, caregiver, vehicle or family member can change the plan substantially
 **Title tag:** `Utility Shutoff Information: Document Locations Without Encouraging Unsafe Action`
 **Meta description:** `Keep accurate household references for utility controls and service contacts while leaving hazardous operations to qualified guidance.`
 **Primary keyword concept:** utility shutoff information sheet
-**Suggested internal links:** `/guides/emergency-information-sheet/`, `/guides/organize-utility-account-information/`, `/features/emergency-information-organizer/`, `/guides/household-handoff/`
+**Suggested internal links:** `/guides/emergency-information-sheet/`, `/guides/organize-utility-account-information/`, `/features/emergency-information-organizer/`, `/guides/household-admin-backup-person/`
 
 # Knowing where a household control is located can be useful; knowing when to use it is a separate question
 
@@ -4707,7 +4713,7 @@ If supplies are consumed during an outage or trip, create a restock task rather 
 **Title tag:** `Household Medical Information Organization: Keep Emergency References Without Overexposing Health Data`
 **Meta description:** `Organize limited household medical emergency references, provider contacts and document locations while keeping sensitive health records in appropriately secure systems.`
 **Primary keyword concept:** organize family medical information
-**Suggested internal links:** `/guides/emergency-information-sheet/`, `/guides/family-emergency-contacts/`, `/privacy/`, `/features/emergency-information-organizer/`
+**Suggested internal links:** `/guides/emergency-information-sheet/`, `/privacy/`, `/features/emergency-information-organizer/`
 
 # Medical information deserves a stricter privacy boundary than ordinary household notes
 
@@ -4739,7 +4745,7 @@ For complex care, a dedicated health or clinical record system may be more appro
 **Title tag:** `Caregiver Handoff Checklist: Transfer Routines, Contacts and Household Responsibilities Clearly`
 **Meta description:** `Create a caregiver handoff with routines, contacts, household logistics and current instructions while protecting sensitive information.`
 **Primary keyword concept:** caregiver handoff checklist
-**Suggested internal links:** `/guides/household-handoff/`, `/guides/pet-sitter-information/`, `/guides/house-sitter-information/`, `/tools/home-handoff-summary-generator/`
+**Suggested internal links:** `/guides/household-admin-backup-person/`, `/guides/pet-sitter-information/`, `/guides/house-sitter-information/`, `/tools/home-handoff-summary-generator/`
 
 # A caregiver handoff should describe the current routine, not the entire family history
 
@@ -4771,7 +4777,8 @@ A temporary caregiver should not automatically receive the household's entire pr
 **Title tag:** `Household Handoff Guide: Transfer the Invisible Work of Running a Home`
 **Meta description:** `Build a household handoff covering recurring responsibilities, upcoming deadlines, service contacts, assets and emergency information.`
 **Primary keyword concept:** household handoff
-**Suggested internal links:** `/features/household-handoff/`, `/guides/what-spouse-needs-to-know/`, `/guides/household-admin-backup-person/`, `/tools/home-handoff-summary-generator/`
+**Redirects to:** `/guides/household-admin-backup-person/`
+**Suggested internal links:** `/features/household-handoff/`, `/guides/household-admin-backup-person/`, `/tools/home-handoff-summary-generator/`
 
 # A household handoff is the operational version of “here is what you need to know”
 
@@ -4899,7 +4906,7 @@ Pet routines can change. Add a last-reviewed date and do not reuse an old sheet 
 **Title tag:** `Family Continuity Plan: Keep the Household Running When Normal Roles Change`
 **Meta description:** `Build a family continuity plan for recurring obligations, household admin, service contacts, pets, dependents and essential records.`
 **Primary keyword concept:** family continuity plan
-**Suggested internal links:** `/guides/household-handoff/`, `/guides/household-admin-backup-person/`, `/guides/what-spouse-needs-to-know/`, `/features/household-handoff/`
+**Suggested internal links:** `/guides/household-admin-backup-person/`, `/features/household-handoff/`
 
 # Continuity planning is not only for businesses
 
@@ -4931,7 +4938,8 @@ Moves, new dependents, new jobs or changed care responsibilities can make the co
 **Title tag:** `What Your Spouse or Partner Needs to Know About the Household`
 **Meta description:** `Make invisible household admin transferable by documenting recurring obligations, providers, renewals, maintenance and emergency information.`
 **Primary keyword concept:** household information spouse should know
-**Suggested internal links:** `/guides/divide-household-responsibilities/`, `/guides/household-handoff/`, `/guides/household-admin-backup-person/`, `/features/household-handoff/`
+**Redirects to:** `/guides/household-admin-backup-person/`
+**Suggested internal links:** `/guides/divide-household-responsibilities/`, `/guides/household-admin-backup-person/`, `/features/household-handoff/`
 
 # The goal is not equal memory; it is shared recoverability
 
@@ -4963,7 +4971,7 @@ Shared household operation does not require eliminating all individual privacy. 
 **Title tag:** `Household Admin Backup Person: How to Prepare Someone to Step In Temporarily`
 **Meta description:** `Choose a backup household administrator and give them a clear view of recurring obligations, contacts, records and upcoming household work.`
 **Primary keyword concept:** household backup person
-**Suggested internal links:** `/guides/family-continuity-plan/`, `/guides/household-handoff/`, `/guides/what-spouse-needs-to-know/`, `/tools/home-handoff-summary-generator/`
+**Suggested internal links:** `/guides/family-continuity-plan/`, `/guides/household-admin-backup-person/`, `/tools/home-handoff-summary-generator/`
 
 # Every important household system should have a second person who can find the map
 
@@ -4996,7 +5004,7 @@ Ask the backup person to find a service contact, renewal date and emergency docu
 **Title tag:** `Household Management Checklist: The Recurring Work Behind a Well-Run Home`
 **Meta description:** `Use a household management checklist to map maintenance, documents, bills, tasks, supplies, emergency information and recurring responsibilities.`
 **Primary keyword concept:** household management checklist
-**Suggested internal links:** `/tools/household-annual-review-generator/`, `/guides/recurring-household-tasks/`, `/guides/divide-household-responsibilities/`, `/features/home-dashboard/`
+**Suggested internal links:** `/tools/household-annual-review-generator/`, `/guides/family-chore-system/`, `/guides/divide-household-responsibilities/`, `/features/home-dashboard/`
 
 # Household management is easier when responsibilities are visible
 
@@ -5032,7 +5040,7 @@ Once a month or quarter, ask whether important responsibilities still have a cle
 **Title tag:** `How to Divide Household Responsibilities Without Creating Another Chore Fight`
 **Meta description:** `Divide household responsibilities by ownership, frequency and hidden admin work so recurring tasks are easier to share and hand off.`
 **Primary keyword concept:** divide household responsibilities
-**Suggested internal links:** `/guides/home-maintenance-delegation/`, `/guides/recurring-household-tasks/`, `/guides/household-handoff/`, `/features/family-task-manager/`
+**Suggested internal links:** `/guides/home-maintenance-delegation/`, `/guides/family-chore-system/`, `/guides/household-admin-backup-person/`, `/features/family-task-manager/`
 
 # Household work is easier to divide when the invisible parts are named
 
@@ -5064,6 +5072,7 @@ Critical responsibilities should be understandable to another person even if one
 **Title tag:** `Recurring Household Tasks: What Is Worth Automating and What Should Stay Flexible`
 **Meta description:** `Organize recurring household work by daily, weekly, monthly, seasonal and annual responsibilities without turning every routine into an alert.`
 **Primary keyword concept:** recurring household tasks
+**Redirects to:** `/guides/family-chore-system/`
 **Suggested internal links:** `/tools/recurring-chore-planner/`, `/guides/family-chore-system/`, `/guides/household-weekly-reset/`, `/features/family-task-manager/`
 
 # Repetition is a good reason to build a system—but not every repeated action needs a notification
@@ -5128,7 +5137,8 @@ A kitchen tablet can show today's chores without exposing private household info
 **Title tag:** `Chore Chart for Adults: Use Ownership and Rotation Without Making Home Feel Like Work`
 **Meta description:** `Build an adult household chore chart using responsibilities, rotation, frequency and hidden admin work instead of childish reward systems.`
 **Primary keyword concept:** chore chart for adults
-**Suggested internal links:** `/templates/printable-chore-chart/`, `/guides/divide-household-responsibilities/`, `/guides/household-admin-day/`, `/features/family-task-manager/`
+**Redirects to:** `/guides/family-chore-system/`
+**Suggested internal links:** `/templates/printable-chore-chart/`, `/guides/divide-household-responsibilities/`, `/guides/household-weekly-reset/`, `/features/family-task-manager/`
 
 # Adult chore charts work best when they look like shared operations, not classroom behavior charts
 
@@ -5160,7 +5170,7 @@ Work schedules, health, caregiving and travel can change capacity. A chore chart
 **Title tag:** `Household Weekly Reset: A 20-Minute Review of Tasks, Calendar and Home Needs`
 **Meta description:** `Use a short weekly household reset to review upcoming events, chores, supplies, maintenance and unresolved home tasks.`
 **Primary keyword concept:** household weekly reset
-**Suggested internal links:** `/guides/household-admin-day/`, `/guides/recurring-household-tasks/`, `/features/home-dashboard/`, `/features/family-display-mode/`
+**Suggested internal links:** `/guides/household-weekly-reset/`, `/guides/family-chore-system/`, `/features/home-dashboard/`, `/features/family-display-mode/`
 
 # A weekly reset is the smallest routine that can keep a household system current
 
@@ -5224,6 +5234,7 @@ If no recent backup exists, create one and verify the file is stored safely.
 **Title tag:** `Household Admin Day: Batch the Calls, Renewals and Paperwork You Keep Postponing`
 **Meta description:** `Use a recurring household admin session for service calls, renewals, documents, scheduling and the invisible work that does not fit daily chores.`
 **Primary keyword concept:** household admin day
+**Redirects to:** `/guides/household-weekly-reset/`
 **Suggested internal links:** `/guides/household-weekly-reset/`, `/guides/annual-renewal-calendar/`, `/guides/household-documents-organizer/`, `/features/family-task-manager/`
 
 # Household admin is easier when it has a container
@@ -5256,7 +5267,7 @@ Some households need a weekly admin block; others need one monthly. The system s
 **Title tag:** `How to Organize Household Subscriptions Before They Become Invisible Expenses`
 **Meta description:** `Create a household subscription list with owner, cost, billing frequency, renewal date and cancellation notes.`
 **Primary keyword concept:** organize household subscriptions
-**Suggested internal links:** `/tools/household-subscription-cost-calculator/`, `/guides/subscription-renewal-tracker/`, `/guides/annual-renewal-calendar/`, `/features/household-subscription-tracker/`
+**Suggested internal links:** `/tools/household-subscription-cost-calculator/`, `/guides/organize-household-subscriptions/`, `/guides/annual-renewal-calendar/`, `/features/household-subscription-tracker/`
 
 # A household subscription list should answer who owns it, what it costs and what happens next
 
@@ -5288,6 +5299,7 @@ If a subscription depends on one person's account, record that owner so the hous
 **Title tag:** `Subscription Renewal Tracker: Review Services Before the Charge Happens`
 **Meta description:** `Track monthly and annual subscription renewals with lead-time reminders, account ownership and cancellation notes.`
 **Primary keyword concept:** subscription renewal tracker
+**Redirects to:** `/guides/organize-household-subscriptions/`
 **Suggested internal links:** `/features/household-subscription-tracker/`, `/tools/annual-subscription-cost-calculator/`, `/guides/organize-household-subscriptions/`, `/guides/annual-renewal-calendar/`
 
 # A renewal reminder should create a decision window
@@ -5352,7 +5364,7 @@ The tracker is not a ledger and should not claim to verify whether a payment cle
 **Title tag:** `Annual Renewal Calendar: Put Insurance, Memberships, Registrations and Services on One Timeline`
 **Meta description:** `Build an annual household renewal calendar for insurance, memberships, registrations, service plans and other once-a-year obligations.`
 **Primary keyword concept:** annual renewal calendar
-**Suggested internal links:** `/tools/household-annual-review-generator/`, `/guides/subscription-renewal-tracker/`, `/guides/recurring-bills-tracker/`, `/features/household-calendar/`
+**Suggested internal links:** `/tools/household-annual-review-generator/`, `/guides/organize-household-subscriptions/`, `/guides/recurring-bills-tracker/`, `/features/household-calendar/`
 
 # Annual obligations are the easiest recurring tasks to forget
 
@@ -5384,7 +5396,7 @@ An annual calendar itself needs maintenance. Remove cancelled services and add n
 **Title tag:** `Household Account List: Know Which Services Exist Without Storing Passwords in the Wrong Place`
 **Meta description:** `Create a household account index with service name, account owner, support link and renewal information while keeping credentials in a password manager.`
 **Primary keyword concept:** household account list
-**Suggested internal links:** `/guides/organize-utility-account-information/`, `/guides/organize-household-subscriptions/`, `/guides/household-handoff/`, `/features/household-subscription-tracker/`
+**Suggested internal links:** `/guides/organize-utility-account-information/`, `/guides/organize-household-subscriptions/`, `/guides/household-admin-backup-person/`, `/features/household-subscription-tracker/`
 
 # A household needs an account map even if the passwords live elsewhere
 
@@ -5416,7 +5428,7 @@ When an email address or owner changes, update the index immediately.
 **Title tag:** `Home Contact List: The People and Services Your Household Actually Needs`
 **Meta description:** `Create a household contact list for family, neighbors, building management, utilities, schools, caregivers and service providers.`
 **Primary keyword concept:** home contact list
-**Suggested internal links:** `/guides/home-service-provider-list/`, `/guides/family-emergency-contacts/`, `/templates/printable-household-contacts/`, `/features/household-handoff/`
+**Suggested internal links:** `/guides/home-service-provider-list/`, `/guides/emergency-information-sheet/`, `/templates/printable-household-contacts/`, `/features/household-handoff/`
 
 # A home contact list is useful when it is curated rather than complete
 
@@ -5448,7 +5460,8 @@ A paper list may contain fewer details than the private app. Use role-based expo
 **Title tag:** `Household Service Provider Contact List: Plumber, HVAC, Electrician and More`
 **Meta description:** `Keep household service-provider contacts linked to the systems and prior work they know, with factual private notes and history.`
 **Primary keyword concept:** home service provider contact list
-**Suggested internal links:** `/guides/home-service-provider-list/`, `/guides/contractor-records/`, `/templates/printable-service-provider-list/`, `/features/home-record-keeper/`
+**Redirects to:** `/guides/home-service-provider-list/`
+**Suggested internal links:** `/guides/home-service-provider-list/`, `/guides/contractor-records/`, `/templates/printable-service-provider-list/`, `/features/free-home-management-app/`
 
 # A service contact is more useful when you know what they worked on
 
@@ -5480,6 +5493,7 @@ The household can keep short factual notes. Public review data can go stale and 
 **Title tag:** `Household Shopping Staples: Create a Restock List That Does Not Become a Full Inventory System`
 **Meta description:** `Organize recurring household staples, preferred sizes and restock points without counting every item in the house.`
 **Primary keyword concept:** household staples list
+**Redirects to:** `/guides/household-supplies-inventory/`
 **Suggested internal links:** `/guides/pantry-restock-system/`, `/guides/household-supplies-inventory/`, `/features/family-task-manager/`, `/guides/household-weekly-reset/`
 
 # A staples list is about remembering what the household repeatedly runs out of
@@ -5512,7 +5526,7 @@ A staple record should serve the household first. Product recommendations can be
 **Title tag:** `Pantry Restock System: Keep Everyday Food Staples Visible Without Tracking Every Can`
 **Meta description:** `Build a simple pantry restock system using staple lists, minimum quantities or “last one opened” triggers rather than full inventory accounting.`
 **Primary keyword concept:** pantry restock system
-**Suggested internal links:** `/guides/household-shopping-staples/`, `/guides/household-weekly-reset/`, `/features/family-task-manager/`, `/templates/printable-household-contacts/`
+**Suggested internal links:** `/guides/household-supplies-inventory/`, `/guides/household-weekly-reset/`, `/features/family-task-manager/`, `/templates/printable-household-contacts/`
 
 # Most households do not need warehouse software for the pantry
 
@@ -5544,7 +5558,7 @@ Expiration tracking for every food item creates enormous data-entry burden. Keep
 **Title tag:** `Household Supplies Inventory: Filters, Cleaning Products and Maintenance Consumables`
 **Meta description:** `Track household consumables that matter for maintenance and continuity, such as compatible filters, bags and replacement parts.`
 **Primary keyword concept:** household supplies inventory
-**Suggested internal links:** `/guides/household-shopping-staples/`, `/guides/water-filter-replacement-guide/`, `/guides/robot-vacuum-maintenance-guide/`, `/features/home-inventory-tracker/`
+**Suggested internal links:** `/guides/household-supplies-inventory/`, `/guides/water-filter-replacement-guide/`, `/guides/robot-vacuum-maintenance-guide/`, `/features/home-inventory-tracker/`
 
 # A supplies inventory is most useful for items that must match equipment
 
@@ -6023,7 +6037,7 @@ There's no universally correct number to enter for the planning horizon — it's
 **Title tag:** `Household Subscription Cost Calculator | Monthly and Annual Total`
 **Meta description:** `Add household subscriptions with monthly, annual or custom billing cycles and see the normalized monthly and yearly total.`
 **Primary keyword concept:** household subscription calculator
-**Suggested internal links:** `/guides/organize-household-subscriptions/`, `/guides/subscription-renewal-tracker/`, `/features/household-subscription-tracker/`, `/tools/annual-subscription-cost-calculator/`
+**Suggested internal links:** `/guides/organize-household-subscriptions/`, `/features/household-subscription-tracker/`, `/tools/annual-subscription-cost-calculator/`
 
 # Household Subscription Cost Calculator
 
@@ -6073,7 +6087,7 @@ The calculator totals every line together into one household number, but it does
 **Title tag:** `Annual Subscription Cost Calculator | Convert Monthly, Weekly or Quarterly Pricing`
 **Meta description:** `Convert a recurring subscription price into its approximate yearly cost and compare billing frequencies clearly.`
 **Primary keyword concept:** annual subscription cost calculator
-**Suggested internal links:** `/tools/household-subscription-cost-calculator/`, `/guides/subscription-renewal-tracker/`, `/guides/annual-renewal-calendar/`, `/features/household-subscription-tracker/`
+**Suggested internal links:** `/tools/household-subscription-cost-calculator/`, `/guides/organize-household-subscriptions/`, `/guides/annual-renewal-calendar/`, `/features/household-subscription-tracker/`
 
 # Annual Subscription Cost Calculator
 
@@ -6123,7 +6137,7 @@ An annualized figure is only useful if you remember what it was for. Note the se
 **Title tag:** `Free Home Maintenance Cost Tracker | Repairs, Service and Planned Work`
 **Meta description:** `Track actual household maintenance, repair and replacement spending by date, asset and category without linking bank accounts.`
 **Primary keyword concept:** home maintenance cost tracker
-**Suggested internal links:** `/guides/home-maintenance-budget/`, `/guides/home-repair-history/`, `/tools/home-repair-cost-log/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/home-maintenance-budget/`, `/guides/home-repair-history/`, `/tools/home-repair-cost-log/`, `/features/free-home-management-app/`
 
 # Home Maintenance Cost Tracker
 
@@ -6173,7 +6187,7 @@ The gap between your planned and completed totals is worth watching from one rev
 **Title tag:** `Home Repair Cost Log | Track Repairs by Appliance, System and Date`
 **Meta description:** `Create a private repair cost log with symptom, provider, cost, outcome and asset history to understand repeated household repairs.`
 **Primary keyword concept:** home repair cost log
-**Suggested internal links:** `/guides/repair-history/`, `/guides/home-repair-history/`, `/tools/home-maintenance-cost-tracker/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/repair-history/`, `/guides/home-repair-history/`, `/tools/home-maintenance-cost-tracker/`, `/features/free-home-management-app/`
 
 # Home Repair Cost Log
 
@@ -6223,7 +6237,7 @@ Either works, but be consistent about which you're doing. A single combined log 
 **Title tag:** `Free Emergency Binder Generator | Build a Household Information Packet`
 **Meta description:** `Create a customizable household emergency binder with contacts, household information, pets, utilities and secure document references.`
 **Primary keyword concept:** emergency binder generator
-**Suggested internal links:** `/guides/emergency-binder/`, `/checklists/printable-emergency-binder-checklist/`, `/guides/family-emergency-contacts/`, `/features/emergency-information-organizer/`
+**Suggested internal links:** `/guides/emergency-binder/`, `/checklists/printable-emergency-binder-checklist/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`
 
 # Emergency Binder Generator
 
@@ -6371,7 +6385,7 @@ If you've already run this generator on several individual rooms, the Home Inven
 **Title tag:** `Free Recurring Chore Planner | Build a Household Routine by Frequency and Owner`
 **Meta description:** `Create a recurring chore plan by household members, rooms, frequency and rotation without overloading the family with notifications.`
 **Primary keyword concept:** recurring chore planner
-**Suggested internal links:** `/guides/family-chore-system/`, `/guides/chore-chart-for-adults/`, `/templates/printable-chore-chart/`, `/features/family-task-manager/`
+**Suggested internal links:** `/guides/family-chore-system/`, `/templates/printable-chore-chart/`, `/features/family-task-manager/`
 
 # Recurring Chore Planner
 
@@ -6571,7 +6585,7 @@ The first time you run this review, it's common to find several things out of da
 **Title tag:** `Free Move-In Checklist Generator | Utilities, Records, Inventory and Home Setup`
 **Meta description:** `Generate a move-in checklist based on renter/owner status, home type, utilities, appliances, pets and household setup needs.`
 **Primary keyword concept:** move in checklist generator
-**Suggested internal links:** `/guides/move-in-maintenance-checklist/`, `/guides/new-home-setup-checklist/`, `/guides/first-time-homeowner-maintenance-guide/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/move-in-maintenance-checklist/`, `/guides/new-home-setup-checklist/`, `/guides/first-time-homeowner-maintenance-guide/`, `/features/free-home-management-app/`
 
 # Move-In Checklist Generator
 
@@ -6923,7 +6937,7 @@ A household document index with thirty narrow categories is about as hard to use
 **Title tag:** `Free Emergency Contact Sheet Generator | Household, Utility and Care Contacts`
 **Meta description:** `Create a printable emergency contact sheet with household members, nearby support, utilities, care contacts and a last-reviewed date.`
 **Primary keyword concept:** emergency contact sheet generator
-**Suggested internal links:** `/guides/family-emergency-contacts/`, `/templates/printable-emergency-contacts/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`
+**Suggested internal links:** `/guides/emergency-information-sheet/`, `/templates/printable-emergency-contacts/`, `/features/emergency-information-organizer/`
 
 # Emergency Contact Sheet Generator
 
@@ -7027,7 +7041,7 @@ Generate a separate checklist for each appliance rather than trying to track sev
 **Title tag:** `Home Handoff Summary Generator | What Another Person Needs to Run the Household`
 **Meta description:** `Create a household handoff with upcoming tasks, services, pets, recurring obligations, contacts and emergency references while limiting private data.`
 **Primary keyword concept:** household handoff template generator
-**Suggested internal links:** `/guides/household-handoff/`, `/guides/family-continuity-plan/`, `/features/household-handoff/`, `/templates/printable-household-handoff-sheet/`
+**Suggested internal links:** `/guides/household-admin-backup-person/`, `/guides/family-continuity-plan/`, `/features/household-handoff/`, `/templates/printable-household-handoff-sheet/`
 
 # Home Handoff Summary Generator
 
@@ -7310,7 +7324,7 @@ Set a review date before expiration so the household has time to find documents 
 **Title tag:** `Printable Home Repair Log | Problem, Service, Cost and Outcome`
 **Meta description:** `Print a repair log for household assets with symptom, date, provider, work performed, cost, outcome and follow-up.`
 **Primary keyword concept:** printable repair log
-**Suggested internal links:** `/guides/repair-history/`, `/guides/home-repair-history/`, `/tools/home-repair-cost-log/`, `/features/home-record-keeper/`
+**Suggested internal links:** `/guides/repair-history/`, `/guides/home-repair-history/`, `/tools/home-repair-cost-log/`, `/features/free-home-management-app/`
 
 # Printable Repair Log
 
@@ -7341,7 +7355,7 @@ Write what you observed first, then the provider's diagnosis. This makes recurri
 **Title tag:** `Printable Home Service Provider List | Contractors and Household Contacts`
 **Meta description:** `Print a household service-provider list with trade, company, contact, prior work and related home system.`
 **Primary keyword concept:** printable home service provider list
-**Suggested internal links:** `/guides/home-service-provider-list/`, `/guides/service-provider-contact-list/`, `/guides/contractor-records/`, `/features/household-handoff/`
+**Suggested internal links:** `/guides/home-service-provider-list/`, `/guides/contractor-records/`, `/features/household-handoff/`
 
 # Printable Home Service Provider List
 
@@ -7374,7 +7388,7 @@ Businesses change numbers, hours and ownership. Mark a `Last verified` date for 
 **Title tag:** `Printable Household Contact List | Family, Neighbors, Utilities and Services`
 **Meta description:** `Print a curated household contact list organized by role instead of exporting an entire phone address book.`
 **Primary keyword concept:** printable household contact list
-**Suggested internal links:** `/guides/home-contact-list/`, `/guides/family-emergency-contacts/`, `/templates/printable-emergency-contacts/`, `/features/household-handoff/`
+**Suggested internal links:** `/guides/home-contact-list/`, `/guides/emergency-information-sheet/`, `/templates/printable-emergency-contacts/`, `/features/household-handoff/`
 
 # Printable Household Contact List
 
@@ -7407,7 +7421,7 @@ Do not include sensitive account numbers, access codes or information that does 
 **Title tag:** `Printable Emergency Contact Sheet | Family, Utility, Care and Local Support`
 **Meta description:** `Print a concise emergency contact sheet with household, local support, utility and care contacts plus a last-reviewed date.`
 **Primary keyword concept:** printable emergency contact sheet
-**Suggested internal links:** `/tools/emergency-contact-sheet-generator/`, `/guides/family-emergency-contacts/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`
+**Suggested internal links:** `/tools/emergency-contact-sheet-generator/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`
 
 # Printable Emergency Contact Sheet
 
@@ -7586,7 +7600,7 @@ Do not fill every row. Start with the minimum routine that keeps the home comfor
 **Title tag:** `Printable Household Chore Chart | Fixed or Rotating Responsibilities`
 **Meta description:** `Print a simple chore chart with task, frequency, owner and rotation without relying on points or gamification.`
 **Primary keyword concept:** printable chore chart
-**Suggested internal links:** `/tools/recurring-chore-planner/`, `/guides/family-chore-system/`, `/guides/chore-chart-for-adults/`, `/features/family-task-manager/`
+**Suggested internal links:** `/tools/recurring-chore-planner/`, `/guides/family-chore-system/`, `/features/family-task-manager/`
 
 # Printable Household Chore Chart
 
@@ -7615,7 +7629,7 @@ Use checkmarks if the household wants them. Points, rewards and leaderboards are
 **Title tag:** `Printable Subscription Tracker | Cost, Billing Cycle, Owner and Renewal Date`
 **Meta description:** `Print a household subscription tracker with cost, billing frequency, account owner, next renewal and cancellation notes.`
 **Primary keyword concept:** printable subscription tracker
-**Suggested internal links:** `/tools/household-subscription-cost-calculator/`, `/guides/organize-household-subscriptions/`, `/guides/subscription-renewal-tracker/`, `/features/household-subscription-tracker/`
+**Suggested internal links:** `/tools/household-subscription-cost-calculator/`, `/guides/organize-household-subscriptions/`, `/features/household-subscription-tracker/`
 
 # Printable Subscription Tracker
 
@@ -7642,7 +7656,7 @@ Use checkmarks if the household wants them. Points, rewards and leaderboards are
 **Title tag:** `Printable Annual Renewals Calendar | Household Services, Insurance and Memberships`
 **Meta description:** `Print a 12-month household renewal calendar for subscriptions, insurance references, memberships, registrations and recurring services.`
 **Primary keyword concept:** printable annual renewal calendar
-**Suggested internal links:** `/guides/annual-renewal-calendar/`, `/guides/subscription-renewal-tracker/`, `/guides/recurring-bills-tracker/`, `/features/household-calendar/`
+**Suggested internal links:** `/guides/annual-renewal-calendar/`, `/guides/organize-household-subscriptions/`, `/guides/recurring-bills-tracker/`, `/features/household-calendar/`
 
 # Printable Annual Renewals Calendar
 
@@ -7748,7 +7762,7 @@ The decision date may be more important than the payment date. Give the househol
 **Title tag:** `Printable Household Handoff Sheet | Tasks, Contacts, Services and Upcoming Obligations`
 **Meta description:** `Print a household handoff sheet with the next 30 days, recurring responsibilities, service contacts, pets, utilities and emergency references.`
 **Primary keyword concept:** printable household handoff sheet
-**Suggested internal links:** `/tools/home-handoff-summary-generator/`, `/guides/household-handoff/`, `/guides/family-continuity-plan/`, `/features/household-handoff/`
+**Suggested internal links:** `/tools/home-handoff-summary-generator/`, `/guides/household-admin-backup-person/`, `/guides/family-continuity-plan/`, `/features/household-handoff/`
 
 # Printable Household Handoff Sheet
 

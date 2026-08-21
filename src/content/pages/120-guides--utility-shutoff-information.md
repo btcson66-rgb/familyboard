@@ -15,7 +15,7 @@ related:
   - "/guides/emergency-information-sheet/"
   - "/guides/organize-utility-account-information/"
   - "/features/emergency-information-organizer/"
-  - "/guides/household-handoff/"
+  - "/guides/household-admin-backup-person/"
 faq: []
 contentVersion: 1
 ---

@@ -14,7 +14,6 @@ nextStep: "For recurring reminders and a shared tablet view, save agreed chores 
 related:
   - "/tools/recurring-chore-planner/"
   - "/guides/family-chore-system/"
-  - "/guides/chore-chart-for-adults/"
   - "/features/family-task-manager/"
 faq: []
 contentVersion: 1

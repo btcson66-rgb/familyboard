@@ -12,7 +12,7 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Generate the handoff, confirm every task and date is still accurate, and give it to the recipient with a chance to ask what still depends on your memory."
 related:
-  - "/guides/household-handoff/"
+  - "/guides/household-admin-backup-person/"
   - "/guides/family-continuity-plan/"
   - "/features/household-handoff/"
   - "/templates/printable-household-handoff-sheet/"

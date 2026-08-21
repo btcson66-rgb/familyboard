@@ -13,7 +13,6 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Calculate the household total, then note the renewal date next to each subscription you want to reconsider before its next charge."
 related:
   - "/guides/organize-household-subscriptions/"
-  - "/guides/subscription-renewal-tracker/"
   - "/features/household-subscription-tracker/"
   - "/tools/annual-subscription-cost-calculator/"
 faq:

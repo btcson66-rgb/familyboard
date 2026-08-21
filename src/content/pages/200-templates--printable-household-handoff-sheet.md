@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Use the digital Handoff Summary Generator when you want the next-30-days section to update from live local household records."
 related:
   - "/tools/home-handoff-summary-generator/"
-  - "/guides/household-handoff/"
+  - "/guides/household-admin-backup-person/"
   - "/guides/family-continuity-plan/"
   - "/features/household-handoff/"
 faq: []

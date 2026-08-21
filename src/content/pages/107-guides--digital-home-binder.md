@@ -15,7 +15,7 @@ related:
   - "/guides/home-maintenance-binder/"
   - "/guides/household-documents-organizer/"
   - "/guides/emergency-binder/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq: []
 contentVersion: 1
 ---

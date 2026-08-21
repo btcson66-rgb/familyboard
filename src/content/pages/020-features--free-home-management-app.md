@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Start with the free PWA. If it becomes part of your household routine, export regular backups and watch the roadmap for optional local Pro and sync features later."
 related:
   - "/app/"
-  - "/features/local-first-home-organizer/"
+  - "/features/private-family-organizer/"
   - "/features/home-dashboard/"
   - "/features/free-home-management-app/"
 faq: []

@@ -15,7 +15,7 @@ related:
   - "/guides/contractor-records/"
   - "/guides/home-improvement-receipts/"
   - "/guides/home-repair-history/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq: []
 contentVersion: 1
 ---

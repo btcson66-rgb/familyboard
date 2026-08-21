@@ -12,7 +12,6 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Generate a basic emergency contact sheet first. Then add only the information another trusted household member would actually need under pressure."
 related:
-  - "/guides/family-emergency-contacts/"
   - "/guides/emergency-information-sheet/"
   - "/tools/emergency-contact-sheet-generator/"
   - "/features/household-handoff/"

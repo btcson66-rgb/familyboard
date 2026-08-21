@@ -12,9 +12,8 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Generate the sheet, add your area's current official emergency number as the first line, and post the printed copy somewhere genuinely reachable."
 related:
-  - "/guides/family-emergency-contacts/"
-  - "/templates/printable-emergency-contacts/"
   - "/guides/emergency-information-sheet/"
+  - "/templates/printable-emergency-contacts/"
   - "/features/emergency-information-organizer/"
 faq:
   - question: "What format does the contact list need to be in?"

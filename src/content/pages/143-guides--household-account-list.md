@@ -14,7 +14,7 @@ nextStep: "Build an account map first. You can improve credential continuity sep
 related:
   - "/guides/organize-utility-account-information/"
   - "/guides/organize-household-subscriptions/"
-  - "/guides/household-handoff/"
+  - "/guides/household-admin-backup-person/"
   - "/features/household-subscription-tracker/"
 faq: []
 contentVersion: 1

@@ -15,7 +15,7 @@ related:
   - "/features/home-inventory-tracker/"
   - "/features/maintenance-tracker/"
   - "/features/household-handoff/"
-  - "/features/local-first-home-organizer/"
+  - "/features/private-family-organizer/"
 faq: []
 contentVersion: 1
 ---

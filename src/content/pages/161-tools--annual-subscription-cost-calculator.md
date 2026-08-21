@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Calculate the annual figure, then note the service, price, and billing frequency alongside it so you have a real number to compare against at the next renewal."
 related:
   - "/tools/household-subscription-cost-calculator/"
-  - "/guides/subscription-renewal-tracker/"
+  - "/guides/organize-household-subscriptions/"
   - "/guides/annual-renewal-calendar/"
   - "/features/household-subscription-tracker/"
 faq:

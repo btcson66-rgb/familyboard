@@ -14,7 +14,7 @@ nextStep: "Generate the outline, attach a real authoritative source to each need
 related:
   - "/guides/emergency-binder/"
   - "/checklists/printable-emergency-binder-checklist/"
-  - "/guides/family-emergency-contacts/"
+  - "/guides/emergency-information-sheet/"
   - "/features/emergency-information-organizer/"
 faq:
   - question: "What sections does every generated binder include?"

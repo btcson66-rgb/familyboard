@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Use the checklist to identify missing systems, then add only the categories that solve a real household problem."
 related:
   - "/tools/household-annual-review-generator/"
-  - "/guides/recurring-household-tasks/"
+  - "/guides/family-chore-system/"
   - "/guides/divide-household-responsibilities/"
   - "/features/home-dashboard/"
 faq: []

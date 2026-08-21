@@ -13,7 +13,6 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Store only what another trusted caregiver truly needs and keep the rest in the appropriate secure health-record system."
 related:
   - "/guides/emergency-information-sheet/"
-  - "/guides/family-emergency-contacts/"
   - "/privacy/"
   - "/features/emergency-information-organizer/"
 faq: []

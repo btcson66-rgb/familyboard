@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Find the top ten recurring services first. The goal is visibility, not perfect forensic accounting."
 related:
   - "/tools/household-subscription-cost-calculator/"
-  - "/guides/subscription-renewal-tracker/"
+  - "/guides/organize-household-subscriptions/"
   - "/guides/annual-renewal-calendar/"
   - "/features/household-subscription-tracker/"
 faq: []

@@ -14,7 +14,7 @@ nextStep: "Use the Pet Sitter Instruction Generator to discover which details cu
 related:
   - "/guides/pet-sitter-information/"
   - "/tools/pet-sitter-instruction-generator/"
-  - "/guides/household-handoff/"
+  - "/guides/household-admin-backup-person/"
   - "/features/emergency-information-organizer/"
 faq: []
 contentVersion: 1

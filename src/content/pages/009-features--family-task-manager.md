@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Create three recurring tasks that currently live only in someone's memory. If the task belongs to an appliance or subscription, link the two records."
 related:
   - "/guides/divide-household-responsibilities/"
-  - "/guides/recurring-household-tasks/"
+  - "/guides/family-chore-system/"
   - "/tools/recurring-chore-planner/"
   - "/features/household-handoff/"
 faq: []

@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Use your email search and last year's calendar to find annual obligations, then create one consolidated timeline."
 related:
   - "/tools/household-annual-review-generator/"
-  - "/guides/subscription-renewal-tracker/"
+  - "/guides/organize-household-subscriptions/"
   - "/guides/recurring-bills-tracker/"
   - "/features/household-calendar/"
 faq: []

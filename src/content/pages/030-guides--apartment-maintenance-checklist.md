@@ -15,7 +15,7 @@ related:
   - "/guides/rental-home-maintenance-log/"
   - "/guides/move-in-maintenance-checklist/"
   - "/guides/moving-inventory/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq: []
 contentVersion: 1
 ---

@@ -13,7 +13,6 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Keep the printed version limited; detailed private service history belongs with the relevant asset/project."
 related:
   - "/guides/home-service-provider-list/"
-  - "/guides/service-provider-contact-list/"
   - "/guides/contractor-records/"
   - "/features/household-handoff/"
 faq: []

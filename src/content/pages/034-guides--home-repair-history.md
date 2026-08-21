@@ -15,7 +15,7 @@ related:
   - "/guides/home-maintenance-records/"
   - "/guides/repair-history/"
   - "/templates/printable-repair-log/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq: []
 contentVersion: 1
 ---

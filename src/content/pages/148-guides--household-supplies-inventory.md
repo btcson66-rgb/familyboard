@@ -12,7 +12,7 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Track supplies only when compatibility, scarcity or household continuity makes the record worth maintaining."
 related:
-  - "/guides/household-shopping-staples/"
+  - "/guides/household-supplies-inventory/"
   - "/guides/water-filter-replacement-guide/"
   - "/guides/robot-vacuum-maintenance-guide/"
   - "/features/home-inventory-tracker/"

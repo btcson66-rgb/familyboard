@@ -13,8 +13,8 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Build a shared list of invisible admin tasks first. Many household workload problems become clearer before any reassignment happens."
 related:
   - "/guides/home-maintenance-delegation/"
-  - "/guides/recurring-household-tasks/"
-  - "/guides/household-handoff/"
+  - "/guides/family-chore-system/"
+  - "/guides/household-admin-backup-person/"
   - "/features/family-task-manager/"
 faq: []
 contentVersion: 1

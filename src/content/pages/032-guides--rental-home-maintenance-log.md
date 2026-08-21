@@ -15,7 +15,7 @@ related:
   - "/guides/apartment-maintenance-checklist/"
   - "/templates/printable-repair-log/"
   - "/guides/move-out-home-records/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq: []
 contentVersion: 1
 ---

@@ -12,7 +12,7 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Generate a temporary handoff packet and review it from the caregiver's perspective: what would they have to call you to ask?"
 related:
-  - "/guides/household-handoff/"
+  - "/guides/household-admin-backup-person/"
   - "/guides/pet-sitter-information/"
   - "/guides/house-sitter-information/"
   - "/tools/home-handoff-summary-generator/"

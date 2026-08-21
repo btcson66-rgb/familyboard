@@ -15,7 +15,7 @@ related:
   - "/guides/home-maintenance-records/"
   - "/guides/home-service-provider-list/"
   - "/guides/repair-history/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq: []
 contentVersion: 1
 ---

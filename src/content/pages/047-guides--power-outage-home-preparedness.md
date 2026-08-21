@@ -15,7 +15,7 @@ related:
   - "/guides/emergency-supply-inventory/"
   - "/guides/ups-battery-backup-records/"
   - "/guides/emergency-information-sheet/"
-  - "/features/offline-household-organizer/"
+  - "/features/private-family-organizer/"
 faq: []
 contentVersion: 1
 ---

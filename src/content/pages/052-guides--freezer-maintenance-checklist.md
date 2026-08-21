@@ -15,7 +15,7 @@ related:
   - "/guides/refrigerator-maintenance-checklist/"
   - "/guides/power-outage-home-preparedness/"
   - "/guides/appliance-inventory/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq: []
 contentVersion: 1
 ---

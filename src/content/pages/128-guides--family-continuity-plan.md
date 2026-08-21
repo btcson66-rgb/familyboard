@@ -12,9 +12,7 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Choose the five household responsibilities with the most single-person knowledge and create a backup path for each."
 related:
-  - "/guides/household-handoff/"
   - "/guides/household-admin-backup-person/"
-  - "/guides/what-spouse-needs-to-know/"
   - "/features/household-handoff/"
 faq: []
 contentVersion: 1

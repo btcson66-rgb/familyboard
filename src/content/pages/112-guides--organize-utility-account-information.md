@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Build the utility index before travel or moving so another trusted household member can identify every active service without searching old bills."
 related:
   - "/guides/household-account-list/"
-  - "/guides/household-handoff/"
+  - "/guides/household-admin-backup-person/"
   - "/guides/power-outage-home-preparedness/"
   - "/features/household-handoff/"
 faq: []

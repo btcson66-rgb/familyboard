@@ -15,7 +15,7 @@ related:
   - "/guides/home-maintenance-budget/"
   - "/guides/home-repair-history/"
   - "/tools/home-repair-cost-log/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq:
   - question: "What exact words does the tracker use to total costs?"
     answer: "Only \"completed\" and \"planned,\" matched case-insensitively. An entry labeled with either word is added into its matching total. Any other status word — \"done,\" \"scheduled,\" \"pending\" — still appears in the itemized list but isn't included in either running total, so it's best to standardize on one of the two recognized words."

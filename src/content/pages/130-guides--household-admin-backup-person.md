@@ -13,8 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Create a backup-person handoff and test three real household questions before an emergency makes the test unavoidable."
 related:
   - "/guides/family-continuity-plan/"
-  - "/guides/household-handoff/"
-  - "/guides/what-spouse-needs-to-know/"
+  - "/guides/household-admin-backup-person/"
   - "/tools/home-handoff-summary-generator/"
 faq: []
 contentVersion: 1

@@ -1,6 +1,6 @@
 # Content quality report
 
-Generated: 2026-08-20T19:03:16.794Z
+Generated: 2026-08-21T02:40:21.048Z
 
 ## Summary
 
@@ -11,7 +11,7 @@ Generated: 2026-08-20T19:03:16.794Z
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 19
+- Pages without a contextual product/tool link: 28
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -49,10 +49,19 @@ Generated: 2026-08-20T19:03:16.794Z
 - /contact/
 - /disclaimer/
 - /editorial-policy/
+- /guides/chore-chart-for-adults/
+- /guides/family-emergency-contacts/
+- /guides/household-admin-day/
+- /guides/household-handoff/
+- /guides/household-shopping-staples/
 - /guides/important-household-documents/
 - /guides/
+- /guides/recurring-household-tasks/
 - /guides/seasonal-home-maintenance-checklist/
+- /guides/service-provider-contact-list/
+- /guides/subscription-renewal-tracker/
 - /guides/valuable-item-inventory/
+- /guides/what-spouse-needs-to-know/
 - /
 - /pricing/
 - /privacy/

@@ -14,7 +14,7 @@ nextStep: "Use the Emergency Binder Generator to organize contacts and household
 related:
   - "/guides/power-outage-home-preparedness/"
   - "/guides/emergency-supply-inventory/"
-  - "/guides/family-emergency-contacts/"
+  - "/guides/emergency-information-sheet/"
   - "/features/emergency-information-organizer/"
 faq: []
 contentVersion: 1

@@ -452,7 +452,7 @@ const sitemapPages = [
 fs.writeFileSync(sitemapOutput, `${JSON.stringify(sitemapPages, null, 2)}\n`);
 
 const search = all
-  .filter((record) => record.indexable)
+  .filter((record) => record.indexable && !record.redirectTo)
   .map((record) => ({
     title: record.title,
     description: record.description,

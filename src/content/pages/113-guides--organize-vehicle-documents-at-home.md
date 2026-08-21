@@ -14,7 +14,7 @@ nextStep: "Treat each vehicle as an asset with a document, renewal and service t
 related:
   - "/guides/annual-renewal-calendar/"
   - "/guides/home-service-provider-list/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
   - "/guides/important-household-documents/"
 faq: []
 contentVersion: 1

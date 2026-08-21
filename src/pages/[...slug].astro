@@ -24,14 +24,15 @@ const zhTwPages = await getCollection('pagesZhTw');
 const alternatePath = zhTwPages.find((candidate) => candidate.data.alternateRoute === entry.data.route)?.data.route;
 const related = entry.data.related.map((route: string) => pages.find((candidate) => candidate.data.route === route)).filter((item): item is NonNullable<typeof item> => Boolean(item));
 const routeSlug = entry.data.route.split('/').filter(Boolean).at(-1) || '';
-const isHub = ['/guides/', '/tools/', '/checklists/', '/templates/'].includes(entry.data.route);
+const isHub = ['/guides/', '/tools/', '/checklists/', '/templates/', '/features/'].includes(entry.data.route);
 const hubItems = isHub ? pages.filter((candidate) => {
+  if (candidate.data.redirectTo) return false;
   if (entry.data.route === '/guides/') return candidate.data.pageType === 'content' && !candidate.data.route.startsWith('/features/');
   return candidate.data.route.startsWith(entry.data.route) && candidate.data.route !== entry.data.route;
 }).sort((a, b) => a.data.title.localeCompare(b.data.title)) : [];
 const pageType = entry.data.pageType === 'content' ? 'article' : 'website';
 ---
-<BaseLayout title={entry.data.title} description={entry.data.description} canonicalPath={redirectStub?.canonicalPath ?? entry.data.route} alternatePath={redirectStub ? undefined : alternatePath} indexable={redirectStub?.indexable ?? entry.data.indexable} pageType={redirectStub ? 'website' : pageType} publishedAt={entry.data.publishedAt} lastReviewedAt={entry.data.lastReviewedAt} faq={redirectStub ? [] : entry.data.faq} publicIntegrationsEnabled={redirectStub?.publicIntegrationsEnabled ?? true} redirectRefresh={redirectStub?.refreshContent}>
+<BaseLayout title={entry.data.title} description={entry.data.description} canonicalPath={redirectStub?.canonicalPath ?? entry.data.route} alternatePath={redirectStub ? undefined : alternatePath} indexable={redirectStub?.indexable ?? entry.data.indexable} robots={redirectStub?.robots} pageType={redirectStub ? 'website' : pageType} publishedAt={entry.data.publishedAt} lastReviewedAt={entry.data.lastReviewedAt} faq={redirectStub ? [] : entry.data.faq} publicIntegrationsEnabled={redirectStub?.publicIntegrationsEnabled ?? true} redirectRefresh={redirectStub?.refreshContent}>
   {redirectStub ? <div class="shell page-grid">
     <article class="article redirect-stub">
       <h1>{redirectStub.heading}</h1>

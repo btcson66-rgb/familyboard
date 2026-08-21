@@ -13,7 +13,6 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Use the Household Subscription Cost Calculator to see the annual total, then move the subscriptions worth monitoring into the private tracker."
 related:
   - "/guides/organize-household-subscriptions/"
-  - "/guides/subscription-renewal-tracker/"
   - "/tools/household-subscription-cost-calculator/"
   - "/guides/annual-renewal-calendar/"
 faq: []

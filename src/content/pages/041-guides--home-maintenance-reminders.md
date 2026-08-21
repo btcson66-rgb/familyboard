@@ -15,7 +15,7 @@ related:
   - "/guides/home-maintenance-calendar/"
   - "/tools/home-service-reminder-generator/"
   - "/features/maintenance-tracker/"
-  - "/guides/recurring-household-tasks/"
+  - "/guides/family-chore-system/"
 faq: []
 contentVersion: 1
 ---

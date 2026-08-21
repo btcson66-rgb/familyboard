@@ -15,7 +15,7 @@ related:
   - "/guides/water-leak-response-home-records/"
   - "/guides/appliance-replacement-planning/"
   - "/guides/home-service-provider-list/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq:
   - question: "How often should a water heater tank actually be flushed?"
     answer: "Manufacturer guidance from A.O. Smith recommends flushing sediment from the tank once a year. Skipping this reduces heating efficiency over time as sediment insulates the bottom of the tank from the heat source, and in gas units it can also contribute to the rumbling or popping noises that signal a tank nearing the end of its service life."

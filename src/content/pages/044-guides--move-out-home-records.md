@@ -15,7 +15,7 @@ related:
   - "/guides/moving-house-organizer/"
   - "/guides/moving-inventory/"
   - "/tools/household-document-index-generator/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq: []
 contentVersion: 1
 ---

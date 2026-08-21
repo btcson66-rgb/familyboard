@@ -97,6 +97,33 @@ for (const key of ["title", "description", "route"]) {
   }
 }
 
+const recordByRoute = new Map(records.map((record) => [record.route, record]));
+for (const record of records.filter((item) => item.redirectTo)) {
+  const target = recordByRoute.get(record.redirectTo);
+  if (!target)
+    errors.push(
+      `${record.file}: redirect target route does not exist in the library: ${record.redirectTo}`,
+    );
+  if (target?.redirectTo)
+    errors.push(
+      `${record.file}: redirect target is itself a redirect stub: ${record.redirectTo} -> ${target.redirectTo}`,
+    );
+  if (record.indexable)
+    errors.push(`${record.file}: redirect stub must not be indexable`);
+}
+
+const redirectRoutes = new Set(
+  records.filter((record) => record.redirectTo).map((record) => record.route),
+);
+const searchIndexPath = path.resolve("src/generated/search-index.json");
+if (fs.existsSync(searchIndexPath)) {
+  const searchIndex = JSON.parse(fs.readFileSync(searchIndexPath, "utf8"));
+  for (const item of searchIndex) {
+    if (redirectRoutes.has(item.route))
+      errors.push(`search index contains redirect stub: ${item.route}`);
+  }
+}
+
 const core = files.filter((file) => /^\d{3}-/.test(file));
 if (core.length < minimumCorePages)
   errors.push(

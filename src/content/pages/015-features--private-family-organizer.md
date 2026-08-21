@@ -14,7 +14,7 @@ nextStep: "Read the privacy architecture before using the app for sensitive hous
 related:
   - "/privacy/"
   - "/security/"
-  - "/features/local-first-home-organizer/"
+  - "/features/private-family-organizer/"
   - "/features/household-handoff/"
 faq: []
 contentVersion: 1

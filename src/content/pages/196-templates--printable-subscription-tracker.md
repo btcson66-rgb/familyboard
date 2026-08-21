@@ -14,7 +14,6 @@ nextStep: "Use the calculator to normalize annual cost, then keep the active lis
 related:
   - "/tools/household-subscription-cost-calculator/"
   - "/guides/organize-household-subscriptions/"
-  - "/guides/subscription-renewal-tracker/"
   - "/features/household-subscription-tracker/"
 faq: []
 contentVersion: 1

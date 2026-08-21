@@ -109,7 +109,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/features/private-family-organizer/"
   },
   {
     "route": "/features/private-family-organizer/",
@@ -125,7 +125,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/features/private-family-organizer/"
   },
   {
     "route": "/features/no-account-family-organizer/",
@@ -133,7 +133,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/features/private-family-organizer/"
   },
   {
     "route": "/features/home-record-keeper/",
@@ -141,7 +141,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/features/free-home-management-app/"
   },
   {
     "route": "/features/household-operations-system/",
@@ -149,7 +149,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/features/free-home-management-app/"
   },
   {
     "route": "/features/free-home-management-app/",
@@ -933,7 +933,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/guides/emergency-information-sheet/"
   },
   {
     "route": "/guides/emergency-information-sheet/",
@@ -989,7 +989,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/guides/household-admin-backup-person/"
   },
   {
     "route": "/guides/travel-household-handoff/",
@@ -1029,7 +1029,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/guides/household-admin-backup-person/"
   },
   {
     "route": "/guides/household-admin-backup-person/",
@@ -1061,7 +1061,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/guides/family-chore-system/"
   },
   {
     "route": "/guides/family-chore-system/",
@@ -1077,7 +1077,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/guides/family-chore-system/"
   },
   {
     "route": "/guides/household-weekly-reset/",
@@ -1101,7 +1101,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/guides/household-weekly-reset/"
   },
   {
     "route": "/guides/organize-household-subscriptions/",
@@ -1117,7 +1117,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/guides/organize-household-subscriptions/"
   },
   {
     "route": "/guides/recurring-bills-tracker/",
@@ -1157,7 +1157,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/guides/home-service-provider-list/"
   },
   {
     "route": "/guides/household-shopping-staples/",
@@ -1165,7 +1165,7 @@
     "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/guides/household-supplies-inventory/"
   },
   {
     "route": "/guides/pantry-restock-system/",

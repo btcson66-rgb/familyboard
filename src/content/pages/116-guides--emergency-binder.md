@@ -14,7 +14,7 @@ nextStep: "Generate the binder outline, fill the contacts first and test whether
 related:
   - "/tools/emergency-binder-generator/"
   - "/checklists/printable-emergency-binder-checklist/"
-  - "/guides/family-emergency-contacts/"
+  - "/guides/emergency-information-sheet/"
   - "/features/emergency-information-organizer/"
 faq: []
 contentVersion: 1

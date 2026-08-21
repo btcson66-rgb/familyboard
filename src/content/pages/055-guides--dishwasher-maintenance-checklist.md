@@ -15,7 +15,7 @@ related:
   - "/guides/water-leak-response-home-records/"
   - "/guides/appliance-inventory/"
   - "/tools/warranty-expiration-calculator/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq: []
 contentVersion: 1
 ---

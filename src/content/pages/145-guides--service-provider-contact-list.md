@@ -11,30 +11,12 @@ depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Build the list from people who have already worked successfully on your home before searching for new providers."
+redirectTo: "/guides/home-service-provider-list/"
 related:
   - "/guides/home-service-provider-list/"
   - "/guides/contractor-records/"
   - "/templates/printable-service-provider-list/"
-  - "/features/home-record-keeper/"
+  - "/features/free-home-management-app/"
 faq: []
 contentVersion: 1
 ---
-# A service contact is more useful when you know what they worked on
-
-Instead of a generic contractor list, link each provider to prior household history.
-
-## Store trade and relationship
-
-Label plumber, HVAC, appliance repair, electrician, locksmith, building management or other category. Record the project or asset they previously serviced.
-
-## Keep availability claims current
-
-Do not label a provider “24/7” or “emergency” unless that information is verified and reviewed.
-
-## Preserve the last service event
-
-A contact card can show “last worked on water heater — 2025” to remind the household why the provider matters.
-
-## Avoid public ratings inside the private record
-
-The household can keep short factual notes. Public review data can go stale and creates unnecessary complexity.

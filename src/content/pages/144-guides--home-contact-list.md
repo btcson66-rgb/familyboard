@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Build a 15-contact household list that another trusted person can understand without your phone's address book."
 related:
   - "/guides/home-service-provider-list/"
-  - "/guides/family-emergency-contacts/"
+  - "/guides/emergency-information-sheet/"
   - "/templates/printable-household-contacts/"
   - "/features/household-handoff/"
 faq: []

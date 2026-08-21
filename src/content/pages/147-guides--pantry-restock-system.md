@@ -12,7 +12,7 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Start with ten staples the household genuinely wants to keep on hand, not the entire grocery store."
 related:
-  - "/guides/household-shopping-staples/"
+  - "/guides/household-supplies-inventory/"
   - "/guides/household-weekly-reset/"
   - "/features/family-task-manager/"
   - "/templates/printable-household-contacts/"

@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Treat school information as a current operations layer, not a permanent dump of every document the school sends."
 related:
   - "/guides/household-account-list/"
-  - "/guides/family-emergency-contacts/"
+  - "/guides/emergency-information-sheet/"
   - "/guides/annual-renewal-calendar/"
   - "/features/household-documents-organizer/"
 faq: []

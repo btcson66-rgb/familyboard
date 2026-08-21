@@ -13,7 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Add the annual renewals to the digital dashboard if you want lead-time reminders instead of checking the sheet manually."
 related:
   - "/guides/annual-renewal-calendar/"
-  - "/guides/subscription-renewal-tracker/"
+  - "/guides/organize-household-subscriptions/"
   - "/guides/recurring-bills-tracker/"
   - "/features/household-calendar/"
 faq: []

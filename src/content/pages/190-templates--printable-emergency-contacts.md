@@ -13,7 +13,6 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Review the page at least when household contacts change and keep sensitive versions out of public view."
 related:
   - "/tools/emergency-contact-sheet-generator/"
-  - "/guides/family-emergency-contacts/"
   - "/guides/emergency-information-sheet/"
   - "/features/emergency-information-organizer/"
 faq: []
