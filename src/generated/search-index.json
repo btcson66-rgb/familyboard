@@ -128,12 +128,108 @@
     "headings": "How to build a home maintenance schedule you will actually keep Begin with systems, not months A starting interval for the systems almost every home has Separate fixed dates from condition-based work Give high-consequence work more visibility Keep a completion history Group by season without losing the underlying system What a rental or a newly purchased home should do differently"
   },
   {
+    "title": "Monthly Home Maintenance Checklist: A 30-Minute Household Review",
+    "description": "Use a simple monthly home maintenance review to catch small issues, update records and keep recurring household work from piling up.",
+    "route": "/guides/monthly-home-maintenance-checklist/",
+    "cluster": "maintenance",
+    "keywords": "monthly home maintenance checklist",
+    "headings": "A monthly home maintenance checklist should take about 30 minutes, not a full day Start with what already needs attention The five-minute walk-through The one task worth doing every single month Restock only what your household actually uses Close the loop before you stop How this is different from the quarterly review"
+  },
+  {
     "title": "Quarterly Home Maintenance Checklist: Review the Systems Monthly Checks Miss",
     "description": "A quarterly household maintenance review for equipment records, recurring services, supplies, safety information and seasonal changes.",
     "route": "/guides/quarterly-home-maintenance-checklist/",
     "cluster": "maintenance",
     "keywords": "quarterly home maintenance checklist",
     "headings": "Quarterly maintenance is the bridge between monthly awareness and annual projects The items every household checks, regardless of climate What changes by climate Looking back before looking forward"
+  },
+  {
+    "title": "Seasonal Home Maintenance Checklist: Plan Around Weather, Equipment and Your Climate",
+    "description": "Build a seasonal home maintenance plan based on climate, equipment and changing household demands instead of copying a one-size-fits-all list.",
+    "route": "/guides/seasonal-home-maintenance-checklist/",
+    "cluster": "maintenance",
+    "keywords": "seasonal home maintenance checklist",
+    "headings": "Seasonal maintenance is about transitions, not four identical calendar quarters Two questions to ask at every transition What actually differs by climate Prepare the household, not only the building Indoor humidity is the one variable that ties every season together Use a recurring seasonal review, and let it evolve"
+  },
+  {
+    "title": "Spring Home Maintenance Checklist: Reset the House After Winter or a Wet Season",
+    "description": "A flexible spring home maintenance guide for moisture, exterior condition, cooling preparation, records and seasonal household reset.",
+    "route": "/guides/spring-home-maintenance-checklist/",
+    "cluster": "maintenance",
+    "keywords": "spring home maintenance checklist",
+    "headings": "Spring home maintenance checklist: what winter damaged, and what the thaw reveals Check for winter damage before anything else, in cold climates What water does as it thaws Prepare systems entering heavy use In hot-humid and mild climates Reset household records while you're already looking"
+  },
+  {
+    "title": "Summer Home Maintenance Checklist: Cooling, Travel, Outdoor Use and Mid-Year Review",
+    "description": "A practical summer household checklist covering cooling performance, travel preparation, outdoor use, maintenance records and mid-year obligations.",
+    "route": "/guides/summer-home-maintenance-checklist/",
+    "cluster": "maintenance",
+    "keywords": "summer home maintenance checklist",
+    "headings": "Summer home maintenance checklist: cooling load, humidity and exterior work Cooling equipment is under its heaviest load of the year Indoor humidity matters as much as temperature Plan for travel before the door closes Use the middle of the year as a record checkpoint Keep exterior work realistic In cold-winter and mild climates"
+  },
+  {
+    "title": "Fall Home Maintenance Checklist: Prepare Systems Before Weather Changes",
+    "description": "Use a flexible fall home maintenance review to prepare heating, drainage, household supplies and recurring winter responsibilities.",
+    "route": "/guides/fall-home-maintenance-checklist/",
+    "cluster": "maintenance",
+    "keywords": "fall home maintenance checklist",
+    "headings": "Fall home maintenance checklist: get the pre-heating-season list done, and beat the leaves Heating system: the single highest-priority fall task Gutters: clear them after the leaves drop, not before Freeze-protect exterior plumbing before the first hard freeze, in cold climates Check household readiness before you actually need it Close out summer equipment and records In hot-humid and mild climates"
+  },
+  {
+    "title": "Winter Home Maintenance Checklist: Monitor, Document and Respond Early",
+    "description": "A winter home checklist focused on active monitoring, heating records, moisture, emergency readiness and small problems before they grow.",
+    "route": "/guides/winter-home-maintenance-checklist/",
+    "cluster": "maintenance",
+    "keywords": "winter home maintenance checklist",
+    "headings": "Winter home maintenance checklist: freeze protection, ice dams and combustion safety Freeze protection, if it hasn't already frozen Watch for ice dams if your roofline holds snow Combustion and carbon monoxide safety Keep heating and moisture history visible, not just noticed Keep emergency information reachable without the internet Professional-only work stays professional-only"
+  },
+  {
+    "title": "First-Time Homeowner Maintenance Guide: Build a Simple System Before Problems Pile Up",
+    "description": "A practical first-time homeowner maintenance system for learning your equipment, recording service history and creating manageable recurring tasks.",
+    "route": "/guides/first-time-homeowner-maintenance-guide/",
+    "cluster": "maintenance",
+    "keywords": "first time homeowner maintenance guide",
+    "headings": "First-time homeowner maintenance guide: build a simple system before problems pile up Stop downloading giant checklists on week one Build a systems inventory before a task list Recover whatever service history you can Add recurring tasks in one layer at a time Build the contact list before you need it in an emergency Understand what maintenance actually costs before you're surprised by it Keep documents connected to the house, not scattered"
+  },
+  {
+    "title": "Apartment Maintenance Checklist: What to Track, Clean, Report and Document",
+    "description": "A renter-friendly apartment maintenance checklist that separates everyday upkeep from issues that should be documented and reported to the property owner or manager.",
+    "route": "/guides/apartment-maintenance-checklist/",
+    "cluster": "maintenance",
+    "keywords": "apartment maintenance checklist",
+    "headings": "Apartment maintenance checklist: what to track, clean, report and document What's generally the landlord's job versus yours Document the unit's condition at move-in, before anything happens Maintain what's actually yours to maintain Report problems with a timeline, not just a text message Your belongings are your own responsibility to document, separate from the unit Keep move-out in mind from the day you move in"
+  },
+  {
+    "title": "Condo Maintenance Checklist: Track What Belongs to Your Unit and What Belongs to the Building",
+    "description": "A condo maintenance framework for unit systems, shared-building responsibilities, association contacts, records and recurring services.",
+    "route": "/guides/condo-maintenance-checklist/",
+    "cluster": "maintenance",
+    "keywords": "condo maintenance checklist",
+    "headings": "Condo maintenance checklist: track what belongs to your unit and what belongs to the building Where the boundary usually falls, and why \"usually\" matters Build a unit-level inventory for what's genuinely yours Keep building contacts somewhere you'll actually find them at 11pm Coordination is part of the task, not a separate step Preserve governing documents, but don't try to interpret them Special assessments deserve their own record"
+  },
+  {
+    "title": "Rental Home Maintenance Log: Keep a Clear Record of Issues, Reports and Repairs",
+    "description": "Create a rental maintenance log that records problems, communication dates, service visits and tenant-completed upkeep without confusing responsibility.",
+    "route": "/guides/rental-home-maintenance-log/",
+    "cluster": "maintenance",
+    "keywords": "rental maintenance log",
+    "headings": "Rental home maintenance log: a timeline, not a legal argument What belongs in an entry Separate what you did from what you reported Keep related documents attached to the same timeline The log documents; it doesn't decide Why this differs from a general maintenance log"
+  },
+  {
+    "title": "Home Maintenance Records: What to Keep and How to Make Them Useful",
+    "description": "Learn which maintenance records have future value, from service dates and repair notes to invoices, models and follow-up recommendations.",
+    "route": "/guides/home-maintenance-records/",
+    "cluster": "maintenance",
+    "keywords": "home maintenance records",
+    "headings": "Home maintenance records: what to keep, and how to make them useful The five facts worth capturing for any meaningful service or repair Recommendations with a future date are the easiest thing to lose Retention: what actually needs to be kept, and for how long Storage location matters as much as content Use names that mean something later"
+  },
+  {
+    "title": "How to Keep a Home Repair History That Is Useful Years Later",
+    "description": "Track repair dates, symptoms, service providers, parts, costs and outcomes so recurring household problems are easier to understand.",
+    "route": "/guides/home-repair-history/",
+    "cluster": "maintenance",
+    "keywords": "home repair history",
+    "headings": "Home repair history: the fault-and-fix trail on one asset The first repair is an event; the second is a pattern Write the symptom the way you actually experienced it Every entry needs an outcome, not just a description A worked example Track cost, but let a person make the replace-or-repair call Why this is different from a general maintenance log"
   },
   {
     "title": "Refrigerator Maintenance Checklist: Coils, Temperature, Seals and Service History",

@@ -170,7 +170,7 @@
   {
     "route": "/guides/monthly-home-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -186,7 +186,7 @@
   {
     "route": "/guides/seasonal-home-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -194,7 +194,7 @@
   {
     "route": "/guides/spring-home-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -202,7 +202,7 @@
   {
     "route": "/guides/summer-home-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -210,7 +210,7 @@
   {
     "route": "/guides/fall-home-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -218,7 +218,7 @@
   {
     "route": "/guides/winter-home-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -226,7 +226,7 @@
   {
     "route": "/guides/first-time-homeowner-maintenance-guide/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -234,7 +234,7 @@
   {
     "route": "/guides/apartment-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -242,7 +242,7 @@
   {
     "route": "/guides/condo-maintenance-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -250,7 +250,7 @@
   {
     "route": "/guides/rental-home-maintenance-log/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -258,7 +258,7 @@
   {
     "route": "/guides/home-maintenance-records/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -266,7 +266,7 @@
   {
     "route": "/guides/home-repair-history/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
