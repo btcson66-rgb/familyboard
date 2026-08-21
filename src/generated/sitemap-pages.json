@@ -1042,7 +1042,7 @@
   {
     "route": "/guides/household-management-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1050,7 +1050,7 @@
   {
     "route": "/guides/divide-household-responsibilities/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1066,7 +1066,7 @@
   {
     "route": "/guides/family-chore-system/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1082,7 +1082,7 @@
   {
     "route": "/guides/household-weekly-reset/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1090,7 +1090,7 @@
   {
     "route": "/guides/household-monthly-review/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1106,7 +1106,7 @@
   {
     "route": "/guides/organize-household-subscriptions/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1122,7 +1122,7 @@
   {
     "route": "/guides/recurring-bills-tracker/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1130,7 +1130,7 @@
   {
     "route": "/guides/annual-renewal-calendar/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1138,7 +1138,7 @@
   {
     "route": "/guides/household-account-list/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1146,7 +1146,7 @@
   {
     "route": "/guides/home-contact-list/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1170,7 +1170,7 @@
   {
     "route": "/guides/pantry-restock-system/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1178,7 +1178,7 @@
   {
     "route": "/guides/household-supplies-inventory/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1186,7 +1186,7 @@
   {
     "route": "/guides/cleaning-schedule/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1194,7 +1194,7 @@
   {
     "route": "/guides/deep-cleaning-tracker/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1202,7 +1202,7 @@
   {
     "route": "/guides/guest-preparation-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1210,7 +1210,7 @@
   {
     "route": "/guides/vacation-home-shutdown-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1218,7 +1218,7 @@
   {
     "route": "/guides/returning-home-after-travel-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1226,7 +1226,7 @@
   {
     "route": "/guides/moving-house-organizer/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
@@ -1234,7 +1234,7 @@
   {
     "route": "/guides/new-home-setup-checklist/",
     "alternateRoute": "",
-    "indexable": false,
+    "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""

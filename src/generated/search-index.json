@@ -976,6 +976,158 @@
     "headings": "Every important household system should have a second person who can find the map The goal is shared recoverability, not equal memory Decide what authority the backup actually needs, and say so explicitly Build a short operational brief, organized by what's due soon Use a generated handoff view instead of a spreadsheet nobody updates Tell them where secure records live without exposing what's in them Respect privacy within the partnership Practice it once, before an emergency forces the first real test"
   },
   {
+    "title": "Household Management Checklist: The Recurring Work Behind a Well-Run Home",
+    "description": "Use a household management checklist to map maintenance, documents, bills, tasks, supplies, emergency information and recurring responsibilities.",
+    "route": "/guides/household-management-checklist/",
+    "cluster": "household-operations",
+    "keywords": "household management checklist",
+    "headings": "Household management is easier when responsibilities are visible The checklist, by category Why \"recurring money\" is three records, not one Match the record type to the responsibility, not the reverse What this checklist deliberately doesn't cover Review the system itself, not only the tasks inside it Re-audit after anything that changes the household, not just on a schedule What a skipped category actually costs"
+  },
+  {
+    "title": "How to Divide Household Responsibilities Without Creating Another Chore Fight",
+    "description": "Divide household responsibilities by ownership, frequency and hidden admin work so recurring tasks are easier to share and hand off.",
+    "route": "/guides/divide-household-responsibilities/",
+    "cluster": "household-operations",
+    "keywords": "divide household responsibilities",
+    "headings": "Household work is easier to divide when the invisible parts are named A responsibility isn't shared until all four stages have an owner What this looks like for one real task A second example, to show the pattern holds List responsibilities before assigning them Count by frequency, not by task Match tasks to capacity, not just fairness on paper Keep a backup path for anything critical Revisit the split when life changes, not just when it breaks"
+  },
+  {
+    "title": "Family Chore System: Build a Routine People Can Understand at a Glance",
+    "description": "Create a family chore system with clear ownership, recurring schedules, age-appropriate expectations and a shared display without over-gamifying normal home life.",
+    "route": "/guides/family-chore-system/",
+    "cluster": "household-operations",
+    "keywords": "family chore system",
+    "headings": "A chore system needs four things to work: a task, an owner, a frequency and a definition of done Write tasks at the level of detail the household actually needs Match rotation to what actually benefits from it Pick the right recurrence for each task, not one default Admin work is a chore too, even without a visible result Keep age and ability in the task, not as a separate system Skip the point system unless your household actually wants one Use a shared display for visibility, not supervision Start small and prove the system before expanding it"
+  },
+  {
+    "title": "Household Weekly Reset: A 20-Minute Review of Tasks, Calendar and Home Needs",
+    "description": "Use a short weekly household reset to review upcoming events, chores, supplies, maintenance and unresolved home tasks.",
+    "route": "/guides/household-weekly-reset/",
+    "cluster": "household-operations",
+    "keywords": "household weekly reset",
+    "headings": "A weekly reset is the smallest routine that keeps a household system current The seven-part run-through When the same home issue keeps showing up in the reset What a stocked admin queue actually looks like Why admin tasks belong inside the weekly reset, not a separate ritual Keep the time budget honest Clearing stale tasks is not the same as ignoring them Put it on the calendar like any other recurring commitment What the weekly reset deliberately does not cover"
+  },
+  {
+    "title": "Household Monthly Review: Maintenance, Renewals, Records and the Next 30 Days",
+    "description": "Use a monthly household review to clean up tasks, check maintenance, review subscriptions and renewals, update records and create a backup.",
+    "route": "/guides/household-monthly-review/",
+    "cluster": "household-operations",
+    "keywords": "monthly household review",
+    "headings": "Monthly is the right cadence for household work that's important but not urgent The monthly run-through Seasonal maintenance often surfaces here first Why 30 to 60 days, specifically Keep the financial review bounded Reconciling maintenance history prevents a specific failure mode Back up like the browser might not be there tomorrow What \"done\" looks like for a monthly review"
+  },
+  {
+    "title": "How to Organize Household Subscriptions Before They Become Invisible Expenses",
+    "description": "Create a household subscription list with owner, cost, billing frequency, renewal date and cancellation notes.",
+    "route": "/guides/organize-household-subscriptions/",
+    "cluster": "household-operations",
+    "keywords": "organize household subscriptions",
+    "headings": "A subscription is different from a bill because you can just stop paying it Find every subscription from more than one source The five fields that actually matter Free trials are where subscriptions actually go wrong Set your own review date ahead of the seller's notice Record ownership, not just cost Start with the ten that matter, not a forensic audit"
+  },
+  {
+    "title": "Recurring Bills Tracker: Organize Due Dates Without Becoming a Banking App",
+    "description": "Track household recurring bills, due dates, frequency, owner and payment method notes without connecting bank accounts or storing sensitive credentials.",
+    "route": "/guides/recurring-bills-tracker/",
+    "cluster": "household-operations",
+    "keywords": "recurring bills tracker",
+    "headings": "A recurring bill is an obligation, not a subscription you can just cancel Track the obligation, not the transaction Group bills by what happens if they're missed Autopay removes the due-date risk, not the price risk Insurance and contract-based bills sometimes carry real notice rules Record the switching path, not just the cancellation path An example of the difference in practice Keep sensitive numbers out of the shared view Use actual statements for anything money-related"
+  },
+  {
+    "title": "Annual Renewal Calendar: Put Insurance, Memberships, Registrations and Services on One Timeline",
+    "description": "Build an annual household renewal calendar for insurance, memberships, registrations, service plans and other once-a-year obligations.",
+    "route": "/guides/annual-renewal-calendar/",
+    "cluster": "household-operations",
+    "keywords": "annual renewal calendar",
+    "headings": "Annual renewals are the easiest recurring cost to forget, because a year is long enough to forget the price What belongs on an annual calendar Track two dates, not one How much lead time is reasonable Track the price at last renewal against the price now Enter real dates from your own documents, not an assumed schedule Review the calendar itself once a year Build the first version from what you can already find Not every annual item needs the same review lead time"
+  },
+  {
+    "title": "Household Account List: Know Which Services Exist Without Storing Passwords in the Wrong Place",
+    "description": "Create a household account index with service name, account owner, support link and renewal information while keeping credentials in a password manager.",
+    "route": "/guides/household-account-list/",
+    "cluster": "household-operations",
+    "keywords": "household account list",
+    "headings": "An account list answers \"whose login is this under,\" not \"who do we call\" What belongs on an account record Store enough of the account number to be useful, not the whole thing Passwords do not belong in this list, and here's the actual mechanism that enforces it What happens at a move deserves its own note, not an assumption Continuity for critical, single-owner accounts Review the list when ownership actually changes Start with the accounts that would actually cause a problem if forgotten Overlap with the subscription list is expected, and fine"
+  },
+  {
+    "title": "Home Contact List: The People and Services Your Household Actually Needs",
+    "description": "Create a household contact list for family, neighbors, building management, utilities, schools, caregivers and service providers.",
+    "route": "/guides/home-contact-list/",
+    "cluster": "household-operations",
+    "keywords": "home contact list",
+    "headings": "A home contact list is useful because it's curated, not because it's complete Organize by role, not alphabetically Add the reason, not just the name Mark anything sensitive, and mean it Review outdated entries on purpose Print a limited version, not the whole list Aim for a list that fits on one page Paper vs. private app: keep the roles separate Digital contacts already exist — this list isn't a replacement for them"
+  },
+  {
+    "title": "Pantry Restock System: Keep Everyday Food Staples Visible Without Tracking Every Can",
+    "description": "Build a simple pantry restock system using staple lists, minimum quantities or “last one opened” triggers rather than full inventory accounting.",
+    "route": "/guides/pantry-restock-system/",
+    "cluster": "household-operations",
+    "keywords": "pantry restock system",
+    "headings": "A pantry restock system tracks food, not equipment — and that distinction is the whole design Pick a restock trigger, not a running count Storage category changes the shelf-life math, and it is worth knowing the actual ranges Keep dietary and specialty staples visible on their own Prune the list on a schedule, not just when it gets annoying Leave expiration-date tracking out of version one"
+  },
+  {
+    "title": "Household Supplies Inventory: Filters, Cleaning Products and Maintenance Consumables",
+    "description": "Track household consumables that matter for maintenance and continuity, such as compatible filters, bags and replacement parts.",
+    "route": "/guides/household-supplies-inventory/",
+    "cluster": "household-operations",
+    "keywords": "household supplies inventory",
+    "headings": "A supplies inventory exists for items that have to match a specific machine — not for soap Track the part number, not the category Record where the spare actually is Connect the record to maintenance, not just shopping Don't let it become a stockpiling list Know when an item doesn't belong in this inventory at all Review it during the household's regular rhythm, not as a one-off project"
+  },
+  {
+    "title": "Cleaning Schedule: Build Daily, Weekly and Deep-Cleaning Routines That Fit Your Home",
+    "description": "Create a household cleaning schedule by zone, frequency and owner without generating an unrealistic list of chores.",
+    "route": "/guides/cleaning-schedule/",
+    "cluster": "household-operations",
+    "keywords": "cleaning schedule",
+    "headings": "A cleaning schedule is the recurring routine — the tasks that happen on a rhythm, not the ones that get forgotten entirely Build from mess patterns, not a template Separate the three tiers Assign by room or by task — the app should support either A sample weekly split to start from The one chemical-safety rule that actually matters here Keep achievable ahead of thorough Adjust the schedule around real-life disruptions, don't just abandon it Keep cleaning and maintenance in separate records"
+  },
+  {
+    "title": "Deep Cleaning Tracker: Remember the Jobs That Are Too Rare for Weekly Routines",
+    "description": "Track occasional deep-cleaning tasks by room, season and last-completed date without cluttering the everyday chore list.",
+    "route": "/guides/deep-cleaning-tracker/",
+    "cluster": "household-operations",
+    "keywords": "deep cleaning tracker",
+    "headings": "The jobs a weekly routine never catches Organize by zone, not by a fixed calendar Record the last-completed date, not a due date The dryer vent and lint trap deserve their own line A sample deep-cleaning list to start from Tie deep cleaning to the seasons you're already thinking about Keep it out of the maintenance history unless equipment is involved Some deep-cleaning tasks are worth hiring out, not tracking as DIY"
+  },
+  {
+    "title": "Guest Preparation Checklist: A Calm 24-Hour Home Reset Before Visitors Arrive",
+    "description": "Prepare for overnight guests with sleeping space, linens, bathroom basics, access information and household routines without over-cleaning the entire home.",
+    "route": "/guides/guest-preparation-checklist/",
+    "cluster": "household-operations",
+    "keywords": "guest preparation checklist",
+    "headings": "Guest preparation is about making a house usable by someone who doesn't live there — for a weekend, not a takeover What guests actually need, in order Set the timing: most of this happens in the 24 hours before arrival You are not required to make the house look like a hotel Multi-night stays need a couple of things a single overnight doesn't Know what your homeowners or renters policy actually covers if a guest is hurt Reset after they leave"
+  },
+  {
+    "title": "Vacation Home Shutdown Checklist: What to Review Before You Leave",
+    "description": "Create a household vacation shutdown routine for deliveries, pets, appliances, temperature, waste, service appointments and handoff contacts.",
+    "route": "/guides/vacation-home-shutdown-checklist/",
+    "cluster": "household-operations",
+    "keywords": "vacation home shutdown checklist",
+    "headings": "A shutdown checklist reduces loose ends before an absence — not a full winterization event every time Water is the highest-value thing to get right before leaving Set the thermostat, don't just turn it off Stop or redirect what keeps arriving without you Unplug what doesn't need to stay on Set exterior lighting and security deliberately, not as an afterthought Build a limited handoff, not full access Don't broadcast the absence"
+  },
+  {
+    "title": "Returning Home After Travel Checklist: Restart the Household Without Missing a Problem",
+    "description": "Use a short return-home checklist for condition checks, mail, pets, supplies, household tasks and closing temporary travel handoffs.",
+    "route": "/guides/returning-home-after-travel-checklist/",
+    "cluster": "household-operations",
+    "keywords": "returning home after vacation checklist",
+    "headings": "This is the fuller restart, not the five-minute walk-through Start from whatever the quick check flagged Close out every temporary arrangement properly Work through the backlog systematically Check the exterior along with the interior File any trip-related paperwork while it's still easy to find Improve the next trip's checklist while the gaps are fresh Why this is a separate page from the five-minute check"
+  },
+  {
+    "title": "Moving House Organizer: Tasks, Utilities, Inventory, Documents and the First Week",
+    "description": "Organize a move by workstream: utilities, addresses, documents, box inventory, service providers, old-home closure and new-home setup.",
+    "route": "/guides/moving-house-organizer/",
+    "cluster": "household-operations",
+    "keywords": "moving house organizer",
+    "headings": "A move is easier managed as workstreams than as one giant checklist Build the timeline backward from moving day Change your address in more places than you'd expect Gather the documents workstream early, since some take time to obtain Keep the possessions inventory functional, not exhaustive Separate what belongs to the old home from what moves with the household Build the first-week list before moving day, not during it Budget for the move itself as its own line item Keep the old-home closure list separate from the new-home list"
+  },
+  {
+    "title": "New Home Setup Checklist: Build the Household System Before the Details Get Lost",
+    "description": "Set up a new home by organizing utilities, equipment records, maintenance, contacts, documents, emergency information and first-week tasks.",
+    "route": "/guides/new-home-setup-checklist/",
+    "cluster": "household-operations",
+    "keywords": "new home setup checklist",
+    "headings": "New home setup is the administrative foundation, not the physical walk-through Confirm utilities are actually transferred, not just requested Redirect the address changes you didn't finish during the move Decide what to locate and record first — in this order Don't forget the registrations that aren't utilities or mail Build the asset and maintenance list gradually, not all at once Set up the household's emergency-reference view early Export the first backup once there's something worth protecting"
+  },
+  {
     "title": "Free Home Maintenance Schedule Generator | Build a Custom Household Plan",
     "description": "Create a starter home maintenance schedule based on your home type, systems and seasons, then edit it to match actual manuals and local conditions.",
     "route": "/tools/home-maintenance-schedule-generator/",
