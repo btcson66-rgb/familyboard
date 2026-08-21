@@ -6,37 +6,51 @@ primaryIntent: "manage recurring household tasks"
 primaryKeyword: "family task manager"
 cluster: "product"
 pageType: "content"
-indexable: false
-depthVerified: false
+indexable: true
+depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
-nextStep: "Create three recurring tasks that currently live only in someone's memory. If the task belongs to an appliance or subscription, link the two records."
+nextStep: "Create three recurring responsibilities that currently live only in someone's memory. If a task belongs to an appliance or subscription, mention it in the notes so the connection isn't lost."
 related:
-  - "/guides/divide-household-responsibilities/"
-  - "/guides/family-chore-system/"
-  - "/tools/recurring-chore-planner/"
+  - "/features/household-calendar/"
   - "/features/household-handoff/"
-faq: []
+  - "/features/home-dashboard/"
+  - "/features/free-home-management-app/"
+faq:
+  - question: "Does completing a recurring task automatically create the next one?"
+    answer: "No. The recurrence field is a plain-text note (\"weekly,\" \"annual\") for your own reference, not an automation. The form's own help text says this directly: completing a task does not invent the next date. For genuinely repeating work, many households leave the task open and just move its due date forward instead of completing and recreating it."
+  - question: "Can I assign a task to more than one household member?"
+    answer: "A task has a single owner field. If a responsibility genuinely needs shared visibility, a practical approach is choosing whichever person is accountable for making sure it happens, and using the notes field to record that others are involved."
+  - question: "What's the difference between a task and a calendar event?"
+    answer: "A task is an open-ended responsibility with an owner, a due date and a completion state. An event has a specific start and end time and location, with no owner or completion button — it's meant for things like appointments, not for ongoing responsibilities."
+  - question: "Can I undo completing a task by mistake?"
+    answer: "There's no undo button on the task card itself. If you complete a task in error, the practical fix is creating a new task with the correct details, since the completed record's timestamp reflects when you actually pressed Complete."
 contentVersion: 1
 ---
 # Household work includes far more than chores
 
-Chore apps tend to focus on visible jobs: dishes, laundry, trash and cleaning. Those tasks matter, but the invisible administrative work of a household can be just as demanding. Someone schedules repairs, renews documents, checks a contract, orders replacement filters, contacts the landlord, prepares for a trip or keeps track of an annual service.
+Chore apps tend to focus on visible jobs: dishes, laundry, trash. Those matter, but the invisible administrative work of running a home — scheduling a repair, renewing a document, ordering a replacement filter, contacting a landlord, prepping for a trip — is just as real and far easier to lose track of. `FamilyBoard`'s Tasks tab treats both kinds the same way: a title, an owner, a due date, and a place to note how it repeats.
 
-`FamilyBoard` uses a broader definition of household tasks.
+## What a task record holds
 
-## Give every recurring responsibility an owner
+The quick-add form asks for a title (required), an owner from your household members, a due date, a repeat note, and free-text notes. The repeat field's help text is explicit about what it is and isn't: "Example: weekly. Completing does not invent the next date." That's an honest design choice — recurrence here is a label for humans to read, not an automated engine that recreates the task on a schedule. If you want a task to genuinely come back every week, you complete it and create the next instance yourself, or use it as a note reminding you what the pattern normally is.
 
-A task can belong to a person without implying that the person must perform every physical step. “HVAC service” may mean one person is responsible for booking the technician. “Pet annual records” may mean someone makes sure documents are current. Clear ownership reduces the common situation where everyone assumes someone else is handling the task.
+## Completing a task is a one-way action
 
-## Keep recurring work connected to the home
+Each open task card shows a "Complete" button. Pressing it stamps the task with today's completion timestamp and changes its badge from a due-date status to "Complete." There's no undo button on the card itself and no automatic next task generated — which is exactly what the recurrence-note help text warns you about. For genuinely recurring responsibilities, many households find it easier to leave the task open with a rough recurrence note and just update the due date manually, rather than completing and recreating it every cycle.
 
-When possible, link a task to the asset, subscription or responsibility it affects. A task called “review internet plan” is more useful when it points to the existing subscription record. “Replace filter” should connect to the correct appliance.
+## Give every responsibility a real owner
 
-## Use history for accountability, not surveillance
+The owner field pulls from your Members list. Assigning "HVAC service" to one household member doesn't mean they personally have to do the physical work — it means they're the one responsible for making sure it happens, which is often the more useful commitment for administrative tasks like scheduling a technician or checking a contract renewal.
 
-Completion history helps the household know what was done. It should not turn family life into a productivity scorecard. The product should avoid gamification that makes normal household contribution feel like employee monitoring.
+## Calendar events live on the same screen, but are a separate record type
 
-## Make the system easy to ignore when nothing is wrong
+The Tasks tab has a second quick-add form beneath the task one, for calendar events: title, start time, end time, location and notes. Events are a distinct record from tasks — they don't have an owner, a due-date status or a Complete button, since an event either happened at its time or didn't. They're meant for things with a specific start time, like a technician's appointment, rather than open-ended responsibilities.
 
-Good household software should disappear into the background. Only overdue and upcoming work needs regular attention.
+## A worked example
+
+A household creates a task "Renew car registration," owner assigned, due date set to the state deadline, recurrence note "annual, check DMV site for new fee schedule," notes "last renewed online, confirmation emailed." A month before the due date it shows as upcoming on the dashboard; on the day, if it's still open, it flips to "overdue" styling. Once actually renewed, pressing Complete records the exact completion date — a genuine record of when it was actually done, distinct from the note that just says how often it recurs.
+
+## How tasks feed into handoff and display
+
+Open tasks (not completed) are what the Handoff tab's default profile includes in a printable briefing, and what Display mode shows on a shared screen — both filtered to only what's still open, since a completed task isn't operationally useful to hand off.

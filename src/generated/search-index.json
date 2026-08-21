@@ -13,7 +13,111 @@
     "route": "/features/",
     "cluster": "product",
     "keywords": "household management app features",
-    "headings": "One household dashboard, built around the work behind the calendar Household dashboard Home inventory and asset records Maintenance history Warranty and receipt organization Household subscriptions and renewals Tasks and shared responsibilities Emergency information and handoff Local-first by default"
+    "headings": "One household dashboard, built around the work behind the calendar Today — the dashboard Assets — the inventory Maintenance — the recurring work Warranties — coverage windows Subscriptions — recurring costs Tasks — one-off and recurring responsibilities Emergency — contacts that stay local Documents — where things actually are Handoff and Display — for the rest of the household Settings — backups, storage and the master table What ties the twelve screens together"
+  },
+  {
+    "title": "Home Dashboard for Maintenance, Warranties, Tasks and Renewals | FamilyBoard",
+    "description": "A practical household dashboard that brings maintenance, warranties, recurring tasks, subscriptions and upcoming home responsibilities into one view.",
+    "route": "/features/home-dashboard/",
+    "cluster": "product",
+    "keywords": "home dashboard",
+    "headings": "A home dashboard should tell you what needs attention, not just show pretty charts The four counters The two lists beneath them A worked example Why the dashboard doesn't try to show everything What the dashboard does not do From dashboard to wall display"
+  },
+  {
+    "title": "Private Home Inventory Tracker for Appliances, Electronics and Household Assets | FamilyBoard",
+    "description": "Create a practical home inventory with model numbers, serial numbers, purchase details, warranties, maintenance and local records.",
+    "route": "/features/home-inventory-tracker/",
+    "cluster": "product",
+    "keywords": "home inventory tracker",
+    "headings": "A useful home inventory is not a list of everything you own What an asset record actually holds Watch and Archive, not delete Why connect inventory to maintenance, warranties and documents A worked example Keep detail proportional to value Build it gradually, and know the limits"
+  },
+  {
+    "title": "Home Maintenance Tracker with Recurring Schedules and Service History | FamilyBoard",
+    "description": "Track recurring home maintenance, completion dates, service history, costs and the assets each task belongs to.",
+    "route": "/features/maintenance-tracker/",
+    "cluster": "product",
+    "keywords": "home maintenance tracker",
+    "headings": "Stop relying on \"I think we did that recently\" What a maintenance task actually stores What happens when you press Complete The card shows real history, not just a status A worked example Flexible schedules for work that doesn't fit a fixed date The honest limits"
+  },
+  {
+    "title": "Warranty Tracker for Appliances and Household Purchases | FamilyBoard",
+    "description": "Track household warranties, purchase dates, receipts and expiration windows before you need them.",
+    "route": "/features/warranty-tracker/",
+    "cluster": "product",
+    "keywords": "warranty tracker",
+    "headings": "The worst time to look for warranty information is after something stops working What a warranty record holds Status is computed, not typed in The receipt reference field, and why it's just text A worked example Warranty and repair history stay on the same asset What FamilyBoard does not do"
+  },
+  {
+    "title": "Household Documents Organizer for Warranties, Manuals, Receipts and Home Records | FamilyBoard",
+    "description": "Organize household document references around the home, asset or responsibility they belong to instead of relying on disconnected folders.",
+    "route": "/features/household-documents-organizer/",
+    "cluster": "product",
+    "keywords": "household documents organizer",
+    "headings": "A document index, not a file cabinet What a document record stores — and doesn't Linking a document to an asset is what makes it findable later The review date field A worked example Categories worth using The honest limit"
+  },
+  {
+    "title": "Household Subscription Tracker for Renewals, Costs and Cancellation Notes | FamilyBoard",
+    "description": "Track household subscriptions, renewal dates, billing frequency, ownership and cancellation notes in one private list.",
+    "route": "/features/household-subscription-tracker/",
+    "cluster": "product",
+    "keywords": "household subscription tracker",
+    "headings": "Subscriptions are household obligations, not just line items What a subscription record holds The annualized total is computed live A worked example of the annualized math Marking a subscription cancelled instead of deleting it Reviewing before renewal What it deliberately doesn't do"
+  },
+  {
+    "title": "Family Task Manager for Chores, Household Admin and Recurring Responsibilities | FamilyBoard",
+    "description": "Organize household chores and recurring admin tasks by owner, due date, priority and history.",
+    "route": "/features/family-task-manager/",
+    "cluster": "product",
+    "keywords": "family task manager",
+    "headings": "Household work includes far more than chores What a task record holds Completing a task is a one-way action Give every responsibility a real owner Calendar events live on the same screen, but are a separate record type A worked example How tasks feed into handoff and display"
+  },
+  {
+    "title": "Simple Household Calendar Connected to Tasks and Home Responsibilities | FamilyBoard",
+    "description": "Use a lightweight household calendar for events that relate to home tasks, maintenance and family responsibilities without turning the product into another calendar clone.",
+    "route": "/features/household-calendar/",
+    "cluster": "product",
+    "keywords": "household calendar",
+    "headings": "A small calendar for the events that belong to your home records What an event record actually stores Events are not tasks, and the app keeps them visibly separate Where events show up A worked example What it deliberately doesn't do"
+  },
+  {
+    "title": "Household Emergency Information Organizer — Contacts, Utilities and Instructions | FamilyBoard",
+    "description": "Keep important household emergency contacts, utility notes, pet information and operational instructions in one clear local-first record.",
+    "route": "/features/emergency-information-organizer/",
+    "cluster": "product",
+    "keywords": "household emergency information organizer",
+    "headings": "A contact list built to be found fast, not admired What a contact record holds What \"sensitive\" actually controls Not the same as Household Members A worked example What FamilyBoard is honest about not being Where the data actually lives"
+  },
+  {
+    "title": "Household Handoff — Make the Invisible Work of Running a Home Transferable | FamilyBoard",
+    "description": "Create a concise household handoff showing upcoming obligations, recurring responsibilities, service contacts and the information another trusted person needs.",
+    "route": "/features/household-handoff/",
+    "cluster": "product",
+    "keywords": "household handoff checklist",
+    "headings": "A printable briefing built from your own records, not a fresh document The default view, with no profile created Sharing profiles let you choose what's included What's always excluded, no matter what What the sheet actually shows Print, don't just view A worked example"
+  },
+  {
+    "title": "Family Display Mode — Turn an Old Tablet into a Household Dashboard | FamilyBoard",
+    "description": "Use a tablet-friendly full-screen view for today’s events, chores, maintenance alerts and household notices without buying dedicated family calendar hardware.",
+    "route": "/features/family-display-mode/",
+    "cluster": "product",
+    "keywords": "family dashboard tablet",
+    "headings": "A simplified, low-sensitivity view built for a shared screen Exactly three things appear on it \"Refreshes every minute\" is a real, specific number Why it's honest to call this \"low-sensitivity,\" not \"safe for anyone\" Turning a spare tablet into a display A worked example"
+  },
+  {
+    "title": "Private Family Organizer — Local-First, Offline and No Account Required | FamilyBoard",
+    "description": "A household organizer that stores records in your browser, works offline, needs no account, and gives you password-protected backups you control.",
+    "route": "/features/private-family-organizer/",
+    "cluster": "product",
+    "keywords": "private family organizer",
+    "headings": "Local-first, offline and no-account are one design decision, not three features What \"no account\" means in practice What \"offline\" means in practice What \"local-first\" means for backup, concretely The bulk-edit path: master CSV One household per browser profile — the honest limit What local-first does not protect against"
+  },
+  {
+    "title": "Free Home Management App — Every Feature, No Account, No Paywall | FamilyBoard",
+    "description": "A free home management app with no paid tier gating any feature: assets, maintenance, warranties, subscriptions, tasks, handoff and encrypted backups, all local.",
+    "route": "/features/free-home-management-app/",
+    "cluster": "product",
+    "keywords": "free home management app",
+    "headings": "Free because there's nothing behind a paywall to unlock Why a local-first app can afford to be genuinely free A real household history, not a limited demo What the free tier includes, concretely The honest limit: this is a single-household, single-browser-profile app What durability actually requires from you"
   },
   {
     "title": "How to Build a Home Maintenance Schedule You Will Actually Keep",

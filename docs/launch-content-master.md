@@ -413,45 +413,68 @@ You do not need a perfect system. Start with one refrigerator, one vehicle, one 
 **Title tag:** `Household Management Features — Assets, Maintenance, Warranties, Tasks and More | FamilyBoard`
 **Meta description:** `See how FamilyBoard organizes household assets, maintenance, warranties, subscriptions, tasks, emergency information, backups and family handoffs.`
 **Primary keyword concept:** household management app features
-**Suggested internal links:** `/features/home-inventory-tracker/`, `/features/maintenance-tracker/`, `/features/household-handoff/`, `/features/private-family-organizer/`
+**Depth:** verified
+**Suggested internal links:** `/features/home-inventory-tracker/`, `/features/maintenance-tracker/`, `/features/household-handoff/`, `/features/private-family-organizer/`, `/features/free-home-management-app/`
 
 # One household dashboard, built around the work behind the calendar
 
-A family calendar is only one layer of household management. `FamilyBoard` focuses on the information that tends to scatter across drawers, email, notes apps, spreadsheets and memory.
+A family calendar answers "what's happening and when." It doesn't answer "when did we last flush the water heater," "where's the dishwasher receipt," or "what does the new sitter need to know if we're both unreachable for a weekend." `FamilyBoard` is the twelve-screen app built for that second set of questions: Today, Members, Assets, Maintenance, Tasks, Warranties, Subscriptions, Emergency, Documents, Handoff, Display and Settings, all reading from one household database stored in this browser.
 
-## Household dashboard
+Below is what each section actually does, with a link to the full page for each.
 
-See what needs attention without opening five different lists. The dashboard should surface overdue tasks, upcoming maintenance, warranties approaching their end date, recurring subscriptions and important household events. It is designed as a practical “what should we deal with next?” view rather than a decorative analytics screen.
+## Today — the dashboard
 
-## Home inventory and asset records
+Opening the app lands on four counters — overdue tasks, maintenance due within seven days, active assets, active subscriptions — plus two short lists: your next five open responsibilities and your next five maintenance items due soon, each with a one-click link to the full tab. See **[Home Dashboard](/features/home-dashboard/)**.
 
-Track appliances, vehicles, electronics, home systems and other meaningful possessions. Each asset can keep its own identifying details, purchase information, related maintenance and service notes. This creates a record that becomes more valuable when something breaks, needs replacement or has to be described for a claim or move.
+## Assets — the inventory
 
-## Maintenance history
+Every appliance, vehicle or system gets a record: name, category, location, brand, model, serial number, purchase date and notes from the quick-add form, plus purchase price, seller, installed date, manual reference and an active/watch/archived status field the record reserves for deeper tracking. Asset cards carry "Watch" and "Archive" buttons. See **[Home Inventory Tracker](/features/home-inventory-tracker/)**.
 
-Recurring maintenance is linked to the item or part of the home it belongs to. Completion creates history. Instead of only knowing that a filter “should probably be changed,” you can see when you last changed it and what is due next.
+## Maintenance — the recurring work
 
-## Warranty and receipt organization
+A maintenance task links a title to an asset or home area, an owner, a next-due date, a repeat interval in months, a priority and an instructions source. Pressing "Complete" logs a maintenance event with today's date and rolls the next-due date forward by the interval; the card keeps the five most recent completions visible underneath. See **[Maintenance Tracker](/features/maintenance-tracker/)**.
 
-Record the warranty term and purchase date while the information is easy to find. Attach or reference the receipt locally when appropriate. The goal is to make the information retrievable before the product fails, not after.
+## Warranties — coverage windows
 
-## Household subscriptions and renewals
+A warranty record ties a provider, start date, end date, receipt reference and terms reference to an asset. The card flips to an "Expired" status the day after the end date passes and always reminds you that written terms control exact coverage. See **[Warranty Tracker](/features/warranty-tracker/)**.
 
-Track recurring services that are easy to forget: streaming, security monitoring, memberships, annual services or other household contracts. Store the billing frequency, next renewal date and notes about how to cancel or manage the service.
+## Subscriptions — recurring costs
 
-## Tasks and shared responsibilities
+Each subscription stores cost, currency, billing frequency, next renewal, a review-before-days lead time, an owner, a management URL and a payment note — deliberately not a card number. The subscriptions screen totals every active subscription's annualized cost live, so a weekly $12 lawn app and a $180 annual security plan land on the same yearly number. See **[Household Subscription Tracker](/features/household-subscription-tracker/)**.
 
-Household work is not only “take out trash.” It includes recurring administration: arrange service, renew a plan, inspect something, restock a safety item, review documents or prepare for travel. Tasks can be assigned to a household member and linked to a larger home responsibility.
+## Tasks — one-off and recurring responsibilities
 
-## Emergency information and handoff
+Tasks carry a title, an owner, a due date, a free-text recurrence note and completion status; a separate quick-add form on the same screen creates calendar events with a start time, end time and location. See **[Family Task Manager](/features/family-task-manager/)** and **[Household Calendar](/features/household-calendar/)**.
 
-Keep the information another trusted household member may need when normal routines break: important contacts, utility notes, service providers, pet instructions and upcoming obligations. Handoff mode turns scattered records into a concise operational summary.
+## Emergency — contacts that stay local
 
-## Local-first by default
+Emergency contacts hold name, category, phone, email, notes and a sensitive flag. Marking a contact sensitive removes it from the printable handoff sheet by default — nothing about it is ever exposed by the app's design. See **[Emergency Information Organizer](/features/emergency-information-organizer/)**.
 
-Core data is designed to live on your device, with backup and restore under your control. The free version does not require a cloud account simply to organize your own home.
+## Documents — where things actually are
+
+A document record doesn't store a file; it stores a name, category, a plain-text location reference ("fireproof box, hallway closet"), a linked asset and a review date. See **[Household Documents Organizer](/features/household-documents-organizer/)**.
+
+## Handoff and Display — for the rest of the household
+
+Handoff mode builds a printable briefing from a sharing profile that toggles which record types to include; sensitive contacts, serial numbers, document details, subscription costs and private notes are always left out. Display mode renders a large-type, low-sensitivity view of today's tasks, today's events and upcoming maintenance, meant for a kitchen tablet. See **[Household Handoff](/features/household-handoff/)** and **[Family Display Mode](/features/family-display-mode/)**.
+
+## Settings — backups, storage and the master table
+
+Settings shows current storage usage against the browser's quota, lets you request persistent storage, and is where JSON backups (optionally password-encrypted) and a bulk-edit CSV export/import live — the CSV exposes every field on every record type, including the ones the quick-add forms don't ask for.
+
+## What ties the twelve screens together
+
+The spine of the product is that assets, maintenance, warranties and documents all reference each other by ID. A dishwasher asset, its descale-and-filter maintenance task, its two-year warranty and its manual-location document entry are four separate records that all point back to the same asset, so opening the dishwasher's context shows its full story rather than four disconnected lists. See **[Private Family Organizer](/features/private-family-organizer/)** for how the local-only storage model that makes all of this possible actually works, and **[Free Home Management App](/features/free-home-management-app/)** for what's included at no cost.
 
 **Contextual CTA:** If your biggest pain point is remembering upkeep, start with the Maintenance Tracker. If it is scattered receipts and models, start with Home Inventory.
+
+**FAQ:**
+- Q: Do I need to fill in every field on every screen to get value from FamilyBoard?
+  A: No. Each quick-add form only requires one or two fields — an asset needs just a name, a task needs just a title. Purchase price, seller, manual reference and similar detail fields are optional and can be filled in later, including in bulk through the Settings CSV export.
+- Q: Which screen should a new household start with?
+  A: Add your assets first, since maintenance, warranties and documents all link back to an asset record. Start with the handful of appliances or systems you'd actually miss the receipt or manual for, then add maintenance and warranty records against them.
+- Q: Is there a mobile app, or is this only a website?
+  A: FamilyBoard is a Progressive Web App you use in your browser and can add to your phone or tablet's home screen for an app-like icon and standalone window. There's no separate native app, and no app-store account is involved.
 
 ---
 
@@ -461,33 +484,55 @@ Core data is designed to live on your device, with backup and restore under your
 **Title tag:** `Home Dashboard for Maintenance, Warranties, Tasks and Renewals | FamilyBoard`
 **Meta description:** `A practical household dashboard that brings maintenance, warranties, recurring tasks, subscriptions and upcoming home responsibilities into one view.`
 **Primary keyword concept:** home dashboard
-**Suggested internal links:** `/features/maintenance-tracker/`, `/features/warranty-tracker/`, `/guides/household-weekly-reset/`, `/app/`
+**Depth:** verified
+**Suggested internal links:** `/features/maintenance-tracker/`, `/features/warranty-tracker/`, `/features/family-display-mode/`, `/app/`
 
 # A home dashboard should tell you what needs attention, not just show pretty charts
 
-The useful version of a household dashboard is closer to a cockpit than a report. When you open it, you should be able to answer a few practical questions quickly: What is overdue? What is coming up? Is anything about to expire? Which task has no owner? Is there a maintenance job we keep postponing?
+Open `FamilyBoard` and the first screen you see — the Today tab — is four numbers and two short lists, not a chart or a decorative widget. That's a deliberate choice: a household dashboard's only job is answering "what needs attention right now," and every extra element competing for space on that screen makes the real answer slower to find.
 
-`FamilyBoard` is designed to surface those operational details in one place.
+## The four counters
 
-## Today and next up
+Across the top of Today sit four figures, each recomputed from your actual records every time the page loads:
 
-The top of the dashboard should focus on immediate work: today's events, tasks due soon, maintenance approaching its next date, warranty deadlines and subscriptions renewing shortly. The purpose is to reduce mental load, not create another inbox you have to manage.
+- **Overdue tasks** — the count of open tasks whose due date has already passed.
+- **Maintenance due soon** — maintenance tasks whose next-due date falls within the next seven days.
+- **Active assets** — every asset whose status isn't "archived."
+- **Active subscriptions** — every subscription whose status is "active."
 
-## Attention beats information overload
+None of these are configurable thresholds you can tune; the seven-day maintenance window and the overdue/active definitions are fixed in the app itself. If you want a wider planning horizon, the full Maintenance and Tasks tabs list everything, not just what's imminent.
 
-A household may contain dozens of assets and hundreds of historical records. Showing all of them at once is not helpful. The dashboard should prioritize exceptions: overdue work, missing information, upcoming deadlines and items that have changed recently.
+## The two lists beneath them
 
-For example, a washing machine record can sit quietly for months. It becomes dashboard-worthy when a recurring maintenance item is due, the warranty is nearing expiration, or a repair task has been created.
+Below the counters are two cards. "Next responsibilities" shows your five soonest open tasks, each with its due-date label and assigned owner, and a button that jumps straight to the full Tasks tab. "Maintenance due" shows up to five maintenance items due within the same seven-day window, each labeled with its linked asset or home area and due-date status, with a button into the full Maintenance tab. If nothing is open, each card says so plainly instead of leaving a blank space — "Nothing needs your attention right now" for tasks, "No maintenance is due in the next seven days" for maintenance.
 
-## Different households need different signals
+## A worked example
 
-A renter may care about subscriptions, recurring bills and move-in records. A homeowner may care more about HVAC service, appliance history and contractors. A household with pets may keep sitter instructions and recurring care tasks. The dashboard should adapt to what the user actually records rather than force everyone into the same fixed set of cards.
+Suppose your household has a dishwasher maintenance task ("Clean filter and check seal," due in 4 days), an overdue task ("Renew car registration," due 3 days ago), a dryer maintenance task due in 40 days, and three active subscriptions. Today would show: Overdue tasks = 1, Maintenance due soon = 1 (only the dishwasher task falls inside seven days; the dryer task doesn't), Active assets = however many aren't archived, Active subscriptions = 3. The dryer task doesn't appear anywhere on Today until it crosses into that seven-day window — it's still fully visible on the Maintenance tab in the meantime.
 
-## A dashboard can also become a family display
+## Why the dashboard doesn't try to show everything
 
-On a wall-mounted or kitchen tablet, the same data can be simplified into a large-format daily view: today's schedule, chores, maintenance alerts and important notes. That makes the system useful even for family members who never open the full organizer.
+A household with years of history can accumulate hundreds of completed maintenance events, closed tasks and expired warranties. Surfacing all of it on the first screen would bury the two or three things that actually need a decision this week. The Today tab intentionally shows only open, upcoming or overdue items; everything else lives one click away on its own tab, in full.
+
+## What the dashboard does not do
+
+It does not send a push notification, email or text — nothing fires while the browser is closed. It refreshes when you open the app, when you switch back to its browser tab, and on a background timer while it's open, but only because the underlying data reload runs on that schedule, not because of any external reminder system. It also doesn't show warranty expirations or subscription renewals as separate counters — those live on their own tabs, though an expiring warranty or subscription can still show up as a task if you've created one to review it.
+
+## From dashboard to wall display
+
+The same Today data — tasks, events, upcoming maintenance — can be shown in a simplified, larger-type layout meant to be read from across a room rather than clicked through. That's a separate mode built for a mounted tablet, not a setting on the dashboard itself; see Family Display Mode for how it differs.
 
 **Contextual CTA:** Open the app, add two recurring responsibilities and one asset, then use the dashboard to see how scattered household tasks become a single actionable view.
+
+**FAQ:**
+- Q: How is "maintenance due soon" calculated?
+  A: It's any maintenance task whose next-due date falls within the next seven days from today, calculated fresh every time the Today tab loads. There's no setting to widen or narrow that window; tasks due further out are still visible in full on the Maintenance tab.
+- Q: Can I customize which cards or counters appear on the dashboard?
+  A: Not currently. The Today tab always shows the same four counters and the same two lists (next responsibilities, maintenance due). If you want a different view of the same data, the Family Display Mode offers a separate large-type layout built for a shared screen rather than a private one.
+- Q: Why doesn't the dashboard show warranties or subscriptions that are about to expire?
+  A: Those live on their own Warranties and Subscriptions tabs rather than as dashboard counters. A practical workaround is creating a task ("Review water heater warranty") with a due date before the expiration, so it surfaces on Today through the normal task-overdue logic.
+- Q: Does the dashboard update in real time if someone else edits a record?
+  A: FamilyBoard stores data in this browser only, so there's no other device or person editing the same database simultaneously. Within one browser, the dashboard reloads its data automatically about once a minute and whenever you return to the tab.
 
 ---
 
@@ -497,31 +542,48 @@ On a wall-mounted or kitchen tablet, the same data can be simplified into a larg
 **Title tag:** `Private Home Inventory Tracker for Appliances, Electronics and Household Assets | FamilyBoard`
 **Meta description:** `Create a practical home inventory with model numbers, serial numbers, purchase details, warranties, maintenance and local records.`
 **Primary keyword concept:** home inventory tracker
-**Suggested internal links:** `/guides/home-inventory-checklist/`, `/guides/photo-home-inventory/`, `/tools/home-inventory-checklist-generator/`, `/features/warranty-tracker/`
+**Depth:** verified
+**Suggested internal links:** `/features/maintenance-tracker/`, `/features/warranty-tracker/`, `/features/household-documents-organizer/`, `/features/free-home-management-app/`
 
 # A useful home inventory is not a list of everything you own
 
-Trying to catalog every household object is one of the fastest ways to abandon a home inventory project. A better approach is to record the things you may realistically need to identify, maintain, repair, replace, move or document later.
+Trying to catalog every household object is one of the fastest ways to abandon a home inventory project. `FamilyBoard`'s Assets tab is built around a narrower goal: give the things that create cost, maintenance or responsibility a real record, and let that record connect to everything else — maintenance, warranties and documents — instead of sitting alone.
 
-`FamilyBoard` treats an inventory item as a living household record rather than a row in a spreadsheet.
+## What an asset record actually holds
 
-## What is worth adding?
+The quick-add form on the Assets tab asks for a name, category (defaulting to "Appliance"), location, brand, model, serial number, purchase date and notes — eight fields, only the name required. The underlying asset record reserves several more fields for detail you can add later: purchase price, seller, installed date, a manual reference, and a status of active, watch or archived. Those extra fields aren't on the quick-add form, but they're part of every asset record and can be filled in through the household master CSV export in Settings — export to a spreadsheet, add the purchase price and manual link column by column, then import it back.
 
-Start with appliances, electronics, vehicles, tools, furniture with meaningful value, safety equipment and home systems. A refrigerator record might contain the brand, model, serial number, purchase date, price, warranty information, room, receipt reference and maintenance history. A router record might contain the model, purchase date, internet provider notes and replacement planning information.
+## Watch and Archive, not delete
 
-## Why connect inventory to maintenance?
+Every asset card carries two buttons: "Watch" and "Archive." Watch flips the status to "watch" and the card gets an "attention" style — a way to flag an item you're keeping an eye on (a washing machine making a new noise, a roof patch you're monitoring) without creating a formal maintenance task for it yet. Archive sets the status to "archived," which removes it from the active-asset count on the dashboard and from the dropdown lists used when creating new maintenance, warranty or document records, without deleting its history.
 
-Inventory becomes much more useful when it answers more than “what do I own?” If the dryer has a maintenance task, its completion belongs in the dryer's history. If an appliance is repaired, the service provider and repair note should live with the appliance. If a warranty expires, that event should be visible on the same record.
+## Why connect inventory to maintenance, warranties and documents
+
+An asset by itself is just a name and a serial number. The reason to record one in FamilyBoard rather than a plain spreadsheet is that maintenance tasks, warranties and document references all reference an asset by its ID, and every screen that lists them shows the asset's name next to the entry. Complete a maintenance task on the dishwasher, and that completion is visible from the dishwasher's context, not just as an isolated log line. Add a warranty for the same asset, and the warranty screen shows the asset name in its header instead of a bare provider name.
+
+## A worked example
+
+A household adds "Dishwasher" as an asset: category Appliance, location Kitchen, brand Bosch, model SHP878, serial number recorded from the inner door frame, purchase date the day it was installed, notes "installed by contractor, drain hose routed under sink." Later, in Settings, they export the master CSV and fill in purchase price ($899) and manual reference (a link to the PDF they saved). They then create a maintenance task titled "Clean filter and check door seal" linked to that same asset, and a warranty record for the same asset with the manufacturer's two-year term and a receipt reference pointing to a folder in their email. All three records now show "Dishwasher" as their connecting thread — opening any one of them gives context for the other two through the asset name and linked records.
 
 ## Keep detail proportional to value
 
-Not every item deserves ten fields. For some objects, a name, room and photo may be enough. For others, serial number and documentation matter. A good inventory system should allow lightweight records without forcing users to complete a form that feels like an insurance application.
+Not every item earns eight fields. A modest lamp might get a name and a location; nothing forces you to complete every field. A dishwasher, water heater or car is worth the extra ten minutes because a serial number, purchase price and manual reference are exactly what you'd need to find fast during a claim, a repair call or a resale.
 
-## Build it gradually
+## Build it gradually, and know the limits
 
-A practical way to start is one room at a time or one category at a time. Add the kitchen appliances this weekend, electronics next month, and the rest only when there is a reason. The inventory is successful when it helps you retrieve information, not when it reaches 100% completeness.
+Add one room or one category at a time rather than trying to catalog the whole house in one sitting. And keep the honest limits in mind: everything lives in this browser's local database, there's no photo-upload field on the asset record itself (photos would need to be referenced as a document instead), and if you use a different browser or device, this asset list doesn't follow you there automatically — export a JSON backup from Settings if you want to move it.
 
-**Contextual CTA:** Use the free Home Inventory Checklist Generator to decide what deserves a record, then save the important items in the app.
+**Contextual CTA:** Add the first appliance or vehicle you'd hate to lose the receipt or serial number for, then export the master CSV from Settings to fill in purchase price and manual reference.
+
+**FAQ:**
+- Q: What fields does the quick-add form for an asset actually ask for?
+  A: Name (required), category, location, brand, model, serial number, purchase date and notes. Purchase price, seller, installed date, manual reference and status aren't on that form — they're part of the asset record and can be added by exporting the household master CSV from Settings, editing it in a spreadsheet, and importing it back.
+- Q: What's the difference between "Watch" and "Archive" on an asset card?
+  A: Watch flags an active asset you're monitoring — it stays fully active but gets a visual "attention" marker. Archive removes an asset from active counts and from dropdown lists on other screens, for items that are gone, replaced or no longer relevant, without deleting its history.
+- Q: Can I upload a photo of the appliance to its record?
+  A: The asset record itself doesn't have a photo field. If a photo matters — a nameplate, a receipt, a manual page — the practical option is to add it as a document reference pointing to where you've stored the file, then link that document to the asset.
+- Q: Does archiving an asset delete its maintenance history or warranty?
+  A: No. Archiving only changes the asset's status field. Its linked maintenance tasks, completion events, warranties and documents remain in the database; they simply won't show that asset in "active" dropdown lists on other tabs going forward.
 
 ---
 
@@ -531,33 +593,50 @@ A practical way to start is one room at a time or one category at a time. Add th
 **Title tag:** `Home Maintenance Tracker with Recurring Schedules and Service History | FamilyBoard`
 **Meta description:** `Track recurring home maintenance, completion dates, service history, costs and the assets each task belongs to.`
 **Primary keyword concept:** home maintenance tracker
-**Suggested internal links:** `/guides/home-maintenance-schedule/`, `/guides/home-maintenance-records/`, `/tools/home-maintenance-schedule-generator/`, `/features/home-dashboard/`
+**Depth:** verified
+**Suggested internal links:** `/features/home-inventory-tracker/`, `/features/home-dashboard/`, `/features/household-documents-organizer/`, `/features/free-home-management-app/`
 
-# Stop relying on “I think we did that recently”
+# Stop relying on "I think we did that recently"
 
-Household maintenance often fails because the information is incomplete rather than because the work is difficult. Someone remembers that the air filter was changed “a while ago.” A service visit happened, but the date is buried in email. A water filter replacement is scheduled in a phone reminder with no connection to the model or purchase record.
+Household maintenance often fails because the information is incomplete, not because the work is hard. Someone remembers changing a filter "a while ago." A technician visited, but the invoice is buried in email. `FamilyBoard`'s Maintenance tab exists to replace that guesswork with a dated record tied to the actual thing being maintained.
 
-A maintenance tracker should turn those fragments into history.
+## What a maintenance task actually stores
 
-## Link every recurring task to a real part of the home
+The quick-add form asks for a title, a related asset (from your Assets list), a home area (for maintenance that isn't tied to one specific asset, like "gutters" or "yard"), an owner, a next-due date, a repeat interval in months, a priority (normal, high or low), and an instructions source — a place to note "owner's manual page 14" or "HVAC company recommendation" so the interval has a traceable origin instead of being invented. Underneath, the record also carries a trigger type of date, interval-after-completion, seasonal or manual; the quick-add form sets this automatically — if you enter a repeat interval greater than zero it becomes interval-after-completion, otherwise it's date. Seasonal and manual trigger types exist on the record and can be set through the Settings master CSV for tasks that don't fit either automatic pattern.
 
-Instead of keeping a generic task called “change filter,” connect the task to the actual system or appliance. That lets the record answer: Which filter? When was it last done? Who did it? Was there a cost? Was anything unusual noted?
+## What happens when you press Complete
 
-## Record completion, not only reminders
+Each maintenance card has a "Complete" button. Pressing it does two things: it adds a maintenance event with today's date (cost and notes start blank, ready for you to fill in through the CSV export if you want to log what a technician charged), and if the task has a repeat interval, it recalculates the next-due date by adding that many months to today, clamped so a task due-monthed from the 31st lands on the last valid day of a shorter month rather than erroring. A task with no interval — a one-time item — simply gets logged as completed without generating a new due date.
 
-A reminder disappears once dismissed. A maintenance history remains useful for years. Completion dates can help you notice patterns, explain prior work to a technician, prepare a home for sale or simply avoid repeating maintenance too early because nobody remembered the last service.
+## The card shows real history, not just a status
 
-## Use flexible schedules
+Below the title and due-status badge, each maintenance card shows the linked asset or home area, the owner, the instructions source, a running completion count, and up to the five most recent completion events with their dates and any recorded cost. That means a task you've completed nine times shows its five newest entries right on the card — no separate report to run.
 
-Some work happens on a date interval. Other work is based on usage, season, observed condition or manufacturer instructions. The tracker should let the user record a suggested cadence without pretending every household requires the same universal schedule.
+## A worked example
 
-For equipment with safety implications, the product should encourage users to follow the manufacturer manual and qualified professional guidance where appropriate.
+"Clean condenser coils" is linked to the Refrigerator asset, owned by one household member, home area left blank since it's tied to the asset, next due in three months, interval 6 months, priority normal, instructions source "Whirlpool support page." Six months later it shows as due; pressing Complete logs the event and pushes next-due out another six months automatically. Two years and four completions later, the card shows "4 completions" and the four most recent dates — a real service history for that one appliance instead of a memory of "we do that sometimes."
 
-## Make maintenance visible before it becomes urgent
+## Flexible schedules for work that doesn't fit a fixed date
 
-The dashboard can show upcoming and overdue work, while the asset page stores the full history. This separation keeps daily attention focused without losing detail.
+Not everything belongs on a clean monthly or seasonal cadence. Some maintenance is condition-based — "inspect and clean if needed" rather than a guaranteed six-month job. The priority field is there to make sure a high-consequence, condition-based item (checking a water heater's relief valve, for instance) stays visible even without a hard due date forcing it onto the dashboard.
 
-**Contextual CTA:** Generate a starter schedule with the free Home Maintenance Schedule Generator, then save only the tasks that make sense for your actual home.
+## The honest limits
+
+FamilyBoard doesn't send a push notification or email when a task comes due — the due-soon and overdue statuses only appear when you open the app, on the Today dashboard or the Maintenance tab itself. There's no built-in library of manufacturer-recommended intervals; the instructions source field is where you record where your interval came from, but the app doesn't look it up for you. And for anything involving gas lines, electrical panels or structural work, FamilyBoard is a record of who came and what was done — not a substitute for hiring a licensed professional.
+
+**Contextual CTA:** Add one recurring maintenance task linked to a real asset, complete it once, and watch the next-due date and completion history build automatically from there.
+
+**FAQ:**
+- Q: What happens to the next-due date when I complete a maintenance task?
+  A: If the task has a repeat interval set (in months), completing it logs today's date as an event and moves the next-due date forward by that many months, adjusted so it always lands on a real calendar day. If the interval is zero, the task is simply marked completed with no new due date generated.
+- Q: Can I log the cost of a maintenance visit?
+  A: The maintenance event created by pressing Complete starts with a blank cost and note field. You can fill those in afterward through the household master CSV export in Settings, which includes cost and notes columns for every maintenance event.
+- Q: What's the difference between linking a task to an asset versus a home area?
+  A: An asset link ties the task to one specific record, like a named dishwasher or water heater, so its history shows on that asset's context. A home area (like "yard" or "gutters") is for maintenance that doesn't belong to a single tracked item — the card just shows the area name instead of an asset name.
+- Q: Does FamilyBoard tell me how often I should do a given maintenance task?
+  A: No. The instructions source field records where your interval came from — a manual page, a manufacturer's site, a technician's recommendation — but FamilyBoard doesn't supply or look up recommended intervals itself. You set the next-due date and repeat interval based on what you've found.
+- Q: Will I get a reminder when maintenance is due?
+  A: Only inside the app. Due and overdue maintenance shows on the Today dashboard and the Maintenance tab whenever you open FamilyBoard, but there's no email, push notification or SMS — nothing fires while the browser is closed.
 
 ---
 
@@ -567,33 +646,48 @@ The dashboard can show upcoming and overdue work, while the asset page stores th
 **Title tag:** `Warranty Tracker for Appliances and Household Purchases | FamilyBoard`
 **Meta description:** `Track household warranties, purchase dates, receipts and expiration windows before you need them.`
 **Primary keyword concept:** warranty tracker
-**Suggested internal links:** `/guides/how-to-track-product-warranties/`, `/guides/warranty-expiration/`, `/tools/warranty-expiration-calculator/`, `/features/home-inventory-tracker/`
+**Depth:** verified
+**Suggested internal links:** `/features/home-inventory-tracker/`, `/features/household-documents-organizer/`, `/features/maintenance-tracker/`, `/features/free-home-management-app/`
 
 # The worst time to look for warranty information is after something stops working
 
-Warranty paperwork is easy to ignore when a product is new. Months or years later, the useful details may be spread across an email receipt, a PDF manual, a store account and a photo of the serial number.
+Warranty paperwork is easy to ignore when a product is new. Months or years later, the details are spread across an email receipt, a PDF manual, a store loyalty account and a photo of a serial number nobody can find again. `FamilyBoard`'s Warranties tab exists to capture that information once, while it's easy, and tie it to the item it actually covers.
 
-`FamilyBoard` keeps warranty information attached to the household item it belongs to.
+## What a warranty record holds
 
-## Record the minimum useful facts early
+The quick-add form requires an asset link and an end date; provider, start date, receipt reference, terms reference and notes are all optional but recorded when you have them. The asset link is what makes a warranty a warranty rather than a floating note — pick "Dishwasher" from the asset dropdown and the warranty card's header shows "Dishwasher," not a generic entry.
 
-When you add a significant purchase, capture the purchase date, seller, basic warranty term and where the proof of purchase can be found. If a model or serial number is relevant, record it while the label is easy to access.
+## Status is computed, not typed in
 
-The goal is not to recreate every warranty contract. It is to preserve the information that helps you decide whether a repair or claim may be worth investigating.
+You never mark a warranty as expired yourself. The card compares the end date against today's date every time you open the tab: if the end date has passed, the badge reads "Expired"; otherwise it reads "Ends" followed by the date. That means the status is always current the moment you look at it, with no separate step to update it as time passes.
 
-## Track “expiring soon,” not just “expired”
+## The receipt reference field, and why it's just text
 
-A useful warranty system surfaces an approaching date before it passes. That can prompt a quick check for unresolved issues, missing registration steps or receipts that still need to be organized. The app should not tell the user a claim is legally valid; it should simply make the timeline visible.
+The receipt reference is a plain string field — "PDF in email, subject 'Order confirmation,' dated March 2025" or "printed receipt in kitchen drawer folder" both work. FamilyBoard doesn't store the receipt file itself in this field; it stores where to find it, which is the same local-reference approach the Documents tab uses. Every warranty card also carries a fixed reminder: "Written terms control exact coverage." The app surfaces the date window; it never claims to know what a specific manufacturer's terms actually promise.
 
-## Keep warranty and repair history together
+## A worked example
 
-If an item has already been repaired, the repair note may be as useful as the original warranty. Storing the repair date, service provider and outcome beside the warranty gives you a clearer picture of the product's history.
+A household buys a washing machine with a 2-year manufacturer warranty starting the installation date. They add the asset first (brand, model, serial number from the door frame, purchase date), then add a warranty: asset = the washing machine, provider "LG," starts at the install date, ends 24 months later, receipt reference "email folder 'Appliances 2026'," terms reference "warranty card, kitchen drawer." Fourteen months in, the card reads "Ends [date 10 months out]" — a fast answer to "is this still covered" without digging through email. If the machine develops a drain problem in month 20, the warranty record and a maintenance event logged against the same asset both exist, so the repair history and the coverage window sit side by side.
 
-## Manufacturer terms always win
+## Warranty and repair history stay on the same asset
 
-Warranty rules vary by product, seller and jurisdiction. The tracker should never infer legal coverage from a date alone. It should encourage the user to confirm the actual terms when making a claim.
+Because a warranty links to an asset ID, and a maintenance completion event links to a maintenance task that also has an asset ID, both threads trace back to the same appliance. Opening the asset shows you both: what's covered, and what's already been serviced — useful context if you're deciding whether an issue is worth a warranty claim or a routine repair.
 
-**Contextual CTA:** Use the Warranty Expiration Calculator for a quick date, then create a full asset record if the purchase is important enough to track long-term.
+## What FamilyBoard does not do
+
+It does not read your warranty terms or tell you whether a specific repair is covered — the "written terms control" reminder on every card is there because coverage rules genuinely vary by manufacturer, retailer and sometimes by state consumer-protection law. It does not track extended or third-party warranties any differently from manufacturer warranties; you record whatever terms and provider apply. And it does not notify you by email or push alert as an end date approaches — the "Ends" badge only updates when you open the app.
+
+**Contextual CTA:** Add a warranty for the newest significant purchase in your home while the receipt is still easy to find, and link it to that item's asset record.
+
+**FAQ:**
+- Q: How does FamilyBoard know if a warranty has expired?
+  A: It compares the warranty's end date to today's date every time you view the Warranties tab, and shows "Expired" once that date has passed. There's no manual status field to update — the badge is always computed live from the date you entered.
+- Q: Can I attach the actual PDF receipt or warranty card to the record?
+  A: Not directly on the warranty record. The receipt reference and terms reference fields are plain text describing where the original lives — an email folder, a physical drawer, a cloud storage link — rather than a file upload. Keep the actual document in storage you control.
+- Q: Does FamilyBoard tell me whether my warranty claim will be approved?
+  A: No, and it shouldn't be relied on for that. Every warranty card includes a reminder that written terms control exact coverage. FamilyBoard tracks the dates and where to find your paperwork; the manufacturer or retailer determines what's actually covered.
+- Q: What happens to a warranty record if I archive the linked asset?
+  A: The warranty record itself isn't deleted or hidden — it stays in your data and remains visible on the Warranties tab. Archiving only removes the asset from active dropdown lists used when creating new records.
 
 ---
 
@@ -603,29 +697,48 @@ Warranty rules vary by product, seller and jurisdiction. The tracker should neve
 **Title tag:** `Household Documents Organizer for Warranties, Manuals, Receipts and Home Records | FamilyBoard`
 **Meta description:** `Organize household document references around the home, asset or responsibility they belong to instead of relying on disconnected folders.`
 **Primary keyword concept:** household documents organizer
-**Suggested internal links:** `/guides/digital-home-binder/`, `/guides/important-household-documents/`, `/guides/organize-appliance-manuals/`, `/features/home-inventory-tracker/`
+**Depth:** verified
+**Suggested internal links:** `/features/home-inventory-tracker/`, `/features/warranty-tracker/`, `/features/private-family-organizer/`, `/features/free-home-management-app/`
 
-# Organize documents by what they help you do
+# A document index, not a file cabinet
 
-Traditional folders are good at storing files but not always good at answering household questions. A PDF named `IMG_4281.pdf` may be a receipt, but months later you may not remember what it was for. A manual may be searchable in a drive, yet still disconnected from the appliance model, service history and warranty date.
+A PDF named `IMG_4281.pdf` might be a receipt, but six months later nobody remembers what it was for. `FamilyBoard`'s Documents tab doesn't try to solve that by storing the file — it stores a short, structured pointer to where the real file already lives, linked to the household thing it's actually about.
 
-`FamilyBoard` approaches household documents as part of a larger record.
+## What a document record stores — and doesn't
 
-## Attach context, not just files
+The quick-add form asks for a record name, a category (defaulting to "Home record"), a location reference (required — where the original actually is), a related asset and a review date. That location reference is a plain-text field: "PDF in Downloads, filename dishwasher-manual.pdf," "printed folder in filing cabinet, tab 3," "email starred, subject 'Insurance renewal.'" There is no file-upload button on this form. The screen itself carries a permanent notice explaining why: "This v1 stores document references, not uploaded document files. Keep durable originals in storage you control." That's an intentional boundary, not a missing feature waiting to be discovered — FamilyBoard is an index of where things are, not a document vault.
 
-For an appliance, the useful context can include purchase date, model, serial number, room, warranty end date, receipt and manual. For a home service, it may include the provider, work performed, cost and related invoice. This makes documents easier to find because you can reach them through the thing or responsibility they describe.
+## Linking a document to an asset is what makes it findable later
 
-## Use categories that match household decisions
+A document with no asset link is just a name and a location string, no more useful than a well-labeled folder. Link it to an asset, though, and it shows up alongside that asset's other records — the same connective pattern the Maintenance and Warranty tabs use. A "Water heater installation manual" document linked to the Water Heater asset becomes something you'd actually find again when a technician asks which model you have.
 
-Helpful categories include purchase records, warranties, manuals, service invoices, insurance references, utility information, emergency documents and property records. Avoid creating fifty categories before you need them. A small, understandable taxonomy is easier for the whole household to maintain.
+## The review date field
 
-## Local storage has limits
+Documents like insurance policies, service contracts or lease agreements benefit from a periodic look, not a one-time filing. The review date field exists for exactly that — set it to when the document should next be checked (a renewal date, an annual review), and it becomes a normal date field you can track the same way you'd track any other household deadline, even though the Documents tab itself doesn't currently surface "review due soon" as a dashboard counter the way maintenance does.
 
-A browser-based local-first app can keep document metadata and selected local attachments, but users should be told clearly that browser storage is not the same as an archival backup. Important files should also exist in a durable backup location the user controls.
+## A worked example
 
-That limitation is part of the product's privacy-first philosophy: the app should not quietly turn itself into an unannounced cloud document vault.
+After a plumbing repair, a household adds a document: name "Water heater repair invoice — March 2026," category "Service invoice," location reference "PDF attached to email from ABC Plumbing, starred," related asset "Water Heater," review date left blank since it's a one-time record. Separately, they add "Water heater manual" with category "Manuals," location reference "Downloads folder, filename whirlpool-wh-manual.pdf," same asset link. Now, opening the Water Heater asset gives context that neither a folder of PDFs nor a manufacturer's app would: the maintenance history, the warranty window and now two document references, all pointing at the same physical unit.
 
-**Contextual CTA:** Build a Digital Home Binder index first. Once the categories make sense, add records and local file references only for the documents that are genuinely worth keeping close to the household record.
+## Categories worth using
+
+A small taxonomy holds up better than a large one: purchase records, warranties, manuals, service invoices, insurance references, utility information, emergency documents and property records cover most households without needing fifty categories nobody remembers the difference between.
+
+## The honest limit
+
+Because documents are references and not uploads, the durable copy of anything irreplaceable — a deed, a passport scan, an insurance policy — needs to live somewhere outside this browser too: cloud storage you control, a physical fireproof folder, or both. FamilyBoard's JSON backup (from Settings) preserves your document references and notes, but not files those references point to.
+
+**Contextual CTA:** Add a document reference for the warranty or manual you'd have the hardest time finding again, and link it to the asset it belongs to.
+
+**FAQ:**
+- Q: Can I upload the actual PDF or photo to a document record?
+  A: No. The Documents tab stores a name, category, a text location reference, an asset link and a review date — not the file itself. The location reference field is where you note exactly where the real file lives, so you can find it again.
+- Q: What's a good location reference to write if my documents are just scattered in email?
+  A: Something specific enough to search for later: the sender, subject line and rough date ("email from LG Support, subject 'Order Confirmation,' March 2026") works better than "in email," since you can search Gmail or Outlook directly for that phrase.
+- Q: What happens on the review date — does FamilyBoard remind me?
+  A: The review date is stored as a field on the document record, but the Documents tab doesn't currently show a "review due" counter or alert. It's most useful paired with a task you create with a matching due date, which does show up on the dashboard.
+- Q: Is my document backup safe if my browser data gets cleared?
+  A: Only if you've exported a JSON backup from Settings beforehand — that backup includes your document references and notes. Clearing browser data without a recent backup means losing the index, though any actual files you referenced (stored elsewhere) are unaffected.
 
 ---
 
@@ -635,31 +748,48 @@ That limitation is part of the product's privacy-first philosophy: the app shoul
 **Title tag:** `Household Subscription Tracker for Renewals, Costs and Cancellation Notes | FamilyBoard`
 **Meta description:** `Track household subscriptions, renewal dates, billing frequency, ownership and cancellation notes in one private list.`
 **Primary keyword concept:** household subscription tracker
-**Suggested internal links:** `/guides/organize-household-subscriptions/`, `/tools/household-subscription-cost-calculator/`, `/guides/annual-renewal-calendar/`
+**Depth:** verified
+**Suggested internal links:** `/features/family-task-manager/`, `/features/home-dashboard/`, `/features/private-family-organizer/`, `/features/free-home-management-app/`
 
-# Subscriptions are household obligations, not just expenses
+# Subscriptions are household obligations, not just line items
 
-A subscription tracker is often treated as a budgeting tool. Cost matters, but the operational details matter too: Who owns the account? Does it renew monthly or annually? Where do you manage it? Is the renewal automatic? Is the service tied to a device, home security system, internet plan or membership another family member depends on?
+A subscription tracker often gets treated as a pure budgeting tool. Cost matters, but the operational questions matter just as much: who owns the account, does it renew monthly or annually, where do you actually manage it, and is it tied to something the whole household depends on? `FamilyBoard`'s Subscriptions tab keeps those details together instead of scattering them between a budgeting app and memory.
 
-`FamilyBoard` keeps those details alongside other recurring household responsibilities.
+## What a subscription record holds
 
-## Record the next action, not just the price
+The quick-add form captures the service name, category (defaulting to "Household"), cost, currency (defaulting to USD), billing frequency (monthly, annual, weekly or quarterly), next renewal date, a review-lead-time in days before renewal (defaulting to 14), an owner, a management URL, and a payment-method note. That last field has an explicit warning built into its help text: "Never store card numbers or passwords." The record can identify which card or account a subscription bills to in general terms — "the household Visa" — without ever becoming a place to store the actual number.
 
-A useful subscription entry should include the current price, billing frequency, next renewal date and a note about how to manage or cancel the service. If the household decides to review a service before renewal, create a task linked to that date rather than hoping someone remembers.
+## The annualized total is computed live
 
-## Separate account information from passwords
+Above your subscription list, the tab shows one figure: the annualized cost of every subscription currently marked active. The calculation is straightforward — weekly costs are multiplied by 52, monthly by 12, quarterly by 4, and annual by 1 — and it's recomputed every time the page loads, so adding or cancelling a subscription changes the total immediately.
 
-The tracker can identify the service, account owner and management URL without becoming a password manager. Passwords belong in a dedicated secure password-management system, not in ordinary household notes.
+## A worked example of the annualized math
 
-## Annual subscriptions deserve special attention
+Say a household has three active subscriptions: a $15.99/month streaming service, a $89.99/quarterly pest-control plan, and a $6.49/week meal-kit box. The annualized total shown on the tab would be (15.99 × 12) + (89.99 × 4) + (6.49 × 52) = $191.88 + $359.96 + $337.48 = $889.32. That's the number that makes an easy-to-ignore set of small recurring charges visible as one yearly figure — the meal-kit box alone, billed weekly, is easy to underestimate until it's annualized.
 
-Annual renewals are easy to forget because they do not appear every month. A dashboard that surfaces them several weeks before the charge gives the household time to decide whether the service is still useful.
+## Marking a subscription cancelled instead of deleting it
 
-## Review subscriptions as a household, not only individually
+Each subscription card has a button that toggles between "Mark cancelled" and "Reactivate." Cancelling doesn't delete the record — it changes its status to "cancelled," which removes it from the active-subscription count on the dashboard and from the annualized total, while keeping its history (what it cost, when it was cancelled) intact in case you want to look back at it or resubscribe.
 
-Some subscriptions serve one person; others are shared. A monthly or quarterly review can reveal duplicate streaming plans, old memberships or annual services nobody is using. The tracker creates the inventory needed for that conversation.
+## Reviewing before renewal
 
-**Contextual CTA:** Use the Household Subscription Cost Calculator to see the annual total, then move the subscriptions worth monitoring into the private tracker.
+The review-before-days field is the tracker's version of a heads-up: set it to how many days before a renewal date you'd want to reconsider the service. FamilyBoard doesn't currently turn that into an automatic dashboard alert on its own, so the reliable pattern is pairing a subscription with a task due that many days before the renewal date — the task then shows up in the normal overdue/upcoming logic on the dashboard.
+
+## What it deliberately doesn't do
+
+It doesn't charge, cancel, or contact any service on your behalf — the management URL field just stores where you'd go to do that yourself. It doesn't detect duplicate subscriptions or suggest cheaper alternatives. And it never asks for or stores payment credentials; the payment-method note is a household reminder field, not a wallet.
+
+**Contextual CTA:** Add your three most expensive recurring subscriptions first, check the annualized total, and mark anything you no longer use as cancelled.
+
+**FAQ:**
+- Q: How is the annualized subscription total calculated?
+  A: FamilyBoard multiplies each active subscription's cost by a fixed factor based on its billing frequency — 52 for weekly, 12 for monthly, 4 for quarterly, and 1 for annual — then sums every active subscription. The total updates automatically whenever you add, cancel or reactivate a subscription.
+- Q: Does FamilyBoard remind me before a subscription renews?
+  A: Not automatically as a standalone alert. The review-before-days field records how much notice you'd want, but the practical way to get a real reminder on the dashboard is to create a task due that many days before the renewal date.
+- Q: Is it safe to store my credit card number in the payment method note?
+  A: No — don't. That field's help text explicitly says never to store card numbers or passwords there. It's meant for a household-readable note like "billed to the joint checking account," not actual payment credentials, which belong in a dedicated password manager.
+- Q: What happens when I mark a subscription as cancelled?
+  A: Its status changes to "cancelled," which removes it from the active-subscription dashboard count and the annualized total. The record itself isn't deleted, so its cost history and notes stay available, and you can reactivate it later with one click if you resubscribe.
 
 ---
 
@@ -669,31 +799,48 @@ Some subscriptions serve one person; others are shared. A monthly or quarterly r
 **Title tag:** `Family Task Manager for Chores, Household Admin and Recurring Responsibilities | FamilyBoard`
 **Meta description:** `Organize household chores and recurring admin tasks by owner, due date, priority and history.`
 **Primary keyword concept:** family task manager
-**Suggested internal links:** `/guides/divide-household-responsibilities/`, `/guides/family-chore-system/`, `/tools/recurring-chore-planner/`, `/features/household-handoff/`
+**Depth:** verified
+**Suggested internal links:** `/features/household-calendar/`, `/features/household-handoff/`, `/features/home-dashboard/`, `/features/free-home-management-app/`
 
 # Household work includes far more than chores
 
-Chore apps tend to focus on visible jobs: dishes, laundry, trash and cleaning. Those tasks matter, but the invisible administrative work of a household can be just as demanding. Someone schedules repairs, renews documents, checks a contract, orders replacement filters, contacts the landlord, prepares for a trip or keeps track of an annual service.
+Chore apps tend to focus on visible jobs: dishes, laundry, trash. Those matter, but the invisible administrative work of running a home — scheduling a repair, renewing a document, ordering a replacement filter, contacting a landlord, prepping for a trip — is just as real and far easier to lose track of. `FamilyBoard`'s Tasks tab treats both kinds the same way: a title, an owner, a due date, and a place to note how it repeats.
 
-`FamilyBoard` uses a broader definition of household tasks.
+## What a task record holds
 
-## Give every recurring responsibility an owner
+The quick-add form asks for a title (required), an owner from your household members, a due date, a repeat note, and free-text notes. The repeat field's help text is explicit about what it is and isn't: "Example: weekly. Completing does not invent the next date." That's an honest design choice — recurrence here is a label for humans to read, not an automated engine that recreates the task on a schedule. If you want a task to genuinely come back every week, you complete it and create the next instance yourself, or use it as a note reminding you what the pattern normally is.
 
-A task can belong to a person without implying that the person must perform every physical step. “HVAC service” may mean one person is responsible for booking the technician. “Pet annual records” may mean someone makes sure documents are current. Clear ownership reduces the common situation where everyone assumes someone else is handling the task.
+## Completing a task is a one-way action
 
-## Keep recurring work connected to the home
+Each open task card shows a "Complete" button. Pressing it stamps the task with today's completion timestamp and changes its badge from a due-date status to "Complete." There's no undo button on the card itself and no automatic next task generated — which is exactly what the recurrence-note help text warns you about. For genuinely recurring responsibilities, many households find it easier to leave the task open with a rough recurrence note and just update the due date manually, rather than completing and recreating it every cycle.
 
-When possible, link a task to the asset, subscription or responsibility it affects. A task called “review internet plan” is more useful when it points to the existing subscription record. “Replace filter” should connect to the correct appliance.
+## Give every responsibility a real owner
 
-## Use history for accountability, not surveillance
+The owner field pulls from your Members list. Assigning "HVAC service" to one household member doesn't mean they personally have to do the physical work — it means they're the one responsible for making sure it happens, which is often the more useful commitment for administrative tasks like scheduling a technician or checking a contract renewal.
 
-Completion history helps the household know what was done. It should not turn family life into a productivity scorecard. The product should avoid gamification that makes normal household contribution feel like employee monitoring.
+## Calendar events live on the same screen, but are a separate record type
 
-## Make the system easy to ignore when nothing is wrong
+The Tasks tab has a second quick-add form beneath the task one, for calendar events: title, start time, end time, location and notes. Events are a distinct record from tasks — they don't have an owner, a due-date status or a Complete button, since an event either happened at its time or didn't. They're meant for things with a specific start time, like a technician's appointment, rather than open-ended responsibilities.
 
-Good household software should disappear into the background. Only overdue and upcoming work needs regular attention.
+## A worked example
 
-**Contextual CTA:** Create three recurring tasks that currently live only in someone's memory. If the task belongs to an appliance or subscription, link the two records.
+A household creates a task "Renew car registration," owner assigned, due date set to the state deadline, recurrence note "annual, check DMV site for new fee schedule," notes "last renewed online, confirmation emailed." A month before the due date it shows as upcoming on the dashboard; on the day, if it's still open, it flips to "overdue" styling. Once actually renewed, pressing Complete records the exact completion date — a genuine record of when it was actually done, distinct from the note that just says how often it recurs.
+
+## How tasks feed into handoff and display
+
+Open tasks (not completed) are what the Handoff tab's default profile includes in a printable briefing, and what Display mode shows on a shared screen — both filtered to only what's still open, since a completed task isn't operationally useful to hand off.
+
+**Contextual CTA:** Create three recurring responsibilities that currently live only in someone's memory. If a task belongs to an appliance or subscription, mention it in the notes so the connection isn't lost.
+
+**FAQ:**
+- Q: Does completing a recurring task automatically create the next one?
+  A: No. The recurrence field is a plain-text note ("weekly," "annual") for your own reference, not an automation. The form's own help text says this directly: completing a task does not invent the next date. For genuinely repeating work, many households leave the task open and just move its due date forward instead of completing and recreating it.
+- Q: Can I assign a task to more than one household member?
+  A: A task has a single owner field. If a responsibility genuinely needs shared visibility, a practical approach is choosing whichever person is accountable for making sure it happens, and using the notes field to record that others are involved.
+- Q: What's the difference between a task and a calendar event?
+  A: A task is an open-ended responsibility with an owner, a due date and a completion state. An event has a specific start and end time and location, with no owner or completion button — it's meant for things like appointments, not for ongoing responsibilities.
+- Q: Can I undo completing a task by mistake?
+  A: There's no undo button on the task card itself. If you complete a task in error, the practical fix is creating a new task with the correct details, since the completed record's timestamp reflects when you actually pressed Complete.
 
 ---
 
@@ -703,27 +850,44 @@ Good household software should disappear into the background. Only overdue and u
 **Title tag:** `Simple Household Calendar Connected to Tasks and Home Responsibilities | FamilyBoard`
 **Meta description:** `Use a lightweight household calendar for events that relate to home tasks, maintenance and family responsibilities without turning the product into another calendar clone.`
 **Primary keyword concept:** household calendar
-**Suggested internal links:** `/features/home-dashboard/`, `/features/family-task-manager/`, `/guides/annual-renewal-calendar/`, `/features/family-display-mode/`
+**Depth:** verified
+**Suggested internal links:** `/features/family-task-manager/`, `/features/home-dashboard/`, `/features/family-display-mode/`, `/features/free-home-management-app/`
 
-# A calendar is useful when it stays connected to the work around it
+# A small calendar for the events that belong to your home records
 
-There are excellent dedicated calendar products already. `FamilyBoard` does not need to replace them. Its household calendar exists for a different reason: to connect dates with the home records that create those dates.
+There are excellent dedicated calendar apps already, and `FamilyBoard` isn't trying to replace Google Calendar or Apple Calendar. Its calendar exists on the Tasks tab for a narrower reason: to hold the events that make more sense sitting next to your household records than buried in a personal calendar full of unrelated meetings.
 
-A service appointment can connect to an appliance. A warranty review can connect to a purchase. A house sitter handoff can connect to a travel period. A recurring household admin day can surface subscriptions and overdue tasks.
+## What an event record actually stores
 
-## Keep the feature intentionally lightweight
+The event quick-add form — the second form on the Tasks tab, below the task form — asks for a title (required), a start date and time (required), an end date and time, a location, and notes. That's the entire event record: `HouseholdEvent` has exactly those five fields plus the standard id and timestamps. There's no recurrence field on events (unlike tasks, which have a free-text repeat note), no owner field, and no reminder setting.
 
-The first version should support normal events, all-day entries, recurring events, household-member ownership and notes. It should not spend months reproducing every feature in Google Calendar or Apple Calendar.
+## Events are not tasks, and the app keeps them visibly separate
 
-## Dates are more useful with context
+On the Tasks tab, event cards are marked with a distinct "Calendar event" tag so they don't blend into the task list. Events don't have a due-status badge or a Complete button — an event either happens at its scheduled time or it doesn't, so there's nothing to mark done. If you need an event to also generate a follow-up responsibility ("confirm the technician the day before"), that's a separate task you create yourself, since the two record types don't auto-link.
 
-A calendar entry reading “Technician 2 PM” becomes more useful when the related asset page contains the model, prior repair notes, serial number and service provider. That is where `FamilyBoard` adds value: the event is only one point in a longer household record.
+## Where events show up
 
-## Display mode makes the calendar more accessible
+Beyond the Tasks tab list, today's events specifically appear on two other screens: the Today dashboard doesn't list them directly, but Display mode does — it filters `data.events` down to whichever ones start today and shows up to six, each with its formatted start time. That makes the calendar useful on a kitchen-tablet display even though it isn't the primary focus of the private dashboard.
 
-A household tablet does not need every detail. It needs a large daily view that shows what the family should know today: events, chores, maintenance and notices. The same underlying records can feed that simplified view.
+## A worked example
 
-**Contextual CTA:** Keep using your favorite full calendar if it works for you. Use `FamilyBoard` for the dates that only make sense when connected to household records.
+A household schedules an HVAC technician: title "HVAC technician visit," starts at 2:00 PM on a specific date, ends at 4:00 PM, location "home — front door access," notes "gate code 4471, dog will be crated." On the day, this event shows on the Tasks tab as a "Calendar event" card and, if a family display is running, on that shared screen with just the time and title — while the fuller detail (gate code) stays in the private app rather than a tablet visible to visitors. Separately, the HVAC unit's asset record can hold the resulting maintenance completion once the visit is done, connecting the appointment to the equipment's actual service history.
+
+## What it deliberately doesn't do
+
+It doesn't sync with Google Calendar, Outlook or iCloud — events created here exist only in this browser's local database, the same as every other record type. It doesn't send a notification before an event starts. And it doesn't support recurring events the way a full calendar app does — a weekly recycling pickup, for instance, is better represented as a task with a recurrence note than as a repeating calendar event, since there's no built-in repeat rule for events.
+
+**Contextual CTA:** Keep using your everyday calendar for personal scheduling. Add a household event here only when it's genuinely tied to a home record — a service appointment, a delivery window, a handoff period.
+
+**FAQ:**
+- Q: Does the household calendar sync with Google Calendar or Outlook?
+  A: No. Events created in FamilyBoard exist only in this browser's local database, like every other record in the app. There's no calendar sync, import from, or export to an external calendar service.
+- Q: Can I create a recurring event, like a weekly pickup?
+  A: Events don't have a recurrence field. For something that repeats on a schedule, a task with a due date and a free-text recurrence note ("weekly") is the closer fit than the calendar event form, which is built for single dated occurrences.
+- Q: Will I get a reminder before an event starts?
+  A: No. There's no notification, alarm or reminder tied to events — the start and end time are stored for reference and display, but nothing alerts you as the time approaches.
+- Q: How is an event different from a task with a due date?
+  A: An event has a specific start and end time and no owner or completion status — it either happened or it didn't. A task has a due date, an assigned owner, a completion button and an optional recurrence note, built for tracking who's responsible for what.
 
 ---
 
@@ -733,31 +897,48 @@ A household tablet does not need every detail. It needs a large daily view that 
 **Title tag:** `Household Emergency Information Organizer — Contacts, Utilities and Instructions | FamilyBoard`
 **Meta description:** `Keep important household emergency contacts, utility notes, pet information and operational instructions in one clear local-first record.`
 **Primary keyword concept:** household emergency information organizer
-**Suggested internal links:** `/guides/emergency-information-sheet/`, `/tools/emergency-contact-sheet-generator/`, `/features/household-handoff/`
+**Depth:** verified
+**Suggested internal links:** `/features/household-handoff/`, `/features/private-family-organizer/`, `/features/family-display-mode/`, `/features/free-home-management-app/`
 
-# Emergency information is only useful if another person can understand it quickly
+# A contact list built to be found fast, not admired
 
-A household emergency record should not be a giant archive. In a stressful moment, the useful questions are simple: Who do I call? Where is the relevant information? Is there a pet or dependent who needs special attention? How do I contact the utility or service provider? What important household instruction would another trusted person need to know?
+The Emergency tab is FamilyBoard's contact list, deliberately scoped narrower than a general address book: it exists to hold the people and services a household — or someone standing in for it — needs to reach quickly, with one field that decides whether a given contact is safe to show on a shared screen.
 
-`FamilyBoard` provides a structured place for that information while keeping it separate from ordinary daily tasks.
+## What a contact record holds
 
-## Focus on operational information
+The quick-add form asks for a name or service (required), a category (defaulting to "Household contact" — plumber, utility, pediatrician, neighbor), phone, email, operational notes, and a visibility toggle. That toggle is the field worth understanding: marking a contact "sensitive" is a boolean flag with real consequences elsewhere in the app, not just a label.
 
-Examples include emergency contacts, home address, trusted neighbors, utility provider numbers, basic shutoff-location notes, insurance reference information, pet care contacts and key household instructions. Highly sensitive medical or identity information should be handled carefully and only stored when the user understands the local-device security implications.
+## What "sensitive" actually controls
 
-## Make it readable in an emergency
+A contact's `sensitive` flag does two concrete things. First, on the Emergency tab itself, a sensitive contact's card gets a "Private" status badge instead of "Shareable," so you can see at a glance which entries are flagged. Second — and this is the part that matters — the household handoff briefing filters contacts through `!item.sensitive` before including them, so a sensitive contact is excluded from the printable handoff sheet by default, regardless of which sharing profile is active. The form's help text says this outright: "Sensitive contacts are excluded from shared display and handoff by default."
 
-The emergency view should use plain labels, large touch targets and minimal navigation. It should be printable so a household can keep a paper copy if that suits its risk plan.
+## Not the same as Household Members
 
-## Review instead of assuming it stays correct forever
+It's worth distinguishing this tab from the separate Members list. Members are the people who live in and use the household — they get assigned as owners of tasks, maintenance and subscriptions. Emergency contacts are the outside people and services the household might need to reach: a plumber, a pediatrician, a trusted neighbor, a utility company's outage line. The two lists don't overlap or reference each other.
 
-Phone numbers change. Service providers change. People move. An emergency record should have a visible last-reviewed date and a simple periodic review task.
+## A worked example
 
-## Do not replace official emergency guidance
+A household adds "Neighbor — Sarah (unit 4B)," category "Trusted neighbor," phone recorded, notes "has spare key, feeds cat if we're away," sensitive left off — this is exactly the kind of contact worth sharing on a handoff sheet for a house sitter. Separately, they add "Dad — medical directive holder," category "Family," phone and email recorded, notes referencing a health situation, sensitive turned on. The neighbor appears on any printed handoff or shared display; the family medical contact does not, because the sensitive flag excludes it from both by design, not by an extra step you have to remember each time.
 
-The product organizes the household's information; it does not replace local emergency authorities, medical advice, building safety instructions or professional guidance.
+## What FamilyBoard is honest about not being
 
-**Contextual CTA:** Generate a basic emergency contact sheet first. Then add only the information another trusted household member would actually need under pressure.
+The Emergency tab carries a standing notice: "FamilyBoard organizes contacts; it does not replace current official local emergency guidance." It's a private, local list of who to call — it doesn't connect to emergency services, doesn't verify phone numbers are current, and doesn't push any alert. Keeping it useful means revisiting it occasionally as numbers and providers change; nothing in the app currently prompts that review automatically the way maintenance due-dates do.
+
+## Where the data actually lives
+
+Like every other record type in FamilyBoard, contacts are written to this browser's local IndexedDB database — there's no server copy, no account tied to the list, and no other device that can see it unless you deliberately move it there. That's worth knowing before you decide how much to store here: a phone number is low-risk if this device is lost, but a note describing a family member's medical condition deserves the same caution you'd give any sensitive information kept on a single device. Exporting a JSON backup from Settings preserves the whole contact list, including the sensitive flag on each entry, so a restore recreates the same visibility rules rather than exposing everything by default.
+
+**Contextual CTA:** Add the contacts another trusted person would actually need under pressure — mark anything genuinely private as sensitive so it's excluded from handoff and display automatically.
+
+**FAQ:**
+- Q: What does marking a contact "sensitive" actually change?
+  A: Two things: the contact's card shows a "Private" badge instead of "Shareable" on the Emergency tab, and it's automatically excluded from the household handoff briefing regardless of which sharing profile is active. It has no effect on where the contact appears within your own private view of the app.
+- Q: Are emergency contacts the same as household members?
+  A: No. Members are the people in your household who get assigned as owners of tasks and maintenance. Emergency contacts are outside people or services — a plumber, a doctor, a neighbor with a spare key — kept in a separate list that doesn't connect to the Members tab.
+- Q: Does FamilyBoard call emergency services or send alerts?
+  A: No. It's a private, local organizer for contact information you already have. It doesn't dial, text, verify numbers, or connect to any emergency-services system, and it explicitly does not replace official local emergency guidance.
+- Q: Will FamilyBoard tell me if a contact's phone number is outdated?
+  A: No, there's no verification or review reminder built into the Emergency tab currently. Numbers and providers change over time, so it's worth revisiting this list occasionally the same way you'd review any other household record.
 
 ---
 
@@ -767,31 +948,48 @@ The product organizes the household's information; it does not replace local eme
 **Title tag:** `Household Handoff — Make the Invisible Work of Running a Home Transferable | FamilyBoard`
 **Meta description:** `Create a concise household handoff showing upcoming obligations, recurring responsibilities, service contacts and the information another trusted person needs.`
 **Primary keyword concept:** household handoff checklist
-**Suggested internal links:** `/guides/household-admin-backup-person/`, `/tools/home-handoff-summary-generator/`, `/features/emergency-information-organizer/`
+**Depth:** verified
+**Suggested internal links:** `/features/emergency-information-organizer/`, `/features/family-task-manager/`, `/features/maintenance-tracker/`, `/features/private-family-organizer/`
 
-# If the household organizer vanished for a week, what would everyone else miss?
+# A printable briefing built from your own records, not a fresh document
 
-In many homes, one person becomes the unofficial operating system. They know when the car needs service, which bill is unusual, who to call about the heater, where the pet records are, which subscription renews annually and what the technician said last time.
+In many homes, one person becomes the unofficial operating system — they know which bill looks wrong, who to call about the heater, and what the technician said last time. FamilyBoard's Handoff tab turns that knowledge into a document by pulling directly from records you've already entered, filtered by an explicit set of privacy rules rather than a blanket export.
 
-That knowledge is valuable, but it is also fragile if it only exists in one person's memory.
+## The default view, with no profile created
 
-## Handoff mode turns records into a briefing
+If you haven't created a sharing profile, the handoff sheet uses a built-in default: it includes open tasks and all maintenance tasks and non-sensitive contacts, but leaves out document locations. That's a deliberately conservative starting point — useful information is shown, but nothing marked private and nothing document-related leaks in by default.
 
-Instead of asking another family member to learn the entire app, `FamilyBoard` can generate a focused view of what matters now: tasks due soon, recurring obligations, important contacts, active maintenance issues, upcoming renewals and selected emergency information.
+## Sharing profiles let you choose what's included
 
-## Temporary absence and emergency absence are different
+You can create a named profile — "Weekend sitter," "Emergency contact for Mom" — with a purpose note and four yes/no toggles: include open tasks, include maintenance, include non-sensitive contacts, include document locations. Each toggle maps directly to a filter: turning off "include contacts," for instance, empties the contacts section of the sheet entirely for that profile. Multiple profiles can exist for different situations — a short weekend trip briefing looks different from a longer absence one — though only one handoff sheet renders at a time, built from whichever profile you're viewing.
 
-A planned travel handoff might include mail, pets, trash day, service appointments and expected deliveries. An emergency handoff may need broader operational information. The user should be able to choose what is included rather than expose the entire household database.
+## What's always excluded, no matter what
 
-## Make responsibility visible without making it personal
+Regardless of profile settings, the handoff sheet's closing section lists exactly what's intentionally left out: "Sensitive contacts, serial numbers, document details, subscription costs, private notes and backup contents." That's a hard boundary baked into how the sheet is built, not a toggle you can turn on — even with every include-flag set to yes, a contact marked sensitive never appears, and no field like serial number or subscription cost is ever pulled into the sheet.
 
-The handoff should answer “what needs to happen?” rather than assign blame for how much each person normally does. It is an operational continuity tool, not a relationship scorecard.
+## What the sheet actually shows
 
-## A good household system should survive the person who built it
+When maintenance is included, it lists up to ten maintenance tasks with their linked asset or home area and due status — not full history, just the operational summary someone would need to know what's coming up. Tasks show title, due status and owner. Contacts show name, category and phone number only — not email or notes. If documents are included, entries show name and location reference, not category or review date.
 
-That is one of the clearest differences between a collection of private notes and a real household management system.
+## Print, don't just view
 
-**Contextual CTA:** Start with the free Household Handoff Summary Generator and see which missing pieces are still trapped in one person's memory.
+The tab includes a "Print handoff" button that calls the browser's native print function on the rendered sheet, meant for households that want a physical copy — on the fridge, in a go-bag, or with a house sitter who won't be logging into the app at all.
+
+## A worked example
+
+Before a two-week trip, a household creates a profile named "House sitter — August," purpose "cat care and mail," with tasks and maintenance included, contacts included, documents left off. The generated sheet shows: any open task due during the trip window, upcoming maintenance like a scheduled HVAC filter check, the non-sensitive contacts (the vet, the trusted neighbor) with their phone numbers, and nothing else — no serial numbers, no subscription costs, no sensitive family contacts. They print it and leave it on the counter.
+
+**Contextual CTA:** Create a sharing profile for the next time someone else needs to know what's going on in your home, and check the generated sheet before printing or sharing it.
+
+**FAQ:**
+- Q: What's included in the handoff if I haven't set up a sharing profile?
+  A: The default view includes open tasks, all maintenance tasks, and non-sensitive contacts, but leaves out document locations. It's a conservative built-in default, not an unfiltered dump of every record.
+- Q: Can a sensitive contact ever appear on the handoff sheet?
+  A: No. Contacts marked sensitive are filtered out of every handoff profile, regardless of the "include contacts" toggle. This is a hard rule in how the sheet is generated, not a per-profile setting you could accidentally leave open.
+- Q: Does the handoff sheet show subscription costs or serial numbers?
+  A: No. The handoff's closing section explicitly states these are excluded: sensitive contacts, serial numbers, document details, subscription costs, private notes and backup contents. The sheet is built to show operational summaries, not financial or identifying detail.
+- Q: Can I have more than one handoff profile for different situations?
+  A: Yes. You can create multiple named profiles — for example, one for a short weekend trip and a broader one for an extended absence — each with its own include/exclude toggles and purpose note, and view whichever one fits the current situation.
 
 ---
 
@@ -801,29 +999,44 @@ That is one of the clearest differences between a collection of private notes an
 **Title tag:** `Family Display Mode — Turn an Old Tablet into a Household Dashboard | FamilyBoard`
 **Meta description:** `Use a tablet-friendly full-screen view for today’s events, chores, maintenance alerts and household notices without buying dedicated family calendar hardware.`
 **Primary keyword concept:** family dashboard tablet
-**Suggested internal links:** `/guides/household-weekly-reset/`, `/features/home-dashboard/`, `/features/household-calendar/`, `/app/`
+**Depth:** verified
+**Suggested internal links:** `/features/home-dashboard/`, `/features/household-calendar/`, `/features/emergency-information-organizer/`, `/features/free-home-management-app/`
 
-# Your old tablet can become the household screen
+# A simplified, low-sensitivity view built for a shared screen
 
-Dedicated family display hardware can be convenient, but many homes already have an unused tablet or older computer. `FamilyBoard` can use the same household records in a simplified full-screen view designed for a kitchen counter, hallway desk or wall mount.
+Dedicated family-display hardware exists, but many homes already have an old tablet doing nothing. `FamilyBoard`'s Display tab renders the same underlying records in a simplified, large-type layout meant for exactly that — a kitchen counter, a hallway mount, a screen more than one person walks past.
 
-## Show only what people need at a glance
+## Exactly three things appear on it
 
-Display mode should prioritize large, readable information: today's events, assigned chores, maintenance alerts, upcoming renewals and one or two important household notices. It should avoid exposing private document details or cluttering the screen with settings.
+Display mode shows the household name, today's formatted date, and three cards: household tasks (up to six open tasks, each showing the title, assigned owner or "Anyone" if unassigned, and due status), today's events (up to six events whose start time falls today, each with a formatted time), and "Coming up" (maintenance tasks sorted by next-due date, showing up to six). That's the complete list — no warranties, no subscriptions, no documents, and no emergency contacts appear on this screen at all, sensitive or not, because those record types simply aren't part of what Display mode renders.
 
-## Design for distance, not only touch
+## "Refreshes every minute" is a real, specific number
 
-A family display may be viewed from several feet away. That means large type, high contrast, predictable sections and restrained information density. Touch controls should also be generous enough for quick completion of a chore or dismissal of a notice.
+The badge at the top of the display reads "Shared view · refreshes every minute," and that's not a marketing phrase — the app underneath reloads its data from the local database on a 60-second timer while the tab stays open, plus immediately whenever the browser tab becomes visible again. That means a task completed on your phone shows up on the wall display within a minute if both are pointed at the same browser profile and the display's tab is active, though in practice Display mode is most useful as a read-only board rather than something you update from itself.
 
-## Reuse existing hardware
+## Why it's honest to call this "low-sensitivity," not "safe for anyone"
 
-Because the product is a PWA, a compatible browser can provide a near-app experience without a separate hardware purchase. The user can add the app to the home screen and launch it in a standalone window where supported.
+The footer text says private records and sensitive contacts are hidden from this display — true, in the sense that contacts (sensitive or not) never render here at all, along with warranties, subscriptions, documents and notes fields. But a task title itself could still reveal something you'd rather a houseguest not read on the wall ("pick up prescription refill"). Display mode limits which record types appear; it doesn't screen individual task titles for sensitivity, so it's worth a moment's thought about what you title a task if the display tablet sits somewhere visitors pass.
 
-## Treat a shared screen as shared space
+## Turning a spare tablet into a display
 
-A wall tablet is not the place for private notes, sensitive documents or personal account details. Display mode should have a deliberately limited data surface and an easy way to return to a private view only when appropriate.
+Because FamilyBoard is a PWA with a standalone display mode declared in its manifest, a compatible browser can add it to a device's home screen and launch it without browser chrome, closer to a dedicated app than a bookmarked tab. Point an old tablet's browser at the Display tab, add it to the home screen, and prop it up — no separate hardware purchase or app-store account required.
 
-**Contextual CTA:** Try display mode on an old tablet before buying a dedicated household screen. If it already solves the visibility problem, the hardware you own may be enough.
+## A worked example
+
+A household mounts an old 8-inch tablet in the kitchen. It shows "The Garcia Household," today's date, three open tasks under "Household tasks" (trash day owner unassigned, a bill to pay assigned to one parent, a school form due), one event under "Today's events" (a 4 PM pickup), and under "Coming up," the next maintenance item — an HVAC filter check due in five days. Nobody has to open the full app to see the day's shape; anyone walking past the kitchen gets the same read.
+
+**Contextual CTA:** Try Display mode on a spare tablet or old phone before buying dedicated family-dashboard hardware — add it to the home screen for a near-app experience.
+
+**FAQ:**
+- Q: Does the family display show sensitive contacts or documents?
+  A: No. Display mode only renders three record types — open household tasks, today's events, and upcoming maintenance. Contacts, warranties, subscriptions and documents don't appear on this screen at all, regardless of any sensitivity flag.
+- Q: How often does the display update?
+  A: The app reloads its underlying data about once a minute while the tab is open, and immediately when the browser tab becomes visible again after being backgrounded. The "refreshes every minute" label on the display reflects that actual timer.
+- Q: Can I turn an old tablet into a dedicated FamilyBoard screen?
+  A: Yes. FamilyBoard is a Progressive Web App with a standalone display mode, so a compatible browser lets you add it to the device's home screen and launch it without browser address bars or tabs, similar to a dedicated app.
+- Q: Should I worry about what task titles say if the display is visible to guests?
+  A: It's worth a moment's thought. Display mode limits which record types show (no contacts, warranties or documents), but it doesn't screen individual task or event titles for sensitive wording, so anything you title a task will be visible to anyone who can see the screen.
 
 ---
 
@@ -862,35 +1075,54 @@ If encrypted cloud sync is built later, it should be an opt-in service that exte
 
 ## Page 015 — Private Family Organizer
 **Slug:** `/features/private-family-organizer/`
-**Primary intent:** family organizer focused on privacy
-**Title tag:** `Private Family Organizer for Household Records, Maintenance and Tasks | FamilyBoard`
-**Meta description:** `Organize household responsibilities without requiring a cloud account for the core free app. Keep family records local and export your own backups.`
+**Primary intent:** find a local-first, offline, no-account family organizer
+**Title tag:** `Private Family Organizer — Local-First, Offline and No Account Required | FamilyBoard`
+**Meta description:** `A household organizer that stores records in your browser, works offline, needs no account, and gives you password-protected backups you control.`
 **Primary keyword concept:** private family organizer
-**Suggested internal links:** `/privacy/`, `/security/`, `/features/private-family-organizer/`, `/features/household-handoff/`
+**Depth:** verified
+**Suggested internal links:** `/features/free-home-management-app/`, `/features/household-handoff/`, `/features/emergency-information-organizer/`, `/features/home-dashboard/`
 
-# Privacy matters more when the app knows how your household works
+# Local-first, offline and no-account are one design decision, not three features
 
-A household organizer can contain surprisingly sensitive context: when people are away, which services the home uses, what appliances exist, who normally handles responsibilities, emergency contacts and notes about pets or family members. Even when none of those fields is individually secret, the combined picture deserves care.
+A household organizer knows a surprising amount about how your family actually lives: when you travel, what you own, who your emergency contacts are, which services you pay for. `FamilyBoard`'s answer to that is architectural, not a policy promise — the app is built with Dexie (a wrapper around the browser's built-in IndexedDB) as its only datastore. There is no server-side database behind it, no login, and no network request that carries your household data anywhere. That single design choice is what "local-first," "offline" and "no-account" all describe from three different angles.
 
-`FamilyBoard` is designed to minimize unnecessary data collection in the free version.
+## What "no account" means in practice
 
-## No account for the core organizer
+Opening the app for the first time shows one form: a home name and, optionally, a comma-separated list of household members. Submitting it creates a household record and writes it to the local database immediately — there's no email verification step, no password to set, and no server round-trip. The onboarding screen's own heading says it plainly: "Set up your home without creating an account." The top bar of the running app carries a permanent reminder of the same fact: "Local data · no app analytics."
 
-Users should not have to provide an email address simply to track their own refrigerator warranty or recurring home tasks. The free local-first app works without a user account.
+## What "offline" means in practice
 
-## Analytics should stop at the boundary of household content
+FamilyBoard is a Progressive Web App with a service worker and a web manifest declaring a standalone display mode. Once loaded and cached, the core screens keep working without a network connection, because every read and write goes to the local IndexedDB database rather than a remote API — there's nothing to wait on. This is also why the app requests persistent storage from the browser (a button in Settings triggers `navigator.storage.persist()`) — it's asking the browser not to silently evict the database under storage pressure, which matters more for an app with no server copy to fall back to.
 
-Public site analytics can help improve guides and tools, but private household data should not be sent as analytics properties. Asset names, notes, family names, addresses, emergency information and document content must never be included in telemetry.
+## What "local-first" means for backup, concretely
 
-## Privacy does not remove the need for device security
+Because there's no server copy, backup is not an optional extra — it's the only recovery path if a device fails or browser storage is cleared. Settings can export a full JSON backup of every record, optionally encrypted with a password using PBKDF2-SHA256 key derivation at 310,000 iterations and AES-256-GCM encryption — real, named cryptographic primitives, not a marketing claim. Restoring a backup offers merge (add to what's there) or replace (wipe and restore) modes; choosing replace automatically downloads a safety snapshot of your current data first, before anything is overwritten, so a restore mistake doesn't destroy data you hadn't backed up yet.
 
-If someone can unlock the device and browser, local data may be accessible. Users should still use device passcodes, operating-system security and appropriate encrypted backups when storing sensitive information.
+## The bulk-edit path: master CSV
 
-## Be honest instead of making impossible promises
+Beyond the JSON backup, Settings also offers a household "master table" — export every record to a single CSV, edit it in a spreadsheet, and import it back in merge or append mode, with a preview step that surfaces validation errors before anything commits. This is the same local-only principle applied to bulk editing: your data leaves the browser only as a file you explicitly download, not as a background sync.
 
-The site should explain what is stored, where it is stored and what the limitations are. Avoid slogans such as “100% secure” or “unhackable.” Trust is built by clarity.
+## One household per browser profile — the honest limit
 
-**Contextual CTA:** Read the privacy architecture before using the app for sensitive household records. The product should make its boundaries understandable without requiring a security degree.
+The app reads `data.households[0]` — the first household in the local database — as the household you're using. There's no multi-household switcher and no cross-device sync built in: a household created in one browser profile on one device doesn't appear in another browser or another device unless you export a JSON backup from the first and restore it into the second. That's the real tradeoff behind "no account": nothing to log into also means nothing to sync through.
+
+## What local-first does not protect against
+
+Local storage isn't the same as invincible storage. Anyone who can unlock your device and open your browser can potentially see your data, the same as any other locally-stored information — FamilyBoard doesn't add its own login screen or device-level lock. Use your device's own passcode and encryption, and treat the encrypted JSON backup's password as the thing actually protecting an exported file that leaves the device.
+
+**Contextual CTA:** Open the app without creating an account, add one real record, and export a JSON backup — that three-step loop is the entire trust model in action.
+
+**FAQ:**
+- Q: Does FamilyBoard require an account or email address to use?
+  A: No. The onboarding flow only asks for a household name and, optionally, member names. There's no email, password or account creation step — the household record is created directly in your browser's local database.
+- Q: Does FamilyBoard actually work with no internet connection?
+  A: Yes, once loaded. It's a Progressive Web App with a service worker, and because every read and write goes to the local IndexedDB database rather than a remote server, the core screens continue working offline after the app has been opened and cached.
+- Q: How are encrypted backups actually protected?
+  A: An encrypted backup uses PBKDF2-SHA256 to derive a key from your password with 310,000 iterations, then encrypts the data with AES-256-GCM. Losing the password means losing access to that specific encrypted export — there's no recovery mechanism for a forgotten backup password.
+- Q: Can I use FamilyBoard across two devices, like my phone and laptop?
+  A: Not automatically — there's no account or cloud sync, so each browser profile has its own independent local database. To move data between devices, export a JSON backup on one and restore it on the other; that's a manual, one-time transfer, not ongoing sync.
+- Q: What happens if I clear my browser data without a backup?
+  A: You lose the household database — there's no server-side copy to recover it from. This is why FamilyBoard's Settings screen actively warns when your last backup is more than seven days old, or when none has ever been made.
 
 ---
 
@@ -1035,32 +1267,50 @@ If every light bulb change requires a six-field form, the system will fail. The 
 
 ## Page 020 — Free Home Management App
 **Slug:** `/features/free-home-management-app/`
-**Primary intent:** find a free home management app
-**Title tag:** `Free Home Management App — Local-First Household Tracking Without an Account | FamilyBoard`
-**Meta description:** `Use a free local-first home management app for assets, maintenance, warranties, subscriptions, tasks and household records.`
+**Primary intent:** find a free home management app that keeps a real history
+**Title tag:** `Free Home Management App — Every Feature, No Account, No Paywall | FamilyBoard`
+**Meta description:** `A free home management app with no paid tier gating any feature: assets, maintenance, warranties, subscriptions, tasks, handoff and encrypted backups, all local.`
 **Primary keyword concept:** free home management app
-**Suggested internal links:** `/app/`, `/features/private-family-organizer/`, `/features/home-dashboard/`, `/pricing/`
+**Depth:** verified
+**Suggested internal links:** `/features/private-family-organizer/`, `/features/home-dashboard/`, `/features/household-handoff/`, `/features/maintenance-tracker/`
 
-# A free home management app should be useful before it asks you to upgrade
+# Free because there's nothing behind a paywall to unlock
 
-The free first version of `FamilyBoard` is intended to provide the core household system rather than a demo that expires after a few days. Users should be able to organize assets, maintenance, warranties, subscriptions, tasks, emergency information and backups without creating a subscription.
+There's no billing code anywhere in `FamilyBoard` — no upgrade prompt, no locked tab, no feature that checks a subscription status before it works. All twelve screens — Today, Members, Assets, Maintenance, Tasks, Warranties, Subscriptions, Emergency, Documents, Handoff, Display and Settings — are the same app for every user, because the free version isn't a limited trial of a paid product. It's the whole thing.
 
-## Why keep the first version free?
+## Why a local-first app can afford to be genuinely free
 
-The product is being built around a local-first architecture. When the user's household records stay on the device, there is no need to fund a large central database simply to let someone organize their own home. That makes a genuinely useful free tier more sustainable.
+The economics are a direct consequence of the architecture described on the Private Family Organizer page: your household records live in this browser's IndexedDB database, not in a server-side database the company operates and pays to run for every user. There's no per-household hosting cost scaling with how many appliances you track or how many years of maintenance history you keep, because none of that data touches a server. That's a real structural reason a genuinely capable free tier is sustainable, not a promotional claim about generosity.
 
-## What future paid versions could add
+## A real household history, not a limited demo
 
-A paid local desktop edition can reasonably charge for advanced exports, multiple homes, bulk tools, richer archive workflows and desktop packaging. A future encrypted sync service can charge recurring fees because cross-device storage and delivery create real ongoing infrastructure costs.
+Because nothing is metered or capped by a paid tier, the product is built to hold years of real history rather than a rolling window. A maintenance task's card keeps showing its five most recent completions no matter how many total completions exist. Document references, warranty records and repair notes accumulate indefinitely in the local database — the only ceiling is your browser's storage quota, not a plan limit. That matters for the parts of household life that are only useful in hindsight: when an appliance fails twice, the earlier maintenance and repair notes on that same asset are what tell you whether it's a pattern or a coincidence.
 
-That is a healthier boundary than disabling basic household maintenance tracking just to force an upgrade.
+## What the free tier includes, concretely
 
-## Free does not mean disposable
+Every record type is fully usable: assets with purchase details and status tracking, maintenance with completion history and flexible repeat intervals, warranties with computed expiration status, subscriptions with a live annualized-cost total, tasks and calendar events, emergency contacts with sensitivity filtering, document references, printable handoff briefings built from your own data, a family display mode, and both JSON backup (optionally password-encrypted with AES-256-GCM) and a spreadsheet-editable master CSV export/import. None of that list is a teaser for a paid tier — it's the complete current feature set.
 
-The free app still needs data migrations, reliable backups, accessibility, offline testing and long-term URL stability. A user may trust it with years of household history, so engineering quality matters even before monetization.
+## The honest limit: this is a single-household, single-browser-profile app
 
-**Contextual CTA:** Start with the free PWA. If it becomes part of your household routine, export regular backups and watch the roadmap for optional local Pro and sync features later.
+Being free doesn't mean being infinite. The app reads only the first household stored in this browser's database — there's no multi-household switcher, and no built-in way to combine two separate households' data. A second home, or a household member's separate device, means a separate local database unless you deliberately move a JSON backup between them. That's a genuine architectural boundary of the current version, not a paywall dressed up as a limitation.
 
+## What durability actually requires from you
+
+Free and local-first shifts one responsibility onto you that a paid cloud service would otherwise carry: backup. FamilyBoard tracks and displays when your last backup was made, and warns when it's been seven days or more, or when none has ever been exported — because there's no automatic server-side copy behind the free tier. Export a JSON backup after adding anything you'd genuinely mind losing.
+
+**Contextual CTA:** Start using the app for real — every tab is already unlocked. Export your first backup once you've added a handful of real records.
+
+**FAQ:**
+- Q: Is any feature in FamilyBoard limited to a paid plan?
+  A: No. There's no billing, subscription check, or locked screen anywhere in the app currently — every tab and feature (assets, maintenance, warranties, subscriptions, handoff, backups) is fully available in the free version.
+- Q: How can a home management app be free with no ads or subscription inside the app itself?
+  A: Because household data is stored entirely in your browser's local database rather than a server the company has to host and scale for every user, the app avoids the ongoing per-user infrastructure cost that usually justifies a subscription. That's an architectural reason, not a temporary promotion.
+- Q: Is there a limit on how many records or how much history I can keep?
+  A: There's no plan-based limit. The only real ceiling is your browser's storage quota, which Settings shows you directly (used space against the browser-managed quota). Maintenance history, documents and notes are designed to accumulate over years, not reset or cap.
+- Q: Can I manage more than one household or property with the free version?
+  A: Not within a single browser profile — the app currently uses only the first household stored locally, with no multi-household switcher. Managing a second property means a separate browser profile or device with its own local database, moved manually via a JSON backup if needed.
+- Q: If it's free, who backs up my data?
+  A: You do. Because there's no server-side copy behind the free local-first design, FamilyBoard displays your last backup date and warns when it's stale or missing, but the actual export step is manual — open Settings and download a JSON backup regularly.
 
 ---
 
@@ -7813,39 +8063,29 @@ Give the sheet to the backup person and ask them to locate one service provider,
 ## Supporting Page A — Pricing
 **Slug:** `/pricing/`
 **Indexable:** Yes
-**Title tag:** `FamilyBoard Pricing — Free Local-First Web App and Future Pro Options`
-**Meta description:** `FamilyBoard is free to use in its first local-first web release. See what is free today and which optional local Pro or encrypted sync features may come later.`
+**Title tag:** `FamilyBoard Is Free — No Account or Paid Plan Required`
+**Meta description:** `FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.`
 
-# Simple now. Optional paid upgrades later.
+# FamilyBoard is free
 
-The first release of `FamilyBoard` is free. You can use the local-first household dashboard, track home assets, maintenance, warranties, subscriptions, tasks, emergency information and create backups without an account.
+The public guides, browser tools, printables and local-first household app are available without an account, checkout or subscription.
 
-## Free web/PWA — available in v1
+## What is included
 
-- One household
-- Home dashboard
-- Household members
-- Assets and appliance records
-- Maintenance schedules and history
-- Warranty tracking
-- Subscriptions and recurring obligations
-- Tasks and simple household calendar
-- Emergency information
-- Household handoff view
-- Family/tablet display
-- Local-first storage
-- Backup and restore
-- Offline-capable PWA
+- The local household dashboard and member list
+- Asset, maintenance, task, warranty and subscription records
+- Emergency contacts, document references, handoff and family display views
+- Versioned JSON backups and optional encrypted exports
+- Offline-capable browser access after the first successful load
+- Public guides, calculators, generators and printables
 
-## Pro Local Edition — planned, not yet for sale
+## No payment details are collected
 
-A future downloadable desktop/local edition may add multiple properties, advanced export, richer document workflows, batch import, printable report packs, expanded local archive features and desktop packaging. It is intended to be a one-time-purchase style product where practical.
+FamilyBoard does not currently sell software or collect payment information. Product recommendations on selected public pages may use clearly labeled affiliate links, but they do not change access to the free app.
 
-## Encrypted Sync — planned, separate service
+## The practical limit
 
-Cross-device family sharing creates ongoing infrastructure cost, so an optional future sync service may use recurring pricing. The goal is to keep the core local organizer useful without forcing every user into a subscription.
-
-> No fake checkout should appear before a real payment channel exists. “Planned” means planned, not available.
+Data stays in the current browser profile unless you export and move a backup yourself. There is no account or cross-device cloud storage. Read the [privacy explanation](/privacy/) and [security limits](/security/) before storing important records.
 
 ---
 
@@ -7976,66 +8216,56 @@ The public site is intended to become a practical household reference library. E
 **Slug:** `/contact/`
 **Indexable:** Yes
 **Title tag:** `Contact FamilyBoard`
-**Meta description:** `Contact the FamilyBoard project about bugs, accessibility, content corrections, privacy questions or product feedback.`
+**Meta description:** `Report a FamilyBoard bug, accessibility issue, content correction, privacy concern or security vulnerability through a working support route.`
 
-# Contact
+# Contact FamilyBoard
 
-Use `support@familyboard.win` only after a real mailbox or forwarding route is configured and tested; otherwise provide a working contact route that does not require exposing a personal email.
+FamilyBoard currently uses its public GitHub repository for product and content support. Do not include household records, passwords, backup files, private contact details or other sensitive information in a public report.
 
-Suggested contact categories:
+## Product, accessibility and content reports
 
-- Product bug
-- Backup/restore issue
-- Accessibility problem
-- Security/privacy concern
-- Content correction
-- Feature suggestion
-- Business/affiliate inquiry
+[Open a public FamilyBoard issue](https://github.com/btcson66-rgb/familyboard/issues/new) and include:
 
-Do not promise response times the project cannot guarantee.
+- the affected page URL or app section;
+- what you expected and what happened;
+- browser and device type when relevant;
+- for a content correction, a reliable supporting source.
 
-For content corrections involving maintenance or safety information, ask the sender to include the page URL and a reliable source.
+GitHub requires an account to submit an issue. Existing reports can be read without an account.
+
+## Security reports
+
+Do not publish a suspected vulnerability or sensitive reproduction data in a normal issue. [Send a private vulnerability report](https://github.com/btcson66-rgb/familyboard/security/advisories/new) through GitHub Security Advisories.
+
+## Response expectations
+
+FamilyBoard does not promise a fixed response time. Confirm urgent household, safety or emergency questions with the relevant official service or qualified professional rather than waiting for website support.
 
 ---
 
 ## Supporting Page F — Roadmap
 **Slug:** `/roadmap/`
 **Indexable:** Yes
-**Title tag:** `FamilyBoard Roadmap — What Is Available, Planned and Only Being Explored`
-**Meta description:** `See the transparent FamilyBoard roadmap for the free local-first PWA, desktop edition, exports, encrypted sync and future mobile options.`
+**Title tag:** `FamilyBoard Free Product Roadmap`
+**Meta description:** `See the current improvement roadmap for the free FamilyBoard local-first household organizer, tools and content library.`
 
-# Roadmap
+# A roadmap for the free product
 
-Use three statuses only: **Available**, **Planned**, **Exploring**. Do not publish fake dates.
+FamilyBoard is concentrating on reliability, useful household workflows and discoverable public resources before considering any different business model.
 
-## Available in v1
+## Current priorities
 
-- Local-first household database
-- Assets, maintenance, warranties and service history
-- Subscriptions and recurring tasks
-- Household handoff
-- Emergency information
-- Backup/restore
-- Offline PWA
-- Public guides, calculators and printable templates
+- Validate backup and restore behavior across browser updates
+- Improve maintenance history, handoff profiles and shared display clarity
+- Expand accessibility, keyboard and offline testing
+- Add Traditional Chinese navigation, tools and genuinely localized guides
+- Use Search Console and privacy-safe analytics to improve pages people actually find useful
 
-## Planned
+## How priorities are chosen
 
-- More advanced local exports
-- More flexible property/multiple-home architecture
-- Desktop/local edition
-- Better import tools
-- Expanded printable report packs
+Reliability and user evidence come before feature volume. Search impressions, tool completion, app opens, support reports and test failures will guide the next work. The roadmap is directional and does not promise release dates.
 
-## Exploring
-
-- End-to-end encrypted sync
-- Household invitations/permissions
-- Push notifications
-- Native-enhanced mobile apps
-- Optional integrations
-
-Only move an item to “Available” in the same release that actually ships it.
+See the [changelog](/changelog/) for changes that are already shipped.
 
 ---
 

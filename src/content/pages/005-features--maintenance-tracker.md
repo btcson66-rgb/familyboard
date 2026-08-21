@@ -6,39 +6,53 @@ primaryIntent: "find home maintenance tracking software"
 primaryKeyword: "home maintenance tracker"
 cluster: "product"
 pageType: "content"
-indexable: false
-depthVerified: false
+indexable: true
+depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
-nextStep: "Generate a starter schedule with the free Home Maintenance Schedule Generator, then save only the tasks that make sense for your actual home."
+nextStep: "Add one recurring maintenance task linked to a real asset, complete it once, and watch the next-due date and completion history build automatically from there."
 related:
-  - "/guides/home-maintenance-schedule/"
-  - "/guides/home-maintenance-records/"
-  - "/tools/home-maintenance-schedule-generator/"
+  - "/features/home-inventory-tracker/"
   - "/features/home-dashboard/"
-faq: []
+  - "/features/household-documents-organizer/"
+  - "/features/free-home-management-app/"
+faq:
+  - question: "What happens to the next-due date when I complete a maintenance task?"
+    answer: "If the task has a repeat interval set (in months), completing it logs today's date as an event and moves the next-due date forward by that many months, adjusted so it always lands on a real calendar day. If the interval is zero, the task is simply marked completed with no new due date generated."
+  - question: "Can I log the cost of a maintenance visit?"
+    answer: "The maintenance event created by pressing Complete starts with a blank cost and note field. You can fill those in afterward through the household master CSV export in Settings, which includes cost and notes columns for every maintenance event."
+  - question: "What's the difference between linking a task to an asset versus a home area?"
+    answer: "An asset link ties the task to one specific record, like a named dishwasher or water heater, so its history shows on that asset's context. A home area (like \"yard\" or \"gutters\") is for maintenance that doesn't belong to a single tracked item — the card just shows the area name instead of an asset name."
+  - question: "Does FamilyBoard tell me how often I should do a given maintenance task?"
+    answer: "No. The instructions source field records where your interval came from — a manual page, a manufacturer's site, a technician's recommendation — but FamilyBoard doesn't supply or look up recommended intervals itself. You set the next-due date and repeat interval based on what you've found."
+  - question: "Will I get a reminder when maintenance is due?"
+    answer: "Only inside the app. Due and overdue maintenance shows on the Today dashboard and the Maintenance tab whenever you open FamilyBoard, but there's no email, push notification or SMS — nothing fires while the browser is closed."
 contentVersion: 1
 ---
-# Stop relying on “I think we did that recently”
+# Stop relying on "I think we did that recently"
 
-Household maintenance often fails because the information is incomplete rather than because the work is difficult. Someone remembers that the air filter was changed “a while ago.” A service visit happened, but the date is buried in email. A water filter replacement is scheduled in a phone reminder with no connection to the model or purchase record.
+Household maintenance often fails because the information is incomplete, not because the work is hard. Someone remembers changing a filter "a while ago." A technician visited, but the invoice is buried in email. `FamilyBoard`'s Maintenance tab exists to replace that guesswork with a dated record tied to the actual thing being maintained.
 
-A maintenance tracker should turn those fragments into history.
+## What a maintenance task actually stores
 
-## Link every recurring task to a real part of the home
+The quick-add form asks for a title, a related asset (from your Assets list), a home area (for maintenance that isn't tied to one specific asset, like "gutters" or "yard"), an owner, a next-due date, a repeat interval in months, a priority (normal, high or low), and an instructions source — a place to note "owner's manual page 14" or "HVAC company recommendation" so the interval has a traceable origin instead of being invented. Underneath, the record also carries a trigger type of date, interval-after-completion, seasonal or manual; the quick-add form sets this automatically — if you enter a repeat interval greater than zero it becomes interval-after-completion, otherwise it's date. Seasonal and manual trigger types exist on the record and can be set through the Settings master CSV for tasks that don't fit either automatic pattern.
 
-Instead of keeping a generic task called “change filter,” connect the task to the actual system or appliance. That lets the record answer: Which filter? When was it last done? Who did it? Was there a cost? Was anything unusual noted?
+## What happens when you press Complete
 
-## Record completion, not only reminders
+Each maintenance card has a "Complete" button. Pressing it does two things: it adds a maintenance event with today's date (cost and notes start blank, ready for you to fill in through the CSV export if you want to log what a technician charged), and if the task has a repeat interval, it recalculates the next-due date by adding that many months to today, clamped so a task due-monthed from the 31st lands on the last valid day of a shorter month rather than erroring. A task with no interval — a one-time item — simply gets logged as completed without generating a new due date.
 
-A reminder disappears once dismissed. A maintenance history remains useful for years. Completion dates can help you notice patterns, explain prior work to a technician, prepare a home for sale or simply avoid repeating maintenance too early because nobody remembered the last service.
+## The card shows real history, not just a status
 
-## Use flexible schedules
+Below the title and due-status badge, each maintenance card shows the linked asset or home area, the owner, the instructions source, a running completion count, and up to the five most recent completion events with their dates and any recorded cost. That means a task you've completed nine times shows its five newest entries right on the card — no separate report to run.
 
-Some work happens on a date interval. Other work is based on usage, season, observed condition or manufacturer instructions. The tracker should let the user record a suggested cadence without pretending every household requires the same universal schedule.
+## A worked example
 
-For equipment with safety implications, the product should encourage users to follow the manufacturer manual and qualified professional guidance where appropriate.
+"Clean condenser coils" is linked to the Refrigerator asset, owned by one household member, home area left blank since it's tied to the asset, next due in three months, interval 6 months, priority normal, instructions source "Whirlpool support page." Six months later it shows as due; pressing Complete logs the event and pushes next-due out another six months automatically. Two years and four completions later, the card shows "4 completions" and the four most recent dates — a real service history for that one appliance instead of a memory of "we do that sometimes."
 
-## Make maintenance visible before it becomes urgent
+## Flexible schedules for work that doesn't fit a fixed date
 
-The dashboard can show upcoming and overdue work, while the asset page stores the full history. This separation keeps daily attention focused without losing detail.
+Not everything belongs on a clean monthly or seasonal cadence. Some maintenance is condition-based — "inspect and clean if needed" rather than a guaranteed six-month job. The priority field is there to make sure a high-consequence, condition-based item (checking a water heater's relief valve, for instance) stays visible even without a hard due date forcing it onto the dashboard.
+
+## The honest limits
+
+FamilyBoard doesn't send a push notification or email when a task comes due — the due-soon and overdue statuses only appear when you open the app, on the Today dashboard or the Maintenance tab itself. There's no built-in library of manufacturer-recommended intervals; the instructions source field is where you record where your interval came from, but the app doesn't look it up for you. And for anything involving gas lines, electrical panels or structural work, FamilyBoard is a record of who came and what was done — not a substitute for hiring a licensed professional.

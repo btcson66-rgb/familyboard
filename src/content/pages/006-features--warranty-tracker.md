@@ -6,39 +6,51 @@ primaryIntent: "find an appliance or product warranty tracker"
 primaryKeyword: "warranty tracker"
 cluster: "product"
 pageType: "content"
-indexable: false
-depthVerified: false
+indexable: true
+depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
-nextStep: "Use the Warranty Expiration Calculator for a quick date, then create a full asset record if the purchase is important enough to track long-term."
+nextStep: "Add a warranty for the newest significant purchase in your home while the receipt is still easy to find, and link it to that item's asset record."
 related:
-  - "/guides/how-to-track-product-warranties/"
-  - "/guides/warranty-expiration/"
-  - "/tools/warranty-expiration-calculator/"
   - "/features/home-inventory-tracker/"
-faq: []
+  - "/features/household-documents-organizer/"
+  - "/features/maintenance-tracker/"
+  - "/features/free-home-management-app/"
+faq:
+  - question: "How does FamilyBoard know if a warranty has expired?"
+    answer: "It compares the warranty's end date to today's date every time you view the Warranties tab, and shows \"Expired\" once that date has passed. There's no manual status field to update — the badge is always computed live from the date you entered."
+  - question: "Can I attach the actual PDF receipt or warranty card to the record?"
+    answer: "Not directly on the warranty record. The receipt reference and terms reference fields are plain text describing where the original lives — an email folder, a physical drawer, a cloud storage link — rather than a file upload. Keep the actual document in storage you control."
+  - question: "Does FamilyBoard tell me whether my warranty claim will be approved?"
+    answer: "No, and it shouldn't be relied on for that. Every warranty card includes a reminder that written terms control exact coverage. FamilyBoard tracks the dates and where to find your paperwork; the manufacturer or retailer determines what's actually covered."
+  - question: "What happens to a warranty record if I archive the linked asset?"
+    answer: "The warranty record itself isn't deleted or hidden — it stays in your data and remains visible on the Warranties tab. Archiving only removes the asset from active dropdown lists used when creating new records."
 contentVersion: 1
 ---
 # The worst time to look for warranty information is after something stops working
 
-Warranty paperwork is easy to ignore when a product is new. Months or years later, the useful details may be spread across an email receipt, a PDF manual, a store account and a photo of the serial number.
+Warranty paperwork is easy to ignore when a product is new. Months or years later, the details are spread across an email receipt, a PDF manual, a store loyalty account and a photo of a serial number nobody can find again. `FamilyBoard`'s Warranties tab exists to capture that information once, while it's easy, and tie it to the item it actually covers.
 
-`FamilyBoard` keeps warranty information attached to the household item it belongs to.
+## What a warranty record holds
 
-## Record the minimum useful facts early
+The quick-add form requires an asset link and an end date; provider, start date, receipt reference, terms reference and notes are all optional but recorded when you have them. The asset link is what makes a warranty a warranty rather than a floating note — pick "Dishwasher" from the asset dropdown and the warranty card's header shows "Dishwasher," not a generic entry.
 
-When you add a significant purchase, capture the purchase date, seller, basic warranty term and where the proof of purchase can be found. If a model or serial number is relevant, record it while the label is easy to access.
+## Status is computed, not typed in
 
-The goal is not to recreate every warranty contract. It is to preserve the information that helps you decide whether a repair or claim may be worth investigating.
+You never mark a warranty as expired yourself. The card compares the end date against today's date every time you open the tab: if the end date has passed, the badge reads "Expired"; otherwise it reads "Ends" followed by the date. That means the status is always current the moment you look at it, with no separate step to update it as time passes.
 
-## Track “expiring soon,” not just “expired”
+## The receipt reference field, and why it's just text
 
-A useful warranty system surfaces an approaching date before it passes. That can prompt a quick check for unresolved issues, missing registration steps or receipts that still need to be organized. The app should not tell the user a claim is legally valid; it should simply make the timeline visible.
+The receipt reference is a plain string field — "PDF in email, subject 'Order confirmation,' dated March 2025" or "printed receipt in kitchen drawer folder" both work. FamilyBoard doesn't store the receipt file itself in this field; it stores where to find it, which is the same local-reference approach the Documents tab uses. Every warranty card also carries a fixed reminder: "Written terms control exact coverage." The app surfaces the date window; it never claims to know what a specific manufacturer's terms actually promise.
 
-## Keep warranty and repair history together
+## A worked example
 
-If an item has already been repaired, the repair note may be as useful as the original warranty. Storing the repair date, service provider and outcome beside the warranty gives you a clearer picture of the product's history.
+A household buys a washing machine with a 2-year manufacturer warranty starting the installation date. They add the asset first (brand, model, serial number from the door frame, purchase date), then add a warranty: asset = the washing machine, provider "LG," starts at the install date, ends 24 months later, receipt reference "email folder 'Appliances 2026'," terms reference "warranty card, kitchen drawer." Fourteen months in, the card reads "Ends [date 10 months out]" — a fast answer to "is this still covered" without digging through email. If the machine develops a drain problem in month 20, the warranty record and a maintenance event logged against the same asset both exist, so the repair history and the coverage window sit side by side.
 
-## Manufacturer terms always win
+## Warranty and repair history stay on the same asset
 
-Warranty rules vary by product, seller and jurisdiction. The tracker should never infer legal coverage from a date alone. It should encourage the user to confirm the actual terms when making a claim.
+Because a warranty links to an asset ID, and a maintenance completion event links to a maintenance task that also has an asset ID, both threads trace back to the same appliance. Opening the asset shows you both: what's covered, and what's already been serviced — useful context if you're deciding whether an issue is worth a warranty claim or a routine repair.
+
+## What FamilyBoard does not do
+
+It does not read your warranty terms or tell you whether a specific repair is covered — the "written terms control" reminder on every card is there because coverage rules genuinely vary by manufacturer, retailer and sometimes by state consumer-protection law. It does not track extended or third-party warranties any differently from manufacturer warranties; you record whatever terms and provider apply. And it does not notify you by email or push alert as an end date approaches — the "Ends" badge only updates when you open the app.
