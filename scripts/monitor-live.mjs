@@ -52,6 +52,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-annual-review-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/move-in-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-handoff-summary-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/recurring-chore-planner/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-inventory-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-document-index-generator/</loc>",
@@ -224,6 +227,33 @@ const checks = [
       'hreflang="en"',
       "需要交接的照護或收取事項",
       "不提供通用水電瓦斯關閉指令",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/house-sitter-instruction-generator/",
+    require: [
+      "看家注意事項產生器",
+      'hreflang="en"',
+      "禁止事項與隱私界線",
+      "門禁與密碼必須和可列印摘要分離",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/pet-sitter-instruction-generator/",
+    require: [
+      "寵物照護交接表產生器",
+      'hreflang="en"',
+      "獸醫書面指示與就醫授權位置",
+      "多隻動物要做交叉核對",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-handoff-summary-generator/",
+    require: [
+      "家庭交接摘要產生器",
+      'hreflang="en"',
+      "本次明確納入的資料類別",
+      "接受確認不是簽名而已",
     ],
   },
   {

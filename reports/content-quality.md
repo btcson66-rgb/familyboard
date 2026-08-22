@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T14:45:24.970Z
+Generated: 2026-08-22T14:58:32.502Z
 
 ## Summary
 
-- Indexable pages: 245
-- Generated HTML routes: 262
+- Indexable pages: 248
+- Generated HTML routes: 265
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 68
+- Pages without a contextual product/tool link: 71
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -24,12 +24,12 @@ Generated: 2026-08-22T14:45:24.970Z
 - household-operations: 20
 - inventory-warranty: 27
 - records-emergency: 23
-- tools: 41
+- tools: 44
 
 ## Word-count range
 
 - Lowest: https://familyboard.win/search/ (19 words)
-- Highest: https://familyboard.win/zh-tw/features/free-home-management-app/ (2862 words)
+- Highest: https://familyboard.win/zh-tw/tools/home-handoff-summary-generator/ (3255 words)
 
 ## Highest similarity pairs
 
@@ -100,15 +100,18 @@ Generated: 2026-08-22T14:45:24.970Z
 - /zh-tw/tools/appliance-age-calculator/
 - /zh-tw/tools/appliance-maintenance-checklist-generator/
 - /zh-tw/tools/emergency-contact-sheet-generator/
+- /zh-tw/tools/home-handoff-summary-generator/
 - /zh-tw/tools/home-inventory-checklist-generator/
 - /zh-tw/tools/home-maintenance-cost-tracker/
 - /zh-tw/tools/home-maintenance-schedule-generator/
 - /zh-tw/tools/home-repair-cost-log/
 - /zh-tw/tools/home-service-reminder-generator/
+- /zh-tw/tools/house-sitter-instruction-generator/
 - /zh-tw/tools/household-annual-review-generator/
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-subscription-cost-calculator/
 - /zh-tw/tools/move-in-checklist-generator/
+- /zh-tw/tools/pet-sitter-instruction-generator/
 - /zh-tw/tools/receipt-retention-organizer/
 - /zh-tw/tools/recurring-chore-planner/
 - /zh-tw/tools/vacation-shutdown-checklist-generator/

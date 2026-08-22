@@ -1377,7 +1377,7 @@
   },
   {
     "route": "/tools/house-sitter-instruction-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/house-sitter-instruction-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1385,7 +1385,7 @@
   },
   {
     "route": "/tools/pet-sitter-instruction-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/pet-sitter-instruction-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1433,7 +1433,7 @@
   },
   {
     "route": "/tools/home-handoff-summary-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/home-handoff-summary-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1805,6 +1805,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/home-handoff-summary-generator/",
+    "alternateRoute": "/tools/home-handoff-summary-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/home-inventory-checklist-generator/",
     "alternateRoute": "/tools/home-inventory-checklist-generator/",
     "indexable": true,
@@ -1863,6 +1870,13 @@
   {
     "route": "/zh-tw/",
     "alternateRoute": "/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/house-sitter-instruction-generator/",
+    "alternateRoute": "/tools/house-sitter-instruction-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
@@ -1954,6 +1968,13 @@
   {
     "route": "/zh-tw/guides/organize-household-subscriptions/",
     "alternateRoute": "/guides/organize-household-subscriptions/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/pet-sitter-instruction-generator/",
+    "alternateRoute": "/tools/pet-sitter-instruction-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

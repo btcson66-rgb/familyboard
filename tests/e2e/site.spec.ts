@@ -85,6 +85,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-annual-review-generator/",
     "/zh-tw/tools/move-in-checklist-generator/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
+    "/zh-tw/tools/house-sitter-instruction-generator/",
+    "/zh-tw/tools/pet-sitter-instruction-generator/",
+    "/zh-tw/tools/home-handoff-summary-generator/",
     "/zh-tw/tools/recurring-chore-planner/",
     "/zh-tw/tools/home-inventory-checklist-generator/",
     "/zh-tw/tools/household-document-index-generator/",
@@ -383,6 +386,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       heading: "旅行前住家檢查清單",
     },
     {
+      route: "/zh-tw/tools/house-sitter-instruction-generator/",
+      alternate: "/tools/house-sitter-instruction-generator/",
+      heading: "看家注意事項產生器",
+    },
+    {
+      route: "/zh-tw/tools/pet-sitter-instruction-generator/",
+      alternate: "/tools/pet-sitter-instruction-generator/",
+      heading: "寵物照護交接表產生器",
+    },
+    {
+      route: "/zh-tw/tools/home-handoff-summary-generator/",
+      alternate: "/tools/home-handoff-summary-generator/",
+      heading: "家庭交接摘要產生器",
+    },
+    {
       route: "/zh-tw/tools/recurring-chore-planner/",
       alternate: "/tools/recurring-chore-planner/",
       heading: "家庭家事輪值表產生器",
@@ -526,6 +544,55 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText("第 1 行格式不完整");
 
+  await page.goto("/zh-tw/tools/house-sitter-instruction-generator/");
+  await page.getByLabel("看家開始日期").fill("2026-09-01");
+  await page.getByLabel("預計結束日期").fill("2026-09-03");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("含首尾共 3 天");
+  await expect(page.locator(".result")).toContainText(
+    "收到通知時｜依管理規則領取包裹",
+  );
+  await expect(page.locator(".result")).toContainText("接受人／日期");
+  await page
+    .getByLabel("屋主／家庭主要聯絡方式")
+    .fill("家庭主要聯絡人／門禁碼 1234");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "偵測到可能的密碼、門禁碼或驗證碼",
+  );
+
+  await page.goto("/zh-tw/tools/pet-sitter-instruction-generator/");
+  await page.getByLabel("照護開始日期").fill("2026-09-01");
+  await page.getByLabel("照護結束日期").fill("2026-09-03");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("米米｜貓｜可見辨識");
+  await expect(page.locator(".result")).toContainText(
+    "不計算食物份量、藥物劑量或治療方法",
+  );
+  await page
+    .getByLabel("飼主已確認的照護工作")
+    .fill("豆豆 | 每日 07:00 | 提供早餐");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "動物名字未出現在辨識資料",
+  );
+
+  await page.goto("/zh-tw/tools/home-handoff-summary-generator/");
+  await page.getByLabel("本次交接用途").selectOption("主要整理人更換");
+  await page.getByLabel("交接生效日期").fill("2026-09-01");
+  await page.getByLabel("交接到期日期").fill("2026-09-30");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("主要整理人更換");
+  await expect(page.locator(".result")).toContainText(
+    "逐項確認正式負責人、權限、文件位置與未結事項",
+  );
+  await expect(page.locator(".result")).toContainText("明確排除");
+  await page.getByLabel("本次明確納入的資料類別").fill("帳號密碼");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不應納入一般交接摘要",
+  );
+
   await page.goto("/zh-tw/tools/recurring-chore-planner/");
   await page.getByLabel("下次一起複查日期").fill("2026-09-05");
   await page
@@ -604,6 +671,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/home-handoff-summary-generator/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/recurring-chore-planner/",

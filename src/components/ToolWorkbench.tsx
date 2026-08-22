@@ -1510,6 +1510,385 @@ const zhTwDefinitions: Record<string, Definition> = {
       ].map((item) => `[ ] ${item}`))}\n\n這份清單不會查詢即時天氣、不會通知代理人，也不會替你申請警方或管理服務。遇到警特報、設備異常或長期空置時，請依所在地官方資訊、建物規則、保險條款與設備說明處理。`;
     },
   },
+  "house-sitter-instruction-generator": {
+    intro:
+      "把看家期間真正要執行的住家工作、異常升級與禁止事項分開交接。工具不接受門禁密碼，且不會聯絡看家者或替任何人取得住宅權限。",
+    fields: [
+      { name: "start", label: "看家開始日期", type: "date" },
+      { name: "end", label: "預計結束日期", type: "date" },
+      text(
+        "sitter",
+        "看家照護角色",
+        "可填角色或暱稱；共享版本不必放完整身分資料。",
+        "受託看家者",
+      ),
+      text(
+        "ownerContact",
+        "屋主／家庭主要聯絡方式",
+        "填已核對且適合交付的聯絡管道，不要填帳號密碼。",
+        "家庭主要聯絡人／已核對電話",
+      ),
+      {
+        name: "routines",
+        label: "住家例行工作",
+        type: "textarea",
+        help: "每行格式：時機 | 工作 | 完成證據或回報條件；最多 12 行。",
+        value:
+          "每日早上 | 查看門窗與室內是否有異常 | 有漏水、焦味或警示立即回報\n收到通知時 | 依管理規則領取包裹 | 記錄件數與領取時間\n週二晚間 | 將垃圾依社區規則送出 | 完成後勾選",
+      },
+      {
+        name: "escalation",
+        label: "異常升級安排",
+        type: "textarea",
+        help: "每行格式：狀況 | 第一聯絡角色 | 無法聯絡時；最多 8 行。遇立即危險仍應先聯絡官方緊急服務。",
+        value:
+          "可見漏水或設備警示 | 家庭主要聯絡人 | 管理室／合格服務單位\n無法進入住家 | 家庭主要聯絡人 | 管理室或原定備援聯絡人",
+      },
+      {
+        name: "boundaries",
+        label: "禁止事項與隱私界線",
+        type: "textarea",
+        help: "每行一項，最多 8 項。不要把密碼、門禁碼或保全解除方式寫在這裡。",
+        value:
+          "不拍攝或轉傳家庭文件與螢幕內容\n不進入未交付的私人空間\n不自行拆修電氣、瓦斯、給排水或保全設備",
+      },
+    ],
+    run: (values) => {
+      const start = date(values.start);
+      const end = date(values.end);
+      if (!start) return "請輸入有效的看家開始日期。";
+      if (!end) return "請輸入有效的預計結束日期。";
+      if (end.getTime() < start.getTime())
+        return "預計結束日期不能早於看家開始日期。";
+      const days =
+        Math.round((end.getTime() - start.getTime()) / 86_400_000) + 1;
+      if (days > 90)
+        return "這份看家摘要一次最多涵蓋 90 天；更長期間請建立定期複查、費用、設備與保險的獨立管理計畫。";
+      if (!values.sitter.trim()) return "請填寫看家照護角色。";
+      if (!values.ownerContact.trim())
+        return "請填寫已核對的屋主或家庭主要聯絡方式。";
+      const parseRows = (source: string) =>
+        source
+          .split("\n")
+          .map((line, index) => ({
+            line: index + 1,
+            parts: line.split("|").map((part) => part.trim()),
+          }))
+          .filter((row) => row.parts.some(Boolean));
+      const routineRows = parseRows(values.routines);
+      if (routineRows.length === 0)
+        return "請至少輸入一項住家例行工作。";
+      if (routineRows.length > 12)
+        return "住家例行工作一次最多 12 項；其餘請另做完整住家操作文件。";
+      const badRoutine = routineRows.filter(
+        (row) => row.parts.length !== 3 || row.parts.some((part) => !part),
+      );
+      if (badRoutine.length)
+        return `住家例行工作的第 ${badRoutine.map((row) => row.line).join("、")} 行格式不完整。請使用「時機 | 工作 | 完成證據或回報條件」。`;
+      const escalationRows = parseRows(values.escalation);
+      if (escalationRows.length === 0)
+        return "請至少輸入一項異常升級安排，讓看家者知道何時停止自行處理。";
+      if (escalationRows.length > 8)
+        return "異常升級安排一次最多 8 項。";
+      const badEscalation = escalationRows.filter(
+        (row) => row.parts.length !== 3 || row.parts.some((part) => !part),
+      );
+      if (badEscalation.length)
+        return `異常升級安排的第 ${badEscalation.map((row) => row.line).join("、")} 行格式不完整。請使用「狀況 | 第一聯絡角色 | 無法聯絡時」。`;
+      const boundaries = uniqueList(values.boundaries);
+      if (boundaries.length === 0)
+        return "請至少寫一項禁止事項或隱私界線。";
+      if (boundaries.length > 8)
+        return "禁止事項與隱私界線一次最多 8 項。";
+      const shareableText = [
+        values.ownerContact,
+        values.routines,
+        values.escalation,
+      ].join("\n");
+      if (/密碼|門禁碼|驗證碼|解鎖碼|保全碼|password|pin\s*[:：]/i.test(shareableText))
+        return "偵測到可能的密碼、門禁碼或驗證碼。請從可列印摘要移除，改用與看家者另行確認的安全交付方式。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", {
+        dateStyle: "long",
+      });
+      return `看家照護交接摘要\n期間：${formatter.format(start)} 至 ${formatter.format(end)}（含首尾共 ${days} 天）\n看家角色：${values.sitter.trim()}\n家庭主要聯絡：${values.ownerContact.trim()}\n文件有效至：${formatter.format(end)}，返家後請收回或銷毀不再需要的副本。\n\n${lines(
+        "住家例行工作",
+        routineRows.map(
+          (row) =>
+            `[ ] ${row.parts[0]}｜${row.parts[1]}｜完成證據／回報：${row.parts[2]}`,
+        ),
+      )}\n\n${lines(
+        "異常升級",
+        escalationRows.map(
+          (row) =>
+            `${row.parts[0]}｜先聯絡：${row.parts[1]}｜無法聯絡時：${row.parts[2]}`,
+        ),
+      )}\n\n${lines(
+        "禁止事項與隱私界線",
+        boundaries.map((item) => `不得：${item}`),
+      )}\n\n接受確認：看家者已走讀各項工作、實際看到必要位置，並知道立即危險應優先使用所在地官方緊急服務。\n接受人／日期：＿＿＿＿＿＿＿＿\n\n這份摘要不授權看家者拆修設備、處理契約或查看其他家庭資料。鑰匙、門禁與保全權限請用獨立、安全、可撤回的方法交付，不要放進這份文件。`;
+    },
+  },
+  "pet-sitter-instruction-generator": {
+    intro:
+      "把每隻動物的辨識、日常照護、獸醫書面指示位置與異常聯絡流程分開。工具不計算餵食量或藥量，也不診斷症狀。",
+    fields: [
+      { name: "start", label: "照護開始日期", type: "date" },
+      { name: "end", label: "照護結束日期", type: "date" },
+      text(
+        "sitter",
+        "寵物照護角色",
+        "填已同意照護且完成走讀的人或角色。",
+        "受託寵物照護者",
+      ),
+      {
+        name: "pets",
+        label: "動物辨識資料",
+        type: "textarea",
+        help: "每行格式：名字 | 種類 | 可見辨識特徵；最多 6 隻。晶片號碼與飼主證件另存，不放共享摘要。",
+        value: "米米 | 貓 | 虎斑、綠色項圈",
+      },
+      {
+        name: "routine",
+        label: "飼主已確認的照護工作",
+        type: "textarea",
+        help: "每行格式：動物 | 時間或觸發 | 飼主已確認內容；最多 16 行。不要由工具猜測份量。",
+        value:
+          "米米 | 每日 07:00 | 依標示容器提供早餐並更換飲水\n米米 | 每日 19:00 | 依標示容器提供晚餐並清理貓砂",
+      },
+      text(
+        "vet",
+        "常用與緊急動物醫院聯絡方式",
+        "出發前核對營業／急診時段、電話、地址與交通安排。",
+        "常用動物醫院／電話；非營業時間備援院所／電話",
+      ),
+      text(
+        "medicalReference",
+        "獸醫書面指示與就醫授權位置",
+        "只寫文件名稱、版本日期與安全位置；不要憑記憶改寫劑量。沒有用藥也要明寫。",
+        "目前無用藥；就醫聯絡與費用授權見已簽署紙本",
+      ),
+      {
+        name: "observations",
+        label: "觀察與回報條件",
+        type: "textarea",
+        help: "每行格式：動物 | 要觀察的改變 | 飼主要求的聯絡方式；最多 10 行。急症仍應直接諮詢獸醫師。",
+        value:
+          "米米 | 明顯不吃不喝、反覆嘔吐、呼吸或活動異常 | 立即聯絡飼主並致電獸醫院",
+      },
+    ],
+    run: (values) => {
+      const start = date(values.start);
+      const end = date(values.end);
+      if (!start) return "請輸入有效的照護開始日期。";
+      if (!end) return "請輸入有效的照護結束日期。";
+      if (end.getTime() < start.getTime())
+        return "照護結束日期不能早於開始日期。";
+      const days =
+        Math.round((end.getTime() - start.getTime()) / 86_400_000) + 1;
+      if (days > 60)
+        return "這份寵物照護摘要一次最多涵蓋 60 天；更長期間應由飼主、照護者與獸醫建立持續複查安排。";
+      if (!values.sitter.trim()) return "請填寫寵物照護角色。";
+      if (!values.vet.trim())
+        return "請填寫出發前已核對的常用與緊急動物醫院聯絡方式。";
+      if (!values.medicalReference.trim())
+        return "請明確填寫獸醫書面指示與就醫授權的位置；沒有用藥也要寫明。";
+      const parseRows = (source: string) =>
+        source
+          .split("\n")
+          .map((line, index) => ({
+            line: index + 1,
+            parts: line.split("|").map((part) => part.trim()),
+          }))
+          .filter((row) => row.parts.some(Boolean));
+      const petRows = parseRows(values.pets);
+      if (petRows.length === 0) return "請至少輸入一隻動物的辨識資料。";
+      if (petRows.length > 6)
+        return "一份摘要最多整理 6 隻動物；更多動物請分開製作，避免照護內容混淆。";
+      const badPets = petRows.filter(
+        (row) => row.parts.length !== 3 || row.parts.some((part) => !part),
+      );
+      if (badPets.length)
+        return `動物辨識資料的第 ${badPets.map((row) => row.line).join("、")} 行格式不完整。請使用「名字 | 種類 | 可見辨識特徵」。`;
+      const petNames = new Set(petRows.map((row) => row.parts[0]));
+      const routineRows = parseRows(values.routine);
+      if (routineRows.length === 0)
+        return "請至少輸入一項飼主已確認的照護工作。";
+      if (routineRows.length > 16)
+        return "飼主已確認的照護工作一次最多 16 項。";
+      const badRoutine = routineRows.filter(
+        (row) =>
+          row.parts.length !== 3 ||
+          row.parts.some((part) => !part) ||
+          !petNames.has(row.parts[0]),
+      );
+      if (badRoutine.length)
+        return `照護工作的第 ${badRoutine.map((row) => row.line).join("、")} 行格式不完整，或動物名字未出現在辨識資料。請使用「動物 | 時間或觸發 | 飼主已確認內容」。`;
+      const observationRows = parseRows(values.observations);
+      if (observationRows.length === 0)
+        return "請至少輸入一項觀察與回報條件。";
+      if (observationRows.length > 10)
+        return "觀察與回報條件一次最多 10 項。";
+      const badObservations = observationRows.filter(
+        (row) =>
+          row.parts.length !== 3 ||
+          row.parts.some((part) => !part) ||
+          !petNames.has(row.parts[0]),
+      );
+      if (badObservations.length)
+        return `觀察與回報條件的第 ${badObservations.map((row) => row.line).join("、")} 行格式不完整，或動物名字未出現在辨識資料。`;
+      const formatter = new Intl.DateTimeFormat("zh-TW", {
+        dateStyle: "long",
+      });
+      return `寵物照護交接摘要\n期間：${formatter.format(start)} 至 ${formatter.format(end)}（含首尾共 ${days} 天）\n照護角色：${values.sitter.trim()}\n\n${lines(
+        "動物辨識",
+        petRows.map(
+          (row) =>
+            `${row.parts[0]}｜${row.parts[1]}｜可見辨識：${row.parts[2]}`,
+        ),
+      )}\n\n${lines(
+        "飼主已確認的照護工作",
+        routineRows.map(
+          (row) => `[ ] ${row.parts[0]}｜${row.parts[1]}｜${row.parts[2]}`,
+        ),
+      )}\n\n動物醫院：${values.vet.trim()}\n獸醫書面指示／就醫授權位置：${values.medicalReference.trim()}\n\n${lines(
+        "觀察與回報",
+        observationRows.map(
+          (row) =>
+            `${row.parts[0]}｜觀察：${row.parts[1]}｜聯絡：${row.parts[2]}`,
+        ),
+      )}\n\n接受確認：照護者已實際辨識每隻動物、看過食物與用品位置、讀過獸醫書面指示，並確認可聯絡的動物醫院與交通方案。\n接受人／日期：＿＿＿＿＿＿＿＿\n\n本工具不計算食物份量、藥物劑量或治療方法。動物出現明顯飲食飲水、精神、如廁、動作或呼吸異常，或其他急症時，應立即聯絡獸醫師或動物醫院；不要等待工具判斷。`;
+    },
+  },
+  "home-handoff-summary-generator": {
+    intro:
+      "為特定接手人與明確期間產生最小必要的家庭營運摘要，逐項保留完成證據、資料排除範圍與接受確認。它不會讀取 FamilyBoard App 的其他紀錄。",
+    fields: [
+      text(
+        "recipient",
+        "交接接手角色",
+        "每位不同權限的接手人應各做一份。",
+        "家庭行政備援人",
+      ),
+      {
+        name: "purpose",
+        label: "本次交接用途",
+        type: "select",
+        options: ["短期旅行代理", "工作繁忙期間代理", "主要整理人更換", "緊急備援演練", "其他明確用途"],
+      },
+      { name: "start", label: "交接生效日期", type: "date" },
+      { name: "end", label: "交接到期日期", type: "date" },
+      {
+        name: "tasks",
+        label: "可執行工作",
+        type: "textarea",
+        help: "每行格式：日期或觸發 | 工作 | 完成證據；最多 12 行。",
+        value:
+          "每週五 | 依社區規則處理垃圾與回收 | 完成後在家庭任務勾選\n收到到期通知時 | 核對並處理已授權的帳單 | 記錄金額、日期與單據位置",
+      },
+      {
+        name: "contacts",
+        label: "本次可使用的聯絡管道",
+        type: "textarea",
+        help: "每行格式：用途 | 聯絡角色 | 已核對的安全管道；最多 8 行。",
+        value:
+          "住宅管理 | 管理室 | 已核對電話\n設備修繕 | 原服務商 | 合約上的客服電話",
+      },
+      {
+        name: "included",
+        label: "本次明確納入的資料類別",
+        type: "textarea",
+        help: "每行一類，最多 8 類；只納入接手人完成工作真正需要的內容。",
+        value: "近期家庭任務\n已授權帳單的到期資訊\n住宅管理與服務聯絡方式",
+      },
+      {
+        name: "omitted",
+        label: "明確排除的敏感或無關資料",
+        type: "textarea",
+        help: "每行一類，至少 1 項、最多 10 項。",
+        value:
+          "帳號密碼與驗證碼\n完整身分證件與金融資料\n與本次工作無關的醫療、法律及私人紀錄",
+      },
+    ],
+    run: (values) => {
+      const start = date(values.start);
+      const end = date(values.end);
+      if (!values.recipient.trim()) return "請填寫交接接手角色。";
+      if (!start) return "請輸入有效的交接生效日期。";
+      if (!end) return "請輸入有效的交接到期日期。";
+      if (end.getTime() < start.getTime())
+        return "交接到期日期不能早於生效日期。";
+      const days =
+        Math.round((end.getTime() - start.getTime()) / 86_400_000) + 1;
+      if (days > 366)
+        return "一份交接摘要最多生效 366 天；更長期的角色移交應建立定期複查與正式權限管理。";
+      const parseRows = (source: string) =>
+        source
+          .split("\n")
+          .map((line, index) => ({
+            line: index + 1,
+            parts: line.split("|").map((part) => part.trim()),
+          }))
+          .filter((row) => row.parts.some(Boolean));
+      const taskRows = parseRows(values.tasks);
+      if (taskRows.length === 0) return "請至少輸入一項可執行工作。";
+      if (taskRows.length > 12)
+        return "一份摘要最多放 12 項工作；更多內容請回到完整任務系統分工。";
+      const badTasks = taskRows.filter(
+        (row) => row.parts.length !== 3 || row.parts.some((part) => !part),
+      );
+      if (badTasks.length)
+        return `可執行工作的第 ${badTasks.map((row) => row.line).join("、")} 行格式不完整。請使用「日期或觸發 | 工作 | 完成證據」。`;
+      const contactRows = parseRows(values.contacts);
+      if (contactRows.length === 0)
+        return "請至少輸入一個本次可使用的聯絡管道。";
+      if (contactRows.length > 8)
+        return "本次可使用的聯絡管道最多 8 項。";
+      const badContacts = contactRows.filter(
+        (row) => row.parts.length !== 3 || row.parts.some((part) => !part),
+      );
+      if (badContacts.length)
+        return `聯絡管道的第 ${badContacts.map((row) => row.line).join("、")} 行格式不完整。請使用「用途 | 聯絡角色 | 已核對的安全管道」。`;
+      const included = uniqueList(values.included);
+      const omitted = uniqueList(values.omitted);
+      if (included.length === 0)
+        return "請至少列出一項本次明確納入的資料類別。";
+      if (included.length > 8)
+        return "本次納入的資料類別最多 8 項；範圍過大時應拆成不同角色的交接。";
+      if (omitted.length === 0)
+        return "請至少列出一項明確排除的敏感或無關資料。";
+      if (omitted.length > 10)
+        return "明確排除的資料類別最多 10 項。";
+      const riskyIncluded = included.filter((item) =>
+        /密碼|驗證碼|解鎖碼|保全碼|完整身分證|完整信用卡|完整病歷|password/i.test(
+          item,
+        ),
+      );
+      if (riskyIncluded.length)
+        return `下列內容不應納入一般交接摘要：${riskyIncluded.join("、")}。請移到明確排除清單，並另用具權限控管的方式處理真正必要的存取。`;
+      const shareableText = [values.tasks, values.contacts].join("\n");
+      if (/密碼|驗證碼|解鎖碼|保全碼|password|pin\s*[:：]/i.test(shareableText))
+        return "偵測到可能的密碼或驗證碼。請從工作與聯絡欄移除，不要讓可列印摘要變成存取憑證。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", {
+        dateStyle: "long",
+      });
+      const transferNote =
+        values.purpose === "主要整理人更換"
+          ? "這是角色移交，不只是一段代班；到期前應逐項確認正式負責人、權限、文件位置與未結事項。"
+          : "這是有期限的代理摘要；到期後應收回權限、關閉臨時工作並銷毀不再需要的副本。";
+      return `家庭營運交接摘要\n接手角色：${values.recipient.trim()}\n用途：${values.purpose}\n生效：${formatter.format(start)}\n到期：${formatter.format(end)}（含首尾共 ${days} 天）\n${transferNote}\n\n${lines(
+        "可執行工作",
+        taskRows.map(
+          (row) =>
+            `[ ] ${row.parts[0]}｜${row.parts[1]}｜完成證據：${row.parts[2]}`,
+        ),
+      )}\n\n${lines(
+        "本次可使用的聯絡管道",
+        contactRows.map(
+          (row) => `${row.parts[0]}｜${row.parts[1]}｜${row.parts[2]}`,
+        ),
+      )}\n\n${lines("明確納入", included)}\n\n${lines("明確排除", omitted)}\n\n接受確認：接手人已逐項走讀、能指出工作來源與完成證據位置，並知道哪些內容沒有授權。\n交接人／接手人／日期：＿＿＿＿＿＿＿＿\n\n這份結果只來自目前輸入，不會讀取 FamilyBoard App、通知聯絡人或授予任何帳號與設備權限。分享前請再次核對日期與最小必要範圍。`;
+    },
+  },
   "recurring-chore-planner": {
     intro:
       "依名單順序輪流分配例行家事，產生一份可以試行與複查的初稿。它能平均分配項目數，不能自動判斷每件事的工時、體力或照護負擔。",
