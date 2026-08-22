@@ -801,7 +801,7 @@
   },
   {
     "route": "/guides/contractor-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/contractor-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1664,6 +1664,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/home-repair-change-order-log/",
+    "alternateRoute": "/zh-tw/tools/home-repair-change-order-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -1855,6 +1863,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/contractor-records/",
+    "alternateRoute": "/guides/contractor-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/digital-home-inventory-backup/",
     "alternateRoute": "/guides/digital-home-inventory-backup/",
     "indexable": true,
@@ -1999,6 +2014,13 @@
     "alternateRoute": "/guides/home-maintenance-schedule/",
     "indexable": true,
     "lastReviewedAt": "2026-08-20",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/home-repair-change-order-log/",
+    "alternateRoute": "/tools/home-repair-change-order-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {

@@ -768,12 +768,12 @@
     "headings": "A renovation record does two jobs: future maintenance and future taxes What actually counts as a capital improvement, per the IRS Create one project record, not a scattered pile of receipts Preserve the exact product details, while they're still easy to find New assets created by a renovation get their own record Before and after photos are evidence, not just memory A renovation record should survive a change in contractor Permits are a resale-relevant record, even though the rules vary by place A renovation record is also a maintenance record's origin story"
   },
   {
-    "title": "Contractor Records: Keep Quotes, Work History and Household Context Organized",
-    "description": "Track household contractors by project, work history and lien-waiver status — including why paying the general contractor in full doesn't always end the household's risk.",
+    "title": "Contractor Records for Home Repairs | Scope, Change Orders and Close-Out",
+    "description": "Build contractor records that preserve the agreed scope, written changes, payment evidence, site observations and close-out without confusing a quote with completed work.",
     "route": "/guides/contractor-records/",
     "cluster": "inventory-warranty",
     "keywords": "contractor records organizer",
-    "headings": "A contractor record needs to answer more than \"how do I reach them\" Why a lien waiver matters even after you've paid in full Keep quotes separate from completed work Verify licensing and insurance before work begins, not after Product and warranty details belong on the asset, not just the contact Note the estimate you were quoted alongside the final cost Turn follow-up recommendations into tasks, not lost emails A payment schedule tied to milestones reduces risk on both sides Keep the notes factual, not a public review A short list of trusted providers is worth more than a long list of one-time contacts"
+    "headings": "Contractor records for home repairs: preserve what was agreed, what changed and what actually happened Start with an immutable baseline Separate the household observation from the proposed solution A change order is a versioned decision, not an overwritten estimate Record increases, decreases and zero-effect changes Connect approvals to the exact version Keep payments separate from progress and acceptance Site notes should say what was seen, not certify workmanship Close-out is a bundle, not one final invoice Lien, waiver and final-payment checks are local legal questions If the project becomes disputed, preserve history instead of rewriting it Sponsored services cannot enter the approval chain"
   },
   {
     "title": "Home Improvement Receipts: Organize Costs and Proof by Project, Not by Shopping Trip",
@@ -1558,6 +1558,14 @@
     "cluster": "tools",
     "keywords": "home service provider verification checklist",
     "headings": "Home service provider verification log Define the requested service before checking names Create one source row for one verification question Open the authoritative source rather than trusting a search result Record each provider without turning the row into a rating Use four statuses that describe verification work Give every open row exactly one evidence action Protect household, provider and reference details Keep urgent and hazardous conditions outside provider comparison Move the decision into a project or repair record Keep sponsored discovery separate from verification"
+  },
+  {
+    "title": "Home Repair Change Order Log | Cost, Time and Written Approval",
+    "description": "Record repair additions, deletions and substitutions with written evidence, cost and schedule effects, owners and close-out—without replacing the signed contract.",
+    "route": "/tools/home-repair-change-order-log/",
+    "cluster": "tools",
+    "keywords": "home repair change order log",
+    "headings": "Home repair change order log Freeze the original project baseline first Create one row for each distinct change Record cost and time as separate signed effects Use four statuses with evidence boundaries Every open change needs exactly one next evidence action Written change rules depend on the actual location and agreement Do not use a payment or site photo as automatic approval Protect the household and project evidence Close the project without erasing its changes Commercial recommendations stay outside the record"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

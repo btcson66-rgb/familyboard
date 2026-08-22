@@ -6483,64 +6483,128 @@ Many recurring maintenance tasks trace back to a specific renovation — a new H
 
 ## Page 101 — Contractor Records
 **Slug:** `/guides/contractor-records/`
-**Primary intent:** organize home contractor contacts and work history
-**Title tag:** `Contractor Records: Keep Quotes, Work History and Household Context Organized`
-**Meta description:** `Track household contractors by project, work history and lien-waiver status — including why paying the general contractor in full doesn't always end the household's risk.`
+**Primary intent:** organize contractor project records, written changes, payments and close-out evidence
+**Title tag:** `Contractor Records for Home Repairs | Scope, Change Orders and Close-Out`
+**Meta description:** `Build contractor records that preserve the agreed scope, written changes, payment evidence, site observations and close-out without confusing a quote with completed work.`
 **Primary keyword concept:** contractor records organizer
 **Depth:** verified
-**Suggested internal links:** `/guides/renovation-records/`, `/guides/home-improvement-receipts/`, `/guides/home-purchase-records/`, `/features/free-home-management-app/`
+**Suggested internal links:** `/tools/home-repair-change-order-log/`, `/tools/home-service-provider-verification-log/`, `/guides/renovation-records/`, `/guides/home-improvement-receipts/`
 
-# A contractor record needs to answer more than "how do I reach them"
+# Contractor records for home repairs: preserve what was agreed, what changed and what actually happened
 
-A phone number alone doesn't tell a future household member why a contact matters. A useful contractor record attaches the project or system worked on, the date, the scope, and the outcome — and for any project involving subcontractors or suppliers, one more thing most households don't think to track: whether payment was actually protected against a lien.
+A contractor contact answers who to call. A contractor project record answers a harder set of questions: what condition did the household report, which written scope was accepted, what changed, who agreed to the change, what effect was recorded for cost and time, what was paid, and what was actually observed at close-out.
 
-## Why a lien waiver matters even after you've paid in full
+Those facts should not be collapsed into a single note. An estimate is not a contract. A signed contract is not proof of completed work. A payment is not an inspection. A message asking for a change is not necessarily an approved change order. A useful record preserves each stage with its own date and source.
 
-This is the detail that surprises most homeowners. Per a state contractors licensing board's [consumer guidance on mechanics liens](https://www.cslb.ca.gov/consumers/legal_issues_for_consumers/mechanics_lien/), contractors, subcontractors, laborers and material suppliers can file a lien against your property if *they* don't get paid — even if you already paid the general contractor in full. If the general contractor didn't pass payment along to a subcontractor or supplier, that unpaid party can still come after your property, not just the contractor who failed to pay them. A lien waiver is a document from each party confirming they've been paid and waiving further lien rights — getting one before final payment, from the general contractor and from any subcontractors and suppliers you're aware of, is what actually closes that risk. Rules and required forms vary by state, but the underlying risk is common across the US.
+FamilyBoard provides organization, not legal, construction or payment advice. Contract rules, licensing, permits, inspections, payment protections, lien procedures and notice deadlines vary by location and project. Use the responsible authority and professional advice for the actual work.
 
-## Keep quotes separate from completed work
+## Start with an immutable baseline
 
-A quote is not proof that work happened, and treating an estimate the same as a finished project in the household record creates real confusion later. Mark each entry distinctly as proposed, scheduled or completed, so the record always reflects what's actually true rather than what was once planned.
+Before work begins, create one baseline record that points to the exact signed agreement or accepted estimate version. Record a private project label, agreement date, defined work area, included work, exclusions, named materials or performance assumptions, original price, planned time, payment schedule, permit or inspection responsibility, cleanup, warranty promises and all documents incorporated by reference.
 
-## Verify licensing and insurance before work begins, not after
+Do not paste private contact details, signatures, bank information or a full home address into a broadly shared summary. Use protected pointers such as `CONTRACT-C1`, `DRAWING-A3`, `ESTIMATE-E2` and `CONTACT-PROV-1`, then keep the original documents in access-controlled storage.
 
-Before hiring, it's worth confirming a contractor's license is current and that they carry liability insurance — a quick check most licensing boards make available, and a step that matters more than it might seem, since an uninsured contractor's accident on your property can become your liability. Record what was verified and when, alongside the contact itself.
+The baseline must stay unchanged. If the parties later choose different materials, discover a condition, remove work or add a task, create a new dated change record. Editing the old scope destroys the comparison that explains the later price and schedule.
 
-## Product and warranty details belong on the asset, not just the contact
+## Separate the household observation from the proposed solution
 
-If a contractor installed something with its own warranty or a specific product model, that information belongs on the relevant asset or project record — see [renovation records](/guides/renovation-records/) — not only in the contractor's own entry. The equipment needs its own warranty record regardless of which contractor happens to be top of mind at the time.
+Record what was observed before adopting a diagnosis. `Water staining appeared below the upstairs shower after two uses` is a household observation. `Replace the shower pan` is a proposed solution that needs qualified assessment and written scope. Keeping those apart prevents the project history from presenting an early assumption as a proven cause.
 
-## Note the estimate you were quoted alongside the final cost
+For each observation, preserve the date, area, factual description and evidence pointer. If the condition involves active fire, gas, exposed electrical parts, structural movement, contaminated water, injury or another immediate hazard, stop the recordkeeping workflow and follow local emergency, utility, building and qualified-professional instructions.
 
-Recording the original quoted price next to the final invoice amount, even when they match, builds a household-specific sense over time of which providers tend to estimate accurately and which tend to run over — genuinely useful information the next time a similar project comes up, and not something most households would otherwise remember accurately years later.
+## A change order is a versioned decision, not an overwritten estimate
 
-## Turn follow-up recommendations into tasks, not lost emails
+The [Federal Trade Commission's home-improvement guidance](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) recommends detailed written estimates and contracts that capture the work, materials, schedule, price and promises made in conversations. A change should preserve the same level of clarity.
 
-If a contractor mentions something worth revisiting — a part that's wearing, a recommendation to reinspect next season — that note is easy to lose in an old email thread. Convert it into a connected future task at the time it's said, rather than counting on remembering to search old messages when the time comes.
+A useful change row identifies:
 
-## A payment schedule tied to milestones reduces risk on both sides
+- a unique change ID and request date;
+- who requested it, by role rather than unnecessary personal detail;
+- the exact addition, deletion, substitution or method change;
+- the observed condition or decision behind it;
+- the cost increase, decrease or no-change statement;
+- the schedule increase, decrease or no-change statement;
+- the dated written approval or decline evidence;
+- the owner of the next action; and
+- whether it is proposed, approved, declined or completed.
 
-Rather than paying a large deposit upfront and the balance only at the very end, many well-run projects use a payment schedule tied to specific completed milestones — framing done, rough-in inspection passed, final walkthrough complete. Recording the agreed schedule alongside the contract, and checking off each payment against the milestone it corresponds to, makes it easy to see at a glance whether payments and progress are actually in sync, rather than relying on memory partway through a multi-week project.
+The California Contractors State License Board says covered California home-improvement contract changes must use a written change order signed before the change. That is a location-specific rule, not a universal statement. Massachusetts likewise publishes state-specific sample language requiring modifications to be written and agreed to by both parties. The portable lesson is to check the rule that governs the actual project and preserve the written evidence it requires.
 
-## Keep the notes factual, not a public review
+Use the [Home Repair Change Order Log](/tools/home-repair-change-order-log/) to reconcile change IDs, cost and time effects without treating the generated summary as a contract or signature.
 
-A household contractor record isn't a review platform — it's a private, factual account of what was done and how it went, useful to the household itself and to anyone helping manage the property later. Keep it accordingly: specific and professional, without unnecessary personal commentary.
+## Record increases, decreases and zero-effect changes
 
-## A short list of trusted providers is worth more than a long list of one-time contacts
+Changes do not always increase price. A deleted item can reduce the contract amount; a material substitution may keep price unchanged; access constraints can affect time without changing the agreed cost. Record cost and schedule effects independently.
 
-Over time, a household tends to accumulate contacts for providers used exactly once, alongside a smaller set used repeatedly and trusted. It's worth being able to tell the two apart at a glance — noting which providers the household would actively call again versus which were a one-off, so the record helps with a future decision rather than just accumulating names indefinitely.
+Use a signed number for each accepted effect: `1200`, `-450` or `0` for cost and `3`, `-1` or `0` for days. Use `pending` only while a proposal is still open. Do not put an estimated effect into the accepted total merely because work appears to have started. Preserve the proposed figure and wait for the written decision required by the actual contract and law.
 
-**Contextual CTA:** Add the last provider who performed significant work, connect them to the specific project or equipment they actually know, and note whether a lien waiver was obtained before final payment.
+The arithmetic total is a reconciliation aid. It does not decide whether a charge is valid, due, reasonable, covered by insurance or recoverable in a dispute. Taxes, allowances, retainage, credits, financing and payment law can require separate treatment.
+
+## Connect approvals to the exact version
+
+`Approved by text` is too vague when several messages and estimate versions exist. Use an evidence pointer that resolves to the exact dated document or thread in protected storage, and say what that version changed. If a drawing, material schedule or price sheet was revised, preserve both the prior and approved versions.
+
+Do not use FamilyBoard output as a signature substitute. The tool cannot identify the parties, verify authority, prove delivery, satisfy an electronic-signature rule or decide whether consent is legally effective. Its job is to tell the household which original evidence to retrieve.
+
+If a landlord, condominium association, building department, insurer, lender, designer or other party must approve a change, track that as a separate dependency. Contractor and homeowner agreement cannot stand in for approval from a different responsible source.
+
+## Keep payments separate from progress and acceptance
+
+A payment record should identify the invoice or request, date, amount, method category, protected transaction pointer and the milestone it was said to cover. It should not automatically mark a change complete or work accepted.
+
+The FTC advises consumers not to pay an entire home-improvement price upfront and to check local limits and contract requirements. Exact deposit limits, trust accounts, progress-payment rules, retainage and final-payment conditions differ by jurisdiction. Never copy a percentage from another state into a household rule without confirming the source that governs the actual project.
+
+Before any payment, reconcile the current baseline plus accepted change IDs with the current invoice. If totals differ, leave the issue open and request a written explanation. A household ledger can preserve the discrepancy; it cannot determine the legal amount owed.
+
+## Site notes should say what was seen, not certify workmanship
+
+Useful notes are dated and observable: `cabinet fronts installed; two doors not aligned at walkthrough; PHOTO-18`, `specified model visible on label; MODEL-SNAPSHOT-2`, or `area inaccessible, completion not observed`. Avoid `installed correctly`, `code compliant`, `safe`, `passed` or `defect-free` unless the statement is attributed to the qualified source that actually made that determination.
+
+Keep permit cards, inspection results, test reports and professional opinions as separate source documents. A household photo may show appearance on a date; it does not reveal concealed work or replace inspection.
+
+When a change is marked completed, connect it to close-out evidence and any unresolved item. Completion in the household workflow means the stated work was observed or documented at the chosen evidence level. It does not waive defects, accept legal performance or start a warranty period unless the controlling documents and law say so.
+
+## Close-out is a bundle, not one final invoice
+
+At close-out, reconcile the original agreement, every approved or declined change, the final cost statement, payment evidence, inspection or permit documents, warranties, manuals, product identifiers, before-and-after observations, punch-list items and future maintenance tasks.
+
+Create separate asset records for equipment installed during the project. Link model, serial, installation and warranty evidence to the asset while preserving the project connection. Store receipts by project with the [home-improvement receipt guide](/guides/home-improvement-receipts/) and preserve the broader room or renovation history with [renovation records](/guides/renovation-records/).
+
+Do not delete declined changes. A dated declined row can explain why the finished scope differs from an earlier proposal. Do not rewrite an approved change as completed until close-out evidence exists.
+
+## Lien, waiver and final-payment checks are local legal questions
+
+The old version of this guide treated lien waivers too broadly. Lien rights, preliminary notices, waiver forms, timing and affected parties vary substantially by jurisdiction. Some U.S. authorities publish detailed homeowner protections; other places use different mechanisms entirely.
+
+If lien or payment-chain risk applies, identify the responsible local authority or legal adviser, the exact required documents, each party from whom evidence is needed and every deadline. Never create a generic waiver in FamilyBoard or assume that paying the primary contractor closes every claim. Conversely, do not withhold payment or accuse a provider based only on a checklist. Preserve facts and obtain jurisdiction-specific advice.
+
+## If the project becomes disputed, preserve history instead of rewriting it
+
+Keep the signed baseline, every version, dated messages, photos, invoices, payments, inspection records and attempts to resolve the issue. The FTC recommends following phone discussions with traceable written communication and keeping copies. Local consumer agencies, regulators, insurers, dispute-resolution services and legal professionals decide which process and evidence apply.
+
+Do not turn the private project record into a public accusation. Use observable facts and attributed statements. Restrict access to personal information and originals, and export only the minimum record needed for a household handoff or professional review.
+
+## Sponsored services cannot enter the approval chain
+
+A future affiliate or sponsored area may introduce clearly labelled software, storage, materials or provider-discovery categories beside this guide. Paid placement must never create a provider status, approve a change, alter an arithmetic total or appear inside the private tool output. Every product and provider still needs independent fit, source and contract checks.
+
+**Next step:** preserve the exact baseline agreement, then add one dated change ID for every proposed addition, deletion, substitution or time effect without overwriting the prior version.
+
+**Contextual CTA:** Use the Home Repair Change Order Log to reconcile written changes, then keep original approvals, invoices and close-out evidence in protected project storage.
 
 **FAQ:**
-- Q: If I paid my contractor in full, can I still be at risk from a lien?
-  A: Yes, in many states. If the general contractor didn't pass payment along to a subcontractor or material supplier, that unpaid party can potentially file a lien against your property even though you already paid in full — a lien waiver from each party is what actually closes that risk.
-- Q: What is a lien waiver, exactly?
-  A: A document from a contractor, subcontractor or supplier confirming they've received payment and waiving their right to file a lien against your property for that amount. Getting these before final payment is the standard way homeowners protect themselves from being paid contractors and unpaid subcontractors overlapping.
-- Q: Should I record a contractor's quote the same way as completed work?
-  A: No — keep them clearly distinct. A quote is only a proposal, not proof anything happened. Mark records as proposed, scheduled or completed so the household record always reflects what's actually true rather than what was once planned.
-- Q: What should I check about a contractor before hiring them?
-  A: Confirm their license is current and that they carry liability insurance, typically verifiable through your state's licensing board. This matters beyond just trust — an uninsured contractor's on-site accident can become the homeowner's liability, not just the contractor's.
+- Q: Is the FamilyBoard change-order output a contract amendment or electronic signature?
+  A: No. It is a private household index and arithmetic summary. It cannot verify identity or authority, prove delivery, create a signature or determine legal effect. Preserve the original written document and follow the contract and local rules.
+- Q: Should a proposed change be added to the current project total?
+  A: Not as an accepted amount. Keep proposed or pending cost and time effects visible, but include only written-approved and completed changes in the accepted arithmetic total. That total still does not decide what is legally due.
+- Q: Can a change reduce cost or time?
+  A: Yes. Record increases, decreases and zero effects separately for money and days. A deletion may reduce price, and a substitution can affect time without changing price. Preserve the written basis for each figure.
+- Q: Does marking a change completed prove the work is safe, compliant or defect-free?
+  A: No. It only records the household's chosen close-out evidence. Permits, inspections, qualified assessments, contract terms and applicable law determine safety, compliance, acceptance and warranty consequences.
+- Q: Do I always need a lien waiver before final payment?
+  A: There is no universal answer. Lien rights, notices and waiver forms are jurisdiction-specific. Check the responsible local authority or legal adviser for the actual project, parties and deadlines instead of copying another region's rule.
+
+**Content version:** 2
 
 ---
 
@@ -12717,6 +12781,126 @@ A future clearly labelled affiliate or sponsored directory may introduce provide
   A: An unresolved qualification or estimate question is easy to forget when the shortlist looks complete. A single evidence action with an owner and date makes the missing decision input visible without creating duplicate tasks.
 - Q: Can this record resolve a dispute or prove compliance?
   A: No. It may preserve dates, source references and household observations, but contracts, original evidence, the responsible authorities, insurers and applicable law determine notice, responsibility, coverage and compliance.
+
+**Depth:** verified
+
+---
+
+
+## Page 209 — Home Repair Change Order Log
+**Slug:** `/tools/home-repair-change-order-log/`
+**Primary intent:** reconcile written home repair changes against the original project scope, cost and schedule
+**Title tag:** `Home Repair Change Order Log | Cost, Time and Written Approval`
+**Meta description:** `Record repair additions, deletions and substitutions with written evidence, cost and schedule effects, owners and close-out—without replacing the signed contract.`
+**Primary keyword concept:** home repair change order log
+**Cluster:** tools
+**Page type:** tool
+**Published date:** 2026-08-23
+**Editorial review date:** 2026-08-23
+**Content version:** 1
+**Suggested internal links:** `/guides/contractor-records/`, `/tools/home-service-provider-verification-log/`, `/guides/renovation-records/`, `/guides/home-improvement-receipts/`
+
+# Home repair change order log
+
+A home repair can drift away from its original agreement one conversation at a time. A material is unavailable, an opening reveals a hidden condition, the household removes an item, or the provider proposes a different method. Without a versioned record, the final invoice and completion date can become impossible to reconcile with what everyone remembers.
+
+This free browser tool preserves an original arithmetic baseline and one row per proposed, approved, declined or completed change. It validates dates and IDs, requires accepted changes to have numeric cost and schedule effects, and gives every open change one owner-led evidence action. Processing stays in the browser.
+
+It does not create or amend a contract, capture a signature, prove authorization, decide whether a charge is valid or due, inspect work, approve permits, determine compliance, calculate tax or insurance treatment, or resolve a dispute. The signed originals and responsible sources control.
+
+**Ready to reconcile a real project? [Jump to the Home Repair Change Order Log](#tool-heading).**
+
+## Freeze the original project baseline first
+
+Enter a private project label, not a full address. The original agreement date is the date on the signed contract or accepted estimate that forms the baseline. The record date is when the household reconciles all change rows; it cannot be in the future or earlier than the baseline.
+
+The baseline evidence field should identify the exact version and its scope in safe language: `signed contract C-1; replace listed cabinet fronts; excludes electrical relocation and wall repair`. Include the protected document pointer but not signatures, private contacts, payment credentials or a home address.
+
+Enter the original agreed amount and planned duration only when those figures exist in the referenced baseline. Use zero where duration was not expressed as calendar days and explain that limitation in the baseline. Do not invent a duration to make the arithmetic look complete.
+
+The tool supports a currency label so the output is readable, but it performs simple arithmetic only. It does not apply tax, financing, allowances, retainage, escalation, exchange rates or payment law.
+
+## Create one row for each distinct change
+
+Each change row uses ten fields:
+
+`ID | request date | requested by role | exact addition, deletion or substitution | reason or observed trigger | cost effect | schedule effect in days | written decision or close-out evidence | owner | status`
+
+Use stable IDs such as `CHG-1`, `CHG-2` and `CHG-3`. A change date must fall between the original agreement and the record date. `Requested by role` can be `household project owner`, `contractor project lead` or `building manager`; avoid a person's private contact information.
+
+Describe the change narrowly. `Substitute sink model A with model B, including revised mounting hardware` is auditable. `Kitchen extras` is not. The reason should preserve an attributable fact: `model A unavailable per supplier notice SUP-2` or `concealed damaged backing observed after authorized opening; PHOTO-7`. It should not assert fraud, fault, safety or legal responsibility.
+
+## Record cost and time as separate signed effects
+
+Cost and time answer different questions. Enter a number without a currency symbol for cost and an integer number of calendar days for schedule. Positive numbers increase the baseline, negative numbers reduce it and zero records no accepted effect. A proposed row may use `pending` until the written effect exists.
+
+Approved and completed rows must use numeric values for both fields. Declined or withdrawn rows must use zero for both because they do not enter the accepted arithmetic total. If the parties are still discussing whether a deletion deserves a credit, leave the row proposed rather than guessing a negative amount.
+
+The output sums only `Approved in writing—not yet completed` and `Completed—close-out evidence linked` rows into the accepted change total. It also shows how many proposed effects remain pending. This is an arithmetic snapshot, not an invoice validation or conclusion about legal entitlement.
+
+## Use four statuses with evidence boundaries
+
+`Proposed—awaiting written scope, price or time` means at least one decision input remains open. It may contain proposed numbers or `pending`, but it is excluded from accepted totals.
+
+`Approved in writing—not yet completed` means the household has a protected pointer to the written decision required by its workflow and has recorded numeric cost and time effects. The tool does not verify signatures, authority or legal validity.
+
+`Declined or withdrawn—with reason recorded` preserves the decision history and uses zero accepted cost and time. Do not delete it; a decline can explain why an earlier drawing or message was not built.
+
+`Completed—close-out evidence linked` means the row points to the household's stated completion evidence. It does not certify workmanship, concealed conditions, permit compliance, inspection, safety, acceptance or warranty.
+
+## Every open change needs exactly one next evidence action
+
+Proposed and approved-but-not-completed rows are still open. Each needs exactly one action row:
+
+`open change ID | next written or close-out evidence | owner | due date`
+
+A proposed action might be `obtain revised itemized proposal showing credit, tax treatment and schedule effect`. An approved action might be `complete walkthrough of the changed cabinet scope and preserve dated punch-list evidence`. The due date must fall between the record date and next household review.
+
+The due date is an organizational control. It does not extend a contract notice, cancellation, permit, inspection, insurance, warranty, payment or dispute deadline. Those dates must come from the controlling source.
+
+## Written change rules depend on the actual location and agreement
+
+The [Federal Trade Commission](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) advises getting detailed written estimates and contracts and preserving promises made in conversations. The California Contractors State License Board's [home-improvement contract guidance](https://www2.cslb.ca.gov/Consumers/Hire_A_Contractor/Home_Improvement_Contracts/What_Is_A_Contract.aspx) says covered California price or scope changes require a written change order signed before the change. Massachusetts publishes a different state-specific contract framework that also calls for written, mutually agreed modifications.
+
+These examples show why location matters; they are not a universal contract rule. Check the original agreement and the current consumer, contractor, building and legal sources for the project's jurisdiction. A FamilyBoard status cannot satisfy a writing, signature, delivery or notice requirement.
+
+## Do not use a payment or site photo as automatic approval
+
+A payment may be relevant evidence, but the tool does not infer which scope it accepted or whether it was required. A site photo may show appearance, but it cannot prove hidden work, code compliance or safety. Keep invoice, payment, message, photo, inspection and approval evidence as distinct protected sources.
+
+If work starts before a change is reconciled, record that observable fact without retroactively marking the change approved. If a dispute exists, do not alter earlier rows. Preserve versions and obtain advice about the applicable notice and resolution process.
+
+## Protect the household and project evidence
+
+The form blocks common phone, email, full numeric identifier, address, password, access-code, payment-card, bank, government-ID, licence, policy, claim and signature patterns. Automated screening cannot recognize every private fact, so inspect the output before sharing it.
+
+Use pointers such as `CHANGE-CHG-2`, `PHOTO-7`, `INVOICE-I4` and `APPROVAL-A2`. Keep original contracts, signatures, invoices, full provider details and dispute files in access-controlled storage. A shared household summary rarely needs the exact home address or bank transaction number.
+
+## Close the project without erasing its changes
+
+When all changes are completed or declined, reconcile the final scope, accepted arithmetic total, final invoice, payments, inspections, product and warranty records, punch list and continuing tasks. Differences should remain visible with an explanation rather than being silently forced to match.
+
+Use [contractor records](/guides/contractor-records/) for the full evidence structure, the [provider verification log](/tools/home-service-provider-verification-log/) for pre-hire source checks and [home-improvement receipts](/guides/home-improvement-receipts/) for project purchase evidence.
+
+## Commercial recommendations stay outside the record
+
+A future affiliate area may present clearly labelled project software, document storage, materials or provider-discovery categories beside the educational page. It cannot appear inside the form or output, mark a change approved, change the total, satisfy evidence or imply that a sponsored provider is authorized for the work.
+
+**Next step:** enter the exact original agreement pointer, then add one row for every proposed addition, deletion, substitution or schedule effect without overwriting the baseline.
+
+**Contextual CTA:** Build a dated change ledger now, then reconcile the result against the original documents before the next payment or close-out review.
+
+**FAQ:**
+- Q: Does the generated log amend my contract or count as a signature?
+  A: No. It is a private household record. It cannot identify or bind parties, prove authority or delivery, create a signature or satisfy a local change-order rule. Preserve and use the original written documents required for the project.
+- Q: Which changes are included in the accepted total?
+  A: Only rows marked approved in writing or completed, and only when both cost and schedule effects are numeric. Proposed rows remain visible but excluded; declined rows use zero. The total is arithmetic, not a decision about what is valid or due.
+- Q: What if a change has no price increase but delays the project?
+  A: Enter `0` for cost and the signed number of days for schedule once the effect is written and approved. Money and time are intentionally separate fields.
+- Q: Can I use `pending` on an approved change?
+  A: No. Approval without a resolved cost and time effect is ambiguous for this record. Keep the row proposed until both effects and the written decision pointer can be entered, even if one effect is zero.
+- Q: Does completed status mean I accepted the work or waived defects?
+  A: No. It means only that the household linked its chosen close-out evidence. The contract, inspections, qualified assessments and applicable law determine acceptance, defects, safety, compliance and warranty consequences.
 
 **Depth:** verified
 

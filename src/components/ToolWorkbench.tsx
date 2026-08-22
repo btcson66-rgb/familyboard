@@ -1643,6 +1643,182 @@ const definitions: Record<string, Definition> = {
       return `${values.household.trim()} — home service provider verification log\nVerification context: ${values.context}\nReview completed: ${formatter.format(reviewDate)}\nNext household review: ${formatter.format(nextReview)}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (workflow summary only, not a provider score or endorsement)\n\n${lines("Verification source map", sourceRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — checked ${formatter.format(strictIsoDate(row.parts[2]) as Date)} — question: ${row.parts[3]} — observed result/evidence: ${row.parts[4]} — owner: ${row.parts[5]}`))}\n\n${lines("Provider verification rows", providerRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — requested scope: ${row.parts[2]} — sources: ${row.parts[3]} — written evidence: ${row.parts[4]} — owner: ${row.parts[5]} — status: ${row.parts[6]}`))}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["No open provider row remains; recheck sources before relying on this record for another service need."])}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a dated household research record. It does not search or authenticate a provider, interpret registry or licence categories, confirm insurance, permits, inspection, landlord or building approval, compare price fairness, assess workmanship, authorize home access, endorse or rank a business, make a hiring decision, or prove contract, legal or regulatory compliance. Use current responsible sources for the actual location and scope.`;
     },
   },
+  "home-repair-change-order-log": {
+    intro:
+      "Reconcile additions, deletions and substitutions against one preserved project baseline. The tool performs local arithmetic and workflow validation; it does not amend a contract, capture a signature, approve work or decide what is owed.",
+    fields: [
+      text("project", "Private project label", "Use a household nickname and work area, not a full address or private provider contact.", "Maple household kitchen repair"),
+      {
+        name: "context",
+        label: "Record context",
+        type: "select",
+        options: [
+          "Active project change review",
+          "Before next progress payment",
+          "Pre-close-out reconciliation",
+          "Disputed or incomplete history preservation",
+        ],
+      },
+      {
+        name: "currency",
+        label: "Currency label",
+        type: "select",
+        options: ["TWD", "USD", "CAD", "AUD", "GBP", "EUR", "Other currency"],
+      },
+      { name: "agreementDate", label: "Original agreement date", type: "date" },
+      { name: "recordDate", label: "Change record date", type: "date" },
+      { name: "nextReview", label: "Next household review date", type: "date" },
+      text("baseline", "Original agreement evidence and scope", "Name the exact signed contract or accepted-estimate version, included work and important exclusions. Do not paste signatures or private contact details.", "Signed contract C-1; replace listed cabinet fronts; excludes electrical relocation and wall repair"),
+      { name: "originalAmount", label: "Original agreed amount", type: "number", value: "120000" },
+      { name: "originalDays", label: "Original planned duration in calendar days", type: "number", value: "20" },
+      {
+        name: "changes",
+        label: "Versioned change rows",
+        type: "textarea",
+        help: "One line: ID | request date YYYY-MM-DD | requested by role | exact addition, deletion or substitution | reason or observed trigger | signed cost effect or pending | schedule effect days or pending | written decision or close-out evidence pointer | owner | Proposed—awaiting written scope, price or time, Approved in writing—not yet completed, Declined or withdrawn—with reason recorded, or Completed—close-out evidence linked. Maximum 15 lines.",
+        value: "CHG-1 | 2026-08-23 | Household project owner | Substitute sink model A with model B including revised mounting hardware | Model A unavailable per supplier notice SUP-2 | 2500 | 2 | Written approval CHANGE-CHG-1 | Project owner | Approved in writing—not yet completed\nCHG-2 | 2026-08-23 | Contractor project lead | Add backing repair only where opened area shows damage | Observable condition PHOTO-7; written method and price not received | pending | pending | Proposal request CHANGE-CHG-2 | Project owner | Proposed—awaiting written scope, price or time",
+      },
+      {
+        name: "actions",
+        label: "Follow-up for every open change ID",
+        type: "textarea",
+        help: "One line: open change ID | next written or close-out evidence | owner | due date YYYY-MM-DD. Every proposed or approved-not-completed row needs exactly one action.",
+        value: "CHG-1 | Complete a walkthrough of the changed sink scope and preserve dated close-out evidence | Project owner | 2026-08-28\nCHG-2 | Obtain an itemized written proposal showing method, cost and schedule effect before a decision | Project owner | 2026-08-26",
+      },
+      text("storage", "Protected original-document location", "Use a folder or envelope label, not an address, phone, email, signature, account, payment, identity, licence, policy or claim detail.", "Household records / repairs / PROJECT-C1"),
+    ],
+    run: (values) => {
+      const agreementDate = strictIsoDate(values.agreementDate);
+      const recordDate = strictIsoDate(values.recordDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.project.trim()) return "Enter a private project label so the exported change record can be identified.";
+      if (!agreementDate) return "Enter a real original agreement date in YYYY-MM-DD format.";
+      if (!recordDate) return "Enter a real change record date in YYYY-MM-DD format.";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (recordDate.getTime() > today.getTime()) return "The change record date cannot be in the future.";
+      if (agreementDate.getTime() > recordDate.getTime()) return "The original agreement date cannot be later than the change record date.";
+      if (!nextReview) return "Enter a real next household review date in YYYY-MM-DD format.";
+      if (nextReview.getTime() < recordDate.getTime()) return "The next household review cannot be earlier than the change record date.";
+      if (!values.baseline.trim()) return "Enter the exact original agreement evidence and scope baseline.";
+      if (!values.storage.trim()) return "Enter the protected location for original agreements, approvals, invoices and close-out evidence.";
+      const originalAmount = Number(values.originalAmount);
+      const originalDays = Number(values.originalDays);
+      if (!Number.isFinite(originalAmount) || originalAmount < 0 || originalAmount > 1_000_000_000_000)
+        return "Enter an original agreed amount from 0 to 1,000,000,000,000 without currency symbols or separators.";
+      if (!Number.isInteger(originalDays) || originalDays < 0 || originalDays > 3650)
+        return "Enter an original planned duration from 0 to 3,650 whole calendar days.";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const changeRows = parseRows(values.changes);
+      if (changeRows.length === 0) return "Add at least one versioned change row.";
+      if (changeRows.length > 15) return "Use no more than 15 change rows in one project review; create another dated review if needed.";
+      const invalidChanges = changeRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidChanges.length)
+        return `Change line ${invalidChanges.map((row) => row.line).join(", ")} must contain all 10 pipe-separated fields.`;
+      const changeIds = changeRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(changeIds).size !== changeIds.length) return "Each change row must have a unique ID.";
+      if (changeIds.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Change IDs must use 2 to 20 letters, numbers or hyphens, such as CHG-1.";
+      const invalidChangeDates = changeRows.filter((row) => {
+        const requested = strictIsoDate(row.parts[1]);
+        return !requested || requested.getTime() < agreementDate.getTime() || requested.getTime() > recordDate.getTime();
+      });
+      if (invalidChangeDates.length)
+        return `Change line ${invalidChangeDates.map((row) => row.line).join(", ")} needs a real request date between the original agreement and this record.`;
+      const statuses = new Set([
+        "Proposed—awaiting written scope, price or time",
+        "Approved in writing—not yet completed",
+        "Declined or withdrawn—with reason recorded",
+        "Completed—close-out evidence linked",
+      ]);
+      const invalidStatuses = changeRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `Change line ${invalidStatuses.map((row) => row.line).join(", ")} has an unsupported status. Use one of the four labels shown in the field instructions.`;
+      const costPattern = /^(?:pending|-?(?:0|[1-9]\d*)(?:\.\d{1,2})?)$/i;
+      const dayPattern = /^(?:pending|-?(?:0|[1-9]\d*))$/i;
+      const invalidEffects = changeRows.filter((row) => {
+        if (!costPattern.test(row.parts[5]) || !dayPattern.test(row.parts[6])) return true;
+        const cost = row.parts[5].toLocaleLowerCase("en") === "pending" ? null : Number(row.parts[5]);
+        const days = row.parts[6].toLocaleLowerCase("en") === "pending" ? null : Number(row.parts[6]);
+        return (cost !== null && Math.abs(cost) > 1_000_000_000) || (days !== null && Math.abs(days) > 3650);
+      });
+      if (invalidEffects.length)
+        return `Change line ${invalidEffects.map((row) => row.line).join(", ")} needs a cost effect up to two decimals and a whole-day effect; use a signed number, 0 or pending.`;
+      const decidedRows = changeRows.filter((row) =>
+        row.parts[9] === "Approved in writing—not yet completed" || row.parts[9] === "Completed—close-out evidence linked",
+      );
+      const unresolvedDecided = decidedRows.filter((row) =>
+        row.parts[5].toLocaleLowerCase("en") === "pending" || row.parts[6].toLocaleLowerCase("en") === "pending" || /\b(?:pending|awaiting|none|n\/a)\b/i.test(row.parts[7]),
+      );
+      if (unresolvedDecided.length)
+        return `Approved or completed change line ${unresolvedDecided.map((row) => row.line).join(", ")} needs numeric cost and time effects plus a specific written decision or close-out evidence pointer.`;
+      const invalidDeclines = changeRows.filter((row) =>
+        row.parts[9] === "Declined or withdrawn—with reason recorded" && (Number(row.parts[5]) !== 0 || Number(row.parts[6]) !== 0),
+      );
+      if (invalidDeclines.length)
+        return `Declined or withdrawn change line ${invalidDeclines.map((row) => row.line).join(", ")} must use 0 cost and 0 days so it remains outside accepted totals.`;
+      const openRows = changeRows.filter((row) =>
+        row.parts[9] === "Proposed—awaiting written scope, price or time" || row.parts[9] === "Approved in writing—not yet completed",
+      );
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 15) return "Use no more than 15 follow-up rows in one project review.";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `Follow-up line ${invalidActions.map((row) => row.line).join(", ")} must contain all 4 pipe-separated fields.`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length) return "Each open change ID must have exactly one follow-up row.";
+      const openIds = new Set(openRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...openIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length) return `Add one follow-up row for every open change ID: ${missingActions.join(", ")}.`;
+      const extraActions = actionIds.filter((id) => !openIds.has(id));
+      if (extraActions.length) return `Follow-up rows may reference only proposed or approved-not-completed change IDs. Remove or update: ${extraActions.join(", ")}.`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() < recordDate.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `Follow-up line ${invalidDueDates.map((row) => row.line).join(", ")} needs a real due date on or after this record and no later than the next review.`;
+      const privacyText = [
+        values.baseline,
+        values.storage,
+        ...changeRows.flatMap((row) => [row.parts[2], row.parts[3], row.parts[4], row.parts[7], row.parts[8]]),
+        ...actionRows.flatMap((row) => [row.parts[1], row.parts[2]]),
+      ].join("\n");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacyText) || /(?:\d[\s().+-]*){7,}/.test(privacyText))
+        return "A possible full phone number, email or complete numeric identifier was detected. Keep it in protected evidence and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|full address|account number|card number|bank account|routing number|social security|government id|personal licence number|personal license number|policy number|claim number|signature|date of birth|private contact|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, financial, identity, licence, policy, signature or private contact detail was detected. Replace it with a protected-record pointer.";
+      const acceptedCost = decidedRows.reduce((sum, row) => sum + Number(row.parts[5]), 0);
+      const acceptedDays = decidedRows.reduce((sum, row) => sum + Number(row.parts[6]), 0);
+      const reconciledAmount = originalAmount + acceptedCost;
+      const reconciledDays = originalDays + acceptedDays;
+      if (reconciledAmount < 0 || reconciledDays < 0)
+        return "Accepted changes cannot reduce the reconciled amount or planned duration below zero. Recheck the baseline and signed effects.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const numberFormatter = new Intl.NumberFormat("en", { maximumFractionDigits: 2 });
+      const statusOrder = [
+        "Proposed—awaiting written scope, price or time",
+        "Approved in writing—not yet completed",
+        "Declined or withdrawn—with reason recorded",
+        "Completed—close-out evidence linked",
+      ];
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: changeRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      const pendingCount = changeRows.filter((row) =>
+        row.parts[5].toLocaleLowerCase("en") === "pending" || row.parts[6].toLocaleLowerCase("en") === "pending",
+      ).length;
+      return `${values.project.trim()} — home repair change order log\nRecord context: ${values.context}\nOriginal agreement: ${formatter.format(agreementDate)}\nChange record reconciled: ${formatter.format(recordDate)}\nNext household review: ${formatter.format(nextReview)}\nCurrency: ${values.currency}\nOriginal amount: ${numberFormatter.format(originalAmount)}\nAccepted change effect: ${acceptedCost >= 0 ? "+" : ""}${numberFormatter.format(acceptedCost)}\nReconciled arithmetic amount: ${numberFormatter.format(reconciledAmount)}\nOriginal planned duration: ${originalDays} calendar days\nAccepted schedule effect: ${acceptedDays >= 0 ? "+" : ""}${acceptedDays} calendar days\nReconciled arithmetic duration: ${reconciledDays} calendar days\nPending proposed effects: ${pendingCount}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nOriginal agreement evidence and scope: ${values.baseline.trim()}\n\n${lines("Versioned change rows", changeRows.map((row) => `${row.parts[0]} — requested ${formatter.format(strictIsoDate(row.parts[1]) as Date)} by ${row.parts[2]} — change: ${row.parts[3]} — reason/trigger: ${row.parts[4]} — cost effect: ${row.parts[5]} ${values.currency} — schedule effect: ${row.parts[6]} days — evidence: ${row.parts[7]} — owner: ${row.parts[8]} — status: ${row.parts[9]}`))}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["No proposed or approved-not-completed change remains; reconcile final invoices and close-out evidence without deleting declined history."])}\n\nProtected original-document location: ${values.storage.trim()}\n\nThe totals above are arithmetic reconciliation only. This output does not create or amend a contract, verify identity, authority, consent, signature or delivery, determine whether a charge is valid, reasonable, due or covered, authorize work or payment, inspect workmanship or concealed conditions, approve permits or inspections, certify completion, acceptance, safety, warranty, insurance, tax, lien or legal compliance, extend any notice or deadline, or resolve a dispute. Preserve original documents and use current responsible sources for the actual location and project.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -3570,6 +3746,182 @@ const zhTwDefinitions: Record<string, Definition> = {
         count: providerRows.filter((row) => row.parts[6] === status).length,
       })).filter((item) => item.count > 0);
       return `${values.household.trim()}｜家庭到府服務商查證紀錄\n查證情境：${values.context}\n本次完成：${formatter.format(reviewDate)}\n家庭下次複查：${formatter.format(nextReview)}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（只表示工作流程，不是業者分數或背書）\n\n${lines("查證來源地圖", sourceRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜查核：${formatter.format(strictIsoDate(row.parts[2]) as Date)}｜問題：${row.parts[3]}｜顯示結果／證據：${row.parts[4]}｜負責：${row.parts[5]}`))}\n\n${lines("候選業者查證列", providerRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜要求範圍：${row.parts[2]}｜來源：${row.parts[3]}｜書面證據：${row.parts[4]}｜負責：${row.parts[5]}｜狀態：${row.parts[6]}`))}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["本次沒有未完成候選業者；下一次服務需求仍要重新查目前來源。"])}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是一份有日期的家庭研究紀錄。它不搜尋或驗證業者、不解讀商工、專業業別或證照範圍、不確認保險、許可、檢查、房東或大樓同意、不比較價格合理性、不評估施工品質、不授權入屋、不推薦或排名業者、不替家庭做聘用決定，也不證明契約、法律或工程合規。請依實際地點與工作範圍使用目前的負責來源。`;
+    },
+  },
+  "home-repair-change-order-log": {
+    intro:
+      "把每個追加、刪減與材料替代連回不被覆寫的原契約基準。工具只在瀏覽器做算術與流程驗證，不建立契約、不收集簽名、不批准施工，也不判定費用是否應付。",
+    fields: [
+      text("project", "私密工程代稱", "使用家庭代稱與施工區域，不要填完整門牌或私人業者聯絡資料。", "青葉家庭廚房修繕"),
+      {
+        name: "context",
+        label: "本次紀錄情境",
+        type: "select",
+        options: [
+          "進行中工程變更複查",
+          "下一次進度付款前核對",
+          "完工結案前總整理",
+          "保存爭議中或未完成的歷史",
+        ],
+      },
+      {
+        name: "currency",
+        label: "幣別標籤",
+        type: "select",
+        options: ["TWD", "USD", "CAD", "AUD", "GBP", "EUR", "其他幣別"],
+      },
+      { name: "agreementDate", label: "原約定日期", type: "date" },
+      { name: "recordDate", label: "本次變更紀錄日期", type: "date" },
+      { name: "nextReview", label: "家庭下次複查日期", type: "date" },
+      text("baseline", "原約定證據與範圍", "寫明精確契約或接受估價版本、包含工作與重要排除；不要貼簽名或私人聯絡。", "已簽契約 C-1；更換指定櫃門；不含插座移位與牆面修補"),
+      { name: "originalAmount", label: "原約定總額", type: "number", value: "120000" },
+      { name: "originalDays", label: "原預定工期（日曆天）", type: "number", value: "20" },
+      {
+        name: "changes",
+        label: "有版本的追加變更列",
+        type: "textarea",
+        help: "每行格式：ID | 提出日期 YYYY-MM-DD | 提出角色 | 精確增加、刪減或替代內容 | 原因或觀察證據 | 費用影響數字或 pending | 工期影響天數或 pending | 書面決定或結案證據索引 | 負責人 | 提案中，等待書面範圍、價格或工期、已書面同意，尚未完成、已拒絕或撤回，且已記理由、已完成，且連結結案證據。最多 15 行。",
+        value: "CHG-1 | 2026-08-23 | 家庭工程負責人 | 水槽由型號 A 改為 B，包含新固定五金 | 型號 A 缺貨，供應商通知 SUP-2 | 2500 | 2 | 書面同意 CHANGE-CHG-1 | 工程負責人 | 已書面同意，尚未完成\nCHG-2 | 2026-08-23 | 業者工程窗口 | 只在已開啟區域增加受損基底修補 | 可見狀況 PHOTO-7；尚未取得書面工法與價格 | pending | pending | 提案請求 CHANGE-CHG-2 | 工程負責人 | 提案中，等待書面範圍、價格或工期",
+      },
+      {
+        name: "actions",
+        label: "每個未結案變更 ID 的追蹤",
+        type: "textarea",
+        help: "每行格式：未結案變更 ID | 下一個書面或結案證據 | 負責人 | 期限 YYYY-MM-DD。每個提案中或已同意但未完成的 ID，都必須剛好一筆追蹤。",
+        value: "CHG-1 | 完成變更水槽範圍走查並保存有日期結案證據 | 工程負責人 | 2026-08-28\nCHG-2 | 決定前取得逐項書面提案，列出工法、費用與工期影響 | 工程負責人 | 2026-08-26",
+      },
+      text("storage", "受保護的原始文件位置", "只寫資料夾或信封代稱，不要填地址、電話、Email、簽名、帳號、付款、身分、證照、保單或理賠資料。", "家庭文件／修繕／PROJECT-C1"),
+    ],
+    run: (values) => {
+      const agreementDate = strictIsoDate(values.agreementDate);
+      const recordDate = strictIsoDate(values.recordDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.project.trim()) return "請填私密工程代稱，讓匯出的變更紀錄可以辨識。";
+      if (!agreementDate) return "請輸入真實的原約定日期 YYYY-MM-DD。";
+      if (!recordDate) return "請輸入真實的本次變更紀錄日期 YYYY-MM-DD。";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (recordDate.getTime() > today.getTime()) return "本次變更紀錄日期不能在未來。";
+      if (agreementDate.getTime() > recordDate.getTime()) return "原約定日期不能晚於本次變更紀錄日期。";
+      if (!nextReview) return "請輸入真實的家庭下次複查日期 YYYY-MM-DD。";
+      if (nextReview.getTime() < recordDate.getTime()) return "家庭下次複查日期不能早於本次變更紀錄。";
+      if (!values.baseline.trim()) return "請填精確的原約定證據與範圍基準。";
+      if (!values.storage.trim()) return "請填原契約、同意、請款與結案證據的受保護位置。";
+      const originalAmount = Number(values.originalAmount);
+      const originalDays = Number(values.originalDays);
+      if (!Number.isFinite(originalAmount) || originalAmount < 0 || originalAmount > 1_000_000_000_000)
+        return "原約定總額請填 0 到 1,000,000,000,000，不要加幣別符號或千分位。";
+      if (!Number.isInteger(originalDays) || originalDays < 0 || originalDays > 3650)
+        return "原預定工期請填 0 到 3,650 的整數日曆天。";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const changeRows = parseRows(values.changes);
+      if (changeRows.length === 0) return "請至少新增一筆有版本的追加變更列。";
+      if (changeRows.length > 15) return "一份工程複查最多 15 筆變更；更多內容請建立下一份有日期的複查。";
+      const invalidChanges = changeRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidChanges.length)
+        return `變更第 ${invalidChanges.map((row) => row.line).join("、")} 行必須完整填寫 10 個以直線分隔的欄位。`;
+      const changeIds = changeRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(changeIds).size !== changeIds.length) return "每筆追加變更都要有唯一 ID。";
+      if (changeIds.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "變更 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 CHG-1。";
+      const invalidChangeDates = changeRows.filter((row) => {
+        const requested = strictIsoDate(row.parts[1]);
+        return !requested || requested.getTime() < agreementDate.getTime() || requested.getTime() > recordDate.getTime();
+      });
+      if (invalidChangeDates.length)
+        return `變更第 ${invalidChangeDates.map((row) => row.line).join("、")} 行需要真實提出日，且必須介於原約定與本次紀錄之間。`;
+      const statuses = new Set([
+        "提案中，等待書面範圍、價格或工期",
+        "已書面同意，尚未完成",
+        "已拒絕或撤回，且已記理由",
+        "已完成，且連結結案證據",
+      ]);
+      const invalidStatuses = changeRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `變更第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須使用欄位說明中的四種文字之一。`;
+      const costPattern = /^(?:pending|-?(?:0|[1-9]\d*)(?:\.\d{1,2})?)$/i;
+      const dayPattern = /^(?:pending|-?(?:0|[1-9]\d*))$/i;
+      const invalidEffects = changeRows.filter((row) => {
+        if (!costPattern.test(row.parts[5]) || !dayPattern.test(row.parts[6])) return true;
+        const cost = row.parts[5].toLocaleLowerCase("en") === "pending" ? null : Number(row.parts[5]);
+        const days = row.parts[6].toLocaleLowerCase("en") === "pending" ? null : Number(row.parts[6]);
+        return (cost !== null && Math.abs(cost) > 1_000_000_000) || (days !== null && Math.abs(days) > 3650);
+      });
+      if (invalidEffects.length)
+        return `變更第 ${invalidEffects.map((row) => row.line).join("、")} 行費用最多兩位小數、工期須為整數日；請用正負數字、0 或 pending。`;
+      const decidedRows = changeRows.filter((row) =>
+        row.parts[9] === "已書面同意，尚未完成" || row.parts[9] === "已完成，且連結結案證據",
+      );
+      const unresolvedDecided = decidedRows.filter((row) =>
+        row.parts[5].toLocaleLowerCase("en") === "pending" || row.parts[6].toLocaleLowerCase("en") === "pending" || /(?:待補|待確認|尚未|pending|awaiting|none|n\/a)/i.test(row.parts[7]),
+      );
+      if (unresolvedDecided.length)
+        return `已同意或已完成的變更第 ${unresolvedDecided.map((row) => row.line).join("、")} 行，需要數字費用、數字工期及明確書面決定或結案證據索引。`;
+      const invalidDeclines = changeRows.filter((row) =>
+        row.parts[9] === "已拒絕或撤回，且已記理由" && (Number(row.parts[5]) !== 0 || Number(row.parts[6]) !== 0),
+      );
+      if (invalidDeclines.length)
+        return `已拒絕或撤回的變更第 ${invalidDeclines.map((row) => row.line).join("、")} 行必須使用費用 0、工期 0，才能排除在同意總額外。`;
+      const openRows = changeRows.filter((row) =>
+        row.parts[9] === "提案中，等待書面範圍、價格或工期" || row.parts[9] === "已書面同意，尚未完成",
+      );
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 15) return "一份工程複查最多 15 筆追蹤。";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `追蹤第 ${invalidActions.map((row) => row.line).join("、")} 行必須完整填寫 4 個以直線分隔的欄位。`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length) return "每個未結案變更 ID 只能有一筆追蹤。";
+      const openIds = new Set(openRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...openIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length) return `每個未結案變更 ID 都要建立一筆追蹤，尚缺：${missingActions.join("、")}。`;
+      const extraActions = actionIds.filter((id) => !openIds.has(id));
+      if (extraActions.length) return `追蹤只能連到提案中或已同意但未完成的變更 ID；請移除或更新：${extraActions.join("、")}。`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() < recordDate.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `追蹤第 ${invalidDueDates.map((row) => row.line).join("、")} 行需要真實期限，而且不得早於本次紀錄、不得晚於下次複查。`;
+      const privacyText = [
+        values.baseline,
+        values.storage,
+        ...changeRows.flatMap((row) => [row.parts[2], row.parts[3], row.parts[4], row.parts[7], row.parts[8]]),
+        ...actionRows.flatMap((row) => [row.parts[1], row.parts[2]]),
+      ].join("\n");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacyText) || /(?:\d[\s().+-]*){7,}/.test(privacyText))
+        return "偵測到可能的完整電話、Email 或完整數字識別資料。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|驗證碼|警報碼|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證|個人證照完整號碼|保單編號|案件編號|簽名|出生日期|私人聯絡|password|passcode|access code|account number|card number|government id|policy number|claim number|signature|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、金融、身分、證照、保單、簽名或私人聯絡資料。請改寫成受保護紀錄索引。";
+      const acceptedCost = decidedRows.reduce((sum, row) => sum + Number(row.parts[5]), 0);
+      const acceptedDays = decidedRows.reduce((sum, row) => sum + Number(row.parts[6]), 0);
+      const reconciledAmount = originalAmount + acceptedCost;
+      const reconciledDays = originalDays + acceptedDays;
+      if (reconciledAmount < 0 || reconciledDays < 0)
+        return "已同意變更不能讓目前算術總額或預定工期小於零，請重新核對原基準與正負效果。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const numberFormatter = new Intl.NumberFormat("zh-TW", { maximumFractionDigits: 2 });
+      const statusOrder = [
+        "提案中，等待書面範圍、價格或工期",
+        "已書面同意，尚未完成",
+        "已拒絕或撤回，且已記理由",
+        "已完成，且連結結案證據",
+      ];
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: changeRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      const pendingCount = changeRows.filter((row) =>
+        row.parts[5].toLocaleLowerCase("en") === "pending" || row.parts[6].toLocaleLowerCase("en") === "pending",
+      ).length;
+      return `${values.project.trim()}｜居家修繕追加變更紀錄\n紀錄情境：${values.context}\n原約定日期：${formatter.format(agreementDate)}\n本次變更核對：${formatter.format(recordDate)}\n家庭下次複查：${formatter.format(nextReview)}\n幣別：${values.currency}\n原約定總額：${numberFormatter.format(originalAmount)}\n已同意變更影響：${acceptedCost >= 0 ? "+" : ""}${numberFormatter.format(acceptedCost)}\n目前算術總額：${numberFormatter.format(reconciledAmount)}\n原預定工期：${originalDays} 日曆天\n已同意工期影響：${acceptedDays >= 0 ? "+" : ""}${acceptedDays} 日曆天\n目前算術工期：${reconciledDays} 日曆天\n仍為 pending 的提案效果：${pendingCount} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n原約定證據與範圍：${values.baseline.trim()}\n\n${lines("有版本的追加變更列", changeRows.map((row) => `${row.parts[0]}｜${formatter.format(strictIsoDate(row.parts[1]) as Date)} 由 ${row.parts[2]} 提出｜變更：${row.parts[3]}｜原因／觀察：${row.parts[4]}｜費用影響：${row.parts[5]} ${values.currency}｜工期影響：${row.parts[6]} 天｜證據：${row.parts[7]}｜負責：${row.parts[8]}｜狀態：${row.parts[9]}`))}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["本次沒有提案中或已同意但未完成的變更；請保留拒絕歷史，再核對最終請款與結案證據。"])}\n\n受保護的原始文件位置：${values.storage.trim()}\n\n以上總數只是算術核對。這份輸出不建立或變更契約、不驗證身分、代理權、同意、簽名或送達、不判定費用是否有效、合理、到期、應付或受保障、不授權施工或付款、不檢查施工品質與隱蔽狀況、不批准許可或檢查、不認證完工、驗收、安全、保固、保險、稅務、權利負擔或法律合規、不延長任何通知與期限，也不解決爭議。請保存原始文件，並依實際地點與工程使用目前的負責來源。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

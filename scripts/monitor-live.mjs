@@ -75,6 +75,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/home-service-provider-verification-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-service-provider-verification-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-service-provider-list/</loc>",
+      "<loc>https://familyboard.win/tools/home-repair-change-order-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-repair-change-order-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/contractor-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -250,6 +253,24 @@ const checks = [
       "Home Service Provider List",
       'hreflang="zh-TW"',
       "Registration, licence, insurance and skill are different claims",
+      "consumer.ftc.gov/articles/how-avoid-home-improvement-scam",
+    ],
+  },
+  {
+    path: "/tools/home-repair-change-order-log/",
+    require: [
+      "Home Repair Change Order Log",
+      'hreflang="zh-TW"',
+      "Use four statuses with evidence boundaries",
+      "does not create or amend a contract",
+    ],
+  },
+  {
+    path: "/guides/contractor-records/",
+    require: [
+      "Contractor Records for Home Repairs",
+      'hreflang="zh-TW"',
+      "A change order is a versioned decision",
       "consumer.ftc.gov/articles/how-avoid-home-improvement-scam",
     ],
   },
@@ -440,6 +461,24 @@ const checks = [
       'hreflang="en"',
       "商工登記查得到，只回答一部分問題",
       "全國消費者服務專線 1950",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-repair-change-order-log/",
+    require: [
+      "居家修繕追加變更紀錄",
+      'hreflang="en"',
+      "四種狀態是證據流程",
+      "不建立契約",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/contractor-records/",
+    require: [
+      "裝潢追加工程怎麼記",
+      'hreflang="en"',
+      "現行官方範本怎麼處理工程變更",
+      "2026 新制傳言不能寫成已經生效",
     ],
   },
   {

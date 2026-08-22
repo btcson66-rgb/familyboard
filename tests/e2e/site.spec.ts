@@ -80,6 +80,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/storm-preparation-home-checklist/",
     "/tools/home-service-provider-verification-log/",
     "/guides/home-service-provider-list/",
+    "/tools/home-repair-change-order-log/",
+    "/guides/contractor-records/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -105,6 +107,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-storm-readiness-review/",
     "/zh-tw/tools/home-service-provider-verification-log/",
     "/zh-tw/guides/home-service-provider-list/",
+    "/zh-tw/tools/home-repair-change-order-log/",
+    "/zh-tw/guides/contractor-records/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -238,6 +242,9 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     page.locator(".site-footer").getByRole("link", { name: "到府服務商查證紀錄" }),
   ).toHaveAttribute("href", "/zh-tw/tools/home-service-provider-verification-log/");
   await expect(
+    page.locator(".site-footer").getByRole("link", { name: "居家修繕追加變更紀錄" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/home-repair-change-order-log/");
+  await expect(
     page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
   await expect(
@@ -252,6 +259,9 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "找水電與維修業者指南" }),
   ).toHaveAttribute("href", "/zh-tw/guides/home-service-provider-list/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "裝潢追加工程教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/contractor-records/");
 
   for (const localized of [
     {
@@ -343,6 +353,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/home-service-provider-list/",
       alternate: "/guides/home-service-provider-list/",
       heading: "找水電師傅或到府維修要注意什麼：先查身分、工作範圍與書面證據",
+    },
+    {
+      route: "/zh-tw/guides/contractor-records/",
+      alternate: "/guides/contractor-records/",
+      heading: "裝潢追加工程怎麼記：先保留原約定，再逐筆記變更",
     },
     {
       route: "/zh-tw/features/household-handoff/",
@@ -562,6 +577,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/home-service-provider-verification-log/",
       alternate: "/tools/home-service-provider-verification-log/",
       heading: "家庭到府服務商查證紀錄",
+    },
+    {
+      route: "/zh-tw/tools/home-repair-change-order-log/",
+      alternate: "/tools/home-repair-change-order-log/",
+      heading: "居家修繕追加變更紀錄",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -1022,6 +1042,46 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "憑證、地址、金融、身分、保單、簽名或私人推薦人資料",
   );
 
+  await page.goto("/tools/home-repair-change-order-log/");
+  await page.getByLabel("Original agreement date").fill("2026-08-20");
+  await page.getByLabel("Change record date").fill("2026-08-23");
+  await page.getByLabel("Next household review date").fill("2026-08-30");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Accepted change effect: +2,500");
+  await expect(page.locator(".result")).toContainText("Reconciled arithmetic amount: 122,500");
+  await expect(page.locator(".result")).toContainText("Accepted schedule effect: +2 calendar days");
+  await expect(page.locator(".result")).toContainText("Pending proposed effects: 1");
+  await expect(page.locator(".result")).toContainText("does not create or amend a contract");
+  await page.getByLabel("Versioned change rows").fill(
+    "CHG-1 | 2026-08-23 | Project owner | Add one shelf | Written request REQ-1 | pending | 1 | APPROVAL-1 | Project owner | Approved in writing—not yet completed",
+  );
+  await page.getByLabel("Follow-up for every open change ID").fill(
+    "CHG-1 | Preserve close-out evidence | Project owner | 2026-08-28",
+  );
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "Approved or completed change line 1 needs numeric cost and time effects",
+  );
+
+  await page.goto("/zh-tw/tools/home-repair-change-order-log/");
+  await page.getByLabel("原約定日期").fill("2026-08-20");
+  await page.getByLabel("本次變更紀錄日期").fill("2026-08-23");
+  await page.getByLabel("家庭下次複查日期").fill("2026-08-30");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("已同意變更影響：+2,500");
+  await expect(page.locator(".result")).toContainText("目前算術總額：122,500");
+  await expect(page.locator(".result")).toContainText("已同意工期影響：+2 日曆天");
+  await expect(page.locator(".result")).toContainText("仍為 pending 的提案效果：1 筆");
+  await expect(page.locator(".result")).toContainText("不建立或變更契約");
+  await page.getByLabel("有版本的追加變更列").fill(
+    "CHG-1 | 2026-08-23 | 家庭工程負責人 | 取消一座上櫃 | 家庭書面決定 DEC-1 | 100 | 0 | 已拒絕 DEC-1 | 工程負責人 | 已拒絕或撤回，且已記理由",
+  );
+  await page.getByLabel("每個未結案變更 ID 的追蹤").fill("");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "已拒絕或撤回的變更第 1 行必須使用費用 0、工期 0",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1311,6 +1371,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/home-service-provider-list/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/home-repair-change-order-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/home-repair-change-order-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/contractor-records/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",
