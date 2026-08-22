@@ -69,3 +69,22 @@ export function sortByOptionalIsoDate<T>(
     return dateA.localeCompare(dateB);
   });
 }
+
+export function sortUpcomingThenPastIsoDate<T>(
+  items: T[],
+  getDate: (item: T) => string,
+  today: string,
+) {
+  return [...items].sort((a, b) => {
+    const dateA = getDate(a);
+    const dateB = getDate(b);
+    if (!dateA) return dateB ? 1 : 0;
+    if (!dateB) return -1;
+    const aIsPast = dateA < today;
+    const bIsPast = dateB < today;
+    if (aIsPast !== bIsPast) return aIsPast ? 1 : -1;
+    return aIsPast
+      ? dateB.localeCompare(dateA)
+      : dateA.localeCompare(dateB);
+  });
+}

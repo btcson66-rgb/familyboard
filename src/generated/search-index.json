@@ -41,11 +41,11 @@
   },
   {
     "title": "Warranty Tracker for Appliances and Household Purchases | FamilyBoard",
-    "description": "Track household warranties, purchase dates, receipts and expiration windows before you need them.",
+    "description": "Track household warranty providers, receipt references, written terms and expiration windows before you need them.",
     "route": "/features/warranty-tracker/",
     "cluster": "product",
     "keywords": "warranty tracker",
-    "headings": "The worst time to look for warranty information is after something stops working What a warranty record holds Status is computed, not typed in The receipt reference field, and why it's just text A worked example Warranty and repair history stay on the same asset What FamilyBoard does not do"
+    "headings": "The worst time to look for warranty information is after something stops working What a warranty record holds Status is computed, not typed in The receipt reference field, and why it's just text A worked example One asset name connects the records across tabs What FamilyBoard does not do"
   },
   {
     "title": "Household Documents Organizer for Warranties, Manuals, Receipts and Home Records | FamilyBoard",

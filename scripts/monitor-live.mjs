@@ -60,6 +60,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/family-task-manager/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-dashboard/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/maintenance-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/warranty-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/household-subscription-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/how-to-track-product-warranties/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-household-subscriptions/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/household-documents-organizer/</loc>",
@@ -289,6 +292,33 @@ const checks = [
       'hreflang="en"',
       "有到期日的任務先顯示",
       "今天加七天",
+    ],
+  },
+  {
+    path: "/zh-tw/features/maintenance-tracker/",
+    require: [
+      "居家保養紀錄 App 教學",
+      'hreflang="en"',
+      "完成後間隔月數",
+      "費用欄沒有幣別",
+    ],
+  },
+  {
+    path: "/zh-tw/features/warranty-tracker/",
+    require: [
+      "保固管理 App 教學",
+      'hreflang="en"',
+      "截止日正好是今天",
+      "沒有統一詳情頁",
+    ],
+  },
+  {
+    path: "/zh-tw/features/household-subscription-tracker/",
+    require: [
+      "家庭訂閱管理 App 教學",
+      'hreflang="en"',
+      "年化費用怎麼算",
+      "不會自動新增獨立的取消日期",
     ],
   },
   {

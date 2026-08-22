@@ -596,6 +596,7 @@ Add one room or one category at a time rather than trying to catalog the whole h
 **Meta description:** `Track recurring home maintenance, completion dates, service history, costs and the assets each task belongs to.`
 **Primary keyword concept:** home maintenance tracker
 **Depth:** verified
+**Editorial review date:** 2026-08-22
 **Suggested internal links:** `/features/home-inventory-tracker/`, `/features/home-dashboard/`, `/features/household-documents-organizer/`, `/features/free-home-management-app/`
 
 # Stop relying on "I think we did that recently"
@@ -608,19 +609,19 @@ The quick-add form asks for a title, a related asset (from your Assets list), a 
 
 ## What happens when you press Complete
 
-Each maintenance card has a "Complete" button. Pressing it does two things: it adds a maintenance event with today's date (cost and notes start blank, ready for you to fill in through the CSV export if you want to log what a technician charged), and if the task has a repeat interval, it recalculates the next-due date by adding that many months to today, clamped so a task due-monthed from the 31st lands on the last valid day of a shorter month rather than erroring. A task with no interval — a one-time item — simply gets logged as completed without generating a new due date.
+Each maintenance card has a "Complete" button. Pressing it does two things: it adds a maintenance event with today's date (cost starts at zero and notes start blank, ready for you to edit through the master CSV if you want to log what a technician charged), and if the task has a repeat interval, it recalculates the next-due date by adding that many months to today, clamped so a task completed on the 31st lands on the last valid day of a shorter month rather than erroring. A task with no interval still logs a completion event, then clears its next-due date; it does not gain a separate "completed" task status.
 
 ## The card shows real history, not just a status
 
-Below the title and due-status badge, each maintenance card shows the linked asset or home area, the owner, the instructions source, a running completion count, and up to the five most recent completion events with their dates and any recorded cost. That means a task you've completed nine times shows its five newest entries right on the card — no separate report to run.
+Below the title and due-status badge, each maintenance card shows the linked asset or home area, owner, priority, instructions source, task notes, a running completion count, and up to the five most recent completion events with their dates and any recorded cost. The event cost is displayed as a plain number because maintenance events do not store a currency code; write the currency convention in the task notes or master data if your household could confuse it. A task you've completed nine times shows its five newest entries right on the card — no separate report to run.
 
 ## A worked example
 
-"Clean condenser coils" is linked to the Refrigerator asset, owned by one household member, home area left blank since it's tied to the asset, next due in three months, interval 6 months, priority normal, instructions source "Whirlpool support page." Six months later it shows as due; pressing Complete logs the event and pushes next-due out another six months automatically. Two years and four completions later, the card shows "4 completions" and the four most recent dates — a real service history for that one appliance instead of a memory of "we do that sometimes."
+"Clean condenser coils" is linked to the Refrigerator asset, owned by one household member, home area left blank since it's tied to the asset, next due September 1, interval 6 months, priority normal, instructions source "manufacturer support page." On September 1 it shows as due; pressing Complete that day logs the event and sets the new next-due date to March 1. After four completions, the card shows "4 completions" and the four dates — a real service history for that one appliance instead of a memory of "we do that sometimes."
 
 ## Flexible schedules for work that doesn't fit a fixed date
 
-Not everything belongs on a clean monthly or seasonal cadence. Some maintenance is condition-based — "inspect and clean if needed" rather than a guaranteed six-month job. The priority field is there to make sure a high-consequence, condition-based item (checking a water heater's relief valve, for instance) stays visible even without a hard due date forcing it onto the dashboard.
+Not everything belongs on a clean monthly or seasonal cadence. Some maintenance is condition-based — "inspect and clean if needed" rather than a guaranteed six-month job. The priority field gives that record a visible high, normal or low label on its maintenance card, but it does not change dashboard order or create an alert. A condition-based item without a next-due date will not appear in the dashboard's seven-day maintenance list, so pair it with a dated task when a real follow-up deadline matters.
 
 ## The honest limits
 
@@ -630,11 +631,11 @@ FamilyBoard doesn't send a push notification or email when a task comes due — 
 
 **FAQ:**
 - Q: What happens to the next-due date when I complete a maintenance task?
-  A: If the task has a repeat interval set (in months), completing it logs today's date as an event and moves the next-due date forward by that many months, adjusted so it always lands on a real calendar day. If the interval is zero, the task is simply marked completed with no new due date generated.
+  A: If the task has a repeat interval set (in months), completing it logs today's date as an event and moves the next-due date forward by that many months, adjusted so it always lands on a real calendar day. If the interval is zero, it still logs the event but clears the next-due date; the maintenance task itself does not receive a separate completed status.
 - Q: Can I log the cost of a maintenance visit?
-  A: The maintenance event created by pressing Complete starts with a blank cost and note field. You can fill those in afterward through the household master CSV export in Settings, which includes cost and notes columns for every maintenance event.
+  A: The maintenance event created by pressing Complete starts with cost 0 and a blank note. You can fill those in afterward through the household master CSV export in Settings, which includes cost and notes columns for every maintenance event. The event has no currency field, so the card displays a plain number rather than assuming USD or another currency.
 - Q: What's the difference between linking a task to an asset versus a home area?
-  A: An asset link ties the task to one specific record, like a named dishwasher or water heater, so its history shows on that asset's context. A home area (like "yard" or "gutters") is for maintenance that doesn't belong to a single tracked item — the card just shows the area name instead of an asset name.
+  A: An asset link ties the task to one specific record, like a named dishwasher or water heater, and the maintenance card identifies that asset by name. A home area (like "yard" or "gutters") is for maintenance that doesn't belong to a single tracked item. FamilyBoard does not currently provide a unified asset-detail screen that combines every linked record.
 - Q: Does FamilyBoard tell me how often I should do a given maintenance task?
   A: No. The instructions source field records where your interval came from — a manual page, a manufacturer's site, a technician's recommendation — but FamilyBoard doesn't supply or look up recommended intervals itself. You set the next-due date and repeat interval based on what you've found.
 - Q: Will I get a reminder when maintenance is due?
@@ -646,9 +647,10 @@ FamilyBoard doesn't send a push notification or email when a task comes due — 
 **Slug:** `/features/warranty-tracker/`
 **Primary intent:** find an appliance or product warranty tracker
 **Title tag:** `Warranty Tracker for Appliances and Household Purchases | FamilyBoard`
-**Meta description:** `Track household warranties, purchase dates, receipts and expiration windows before you need them.`
+**Meta description:** `Track household warranty providers, receipt references, written terms and expiration windows before you need them.`
 **Primary keyword concept:** warranty tracker
 **Depth:** verified
+**Editorial review date:** 2026-08-22
 **Suggested internal links:** `/features/home-inventory-tracker/`, `/features/household-documents-organizer/`, `/features/maintenance-tracker/`, `/features/free-home-management-app/`
 
 # The worst time to look for warranty information is after something stops working
@@ -661,7 +663,7 @@ The quick-add form requires an asset link and an end date; provider, start date,
 
 ## Status is computed, not typed in
 
-You never mark a warranty as expired yourself. The card compares the end date against today's date every time you open the tab: if the end date has passed, the badge reads "Expired"; otherwise it reads "Ends" followed by the date. That means the status is always current the moment you look at it, with no separate step to update it as time passes.
+You never mark a warranty as expired yourself. The card compares the end date against today's date every time you open the tab: if the end date has passed, the badge reads "Expired"; on the end date itself and before it, the badge reads "Ends" followed by the date. Warranties that have not expired are listed first by nearest end date, followed by expired records with the most recently expired first. The status and order update when you open the app; no manual status field is involved.
 
 ## The receipt reference field, and why it's just text
 
@@ -669,15 +671,15 @@ The receipt reference is a plain string field — "PDF in email, subject 'Order 
 
 ## A worked example
 
-A household buys a washing machine with a 2-year manufacturer warranty starting the installation date. They add the asset first (brand, model, serial number from the door frame, purchase date), then add a warranty: asset = the washing machine, provider "LG," starts at the install date, ends 24 months later, receipt reference "email folder 'Appliances 2026'," terms reference "warranty card, kitchen drawer." Fourteen months in, the card reads "Ends [date 10 months out]" — a fast answer to "is this still covered" without digging through email. If the machine develops a drain problem in month 20, the warranty record and a maintenance event logged against the same asset both exist, so the repair history and the coverage window sit side by side.
+A household buys a washing machine with a two-year manufacturer warranty starting on the installation date. They add the asset first (brand, model, serial number from the door frame and purchase date), then add a warranty: asset = the washing machine, provider = manufacturer, starts at the installation date, ends 24 months later, receipt reference = "email folder 'Appliances 2026'," and terms reference = "warranty card, kitchen drawer." Fourteen months in, the card reads "Ends [date 10 months out]" — a fast answer to "is the recorded period still open?" without digging through email. If the machine develops a drain problem in month 20, the warranty record and the maintenance history remain in their respective tabs under the same asset name.
 
-## Warranty and repair history stay on the same asset
+## One asset name connects the records across tabs
 
-Because a warranty links to an asset ID, and a maintenance completion event links to a maintenance task that also has an asset ID, both threads trace back to the same appliance. Opening the asset shows you both: what's covered, and what's already been serviced — useful context if you're deciding whether an issue is worth a warranty claim or a routine repair.
+Because a warranty links to an asset ID, and a maintenance completion event links to a maintenance task that can use the same asset ID, both records identify the same appliance. FamilyBoard currently has no unified asset-detail screen: you switch between Warranties and Maintenance and use the consistent asset name to connect them. The app records the paperwork location and service timeline; it does not decide whether the issue is covered or whether a claim is worthwhile.
 
 ## What FamilyBoard does not do
 
-It does not read your warranty terms or tell you whether a specific repair is covered — the "written terms control" reminder on every card is there because coverage rules genuinely vary by manufacturer, retailer and sometimes by state consumer-protection law. It does not track extended or third-party warranties any differently from manufacturer warranties; you record whatever terms and provider apply. And it does not notify you by email or push alert as an end date approaches — the "Ends" badge only updates when you open the app.
+It does not read your warranty terms or tell you whether a specific repair is covered — the "written terms control" reminder on every card is there because coverage rules vary by provider, product and agreement. It does not track extended or third-party warranties differently from manufacturer warranties; you record whichever terms and provider apply. It also has no review-before field and does not notify you by email or push alert as an end date approaches. If you need action before expiry, create a separate task with a real owner and due date.
 
 **Contextual CTA:** Add a warranty for the newest significant purchase in your home while the receipt is still easy to find, and link it to that item's asset record.
 
@@ -751,6 +753,7 @@ Because documents are references and not uploads, the durable copy of anything i
 **Meta description:** `Track household subscriptions, renewal dates, billing frequency, ownership and cancellation notes in one private list.`
 **Primary keyword concept:** household subscription tracker
 **Depth:** verified
+**Editorial review date:** 2026-08-22
 **Suggested internal links:** `/features/family-task-manager/`, `/features/home-dashboard/`, `/features/private-family-organizer/`, `/features/free-home-management-app/`
 
 # Subscriptions are household obligations, not just line items
@@ -759,19 +762,19 @@ A subscription tracker often gets treated as a pure budgeting tool. Cost matters
 
 ## What a subscription record holds
 
-The quick-add form captures the service name, category (defaulting to "Household"), cost, currency (defaulting to USD), billing frequency (monthly, annual, weekly or quarterly), next renewal date, a review-lead-time in days before renewal (defaulting to 14), an owner, a management URL, and a payment-method note. That last field has an explicit warning built into its help text: "Never store card numbers or passwords." The record can identify which card or account a subscription bills to in general terms — "the household Visa" — without ever becoming a place to store the actual number.
+The English quick-add form captures the service name, category (defaulting to "Household"), a non-negative cost, currency (defaulting to USD), billing frequency (monthly, annual, weekly or quarterly), next renewal date, a non-negative review-lead-time in days before renewal (defaulting to 14), an owner, a management URL, and a payment-method note. The Traditional Chinese interface defaults to the category 家庭 and currency TWD. The payment-note help text explicitly says: "Never store card numbers or passwords." It can identify an account in general terms — "household Visa" — without becoming a place to store the actual number.
 
 ## The annualized total is computed live
 
-Above your subscription list, the tab shows one figure: the annualized cost of every subscription currently marked active. The calculation is straightforward — weekly costs are multiplied by 52, monthly by 12, quarterly by 4, and annual by 1 — and it's recomputed every time the page loads, so adding or cancelling a subscription changes the total immediately.
+Above the subscription list, the tab shows annualized active totals separated by currency. The calculation is straightforward — weekly costs are multiplied by 52, monthly by 12, quarterly by 4, and annual by 1 — and is recomputed when the data changes. Adding, cancelling or reactivating a subscription changes the corresponding currency total immediately. FamilyBoard does not fetch exchange rates and never adds USD, TWD and JPY into a misleading combined number.
 
 ## A worked example of the annualized math
 
-Say a household has three active subscriptions: a $15.99/month streaming service, a $89.99/quarterly pest-control plan, and a $6.49/week meal-kit box. The annualized total shown on the tab would be (15.99 × 12) + (89.99 × 4) + (6.49 × 52) = $191.88 + $359.96 + $337.48 = $889.32. That's the number that makes an easy-to-ignore set of small recurring charges visible as one yearly figure — the meal-kit box alone, billed weekly, is easy to underestimate until it's annualized.
+Say a household has three active USD subscriptions: a $15.99/month streaming service, an $89.99/quarterly pest-control plan, and a $6.49/week meal-kit box. The USD annualized total is (15.99 × 12) + (89.99 × 4) + (6.49 × 52) = $889.32. If the same household also records a TWD 1,200 annual service, the notice shows `TWD 1,200 · USD 889.32`; it does not call the sum 2,089.32 because those numbers are different currencies.
 
 ## Marking a subscription cancelled instead of deleting it
 
-Each subscription card has a button that toggles between "Mark cancelled" and "Reactivate." Cancelling doesn't delete the record — it changes its status to "cancelled," which removes it from the active-subscription count on the dashboard and from the annualized total, while keeping its history (what it cost, when it was cancelled) intact in case you want to look back at it or resubscribe.
+Each subscription card has a button that toggles between "Mark cancelled" and "Reactivate." Cancelling doesn't delete the record — it changes its status to "cancelled," which removes it from the active-subscription count on the dashboard and from the annualized totals while keeping the entered cost, renewal, owner, category, URL and notes. The current record does not have a dedicated cancellation-date field, so write a date in Notes before cancelling if that history matters. Active records are shown first by nearest renewal date, followed by cancelled records.
 
 ## Reviewing before renewal
 
@@ -785,13 +788,13 @@ It doesn't charge, cancel, or contact any service on your behalf — the managem
 
 **FAQ:**
 - Q: How is the annualized subscription total calculated?
-  A: FamilyBoard multiplies each active subscription's cost by a fixed factor based on its billing frequency — 52 for weekly, 12 for monthly, 4 for quarterly, and 1 for annual — then sums every active subscription. The total updates automatically whenever you add, cancel or reactivate a subscription.
+  A: FamilyBoard multiplies each active subscription's cost by a fixed factor based on its billing frequency — 52 for weekly, 12 for monthly, 4 for quarterly, and 1 for annual — then sums records only within the same currency. USD, TWD and JPY remain separate because the app does not fetch exchange rates.
 - Q: Does FamilyBoard remind me before a subscription renews?
   A: Not automatically as a standalone alert. The review-before-days field records how much notice you'd want, but the practical way to get a real reminder on the dashboard is to create a task due that many days before the renewal date.
 - Q: Is it safe to store my credit card number in the payment method note?
   A: No — don't. That field's help text explicitly says never to store card numbers or passwords there. It's meant for a household-readable note like "billed to the joint checking account," not actual payment credentials, which belong in a dedicated password manager.
 - Q: What happens when I mark a subscription as cancelled?
-  A: Its status changes to "cancelled," which removes it from the active-subscription dashboard count and the annualized total. The record itself isn't deleted, so its cost history and notes stay available, and you can reactivate it later with one click if you resubscribe.
+  A: Its status changes to "cancelled," which removes it from the active-subscription dashboard count and annualized totals. The record itself is not deleted, so its entered details stay available and you can reactivate it later. FamilyBoard does not automatically record a dedicated cancellation date.
 
 ---
 

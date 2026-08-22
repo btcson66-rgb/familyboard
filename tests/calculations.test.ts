@@ -5,6 +5,7 @@ import {
   annualizedCost,
   localIsoDate,
   sortByOptionalIsoDate,
+  sortUpcomingThenPastIsoDate,
   warrantyReviewDate,
 } from "../src/lib/calculations";
 describe("date and cost rules", () => {
@@ -56,5 +57,21 @@ describe("date and cost rules", () => {
       { id: "undated", dueDate: "" },
     ]);
     expect(records[0].id).toBe("undated");
+  });
+  it("shows upcoming dates first and keeps expired dates newest-first", () => {
+    const warranties = [
+      { id: "old-expired", endDate: "2025-03-01" },
+      { id: "later", endDate: "2026-10-01" },
+      { id: "recent-expired", endDate: "2026-08-20" },
+      { id: "next", endDate: "2026-08-23" },
+    ];
+    expect(
+      sortUpcomingThenPastIsoDate(
+        warranties,
+        (item) => item.endDate,
+        "2026-08-22",
+      ).map((item) => item.id),
+    ).toEqual(["next", "later", "recent-expired", "old-expired"]);
+    expect(warranties[0].id).toBe("old-expired");
   });
 });

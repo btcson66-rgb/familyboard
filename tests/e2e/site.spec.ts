@@ -87,6 +87,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/features/home-inventory-tracker/",
     "/zh-tw/features/family-task-manager/",
     "/zh-tw/features/home-dashboard/",
+    "/zh-tw/features/maintenance-tracker/",
+    "/zh-tw/features/warranty-tracker/",
+    "/zh-tw/features/household-subscription-tracker/",
     "/zh-tw/guides/how-to-track-product-warranties/",
     "/zh-tw/guides/organize-household-subscriptions/",
     "/zh-tw/guides/household-documents-organizer/",
@@ -196,6 +199,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/features/home-dashboard/",
       alternate: "/features/home-dashboard/",
       heading: "家庭管理儀表板教學：先看懂數字，再決定今天要處理什麼",
+    },
+    {
+      route: "/zh-tw/features/maintenance-tracker/",
+      alternate: "/features/maintenance-tracker/",
+      heading: "居家保養紀錄 App 教學：不要只排日期，要留下「真的做過」的證據",
+    },
+    {
+      route: "/zh-tw/features/warranty-tracker/",
+      alternate: "/features/warranty-tracker/",
+      heading: "保固管理 App 教學：把「應該還有保固」變成可以查證的資料",
+    },
+    {
+      route: "/zh-tw/features/household-subscription-tracker/",
+      alternate: "/features/household-subscription-tracker/",
+      heading: "家庭訂閱管理 App 教學：費用之外，更要知道誰負責與何時決定",
     },
     {
       route: "/zh-tw/guides/how-to-track-product-warranties/",
@@ -466,6 +484,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "https://familyboard.win/zh-tw/features/home-dashboard/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/maintenance-tracker/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/warranty-tracker/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/household-subscription-tracker/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/how-to-track-product-warranties/",
   );
   expect(sitemap).toContain(
@@ -509,6 +536,23 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(assetCard).not.toContainText("purchased");
   await expect(assetCard).toContainText("序號： ZH-ASSET-001");
   await expect(assetCard).toContainText("備註： 廚房左側插座");
+
+  await page.getByRole("button", { name: "保養維護" }).click();
+  await expect(page.getByLabel("完成後間隔月數")).toHaveAttribute("min", "0");
+  await page.getByLabel("保養工作").fill("檢查冰箱散熱區");
+  await page.getByLabel("關聯資產").selectOption({ label: "測試冰箱" });
+  await page.getByLabel("完成後間隔月數").fill("6");
+  await page.getByLabel("優先順序").selectOption("high");
+  await page.getByLabel("操作說明來源").fill("原廠手冊第 12 頁");
+  await page.getByLabel("備註", { exact: true }).fill("先確認通風空間");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  const maintenanceCard = page.locator(".app-card").filter({ hasText: "檢查冰箱散熱區" });
+  await expect(maintenanceCard).toContainText("優先順序： 高");
+  await expect(maintenanceCard).toContainText("來源： 原廠手冊第 12 頁");
+  await expect(maintenanceCard).toContainText("備註： 先確認通風空間");
+  await maintenanceCard.getByRole("button", { name: "標記完成" }).click();
+  await expect(maintenanceCard).toContainText("完成 1 次");
+  await expect(maintenanceCard).toContainText("完成於");
 
   await page.getByRole("button", { name: "任務" }).click();
   await page.getByLabel("家庭責任").fill("較晚任務");
@@ -558,6 +602,8 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
 
   await page.getByRole("button", { name: "訂閱" }).click();
   await expect(page.getByLabel("幣別")).toHaveValue("TWD");
+  await expect(page.getByLabel("費用")).toHaveAttribute("min", "0");
+  await expect(page.getByLabel("提前幾天複查")).toHaveAttribute("min", "0");
   await page.getByLabel("服務名稱").fill("測試影音");
   await page.getByLabel("費用").fill("100");
   await page.getByLabel("下次續約日").fill("2026-12-31");
@@ -568,6 +614,7 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByRole("button", { name: "新增紀錄" }).click();
   await expect(page.locator(".notice")).toContainText("TWD 1,200");
   const twdCard = page.locator(".app-card").filter({ hasText: "測試影音" });
+  await expect(twdCard).toContainText("分類： 家庭");
   await expect(twdCard).toContainText("複查日 2026年12月1日");
   await expect(twdCard.getByRole("link", { name: "開啟服務管理頁" })).toHaveAttribute(
     "href",

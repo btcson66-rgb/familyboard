@@ -14,6 +14,7 @@ import {
   annualizedActiveTotalsByCurrency,
   localIsoDate,
   sortByOptionalIsoDate,
+  sortUpcomingThenPastIsoDate,
   warrantyReviewDate,
 } from "../lib/calculations";
 import {
@@ -87,6 +88,7 @@ type Input = {
   optionLabels?: Record<string, string>;
   value?: string;
   help?: string;
+  min?: number;
 };
 type ToolDraft = {
   slug: string;
@@ -261,6 +263,7 @@ function QuickForm({
                 type={field.type || "text"}
                 value={values[field.name]}
                 required={field.required}
+                min={field.min}
                 onChange={(event) =>
                   setValues({ ...values, [field.name]: event.target.value })
                 }
@@ -677,6 +680,7 @@ function FamilyAppBody() {
                     label: "Repeat months after completion",
                     type: "number",
                     value: "0",
+                    min: 0,
                   },
                   {
                     name: "priority",
@@ -722,17 +726,15 @@ function FamilyAppBody() {
                       · {names[item.ownerMemberId] || "Unassigned"}
                     </p>
                     <p className="detail">
-                      Source:{" "}
+                      <span>Priority:</span> {item.priority} · <span>Source:</span>{" "}
                       {item.instructionsSource ||
                         "Add manufacturer/provider source"}{" "}
                       ·{" "}
-                      {
-                        data.maintenanceEvents.filter(
-                          (event) => event.maintenanceTaskId === item.id,
-                        ).length
-                      }{" "}
-                      completions
+                      {`${data.maintenanceEvents.filter(
+                        (event) => event.maintenanceTaskId === item.id,
+                      ).length} completions`}
                     </p>
+                    {item.notes && <p className="detail">Notes: {item.notes}</p>}
                     {data.maintenanceEvents
                       .filter((event) => event.maintenanceTaskId === item.id)
                       .sort((a, b) =>
@@ -741,11 +743,16 @@ function FamilyAppBody() {
                       .slice(0, 5)
                       .map((event) => (
                         <p className="detail" key={event.id}>
-                          Completed{" "}
-                          {dateTime(event.completedAt)}
-                          {event.cost
-                            ? ` · ${new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(event.cost)}`
-                            : ""}
+                          <span>{`Completed ${dateTime(event.completedAt)}`}</span>
+                          {event.cost ? (
+                            <>
+                              {" · "}<span>Recorded cost</span>{" "}
+                              {new Intl.NumberFormat(
+                                locale === "zh-TW" ? "zh-TW" : "en-US",
+                                { maximumFractionDigits: 2 },
+                              ).format(event.cost)}
+                            </>
+                          ) : null}
                         </p>
                       ))}
                     <div className="app-actions">
@@ -828,7 +835,11 @@ function FamilyAppBody() {
                 }
               />
               <div className="app-grid">
-                {data.warranties.map((item) => (
+                {sortUpcomingThenPastIsoDate(
+                  data.warranties,
+                  (item) => item.endsAt,
+                  localIsoDate(),
+                ).map((item) => (
                   <div className="app-card" key={item.id}>
                     <header>
                       <h2>{assets[item.assetId] || "Unlinked warranty"}</h2>
@@ -869,7 +880,7 @@ function FamilyAppBody() {
                     label: "Category",
                     value: locale === "zh-TW" ? "家庭" : "Household",
                   },
-                  { name: "cost", label: "Cost", type: "number", value: "0" },
+                  { name: "cost", label: "Cost", type: "number", value: "0", min: 0 },
                   {
                     name: "currency",
                     label: "Currency",
@@ -887,6 +898,7 @@ function FamilyAppBody() {
                     label: "Review days before",
                     type: "number",
                     value: "14",
+                    min: 0,
                   },
                   {
                     name: "ownerMemberId",
@@ -931,7 +943,16 @@ function FamilyAppBody() {
                   : "No active subscriptions."}
               </p>
               <div className="app-grid">
-                {data.subscriptions.map((item) => {
+                {[
+                  ...sortByOptionalIsoDate(
+                    data.subscriptions.filter((item) => item.status === "active"),
+                    (item) => item.nextRenewal,
+                  ),
+                  ...sortByOptionalIsoDate(
+                    data.subscriptions.filter((item) => item.status !== "active"),
+                    (item) => item.nextRenewal,
+                  ),
+                ].map((item) => {
                   const managementUrl = safeExternalUrl(item.managementUrl);
                   const reviewDate = item.nextRenewal
                     ? warrantyReviewDate(
@@ -948,6 +969,7 @@ function FamilyAppBody() {
                       {item.currency} {item.cost.toFixed(2)} ·{" "}
                       {item.billingFrequency}
                     </p>
+                    <p className="detail">Category: {item.category || "Not recorded"}</p>
                     <p className="detail">
                       Renewal {labelDate(item.nextRenewal)} ·{" "}
                       Review by {labelDate(reviewDate)} ·{" "}

@@ -33,17 +33,17 @@
   },
   {
     "route": "/features/maintenance-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/maintenance-tracker/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
   {
     "route": "/features/warranty-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/warranty-tracker/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
@@ -57,9 +57,9 @@
   },
   {
     "route": "/features/household-subscription-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/household-subscription-tracker/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1868,8 +1868,22 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/features/household-subscription-tracker/",
+    "alternateRoute": "/features/household-subscription-tracker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/how-to-track-product-warranties/",
     "alternateRoute": "/guides/how-to-track-product-warranties/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/features/maintenance-tracker/",
+    "alternateRoute": "/features/maintenance-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
@@ -1914,6 +1928,13 @@
     "alternateRoute": "/tools/warranty-expiration-calculator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-20",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/features/warranty-tracker/",
+    "alternateRoute": "/features/warranty-tracker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
   }
 ]
