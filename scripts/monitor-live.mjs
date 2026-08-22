@@ -69,6 +69,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-water-leak-event-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-water-leak-event-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/water-leak-response-home-records/</loc>",
+      "<loc>https://familyboard.win/tools/household-storm-readiness-review/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-storm-readiness-review/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/storm-preparation-home-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -209,6 +212,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Keep four layers separate",
       "epa.gov/mold/brief-guide-mold-moisture-and-your-home",
+    ],
+  },
+  {
+    path: "/tools/household-storm-readiness-review/",
+    require: [
+      "Household Storm Readiness Review",
+      'hreflang="zh-TW"',
+      "Four statuses preserve the difference between checked and resolved",
+      "does not fetch forecasts",
+    ],
+  },
+  {
+    path: "/guides/storm-preparation-home-checklist/",
+    require: [
+      "Storm Preparation Home Checklist",
+      'hreflang="zh-TW"',
+      "Create a source map before creating a task list",
+      "weather.gov/nwr",
     ],
   },
   {
@@ -374,6 +395,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-storm-readiness-review/",
+    require: [
+      "家庭颱風準備複查表",
+      'hreflang="en"',
+      "四種狀態只描述工作流程",
+      "不讀取即時颱風",
+    ],
+  },
+  {
     path: "/zh-tw/guides/home-evacuation-information/",
     require: [
       "家庭避難計畫怎麼做",
@@ -416,6 +446,15 @@ const checks = [
       'hreflang="en"',
       "公共供水、大樓共用、室內設備不是同一個窗口",
       "1910",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/storm-preparation-home-checklist/",
+    require: [
+      "颱風來了家裡要準備什麼",
+      'hreflang="en"',
+      "同一場颱風，要分開看風、雨、淹水與坡地警戒",
+      "246.ardswc.gov.tw",
     ],
   },
   {

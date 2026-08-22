@@ -2834,58 +2834,175 @@ The annual review naturally surfaces more findings than can reasonably be handle
 
 ## Page 046 — Storm Preparation Home Checklist
 **Slug:** `/guides/storm-preparation-home-checklist/`
-**Primary intent:** organize household preparations before severe weather
-**Title tag:** `Storm Preparation Home Checklist: Organize Information, Supplies and Household Responsibilities`
-**Meta description:** `A household storm-preparation framework for contacts, devices, supplies, property tasks and family responsibilities, with local official guidance taking priority.`
+**Primary intent:** build a source-led household storm preparation plan with checked tasks, assigned roles and dated rechecks
+**Title tag:** `Storm Preparation Home Checklist | Sources, Roles and Rechecks`
+**Meta description:** `Prepare for severe storms with verified local alerts, observable home checks, household roles, protected records and dated follow-up—without replacing official instructions.`
 **Primary keyword concept:** storm preparation home checklist
-**Suggested internal links:** `/guides/power-outage-home-preparedness/`, `/guides/emergency-supply-inventory/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`
+**Cluster:** maintenance
+**Page type:** content
+**Published date:** 2026-08-19
+**Editorial review date:** 2026-08-23
+**Content version:** 2
+**Suggested internal links:** `/tools/household-storm-readiness-review/`, `/guides/power-outage-home-preparedness/`, `/guides/emergency-supply-inventory/`, `/guides/emergency-information-sheet/`
 
-# Storm preparation home checklist: organize information, supplies and responsibilities
+# Storm preparation home checklist: turn current guidance into owned household work
 
-Storm risk is genuinely local — a household in a hurricane-prone coastal area, one under tornado watches every spring, and one that mostly worries about a bad ice storm are preparing for different things. This page doesn't try to override that: official local emergency guidance always determines the actual safety actions for your specific storm. What a household organizer can do well is make sure the information, responsibilities and supplies are already sorted out before conditions get bad enough that clear thinking gets harder.
+A useful storm checklist is not a universal list of objects to buy. It is a dated bridge between current official information and one household's real people, building, location, supplies and responsibilities. The bridge matters because a coastal hurricane, inland flood, tornado outbreak, tropical cyclone, winter storm and severe thunderstorm do not create identical decisions. Even two homes under the same warning can have different evacuation zones, access limits, medical dependencies and building instructions.
 
-## Get your alerts from a source that doesn't depend on cell towers or the internet
+This guide shows how to maintain that bridge. It separates an official source from a household observation, turns each open preparation into one owned action, protects sensitive records and sets a recheck before information goes stale. It does not forecast a storm, calculate property risk, inspect a building, approve do-it-yourself work or decide whether anyone should stay or evacuate.
 
-A storm severe enough to matter often also strains or knocks out cell networks and internet service, right when you need alerts most. NOAA Weather Radio is a dedicated broadcast network that operates independent of internet or cellular connectivity, running 24/7 on its own radio frequencies, and it carries official National Weather Service warnings and watches directly. Source: [NOAA — Weather Radio](https://www.weather.gov/nwr). Wireless Emergency Alerts, sent directly to compatible cell phones by local authorities, are a second channel worth having enabled, even though they depend on a working cell network. Source: [National Weather Service — Safety](https://www.weather.gov/safety/). Having both means one working even if the other doesn't.
+**Want a structured review? [Open the Household Storm Readiness Review](#checklist-workflow) and give every open item one owner and date.**
 
-## Follow local authorities for every actual safety decision
+## Start with the authority for the actual location
 
-Evacuation orders, shelter locations, travel restrictions and real-time warnings come from your local emergency management authority, not from this page or any generic checklist. If official guidance and a general household checklist ever conflict, the official guidance wins, every time, without exception.
+Identify the weather service, emergency-management agency, evacuation authority, flood or landslide source, utility and building contact that apply to the home's location. Record the official page or channel, what question it answers, the date someone checked it and how the household can reach the information if home internet is unavailable.
 
-## Assign specific responsibilities before the storm, not during it
+In the United States, [NOAA Weather Radio](https://www.weather.gov/nwr/) broadcasts National Weather Service warnings, watches, forecasts and other hazard information through a dedicated network. That is a useful U.S. example, not a worldwide instruction. A household elsewhere needs the equivalent official source for its jurisdiction. Phone alerts, websites, radio, television and local authority messages can provide overlapping paths; each still depends on real coverage, power, equipment and current enrollment.
 
-A short list of clear ownership prevents duplicated effort and gaps at the worst possible time:
+Do not copy a warning into a permanent checklist and treat it as current next season. Preserve its issue time and source. Forecasts, warning areas, shelter information, roads and evacuation instructions change. The household checklist can say who checks each source and where the current message is recorded; it cannot make a saved message remain authoritative.
 
-- Who's checking alerts and relaying them to the rest of the household?
-- Who handles pets — carriers, food, current ID tags?
-- Who's responsible for grabbing essential documents if evacuation becomes necessary?
-- Who checks in on a household member who lives alone or depends on others?
+## Distinguish a forecast, warning, order and household note
 
-Write these down and revisit them once a year — households change, and an assignment made three years ago may no longer fit who's actually available.
+These records have different authority:
 
-## Inventory what you have before buying more
+- a forecast describes expected conditions and uncertainty;
+- a watch, warning or advisory has a definition set by the issuing authority;
+- an evacuation or shelter instruction comes from the responsible public authority;
+- a building notice covers the property manager's systems or access rules; and
+- a household note describes what a resident saw or completed.
 
-Review the household's existing emergency supplies — batteries, a battery-powered radio, first-aid items, any stored water or food — and check condition and expiration dates rather than assuming a bundle bought years ago is still good. Buying a full new kit without checking what's already in the closet wastes money and still leaves you with an assortment nobody's actually verified works.
+Do not combine them into `storm safe` or `evacuation not needed`. A resident seeing a clear road does not cancel a flood closure. A neighbor's message does not replace an official warning. A completed balcony check does not certify the building envelope. Preserve the source name, issue or check time and exact household consequence without upgrading the evidence.
 
-## Protect your household records before the storm, not after
+The current [CDC hurricane and tropical-storm preparation guidance](https://www.cdc.gov/hurricanes/safety/) tells readers to plan ahead, gather supplies, prepare the home and follow authorities about evacuation or staying home. Those are separate jobs. A household checklist supports them by making information and responsibility findable; it never overrides the responsible authority's live direction.
 
-If a storm damages the home, having your insurance policy details, a home inventory, and key documents accessible from outside the house matters more than almost anything else on this list for the recovery process afterward. The Insurance Information Institute recommends storing a home inventory somewhere outside the home itself specifically so it survives the event it may need to document. Source: [Insurance Information Institute](https://www.iii.org/article/brochure-home-inventory). An exported backup of your household records, kept somewhere other than the device that might be damaged, does the same job for everything else you've documented.
+## Create a source map before creating a task list
 
-## If the storm knocks out power, that's its own checklist
+A task without a basis can become folklore. Build a compact source map first:
 
-Power loss during or after a storm brings its own specific risks — generator carbon monoxide safety chief among them — detailed on the power outage preparedness page. Storm prep and outage prep overlap but aren't the same job: storm prep is about the event itself and evacuation-adjacent decisions; outage prep is specifically about managing without electricity, however it was lost.
+1. official weather and warning source;
+2. local emergency-management and evacuation source;
+3. flood, landslide, storm-surge or other locally relevant hazard source;
+4. electricity, water and other utility channels;
+5. building, landlord or association instructions;
+6. product manuals and qualified service sources; and
+7. individual care or accessibility plans kept in a protected location.
 
-**Contextual CTA:** Use the Emergency Binder Generator to organize contacts and household-specific responsibilities now, then let your local emergency-management guidance drive every actual decision once a storm is approaching.
+For each one, record `source ID | authority | date checked | purpose | offline access | owner`. Use stable IDs such as `SRC-1`. The source owner is responsible for refreshing it, not for interpreting beyond what it actually says.
+
+Test access without the normal home connection. A bookmarked webpage is not an offline path when the router has no power. A downloaded page, printed card, radio channel or phone contact may help, but verify that the chosen method works for the intended person and label when it was last checked.
+
+## Review the household by consequence, not by room alone
+
+Walk through what severe wind, rain, flooding, loss of power, blocked travel or an evacuation instruction could interrupt. Categories may include:
+
+- people who need mobility, communication, temperature or other continuity support;
+- pets, carriers, food and a destination that actually accepts them;
+- medication and health plans maintained with the appropriate professional;
+- doors, windows, balconies, yards and loose exterior items;
+- drainage, pumps and shared building systems;
+- electricity, water, refrigeration, communications and access equipment;
+- transport, fuel or an alternative ride arrangement;
+- important documents, home inventory and recoverable backups; and
+- the post-event conditions that must be checked before normal use resumes.
+
+The list is for discovery, not a score. One unresolved life-safety dependency can matter more than twenty checked convenience items. Do not copy diagnoses, medication doses, account numbers or exact home and shelter addresses into a broadly shared sheet. Record a role and protected pointer to the current individual plan.
+
+## Translate authoritative guidance into observable tasks
+
+Each task should say what a household member can safely verify. `Outdoor chair moved to named indoor storage; dated photo ITEM-1-A` is observable. `Home secured against wind` is an unsupported conclusion. `Battery radio powered on under manufacturer instructions and local station received on review date` is evidence. `Communications guaranteed` is not.
+
+Use these fields:
+
+`ID | area or dependency | observed readiness fact | evidence | household owner | status | source ID`
+
+The source ID keeps a task from drifting away from its basis. A building-specific shutter, roof, generator, electrical, gas or flood-barrier task should point to the applicable manual, building instruction or qualified source—not a generic social post. Never climb, enter floodwater, touch a downed line, work on live electrical equipment or perform unfamiliar building work simply to complete a row.
+
+Four workflow statuses are enough:
+
+- `Physically checked for this review` means the specific observation was made on the review date;
+- `Action or purchase open` means a defined household step is unfinished;
+- `Authority or building confirmation open` means the household must obtain a responsible answer; and
+- `Not applicable with recorded basis` means the source and reason are preserved, not merely assumed.
+
+None of them means `safe for this storm`. Conditions and official instructions can change after the check.
+
+## Assign roles that can still work when plans change
+
+Use functional roles rather than depending on one person's memory. A small household may have one person hold several roles, but the duties should still be visible:
+
+- source checker records official updates and issue times;
+- household coordinator reconciles tasks and contacts;
+- supply checker physically verifies selected supplies and dates;
+- care coordinator maintains protected individual plans;
+- pet or transport owner confirms the relevant arrangement;
+- building liaison checks current property instructions; and
+- records owner preserves evidence, exports and later lessons.
+
+Each open task receives exactly one next action, one household owner and one due date. If an outside contractor or building manager must act, the household owner still follows up and preserves the response. Ownership never grants permission or competence to perform hazardous or regulated work.
+
+Build a backup for the source-checking role. Ask the second person to locate the current information and explain which authority wins if messages differ. That short exercise is more useful than listing six contacts nobody has tested.
+
+## Check supplies against the plan instead of buying a generic kit
+
+Start with the needs and official guidance already identified. Then inspect what the household owns: quantity, condition, expiry, compatibility, storage location and the person or animal it supports. The [emergency supply inventory guide](/guides/emergency-supply-inventory/) provides a structured workflow for that job.
+
+CDC's U.S. guidance includes food, water, medicine, lighting, batteries and documents among hurricane preparation topics. The amount, type and handling instructions still depend on the current responsible authority, household size, health needs and local conditions. A sealed package is not proof that the right item is present, that batteries match or that a household member can use it.
+
+Affiliate recommendations, if shown in the future, must remain optional and outside the review form. A shopping category cannot know the household's hazard, equipment compatibility or current stock. The preparation can be completed without buying through FamilyBoard, and a commission cannot define what a family needs.
+
+## Keep property preparation within safe authority boundaries
+
+Exterior objects can become hazards in strong wind, but the safe method for moving, securing or removing something depends on its weight, height, mounting, weather, access and building rules. Finish ordinary, authorized work while conditions are safe. Stop when a task requires climbing, roof access, electrical work, gas work, tree work near lines, entry into water, heavy lifting beyond the person's ability or modification of common property.
+
+Use a qualified provider or building authority where needed. Preserve the requested work, source, appointment or completion evidence. Do not mark `contractor called` as `work complete`, and do not mark `looks secure` as an engineering finding.
+
+If lines are down or exposed, keep away and use the responsible utility or emergency channel. If flooding, slope movement, structural damage, fire, gas odor or injury is present, the household checklist pauses. Live official and emergency instructions take priority over completing the form.
+
+## Prepare for power, water and communication interruption as separate plans
+
+Storm preparation discovers dependencies; it should link to rather than duplicate their expert workflows. The [power outage preparedness guide](/guides/power-outage-home-preparedness/) covers source verification, power-dependent support, generators and restoration evidence. Water interruption or flooding may require the current utility and public-health authority. Communications need both powered equipment and external service.
+
+Record the relevant plan location, owner and last review. Avoid copying generator installation steps, food-safety thresholds, medical device settings or water-treatment instructions into the storm task list. Those details change by product, jurisdiction and condition and belong with their responsible source.
+
+## Protect records that recovery may require
+
+Keep a current home inventory, important document index, insurance or rental sources and a recoverable FamilyBoard export outside the single device or location that could be affected. A shared readiness sheet needs only protected references such as `DOC-1` or `POLICY-1`, not policy numbers, identity documents, financial details or passwords.
+
+Test the backup rather than only creating it. Confirm the intended person can find and open the copy. If encryption is used, manage the password separately; FamilyBoard cannot recover a lost one. Review printed copies after the event and destroy stale sensitive sheets appropriately.
+
+The [emergency information sheet guide](/guides/emergency-information-sheet/) explains how to minimize a handoff copy. The private app remains local to the browser unless the user exports it, so browser storage is not the only copy for important records.
+
+## Set a review window that changes with conditions
+
+A seasonal review may have a later next-check date. Once an official local update, watch or warning affects the area, the source and open tasks may need review sooner. The checklist does not calculate that interval. Record the date chosen from current authority, building needs and household circumstances.
+
+Every open task should fit inside the next-review window. If it cannot, document the responsible escalation or alternative rather than leaving an unrealistic promise. A later date does not authorize waiting when an official instruction requires action now.
+
+## Close only the review, never the weather risk
+
+Before marking a review complete, reconcile every source ID, task ID, evidence pointer, open action, owner and due date. Replace `done` with the observable fact that supports it. Preserve what was not accessible or not yet confirmed rather than guessing.
+
+After the event, create new observations for damage, service interruption and repairs instead of rewriting the preparation record. Compare what was planned with what actually worked: which alert arrived, which offline path was usable, what task lacked an owner and which supply or document could not be found. Those lessons become the next version.
+
+The completion statement should read `household preparation review reconciled on [date]`. It should never say the property was storm-proof, the route was safe, the official warning ended or future loss was prevented.
+
+<a id="checklist-workflow"></a>
+
+**Next step:** use the [Household Storm Readiness Review](/tools/household-storm-readiness-review/) to record at least one current official source, one observable household check and one owned follow-up for every unfinished item.
+
+**Contextual CTA:** Build a dated, source-led readiness record now; when conditions change, update the official source and open actions instead of relying on memory.
 
 **FAQ:**
-- Q: What's the advantage of a NOAA Weather Radio over just checking my phone for alerts?
-  A: It doesn't depend on cell towers or internet service, both of which can go down during a severe storm right when you need alerts most. NOAA Weather Radio broadcasts official National Weather Service warnings continuously on its own dedicated frequencies, so it keeps working independent of what's happening to cell and internet infrastructure.
-- Q: How often should a household review its storm-preparation responsibilities?
-  A: At least once a year, since who's available and capable of each role can change — a household member who used to handle pet evacuation may have moved out, or a new household member may need to be added to the plan. A responsibility list nobody's looked at in three years is a guess, not a plan.
-- Q: What household records are most important to protect before a storm?
-  A: Insurance policy details, a home inventory of your belongings, and any essential identity or property documents — all kept somewhere accessible from outside the home, since a storm that damages the house can just as easily damage records stored only inside it. An exported backup stored elsewhere covers everything else in your household system.
-- Q: If official evacuation guidance conflicts with what I planned in my household checklist, which do I follow?
-  A: Always follow the official guidance from local emergency management authorities. A household checklist is meant to make you organized and ready to act on real-time official information quickly — it's never meant to substitute for or override that information when the two disagree.
+- Q: Can this checklist tell me whether it is safe to stay home during a storm?
+  A: No. Staying, evacuating, shelter choice and route safety depend on current instructions from the responsible local authorities and on conditions a webpage cannot observe. The checklist helps the household find those sources and carry out assigned preparation; it never replaces a warning or order.
+- Q: Why does every preparation task need a source ID?
+  A: The source ID preserves why the task exists and who owns refreshing that basis. Without it, a task copied from an old list can look authoritative after the building, equipment or public guidance has changed. A household observation and an official instruction remain visibly different.
+- Q: Does “physically checked for this review” mean the item is ready for any storm?
+  A: No. It records a specific observation on a specific review date. Conditions, inventory, batteries, household members and official instructions can change. The output deliberately avoids a readiness score or safety certificate.
+- Q: Should I buy a preassembled storm kit before reviewing what the household has?
+  A: Review actual needs, current official guidance and existing supplies first. A generic package may duplicate items, omit a household-specific dependency or contain incompatible equipment. Any future retailer link on FamilyBoard is optional and cannot define the plan.
+- Q: How should I store exact addresses, phone numbers, medical details and policy numbers?
+  A: Keep them in a protected household record appropriate to the people who need access. The shared readiness review should use a safe role, verified-channel description and stable pointer, because it may be downloaded, printed or handed to someone else.
 
 **Depth:** verified
 
@@ -12249,6 +12366,158 @@ Use the [water leak response records guide](/guides/water-leak-response-home-rec
   A: The exported record may be printed or shared. It should contain a verified-channel description and protected-record pointer, while full contact, address, account, policy and claim details stay in the household's controlled source.
 - Q: Can this log prove an insurance claim or decide who must pay?
   A: No. It can organize dated household observations, notices and source references, but coverage, causation, notice requirements, repair authority and legal responsibility depend on the policy, lease, contract, jurisdiction and authoritative evidence.
+
+**Depth:** verified
+
+---
+
+
+## Page 207 — Household Storm Readiness Review
+**Slug:** `/tools/household-storm-readiness-review/`
+**Primary intent:** create a dated household storm preparation review linked to current authoritative sources and owned follow-up
+**Title tag:** `Household Storm Readiness Review | Sources, Tasks and Owners`
+**Meta description:** `Create a private storm-preparation review with verified sources, observable task IDs and owner-linked follow-up—without forecasting risk or certifying a home as safe.`
+**Primary keyword concept:** household storm readiness checklist
+**Cluster:** tools
+**Page type:** tool
+**Published date:** 2026-08-23
+**Editorial review date:** 2026-08-23
+**Content version:** 1
+**Suggested internal links:** `/guides/storm-preparation-home-checklist/`, `/guides/power-outage-home-preparedness/`, `/guides/emergency-supply-inventory/`, `/tools/emergency-supply-inventory-audit/`
+
+# Household storm readiness review
+
+A storm-preparation list becomes useful only when a household can answer four questions: which current authority supports the task, what was physically observed, who owns unfinished work and when it will be checked again. A page full of generic checkmarks cannot answer those questions and may create false confidence after sources, household members or equipment change.
+
+This free browser tool creates one dated review. It connects authoritative source IDs to household task IDs, records evidence without exposing private details and requires exactly one owner-linked follow-up for every open task. All processing happens in the browser. The tool does not fetch forecasts, monitor alerts, inspect a property, calculate a risk score, contact anyone or upload the form.
+
+The output is a work record, not a readiness certificate. It cannot say a home will withstand wind or water, approve a shelter or route, predict utility continuity, decide whether to stay or evacuate, or replace current official instructions.
+
+**Ready to organize a real review? [Jump to the Household Storm Readiness Review](#tool-heading).**
+
+## Use the source for the home's actual jurisdiction
+
+The first table is a source map. Enter the responsible weather service, local emergency-management authority, flood or slope-warning source, utility, building contact, equipment manual or individual continuity plan that applies to the household. A national page may explain a hazard while a local authority issues the decision that matters now; keep both roles visible.
+
+In the United States, [NOAA Weather Radio](https://www.weather.gov/nwr/) broadcasts official National Weather Service warnings, watches and forecasts through a dedicated network. The current [CDC hurricane-preparation page](https://www.cdc.gov/hurricanes/safety/) describes planning, supplies, home preparation and following authorities about evacuation or staying home. Users outside the United States need their own equivalent authorities; the tool never assumes NOAA, CDC or U.S. terms apply everywhere.
+
+Record the date a source was checked and a safe offline-access description. A downloaded official page, current printed card, radio channel or verified phone route can help when ordinary internet access is unavailable. The tool cannot test any of them, so the evidence should say what a household member actually verified.
+
+## One source row answers one defined question
+
+Each source row uses:
+
+`ID | authority or responsible source | checked date | household purpose | offline access or evidence | owner`
+
+Use IDs such as `SRC-1`, `BLDG-1` or `CARE-1`. The source name should identify authority without copying private contact data. The purpose keeps the row narrow: `official warning and forecast`, `local evacuation messages`, `building common-area instructions` or `manufacturer operation limits`.
+
+An offline description can say `official alert page downloaded on review date`, `battery radio received the local official station during test` or `verified number held in protected contact record CONTACT-1`. It should not claim the channel will always be available.
+
+Every source needs a household owner. That person checks for updates and preserves the current issue time. Ownership does not give the person authority to reinterpret a warning, modify equipment or ignore a public order.
+
+## Review household facts rather than promising outcomes
+
+Each preparation row uses:
+
+`ID | area or dependency | observable readiness fact | evidence | household owner | status | source ID`
+
+The ID remains stable within this review. Examples include `EXT-1` for an exterior item, `SUP-1` for a supply group and `CARE-1` for a protected continuity-plan pointer. The source ID must match the first table so the household can see what the task is based on.
+
+Write facts that can be checked:
+
+- `balcony chair moved to authorized indoor storage; dated photo STORM-1-A`;
+- `two flashlights powered on with matching batteries under their manuals`;
+- `building resident notice checked on review date; lift instruction stored offline`;
+- `pet carrier located; destination acceptance still needs confirmation`; or
+- `individual support plan version and owner verified; details remain protected`.
+
+Avoid conclusions such as `windows hurricane proof`, `drain cannot flood`, `generator ready`, `route safe`, `family fully prepared` or `no evacuation necessary`. The household and this tool do not have the evidence or authority to certify those outcomes.
+
+## Four statuses preserve the difference between checked and resolved
+
+`Physically checked for this review` means the stated observation was performed on the review date. It is not a promise about future conditions.
+
+`Action or purchase open` means a concrete household action is unfinished. Purchasing is only one possible action; moving an item, replacing an expired supply, confirming transport or making an offline copy may be the actual need.
+
+`Authority or building confirmation open` is for questions that a resident should not answer alone, including common-property work, evacuation arrangements, utility procedures, equipment service and other authoritative decisions.
+
+`Not applicable with recorded basis` requires the reason and source to be written in the observation and evidence fields. It is not a shortcut for items nobody checked.
+
+No status is called `safe`, `low risk` or `storm ready`. Counts in the output show workflow only and must not be compared across households.
+
+## Keep hazardous work outside the form
+
+The review should happen before conditions become dangerous. Do not climb, reach a roof, enter floodwater, approach slope movement, touch a downed or exposed line, handle wet electrical equipment, perform gas work, trim trees near utilities or alter shared building systems to complete a field.
+
+When a task needs a qualified provider or building authority, record the request and retain the response. `Service requested` is different from `work completed`. `Dated photo from a safe position` is different from `structural inspection passed`.
+
+If immediate danger, an official evacuation instruction, fire, gas odor, flooding, structural movement, injury or a downed line is present, stop the review and use the responsible emergency and public-authority instructions. A better form is never worth delayed protective action.
+
+## Every open row receives exactly one next action
+
+The follow-up table uses:
+
+`open task ID | next evidence-based action | owner | due date YYYY-MM-DD`
+
+The tool identifies every row with `Action or purchase open` or `Authority or building confirmation open`. Each must appear exactly once in follow-up, and closed or not-applicable rows cannot receive an action. This prevents an attractive checklist from hiding unfinished work.
+
+The next action should name the evidence that will change the row: `obtain the current building instruction and link the dated notice`, `physically check the correct cable and update the supply evidence`, or `confirm the destination's current pet policy through its responsible source`. `Get ready` and `handle later` do not identify an outcome.
+
+The due date must be on or after the review and no later than the selected next review. If an official instruction demands action earlier, that live instruction wins; the tool's date rules do not grant permission to wait.
+
+## Protect personal and operational details
+
+Use a household nickname, not a complete address. Keep exact phone numbers, email addresses, account numbers, policy or claim numbers, passwords, access codes, identity data, medical details and exact private shelter arrangements in a controlled record. The source table should use a verified-channel description and stable pointer.
+
+The form rejects common contact patterns and sensitive terms to reduce accidental exposure. It cannot identify every private fact, so review the output before printing, copying, downloading or saving it to the FamilyBoard App. Each action creates another user-controlled copy.
+
+Local calculation means the form values are not sent to FamilyBoard. Browser storage is still not an archival backup. Export important household data to a durable location and protect access according to the people who need it.
+
+## Use review timing honestly
+
+The review date is when this source-and-task reconciliation occurred. The next review is a household control, not a forecast. A seasonal check may use one interval; an active official update may demand much sooner verification. The tool ensures the next date is not before the review and that source checks are not dated after the review.
+
+Choose the context that matches the evidence: a seasonal planning review, an official local update reviewed, pre-event household actions underway, or post-event lessons incorporated. Context does not change official warning status. A household cannot select `post-event` to declare public danger over.
+
+If a source or condition changes before the next date, update the record then. An old review is evidence of prior preparation, not evidence that the current situation is unchanged.
+
+## Read the result as a handoff record
+
+The output lists context, review window, source map, status counts, all task facts, unresolved actions and the protected storage pointer. Give the intended household member the minimum version they need and ask them to locate the related authoritative information.
+
+A useful handoff sounds like: `SRC-1 owns the official warning; COORD-1 checks it; EXT-1 remains open until the authorized storage action has dated evidence; CARE-1 details are in a protected plan.` It does not sound like: `everything is ready`.
+
+After a storm, preserve damage observations, outage times, provider notices and repairs as separate event records. Do not rewrite preparation rows to make them match the outcome. Comparing the two records reveals what needs to improve next season.
+
+## Commerce stays optional and separate
+
+This tool does not recommend or rank products. A future affiliate area may link to a clearly labeled comparison category beside an educational page, but it must never appear inside the form, output or private app. It cannot imply that buying shutters, a generator, a radio, a pump or a preassembled kit makes a home safe or satisfies local guidance.
+
+The review is complete when sources, observations and owned actions are reconciled—not when a purchase is made. Manufacturer compatibility, installation, condition, local rules and professional requirements remain separate checks.
+
+## Close the review without certifying the home
+
+Before sharing the output, confirm that every task uses a real source ID, every open status has one follow-up, each date is supportable and private details have been removed. Ask a second person to locate the most important source and protected plan.
+
+The appropriate closing statement is `household storm preparation review reconciled on this date`. It does not certify a structure, forecast an event, approve a route, guarantee utility service or prove compliance with an authority, policy, lease or building rule.
+
+Use the [storm preparation home checklist](/guides/storm-preparation-home-checklist/) for the full workflow, the [power outage preparedness guide](/guides/power-outage-home-preparedness/) for electricity dependencies and the [emergency supply inventory audit](/tools/emergency-supply-inventory-audit/) to compare actual items with the household's chosen plan.
+
+**Next step:** enter one current authoritative source, one observable preparation fact and one owner-linked action for every row that remains open.
+
+**Contextual CTA:** Build the review from facts and sources now, then refresh it whenever official information or household conditions change.
+
+**FAQ:**
+- Q: Does this tool monitor weather or tell me when to evacuate?
+  A: No. It never fetches forecasts, alerts, road conditions, shelter status or evacuation orders. Use current information from the responsible authorities for the actual location. The tool only records which sources the household checked and who owns each preparation step.
+- Q: Why must each task reference a source ID?
+  A: A source ID keeps an observation attached to its authoritative basis. It lets a later reviewer distinguish a building instruction, product manual, public warning and household note, and it makes stale guidance easier to find and replace.
+- Q: Can “physically checked” be used after I only ordered an item?
+  A: No. An order is evidence of a purchase step, not evidence that the correct item arrived, works, fits the intended use or was stored where people can find it. Keep the task open until the stated physical check is actually completed.
+- Q: What should I do if an official instruction changes before my next review date?
+  A: Follow the current official instruction and update the record immediately. The next-review date is an organizational reminder, not permission to wait and not evidence that an earlier message remains valid.
+- Q: Can the exported review support an insurance or building-compliance claim?
+  A: It may preserve household observations, dates and source references, but it is not an inspection, certification, notice determination or proof of coverage. Policies, leases, building rules and law determine what evidence and procedures apply.
 
 **Depth:** verified
 

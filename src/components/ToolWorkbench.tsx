@@ -1361,6 +1361,147 @@ const definitions: Record<string, Definition> = {
       return `${values.household.trim()} — household water leak event log\nRecord stage: ${values.stage}\nObserved scope: ${values.scope}\nFirst observed: ${formatMoment(started)}\nActive water last observed stopped: ${stopped ? `${formatMoment(stopped)} (observation only; source repair not proven)` : "Not yet recorded; active water or spread remains under observation"}\nNext household review: ${formatter.format(nextReview)}\nResponsible source / event evidence: ${values.authority.trim()}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (workflow summary, not a damage or safety score)\n\n${lines("Observed areas and materials", observationRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — observed: ${row.parts[2]} — evidence: ${row.parts[3]} — action already taken: ${row.parts[4]} — owner/observer: ${row.parts[5]} — status: ${row.parts[6]}`))}\n\n${lines("Notifications and source checks", notificationRows.length ? notificationRows.map((row) => `${row.parts[0]} — channel: ${row.parts[1]} — checked/notified: ${formatter.format(strictIsoDate(row.parts[2]) as Date)} — response/reference: ${row.parts[3]} — household owner: ${row.parts[4]}`) : ["No notification row was recorded; confirm which building, utility, landlord, insurer or qualified provider source applies before sharing the record."])}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["All observation rows were closed only after recheck; preserve the supporting evidence with this record."])}\n\nProtected event-record location: ${values.storage.trim()}\n\nThis output records household observations, source checks and workflow. It does not diagnose where water originated, prove that a hidden leak stopped, confirm electrical or structural safety, certify mold prevention or drying, estimate damage, authorize repairs, or determine landlord, provider, insurance or legal responsibility. If water is near electricity, there is contaminated water, structural movement, fire, injury or another immediate hazard, stay clear and use the current local emergency, utility, building and qualified-professional instructions for the actual condition.`;
     },
   },
+  "household-storm-readiness-review": {
+    intro:
+      "Create a dated storm-preparation review that links every household observation to a responsible source and every open task to one owner and due date. The tool does not fetch alerts, score risk, inspect a property or certify safety.",
+    fields: [
+      text("household", "Household label", "Use a private nickname, not a full address or account identifier.", "Maple household"),
+      {
+        name: "context",
+        label: "Review context",
+        type: "select",
+        options: [
+          "Routine seasonal planning review",
+          "Official local update reviewed",
+          "Pre-event household actions underway",
+          "Post-event lessons incorporated",
+        ],
+      },
+      { name: "reviewDate", label: "Review date", type: "date" },
+      { name: "nextReview", label: "Next household review date", type: "date" },
+      {
+        name: "sources",
+        label: "Authoritative source map",
+        type: "textarea",
+        help: "One line: ID | authority or responsible source | checked date YYYY-MM-DD | household purpose | offline access or evidence | owner. Maximum 10 lines. Use current sources for the home's actual location.",
+        value: "SRC-1 | Official local weather service | 2026-08-23 | Warning, watch and forecast issue times | Official page saved on review date; alternate broadcast path checked | Source checker\nBLDG-1 | Current building resident notice | 2026-08-23 | Common-area and resident responsibilities | Dated notice stored in protected folder | Building liaison\nPLAN-1 | Household emergency plan | 2026-08-23 | Family roles, communication and protected support pointers | Current offline copy located by backup coordinator | Household coordinator",
+      },
+      {
+        name: "tasks",
+        label: "Household preparation observations",
+        type: "textarea",
+        help: "One line: ID | area or dependency | observable readiness fact | evidence | household owner | Physically checked for this review, Action or purchase open, Authority or building confirmation open, or Not applicable with recorded basis | source ID. Maximum 20 lines.",
+        value: "EXT-1 | Movable balcony items | Chairs moved to the authorized indoor storage area | Dated photo index STORM-1-A | Household coordinator | Physically checked for this review | BLDG-1\nSUP-1 | Lighting and communication | Two flashlights powered on; correct spare batteries located; radio source checked | Dated inventory record STORM-1-B | Supply checker | Physically checked for this review | PLAN-1\nBLDG-2 | Lift and common-area plan | Current event-specific resident instruction not yet received | Request and response will be stored as BLDG-2-N1 | Building liaison | Authority or building confirmation open | BLDG-1",
+      },
+      {
+        name: "actions",
+        label: "Follow-up for every open task ID",
+        type: "textarea",
+        help: "One line: open task ID | next evidence-based action | owner | due date YYYY-MM-DD. Every Action or purchase open and Authority or building confirmation open row needs exactly one action.",
+        value: "BLDG-2 | Obtain the current event-specific resident instruction and preserve its issue time without guessing how shared systems will operate | Building liaison | 2026-08-24",
+      },
+      text("storage", "Protected review-record location", "Use a folder or envelope label, not a password, full address, phone number, account, policy or medical detail.", "Household records / storm readiness / STORM-1"),
+    ],
+    run: (values) => {
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.household.trim()) return "Enter a household label so the exported review can be identified.";
+      if (!reviewDate) return "Enter a real review date in YYYY-MM-DD format.";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The storm-readiness review date cannot be in the future.";
+      if (!nextReview) return "Enter a real next household review date in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next household review cannot be earlier than this review.";
+      if (!values.storage.trim()) return "Enter the protected location for the detailed review record.";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const sourceRows = parseRows(values.sources);
+      if (sourceRows.length === 0) return "Add at least one current authoritative or responsible source.";
+      if (sourceRows.length > 10) return "Use no more than 10 source rows in one storm-readiness review.";
+      const invalidSources = sourceRows.filter((row) => row.parts.length !== 6 || row.parts.some((part) => !part));
+      if (invalidSources.length)
+        return `Source line ${invalidSources.map((row) => row.line).join(", ")} must contain all 6 pipe-separated fields.`;
+      const sourceIds = sourceRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(sourceIds).size !== sourceIds.length) return "Each source must have a unique ID.";
+      if (sourceIds.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Source IDs must use 2 to 20 letters, numbers or hyphens, such as SRC-1.";
+      const invalidSourceDates = sourceRows.filter((row) => {
+        const checked = strictIsoDate(row.parts[2]);
+        return !checked || checked.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `Source line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a real checked date no later than the review date.`;
+      const taskRows = parseRows(values.tasks);
+      if (taskRows.length === 0) return "Add at least one household preparation observation.";
+      if (taskRows.length > 20) return "Use no more than 20 task rows in one review; split a complex household by zone or dependency.";
+      const invalidTasks = taskRows.filter((row) => row.parts.length !== 7 || row.parts.some((part) => !part));
+      if (invalidTasks.length)
+        return `Task line ${invalidTasks.map((row) => row.line).join(", ")} must contain all 7 pipe-separated fields.`;
+      const statuses = new Set([
+        "Physically checked for this review",
+        "Action or purchase open",
+        "Authority or building confirmation open",
+        "Not applicable with recorded basis",
+      ]);
+      const invalidStatuses = taskRows.filter((row) => !statuses.has(row.parts[5]));
+      if (invalidStatuses.length)
+        return `Task line ${invalidStatuses.map((row) => row.line).join(", ")} has an unsupported status. Use one of the four labels shown in the field instructions.`;
+      const taskIds = taskRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(taskIds).size !== taskIds.length) return "Each household preparation task must have a unique ID.";
+      if (taskIds.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Task IDs must use 2 to 20 letters, numbers or hyphens, such as EXT-1.";
+      const unknownSources = taskRows
+        .filter((row) => !sourceIds.includes(row.parts[6].toLocaleUpperCase("en")))
+        .map((row) => row.parts[0]);
+      if (unknownSources.length)
+        return `Every task must reference a source ID from the source map. Check: ${unknownSources.join(", ")}.`;
+      const openRows = taskRows.filter((row) =>
+        row.parts[5] === "Action or purchase open" || row.parts[5] === "Authority or building confirmation open",
+      );
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 20) return "Use no more than 20 follow-up rows in one review.";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `Follow-up line ${invalidActions.map((row) => row.line).join(", ")} must contain all 4 pipe-separated fields.`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length) return "Each open task ID must have exactly one follow-up row.";
+      const openIds = new Set(openRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...openIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length) return `Add one follow-up row for every open task ID: ${missingActions.join(", ")}.`;
+      const extraActions = actionIds.filter((id) => !openIds.has(id));
+      if (extraActions.length) return `Follow-up rows may reference only open task IDs. Remove or update: ${extraActions.join(", ")}.`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() < reviewDate.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `Follow-up line ${invalidDueDates.map((row) => row.line).join(", ")} needs a real due date on or after the review and no later than the next review.`;
+      const privacyText = [values.sources, values.tasks, values.actions, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number or email was detected. Use a verified-channel description and protected-record pointer instead.";
+      if (/password|passcode|access code|alarm code|door code|full address|account number|policy number|claim number|bank account|social security|government id|diagnosis|medication|dosage|device setting|date of birth|exact shelter address|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, account, policy, claim or unnecessary personal or care detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusOrder = [
+        "Physically checked for this review",
+        "Action or purchase open",
+        "Authority or building confirmation open",
+        "Not applicable with recorded basis",
+      ];
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: taskRows.filter((row) => row.parts[5] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.household.trim()} — household storm-readiness review\nReview context: ${values.context}\nReview completed: ${formatter.format(reviewDate)}\nNext household review: ${formatter.format(nextReview)}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (workflow summary only, not a risk score or safety certificate)\n\n${lines("Authoritative source map", sourceRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — checked ${formatter.format(strictIsoDate(row.parts[2]) as Date)} — purpose: ${row.parts[3]} — offline/evidence: ${row.parts[4]} — owner: ${row.parts[5]}`))}\n\n${lines("Household preparation observations", taskRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — observed: ${row.parts[2]} — evidence: ${row.parts[3]} — owner: ${row.parts[4]} — status: ${row.parts[5]} — source: ${row.parts[6]}`))}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["No open task remains in this review; refresh the sources and observations whenever official information or household conditions change."])}\n\nProtected review-record location: ${values.storage.trim()}\n\nThis output records a dated household workflow. It does not fetch or replace official alerts, forecast storm effects, certify a building, route, shelter, supply or device, approve electrical, gas, roof, tree or flood work, guarantee utility service, decide whether to stay or evacuate, or prove insurance, rental, legal or building compliance. Current instructions from responsible authorities and emergency services always take priority.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -3006,6 +3147,147 @@ const zhTwDefinitions: Record<string, Definition> = {
         count: observationRows.filter((row) => row.parts[6] === status).length,
       })).filter((item) => item.count > 0);
       return `${values.household.trim()}｜家庭漏水事件紀錄\n紀錄階段：${values.stage}\n觀察範圍：${values.scope}\n第一次觀察：${formatMoment(started)}\n最後觀察到持續出水停止：${stopped ? `${formatMoment(stopped)}（只是觀察，不代表隱蔽來源已修復）` : "尚未記錄；仍觀察出水或範圍變化"}\n家庭下次複查：${formatter.format(nextReview)}\n負責來源／事件證據：${values.authority.trim()}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（只是工作摘要，不是損害或安全分數）\n\n${lines("區域與材料觀察", observationRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜實際觀察：${row.parts[2]}｜證據：${row.parts[3]}｜已完成動作：${row.parts[4]}｜負責／觀察：${row.parts[5]}｜狀態：${row.parts[6]}`))}\n\n${lines("通知與來源查核", notificationRows.length ? notificationRows.map((row) => `${row.parts[0]}｜管道：${row.parts[1]}｜查核／通知：${formatter.format(strictIsoDate(row.parts[2]) as Date)}｜回應／索引：${row.parts[3]}｜家庭負責：${row.parts[4]}`) : ["本次未列通知；分享前請確認實際適用的管理、供水、房東、保險或合格廠商來源。"])}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["所有觀察都已在複查後結案；請將支持證據與本紀錄一起保存。"])}\n\n受保護的事件紀錄位置：${values.storage.trim()}\n\n這份輸出只整理家庭觀察、來源查核與工作流程。它不診斷水從何處來、不證明隱蔽漏水已停止、不確認電氣或結構安全、不認證防霉或乾燥成果、不估算損失、不授權修繕，也不決定房東、住戶、廠商、保險或法律責任。若水接近電氣、疑似污染水、結構變形、起火、受傷或其他立即危險，請保持距離並依所在地緊急服務、供水／供電、管理單位及合格專業人員的最新指示。`;
+    },
+  },
+  "household-storm-readiness-review": {
+    intro:
+      "依台灣官方來源建立有日期、有證據及有負責人的家庭防颱複查。工具不抓取即時警報、不計算風險、不檢查住家，也不把完成清單當成安全或合格認證。",
+    fields: [
+      text("household", "家庭代稱", "使用私密代稱，不要填完整地址或帳號。", "青葉家庭"),
+      {
+        name: "context",
+        label: "本次複查情境",
+        type: "select",
+        options: [
+          "例行颱風季準備複查",
+          "已查閱所在地官方更新",
+          "家庭正在完成事件前工作",
+          "災後經驗已納入下一版",
+        ],
+      },
+      { name: "reviewDate", label: "本次複查日期", type: "date" },
+      { name: "nextReview", label: "家庭下次複查日期", type: "date" },
+      {
+        name: "sources",
+        label: "官方與負責來源地圖",
+        type: "textarea",
+        help: "每行格式：ID | 官方或負責來源 | 查核日 YYYY-MM-DD | 家庭用途 | 離線取得或證據 | 負責人。最多 10 行；要依住家實際轄區使用氣象署、地方政府、水利署、農村水保署、台電、管理單位或適用手冊。",
+        value: "CWA-1 | 中央氣象署官方颱風資訊 | 2026-08-23 | 查警報、預報與發布時間 | 已保存複查日官方頁面，另核對可攜式收音來源 | 資訊查核人\nBLDG-1 | 目前大樓住戶公告 | 2026-08-23 | 共用區域與住戶責任 | 有日期公告存於受保護資料夾 | 大樓聯絡人\nPLAN-1 | 家庭防災計畫 | 2026-08-23 | 家庭角色、通訊與個別支援索引 | 備援協調人已找到目前離線版本 | 家庭協調人",
+      },
+      {
+        name: "tasks",
+        label: "家庭準備觀察",
+        type: "textarea",
+        help: "每行格式：ID | 區域或依賴項目 | 可觀察準備事實 | 證據 | 家庭負責人 | 本次已實物查核、行動或採購尚未完成、等待官方、管理或合格人員確認、不適用且已記依據 | 來源 ID。最多 20 行。",
+        value: "EXT-1 | 陽台可移動物品 | 椅子已移到管理規約允許的室內位置 | 有日期照片索引 STORM-1-A | 家庭協調人 | 本次已實物查核 | BLDG-1\nSUP-1 | 照明與通訊 | 兩支手電筒實際亮起，正確備用電池已定位，官方收音來源已測 | 有日期物資紀錄 STORM-1-B | 物資查核人 | 本次已實物查核 | PLAN-1\nBLDG-2 | 電梯與共用區域計畫 | 尚未收到本次事件的住戶指示 | 來回訊息將存為 BLDG-2-N1 | 大樓聯絡人 | 等待官方、管理或合格人員確認 | BLDG-1",
+      },
+      {
+        name: "actions",
+        label: "每個未完成 ID 的追蹤",
+        type: "textarea",
+        help: "每行格式：未完成 ID | 下一個可查證動作 | 負責人 | 期限 YYYY-MM-DD。每個「行動或採購尚未完成」及「等待官方、管理或合格人員確認」都必須剛好有一筆追蹤。",
+        value: "BLDG-2 | 取得本次事件的住戶指示並保存發布時間，不自行猜測共用設備如何運作 | 大樓聯絡人 | 2026-08-24",
+      },
+      text("storage", "受保護的複查紀錄位置", "只寫資料夾或信封代稱，不要填密碼、門牌、電話、帳號、保單或醫療細節。", "家庭文件／颱風準備／STORM-1"),
+    ],
+    run: (values) => {
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.household.trim()) return "請填家庭代稱，讓匯出的複查紀錄可以辨識。";
+      if (!reviewDate) return "請輸入真實的本次複查日期 YYYY-MM-DD。";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "家庭颱風準備複查日期不能在未來。";
+      if (!nextReview) return "請輸入真實的家庭下次複查日期 YYYY-MM-DD。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "家庭下次複查日期不能早於本次複查。";
+      if (!values.storage.trim()) return "請填寫受保護的詳細複查紀錄位置。";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const sourceRows = parseRows(values.sources);
+      if (sourceRows.length === 0) return "請至少新增一筆目前的官方或負責來源。";
+      if (sourceRows.length > 10) return "一份家庭防颱複查最多整理 10 筆來源。";
+      const invalidSources = sourceRows.filter((row) => row.parts.length !== 6 || row.parts.some((part) => !part));
+      if (invalidSources.length)
+        return `來源第 ${invalidSources.map((row) => row.line).join("、")} 行必須完整填寫 6 個以直線分隔的欄位。`;
+      const sourceIds = sourceRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(sourceIds).size !== sourceIds.length) return "每筆來源都要有唯一 ID。";
+      if (sourceIds.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "來源 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 CWA-1。";
+      const invalidSourceDates = sourceRows.filter((row) => {
+        const checked = strictIsoDate(row.parts[2]);
+        return !checked || checked.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `來源第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要真實查核日期，而且不得晚於本次複查。`;
+      const taskRows = parseRows(values.tasks);
+      if (taskRows.length === 0) return "請至少新增一筆真正查過的家庭準備觀察。";
+      if (taskRows.length > 20) return "一份複查最多 20 筆準備觀察；複雜家庭請依區域或依賴項目拆分。";
+      const invalidTasks = taskRows.filter((row) => row.parts.length !== 7 || row.parts.some((part) => !part));
+      if (invalidTasks.length)
+        return `準備觀察第 ${invalidTasks.map((row) => row.line).join("、")} 行必須完整填寫 7 個以直線分隔的欄位。`;
+      const statuses = new Set([
+        "本次已實物查核",
+        "行動或採購尚未完成",
+        "等待官方、管理或合格人員確認",
+        "不適用且已記依據",
+      ]);
+      const invalidStatuses = taskRows.filter((row) => !statuses.has(row.parts[5]));
+      if (invalidStatuses.length)
+        return `準備觀察第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須使用欄位說明中的四種文字之一。`;
+      const taskIds = taskRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(taskIds).size !== taskIds.length) return "每筆家庭準備觀察都要有唯一 ID。";
+      if (taskIds.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "準備觀察 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 EXT-1。";
+      const unknownSources = taskRows
+        .filter((row) => !sourceIds.includes(row.parts[6].toLocaleUpperCase("en")))
+        .map((row) => row.parts[0]);
+      if (unknownSources.length)
+        return `每筆準備觀察都要連到來源地圖中存在的來源 ID，請檢查：${unknownSources.join("、")}。`;
+      const openRows = taskRows.filter((row) =>
+        row.parts[5] === "行動或採購尚未完成" || row.parts[5] === "等待官方、管理或合格人員確認",
+      );
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 20) return "一份複查最多 20 筆追蹤工作。";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `追蹤第 ${invalidActions.map((row) => row.line).join("、")} 行必須完整填寫 4 個以直線分隔的欄位。`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length) return "每個未完成 ID 只能有一筆追蹤；請合併相同項目的下一步。";
+      const openIds = new Set(openRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...openIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length) return `每個未完成 ID 都要建立一筆追蹤，尚缺：${missingActions.join("、")}。`;
+      const extraActions = actionIds.filter((id) => !openIds.has(id));
+      if (extraActions.length) return `追蹤只能連到未完成 ID；請移除或更新：${extraActions.join("、")}。`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() < reviewDate.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `追蹤第 ${invalidDueDates.map((row) => row.line).join("、")} 行需要真實期限，而且不得早於本次複查、不得晚於下次複查。`;
+      const privacyText = [values.sources, values.tasks, values.actions, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話或 Email。請改寫成已驗證管道描述與受保護紀錄索引。";
+      if (/密碼|門禁碼|驗證碼|警報碼|完整地址|完整門牌|帳號|保單編號|案件編號|銀行帳戶|完整(?:身分證|病歷)|診斷|藥名|藥物|劑量|設備設定|出生日期|精確避難地址|password|passcode|access code|alarm code|account number|policy number|claim number|government id|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、帳號、保單、案件或不必要個人／照護細節。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusOrder = [
+        "本次已實物查核",
+        "行動或採購尚未完成",
+        "等待官方、管理或合格人員確認",
+        "不適用且已記依據",
+      ];
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: taskRows.filter((row) => row.parts[5] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.household.trim()}｜家庭颱風準備複查\n複查情境：${values.context}\n本次完成：${formatter.format(reviewDate)}\n家庭下次複查：${formatter.format(nextReview)}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（只表示工作流程，不是風險分數或安全認證）\n\n${lines("官方與負責來源地圖", sourceRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜查核：${formatter.format(strictIsoDate(row.parts[2]) as Date)}｜用途：${row.parts[3]}｜離線／證據：${row.parts[4]}｜負責：${row.parts[5]}`))}\n\n${lines("家庭準備觀察", taskRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜實際觀察：${row.parts[2]}｜證據：${row.parts[3]}｜負責：${row.parts[4]}｜狀態：${row.parts[5]}｜來源：${row.parts[6]}`))}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["本次沒有未完成項目；官方資訊或家庭狀況改變時，仍要立即更新來源與觀察。"])}\n\n受保護的複查紀錄位置：${values.storage.trim()}\n\n這份輸出只整理某日的家庭工作流程。它不抓取或取代官方警報、不預測颱風影響、不認證住家、路線、避難處所、物資或設備、不批准電氣、瓦斯、屋頂、樹木或積淹水作業、不保證供電供水、不決定留在家或撤離，也不證明保險、租屋、法令或建物規約合規。所在地主管機關、緊急服務與負責單位的最新指示永遠優先。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

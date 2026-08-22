@@ -361,9 +361,9 @@
   },
   {
     "route": "/guides/storm-preparation-home-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/storm-preparation-home-checklist/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-23",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1648,6 +1648,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-storm-readiness-review/",
+    "alternateRoute": "/zh-tw/tools/household-storm-readiness-review/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2063,6 +2071,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/household-storm-readiness-review/",
+    "alternateRoute": "/tools/household-storm-readiness-review/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/household-subscription-cost-calculator/",
     "alternateRoute": "/tools/household-subscription-cost-calculator/",
     "indexable": true,
@@ -2193,6 +2208,13 @@
     "alternateRoute": "/security/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/storm-preparation-home-checklist/",
+    "alternateRoute": "/guides/storm-preparation-home-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {

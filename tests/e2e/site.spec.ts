@@ -76,6 +76,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/power-outage-home-preparedness/",
     "/tools/household-water-leak-event-log/",
     "/guides/water-leak-response-home-records/",
+    "/tools/household-storm-readiness-review/",
+    "/guides/storm-preparation-home-checklist/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -98,6 +100,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/emergency-contact-verification-log/",
     "/zh-tw/tools/household-power-outage-event-log/",
     "/zh-tw/tools/household-water-leak-event-log/",
+    "/zh-tw/tools/household-storm-readiness-review/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -123,6 +126,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/emergency-information-sheet/",
     "/zh-tw/guides/power-outage-home-preparedness/",
     "/zh-tw/guides/water-leak-response-home-records/",
+    "/zh-tw/guides/storm-preparation-home-checklist/",
     "/zh-tw/guides/home-maintenance-log/",
     "/zh-tw/guides/appliance-replacement-planning/",
     "/zh-tw/guides/room-by-room-home-inventory/",
@@ -161,7 +165,7 @@ test("representative routes have no serious accessibility violations", async ({
 test("Traditional Chinese pages are indexable, paired and functional", async ({
   page,
 }) => {
-  test.setTimeout(90_000);
+  test.setTimeout(180_000);
   await page.goto("/zh-tw/");
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
@@ -224,6 +228,9 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     page.locator(".site-footer").getByRole("link", { name: "家庭漏水事件紀錄" }),
   ).toHaveAttribute("href", "/zh-tw/tools/household-water-leak-event-log/");
   await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭颱風準備複查" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/household-storm-readiness-review/");
+  await expect(
     page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
   await expect(
@@ -232,6 +239,9 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭漏水處理指南" }),
   ).toHaveAttribute("href", "/zh-tw/guides/water-leak-response-home-records/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭防颱準備指南" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/storm-preparation-home-checklist/");
 
   for (const localized of [
     {
@@ -313,6 +323,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/water-leak-response-home-records/",
       alternate: "/guides/water-leak-response-home-records/",
       heading: "家裡漏水怎麼辦：台灣家庭要先保安全，再建立可查證時間線",
+    },
+    {
+      route: "/zh-tw/guides/storm-preparation-home-checklist/",
+      alternate: "/guides/storm-preparation-home-checklist/",
+      heading: "颱風來了家裡要準備什麼：台灣家庭要先對官方資訊，再做清單",
     },
     {
       route: "/zh-tw/features/household-handoff/",
@@ -522,6 +537,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/household-water-leak-event-log/",
       alternate: "/tools/household-water-leak-event-log/",
       heading: "家庭漏水事件紀錄表",
+    },
+    {
+      route: "/zh-tw/tools/household-storm-readiness-review/",
+      alternate: "/tools/household-storm-readiness-review/",
+      heading: "家庭颱風準備複查表",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -910,6 +930,42 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText("24 小時 HH:MM 時間");
 
+  await page.goto("/tools/household-storm-readiness-review/");
+  await page.getByLabel("Review date", { exact: true }).fill("2026-08-23");
+  await page.getByLabel("Next household review date").fill("2026-08-25");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "Physically checked for this review 2",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "Authority or building confirmation open 1",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "not a risk score or safety certificate",
+  );
+  await page.getByLabel("Review date", { exact: true }).fill("2026-08-24");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "review date cannot be in the future",
+  );
+
+  await page.goto("/zh-tw/tools/household-storm-readiness-review/");
+  await page.getByLabel("本次複查日期").fill("2026-08-23");
+  await page.getByLabel("家庭下次複查日期").fill("2026-08-25");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("本次已實物查核 2 筆");
+  await expect(page.locator(".result")).toContainText(
+    "等待官方、管理或合格人員確認 1 筆",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "不是風險分數或安全認證",
+  );
+  await page.getByLabel("家庭下次複查日期").fill("2026-08-22");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "家庭下次複查日期不能早於本次複查",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1181,6 +1237,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/water-leak-response-home-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-storm-readiness-review/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-storm-readiness-review/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/storm-preparation-home-checklist/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",

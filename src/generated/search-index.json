@@ -328,12 +328,12 @@
     "headings": "Annual home review: a once-a-year check of maintenance, records and recurring costs Look for patterns across the full year, not just the last quarter Reconcile the asset inventory against reality Audit recurring costs the household has stopped noticing Confirm contacts and emergency information are still accurate Verify backups actually work, not just that they exist Turn the review into next year's task list, not one overwhelming day"
   },
   {
-    "title": "Storm Preparation Home Checklist: Organize Information, Supplies and Household Responsibilities",
-    "description": "A household storm-preparation framework for contacts, devices, supplies, property tasks and family responsibilities, with local official guidance taking priority.",
+    "title": "Storm Preparation Home Checklist | Sources, Roles and Rechecks",
+    "description": "Prepare for severe storms with verified local alerts, observable home checks, household roles, protected records and dated follow-up—without replacing official instructions.",
     "route": "/guides/storm-preparation-home-checklist/",
     "cluster": "maintenance",
     "keywords": "storm preparation home checklist",
-    "headings": "Storm preparation home checklist: organize information, supplies and responsibilities Get your alerts from a source that doesn't depend on cell towers or the internet Follow local authorities for every actual safety decision Assign specific responsibilities before the storm, not during it Inventory what you have before buying more Protect your household records before the storm, not after If the storm knocks out power, that's its own checklist"
+    "headings": "Storm preparation home checklist: turn current guidance into owned household work Start with the authority for the actual location Distinguish a forecast, warning, order and household note Create a source map before creating a task list Review the household by consequence, not by room alone Translate authoritative guidance into observable tasks Assign roles that can still work when plans change Check supplies against the plan instead of buying a generic kit Keep property preparation within safe authority boundaries Prepare for power, water and communication interruption as separate plans Protect records that recovery may require Set a review window that changes with conditions Close only the review, never the weather risk"
   },
   {
     "title": "Power Outage Preparedness at Home | Build a Household Plan That Can Be Rechecked",
@@ -1542,6 +1542,14 @@
     "cluster": "tools",
     "keywords": "water leak event log",
     "headings": "Household water leak event log Safety comes before a more complete form One event needs one scope and one stable label First observed and last observed stopped are evidence boundaries Four stages stop an event from closing too early Seven fields preserve what happened without diagnosing it Four statuses describe workflow, not severity Separate observation, diagnosis, repair and recovery Notification rows show who was contacted without copying secrets Every unresolved ID receives exactly one owned next action Privacy filtering reduces accidental exposure Close the event by reconciling evidence, not by cleaning the page"
+  },
+  {
+    "title": "Household Storm Readiness Review | Sources, Tasks and Owners",
+    "description": "Create a private storm-preparation review with verified sources, observable task IDs and owner-linked follow-up—without forecasting risk or certifying a home as safe.",
+    "route": "/tools/household-storm-readiness-review/",
+    "cluster": "tools",
+    "keywords": "household storm readiness checklist",
+    "headings": "Household storm readiness review Use the source for the home's actual jurisdiction One source row answers one defined question Review household facts rather than promising outcomes Four statuses preserve the difference between checked and resolved Keep hazardous work outside the form Every open row receives exactly one next action Protect personal and operational details Use review timing honestly Read the result as a handoff record Commerce stays optional and separate Close the review without certifying the home"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
