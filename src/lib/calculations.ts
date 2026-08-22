@@ -10,7 +10,7 @@ export function addMonthsClamped(isoDate: string, months: number) {
       new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate(),
     ),
   );
-  return date.toISOString().slice(0, 10);
+  return localIsoDate(date);
 }
 
 export function annualizedCost(cost: number, frequency: string) {
@@ -47,5 +47,25 @@ export function warrantyReviewDate(endDate: string, daysBefore: number) {
   const date = new Date(`${endDate}T12:00:00`);
   if (Number.isNaN(date.valueOf())) throw new Error("Invalid date");
   date.setDate(date.getDate() - daysBefore);
-  return date.toISOString().slice(0, 10);
+  return localIsoDate(date);
+}
+
+export function localIsoDate(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+export function sortByOptionalIsoDate<T>(
+  items: T[],
+  getDate: (item: T) => string,
+) {
+  return [...items].sort((a, b) => {
+    const dateA = getDate(a);
+    const dateB = getDate(b);
+    if (!dateA) return dateB ? 1 : 0;
+    if (!dateB) return -1;
+    return dateA.localeCompare(dateB);
+  });
 }

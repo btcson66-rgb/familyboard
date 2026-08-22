@@ -64,8 +64,8 @@
     "headings": "Subscriptions are household obligations, not just line items What a subscription record holds The annualized total is computed live A worked example of the annualized math Marking a subscription cancelled instead of deleting it Reviewing before renewal What it deliberately doesn't do"
   },
   {
-    "title": "Family Task Manager for Chores, Household Admin and Recurring Responsibilities | FamilyBoard",
-    "description": "Organize household chores and recurring admin tasks by owner, due date, priority and history.",
+    "title": "Family Task Manager for Chores and Household Responsibilities | FamilyBoard",
+    "description": "Organize household chores and admin tasks by owner, due date, recurrence note and completion state.",
     "route": "/features/family-task-manager/",
     "cluster": "product",
     "keywords": "family task manager",

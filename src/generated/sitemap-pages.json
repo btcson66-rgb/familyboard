@@ -17,17 +17,17 @@
   },
   {
     "route": "/features/home-dashboard/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/home-dashboard/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
   {
     "route": "/features/home-inventory-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/home-inventory-tracker/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
@@ -65,9 +65,9 @@
   },
   {
     "route": "/features/family-task-manager/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/family-task-manager/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1770,6 +1770,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/features/family-task-manager/",
+    "alternateRoute": "/features/family-task-manager/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/free-home-management-app/",
     "alternateRoute": "/features/free-home-management-app/",
     "indexable": true,
@@ -1777,8 +1784,22 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/features/home-dashboard/",
+    "alternateRoute": "/features/home-dashboard/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/home-inventory-checklist-generator/",
     "alternateRoute": "/tools/home-inventory-checklist-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/features/home-inventory-tracker/",
+    "alternateRoute": "/features/home-inventory-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

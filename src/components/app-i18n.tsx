@@ -7,6 +7,7 @@ import {
   type ReactElement,
   type ReactNode,
 } from "react";
+import { localIsoDate } from "../lib/calculations";
 
 export type AppLocale = "en" | "zh-TW";
 
@@ -145,6 +146,7 @@ const zhTw: Record<string, string> = {
   "Open service page": "開啟服務管理頁",
   "Payment note:": "付款備註：",
   "Notes:": "備註：",
+  "Serial number:": "序號：",
   "Add a contact": "新增聯絡人",
   "Person or service": "人員或服務單位",
   "Household contact": "家庭聯絡人",
@@ -394,9 +396,9 @@ export function useAppLocale() {
     },
     due(value: string) {
       if (!value) return locale === "zh-TW" ? "未填日期" : "No date";
-      if (value < new Date().toISOString().slice(0, 10))
+      if (value < localIsoDate())
         return locale === "zh-TW" ? "已逾期" : "Overdue";
-      if (value === new Date().toISOString().slice(0, 10))
+      if (value === localIsoDate())
         return locale === "zh-TW" ? "今天到期" : "Due today";
       const formatted = new Intl.DateTimeFormat(locale === "zh-TW" ? "zh-TW" : "en", {
         dateStyle: "medium",

@@ -12,6 +12,8 @@ import "./app.css";
 import {
   addMonthsClamped,
   annualizedActiveTotalsByCurrency,
+  localIsoDate,
+  sortByOptionalIsoDate,
   warrantyReviewDate,
 } from "../lib/calculations";
 import {
@@ -604,8 +606,18 @@ function FamilyAppBody() {
                     <p className="detail">
                       {[item.brand, item.model].filter(Boolean).join(" ") ||
                         "Brand/model not recorded"}{" "}
-                      · purchased {labelDate(item.purchaseDate)}
+                      {locale === "zh-TW"
+                        ? `· 購買日 ${labelDate(item.purchaseDate)}`
+                        : `· purchased ${labelDate(item.purchaseDate)}`}
                     </p>
+                    {item.serialNumber && (
+                      <p className="detail">
+                        Serial number: {item.serialNumber}
+                      </p>
+                    )}
+                    {item.notes && (
+                      <p className="detail">Notes: {item.notes}</p>
+                    )}
                     <div className="app-actions">
                       <button
                         className="secondary"
@@ -698,7 +710,7 @@ function FamilyAppBody() {
                     <header>
                       <h2>{item.title}</h2>
                       <span
-                        className={`status ${item.nextDue && item.nextDue < new Date().toISOString().slice(0, 10) ? "overdue" : ""}`}
+                        className={`status ${item.nextDue && item.nextDue < localIsoDate() ? "overdue" : ""}`}
                       >
                         {dueStatus(item.nextDue)}
                       </span>
@@ -751,7 +763,7 @@ function FamilyAppBody() {
                             const nextDue =
                               item.intervalMonths > 0
                                 ? addMonthsClamped(
-                                    new Date().toISOString().slice(0, 10),
+                                    localIsoDate(),
                                     item.intervalMonths,
                                   )
                                 : "";
@@ -821,9 +833,9 @@ function FamilyAppBody() {
                     <header>
                       <h2>{assets[item.assetId] || "Unlinked warranty"}</h2>
                       <span
-                        className={`status ${item.endsAt < new Date().toISOString().slice(0, 10) ? "overdue" : ""}`}
+                        className={`status ${item.endsAt < localIsoDate() ? "overdue" : ""}`}
                       >
-                        {item.endsAt < new Date().toISOString().slice(0, 10)
+                        {item.endsAt < localIsoDate()
                           ? "Expired"
                           : `Ends ${labelDate(item.endsAt)}`}
                       </span>
@@ -1347,16 +1359,24 @@ function Today({
   setTab: (tab: Tab) => void;
 }) {
   const { due: dueStatus } = useAppLocale();
-  const active = data.tasks.filter((item) => !item.completedAt);
+  const today = localIsoDate();
+  const maintenanceCutoff = new Date();
+  maintenanceCutoff.setDate(maintenanceCutoff.getDate() + 7);
+  const active = sortByOptionalIsoDate(
+    data.tasks.filter((item) => !item.completedAt),
+    (item) => item.dueDate,
+  );
   const overdue = active.filter(
     (item) =>
-      item.dueDate && item.dueDate < new Date().toISOString().slice(0, 10),
+      item.dueDate && item.dueDate < today,
   );
-  const dueMaintenance = data.maintenanceTasks.filter(
-    (item) =>
-      item.nextDue &&
-      item.nextDue <=
-        new Date(Date.now() + 7 * 86400000).toISOString().slice(0, 10),
+  const dueMaintenance = sortByOptionalIsoDate(
+    data.maintenanceTasks.filter(
+      (item) =>
+        item.nextDue &&
+        item.nextDue <= localIsoDate(maintenanceCutoff),
+    ),
+    (item) => item.nextDue,
   );
   return (
     <Localize>
@@ -1516,6 +1536,7 @@ function TasksView({
               {names[item.ownerMemberId] || "Unassigned"} ·{" "}
               {item.recurrence || "One-off"}
             </p>
+            {item.notes && <p className="detail">Notes: {item.notes}</p>}
             {!item.completedAt && (
               <div className="app-actions">
                 <button
@@ -1542,6 +1563,10 @@ function TasksView({
               {dateTime(item.startsAt)} ·{" "}
               {item.location || "No location"}
             </p>
+            {item.endsAt && (
+              <p className="detail">{`Ends ${dateTime(item.endsAt)}`}</p>
+            )}
+            {item.notes && <p className="detail">Notes: {item.notes}</p>}
           </div>
         ))}
       </div>
@@ -1714,7 +1739,7 @@ function DisplayView({
     month: "long",
     day: "numeric",
   });
-  const todayKey = new Date().toISOString().slice(0, 10);
+  const todayKey = localIsoDate();
   const events = data.events.filter((item) =>
     item.startsAt.startsWith(todayKey),
   );
@@ -1833,7 +1858,7 @@ function SettingsView({
       const backup = await createBackup();
       const output = encrypted ? await encryptBackup(backup, password) : backup;
       download(
-        `familyboard-backup-${new Date().toISOString().slice(0, 10)}${encrypted ? ".encrypted" : ""}.json`,
+        `familyboard-backup-${localIsoDate()}${encrypted ? ".encrypted" : ""}.json`,
         output,
       );
       await db.settings.put(baseSetting("lastBackup", now()));
@@ -1898,7 +1923,7 @@ function SettingsView({
       setError("");
       const csv = exportMasterTable(data, householdId);
       downloadFile(
-        `familyboard-master-${new Date().toISOString().slice(0, 10)}.csv`,
+        `familyboard-master-${localIsoDate()}.csv`,
         csv,
         "text/csv;charset=utf-8",
       );

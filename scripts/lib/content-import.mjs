@@ -116,7 +116,7 @@ export function renderGeneratedMarkdown(record, launchDate) {
     `indexable: ${record.indexable}`,
     `depthVerified: ${Boolean(record.depthVerified)}`,
     `publishedAt: ${yamlDoubleQuoted(launchDate)}`,
-    `lastReviewedAt: ${yamlDoubleQuoted(launchDate)}`,
+    `lastReviewedAt: ${yamlDoubleQuoted(record.lastReviewedAt || launchDate)}`,
     ...(record.nextStep
       ? [`nextStep: ${yamlDoubleQuoted(record.nextStep)}`]
       : []),

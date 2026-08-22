@@ -84,6 +84,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/digital-home-inventory-backup/",
     "/zh-tw/guides/home-maintenance-log/",
     "/zh-tw/features/household-handoff/",
+    "/zh-tw/features/home-inventory-tracker/",
+    "/zh-tw/features/family-task-manager/",
+    "/zh-tw/features/home-dashboard/",
     "/zh-tw/guides/how-to-track-product-warranties/",
     "/zh-tw/guides/organize-household-subscriptions/",
     "/zh-tw/guides/household-documents-organizer/",
@@ -178,6 +181,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/features/household-handoff/",
       alternate: "/features/household-handoff/",
       heading: "家庭交接清單教學：讓別人接得住，也不要一次看見所有資料",
+    },
+    {
+      route: "/zh-tw/features/home-inventory-tracker/",
+      alternate: "/features/home-inventory-tracker/",
+      heading: "家庭資產清單 App 教學：先記錄「日後一定會找」的設備資料",
+    },
+    {
+      route: "/zh-tw/features/family-task-manager/",
+      alternate: "/features/family-task-manager/",
+      heading: "家庭任務管理 App 教學：把「大家記得做」改成一位負責人與一個日期",
+    },
+    {
+      route: "/zh-tw/features/home-dashboard/",
+      alternate: "/features/home-dashboard/",
+      heading: "家庭管理儀表板教學：先看懂數字，再決定今天要處理什麼",
     },
     {
       route: "/zh-tw/guides/how-to-track-product-warranties/",
@@ -439,6 +457,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "https://familyboard.win/zh-tw/features/household-handoff/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/home-inventory-tracker/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/family-task-manager/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/home-dashboard/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/how-to-track-product-warranties/",
   );
   expect(sitemap).toContain(
@@ -474,8 +501,43 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(page.getByRole("heading", { name: "今日總覽" })).toBeVisible();
   await page.getByRole("button", { name: "家庭資產" }).click();
   await page.getByLabel("資產名稱").fill("測試冰箱");
+  await page.getByLabel("序號").fill("ZH-ASSET-001");
+  await page.getByLabel("備註", { exact: true }).fill("廚房左側插座");
   await page.getByRole("button", { name: "新增紀錄" }).click();
-  await expect(page.getByRole("heading", { name: "測試冰箱" })).toBeVisible();
+  const assetCard = page.locator(".app-card").filter({ hasText: "測試冰箱" });
+  await expect(assetCard).toContainText("購買日 未填日期");
+  await expect(assetCard).not.toContainText("purchased");
+  await expect(assetCard).toContainText("序號： ZH-ASSET-001");
+  await expect(assetCard).toContainText("備註： 廚房左側插座");
+
+  await page.getByRole("button", { name: "任務" }).click();
+  await page.getByLabel("家庭責任").fill("較晚任務");
+  await page.getByLabel("到期日").fill("2026-12-31");
+  await page.getByLabel("重複週期備註").fill("每年依正式日期重建");
+  await page.getByLabel("備註", { exact: true }).first().fill("晚任務備註");
+  await page.getByRole("button", { name: "新增紀錄" }).first().click();
+  await expect(page.locator(".app-card").filter({ hasText: "較晚任務" })).toContainText(
+    "晚任務備註",
+  );
+  await page.getByLabel("家庭責任").fill("較早任務");
+  await page.getByLabel("到期日").fill("2026-09-01");
+  await page.getByRole("button", { name: "新增紀錄" }).first().click();
+  await page.getByLabel("事件名稱").fill("設備到府測試");
+  await page.getByLabel("開始日期").fill("2026-08-22T18:00");
+  await page.getByLabel("截止日期").fill("2026-08-22T19:00");
+  await page.getByLabel("備註", { exact: true }).last().fill("事件備註可見");
+  await page.getByRole("button", { name: "新增紀錄" }).last().click();
+  const eventCard = page.locator(".app-card").filter({ hasText: "設備到府測試" });
+  await expect(eventCard).toContainText("截止日");
+  await expect(eventCard).toContainText("事件備註可見");
+  await page.getByRole("button", { name: "今日總覽" }).click();
+  const responsibilities = page
+    .locator(".app-card")
+    .filter({ hasText: "接下來的責任" });
+  await expect(responsibilities.locator("strong")).toHaveText([
+    "較早任務",
+    "較晚任務",
+  ]);
 
   await page.getByRole("button", { name: "保固" }).click();
   await expect(page.getByLabel("資產")).toHaveAttribute("required", "");

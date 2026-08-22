@@ -485,6 +485,7 @@ The spine of the product is that assets, maintenance, warranties and documents a
 **Meta description:** `A practical household dashboard that brings maintenance, warranties, recurring tasks, subscriptions and upcoming home responsibilities into one view.`
 **Primary keyword concept:** home dashboard
 **Depth:** verified
+**Editorial review date:** 2026-08-22
 **Suggested internal links:** `/features/maintenance-tracker/`, `/features/warranty-tracker/`, `/features/family-display-mode/`, `/app/`
 
 # A home dashboard should tell you what needs attention, not just show pretty charts
@@ -504,7 +505,7 @@ None of these are configurable thresholds you can tune; the seven-day maintenanc
 
 ## The two lists beneath them
 
-Below the counters are two cards. "Next responsibilities" shows your five soonest open tasks, each with its due-date label and assigned owner, and a button that jumps straight to the full Tasks tab. "Maintenance due" shows up to five maintenance items due within the same seven-day window, each labeled with its linked asset or home area and due-date status, with a button into the full Maintenance tab. If nothing is open, each card says so plainly instead of leaving a blank space — "Nothing needs your attention right now" for tasks, "No maintenance is due in the next seven days" for maintenance.
+Below the counters are two cards. "Next responsibilities" shows up to five open tasks, sorted by due date with undated tasks after dated ones. Each row includes its due-date label and assigned owner, and a button jumps straight to the full Tasks tab. "Maintenance due" shows up to five maintenance items due within the same seven-day window, also sorted by next-due date. Each row is labeled with its linked asset or home area and due-date status, with a button into the full Maintenance tab. If nothing is open, each card says so plainly instead of leaving a blank space — "Nothing needs your attention right now" for tasks, "No maintenance is due in the next seven days" for maintenance.
 
 ## A worked example
 
@@ -543,6 +544,7 @@ The same Today data — tasks, events, upcoming maintenance — can be shown in 
 **Meta description:** `Create a practical home inventory with model numbers, serial numbers, purchase details, warranties, maintenance and local records.`
 **Primary keyword concept:** home inventory tracker
 **Depth:** verified
+**Editorial review date:** 2026-08-22
 **Suggested internal links:** `/features/maintenance-tracker/`, `/features/warranty-tracker/`, `/features/household-documents-organizer/`, `/features/free-home-management-app/`
 
 # A useful home inventory is not a list of everything you own
@@ -559,11 +561,11 @@ Every asset card carries two buttons: "Watch" and "Archive." Watch flips the sta
 
 ## Why connect inventory to maintenance, warranties and documents
 
-An asset by itself is just a name and a serial number. The reason to record one in FamilyBoard rather than a plain spreadsheet is that maintenance tasks, warranties and document references all reference an asset by its ID, and every screen that lists them shows the asset's name next to the entry. Complete a maintenance task on the dishwasher, and that completion is visible from the dishwasher's context, not just as an isolated log line. Add a warranty for the same asset, and the warranty screen shows the asset name in its header instead of a bare provider name.
+An asset by itself is just a name and a serial number. The reason to record one in FamilyBoard rather than a plain spreadsheet is that maintenance tasks, warranties and document references all reference an asset by its ID, and the related screens show the asset's name next to each entry. Complete a maintenance task on the dishwasher and the completion log identifies the dishwasher; add a warranty for the same asset and the warranty card shows its name instead of only a provider. FamilyBoard does not currently provide a single asset-detail screen that gathers all those records in one panel, so move between the relevant tabs and use the shared asset name as the connecting thread.
 
 ## A worked example
 
-A household adds "Dishwasher" as an asset: category Appliance, location Kitchen, brand Bosch, model SHP878, serial number recorded from the inner door frame, purchase date the day it was installed, notes "installed by contractor, drain hose routed under sink." Later, in Settings, they export the master CSV and fill in purchase price ($899) and manual reference (a link to the PDF they saved). They then create a maintenance task titled "Clean filter and check door seal" linked to that same asset, and a warranty record for the same asset with the manufacturer's two-year term and a receipt reference pointing to a folder in their email. All three records now show "Dishwasher" as their connecting thread — opening any one of them gives context for the other two through the asset name and linked records.
+A household adds "Dishwasher" as an asset: category Appliance, location Kitchen, brand Bosch, model SHP878, serial number recorded from the inner door frame, purchase date the day it was installed, notes "installed by contractor, drain hose routed under sink." Later, in Settings, they export the master CSV and fill in purchase price ($899) and manual reference (a link to the PDF they saved). They then create a maintenance task titled "Clean filter and check door seal" linked to that same asset, and a warranty record for the same asset with the manufacturer's two-year term and a receipt reference pointing to a folder in their email. All three records now show "Dishwasher" as their connecting thread. They remain on separate tabs rather than opening into one combined asset history, but the consistent asset name makes the relationship visible wherever each record is listed.
 
 ## Keep detail proportional to value
 
@@ -796,10 +798,11 @@ It doesn't charge, cancel, or contact any service on your behalf — the managem
 ## Page 009 — Family Task Manager
 **Slug:** `/features/family-task-manager/`
 **Primary intent:** manage recurring household tasks
-**Title tag:** `Family Task Manager for Chores, Household Admin and Recurring Responsibilities | FamilyBoard`
-**Meta description:** `Organize household chores and recurring admin tasks by owner, due date, priority and history.`
+**Title tag:** `Family Task Manager for Chores and Household Responsibilities | FamilyBoard`
+**Meta description:** `Organize household chores and admin tasks by owner, due date, recurrence note and completion state.`
 **Primary keyword concept:** family task manager
 **Depth:** verified
+**Editorial review date:** 2026-08-22
 **Suggested internal links:** `/features/household-calendar/`, `/features/household-handoff/`, `/features/home-dashboard/`, `/features/free-home-management-app/`
 
 # Household work includes far more than chores
@@ -812,7 +815,7 @@ The quick-add form asks for a title (required), an owner from your household mem
 
 ## Completing a task is a one-way action
 
-Each open task card shows a "Complete" button. Pressing it stamps the task with today's completion timestamp and changes its badge from a due-date status to "Complete." There's no undo button on the card itself and no automatic next task generated — which is exactly what the recurrence-note help text warns you about. For genuinely recurring responsibilities, many households find it easier to leave the task open with a rough recurrence note and just update the due date manually, rather than completing and recreating it every cycle.
+Each open task card shows a "Complete" button. Pressing it stamps the task with the current completion timestamp and changes its badge from a due-date status to "Complete." There's no undo or edit button on the card itself and no automatic next task generated — which is exactly what the recurrence-note help text warns you about. For genuinely recurring responsibilities, complete the current occurrence and create the next one with its real date. That takes another entry, but it keeps the completed record truthful.
 
 ## Give every responsibility a real owner
 
@@ -824,7 +827,7 @@ The Tasks tab has a second quick-add form beneath the task one, for calendar eve
 
 ## A worked example
 
-A household creates a task "Renew car registration," owner assigned, due date set to the state deadline, recurrence note "annual, check DMV site for new fee schedule," notes "last renewed online, confirmation emailed." A month before the due date it shows as upcoming on the dashboard; on the day, if it's still open, it flips to "overdue" styling. Once actually renewed, pressing Complete records the exact completion date — a genuine record of when it was actually done, distinct from the note that just says how often it recurs.
+A household creates a task "Renew car registration," owner assigned, due date set to the official deadline, recurrence note "annual, check official site for the current fee schedule," notes "last renewed online, confirmation emailed." The Today dashboard sorts dated open tasks from earliest to latest and displays up to five, so this task appears there when it is among the first five; once its date has passed, its label changes to overdue. After the renewal is actually finished, pressing Complete records the completion timestamp — a genuine record of when it was done, distinct from the note that just says how often it recurs.
 
 ## How tasks feed into handoff and display
 
@@ -834,7 +837,7 @@ Open tasks (not completed) are what the Handoff tab's default profile includes i
 
 **FAQ:**
 - Q: Does completing a recurring task automatically create the next one?
-  A: No. The recurrence field is a plain-text note ("weekly," "annual") for your own reference, not an automation. The form's own help text says this directly: completing a task does not invent the next date. For genuinely repeating work, many households leave the task open and just move its due date forward instead of completing and recreating it.
+  A: No. The recurrence field is a plain-text note ("weekly," "annual") for your own reference, not an automation. The form's own help text says this directly: completing a task does not invent the next date. To preserve an honest completion record, complete the current task and create the next occurrence with its real date.
 - Q: Can I assign a task to more than one household member?
   A: A task has a single owner field. If a responsibility genuinely needs shared visibility, a practical approach is choosing whichever person is accountable for making sure it happens, and using the notes field to record that others are involved.
 - Q: What's the difference between a task and a calendar event?
@@ -13575,7 +13578,7 @@ This file is intended to be handed directly to Codex/Claude Code after the `fami
 | 006 | `/features/warranty-tracker/` | Warranty Tracker for Appliances and Household Purchases \| FamilyBoard | find an appliance or product warranty tracker | warranty tracker | 353 |
 | 007 | `/features/household-documents-organizer/` | Household Documents Organizer for Warranties, Manuals, Receipts and Home Records \| FamilyBoard | organize household documents digitally | household documents organizer | 336 |
 | 008 | `/features/household-subscription-tracker/` | Household Subscription Tracker for Renewals, Costs and Cancellation Notes \| FamilyBoard | track household subscriptions and renewals | household subscription tracker | 323 |
-| 009 | `/features/family-task-manager/` | Family Task Manager for Chores, Household Admin and Recurring Responsibilities \| FamilyBoard | manage recurring household tasks | family task manager | 321 |
+| 009 | `/features/family-task-manager/` | Family Task Manager for Chores and Household Responsibilities \| FamilyBoard | manage recurring household tasks | family task manager | 321 |
 | 010 | `/features/household-calendar/` | Simple Household Calendar Connected to Tasks and Home Responsibilities \| FamilyBoard | simple household calendar inside a broader home system | household calendar | 303 |
 | 011 | `/features/emergency-information-organizer/` | Household Emergency Information Organizer — Contacts, Utilities and Instructions \| FamilyBoard | organize family emergency information | household emergency information organizer | 310 |
 | 012 | `/features/household-handoff/` | Household Handoff — Make the Invisible Work of Running a Home Transferable \| FamilyBoard | hand over household responsibilities to spouse, family member or caregiver | household handoff checklist | 319 |

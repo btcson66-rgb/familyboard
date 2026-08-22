@@ -3,6 +3,8 @@ import {
   addMonthsClamped,
   annualizedActiveTotalsByCurrency,
   annualizedCost,
+  localIsoDate,
+  sortByOptionalIsoDate,
   warrantyReviewDate,
 } from "../src/lib/calculations";
 describe("date and cost rules", () => {
@@ -40,4 +42,19 @@ describe("date and cost rules", () => {
   });
   it("calculates warranty review date", () =>
     expect(warrantyReviewDate("2026-12-31", 30)).toBe("2026-12-01"));
+  it("formats the browser's local calendar date instead of its UTC date", () =>
+    expect(localIsoDate(new Date(2026, 7, 22, 23, 59))).toBe("2026-08-22"));
+  it("sorts dated records first without mutating the original list", () => {
+    const records = [
+      { id: "undated", dueDate: "" },
+      { id: "later", dueDate: "2026-09-02" },
+      { id: "earlier", dueDate: "2026-08-23" },
+    ];
+    expect(sortByOptionalIsoDate(records, (item) => item.dueDate)).toEqual([
+      { id: "earlier", dueDate: "2026-08-23" },
+      { id: "later", dueDate: "2026-09-02" },
+      { id: "undated", dueDate: "" },
+    ]);
+    expect(records[0].id).toBe("undated");
+  });
 });

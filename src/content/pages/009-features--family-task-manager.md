@@ -1,6 +1,6 @@
 ---
-title: "Family Task Manager for Chores, Household Admin and Recurring Responsibilities | FamilyBoard"
-description: "Organize household chores and recurring admin tasks by owner, due date, priority and history."
+title: "Family Task Manager for Chores and Household Responsibilities | FamilyBoard"
+description: "Organize household chores and admin tasks by owner, due date, recurrence note and completion state."
 route: "/features/family-task-manager/"
 primaryIntent: "manage recurring household tasks"
 primaryKeyword: "family task manager"
@@ -9,7 +9,7 @@ pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-08-22"
 nextStep: "Create three recurring responsibilities that currently live only in someone's memory. If a task belongs to an appliance or subscription, mention it in the notes so the connection isn't lost."
 related:
   - "/features/household-calendar/"
@@ -18,7 +18,7 @@ related:
   - "/features/free-home-management-app/"
 faq:
   - question: "Does completing a recurring task automatically create the next one?"
-    answer: "No. The recurrence field is a plain-text note (\"weekly,\" \"annual\") for your own reference, not an automation. The form's own help text says this directly: completing a task does not invent the next date. For genuinely repeating work, many households leave the task open and just move its due date forward instead of completing and recreating it."
+    answer: "No. The recurrence field is a plain-text note (\"weekly,\" \"annual\") for your own reference, not an automation. The form's own help text says this directly: completing a task does not invent the next date. To preserve an honest completion record, complete the current task and create the next occurrence with its real date."
   - question: "Can I assign a task to more than one household member?"
     answer: "A task has a single owner field. If a responsibility genuinely needs shared visibility, a practical approach is choosing whichever person is accountable for making sure it happens, and using the notes field to record that others are involved."
   - question: "What's the difference between a task and a calendar event?"
@@ -37,7 +37,7 @@ The quick-add form asks for a title (required), an owner from your household mem
 
 ## Completing a task is a one-way action
 
-Each open task card shows a "Complete" button. Pressing it stamps the task with today's completion timestamp and changes its badge from a due-date status to "Complete." There's no undo button on the card itself and no automatic next task generated — which is exactly what the recurrence-note help text warns you about. For genuinely recurring responsibilities, many households find it easier to leave the task open with a rough recurrence note and just update the due date manually, rather than completing and recreating it every cycle.
+Each open task card shows a "Complete" button. Pressing it stamps the task with the current completion timestamp and changes its badge from a due-date status to "Complete." There's no undo or edit button on the card itself and no automatic next task generated — which is exactly what the recurrence-note help text warns you about. For genuinely recurring responsibilities, complete the current occurrence and create the next one with its real date. That takes another entry, but it keeps the completed record truthful.
 
 ## Give every responsibility a real owner
 
@@ -49,7 +49,7 @@ The Tasks tab has a second quick-add form beneath the task one, for calendar eve
 
 ## A worked example
 
-A household creates a task "Renew car registration," owner assigned, due date set to the state deadline, recurrence note "annual, check DMV site for new fee schedule," notes "last renewed online, confirmation emailed." A month before the due date it shows as upcoming on the dashboard; on the day, if it's still open, it flips to "overdue" styling. Once actually renewed, pressing Complete records the exact completion date — a genuine record of when it was actually done, distinct from the note that just says how often it recurs.
+A household creates a task "Renew car registration," owner assigned, due date set to the official deadline, recurrence note "annual, check official site for the current fee schedule," notes "last renewed online, confirmation emailed." The Today dashboard sorts dated open tasks from earliest to latest and displays up to five, so this task appears there when it is among the first five; once its date has passed, its label changes to overdue. After the renewal is actually finished, pressing Complete records the completion timestamp — a genuine record of when it was done, distinct from the note that just says how often it recurs.
 
 ## How tasks feed into handoff and display
 

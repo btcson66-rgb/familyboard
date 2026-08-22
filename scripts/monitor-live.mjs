@@ -57,6 +57,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/digital-home-inventory-backup/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/household-handoff/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/family-task-manager/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/home-dashboard/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/how-to-track-product-warranties/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-household-subscriptions/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/household-documents-organizer/</loc>",
@@ -259,6 +262,33 @@ const checks = [
       'hreflang="en"',
       "交接設定檔",
       "敏感聯絡人",
+    ],
+  },
+  {
+    path: "/zh-tw/features/home-inventory-tracker/",
+    require: [
+      "家庭資產清單 App 教學",
+      'hreflang="en"',
+      "關注與封存不是刪除",
+      "一個把同一資產所有保養、保固與文件集中顯示",
+    ],
+  },
+  {
+    path: "/zh-tw/features/family-task-manager/",
+    require: [
+      "家庭任務管理 App 教學",
+      'hreflang="en"',
+      "完成不會替你推測下一個日期",
+      "不發推播、電子郵件或簡訊",
+    ],
+  },
+  {
+    path: "/zh-tw/features/home-dashboard/",
+    require: [
+      "家庭管理儀表板教學",
+      'hreflang="en"',
+      "有到期日的任務先顯示",
+      "今天加七天",
     ],
   },
   {

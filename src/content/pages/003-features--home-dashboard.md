@@ -9,7 +9,7 @@ pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-08-22"
 nextStep: "Open the app, add two recurring responsibilities and one asset, then use the dashboard to see how scattered household tasks become a single actionable view."
 related:
   - "/features/maintenance-tracker/"
@@ -44,7 +44,7 @@ None of these are configurable thresholds you can tune; the seven-day maintenanc
 
 ## The two lists beneath them
 
-Below the counters are two cards. "Next responsibilities" shows your five soonest open tasks, each with its due-date label and assigned owner, and a button that jumps straight to the full Tasks tab. "Maintenance due" shows up to five maintenance items due within the same seven-day window, each labeled with its linked asset or home area and due-date status, with a button into the full Maintenance tab. If nothing is open, each card says so plainly instead of leaving a blank space — "Nothing needs your attention right now" for tasks, "No maintenance is due in the next seven days" for maintenance.
+Below the counters are two cards. "Next responsibilities" shows up to five open tasks, sorted by due date with undated tasks after dated ones. Each row includes its due-date label and assigned owner, and a button jumps straight to the full Tasks tab. "Maintenance due" shows up to five maintenance items due within the same seven-day window, also sorted by next-due date. Each row is labeled with its linked asset or home area and due-date status, with a button into the full Maintenance tab. If nothing is open, each card says so plainly instead of leaving a blank space — "Nothing needs your attention right now" for tasks, "No maintenance is due in the next seven days" for maintenance.
 
 ## A worked example
 
