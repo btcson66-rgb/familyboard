@@ -52,11 +52,9 @@ const money = (value: number) =>
     value,
   );
 const moneyFor = (value: number, currency: string) =>
-  new Intl.NumberFormat("zh-TW", {
-    style: "currency",
-    currency,
+  `${({ TWD: "NT$", USD: "US$", JPY: "JP¥" } as Record<string, string>)[currency] || `${currency} `}${new Intl.NumberFormat("zh-TW", {
     maximumFractionDigits: currency === "USD" ? 2 : 0,
-  }).format(value);
+  }).format(value)}`;
 const lines = (heading: string, items: string[]) =>
   `${heading}\n${items.map((item) => `• ${item}`).join("\n")}`;
 const text = (
@@ -820,6 +818,36 @@ const zhTwDefinitions: Record<string, Definition> = {
       return `預估期間終點：${format(end)}\n建議複查日：${format(review)}\n\n請以書面保證確認涵蓋範圍、起算方式、登錄要求與真正的截止規則。`;
     },
   },
+  "appliance-age-calculator": {
+    intro:
+      "用已知的購買日或安裝日計算家電經過幾年幾個月。結果只整理時間，不會用年齡猜故障日或建議你直接汰換。",
+    fields: [
+      text("name", "家電名稱", "寫到家人能辨認同一台設備。", "廚房冰箱"),
+      { name: "start", label: "購買或安裝日期", type: "date" },
+      {
+        name: "basis",
+        label: "這個日期的依據",
+        type: "select",
+        options: ["購買日（有單據）", "安裝日（有紀錄）", "約略日期"],
+      },
+    ],
+    run: (values) => {
+      const start = date(values.start);
+      if (!start) return "請輸入有效的購買或安裝日期。";
+      const today = new Date();
+      if (start.valueOf() > today.valueOf())
+        return "購買或安裝日期不能晚於今天；若是預計安裝日期，請等實際完成後再建立年齡紀錄。";
+      let months =
+        (today.getFullYear() - start.getFullYear()) * 12 +
+        today.getMonth() -
+        start.getMonth();
+      if (today.getDate() < start.getDate()) months -= 1;
+      months = Math.max(0, months);
+      const format = (value: Date) =>
+        new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" }).format(value);
+      return `${values.name || "家電"}目前年齡：${Math.floor(months / 12)} 年 ${months % 12} 個月\n起算日：${format(start)}\n日期依據：${values.basis || "尚未註明"}\n\n這是日曆經過時間，不是故障機率或剩餘壽命。請把型號、序號、保固、異常、耗能與維修歷程放在同一筆設備紀錄後再做判斷；若日期只是估計值，分享或列印時也要保留「約略」標示。`;
+    },
+  },
   "household-subscription-cost-calculator": {
     intro:
       "將每週、每月、每季與每年扣款換算成同一個月均與年總額。只做你輸入資料的算術整理，不會連接銀行或判斷哪一項應取消。",
@@ -896,6 +924,154 @@ const zhTwDefinitions: Record<string, Definition> = {
             `${row.name}：${moneyFor(row.annual, currency)}（每次 ${moneyFor(row.amount, currency)}／${row.cadence}）`,
         ),
       )}\n\n家庭月均：${moneyFor(annual / 12, currency)}\n家庭年總額：${moneyFor(annual, currency)}${invalidMessage}\n\n換算採每年 52 週、12 個月、4 季；尚未包含匯率、價格調整、稅費或取消條款。`;
+    },
+  },
+  "home-maintenance-cost-tracker": {
+    intro:
+      "把已完成與已規劃的居家維護費用分開加總，並保留日期與設備名稱。工具不會連接銀行，也不會用通用比例判斷你花得太多或太少。",
+    fields: [
+      {
+        name: "entries",
+        label: "維護費用明細",
+        type: "textarea",
+        help: "每行格式：日期 | 項目 | 金額 | 已完成或已規劃。",
+        value:
+          "2026-08-05 | 客廳冷氣檢修 | 1800 | 已完成\n2026-09-12 | 浴室抽風機更換 | 3200 | 已規劃",
+      },
+      {
+        name: "currency",
+        label: "幣別",
+        type: "select",
+        options: ["TWD", "USD", "JPY"],
+      },
+    ],
+    run: (values) => {
+      const rows = values.entries
+        .split("\n")
+        .map((source, index) => {
+          const [rawDate = "", item = "", rawAmount = "", status = ""] =
+            source.split("|").map((part) => part.trim());
+          const parsedDate = date(rawDate);
+          const amount = Number(rawAmount.replace(/[,$，\s]/g, ""));
+          const normalizedStatus: Record<string, "completed" | "planned"> = {
+            已完成: "completed",
+            完成: "completed",
+            completed: "completed",
+            已規劃: "planned",
+            規劃: "planned",
+            planned: "planned",
+          };
+          return {
+            line: index + 1,
+            rawDate,
+            item,
+            amount,
+            status,
+            normalized: normalizedStatus[status.toLowerCase()],
+            valid:
+              Boolean(parsedDate) &&
+              Boolean(item) &&
+              Number.isFinite(amount) &&
+              amount >= 0 &&
+              Boolean(normalizedStatus[status.toLowerCase()]),
+          };
+        })
+        .filter((row) =>
+          [row.rawDate, row.item, row.status].some(Boolean) ||
+          Number.isFinite(row.amount),
+        );
+      const valid = rows.filter((row) => row.valid);
+      const invalid = rows.filter((row) => !row.valid);
+      if (valid.length === 0)
+        return "沒有可計算的明細。請使用「日期 | 項目 | 金額 | 已完成或已規劃」格式，每行一項。";
+      const currency = values.currency || "TWD";
+      const completed = valid.filter((row) => row.normalized === "completed");
+      const planned = valid.filter((row) => row.normalized === "planned");
+      const total = (items: typeof valid) =>
+        items.reduce((sum, row) => sum + row.amount, 0);
+      const completedTotal = total(completed);
+      const plannedTotal = total(planned);
+      const invalidMessage = invalid.length
+        ? `\n\n未納入：第 ${invalid.map((row) => row.line).join("、")} 行。請檢查日期、項目、非負金額及「已完成／已規劃」狀態。`
+        : "";
+      return `${lines(
+        "居家維護費用明細",
+        valid.map(
+          (row) =>
+            `${row.rawDate}｜${row.item}｜${moneyFor(row.amount, currency)}｜${row.normalized === "completed" ? "已完成" : "已規劃"}`,
+        ),
+      )}\n\n已完成：${moneyFor(completedTotal, currency)}（${completed.length} 筆）\n已規劃：${moneyFor(plannedTotal, currency)}（${planned.length} 筆）\n已完成平均每筆：${moneyFor(completed.length ? completedTotal / completed.length : 0, currency)}${invalidMessage}\n\n總額只反映你輸入的資料；沒有包含未登錄費用，也不代表稅務、保險或房屋增值成本。`;
+    },
+  },
+  "recurring-chore-planner": {
+    intro:
+      "依名單順序輪流分配例行家事，產生一份可以試行與複查的初稿。它能平均分配項目數，不能自動判斷每件事的工時、體力或照護負擔。",
+    fields: [
+      text(
+        "members",
+        "家庭成員或角色",
+        "每行或逗號分隔；公開張貼時可用角色代替真名。",
+        "大人 A\n大人 B\n青少年",
+      ),
+      {
+        name: "chores",
+        label: "這一輪要分配的家事",
+        type: "textarea",
+        help: "每行或逗號分隔一項；不同難度的工作不要只看件數。",
+        value: "晚餐後廚房復位\n倒垃圾與回收\n洗曬衣物\n公共區域整理",
+      },
+      {
+        name: "frequency",
+        label: "輪值頻率",
+        type: "select",
+        options: ["每天", "每週", "每兩週", "每月"],
+      },
+      {
+        name: "startPosition",
+        label: "這一輪從名單第幾位開始",
+        type: "number",
+        help: "下次可往後移一位，避免每次都由同一人接第一項。",
+        value: "1",
+      },
+      { name: "review", label: "下次一起複查日期", type: "date" },
+    ],
+    run: (values) => {
+      const members = list(values.members);
+      const chores = list(values.chores);
+      if (chores.length === 0) return "請至少輸入一項要分配的家事。";
+      const rawPosition = Number(values.startPosition || 1);
+      if (
+        !Number.isInteger(rawPosition) ||
+        rawPosition < 1 ||
+        (members.length > 0 && rawPosition > members.length)
+      )
+        return members.length
+          ? `起始順位必須是 1 到 ${members.length} 之間的整數。`
+          : "起始順位必須是正整數。";
+      const review = date(values.review);
+      if (!review) return "請輸入有效的下次複查日期。";
+      const assigned = chores.map((chore, index) => {
+        const owner = members.length
+          ? members[(index + rawPosition - 1) % members.length]
+          : "尚待指派";
+        return `${chore} — ${owner} — 完成後記錄實際執行者與需要調整的地方`;
+      });
+      const counts = members.map((member) => ({
+        member,
+        count: assigned.filter((_, index) =>
+          members[(index + rawPosition - 1) % members.length] === member,
+        ).length,
+      }));
+      const format = new Intl.DateTimeFormat("zh-TW", {
+        dateStyle: "long",
+      }).format(review);
+      return `${values.frequency || "每週"}家事輪值初稿\n下次共同複查：${format}\n\n${assigned
+        .map((item) => `• ${item}`)
+        .join("\n")}\n\n${
+        counts.length
+          ? `項目數：${counts.map((item) => `${item.member} ${item.count} 項`).join("、")}`
+          : "目前沒有成員名單，所有項目均標示為尚待指派。"
+      }\n\n輪流分配只平衡項目數，不代表工時、體力、年齡適合度或照護負擔公平。試行到複查日後，請依實際完成情況交換、拆分或刪除工作。`;
     },
   },
   "emergency-contact-sheet-generator": {

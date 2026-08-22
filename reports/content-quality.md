@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T08:40:46.008Z
+Generated: 2026-08-22T08:53:54.521Z
 
 ## Summary
 
-- Indexable pages: 217
-- Generated HTML routes: 235
+- Indexable pages: 220
+- Generated HTML routes: 238
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 41
+- Pages without a contextual product/tool link: 44
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -24,7 +24,7 @@ Generated: 2026-08-22T08:40:46.008Z
 - household-operations: 19
 - inventory-warranty: 26
 - records-emergency: 22
-- tools: 29
+- tools: 32
 
 ## Word-count range
 
@@ -82,9 +82,12 @@ Generated: 2026-08-22T08:40:46.008Z
 - /zh-tw/privacy/
 - /zh-tw/security/
 - /zh-tw/terms/
+- /zh-tw/tools/appliance-age-calculator/
 - /zh-tw/tools/emergency-contact-sheet-generator/
+- /zh-tw/tools/home-maintenance-cost-tracker/
 - /zh-tw/tools/home-maintenance-schedule-generator/
 - /zh-tw/tools/household-subscription-cost-calculator/
+- /zh-tw/tools/recurring-chore-planner/
 - /zh-tw/tools/warranty-expiration-calculator/
 
 ## Blockers

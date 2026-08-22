@@ -44,6 +44,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/recurring-chore-planner/</loc>",
       "<loc>https://familyboard.win/zh-tw/privacy/</loc>",
       "<loc>https://familyboard.win/zh-tw/security/</loc>",
       "<loc>https://familyboard.win/zh-tw/affiliate-disclosure/</loc>",
@@ -124,6 +127,33 @@ const checks = [
       'hreflang="en"',
       "警察報案：110",
       "119 報案要領",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/appliance-age-calculator/",
+    require: [
+      "家電年齡計算器",
+      'hreflang="en"',
+      "購買或安裝日期",
+      "家電選購與使用注意事項",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-maintenance-cost-tracker/",
+    require: [
+      "居家維護費用追蹤器",
+      'hreflang="en"',
+      "維護費用明細",
+      "已規劃不是已核准",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/recurring-chore-planner/",
+    require: [
+      "家庭家事輪值表產生器",
+      'hreflang="en"',
+      "這一輪從名單第幾位開始",
+      "每人分到相同件數就代表公平嗎",
     ],
   },
   {

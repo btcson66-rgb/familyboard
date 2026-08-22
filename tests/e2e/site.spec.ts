@@ -71,6 +71,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/home-maintenance-schedule-generator/",
     "/zh-tw/tools/household-subscription-cost-calculator/",
     "/zh-tw/tools/emergency-contact-sheet-generator/",
+    "/zh-tw/tools/appliance-age-calculator/",
+    "/zh-tw/tools/home-maintenance-cost-tracker/",
+    "/zh-tw/tools/recurring-chore-planner/",
     "/zh-tw/privacy/",
     "/zh-tw/security/",
     "/zh-tw/affiliate-disclosure/",
@@ -233,6 +236,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       alternate: "/tools/emergency-contact-sheet-generator/",
       heading: "家庭緊急聯絡表產生器",
     },
+    {
+      route: "/zh-tw/tools/appliance-age-calculator/",
+      alternate: "/tools/appliance-age-calculator/",
+      heading: "家電年齡計算器",
+    },
+    {
+      route: "/zh-tw/tools/home-maintenance-cost-tracker/",
+      alternate: "/tools/home-maintenance-cost-tracker/",
+      heading: "居家維護費用追蹤器",
+    },
+    {
+      route: "/zh-tw/tools/recurring-chore-planner/",
+      alternate: "/tools/recurring-chore-planner/",
+      heading: "家庭家事輪值表產生器",
+    },
   ]) {
     await page.goto(localizedTool.route);
     await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
@@ -277,6 +295,37 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "行動電話報案時優先說明案發地點",
   );
 
+  await page.goto("/zh-tw/tools/appliance-age-calculator/");
+  await page.getByLabel("家電名稱").fill("測試冰箱");
+  await page.getByLabel("購買或安裝日期").fill("2020-01-15");
+  await page.getByLabel("這個日期的依據").selectOption("安裝日（有紀錄）");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("測試冰箱目前年齡");
+  await expect(page.locator(".result")).toContainText("安裝日（有紀錄）");
+  await expect(page.locator(".result")).toContainText("不是故障機率或剩餘壽命");
+
+  await page.goto("/zh-tw/tools/home-maintenance-cost-tracker/");
+  await page.getByLabel("維護費用明細").fill(
+    "2026-08-05 | 客廳冷氣檢修 | 1800 | 已完成\n2026-09-12 | 浴室抽風機更換 | 3200 | 已規劃\n格式錯誤",
+  );
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("已完成：NT$1,800");
+  await expect(page.locator(".result")).toContainText("已規劃：NT$3,200");
+  await expect(page.locator(".result")).toContainText("未納入：第 3 行");
+
+  await page.goto("/zh-tw/tools/recurring-chore-planner/");
+  await page.getByLabel("下次一起複查日期").fill("2026-09-05");
+  await page
+    .getByRole("spinbutton", { name: "這一輪從名單第幾位開始" })
+    .fill("2");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "晚餐後廚房復位 — 大人 B",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "輪流分配只平衡項目數",
+  );
+
   const sitemap = await (await page.request.get("/sitemap-0.xml")).text();
   expect(sitemap).toContain("https://familyboard.win/zh-tw/");
   expect(sitemap).toContain(
@@ -293,6 +342,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/appliance-age-calculator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/recurring-chore-planner/",
   );
   expect(sitemap).toContain("https://familyboard.win/zh-tw/privacy/");
   expect(sitemap).toContain("https://familyboard.win/zh-tw/security/");

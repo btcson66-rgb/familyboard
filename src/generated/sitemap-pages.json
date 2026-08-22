@@ -1257,7 +1257,7 @@
   },
   {
     "route": "/tools/appliance-age-calculator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/appliance-age-calculator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1289,7 +1289,7 @@
   },
   {
     "route": "/tools/home-maintenance-cost-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/home-maintenance-cost-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1329,7 +1329,7 @@
   },
   {
     "route": "/tools/recurring-chore-planner/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/recurring-chore-planner/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1735,6 +1735,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/appliance-age-calculator/",
+    "alternateRoute": "/tools/appliance-age-calculator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/contact/",
     "alternateRoute": "/contact/",
     "indexable": true,
@@ -1758,6 +1765,13 @@
   {
     "route": "/zh-tw/features/free-home-management-app/",
     "alternateRoute": "/features/free-home-management-app/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/home-maintenance-cost-tracker/",
+    "alternateRoute": "/tools/home-maintenance-cost-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
@@ -1807,6 +1821,13 @@
   {
     "route": "/zh-tw/privacy/",
     "alternateRoute": "/privacy/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/recurring-chore-planner/",
+    "alternateRoute": "/tools/recurring-chore-planner/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
