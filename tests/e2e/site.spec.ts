@@ -72,6 +72,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/home-emergency-drill-record-generator/",
     "/tools/emergency-supply-inventory-audit/",
     "/tools/emergency-contact-verification-log/",
+    "/tools/household-power-outage-event-log/",
+    "/guides/power-outage-home-preparedness/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -92,6 +94,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/home-emergency-drill-record-generator/",
     "/zh-tw/tools/emergency-supply-inventory-audit/",
     "/zh-tw/tools/emergency-contact-verification-log/",
+    "/zh-tw/tools/household-power-outage-event-log/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -115,6 +118,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/home-evacuation-information/",
     "/zh-tw/guides/emergency-supply-inventory/",
     "/zh-tw/guides/emergency-information-sheet/",
+    "/zh-tw/guides/power-outage-home-preparedness/",
     "/zh-tw/guides/home-maintenance-log/",
     "/zh-tw/guides/appliance-replacement-planning/",
     "/zh-tw/guides/room-by-room-home-inventory/",
@@ -210,8 +214,14 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料驗證" }),
   ).toHaveAttribute("href", "/zh-tw/tools/emergency-contact-verification-log/");
   await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭停電事件紀錄" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/household-power-outage-event-log/");
+  await expect(
     page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭停電準備指南" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/power-outage-home-preparedness/");
 
   for (const localized of [
     {
@@ -283,6 +293,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/emergency-information-sheet/",
       alternate: "/guides/emergency-information-sheet/",
       heading: "家庭緊急聯絡資料表怎麼做：先定義誰會看，再逐筆驗證",
+    },
+    {
+      route: "/zh-tw/guides/power-outage-home-preparedness/",
+      alternate: "/guides/power-outage-home-preparedness/",
+      heading: "停電怎麼準備：台灣家庭需要的不是購物清單，而是一套可查證流程",
     },
     {
       route: "/zh-tw/features/household-handoff/",
@@ -482,6 +497,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/emergency-contact-verification-log/",
       alternate: "/tools/emergency-contact-verification-log/",
       heading: "家庭緊急聯絡資料驗證紀錄",
+    },
+    {
+      route: "/zh-tw/tools/household-power-outage-event-log/",
+      alternate: "/tools/household-power-outage-event-log/",
+      heading: "家庭停電紀錄表",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -800,6 +820,48 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "需要真實的 YYYY-MM-DD 驗證日期",
   );
 
+  await page.goto("/tools/household-power-outage-event-log/");
+  await page.getByLabel("First observed outage date").fill("2026-08-22");
+  await page.getByLabel("Next household review date").fill("2026-08-24");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Observed; monitoring 1");
+  await expect(page.locator(".result")).toContainText(
+    "Official or qualified follow-up pending 1",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "Not yet recorded; no restoration prediction made",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "does not establish the outage cause or exact utility duration",
+  );
+  await page
+    .getByLabel("First observed time (24-hour HH:MM)")
+    .fill("25:00");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "24-hour time in HH:MM format",
+  );
+
+  await page.goto("/zh-tw/tools/household-power-outage-event-log/");
+  await page.getByLabel("第一次觀察到停電的日期").fill("2026-08-22");
+  await page.getByLabel("家庭下次複查日期").fill("2026-08-24");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("已觀察持續追蹤 1 筆");
+  await expect(page.locator(".result")).toContainText(
+    "等待官方或合格人員查核 1 筆",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "尚未記錄；工具未預測復電時間",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "不證明停電原因或台電計算時數",
+  );
+  await page.getByLabel("第一次觀察時間（24 小時 HH:MM）").fill("24:01");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "24 小時制 HH:MM 時間",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1053,6 +1115,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/emergency-contact-verification-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-power-outage-event-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-power-outage-event-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",

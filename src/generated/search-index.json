@@ -336,12 +336,12 @@
     "headings": "Storm preparation home checklist: organize information, supplies and responsibilities Get your alerts from a source that doesn't depend on cell towers or the internet Follow local authorities for every actual safety decision Assign specific responsibilities before the storm, not during it Inventory what you have before buying more Protect your household records before the storm, not after If the storm knocks out power, that's its own checklist"
   },
   {
-    "title": "Power Outage Home Preparedness: Organize the Household Before the Lights Go Out",
-    "description": "Prepare for a household power outage by organizing contacts, backup devices, responsibilities, offline information and post-outage notes.",
+    "title": "Power Outage Preparedness at Home | Build a Household Plan That Can Be Rechecked",
+    "description": "Prepare a home for power outages with verified contacts, offline information, power-dependent support plans, equipment records, safe evidence and a restoration review.",
     "route": "/guides/power-outage-home-preparedness/",
     "cluster": "maintenance",
     "keywords": "power outage preparedness home",
-    "headings": "Power outage home preparedness: organize the household before the lights go out If you use a portable generator, this is the one rule that actually matters Keep utility and outage contacts reachable without the internet Know which specific needs in your household actually depend on power Test backup devices on a schedule, not just when you remember Document anything unusual once power comes back"
+    "headings": "Power outage preparedness at home: build a plan the household can actually use Begin with consequences, not products Verify the utility and public-information path before an outage Create one source map instead of rewriting expert instructions Build a lighting and communication layer from observed capability Handle food and cold storage as an evidence workflow Treat power-dependent care as an individual continuity plan Portable generators require a dedicated safety and installation plan Make building and rental responsibilities explicit Assign roles small enough to execute Record an active outage without chasing certainty Restoration is a checkpoint, not the end of the record Preserve evidence without turning the shared log into a data leak Review the plan after each real event"
   },
   {
     "title": "Water Leak Response Records: What to Document While You Arrange Repair",
@@ -1526,6 +1526,14 @@
     "cluster": "tools",
     "keywords": "emergency contact verification log",
     "headings": "Emergency contact verification log A contact sheet and a verification log solve different problems Choose one verification scope Name the plan and official sources checked Eight fields create a repeatable contact audit Safe channel hints prevent accidental duplication Verification evidence differs for people and organizations Four statuses describe evidence, not importance Every unresolved record needs one owner-linked action A worked three-record review Review dates and event triggers Privacy filters are a final guard, not permission to paste secrets Keep affiliate placements outside the decision record"
+  },
+  {
+    "title": "Household Power Outage Event Log | Record Times, Evidence and Follow-Up",
+    "description": "Document a household power outage with observed times, official-source evidence, system IDs, four statuses and owner-linked follow-up—without guessing the cause or safety outcome.",
+    "route": "/tools/household-power-outage-event-log/",
+    "cluster": "tools",
+    "keywords": "power outage event log",
+    "headings": "Household power outage event log Use one record for one outage event and one household scope First observed is not the same as official start The three record stages prevent premature closure Name the official source, channel and date checked Seven fields turn a symptom list into traceable observations Four statuses describe workflow, not safety Keep household-specific support details in their authoritative plans Food, medicine and equipment need evidence—not a universal verdict Every unresolved ID gets exactly one next action The privacy screen reduces risk but cannot recognize every secret A careful close-out has three layers"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

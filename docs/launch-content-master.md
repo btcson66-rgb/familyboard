@@ -2893,47 +2893,193 @@ Power loss during or after a storm brings its own specific risks — generator c
 
 ## Page 047 — Power Outage Home Preparedness
 **Slug:** `/guides/power-outage-home-preparedness/`
-**Primary intent:** prepare household information and responsibilities for a power outage
-**Title tag:** `Power Outage Home Preparedness: Organize the Household Before the Lights Go Out`
-**Meta description:** `Prepare for a household power outage by organizing contacts, backup devices, responsibilities, offline information and post-outage notes.`
+**Primary intent:** build and maintain a household power outage plan with verified sources, responsibilities and records
+**Title tag:** `Power Outage Preparedness at Home | Build a Household Plan That Can Be Rechecked`
+**Meta description:** `Prepare a home for power outages with verified contacts, offline information, power-dependent support plans, equipment records, safe evidence and a restoration review.`
 **Primary keyword concept:** power outage preparedness home
-**Suggested internal links:** `/guides/emergency-supply-inventory/`, `/guides/ups-battery-backup-records/`, `/guides/emergency-information-sheet/`, `/features/private-family-organizer/`
+**Cluster:** maintenance
+**Page type:** content
+**Published date:** 2026-08-19
+**Editorial review date:** 2026-08-23
+**Content version:** 2
+**Suggested internal links:** `/tools/household-power-outage-event-log/`, `/guides/emergency-supply-inventory/`, `/guides/ups-battery-backup-records/`, `/guides/emergency-information-sheet/`
 
-# Power outage home preparedness: organize the household before the lights go out
+# Power outage preparedness at home: build a plan the household can actually use
 
-The first problem most households hit in a power outage isn't a lack of equipment — it's that nobody can find it, or remember whether it still works. A flashlight nobody can locate and a battery pack that's been dead for six months are both effectively the same as not owning either one. Preparation here is mostly an information and organization problem, with one real physical danger that deserves its own section: generator carbon monoxide risk.
+Power-outage preparation is often reduced to buying flashlights. Lighting matters, but a household usually fails somewhere less visible: the utility contact is stored only in a cloud bookmark, the power bank has the wrong cable, nobody knows which care plan applies to a power-dependent device, the freezer decision has no timestamp, or power returns and an abnormal appliance is never recorded.
 
-## If you use a portable generator, this is the one rule that actually matters
+A durable plan connects five things: the actual people and systems that depend on electricity, current responsible sources, supplies someone has physically checked, assigned household roles, and an event record that survives the stress of the outage. This guide explains how to build that workflow without pretending one checklist can diagnose electrical faults, prescribe medical backup, decide food safety or guarantee restoration.
 
-Never run a portable generator inside a house, garage, basement or any enclosed or partially enclosed space — not even with the doors and windows open. The EPA is direct about why: a generator's exhaust contains carbon monoxide, a poisonous gas you can't see or smell, and it can build up to deadly levels within minutes in an enclosed space, then linger for hours afterward even after the generator is off. Run it outside only, far from windows, doors and vents. Source: [EPA — power outages and indoor air quality](https://www.epa.gov/emergencies-iaq/power-outages-and-indoor-air-quality-iaq). The U.S. Consumer Product Safety Commission recommends a carbon monoxide alarm on every level of the home, outside each sleeping area — check that yours have working batteries or backup power before an outage happens, not during one, since a generator running nearby is exactly when a CO alarm is doing its most important job.
+Use the authority for the home’s real location. The sources below illustrate strong official guidance, but emergency numbers, utility processes, climate hazards, building rules and health advice vary. Review dates belong beside every source.
 
-## Keep utility and outage contacts reachable without the internet
+## Begin with consequences, not products
 
-The outage that takes out your power often takes out your home internet and sometimes weakens cell service too, right when you'd normally look up your utility's outage-reporting number. Store the utility provider's name, the outage-reporting method (often a phone number that works independent of home internet) and your account reference somewhere the household can reach offline — printed, or saved on a device that doesn't need a live connection. Keep sensitive account numbers off any shared wall display; a phone number and account reference visible to guests is a different exposure than a private note in a drawer.
+Walk through an ordinary day and ask what changes when power stops. Separate immediate life-safety or care dependencies from communication, food storage, building systems, work and convenience. A household may identify:
 
-## Know which specific needs in your household actually depend on power
+- a power-dependent medical, accessibility or caregiving arrangement;
+- heating or cooling needed because of actual weather or health conditions;
+- a refrigerator, freezer or temperature-sensitive supply;
+- a modem, router, mobile-phone charging and an offline communication method;
+- building access, garage doors, pumps, lifts, gates or shared alarms;
+- lighting for stairs, exits, children, older adults or pets; and
+- appliances and electronics that need an after-restoration check.
 
-Make a list specific to your household, not a generic one: communications devices, any medically necessary equipment, refrigerated medication, heating or cooling needs, and anything else that would genuinely create a problem within hours rather than being merely inconvenient. For medical and life-safety equipment specifically, follow the guidance from the equipment manufacturer and your medical provider — a household organizer can hold the note that "mom's equipment needs power," but the actual emergency plan for that equipment should come from a professional, not a generic checklist.
+This is not a risk score. One item can be more consequential than ten convenience devices. The purpose is to know which authoritative plan, person and evidence belongs to each dependency.
 
-## Test backup devices on a schedule, not just when you remember
+Do not copy diagnoses, medication doses or device settings into a shared preparedness page. Record a safe category and a protected pointer to the individual plan maintained with the person, clinician, pharmacist, manufacturer or provider. The household coordinator needs to know where the current plan is and who owns it—not every private detail.
 
-A backup device you haven't tested since you bought it is a guess, not a preparation. Record what the household actually owns — flashlights, a battery pack, a generator, backup batteries for medical devices — and build in a periodic check using the manufacturer's own testing or charging guidance for that specific device. The value of recording this isn't the list itself; it's catching the dead battery pack in a calm month instead of during the outage.
+## Verify the utility and public-information path before an outage
 
-## Document anything unusual once power comes back
+Record the electricity provider for the actual service address, its official outage map or reporting channel, an offline phone method where available, and the date each source was checked. Store account and service-address details separately. A printed household sheet can say `utility outage channel — protected record UTILITY-1` without exposing the account.
 
-Power surges and outages can leave appliances, routers or other electronics behaving oddly afterward — a device that won't reconnect, a breaker that trips repeatedly, a smell that wasn't there before. Note it against the specific device's record rather than shrugging it off; a pattern across multiple outages is much easier to spot with a written note than a vague memory of "that's happened before, I think."
+Also identify the local emergency-management source and building-management channel, if applicable. A utility outage, a building common-system problem and a fault inside one dwelling may look similar at first but have different owners. The household should be able to describe the observed scope without diagnosing the cause.
 
-**Contextual CTA:** Create an offline Emergency Information Sheet with utility contacts and household-specific power needs, and confirm at least two household members know exactly where to find it.
+Ask two people to locate the information with home internet unavailable. A bookmark on the router-dependent network is not an offline plan. A printed card, a downloaded document or a locally available phone note can help, but each copy needs a version date and a routine for replacement.
+
+Use the [Emergency Contact Verification Log](/tools/emergency-contact-verification-log/) to preserve the provider source, verification date, safe channel hint and sharing scope without building another full contact directory.
+
+## Create one source map instead of rewriting expert instructions
+
+The household plan should point to current authority rather than paraphrase every high-risk instruction. Maintain a compact source map with:
+
+1. responsible utility and building information;
+2. local emergency alerts and services;
+3. health-authority food, water, heat and cold guidance;
+4. product manuals and qualified service sources;
+5. individual power-dependent care plans; and
+6. insurance, rental or property-management notice requirements.
+
+Add `last checked` and `owner` to each source. A source with no date quietly becomes a historical document. A source owned by nobody is unlikely to be refreshed.
+
+Avoid making a generic household page the authority for generator placement, electrical-panel operation, refrigerated medication, oxygen or other care equipment. Those decisions depend on facts the page cannot inspect. A concise source pointer is safer and easier to maintain than a copied procedure that drifts from its original.
+
+## Build a lighting and communication layer from observed capability
+
+Inventory what the household actually owns and can locate: flashlights or headlamps, matching batteries, charged mobile-power devices, cables that fit the intended phones, a battery radio if relevant to local alerts, and a paper or offline communication card. Record the storage label and last physical check.
+
+The [emergency supply inventory guide](/guides/emergency-supply-inventory/) explains how to compare a chosen container with a current plan instead of buying from a generic list. A package still on the shelf is not evidence that a device works. Test only according to the manufacturer and within the ordinary safe use of the product.
+
+Home internet commonly depends on powered equipment inside the dwelling and may also depend on provider infrastructure outside it. A small UPS can sometimes support selected equipment, but its label, battery health, load and observed runtime matter. Use the [UPS battery backup records guide](/guides/ups-battery-backup-records/) to maintain those facts. Do not promise that a battery device will preserve provider service during a regional event.
+
+Agree on a low-bandwidth family communication method and an alternative. Store only the contacts and roles each person needs. A delivered practice message proves that method worked at that time; it does not guarantee future cellular availability.
+
+## Handle food and cold storage as an evidence workflow
+
+The U.S. Centers for Disease Control and Prevention includes food, water and medication among the distinct health concerns in its current [power-outage guidance](https://www.cdc.gov/natural-disasters/response/what-to-do-protect-yourself-during-a-power-outage.html). It gives U.S.-specific limits and contacts. Other countries and specific products may require different authority.
+
+Prepare the household record before an event:
+
+- identify refrigerators, freezers and any reliable appliance thermometers;
+- know where item-specific labels and health guidance can be found;
+- decide who records the first-observed outage time;
+- preserve door-opening, temperature and restoration observations; and
+- name who will make and document the final decision from the responsible source.
+
+The record should not output `safe` because a timer has not crossed a copied threshold. The household does not know the exact temperature history from time alone, and the tool does not know the food, packaging, appliance or local condition. Record evidence and return to current health guidance.
+
+The same principle applies to refrigerated medicine, but the authority chain differs: product label, pharmacist, clinician and manufacturer. Keep the private item and instruction details outside a broadly shared event log.
+
+## Treat power-dependent care as an individual continuity plan
+
+For every person who relies on powered equipment, temperature control, charging, communication or another electrical support, confirm the plan with the relevant professional and provider before an outage. The plan may need equipment identification, backup source, observed capability, transport or alternate-location arrangements, contact paths and clear triggers. None should be invented by a generic calculator.
+
+Record the plan’s protected location, version date, responsible person and next review. Ask the intended backup person to locate it and explain their role. Do not test life-support or other critical equipment by disconnecting it for a household exercise.
+
+Weather makes this time-sensitive. If a home becomes dangerously hot or cold, current public-health and emergency instructions take priority over a household schedule. CDC’s U.S. guidance discusses heat and cold risks; households elsewhere should identify their local authority and shelter or support information in advance.
+
+## Portable generators require a dedicated safety and installation plan
+
+CDC warns never to use a generator or other gasoline-powered engine inside a home, basement or garage, or in other enclosed or partially enclosed areas, because carbon monoxide can accumulate. Its guidance also warns against using charcoal grills, portable camping stoves and similar combustion sources indoors. The [EPA’s power-outage indoor-air guidance](https://www.epa.gov/emergencies-iaq/power-outages-and-indoor-air-quality-iaq) reinforces the carbon-monoxide concern.
+
+Do not turn those warnings into a do-it-yourself installation guide. Location, weather, openings, electrical transfer, grounding, fuel, maintenance, storage and local rules require the current product manual and applicable fire, electrical and qualified professional sources. A household app cannot see the building or approve a setup.
+
+Carbon-monoxide alarms, smoke alarms and other safety devices should be maintained under their manufacturer and local authority guidance. Record the model, manual source, check date and replacement basis. Buying a generator or alarm is not proof that the household has a safe, functioning plan.
+
+## Make building and rental responsibilities explicit
+
+In an apartment or multi-unit building, some dependencies belong to the resident, some to building management and some to the utility. Lifts, access gates, common lighting, water pumps, fire systems, parking equipment and shared generators may follow a building plan. Obtain current resident instructions and an offline management contact.
+
+Do not operate common electrical, fire or mechanical equipment unless authorized and qualified. A household plan can record `building access status to be confirmed with management`; it should not invent a bypass or manual-release procedure.
+
+Renters should keep the lease, property-management channel, condition evidence and notice process accessible. Owners may need equipment service records and insurance sources. Neither should assume that an event log alone proves responsibility or coverage.
+
+## Assign roles small enough to execute
+
+A practical outage plan can use roles rather than personal names in a shared version:
+
+- the source checker records utility and public updates with timestamps;
+- the household observer records first-observed and restoration-observed times;
+- the care-plan owner follows the individual authoritative plan;
+- the cold-storage owner preserves time and temperature evidence;
+- the communication owner checks the agreed primary and alternative methods; and
+- the close-out owner reconciles open system IDs after restoration.
+
+One person may hold several roles in a small household, but every consequential task still needs an owner and backup. “Everyone will remember” is not an assignment.
+
+Conduct a low-risk walk-through: locate lights, offline contacts, source map and protected plan pointers. Do not call emergency services as a test, interrupt necessary equipment, operate electrical panels without authority or simulate a dangerous condition.
+
+## Record an active outage without chasing certainty
+
+During an actual event, immediate official and on-scene safety instructions come first. When it is safe to record, open the [Household Power Outage Event Log](/tools/household-power-outage-event-log/) and capture:
+
+- the earliest supportable first-observed date and time;
+- whether the scope is official, building-level, dwelling-level or unknown;
+- the official source and time checked;
+- each system’s observed condition and evidence;
+- the action already taken—not a speculative recommendation;
+- the responsible household role and workflow status; and
+- one evidence-based follow-up for every unresolved ID.
+
+Do not approach a fallen or exposed line, enter flooded electrical areas or restart questionable equipment to improve the record. A missing observation is safer than evidence collected through a hazard.
+
+If the outage remains active, leave restoration blank. If an official estimate is published, preserve it as an attributed source update rather than placing it in the restoration-observed field. A forecast is not an observation.
+
+## Restoration is a checkpoint, not the end of the record
+
+When power appears to return, note the observed time and keep the household record open. Recheck each priority system using its proper source. A light can return while home internet, a shared pump or one appliance remains unavailable. A device can show an abnormal smell, sound, heat, error code or repeated interruption.
+
+Record abnormalities against the actual asset and do not repeatedly energize questionable equipment. Visible damage, smoke, sparks, unusual heat, standing water near electrical equipment, fallen lines or other urgent hazards require current utility, emergency or qualified professional help—not a troubleshooting checklist.
+
+For ordinary devices, record the recheck method, result and manual or service source. For cold storage and medication, preserve the authority consulted. For care equipment, follow the individual plan. Close each system ID only after the evidence exists.
+
+## Preserve evidence without turning the shared log into a data leak
+
+Use stable IDs and protected locations for photos, screenshots, utility notices, temperatures, receipts and service records. Keep original timestamps and files where possible. A public or printable household summary should not carry an exact address, utility account, access credential, government ID, full medical record or unnecessary personal information.
+
+The tool runs in the browser, but a downloaded, printed, copied or app-saved result becomes another user-controlled copy. Decide who needs it, where it is backed up and when superseded copies should be destroyed.
+
+If the record may support a complaint, reimbursement or insurance claim, do not edit observations into conclusions. Preserve the provider’s statement, original files, dates, notice proof and correspondence. The responsible organization, contract, policy and law determine eligibility and procedure; FamilyBoard does not.
+
+## Review the plan after each real event
+
+An outage reveals which assumptions were wrong. Conduct a short after-action review:
+
+1. Which official or household source was hard to find?
+2. Which supply was missing, discharged, incompatible or stored elsewhere?
+3. Which person or system needed power sooner than expected?
+4. Which action lacked an owner or backup?
+5. Which observation could not be supported later?
+6. Which shared copy exposed too much or carried an old version?
+
+Convert answers into dated maintenance, supply, contact and care-plan work. Do not simply add more products. A working cable in the right bag and a verified source on paper can be more useful than an untested high-capacity device.
+
+Future affiliate recommendations should remain clearly disclosed, outside emergency forms and results, and subordinate to official guidance. No product placement should imply that purchase creates preparedness, replace a local professional or make the free workflow conditional.
+
+**Next step:** walk through the home with one other person, identify the three most consequential power dependencies, verify the responsible source for each, and assign owners. During the next real event, preserve observations in the outage log and close each ID only after a documented recheck.
+
+**Contextual CTA:** Run one household walk-through, verify the responsible utility and support-plan sources, then use the outage event log during the next real or announced test.
 
 **FAQ:**
-- Q: Is it okay to run a generator in the garage if I leave the garage door open?
-  A: No. The EPA is explicit that a portable generator should never run inside a garage, even with the door open, because carbon monoxide can build up to deadly levels within minutes in an enclosed or partially enclosed space and linger for hours. Run it outside only, far from windows, doors and vents.
-- Q: How many carbon monoxide alarms does my home actually need?
-  A: The U.S. Consumer Product Safety Commission recommends one on every level of the home, positioned outside each sleeping area. Check that each one has a working battery or backup power before an outage happens — that's exactly when a generator or alternate heat source is most likely to be in use, which is when CO risk is highest.
-- Q: What should I do about medical equipment that needs power during an outage?
-  A: Record in your household system that the equipment exists and needs power, but get the actual emergency plan — backup power requirements, how long it can safely run without power, what to do if power doesn't return in time — from the equipment's manufacturer and the patient's medical provider, not from a generic household checklist.
-- Q: Why does my internet usually go out along with my power?
-  A: Home internet typically depends on equipment that needs electricity — a modem, router and often the provider's own local infrastructure — so a power outage frequently takes internet down with it. That's exactly why utility and emergency contact information needs to be stored somewhere reachable offline, not just bookmarked in a browser.
+- Q: What is the most important first step in household power outage preparedness?
+  A: Identify the systems and people that truly depend on power, then verify the responsible utility, local emergency sources and household-specific plans. A generic shopping list cannot replace that inventory and source check.
+- Q: Can a portable generator run in a garage with the door open?
+  A: No. CDC and EPA warn against operating a generator or gasoline-powered engine in a home, basement, garage or other enclosed or partially enclosed space. Follow the current manufacturer, fire-safety, electrical and local authority requirements for the actual installation.
+- Q: How should I plan for refrigerated medicine or power-dependent medical equipment?
+  A: Keep a private pointer to the current label, manufacturer, pharmacist, clinician, provider and individual support plan. Do not let a household checklist invent storage limits, doses, device settings or a generic backup runtime.
+- Q: Should I turn off the main breaker during every outage?
+  A: A general website should not issue that universal instruction. The right action depends on the property, hazard, equipment, flooding, wiring and responsible authority. Follow current utility, building, manufacturer and qualified professional guidance.
+- Q: What should the household record after power returns?
+  A: Preserve when restoration was observed, which source was checked, which systems were rechecked, any abnormal condition, the evidence location and every remaining owner action. Do not treat one light returning as proof that all services and equipment are normal.
 
 **Depth:** verified
 
@@ -11704,6 +11850,158 @@ The verification workflow does not require a product purchase. If FamilyBoard la
   A: A status without ownership can remain unresolved indefinitely. The action connects the exact source ID to a concrete correction, one responsible role and a real due date before the next review.
 - Q: Does a confirmed status guarantee that the contact will answer during an emergency?
   A: No. It records a past verification. The tool cannot test future network conditions, availability, authority or response. Use current official channels and instructions in a real emergency.
+
+---
+
+## Page 205 — Household Power Outage Event Log
+**Slug:** `/tools/household-power-outage-event-log/`
+**Primary intent:** record a household power outage timeline, observed system conditions, sources and follow-up ownership
+**Title tag:** `Household Power Outage Event Log | Record Times, Evidence and Follow-Up`
+**Meta description:** `Document a household power outage with observed times, official-source evidence, system IDs, four statuses and owner-linked follow-up—without guessing the cause or safety outcome.`
+**Primary keyword concept:** power outage event log
+**Cluster:** tools
+**Page type:** tool
+**Published date:** 2026-08-23
+**Editorial review date:** 2026-08-23
+**Content version:** 1
+**Suggested internal links:** `/guides/power-outage-home-preparedness/`, `/guides/emergency-supply-inventory/`, `/guides/ups-battery-backup-records/`, `/tools/emergency-contact-verification-log/`
+
+# Household power outage event log
+
+A power outage is easy to remember as one event and hard to reconstruct as evidence. One person noticed the lights at 9:15, another checked the utility page ten minutes later, the refrigerator stayed closed, internet service returned after the lights, and one appliance behaved differently the next morning. Without a dated record, those facts become a single vague memory: “the power was out for a while.”
+
+This free browser tool creates a household operations record from what someone actually observed. It keeps the event stage, first-observed time, restoration-observed time, official-source reference, system conditions, actions already taken, support-plan pointers and owner-linked follow-up in one readable result. It does not monitor the grid, contact a utility, read smart-meter data or inspect household equipment.
+
+The distinction matters. A household timestamp is not necessarily the utility's official outage start. Lights returning does not prove every circuit, appliance or provider service is stable. An observation about a refrigerator does not decide whether its contents are safe. The log protects these boundaries instead of converting incomplete evidence into a confident answer.
+
+**Recording a real event? [Jump to the outage log](#tool-heading).**
+
+## Use one record for one outage event and one household scope
+
+Start with a private household label rather than a street address. `Maple household` or `Apartment A` is enough to identify an export among family records. The tool rejects common account and credential language because a printable event summary should not become another copy of a utility account, access code or medical file.
+
+Choose the scope that best matches the evidence available now:
+
+- an area or utility event shown by an official source;
+- a building or shared service affected;
+- one dwelling or part of it affected; or
+- scope not yet established.
+
+These options describe observations, not causes. If neighbors also appear dark and the utility map shows an incident, the household can record both sources. If a common hallway has power but one dwelling does not, record that difference without concluding that a breaker, wiring fault or unpaid account caused it. Diagnosis belongs to the responsible utility, building manager or qualified electrical professional.
+
+Keep separate events separate. A brief interruption on Monday and a second event on Wednesday should not share a single start and restoration time. A building generator test and a utility outage also have different evidence and ownership even if both interrupt a device.
+
+## First observed is not the same as official start
+
+The form asks for a date and a 24-hour `HH:MM` time. Enter when someone first noticed the condition or the timestamp supported by the named source. If a household member woke at 07:00 and found clocks blinking, do not silently claim the outage began at 03:12 because that is the last time shown on one device. Write that the start is an estimate in the source/evidence text and preserve the device observation separately.
+
+The tool checks that the timestamp is a real calendar date and time and is not in the future. It deliberately does not compute “official outage duration.” The household may have noticed the event after it began, and the utility may define interruption and restoration differently. If a formal duration matters, obtain it from the responsible provider and keep that record beside—not overwritten by—the household log.
+
+For an ongoing outage, leave both restoration fields blank. When supply is actually observed again, change the stage and enter both the restoration date and time. A restoration timestamp cannot precede the first observation or lie in the future. The wording remains “restoration observed” because a light turning on is evidence of that moment, not certification that all systems are stable.
+
+## The three record stages prevent premature closure
+
+`Outage ongoing; facts still being observed` is for an active interruption. It permits system rows such as `Observed; monitoring` and requires a next action for every row that has not been closed.
+
+`Supply restoration observed; household checks open` means someone has seen power return but the household has not finished checking the systems that matter. A router may need an ordinary connection test, a freezer record may require a health-authority review, or an appliance may remain off pending its manual or a qualified assessment. Restoration is a transition, not automatic close-out.
+
+`Household close-out review complete` is strict. Every system row must already say `Closed after recheck`, and therefore no open action can remain. Use this only after the new observation and supporting record exist. Changing a status to make the form pass is not evidence.
+
+## Name the official source, channel and date checked
+
+The source field should answer: which responsible organization or household record did you consult, by what channel, and when? A useful entry is `Utility official outage page checked 2026-08-23; protected report reference OUTAGE-1.` A weak entry is `the internet said it was down.`
+
+Use the utility serving the actual address, a building management notice for a shared system, or a local emergency authority for public hazards. Search results, neighborhood chat messages and social posts can help locate an official source but should not silently become the authority. If the source later changes, preserve both timestamps rather than rewriting the first record as though the later statement had always been known.
+
+Do not paste the service address, account number, meter number, full case number or login details into the export. Keep sensitive proof in a protected folder and use a stable event pointer such as `OUTAGE-1`. The log is designed to remain useful when printed or shared with another household coordinator.
+
+## Seven fields turn a symptom list into traceable observations
+
+Each system line follows this structure:
+
+`ID | area or system | first observed condition | source/evidence | household action already taken | owner/observer | status`
+
+The ID uses 2–20 letters, numbers or hyphens, such as `POWER-1`, `COLD-1` or `ROUTER-1`. Every ID must be unique. Reuse the same ID in its one follow-up row so the next action cannot attach to the wrong system.
+
+The area/system field identifies the operational unit: dwelling supply, lighting, refrigerator and freezer, home network, accessibility support, security equipment or another real household dependency. Avoid vague labels such as `everything`.
+
+The condition field records what was visible or otherwise supported: `ordinary outlets unavailable at first check` or `router status lights absent while dwelling supply was unavailable`. It should not say `wiring failed` unless a qualified source established that conclusion.
+
+The evidence field can name an official page timestamp, a dated photo index, a device indicator or a protected temperature record. The action-already-taken field describes history, not advice: `official page checked and event reference saved` is safer and more auditable than inventing an electrical procedure.
+
+## Four statuses describe workflow, not safety
+
+`Observed; monitoring` means the condition was recorded during an active event and will be checked again. It does not mean the condition is harmless.
+
+`Official or qualified follow-up pending` is for a question that the household should not answer from a generic web tool. Food and medication decisions, power-dependent care plans, exposed wiring, repeated breaker behavior and equipment damage are examples where a current responsible source may be needed.
+
+`Restored; recheck pending` means the relevant service appears to have returned but the household has not yet completed its planned check. It avoids the common mistake of equating one light with every device being ready.
+
+`Closed after recheck` means the household performed the identified check, retained enough evidence to support the result and has no open work for that row. It is not a safety certification, repair approval or provider service-level finding.
+
+The result counts statuses only as a workflow summary. Three closed convenience devices do not outweigh one open power-dependent support issue. There is no readiness score.
+
+## Keep household-specific support details in their authoritative plans
+
+The optional support section uses four fields:
+
+`support category | authoritative plan or instructions location | observed impact only | responsible role`
+
+Use categories such as communication, mobility support, temperature-sensitive supplies, caregiving or pet care. Put the actual plan in the protected source maintained with the person, clinician, pharmacist, manufacturer, provider or other qualified authority. The public tool should contain a pointer such as `protected care record CARE-1`, not a diagnosis, medication dose, device setting or private identity detail.
+
+This keeps the outage record useful to a household coordinator while avoiding a dangerous copy problem. If the care plan changes, the source remains the authority. The event log only shows that the plan was consulted and what impact was observed.
+
+## Food, medicine and equipment need evidence—not a universal verdict
+
+The U.S. Centers for Disease Control and Prevention identifies carbon monoxide, food and water, medication, extreme temperature and electrical hazards as distinct outage concerns in its [power-outage safety guidance](https://www.cdc.gov/natural-disasters/response/what-to-do-protect-yourself-during-a-power-outage.html). That page includes U.S.-specific thresholds and emergency contacts. A household elsewhere must use its own current health and emergency authorities.
+
+The log therefore records inputs without returning a safe/unsafe answer. For cold storage, preserve the first-observed time, whether doors remained closed, any reliable temperature evidence, the item or container reference and the authority consulted. For medicine, follow the label and current pharmacist, clinician or manufacturer guidance. For a power-dependent device, follow its manufacturer and individual support plan. Do not convert a generic timer into a medical or food-safety decision.
+
+Portable generators and other fuel-burning equipment create a separate carbon-monoxide risk. CDC says never to run a generator or gasoline-powered engine inside a home, basement or garage and warns that fumes can accumulate in enclosed or partially enclosed spaces. The [EPA's outage and indoor-air guidance](https://www.epa.gov/emergencies-iaq/power-outages-and-indoor-air-quality-iaq) is another authoritative planning source. The event log does not calculate generator placement or approve an installation; retain manufacturer, local fire-safety and qualified installation guidance.
+
+## Every unresolved ID gets exactly one next action
+
+The follow-up format is:
+
+`unresolved ID | next evidence-based action | owner or role | due date YYYY-MM-DD`
+
+Every status except `Closed after recheck` requires one row. Missing actions, duplicate IDs and actions attached to already-closed observations are rejected. A due date may be the outage date because some source checks are same-day; it cannot be earlier than the event or later than the record's next-review date.
+
+A good action identifies the new evidence required. `Check again` is vague. `Recheck the utility official status at the household's planned interval and save the new source timestamp` is testable. `Decide whether food is safe` is too broad; `compare the recorded time and temperature evidence with the responsible health authority's current guidance and preserve the decision source` keeps the boundary clear.
+
+One action can include several orderly steps, but one owner remains accountable for closing the ID. If the next review shows a different condition, preserve the earlier row and create a new dated record rather than editing history into a cleaner story.
+
+## The privacy screen reduces risk but cannot recognize every secret
+
+The tool blocks common credentials, account identifiers, full-address language and unnecessary medical or device detail. This is a final warning layer, not permission to paste sensitive data until the filter complains. A distinctive nickname, case fragment or storage path may still reveal more than intended in a particular household.
+
+Calculation happens in the browser. Copying, downloading, printing or saving the result into the FamilyBoard App creates a new copy controlled by the user. Review recipients, storage, backups and disposal. If an insurer, landlord, utility or government office needs proof, preserve original files and submit only through that organization's verified process.
+
+Future disclosed affiliate recommendations must remain outside the form and result, never obscure current official links, and never imply that buying a generator, battery or monitoring product makes a household prepared. This record can be completed without purchasing anything.
+
+## A careful close-out has three layers
+
+First, reconcile the event: observation timestamps, official source, system rows and actions. Second, update the underlying household systems: contact directory, backup-power checks, emergency supplies, equipment records and care-plan pointers. Third, preserve the event in a protected location with a stable name and review whether any shared copies should be replaced or destroyed.
+
+Use the [power outage preparedness guide](/guides/power-outage-home-preparedness/) to build the pre-event household workflow. Use the [emergency supply inventory audit](/tools/emergency-supply-inventory-audit/) to check physical supplies against a current plan, and the [emergency contact verification log](/tools/emergency-contact-verification-log/) to verify utility and support contacts without duplicating their full details.
+
+**Next step:** enter one real event using the earliest supportable observation, name the official source and create one follow-up for every open system ID. Do not select close-out until each row has been rechecked and its evidence is preserved.
+
+**Contextual CTA:** Create one event record from observations you can support, then close each unresolved ID only after a new check and preserved evidence.
+
+**FAQ:**
+- Q: Does this log calculate the official outage duration?
+  A: No. It preserves the household's first-observed and restoration-observed timestamps. Those may differ from the utility's event boundaries, and an approximate observation is not converted into an official duration.
+- Q: Can the tool tell me whether refrigerated food or medicine is safe?
+  A: No. It can preserve time, temperature and source pointers for later review, but it does not know the product, storage history, local conditions or current authority guidance. Use the responsible health authority, label, pharmacist, clinician or manufacturer for the actual decision.
+- Q: What should I enter as the cause of the outage?
+  A: There is no cause field. Record the responsible utility's current statement as source evidence if one exists. Do not turn a neighbor's theory, a tripped device or the size of the affected area into a cause claim.
+- Q: Why does every open observation need one follow-up row?
+  A: An open status without an owner and date is easy to forget. The exact ID connects the observed condition to one next evidence-based action, one responsible role and a deadline within the review window.
+- Q: Can this record prove a compensation, insurance or liability claim?
+  A: No. It may help preserve household observations and source references, but eligibility, causation, notice, proof and deadlines depend on the responsible provider, contract, policy and law. Keep original evidence and obtain authoritative guidance.
+
+**Depth:** verified
 
 ---
 

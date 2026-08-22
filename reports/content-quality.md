@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T17:25:49.136Z
+Generated: 2026-08-22T17:57:03.782Z
 
 ## Summary
 
-- Indexable pages: 269
-- Generated HTML routes: 286
+- Indexable pages: 272
+- Generated HTML routes: 289
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 88
+- Pages without a contextual product/tool link: 90
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,13 +23,13 @@ Generated: 2026-08-22T17:25:49.136Z
 - maintenance: 33
 - household-operations: 21
 - inventory-warranty: 29
-- records-emergency: 26
-- tools: 58
+- records-emergency: 27
+- tools: 60
 
 ## Word-count range
 
 - Lowest: https://familyboard.win/search/ (19 words)
-- Highest: https://familyboard.win/zh-tw/tools/home-emergency-drill-record-generator/ (4508 words)
+- Highest: https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/ (5390 words)
 
 ## Highest similarity pairs
 
@@ -99,6 +99,7 @@ Generated: 2026-08-22T17:25:49.136Z
 - /zh-tw/guides/how-to-track-product-warranties/
 - /zh-tw/guides/move-out-home-records/
 - /zh-tw/guides/organize-household-subscriptions/
+- /zh-tw/guides/power-outage-home-preparedness/
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/
 - /zh-tw/privacy/
@@ -123,6 +124,7 @@ Generated: 2026-08-22T17:25:49.136Z
 - /zh-tw/tools/house-sitter-instruction-generator/
 - /zh-tw/tools/household-annual-review-generator/
 - /zh-tw/tools/household-document-index-generator/
+- /zh-tw/tools/household-power-outage-event-log/
 - /zh-tw/tools/household-subscription-cost-calculator/
 - /zh-tw/tools/move-in-checklist-generator/
 - /zh-tw/tools/move-out-condition-record-generator/

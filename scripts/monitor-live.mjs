@@ -63,6 +63,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/emergency-contact-verification-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-verification-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/emergency-information-sheet/</loc>",
+      "<loc>https://familyboard.win/tools/household-power-outage-event-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-power-outage-event-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -167,6 +170,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Safe channel hints prevent accidental duplication",
       "does not ask for the full phone number",
+    ],
+  },
+  {
+    path: "/tools/household-power-outage-event-log/",
+    require: [
+      "Household Power Outage Event Log",
+      'hreflang="zh-TW"',
+      "Four statuses describe workflow, not safety",
+      "does not monitor the grid",
+    ],
+  },
+  {
+    path: "/guides/power-outage-home-preparedness/",
+    require: [
+      "Power Outage Preparedness at Home",
+      'hreflang="zh-TW"',
+      "Begin with consequences, not products",
+      "cdc.gov/natural-disasters/response/what-to-do-protect-yourself-during-a-power-outage.html",
     ],
   },
   {
@@ -314,6 +335,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-power-outage-event-log/",
+    require: [
+      "家庭停電紀錄表",
+      'hreflang="en"',
+      "四種狀態只代表工作流程",
+      "不推測停電原因",
+    ],
+  },
+  {
     path: "/zh-tw/guides/home-evacuation-information/",
     require: [
       "家庭避難計畫怎麼做",
@@ -338,6 +368,15 @@ const checks = [
       'hreflang="en"',
       "台灣官方防災卡把聯絡",
       "離線備援不能只存在一支手機",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/power-outage-home-preparedness/",
+    require: [
+      "停電怎麼準備",
+      'hreflang="en"',
+      "公寓大廈要把住戶、管理與台電三層分清楚",
+      "1911",
     ],
   },
   {

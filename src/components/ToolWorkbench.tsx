@@ -30,6 +30,17 @@ const strictIsoDate = (value: string) => {
   ].join("-");
   return normalized === value ? parsed : null;
 };
+const strictTime = (value: string) =>
+  /^(?:[01]\d|2[0-3]):[0-5]\d$/.test(value) ? value : null;
+const localDateTime = (dateValue: string, timeValue: string) => {
+  const validDate = strictIsoDate(dateValue);
+  const validTime = strictTime(timeValue);
+  if (!validDate || !validTime) return null;
+  const [hours, minutes] = validTime.split(":").map(Number);
+  const result = new Date(validDate);
+  result.setHours(hours, minutes, 0, 0);
+  return result;
+};
 const fmt = (value: Date) =>
   new Intl.DateTimeFormat("en", { dateStyle: "long" }).format(value);
 const addMonths = (value: Date, months: number) => {
@@ -1038,6 +1049,156 @@ const definitions: Record<string, Definition> = {
         count: recordRows.filter((row) => row.parts[7].toLocaleLowerCase("en") === status.toLocaleLowerCase("en")).length,
       })).filter((item) => item.count > 0);
       return `${values.household.trim()} — emergency contact verification log\nScope: ${values.scope}\nReview completed: ${formatter.format(reviewed)}\nNext contact review: ${formatter.format(nextReview)}\nPlan / official-source reference: ${values.authority.trim()}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (workflow summary, not an emergency-readiness score)\n\n${lines("Verified contact records", recordRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — protected source: ${row.parts[2]} — safe channel hint: ${row.parts[3]} — evidence: ${row.parts[4]} — verified: ${formatter.format(strictIsoDate(row.parts[5]) as Date)} — sharing/consent: ${row.parts[6]} — status: ${row.parts[7]}`))}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["No unresolved contact was recorded. Confirm that every role, source and sharing scope was actually checked before closing the review."])}\n\nProtected verification-record location: ${values.storage.trim()}\n\nClose-out check: update the protected source, then replace or destroy superseded shared copies and ask an intended user to locate the current plan. This log contains labels and evidence, not the contact details themselves. It does not contact anyone, validate a phone network, replace local emergency services, or guarantee that a person or service will be available. In a real emergency, use current official channels and instructions.`;
+    },
+  },
+  "household-power-outage-event-log": {
+    intro:
+      "Create a dated household record of what was actually observed during a power outage, which source was checked, and who owns every open follow-up. The tool does not identify the cause, predict restoration, judge food or medical-device safety, or decide claims.",
+    fields: [
+      text("household", "Household label", "Use a private nickname, not a street address or utility account number.", "Maple household"),
+      {
+        name: "stage",
+        label: "Record stage",
+        type: "select",
+        options: [
+          "Outage ongoing; facts still being observed",
+          "Supply restoration observed; household checks open",
+          "Household close-out review complete",
+        ],
+      },
+      {
+        name: "scope",
+        label: "Observed outage scope",
+        type: "select",
+        options: [
+          "Area or utility event shown by an official source",
+          "Building or shared service affected",
+          "One dwelling or part of the dwelling affected",
+          "Scope not yet established",
+        ],
+      },
+      { name: "startDate", label: "First observed outage date", type: "date" },
+      text("startTime", "First observed time (24-hour HH:MM)", "Use the time actually observed. If approximate, say so in the source/evidence field.", "09:15"),
+      { name: "restoredDate", label: "Restoration observed date (leave blank if ongoing)", type: "date" },
+      text("restoredTime", "Restoration observed time (leave blank if ongoing)", "Use 24-hour HH:MM. The date and time must either both be present or both be blank.", ""),
+      { name: "nextReview", label: "Next household review date", type: "date" },
+      text("source", "Official source and event evidence", "Name the utility or responsible organization, channel, reference date and safe case hint. Do not enter an account number, full address or credential.", "Utility official outage page checked 2026-08-23; protected report reference OUTAGE-1"),
+      {
+        name: "observations",
+        label: "System observation rows",
+        type: "textarea",
+        help: "One line: ID | area or system | first observed condition | source/evidence | household action already taken | owner/observer | Observed; monitoring, Official or qualified follow-up pending, Restored; recheck pending, or Closed after recheck. Maximum 15 lines. Record facts, not diagnoses or repair instructions.",
+        value: "POWER-1 | Dwelling supply | Lights and ordinary outlets unavailable at first check | Utility official outage page showed an area event; checked 09:25 | Official page checked and event reference saved | Household coordinator | Observed; monitoring\nCOLD-1 | Refrigerator and freezer | Doors remained closed; no safety decision recorded here | Start time and any temperature evidence indexed in protected event file | Condition logged for later review against current health guidance | Food-record owner | Official or qualified follow-up pending\nROUTER-1 | Home network | Router lost power at first observation | Device status light unavailable; no equipment fault inferred | Existing backup communication method used | Communications owner | Restored; recheck pending",
+      },
+      {
+        name: "support",
+        label: "Household-specific support references",
+        type: "textarea",
+        help: "Optional. One line: support category | authoritative plan or instructions location | observed impact only | responsible role. Maximum 8 lines. Do not enter diagnoses, medication doses or device settings.",
+        value: "Communication | Protected household communication plan COMM-1 | Home internet unavailable during first check | Communications owner\nPower-dependent support | Manufacturer/provider plan pointer in protected care record CARE-1 | Backup-status review requested; no safety conclusion recorded | Care-plan owner",
+      },
+      {
+        name: "actions",
+        label: "Follow-up for every unresolved observation ID",
+        type: "textarea",
+        help: "One line: unresolved ID | next evidence-based action | owner or role | due date YYYY-MM-DD. Every row not Closed after recheck needs exactly one action. Due dates may be the outage date and must be no later than the next review.",
+        value: "POWER-1 | Recheck the utility official status at the household's planned interval and record any new source timestamp | Household coordinator | 2026-08-23\nCOLD-1 | Compare recorded time and temperature evidence with current responsible health-authority guidance; preserve the decision source | Food-record owner | 2026-08-23\nROUTER-1 | After stable supply is observed, test the intended connection and record the result without inferring outage cause | Communications owner | 2026-08-24",
+      },
+      text("storage", "Protected event-record location", "Use a folder or envelope label, not a password, account number, full address or public link.", "Household records / outage events / OUTAGE-1"),
+    ],
+    run: (values) => {
+      const started = localDateTime(values.startDate, values.startTime);
+      const restoredDatePresent = Boolean(values.restoredDate.trim());
+      const restoredTimePresent = Boolean(values.restoredTime.trim());
+      const restored = restoredDatePresent && restoredTimePresent
+        ? localDateTime(values.restoredDate, values.restoredTime)
+        : null;
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.household.trim()) return "Enter a household label so the exported event record can be identified.";
+      if (!started) return "Enter a real first-observed date and a 24-hour time in HH:MM format.";
+      const now = new Date();
+      if (started.getTime() > now.getTime())
+        return "The first-observed outage time cannot be in the future. Record only an event already observed.";
+      if (restoredDatePresent !== restoredTimePresent)
+        return "Enter both the restoration-observed date and time, or leave both blank while the outage is ongoing.";
+      if ((restoredDatePresent || restoredTimePresent) && !restored)
+        return "Enter a real restoration-observed date and a 24-hour time in HH:MM format.";
+      if (restored && restored.getTime() < started.getTime())
+        return "The restoration-observed time cannot be earlier than the first-observed outage time.";
+      if (restored && restored.getTime() > now.getTime())
+        return "The restoration-observed time cannot be in the future.";
+      if (values.stage === "Outage ongoing; facts still being observed" && restored)
+        return "An ongoing record must leave restoration date and time blank. Change the stage if supply restoration was actually observed.";
+      if (values.stage !== "Outage ongoing; facts still being observed" && !restored)
+        return "A restoration or close-out stage requires the date and time when restoration was actually observed.";
+      if (!nextReview) return "Enter a real next household review date in YYYY-MM-DD format.";
+      const startedDay = strictIsoDate(values.startDate) as Date;
+      if (nextReview.getTime() < startedDay.getTime())
+        return "The next household review date cannot be earlier than the outage date.";
+      if (restored && nextReview.getTime() < (strictIsoDate(values.restoredDate) as Date).getTime())
+        return "The next household review date cannot be earlier than the restoration-observed date.";
+      if (!values.source.trim()) return "Add the official source and event evidence used for this record.";
+      if (!values.storage.trim()) return "Add a protected location where the event record can be found again.";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const observationRows = parseRows(values.observations);
+      if (observationRows.length === 0) return "Add at least one system condition that was actually observed.";
+      if (observationRows.length > 15) return "Use no more than 15 observation rows in one outage event; split a complex event by location or review stage.";
+      const invalidObservations = observationRows.filter((row) => row.parts.length !== 7 || row.parts.some((part) => !part));
+      if (invalidObservations.length)
+        return `Observation line ${invalidObservations.map((row) => row.line).join(", ")} must contain all 7 pipe-separated fields.`;
+      const statuses = new Set(["observed; monitoring", "official or qualified follow-up pending", "restored; recheck pending", "closed after recheck"]);
+      const invalidStatuses = observationRows.filter((row) => !statuses.has(row.parts[6].toLocaleLowerCase("en")));
+      if (invalidStatuses.length)
+        return `Observation line ${invalidStatuses.map((row) => row.line).join(", ")} must end with Observed; monitoring, Official or qualified follow-up pending, Restored; recheck pending, or Closed after recheck.`;
+      const ids = observationRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length)
+        return "Every observation needs a unique ID so follow-up cannot attach to the wrong system.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Observation IDs must use 2–20 letters, numbers or hyphens, such as POWER-1.";
+      const supportRows = parseRows(values.support);
+      if (supportRows.length > 8) return "Use no more than 8 household-specific support rows in one event.";
+      const invalidSupport = supportRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidSupport.length)
+        return `Support line ${invalidSupport.map((row) => row.line).join(", ")} must contain all 4 pipe-separated fields.`;
+      const unresolvedRows = observationRows.filter((row) => row.parts[6].toLocaleLowerCase("en") !== "closed after recheck");
+      if (values.stage === "Household close-out review complete" && unresolvedRows.length)
+        return `A close-out record cannot contain unresolved observations. Recheck or update: ${unresolvedRows.map((row) => row.parts[0]).join(", ")}.`;
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 15) return "Use no more than 15 follow-up rows in one outage event.";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `Follow-up line ${invalidActions.map((row) => row.line).join(", ")} must contain all 4 pipe-separated fields.`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length)
+        return "Each unresolved observation ID must have exactly one follow-up row.";
+      const unresolvedIds = new Set(unresolvedRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...unresolvedIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length)
+        return `Add one follow-up row for every unresolved observation ID: ${missingActions.join(", ")}.`;
+      const extraActions = actionIds.filter((id) => !unresolvedIds.has(id));
+      if (extraActions.length)
+        return `Follow-up rows may reference only unresolved observation IDs. Remove or update: ${extraActions.join(", ")}.`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() < startedDay.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `Follow-up line ${invalidDueDates.map((row) => row.line).join(", ")} needs a real YYYY-MM-DD date on or after the outage date and no later than the next review.`;
+      const privacyText = [values.source, values.observations, values.support, values.actions, values.storage].join("\n");
+      if (/password|passcode|access code|alarm code|door code|utility account|account number|full address|bank account|social security|medical record|diagnosis|medication dose|dosage|device setting|government id|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, account identifier, address or unnecessary care detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const formatMoment = (value: Date) => `${formatter.format(value)}, ${String(value.getHours()).padStart(2, "0")}:${String(value.getMinutes()).padStart(2, "0")}`;
+      const displayStatuses = ["Observed; monitoring", "Official or qualified follow-up pending", "Restored; recheck pending", "Closed after recheck"];
+      const statusCounts = displayStatuses.map((status) => ({
+        status,
+        count: observationRows.filter((row) => row.parts[6].toLocaleLowerCase("en") === status.toLocaleLowerCase("en")).length,
+      })).filter((item) => item.count > 0);
+      return `${values.household.trim()} — household power outage event log\nRecord stage: ${values.stage}\nObserved scope: ${values.scope}\nFirst observed: ${formatMoment(started)}\nRestoration observed: ${restored ? formatMoment(restored) : "Not yet recorded; no restoration prediction made"}\nNext household review: ${formatter.format(nextReview)}\nOfficial source / event evidence: ${values.source.trim()}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (workflow summary, not a safety or utility-performance score)\n\n${lines("Observed systems and conditions", observationRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — observed: ${row.parts[2]} — evidence: ${row.parts[3]} — action already taken: ${row.parts[4]} — owner/observer: ${row.parts[5]} — status: ${row.parts[6]}`))}\n\n${lines("Household-specific support references", supportRows.length ? supportRows.map((row) => `${row.parts[0]} — plan/instructions: ${row.parts[1]} — observed impact: ${row.parts[2]} — responsible role: ${row.parts[3]}`) : ["No separate support reference was recorded; confirm that this reflects the household rather than an omitted power-dependent need."])}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["All observation rows were closed only after recheck; preserve the supporting evidence with this record."])}\n\nProtected event-record location: ${values.storage.trim()}\n\nThis output records household observations and dated source checks. It does not establish the outage cause or exact utility duration, predict restoration, certify wiring or appliances, decide whether food, medicine or a power-dependent device is safe, or determine liability, compensation or insurance coverage. Do not approach or touch a fallen or exposed power line. In an active event, use the responsible utility, local authority, emergency services and qualified guidance for the actual location and condition.`;
     },
   },
   "vacation-shutdown-checklist-generator": {
@@ -2380,6 +2541,156 @@ const zhTwDefinitions: Record<string, Definition> = {
         count: recordRows.filter((row) => row.parts[7] === status).length,
       })).filter((item) => item.count > 0);
       return `${values.household.trim()}｜家庭緊急聯絡資料驗證紀錄\n本次範圍：${values.scope}\n實際完成複查：${formatter.format(reviewed)}\n下次聯絡資料複查：${formatter.format(nextReview)}\n家庭計畫／官方來源：${values.authority.trim()}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（只反映工作流程，不是防災準備分數）\n\n${lines("已複查的聯絡資料", recordRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜受保護來源：${row.parts[2]}｜安全管道提示：${row.parts[3]}｜驗證證據：${row.parts[4]}｜驗證日期：${formatter.format(strictIsoDate(row.parts[5]) as Date)}｜分享／同意：${row.parts[6]}｜狀態：${row.parts[7]}`))}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["本次未記錄未完成項目；結案前仍要確認每個角色、來源與分享範圍真的逐筆查過。"])}\n\n受保護的驗證紀錄位置：${values.storage.trim()}\n\n結案前查核：先更新受保護來源，再替換或銷毀過期分享稿，並請一位預定使用者實際找到最新版。這份紀錄只含代稱與證據，不含聯絡資料本身；工具不會替你聯絡對方、驗證電信網路、取代 110、119、112 或保證任何人與服務一定可用。真實事件以所在地最新官方管道與指示為準。`;
+    },
+  },
+  "household-power-outage-event-log": {
+    intro:
+      "建立有日期、來源與負責人的家庭停電事件紀錄，只寫實際觀察與待追蹤工作。工具不推測停電原因、復電時間，不判定食品、藥品或設備是否安全，也不決定責任、補償或理賠。",
+    fields: [
+      text("household", "家庭識別名稱", "使用家人看得懂的暱稱，不要填完整地址或台電電號。", "我們家"),
+      {
+        name: "stage",
+        label: "目前紀錄階段",
+        type: "select",
+        options: [
+          "仍在停電；持續記錄事實",
+          "已觀察到供電恢復；家庭複查尚未完成",
+          "家庭結案複查已完成",
+        ],
+      },
+      {
+        name: "scope",
+        label: "實際觀察到的停電範圍",
+        type: "select",
+        options: [
+          "官方來源顯示地區或台電供電事件",
+          "大樓或共用系統受到影響",
+          "單一住宅或住宅局部受到影響",
+          "範圍尚未查明",
+        ],
+      },
+      { name: "startDate", label: "第一次觀察到停電的日期", type: "date" },
+      text("startTime", "第一次觀察時間（24 小時 HH:MM）", "填實際看到的時間；若是估計，請在來源／證據欄明寫。", "09:15"),
+      { name: "restoredDate", label: "觀察到恢復供電的日期（仍停電請留白）", type: "date" },
+      text("restoredTime", "觀察到恢復供電的時間（仍停電請留白）", "使用 24 小時 HH:MM；日期與時間必須同時填寫或同時留白。", ""),
+      { name: "nextReview", label: "家庭下次複查日期", type: "date" },
+      text("source", "官方來源與事件證據", "寫台電或負責單位、查詢管道、日期與安全案件提示；不要填電號、完整地址或憑證。", "台電官網停電查詢及通報，2026-08-23 核對；受保護通報索引 OUTAGE-1"),
+      {
+        name: "observations",
+        label: "系統觀察列",
+        type: "textarea",
+        help: "每行格式：識別碼 | 區域／系統 | 第一次看到的狀況 | 來源／證據 | 家庭已完成動作 | 負責／觀察角色 | 已觀察持續追蹤、等待官方或合格人員查核、已復電待複查、複查後結案；最多 15 行。只寫事實，不自行診斷或下修理指令。",
+        value: "POWER-1 | 住宅供電 | 第一次檢查時照明與一般插座無電 | 台電官網顯示地區事件，09:25 核對 | 已查官方頁面並保存事件索引 | 家庭協調人 | 已觀察持續追蹤\nCOLD-1 | 冰箱與冷凍庫 | 保持門扇關閉；本紀錄不判定內容物安全 | 開始時間與溫度證據存入受保護事件檔 | 已記錄狀況，待依現行衛生機關資料複查 | 食品紀錄負責人 | 等待官方或合格人員查核\nROUTER-1 | 家庭網路 | 第一次觀察時路由器因供電中斷而停止 | 指示燈無法顯示；未推測設備故障 | 已改用家庭既有的備援通訊方法 | 通訊負責人 | 已復電待複查",
+      },
+      {
+        name: "support",
+        label: "家庭個別支援來源",
+        type: "textarea",
+        help: "可留白。每行格式：支援類別 | 權威計畫或指示位置 | 只寫已觀察影響 | 負責角色；最多 8 行。不要填診斷、藥物劑量或設備設定。",
+        value: "家庭通訊 | 受保護家庭通訊計畫 COMM-1 | 第一次檢查時家用網路無法使用 | 通訊負責人\n需電力支援事項 | 受保護照護紀錄 CARE-1 的製造商／服務提供者計畫 | 已要求複查備援狀態；本紀錄未做安全結論 | 照護計畫負責人",
+      },
+      {
+        name: "actions",
+        label: "每個未結案識別碼的追蹤",
+        type: "textarea",
+        help: "每行格式：未結案識別碼 | 下一個有證據的動作 | 負責人或角色 | YYYY-MM-DD 期限。每個不是「複查後結案」的項目都要剛好一列；期限可與停電日同日，且不得晚於下次複查。",
+        value: "POWER-1 | 依家庭預定間隔重新查台電官方停復電狀態並記錄新的來源時間 | 家庭協調人 | 2026-08-23\nCOLD-1 | 把已記錄時間與溫度證據對照現行衛生主管機關資訊，保存個別決定的來源 | 食品紀錄負責人 | 2026-08-23\nROUTER-1 | 觀察供電穩定後測試原本連線並記錄結果，不推測停電原因 | 通訊負責人 | 2026-08-24",
+      },
+      text("storage", "受保護的事件紀錄位置", "只寫資料夾或信封代稱，不要填密碼、電號、完整地址或公開連結。", "家庭文件／停電事件／OUTAGE-1"),
+    ],
+    run: (values) => {
+      const started = localDateTime(values.startDate, values.startTime);
+      const restoredDatePresent = Boolean(values.restoredDate.trim());
+      const restoredTimePresent = Boolean(values.restoredTime.trim());
+      const restored = restoredDatePresent && restoredTimePresent
+        ? localDateTime(values.restoredDate, values.restoredTime)
+        : null;
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.household.trim()) return "請填寫家庭識別名稱，讓匯出後的事件紀錄仍能辨識。";
+      if (!started) return "請輸入真實有效的第一次觀察日期，以及 24 小時制 HH:MM 時間。";
+      const now = new Date();
+      if (started.getTime() > now.getTime())
+        return "第一次觀察停電的時間不能晚於現在；只記錄已實際發生的事件。";
+      if (restoredDatePresent !== restoredTimePresent)
+        return "觀察到恢復供電的日期與時間必須同時填寫；若仍停電，兩欄都請留白。";
+      if ((restoredDatePresent || restoredTimePresent) && !restored)
+        return "請輸入真實有效的恢復供電日期，以及 24 小時制 HH:MM 時間。";
+      if (restored && restored.getTime() < started.getTime())
+        return "觀察到恢復供電的時間不能早於第一次觀察停電的時間。";
+      if (restored && restored.getTime() > now.getTime())
+        return "觀察到恢復供電的時間不能晚於現在。";
+      if (values.stage === "仍在停電；持續記錄事實" && restored)
+        return "仍在停電的紀錄不應填恢復日期與時間；若已實際觀察到復電，請更新紀錄階段。";
+      if (values.stage !== "仍在停電；持續記錄事實" && !restored)
+        return "已復電或結案階段必須填寫實際觀察到恢復供電的日期與時間。";
+      if (!nextReview) return "請輸入真實有效的 YYYY-MM-DD 家庭下次複查日期。";
+      const startedDay = strictIsoDate(values.startDate) as Date;
+      if (nextReview.getTime() < startedDay.getTime())
+        return "家庭下次複查日期不能早於停電事件日期。";
+      if (restored && nextReview.getTime() < (strictIsoDate(values.restoredDate) as Date).getTime())
+        return "家庭下次複查日期不能早於觀察到恢復供電的日期。";
+      if (!values.source.trim()) return "請填寫本次採用的官方來源與事件證據。";
+      if (!values.storage.trim()) return "請填寫受保護的事件紀錄位置。";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const observationRows = parseRows(values.observations);
+      if (observationRows.length === 0) return "請至少輸入一項實際看過的系統狀況。";
+      if (observationRows.length > 15) return "一份事件最多 15 筆觀察；更複雜的事件請依位置或複查階段拆分。";
+      const invalidObservations = observationRows.filter((row) => row.parts.length !== 7 || row.parts.some((part) => !part));
+      if (invalidObservations.length)
+        return `系統觀察第 ${invalidObservations.map((row) => row.line).join("、")} 行必須完整填寫 7 個以直線分隔的欄位。`;
+      const statuses = new Set(["已觀察持續追蹤", "等待官方或合格人員查核", "已復電待複查", "複查後結案"]);
+      const invalidStatuses = observationRows.filter((row) => !statuses.has(row.parts[6]));
+      if (invalidStatuses.length)
+        return `系統觀察第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須是「已觀察持續追蹤、等待官方或合格人員查核、已復電待複查、複查後結案」之一。`;
+      const ids = observationRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length)
+        return "每筆系統觀察都要有唯一識別碼，避免追蹤工作連到錯誤設備或區域。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "觀察識別碼請使用 2 到 20 個英文字母、數字或連字號，例如 POWER-1。";
+      const supportRows = parseRows(values.support);
+      if (supportRows.length > 8) return "一份事件最多 8 筆家庭個別支援來源。";
+      const invalidSupport = supportRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidSupport.length)
+        return `家庭支援第 ${invalidSupport.map((row) => row.line).join("、")} 行必須完整填寫 4 個以直線分隔的欄位。`;
+      const unresolvedRows = observationRows.filter((row) => row.parts[6] !== "複查後結案");
+      if (values.stage === "家庭結案複查已完成" && unresolvedRows.length)
+        return `結案紀錄不能留有未完成觀察，請先複查或更新：${unresolvedRows.map((row) => row.parts[0]).join("、")}。`;
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 15) return "一份事件最多 15 筆追蹤工作。";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `追蹤第 ${invalidActions.map((row) => row.line).join("、")} 行必須完整填寫 4 個以直線分隔的欄位。`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length)
+        return "每個未結案觀察識別碼只能有一筆追蹤；請合併同一項目的動作。";
+      const unresolvedIds = new Set(unresolvedRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...unresolvedIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length)
+        return `每個未結案觀察都要建立一筆追蹤，尚缺：${missingActions.join("、")}。`;
+      const extraActions = actionIds.filter((id) => !unresolvedIds.has(id));
+      if (extraActions.length)
+        return `追蹤只能連到未結案觀察；請移除或更新：${extraActions.join("、")}。`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() < startedDay.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `追蹤第 ${invalidDueDates.map((row) => row.line).join("、")} 行需要真實的 YYYY-MM-DD 日期，而且不得早於停電日、不得晚於下次複查。`;
+      const privacyText = [values.source, values.observations, values.support, values.actions, values.storage].join("\n");
+      if (/密碼|門禁碼|驗證碼|警報碼|電號|帳號|完整地址|銀行帳戶|完整(?:身分證|病歷)|診斷|藥物劑量|劑量|設備設定|password|passcode|access code|alarm code|account number|government id|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、電號、地址或不必要照護細節。請改寫成受保護紀錄的索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const formatMoment = (value: Date) => `${formatter.format(value)} ${String(value.getHours()).padStart(2, "0")}:${String(value.getMinutes()).padStart(2, "0")}`;
+      const displayStatuses = ["已觀察持續追蹤", "等待官方或合格人員查核", "已復電待複查", "複查後結案"];
+      const statusCounts = displayStatuses.map((status) => ({
+        status,
+        count: observationRows.filter((row) => row.parts[6] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.household.trim()}｜家庭停電事件紀錄\n紀錄階段：${values.stage}\n觀察範圍：${values.scope}\n第一次觀察：${formatMoment(started)}\n觀察到恢復供電：${restored ? formatMoment(restored) : "尚未記錄；工具未預測復電時間"}\n家庭下次複查：${formatter.format(nextReview)}\n官方來源／事件證據：${values.source.trim()}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（只是工作摘要，不是安全或台電績效分數）\n\n${lines("系統與狀況觀察", observationRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜實際觀察：${row.parts[2]}｜證據：${row.parts[3]}｜已完成動作：${row.parts[4]}｜負責／觀察：${row.parts[5]}｜狀態：${row.parts[6]}`))}\n\n${lines("家庭個別支援來源", supportRows.length ? supportRows.map((row) => `${row.parts[0]}｜計畫／指示：${row.parts[1]}｜已觀察影響：${row.parts[2]}｜負責角色：${row.parts[3]}`) : ["本次未列獨立支援來源；請再確認這是家庭實況，而不是漏掉需要電力、通訊或照護支援的事項。"])}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["所有觀察都已在複查後結案；請將支持證據與本紀錄一起保存。"])}\n\n受保護的事件紀錄位置：${values.storage.trim()}\n\n這份輸出只記家庭觀察與有日期的來源查核。它不證明停電原因或台電計算時數、不預測復電、不認證配線或家電、不判定食品、藥品或需電力設備是否安全，也不決定責任、補償或保險理賠。看到掉落或外露電線不得靠近或碰觸；事件進行中，依台電、所在地主管機關、緊急服務與合格專業指示處理。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

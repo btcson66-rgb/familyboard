@@ -369,9 +369,9 @@
   },
   {
     "route": "/guides/power-outage-home-preparedness/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/power-outage-home-preparedness/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-23",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1632,6 +1632,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-power-outage-event-log/",
+    "alternateRoute": "/zh-tw/tools/household-power-outage-event-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2040,6 +2048,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/household-power-outage-event-log/",
+    "alternateRoute": "/tools/household-power-outage-event-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/household-subscription-cost-calculator/",
     "alternateRoute": "/tools/household-subscription-cost-calculator/",
     "indexable": true,
@@ -2107,6 +2122,13 @@
     "alternateRoute": "/tools/pet-sitter-instruction-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/power-outage-home-preparedness/",
+    "alternateRoute": "/guides/power-outage-home-preparedness/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {

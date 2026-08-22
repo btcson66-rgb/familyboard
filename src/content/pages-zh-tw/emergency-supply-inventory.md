@@ -13,6 +13,7 @@ publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"
 related:
   - "/zh-tw/tools/emergency-supply-inventory-audit/"
+  - "/zh-tw/tools/household-power-outage-event-log/"
   - "/zh-tw/tools/emergency-binder-generator/"
   - "/zh-tw/guides/home-evacuation-information/"
   - "/zh-tw/features/emergency-information-organizer/"
