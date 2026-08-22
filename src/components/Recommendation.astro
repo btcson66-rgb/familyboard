@@ -37,5 +37,5 @@ const link = (query: string) => `https://www.amazon.com/s?k=${encodeURIComponent
     const label = isZhTw ? item.zh : item.en;
     return <a class="recommendation-link" data-affiliate-category={item.en} href={link(item.query)} rel="sponsored nofollow noopener" target="_blank"><strong>{label}</strong><span>{isZhTw ? '查看目前商品 →' : 'Compare current listings →'}</span></a>;
   })}</div>
-  <p class="help">{isZhTw ? <>若你透過連結完成符合條件的購買，FamilyBoard 可能獲得佣金，價格不會因此增加。<a href="/affiliate-disclosure/">閱讀聯盟行銷揭露（英文）。</a></> : <>As an affiliate, FamilyBoard may earn from qualifying purchases. <a href="/affiliate-disclosure/">Read the full disclosure.</a></>}</p>
+  <p class="help">{isZhTw ? <>若你透過連結完成符合條件的購買，FamilyBoard 可能獲得佣金，價格通常不會因此增加。<a href="/zh-tw/affiliate-disclosure/">閱讀完整聯盟行銷揭露。</a></> : <>As an Amazon Associate I earn from qualifying purchases. <a href="/affiliate-disclosure/">Read the full disclosure.</a></>}</p>
 </aside>}

@@ -1,22 +1,22 @@
 # Content quality report
 
-Generated: 2026-08-22T08:15:18.072Z
+Generated: 2026-08-22T08:25:56.539Z
 
 ## Summary
 
-- Indexable pages: 211
-- Generated HTML routes: 229
+- Indexable pages: 214
+- Generated HTML routes: 232
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 35
+- Pages without a contextual product/tool link: 38
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
-- support: 18
+- support: 21
 - printables: 20
 - product: 17
 - appliances: 30
@@ -71,11 +71,14 @@ Generated: 2026-08-22T08:15:18.072Z
 - /roadmap/
 - /security/
 - /terms/
+- /zh-tw/affiliate-disclosure/
 - /zh-tw/contact/
 - /zh-tw/features/free-home-management-app/
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/
 - /zh-tw/privacy/
+- /zh-tw/security/
+- /zh-tw/terms/
 - /zh-tw/tools/emergency-contact-sheet-generator/
 - /zh-tw/tools/home-maintenance-schedule-generator/
 - /zh-tw/tools/household-subscription-cost-calculator/

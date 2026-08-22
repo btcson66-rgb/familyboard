@@ -1617,7 +1617,7 @@
   },
   {
     "route": "/security/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/security/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1697,7 +1697,7 @@
   },
   {
     "route": "/affiliate-disclosure/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/affiliate-disclosure/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1705,7 +1705,7 @@
   },
   {
     "route": "/terms/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/terms/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1726,6 +1726,13 @@
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/affiliate-disclosure/",
+    "alternateRoute": "/affiliate-disclosure/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
   },
   {
     "route": "/zh-tw/contact/",
@@ -1779,6 +1786,20 @@
   {
     "route": "/zh-tw/privacy/",
     "alternateRoute": "/privacy/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/security/",
+    "alternateRoute": "/security/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/terms/",
+    "alternateRoute": "/terms/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

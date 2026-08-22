@@ -14,7 +14,7 @@ Google indexing, ranking, AdSense approval and revenue are separate outcomes. A 
 ## Starting point
 
 - 216 English source pages exist, including content, working tools, printables, support pages and redirect stubs.
-- After the first two 2026-08-22 batches, nine indexable zh-TW content files exist. The local build contains 229 HTML routes and 211 indexable URLs; these figures are not a deployment claim.
+- After the first three 2026-08-22 batches, 12 indexable zh-TW content files exist. The verified local build contains 232 HTML routes and 214 indexable URLs; these figures are not a deployment claim.
 - The private English and zh-TW App routes remain `noindex` and free of public analytics, advertising and affiliate modules.
 - The next bottleneck is no longer English page depth. It is Taiwan-localized coverage, app education, additional genuinely working tools and measured discovery.
 
@@ -112,7 +112,7 @@ Pages that do not earn impressions, engagement or a durable product role are can
 
 1. **Trust foundation — local-ready:** zh-TW privacy, contact and full App tutorial.
 2. **First working-tool wave — local-ready:** zh-TW maintenance schedule generator, subscription cost calculator and emergency contact sheet generator, each paired to the matching English intent and covered by browser tests.
-3. **Trust completion:** prioritize zh-TW security, affiliate disclosure and terms after checking whether each needs jurisdiction-specific wording.
+3. **Trust completion — local-ready after batch verification:** zh-TW security, affiliate disclosure and terms use Taiwan-language search intent, describe current product behavior and avoid inventing a jurisdiction or active commercial partnership.
 4. **App workflow series:** one deep tutorial per real screen or cross-screen workflow, beginning with backup/restore, maintenance history and privacy-safe handoff.
 5. **Further working-tool waves:** add tools in English/zh-TW pairs only after implementation and tests; use the third page slot for the supporting workflow when it adds distinct value.
 6. **Evidence-led expansion:** after GSC begins returning queries, use real demand to reorder the backlog rather than publishing by calendar alone.

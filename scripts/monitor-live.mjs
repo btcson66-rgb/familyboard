@@ -45,6 +45,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/privacy/</loc>",
+      "<loc>https://familyboard.win/zh-tw/security/</loc>",
+      "<loc>https://familyboard.win/zh-tw/affiliate-disclosure/</loc>",
+      "<loc>https://familyboard.win/zh-tw/terms/</loc>",
       "<loc>https://familyboard.win/zh-tw/contact/</loc>",
     ],
     forbid: [
@@ -136,6 +139,33 @@ const checks = [
       'hreflang="en"',
       "GitHub 私人漏洞回報",
       "/zh-tw/privacy/",
+    ],
+  },
+  {
+    path: "/zh-tw/security/",
+    require: [
+      "FamilyBoard 資安說明",
+      'hreflang="en"',
+      "PBKDF2-SHA-256、310,000 次迭代",
+      "GitHub 私人漏洞回報",
+    ],
+  },
+  {
+    path: "/zh-tw/affiliate-disclosure/",
+    require: [
+      "FamilyBoard 聯盟行銷揭露",
+      'hreflang="en"',
+      "As an Amazon Associate I earn from qualifying purchases.",
+      "/zh-tw/privacy/",
+    ],
+  },
+  {
+    path: "/zh-tw/terms/",
+    require: [
+      "FamilyBoard 使用條款",
+      'hreflang="en"',
+      "不是專業服務或正式證明",
+      "/zh-tw/security/",
     ],
   },
   {

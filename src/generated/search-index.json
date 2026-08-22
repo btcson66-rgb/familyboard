@@ -1509,7 +1509,7 @@
     "route": "/security/",
     "cluster": "support",
     "keywords": "",
-    "headings": "Security without impossible promises Local-first architecture Backup encryption Device security still matters Shared display boundaries Responsible disclosure"
+    "headings": "Security without impossible promises Where household records live Plain, encrypted and spreadsheet exports Browser storage is not a backup Shared views and printed output Analytics and private-app separation Responsible vulnerability reporting"
   },
   {
     "title": "About FamilyBoard — Why We Are Building a Better Household Memory",
@@ -1589,7 +1589,7 @@
     "route": "/affiliate-disclosure/",
     "cluster": "support",
     "keywords": "FamilyBoard affiliate disclosure",
-    "headings": "Affiliate Disclosure Editorial independence Product and price checks"
+    "headings": "Affiliate Disclosure How affiliate links are labeled Editorial independence Product, price and compatibility checks Places where recommendations do not appear Data and third-party boundaries"
   },
   {
     "title": "Terms of Use | FamilyBoard",
