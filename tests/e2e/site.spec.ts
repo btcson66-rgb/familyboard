@@ -86,6 +86,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/renovation-records/",
     "/tools/home-repair-closeout-checklist/",
     "/guides/home-improvement-receipts/",
+    "/tools/warranty-claim-evidence-log/",
+    "/guides/how-to-track-product-warranties/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -117,6 +119,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/renovation-records/",
     "/zh-tw/tools/home-repair-closeout-checklist/",
     "/zh-tw/guides/home-improvement-receipts/",
+    "/zh-tw/tools/warranty-claim-evidence-log/",
+    "/zh-tw/guides/how-to-track-product-warranties/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -258,6 +262,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "居家修繕結案資料包" }),
   ).toHaveAttribute("href", "/zh-tw/tools/home-repair-closeout-checklist/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "產品保固申請紀錄表" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/warranty-claim-evidence-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "保固申請與追蹤教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/how-to-track-product-warranties/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
@@ -447,7 +457,7 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     {
       route: "/zh-tw/guides/how-to-track-product-warranties/",
       alternate: "/guides/how-to-track-product-warranties/",
-      heading: "產品保固追蹤教學：把保證書、收據與設備期限連在一起",
+      heading: "產品保固怎麼整理：先建立證據鏈，再處理報修申請",
     },
     {
       route: "/zh-tw/guides/organize-household-subscriptions/",
@@ -622,6 +632,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/home-improvement-receipts/",
       alternate: "/guides/home-improvement-receipts/",
       heading: "裝潢收據怎麼整理：一張發票不能代替整段工程證據",
+    },
+    {
+      route: "/zh-tw/tools/warranty-claim-evidence-log/",
+      alternate: "/tools/warranty-claim-evidence-log/",
+      heading: "產品保固申請證據紀錄表",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -1174,6 +1189,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "目標日必須從本次檢視日起",
   );
 
+  await page.goto("/tools/warranty-claim-evidence-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open events: 3");
+  await expect(page.locator(".result")).toContainText("Closed or handed-off events: 0");
+  await expect(page.locator(".result")).toContainText("does not diagnose a product");
+  await page.getByLabel("Versioned warranty-claim timeline events").fill(
+    "WR-1 | Provider response | Provider acknowledged the request without a coverage position | Warranty-provider support role | 2026-08-23 | RESPONSE-R1 | Ask for an attributed written outcome after the scheduled review | Household asset owner | 2026-08-22 | Response received—source linked",
+  );
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "needs a target date from this review",
+  );
+
+  await page.goto("/zh-tw/tools/warranty-claim-evidence-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放事件：3 筆");
+  await expect(page.locator(".result")).toContainText("已結案或移交事件：0 筆");
+  await expect(page.locator(".result")).toContainText("不診斷產品");
+  await page.getByLabel("有版本的保固申請時間線事件").fill(
+    "WR-1 | 業者回覆 | 業者確認收到申請但未表示保固涵蓋結論 | 保證提供者客服角色 | 2026-08-23 | RESPONSE-R1 | 於預定檢視後索取有來源的書面結果 | 家庭資產負責人 | 2026-08-22 | 已收到回覆，連結來源",
+  );
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "目標日必須從本次檢視日起",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1490,6 +1531,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/home-improvement-receipts/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/warranty-claim-evidence-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/warranty-claim-evidence-log/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",

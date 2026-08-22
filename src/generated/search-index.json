@@ -688,12 +688,12 @@
     "headings": "Purchase receipt organizer: the actual retention periods, not a guessed rule How long to keep a receipt, by reason The best way to find a receipt is through the item, not the date Keep high-value or high-purpose receipts; skip the rest Use meaningful file names and searchable fields Paper receipts fade — capture them before they're unreadable Digital and emailed receipts need the same organization as paper ones When a receipt's job is done, let it go A quick sort for the receipts already piled up"
   },
   {
-    "title": "How to Track Product Warranties Without Keeping Every Box",
-    "description": "Track product warranties using what US federal law actually requires — proof of purchase, not registration or the original box — plus what the FTC says about \"warranty void\" stickers.",
+    "title": "How to Track Product Warranties and Warranty Claims | FamilyBoard",
+    "description": "Track written warranty terms, purchase evidence, product identity, service history, claim messages, delivery proof, responses and outcomes without treating a tracker as a coverage decision.",
     "route": "/guides/how-to-track-product-warranties/",
     "cluster": "inventory-warranty",
-    "keywords": "how to track warranties",
-    "headings": "Warranty tracking works because of what the law actually requires, not what packaging implies What a warranty claim actually needs as proof Registration is not required for coverage to be valid \"Warranty void if removed\" stickers are largely unenforceable What to record while the purchase is fresh The record needs a provider, not just a product A tracker calculates a date; it doesn't decide a claim Set a reminder before the date, not on it Preserve what happened when a claim is filed"
+    "keywords": "how to track product warranties",
+    "headings": "How to track product warranties: build the record before a claim becomes urgent Separate the six evidence layers Identify who actually made the promise Freeze the terms before a webpage or portal changes Preserve purchase proof while it is still readable Describe the problem without self-diagnosing it Make the first request traceable Give every response its own event Do not invent a universal claim deadline Close the record with the actual outcome evidence Keep recommendations outside claim decisions"
   },
   {
     "title": "Warranty Expiration: How to Track the Date Without Assuming Coverage",
@@ -1582,6 +1582,14 @@
     "cluster": "tools",
     "keywords": "home repair closeout checklist",
     "headings": "Home repair close-out checklist Freeze the controlling project version first Give every expected source its own row Five statuses preserve where the evidence really is Open and filed rows use different dates Keep invoices, payments and acceptance separate Do not turn permit and inspection rows into self-certification Hand installed products into their own life-cycle records Protect private originals and dispute material Commercial recommendations stay outside close-out decisions"
+  },
+  {
+    "title": "Warranty Claim Evidence Log | Requests, Responses and Outcomes",
+    "description": "Create a private warranty-claim timeline for observations, written requests, delivery proof, provider responses, follow-up targets, outcomes and escalation pointers.",
+    "route": "/tools/warranty-claim-evidence-log/",
+    "cluster": "tools",
+    "keywords": "warranty claim tracker",
+    "headings": "Warranty claim evidence log Start with one exact asset and one governing promise Record a safety check before treating the problem as routine service Write observations, not unsupported diagnoses Use six statuses that describe evidence, not optimism Preserve delivery separately from the message Give the requested outcome its own wording Keep appointments, findings and coverage positions separate Use review dates without inventing statutory periods Hand off a dispute without exposing the complaint file Protect the unredacted record Commercial content cannot enter the evidence chain"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

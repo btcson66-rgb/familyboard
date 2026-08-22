@@ -2059,6 +2059,122 @@ const definitions: Record<string, Definition> = {
       return `${values.project.trim()} — home repair close-out package manifest\nReview context: ${values.context}\nOriginal agreement: ${formatter.format(baselineDate)}\nPackage review: ${formatter.format(reviewDate)}\nNext household document review: ${formatter.format(nextReview)}\nOpen requests or reviews: ${openRows.length}\nFiled, not applicable or archived gaps: ${closedRows.length}\nUnresolved gaps: ${unresolvedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling scope and project history: ${values.baseline.trim()}\n\n${lines("Versioned close-out package rows", itemRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — expected record: ${row.parts[2]} — controlling source: ${row.parts[3]} — issuer/responsible source: ${row.parts[4]} — evidence date: ${dateOrMissing(row.parts[5])} — protected file/request/gap pointer: ${row.parts[6]} — next evidence step/closure reason: ${row.parts[7]} — owner: ${row.parts[8]} — target/filing/archive date: ${formatter.format(strictIsoDate(row.parts[9]) as Date)} — status: ${row.parts[10]}`))}\n\nProtected original-document location: ${values.storage.trim()}\n\nThis output is a private household document manifest. It does not inspect work, verify document authenticity or legal sufficiency, certify workmanship, completion, acceptance, safety, code or legal compliance, determine permit or inspection applicability or outcome, authorize payment or withholding, prove delivery, release a claim or lien, start or change a warranty, classify tax treatment, calculate or extend any deadline, waive a right, assign responsibility or resolve a dispute. Preserve original sources and use the contract, responsible authority and qualified professionals for the actual project.`;
     },
   },
+  "warranty-claim-evidence-log": {
+    intro:
+      "Build a dated product-warranty request timeline that separates household observations, sent messages, delivery evidence, provider responses, follow-up and outcomes. It does not diagnose a product, decide coverage or calculate legal deadlines.",
+    fields: [
+      text("asset", "Private product label", "Use a household asset label, not a full serial, address, account or private contact.", "Kitchen refrigerator ASSET-A1"),
+      {
+        name: "context",
+        label: "Current claim-review context",
+        type: "select",
+        options: [
+          "Preparing the first written warranty request",
+          "Following up after a submitted request",
+          "Reviewing service, replacement or refund evidence",
+          "Preserving an unresolved or disputed history",
+        ],
+      },
+      { name: "observedDate", label: "Problem first observed", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "Timeline review date", type: "date", value: "2026-08-23" },
+      { name: "nextReview", label: "Next household follow-up review", type: "date", value: "2026-08-30" },
+      text("basis", "Controlling product, purchase and written-term sources", "Use protected pointers and identify the issuer and term version. Do not paste full identifiers or contacts.", "ASSET-A1; purchase proof PURCHASE-P1; manufacturer written terms TERMS-W2 retrieved 2026-08-20"),
+      text("observation", "First household observation", "Describe visible, audible or measured conditions without claiming a technical diagnosis.", "Cooling alarm appeared and display temperature rose; no panels opened; current safety and recall sources checked separately"),
+      {
+        name: "events",
+        label: "Versioned warranty-claim timeline events",
+        type: "textarea",
+        help: "One line: ID | event type | exact observation, request or response | actor or source role | event date YYYY-MM-DD | protected evidence pointer | next step or closure reason | owner role | target or closure date YYYY-MM-DD | Prepared—not sent, Sent—delivery evidence linked, Response received—source linked, Follow-up due—prior evidence linked, Closed—outcome evidence linked, or Handed off—complaint pointer linked. Maximum 16 lines.",
+        value: "WR-1 | Initial written request | Reported cooling alarm and requested written confirmation of the claim process | Household asset owner | 2026-08-20 | REQUEST-R1 plus DELIVERY-R1 | Ask the warranty issuer to confirm the case-reference pointer and next inspection step in writing | Household asset owner | 2026-08-26 | Sent—delivery evidence linked\nWR-2 | Provider acknowledgement | Provider opened a service workflow and proposed an appointment; no coverage position stated | Warranty-provider support role | 2026-08-21 | RESPONSE-R1 and CASE-REF-1 | Compare the proposed appointment with TERMS-W2 and confirm the access window | Household asset owner | 2026-08-25 | Response received—source linked\nWR-3 | Follow-up checkpoint | Awaiting an attributed written outcome after the service visit | Household asset owner | 2026-08-23 | FOLLOWUP-NOTE-1 linked to RESPONSE-R1 | Send a dated follow-up citing CASE-REF-1 and ask for the written service and coverage outcome | Household asset owner | 2026-08-29 | Follow-up due—prior evidence linked",
+      },
+      text("storage", "Protected original-evidence location", "Use a folder label, not a full address, phone, email, serial, case number, credential, signature or payment detail.", "Household records / appliances / ASSET-A1 / warranty claim WR-2026-1"),
+    ],
+    run: (values) => {
+      const observedDate = strictIsoDate(values.observedDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.asset.trim()) return "Enter a private product label so the exported warranty timeline can be identified.";
+      if (!observedDate) return "Enter a real problem-first-observed date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real timeline review date in YYYY-MM-DD format.";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The timeline review date cannot be in the future.";
+      if (observedDate.getTime() > reviewDate.getTime()) return "The problem-first-observed date cannot be later than the review date.";
+      if (!nextReview) return "Enter a real next household follow-up review date in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next household follow-up review cannot be earlier than this review.";
+      if (!values.basis.trim()) return "Enter protected pointers for the exact product, purchase evidence and written warranty or service-contract terms.";
+      if (!values.observation.trim()) return "Enter the first household observation without inventing a technical diagnosis.";
+      if (!values.storage.trim()) return "Enter the protected location for original request, response and outcome evidence.";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "Add at least one warranty-claim timeline event.";
+      if (eventRows.length > 16) return "Use no more than 16 events in one review; create another dated timeline version if needed.";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Warranty event line ${invalidRows.map((row) => row.line).join(", ")} must contain all 10 pipe-separated fields.`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Each warranty-claim timeline event must have a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Warranty event IDs must use 2 to 20 letters, numbers or hyphens, such as WR-1.";
+      const statusOrder = [
+        "Prepared—not sent",
+        "Sent—delivery evidence linked",
+        "Response received—source linked",
+        "Follow-up due—prior evidence linked",
+        "Closed—outcome evidence linked",
+        "Handed off—complaint pointer linked",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `Warranty event line ${invalidStatuses.map((row) => row.line).join(", ")} has an unsupported status. Use one of the six labels shown in the field instructions.`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < observedDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `Warranty event line ${invalidEventDates.map((row) => row.line).join(", ")} needs a real event date from the first observation through this review.`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 4).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(4).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open warranty event line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next household follow-up review.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const closed = strictIsoDate(row.parts[8]);
+        return !closed || closed.getTime() < observedDate.getTime() || closed.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Closed or handed-off warranty event line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual closure or handoff date from the first observation through this review.`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `Warranty event line ${missingSources.map((row) => row.line).join(", ")} needs an actor or source role and a protected draft, delivery, response, outcome or complaint pointer.`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 12 || /^(?:done|complete|completed|fixed|resolved|ok|none|n\/a|follow up|closed)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `Warranty event line ${vagueActions.map((row) => row.line).join(", ")} needs a specific next evidence step or preserved closure reason—not a generic completion word.`;
+      const privacyText = [values.asset, values.basis, values.observation, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, serial, case or complete numeric identifier was detected. Keep it in protected evidence and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|full address|account number|card number|bank account|routing number|social security|government id|full serial|serial number|case number|claim number|policy number|signature|date of birth|private contact|payment credential|login credential|legal strategy|complaint form|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, financial, identity, full serial, case, policy, signature, complaint or private contact detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: eventRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.asset.trim()} — warranty claim evidence timeline\nReview context: ${values.context}\nProblem first observed: ${formatter.format(observedDate)}\nTimeline review: ${formatter.format(reviewDate)}\nNext household follow-up review: ${formatter.format(nextReview)}\nOpen events: ${openRows.length}\nClosed or handed-off events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling product, purchase and written-term sources: ${values.basis.trim()}\nFirst household observation: ${values.observation.trim()}\n\n${lines("Versioned warranty-claim timeline", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — observation/request/response: ${row.parts[2]} — actor/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next step/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/closure/handoff date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not diagnose a product, determine safety or recall status, verify evidence or delivery, decide warranty or service-contract coverage, authorize service, shipping, payment, replacement or refund, calculate a contractual or legal deadline, create a consumer complaint, assign fault or liability, waive a right or resolve a dispute. Follow current manufacturer and responsible product-safety instructions, preserve original sources and use the applicable issuer, authority or qualified adviser for actual decisions.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -4402,6 +4518,122 @@ const zhTwDefinitions: Record<string, Definition> = {
       })).filter((item) => item.count > 0);
       const dateOrMissing = (value: string) => value.toLocaleUpperCase("en") === "MISSING" ? "MISSING" : formatter.format(strictIsoDate(value) as Date);
       return `${values.project.trim()}｜居家修繕結案資料包清單\n本次檢視情境：${values.context}\n原約定日期：${formatter.format(baselineDate)}\n本次資料包檢視：${formatter.format(reviewDate)}\n家庭下次文件追蹤：${formatter.format(nextReview)}\n仍在索取或檢視：${openRows.length} 筆\n已歸檔、不適用或封存缺件：${closedRows.length} 筆\n結案仍缺：${unresolvedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的範圍與工程歷史：${values.baseline.trim()}\n\n${lines("有版本的結案資料包列", itemRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜預期文件：${row.parts[2]}｜控制來源：${row.parts[3]}｜出具／負責來源：${row.parts[4]}｜證據日期：${dateOrMissing(row.parts[5])}｜受保護檔案／索取／缺件索引：${row.parts[6]}｜下一個證據步驟／結案理由：${row.parts[7]}｜負責角色：${row.parts[8]}｜目標／歸檔／封存日：${formatter.format(strictIsoDate(row.parts[9]) as Date)}｜狀態：${row.parts[10]}`))}\n\n受保護的原始文件位置：${values.storage.trim()}\n\n這份輸出只是家庭文件清單。它不檢查施工、不驗證文件真偽或法律充分性、不認證施工品質、完工、驗收、安全、法規或法律合規、不判斷許可或檢查是否適用與結果、不授權付款或扣款、不證明送達、不解除請求或權利負擔、不啟動或變更保固、不分類稅務處理、不計算或延長任何期限、不代表放棄權利、不分配責任，也不解決爭議。請保存原始來源，並依實際工程使用契約、主管機關與合格專業人員。`;
+    },
+  },
+  "warranty-claim-evidence-log": {
+    intro:
+      "建立產品保固申請時間線，分開家庭觀察、送出內容、送達證據、業者回覆、追蹤與結果。工具不診斷產品、不判定保固涵蓋，也不計算法律期限。",
+    fields: [
+      text("asset", "私密產品代稱", "使用家庭資產代稱，不要填完整序號、地址、帳號或私人聯絡資料。", "廚房冰箱 ASSET-A1"),
+      {
+        name: "context",
+        label: "目前申請檢視情境",
+        type: "select",
+        options: [
+          "準備第一次書面保固申請",
+          "已送出申請後追蹤",
+          "檢視維修、更換或退款證據",
+          "保存尚未解決或有爭議的歷史",
+        ],
+      },
+      { name: "observedDate", label: "問題首次發現日", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "本次時間線檢視日", type: "date", value: "2026-08-23" },
+      { name: "nextReview", label: "家庭下次追蹤複查日", type: "date", value: "2026-08-30" },
+      text("basis", "控制中的產品、交易與書面保證來源", "使用受保護索引，寫明提供者與條款版本，不要貼完整識別或聯絡資料。", "ASSET-A1；購買證明 PURCHASE-P1；製造商書面保證 TERMS-W2，2026-08-20 取得"),
+      text("observation", "第一次家庭觀察", "描述可見、可聽或量測狀況，不要假裝有技術診斷。", "冷卻警示出現且顯示溫度上升；未拆面板；安全與召回來源另行核對"),
+      {
+        name: "events",
+        label: "有版本的保固申請時間線事件",
+        type: "textarea",
+        help: "每行格式：ID | 事件類型 | 客觀觀察、請求或回覆 | 行動者或來源角色 | 事件日期 YYYY-MM-DD | 受保護證據索引 | 下一步或結案理由 | 負責角色 | 目標或結案日期 YYYY-MM-DD | 已準備，尚未送出、已送出，連結送達證據、已收到回覆，連結來源、需要追蹤，連結先前證據、已結案，連結結果證據、已移交，連結申訴案件索引。最多 16 行。",
+        value: "WR-1 | 第一次書面申請 | 回報冷卻警示並要求書面確認保固申請流程 | 家庭資產負責人 | 2026-08-20 | REQUEST-R1 與 DELIVERY-R1 | 請保證提供者以書面確認案件索引與下一個檢測步驟 | 家庭資產負責人 | 2026-08-26 | 已送出，連結送達證據\nWR-2 | 業者受理回覆 | 業者開啟服務流程並提出預約，尚未表示保固涵蓋結論 | 保證提供者客服角色 | 2026-08-21 | RESPONSE-R1 與 CASE-REF-1 | 對照 TERMS-W2 核對預約安排並確認進入住家時段 | 家庭資產負責人 | 2026-08-25 | 已收到回覆，連結來源\nWR-3 | 後續追蹤節點 | 等待服務後有來源的書面結果 | 家庭資產負責人 | 2026-08-23 | FOLLOWUP-NOTE-1 連結 RESPONSE-R1 | 以有日期的訊息引用 CASE-REF-1 並索取書面服務與涵蓋結果 | 家庭資產負責人 | 2026-08-29 | 需要追蹤，連結先前證據",
+      },
+      text("storage", "受保護的原始證據位置", "只寫資料夾代稱，不要填地址、電話、Email、完整序號、案件編號、憑證、簽名或付款資料。", "家庭文件／家電／ASSET-A1／保固申請 WR-2026-1"),
+    ],
+    run: (values) => {
+      const observedDate = strictIsoDate(values.observedDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.asset.trim()) return "請填私密產品代稱，讓匯出的保固申請時間線可以辨識。";
+      if (!observedDate) return "請輸入真實的問題首次發現日 YYYY-MM-DD。";
+      if (!reviewDate) return "請輸入真實的本次時間線檢視日 YYYY-MM-DD。";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次時間線檢視日不能在未來。";
+      if (observedDate.getTime() > reviewDate.getTime()) return "問題首次發現日不能晚於本次檢視日。";
+      if (!nextReview) return "請輸入真實的家庭下次追蹤複查日 YYYY-MM-DD。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "家庭下次追蹤複查日不能早於本次檢視。";
+      if (!values.basis.trim()) return "請填確切產品、購買證據與書面保證或服務契約條款的受保護索引。";
+      if (!values.observation.trim()) return "請填第一次家庭觀察，不要自行建立技術診斷。";
+      if (!values.storage.trim()) return "請填原始申請、回覆與結果證據的受保護位置。";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "請至少新增一筆保固申請時間線事件。";
+      if (eventRows.length > 16) return "一次檢視最多 16 筆事件；更多事件請建立下一份有日期的時間線版本。";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `保固事件第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整填寫 10 個以直線分隔的欄位。`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆保固申請時間線事件都要有唯一 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "保固事件 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 WR-1。";
+      const statusOrder = [
+        "已準備，尚未送出",
+        "已送出，連結送達證據",
+        "已收到回覆，連結來源",
+        "需要追蹤，連結先前證據",
+        "已結案，連結結果證據",
+        "已移交，連結申訴案件索引",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `保固事件第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須使用欄位說明中的六種文字之一。`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < observedDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `保固事件第 ${invalidEventDates.map((row) => row.line).join("、")} 行需要介於問題首次發現日與本次檢視日之間的真實事件日期。`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 4).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(4).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的保固事件第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次檢視日起，到家庭下次追蹤複查日為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const closed = strictIsoDate(row.parts[8]);
+        return !closed || closed.getTime() < observedDate.getTime() || closed.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已結案或已移交的保固事件第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於問題首次發現日與本次檢視日之間的實際結案或移交日期。`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `保固事件第 ${missingSources.map((row) => row.line).join("、")} 行需要行動者或來源角色，以及受保護的草稿、送達、回覆、結果或申訴索引。`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 8 || /^(?:完成|好了|已好|修好|已解決|無|不用|不適用|待追蹤|已結案|ok)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `保固事件第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的下一個證據步驟或保留的結案理由，不能只寫通用完成詞。`;
+      const privacyText = [values.asset, values.basis, values.observation, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、序號、案件或完整數字識別資料。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|驗證碼|警報碼|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證|完整序號|案件編號|理賠編號|保單編號|簽名|出生日期|私人聯絡|付款憑證完整資料|登入憑證|法律策略|申訴表全文|password|passcode|access code|account number|card number|government id|full serial|serial number|case number|claim number|policy number|signature|payment credential|login credential|legal strategy|complaint form|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、金融、身分、完整序號、案件、保單、簽名、申訴或私人聯絡資料。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: eventRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.asset.trim()}｜產品保固申請證據時間線\n目前檢視情境：${values.context}\n問題首次發現：${formatter.format(observedDate)}\n本次時間線檢視：${formatter.format(reviewDate)}\n家庭下次追蹤複查：${formatter.format(nextReview)}\n仍開放事件：${openRows.length} 筆\n已結案或移交事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的產品、交易與書面保證來源：${values.basis.trim()}\n第一次家庭觀察：${values.observation.trim()}\n\n${lines("有版本的保固申請時間線", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜觀察／請求／回覆：${row.parts[2]}｜行動者／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一步／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結案／移交日：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭證據索引。它不診斷產品、不判斷安全或召回狀態、不驗證證據或送達、不決定保固或服務契約涵蓋、不授權檢修、寄送、付款、更換或退款、不計算契約或法律期限、不建立消費申訴、不分配過失或責任、不代表放棄權利，也不解決爭議。請依製造商與負責商品安全機關的現行指示處理，保存原始來源，並由實際保證提供者、主管機關或合適專業人士作成真正決定。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

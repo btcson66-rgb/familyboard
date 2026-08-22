@@ -5853,63 +5853,115 @@ Facing an existing shoebox or downloads folder full of receipts is different fro
 
 ## Page 091 — Warranty Tracker Guide
 **Slug:** `/guides/how-to-track-product-warranties/`
-**Primary intent:** build a warranty-tracking process
-**Title tag:** `How to Track Product Warranties Without Keeping Every Box`
-**Meta description:** `Track product warranties using what US federal law actually requires — proof of purchase, not registration or the original box — plus what the FTC says about "warranty void" stickers.`
-**Primary keyword concept:** how to track warranties
+**Primary intent:** build a source-linked product warranty and claim record
+**Title tag:** `How to Track Product Warranties and Warranty Claims | FamilyBoard`
+**Meta description:** `Track written warranty terms, purchase evidence, product identity, service history, claim messages, delivery proof, responses and outcomes without treating a tracker as a coverage decision.`
+**Primary keyword concept:** how to track product warranties
+**Content version:** 2
 **Depth:** verified
-**Suggested internal links:** `/features/warranty-tracker/`, `/tools/warranty-expiration-calculator/`, `/guides/purchase-receipt-organizer/`, `/guides/product-registration-tracker/`
+**Suggested internal links:** `/features/warranty-tracker/`, `/tools/warranty-expiration-calculator/`, `/tools/warranty-claim-evidence-log/`, `/guides/purchase-receipt-organizer/`
 
-# Warranty tracking works because of what the law actually requires, not what packaging implies
+# How to track product warranties: build the record before a claim becomes urgent
 
-Most of the anxiety around warranties — keep the box, register within 30 days, only use the manufacturer's service center — turns out not to match what US federal law actually requires. Knowing the real rules changes what a household actually needs to track.
+A warranty record should answer more than “when does it expire?” When a product fails, the household needs to identify the exact item, find the written promise that may apply, show when and where it was obtained, describe what happened without inventing a diagnosis, prove what was sent to whom and preserve every response. A single date or photograph of a warranty card cannot do all of those jobs.
 
-## What a warranty claim actually needs as proof
+Build the record as linked layers. Keep the protected originals in storage you control, then use a household index to connect them. This approach works for manufacturer warranties, seller promises and separately purchased service contracts while keeping their issuers and terms visibly different.
 
-In practice, a dated receipt or credit card statement showing the purchase is what a warranty claim needs — not the original packaging, and not proof of registration. The date on that receipt is what establishes when the warranty clock started. This is also the biggest practical argument for a digital record: a photo of a receipt taken the day of purchase survives far better than the paper original, which fades or gets thrown out with the box.
+## Separate the six evidence layers
 
-## Registration is not required for coverage to be valid
+Give each layer a stable pointer so later notes can cite it without copying private data into every file:
 
-This is a genuinely common misunderstanding. Under the [Magnuson-Moss Warranty Act](https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law), a manufacturer cannot make product registration a condition of warranty coverage — the warranty is in effect from the date of purchase, whether or not the registration card gets mailed in or the online form gets filled out. Manufacturers can still encourage registration for their own reasons (recall notices, marketing, extended-warranty promotions), but "coverage starts at registration" is not how the underlying law works. Track whether you registered a product for its own sake — see the [product registration tracker guide](/guides/product-registration-tracker/) — but don't confuse it with the warranty itself.
+1. **Product identity:** household asset label, brand, exact model and protected serial-number record.
+2. **Transaction:** seller, transaction date, receipt or order record and payment-evidence pointer.
+3. **Written promise:** issuer, warranty or service-contract version, coverage period, start method, exclusions and claim instructions.
+4. **Care and service history:** maintenance or prior repair evidence when the written terms make it relevant.
+5. **Problem record:** the date first observed, conditions, visible or audible symptoms and any safety warning—without claiming a technical cause.
+6. **Claim history:** requests, delivery evidence, case-reference pointer, appointments, responses, documents requested, outcome and any later escalation.
 
-## "Warranty void if removed" stickers are largely unenforceable
+This is a source map, not a stack of copies. The shared tracker can say `RECEIPT-P1` or `TERMS-W2`; the receipt image, full serial number, account details and correspondence remain in protected storage.
 
-The Federal Trade Commission has sent warning letters to companies over exactly this practice — stickers that claim a warranty is void if a certain part is removed or an unauthorized repair is performed. Per the FTC's [guidance to businesses on federal warranty law](https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law), which sets out the Act's Section 102(c) prohibition on tie-in sales provisions, a warrantor generally cannot condition coverage on using specific branded parts or an authorized service provider unless those are provided free of charge or the FTC has granted a specific waiver — and creating the impression that using a third-party repair voids the warranty, when that isn't actually true, is treated as a deceptive practice. This doesn't mean every warranty term is unenforceable — some genuine, narrow exceptions exist — but the blanket "any independent repair voids everything" claim usually isn't one of them.
+## Identify who actually made the promise
 
-## What to record while the purchase is fresh
+A manufacturer's written warranty, a retailer's return or store guarantee and a separately purchased service contract may cover different events and use different channels. The word “warranty” in a marketing headline does not make those documents interchangeable.
 
-- Purchase date and where it was bought.
-- The written warranty term (often printed on the box, receipt, or manufacturer's page — save a reference to it, not just a typed summary).
-- A photo or scan of the receipt, taken immediately rather than "when I get around to it."
-- Whether the product was registered, tracked as a separate fact from the warranty itself.
+Save the exact issuer and document version. The US Federal Trade Commission's current [warranty guidance for consumers](https://consumer.ftc.gov/articles/warranties) explains that written warranties can cover a lot or a little, and that separately purchased service contracts are different from warranties included with a product. Use the actual document to identify who receives the request, what the process asks for and whether costs such as labor or shipping are addressed.
 
-## The record needs a provider, not just a product
+If a salesperson made an additional promise, preserve the written confirmation. A household memory of a verbal statement is not the same evidence as a dated email, order note or signed term.
 
-A warranty is a relationship with whoever issued it — the manufacturer in most cases, though sometimes a retailer or a third-party extended-warranty company instead. Record which one applies alongside the term and the receipt reference, since a claim goes to a different place and follows a different process depending on which of those three actually issued the coverage. A household that only remembers "it's under warranty" without knowing which entity to contact has recreated the exact search a good record was meant to prevent.
+## Freeze the terms before a webpage or portal changes
 
-## A tracker calculates a date; it doesn't decide a claim
+Download or print the warranty that applied to the purchase and record the retrieval date. Do not rely only on a current support page: models, regions, product generations and terms can change while a URL stays the same.
 
-An expiration date calculated from a warranty term is a convenience for planning, not a legal determination. What's actually covered, what's excluded, and what the manufacturer or seller's specific process requires still comes down to the written terms and applicable consumer law — use the calculated date to know when to act, not as the final word on coverage.
+Record each relevant period separately if coverage differs for the whole product, parts, labor, battery, compressor or another component. A calculated end date is useful for planning, but it cannot decide which term applies or whether an event is covered. Use the [warranty expiration calculator](/tools/warranty-expiration-calculator/) only after finding the written start rule and term.
 
-## Set a reminder before the date, not on it
+The FTC's [Businessperson's Guide to Federal Warranty Law](https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law) describes US federal rules for written consumer product warranties, including limits on certain tie-in sales provisions. Those rules are jurisdiction-specific and do not turn a household tracker into legal advice. State implied-warranty rules and remedies can differ, and a service contract follows its own agreement.
 
-A reminder 30 to 60 days before expiration is more useful than one that fires on the last day, since it leaves time to actually locate documents or get a known issue looked at while coverage is still active. A same-day reminder is often too late to do anything useful with.
+## Preserve purchase proof while it is still readable
 
-## Preserve what happened when a claim is filed
+The FTC advises saving a copy of the warranty and the receipt, which supports the purchase date and original ownership. Preserve the complete receipt or order record in a protected location, not just a cropped total. Also retain refunds, exchanges, replacement orders or corrected receipts because they may change which product and date the claim concerns.
 
-If warranty service does happen, keep the case or reference number, the date, and the outcome attached to the asset's history — this is what turns "I think it was under warranty" into a documented fact the next time something goes wrong with the same item.
+Original packaging can help with safe shipping or carry a label, but do not use the box as a substitute for the product identity, transaction record or written terms. If a provider gives packaging instructions for a return, preserve that instruction as its own dated source.
 
-**Contextual CTA:** The next time you make a major purchase, spend two minutes photographing the receipt and adding the warranty term to the asset record — that's the proof that actually matters, not the box.
+## Describe the problem without self-diagnosing it
+
+A useful first observation is specific and repeatable: `display dark after power button pressed; outlet was separately checked with a known working lamp; no disassembly`. A weak note says `bad control board` without a qualified diagnosis.
+
+Record what was seen, heard, smelled or measured; when it happened; the operating conditions; messages or codes; and what safe, manufacturer-authorized checks were completed. Do not open, energize, move or continue using a product when that may be unsafe. In the United States, check the current [CPSC recalls database](https://www.cpsc.gov/Recalls); elsewhere use the responsible product-safety authority. A recall or safety instruction is a separate source and can require action independent of the warranty process.
+
+## Make the first request traceable
+
+Follow the channel stated in the written terms, while preserving a dated copy of what you submitted. A good request identifies the asset through a protected reference, cites the purchase and warranty sources, describes the observation, states the requested next step and asks for written confirmation of the case reference and process.
+
+Keep delivery evidence appropriate to the channel: sent-message copy, portal confirmation, mail receipt or call note that identifies the date, role and promised follow-up. Do not publish the full case number, address, phone, email, serial number or payment details in a shared household summary.
+
+The FTC suggests contacting the seller and, if unresolved, writing to the manufacturer; it also notes that the written warranty may allow the company an opportunity to repair before another remedy. That is US consumer guidance, not a universal sequence or outcome. Follow the actual terms and law that apply to the transaction.
+
+## Give every response its own event
+
+Do not overwrite the initial request with the latest reply. Add a timeline event for each acknowledgement, document request, inspection, shipment, estimate, repair report, replacement offer, denial or closure. Preserve four facts for every event: who issued it, when, where the original lives and what must happen next.
+
+Keep these statements separate:
+
+- the household observed a symptom;
+- the provider acknowledged a request;
+- a technician recorded a finding;
+- the issuer stated a coverage position;
+- a repair or replacement was performed;
+- the household confirmed the present condition.
+
+One does not prove the others. A shipment tracking page does not prove the product was repaired. A service report does not automatically prove coverage. A household “closed” label does not waive rights or certify the outcome.
+
+Use the free [warranty claim evidence log](/tools/warranty-claim-evidence-log/) to validate dated events, evidence pointers, owners, follow-up targets and final outcome sources without deciding coverage.
+
+## Do not invent a universal claim deadline
+
+The warranty may specify notice, shipment, inspection or response steps. Statutes, regulations and dispute processes may add other periods. Record the exact source and calculation instead of assuming “30 days” or another internet rule applies.
+
+Use a household review date to prevent silence from disappearing, but label it as an internal follow-up—not a legal deadline. If a provider gives a date, preserve who gave it and what event it concerns. If a legal or contractual period matters, verify the current rule for the transaction and consider qualified help.
+
+## Close the record with the actual outcome evidence
+
+A claim is not closed merely because a replacement arrived or a repair visit occurred. Preserve the provider's outcome, service report, shipment or refund record, any new product identifier, any changed warranty term and the household's dated post-service observation. If the issue persists, open a new linked event rather than rewriting the earlier result.
+
+When a dispute moves to a consumer agency, mediator, court or another process, keep that file separate and link only a safe pointer from the warranty timeline. The tracker should not copy sensitive complaint forms into a broadly shared household note.
+
+## Keep recommendations outside claim decisions
+
+A future affiliate area may show clearly labelled scanners, storage media, label makers or replacement products beside this guide. A commercial link must never mark a claim valid, choose a repair provider, interpret coverage, start a deadline or imply that buying through the link improves an outcome. Evidence and household workflow remain independent of monetization.
+
+**Contextual CTA:** Create one source-linked warranty record now, then use the claim log only when a real event occurs. Preserve the original terms and messages instead of turning the summary into the only copy.
 
 **FAQ:**
-- Q: Do I need to keep the original box to make a warranty claim?
-  A: No. What actually establishes a warranty claim is proof of purchase — typically a dated receipt or card statement — not the original packaging. Keeping a photo of the receipt from day one is more reliable than keeping the box, which tends to get discarded or damaged long before the warranty period ends.
-- Q: Is my warranty void if I don't register the product?
-  A: No. Under the Magnuson-Moss Warranty Act, a manufacturer can't make registration a condition of warranty coverage — the warranty applies from the purchase date regardless of registration. Manufacturers can still encourage registration for their own purposes, but it isn't legally required for the coverage itself to be valid.
-- Q: Are "warranty void if removed" stickers actually legal?
-  A: Generally not enforceable in the way they imply. The FTC has warned companies that this kind of language is a deceptive practice unless the specific parts or service are provided free or the FTC has granted a waiver — a manufacturer usually can't void a warranty just because an independent repair was performed.
-- Q: When should a warranty expiration reminder actually fire?
-  A: 30 to 60 days before the end date, not on the day itself. That lead time leaves room to locate documents and get a known issue addressed while the warranty is still active, instead of discovering an expired warranty on the exact day it lapses.
+- Q: Does a receipt prove that a warranty claim is covered?
+  A: No. A receipt can support the transaction and purchase date. Coverage, exclusions, process and remedy depend on the written promise and applicable law; the product identity, problem record and claim history remain separate evidence.
+- Q: Should I keep the product box for the whole warranty period?
+  A: Keep it when safe shipping, return instructions or product identification make it useful, but do not treat packaging as a substitute for the receipt, exact item identity and written terms. Follow the provider's actual return instructions.
+- Q: Can FamilyBoard decide whether an independent repair voided the warranty?
+  A: No. US federal guidance restricts some tie-in provisions, but the facts, written warranty, jurisdiction and reason for a denial matter. FamilyBoard only preserves the service source and the issuer's stated position.
+- Q: What belongs in a warranty claim timeline?
+  A: Preserve the first observation, request, delivery evidence, acknowledgement, document requests, appointments, attributed findings, coverage response, repair or replacement evidence, household recheck and any escalation as separate dated events.
+- Q: Is the next review date a legal deadline?
+  A: No. It is an internal household checkpoint. Contractual, statutory, regulatory and complaint-process periods must be identified from the current responsible source for the transaction.
 
 ---
 
@@ -13189,6 +13241,124 @@ A future affiliate area may show clearly labelled scanners, document storage, la
   A: The tool cannot decide applicability. Link the current responsible authority or qualified source for that conclusion; when uncertain, keep the question open rather than closing it for convenience.
 - Q: Does filing warranty paperwork start coverage?
   A: No. Preserve the actual terms, purchase or installation evidence, product details and responsible source. A household filing date cannot create or change warranty coverage, registration or claim rights.
+
+---
+
+## Page 212 — Warranty Claim Evidence Log
+**Slug:** `/tools/warranty-claim-evidence-log/`
+**Primary intent:** build a dated warranty claim evidence timeline without deciding coverage
+**Title tag:** `Warranty Claim Evidence Log | Requests, Responses and Outcomes`
+**Meta description:** `Create a private warranty-claim timeline for observations, written requests, delivery proof, provider responses, follow-up targets, outcomes and escalation pointers.`
+**Primary keyword concept:** warranty claim tracker
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Suggested internal links:** `/guides/how-to-track-product-warranties/`, `/tools/warranty-expiration-calculator/`, `/guides/service-history/`, `/guides/purchase-receipt-organizer/`
+
+# Warranty claim evidence log
+
+A warranty request can turn into an unsearchable mixture of portal messages, call notes, shipping labels, appointment windows and changing explanations. This free browser tool creates a versioned household timeline. It preserves what the household observed, what it sent, what a provider actually answered, what evidence supports each step and who owns the next follow-up.
+
+The result is not a coverage opinion or complaint form. It does not diagnose a product, verify evidence, calculate a legal deadline, authorize a repair, decide a refund or certify that a claim is resolved. It keeps the sources visible so the household, provider, authority or qualified adviser can evaluate the real record.
+
+**Need a claim timeline? [Jump to the Warranty Claim Evidence Log](#tool-heading).**
+
+## Start with one exact asset and one governing promise
+
+Use a private asset label such as `kitchen refrigerator ASSET-A1`, not the public-facing serial number, home address or account name. Link the protected product identity, transaction and written terms with stable pointers:
+
+- `ASSET-A1` identifies the item and points to its complete model and serial record;
+- `PURCHASE-P1` points to the receipt or order evidence;
+- `TERMS-W2` points to the warranty version that applied to the purchase; and
+- `SERVICE-S1` points to earlier maintenance or repair history when relevant.
+
+Do not rewrite the terms in a way that silently expands coverage. Record the issuer, document version, retrieval date, relevant section and claim channel. A manufacturer warranty, retailer promise and separately purchased service contract may have different issuers, procedures and remedies.
+
+The US Federal Trade Commission's [consumer warranty guidance](https://consumer.ftc.gov/articles/warranties) recommends saving the warranty and receipt and explains that service contracts are distinct from warranties. That is useful evidence practice, but the actual promise and applicable jurisdiction still control the claim.
+
+## Record a safety check before treating the problem as routine service
+
+A malfunction may also appear in a product recall or safety warning. Check the responsible product-safety authority and the manufacturer's current notice using the exact model and protected serial or date-code record. In the United States, use the [CPSC recalls database](https://www.cpsc.gov/Recalls). Do not paste a complete serial number into a shared output.
+
+If an official notice says to stop using, unplug, isolate or follow another safety step, follow that source. Do not keep operating equipment merely to collect evidence or because a warranty appointment is pending. The tool records the authority and notice pointer; it cannot determine whether a product is safe.
+
+## Write observations, not unsupported diagnoses
+
+Describe the product's observable condition and the conditions under which it occurred. `Freezer temperature display rose from the household's normal reading; alarm appeared; no panels opened` is attributable. `Compressor is defective` is a diagnosis unless a qualified source actually stated it.
+
+Preserve original photographs, videos, error messages or readings with dates and context. A photograph may show visible condition but usually cannot prove an internal cause. If a technician later gives a finding, record that statement as a separate provider event with its source, rather than rewriting the household observation.
+
+## Use six statuses that describe evidence, not optimism
+
+Every row must use exactly one status:
+
+1. **Prepared—not sent:** the household drafted an event or request but has no delivery evidence.
+2. **Sent—delivery evidence linked:** a request left through the stated channel and the protected confirmation is linked.
+3. **Response received—source linked:** a provider response exists, but it does not automatically decide coverage or finish the problem.
+4. **Follow-up due—prior evidence linked:** a prior request or response exists and a specific next checkpoint is assigned.
+5. **Closed—outcome evidence linked:** the timeline preserves the stated outcome and household recheck or closure reason.
+6. **Handed off—complaint pointer linked:** the warranty workflow now points to a separate consumer complaint, mediation, legal or other process file.
+
+The first four are open. Their target dates must fall between this review and the next household review. Closed and handed-off rows need an actual closure or handoff date between the first observation and this review. These are household workflow dates, not legal deadlines.
+
+## Preserve delivery separately from the message
+
+A copy of a request shows what was said. A portal confirmation, sent-email record, postal receipt or other attributable record may support when and how it was delivered. Keep both pointers. A draft in a notes app does not prove submission, and a case reference without the underlying request does not preserve what the household asked for.
+
+Use role names in the shareable timeline: `household asset owner`, `manufacturer support role`, `retailer service desk`. Full names, addresses, phone numbers, email addresses, login credentials and complete case or serial numbers belong in protected evidence.
+
+## Give the requested outcome its own wording
+
+State what the household asked the issuer to do: confirm the claim channel, schedule inspection, explain a requested document, give a written coverage position, perform the remedy stated in the terms or explain a denial. Do not record `fix it` or `handle claim` as the next step.
+
+A specific request does not prove entitlement. It lets a later reader distinguish the household request from the provider response. If the provider offers a different step, preserve both rather than rewriting the original request.
+
+## Keep appointments, findings and coverage positions separate
+
+A support acknowledgement is not an inspection. An appointment is not a repair. A technician's finding is not necessarily the warranty issuer's coverage decision. A shipment record is not a household recheck. Give each event a unique ID and exact source role.
+
+After service, record the service report, replaced-part or product pointer, shipment or refund evidence, any changed identifier, any stated warranty effect and the household's dated observation. Do not label the claim closed only because an item was returned from service.
+
+Use the [service-history guide](/guides/service-history/) to carry completed work into the asset's long-term record. The claim timeline explains the request and response; the asset history explains what happened to the product across its life.
+
+## Use review dates without inventing statutory periods
+
+The next household review prevents a silent case from disappearing. It is deliberately not calculated from an assumed law or contract. If the written warranty gives a submission or response step, cite the source and calculate it outside the tool with appropriate review. If an agency process sets a period, preserve the agency source and the event from which that period runs.
+
+The FTC says that if a product problem is not resolved, a consumer can contact relevant enforcement or state consumer-protection resources. Other countries have different complaint structures. The tool does not determine eligibility, venue, limitation periods or the correct escalation route.
+
+## Hand off a dispute without exposing the complaint file
+
+When the matter leaves the ordinary warranty process, use `Handed off—complaint pointer linked` only after creating a separate protected file. Record the handoff date, process or authority role, safe pointer and why the warranty timeline stopped. Do not paste complaint forms, identity information, private contacts or legal strategy into the shared output.
+
+A handoff is not a win, loss or merits decision. It means another process now owns the next step. Keep later agency, mediation or court events in the appropriate file while preserving the link back to the original product, terms and request history.
+
+## Protect the unredacted record
+
+The tool rejects common patterns for complete phone numbers, emails, addresses, account or payment data, credentials, signatures, government identifiers, case numbers, policy numbers and full serial numbers. This filter is a warning layer, not a guarantee. Review the output before downloading, printing or sharing it.
+
+Store unredacted originals according to household access needs. Preserve prior versions if a denial, repeated repair or dispute develops. Browser-only processing means FamilyBoard does not receive or back up what you type.
+
+## Commercial content cannot enter the evidence chain
+
+A future affiliate area may show clearly labelled scanners, storage products, shipping supplies or replacement products outside the form and result. It cannot select a provider, mark delivery, interpret coverage, recommend unsafe continued use, close a case or imply that a purchase affects a claim. Sponsored content stays outside the evidence workflow.
+
+**Next step:** freeze the written terms and purchase proof, then add the first observation and every request or response as a separate dated row with a protected source pointer.
+
+**Contextual CTA:** Build the versioned timeline in your browser, keep open follow-ups visible and move disputes to a separate protected file rather than rewriting history.
+
+**FAQ:**
+- Q: Does this warranty claim log decide whether the product is covered?
+  A: No. It preserves product, terms, transaction, observation, message and outcome pointers. The issuer, applicable law and any responsible authority or qualified adviser determine the real coverage and remedy questions.
+- Q: Is a provider case number enough evidence that I filed a request?
+  A: It is useful, but preserve the submitted message and delivery confirmation too. A case reference alone may not show what was reported, requested or attached.
+- Q: What if the product may be unsafe or recalled?
+  A: Follow the current manufacturer and responsible product-safety authority instructions. Do not continue using or test a product merely to fill the log. Record the official notice as a separate source.
+- Q: Does the next household review calculate a legal deadline?
+  A: No. It is an internal checkpoint. Verify contractual, statutory, regulatory and complaint-process periods from the current responsible source for the transaction.
+- Q: When should a claim row be closed?
+  A: Only when the outcome source and the household's closure reason or post-service observation are linked. A provider acknowledgement, appointment or return shipment alone is not a completed outcome.
 
 ---
 

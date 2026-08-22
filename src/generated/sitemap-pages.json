@@ -1688,6 +1688,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/warranty-claim-evidence-log/",
+    "alternateRoute": "/zh-tw/tools/warranty-claim-evidence-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2183,7 +2191,7 @@
     "route": "/zh-tw/guides/how-to-track-product-warranties/",
     "alternateRoute": "/guides/how-to-track-product-warranties/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-22",
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {
@@ -2324,6 +2332,13 @@
     "alternateRoute": "/tools/warranty-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/warranty-claim-evidence-log/",
+    "alternateRoute": "/tools/warranty-claim-evidence-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {

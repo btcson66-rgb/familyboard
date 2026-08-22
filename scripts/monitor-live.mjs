@@ -84,6 +84,8 @@ const checks = [
       "<loc>https://familyboard.win/tools/home-repair-closeout-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-repair-closeout-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-improvement-receipts/</loc>",
+      "<loc>https://familyboard.win/tools/warranty-claim-evidence-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/warranty-claim-evidence-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -314,6 +316,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Preserve five evidence layers instead of one receipt folder",
       "irs.gov/publications/p530",
+    ],
+  },
+  {
+    path: "/tools/warranty-claim-evidence-log/",
+    require: [
+      "Warranty Claim Evidence Log",
+      'hreflang="zh-TW"',
+      "Use six statuses that describe evidence",
+      "does not diagnose a product",
+    ],
+  },
+  {
+    path: "/guides/how-to-track-product-warranties/",
+    require: [
+      "How to track product warranties",
+      'hreflang="zh-TW"',
+      "Separate the six evidence layers",
+      "consumer.ftc.gov/articles/warranties",
     ],
   },
   {
@@ -557,6 +577,24 @@ const checks = [
       'hreflang="en"',
       "台灣法律區分統一發票與普通收據",
       "房地合一稅需要的是整組證據",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/warranty-claim-evidence-log/",
+    require: [
+      "產品保固申請證據紀錄表",
+      'hreflang="en"',
+      "六種狀態代表證據階段",
+      "家庭複查日不能冒充法定 15 日",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/how-to-track-product-warranties/",
+    require: [
+      "產品保固怎麼整理",
+      'hreflang="en"',
+      "先把六層資料分開",
+      "商品安全資訊網",
     ],
   },
   {
@@ -964,15 +1002,6 @@ const checks = [
       "five-minute offline acceptance test",
     ],
     forbid: ['http-equiv="refresh"'],
-  },
-  {
-    path: "/zh-tw/guides/how-to-track-product-warranties/",
-    require: [
-      "產品保固追蹤教學",
-      'hreflang="en"',
-      "收據位置或索引",
-      "消費者保護會",
-    ],
   },
   {
     path: "/zh-tw/guides/organize-household-subscriptions/",

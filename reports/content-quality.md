@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T20:30:12.647Z
+Generated: 2026-08-22T20:52:33.474Z
 
 ## Summary
 
-- Indexable pages: 290
-- Generated HTML routes: 307
+- Indexable pages: 292
+- Generated HTML routes: 309
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 102
+- Pages without a contextual product/tool link: 103
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -24,7 +24,7 @@ Generated: 2026-08-22T20:30:12.647Z
 - household-operations: 21
 - inventory-warranty: 32
 - records-emergency: 27
-- tools: 71
+- tools: 73
 
 ## Word-count range
 
@@ -146,6 +146,7 @@ Generated: 2026-08-22T20:30:12.647Z
 - /zh-tw/tools/room-inventory-generator/
 - /zh-tw/tools/vacation-shutdown-checklist-generator/
 - /zh-tw/tools/warranty-checklist-generator/
+- /zh-tw/tools/warranty-claim-evidence-log/
 - /zh-tw/tools/warranty-expiration-calculator/
 
 ## Blockers
