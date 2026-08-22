@@ -47,6 +47,15 @@ const list = (value: string) =>
     .split(/\n|,/)
     .map((item) => item.trim())
     .filter(Boolean);
+const uniqueList = (value: string) => {
+  const seen = new Set<string>();
+  return list(value).filter((item) => {
+    const key = item.toLocaleLowerCase("zh-TW");
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+};
 const money = (value: number) =>
   new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
     value,
@@ -91,6 +100,42 @@ const areaItems: Record<string, string[]> = {
     "Electrical panel",
     "Filters and shutoffs",
   ],
+};
+
+const zhTwInventoryAreas: Record<string, string[]> = {
+  客廳: ["沙發、茶几與收納家具", "電視、音響與遊戲設備", "照明與智慧家居設備", "藝術品、收藏品或高單價物品"],
+  廚房: ["冰箱與冷凍設備", "爐具、烤箱與微波爐", "洗碗機、濾水器與固定設備", "高單價小家電", "值得單獨識別的鍋具與餐具"],
+  臥室: ["床架、床墊與收納家具", "電腦、螢幕與視聽設備", "窗飾、燈具與空調設備", "珠寶、收藏品或高單價個人物品"],
+  浴室: ["熱水、通風與暖風設備", "洗面盆、水龍頭與固定配件", "電動牙刷、吹風機等電器", "無障礙或其他特殊配件"],
+  洗衣區: ["洗衣機與乾衣機", "排水、進水與通風配件", "晒衣與熨燙設備", "清潔設備與高單價耗材庫存"],
+  書房: ["書桌、座椅與書櫃", "電腦、螢幕、印表機與儲存設備", "相機、樂器或其他專業設備", "紙本原件、備份媒體與文件容器"],
+  陽台: ["戶外桌椅與收納", "清潔、園藝與季節性設備", "排水、照明與固定配件", "戶外用電器與安全設備"],
+  "車庫／儲藏室": ["車輛、自行車與相關配件", "工具、梯具與維修設備", "門機、鎖與安全設備", "季節用品與已封箱物品"],
+  "機電／設備區": ["熱水器與給排水設備", "空調主機、濾網與控制器", "電盤、關閉點與識別標示", "水泵、發電或備援電力設備"],
+};
+
+const zhTwInventoryAliases: Record<string, string> = {
+  living: "客廳", "living room": "客廳", 客廳: "客廳",
+  kitchen: "廚房", 廚房: "廚房",
+  bedroom: "臥室", 臥室: "臥室",
+  bathroom: "浴室", 浴室: "浴室",
+  laundry: "洗衣區", "laundry room": "洗衣區", 洗衣區: "洗衣區", 洗衣間: "洗衣區",
+  office: "書房", study: "書房", 書房: "書房",
+  balcony: "陽台", 陽台: "陽台",
+  garage: "車庫／儲藏室", storage: "車庫／儲藏室", 車庫: "車庫／儲藏室", 儲藏室: "車庫／儲藏室",
+  utility: "機電／設備區", 機電間: "機電／設備區", 設備區: "機電／設備區",
+};
+
+const zhTwAppliancePrompts: Record<string, string[]> = {
+  冰箱: ["核對說明書中的溫度設定、門封與可由使用者清潔部位", "記錄門封狀態、異音、異味、漏水或溫度異常", "核對濾網、濾芯或其他耗材的真實料號與更換依據", "確認品牌服務與維修聯絡方式"],
+  洗衣機: ["核對說明書中的清潔程式、進排水與可由使用者處理部位", "記錄水管、接點、門封或上蓋的可見狀態", "記錄異常振動、排水、異味、錯誤碼與發生時機", "核對原廠指定的洗劑、耗材與服務管道"],
+  乾衣機: ["核對說明書中的絨屑、冷凝水或排氣系統使用者檢查項目", "記錄乾燥時間變化、異常高溫、焦味、異音或錯誤碼", "核對濾網或其他耗材的正確料號", "確認排氣、瓦斯或電氣問題的合格服務管道"],
+  洗碗機: ["核對說明書中的濾網、噴臂、門封與補充品項目", "記錄漏水、排水、清潔效果變化、異味或錯誤碼", "核對洗劑、軟化鹽或其他耗材是否適用實際型號", "確認進排水與電氣異常的服務聯絡方式"],
+  冷氣: ["核對說明書中可由使用者清潔的濾網與外部部位", "記錄冷房效果、滴水、異音、異味、錯誤碼與發生時機", "核對遙控器、濾網或其他配件的正確料號", "把冷媒、排水配管、電氣與室外機作業留給適當專業人員"],
+  除濕機: ["核對說明書中水箱、濾網、排水與使用環境要求", "記錄異常高溫、異音、焦味、漏水或自動停機狀況", "查核實際品牌型號是否有公開召回或檢修訊息", "確認原廠服務聯絡方式，不自行拆解冷媒或電氣部位"],
+  熱水器: ["核對說明書、能源類型、安裝與合格服務資料", "只記錄可見異常：水溫不穩、漏水、錯誤碼、異味或異音", "確認家人知道遇到瓦斯味、廢氣或電氣異常時的停用與對外聯絡流程", "記錄最近一次專業檢查來源，不由這份清單發明間隔"],
+  抽油煙機: ["核對說明書中油網、油杯與可由使用者清潔部位", "記錄吸力變化、異音、異味、滴油或按鍵異常", "核對濾網、燈具或其他配件料號", "把風管深層處理、高處與電氣作業留給適當專業人員"],
+  其他: ["在說明書中找出可由使用者執行的清潔、觀察與耗材項目", "記錄正常運作基準與現在看到的差異", "核對耗材、零件、客服與維修資料", "先標示電氣、瓦斯、冷媒、高處或其他不適合自行處理的範圍"],
 };
 
 const definitions: Record<string, Definition> = {
@@ -747,6 +792,106 @@ const definitions: Record<string, Definition> = {
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
+  "home-inventory-checklist-generator": {
+    intro:
+      "依台灣家庭常見空間產生住宅財物盤點起始表，並保留照片、型號、單據與複查欄位。這不是估價或理賠保證。",
+    fields: [
+      text("household", "家庭或盤點範圍", "可用住家暱稱，不必填完整地址。", "目前住家"),
+      {
+        name: "rooms",
+        label: "要盤點的空間",
+        type: "textarea",
+        help: "每行或逗號分隔；支援客廳、廚房、臥室、浴室、洗衣區、書房、陽台、車庫／儲藏室及機電／設備區，也可自訂。",
+        value: "客廳\n廚房\n洗衣區",
+      },
+      { name: "reviewed", label: "本次盤點日期", type: "date" },
+    ],
+    run: (values) => {
+      const rooms = uniqueList(values.rooms);
+      const canonicalRooms = rooms
+        .map(
+          (room) =>
+            zhTwInventoryAliases[room.toLocaleLowerCase("zh-TW")] || room,
+        )
+        .filter(
+          (room, index, all) =>
+            all.findIndex(
+              (candidate) =>
+                candidate.toLocaleLowerCase("zh-TW") ===
+                room.toLocaleLowerCase("zh-TW"),
+            ) === index,
+        );
+      const reviewed = date(values.reviewed);
+      if (!values.household.trim()) return "請填寫家庭或盤點範圍，讓列印後的清單仍能辨識用途。";
+      if (rooms.length === 0) return "請至少輸入一個要盤點的空間。";
+      if (canonicalRooms.length > 12) return "一次最多產生 12 個空間；請先完成一區，再建立下一份清單。";
+      if (!reviewed) return "請輸入有效的本次盤點日期。";
+      const format = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" }).format(reviewed);
+      const general = ["主要家具與固定配件", "電子、電器與有型號的設備", "有保固、單據或較高價值的物品", "需要照片或特徵才能辨認的其他物品"];
+      const sections = canonicalRooms.map((canonical) => {
+        const items = zhTwInventoryAreas[canonical] || general;
+        const custom = zhTwInventoryAreas[canonical] ? "" : "（自訂空間，使用通用分類）";
+        return `【${canonical}${custom}】\n${items.map((item) => `• ${item}`).join("\n")}`;
+      });
+      return `${values.household.trim()}｜住宅財物盤點起始清單\n本次盤點：${format}\n空間數：${canonicalRooms.length}\n\n${sections.join("\n\n")}\n\n每一項實際物品至少補上：清楚名稱、所在空間、品牌／型號／序號（如適用）、數量、取得日期與依據、照片日期、購買或保固文件位置，以及最後複查日期。不要在公開或共享清單寫入密碼、完整證件號碼或不必要的住址細節。\n\n這份結果只協助建立盤點順序，不會估算現值、重置成本、承保範圍或可理賠金額。需要投保、報稅或災損申請時，請另依實際保單與主管機關要求準備資料。`;
+    },
+  },
+  "household-document-index-generator": {
+    intro:
+      "建立紙本與數位文件的位置索引，不必上傳文件內容。產生後可逐類補上版本、負責角色、備份位置與複查狀態。",
+    fields: [
+      {
+        name: "categories",
+        label: "文件分類",
+        type: "textarea",
+        help: "每行或逗號分隔；分類應回答家人會找什麼，不要只寫 PDF 或年份。",
+        value: "住宅與租約\n家電購買與保固\n保險聯絡與保單位置\n維修與裝修\n公用事業與帳單\n緊急與照護",
+      },
+      text("owner", "索引複查負責角色", "可填角色，不必填真名。", "家庭資料整理人"),
+      text("primaryLocation", "原始文件主要位置", "只寫家人找得到的安全位置標籤，不要填密碼。", "紙本：書房文件櫃；數位：加密雲端／家庭文件"),
+      text("backupLocation", "備份或替代取得位置", "沒有備份時請明確填『尚未建立』。", "離線加密備份／家庭文件"),
+      { name: "review", label: "下次索引複查日期", type: "date" },
+    ],
+    run: (values) => {
+      const categories = uniqueList(values.categories);
+      const review = date(values.review);
+      if (categories.length === 0) return "請至少輸入一個文件分類。";
+      if (categories.length > 15) return "一次最多整理 15 個分類；請先完成這一批並確認位置，再建立下一份。";
+      if (!values.owner.trim()) return "請填寫索引複查負責角色。";
+      if (!values.primaryLocation.trim()) return "請填寫原始文件主要位置；不要在這裡輸入密碼。";
+      if (!values.backupLocation.trim()) return "請填寫備份位置，或明確寫『尚未建立』。";
+      if (!review) return "請輸入有效的下次索引複查日期。";
+      const format = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" }).format(review);
+      const sameLocation = values.primaryLocation.trim().toLocaleLowerCase("zh-TW") === values.backupLocation.trim().toLocaleLowerCase("zh-TW");
+      const rows = categories.map((category) => `【${category}】\n• 負責角色：${values.owner.trim()}\n• 原始文件主要位置：${values.primaryLocation.trim()}\n• 備份或替代取得位置：${values.backupLocation.trim()}\n• 最新版本／文件日期：待逐項補上\n• 可否由備援家人取得：待確認\n• 下次複查：${format}`);
+      return `家庭文件索引初稿\n分類數：${categories.length}\n\n${rows.join("\n\n")}\n\n${sameLocation ? "注意：主要位置與備份位置完全相同；這個標籤不能證明已有獨立備份，請確認是否需要不同媒體或異地副本。\n\n" : ""}這是文件地圖，不是檔案庫。請勿寫入密碼、載具驗證碼、完整身分證號、醫療內容或金融帳號；FamilyBoard 也不會讀取、同步或備份索引所指向的原始檔案。`;
+    },
+  },
+  "appliance-maintenance-checklist-generator": {
+    intro:
+      "依家電種類產生不同的說明書核對與異常紀錄提示。它不會發明通用保養週期，也不會提供拆機步驟。",
+    fields: [
+      {
+        name: "appliance",
+        label: "家電種類",
+        type: "select",
+        options: ["冰箱", "洗衣機", "乾衣機", "洗碗機", "冷氣", "除濕機", "熱水器", "抽油煙機", "其他"],
+      },
+      text("identity", "家電識別名稱", "寫到家人能找到同一台設備，最好包含位置或型號。", "廚房冰箱／型號待補"),
+      text("source", "實際依據位置", "填原廠說明書、官方支援頁或服務紀錄的位置，不要只寫『網路文章』。", "紙本說明書：書房家電資料夾"),
+      { name: "reviewed", label: "本次複查日期", type: "date" },
+    ],
+    run: (values) => {
+      const appliance = values.appliance || "其他";
+      const reviewed = date(values.reviewed);
+      if (!values.identity.trim()) return "請填寫能辨識實際設備的家電名稱。";
+      if (!values.source.trim()) return "請填寫實際說明書、原廠支援頁或服務紀錄的位置。";
+      if (!reviewed) return "請輸入有效的本次複查日期。";
+      const format = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" }).format(reviewed);
+      const prompts = zhTwAppliancePrompts[appliance] || zhTwAppliancePrompts.其他;
+      return `${values.identity.trim()}｜${appliance}維護來源核對清單\n本次複查：${format}\n實際依據：${values.source.trim()}\n\n${prompts.map((item) => `• ${item}`).join("\n")}\n\n完成時記錄：看到的狀態、已執行的說明書項目、使用的零件或服務單號、處理人／業者、費用與下次核對依據。\n\n遇到焦味、冒煙、漏電、瓦斯或冷媒異常、異常高溫或其他危險徵象時，應先停止使用並尋求適當專業協助。不要把這份清單當成拆解、瓦斯、冷媒或電氣作業教程。`;
+    },
+  },
   "home-maintenance-schedule-generator": {
     intro:
       "把家中實際設備整理成可複查的起始排程。工具不會替原廠說明書發明保養週期，產生後仍要逐項補上真正依據。",

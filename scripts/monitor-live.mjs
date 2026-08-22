@@ -47,6 +47,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/recurring-chore-planner/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-inventory-checklist-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-document-index-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/appliance-maintenance-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/privacy/</loc>",
       "<loc>https://familyboard.win/zh-tw/security/</loc>",
       "<loc>https://familyboard.win/zh-tw/affiliate-disclosure/</loc>",
@@ -157,6 +160,33 @@ const checks = [
       'hreflang="en"',
       "這一輪從名單第幾位開始",
       "每人分到相同件數就代表公平嗎",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-inventory-checklist-generator/",
+    require: [
+      "住宅財物盤點清單產生器",
+      'hreflang="en"',
+      "要盤點的空間",
+      "照片、單據與災損資料是三種不同證據",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-document-index-generator/",
+    require: [
+      "家庭文件索引產生器",
+      'hreflang="en"',
+      "備份或替代取得位置",
+      "索引不應保存密碼",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/appliance-maintenance-checklist-generator/",
+    require: [
+      "家電保養清單產生器",
+      'hreflang="en"',
+      "實際依據位置",
+      "不同家電真的會產生不同清單",
     ],
   },
   {

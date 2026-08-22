@@ -1313,7 +1313,7 @@
   },
   {
     "route": "/tools/home-inventory-checklist-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/home-inventory-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1409,7 +1409,7 @@
   },
   {
     "route": "/tools/household-document-index-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/household-document-index-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1425,7 +1425,7 @@
   },
   {
     "route": "/tools/appliance-maintenance-checklist-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/appliance-maintenance-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1742,6 +1742,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/appliance-maintenance-checklist-generator/",
+    "alternateRoute": "/tools/appliance-maintenance-checklist-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/contact/",
     "alternateRoute": "/contact/",
     "indexable": true,
@@ -1765,6 +1772,13 @@
   {
     "route": "/zh-tw/features/free-home-management-app/",
     "alternateRoute": "/features/free-home-management-app/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/home-inventory-checklist-generator/",
+    "alternateRoute": "/tools/home-inventory-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
@@ -1800,6 +1814,13 @@
   {
     "route": "/zh-tw/",
     "alternateRoute": "/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-document-index-generator/",
+    "alternateRoute": "/tools/household-document-index-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

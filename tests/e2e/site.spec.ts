@@ -74,6 +74,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/appliance-age-calculator/",
     "/zh-tw/tools/home-maintenance-cost-tracker/",
     "/zh-tw/tools/recurring-chore-planner/",
+    "/zh-tw/tools/home-inventory-checklist-generator/",
+    "/zh-tw/tools/household-document-index-generator/",
+    "/zh-tw/tools/appliance-maintenance-checklist-generator/",
     "/zh-tw/privacy/",
     "/zh-tw/security/",
     "/zh-tw/affiliate-disclosure/",
@@ -270,6 +273,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       alternate: "/tools/recurring-chore-planner/",
       heading: "家庭家事輪值表產生器",
     },
+    {
+      route: "/zh-tw/tools/home-inventory-checklist-generator/",
+      alternate: "/tools/home-inventory-checklist-generator/",
+      heading: "住宅財物盤點清單產生器",
+    },
+    {
+      route: "/zh-tw/tools/household-document-index-generator/",
+      alternate: "/tools/household-document-index-generator/",
+      heading: "家庭文件索引產生器",
+    },
+    {
+      route: "/zh-tw/tools/appliance-maintenance-checklist-generator/",
+      alternate: "/tools/appliance-maintenance-checklist-generator/",
+      heading: "家電保養清單產生器",
+    },
   ]) {
     await page.goto(localizedTool.route);
     await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
@@ -345,6 +363,31 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "輪流分配只平衡項目數",
   );
 
+  await page.goto("/zh-tw/tools/home-inventory-checklist-generator/");
+  await page.getByLabel("要盤點的空間").fill("廚房\nkitchen\n客房");
+  await page.getByLabel("本次盤點日期").fill("2026-08-22");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("空間數：2");
+  await expect(page.locator(".result")).toContainText("高單價小家電");
+  await expect(page.locator(".result")).toContainText("客房（自訂空間，使用通用分類）");
+  await expect(page.locator(".result")).toContainText("不會估算現值");
+
+  await page.goto("/zh-tw/tools/household-document-index-generator/");
+  await page.getByLabel("原始文件主要位置").fill("家庭文件夾");
+  await page.getByLabel("備份或替代取得位置").fill("家庭文件夾");
+  await page.getByLabel("下次索引複查日期").fill("2026-09-30");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("家庭文件索引初稿");
+  await expect(page.locator(".result")).toContainText("主要位置與備份位置完全相同");
+  await expect(page.locator(".result")).toContainText("不是檔案庫");
+
+  await page.goto("/zh-tw/tools/appliance-maintenance-checklist-generator/");
+  await page.getByLabel("家電種類").selectOption("除濕機");
+  await page.getByLabel("本次複查日期").fill("2026-08-22");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("公開召回或檢修訊息");
+  await expect(page.locator(".result")).toContainText("不要把這份清單當成拆解");
+
   const sitemap = await (await page.request.get("/sitemap-0.xml")).text();
   expect(sitemap).toContain("https://familyboard.win/zh-tw/");
   expect(sitemap).toContain(
@@ -370,6 +413,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/recurring-chore-planner/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/home-inventory-checklist-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-document-index-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/appliance-maintenance-checklist-generator/",
   );
   expect(sitemap).toContain("https://familyboard.win/zh-tw/privacy/");
   expect(sitemap).toContain("https://familyboard.win/zh-tw/security/");
