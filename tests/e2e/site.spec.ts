@@ -70,6 +70,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
+    "/tools/emergency-supply-inventory-audit/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -88,6 +89,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/move-in-checklist-generator/",
     "/zh-tw/tools/move-out-condition-record-generator/",
     "/zh-tw/tools/home-emergency-drill-record-generator/",
+    "/zh-tw/tools/emergency-supply-inventory-audit/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -109,6 +111,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/digital-home-inventory-backup/",
     "/zh-tw/guides/move-out-home-records/",
     "/zh-tw/guides/home-evacuation-information/",
+    "/zh-tw/guides/emergency-supply-inventory/",
     "/zh-tw/guides/home-maintenance-log/",
     "/zh-tw/guides/appliance-replacement-planning/",
     "/zh-tw/guides/room-by-room-home-inventory/",
@@ -194,6 +197,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭避難計畫教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/home-evacuation-information/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭緊急物資盤點表" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/emergency-supply-inventory-audit/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "緊急避難包清單教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/emergency-supply-inventory/");
 
   for (const localized of [
     {
@@ -255,6 +264,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/home-evacuation-information/",
       alternate: "/guides/home-evacuation-information/",
       heading: "家庭避難計畫怎麼做：先約定集合與聯絡，再用官方資訊更新路線",
+    },
+    {
+      route: "/zh-tw/guides/emergency-supply-inventory/",
+      alternate: "/guides/emergency-supply-inventory/",
+      heading: "緊急避難包清單怎麼整理：從台灣官方指引變成家裡真的拿得走的物資",
     },
     {
       route: "/zh-tw/features/household-handoff/",
@@ -444,6 +458,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/home-emergency-drill-record-generator/",
       alternate: "/tools/home-emergency-drill-record-generator/",
       heading: "家庭防災演練紀錄表產生器",
+    },
+    {
+      route: "/zh-tw/tools/emergency-supply-inventory-audit/",
+      alternate: "/tools/emergency-supply-inventory-audit/",
+      heading: "家庭緊急物資盤點表",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -690,6 +709,38 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "偵測到可能的密碼、門禁碼、金融識別資料",
   );
 
+  await page.goto("/tools/emergency-supply-inventory-audit/");
+  await page.getByLabel("Physical review date").fill("2026-08-23");
+  await page.getByLabel("Next inventory review date").fill("2026-09-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Ready and observed 2");
+  await expect(page.locator(".result")).toContainText("Rotate or replace 1");
+  await expect(page.locator(".result")).toContainText("Verify requirement 1");
+  await expect(page.locator(".result")).toContainText("not a readiness score");
+  await page
+    .getByLabel("Follow-up for every unresolved ID")
+    .fill("POWER-1 | Charge and test | Adult 1 | 2026-09-01");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "Add one follow-up row for every unresolved supply ID: CARE-1",
+  );
+
+  await page.goto("/zh-tw/tools/emergency-supply-inventory-audit/");
+  await page.getByLabel("實際逐項檢查日期").fill("2026-08-23");
+  await page.getByLabel("下次物資複查日期").fill("2026-09-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("已確認可用 2 筆");
+  await expect(page.locator(".result")).toContainText("需輪替或更換 1 筆");
+  await expect(page.locator(".result")).toContainText("需求待查核 1 筆");
+  await expect(page.locator(".result")).toContainText("不是防災準備分數");
+  await page
+    .getByLabel("每個未完成識別碼的追蹤")
+    .fill("POWER-1 | 充電後實測 | 成人甲 | 2026-09-01\nCARE-1 | 核對需求 | 計畫持有人 | 2026-02-31");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "需要真實的 YYYY-MM-DD 日期",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -928,6 +979,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/home-evacuation-information/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/emergency-supply-inventory-audit/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/emergency-supply-inventory-audit/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/emergency-supply-inventory/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/",

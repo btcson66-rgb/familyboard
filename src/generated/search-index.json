@@ -925,7 +925,7 @@
     "route": "/guides/emergency-supply-inventory/",
     "cluster": "records-emergency",
     "keywords": "emergency supply inventory",
-    "headings": "Preparedness starts with knowing what's already in the house, against the actual published quantities Water: the figure that matters most, and where it comes from Food and the rest of the kit Organize the inventory by purpose and location, not just a flat list Record expiration and condition where it's actually relevant Restock immediately after use, not at the next scheduled review"
+    "headings": "Emergency supply inventory: inspect first, compare second, buy last Choose an authority before choosing quantities Separate the portable bag from supplies used at home Give every item a stable identifier Record quantities as observations, not invented prescriptions Condition evidence is item-specific Four statuses preserve uncertainty Every unresolved ID needs an owner and due date Build around accessibility, care and pet needs without exposing details Review on a calendar and after real use Privacy and commercial independence"
   },
   {
     "title": "Household Medical Information Organization: Keep Emergency References Without Overexposing Health Data",
@@ -1510,6 +1510,14 @@
     "cluster": "tools",
     "keywords": "home emergency drill record generator",
     "headings": "Home emergency drill record generator Begin with the plan and authority, not the timer Announce the exercise and define what is simulated Choose one exercise purpose at a time Record participants as context, not signatures Five columns turn a memory into an observation Four statuses prevent false completion Test support roles without copying private medical details Separate communication from precise location disclosure A worked record that keeps an untested item visible Renters and multi-unit residents need building context Close the loop instead of filing the sheet Privacy and real-emergency boundary"
+  },
+  {
+    "title": "Emergency Supply Inventory Audit | Inspect, Verify and Assign Gaps",
+    "description": "Audit emergency supplies in your browser with source notes, observed units, condition evidence, four honest statuses and owner-linked follow-up.",
+    "route": "/tools/emergency-supply-inventory-audit/",
+    "cluster": "tools",
+    "keywords": "emergency supply inventory audit",
+    "headings": "Emergency supply inventory audit Use one audit for one practical scope Record household size as context, not a multiplier Name the authority and the date you checked it Eight columns preserve the chain from requirement to observation The observed amount needs both a number and a unit Condition evidence should describe the check you performed Use four statuses without turning them into a score Unresolved rows cannot disappear without follow-up A worked audit row Accessibility, care and pet rows use pointers, not private files Physical review dates and triggers Privacy, downloads and real-event boundary Commercial recommendations come after the verified gap"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

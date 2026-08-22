@@ -19,6 +19,17 @@ const date = (value: string) => {
   const parsed = new Date(`${value}T12:00:00`);
   return Number.isNaN(parsed.valueOf()) ? null : parsed;
 };
+const strictIsoDate = (value: string) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
+  const parsed = date(value);
+  if (!parsed) return null;
+  const normalized = [
+    parsed.getFullYear(),
+    String(parsed.getMonth() + 1).padStart(2, "0"),
+    String(parsed.getDate()).padStart(2, "0"),
+  ].join("-");
+  return normalized === value ? parsed : null;
+};
 const fmt = (value: Date) =>
   new Intl.DateTimeFormat("en", { dateStyle: "long" }).format(value);
 const addMonths = (value: Date, months: number) => {
@@ -790,6 +801,122 @@ const definitions: Record<string, Definition> = {
         ? supportRows.map((row) => `${row.parts[0]} — primary: ${row.parts[1]} — backup: ${row.parts[2]} — observed: ${row.parts[3]}`)
         : ["No separate support scenario was recorded; confirm that this reflects the household rather than an omitted need."];
       return `${values.household.trim()} — household emergency exercise record\nExercise type: ${values.drillType}\nExercise date: ${formatter.format(practiced)}\nObserved duration: ${minutes} minutes (observation only, not a pass/fail score)\nOfficial plan / guidance reference: ${values.guidance.trim()}\nGoal and announced boundaries: ${values.scope.trim()}\nParticipants / roles: ${participants.join("; ")}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\nNext review or repeat: ${formatter.format(followUp)}\n\n${lines("Exercise observations", observations.map((row) => `${row.parts[0]} — planned check: ${row.parts[1]} — observed: ${row.parts[2]} — improvement: ${row.parts[3]} — status: ${row.parts[4]}`))}\n\n${lines("People, caregiver and pet support", supportOutput)}\n\n${lines("Communication and reunion checks", communicationRows.map((row) => `${row.parts[0]} — primary: ${row.parts[1]} — backup: ${row.parts[2]} — observed: ${row.parts[3]}`))}\n\nProtected record location: ${values.storage.trim()}\n\nClose-out check: assign every Needs follow-up, Not tested or Stopped for safety row to a named owner and repeat only after the plan or environment has been corrected. This output records an announced practice; it is not a safety certification, building approval, medical plan or real-time emergency instruction. In an actual event, current official alerts, emergency services and on-scene conditions take priority.`;
+    },
+  },
+  "emergency-supply-inventory-audit": {
+    intro:
+      "Audit what the household can actually find against a current official or household plan. The tool records evidence and follow-up; it does not prescribe universal quantities, approve a kit, or replace local emergency guidance.",
+    fields: [
+      text("household", "Household label", "Use a private nickname, not a street address.", "Maple household"),
+      {
+        name: "scope",
+        label: "Inventory scope",
+        type: "select",
+        options: [
+          "Portable evacuation or go-bag supplies",
+          "Stay-at-home emergency supplies",
+          "Power-outage support supplies",
+          "Accessibility, caregiver or child support module",
+          "Pet evacuation support module",
+        ],
+      },
+      {
+        name: "people",
+        label: "People covered by this review",
+        type: "number",
+        value: "3",
+        help: "Context only. The tool does not multiply or prescribe quantities.",
+      },
+      text("supportContext", "Additional needs included", "Use short categories such as infant care, mobility-device power, sensory support or pet transport. Do not enter diagnoses, doses or identity details.", "Pet transport; one household member uses prescription glasses"),
+      { name: "reviewed", label: "Physical review date", type: "date" },
+      { name: "nextReview", label: "Next inventory review date", type: "date" },
+      text("authority", "Current guidance or plan reference", "Name the authority or household plan, version and date checked. Do not rely on an unattributed shopping list.", "Ready.gov emergency supply list checked 2026-08-23; county preparedness page checked the same day"),
+      {
+        name: "inventory",
+        label: "Observed inventory rows",
+        type: "textarea",
+        help: "One line: ID | category | item | requirement/source note | quantity and unit actually observed | condition/date evidence | storage label | Ready and observed, Rotate or replace, Verify requirement, or Missing from chosen plan. Maximum 20 lines.",
+        value: "WATER-1 | Water and food | Drinking water | Quantity follows current local guidance and household plan | 6 sealed bottles; label units recorded in protected inventory | Seals intact; printed dates checked 2026-08-23 | Hall closet go-bag | Ready and observed\nLIGHT-1 | Lighting | Headlamp and matching batteries | Ready.gov list checked 2026-08-23 | 1 headlamp and 3 matching batteries | Function tested; battery package date recorded | Hall closet go-bag | Ready and observed\nPOWER-1 | Communication and power | Charged power bank and cable | Household communication plan | 1 power bank and 1 cable | Charge indicator low during physical check | Charging shelf | Rotate or replace\nCARE-1 | Personal support | Care-plan supply pointer | Requirement must be confirmed by the person and qualified source | Protected care-plan reference present; supply amount not copied here | Review date on protected plan not confirmed | Protected support pouch | Verify requirement",
+      },
+      {
+        name: "actions",
+        label: "Follow-up for every unresolved ID",
+        type: "textarea",
+        help: "One line: unresolved ID | next action | owner or role | due date YYYY-MM-DD. Include exactly one row for every Rotate or replace, Verify requirement, or Missing item; due dates must fall after the physical review and no later than the next review.",
+        value: "POWER-1 | Fully charge and test with the intended phone and cable, then record the observed result | Adult 1 | 2026-09-01\nCARE-1 | Ask the person and qualified source to confirm the current requirement; keep details in the protected care plan | Care-plan owner | 2026-09-05",
+      },
+      text("storage", "Protected inventory location", "Use a folder or envelope label, not a password, access code or public location.", "Household records / emergency supplies / 2026-08"),
+    ],
+    run: (values) => {
+      const reviewed = date(values.reviewed);
+      const nextReview = date(values.nextReview);
+      if (!values.household.trim()) return "Enter a household label so the exported audit can be identified.";
+      if (!reviewed) return "Enter a valid physical review date.";
+      if (!nextReview) return "Enter a valid next inventory review date.";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (reviewed.getTime() > today.getTime())
+        return "The physical review date cannot be in the future. Record only supplies you actually inspected.";
+      if (nextReview.getTime() <= reviewed.getTime())
+        return "The next inventory review date must be later than the physical review date.";
+      const people = Number(values.people);
+      if (!Number.isInteger(people) || people < 1 || people > 20)
+        return "Enter 1 to 20 people covered by this review. This is context, not a quantity formula.";
+      if (!values.authority.trim()) return "Add the current guidance or household-plan reference used for this audit.";
+      if (!values.storage.trim()) return "Add a protected inventory location so the evidence can be found again.";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const inventoryRows = parseRows(values.inventory);
+      if (inventoryRows.length === 0) return "Add at least one supply row observed during the physical review.";
+      if (inventoryRows.length > 20) return "Use no more than 20 supply rows in one audit; split a larger inventory by scope or container.";
+      const invalidInventory = inventoryRows.filter((row) => row.parts.length !== 8 || row.parts.some((part) => !part));
+      if (invalidInventory.length)
+        return `Inventory line ${invalidInventory.map((row) => row.line).join(", ")} must contain all 8 pipe-separated fields.`;
+      const statuses = new Set(["ready and observed", "rotate or replace", "verify requirement", "missing from chosen plan"]);
+      const invalidStatuses = inventoryRows.filter((row) => !statuses.has(row.parts[7].toLocaleLowerCase("en")));
+      if (invalidStatuses.length)
+        return `Inventory line ${invalidStatuses.map((row) => row.line).join(", ")} must end with Ready and observed, Rotate or replace, Verify requirement, or Missing from chosen plan.`;
+      const ids = inventoryRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length)
+        return "Every supply row needs a unique ID so follow-up cannot attach to the wrong item.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Supply IDs must use 2–20 letters, numbers or hyphens, such as WATER-1.";
+      const unresolved = inventoryRows.filter((row) => row.parts[7].toLocaleLowerCase("en") !== "ready and observed");
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 20) return "Use no more than 20 follow-up rows in one audit.";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `Follow-up line ${invalidActions.map((row) => row.line).join(", ")} must contain all 4 pipe-separated fields.`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length)
+        return "Each unresolved supply ID must have exactly one follow-up row.";
+      const unresolvedIds = new Set(unresolved.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...unresolvedIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length)
+        return `Add one follow-up row for every unresolved supply ID: ${missingActions.join(", ")}.`;
+      const extraActions = actionIds.filter((id) => !unresolvedIds.has(id));
+      if (extraActions.length)
+        return `Follow-up rows may reference only unresolved supply IDs. Remove or update: ${extraActions.join(", ")}.`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() <= reviewed.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `Follow-up line ${invalidDueDates.map((row) => row.line).join(", ")} needs a real YYYY-MM-DD date after the physical review and no later than the next inventory review.`;
+      const shareable = [values.authority, values.supportContext, values.inventory, values.actions, values.storage].join("\n");
+      if (/password|passcode|access code|alarm code|door code|full card number|bank account|social security|medical record|diagnosis|medication dose|dosage|\bssn\b|\bpin\s*[:=]/i.test(shareable))
+        return "A possible password, access code, financial identifier or unnecessary medical detail was detected. Replace it with a protected-record reference.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const displayStatuses = ["Ready and observed", "Rotate or replace", "Verify requirement", "Missing from chosen plan"];
+      const statusCounts = displayStatuses.map((status) => ({
+        status,
+        count: inventoryRows.filter((row) => row.parts[7].toLocaleLowerCase("en") === status.toLocaleLowerCase("en")).length,
+      })).filter((item) => item.count > 0);
+      const supportContext = values.supportContext.trim() || "No additional support category recorded; confirm this reflects the household rather than an omitted need.";
+      return `${values.household.trim()} — emergency supply inventory audit\nScope: ${values.scope}\nPhysical review: ${formatter.format(reviewed)}\nNext inventory review: ${formatter.format(nextReview)}\nPeople covered: ${people} (context only; no quantity was prescribed)\nAdditional needs included: ${supportContext}\nGuidance / plan reference: ${values.authority.trim()}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (not a readiness score)\n\n${lines("Observed inventory", inventoryRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — ${row.parts[2]} — requirement/source: ${row.parts[3]} — observed: ${row.parts[4]} — evidence: ${row.parts[5]} — stored: ${row.parts[6]} — status: ${row.parts[7]}`))}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["No unresolved row was recorded in this audit. Recheck the source, scope and physical evidence before treating that as complete."])}\n\nProtected inventory location: ${values.storage.trim()}\n\nClose-out check: compare this observation with the latest local authority and household-specific plan, preserve printed dates and manufacturer instructions, assign every unresolved ID, and update the source record after physical reinspection. This output does not prescribe quantities, approve a kit, guarantee availability, or replace medical, accessibility, pet-care or emergency guidance. In an actual event, follow current official alerts and instructions.`;
     },
   },
   "vacation-shutdown-checklist-generator": {
@@ -1895,6 +2022,122 @@ const zhTwDefinitions: Record<string, Definition> = {
         ? supportRows.map((row) => `${row.parts[0]}｜主要：${row.parts[1]}｜備援：${row.parts[2]}｜觀察：${row.parts[3]}`)
         : ["本次未另外列支援情境；請確認這是家庭實況，而不是漏掉兒少、長者、身心障礙、照護或寵物需求。"];
       return `${values.household.trim()}｜家庭緊急演練紀錄\n演練類型：${values.drillType}\n實際演練：${formatter.format(practiced)}\n觀察時間：${minutes} 分鐘（只記實況，不是安全及格分數）\n官方資訊／計畫版本：${values.guidance.trim()}\n目標與事先告知界線：${values.scope.trim()}\n參與者／角色：${participants.join("、")}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n下次複查或重做：${formatter.format(followUp)}\n\n${lines("演練觀察", observations.map((row) => `${row.parts[0]}｜原定查核：${row.parts[1]}｜實際觀察：${row.parts[2]}｜改善：${row.parts[3]}｜狀態：${row.parts[4]}`))}\n\n${lines("人員、照護與寵物支援", supportOutput)}\n\n${lines("失聯、通訊與會合查核", communicationRows.map((row) => `${row.parts[0]}｜第一方法：${row.parts[1]}｜替代：${row.parts[2]}｜觀察：${row.parts[3]}`))}\n\n受保護的演練紀錄位置：${values.storage.trim()}\n\n結案前查核：每一筆「需要追蹤、未測試、因安全停止」都要有負責角色，先修正計畫或環境，再安排重做。這份輸出只記錄事先告知的演練，不是住宅安全認證、建築許可、醫療計畫或真實災害指令；實際事件一律以最新官方警報、緊急服務與現場安全為優先。`;
+    },
+  },
+  "emergency-supply-inventory-audit": {
+    intro:
+      "依台灣最新官方資料與家庭實際需求，盤點眼前真的找得到、看得到日期與狀態的物資。工具只整理證據與追蹤，不替所有家庭開立固定數量，也不把結果當成防災合格證明。",
+    fields: [
+      text("household", "家庭識別名稱", "使用家人看得懂的暱稱，不必輸入完整地址。", "我們家"),
+      {
+        name: "scope",
+        label: "本次盤點範圍",
+        type: "select",
+        options: [
+          "個人緊急避難包",
+          "日常居家防災儲備",
+          "停電與通訊備援物資",
+          "兒少、長者、身心障礙或照護支援模組",
+          "寵物避難支援模組",
+        ],
+      },
+      {
+        name: "people",
+        label: "本次涵蓋人數",
+        type: "number",
+        value: "3",
+        help: "只作盤點脈絡，工具不會用人數自動乘出通用採購量。",
+      },
+      text("supportContext", "本次納入的額外需求", "只寫嬰幼兒照護、輔具電力、感官支援或寵物運送等類別，不要輸入診斷、藥量或完整身分資料。", "寵物運送；一位家人需要處方眼鏡"),
+      { name: "reviewed", label: "實際逐項檢查日期", type: "date" },
+      { name: "nextReview", label: "下次物資複查日期", type: "date" },
+      text("authority", "本次採用的官方資料或家庭計畫", "寫來源名稱、版本與核對日期；不要只填無法追溯的網路清單。", "臺灣全民安全指引－緊急避難包，2026-08-23 核對；家庭需求清單第 2 版"),
+      {
+        name: "inventory",
+        label: "實際盤點列",
+        type: "textarea",
+        help: "每行格式：識別碼 | 類別 | 品項 | 需求／來源註記 | 實際看到的數量與單位 | 狀態／日期證據 | 存放代稱 | 已確認可用、需輪替或更換、需求待查核、所選計畫缺少；最多 20 行。",
+        value: "WATER-1 | 水與食物 | 飲用水 | 依全民安全指引與家庭計畫核定數量 | 實際看到 6 瓶；各瓶容量另存於受保護清冊 | 包裝完整；2026-08-23 核對標示日期 | 玄關避難包 | 已確認可用\nLIGHT-1 | 照明 | 頭燈與相符電池 | 全民安全指引，2026-08-23 核對 | 頭燈 1 具、相符電池 3 顆 | 已實際開機；電池包裝日期已記錄 | 玄關避難包 | 已確認可用\nPOWER-1 | 通訊與電力 | 行動電源與充電線 | 家庭失聯通訊計畫 | 行動電源 1 個、相符線材 1 條 | 實測時電量指示偏低 | 充電架 | 需輪替或更換\nCARE-1 | 個人支援 | 受保護照護計畫的物資索引 | 由本人與合適專業來源確認需求 | 已看到受保護計畫索引；細節不複製到分享稿 | 受保護計畫的複查日期尚未確認 | 個人支援袋 | 需求待查核",
+      },
+      {
+        name: "actions",
+        label: "每個未完成識別碼的追蹤",
+        type: "textarea",
+        help: "每行格式：未完成識別碼 | 下一動作 | 負責人或角色 | YYYY-MM-DD 期限。每個「需輪替或更換、需求待查核、所選計畫缺少」都要剛好一列；期限須晚於實際檢查且不晚於下次複查。",
+        value: "POWER-1 | 完整充電後以預定手機和線材實測，再記錄實際結果 | 成人甲 | 2026-09-01\nCARE-1 | 由本人向合適專業來源核對現行需求，細節仍留在受保護計畫 | 照護計畫持有人 | 2026-09-05",
+      },
+      text("storage", "受保護的盤點紀錄位置", "只寫資料夾、信封或備份代稱，不要輸入密碼、門禁碼或公開位置。", "家庭文件／防災物資／2026-08"),
+    ],
+    run: (values) => {
+      const reviewed = date(values.reviewed);
+      const nextReview = date(values.nextReview);
+      if (!values.household.trim()) return "請填寫家庭識別名稱，讓匯出後的盤點仍能辨識。";
+      if (!reviewed) return "請輸入有效的實際逐項檢查日期。";
+      if (!nextReview) return "請輸入有效的下次物資複查日期。";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (reviewed.getTime() > today.getTime())
+        return "實際逐項檢查日期不能晚於今天；只記錄真正看過的物資。";
+      if (nextReview.getTime() <= reviewed.getTime())
+        return "下次物資複查日期必須晚於實際逐項檢查日期。";
+      const people = Number(values.people);
+      if (!Number.isInteger(people) || people < 1 || people > 20)
+        return "本次涵蓋人數請輸入 1 到 20 的整數；這只作脈絡，不是數量公式。";
+      if (!values.authority.trim()) return "請填寫本次採用的官方資料或家庭計畫。";
+      if (!values.storage.trim()) return "請填寫受保護的盤點紀錄位置。";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const inventoryRows = parseRows(values.inventory);
+      if (inventoryRows.length === 0) return "請至少輸入一筆實際逐項檢查過的物資。";
+      if (inventoryRows.length > 20) return "一份盤點最多 20 筆；更多物資請依背包、容器或用途拆成另一份。";
+      const invalidInventory = inventoryRows.filter((row) => row.parts.length !== 8 || row.parts.some((part) => !part));
+      if (invalidInventory.length)
+        return `物資第 ${invalidInventory.map((row) => row.line).join("、")} 行必須完整填寫 8 個以直線分隔的欄位。`;
+      const statuses = new Set(["已確認可用", "需輪替或更換", "需求待查核", "所選計畫缺少"]);
+      const invalidStatuses = inventoryRows.filter((row) => !statuses.has(row.parts[7]));
+      if (invalidStatuses.length)
+        return `物資第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須是「已確認可用、需輪替或更換、需求待查核、所選計畫缺少」之一。`;
+      const ids = inventoryRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length)
+        return "每筆物資都要有唯一識別碼，避免追蹤工作連到錯誤品項。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "物資識別碼請使用 2 到 20 個英文字母、數字或連字號，例如 WATER-1。";
+      const unresolved = inventoryRows.filter((row) => row.parts[7] !== "已確認可用");
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 20) return "一份盤點最多 20 筆追蹤工作。";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `追蹤第 ${invalidActions.map((row) => row.line).join("、")} 行必須完整填寫 4 個以直線分隔的欄位。`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length)
+        return "每個未完成物資識別碼只能有一筆追蹤；請合併同一品項的動作。";
+      const unresolvedIds = new Set(unresolved.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...unresolvedIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length)
+        return `每個未完成物資都要建立一筆追蹤，尚缺：${missingActions.join("、")}。`;
+      const extraActions = actionIds.filter((id) => !unresolvedIds.has(id));
+      if (extraActions.length)
+        return `追蹤只能連到未完成物資；請移除或更新：${extraActions.join("、")}。`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() <= reviewed.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `追蹤第 ${invalidDueDates.map((row) => row.line).join("、")} 行需要真實的 YYYY-MM-DD 日期，而且須晚於實際檢查、不晚於下次複查。`;
+      const shareable = [values.authority, values.supportContext, values.inventory, values.actions, values.storage].join("\n");
+      if (/密碼|門禁碼|驗證碼|警報碼|完整(?:身分證|信用卡|銀行帳號|病歷)|診斷|藥物劑量|劑量|password|passcode|access code|alarm code|\bpin\s*[:：=]/i.test(shareable))
+        return "偵測到可能的密碼、門禁碼、金融識別資料或不必要醫療細節。請改寫成受保護紀錄的索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const displayStatuses = ["已確認可用", "需輪替或更換", "需求待查核", "所選計畫缺少"];
+      const statusCounts = displayStatuses.map((status) => ({
+        status,
+        count: inventoryRows.filter((row) => row.parts[7] === status).length,
+      })).filter((item) => item.count > 0);
+      const supportContext = values.supportContext.trim() || "本次未列額外支援類別；請再確認這是家庭實況，而不是漏掉兒少、長者、身心障礙、照護或寵物需求。";
+      return `${values.household.trim()}｜家庭緊急物資盤點紀錄\n盤點範圍：${values.scope}\n實際逐項檢查：${formatter.format(reviewed)}\n下次物資複查：${formatter.format(nextReview)}\n本次涵蓋：${people} 人（只作脈絡，工具未開立數量）\n額外需求：${supportContext}\n官方資料／家庭計畫：${values.authority.trim()}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（不是防災準備分數）\n\n${lines("實際盤點", inventoryRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜${row.parts[2]}｜需求／來源：${row.parts[3]}｜實際看到：${row.parts[4]}｜證據：${row.parts[5]}｜存放：${row.parts[6]}｜狀態：${row.parts[7]}`))}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["本次沒有未完成列；仍應再次核對來源、範圍與實物證據，不能只憑統計宣稱完整。"])}\n\n受保護的盤點紀錄位置：${values.storage.trim()}\n\n結案前查核：把實際觀察與所在地最新官方資料、家庭個別需求、產品標示及說明書重新比對，保存日期證據，為每個未完成識別碼指定負責人，並在實際複查後更新來源紀錄。這份輸出不會開立固定數量、不代表避難包或住家已合格，也不取代醫療、無障礙、寵物照護與即時災害指引；真實事件以最新官方警報與現場指示為準。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

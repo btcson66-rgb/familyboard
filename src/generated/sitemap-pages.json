@@ -961,9 +961,9 @@
   },
   {
     "route": "/guides/emergency-supply-inventory/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/emergency-supply-inventory/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-23",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1616,6 +1616,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/emergency-supply-inventory-audit/",
+    "alternateRoute": "/zh-tw/tools/emergency-supply-inventory-audit/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -1832,6 +1840,20 @@
     "alternateRoute": "/features/emergency-information-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/emergency-supply-inventory-audit/",
+    "alternateRoute": "/tools/emergency-supply-inventory-audit/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/emergency-supply-inventory/",
+    "alternateRoute": "/guides/emergency-supply-inventory/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {

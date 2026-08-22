@@ -7153,44 +7153,116 @@ A utility shutoff location can also function as an access detail worth protectin
 **Title tag:** `Emergency Supply Inventory: Track What You Have Before Buying More`
 **Meta description:** `Build a household emergency-supply inventory with quantities, locations, condition and review dates while following official preparedness guidance.`
 **Primary keyword concept:** emergency supply inventory
+**Cluster:** records-emergency
+**Page type:** content
+**Published date:** 2026-08-19
+**Editorial review date:** 2026-08-23
 **Depth:** verified
-**Suggested internal links:** `/guides/storm-preparation-home-checklist/`, `/guides/power-outage-home-preparedness/`, `/tools/emergency-binder-generator/`, `/features/home-inventory-tracker/`
+**Content version:** 2
+**Suggested internal links:** `/tools/emergency-supply-inventory-audit/`, `/guides/storm-preparation-home-checklist/`, `/guides/power-outage-home-preparedness/`, `/tools/emergency-binder-generator/`
 
-# Preparedness starts with knowing what's already in the house, against the actual published quantities
+# Emergency supply inventory: inspect first, compare second, buy last
 
-Generic "buy this emergency kit" lists lead to duplicate flashlights and three half-used first aid kits while a real gap — no way to purify water, no battery radio — goes unnoticed. An inventory checked against actual published guidance, not a household's memory of what preparedness "usually" involves, makes the real state visible.
+An emergency supply inventory is not a wish list and not a photograph of unopened shopping bags. It is a dated comparison between a current authoritative plan and the supplies a household physically observed: what the item is for, how much is actually present, where it can be reached, what condition or printed date was checked, and who owns each unresolved gap.
 
-## Water: the figure that matters most, and where it comes from
+That distinction prevents two common mistakes. The first is buying another generic kit while compatible batteries, current support items or a usable way to carry the load are still missing. The second is treating "we own one" as proof that an item works. A flashlight in a distant drawer, an uncharged power bank, expired supplies or a sealed package nobody has inspected may exist without being ready for the plan that depends on it.
 
-Government and public-health guidance converges on a specific number: at least one gallon of water per person per day, for drinking and sanitation combined. [Island County, Washington's emergency management office](https://www.islandcountywa.gov/485/Water-During-Emergencies) states this plainly and adds an important adjustment — anyone who is "ill, injured, pregnant, nursing, highly active, or exposed to heat should be counted twice," since their water needs roughly double the standard figure. [South Carolina's Department of Insurance](https://doi.sc.gov/964/How-To-Pack-An-Emergency-Kit) frames the same guidance slightly more conservatively for a kit specifically: two gallons per person per day (one for drinking, one for food prep and sanitation) for at least three days, with stored water rotated out every six months. The standard national baseline duration is three days; some regional emergency-management offices with higher local risk — Island County cites earthquake exposure — recommend stretching to as much as two weeks for water specifically. Check your inventory against the duration your own household has decided on, and don't forget pets: [Island County's guidance](https://www.islandcountywa.gov/485/Water-During-Emergencies) also gives a pet water figure of roughly 0.01 gallons per pound of body weight per day.
+Use this guide to build the record system. When you are standing beside the actual bags, shelves and containers, use the [emergency supply inventory audit](/tools/emergency-supply-inventory-audit/) to validate row formats and assign follow-up.
 
-## Food and the rest of the kit
+## Choose an authority before choosing quantities
 
-[Maine's Emergency Management Agency](https://www.maine.gov/mema/maine-prepares/home-preparedness/grab-go-bag) recommends planning for 3 to 7 days of supplies at home — non-perishable food with a manual can opener, a battery-powered or hand-crank radio, a flashlight, blankets, sanitation supplies, and a 7-day medication supply where applicable. [Philadelphia's Office of Emergency Management](https://www.phila.gov/departments/oem/ready-or-not/how-to-get-ready/prepare-for-an-emergency/make-a-go-bag/) adds a first-aid kit, sturdy shoes and cash in small denominations to that baseline list. Use these as the checklist to inventory against, category by category, rather than a household member's memory of "we probably have that somewhere."
+The source comes before the calculation because preparedness recommendations differ by location, hazard, expected duration, shelter plan and household needs. [Ready.gov's Build a Kit page](https://www.ready.gov/kit) is a U.S. federal starting point for basic supplies and explicitly asks households to consider their unique needs. A state, county, tribal, territorial or municipal authority may publish a different duration or hazard-specific adjustment. The household should record the page, agency and date checked rather than reducing all of that context to "online checklist."
 
-## Organize the inventory by purpose and location, not just a flat list
+People outside the United States should start with the responsible authority where they live. For example, Taiwan's National Fire Agency publishes an English [emergency evacuation kit guide](https://www.nfa.gov.tw/eng/index.php?act=article&article_id=8958&code=print&ids=1371) that distinguishes an easy-access evacuation bag, recommends household discussion around individual needs, and describes periodic checking. It is useful evidence for a Taiwan-based plan; it is not a universal rule for every country.
 
-Group entries as lighting, communication, water, food, first aid, pet supplies, batteries/power, and medications, each with a quantity and where in the house it's stored. A flat, unorganized list makes it easy to miss that the household has three flashlights in the garage and zero batteries that fit them — organizing by category surfaces mismatches like that immediately.
+Write the source at two levels. At the audit level, name the overall authority and household plan version. At the row level, write the specific requirement or decision that explains why the item is present. "Ready.gov list, checked August 23" is more traceable than "recommended." "Amount confirmed in protected care plan by its owner" is safer than copying a dosage or clinical detail into a shareable inventory.
 
-## Record expiration and condition where it's actually relevant
+## Separate the portable bag from supplies used at home
 
-Batteries, stored water and some first-aid items benefit from a periodic check; canned food generally doesn't need the same scrutiny within its shelf life. Use the manufacturer's printed date or the rotation guidance above (six months for stored water, for example) rather than inventing a review interval — and don't let medication quantities or replacement schedules in this inventory become anything beyond what a household's own clinician or pharmacist has specified.
+A bag intended to leave with one person has different constraints from supplies stored for remaining at home. It has to be reachable, carryable by the intended person and organized so essential items can be found. Home reserves may be larger and distributed across safe storage areas. Vehicle, workplace, school, caregiver, mobility-support and pet modules can each have a narrower purpose.
 
-## Restock immediately after use, not at the next scheduled review
+Do not combine every container into a single total and assume it is available in every scenario. If all lighting is stored in a garage that the household's plan says may be inaccessible, the inventory should preserve that location. If a support item belongs with one person's bag, keep that association visible. The same physical item should not silently satisfy two plans that may need it at the same time.
 
-If supplies were consumed during an actual outage, storm or trip, create a restock task the moment normal routines resume rather than waiting for an annual preparedness check. A kit that's quietly missing half its water because it was used during last winter's outage and never restocked is a kit that will fail the next time it's actually needed.
+Create one audit for one scope or container. The scope can be a portable evacuation bag, stay-at-home reserve, power-outage module, accessibility or caregiver module, or pet module. A short, honest audit is easier to recheck than one giant document that nobody can reconcile with the shelves.
 
-**Contextual CTA:** Inventory first, buy second. Knowing what you already have is the easiest way to make preparedness spending more deliberate.
+## Give every item a stable identifier
+
+A stable ID connects the physical observation to its corrective action. Use a short code such as `WATER-1`, `LIGHT-1` or `PET-2`, label the container if appropriate, and keep that ID when the item is replaced. The ID is not a serial number and should not contain personal data. It exists so "charge the backup battery" cannot be closed against the wrong device.
+
+Each inventory row should keep eight facts together:
+
+1. Stable item ID
+2. Category
+3. Item name
+4. Requirement or source note
+5. Quantity and unit actually observed
+6. Condition or date evidence
+7. Storage label
+8. Status
+
+The item name and category answer what it is. The requirement note answers why the household expects it. The observed amount answers what was physically present, including a unit instead of a bare number. The evidence states what was checked: printed date, seal, compatibility, charge indicator, visible damage, functional test or another item-specific fact. The storage label tells the household where to inspect it again without publishing a full address.
+
+## Record quantities as observations, not invented prescriptions
+
+"Six" without a unit is not an inventory. Six bottles, six liters and six cases are different facts. Record the packaging and unit visible on the item or in a protected detailed sheet. Then compare that observation with the current authority and household plan. FamilyBoard should not infer that a count is sufficient just because it is greater than zero.
+
+This guide deliberately does not publish one universal water, food, medicine or battery formula. The correct comparison may depend on local guidance, household size, climate, hazard, evacuation versus sheltering, product labeling, accessibility equipment, pets and professional care plans. A source can change after this article is published. Record what it says when reviewed, link to it, and revisit the decision rather than copying a number into permanent site text.
+
+## Condition evidence is item-specific
+
+Different supplies need different evidence. For packaged food or water, inspect packaging and the manufacturer's printed information. For a light, radio, cable or power bank, confirm compatibility and perform the safe functional check described by the manufacturer. For clothing, footwear, blankets or hygiene supplies, inspect size, damage, moisture and whether the intended person can use them. For documents, record that a protected copy or index exists without exposing the document number.
+
+"Looks fine" is rarely enough. A better note is "seal intact; printed date checked August 23" or "headlamp powered on with the batteries stored beside it." The inventory does not certify product safety. Damage, recall questions, storage conditions and specialized equipment should be handled through the manufacturer, responsible authority or qualified professional.
+
+## Four statuses preserve uncertainty
+
+Use `Ready and observed` only when the row's current requirement, physical item, quantity/unit, location and evidence were all checked for this audit. It is still not a guarantee that the item will be available during an emergency.
+
+Use `Rotate or replace` when the household has the item but its date, charge, condition, fit or compatibility requires action. Use `Verify requirement` when the authoritative amount, specification or personal need is not current. Use `Missing from chosen plan` when the selected plan requires an item or function that was not physically found.
+
+Status counts are not a readiness score. Ten easy rows marked ready do not outweigh one unresolved item that the household's plan treats as essential. Never divide ready rows by total rows and publish a percentage. Prioritization belongs to the household's authoritative plan and actual risks.
+
+## Every unresolved ID needs an owner and due date
+
+An inventory without follow-up turns gaps into decoration. For every row not marked ready, create exactly one linked action with the same ID, a concrete next step, an owner or role and a date after the physical review but no later than the next inventory review.
+
+"Buy supplies" is not concrete. `POWER-1 | fully charge and test with the intended phone and cable, then record the result | Adult 1 | 2026-09-01` can be verified. If the need itself is uncertain, the action should ask the responsible person or authority to confirm it before anyone purchases an arbitrary substitute.
+
+Closing an action does not mean editing the old observation into a better one. Preserve the original audit, perform the action, physically inspect again and create a new dated result. That history distinguishes a plan from work that actually occurred.
+
+## Build around accessibility, care and pet needs without exposing details
+
+Ready.gov maintains separate planning information for [people with disabilities](https://www.ready.gov/disability) and [pets](https://www.ready.gov/pets), which is a useful reminder that a generic kit cannot represent every household. Include an additional-needs category in the audit, then link to a protected person-owned, clinician-approved, equipment-specific or veterinary plan where appropriate.
+
+The shareable inventory should not reproduce diagnoses, medication doses, medical records, full identity numbers or precise daily routines. A row can say "care-plan supply pointer; requirement awaiting confirmation by the person and qualified source." That makes the missing decision visible without turning a general household document into an unsafe clinical summary.
+
+For powered accessibility or medical equipment, do not improvise charging, shutdown, transport or backup-power instructions. Use the device manufacturer, utility program, responsible professional and the person's agreed plan. For pets, record transport, food, water, identification and care-plan references according to current official and veterinary guidance; do not calculate treatment or medication in a browser tool.
+
+## Review on a calendar and after real use
+
+Set a next review date based on the source, printed dates, household plan and local risk—not an arbitrary annual ritual. Some authorities recommend a recurring interval; individual products may need earlier attention. A single inventory can contain several item-specific dates, so the next full review is only the outer checkpoint.
+
+Also trigger a review after any real use, household change, move, new pet, new accessibility need, device replacement, source update or transfer between containers. A power outage that consumed supplies is not evidence the kit worked forever; it is a restock event. A new household member changes the plan even if every package remains unopened.
+
+## Privacy and commercial independence
+
+The browser audit runs locally. FamilyBoard does not receive the entries. Downloads, printed pages and saved app records become copies the user controls. Use a household nickname, container labels and protected-record pointers; keep access codes, exact vulnerable-person locations, full document numbers, financial details and private care information elsewhere.
+
+An affiliate product card, if introduced later, must never determine whether a row is required, ready or preferred. The authority and household plan define the need; the inventory establishes the gap; only then may a user evaluate products. Any commercial relationship must be disclosed, alternatives must remain possible, and a click cannot become evidence that the item is suitable.
+
+**Contextual CTA:** Take the current plan to the actual storage location, run the [emergency supply inventory audit](/tools/emergency-supply-inventory-audit/), and close every unresolved ID through a new physical check.
 
 **FAQ:**
-- Q: How much water should a household store per person?
-  A: At least one gallon per person per day is the widely used baseline, covering both drinking and sanitation, for a minimum of three days. Anyone who is ill, pregnant, nursing, highly active or exposed to heat should be counted for roughly double that amount, and pets need water too — figure roughly 0.01 gallons per pound of body weight per day.
-- Q: How many days of food and water should an emergency kit cover?
-  A: Three days is the standard national baseline duration cited across state and local emergency-management guidance, though some agencies in higher-risk regions recommend stretching water storage specifically to as much as two weeks. Check your own household's plan against your region's actual risk profile rather than assuming one figure fits everywhere.
-- Q: How often should stored emergency water be replaced?
-  A: Roughly every six months, per guidance from South Carolina's Department of Insurance emergency-kit checklist, since stored water quality can degrade over time even in a sealed container. Rotating it on a fixed schedule is simpler than guessing whether a particular container is still good.
-- Q: What belongs in an emergency kit besides water and food?
-  A: A battery-powered or hand-crank radio, a flashlight, a first-aid kit, blankets, sanitation supplies, a manual can opener, and — where applicable — a several-day supply of any regular medications. State emergency-management checklists consistently include these as the baseline beyond water and food.
+- Q: Does a high ready count mean the emergency kit is complete?
+  A: No. Counts summarize the rows in one audit; they do not weight risk, validate the chosen authority or certify availability. One essential unresolved requirement can matter more than many easy ready rows. Review the actual plan and close each unresolved ID.
+- Q: Should the inventory tool calculate universal quantities from household size?
+  A: No. Household size is useful context, but quantities can also depend on location, hazard, duration, evacuation versus sheltering, climate, accessibility, pets, product labels and qualified care plans. Record the current authoritative requirement and compare it with observed units.
+- Q: What is the difference between an emergency supply inventory and a shopping list?
+  A: An inventory records what was physically seen, where it is stored, its condition and the source used for comparison. A shopping list is only one possible action after a verified gap. Repairing, charging, rotating, relocating or confirming a requirement may be the correct next step instead.
+- Q: Can I store medication details in the inventory?
+  A: Keep the shareable audit minimal. It can point to a protected, current plan and record that the relevant person or qualified source must confirm a requirement. Do not copy diagnoses, doses or complete medical records into a general household inventory.
+- Q: When should an emergency supply inventory be reviewed?
+  A: Use the interval in current official guidance, the household plan and item-specific printed or manufacturer information. Review sooner after real use, a household change, a move, a new support need, damaged packaging, equipment replacement or a source update.
 
 ---
 
@@ -11269,6 +11341,151 @@ In a real emergency, stop using the generator. Follow current official alerts, c
   A: Not necessarily. Duration is an observation, not a universal score. Scenario, dwelling, official procedure, participant abilities and intentionally simulated steps all affect time. Review gaps and follow the authoritative plan instead of optimizing only a number.
 - Q: What belongs in the people, caregiver and pet support section?
   A: Record the support scenario, primary and backup roles, and what was observed. Keep diagnoses, complete medical records, medication doses and other sensitive details in protected plans maintained by the appropriate person and professional source.
+
+---
+
+## Page 203 — Emergency Supply Inventory Audit
+**Slug:** `/tools/emergency-supply-inventory-audit/`
+**Primary intent:** audit household emergency supplies against current guidance and assign every gap
+**Title tag:** `Emergency Supply Inventory Audit | Inspect, Verify and Assign Gaps`
+**Meta description:** `Audit emergency supplies in your browser with source notes, observed units, condition evidence, four honest statuses and owner-linked follow-up.`
+**Primary keyword concept:** emergency supply inventory audit
+**Cluster:** tools
+**Page type:** tool
+**Published date:** 2026-08-23
+**Editorial review date:** 2026-08-23
+**Content version:** 1
+**Suggested internal links:** `/guides/emergency-supply-inventory/`, `/guides/emergency-binder/`, `/guides/power-outage-home-preparedness/`, `/features/home-inventory-tracker/`
+
+# Emergency supply inventory audit
+
+This free browser tool creates a dated evidence record of emergency supplies a household physically inspected. Each row connects a stable ID, category, item, current requirement source, observed quantity and unit, condition or date evidence, storage label and one of four statuses. Any item that is not ready must have one owner-linked action due before the next full review.
+
+The audit does not prescribe how much water, food, medication, battery capacity or pet supply every household needs. It cannot approve a go-bag, predict a disaster, test product safety or guarantee that supplies will be reachable later. Start with the responsible local authority and household-specific plans; use the tool to compare those requirements with what is actually present.
+
+**Standing beside the supplies? [Jump to the audit tool](#tool-heading).**
+
+## Use one audit for one practical scope
+
+The scope selector separates five jobs that are often confused: a portable evacuation or go-bag inventory, stay-at-home reserves, power-outage support, an accessibility/caregiver/child module, and a pet evacuation module. These may overlap, but they should not silently share the same physical item.
+
+A phone battery stored in a bedroom may support a power-outage plan but not a bag kept by the exit. A large water reserve may be appropriate for sheltering at home but impossible for the intended person to carry. A pet carrier, care item or mobility-equipment accessory may belong to one named support module. Separate audits preserve those location and use constraints.
+
+If one container needs more than twenty rows, split it by module or purpose. The row cap is intentional: a person should be able to reconcile every line with a visible item and finish every follow-up. An enormous pasted checklist can look complete while nobody has touched the supplies.
+
+## Record household size as context, not a multiplier
+
+The tool accepts one to twenty people covered by the review. It prints that number beside the audit so a future reviewer knows the scale of the plan. It does not automatically multiply a universal supply allowance.
+
+Official recommendations vary by place and circumstance. [Ready.gov's emergency supply list](https://www.ready.gov/kit) provides a U.S. federal starting point and tells households to account for individual needs. Local authorities may publish hazard-specific or longer-duration guidance. Product labels, climate, evacuation method, pets, powered equipment and qualified care plans can change what is appropriate. A simple `people × fixed amount` calculation would hide those decisions.
+
+Use the additional-needs field for categories only: infant care, mobility-device power, sensory support, prescription glasses or pet transport. Do not enter a diagnosis, dosage, record number or full daily routine. The generated audit should point to the protected source that owns those details.
+
+## Name the authority and the date you checked it
+
+The current guidance field makes the decision retrievable. Include the agency or household plan, version if available and date checked. For example: `Ready.gov emergency supply list checked 2026-08-23; county preparedness page checked the same day.` If the household uses a building plan, evacuation order zone, utility support program or clinician-approved equipment plan, refer to the applicable protected record as well.
+
+Do not write only `FEMA`, `government website` or `internet list`. A reviewer needs enough information to locate the source again and see whether it changed. If two current authorities appear to differ, do not average their figures in the tool. Create a `Verify requirement` row and assign someone to confirm which guidance governs the household.
+
+Users in other jurisdictions should start with their own authority. Taiwan's National Fire Agency, for example, publishes an English [emergency evacuation kit guide](https://www.nfa.gov.tw/eng/index.php?act=article&article_id=8958&code=print&ids=1371) about easy-access bags, household discussion, individual needs and periodic checking. It is appropriate evidence for a Taiwan-based inventory and a useful example of why location belongs in the source record.
+
+## Eight columns preserve the chain from requirement to observation
+
+Every inventory line uses this format:
+
+`ID | category | item | requirement/source note | quantity and unit actually observed | condition/date evidence | storage label | status`
+
+The stable ID is two to twenty letters, numbers or hyphens, such as `WATER-1`. It must be unique in the audit. Use a household code, not a product serial number or personal identifier. The same ID appears in follow-up, preventing an action from drifting to the wrong item.
+
+Category and item name make the list readable. A category may be water and food, lighting, communication and power, sanitation, weather protection, documents, tools, child support, accessibility support or pet care. Avoid vague names such as `miscellaneous emergency things` because they cannot be inspected consistently next time.
+
+The requirement/source note explains why the row exists. It might cite a local authority item, a household communication plan, manufacturer requirement or protected person-owned support plan. This is separate from the observed amount. The household can therefore preserve a gap without changing the target to match what happens to be on the shelf.
+
+## The observed amount needs both a number and a unit
+
+The tool treats the observed amount as text because real packages use different units, but the household still needs to write the unit. `6 sealed bottles; label units in protected inventory` is evidence. `6` is not. For batteries, record the count and type. For a power bank, record the device and compatible cable actually present. For a radio or headlamp, record the item and matching power source rather than counting the main device alone.
+
+Do not convert the observation into `enough` inside this column. Sufficiency belongs to the requirement comparison and status. If a current source says an amount and the household sees less, preserve both facts. If the source is unclear, choose `Verify requirement`; do not invent a number that makes the row easy to close.
+
+## Condition evidence should describe the check you performed
+
+Condition evidence is not a promise that a product is safe. It records the observable basis for the status: seal intact, printed date checked, visible damage absent, device powered on, cable matched, battery package inspected, size confirmed for the intended wearer, or protected document index located.
+
+Follow the manufacturer for functional checks and storage. Do not open, taste, energize, charge, move or test an item in a way that conflicts with product instructions or creates a hazard. A web form cannot assess contamination, recalls, electrical damage, medical-equipment reliability or structural safety. Assign those questions to the manufacturer, responsible authority or qualified professional.
+
+The storage label should let intended household members find the container, such as `hall closet go-bag` or `protected support pouch`. Avoid a full public address, lockbox code or precise vulnerable-person location. If an item must be stored under controlled conditions, link to the protected plan rather than publishing the control details.
+
+## Use four statuses without turning them into a score
+
+`Ready and observed` means the row was physically found and its current source, amount/unit, evidence and storage were checked. It does not certify the product or guarantee future availability.
+
+`Rotate or replace` means an item is present but needs action because of a printed date, charge, condition, fit, compatibility or another observed reason. `Verify requirement` means the household still needs an authoritative answer about the item or amount. `Missing from chosen plan` means the selected plan expects the function or item, but it was not found within this audit's scope.
+
+The output counts each status. That count is a workload summary, not a preparedness percentage. A single missing communication method or unresolved support requirement can matter more than several ready stationery items. The tool will not label a household safe, compliant, prepared or complete.
+
+## Unresolved rows cannot disappear without follow-up
+
+Every row marked `Rotate or replace`, `Verify requirement` or `Missing from chosen plan` must have exactly one follow-up line:
+
+`unresolved ID | next action | owner or role | due date YYYY-MM-DD`
+
+The ID must exist in the inventory and be unresolved. Duplicate action IDs are rejected. An action for a ready row is rejected because it means the row status and next step disagree. Due dates must be real calendar dates after the physical review and no later than the next inventory review.
+
+This structure catches the gap that ordinary checklists miss. `POWER-1 | fully charge and test with the intended phone and cable, then record the result | Adult 1 | 2026-09-01` has a checkable outcome. `CARE-1 | ask the person and qualified source to confirm the current requirement; retain details in the protected care plan | care-plan owner | 2026-09-05` keeps the decision with the right source.
+
+The browser validates that every unresolved ID has an action before producing the summary. It does not verify that the named person agreed, that a purchase was made or that the action later succeeded. Close the task only after another physical observation.
+
+## A worked audit row
+
+Consider a household that physically checks a go-bag and finds one headlamp with matching batteries. A useful row is:
+
+`LIGHT-1 | Lighting | Headlamp and matching batteries | Ready.gov list checked 2026-08-23 | 1 headlamp and 3 matching batteries | Function tested; battery package date recorded | Hall closet go-bag | Ready and observed`
+
+The row says what was checked and where. It does not state that three batteries are a universal requirement or that the light will work indefinitely.
+
+Now consider a power bank with a low indicator:
+
+`POWER-1 | Communication and power | Charged power bank and cable | Household communication plan | 1 power bank and 1 cable | Charge indicator low during physical check | Charging shelf | Rotate or replace`
+
+That status creates a required action. After charging and testing, preserve the first audit and perform a new dated review. Editing the old row to `Ready and observed` would erase evidence that the device was not ready on the original date.
+
+## Accessibility, care and pet rows use pointers, not private files
+
+Ready.gov provides dedicated preparedness pages for [people with disabilities](https://www.ready.gov/disability) and [pets](https://www.ready.gov/pets). Use them alongside local and person-specific sources. The audit can track that a support plan exists, a transport item was physically seen, or a requirement needs confirmation. It should not contain a diagnosis, complete medication list, dosage, identity document number or detailed routine.
+
+If powered medical or accessibility equipment is involved, do not let the tool generate a backup-power method. Record the manufacturer, utility program or professional-plan pointer and assign a verification action. If a pet has treatment or transport needs, keep veterinary instructions in the protected care plan and use the audit for container, supplies and ownership.
+
+## Physical review dates and triggers
+
+The physical review date cannot be in the future. A future date would turn a plan into an apparent completed record after export. The next review must be later. Follow-up deadlines sit between those two dates so no unresolved row can be postponed beyond the planned checkpoint.
+
+A scheduled review is not the only trigger. Reinspect after real use, relocation, damaged packaging, a household member or pet joining or leaving, changed support needs, equipment replacement, updated authority guidance, or a new hazard plan. Update the official or household source before updating the inventory target.
+
+## Privacy, downloads and real-event boundary
+
+Entries remain in the current browser while the tool runs. FamilyBoard does not receive them. Copying, printing, downloading or saving to the local app creates additional copies under the user's control. Review those copies before sharing and keep them in the protected location named in the audit.
+
+The tool rejects common labels for passwords, access codes, financial identifiers and unnecessary medical details. No filter can identify every secret. Use container names and document pointers instead of codes, full addresses, account numbers or private care details.
+
+During a real emergency, stop using this page and follow current official alerts, emergency services and on-scene instructions. An earlier inventory cannot prove that an item, road, shelter, utility, contact or storage location remains available.
+
+## Commercial recommendations come after the verified gap
+
+An inventory should not start with a product carousel. If FamilyBoard later displays clearly disclosed affiliate suggestions, they must remain outside the input and result, never cover the tool, and never change a status. A product is considered only after a current authority and physical audit establish the actual gap. Users must still compare specifications, fit, compatibility, seller terms and non-affiliate alternatives.
+
+**Contextual CTA:** Inspect one real container now, generate the audit, then assign and physically recheck every unresolved ID before calling the work closed.
+
+**FAQ:**
+- Q: Does the audit tell me exactly how much water or food to buy?
+  A: No. It records the requirement source and what was physically observed. Use current local authority guidance and household-specific plans for quantities; the tool deliberately avoids a universal formula that could be wrong for the location, hazard or person.
+- Q: Why does each supply need a unique ID?
+  A: The ID connects the observed row to exactly one follow-up action and future review. It prevents a task such as “replace battery” from being closed against the wrong device. Use a short household code, not a serial number or personal identifier.
+- Q: What happens if an unresolved item has no action?
+  A: The generator stops and lists the missing IDs. Every Rotate or replace, Verify requirement, or Missing from chosen plan row needs one owner, one concrete action and one due date before the next review.
+- Q: Is Ready and observed the same as approved or safe?
+  A: No. It means the listed evidence was physically checked for this audit. It is not a product certification, professional inspection, preparedness score or guarantee that the item will remain available during a real event.
+- Q: Can affiliate recommendations determine which items the tool marks missing?
+  A: No. The chosen authority and household plan define the requirement, and the physical audit establishes the observation. Any future affiliate suggestion must be disclosed, separated from the audit and optional; a commercial relationship cannot create a need or change a status.
 
 ---
 

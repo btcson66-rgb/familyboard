@@ -57,6 +57,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/home-emergency-drill-record-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-emergency-drill-record-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-evacuation-information/</loc>",
+      "<loc>https://familyboard.win/tools/emergency-supply-inventory-audit/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/emergency-supply-inventory-audit/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/emergency-supply-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -143,6 +146,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Four statuses prevent false completion",
       "not a building inspection",
+    ],
+  },
+  {
+    path: "/tools/emergency-supply-inventory-audit/",
+    require: [
+      "Emergency Supply Inventory Audit",
+      'hreflang="zh-TW"',
+      "Unresolved rows cannot disappear without follow-up",
+      "does not prescribe",
     ],
   },
   {
@@ -272,12 +284,30 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/emergency-supply-inventory-audit/",
+    require: [
+      "家庭緊急物資盤點表",
+      'hreflang="en"',
+      "四種狀態不會合成防災分數",
+      "未來商品推薦不能反過來創造需求",
+    ],
+  },
+  {
     path: "/zh-tw/guides/home-evacuation-information/",
     require: [
       "家庭避難計畫怎麼做",
       'hreflang="en"',
       "避難收容處所是動態服務",
       "全民防災 e 點通",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/emergency-supply-inventory/",
+    require: [
+      "緊急避難包清單怎麼整理",
+      'hreflang="en"',
+      "先分清楚",
+      "臺灣全民安全指引",
     ],
   },
   {

@@ -14,6 +14,8 @@ lastReviewedAt: "2026-08-22"
 related:
   - "/zh-tw/guides/home-evacuation-information/"
   - "/zh-tw/tools/home-emergency-drill-record-generator/"
+  - "/zh-tw/tools/emergency-supply-inventory-audit/"
+  - "/zh-tw/guides/emergency-supply-inventory/"
   - "/zh-tw/tools/emergency-contact-sheet-generator/"
   - "/zh-tw/features/emergency-information-organizer/"
   - "/zh-tw/features/household-documents-organizer/"
@@ -139,4 +141,4 @@ faq:
 
 不夠可靠。大規模災害可能停電、斷網或手機沒電；應準備受控的紙本或離線有限副本，標版本與複查日，並演練家人能否在沒有主要整理人的情況下找到。
 
-**下一步：** 產生兩層索引後，和全家實際核對集合、聯絡與受保護位置，使用[全民防災 e 點通](https://bear.emic.gov.tw/)重新查附近資訊；再依[家庭避難計畫教學](/zh-tw/guides/home-evacuation-information/)完成一份最小必要的離線防災卡，並用[家庭防災演練紀錄表](/zh-tw/tools/home-emergency-drill-record-generator/)保留實際走讀的缺口與重做日期。
+**下一步：** 產生兩層索引後，和全家實際核對集合、聯絡與受保護位置，使用[全民防災 e 點通](https://bear.emic.gov.tw/)重新查附近資訊；再依[家庭避難計畫教學](/zh-tw/guides/home-evacuation-information/)完成最小必要的離線防災卡，用[家庭緊急物資盤點表](/zh-tw/tools/emergency-supply-inventory-audit/)核對實物，並以[家庭防災演練紀錄表](/zh-tw/tools/home-emergency-drill-record-generator/)保留實際走讀的缺口與重做日期。
