@@ -63,6 +63,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/features/maintenance-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/warranty-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/household-subscription-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/household-calendar/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/emergency-information-organizer/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/family-display-mode/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/how-to-track-product-warranties/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-household-subscriptions/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/household-documents-organizer/</loc>",
@@ -319,6 +322,33 @@ const checks = [
       'hreflang="en"',
       "年化費用怎麼算",
       "不會自動新增獨立的取消日期",
+    ],
+  },
+  {
+    path: "/zh-tw/features/household-calendar/",
+    require: [
+      "家庭行事曆 App 教學",
+      'hreflang="en"',
+      "結束時間必須晚於開始時間",
+      "跨裝置不是同步",
+    ],
+  },
+  {
+    path: "/zh-tw/features/emergency-information-organizer/",
+    require: [
+      "家庭緊急聯絡人 App 教學",
+      'hreflang="en"',
+      "敏感標記只會讓卡片顯示私密狀態",
+      "完整 JSON 備份",
+    ],
+  },
+  {
+    path: "/zh-tw/features/family-display-mode/",
+    require: [
+      "舊平板家庭電子看板教學",
+      'hreflang="en"',
+      "每分鐘重新整理",
+      "不是跨裝置同步",
     ],
   },
   {

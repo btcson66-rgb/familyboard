@@ -3,6 +3,8 @@ import {
   addMonthsClamped,
   annualizedActiveTotalsByCurrency,
   annualizedCost,
+  eventOccursOnLocalDate,
+  eventRangeIsValid,
   localIsoDate,
   sortByOptionalIsoDate,
   sortUpcomingThenPastIsoDate,
@@ -45,6 +47,31 @@ describe("date and cost rules", () => {
     expect(warrantyReviewDate("2026-12-31", 30)).toBe("2026-12-01"));
   it("formats the browser's local calendar date instead of its UTC date", () =>
     expect(localIsoDate(new Date(2026, 7, 22, 23, 59))).toBe("2026-08-22"));
+  it("rejects an event ending at or before its start", () => {
+    expect(eventRangeIsValid("2026-08-22T18:00", "")).toBe(true);
+    expect(eventRangeIsValid("2026-08-22T18:00", "2026-08-22T19:00")).toBe(true);
+    expect(eventRangeIsValid("2026-08-22T18:00", "2026-08-22T18:00")).toBe(false);
+    expect(eventRangeIsValid("2026-08-22T18:00", "2026-08-22T17:59")).toBe(false);
+  });
+  it("includes an overnight event on both local calendar dates", () => {
+    expect(
+      eventOccursOnLocalDate(
+        "2026-08-22T23:00",
+        "2026-08-23T01:00",
+        "2026-08-22",
+      ),
+    ).toBe(true);
+    expect(
+      eventOccursOnLocalDate(
+        "2026-08-22T23:00",
+        "2026-08-23T01:00",
+        "2026-08-23",
+      ),
+    ).toBe(true);
+    expect(
+      eventOccursOnLocalDate("2026-08-22T23:00", "", "2026-08-23"),
+    ).toBe(false);
+  });
   it("sorts dated records first without mutating the original list", () => {
     const records = [
       { id: "undated", dueDate: "" },

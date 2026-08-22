@@ -90,6 +90,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/features/maintenance-tracker/",
     "/zh-tw/features/warranty-tracker/",
     "/zh-tw/features/household-subscription-tracker/",
+    "/zh-tw/features/household-calendar/",
+    "/zh-tw/features/emergency-information-organizer/",
+    "/zh-tw/features/family-display-mode/",
     "/zh-tw/guides/how-to-track-product-warranties/",
     "/zh-tw/guides/organize-household-subscriptions/",
     "/zh-tw/guides/household-documents-organizer/",
@@ -214,6 +217,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/features/household-subscription-tracker/",
       alternate: "/features/household-subscription-tracker/",
       heading: "家庭訂閱管理 App 教學：費用之外，更要知道誰負責與何時決定",
+    },
+    {
+      route: "/zh-tw/features/household-calendar/",
+      alternate: "/features/household-calendar/",
+      heading: "家庭行事曆 App 教學：把到府服務與家庭時段放在真正需要的位置",
+    },
+    {
+      route: "/zh-tw/features/emergency-information-organizer/",
+      alternate: "/features/emergency-information-organizer/",
+      heading: "家庭緊急聯絡人 App 教學：先讓資料找得到，再決定哪些可以交給別人",
+    },
+    {
+      route: "/zh-tw/features/family-display-mode/",
+      alternate: "/features/family-display-mode/",
+      heading: "舊平板家庭電子看板教學：先釐清本機資料，再把共用畫面放上牆",
     },
     {
       route: "/zh-tw/guides/how-to-track-product-warranties/",
@@ -493,6 +511,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "https://familyboard.win/zh-tw/features/household-subscription-tracker/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/household-calendar/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/emergency-information-organizer/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/family-display-mode/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/how-to-track-product-warranties/",
   );
   expect(sitemap).toContain(
@@ -566,9 +593,24 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByLabel("家庭責任").fill("較早任務");
   await page.getByLabel("到期日").fill("2026-09-01");
   await page.getByRole("button", { name: "新增紀錄" }).first().click();
+  const localToday = await page.evaluate(() => {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  });
   await page.getByLabel("事件名稱").fill("設備到府測試");
-  await page.getByLabel("開始日期").fill("2026-08-22T18:00");
-  await page.getByLabel("截止日期").fill("2026-08-22T19:00");
+  await page.getByLabel("開始日期").fill(`${localToday}T18:00`);
+  await page.getByLabel("截止日期").fill(`${localToday}T17:00`);
+  await page.getByRole("button", { name: "新增紀錄" }).last().click();
+  await expect(page.getByRole("alert")).toHaveText(
+    "結束時間必須晚於開始時間。",
+  );
+  await expect(
+    page.locator(".app-card").filter({ hasText: "設備到府測試" }),
+  ).toHaveCount(0);
+  await page.getByLabel("截止日期").fill(`${localToday}T19:00`);
   await page.getByLabel("備註", { exact: true }).last().fill("事件備註可見");
   await page.getByRole("button", { name: "新增紀錄" }).last().click();
   const eventCard = page.locator(".app-card").filter({ hasText: "設備到府測試" });
@@ -632,6 +674,37 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(page.locator(".notice")).toContainText("USD 12");
   await expect(twdCard).toContainText("已取消");
 
+  await page.getByRole("button", { name: "緊急聯絡" }).click();
+  await expect(
+    page.getByText(
+      "敏感聯絡人仍會出現在這個私密分頁與完整備份，但不會進入交接摘要；家庭看板完全不顯示聯絡人。",
+    ),
+  ).toBeVisible();
+  await page.getByLabel("人員或服務單位").fill("測試管理室");
+  await page.getByLabel("分類").fill("社區");
+  await page.getByLabel("電話").fill("02-1234-5678");
+  await page.getByLabel("電子郵件").fill("desk@example.test");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  const shareableContact = page.locator(".app-card").filter({ hasText: "測試管理室" });
+  await expect(shareableContact).toContainText("可分享");
+  await expect(shareableContact.getByRole("link", { name: "02-1234-5678" })).toHaveAttribute(
+    "href",
+    "tel:0212345678",
+  );
+  await expect(shareableContact.getByRole("link", { name: "desk@example.test" })).toHaveAttribute(
+    "href",
+    "mailto:desk@example.test",
+  );
+  await page.getByLabel("人員或服務單位").fill("私人醫療窗口");
+  await page.getByLabel("分類").fill("家庭");
+  await page.getByLabel("電話").fill("0912-345-678");
+  await page.getByLabel("操作備註").fill("不可交接的私人備註");
+  await page.getByLabel("顯示範圍").selectOption("true");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  await expect(
+    page.locator(".app-card").filter({ hasText: "私人醫療窗口" }),
+  ).toContainText("私密");
+
   await page.getByRole("button", { name: "文件" }).click();
   await page.getByLabel("紀錄名稱").fill("測試保單");
   await page.getByLabel("原始文件存放位置").fill("加密雲端/保險");
@@ -660,6 +733,8 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(handoffSheet).toContainText("測試冰箱");
   await expect(handoffSheet).toContainText("複查日： 2027年1月15日");
   await expect(handoffSheet).not.toContainText("內含敏感保單編號");
+  await expect(handoffSheet).toContainText("測試管理室");
+  await expect(handoffSheet).not.toContainText("私人醫療窗口");
   await page.getByLabel("設定檔名稱").fill("長期照護");
   await page.getByLabel("用途").fill("長期交班測試");
   await page.getByLabel("包含保養工作").selectOption("no");
@@ -672,6 +747,19 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     .selectOption({ label: "長期照護 — 長期交班測試" });
   await expect(page.getByText("設定檔：長期照護 ·")).toBeVisible();
   await expect(handoffSheet).not.toContainText("加密雲端/保險");
+  await page.getByRole("button", { name: "看板", exact: true }).click();
+  const displayTasks = page.locator(".app-card").filter({ hasText: "家庭任務" });
+  await expect(displayTasks.locator("strong")).toHaveText([
+    "較早任務",
+    "較晚任務",
+  ]);
+  await expect(page.locator(".display-mode")).toContainText("設備到府測試");
+  await expect(page.locator(".display-mode")).not.toContainText("事件備註可見");
+  await expect(page.locator(".display-mode")).not.toContainText("測試管理室");
+  await expect(page.locator(".display-mode")).not.toContainText("私人醫療窗口");
+  await expect(page.locator(".display-mode")).toContainText(
+    "這個看板不顯示聯絡人、詳細備註與其他私密紀錄類型；任務與事件標題仍會顯示。",
+  );
   await page.getByRole("button", { name: "設定" }).click();
   await expect(page.getByRole("heading", { name: "匯出備份" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "家庭資料總表" })).toBeVisible();

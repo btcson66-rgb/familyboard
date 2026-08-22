@@ -12,6 +12,8 @@ import "./app.css";
 import {
   addMonthsClamped,
   annualizedActiveTotalsByCurrency,
+  eventOccursOnLocalDate,
+  eventRangeIsValid,
   localIsoDate,
   sortByOptionalIsoDate,
   sortUpcomingThenPastIsoDate,
@@ -192,11 +194,13 @@ function QuickForm({
   title,
   fields,
   submitLabel = "Add record",
+  validate,
   onSubmit,
 }: {
   title: string;
   fields: Input[];
   submitLabel?: string;
+  validate?: (values: Record<string, string>) => string;
   onSubmit: (values: Record<string, string>) => Promise<void>;
 }) {
   const initial = useMemo(
@@ -211,6 +215,7 @@ function QuickForm({
   );
   const [values, setValues] = useState<Record<string, string>>(initial);
   const [busy, setBusy] = useState(false);
+  const [validationError, setValidationError] = useState("");
   return (
     <Localize>
     <details className="app-form-shell" open>
@@ -222,7 +227,13 @@ function QuickForm({
       className="app-form"
       onSubmit={async (event) => {
         event.preventDefault();
+        const nextValidationError = validate?.(values) || "";
+        if (nextValidationError) {
+          setValidationError(nextValidationError);
+          return;
+        }
         setBusy(true);
+        setValidationError("");
         try {
           await onSubmit(values);
           setValues(initial);
@@ -240,9 +251,10 @@ function QuickForm({
               <select
                 value={values[field.name]}
                 required={field.required}
-                onChange={(event) =>
-                  setValues({ ...values, [field.name]: event.target.value })
-                }
+                onChange={(event) => {
+                  setValidationError("");
+                  setValues({ ...values, [field.name]: event.target.value });
+                }}
               >
                 {field.options.map((option) => (
                   <option key={option} value={option}>
@@ -254,9 +266,10 @@ function QuickForm({
               <textarea
                 value={values[field.name]}
                 required={field.required}
-                onChange={(event) =>
-                  setValues({ ...values, [field.name]: event.target.value })
-                }
+                onChange={(event) => {
+                  setValidationError("");
+                  setValues({ ...values, [field.name]: event.target.value });
+                }}
               />
             ) : (
               <input
@@ -264,15 +277,19 @@ function QuickForm({
                 value={values[field.name]}
                 required={field.required}
                 min={field.min}
-                onChange={(event) =>
-                  setValues({ ...values, [field.name]: event.target.value })
-                }
+                onChange={(event) => {
+                  setValidationError("");
+                  setValues({ ...values, [field.name]: event.target.value });
+                }}
               />
             )}
             {field.help && <span className="help">{field.help}</span>}
           </label>
         ))}
       </div>
+      {validationError && (
+        <p className="app-error" role="alert">{validationError}</p>
+      )}
       <button disabled={busy} type="submit">
         {busy ? "Saving…" : submitLabel}
       </button>
@@ -1031,7 +1048,7 @@ function FamilyAppBody() {
                     name: "sensitive",
                     label: "Visibility",
                     options: ["false", "true"],
-                    help: "Sensitive contacts are excluded from shared display and handoff by default.",
+                    help: "Sensitive contacts remain visible in this private tab and backups, but are excluded from handoff. Family display shows no contacts.",
                   },
                 ]}
                 onSubmit={(v) =>
@@ -1045,23 +1062,45 @@ function FamilyAppBody() {
                 }
               />
               <div className="app-grid">
-                {data.contacts.map((item) => (
-                  <div className="app-card" key={item.id}>
-                    <header>
-                      <h2>{item.name}</h2>
-                      <span
-                        className={`status ${item.sensitive ? "attention" : ""}`}
-                      >
-                        {item.sensitive ? "Private" : "Shareable"}
-                      </span>
-                    </header>
-                    <p>{item.category}</p>
-                    <p>
-                      {item.phone} {item.email}
-                    </p>
-                    <p className="detail">{item.notes}</p>
-                  </div>
-                ))}
+                {[...data.contacts]
+                  .sort(
+                    (left, right) =>
+                      left.category.localeCompare(right.category, locale) ||
+                      left.name.localeCompare(right.name, locale),
+                  )
+                  .map((item) => {
+                    const telephone = item.phone.replace(/[^+\d]/g, "");
+                    return (
+                      <div className="app-card" key={item.id}>
+                        <header>
+                          <h2>{item.name}</h2>
+                          <span
+                            className={`status ${item.sensitive ? "attention" : ""}`}
+                          >
+                            {item.sensitive ? "Private" : "Shareable"}
+                          </span>
+                        </header>
+                        <p>{item.category}</p>
+                        {item.phone || item.email ? (
+                          <p className="contact-links">
+                            {telephone ? (
+                              <a href={`tel:${telephone}`}>{item.phone}</a>
+                            ) : (
+                              item.phone
+                            )}
+                            {item.email && (
+                              <a href={`mailto:${item.email.trim()}`}>
+                                {item.email}
+                              </a>
+                            )}
+                          </p>
+                        ) : (
+                          <p>No contact details recorded.</p>
+                        )}
+                        {item.notes && <p className="detail">{item.notes}</p>}
+                      </div>
+                    );
+                  })}
               </div>
               <p className="notice">
                 FamilyBoard organizes contacts; it does not replace current
@@ -1539,6 +1578,11 @@ function TasksView({
           { name: "location", label: "Location" },
           { name: "notes", label: "Notes", type: "textarea" },
         ]}
+        validate={(v) =>
+          eventRangeIsValid(v.startsAt, v.endsAt)
+            ? ""
+            : "End time must be later than the start time."
+        }
         onSubmit={(v) =>
           save(() =>
             db.events.add({ ...base(householdId), ...v } as HouseholdEvent),
@@ -1577,20 +1621,21 @@ function TasksView({
             )}
           </div>
         ))}
-        {data.events.map((item) => (
-          <div className="app-card" key={item.id}>
-            <span className="card-tag">Calendar event</span>
-            <h2>{item.title}</h2>
-            <p>
-              {dateTime(item.startsAt)} ·{" "}
-              {item.location || "No location"}
-            </p>
-            {item.endsAt && (
-              <p className="detail">{`Ends ${dateTime(item.endsAt)}`}</p>
-            )}
-            {item.notes && <p className="detail">Notes: {item.notes}</p>}
-          </div>
-        ))}
+        {sortByOptionalIsoDate(data.events, (item) => item.startsAt).map(
+          (item) => (
+            <div className="app-card" key={item.id}>
+              <span className="card-tag">Calendar event</span>
+              <h2>{item.title}</h2>
+              <p>
+                {dateTime(item.startsAt)} · {item.location || "No location"}
+              </p>
+              {item.endsAt && (
+                <p className="detail">{`Ends ${dateTime(item.endsAt)}`}</p>
+              )}
+              {item.notes && <p className="detail">Notes: {item.notes}</p>}
+            </div>
+          ),
+        )}
       </div>
     </>
     </Localize>
@@ -1762,8 +1807,19 @@ function DisplayView({
     day: "numeric",
   });
   const todayKey = localIsoDate();
-  const events = data.events.filter((item) =>
-    item.startsAt.startsWith(todayKey),
+  const tasks = sortByOptionalIsoDate(
+    data.tasks.filter((item) => !item.completedAt),
+    (item) => item.dueDate,
+  );
+  const events = sortByOptionalIsoDate(
+    data.events.filter((item) =>
+      eventOccursOnLocalDate(item.startsAt, item.endsAt, todayKey),
+    ),
+    (item) => item.startsAt,
+  );
+  const maintenance = sortByOptionalIsoDate(
+    data.maintenanceTasks.filter((item) => item.nextDue),
+    (item) => item.nextDue,
   );
   return (
     <Localize>
@@ -1774,16 +1830,17 @@ function DisplayView({
       <div className="app-grid">
         <section className="app-card">
           <h2>Household tasks</h2>
-          {data.tasks
-            .filter((item) => !item.completedAt)
-            .slice(0, 6)
-            .map((item) => (
+          {tasks.length ? (
+            tasks.slice(0, 6).map((item) => (
               <p key={item.id}>
                 <strong>{item.title}</strong> ·{" "}
                 {names[item.ownerMemberId] || "Anyone"} ·{" "}
                 {dueStatus(item.dueDate)}
               </p>
-            ))}
+            ))
+          ) : (
+            <p>No open household tasks.</p>
+          )}
         </section>
         <section className="app-card">
           <h2>Today’s events</h2>
@@ -1803,19 +1860,20 @@ function DisplayView({
         </section>
         <section className="app-card">
           <h2>Coming up</h2>
-          {data.maintenanceTasks
-            .slice()
-            .sort((a, b) => a.nextDue.localeCompare(b.nextDue))
-            .slice(0, 6)
-            .map((item) => (
+          {maintenance.length ? (
+            maintenance.slice(0, 6).map((item) => (
               <p key={item.id}>
                 <strong>{item.title}</strong> · {dueStatus(item.nextDue)}
               </p>
-            ))}
+            ))
+          ) : (
+            <p>No dated maintenance items.</p>
+          )}
         </section>
       </div>
       <p>
-        Private records and sensitive contacts are hidden from this display.
+        Contact records, detailed notes and other private record types are not
+        shown. Task and event titles remain visible.
       </p>
     </div>
     </Localize>

@@ -160,8 +160,8 @@ const zhTw: Record<string, string> = {
   Visibility: "顯示範圍",
   false: "可分享",
   true: "敏感",
-  "Sensitive contacts are excluded from shared display and handoff by default.":
-    "敏感聯絡人預設不會出現在共用看板與交接摘要。",
+  "Sensitive contacts remain visible in this private tab and backups, but are excluded from handoff. Family display shows no contacts.":
+    "敏感聯絡人仍會出現在這個私密分頁與完整備份，但不會進入交接摘要；家庭看板完全不顯示聯絡人。",
   Private: "私密",
   Shareable: "可分享",
   "FamilyBoard organizes contacts; it does not replace current official local emergency guidance.":
@@ -220,6 +220,7 @@ const zhTw: Record<string, string> = {
   "Add a calendar event": "新增行事曆事件",
   Event: "事件名稱",
   "Calendar event": "行事曆事件",
+  "End time must be later than the start time.": "結束時間必須晚於開始時間。",
   "One-off": "單次",
   "Create a sharing profile": "建立分享設定檔",
   "Handoff profile": "交接設定檔",
@@ -252,9 +253,12 @@ const zhTw: Record<string, string> = {
   Anyone: "任何成員",
   "Today’s events": "今日事件",
   "No household events today.": "今天沒有家庭事件。",
+  "No open household tasks.": "目前沒有未完成的家庭任務。",
   "Coming up": "即將到期",
-  "Private records and sensitive contacts are hidden from this display.":
-    "這個畫面不會顯示私密紀錄與敏感聯絡人。",
+  "No dated maintenance items.": "目前沒有已設定日期的保養工作。",
+  "No contact details recorded.": "尚未記錄聯絡方式。",
+  "Contact records, detailed notes and other private record types are not shown. Task and event titles remain visible.":
+    "這個看板不顯示聯絡人、詳細備註與其他私密紀錄類型；任務與事件標題仍會顯示。",
   "Storage health": "儲存狀態",
   "App version:": "App 版本：",
   "Database schema:": "資料庫架構版本：",

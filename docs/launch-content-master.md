@@ -414,6 +414,8 @@ You do not need a perfect system. Start with one refrigerator, one vehicle, one 
 **Meta description:** `See how FamilyBoard organizes household assets, maintenance, warranties, subscriptions, tasks, emergency information, backups and family handoffs.`
 **Primary keyword concept:** household management app features
 **Depth:** verified
+**Editorial review date:** 2026-08-22
+**Content version:** 2
 **Suggested internal links:** `/features/home-inventory-tracker/`, `/features/maintenance-tracker/`, `/features/household-handoff/`, `/features/private-family-organizer/`, `/features/free-home-management-app/`
 
 # One household dashboard, built around the work behind the calendar
@@ -448,7 +450,7 @@ Tasks carry a title, an owner, a due date, a free-text recurrence note and compl
 
 ## Emergency — contacts that stay local
 
-Emergency contacts hold name, category, phone, email, notes and a sensitive flag. Marking a contact sensitive removes it from the printable handoff sheet by default — nothing about it is ever exposed by the app's design. See **[Emergency Information Organizer](/features/emergency-information-organizer/)**.
+Emergency contacts hold name, category, phone, email, notes and a sensitive flag. Marking a contact sensitive removes it from the printable handoff sheet, but the record remains visible in the private Emergency tab and full backups. Family Display renders no contacts at all. See **[Emergency Information Organizer](/features/emergency-information-organizer/)**.
 
 ## Documents — where things actually are
 
@@ -857,6 +859,8 @@ Open tasks (not completed) are what the Handoff tab's default profile includes i
 **Meta description:** `Use a lightweight household calendar for events that relate to home tasks, maintenance and family responsibilities without turning the product into another calendar clone.`
 **Primary keyword concept:** household calendar
 **Depth:** verified
+**Editorial review date:** 2026-08-22
+**Content version:** 2
 **Suggested internal links:** `/features/family-task-manager/`, `/features/home-dashboard/`, `/features/family-display-mode/`, `/features/free-home-management-app/`
 
 # A small calendar for the events that belong to your home records
@@ -865,23 +869,23 @@ There are excellent dedicated calendar apps already, and `FamilyBoard` isn't try
 
 ## What an event record actually stores
 
-The event quick-add form — the second form on the Tasks tab, below the task form — asks for a title (required), a start date and time (required), an end date and time, a location, and notes. That's the entire event record: `HouseholdEvent` has exactly those five fields plus the standard id and timestamps. There's no recurrence field on events (unlike tasks, which have a free-text repeat note), no owner field, and no reminder setting.
+The event quick-add form — the second form on the Tasks tab, below the task form — asks for a title (required), a start date and time (required), an end date and time, a location, and notes. If an end is supplied, the form requires it to be later than the start instead of quietly saving an impossible range. That's the entire event record: `HouseholdEvent` has exactly those five fields plus the standard id and timestamps. There's no recurrence field, owner field or reminder setting.
 
 ## Events are not tasks, and the app keeps them visibly separate
 
-On the Tasks tab, event cards are marked with a distinct "Calendar event" tag so they don't blend into the task list. Events don't have a due-status badge or a Complete button — an event either happens at its scheduled time or it doesn't, so there's nothing to mark done. If you need an event to also generate a follow-up responsibility ("confirm the technician the day before"), that's a separate task you create yourself, since the two record types don't auto-link.
+On the Tasks tab, event cards are marked with a distinct "Calendar event" tag and sorted by start time. Events don't have a due-status badge or a Complete button — an event either happens at its scheduled time or it doesn't, so there's nothing to mark done. If you need an event to also generate a follow-up responsibility ("confirm the technician the day before"), that's a separate task you create yourself, since the two record types don't auto-link. The current quick-entry interface also has no event edit or delete control; correct a saved event through the Settings master-table workflow or restore a known-good backup.
 
 ## Where events show up
 
-Beyond the Tasks tab list, today's events specifically appear on two other screens: the Today dashboard doesn't list them directly, but Display mode does — it filters `data.events` down to whichever ones start today and shows up to six, each with its formatted start time. That makes the calendar useful on a kitchen-tablet display even though it isn't the primary focus of the private dashboard.
+Beyond the Tasks tab list, Display mode shows up to six events for the current local calendar date, in start-time order. That includes an event starting today and an overnight or multi-day event that started earlier but has an end time today or later. An event that started yesterday with no end time does not remain on the board indefinitely. The Today dashboard itself does not list events.
 
 ## A worked example
 
-A household schedules an HVAC technician: title "HVAC technician visit," starts at 2:00 PM on a specific date, ends at 4:00 PM, location "home — front door access," notes "gate code 4471, dog will be crated." On the day, this event shows on the Tasks tab as a "Calendar event" card and, if a family display is running, on that shared screen with just the time and title — while the fuller detail (gate code) stays in the private app rather than a tablet visible to visitors. Separately, the HVAC unit's asset record can hold the resulting maintenance completion once the visit is done, connecting the appointment to the equipment's actual service history.
+A household schedules an HVAC technician: title "HVAC technician visit," starts at 2:00 PM on a specific date, ends at 4:00 PM, location "home — front door access," notes "gate code 4471, dog will be crated." On the day, this event shows on the Tasks tab with the full location and note. Display mode shows only its time and title, so the gate code stays off that shared view. The title itself is still public to anyone near the screen, so it should not contain sensitive detail. Separately, the HVAC unit's maintenance record can hold the completion after the visit; the event and maintenance record do not auto-link.
 
 ## What it deliberately doesn't do
 
-It doesn't sync with Google Calendar, Outlook or iCloud — events created here exist only in this browser's local database, the same as every other record type. It doesn't send a notification before an event starts. And it doesn't support recurring events the way a full calendar app does — a weekly recycling pickup, for instance, is better represented as a task with a recurrence note than as a repeating calendar event, since there's no built-in repeat rule for events.
+It doesn't sync with Google Calendar, Outlook or iCloud, and it doesn't sync two devices running FamilyBoard. Events exist only in the current browser profile's local database. It doesn't send a notification before an event starts. And it doesn't support recurring events the way a full calendar app does — a weekly recycling pickup is better represented as a task with a recurrence note, but that note still does not calculate or create the next task automatically.
 
 **Contextual CTA:** Keep using your everyday calendar for personal scheduling. Add a household event here only when it's genuinely tied to a home record — a service appointment, a delivery window, a handoff period.
 
@@ -889,11 +893,13 @@ It doesn't sync with Google Calendar, Outlook or iCloud — events created here 
 - Q: Does the household calendar sync with Google Calendar or Outlook?
   A: No. Events created in FamilyBoard exist only in this browser's local database, like every other record in the app. There's no calendar sync, import from, or export to an external calendar service.
 - Q: Can I create a recurring event, like a weekly pickup?
-  A: Events don't have a recurrence field. For something that repeats on a schedule, a task with a due date and a free-text recurrence note ("weekly") is the closer fit than the calendar event form, which is built for single dated occurrences.
+  A: Events don't have a recurrence field. For something that repeats, a task with a due date and a free-text recurrence note ("weekly") is the closer fit, but the note is only a label: completing the task does not create its next date, so you must create the next occurrence yourself.
 - Q: Will I get a reminder before an event starts?
   A: No. There's no notification, alarm or reminder tied to events — the start and end time are stored for reference and display, but nothing alerts you as the time approaches.
 - Q: How is an event different from a task with a due date?
   A: An event has a specific start and end time and no owner or completion status — it either happened or it didn't. A task has a due date, an assigned owner, a completion button and an optional recurrence note, built for tracking who's responsible for what.
+- Q: Does an event entered on one device appear on another device?
+  A: No. FamilyBoard has no cloud or cross-device sync. Another tab or window using the same browser profile can read the same local database, but a phone and a wall tablet each have separate data unless you deliberately move a backup between them.
 
 ---
 
@@ -901,22 +907,24 @@ It doesn't sync with Google Calendar, Outlook or iCloud — events created here 
 **Slug:** `/features/emergency-information-organizer/`
 **Primary intent:** organize family emergency information
 **Title tag:** `Household Emergency Information Organizer — Contacts, Utilities and Instructions | FamilyBoard`
-**Meta description:** `Keep important household emergency contacts, utility notes, pet information and operational instructions in one clear local-first record.`
+**Meta description:** `Keep household emergency contacts and operational notes in a clear local-first list, with honest limits for private entries, handoff sharing and backups.`
 **Primary keyword concept:** household emergency information organizer
 **Depth:** verified
+**Editorial review date:** 2026-08-22
+**Content version:** 2
 **Suggested internal links:** `/features/household-handoff/`, `/features/private-family-organizer/`, `/features/family-display-mode/`, `/features/free-home-management-app/`
 
 # A contact list built to be found fast, not admired
 
-The Emergency tab is FamilyBoard's contact list, deliberately scoped narrower than a general address book: it exists to hold the people and services a household — or someone standing in for it — needs to reach quickly, with one field that decides whether a given contact is safe to show on a shared screen.
+The Emergency tab is FamilyBoard's contact list, deliberately scoped narrower than a general address book: it exists to hold the people and services a household needs to reach quickly. Its visibility field controls handoff inclusion; it does not encrypt or hide a contact inside the private app.
 
 ## What a contact record holds
 
-The quick-add form asks for a name or service (required), a category (defaulting to "Household contact" — plumber, utility, pediatrician, neighbor), phone, email, operational notes, and a visibility toggle. That toggle is the field worth understanding: marking a contact "sensitive" is a boolean flag with real consequences elsewhere in the app, not just a label.
+The quick-add form asks for a name or service (required), a category (defaulting to "Household contact" — plumber, utility, pediatrician, neighbor), phone, email, operational notes, and a visibility toggle. Saved cards are sorted by category and name, and a recorded phone number or email address becomes a tap-to-call or tap-to-email link. FamilyBoard does not verify that either contact method is current.
 
 ## What "sensitive" actually controls
 
-A contact's `sensitive` flag does two concrete things. First, on the Emergency tab itself, a sensitive contact's card gets a "Private" status badge instead of "Shareable," so you can see at a glance which entries are flagged. Second — and this is the part that matters — the household handoff briefing filters contacts through `!item.sensitive` before including them, so a sensitive contact is excluded from the printable handoff sheet by default, regardless of which sharing profile is active. The form's help text says this outright: "Sensitive contacts are excluded from shared display and handoff by default."
+A contact's `sensitive` flag has one sharing control and one visible cue. The card gets a "Private" badge instead of "Shareable," and the handoff builder filters sensitive contacts out even when the chosen profile includes contacts. The contact is still fully visible on the Emergency tab, still present in JSON backups and the Settings master-table CSV, and still recoverable when a full backup is restored. Family Display renders no contacts at all, so the sensitive flag makes no difference there.
 
 ## Not the same as Household Members
 
@@ -924,7 +932,7 @@ It's worth distinguishing this tab from the separate Members list. Members are t
 
 ## A worked example
 
-A household adds "Neighbor — Sarah (unit 4B)," category "Trusted neighbor," phone recorded, notes "has spare key, feeds cat if we're away," sensitive left off — this is exactly the kind of contact worth sharing on a handoff sheet for a house sitter. Separately, they add "Dad — medical directive holder," category "Family," phone and email recorded, notes referencing a health situation, sensitive turned on. The neighbor appears on any printed handoff or shared display; the family medical contact does not, because the sensitive flag excludes it from both by design, not by an extra step you have to remember each time.
+A household adds "Neighbor — Sarah (unit 4B)," category "Trusted neighbor," phone recorded, notes "has spare key, feeds cat if we're away," sensitive left off. The neighbor can appear on a handoff sheet whose sharing profile includes contacts. Separately, they add "Dad — medical directive holder," category "Family," phone and email recorded, notes referencing a health situation, sensitive turned on. That second contact stays out of every handoff sheet, but remains readable in the Emergency tab and full backups. Neither contact appears on Family Display because that screen renders no contact records.
 
 ## What FamilyBoard is honest about not being
 
@@ -932,9 +940,9 @@ The Emergency tab carries a standing notice: "FamilyBoard organizes contacts; it
 
 ## Where the data actually lives
 
-Like every other record type in FamilyBoard, contacts are written to this browser's local IndexedDB database — there's no server copy, no account tied to the list, and no other device that can see it unless you deliberately move it there. That's worth knowing before you decide how much to store here: a phone number is low-risk if this device is lost, but a note describing a family member's medical condition deserves the same caution you'd give any sensitive information kept on a single device. Exporting a JSON backup from Settings preserves the whole contact list, including the sensitive flag on each entry, so a restore recreates the same visibility rules rather than exposing everything by default.
+Like every other record type in FamilyBoard, contacts are written to this browser's local IndexedDB database — there's no server copy, no account tied to the list, and no other device can see it unless you deliberately move a backup there. A phone number may be lower sensitivity than a note describing a family member's health, but both are readable by someone who can open this browser profile. Exporting JSON preserves the whole contact list, including private contacts and their notes. Encryption can protect the backup file at rest; the restored records are readable again inside the app.
 
-**Contextual CTA:** Add the contacts another trusted person would actually need under pressure — mark anything genuinely private as sensitive so it's excluded from handoff and display automatically.
+**Contextual CTA:** Add the contacts another trusted person would actually need under pressure. Mark private entries sensitive so they stay out of handoff sheets, then protect the app and every full backup because both still contain them.
 
 **FAQ:**
 - Q: What does marking a contact "sensitive" actually change?
@@ -1003,9 +1011,11 @@ Before a two-week trip, a household creates a profile named "House sitter — Au
 **Slug:** `/features/family-display-mode/`
 **Primary intent:** use an old tablet as a family dashboard
 **Title tag:** `Family Display Mode — Turn an Old Tablet into a Household Dashboard | FamilyBoard`
-**Meta description:** `Use a tablet-friendly full-screen view for today’s events, chores, maintenance alerts and household notices without buying dedicated family calendar hardware.`
+**Meta description:** `Use a tablet-friendly shared view for open tasks, today’s events and dated maintenance without buying dedicated family calendar hardware.`
 **Primary keyword concept:** family dashboard tablet
 **Depth:** verified
+**Editorial review date:** 2026-08-22
+**Content version:** 2
 **Suggested internal links:** `/features/home-dashboard/`, `/features/household-calendar/`, `/features/emergency-information-organizer/`, `/features/free-home-management-app/`
 
 # A simplified, low-sensitivity view built for a shared screen
@@ -1014,35 +1024,37 @@ Dedicated family-display hardware exists, but many homes already have an old tab
 
 ## Exactly three things appear on it
 
-Display mode shows the household name, today's formatted date, and three cards: household tasks (up to six open tasks, each showing the title, assigned owner or "Anyone" if unassigned, and due status), today's events (up to six events whose start time falls today, each with a formatted time), and "Coming up" (maintenance tasks sorted by next-due date, showing up to six). That's the complete list — no warranties, no subscriptions, no documents, and no emergency contacts appear on this screen at all, sensitive or not, because those record types simply aren't part of what Display mode renders.
+Display mode shows the household name, today's formatted date, and three cards. Household tasks are the first six open tasks sorted by due date, with dated work before undated work; each shows title, assigned owner or "Anyone," and due status. Today's events are the first six in start-time order, including an overnight or multi-day event whose recorded end has not passed the current local date. "Coming up" shows the first six maintenance items that actually have a next-due date, nearest first. No warranties, subscriptions, documents or emergency contacts appear because those record types are not rendered here.
 
 ## "Refreshes every minute" is a real, specific number
 
-The badge at the top of the display reads "Shared view · refreshes every minute," and that's not a marketing phrase — the app underneath reloads its data from the local database on a 60-second timer while the tab stays open, plus immediately whenever the browser tab becomes visible again. That means a task completed on your phone shows up on the wall display within a minute if both are pointed at the same browser profile and the display's tab is active, though in practice Display mode is most useful as a read-only board rather than something you update from itself.
+The badge at the top reads "Shared view · refreshes every minute." The app reloads its current browser profile's local database on a 60-second timer and when the tab becomes visible again. Another tab or window in the same browser storage environment can therefore be reflected on the next reload. A separate phone and wall tablet do not share IndexedDB, even if they use the same browser brand or operating-system account. There is no FamilyBoard cloud sync behind the timer.
 
 ## Why it's honest to call this "low-sensitivity," not "safe for anyone"
 
-The footer text says private records and sensitive contacts are hidden from this display — true, in the sense that contacts (sensitive or not) never render here at all, along with warranties, subscriptions, documents and notes fields. But a task title itself could still reveal something you'd rather a houseguest not read on the wall ("pick up prescription refill"). Display mode limits which record types appear; it doesn't screen individual task titles for sensitivity, so it's worth a moment's thought about what you title a task if the display tablet sits somewhere visitors pass.
+The footer states the boundary directly: contact records, detailed notes and other private record types are not shown, but task and event titles remain visible. A title such as "pick up prescription refill" may reveal more than you want a guest to read. Owner names, due status and event start times are visible too. Display mode reduces exposed fields; it does not classify wording or turn a shared tablet into a locked-down kiosk.
 
 ## Turning a spare tablet into a display
 
-Because FamilyBoard is a PWA with a standalone display mode declared in its manifest, a compatible browser can add it to a device's home screen and launch it without browser chrome, closer to a dedicated app than a bookmarked tab. Point an old tablet's browser at the Display tab, add it to the home screen, and prop it up — no separate hardware purchase or app-store account required.
+Because FamilyBoard is a PWA whose manifest requests a standalone window, a compatible browser can add it to a device's home screen and launch it without normal address bars or tabs. That is separate from the in-app Display tab: app navigation remains available, so this is a readable shared view rather than a tamper-proof kiosk. Populate the tablet's own database by entering records there or restoring a deliberate backup, then open Display. No app-store account or dedicated display purchase is required.
 
 ## A worked example
 
-A household mounts an old 8-inch tablet in the kitchen. It shows "The Garcia Household," today's date, three open tasks under "Household tasks" (trash day owner unassigned, a bill to pay assigned to one parent, a school form due), one event under "Today's events" (a 4 PM pickup), and under "Coming up," the next maintenance item — an HVAC filter check due in five days. Nobody has to open the full app to see the day's shape; anyone walking past the kitchen gets the same read.
+A household restores a reviewed backup onto an old 8-inch tablet, then opens Display in the kitchen. It shows "The Garcia Household," today's date, three open tasks in due-date order, one 4 PM pickup event and an HVAC filter check due in five days. The household updates records on that tablet during its weekly reset; changes made only on a parent's phone will not appear there automatically. Anyone walking past gets the same read, so titles are kept brief and non-sensitive.
 
-**Contextual CTA:** Try Display mode on a spare tablet or old phone before buying dedicated family-dashboard hardware — add it to the home screen for a near-app experience.
+**Contextual CTA:** Try Display mode on the device that will show it. Enter records there or restore a backup first; FamilyBoard does not sync data from your phone to a separate tablet.
 
 **FAQ:**
 - Q: Does the family display show sensitive contacts or documents?
   A: No. Display mode only renders three record types — open household tasks, today's events, and upcoming maintenance. Contacts, warranties, subscriptions and documents don't appear on this screen at all, regardless of any sensitivity flag.
 - Q: How often does the display update?
-  A: The app reloads its underlying data about once a minute while the tab is open, and immediately when the browser tab becomes visible again after being backgrounded. The "refreshes every minute" label on the display reflects that actual timer.
+  A: The app reloads the local database about once a minute while the tab is open, and when the browser tab becomes visible again. That can pick up changes from another tab using the same browser profile; it does not fetch changes from a different phone, tablet or account.
 - Q: Can I turn an old tablet into a dedicated FamilyBoard screen?
-  A: Yes. FamilyBoard is a Progressive Web App with a standalone display mode, so a compatible browser lets you add it to the device's home screen and launch it without browser address bars or tabs, similar to a dedicated app.
+  A: Yes, if the browser supports installing Progressive Web Apps. Add FamilyBoard to the tablet's home screen, launch it in its standalone window and open the Display tab. The app navigation remains available, and the tablet keeps its own local data rather than syncing another device.
 - Q: Should I worry about what task titles say if the display is visible to guests?
   A: It's worth a moment's thought. Display mode limits which record types show (no contacts, warranties or documents), but it doesn't screen individual task or event titles for sensitive wording, so anything you title a task will be visible to anyone who can see the screen.
+- Q: Will a task completed on my phone disappear from the wall tablet automatically?
+  A: No. A phone and a separate tablet do not share FamilyBoard's local database. To keep the wall tablet current, update records on that tablet or deliberately transfer and restore a current backup; restoring replaces or merges data according to the option you choose.
 
 ---
 

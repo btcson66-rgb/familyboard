@@ -34,6 +34,8 @@
 .app-card h2, .app-card h3, .app-form h2 { margin-top: 0; }
 .app-card header { display: flex; align-items: start; justify-content: space-between; gap: .7rem; }
 .app-card p { margin: .35rem 0; color: #516961; }
+.contact-links { display: flex; flex-wrap: wrap; gap: .35rem 1rem; }
+.contact-links a { overflow-wrap: anywhere; }
 .app-card .detail { font-size: .86rem; }
 .status { display: inline-block; padding: .2rem .5rem; border-radius: 999px; background: #edf1ed; font-size: .74rem; font-weight: 800; }
 .status.attention { background: #ffebc8; color: #694719; }

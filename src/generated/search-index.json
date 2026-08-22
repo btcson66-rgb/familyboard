@@ -81,7 +81,7 @@
   },
   {
     "title": "Household Emergency Information Organizer — Contacts, Utilities and Instructions | FamilyBoard",
-    "description": "Keep important household emergency contacts, utility notes, pet information and operational instructions in one clear local-first record.",
+    "description": "Keep household emergency contacts and operational notes in a clear local-first list, with honest limits for private entries, handoff sharing and backups.",
     "route": "/features/emergency-information-organizer/",
     "cluster": "product",
     "keywords": "household emergency information organizer",
@@ -97,7 +97,7 @@
   },
   {
     "title": "Family Display Mode — Turn an Old Tablet into a Household Dashboard | FamilyBoard",
-    "description": "Use a tablet-friendly full-screen view for today’s events, chores, maintenance alerts and household notices without buying dedicated family calendar hardware.",
+    "description": "Use a tablet-friendly shared view for open tasks, today’s events and dated maintenance without buying dedicated family calendar hardware.",
     "route": "/features/family-display-mode/",
     "cluster": "product",
     "keywords": "family dashboard tablet",

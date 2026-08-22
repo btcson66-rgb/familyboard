@@ -11,7 +11,7 @@
     "route": "/features/",
     "alternateRoute": "",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
@@ -73,17 +73,17 @@
   },
   {
     "route": "/features/household-calendar/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/household-calendar/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
   {
     "route": "/features/emergency-information-organizer/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/emergency-information-organizer/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
@@ -97,9 +97,9 @@
   },
   {
     "route": "/features/family-display-mode/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/family-display-mode/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1770,6 +1770,20 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/features/emergency-information-organizer/",
+    "alternateRoute": "/features/emergency-information-organizer/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/features/family-display-mode/",
+    "alternateRoute": "/features/family-display-mode/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/family-task-manager/",
     "alternateRoute": "/features/family-task-manager/",
     "indexable": true,
@@ -1835,6 +1849,13 @@
   {
     "route": "/zh-tw/",
     "alternateRoute": "/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/features/household-calendar/",
+    "alternateRoute": "/features/household-calendar/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

@@ -57,6 +57,22 @@ export function localIsoDate(date = new Date()) {
   return `${year}-${month}-${day}`;
 }
 
+export function eventRangeIsValid(startsAt: string, endsAt: string) {
+  if (!startsAt) return false;
+  return !endsAt || endsAt > startsAt;
+}
+
+export function eventOccursOnLocalDate(
+  startsAt: string,
+  endsAt: string,
+  date: string,
+) {
+  const startsOn = startsAt.slice(0, 10);
+  const endsOn = endsAt.slice(0, 10);
+  if (startsOn === date) return true;
+  return Boolean(endsAt && startsOn < date && endsOn >= date);
+}
+
 export function sortByOptionalIsoDate<T>(
   items: T[],
   getDate: (item: T) => string,

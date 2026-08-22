@@ -135,7 +135,7 @@ export function renderGeneratedMarkdown(record, launchDate) {
           ]),
         ]
       : ["faq: []"]),
-    "contentVersion: 1",
+    `contentVersion: ${record.contentVersion || 1}`,
     "---",
     "",
   ].join("\n");
