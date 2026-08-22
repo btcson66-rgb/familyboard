@@ -385,7 +385,7 @@
   },
   {
     "route": "/guides/home-service-provider-list/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-service-provider-list/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1656,6 +1656,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/home-service-provider-verification-log/",
+    "alternateRoute": "/zh-tw/tools/home-service-provider-verification-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -1998,6 +2006,20 @@
     "alternateRoute": "/tools/home-repair-cost-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-service-provider-list/",
+    "alternateRoute": "/guides/home-service-provider-list/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/home-service-provider-verification-log/",
+    "alternateRoute": "/tools/home-service-provider-verification-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {

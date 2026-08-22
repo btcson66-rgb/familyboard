@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T18:57:32.452Z
+Generated: 2026-08-22T19:24:24.521Z
 
 ## Summary
 
-- Indexable pages: 278
-- Generated HTML routes: 295
+- Indexable pages: 281
+- Generated HTML routes: 298
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 94
+- Pages without a contextual product/tool link: 96
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,11 +20,11 @@ Generated: 2026-08-22T18:57:32.452Z
 - printables: 20
 - product: 31
 - appliances: 30
-- maintenance: 36
+- maintenance: 37
 - household-operations: 21
 - inventory-warranty: 29
 - records-emergency: 27
-- tools: 63
+- tools: 65
 
 ## Word-count range
 
@@ -95,6 +95,7 @@ Generated: 2026-08-22T18:57:32.452Z
 - /zh-tw/guides/home-evacuation-information/
 - /zh-tw/guides/home-maintenance-log/
 - /zh-tw/guides/home-maintenance-schedule/
+- /zh-tw/guides/home-service-provider-list/
 - /zh-tw/guides/household-documents-organizer/
 - /zh-tw/guides/how-to-track-product-warranties/
 - /zh-tw/guides/move-out-home-records/
@@ -122,6 +123,7 @@ Generated: 2026-08-22T18:57:32.452Z
 - /zh-tw/tools/home-maintenance-cost-tracker/
 - /zh-tw/tools/home-maintenance-schedule-generator/
 - /zh-tw/tools/home-repair-cost-log/
+- /zh-tw/tools/home-service-provider-verification-log/
 - /zh-tw/tools/home-service-reminder-generator/
 - /zh-tw/tools/house-sitter-instruction-generator/
 - /zh-tw/tools/household-annual-review-generator/

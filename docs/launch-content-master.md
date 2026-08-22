@@ -3357,57 +3357,120 @@ Future affiliate recommendations must remain clearly disclosed outside the evide
 
 ## Page 049 — Home Service Provider List
 **Slug:** `/guides/home-service-provider-list/`
-**Primary intent:** create a list of trusted home service providers
-**Title tag:** `Home Service Provider List: Keep the People Who Know Your Home Easy to Find`
-**Meta description:** `Organize household service providers with contact details, specialties, prior work, asset relationships and notes without turning the list into public reviews.`
+**Primary intent:** create and verify a home service provider list
+**Title tag:** `Home Service Provider List | Verify Sources, Scope and Prior Work`
+**Meta description:** `Build a useful home service provider list with dated registry checks, written scope, prior-work evidence and owner-led follow-up—without treating a listing as an endorsement.`
 **Primary keyword concept:** home service provider list
-**Suggested internal links:** `/templates/printable-service-provider-list/`, `/guides/home-maintenance-records/`, `/guides/contractor-records/`, `/features/household-handoff/`
+**Suggested internal links:** `/tools/home-service-provider-verification-log/`, `/templates/printable-service-provider-list/`, `/guides/home-maintenance-records/`, `/guides/contractor-records/`
 
-# Home service provider list: keep the people who know your home easy to find
+# Home service provider list: verify identity, scope and prior work before you rely on it
 
-The best plumber for a specific problem is often the one who already saw it — the person who knows your water heater's odd quirk, or who fixed the same leak two years ago and would recognize it immediately if it came back. Households lose that advantage constantly, not because the relationship wasn't good, but because the contact details ended up buried in an old invoice, a text thread, or a mental note that faded. A dedicated provider list exists specifically to stop that from happening.
+A household contact list answers, “Who did we call?” A dependable home service provider list answers harder questions: which business identity was checked, which kind of work was discussed, what written scope exists, what the household directly observed after prior work and which fact still needs confirmation. Those details matter when a broken appliance, water problem or urgent repair makes the first search result feel like the fastest answer.
 
-## Store more than a name and a phone number
+This guide creates a private decision record, not a ranking or recommendation. A registry result can support identity or authorization for a defined category; it does not prove workmanship, availability, insurance coverage or suitability for the present job. A positive prior experience can support a factual history; it does not prove that the same people, terms or qualifications remain current.
 
-A useful entry captures enough to actually be useful months or years later, not just enough to place a call:
+Use the [home service provider verification log](/tools/home-service-provider-verification-log/) to connect every saved provider to dated sources and to give every unresolved question an owner and due date.
 
-- **Trade or service type** — plumber, electrician, HVAC, appliance repair, general handyman
-- **Contact name, company, phone, website**
-- **What they've actually done** — the specific work performed, not just "came out once"
-- **Which asset or area they serviced** — so it's findable from the equipment side too
-- **Private scheduling or access notes** — anything genuinely useful for next time, like typical response time or how they prefer to be contacted
+## Start with the service need, not a favorite name
 
-The difference between a bare phone number and a full entry shows up exactly when you need it most: at 9pm with a leak, "plumber, 555-1234" tells you who to call; "plumber, 555-1234, fixed the upstairs bathroom supply line leak in 2025, prefers text over calls, usually same-day for emergencies" tells you who to call and what to say when they pick up.
+Describe the household problem before building a shortlist. “Water near the washing machine supply connection,” “air conditioner stops after ten minutes” and “paint and fixed ceiling finish are part of a planned renovation” create different verification questions. “Need a handyman” is too broad to show whether the requested work may require a regulated trade, building approval, manufacturer-authorized service or a specialist assessment.
 
-## Keep it factual, not a review platform
+Keep diagnosis separate from the request. A resident may observe a stain, error code, noise or failed function without knowing the cause. Write `inspect reported symptom and provide written findings and scope`, not `replace the failed valve`, unless a qualified source already established that conclusion.
 
-This list is an internal household reference, not a public review site, and it shouldn't be written like one. Record what happened — the work performed, whether it resolved the issue, whether follow-up was needed — rather than personal commentary about the provider that serves no future practical purpose. Factual notes hold up and stay useful for years; commentary ages badly and adds nothing the next household member reading the entry actually needs.
+For a rented home, condominium or managed building, record whether the owner, property manager or building rules need to be consulted before access or work. That is a permission check, not a provider-quality score.
 
-## Link every provider to the work they actually did
+## Build a source map before making a provider row
 
-A technician's name means little in isolation. What makes the list genuinely useful is connecting each provider to the specific repair history entries and assets they touched, so when you're looking at a washing machine's repair history and see a technician's name, you can pull their full contact and prior-work record in the same place — no separate search required.
+One source cannot answer every question. Separate the evidence into rows with a source ID, issuer, checked date, exact question, observed result, protected evidence location and household owner.
 
-## Verify before you're in an emergency, not during one
+Useful source categories include:
 
-A phone number that worked five years ago may belong to a business that's closed, changed hands, or stopped serving your area. Review your critical service contacts periodically — a quick check that they're still operating — rather than discovering during an actual emergency that the number you were counting on doesn't work anymore. This matters most for the providers tied to your highest-consequence systems: whoever handles your water heater, your HVAC, and your electrical work.
+- an official business or company registry for the displayed legal identity and current public status;
+- the responsible licensing or trade registry when the actual work and jurisdiction require it;
+- the provider's current written estimate, contract, insurance evidence or first-party service policy;
+- a manufacturer or utility source when authorization, compatibility or service boundaries matter;
+- a landlord, condominium or building-management instruction for access and common-property responsibility; and
+- a dated household repair record showing what was actually performed before.
 
-## Why this list is different from repair history
+Open the source directly. A search-result card, advertisement, marketplace badge or copied screenshot may be stale or may belong to a different business with a similar name. Record the displayed name and partial identifier, the question answered, the check date and a safe evidence pointer. Do not turn “found in a registry” into “government approved.”
 
-Repair history is organized around an asset — everything that's happened to one specific system. This list is organized around a person or company — everything you know about one provider, across every asset they've ever touched. Both views point at the same underlying events; they're just sliced along different axes, and having both means you can start from whichever end you actually know first — "who fixed the dishwasher" or "what has this plumber done for us."
+The relevant registry depends on the location and work. In the United States, licence requirements and lookup systems vary by state and locality. The [Federal Trade Commission's home-improvement guidance](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) tells consumers to confirm licensing with the responsible state or county, obtain more than one written estimate and read the contract carefully. Outside the United States, use the authority responsible for the home's jurisdiction and the requested trade.
 
-**Contextual CTA:** Add the last three service providers who worked on your home and connect each one to the specific asset or area they actually serviced.
+## Registration, licence, insurance and skill are different claims
+
+A business-registration record may confirm that an entity with a given name and identifier appears in a public register. A trade licence may show an authorization category and status. Insurance evidence may describe a policy and period. A written estimate describes proposed work. None automatically proves the other three, and none guarantees future workmanship.
+
+Ask a narrow question of each source:
+
+- Does the business identity on the estimate match the official record?
+- Does the current authorization category cover the work actually being proposed?
+- Is the insurance evidence current, and what does the issuer say it covers?
+- Who is responsible for permits, inspections or building approval where required?
+- Is a subcontractor involved, and whose identity and role appear in writing?
+
+Do not interpret unfamiliar categories on your own. Save the source result and ask the responsible authority, issuer or qualified professional what it means for the proposed scope. The household log should say `confirmation open`, not guess `qualified`.
+
+## Normalize written estimates before comparing price
+
+Two totals are not comparable until the work behind them is comparable. Ask for a written estimate or scope that identifies the reported problem, included work, important exclusions, named or performance-specified materials, schedule assumptions, cleanup, access, permit or inspection responsibility, payment stages, change-order process and warranty terms that the provider actually offers.
+
+Then build a comparison note using the same headings for every candidate. If one estimate includes disposal and finishing while another stops after opening the wall, the lower number may simply describe less work. If a provider cannot inspect before estimating, preserve that limitation rather than treating a provisional number as a fixed commitment.
+
+The FTC warns about pressure for an immediate decision, demands for full payment up front or cash-only payment, and starting without a reviewed written contract. Those are reasons to slow down and verify the current situation; this guide does not decide whether a contract term is lawful in a particular jurisdiction. Local consumer, licensing and legal sources control.
+
+## Keep references and reviews in the right evidence tier
+
+A recommendation from a neighbor can help discover a provider. It does not replace identity, scope and authorization checks. If the household contacts a reference, ask factual questions tied to comparable work: what work was agreed, whether the written scope changed, how changes were documented, whether follow-up was needed and when the work occurred.
+
+Record only what the reference consented to share, and keep contact details in a protected source. Public ratings may add context, but they can be incomplete, manipulated or about a different branch. Save the search date and the precise observation; do not copy accusations or convert opinions into facts.
+
+Your own prior-work history is useful when it names the asset or area, visit date, written work record, observable outcome and unresolved follow-up. `Fixed our plumbing` is weak. `Invoice REPAIR-14 identifies replacement of the kitchen faucet supply connector; no recurrence recorded through the dated household review` is useful while staying inside what the record proves.
+
+## Give every candidate a workflow status
+
+Use statuses that describe work completed in the verification process:
+
+- `Identity and relevant scope checked` means the named sources were reviewed for the precise request; it is not an endorsement.
+- `Written scope or estimate comparison open` means important inclusions, exclusions, schedule or price basis remain unclear.
+- `Credential, insurance or permission confirmation open` means the responsible source or issuer still needs to answer a defined question.
+- `Archived or not selected with recorded reason` preserves the date and factual basis without publishing a negative review.
+
+Every open provider row needs exactly one next evidence action, owner and due date. `Check later` is not actionable. `Ask the licensing authority whether category shown in REG-2 covers the proposed panel work and save its dated response` is.
+
+## Keep the private contact card separate from the decision log
+
+The shortlist may be printed, shared with a household member or attached to a project folder. Do not put full home addresses, phone numbers, personal email addresses, access codes, account details, payment-card information, identity documents, complete personal licence numbers or private reference details into that broadly shared copy.
+
+Use stable pointers such as `CONTACT-PROV-2`, `QUOTE-3` and `REPAIR-14`, then keep the originals in protected storage. Before letting anyone enter the home, separately confirm the appointment through a known channel, who is expected, the access boundary and who will be present. A provider record does not authorize entry.
+
+## Move selected work into repair history
+
+The provider list is organized around candidates and sources. The repair record is organized around an asset, area or incident. Once work begins, preserve the agreed scope, approved changes, dates, service evidence, payment records and observable close-out in the appropriate repair history. Do not silently overwrite the original estimate when the work changes.
+
+At the next provider-list review, recheck public status and contact route, close stale questions and archive entries that no longer serve the household. Do not erase an older repair record merely because a business closed or a new provider was selected.
+
+## Keep commercial placement outside verification
+
+A future affiliate or sponsored provider directory may help users discover categories, but paid placement must be clearly labelled and kept outside the verification form and output. Visibility cannot change the status, bypass source checks or imply FamilyBoard certification. The same evidence workflow must apply whether a name came from a neighbor, an advertisement, a marketplace or a paid link.
+
+**Next step:** open the [home service provider verification log](/tools/home-service-provider-verification-log/), define one real service need, add the official or first-party sources that answer it, and assign one next action to every unresolved candidate.
+
+**Contextual CTA:** Build a factual shortlist before urgency compresses the decision, then move the selected provider's actual work into the home's repair history.
 
 **FAQ:**
-- Q: What information should I actually store for each service provider, beyond a phone number?
-  A: Trade or service type, company name, contact details, the specific work they performed, which asset or area they serviced, and any genuinely useful scheduling or access notes. The goal is being able to say what they did and how to reach them again, not just that they exist as a contact.
-- Q: Should I write personal opinions about a service provider in my household list?
-  A: Keep it factual — what work was done, whether it resolved the issue, whether follow-up was needed — rather than personal commentary. This is an internal household reference meant to stay useful for years, not a review platform, and factual notes age much better than opinions.
-- Q: How often should I verify that my saved service provider contacts still work?
-  A: Periodically, and especially for the providers tied to your highest-consequence systems — water heater, HVAC, electrical. A number that worked five years ago may belong to a business that's closed or changed hands, and the worst time to discover that is during an actual emergency.
-- Q: What's the difference between a service provider list and repair history?
-  A: Repair history is organized around one asset — everything that's happened to that specific system, across every provider involved. A provider list is organized around one person or company — everything you know about them, across every asset they've touched. Both draw from the same events, just viewed from opposite directions.
+- Q: Does a business-registration search prove that a provider is qualified for my job?
+  A: No. It may support the entity's displayed identity and current public registration status. Trade authorization, insurance, building permission, experience and suitability are separate questions that require the sources responsible for the actual work and jurisdiction.
+- Q: Should I save a provider if I have only a recommendation from a friend?
+  A: Save it as a discovery lead, not as verified. Record who owns the next identity, scope and authorization checks, and keep the friend's private details out of a broadly shared shortlist unless they agreed to be included.
+- Q: How should I compare estimates that use different wording?
+  A: Normalize them under the same headings: problem understood, included work, exclusions, materials, schedule, cleanup, permits or inspections, payment stages, changes and warranty. Ask providers to clarify gaps in writing instead of guessing that two totals buy the same result.
+- Q: Can FamilyBoard tell me whether a licence or permit is required?
+  A: No. Requirements vary by location, building and scope, and the tool does not interpret law or registry classifications. Record the question and obtain a dated answer from the responsible licensing, building, landlord or professional source.
+- Q: What should happen to the provider record after work is complete?
+  A: Preserve the verification snapshot, then create or update the asset or area repair history with the agreed scope, approved changes, service evidence and observed close-out. Recheck the provider's current information before relying on it for a later job.
 
 **Depth:** verified
+**Content version:** 2
 
 ---
 
@@ -12518,6 +12581,142 @@ Use the [storm preparation home checklist](/guides/storm-preparation-home-checkl
   A: Follow the current official instruction and update the record immediately. The next-review date is an organizational reminder, not permission to wait and not evidence that an earlier message remains valid.
 - Q: Can the exported review support an insurance or building-compliance claim?
   A: It may preserve household observations, dates and source references, but it is not an inspection, certification, notice determination or proof of coverage. Policies, leases, building rules and law determine what evidence and procedures apply.
+
+**Depth:** verified
+
+---
+
+
+## Page 208 — Home Service Provider Verification Log
+**Slug:** `/tools/home-service-provider-verification-log/`
+**Primary intent:** create a dated home service provider verification log using official and first-party evidence
+**Title tag:** `Home Service Provider Verification Log | Sources, Scope and Follow-Up`
+**Meta description:** `Create a private provider shortlist with dated source checks, written-scope evidence and owner-linked follow-up—without ranking, endorsing or certifying a contractor.`
+**Primary keyword concept:** home service provider verification checklist
+**Cluster:** tools
+**Page type:** tool
+**Published date:** 2026-08-23
+**Editorial review date:** 2026-08-23
+**Content version:** 1
+**Suggested internal links:** `/guides/home-service-provider-list/`, `/guides/contractor-records/`, `/guides/home-repair-history/`, `/templates/printable-service-provider-list/`
+
+# Home service provider verification log
+
+The same provider name can appear in an advertisement, a business register, a trade-licensing system, an estimate and an old invoice. Those records do not answer the same question. A useful shortlist keeps each claim attached to the source that can actually support it, the date that source was checked and the household member responsible for any gap.
+
+This free browser tool creates that dated record. It links source IDs to provider rows and requires one next evidence action for every candidate with an unresolved scope, estimate, credential, insurance or permission question. It does not search registries, contact a provider, validate a licence, compare market prices, assess workmanship, recommend a business or make a hiring decision. Form processing stays in the browser.
+
+The output is a private research snapshot, not an endorsement, background check, inspection, insurance confirmation or legal determination. Always use current sources for the actual location, building, service category and proposed work.
+
+**Ready to organize a real shortlist? [Jump to the Home Service Provider Verification Log](#tool-heading).**
+
+## Define the requested service before checking names
+
+Choose a context that reflects the household's actual stage: refreshing a routine list, comparing active repair estimates, checking regulated or permission-sensitive work, or reviewing prior-provider records. Then describe the service need outside the tool in observable language.
+
+`Investigate intermittent power loss at the kitchen outlets and provide written findings` is more useful than `rewire kitchen`. The first statement preserves what the household observed; the second assumes a diagnosis and solution that may not yet exist. For a managed or rented property, the next question may be who has authority to arrange the work before any provider comparison begins.
+
+The review date is when the household reconciled its sources and provider rows. It cannot be in the future. The next review date is a workflow control, not a guarantee that a registration, estimate or availability will remain unchanged until then.
+
+## Create one source row for one verification question
+
+The source map uses:
+
+`ID | responsible source or issuer | checked date | exact verification question | observed result or evidence pointer | owner`
+
+Use 2-to-20-character IDs such as `REG-1`, `TRADE-2`, `QUOTE-1`, `BLDG-1` or `HIST-3`. A source may be an official company register, the responsible trade registry, an insurer response, a written provider estimate, a manufacturer service page, building management or a protected prior-work record.
+
+Each row should answer one narrow question. `REG-1` might confirm that the exact displayed business name and partial identifier appear with a current public status. `TRADE-2` might preserve the licence category and expiry shown for the precise provider. `QUOTE-1` might identify the version and date of a written scope. `BLDG-1` might record whether a property manager gave written access or common-property instructions.
+
+Do not write `provider verified` in the result. Say what the source displayed. Business registration does not prove trade qualification. A trade record does not prove that the person who arrives is covered, that insurance is current or that the proposed work is permitted. A quote does not prove the job will be performed as written.
+
+## Open the authoritative source rather than trusting a search result
+
+Search ads, directory profiles, marketplace badges and review pages can help discover names, but they are not substitutes for the responsible source. The [Federal Trade Commission](https://consumer.ftc.gov/consumer-alerts/2025/04/online-search-results-good-bad-scammy) warns that paid search results and displayed phone numbers can be used by impersonators. Navigate to a known official registry or the organization's verified first-party channel, then preserve the check date and result.
+
+The authority and required checks vary. The FTC's [home-improvement scam guidance](https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam) advises confirming contractor licensing with the responsible state or county, getting multiple written estimates and reviewing the written contract. Those are U.S. examples, not universal rules. Users elsewhere need the equivalent public, licensing, building and consumer sources for their location.
+
+If a registry has multiple similar names, do not pick the closest one. Compare the displayed legal name and safe partial identifier with the estimate or contract. Keep the full personal identifier and private contact data in protected evidence rather than the exported shortlist.
+
+## Record each provider without turning the row into a rating
+
+Each provider row uses:
+
+`ID | displayed provider label | requested service scope | source IDs separated by commas | written evidence summary | owner | status`
+
+Provider IDs such as `PROV-1` stay stable within this review. The displayed label should be enough for the household to reconcile the row with protected contact details, but it should not expose a private individual's address, phone, email or identification number.
+
+The requested scope is the work being considered, not a claim about what the provider may legally or competently do. Source IDs must exist in the source map. If the identity came from `REG-1`, the proposed work from `QUOTE-1` and building permission from `BLDG-1`, list all three. A vague website promise should not stand in for a dated written scope.
+
+The evidence summary should identify what was actually reviewed: `estimate Q-2 lists inspection, included labour, material assumptions, exclusions and change process` or `prior invoice HIST-3 names appliance and work completed; later performance not certified`. Avoid `best`, `trusted`, `fully insured`, `approved` or `guaranteed` unless the source and scope make that exact statement and the household clearly attributes it rather than adopting it as its own conclusion.
+
+## Use four statuses that describe verification work
+
+`Identity and relevant scope checked` means the household reviewed the named sources for the defined service request. It does not mean FamilyBoard or a government endorses the provider.
+
+`Written scope or estimate comparison open` means a proposal, exclusion, material assumption, timing term or price basis remains unresolved. Price alone cannot close this status when the candidates are describing different work.
+
+`Credential, insurance or permission confirmation open` means the responsible registry, issuer, landlord, building authority, manufacturer or qualified source still needs to answer a defined question.
+
+`Archived or not selected with recorded reason` means the row remains as a dated factual record but is no longer active. A reason might be `does not service this area`, `written scope not supplied by review date` or `household postponed project`. Do not turn the archived reason into a public accusation.
+
+Counts in the output summarize workflow. They are not scores and must not be used to rank providers.
+
+## Give every open row exactly one evidence action
+
+The follow-up table uses:
+
+`open provider ID | next evidence-based action | owner | due date YYYY-MM-DD`
+
+Every provider with an open scope/estimate status or open credential/insurance/permission status needs exactly one follow-up row. Checked and archived providers cannot receive an open action. This one-to-one rule prevents important uncertainty from disappearing behind a long shortlist.
+
+Good actions name a source and a change in evidence: `ask REG-2 issuer whether the displayed category covers the proposed work and preserve the dated response`, `request a revised estimate identifying demolition cleanup and change approvals`, or `obtain building management's written common-area access decision`.
+
+The due date must fall between this review and the next household review. It is an organizational deadline, not permission to delay an urgent safety response, a public order or a contract notice.
+
+## Protect household, provider and reference details
+
+Use a household nickname rather than a full address. Keep complete phone numbers, emails, physical addresses, door or alarm codes, account numbers, payment-card details, bank information, identity documents, personal licence numbers, policy details, signatures and private reference contacts outside the exported log.
+
+The form blocks common contact and sensitive-data patterns, but automated checks cannot recognize everything. Review the result before copying, printing, downloading or saving it. A protected evidence pointer such as `CONTACT-PROV-1`, `QUOTE-2` or `REG-SNAPSHOT-3` is usually enough for the shared record.
+
+Local processing means FamilyBoard does not receive the form values. The copies you create remain your responsibility. Limit distribution to people who need the shortlist and preserve original estimates, registry results and contracts in controlled storage.
+
+## Keep urgent and hazardous conditions outside provider comparison
+
+Do not delay emergency services, utility instructions, building safety actions or qualified assessment while completing this form. Do not touch exposed wiring, gas equipment, active fire, contaminated water, unstable structures or other hazards to collect better evidence.
+
+The tool does not determine whether work requires a licence, permit, inspection, landlord consent, condominium approval, utility coordination or manufacturer authorization. When that question exists, keep the provider open and obtain the answer from the responsible source.
+
+Confirm separately who will arrive, the appointment channel, access boundary and who will be present. A row in this log does not authorize anyone to enter the home or handle household records.
+
+## Move the decision into a project or repair record
+
+When the household chooses a provider, preserve the dated verification snapshot and create a separate project or repair record. That record should keep the agreed scope, estimate or contract version, authorized changes, visit dates, observable completion evidence, follow-up and payment records that actually apply.
+
+Do not edit an old source result to make it look current. Add a new dated source check. Do not overwrite an estimate after a change. Preserve the prior version and connect the approved change to the responsible people. History is useful precisely because it shows what changed and when.
+
+Use the [home service provider list guide](/guides/home-service-provider-list/) for the full workflow, [contractor records](/guides/contractor-records/) for project evidence and the [printable service provider list](/templates/printable-service-provider-list/) for a minimal offline contact index.
+
+## Keep sponsored discovery separate from verification
+
+A future clearly labelled affiliate or sponsored directory may introduce provider categories. It must remain outside this form and output. Paid visibility cannot create a checked status, alter the source requirements, hide an open question or imply endorsement. A sponsored lead starts at the same unverified discovery stage as any other name.
+
+**Next step:** add one real official or first-party source, one provider row tied to that source and one owner-led evidence action for every unresolved question.
+
+**Contextual CTA:** Create a dated shortlist from sources and written scope now, then preserve the selected provider's actual work in the repair history.
+
+**FAQ:**
+- Q: Does the tool search business or licence registries for me?
+  A: No. It never fetches registry, complaint, review, insurance or provider data. Open the responsible source yourself, then record what it displayed, the check date and a protected evidence pointer.
+- Q: What does “identity and relevant scope checked” prove?
+  A: It proves only that the household reviewed the listed sources for the defined request on the review date. It is not an endorsement, quality score, background check, insurance confirmation or promise that every legal requirement has been met.
+- Q: Can I list more than one source for a provider?
+  A: Yes. Separate source IDs with commas. Use different sources for different claims, such as public identity, trade category, written scope, building permission and prior-work evidence.
+- Q: Why does every open provider need one follow-up action?
+  A: An unresolved qualification or estimate question is easy to forget when the shortlist looks complete. A single evidence action with an owner and date makes the missing decision input visible without creating duplicate tasks.
+- Q: Can this record resolve a dispute or prove compliance?
+  A: No. It may preserve dates, source references and household observations, but contracts, original evidence, the responsible authorities, insurers and applicable law determine notice, responsibility, coverage and compliance.
 
 **Depth:** verified
 

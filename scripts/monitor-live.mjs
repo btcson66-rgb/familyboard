@@ -72,6 +72,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-storm-readiness-review/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-storm-readiness-review/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/storm-preparation-home-checklist/</loc>",
+      "<loc>https://familyboard.win/tools/home-service-provider-verification-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-service-provider-verification-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-service-provider-list/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -230,6 +233,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Create a source map before creating a task list",
       "weather.gov/nwr",
+    ],
+  },
+  {
+    path: "/tools/home-service-provider-verification-log/",
+    require: [
+      "Home Service Provider Verification Log",
+      'hreflang="zh-TW"',
+      "Use four statuses that describe verification work",
+      "does not search registries",
+    ],
+  },
+  {
+    path: "/guides/home-service-provider-list/",
+    require: [
+      "Home Service Provider List",
+      'hreflang="zh-TW"',
+      "Registration, licence, insurance and skill are different claims",
+      "consumer.ftc.gov/articles/how-avoid-home-improvement-scam",
     ],
   },
   {
@@ -401,6 +422,24 @@ const checks = [
       'hreflang="en"',
       "四種狀態只描述工作流程",
       "不讀取即時颱風",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-service-provider-verification-log/",
+    require: [
+      "家庭到府服務商查證紀錄",
+      'hreflang="en"',
+      "四種狀態只描述流程",
+      "不查政府資料",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-service-provider-list/",
+    require: [
+      "找水電師傅或到府維修要注意什麼",
+      'hreflang="en"',
+      "商工登記查得到，只回答一部分問題",
+      "全國消費者服務專線 1950",
     ],
   },
   {

@@ -1502,6 +1502,147 @@ const definitions: Record<string, Definition> = {
       return `${values.household.trim()} — household storm-readiness review\nReview context: ${values.context}\nReview completed: ${formatter.format(reviewDate)}\nNext household review: ${formatter.format(nextReview)}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (workflow summary only, not a risk score or safety certificate)\n\n${lines("Authoritative source map", sourceRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — checked ${formatter.format(strictIsoDate(row.parts[2]) as Date)} — purpose: ${row.parts[3]} — offline/evidence: ${row.parts[4]} — owner: ${row.parts[5]}`))}\n\n${lines("Household preparation observations", taskRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — observed: ${row.parts[2]} — evidence: ${row.parts[3]} — owner: ${row.parts[4]} — status: ${row.parts[5]} — source: ${row.parts[6]}`))}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["No open task remains in this review; refresh the sources and observations whenever official information or household conditions change."])}\n\nProtected review-record location: ${values.storage.trim()}\n\nThis output records a dated household workflow. It does not fetch or replace official alerts, forecast storm effects, certify a building, route, shelter, supply or device, approve electrical, gas, roof, tree or flood work, guarantee utility service, decide whether to stay or evacuate, or prove insurance, rental, legal or building compliance. Current instructions from responsible authorities and emergency services always take priority.`;
     },
   },
+  "home-service-provider-verification-log": {
+    intro:
+      "Build a dated provider shortlist that ties identity, scope and open questions to the sources that actually support them. The tool does not search registries, validate credentials, compare prices, endorse providers or make a hiring decision.",
+    fields: [
+      text("household", "Household label", "Use a private nickname, not a full address, account or access detail.", "Maple household"),
+      {
+        name: "context",
+        label: "Verification context",
+        type: "select",
+        options: [
+          "Routine household provider-list refresh",
+          "Active repair estimates under review",
+          "Regulated or permission-sensitive work check",
+          "Prior-provider record review",
+        ],
+      },
+      { name: "reviewDate", label: "Verification review date", type: "date" },
+      { name: "nextReview", label: "Next household review date", type: "date" },
+      {
+        name: "sources",
+        label: "Verification source map",
+        type: "textarea",
+        help: "One line: ID | responsible source or issuer | checked date YYYY-MM-DD | exact verification question | observed result or protected evidence pointer | owner. Maximum 12 lines.",
+        value: "REG-1 | Responsible official business registry | 2026-08-23 | Does the displayed business identity match the written estimate | Exact public name and partial identifier matched; snapshot REG-1 | Records owner\nQUOTE-1 | Provider written estimate version Q-1 | 2026-08-23 | What work, exclusions and change process are proposed | Dated estimate lists inspection, included labour, material assumptions and exclusions | Project owner\nBLDG-1 | Current building or property instruction | 2026-08-23 | Who can approve access and common-property work | Written response pending; request stored as BLDG-1 | Building liaison",
+      },
+      {
+        name: "providers",
+        label: "Provider verification rows",
+        type: "textarea",
+        help: "One line: ID | displayed provider label | requested service scope | source IDs separated by commas | written evidence summary | owner | Identity and relevant scope checked, Written scope or estimate comparison open, Credential, insurance or permission confirmation open, or Archived or not selected with recorded reason. Maximum 15 lines.",
+        value: "PROV-1 | North Shore Home Service (public label) | Inspect the reported kitchen leak and provide written findings and scope | REG-1,QUOTE-1 | Estimate Q-1 states inspection, included labour, material assumptions and exclusions | Project owner | Identity and relevant scope checked\nPROV-2 | Cedar Building Repair (public label) | Assess whether the proposed repair affects common property | REG-1,BLDG-1 | Provider identity recorded; written building permission question remains open | Building liaison | Credential, insurance or permission confirmation open",
+      },
+      {
+        name: "actions",
+        label: "Follow-up for every open provider ID",
+        type: "textarea",
+        help: "One line: open provider ID | next evidence-based action | owner | due date YYYY-MM-DD. Every open scope/estimate or credential/insurance/permission row needs exactly one action.",
+        value: "PROV-2 | Obtain the building's written decision about common-property scope and preserve the dated response before access is authorized | Building liaison | 2026-08-25",
+      },
+      text("storage", "Protected evidence location", "Use a folder or envelope label, not a phone, email, full address, identifier, payment detail, credential or signature.", "Household records / providers / REVIEW-1"),
+    ],
+    run: (values) => {
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.household.trim()) return "Enter a household label so the exported provider review can be identified.";
+      if (!reviewDate) return "Enter a real verification review date in YYYY-MM-DD format.";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The verification review date cannot be in the future.";
+      if (!nextReview) return "Enter a real next household review date in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next household review cannot be earlier than this verification review.";
+      if (!values.storage.trim()) return "Enter the protected location for original source, estimate and contact evidence.";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const sourceRows = parseRows(values.sources);
+      if (sourceRows.length === 0) return "Add at least one official, issuer or first-party verification source.";
+      if (sourceRows.length > 12) return "Use no more than 12 source rows in one provider review.";
+      const invalidSources = sourceRows.filter((row) => row.parts.length !== 6 || row.parts.some((part) => !part));
+      if (invalidSources.length)
+        return `Source line ${invalidSources.map((row) => row.line).join(", ")} must contain all 6 pipe-separated fields.`;
+      const sourceIds = sourceRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(sourceIds).size !== sourceIds.length) return "Each verification source must have a unique ID.";
+      if (sourceIds.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Source IDs must use 2 to 20 letters, numbers or hyphens, such as REG-1.";
+      const invalidSourceDates = sourceRows.filter((row) => {
+        const checked = strictIsoDate(row.parts[2]);
+        return !checked || checked.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `Source line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a real checked date no later than the verification review.`;
+      const providerRows = parseRows(values.providers);
+      if (providerRows.length === 0) return "Add at least one provider row linked to a source.";
+      if (providerRows.length > 15) return "Use no more than 15 provider rows in one review; split unrelated service needs.";
+      const invalidProviders = providerRows.filter((row) => row.parts.length !== 7 || row.parts.some((part) => !part));
+      if (invalidProviders.length)
+        return `Provider line ${invalidProviders.map((row) => row.line).join(", ")} must contain all 7 pipe-separated fields.`;
+      const statuses = new Set([
+        "Identity and relevant scope checked",
+        "Written scope or estimate comparison open",
+        "Credential, insurance or permission confirmation open",
+        "Archived or not selected with recorded reason",
+      ]);
+      const invalidStatuses = providerRows.filter((row) => !statuses.has(row.parts[6]));
+      if (invalidStatuses.length)
+        return `Provider line ${invalidStatuses.map((row) => row.line).join(", ")} has an unsupported status. Use one of the four labels shown in the field instructions.`;
+      const providerIds = providerRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(providerIds).size !== providerIds.length) return "Each provider row must have a unique ID.";
+      if (providerIds.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Provider IDs must use 2 to 20 letters, numbers or hyphens, such as PROV-1.";
+      const unknownSources = providerRows.flatMap((row) =>
+        row.parts[3].split(",").map((id) => id.trim().toLocaleUpperCase("en")).filter((id) => !sourceIds.includes(id)).map(() => row.parts[0]),
+      );
+      if (unknownSources.length)
+        return `Every provider must reference only IDs from the source map. Check: ${[...new Set(unknownSources)].join(", ")}.`;
+      const openRows = providerRows.filter((row) =>
+        row.parts[6] === "Written scope or estimate comparison open" || row.parts[6] === "Credential, insurance or permission confirmation open",
+      );
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 15) return "Use no more than 15 follow-up rows in one provider review.";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `Follow-up line ${invalidActions.map((row) => row.line).join(", ")} must contain all 4 pipe-separated fields.`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length) return "Each open provider ID must have exactly one follow-up row.";
+      const openIds = new Set(openRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...openIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length) return `Add one follow-up row for every open provider ID: ${missingActions.join(", ")}.`;
+      const extraActions = actionIds.filter((id) => !openIds.has(id));
+      if (extraActions.length) return `Follow-up rows may reference only open provider IDs. Remove or update: ${extraActions.join(", ")}.`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() < reviewDate.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `Follow-up line ${invalidDueDates.map((row) => row.line).join(", ")} needs a real due date on or after the review and no later than the next review.`;
+      const privacyText = [values.sources, values.providers, values.actions, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email or complete numeric identifier was detected. Keep it in protected evidence and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|full address|account number|card number|bank account|routing number|social security|government id|personal licence number|personal license number|policy number|claim number|signature|date of birth|private reference contact|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, financial, identity, policy, signature or private reference detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusOrder = [
+        "Identity and relevant scope checked",
+        "Written scope or estimate comparison open",
+        "Credential, insurance or permission confirmation open",
+        "Archived or not selected with recorded reason",
+      ];
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: providerRows.filter((row) => row.parts[6] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.household.trim()} — home service provider verification log\nVerification context: ${values.context}\nReview completed: ${formatter.format(reviewDate)}\nNext household review: ${formatter.format(nextReview)}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (workflow summary only, not a provider score or endorsement)\n\n${lines("Verification source map", sourceRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — checked ${formatter.format(strictIsoDate(row.parts[2]) as Date)} — question: ${row.parts[3]} — observed result/evidence: ${row.parts[4]} — owner: ${row.parts[5]}`))}\n\n${lines("Provider verification rows", providerRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — requested scope: ${row.parts[2]} — sources: ${row.parts[3]} — written evidence: ${row.parts[4]} — owner: ${row.parts[5]} — status: ${row.parts[6]}`))}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["No open provider row remains; recheck sources before relying on this record for another service need."])}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a dated household research record. It does not search or authenticate a provider, interpret registry or licence categories, confirm insurance, permits, inspection, landlord or building approval, compare price fairness, assess workmanship, authorize home access, endorse or rank a business, make a hiring decision, or prove contract, legal or regulatory compliance. Use current responsible sources for the actual location and scope.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -3288,6 +3429,147 @@ const zhTwDefinitions: Record<string, Definition> = {
         count: taskRows.filter((row) => row.parts[5] === status).length,
       })).filter((item) => item.count > 0);
       return `${values.household.trim()}｜家庭颱風準備複查\n複查情境：${values.context}\n本次完成：${formatter.format(reviewDate)}\n家庭下次複查：${formatter.format(nextReview)}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（只表示工作流程，不是風險分數或安全認證）\n\n${lines("官方與負責來源地圖", sourceRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜查核：${formatter.format(strictIsoDate(row.parts[2]) as Date)}｜用途：${row.parts[3]}｜離線／證據：${row.parts[4]}｜負責：${row.parts[5]}`))}\n\n${lines("家庭準備觀察", taskRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜實際觀察：${row.parts[2]}｜證據：${row.parts[3]}｜負責：${row.parts[4]}｜狀態：${row.parts[5]}｜來源：${row.parts[6]}`))}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["本次沒有未完成項目；官方資訊或家庭狀況改變時，仍要立即更新來源與觀察。"])}\n\n受保護的複查紀錄位置：${values.storage.trim()}\n\n這份輸出只整理某日的家庭工作流程。它不抓取或取代官方警報、不預測颱風影響、不認證住家、路線、避難處所、物資或設備、不批准電氣、瓦斯、屋頂、樹木或積淹水作業、不保證供電供水、不決定留在家或撤離，也不證明保險、租屋、法令或建物規約合規。所在地主管機關、緊急服務與負責單位的最新指示永遠優先。`;
+    },
+  },
+  "home-service-provider-verification-log": {
+    intro:
+      "把候選到府服務商的公開身分、這次工作範圍與未完成問題逐筆連回官方或第一方來源。工具不查政府資料、不驗證資格、不比較價格、不推薦業者，也不替家庭做選擇。",
+    fields: [
+      text("household", "家庭代稱", "使用私密代稱，不要填完整門牌、帳號或進出資訊。", "青葉家庭"),
+      {
+        name: "context",
+        label: "本次查證情境",
+        type: "select",
+        options: [
+          "例行更新家庭服務商名單",
+          "正在比較維修或服務報價",
+          "查核受專業或管理規範的工作",
+          "重新檢視曾合作業者紀錄",
+        ],
+      },
+      { name: "reviewDate", label: "本次查核日期", type: "date" },
+      { name: "nextReview", label: "家庭下次複查日期", type: "date" },
+      {
+        name: "sources",
+        label: "查證來源地圖",
+        type: "textarea",
+        help: "每行格式：ID | 負責來源或發證／出具者 | 查核日 YYYY-MM-DD | 精確查核問題 | 頁面顯示結果或受保護證據索引 | 負責人。最多 12 行。",
+        value: "MOEA-1 | 經濟部商工登記公示資料 | 2026-08-23 | 報價抬頭是否和公開業者身分一致 | 公開名稱與安全的部分識別資料一致；截圖 MOEA-1 | 紀錄負責人\nQUOTE-1 | 業者書面估價 Q-1 | 2026-08-23 | 這次包含哪些工作、排除與變更方式 | 有日期估價列出檢查、工料假設、排除項目與變更程序 | 專案負責人\nBLDG-1 | 目前管委會或房東書面說明 | 2026-08-23 | 誰能同意進場與共用區域工作 | 已提出書面問題；回覆待存為 BLDG-1 | 管理聯絡人",
+      },
+      {
+        name: "providers",
+        label: "候選業者查證列",
+        type: "textarea",
+        help: "每行格式：ID | 公開業者代稱 | 這次要求的服務範圍 | 來源 ID（以逗號分開） | 書面證據摘要 | 負責人 | 身分與適用服務範圍已依來源記錄、書面範圍或報價仍待比較、資格、保險、許可或管理確認中、未選用或封存且已記理由。最多 15 行。",
+        value: "PROV-1 | 青禾居家服務（公開代稱） | 檢查廚房可見漏水並提出書面發現與範圍 | MOEA-1,QUOTE-1 | 估價 Q-1 列出檢查、工料假設、排除項目與變更方式 | 專案負責人 | 身分與適用服務範圍已依來源記錄\nPROV-2 | 山林修繕（公開代稱） | 評估提案是否涉及大樓共用區域 | MOEA-1,BLDG-1 | 業者公開身分已記；大樓書面權限問題仍待確認 | 管理聯絡人 | 資格、保險、許可或管理確認中",
+      },
+      {
+        name: "actions",
+        label: "每個未完成業者 ID 的追蹤",
+        type: "textarea",
+        help: "每行格式：未完成業者 ID | 下一個可查證動作 | 負責人 | 期限 YYYY-MM-DD。每個報價比較未完成或資格／保險／許可／管理確認中業者，都必須剛好有一筆追蹤。",
+        value: "PROV-2 | 取得管委會對共用區域範圍的書面決定並保存有日期回覆，再決定是否授權進場 | 管理聯絡人 | 2026-08-25",
+      },
+      text("storage", "受保護的原始證據位置", "只寫資料夾或信封代稱，不要填電話、Email、門牌、完整識別碼、付款資料、密碼或簽名。", "家庭文件／服務商／REVIEW-1"),
+    ],
+    run: (values) => {
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.household.trim()) return "請填家庭代稱，讓匯出的業者查證紀錄可以辨識。";
+      if (!reviewDate) return "請輸入真實的本次查核日期 YYYY-MM-DD。";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "到府服務商查核日期不能在未來。";
+      if (!nextReview) return "請輸入真實的家庭下次複查日期 YYYY-MM-DD。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "家庭下次複查日期不能早於本次查核。";
+      if (!values.storage.trim()) return "請填寫原始來源、報價與聯絡資料的受保護位置。";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const sourceRows = parseRows(values.sources);
+      if (sourceRows.length === 0) return "請至少新增一筆官方、發證／出具者或第一方查證來源。";
+      if (sourceRows.length > 12) return "一份業者查證最多整理 12 筆來源。";
+      const invalidSources = sourceRows.filter((row) => row.parts.length !== 6 || row.parts.some((part) => !part));
+      if (invalidSources.length)
+        return `來源第 ${invalidSources.map((row) => row.line).join("、")} 行必須完整填寫 6 個以直線分隔的欄位。`;
+      const sourceIds = sourceRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(sourceIds).size !== sourceIds.length) return "每筆查證來源都要有唯一 ID。";
+      if (sourceIds.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "來源 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 MOEA-1。";
+      const invalidSourceDates = sourceRows.filter((row) => {
+        const checked = strictIsoDate(row.parts[2]);
+        return !checked || checked.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `來源第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要真實查核日，而且不得晚於本次查核。`;
+      const providerRows = parseRows(values.providers);
+      if (providerRows.length === 0) return "請至少新增一筆連到來源的候選業者。";
+      if (providerRows.length > 15) return "一份查證最多 15 筆候選業者；不同服務需求請拆開。";
+      const invalidProviders = providerRows.filter((row) => row.parts.length !== 7 || row.parts.some((part) => !part));
+      if (invalidProviders.length)
+        return `候選業者第 ${invalidProviders.map((row) => row.line).join("、")} 行必須完整填寫 7 個以直線分隔的欄位。`;
+      const statuses = new Set([
+        "身分與適用服務範圍已依來源記錄",
+        "書面範圍或報價仍待比較",
+        "資格、保險、許可或管理確認中",
+        "未選用或封存且已記理由",
+      ]);
+      const invalidStatuses = providerRows.filter((row) => !statuses.has(row.parts[6]));
+      if (invalidStatuses.length)
+        return `候選業者第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須使用欄位說明中的四種文字之一。`;
+      const providerIds = providerRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(providerIds).size !== providerIds.length) return "每筆候選業者都要有唯一 ID。";
+      if (providerIds.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "候選業者 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 PROV-1。";
+      const unknownSources = providerRows.flatMap((row) =>
+        row.parts[3].split(",").map((id) => id.trim().toLocaleUpperCase("en")).filter((id) => !sourceIds.includes(id)).map(() => row.parts[0]),
+      );
+      if (unknownSources.length)
+        return `每筆候選業者只能連到來源地圖中存在的 ID，請檢查：${[...new Set(unknownSources)].join("、")}。`;
+      const openRows = providerRows.filter((row) =>
+        row.parts[6] === "書面範圍或報價仍待比較" || row.parts[6] === "資格、保險、許可或管理確認中",
+      );
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 15) return "一份業者查證最多 15 筆追蹤。";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `追蹤第 ${invalidActions.map((row) => row.line).join("、")} 行必須完整填寫 4 個以直線分隔的欄位。`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length) return "每個未完成業者 ID 只能有一筆追蹤。";
+      const openIds = new Set(openRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...openIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length) return `每個未完成業者 ID 都要建立一筆追蹤，尚缺：${missingActions.join("、")}。`;
+      const extraActions = actionIds.filter((id) => !openIds.has(id));
+      if (extraActions.length) return `追蹤只能連到未完成業者 ID；請移除或更新：${extraActions.join("、")}。`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() < reviewDate.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `追蹤第 ${invalidDueDates.map((row) => row.line).join("、")} 行需要真實期限，而且不得早於本次查核、不得晚於下次複查。`;
+      const privacyText = [values.sources, values.providers, values.actions, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email 或完整數字識別資料。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|驗證碼|警報碼|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證|個人證照完整號碼|保單編號|案件編號|簽名|出生日期|私人推薦人聯絡|password|passcode|access code|account number|card number|government id|policy number|claim number|signature|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、金融、身分、保單、簽名或私人推薦人資料。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusOrder = [
+        "身分與適用服務範圍已依來源記錄",
+        "書面範圍或報價仍待比較",
+        "資格、保險、許可或管理確認中",
+        "未選用或封存且已記理由",
+      ];
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: providerRows.filter((row) => row.parts[6] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.household.trim()}｜家庭到府服務商查證紀錄\n查證情境：${values.context}\n本次完成：${formatter.format(reviewDate)}\n家庭下次複查：${formatter.format(nextReview)}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（只表示工作流程，不是業者分數或背書）\n\n${lines("查證來源地圖", sourceRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜查核：${formatter.format(strictIsoDate(row.parts[2]) as Date)}｜問題：${row.parts[3]}｜顯示結果／證據：${row.parts[4]}｜負責：${row.parts[5]}`))}\n\n${lines("候選業者查證列", providerRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜要求範圍：${row.parts[2]}｜來源：${row.parts[3]}｜書面證據：${row.parts[4]}｜負責：${row.parts[5]}｜狀態：${row.parts[6]}`))}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["本次沒有未完成候選業者；下一次服務需求仍要重新查目前來源。"])}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是一份有日期的家庭研究紀錄。它不搜尋或驗證業者、不解讀商工、專業業別或證照範圍、不確認保險、許可、檢查、房東或大樓同意、不比較價格合理性、不評估施工品質、不授權入屋、不推薦或排名業者、不替家庭做聘用決定，也不證明契約、法律或工程合規。請依實際地點與工作範圍使用目前的負責來源。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

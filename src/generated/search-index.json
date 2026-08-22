@@ -352,12 +352,12 @@
     "headings": "Water leak response records: a safe evidence and follow-up workflow Stop at the safety boundary before collecting more evidence Start with the earliest fact you can actually support Preserve original photos and make later images comparable Keep four layers separate: observation, finding, work and recovery “Water stopped” is an observation, not proof of repair Treat a water-meter change as a clue, not a location diagnosis Verify the responsible notification channel Drying should begin promptly without becoming a universal timer Give each open area one evidence-based next action Renters and owners need different sources, not different facts Record costs without turning them into a claim verdict Close the event only after a new observation"
   },
   {
-    "title": "Home Service Provider List: Keep the People Who Know Your Home Easy to Find",
-    "description": "Organize household service providers with contact details, specialties, prior work, asset relationships and notes without turning the list into public reviews.",
+    "title": "Home Service Provider List | Verify Sources, Scope and Prior Work",
+    "description": "Build a useful home service provider list with dated registry checks, written scope, prior-work evidence and owner-led follow-up—without treating a listing as an endorsement.",
     "route": "/guides/home-service-provider-list/",
     "cluster": "maintenance",
     "keywords": "home service provider list",
-    "headings": "Home service provider list: keep the people who know your home easy to find Store more than a name and a phone number Keep it factual, not a review platform Link every provider to the work they actually did Verify before you're in an emergency, not during one Why this list is different from repair history"
+    "headings": "Home service provider list: verify identity, scope and prior work before you rely on it Start with the service need, not a favorite name Build a source map before making a provider row Registration, licence, insurance and skill are different claims Normalize written estimates before comparing price Keep references and reviews in the right evidence tier Give every candidate a workflow status Keep the private contact card separate from the decision log Move selected work into repair history Keep commercial placement outside verification"
   },
   {
     "title": "Home Maintenance Delegation: Assign Ownership Without Turning the Home into a Workplace",
@@ -1550,6 +1550,14 @@
     "cluster": "tools",
     "keywords": "household storm readiness checklist",
     "headings": "Household storm readiness review Use the source for the home's actual jurisdiction One source row answers one defined question Review household facts rather than promising outcomes Four statuses preserve the difference between checked and resolved Keep hazardous work outside the form Every open row receives exactly one next action Protect personal and operational details Use review timing honestly Read the result as a handoff record Commerce stays optional and separate Close the review without certifying the home"
+  },
+  {
+    "title": "Home Service Provider Verification Log | Sources, Scope and Follow-Up",
+    "description": "Create a private provider shortlist with dated source checks, written-scope evidence and owner-linked follow-up—without ranking, endorsing or certifying a contractor.",
+    "route": "/tools/home-service-provider-verification-log/",
+    "cluster": "tools",
+    "keywords": "home service provider verification checklist",
+    "headings": "Home service provider verification log Define the requested service before checking names Create one source row for one verification question Open the authoritative source rather than trusting a search result Record each provider without turning the row into a rating Use four statuses that describe verification work Give every open row exactly one evidence action Protect household, provider and reference details Keep urgent and hazardous conditions outside provider comparison Move the decision into a project or repair record Keep sponsored discovery separate from verification"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

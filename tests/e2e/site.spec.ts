@@ -63,7 +63,7 @@ test("public SEO, keyboard and five production tools work", async ({
 test("representative routes have no serious accessibility violations", async ({
   page,
 }) => {
-  test.setTimeout(120_000);
+  test.setTimeout(150_000);
   for (const route of [
     "/",
     "/guides/home-maintenance-schedule/",
@@ -78,6 +78,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/water-leak-response-home-records/",
     "/tools/household-storm-readiness-review/",
     "/guides/storm-preparation-home-checklist/",
+    "/tools/home-service-provider-verification-log/",
+    "/guides/home-service-provider-list/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -101,6 +103,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-power-outage-event-log/",
     "/zh-tw/tools/household-water-leak-event-log/",
     "/zh-tw/tools/household-storm-readiness-review/",
+    "/zh-tw/tools/home-service-provider-verification-log/",
+    "/zh-tw/guides/home-service-provider-list/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -231,6 +235,9 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     page.locator(".site-footer").getByRole("link", { name: "家庭颱風準備複查" }),
   ).toHaveAttribute("href", "/zh-tw/tools/household-storm-readiness-review/");
   await expect(
+    page.locator(".site-footer").getByRole("link", { name: "到府服務商查證紀錄" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/home-service-provider-verification-log/");
+  await expect(
     page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
   await expect(
@@ -242,6 +249,9 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭防颱準備指南" }),
   ).toHaveAttribute("href", "/zh-tw/guides/storm-preparation-home-checklist/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "找水電與維修業者指南" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/home-service-provider-list/");
 
   for (const localized of [
     {
@@ -328,6 +338,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/storm-preparation-home-checklist/",
       alternate: "/guides/storm-preparation-home-checklist/",
       heading: "颱風來了家裡要準備什麼：台灣家庭要先對官方資訊，再做清單",
+    },
+    {
+      route: "/zh-tw/guides/home-service-provider-list/",
+      alternate: "/guides/home-service-provider-list/",
+      heading: "找水電師傅或到府維修要注意什麼：先查身分、工作範圍與書面證據",
     },
     {
       route: "/zh-tw/features/household-handoff/",
@@ -542,6 +557,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/household-storm-readiness-review/",
       alternate: "/tools/household-storm-readiness-review/",
       heading: "家庭颱風準備複查表",
+    },
+    {
+      route: "/zh-tw/tools/home-service-provider-verification-log/",
+      alternate: "/tools/home-service-provider-verification-log/",
+      heading: "家庭到府服務商查證紀錄",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -966,6 +986,42 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "家庭下次複查日期不能早於本次複查",
   );
 
+  await page.goto("/tools/home-service-provider-verification-log/");
+  await page.getByLabel("Verification review date").fill("2026-08-23");
+  await page.getByLabel("Next household review date").fill("2026-08-25");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "Identity and relevant scope checked 1",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "Credential, insurance or permission confirmation open 1",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "not a provider score or endorsement",
+  );
+  await page.getByLabel("Protected evidence location").fill("Call 555-123-4567");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "possible full phone number, email or complete numeric identifier",
+  );
+
+  await page.goto("/zh-tw/tools/home-service-provider-verification-log/");
+  await page.getByLabel("本次查核日期").fill("2026-08-23");
+  await page.getByLabel("家庭下次複查日期").fill("2026-08-25");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "身分與適用服務範圍已依來源記錄 1 筆",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "資格、保險、許可或管理確認中 1 筆",
+  );
+  await expect(page.locator(".result")).toContainText("不是業者分數或背書");
+  await page.getByLabel("受保護的原始證據位置").fill("門禁碼 1234");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "憑證、地址、金融、身分、保單、簽名或私人推薦人資料",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1246,6 +1302,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/storm-preparation-home-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/home-service-provider-verification-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/home-service-provider-verification-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/home-service-provider-list/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",
