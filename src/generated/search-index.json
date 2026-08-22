@@ -760,12 +760,12 @@
     "headings": "Home-purchase records exist to prove a number you won't need for years What actually belongs in the closing archive Why \"keep it forever\" is closer to correct than any fixed number Inspection and disclosure documents connect to later work This category feeds directly into renovation and improvement records Retention specifics beyond basis are genuinely jurisdiction-dependent A well-organized purchase archive makes the improvement records that follow easier What a title company or attorney provided is worth keeping intact These documents deserve real access protection An index is enough to start — the originals can stay where they are"
   },
   {
-    "title": "Renovation Records: Keep Contractors, Materials, Dates, Warranties and Before/After History",
-    "description": "Organize renovation records around what the IRS actually counts as a capital improvement — the categories that add to your home's cost basis, not just project logistics.",
+    "title": "Renovation Records | Scope, Changes, Punch List and Warranties",
+    "description": "Build a renovation record that connects agreed scope, change orders, payments, dated observations, punch-list follow-up, products, warranties and tax evidence.",
     "route": "/guides/renovation-records/",
     "cluster": "inventory-warranty",
     "keywords": "renovation records organizer",
-    "headings": "A renovation record does two jobs: future maintenance and future taxes What actually counts as a capital improvement, per the IRS Create one project record, not a scattered pile of receipts Preserve the exact product details, while they're still easy to find New assets created by a renovation get their own record Before and after photos are evidence, not just memory A renovation record should survive a change in contractor Permits are a resale-relevant record, even though the rules vary by place A renovation record is also a maintenance record's origin story"
+    "headings": "Renovation records should preserve the project chronology, not just the final photos Start with the exact controlling scope and its date Keep a source map so statements remain attributable Give every change its own version instead of editing the baseline Record observations before interpreting causes or responsibility A punch list is a controlled observation queue Completion, acceptance, inspection and payment are separate decisions Build the close-out package before the project team disperses Installed equipment becomes an asset with its own history Preserve tax evidence without letting the archive decide tax treatment Preserve history if the project becomes disputed or changes providers Commercial recommendations stay outside the evidence chain"
   },
   {
     "title": "Contractor Records for Home Repairs | Scope, Change Orders and Close-Out",
@@ -1566,6 +1566,14 @@
     "cluster": "tools",
     "keywords": "home repair change order log",
     "headings": "Home repair change order log Freeze the original project baseline first Create one row for each distinct change Record cost and time as separate signed effects Use four statuses with evidence boundaries Every open change needs exactly one next evidence action Written change rules depend on the actual location and agreement Do not use a payment or site photo as automatic approval Protect the household and project evidence Close the project without erasing its changes Commercial recommendations stay outside the record"
+  },
+  {
+    "title": "Home Repair Punch List | Dated Walkthrough and Recheck Log",
+    "description": "Create a private repair punch list with observable items, agreed-scope references, evidence dates, responsible roles, target dates and recheck status.",
+    "route": "/tools/home-repair-punch-list/",
+    "cluster": "tools",
+    "keywords": "home repair punch list",
+    "headings": "Home repair punch list Freeze the scope version before listing visible items Use one narrow, observable condition per item Separate observation from diagnosis, standard and responsibility Observation dates and evidence pointers must stay attributable Five statuses keep reports and rechecks distinct Open and closed rows use dates differently Keep completion, acceptance, payment and warranty outside the status field Reconcile the punch list with the full project archive Protect private household and dispute information Commercial recommendations stay outside walkthrough decisions"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

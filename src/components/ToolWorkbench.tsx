@@ -1819,6 +1819,123 @@ const definitions: Record<string, Definition> = {
       return `${values.project.trim()} — home repair change order log\nRecord context: ${values.context}\nOriginal agreement: ${formatter.format(agreementDate)}\nChange record reconciled: ${formatter.format(recordDate)}\nNext household review: ${formatter.format(nextReview)}\nCurrency: ${values.currency}\nOriginal amount: ${numberFormatter.format(originalAmount)}\nAccepted change effect: ${acceptedCost >= 0 ? "+" : ""}${numberFormatter.format(acceptedCost)}\nReconciled arithmetic amount: ${numberFormatter.format(reconciledAmount)}\nOriginal planned duration: ${originalDays} calendar days\nAccepted schedule effect: ${acceptedDays >= 0 ? "+" : ""}${acceptedDays} calendar days\nReconciled arithmetic duration: ${reconciledDays} calendar days\nPending proposed effects: ${pendingCount}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nOriginal agreement evidence and scope: ${values.baseline.trim()}\n\n${lines("Versioned change rows", changeRows.map((row) => `${row.parts[0]} — requested ${formatter.format(strictIsoDate(row.parts[1]) as Date)} by ${row.parts[2]} — change: ${row.parts[3]} — reason/trigger: ${row.parts[4]} — cost effect: ${row.parts[5]} ${values.currency} — schedule effect: ${row.parts[6]} days — evidence: ${row.parts[7]} — owner: ${row.parts[8]} — status: ${row.parts[9]}`))}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["No proposed or approved-not-completed change remains; reconcile final invoices and close-out evidence without deleting declined history."])}\n\nProtected original-document location: ${values.storage.trim()}\n\nThe totals above are arithmetic reconciliation only. This output does not create or amend a contract, verify identity, authority, consent, signature or delivery, determine whether a charge is valid, reasonable, due or covered, authorize work or payment, inspect workmanship or concealed conditions, approve permits or inspections, certify completion, acceptance, safety, warranty, insurance, tax, lien or legal compliance, extend any notice or deadline, or resolve a dispute. Preserve original documents and use current responsible sources for the actual location and project.`;
     },
   },
+  "home-repair-punch-list": {
+    intro:
+      "Create a dated queue of narrow, visible project items and keep a reported correction separate from a household recheck. This tool does not inspect work, define a defect, certify completion or acceptance, authorize payment, start a warranty or replace a qualified source.",
+    fields: [
+      text("project", "Private project label", "Use a household nickname and work area, not a full address or private provider contact.", "Maple household kitchen renovation"),
+      {
+        name: "context",
+        label: "Walkthrough context",
+        type: "select",
+        options: [
+          "Pre-completion household walkthrough",
+          "Review after provider completion notice",
+          "Recheck after reported correction",
+          "Incomplete or disputed history preservation",
+        ],
+      },
+      { name: "baselineDate", label: "Controlling scope date", type: "date", value: "2026-08-01" },
+      { name: "reviewDate", label: "Punch-list review date", type: "date", value: "2026-08-23" },
+      { name: "nextReview", label: "Next household review date", type: "date", value: "2026-08-30" },
+      text("baseline", "Controlling scope and change evidence", "Name the exact signed scope plus approved change IDs. Do not overwrite the baseline or paste signatures and private contacts.", "CONTRACT-C1 plus approved CHG-1 and CHG-3; excludes dining-room paint"),
+      {
+        name: "items",
+        label: "Versioned punch-list rows",
+        type: "textarea",
+        help: "One line: ID | area or element | observable condition | controlling scope or change pointer | observation date YYYY-MM-DD | photo or document pointer | next evidence, correction or closure reason | responsible role | target or recheck date YYYY-MM-DD | Observed—written response pending, Correction planned—not rechecked, Provider reports corrected—recheck pending, Closed—dated recheck evidence linked, or Archived—not pursued, reason recorded. Maximum 15 lines.",
+        value: "PL-1 | Kitchen east cabinet | Door contacts adjacent panel during full opening | CONTRACT-C1 section 4 and DRAWING-A3 | 2026-08-23 | PHOTO-18 | Recheck full door travel and preserve dated evidence after reported adjustment | Project owner | 2026-08-28 | Correction planned—not rechecked\nPL-2 | Hallway floor | Three tile edges showed visible height differences under fixed hallway light | CHG-3 and TILE-SCHEDULE-T2 | 2026-08-20 | PHOTO-22 and RECHECK-24 | Rechecked after reported correction; dated evidence linked | Project owner | 2026-08-23 | Closed—dated recheck evidence linked",
+      },
+      text("storage", "Protected original-evidence location", "Use a folder or envelope label, not an address, phone, email, signature, account, payment, identity, licence, policy or claim detail.", "Household records / renovation / PROJECT-C1 / punch list"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.project.trim()) return "Enter a private project label so the exported punch list can be identified.";
+      if (!baselineDate) return "Enter a real controlling scope date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real punch-list review date in YYYY-MM-DD format.";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The punch-list review date cannot be in the future.";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "The controlling scope date cannot be later than the punch-list review date.";
+      if (!nextReview) return "Enter a real next household review date in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next household review cannot be earlier than this punch-list review.";
+      if (!values.baseline.trim()) return "Enter the exact controlling agreement and approved-change evidence.";
+      if (!values.storage.trim()) return "Enter the protected location for original scope, photos, responses, inspections and recheck evidence.";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const itemRows = parseRows(values.items);
+      if (itemRows.length === 0) return "Add at least one punch-list row.";
+      if (itemRows.length > 15) return "Use no more than 15 items in one punch-list review; create another dated version if needed.";
+      const invalidRows = itemRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Punch-list line ${invalidRows.map((row) => row.line).join(", ")} must contain all 10 pipe-separated fields.`;
+      const ids = itemRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Each punch-list item must have a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Punch-list IDs must use 2 to 20 letters, numbers or hyphens, such as PL-1.";
+      const invalidObservationDates = itemRows.filter((row) => {
+        const observed = strictIsoDate(row.parts[4]);
+        return !observed || observed.getTime() < baselineDate.getTime() || observed.getTime() > reviewDate.getTime();
+      });
+      if (invalidObservationDates.length)
+        return `Punch-list line ${invalidObservationDates.map((row) => row.line).join(", ")} needs a real observation date between the controlling scope and this review.`;
+      const statusOrder = [
+        "Observed—written response pending",
+        "Correction planned—not rechecked",
+        "Provider reports corrected—recheck pending",
+        "Closed—dated recheck evidence linked",
+        "Archived—not pursued, reason recorded",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = itemRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `Punch-list line ${invalidStatuses.map((row) => row.line).join(", ")} has an unsupported status. Use one of the five labels shown in the field instructions.`;
+      const openStatuses = new Set(statusOrder.slice(0, 3));
+      const openRows = itemRows.filter((row) => openStatuses.has(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open punch-list line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target or recheck date from this review through the next household review.`;
+      const closedRows = itemRows.filter((row) => !openStatuses.has(row.parts[9]));
+      const invalidClosedDates = closedRows.filter((row) => {
+        const observed = strictIsoDate(row.parts[4]) as Date;
+        const closed = strictIsoDate(row.parts[8]);
+        return !closed || closed.getTime() < observed.getTime() || closed.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Closed or archived punch-list line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual recheck or archive date between its observation and this review.`;
+      const vagueActions = itemRows.filter((row) =>
+        row.parts[6].length < 12 || /^(?:done|fixed|ok|none|n\/a|check|follow up)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `Punch-list line ${vagueActions.map((row) => row.line).join(", ")} needs a specific next evidence, correction or preserved closure reason—not a generic completion word.`;
+      const weakPointers = itemRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4);
+      if (weakPointers.length)
+        return `Punch-list line ${weakPointers.map((row) => row.line).join(", ")} needs specific controlling-scope and dated evidence pointers.`;
+      const privacyText = [values.project, values.baseline, values.items, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email or complete numeric identifier was detected. Keep it in protected evidence and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|full address|account number|card number|bank account|routing number|social security|government id|personal licence number|personal license number|policy number|claim number|signature|date of birth|private contact|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, financial, identity, licence, policy, signature or private contact detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: itemRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.project.trim()} — home repair punch list\nWalkthrough context: ${values.context}\nControlling scope date: ${formatter.format(baselineDate)}\nPunch-list review: ${formatter.format(reviewDate)}\nNext household review: ${formatter.format(nextReview)}\nOpen items: ${openRows.length}\nClosed or archived items: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling scope and approved changes: ${values.baseline.trim()}\n\n${lines("Versioned punch-list items", itemRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — observed ${formatter.format(strictIsoDate(row.parts[4]) as Date)}: ${row.parts[2]} — controlling source: ${row.parts[3]} — evidence: ${row.parts[5]} — next evidence/correction/closure reason: ${row.parts[6]} — responsible role: ${row.parts[7]} — target/recheck/archive date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household observation and follow-up record. It does not inspect work or concealed conditions, diagnose cause, define a defect, verify products, permits or inspections, certify workmanship, completion, acceptance, safety, code or legal compliance, authorize work, payment or withholding, start or change a warranty, calculate or extend any deadline, waive a right, assign responsibility or resolve a dispute. Preserve original sources and use the contract, responsible authority and qualified professionals for the actual project.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -3922,6 +4039,123 @@ const zhTwDefinitions: Record<string, Definition> = {
         row.parts[5].toLocaleLowerCase("en") === "pending" || row.parts[6].toLocaleLowerCase("en") === "pending",
       ).length;
       return `${values.project.trim()}｜居家修繕追加變更紀錄\n紀錄情境：${values.context}\n原約定日期：${formatter.format(agreementDate)}\n本次變更核對：${formatter.format(recordDate)}\n家庭下次複查：${formatter.format(nextReview)}\n幣別：${values.currency}\n原約定總額：${numberFormatter.format(originalAmount)}\n已同意變更影響：${acceptedCost >= 0 ? "+" : ""}${numberFormatter.format(acceptedCost)}\n目前算術總額：${numberFormatter.format(reconciledAmount)}\n原預定工期：${originalDays} 日曆天\n已同意工期影響：${acceptedDays >= 0 ? "+" : ""}${acceptedDays} 日曆天\n目前算術工期：${reconciledDays} 日曆天\n仍為 pending 的提案效果：${pendingCount} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n原約定證據與範圍：${values.baseline.trim()}\n\n${lines("有版本的追加變更列", changeRows.map((row) => `${row.parts[0]}｜${formatter.format(strictIsoDate(row.parts[1]) as Date)} 由 ${row.parts[2]} 提出｜變更：${row.parts[3]}｜原因／觀察：${row.parts[4]}｜費用影響：${row.parts[5]} ${values.currency}｜工期影響：${row.parts[6]} 天｜證據：${row.parts[7]}｜負責：${row.parts[8]}｜狀態：${row.parts[9]}`))}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["本次沒有提案中或已同意但未完成的變更；請保留拒絕歷史，再核對最終請款與結案證據。"])}\n\n受保護的原始文件位置：${values.storage.trim()}\n\n以上總數只是算術核對。這份輸出不建立或變更契約、不驗證身分、代理權、同意、簽名或送達、不判定費用是否有效、合理、到期、應付或受保障、不授權施工或付款、不檢查施工品質與隱蔽狀況、不批准許可或檢查、不認證完工、驗收、安全、保固、保險、稅務、權利負擔或法律合規、不延長任何通知與期限，也不解決爭議。請保存原始文件，並依實際地點與工程使用目前的負責來源。`;
+    },
+  },
+  "home-repair-punch-list": {
+    intro:
+      "把每個可見項目連回控制中的契約或變更範圍，並把業者回報處理和家庭再次複查分開。工具不檢查施工、不認定瑕疵、不建立正式驗收或完工、不批准付款，也不取代合格專業來源。",
+    fields: [
+      text("project", "私密工程代稱", "使用家庭代稱與施工區域，不要填完整門牌或私人業者聯絡資料。", "青葉家庭廚房裝潢"),
+      {
+        name: "context",
+        label: "本次走查情境",
+        type: "select",
+        options: [
+          "完工前家庭自行走查",
+          "收到業者完工通知後複查",
+          "業者回報處理後再次查看",
+          "保存未完成或爭議中的歷史",
+        ],
+      },
+      { name: "baselineDate", label: "控制範圍基準日", type: "date", value: "2026-08-01" },
+      { name: "reviewDate", label: "本次缺失紀錄日", type: "date", value: "2026-08-23" },
+      { name: "nextReview", label: "家庭下次複查日", type: "date", value: "2026-08-30" },
+      text("baseline", "控制中的範圍與變更證據", "寫明實際契約或接受估價版本，加上已同意變更 ID；不要覆寫基準，也不要貼簽名或私人聯絡。", "CONTRACT-C1＋已同意 CHG-1、CHG-3；不含餐廳油漆"),
+      {
+        name: "items",
+        label: "有版本的缺失複查列",
+        type: "textarea",
+        help: "每行格式：ID | 區域或構件 | 可見狀況 | 原範圍或變更索引 | 觀察日期 YYYY-MM-DD | 照片或文件索引 | 下一個證據、處理或結案理由 | 負責角色 | 目標或複查日期 YYYY-MM-DD | 已觀察，等待書面回覆、已規劃處理，尚未複查、業者回報已處理，等待複查、已關閉，連結有日期的複查證據、已封存，未繼續追蹤且已記理由。最多 15 行。",
+        value: "PL-1 | 廚房東側櫃門 | 全開時碰到旁板 | CONTRACT-C1 第四節與 DRAWING-A3 | 2026-08-23 | PHOTO-18 | 業者回報調整後重新查看全開行程並保存日期證據 | 家庭工程負責人 | 2026-08-28 | 已規劃處理，尚未複查\nPL-2 | 走道地坪 | 固定燈光下可見三片地磚邊緣高低差 | CHG-3 與 TILE-SCHEDULE-T2 | 2026-08-20 | PHOTO-22 與 RECHECK-24 | 回報處理後已再次查看，連結有日期複查證據 | 家庭工程負責人 | 2026-08-23 | 已關閉，連結有日期的複查證據",
+      },
+      text("storage", "受保護的原始證據位置", "只寫資料夾或信封代稱，不要填地址、電話、Email、簽名、帳號、付款、身分、證照、保單或理賠資料。", "家庭文件／裝潢／PROJECT-C1／缺失複查"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.project.trim()) return "請填私密工程代稱，讓匯出的缺失複查表可以辨識。";
+      if (!baselineDate) return "請輸入真實的控制範圍基準日 YYYY-MM-DD。";
+      if (!reviewDate) return "請輸入真實的本次缺失紀錄日 YYYY-MM-DD。";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次缺失紀錄日不能在未來。";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "控制範圍基準日不能晚於本次缺失紀錄日。";
+      if (!nextReview) return "請輸入真實的家庭下次複查日 YYYY-MM-DD。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "家庭下次複查日不能早於本次缺失紀錄。";
+      if (!values.baseline.trim()) return "請填精確的控制契約、估價與已同意變更證據。";
+      if (!values.storage.trim()) return "請填原範圍、照片、回覆、檢查與複查證據的受保護位置。";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const itemRows = parseRows(values.items);
+      if (itemRows.length === 0) return "請至少新增一筆缺失複查列。";
+      if (itemRows.length > 15) return "一份缺失複查最多 15 筆；更多項目請建立下一份有日期的版本。";
+      const invalidRows = itemRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `缺失複查第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整填寫 10 個以直線分隔的欄位。`;
+      const ids = itemRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆缺失複查都要有唯一 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "缺失 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 PL-1。";
+      const invalidObservationDates = itemRows.filter((row) => {
+        const observed = strictIsoDate(row.parts[4]);
+        return !observed || observed.getTime() < baselineDate.getTime() || observed.getTime() > reviewDate.getTime();
+      });
+      if (invalidObservationDates.length)
+        return `缺失複查第 ${invalidObservationDates.map((row) => row.line).join("、")} 行需要真實觀察日，且必須介於控制範圍基準與本次紀錄之間。`;
+      const statusOrder = [
+        "已觀察，等待書面回覆",
+        "已規劃處理，尚未複查",
+        "業者回報已處理，等待複查",
+        "已關閉，連結有日期的複查證據",
+        "已封存，未繼續追蹤且已記理由",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = itemRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `缺失複查第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須使用欄位說明中的五種文字之一。`;
+      const openStatuses = new Set(statusOrder.slice(0, 3));
+      const openRows = itemRows.filter((row) => openStatuses.has(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的缺失第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標或複查日必須從本次紀錄日起，到家庭下次複查日為止。`;
+      const closedRows = itemRows.filter((row) => !openStatuses.has(row.parts[9]));
+      const invalidClosedDates = closedRows.filter((row) => {
+        const observed = strictIsoDate(row.parts[4]) as Date;
+        const closed = strictIsoDate(row.parts[8]);
+        return !closed || closed.getTime() < observed.getTime() || closed.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已關閉或封存的缺失第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於原觀察日與本次紀錄日之間的實際複查或封存日。`;
+      const vagueActions = itemRows.filter((row) =>
+        row.parts[6].length < 8 || /^(?:好了|完成|已修|固定|ok|無|不用|不追)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `缺失複查第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的下一個證據、處理內容或結案理由，不能只寫通用完成詞。`;
+      const weakPointers = itemRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4);
+      if (weakPointers.length)
+        return `缺失複查第 ${weakPointers.map((row) => row.line).join("、")} 行需要具體的控制範圍與日期證據索引。`;
+      const privacyText = [values.project, values.baseline, values.items, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email 或完整數字識別資料。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|驗證碼|警報碼|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證|個人證照完整號碼|保單編號|案件編號|簽名|出生日期|私人聯絡|password|passcode|access code|account number|card number|government id|policy number|claim number|signature|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、金融、身分、證照、保單、簽名或私人聯絡資料。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: itemRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.project.trim()}｜居家修繕缺失複查表\n本次走查情境：${values.context}\n控制範圍基準日：${formatter.format(baselineDate)}\n本次缺失紀錄：${formatter.format(reviewDate)}\n家庭下次複查：${formatter.format(nextReview)}\n仍開放：${openRows.length} 筆\n已關閉或封存：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的範圍與已同意變更：${values.baseline.trim()}\n\n${lines("有版本的缺失複查列", itemRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜${formatter.format(strictIsoDate(row.parts[4]) as Date)} 觀察：${row.parts[2]}｜控制來源：${row.parts[3]}｜證據：${row.parts[5]}｜下一個證據／處理／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／複查／封存日：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭可見觀察與追蹤紀錄。它不檢查施工或隱蔽工程、不診斷原因、不認定瑕疵、不驗證產品、許可或檢查、不認證施工品質、完工、驗收、安全、法規或法律合規、不授權施工、付款或扣款、不啟動或變更保固、不計算或延長任何期限、不代表放棄權利、不分配責任，也不解決爭議。請保存原始來源，並依實際工程使用契約、主管機關與合格專業人員。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T19:45:03.037Z
+Generated: 2026-08-22T20:08:20.622Z
 
 ## Summary
 
-- Indexable pages: 284
-- Generated HTML routes: 301
+- Indexable pages: 287
+- Generated HTML routes: 304
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 98
+- Pages without a contextual product/tool link: 100
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,9 +22,9 @@ Generated: 2026-08-22T19:45:03.037Z
 - appliances: 30
 - maintenance: 37
 - household-operations: 21
-- inventory-warranty: 30
+- inventory-warranty: 31
 - records-emergency: 27
-- tools: 67
+- tools: 69
 
 ## Word-count range
 
@@ -102,6 +102,7 @@ Generated: 2026-08-22T19:45:03.037Z
 - /zh-tw/guides/move-out-home-records/
 - /zh-tw/guides/organize-household-subscriptions/
 - /zh-tw/guides/power-outage-home-preparedness/
+- /zh-tw/guides/renovation-records/
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/guides/storm-preparation-home-checklist/
 - /zh-tw/guides/water-leak-response-home-records/
@@ -125,6 +126,7 @@ Generated: 2026-08-22T19:45:03.037Z
 - /zh-tw/tools/home-maintenance-schedule-generator/
 - /zh-tw/tools/home-repair-change-order-log/
 - /zh-tw/tools/home-repair-cost-log/
+- /zh-tw/tools/home-repair-punch-list/
 - /zh-tw/tools/home-service-provider-verification-log/
 - /zh-tw/tools/home-service-reminder-generator/
 - /zh-tw/tools/house-sitter-instruction-generator/

@@ -793,7 +793,7 @@
   },
   {
     "route": "/guides/renovation-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/renovation-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1672,6 +1672,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/home-repair-punch-list/",
+    "alternateRoute": "/zh-tw/tools/home-repair-punch-list/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2031,6 +2039,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/home-repair-punch-list/",
+    "alternateRoute": "/tools/home-repair-punch-list/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/home-service-provider-list/",
     "alternateRoute": "/guides/home-service-provider-list/",
     "indexable": true,
@@ -2231,6 +2246,13 @@
     "alternateRoute": "/tools/recurring-chore-planner/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/renovation-records/",
+    "alternateRoute": "/guides/renovation-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {

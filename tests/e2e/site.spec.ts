@@ -82,6 +82,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/home-service-provider-list/",
     "/tools/home-repair-change-order-log/",
     "/guides/contractor-records/",
+    "/tools/home-repair-punch-list/",
+    "/guides/renovation-records/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -109,6 +111,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/home-service-provider-list/",
     "/zh-tw/tools/home-repair-change-order-log/",
     "/zh-tw/guides/contractor-records/",
+    "/zh-tw/tools/home-repair-punch-list/",
+    "/zh-tw/guides/renovation-records/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -245,6 +249,9 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     page.locator(".site-footer").getByRole("link", { name: "居家修繕追加變更紀錄" }),
   ).toHaveAttribute("href", "/zh-tw/tools/home-repair-change-order-log/");
   await expect(
+    page.locator(".site-footer").getByRole("link", { name: "居家修繕缺失複查表" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/home-repair-punch-list/");
+  await expect(
     page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
   await expect(
@@ -259,6 +266,9 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "找水電與維修業者指南" }),
   ).toHaveAttribute("href", "/zh-tw/guides/home-service-provider-list/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "裝潢驗收紀錄教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/renovation-records/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "裝潢追加工程教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/contractor-records/");
@@ -582,6 +592,16 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/home-repair-change-order-log/",
       alternate: "/tools/home-repair-change-order-log/",
       heading: "居家修繕追加變更紀錄",
+    },
+    {
+      route: "/zh-tw/tools/home-repair-punch-list/",
+      alternate: "/tools/home-repair-punch-list/",
+      heading: "居家修繕缺失複查表",
+    },
+    {
+      route: "/zh-tw/guides/renovation-records/",
+      alternate: "/guides/renovation-records/",
+      heading: "裝潢驗收紀錄不是一張勾選表，而是一段有版本的複查歷史",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -1082,6 +1102,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "已拒絕或撤回的變更第 1 行必須使用費用 0、工期 0",
   );
 
+  await page.goto("/tools/home-repair-punch-list/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open items: 1");
+  await expect(page.locator(".result")).toContainText("Closed or archived items: 1");
+  await expect(page.locator(".result")).toContainText("does not inspect work or concealed conditions");
+  await page.getByLabel("Versioned punch-list rows").fill(
+    "PL-1 | Kitchen east cabinet | Door contacts adjacent panel during full opening | CONTRACT-C1 | 2026-08-23 | PHOTO-18 | Obtain written response and schedule a dated recheck | Project owner | 2026-08-22 | Observed—written response pending",
+  );
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "needs a target or recheck date from this review",
+  );
+
+  await page.goto("/zh-tw/tools/home-repair-punch-list/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放：1 筆");
+  await expect(page.locator(".result")).toContainText("已關閉或封存：1 筆");
+  await expect(page.locator(".result")).toContainText("不檢查施工或隱蔽工程");
+  await page.getByLabel("有版本的缺失複查列").fill(
+    "PL-1 | 廚房東側櫃門 | 全開時碰到旁板 | CONTRACT-C1 | 2026-08-23 | PHOTO-18 | 取得書面回覆並安排有日期的再次查看 | 家庭工程負責人 | 2026-08-22 | 已觀察，等待書面回覆",
+  );
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "目標或複查日必須從本次紀錄日起",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1380,6 +1426,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/contractor-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/home-repair-punch-list/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/home-repair-punch-list/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/renovation-records/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",

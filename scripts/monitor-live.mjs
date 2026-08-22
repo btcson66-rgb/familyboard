@@ -78,6 +78,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/home-repair-change-order-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-repair-change-order-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/contractor-records/</loc>",
+      "<loc>https://familyboard.win/tools/home-repair-punch-list/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-repair-punch-list/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/renovation-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -272,6 +275,24 @@ const checks = [
       'hreflang="zh-TW"',
       "A change order is a versioned decision",
       "consumer.ftc.gov/articles/how-avoid-home-improvement-scam",
+    ],
+  },
+  {
+    path: "/tools/home-repair-punch-list/",
+    require: [
+      "Home Repair Punch List",
+      'hreflang="zh-TW"',
+      "Five statuses keep reports and rechecks distinct",
+      "does not inspect work",
+    ],
+  },
+  {
+    path: "/guides/renovation-records/",
+    require: [
+      "Renovation records should preserve the project chronology",
+      'hreflang="zh-TW"',
+      "A punch list is a controlled observation queue",
+      "irs.gov/publications/p530",
     ],
   },
   {
@@ -479,6 +500,24 @@ const checks = [
       'hreflang="en"',
       "現行官方範本怎麼處理工程變更",
       "2026 新制傳言不能寫成已經生效",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-repair-punch-list/",
+    require: [
+      "居家修繕缺失複查表",
+      'hreflang="en"',
+      "五種狀態保存真正的進度",
+      "不檢查施工",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/renovation-records/",
+    require: [
+      "裝潢驗收紀錄不是一張勾選表",
+      'hreflang="en"',
+      "現行官方範本把完工通知和驗收分成不同節點",
+      "全國消費者服務專線 1950",
     ],
   },
   {
