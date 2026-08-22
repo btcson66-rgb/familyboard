@@ -75,6 +75,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/security/",
     "/zh-tw/affiliate-disclosure/",
     "/zh-tw/terms/",
+    "/zh-tw/guides/digital-home-inventory-backup/",
+    "/zh-tw/guides/home-maintenance-log/",
+    "/zh-tw/features/household-handoff/",
     "/zh-tw/contact/",
     "/zh-tw/app/",
   ]) {
@@ -150,6 +153,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/terms/",
       alternate: "/terms/",
       heading: "FamilyBoard 使用條款：免費工具很實用，但仍有清楚的責任界線",
+    },
+    {
+      route: "/zh-tw/guides/digital-home-inventory-backup/",
+      alternate: "/guides/digital-home-inventory-backup/",
+      heading: "FamilyBoard 備份還原教學：先證明檔案能用，再把它當成備份",
+    },
+    {
+      route: "/zh-tw/guides/home-maintenance-log/",
+      alternate: "/guides/home-maintenance-log/",
+      heading: "居家保養紀錄教學：把「做過了」變成下次真的找得到的歷程",
+    },
+    {
+      route: "/zh-tw/features/household-handoff/",
+      alternate: "/features/household-handoff/",
+      heading: "家庭交接清單教學：讓別人接得住，也不要一次看見所有資料",
     },
     {
       route: "/zh-tw/features/free-home-management-app/",
@@ -282,6 +300,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "https://familyboard.win/zh-tw/affiliate-disclosure/",
   );
   expect(sitemap).toContain("https://familyboard.win/zh-tw/terms/");
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/digital-home-inventory-backup/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/home-maintenance-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/household-handoff/",
+  );
   expect(sitemap).toContain("https://familyboard.win/zh-tw/contact/");
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/features/free-home-management-app/",
@@ -311,6 +338,24 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(page.getByLabel("資產名稱")).toBeVisible();
   await page.getByRole("button", { name: "交接" }).click();
   await expect(page.getByText("繁中測試家庭 家庭交接摘要")).toBeVisible();
+  await page.getByLabel("設定檔名稱").fill("週末保母");
+  await page.getByLabel("用途").fill("週末照顧測試");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  await expect(
+    page.getByRole("option", { name: "週末保母 — 週末照顧測試" }),
+  ).toBeAttached();
+  await expect(page.getByLabel("設定檔名稱")).toHaveValue("");
+  await page.getByLabel("設定檔名稱").fill("長期照護");
+  await page.getByLabel("用途").fill("長期交班測試");
+  await page.getByLabel("包含保養工作").selectOption("no");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  await expect(
+    page.getByRole("option", { name: "長期照護 — 長期交班測試" }),
+  ).toBeAttached();
+  await page
+    .getByLabel("交接設定檔")
+    .selectOption({ label: "長期照護 — 長期交班測試" });
+  await expect(page.getByText("設定檔：長期照護 ·")).toBeVisible();
   await page.getByRole("button", { name: "設定" }).click();
   await expect(page.getByRole("heading", { name: "匯出備份" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "家庭資料總表" })).toBeVisible();

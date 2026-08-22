@@ -1489,8 +1489,11 @@ function HandoffView({
   householdId: string;
   save: (action: () => Promise<unknown>) => Promise<void>;
 }) {
-  const { due: dueStatus, dateTime } = useAppLocale();
-  const profile = data.handoffProfiles[0];
+  const { locale, due: dueStatus, dateTime } = useAppLocale();
+  const [selectedProfileId, setSelectedProfileId] = useState("");
+  const profile =
+    data.handoffProfiles.find((item) => item.id === selectedProfileId) ??
+    data.handoffProfiles[0];
   const { tasks, contacts, maintenanceTasks, documents } = buildHandoffSnapshot(
     data,
     profile,
@@ -1525,29 +1528,55 @@ function HandoffView({
           },
           { name: "notes", label: "Profile note", type: "textarea" },
         ]}
-        onSubmit={(values) =>
-          save(() =>
-            db.handoffProfiles.add({
-              ...base(householdId),
-              name: values.name,
-              purpose: values.purpose,
-              includeTasks: values.includeTasks === "yes",
-              includeMaintenance: values.includeMaintenance === "yes",
-              includeContacts: values.includeContacts === "yes",
-              includeDocuments: values.includeDocuments === "yes",
-              notes: values.notes,
-            } as HandoffProfile),
-          )
-        }
+        onSubmit={async (values) => {
+          const record = {
+            ...base(householdId),
+            name: values.name,
+            purpose: values.purpose,
+            includeTasks: values.includeTasks === "yes",
+            includeMaintenance: values.includeMaintenance === "yes",
+            includeContacts: values.includeContacts === "yes",
+            includeDocuments: values.includeDocuments === "yes",
+            notes: values.notes,
+          } as HandoffProfile;
+          await save(() => db.handoffProfiles.add(record));
+          setSelectedProfileId(record.id);
+        }}
       />
+      {data.handoffProfiles.length > 0 && (
+        <section className="app-card handoff-profile-picker">
+          <label>
+            Handoff profile
+            <select
+              value={profile?.id || ""}
+              onChange={(event) => setSelectedProfileId(event.target.value)}
+            >
+              {data.handoffProfiles.map((item) => (
+                <option key={item.id} value={item.id}>
+                  {item.name} — {item.purpose}
+                </option>
+              ))}
+            </select>
+          </label>
+          <p className="help">
+            Select the profile that matches this handoff before reviewing or
+            printing the sheet.
+          </p>
+        </section>
+      )}
       <div className="handoff-sheet">
         <h2>{data.households[0]?.name} household handoff</h2>
         <p>
           {profile
-            ? `Profile: ${profile.name} · `
-            : "Default privacy profile · "}
-          Generated {dateTime(new Date())} · Confirm dates before
-          sharing.
+            ? locale === "zh-TW"
+              ? `設定檔：${profile.name} · `
+              : `Profile: ${profile.name} · `
+            : locale === "zh-TW"
+              ? "預設隱私設定檔 · "
+              : "Default privacy profile · "}
+          {locale === "zh-TW"
+            ? `產生時間 ${dateTime(new Date())} · 分享前請再次確認日期。`
+            : `Generated ${dateTime(new Date())} · Confirm dates before sharing.`}
         </p>
         <h3>Responsibilities</h3>
         {tasks.length ? (

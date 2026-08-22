@@ -206,6 +206,9 @@ const zhTw: Record<string, string> = {
   "Calendar event": "行事曆事件",
   "One-off": "單次",
   "Create a sharing profile": "建立分享設定檔",
+  "Handoff profile": "交接設定檔",
+  "Select the profile that matches this handoff before reviewing or printing the sheet.":
+    "檢查或列印摘要前，先選擇符合這次交接情境的設定檔。",
   "Profile name": "設定檔名稱",
   Purpose: "用途",
   "Include open tasks": "包含未完成任務",

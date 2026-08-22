@@ -89,7 +89,7 @@
   },
   {
     "route": "/features/household-handoff/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/household-handoff/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -305,7 +305,7 @@
   },
   {
     "route": "/guides/home-maintenance-log/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-maintenance-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -833,7 +833,7 @@
   },
   {
     "route": "/guides/digital-home-inventory-backup/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/digital-home-inventory-backup/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1742,6 +1742,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/digital-home-inventory-backup/",
+    "alternateRoute": "/guides/digital-home-inventory-backup/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/emergency-contact-sheet-generator/",
     "alternateRoute": "/tools/emergency-contact-sheet-generator/",
     "indexable": true,
@@ -1751,6 +1758,13 @@
   {
     "route": "/zh-tw/features/free-home-management-app/",
     "alternateRoute": "/features/free-home-management-app/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-maintenance-log/",
+    "alternateRoute": "/guides/home-maintenance-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
@@ -1772,6 +1786,13 @@
   {
     "route": "/zh-tw/",
     "alternateRoute": "/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/features/household-handoff/",
+    "alternateRoute": "/features/household-handoff/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

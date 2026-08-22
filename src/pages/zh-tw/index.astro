@@ -35,8 +35,8 @@ const featured = pages
     <article class="answer-card"><h2>現在需要付費嗎？</h2><p>目前網頁版可免費使用，核心功能沒有結帳牆；私密家庭工作區也不顯示廣告。</p></article>
   </div></div></section>
   <section class="section"><div class="narrow article"><div class="meta"><span><a href="/editorial-policy/">FamilyBoard 編輯團隊</a></span><span>發布與複查日期：2026 年 8 月 20 日</span><span>繁體中文（台灣）</span></div><Content /></div></section>
-  <section class="section tint"><div class="shell"><div class="section-head"><div><span class="eyebrow">繁中首批內容</span><h2>先解決高意圖、能立即使用的家庭問題</h2></div></div>
-    <div class="card-grid">{featured.map((entry) => <a class="card" href={entry.data.route}><span class="card-tag">{entry.data.pageType === 'tool' ? '免費工具' : '實用指南'}</span><h3>{entry.data.title.replace(/｜.*$/, '')}</h3><p>{entry.data.description}</p></a>)}</div>
+  <section class="section tint"><div class="shell"><div class="section-head"><div><span class="eyebrow">繁中內容中心</span><h2>從實際工具、App 工作流程到資料與使用界線</h2></div></div>
+    <div class="card-grid">{featured.map((entry) => <a class="card" href={entry.data.route}><span class="card-tag">{entry.data.pageType === 'tool' ? '免費工具' : entry.data.pageType === 'support' ? '信任與政策' : '實用指南'}</span><h3>{entry.data.title.replace(/｜.*$/, '')}</h3><p>{entry.data.description}</p></a>)}</div>
   </div></section>
-  <section class="section"><div class="narrow"><div class="card"><span class="eyebrow">資料界線</span><h2>公開內容可被搜尋，私密紀錄留在裝置</h2><p>繁中指南與工具是公開且可索引的內容；家庭工作區本身不進 sitemap、不載入公開站分析或廣告程式碼。更換裝置前仍必須自行匯出備份。</p><p><a href="/privacy/">閱讀隱私說明（英文）</a> · <a href="/security/">了解瀏覽器儲存限制（英文）</a></p></div></div></section>
+  <section class="section"><div class="narrow"><div class="card"><span class="eyebrow">資料界線</span><h2>公開內容可被搜尋，私密紀錄留在裝置</h2><p>繁中指南與工具是公開且可索引的內容；家庭工作區本身不進 sitemap、不載入公開站分析或廣告程式碼。更換裝置前仍必須自行匯出備份。</p><p><a href="/zh-tw/privacy/">閱讀繁中隱私權政策</a> · <a href="/zh-tw/security/">了解資安與瀏覽器儲存限制</a> · <a href="/zh-tw/guides/digital-home-inventory-backup/">照步驟完成備份還原</a></p></div></div></section>
 </BaseLayout>

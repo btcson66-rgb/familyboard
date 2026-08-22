@@ -1,28 +1,28 @@
 # Content quality report
 
-Generated: 2026-08-22T08:25:56.539Z
+Generated: 2026-08-22T08:40:46.008Z
 
 ## Summary
 
-- Indexable pages: 214
-- Generated HTML routes: 232
+- Indexable pages: 217
+- Generated HTML routes: 235
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 38
+- Pages without a contextual product/tool link: 41
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 17
+- product: 18
 - appliances: 30
-- maintenance: 31
+- maintenance: 32
 - household-operations: 19
-- inventory-warranty: 25
+- inventory-warranty: 26
 - records-emergency: 22
 - tools: 29
 
@@ -74,6 +74,9 @@ Generated: 2026-08-22T08:25:56.539Z
 - /zh-tw/affiliate-disclosure/
 - /zh-tw/contact/
 - /zh-tw/features/free-home-management-app/
+- /zh-tw/features/household-handoff/
+- /zh-tw/guides/digital-home-inventory-backup/
+- /zh-tw/guides/home-maintenance-log/
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/
 - /zh-tw/privacy/

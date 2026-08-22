@@ -48,6 +48,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/security/</loc>",
       "<loc>https://familyboard.win/zh-tw/affiliate-disclosure/</loc>",
       "<loc>https://familyboard.win/zh-tw/terms/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/digital-home-inventory-backup/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/household-handoff/</loc>",
       "<loc>https://familyboard.win/zh-tw/contact/</loc>",
     ],
     forbid: [
@@ -166,6 +169,33 @@ const checks = [
       'hreflang="en"',
       "不是專業服務或正式證明",
       "/zh-tw/security/",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/digital-home-inventory-backup/",
+    require: [
+      "FamilyBoard 備份還原教學",
+      'hreflang="en"',
+      "只驗證備份，不進行還原",
+      "資通安全署",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-maintenance-log/",
+    require: [
+      "居家保養紀錄教學",
+      'hreflang="en"',
+      "完成後間隔月數",
+      "經濟部標準檢驗局",
+    ],
+  },
+  {
+    path: "/zh-tw/features/household-handoff/",
+    require: [
+      "家庭交接清單教學",
+      'hreflang="en"',
+      "交接設定檔",
+      "敏感聯絡人",
     ],
   },
   {
