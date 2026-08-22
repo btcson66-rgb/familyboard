@@ -54,6 +54,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/digital-home-inventory-backup/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/household-handoff/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/how-to-track-product-warranties/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/organize-household-subscriptions/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/household-documents-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/contact/</loc>",
     ],
     forbid: [
@@ -117,7 +120,7 @@ const checks = [
       "家庭訂閱費用計算器",
       'hreflang="en"',
       "家庭訂閱清單",
-      "週、月、季與年繳費用",
+      "每週、每月、每季與每年扣款",
     ],
   },
   {
@@ -125,7 +128,7 @@ const checks = [
     require: [
       "家庭緊急聯絡表產生器",
       'hreflang="en"',
-      "警察報案：110",
+      "110 是警察報案專線",
       "119 報案要領",
     ],
   },
@@ -161,7 +164,7 @@ const checks = [
     require: [
       "FamilyBoard 隱私權政策",
       'hreflang="en"',
-      "家庭資料不會傳到 FamilyBoard",
+      "核心家庭紀錄會留在目前瀏覽器",
       "/zh-tw/contact/",
     ],
   },
@@ -229,11 +232,38 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/guides/how-to-track-product-warranties/",
+    require: [
+      "產品保固追蹤教學",
+      'hreflang="en"',
+      "收據位置或索引",
+      "消費者保護會",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/organize-household-subscriptions/",
+    require: [
+      "家庭訂閱管理教學",
+      'hreflang="en"',
+      "年化費用依幣別分開",
+      "取消免費贈送或已訂閱",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/household-documents-organizer/",
+    require: [
+      "家庭文件索引教學",
+      'hreflang="en"',
+      "原始文件存放位置",
+      "資通安全署",
+    ],
+  },
+  {
     path: "/zh-tw/features/free-home-management-app/",
     require: [
       "FamilyBoard 使用教學",
       'hreflang="en"',
-      "家庭資料總表 CSV",
+      "CSV 家庭資料總表可以取代 JSON 備份嗎",
       "/zh-tw/app/",
     ],
   },

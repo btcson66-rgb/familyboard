@@ -721,7 +721,7 @@
   },
   {
     "route": "/guides/how-to-track-product-warranties/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/how-to-track-product-warranties/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -841,7 +841,7 @@
   },
   {
     "route": "/guides/household-documents-organizer/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/household-documents-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1105,7 +1105,7 @@
   },
   {
     "route": "/guides/organize-household-subscriptions/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/organize-household-subscriptions/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1805,6 +1805,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/household-documents-organizer/",
+    "alternateRoute": "/guides/household-documents-organizer/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/household-handoff/",
     "alternateRoute": "/features/household-handoff/",
     "indexable": true,
@@ -1814,6 +1821,20 @@
   {
     "route": "/zh-tw/tools/household-subscription-cost-calculator/",
     "alternateRoute": "/tools/household-subscription-cost-calculator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/how-to-track-product-warranties/",
+    "alternateRoute": "/guides/how-to-track-product-warranties/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/organize-household-subscriptions/",
+    "alternateRoute": "/guides/organize-household-subscriptions/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

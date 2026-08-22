@@ -9,7 +9,11 @@ import {
   type ReactNode,
 } from "react";
 import "./app.css";
-import { addMonthsClamped, annualizedCost } from "../lib/calculations";
+import {
+  addMonthsClamped,
+  annualizedActiveTotalsByCurrency,
+  warrantyReviewDate,
+} from "../lib/calculations";
 import {
   DB_SCHEMA_VERSION,
   base,
@@ -78,6 +82,7 @@ type Input = {
   type?: string;
   required?: boolean;
   options?: string[];
+  optionLabels?: Record<string, string>;
   value?: string;
   help?: string;
 };
@@ -120,6 +125,14 @@ const download = (name: string, value: unknown) =>
     JSON.stringify(value, null, 2),
     "application/json;charset=utf-8",
   );
+const safeExternalUrl = (value: string) => {
+  try {
+    const parsed = new URL(value);
+    return ["https:", "http:"].includes(parsed.protocol) ? parsed.toString() : "";
+  } catch {
+    return "";
+  }
+};
 
 function FilePicker({
   label,
@@ -222,13 +235,14 @@ function QuickForm({
             {field.options ? (
               <select
                 value={values[field.name]}
+                required={field.required}
                 onChange={(event) =>
                   setValues({ ...values, [field.name]: event.target.value })
                 }
               >
                 {field.options.map((option) => (
                   <option key={option} value={option}>
-                    {option || "None"}
+                    {option ? field.optionLabels?.[option] || option : "None"}
                   </option>
                 ))}
               </select>
@@ -339,6 +353,10 @@ function FamilyAppBody() {
     () =>
       Object.fromEntries(data.assets.map((asset) => [asset.id, asset.name])),
     [data.assets],
+  );
+  const subscriptionTotals = useMemo(
+    () => annualizedActiveTotalsByCurrency(data.subscriptions),
+    [data.subscriptions],
   );
 
   if (!ready) return <Onboarding onComplete={refresh} checking />;
@@ -539,7 +557,11 @@ function FamilyAppBody() {
                 title="Add an asset"
                 fields={[
                   { name: "name", label: "Asset name", required: true },
-                  { name: "category", label: "Category", value: "Appliance" },
+                  {
+                    name: "category",
+                    label: "Category",
+                    value: locale === "zh-TW" ? "家電" : "Appliance",
+                  },
                   { name: "location", label: "Location" },
                   { name: "brand", label: "Brand" },
                   { name: "model", label: "Model" },
@@ -628,12 +650,14 @@ function FamilyAppBody() {
                     name: "assetId",
                     label: "Related asset",
                     options: assetOptions,
+                    optionLabels: assets,
                   },
                   { name: "homeArea", label: "Home area" },
                   {
                     name: "ownerMemberId",
                     label: "Owner",
                     options: memberOptions,
+                    optionLabels: names,
                   },
                   { name: "nextDue", label: "Next due", type: "date" },
                   {
@@ -764,6 +788,7 @@ function FamilyAppBody() {
                     name: "assetId",
                     label: "Asset",
                     options: assetOptions,
+                    optionLabels: assets,
                     required: true,
                   },
                   { name: "provider", label: "Provider" },
@@ -805,9 +830,17 @@ function FamilyAppBody() {
                     </header>
                     <p>{item.provider || "Provider not recorded"}</p>
                     <p className="detail">
-                      Receipt: {item.receiptReference || "Not recorded"} ·
-                      Written terms control exact coverage.
+                      <span>Receipt:</span>{" "}
+                      {item.receiptReference || "Not recorded"} ·{" "}
+                      <span>Written terms control exact coverage.</span>
                     </p>
+                    <p className="detail">
+                      Coverage: {labelDate(item.startsAt)} – {labelDate(item.endsAt)}
+                    </p>
+                    <p className="detail">
+                      Terms: {item.termsReference || "Not recorded"}
+                    </p>
+                    {item.notes && <p className="detail">Notes: {item.notes}</p>}
                   </div>
                 ))}
               </div>
@@ -819,9 +852,18 @@ function FamilyAppBody() {
                 title="Add a subscription"
                 fields={[
                   { name: "name", label: "Service", required: true },
-                  { name: "category", label: "Category", value: "Household" },
+                  {
+                    name: "category",
+                    label: "Category",
+                    value: locale === "zh-TW" ? "家庭" : "Household",
+                  },
                   { name: "cost", label: "Cost", type: "number", value: "0" },
-                  { name: "currency", label: "Currency", value: "USD" },
+                  {
+                    name: "currency",
+                    label: "Currency",
+                    options: ["TWD", "USD", "JPY"],
+                    value: locale === "zh-TW" ? "TWD" : "USD",
+                  },
                   {
                     name: "billingFrequency",
                     label: "Billing frequency",
@@ -838,6 +880,7 @@ function FamilyAppBody() {
                     name: "ownerMemberId",
                     label: "Owner",
                     options: memberOptions,
+                    optionLabels: names,
                   },
                   {
                     name: "managementUrl",
@@ -864,23 +907,27 @@ function FamilyAppBody() {
                 }
               />
               <p className="notice">
-                Annualized active total:{" "}
-                {new Intl.NumberFormat("en-US", {
-                  style: "currency",
-                  currency: "USD",
-                }).format(
-                  data.subscriptions
-                    .filter((item) => item.status === "active")
-                    .reduce(
-                      (sum, item) =>
-                        sum + annualizedCost(item.cost, item.billingFrequency),
-                      0,
-                    ),
-                )}
+                Annualized active totals by currency:{" "}
+                {Object.entries(subscriptionTotals).length
+                  ? Object.entries(subscriptionTotals)
+                      .sort(([left], [right]) => left.localeCompare(right))
+                      .map(
+                        ([currency, total]) =>
+                          `${currency} ${new Intl.NumberFormat(locale === "zh-TW" ? "zh-TW" : "en-US", { maximumFractionDigits: 2 }).format(total)}`,
+                      )
+                      .join(" · ")
+                  : "No active subscriptions."}
               </p>
               <div className="app-grid">
-                {data.subscriptions.map((item) => (
-                  <div className="app-card" key={item.id}>
+                {data.subscriptions.map((item) => {
+                  const managementUrl = safeExternalUrl(item.managementUrl);
+                  const reviewDate = item.nextRenewal
+                    ? warrantyReviewDate(
+                        item.nextRenewal,
+                        Math.max(0, item.reviewBeforeDays || 0),
+                      )
+                    : "";
+                  return <div className="app-card" key={item.id}>
                     <header>
                       <h2>{item.name}</h2>
                       <span className="status">{item.status}</span>
@@ -891,8 +938,18 @@ function FamilyAppBody() {
                     </p>
                     <p className="detail">
                       Renewal {labelDate(item.nextRenewal)} ·{" "}
+                      Review by {labelDate(reviewDate)} ·{" "}
                       {names[item.ownerMemberId] || "Unassigned"}
                     </p>
+                    {managementUrl && (
+                      <p className="detail">
+                        Management: <a href={managementUrl} target="_blank" rel="noopener noreferrer">Open service page</a>
+                      </p>
+                    )}
+                    {item.paymentMethodNote && (
+                      <p className="detail">Payment note: {item.paymentMethodNote}</p>
+                    )}
+                    {item.notes && <p className="detail">Notes: {item.notes}</p>}
                     <div className="app-actions">
                       <button
                         className="secondary"
@@ -913,8 +970,8 @@ function FamilyAppBody() {
                           : "Mark cancelled"}
                       </button>
                     </div>
-                  </div>
-                ))}
+                  </div>;
+                })}
               </div>
             </>
           )}
@@ -927,7 +984,7 @@ function FamilyAppBody() {
                   {
                     name: "category",
                     label: "Category",
-                    value: "Household contact",
+                    value: locale === "zh-TW" ? "家庭聯絡人" : "Household contact",
                   },
                   { name: "phone", label: "Phone", type: "tel" },
                   { name: "email", label: "Email", type: "email" },
@@ -984,7 +1041,11 @@ function FamilyAppBody() {
                 title="Add a document reference"
                 fields={[
                   { name: "name", label: "Record name", required: true },
-                  { name: "category", label: "Category", value: "Home record" },
+                  {
+                    name: "category",
+                    label: "Category",
+                    value: locale === "zh-TW" ? "家庭文件" : "Home record",
+                  },
                   {
                     name: "locationReference",
                     label: "Where the original is stored",
@@ -994,6 +1055,7 @@ function FamilyAppBody() {
                     name: "relatedAssetId",
                     label: "Related asset",
                     options: assetOptions,
+                    optionLabels: assets,
                   },
                   { name: "reviewDate", label: "Review date", type: "date" },
                   { name: "notes", label: "Notes", type: "textarea" },
@@ -1015,9 +1077,11 @@ function FamilyAppBody() {
                       {item.category} · {item.locationReference}
                     </p>
                     <p className="detail">
-                      {assets[item.relatedAssetId] || "No asset link"} · review{" "}
+                      {assets[item.relatedAssetId] || "No asset link"} ·{" "}
+                      <span>Review:</span>{" "}
                       {labelDate(item.reviewDate)}
                     </p>
+                    {item.notes && <p className="detail">Notes: {item.notes}</p>}
                   </div>
                 ))}
               </div>
@@ -1103,7 +1167,7 @@ function Onboarding({
               .map((member) => ({
                 ...base(id),
                 name: member,
-                role: "Household member",
+                role: locale === "zh-TW" ? "家庭成員" : "Household member",
               }));
             if (rows.length) await db.members.bulkAdd(rows);
           });
@@ -1216,6 +1280,7 @@ function MembersView({
   householdId: string;
   save: (action: () => Promise<unknown>) => Promise<void>;
 }) {
+  const { locale } = useAppLocale();
   return (
     <Localize>
     <>
@@ -1223,7 +1288,11 @@ function MembersView({
         title="Add a household member"
         fields={[
           { name: "name", label: "Member name", required: true },
-          { name: "role", label: "Household role", value: "Household member" },
+          {
+            name: "role",
+            label: "Household role",
+            value: locale === "zh-TW" ? "家庭成員" : "Household member",
+          },
         ]}
         onSubmit={(values) =>
           save(() =>
@@ -1390,7 +1459,12 @@ function TasksView({
         title="Add a task"
         fields={[
           { name: "title", label: "Responsibility", required: true },
-          { name: "ownerMemberId", label: "Owner", options: memberOptions },
+          {
+            name: "ownerMemberId",
+            label: "Owner",
+            options: memberOptions,
+            optionLabels: names,
+          },
           { name: "dueDate", label: "Due date", type: "date" },
           {
             name: "recurrence",
@@ -1489,7 +1563,7 @@ function HandoffView({
   householdId: string;
   save: (action: () => Promise<unknown>) => Promise<void>;
 }) {
-  const { locale, due: dueStatus, dateTime } = useAppLocale();
+  const { locale, due: dueStatus, date: labelDate, dateTime } = useAppLocale();
   const [selectedProfileId, setSelectedProfileId] = useState("");
   const profile =
     data.handoffProfiles.find((item) => item.id === selectedProfileId) ??
@@ -1606,8 +1680,11 @@ function HandoffView({
         {documents.length > 0 && <h3>Document locations</h3>}
         {documents.map((item) => (
           <p key={item.id}>
-            <strong>{item.name}</strong> —{" "}
-            {item.locationReference || "Location not recorded"}
+            <strong>{item.name}</strong> — {item.category} —{" "}
+            {item.locationReference || "Location not recorded"} —{" "}
+            {assets[item.relatedAssetId] || "No asset link"} —{" "}
+            <span>Review:</span>{" "}
+            {labelDate(item.reviewDate)}
           </p>
         ))}
         <h3>Intentionally excluded</h3>

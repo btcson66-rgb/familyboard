@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T08:53:54.521Z
+Generated: 2026-08-22T09:22:28.003Z
 
 ## Summary
 
-- Indexable pages: 220
-- Generated HTML routes: 238
+- Indexable pages: 223
+- Generated HTML routes: 241
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 44
+- Pages without a contextual product/tool link: 47
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,9 +21,9 @@ Generated: 2026-08-22T08:53:54.521Z
 - product: 18
 - appliances: 30
 - maintenance: 32
-- household-operations: 19
-- inventory-warranty: 26
-- records-emergency: 22
+- household-operations: 20
+- inventory-warranty: 27
+- records-emergency: 23
 - tools: 32
 
 ## Word-count range
@@ -78,6 +78,9 @@ Generated: 2026-08-22T08:53:54.521Z
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/home-maintenance-log/
 - /zh-tw/guides/home-maintenance-schedule/
+- /zh-tw/guides/household-documents-organizer/
+- /zh-tw/guides/how-to-track-product-warranties/
+- /zh-tw/guides/organize-household-subscriptions/
 - /zh-tw/
 - /zh-tw/privacy/
 - /zh-tw/security/

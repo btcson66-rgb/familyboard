@@ -81,6 +81,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/digital-home-inventory-backup/",
     "/zh-tw/guides/home-maintenance-log/",
     "/zh-tw/features/household-handoff/",
+    "/zh-tw/guides/how-to-track-product-warranties/",
+    "/zh-tw/guides/organize-household-subscriptions/",
+    "/zh-tw/guides/household-documents-organizer/",
     "/zh-tw/contact/",
     "/zh-tw/app/",
   ]) {
@@ -99,6 +102,7 @@ test("representative routes have no serious accessibility violations", async ({
 test("Traditional Chinese pages are indexable, paired and functional", async ({
   page,
 }) => {
+  test.setTimeout(90_000);
   await page.goto("/zh-tw/");
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
@@ -171,6 +175,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/features/household-handoff/",
       alternate: "/features/household-handoff/",
       heading: "家庭交接清單教學：讓別人接得住，也不要一次看見所有資料",
+    },
+    {
+      route: "/zh-tw/guides/how-to-track-product-warranties/",
+      alternate: "/guides/how-to-track-product-warranties/",
+      heading: "產品保固追蹤教學：把保證書、收據與設備期限連在一起",
+    },
+    {
+      route: "/zh-tw/guides/organize-household-subscriptions/",
+      alternate: "/guides/organize-household-subscriptions/",
+      heading: "家庭訂閱管理教學：在自動續約前看見費用、日期與負責人",
+    },
+    {
+      route: "/zh-tw/guides/household-documents-organizer/",
+      alternate: "/guides/household-documents-organizer/",
+      heading: "家庭文件索引教學：記住原始文件在哪裡，不把 App 當成檔案庫",
     },
     {
       route: "/zh-tw/features/free-home-management-app/",
@@ -367,6 +386,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/features/household-handoff/",
   );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/how-to-track-product-warranties/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/organize-household-subscriptions/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/household-documents-organizer/",
+  );
   expect(sitemap).toContain("https://familyboard.win/zh-tw/contact/");
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/features/free-home-management-app/",
@@ -393,16 +421,84 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByRole("button", { name: "建立本機家庭" }).click();
   await expect(page.getByRole("heading", { name: "今日總覽" })).toBeVisible();
   await page.getByRole("button", { name: "家庭資產" }).click();
-  await expect(page.getByLabel("資產名稱")).toBeVisible();
+  await page.getByLabel("資產名稱").fill("測試冰箱");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  await expect(page.getByRole("heading", { name: "測試冰箱" })).toBeVisible();
+
+  await page.getByRole("button", { name: "保固" }).click();
+  await expect(page.getByLabel("資產")).toHaveAttribute("required", "");
+  await page.getByLabel("資產").selectOption({ label: "測試冰箱" });
+  await page.getByLabel("提供者").fill("測試原廠");
+  await page.getByLabel("開始日期").fill("2026-01-01");
+  await page.getByLabel("截止日期").fill("2028-01-01");
+  await page.getByLabel("收據位置或索引").fill("雲端/收據/冰箱.pdf");
+  await page.getByLabel("條款或手冊索引").fill("紙本保固資料夾 A");
+  await page.getByLabel("備註", { exact: true }).fill("門板序號已核對");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  const warrantyCard = page.locator(".app-card").filter({ hasText: "測試原廠" });
+  await expect(warrantyCard).toContainText("保障期間：");
+  await expect(warrantyCard).toContainText("收據： 雲端/收據/冰箱.pdf");
+  await expect(warrantyCard).toContainText("實際保障範圍以書面條款為準。");
+  await expect(warrantyCard).toContainText("條款： 紙本保固資料夾 A");
+  await expect(warrantyCard).toContainText("門板序號已核對");
+
+  await page.getByRole("button", { name: "訂閱" }).click();
+  await expect(page.getByLabel("幣別")).toHaveValue("TWD");
+  await page.getByLabel("服務名稱").fill("測試影音");
+  await page.getByLabel("費用").fill("100");
+  await page.getByLabel("下次續約日").fill("2026-12-31");
+  await page.getByLabel("提前幾天複查").fill("30");
+  await page.getByLabel("管理網址").fill("https://familyboard.win/");
+  await page.getByLabel("非敏感付款備註").fill("家庭共同卡");
+  await page.getByLabel("備註", { exact: true }).fill("年度檢查畫質方案");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  await expect(page.locator(".notice")).toContainText("TWD 1,200");
+  const twdCard = page.locator(".app-card").filter({ hasText: "測試影音" });
+  await expect(twdCard).toContainText("複查日 2026年12月1日");
+  await expect(twdCard.getByRole("link", { name: "開啟服務管理頁" })).toHaveAttribute(
+    "href",
+    "https://familyboard.win/",
+  );
+
+  await page.getByLabel("服務名稱").fill("測試雲端");
+  await page.getByLabel("費用").fill("12");
+  await page.getByLabel("幣別").selectOption("USD");
+  await page.getByLabel("計費週期").selectOption("annual");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  await expect(page.locator(".notice")).toContainText("TWD 1,200 · USD 12");
+  await twdCard.getByRole("button", { name: "標記為已取消" }).click();
+  await expect(page.locator(".notice")).not.toContainText("TWD 1,200");
+  await expect(page.locator(".notice")).toContainText("USD 12");
+  await expect(twdCard).toContainText("已取消");
+
+  await page.getByRole("button", { name: "文件" }).click();
+  await page.getByLabel("紀錄名稱").fill("測試保單");
+  await page.getByLabel("原始文件存放位置").fill("加密雲端/保險");
+  await page.getByLabel("關聯資產").selectOption({ label: "測試冰箱" });
+  await page.getByLabel("複查日期").fill("2027-01-15");
+  await page.getByLabel("備註", { exact: true }).fill("內含敏感保單編號");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  const documentCard = page.locator(".app-card").filter({ hasText: "測試保單" });
+  await expect(documentCard).toContainText("加密雲端/保險");
+  await expect(documentCard).toContainText("複查日： 2027年1月15日");
+  await expect(documentCard).toContainText("內含敏感保單編號");
+
   await page.getByRole("button", { name: "交接" }).click();
   await expect(page.getByText("繁中測試家庭 家庭交接摘要")).toBeVisible();
   await page.getByLabel("設定檔名稱").fill("週末保母");
   await page.getByLabel("用途").fill("週末照顧測試");
+  await page.getByLabel("包含文件位置").selectOption("yes");
   await page.getByRole("button", { name: "新增紀錄" }).click();
   await expect(
     page.getByRole("option", { name: "週末保母 — 週末照顧測試" }),
   ).toBeAttached();
   await expect(page.getByLabel("設定檔名稱")).toHaveValue("");
+  const handoffSheet = page.locator(".handoff-sheet");
+  await expect(handoffSheet).toContainText("測試保單");
+  await expect(handoffSheet).toContainText("加密雲端/保險");
+  await expect(handoffSheet).toContainText("測試冰箱");
+  await expect(handoffSheet).toContainText("複查日： 2027年1月15日");
+  await expect(handoffSheet).not.toContainText("內含敏感保單編號");
   await page.getByLabel("設定檔名稱").fill("長期照護");
   await page.getByLabel("用途").fill("長期交班測試");
   await page.getByLabel("包含保養工作").selectOption("no");
@@ -414,6 +510,7 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     .getByLabel("交接設定檔")
     .selectOption({ label: "長期照護 — 長期交班測試" });
   await expect(page.getByText("設定檔：長期照護 ·")).toBeVisible();
+  await expect(handoffSheet).not.toContainText("加密雲端/保險");
   await page.getByRole("button", { name: "設定" }).click();
   await expect(page.getByRole("heading", { name: "匯出備份" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "家庭資料總表" })).toBeVisible();
