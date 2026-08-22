@@ -896,12 +896,12 @@
     "headings": "An emergency binder should be short enough to use under pressure Start with contacts, organized by role, not alphabetically Add operational notes that are accurate, not exhaustive Reference sensitive documents instead of duplicating them Build the binder's supply and evacuation sections from official planning documents Decide who gets a copy, and in what form A binder that's never been opened by anyone but its author has a hidden flaw Review on a schedule, and after any household change"
   },
   {
-    "title": "Emergency Information Sheet: What Belongs on One Household Page",
-    "description": "Create a one-page household emergency information sheet with contacts, address, important household notes and clear references to secure documents.",
+    "title": "Emergency Information Sheet: Build, Verify and Share One Useful Page",
+    "description": "Build a one-page emergency information sheet with verified contacts, audience-specific details, offline copies, privacy boundaries and review evidence.",
     "route": "/guides/emergency-information-sheet/",
     "cluster": "records-emergency",
     "keywords": "emergency information sheet",
-    "headings": "One page forces the household to decide what is truly important What a real emergency information card contains — a published model Include basic identity and location on the household version Add the operational contacts that matter in the first five minutes Reference sensitive documents instead of exposing them Build two versions on purpose: shared and private Review it like you'd review a smoke alarm — on a schedule, not by memory"
+    "headings": "Emergency information sheet: one page, one audience, verified sources Start with the communication plan, not the layout Define one reader before choosing the fields Separate contact details from verification evidence Use stable IDs so updates reach every copy Build a shared layer and a protected layer A worked two-version household example Review triggers are more reliable than a universal interval Plan for phone, power and internet failure Accessibility and language are part of usability Keep commercial suggestions outside the emergency record"
   },
   {
     "title": "Home Evacuation Information: Organize People, Pets, Contacts and Go-Bag Records",
@@ -1518,6 +1518,14 @@
     "cluster": "tools",
     "keywords": "emergency supply inventory audit",
     "headings": "Emergency supply inventory audit Use one audit for one practical scope Record household size as context, not a multiplier Name the authority and the date you checked it Eight columns preserve the chain from requirement to observation The observed amount needs both a number and a unit Condition evidence should describe the check you performed Use four statuses without turning them into a score Unresolved rows cannot disappear without follow-up A worked audit row Accessibility, care and pet rows use pointers, not private files Physical review dates and triggers Privacy, downloads and real-event boundary Commercial recommendations come after the verified gap"
+  },
+  {
+    "title": "Emergency Contact Verification Log | Check Sources, Consent and Updates",
+    "description": "Verify household emergency-contact records with safe IDs, source evidence, consent scope, real dates, four statuses and owner-linked corrections.",
+    "route": "/tools/emergency-contact-verification-log/",
+    "cluster": "tools",
+    "keywords": "emergency contact verification log",
+    "headings": "Emergency contact verification log A contact sheet and a verification log solve different problems Choose one verification scope Name the plan and official sources checked Eight fields create a repeatable contact audit Safe channel hints prevent accidental duplication Verification evidence differs for people and organizations Four statuses describe evidence, not importance Every unresolved record needs one owner-linked action A worked three-record review Review dates and event triggers Privacy filters are a final guard, not permission to paste secrets Keep affiliate placements outside the decision record"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

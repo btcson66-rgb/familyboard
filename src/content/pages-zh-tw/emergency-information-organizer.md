@@ -15,6 +15,8 @@ related:
   - "/zh-tw/app/"
   - "/zh-tw/features/household-handoff/"
   - "/zh-tw/tools/emergency-contact-sheet-generator/"
+  - "/zh-tw/tools/emergency-contact-verification-log/"
+  - "/zh-tw/guides/emergency-information-sheet/"
   - "/zh-tw/security/"
 contentVersion: 1
 faq:

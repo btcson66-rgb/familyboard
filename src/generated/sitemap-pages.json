@@ -937,9 +937,9 @@
   },
   {
     "route": "/guides/emergency-information-sheet/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/emergency-information-sheet/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-23",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1624,6 +1624,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/emergency-contact-verification-log/",
+    "alternateRoute": "/zh-tw/tools/emergency-contact-verification-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -1836,10 +1844,24 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/emergency-contact-verification-log/",
+    "alternateRoute": "/tools/emergency-contact-verification-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/emergency-information-organizer/",
     "alternateRoute": "/features/emergency-information-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/emergency-information-sheet/",
+    "alternateRoute": "/guides/emergency-information-sheet/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {

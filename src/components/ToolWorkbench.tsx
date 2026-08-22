@@ -919,6 +919,127 @@ const definitions: Record<string, Definition> = {
       return `${values.household.trim()} — emergency supply inventory audit\nScope: ${values.scope}\nPhysical review: ${formatter.format(reviewed)}\nNext inventory review: ${formatter.format(nextReview)}\nPeople covered: ${people} (context only; no quantity was prescribed)\nAdditional needs included: ${supportContext}\nGuidance / plan reference: ${values.authority.trim()}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (not a readiness score)\n\n${lines("Observed inventory", inventoryRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — ${row.parts[2]} — requirement/source: ${row.parts[3]} — observed: ${row.parts[4]} — evidence: ${row.parts[5]} — stored: ${row.parts[6]} — status: ${row.parts[7]}`))}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["No unresolved row was recorded in this audit. Recheck the source, scope and physical evidence before treating that as complete."])}\n\nProtected inventory location: ${values.storage.trim()}\n\nClose-out check: compare this observation with the latest local authority and household-specific plan, preserve printed dates and manufacturer instructions, assign every unresolved ID, and update the source record after physical reinspection. This output does not prescribe quantities, approve a kit, guarantee availability, or replace medical, accessibility, pet-care or emergency guidance. In an actual event, follow current official alerts and instructions.`;
     },
   },
+  "emergency-contact-verification-log": {
+    intro:
+      "Audit whether each emergency-contact record was confirmed by the intended person or an official source, whether its sharing scope is understood, and who owns every correction. Enter safe labels only—never full phone numbers, email addresses, street addresses or private care details.",
+    fields: [
+      text("household", "Household label", "Use a private nickname, not a street address.", "Maple household"),
+      {
+        name: "scope",
+        label: "Verification scope",
+        type: "select",
+        options: [
+          "Household emergency communication plan",
+          "Shared caregiver or sitter contact sheet",
+          "School, child-care or dependent-care contacts",
+          "Building, utility and service contacts",
+          "Full annual contact review",
+        ],
+      },
+      { name: "reviewed", label: "Review completed date", type: "date" },
+      { name: "nextReview", label: "Next contact review date", type: "date" },
+      text("authority", "Plan and official-source reference", "Name the current local authority page and household plan version checked. Do not paste account or case numbers.", "Local emergency-management communication guidance checked 2026-08-23; household contact plan v2"),
+      {
+        name: "records",
+        label: "Contact verification rows",
+        type: "textarea",
+        help: "One line: ID | role/purpose | protected source location | safe channel hint | verification method/evidence | verification date YYYY-MM-DD | sharing/consent scope | Confirmed with person or official source, Needs correction, Awaiting confirmation, or Retired; removal pending. Maximum 20. Do not enter the actual phone number or email address.",
+        value: "LOCAL-1 | Trusted nearby contact for household check-in | Protected household contact record LOCAL-1 | Mobile ending 42 | Person confirmed the intended role and safe contact method directly | 2026-08-22 | May appear on the private household card; not for public posting | Confirmed with person or official source\nUTILITY-1 | Electricity outage reporting | Protected service directory UTILITY-1 | Official outage channel | Provider website and current bill source were compared | 2026-08-23 | Household reference only; account details remain protected | Confirmed with person or official source\nCARE-1 | Backup caregiver contact | Protected care-plan contact CARE-1 | Channel hint pending | Request sent to confirm role, method and permitted recipients | 2026-08-20 | Do not share until the person confirms | Awaiting confirmation",
+      },
+      {
+        name: "actions",
+        label: "Follow-up for every unresolved ID",
+        type: "textarea",
+        help: "One line: unresolved ID | next action | owner or role | due date YYYY-MM-DD. Include exactly one row for every Needs correction, Awaiting confirmation, or Retired row. The due date must be after this review and no later than the next review.",
+        value: "CARE-1 | Ask the intended caregiver to confirm the role, safe channel and sharing scope; then update the protected source | Household coordinator | 2026-09-02",
+      },
+      text("storage", "Protected verification-record location", "Use a folder, envelope or backup label, not a password, access code, address or actual contact detail.", "Household records / emergency contacts / verification 2026-08"),
+    ],
+    run: (values) => {
+      const reviewed = strictIsoDate(values.reviewed);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.household.trim()) return "Enter a household label so the exported verification record can be identified.";
+      if (!reviewed) return "Enter a real review completed date in YYYY-MM-DD format.";
+      if (!nextReview) return "Enter a real next contact review date in YYYY-MM-DD format.";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (reviewed.getTime() > today.getTime())
+        return "The completed review date cannot be in the future. Record verification only after it actually occurs.";
+      if (nextReview.getTime() <= reviewed.getTime())
+        return "The next contact review date must be later than the completed review date.";
+      if (!values.authority.trim()) return "Add the official-source and household-plan reference used for this review.";
+      if (!values.storage.trim()) return "Add a protected location where the verification record can be found again.";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const recordRows = parseRows(values.records);
+      if (recordRows.length === 0) return "Add at least one contact record that was actually reviewed.";
+      if (recordRows.length > 20) return "Use no more than 20 contact rows in one review; split a larger directory by purpose or audience.";
+      const invalidRecords = recordRows.filter((row) => row.parts.length !== 8 || row.parts.some((part) => !part));
+      if (invalidRecords.length)
+        return `Contact line ${invalidRecords.map((row) => row.line).join(", ")} must contain all 8 pipe-separated fields.`;
+      const statuses = new Set(["confirmed with person or official source", "needs correction", "awaiting confirmation", "retired; removal pending"]);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[7].toLocaleLowerCase("en")));
+      if (invalidStatuses.length)
+        return `Contact line ${invalidStatuses.map((row) => row.line).join(", ")} must end with Confirmed with person or official source, Needs correction, Awaiting confirmation, or Retired; removal pending.`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length)
+        return "Every contact record needs a unique ID so a correction cannot attach to the wrong source.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Contact IDs must use 2–20 letters, numbers or hyphens, such as LOCAL-1.";
+      const invalidVerificationDates = recordRows.filter((row) => {
+        const verified = strictIsoDate(row.parts[5]);
+        return !verified || verified.getTime() > reviewed.getTime() || verified.getTime() > today.getTime();
+      });
+      if (invalidVerificationDates.length)
+        return `Contact line ${invalidVerificationDates.map((row) => row.line).join(", ")} needs a real YYYY-MM-DD verification date no later than this completed review.`;
+      const unsafeChannels = recordRows.filter((row) => row.parts[3].includes("@") || (row.parts[3].match(/\d/g) || []).length > 4);
+      if (unsafeChannels.length)
+        return `Contact line ${unsafeChannels.map((row) => row.line).join(", ")} appears to contain a full phone number or email address. Use a safe hint such as “mobile ending 42” and keep the actual detail in the protected source.`;
+      const unresolvedRows = recordRows.filter((row) => row.parts[7].toLocaleLowerCase("en") !== "confirmed with person or official source");
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 20) return "Use no more than 20 follow-up rows in one review.";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `Follow-up line ${invalidActions.map((row) => row.line).join(", ")} must contain all 4 pipe-separated fields.`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length)
+        return "Each unresolved contact ID must have exactly one follow-up row.";
+      const unresolvedIds = new Set(unresolvedRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...unresolvedIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length)
+        return `Add one follow-up row for every unresolved contact ID: ${missingActions.join(", ")}.`;
+      const extraActions = actionIds.filter((id) => !unresolvedIds.has(id));
+      if (extraActions.length)
+        return `Follow-up rows may reference only unresolved contact IDs. Remove or update: ${extraActions.join(", ")}.`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() <= reviewed.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `Follow-up line ${invalidDueDates.map((row) => row.line).join(", ")} needs a real YYYY-MM-DD date after the completed review and no later than the next review.`;
+      const privacyText = [
+        values.authority,
+        values.storage,
+        ...recordRows.flatMap((row) => [row.parts[1], row.parts[2], row.parts[3], row.parts[4], row.parts[6]]),
+        ...actionRows.flatMap((row) => [row.parts[1], row.parts[2]]),
+      ].join("\n");
+      const contactPatternText = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(contactPatternText) || /(?:\d[\s().+-]*){7,}/.test(contactPatternText))
+        return "A full phone number or email address may be present. Keep actual contact details in the protected source and use only a safe channel hint here.";
+      if (/password|passcode|access code|alarm code|door code|full address|policy number|account number|bank account|social security|medical record|diagnosis|medication dose|dosage|date of birth|government id|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, identifier or unnecessary medical detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const displayStatuses = ["Confirmed with person or official source", "Needs correction", "Awaiting confirmation", "Retired; removal pending"];
+      const statusCounts = displayStatuses.map((status) => ({
+        status,
+        count: recordRows.filter((row) => row.parts[7].toLocaleLowerCase("en") === status.toLocaleLowerCase("en")).length,
+      })).filter((item) => item.count > 0);
+      return `${values.household.trim()} — emergency contact verification log\nScope: ${values.scope}\nReview completed: ${formatter.format(reviewed)}\nNext contact review: ${formatter.format(nextReview)}\nPlan / official-source reference: ${values.authority.trim()}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (workflow summary, not an emergency-readiness score)\n\n${lines("Verified contact records", recordRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — protected source: ${row.parts[2]} — safe channel hint: ${row.parts[3]} — evidence: ${row.parts[4]} — verified: ${formatter.format(strictIsoDate(row.parts[5]) as Date)} — sharing/consent: ${row.parts[6]} — status: ${row.parts[7]}`))}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["No unresolved contact was recorded. Confirm that every role, source and sharing scope was actually checked before closing the review."])}\n\nProtected verification-record location: ${values.storage.trim()}\n\nClose-out check: update the protected source, then replace or destroy superseded shared copies and ask an intended user to locate the current plan. This log contains labels and evidence, not the contact details themselves. It does not contact anyone, validate a phone network, replace local emergency services, or guarantee that a person or service will be available. In a real emergency, use current official channels and instructions.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -2138,6 +2259,127 @@ const zhTwDefinitions: Record<string, Definition> = {
       })).filter((item) => item.count > 0);
       const supportContext = values.supportContext.trim() || "本次未列額外支援類別；請再確認這是家庭實況，而不是漏掉兒少、長者、身心障礙、照護或寵物需求。";
       return `${values.household.trim()}｜家庭緊急物資盤點紀錄\n盤點範圍：${values.scope}\n實際逐項檢查：${formatter.format(reviewed)}\n下次物資複查：${formatter.format(nextReview)}\n本次涵蓋：${people} 人（只作脈絡，工具未開立數量）\n額外需求：${supportContext}\n官方資料／家庭計畫：${values.authority.trim()}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（不是防災準備分數）\n\n${lines("實際盤點", inventoryRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜${row.parts[2]}｜需求／來源：${row.parts[3]}｜實際看到：${row.parts[4]}｜證據：${row.parts[5]}｜存放：${row.parts[6]}｜狀態：${row.parts[7]}`))}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["本次沒有未完成列；仍應再次核對來源、範圍與實物證據，不能只憑統計宣稱完整。"])}\n\n受保護的盤點紀錄位置：${values.storage.trim()}\n\n結案前查核：把實際觀察與所在地最新官方資料、家庭個別需求、產品標示及說明書重新比對，保存日期證據，為每個未完成識別碼指定負責人，並在實際複查後更新來源紀錄。這份輸出不會開立固定數量、不代表避難包或住家已合格，也不取代醫療、無障礙、寵物照護與即時災害指引；真實事件以最新官方警報與現場指示為準。`;
+    },
+  },
+  "emergency-contact-verification-log": {
+    intro:
+      "逐筆確認緊急聯絡資料是否由本人或官方來源核對、分享範圍是否清楚，以及每個失效項目由誰修正。這裡只放安全代稱，不輸入完整電話、Email、地址、帳號或照護秘密。",
+    fields: [
+      text("household", "家庭識別名稱", "使用家人看得懂的暱稱，不必輸入完整地址。", "我們家"),
+      {
+        name: "scope",
+        label: "本次驗證範圍",
+        type: "select",
+        options: [
+          "家庭防災聯絡計畫",
+          "保母、看護或代管者的分享版聯絡表",
+          "學校、托育或受照顧者聯絡資料",
+          "社區、公用事業與居家服務聯絡資料",
+          "家庭年度完整聯絡資料複查",
+        ],
+      },
+      { name: "reviewed", label: "實際完成複查日期", type: "date" },
+      { name: "nextReview", label: "下次聯絡資料複查日期", type: "date" },
+      text("authority", "家庭計畫與官方來源", "寫本次核對的官方頁面、家庭計畫版本與日期；不要貼帳號、案件編號或個資。", "消防署全民防災 e 點通家庭防災卡說明，2026-08-23 核對；家庭聯絡計畫第 2 版"),
+      {
+        name: "records",
+        label: "聯絡資料驗證列",
+        type: "textarea",
+        help: "每行格式：識別碼 | 角色／用途 | 受保護來源位置 | 安全聯絡管道提示 | 驗證方法／證據 | YYYY-MM-DD 驗證日期 | 分享／同意範圍 | 已由本人或官方來源確認、內容需要修正、等待確認、已停用待移除；最多 20 行。不要輸入完整電話或 Email。",
+        value: "LOCAL-1 | 在地可信任聯絡人，供家庭報平安與住家確認 | 受保護家庭聯絡紀錄 LOCAL-1 | 手機末兩碼 42 | 本人直接確認角色、可用管道與允許的分享對象 | 2026-08-22 | 可放家庭私用防災卡，不公開張貼 | 已由本人或官方來源確認\nUTILITY-1 | 電力停電通報 | 受保護服務名錄 UTILITY-1 | 官方停電通報管道 | 對照業者官網與現行帳單來源 | 2026-08-23 | 家庭查詢用；帳戶資料仍留在受保護位置 | 已由本人或官方來源確認\nCARE-1 | 備援照護聯絡人 | 受保護照護計畫 CARE-1 | 聯絡提示待確認 | 已發出請求，等待本人確認角色、聯絡方式與可分享範圍 | 2026-08-20 | 本人確認前不得加入分享版 | 等待確認",
+      },
+      {
+        name: "actions",
+        label: "每個未完成識別碼的追蹤",
+        type: "textarea",
+        help: "每行格式：未完成識別碼 | 下一動作 | 負責人或角色 | YYYY-MM-DD 期限。每個「內容需要修正、等待確認、已停用待移除」都要剛好一列；期限須晚於本次複查且不晚於下次複查。",
+        value: "CARE-1 | 請預定照護者確認角色、安全聯絡管道與可分享範圍，再更新受保護來源 | 家庭聯絡計畫負責人 | 2026-09-02",
+      },
+      text("storage", "受保護的驗證紀錄位置", "只寫資料夾、信封或備份代稱，不要輸入密碼、門禁碼、地址或實際聯絡資料。", "家庭文件／緊急聯絡／2026-08 驗證"),
+    ],
+    run: (values) => {
+      const reviewed = strictIsoDate(values.reviewed);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.household.trim()) return "請填寫家庭識別名稱，讓匯出後的驗證紀錄仍能辨識。";
+      if (!reviewed) return "請輸入真實有效的 YYYY-MM-DD 實際完成複查日期。";
+      if (!nextReview) return "請輸入真實有效的 YYYY-MM-DD 下次聯絡資料複查日期。";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (reviewed.getTime() > today.getTime())
+        return "實際完成複查日期不能晚於今天；只記錄真正完成的驗證。";
+      if (nextReview.getTime() <= reviewed.getTime())
+        return "下次聯絡資料複查日期必須晚於實際完成複查日期。";
+      if (!values.authority.trim()) return "請填寫本次採用的家庭計畫與官方來源。";
+      if (!values.storage.trim()) return "請填寫受保護的驗證紀錄位置。";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const recordRows = parseRows(values.records);
+      if (recordRows.length === 0) return "請至少輸入一筆實際複查過的聯絡資料。";
+      if (recordRows.length > 20) return "一份紀錄最多 20 筆；更大的名錄請依用途或分享對象拆分。";
+      const invalidRecords = recordRows.filter((row) => row.parts.length !== 8 || row.parts.some((part) => !part));
+      if (invalidRecords.length)
+        return `聯絡資料第 ${invalidRecords.map((row) => row.line).join("、")} 行必須完整填寫 8 個以直線分隔的欄位。`;
+      const statuses = new Set(["已由本人或官方來源確認", "內容需要修正", "等待確認", "已停用待移除"]);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[7]));
+      if (invalidStatuses.length)
+        return `聯絡資料第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須是「已由本人或官方來源確認、內容需要修正、等待確認、已停用待移除」之一。`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length)
+        return "每筆聯絡資料都要有唯一識別碼，避免修正工作連到錯誤來源。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "聯絡資料識別碼請使用 2 到 20 個英文字母、數字或連字號，例如 LOCAL-1。";
+      const invalidVerificationDates = recordRows.filter((row) => {
+        const verified = strictIsoDate(row.parts[5]);
+        return !verified || verified.getTime() > reviewed.getTime() || verified.getTime() > today.getTime();
+      });
+      if (invalidVerificationDates.length)
+        return `聯絡資料第 ${invalidVerificationDates.map((row) => row.line).join("、")} 行需要真實的 YYYY-MM-DD 驗證日期，而且不得晚於本次完成複查日期。`;
+      const unsafeChannels = recordRows.filter((row) => row.parts[3].includes("@") || (row.parts[3].match(/\d/g) || []).length > 4);
+      if (unsafeChannels.length)
+        return `聯絡資料第 ${unsafeChannels.map((row) => row.line).join("、")} 行疑似含完整電話或 Email。請只寫「手機末兩碼 42」等安全提示，實際資料留在受保護來源。`;
+      const unresolvedRows = recordRows.filter((row) => row.parts[7] !== "已由本人或官方來源確認");
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 20) return "一份紀錄最多 20 筆追蹤工作。";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `追蹤第 ${invalidActions.map((row) => row.line).join("、")} 行必須完整填寫 4 個以直線分隔的欄位。`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length)
+        return "每個未完成聯絡資料識別碼只能有一筆追蹤；請合併同一項目的動作。";
+      const unresolvedIds = new Set(unresolvedRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...unresolvedIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length)
+        return `每個未完成聯絡資料都要建立一筆追蹤，尚缺：${missingActions.join("、")}。`;
+      const extraActions = actionIds.filter((id) => !unresolvedIds.has(id));
+      if (extraActions.length)
+        return `追蹤只能連到未完成聯絡資料；請移除或更新：${extraActions.join("、")}。`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() <= reviewed.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `追蹤第 ${invalidDueDates.map((row) => row.line).join("、")} 行需要真實的 YYYY-MM-DD 日期，而且須晚於本次複查、不晚於下次複查。`;
+      const privacyText = [
+        values.authority,
+        values.storage,
+        ...recordRows.flatMap((row) => [row.parts[1], row.parts[2], row.parts[3], row.parts[4], row.parts[6]]),
+        ...actionRows.flatMap((row) => [row.parts[1], row.parts[2]]),
+      ].join("\n");
+      const contactPatternText = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(contactPatternText) || /(?:\d[\s().+-]*){7,}/.test(contactPatternText))
+        return "偵測到可能的完整電話或 Email。請把實際聯絡資料留在受保護來源，這裡只寫安全提示。";
+      if (/密碼|門禁碼|驗證碼|警報碼|完整地址|保單號碼|帳號|銀行帳戶|完整(?:身分證|病歷)|診斷|藥物劑量|劑量|出生日期|password|passcode|access code|alarm code|government id|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、識別資料或不必要醫療細節。請改寫成受保護紀錄的索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const displayStatuses = ["已由本人或官方來源確認", "內容需要修正", "等待確認", "已停用待移除"];
+      const statusCounts = displayStatuses.map((status) => ({
+        status,
+        count: recordRows.filter((row) => row.parts[7] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.household.trim()}｜家庭緊急聯絡資料驗證紀錄\n本次範圍：${values.scope}\n實際完成複查：${formatter.format(reviewed)}\n下次聯絡資料複查：${formatter.format(nextReview)}\n家庭計畫／官方來源：${values.authority.trim()}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（只反映工作流程，不是防災準備分數）\n\n${lines("已複查的聯絡資料", recordRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜受保護來源：${row.parts[2]}｜安全管道提示：${row.parts[3]}｜驗證證據：${row.parts[4]}｜驗證日期：${formatter.format(strictIsoDate(row.parts[5]) as Date)}｜分享／同意：${row.parts[6]}｜狀態：${row.parts[7]}`))}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["本次未記錄未完成項目；結案前仍要確認每個角色、來源與分享範圍真的逐筆查過。"])}\n\n受保護的驗證紀錄位置：${values.storage.trim()}\n\n結案前查核：先更新受保護來源，再替換或銷毀過期分享稿，並請一位預定使用者實際找到最新版。這份紀錄只含代稱與證據，不含聯絡資料本身；工具不會替你聯絡對方、驗證電信網路、取代 110、119、112 或保證任何人與服務一定可用。真實事件以所在地最新官方管道與指示為準。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

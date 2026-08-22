@@ -12,6 +12,8 @@ indexable: true
 publishedAt: "2026-08-22"
 lastReviewedAt: "2026-08-22"
 related:
+  - "/zh-tw/tools/emergency-contact-verification-log/"
+  - "/zh-tw/guides/emergency-information-sheet/"
   - "/zh-tw/features/free-home-management-app/"
   - "/zh-tw/privacy/"
   - "/zh-tw/"

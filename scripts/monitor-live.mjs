@@ -60,6 +60,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/emergency-supply-inventory-audit/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-supply-inventory-audit/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/emergency-supply-inventory/</loc>",
+      "<loc>https://familyboard.win/tools/emergency-contact-verification-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-verification-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/emergency-information-sheet/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -155,6 +158,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Unresolved rows cannot disappear without follow-up",
       "does not prescribe",
+    ],
+  },
+  {
+    path: "/tools/emergency-contact-verification-log/",
+    require: [
+      "Emergency Contact Verification Log",
+      'hreflang="zh-TW"',
+      "Safe channel hints prevent accidental duplication",
+      "does not ask for the full phone number",
     ],
   },
   {
@@ -293,6 +305,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/emergency-contact-verification-log/",
+    require: [
+      "家庭緊急聯絡資料驗證紀錄",
+      'hreflang="en"',
+      "這不是第二份電話簿",
+      "四個狀態只描述工作",
+    ],
+  },
+  {
     path: "/zh-tw/guides/home-evacuation-information/",
     require: [
       "家庭避難計畫怎麼做",
@@ -308,6 +329,15 @@ const checks = [
       'hreflang="en"',
       "先分清楚",
       "臺灣全民安全指引",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/emergency-information-sheet/",
+    require: [
+      "家庭緊急聯絡資料表怎麼做",
+      'hreflang="en"',
+      "台灣官方防災卡把聯絡",
+      "離線備援不能只存在一支手機",
     ],
   },
   {

@@ -71,6 +71,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
     "/tools/emergency-supply-inventory-audit/",
+    "/tools/emergency-contact-verification-log/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -90,6 +91,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/move-out-condition-record-generator/",
     "/zh-tw/tools/home-emergency-drill-record-generator/",
     "/zh-tw/tools/emergency-supply-inventory-audit/",
+    "/zh-tw/tools/emergency-contact-verification-log/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -112,6 +114,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/move-out-home-records/",
     "/zh-tw/guides/home-evacuation-information/",
     "/zh-tw/guides/emergency-supply-inventory/",
+    "/zh-tw/guides/emergency-information-sheet/",
     "/zh-tw/guides/home-maintenance-log/",
     "/zh-tw/guides/appliance-replacement-planning/",
     "/zh-tw/guides/room-by-room-home-inventory/",
@@ -203,6 +206,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "緊急避難包清單教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/emergency-supply-inventory/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料驗證" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/emergency-contact-verification-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
 
   for (const localized of [
     {
@@ -269,6 +278,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/emergency-supply-inventory/",
       alternate: "/guides/emergency-supply-inventory/",
       heading: "緊急避難包清單怎麼整理：從台灣官方指引變成家裡真的拿得走的物資",
+    },
+    {
+      route: "/zh-tw/guides/emergency-information-sheet/",
+      alternate: "/guides/emergency-information-sheet/",
+      heading: "家庭緊急聯絡資料表怎麼做：先定義誰會看，再逐筆驗證",
     },
     {
       route: "/zh-tw/features/household-handoff/",
@@ -463,6 +477,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/emergency-supply-inventory-audit/",
       alternate: "/tools/emergency-supply-inventory-audit/",
       heading: "家庭緊急物資盤點表",
+    },
+    {
+      route: "/zh-tw/tools/emergency-contact-verification-log/",
+      alternate: "/tools/emergency-contact-verification-log/",
+      heading: "家庭緊急聯絡資料驗證紀錄",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -741,6 +760,46 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "需要真實的 YYYY-MM-DD 日期",
   );
 
+  await page.goto("/tools/emergency-contact-verification-log/");
+  await page.getByLabel("Review completed date").fill("2026-08-23");
+  await page.getByLabel("Next contact review date").fill("2026-09-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "Confirmed with person or official source 2",
+  );
+  await expect(page.locator(".result")).toContainText("Awaiting confirmation 1");
+  await expect(page.locator(".result")).toContainText(
+    "not an emergency-readiness score",
+  );
+  await page.getByLabel("Follow-up for every unresolved ID").fill("");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "Add one follow-up row for every unresolved contact ID: CARE-1",
+  );
+  await page
+    .getByLabel("Contact verification rows")
+    .fill("LOCAL-1 | Trusted nearby contact | Protected source LOCAL-1 | Phone +1 555 123 4567 | Person confirmed role | 2026-08-22 | Private household card only | Confirmed with person or official source");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "appears to contain a full phone number or email address",
+  );
+
+  await page.goto("/zh-tw/tools/emergency-contact-verification-log/");
+  await page.getByLabel("實際完成複查日期").fill("2026-08-23");
+  await page.getByLabel("下次聯絡資料複查日期").fill("2026-09-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("已由本人或官方來源確認 2 筆");
+  await expect(page.locator(".result")).toContainText("等待確認 1 筆");
+  await expect(page.locator(".result")).toContainText("不是防災準備分數");
+  await page
+    .getByLabel("聯絡資料驗證列")
+    .fill("LOCAL-1 | 在地可信任聯絡人 | 受保護來源 LOCAL-1 | 手機末兩碼 42 | 本人確認角色與分享範圍 | 2026-02-30 | 家庭私用 | 已由本人或官方來源確認");
+  await page.getByLabel("每個未完成識別碼的追蹤").fill("");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "需要真實的 YYYY-MM-DD 驗證日期",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -988,6 +1047,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-supply-inventory/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/emergency-contact-verification-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/emergency-contact-verification-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/",

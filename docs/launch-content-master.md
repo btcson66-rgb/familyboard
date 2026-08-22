@@ -6998,52 +6998,119 @@ Ask another household member to locate a specific contact without coaching. If t
 
 ## Page 118 — Emergency Information Sheet
 **Slug:** `/guides/emergency-information-sheet/`
-**Primary intent:** make a one-page household emergency information sheet
-**Title tag:** `Emergency Information Sheet: What Belongs on One Household Page`
-**Meta description:** `Create a one-page household emergency information sheet with contacts, address, important household notes and clear references to secure documents.`
+**Primary intent:** build and verify a one-page household emergency information sheet
+**Title tag:** `Emergency Information Sheet: Build, Verify and Share One Useful Page`
+**Meta description:** `Build a one-page emergency information sheet with verified contacts, audience-specific details, offline copies, privacy boundaries and review evidence.`
 **Primary keyword concept:** emergency information sheet
+**Cluster:** records-emergency
+**Page type:** content
+**Published date:** 2026-08-19
+**Editorial review date:** 2026-08-23
 **Depth:** verified
-**Suggested internal links:** `/tools/emergency-contact-sheet-generator/`, `/templates/printable-emergency-contacts/`, `/guides/emergency-binder/`, `/features/household-handoff/`
+**Content version:** 2
+**Suggested internal links:** `/tools/emergency-contact-verification-log/`, `/tools/emergency-contact-sheet-generator/`, `/guides/emergency-binder/`, `/features/household-handoff/`
 
-# One page forces the household to decide what is truly important
+# Emergency information sheet: one page, one audience, verified sources
 
-An emergency binder can hold real depth. An emergency information sheet has one job: be the fastest possible summary a person can read in seconds, whether that's a paramedic, a substitute caregiver, or a family member calling from out of town. One page limits scope by design — if it doesn't fit, it usually doesn't belong on this specific document.
+An emergency information sheet is a routing page, not a compressed household database. Its job is to help one intended reader identify the household, find the right current contact or plan, and reach protected details without searching through messages, bills and folders. The useful question is not “How much can fit on one page?” It is “What can this reader safely use under stress, and how do we know it is still current?”
 
-## What a real emergency information card contains — a published model
+That changes the workflow. Choose the audience and storage location first. Verify every contact against a person or responsible official source. Put only the minimum usable detail on the sheet. Point toward protected records for anything sensitive. Add a visible review date, replace superseded copies and test whether another intended user can actually find the current version.
 
-State public-health guidance on emergency health information cards gives a concrete structure worth adapting. [Connecticut's Department of Public Health](https://portal.ct.gov/dph/public-health-preparedness/bioterrorism/creating-an-emergency-health-information-card) recommends a front side with name, address, phone numbers, birth date, blood type and health insurance information, and a back side covering emergency contacts, medical conditions or disabilities, current medications with dosage and administration details, allergies and sensitivities, immunization dates, and any special communication or equipment needs (mobility equipment, hearing or vision aids). That front/back split — identity and logistics on one side, medical specifics on the other — is a useful model for a household sheet even when it's built for the whole family rather than one person.
+## Start with the communication plan, not the layout
 
-## Include basic identity and location on the household version
+[Ready.gov's Family Emergency Communication Plan](https://www.ready.gov/sites/default/files/2020-03/family-emergency-communication-planning-document.pdf) asks households to write down contact and service information, give plan copies to household members, keep a central home copy, place information on phones and practice contacting the agreed out-of-town person. Taiwan's National Fire Agency similarly explains that communications may be disrupted and families should agree on contact methods, meeting locations and emergency contacts before an earthquake in its English [family evacuation planning guidance](https://www.nfa.gov.tw/eng/index.php?article_id=8960&code=list&flag=detail&ids=1371).
 
-Home address, household member names and roles, and the primary emergency contact form a reasonable household-wide baseline. Match the sensitivity of what's included to where the sheet will live — a version taped inside a kitchen cabinet needs less detail than one kept in a locked drawer or only inside the app.
+Those sources describe a plan, not merely a phone directory. A household needs to decide who checks in with whom, which alternative method to try, where people reunite, what an out-of-area contact is expected to do and where the authoritative local information lives. The one-page sheet is the portable, audience-specific view of those decisions. It cannot rescue a plan that the household never discussed.
 
-## Add the operational contacts that matter in the first five minutes
+Official emergency channels are location-specific and time-sensitive. Record the responsible authority and date checked. Never copy a number from a foreign template because it looks familiar. A household that travels or has members in different jurisdictions may need separate cards; one country's emergency number should not silently appear as a universal default.
 
-Utility outage numbers, building or property management, a trusted nearby contact, and pet-care or caregiver numbers cover most real emergencies. The household contact list underlying this sheet should support marking any contact as sensitive — a contact flagged that way is automatically excluded from any generated handoff or printed sheet, which means a private contact (a therapist, an estranged relative kept on file for medical history only) never accidentally ends up on a page taped to a refrigerator.
+## Define one reader before choosing the fields
 
-## Reference sensitive documents instead of exposing them
+A card carried by a child, a refrigerator sheet, a caregiver handoff and a locked medical envelope do not need the same content. Name the audience in the sheet header. If a document has several audiences, create several controlled versions rather than one overexposed master copy.
 
-Instead of placing policy numbers, account details or government ID numbers directly on the sheet, write where the secure originals are stored — "insurance policy: home office folder" rather than the policy number itself. This single-page sheet is the document most likely to be seen by someone outside the immediate household, which makes it exactly the wrong place for information that shouldn't be broadly readable.
+A shared household page might include:
 
-## Build two versions on purpose: shared and private
+- a short household or location label that its users understand;
+- the current local emergency-services reference and the date it was checked;
+- one primary household coordination role and one backup role;
+- one agreed nearby meeting reference and one protected pointer to the wider plan;
+- a trusted nearby or out-of-area contact, if that person has agreed;
+- building management, utility outage, school, care or veterinary roles that the audience genuinely needs;
+- a visible “verified on” date and the next review trigger.
 
-A sheet meant for a refrigerator or a shared drawer should carry less than a version meant only for the app or a locked binder. Generate a limited shared version (contacts, address, essential logistics) and a fuller private version (medical notes, full contact list) rather than trying to make one sheet serve both purposes — the alternative is either an overexposed shared sheet or an underpowered private one.
+It usually should not contain full government identifiers, insurance or utility account numbers, passwords, alarm or access codes, complete medical histories, detailed medication instructions, financial information or a vulnerable person's precise routine. Put those details in an appropriately protected, maintained source. The sheet can say `protected care plan: blue household folder` without copying the plan.
 
-## Review it like you'd review a smoke alarm — on a schedule, not by memory
+## Separate contact details from verification evidence
 
-A phone number that's two providers old, or a medication that's since changed, turns a trusted quick-reference sheet into a source of bad information during exactly the moment it's needed most. Put a visible review date on it and treat any household change — new pediatrician, new medication, moved residence — as a trigger to update it immediately rather than waiting for the next scheduled pass.
+A phone number can be perfectly formatted and still belong to the wrong person. An official service number copied years ago can still look plausible. A contact sheet therefore needs two records: the protected source containing the actual contact detail, and a verification log explaining how its role and channel were confirmed.
 
-**Contextual CTA:** Use the generator to create two versions: a limited shared-sheet version and a more complete private household version.
+For a person, confirmation should cover more than “Is this still your number?” Ask whether the person still accepts the intended role, which contact method they prefer, who may receive that detail and what they should do if reached. Consent to appear on a private family card is not consent to appear on a public notice or every caregiver handoff.
+
+For a government, utility, building or service contact, verify against the responsible organization's current official website, current statement, contract channel or formal management notice. A search-result snippet, an old social post and a crowd-sourced directory are discovery leads, not the final evidence. Record the source name and check date so the next reviewer can repeat the check.
+
+The free [Emergency Contact Verification Log](/tools/emergency-contact-verification-log/) records a stable contact ID, role, protected-source pointer, safe channel hint, verification evidence, verification date, sharing scope and status. It deliberately rejects full phone numbers and email addresses. The log proves what was reviewed without becoming another sensitive directory that must be reconciled later.
+
+## Use stable IDs so updates reach every copy
+
+Give important source records short identifiers such as `LOCAL-1`, `UTILITY-1` or `CARE-1`. Print the same ID beside the entry on each controlled sheet. When a number or role changes, the household can search copies for that ID rather than guessing where the old detail may remain.
+
+An ID is not an account number or serial number. It is a household label. Keep it short and non-sensitive. A change log might say `UTILITY-1 verified from provider website; refrigerator and caregiver copies replaced` without exposing the actual number in a task list or calendar notification.
+
+This also makes retirement visible. If a trusted neighbor moves away, mark `LOCAL-1` retired in the verification log, remove it from the protected source, replace every shared copy and only then close the action. Simply adding a new contact while the old copy remains on the refrigerator leaves two apparently valid answers.
+
+## Build a shared layer and a protected layer
+
+The shared layer is fast to reach and intentionally sparse. The protected layer owns full contact details, sensitive care information, documents and evidence. The sheet points from the first to the second only where its audience is authorized to follow.
+
+FamilyBoard's app can store emergency contacts in the current browser and mark contacts as sensitive for household handoff filtering. That flag is a sharing rule, not encryption and not a guarantee against someone who can open the browser profile. A full JSON or CSV export may still contain those records. Review the generated handoff before sharing, and use device and file protection appropriate to the data.
+
+The separate [Emergency Contact Sheet Generator](/tools/emergency-contact-sheet-generator/) formats actual household-entered contact rows into a printable sheet. Use it only after the source records have been checked. The verification-log tool has a different job: it records the review without collecting the numbers. Neither tool contacts the person, tests the network or decides which emergency service applies.
+
+## A worked two-version household example
+
+Suppose a household has two adults, a child, a dog and a regular caregiver. Its kitchen copy may show the location label, current official emergency-service reference, primary and backup family coordination roles, trusted nearby role, building management, electricity outage contact, veterinarian and the protected binder location. It avoids birth dates, account numbers, medical details and access codes.
+
+The caregiver version can be even narrower: household coordination roles, child-care and veterinary contacts the caregiver is permitted to use, the meeting reference, and where to find the protected instructions. A private envelope may contain person-specific health or authorization material prepared with the appropriate source. The household does not photocopy that envelope onto the kitchen page merely because it is “emergency information.”
+
+In the verification log, `LOCAL-1` is confirmed directly with the person and records the permitted audience. `UTILITY-1` is confirmed from the provider's current official source. `CARE-1` remains `Awaiting confirmation`, so it cannot appear on the new caregiver sheet. A named household coordinator receives a due date to close the gap before the next review.
+
+## Review triggers are more reliable than a universal interval
+
+There is no single review interval that makes every contact trustworthy. Choose a household cadence, but also update after events that change the source: moving, a new school or care provider, household membership changes, a person withdrawing consent, a building manager change, a utility account transition, a revised local emergency page, a new phone, a lost copy or a failed drill.
+
+The review date must mean someone checked the source—not that the document was opened and saved. For each row, preserve who or what confirmed it and when. A future review date is a planning field; it is not proof the future check already happened.
+
+After updating, replace or destroy obsolete paper copies, refresh offline files and update the protected app or binder source. Ask someone other than the editor to locate one contact and explain the backup method. If the person cannot find the right version, the information architecture failed even if every number is correct.
+
+## Plan for phone, power and internet failure
+
+A cloud bookmark is not an offline copy. A note stored on one locked phone may be unreachable to everyone else. A printed card can survive a power failure but may expose information if left in a public place. Use more than one appropriate format: a limited paper copy, a protected home record and the intended household members' devices where suitable.
+
+Practice communication without creating a false alarm. Household members can locate the card, identify the primary and alternative method, and send a clearly announced test message to a consenting contact. Do not call emergency services as a drill. Record the observed result in a [household emergency exercise record](/tools/home-emergency-drill-record-generator/) and assign any gap.
+
+## Accessibility and language are part of usability
+
+Readable type, plain role labels, adequate contrast and a predictable field order matter under stress. A multilingual household may need separate language versions with the same stable IDs and review date, not tiny side-by-side text. A person who uses assistive technology may need an accessible digital copy as well as paper. A child may need role labels and an agreed action rather than a dense page written for adults.
+
+Do not infer a person's support or communication needs. Confirm with the person and, where appropriate, their caregiver or qualified plan owner. The shared page can point to the protected support plan; it should not expose a diagnosis to everyone who can see the sheet.
+
+## Keep commercial suggestions outside the emergency record
+
+An emergency sheet does not need a product carousel between the official number and the family contact. If FamilyBoard later shows clearly disclosed affiliate suggestions on public educational pages, they must remain outside the form and generated result, never cover the tool and never determine which contact or device is “required.” The household plan and responsible authority define the need; a commercial relationship cannot validate it.
+
+**Contextual CTA:** Verify one real contact and one official service source, generate the audit record, then replace every obsolete copy carrying those IDs.
 
 **FAQ:**
-- Q: What's the difference between an emergency information sheet and a full emergency binder?
-  A: The sheet is a one-page, seconds-to-read summary — address, essential contacts, critical logistics. The binder holds real depth behind it: full contact lists, insurance references, evacuation and supply plans. The sheet should point toward the binder for anything that doesn't fit on one page, not try to contain everything itself.
-- Q: What should go on the front versus the back of a household emergency card?
-  A: A useful model, adapted from public-health guidance, puts identity and contact basics (name, address, phone, primary contact) on the front and medical specifics (conditions, current medications with dosage, allergies, immunization dates) on the back — separating "who to call" from "what a responder needs to know" so each side stays fast to scan.
-- Q: How does a household keep a private contact off a shared emergency sheet?
-  A: By marking that contact as sensitive in the household system — a contact flagged that way is automatically filtered out of any generated handoff packet or printed sheet, so a private contact never ends up exposed on a page meant for broad household or emergency use.
-- Q: Is it safe to write insurance policy numbers or ID numbers on a printed emergency sheet?
-  A: No — write where the secure original is stored instead of the number itself. A printed emergency sheet is one of the documents most likely to be seen by someone outside the household, which makes it a poor place for account numbers, full policy numbers or government ID numbers to sit in plain text.
+- Q: What is the difference between an emergency information sheet and a full emergency binder?
+  A: The sheet is an audience-specific routing page with a few current contacts, coordination roles and protected-record pointers. The binder owns the deeper plans, source documents and sensitive details. The sheet should help an authorized reader reach the right source, not duplicate the whole binder.
+- Q: How can I tell whether a contact was really verified?
+  A: Record whether a person directly confirmed the role and sharing scope or whether an official-service contact was checked against the responsible organization's current source. Keep the date and evidence in a verification log; a plausible format or old printed copy is not verification.
+- Q: Should the verification log contain the actual phone number or email address?
+  A: No. Keep the actual detail in the protected source and use a safe hint plus stable ID in the log. That prevents the audit from becoming a second sensitive directory that can drift out of sync.
+- Q: Can one sheet be shared with family, caregivers and visitors?
+  A: Usually not safely. Create controlled versions for distinct audiences. A caregiver may need care and coordination contacts; a general household copy may need utility and building roles; a protected person-specific record may contain details that belong on neither shared sheet.
+- Q: Does a completed sheet guarantee that a person, phone network or service will be available?
+  A: No. It records a dated plan and verification evidence. It cannot contact anyone, test future network conditions, certify readiness or replace current local emergency services and official instructions.
 
 ---
 
@@ -11486,6 +11553,157 @@ An inventory should not start with a product carousel. If FamilyBoard later disp
   A: No. It means the listed evidence was physically checked for this audit. It is not a product certification, professional inspection, preparedness score or guarantee that the item will remain available during a real event.
 - Q: Can affiliate recommendations determine which items the tool marks missing?
   A: No. The chosen authority and household plan define the requirement, and the physical audit establishes the observation. Any future affiliate suggestion must be disclosed, separated from the audit and optional; a commercial relationship cannot create a need or change a status.
+
+---
+
+## Page 204 — Emergency Contact Verification Log
+**Slug:** `/tools/emergency-contact-verification-log/`
+**Primary intent:** verify emergency contact records, consent and update ownership without duplicating contact details
+**Title tag:** `Emergency Contact Verification Log | Check Sources, Consent and Updates`
+**Meta description:** `Verify household emergency-contact records with safe IDs, source evidence, consent scope, real dates, four statuses and owner-linked corrections.`
+**Primary keyword concept:** emergency contact verification log
+**Cluster:** tools
+**Page type:** tool
+**Published date:** 2026-08-23
+**Editorial review date:** 2026-08-23
+**Content version:** 1
+**Suggested internal links:** `/guides/emergency-information-sheet/`, `/tools/emergency-contact-sheet-generator/`, `/tools/home-emergency-drill-record-generator/`, `/features/emergency-information-organizer/`
+
+# Emergency contact verification log
+
+This free browser tool records whether each important household contact was confirmed by the intended person or a responsible official source, when that check happened, what sharing scope applies and who owns every unresolved correction. It deliberately does not ask for the full phone number, email address, street address, account number or private care details.
+
+That makes the output a verification log, not another contact list. The actual contact remains in the household's protected source. The log uses a stable ID and safe channel hint to show which record was reviewed without creating a duplicate directory that can be exposed or drift out of date.
+
+**Ready to review real records? [Jump to the verification tool](#tool-heading).**
+
+## A contact sheet and a verification log solve different problems
+
+The [Emergency Contact Sheet Generator](/tools/emergency-contact-sheet-generator/) formats household-entered contact details into a readable page. This tool audits the records behind that page. It asks whether `LOCAL-1` still accepts the trusted-neighbor role, whether `UTILITY-1` came from the provider's current official source, whether `CARE-1` can be shared with a caregiver and whether an obsolete contact has been removed from every copy.
+
+Keeping the functions separate protects both accuracy and privacy. If every annual audit copies every phone number into another file, the household finishes with several sources that disagree. A verification log can say `mobile ending 42, confirmed directly on August 22` while the full detail remains in one protected record.
+
+The log is not proof that a phone network works, that a person will answer or that an organization will retain the same channel. It records a dated check and the evidence used. Current official instructions and real-world conditions still control during an emergency.
+
+## Choose one verification scope
+
+The tool offers five scopes: the household emergency communication plan; a caregiver or sitter contact sheet; school, child-care or dependent-care contacts; building, utility and service contacts; or a full annual review. Use one review for one practical audience or source set.
+
+This prevents a common privacy mistake. A sitter sheet may need a veterinarian and household coordinator but not an insurance contact. A school form may need authorized guardians but not a utility outage line. A full household plan may reference all of them, but each shared view should still include only what its intended reader needs.
+
+If more than twenty records belong in the review, split them by audience or function. The row limit keeps every status and action visible. A huge pasted directory can appear comprehensive while nobody verifies the roles or replaces the old copies.
+
+## Name the plan and official sources checked
+
+The plan/source field preserves the context for the review. Record the current local emergency-management source, the household communication-plan version and the date checked. For example: `Ready.gov family communication plan checked 2026-08-23; household plan v2.`
+
+[Ready.gov's Family Emergency Communication Plan](https://www.ready.gov/sites/default/files/2020-03/family-emergency-communication-planning-document.pdf) describes household, school, medical, utility and service contacts; copies for household members; an out-of-town contact; device entries; and practice. Taiwan's National Fire Agency also describes pre-agreed contact methods and family emergency-card information in its English [family evacuation planning guidance](https://www.nfa.gov.tw/eng/index.php?article_id=8960&code=list&flag=detail&ids=1371). These are planning sources, not a universal list of numbers.
+
+Use the responsible authority for the household's actual location. A government or emergency number from one country cannot be treated as the default elsewhere. Record the source name rather than relying on memory, a search snippet or an undated printable.
+
+Do not paste an account number, utility case number, policy number or precise address into the source field. If a provider record is private, identify its protected location and source ID.
+
+## Eight fields create a repeatable contact audit
+
+Each contact row uses this structure:
+
+`ID | role/purpose | protected source location | safe channel hint | verification method/evidence | verification date YYYY-MM-DD | sharing/consent scope | status`
+
+The ID uses two to twenty letters, numbers or hyphens, such as `LOCAL-1`, `UTILITY-1` or `CARE-1`. It must be unique inside the review. Use a household label, not a government identifier, account number or the contact's phone number.
+
+Role/purpose should answer when the household would use the contact. `Trusted nearby contact for household check-in` is better than `Alex`. `Electricity outage reporting` is better than the provider name alone. The role makes it easier to notice when two entries duplicate the same job or when a plan has no backup.
+
+Protected source location identifies where the actual detail is maintained: `protected household contact record LOCAL-1`, `building management notice folder` or `current provider statement`. The log must remain useful even though it does not reproduce the number.
+
+## Safe channel hints prevent accidental duplication
+
+A safe channel hint distinguishes records without exposing them. Examples include `mobile ending 42`, `official outage channel`, `number on current building notice` or `protected email record CARE-1`. The tool rejects hints that appear to contain a full phone number or email address.
+
+The final two or three digits are not a security control. They are only a reconciliation clue for the household. Do not add a person's full name, address, birth date or routine merely because the number is omitted. Combine the hint with the stable ID and protected source.
+
+Downloaded or copied outputs are under the user's control. Treat them according to their content and audience. A safe verification log can still reveal that a household uses a caregiver or has a particular service relationship, so share it only when useful.
+
+## Verification evidence differs for people and organizations
+
+For a person, direct confirmation should cover the intended role, acceptable channel and permitted recipients. Someone may agree to be an out-of-area family contact without agreeing to appear on a refrigerator sheet visible to visitors. Record the scope in plain language, such as `private household card only; not for public posting`.
+
+For an official service, use the responsible organization's current website, bill, contract channel or formal notice. Record what was compared. `Provider website and current statement source were compared` is retrievable. `Found online` is not.
+
+For a school, care provider or dependent-care relationship, follow the organization's authorized update process. The verification log does not create legal authority, consent to treatment, pickup permission or a substitute for the provider's form. It can record that the formal source was reviewed and that a correction is pending.
+
+The verification date belongs to each row because different contacts may have been checked on different days. It must be a real calendar date no later than the overall completed-review date. A future plan to call someone is an action, not verification evidence.
+
+## Four statuses describe evidence, not importance
+
+`Confirmed with person or official source` means the role, protected source, safe hint, method, date and sharing scope were checked for this review. It does not guarantee future availability.
+
+`Needs correction` means the current source contains a known error or mismatch. `Awaiting confirmation` means a request was made or a source still needs to be checked. `Retired; removal pending` means the relationship or channel should no longer appear, but one or more source or shared copies still need cleanup.
+
+The output counts each status. That is a workload summary, not an emergency-readiness score. One unconfirmed backup caregiver can matter more to a household than several current service contacts. The tool never labels a family prepared, safe or compliant.
+
+Do not choose `Confirmed` merely because a call button opens or a message can be drafted. The device accepting the format does not prove the intended person controls it or accepts the role.
+
+## Every unresolved record needs one owner-linked action
+
+Each `Needs correction`, `Awaiting confirmation` or `Retired; removal pending` ID must have exactly one follow-up row:
+
+`unresolved ID | next action | owner or role | due date YYYY-MM-DD`
+
+The ID must exist and be unresolved. Duplicate action IDs are rejected. An action attached to a confirmed row is rejected because the status and work plan disagree. The due date must be a real date after the completed review and no later than the next review.
+
+A specific action looks like this:
+
+`CARE-1 | Ask the intended caregiver to confirm the role, safe channel and sharing scope; then update the protected source | Household coordinator | 2026-09-02`
+
+`Fix contact` is not enough. The owner needs to know which source to update and what observed evidence will close the task. After correction, keep the old verification log as history and create a new dated check; editing the original status erases what was true during the first review.
+
+## A worked three-record review
+
+The tool's starting example includes three distinct verification methods.
+
+`LOCAL-1` is a trusted nearby contact. The person directly confirmed the role, safe method and sharing scope. The hint says only `mobile ending 42`, while the actual number remains in the protected contact record. Its status is confirmed.
+
+`UTILITY-1` is an electricity-outage channel. The household compares the provider's official website with a current bill source, records the date and keeps account details protected. It is also confirmed, but the evidence is organizational rather than personal consent.
+
+`CARE-1` is a backup caregiver. The household sent a request but has not received confirmation. The row remains `Awaiting confirmation`, the sharing scope says not to include it yet, and one action assigns the household coordinator a due date. The tool will not generate a successful record if that action is removed.
+
+This example does not claim the three contacts make a complete plan. The correct roles depend on household composition, jurisdiction, building, school, pets, care arrangements and the responsible official guidance.
+
+## Review dates and event triggers
+
+The overall completed-review date cannot be in the future. The next review must be later. Those controls prevent an exported plan from looking like evidence of work that has not happened.
+
+A calendar review is only a fallback. Review immediately after a move, provider change, school or caregiver change, a person withdrawing consent, phone or email replacement, building-management transition, official-source update, failed drill, lost copy or any incident where the expected contact did not work as planned.
+
+Closing a review means more than updating the protected directory. Replace refrigerator, wallet, caregiver and device copies that carry the retired ID. Remove access that is no longer authorized. Then ask an intended user to find the correct role without coaching.
+
+The [Home Emergency Drill Record Generator](/tools/home-emergency-drill-record-generator/) can record an announced communication exercise. Never call emergency services as a test. A household can instead locate the card, identify its primary and backup methods, and send a clearly labeled test message to a consenting participant.
+
+## Privacy filters are a final guard, not permission to paste secrets
+
+The tool rejects likely full phone numbers, email addresses, passwords, access codes, financial identifiers and unnecessary medical details. No text filter catches every secret or contextual identifier. The user remains responsible for entering minimal labels and reviewing the result before copying, downloading or sharing it.
+
+Public tool values are processed in the browser and are not included in FamilyBoard's analytics events. Saving to the local app or downloading creates another copy on the user's device. The public page itself is not a secure vault, contact service, identity verifier or encrypted communications platform.
+
+If the household needs to store actual contact details in FamilyBoard, read the [Emergency Information Organizer](/features/emergency-information-organizer/) and understand the app's local-browser and backup boundaries. A sensitive flag controls handoff inclusion; it does not add separate device authentication or remove the entry from full exports.
+
+## Keep affiliate placements outside the decision record
+
+The verification workflow does not require a product purchase. If FamilyBoard later displays clearly disclosed affiliate suggestions for labels, binders or backup supplies, they must remain outside the form and output, never interrupt completion and never change a contact's status. The user should be able to verify, copy, print and download the record without opening a commercial link.
+
+**Contextual CTA:** Verify one person and one official service today, assign every unresolved ID, and replace the stale source copies before the next review.
+
+**FAQ:**
+- Q: Why does the tool reject full phone numbers and email addresses?
+  A: The purpose is to audit the protected source, not duplicate it. A stable ID and safe channel hint show which record was checked while reducing exposure and the risk of several contact files drifting out of sync.
+- Q: What counts as confirmation for a personal contact?
+  A: Direct confirmation of the intended role, acceptable contact method and sharing scope. A delivered message or familiar-looking number alone does not show that the person still accepts the role or the proposed audience.
+- Q: How should I verify a utility, building or government contact?
+  A: Compare it with the responsible organization's current official website, statement, contract channel or formal notice, then record the source and date. Do not rely on an undated printable, search snippet or third-party directory as final evidence.
+- Q: Why must every unresolved ID have an action?
+  A: A status without ownership can remain unresolved indefinitely. The action connects the exact source ID to a concrete correction, one responsible role and a real due date before the next review.
+- Q: Does a confirmed status guarantee that the contact will answer during an emergency?
+  A: No. It records a past verification. The tool cannot test future network conditions, availability, authority or response. Use current official channels and instructions in a real emergency.
 
 ---
 

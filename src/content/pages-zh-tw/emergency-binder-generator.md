@@ -17,6 +17,8 @@ related:
   - "/zh-tw/tools/emergency-supply-inventory-audit/"
   - "/zh-tw/guides/emergency-supply-inventory/"
   - "/zh-tw/tools/emergency-contact-sheet-generator/"
+  - "/zh-tw/tools/emergency-contact-verification-log/"
+  - "/zh-tw/guides/emergency-information-sheet/"
   - "/zh-tw/features/emergency-information-organizer/"
   - "/zh-tw/features/household-documents-organizer/"
   - "/zh-tw/guides/digital-home-inventory-backup/"
