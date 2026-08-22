@@ -79,6 +79,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/emergency-contact-sheet-generator/",
     "/zh-tw/tools/appliance-age-calculator/",
     "/zh-tw/tools/home-maintenance-cost-tracker/",
+    "/zh-tw/tools/home-repair-cost-log/",
+    "/zh-tw/tools/home-service-reminder-generator/",
+    "/zh-tw/tools/receipt-retention-organizer/",
     "/zh-tw/tools/recurring-chore-planner/",
     "/zh-tw/tools/home-inventory-checklist-generator/",
     "/zh-tw/tools/household-document-index-generator/",
@@ -347,6 +350,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       heading: "居家維護費用追蹤器",
     },
     {
+      route: "/zh-tw/tools/home-repair-cost-log/",
+      alternate: "/tools/home-repair-cost-log/",
+      heading: "居家修繕費用紀錄表",
+    },
+    {
+      route: "/zh-tw/tools/home-service-reminder-generator/",
+      alternate: "/tools/home-service-reminder-generator/",
+      heading: "到府服務提醒產生器",
+    },
+    {
+      route: "/zh-tw/tools/receipt-retention-organizer/",
+      alternate: "/tools/receipt-retention-organizer/",
+      heading: "收據保存整理器",
+    },
+    {
       route: "/zh-tw/tools/recurring-chore-planner/",
       alternate: "/tools/recurring-chore-planner/",
       heading: "家庭家事輪值表產生器",
@@ -428,6 +446,37 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(page.locator(".result")).toContainText("已規劃：NT$3,200");
   await expect(page.locator(".result")).toContainText("未納入：第 3 行");
 
+  await page.goto("/zh-tw/tools/home-repair-cost-log/");
+  await page.getByLabel("修繕紀錄").fill(
+    "2026-03-08 | 客廳冷氣 | 運轉後滴水 | 原廠服務站 | 1800 | 清潔排水管後正常\n2026-08-18 | 客廳冷氣 | 再次滴水 | 原廠服務站 | 950 | 調整排水坡度，持續觀察\n格式錯誤",
+  );
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("實付總額：NT$2,750");
+  await expect(page.locator(".result")).toContainText("客廳冷氣：2 筆，共 NT$2,750");
+  await expect(page.locator(".result")).toContainText("未納入：第 3 行");
+
+  await page.goto("/zh-tw/tools/home-service-reminder-generator/");
+  await page.getByLabel("最晚完成日期").fill("2026-10-15");
+  await page
+    .getByRole("spinbutton", { name: "提前幾天開始聯絡／預約" })
+    .fill("21");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("2026年9月24日");
+  await expect(page.locator(".result")).toContainText("日期依據：使用說明書第 18 頁");
+  await expect(page.locator(".result")).toContainText("不會發送通知或自動預約");
+
+  await page.goto("/zh-tw/tools/receipt-retention-organizer/");
+  await page.getByLabel("交易或完工日期").fill("2025-10-31");
+  await page
+    .getByRole("spinbutton", { name: "已查明的複查間隔（月）" })
+    .fill("12");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("2026年10月31日");
+  await expect(page.locator(".result")).toContainText("複查日不是銷毀日");
+  await page.getByLabel("交易或完工日期").fill("2099-01-01");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("不能晚於今天");
+
   await page.goto("/zh-tw/tools/recurring-chore-planner/");
   await page.getByLabel("下次一起複查日期").fill("2026-09-05");
   await page
@@ -488,6 +537,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/home-repair-cost-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/home-service-reminder-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/receipt-retention-organizer/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/recurring-chore-planner/",

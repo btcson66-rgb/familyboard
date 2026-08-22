@@ -1297,7 +1297,7 @@
   },
   {
     "route": "/tools/home-repair-cost-log/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/home-repair-cost-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1345,7 +1345,7 @@
   },
   {
     "route": "/tools/home-service-reminder-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/home-service-reminder-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1401,7 +1401,7 @@
   },
   {
     "route": "/tools/receipt-retention-organizer/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/receipt-retention-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1847,6 +1847,20 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/home-repair-cost-log/",
+    "alternateRoute": "/tools/home-repair-cost-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/home-service-reminder-generator/",
+    "alternateRoute": "/tools/home-service-reminder-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/",
     "alternateRoute": "/",
     "indexable": true,
@@ -1940,6 +1954,13 @@
   {
     "route": "/zh-tw/features/private-family-organizer/",
     "alternateRoute": "/features/private-family-organizer/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/receipt-retention-organizer/",
+    "alternateRoute": "/tools/receipt-retention-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

@@ -1148,6 +1148,171 @@ const zhTwDefinitions: Record<string, Definition> = {
       )}\n\n已完成：${moneyFor(completedTotal, currency)}（${completed.length} 筆）\n已規劃：${moneyFor(plannedTotal, currency)}（${planned.length} 筆）\n已完成平均每筆：${moneyFor(completed.length ? completedTotal / completed.length : 0, currency)}${invalidMessage}\n\n總額只反映你輸入的資料；沒有包含未登錄費用，也不代表稅務、保險或房屋增值成本。`;
     },
   },
+  "home-repair-cost-log": {
+    intro:
+      "把每次修繕的日期、設備、故障現象、處理者、實付金額與結果放在同一條時間線，並找出同一設備的重複維修。這是紀錄工具，不會替你判定應維修或汰換。",
+    fields: [
+      {
+        name: "entries",
+        label: "修繕紀錄",
+        type: "textarea",
+        help: "每行格式：日期 | 設備／區域 | 故障現象 | 業者／處理人 | 實付金額 | 結果。自行處理也要明確填寫。",
+        value:
+          "2026-03-08 | 客廳冷氣 | 運轉後滴水 | 原廠服務站 | 1800 | 清潔排水管後正常\n2026-08-18 | 客廳冷氣 | 再次滴水 | 原廠服務站 | 950 | 調整排水坡度，持續觀察",
+      },
+      {
+        name: "currency",
+        label: "幣別",
+        type: "select",
+        options: ["TWD", "USD", "JPY"],
+      },
+    ],
+    run: (values) => {
+      const parsed = values.entries
+        .split("\n")
+        .map((source, index) => {
+          const parts = source.split("|").map((part) => part.trim());
+          const [rawDate = "", item = "", symptom = "", provider = "", rawAmount = "", outcome = ""] = parts;
+          const amount = Number(rawAmount.replace(/[,$，\s]/g, ""));
+          return {
+            line: index + 1,
+            parts,
+            rawDate,
+            item,
+            symptom,
+            provider,
+            amount,
+            outcome,
+            valid:
+              parts.length === 6 &&
+              Boolean(date(rawDate)) &&
+              [item, symptom, provider, outcome].every(Boolean) &&
+              Number.isFinite(amount) &&
+              amount >= 0,
+          };
+        })
+        .filter((row) => row.parts.some(Boolean));
+      if (parsed.length > 50)
+        return "一次最多整理 50 筆修繕；請按住家、設備或年度拆成較容易複查的紀錄。";
+      const valid = parsed.filter((row) => row.valid);
+      const invalid = parsed.filter((row) => !row.valid);
+      if (valid.length === 0)
+        return "沒有可整理的紀錄。請使用「日期 | 設備／區域 | 故障現象 | 業者／處理人 | 實付金額 | 結果」格式，每行六個完整欄位。";
+      const currency = values.currency || "TWD";
+      const total = valid.reduce((sum, row) => sum + row.amount, 0);
+      const groups = new Map<string, { label: string; count: number; total: number }>();
+      valid.forEach((row) => {
+        const key = row.item.toLocaleLowerCase("zh-TW");
+        const current = groups.get(key) || { label: row.item, count: 0, total: 0 };
+        current.count += 1;
+        current.total += row.amount;
+        groups.set(key, current);
+      });
+      const repeated = [...groups.values()].filter((group) => group.count > 1);
+      const invalidMessage = invalid.length
+        ? `\n\n未納入：第 ${invalid.map((row) => row.line).join("、")} 行。每行必須正好六個欄位，日期有效、文字不留白，金額為非負數。`
+        : "";
+      return `${lines(
+        "居家修繕歷程",
+        valid.map(
+          (row) =>
+            `${row.rawDate}｜${row.item}｜現象：${row.symptom}｜處理：${row.provider}｜${moneyFor(row.amount, currency)}｜結果：${row.outcome}`,
+        ),
+      )}\n\n實付總額：${moneyFor(total, currency)}（${valid.length} 筆）\n平均每筆：${moneyFor(total / valid.length, currency)}\n\n${repeated.length ? lines("同名設備的重複紀錄", repeated.map((group) => `${group.label}：${group.count} 筆，共 ${moneyFor(group.total, currency)}`)) : "目前沒有同名設備的重複紀錄。"}${invalidMessage}\n\n重複筆數只是一個回查訊號，不代表設備一定該汰換。請一併核對設備年齡、保固、實際故障原因、安全風險、書面報價與替代成本。`;
+    },
+  },
+  "home-service-reminder-generator": {
+    intro:
+      "把到府檢修、清洗、換料或續約整理成「何時開始聯絡」與「何時必須完成」兩個日期。週期必須來自說明書、服務契約或你已確認的依據。",
+    fields: [
+      text("item", "設備或服務", "寫清楚位置與設備，例如『主臥冷氣』。", "主臥冷氣"),
+      text("action", "這次要完成的動作", "使用可以驗收的動詞，不要只寫『處理一下』。", "預約原廠檢查異音"),
+      text("source", "日期或週期的實際依據", "例如說明書頁碼、保固條款、服務契約或上次完工紀錄。", "使用說明書第 18 頁／異常時聯絡指定維修站"),
+      text("owner", "負責聯絡的家庭角色", "可以填角色，不必填真名。", "家庭設備負責人"),
+      { name: "due", label: "最晚完成日期", type: "date" },
+      {
+        name: "lead",
+        label: "提前幾天開始聯絡／預約",
+        type: "number",
+        help: "請依業者排程、料件等待與家庭可配合時段決定；可填 0 到 365 的整數。",
+        value: "14",
+      },
+    ],
+    run: (values) => {
+      const due = date(values.due);
+      const lead = Number(values.lead);
+      if (!values.item.trim()) return "請填寫設備或服務名稱。";
+      if (!values.action.trim()) return "請填寫這次要完成的具體動作。";
+      if (!values.source.trim()) return "請填寫日期或週期的實際依據；工具不會替你猜保養週期。";
+      if (!values.owner.trim()) return "請填寫負責聯絡的家庭角色，避免提醒到了卻沒有人承接。";
+      if (!due) return "請輸入有效的最晚完成日期。";
+      if (!Number.isInteger(lead) || lead < 0 || lead > 365)
+        return "提前天數必須是 0 到 365 之間的整數。";
+      const contact = new Date(due);
+      contact.setDate(contact.getDate() - lead);
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      const day = 86_400_000;
+      const daysUntilDue = Math.round((due.getTime() - today.getTime()) / day);
+      const daysUntilContact = Math.round((contact.getTime() - today.getTime()) / day);
+      const status =
+        daysUntilDue < 0
+          ? `已逾最晚完成日 ${Math.abs(daysUntilDue)} 天；先確認是否已完成或需要重新排程。`
+          : daysUntilDue === 0
+            ? "最晚完成日是今天。"
+            : daysUntilContact < 0
+              ? `建議聯絡日已過 ${Math.abs(daysUntilContact)} 天，距最晚完成日還有 ${daysUntilDue} 天。`
+              : daysUntilContact === 0
+                ? `今天開始聯絡／預約，距最晚完成日還有 ${daysUntilDue} 天。`
+                : `距建議聯絡日還有 ${daysUntilContact} 天，距最晚完成日還有 ${daysUntilDue} 天。`;
+      return `${values.item.trim()}｜${values.action.trim()}\n負責角色：${values.owner.trim()}\n日期依據：${values.source.trim()}\n建議聯絡／預約日：${formatter.format(contact)}\n最晚完成日：${formatter.format(due)}\n狀態：${status}\n\n預約時確認：工作範圍、到府時段、費用／估價方式、服務人員識別方式，以及取消或改期規則。\n完工後補記：實際日期、服務商、費用、處理內容、異常是否消失、單據位置，以及下一次日期的真實依據。\n\n這份結果不會發送通知或自動預約；請複製到你真正會查看的行事曆或 FamilyBoard 任務。`;
+    },
+  },
+  "receipt-retention-organizer": {
+    intro:
+      "先寫明保留收據的用途與依據，再計算人工複查日。它不會提供一體適用的保存年限，也不會在日期到達時刪除任何資料。",
+    fields: [
+      text("item", "購買品或工程／服務", "名稱要能和設備、維修或文件索引對得起來。", "客廳冷氣排水修繕"),
+      {
+        name: "purpose",
+        label: "主要保留用途",
+        type: "select",
+        options: ["退換貨或付款證明", "保固或維修", "住宅財物盤點／保險佐證", "裝修或房屋改善紀錄", "稅務或法律用途（須查主管機關）"],
+      },
+      { name: "purchase", label: "交易或完工日期", type: "date" },
+      {
+        name: "months",
+        label: "已查明的複查間隔（月）",
+        type: "number",
+        help: "這是複查間隔，不是自動銷毀期限；可填 0 到 1200 的整數。",
+        value: "12",
+      },
+      text("source", "期間依據", "例如業者退換貨頁面、書面保固、保單要求、主管機關規定或專業意見。", "書面保固條款／服務單"),
+      text("location", "收據與相關文件位置", "只寫安全的位置標籤，不要輸入密碼或完整卡號。", "家庭文件／家電與修繕／客廳冷氣"),
+    ],
+    run: (values) => {
+      const purchase = date(values.purchase);
+      const months = Number(values.months);
+      if (!values.item.trim()) return "請填寫購買品、工程或服務名稱。";
+      if (!purchase) return "請輸入有效的交易或完工日期。";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (purchase.getTime() > today.getTime()) return "交易或完工日期不能晚於今天；尚未發生的項目不應建立成收據紀錄。";
+      if (!Number.isInteger(months) || months < 0 || months > 1200)
+        return "複查間隔必須是 0 到 1200 之間的整數月。";
+      if (!values.source.trim()) return "請填寫期間依據；不要只憑工具預設值決定保存多久。";
+      if (!values.location.trim()) return "請填寫收據與相關文件的位置，否則日期到了仍找不到原件。";
+      const review = addMonths(purchase, months);
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const reviewState = review.getTime() < today.getTime()
+        ? "複查日已到，請現在核對原始依據；這不代表可以直接銷毀。"
+        : review.getTime() === today.getTime()
+          ? "今天是複查日；先核對原始依據，再決定延長或結案。"
+          : "複查日尚未到；若保固、退換貨、保單或法規改變，仍應提早更新。";
+      return `${values.item.trim()}｜收據保存索引\n用途：${values.purpose}\n交易／完工日：${formatter.format(purchase)}\n人工複查日：${formatter.format(review)}\n期間依據：${values.source.trim()}\n文件位置：${values.location.trim()}\n狀態：${reviewState}\n\n一起保存或交叉索引：可辨識交易的發票／收據、品項或工作明細、付款證明、保固／退換貨條款、服務或驗收紀錄，以及日後往來。避免保存完整信用卡號、密碼或與用途無關的身分資料。\n\n複查日不是銷毀日。稅務、保險、房屋交易或爭議案件的保存期間，應以當下適用的主管機關規定、契約與專業意見為準。`;
+    },
+  },
   "recurring-chore-planner": {
     intro:
       "依名單順序輪流分配例行家事，產生一份可以試行與複查的初稿。它能平均分配項目數，不能自動判斷每件事的工時、體力或照護負擔。",

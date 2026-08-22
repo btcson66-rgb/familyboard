@@ -46,6 +46,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-repair-cost-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-service-reminder-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/receipt-retention-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/recurring-chore-planner/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-inventory-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-document-index-generator/</loc>",
@@ -164,6 +167,33 @@ const checks = [
       'hreflang="en"',
       "維護費用明細",
       "已規劃不是已核准",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-repair-cost-log/",
+    require: [
+      "居家修繕費用紀錄表",
+      'hreflang="en"',
+      "每一行固定六個欄位",
+      "手機送修注意事項",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-service-reminder-generator/",
+    require: [
+      "到府服務提醒產生器",
+      'hreflang="en"',
+      "建議聯絡／預約日",
+      "週期來源比漂亮的循環排程更重要",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/receipt-retention-organizer/",
+    require: [
+      "收據保存整理器",
+      'hreflang="en"',
+      "人工複查日",
+      "雲端發票解決",
     ],
   },
   {
