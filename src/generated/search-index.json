@@ -344,12 +344,12 @@
     "headings": "Power outage preparedness at home: build a plan the household can actually use Begin with consequences, not products Verify the utility and public-information path before an outage Create one source map instead of rewriting expert instructions Build a lighting and communication layer from observed capability Handle food and cold storage as an evidence workflow Treat power-dependent care as an individual continuity plan Portable generators require a dedicated safety and installation plan Make building and rental responsibilities explicit Assign roles small enough to execute Record an active outage without chasing certainty Restoration is a checkpoint, not the end of the record Preserve evidence without turning the shared log into a data leak Review the plan after each real event"
   },
   {
-    "title": "Water Leak Response Records: What to Document While You Arrange Repair",
-    "description": "Keep a clear timeline of a household water leak, observations, photos, contacts, service visits and repair outcomes while following safety and professional guidance.",
+    "title": "Water Leak Response Records | A Safe Evidence and Follow-Up Workflow",
+    "description": "Build a household water leak record with safe observations, original evidence, verified notices, qualified findings, repair history and recovery follow-up.",
     "route": "/guides/water-leak-response-home-records/",
     "cluster": "maintenance",
     "keywords": "water leak documentation checklist",
-    "headings": "Water leak response records: what to document while you arrange repair If water is anywhere near electrical outlets, panels or wiring, stop and get out Once the area is safe, document what you actually observed Act on the 24-to-48-hour drying window Keep every contact and response on the same timeline Connect the eventual repair to the asset or area, not just the incident Capture the follow-up work too, not just the stop-the-leak moment The record documents; it doesn't decide who pays or what's required"
+    "headings": "Water leak response records: a safe evidence and follow-up workflow Stop at the safety boundary before collecting more evidence Start with the earliest fact you can actually support Preserve original photos and make later images comparable Keep four layers separate: observation, finding, work and recovery “Water stopped” is an observation, not proof of repair Treat a water-meter change as a clue, not a location diagnosis Verify the responsible notification channel Drying should begin promptly without becoming a universal timer Give each open area one evidence-based next action Renters and owners need different sources, not different facts Record costs without turning them into a claim verdict Close the event only after a new observation"
   },
   {
     "title": "Home Service Provider List: Keep the People Who Know Your Home Easy to Find",
@@ -1534,6 +1534,14 @@
     "cluster": "tools",
     "keywords": "power outage event log",
     "headings": "Household power outage event log Use one record for one outage event and one household scope First observed is not the same as official start The three record stages prevent premature closure Name the official source, channel and date checked Seven fields turn a symptom list into traceable observations Four statuses describe workflow, not safety Keep household-specific support details in their authoritative plans Food, medicine and equipment need evidence—not a universal verdict Every unresolved ID gets exactly one next action The privacy screen reduces risk but cannot recognize every secret A careful close-out has three layers"
+  },
+  {
+    "title": "Household Water Leak Event Log | Record Evidence, Notices and Follow-Up",
+    "description": "Document a household water leak with observed times, area IDs, evidence, verified notices and owner-linked follow-up—without guessing the source or deciding liability.",
+    "route": "/tools/household-water-leak-event-log/",
+    "cluster": "tools",
+    "keywords": "water leak event log",
+    "headings": "Household water leak event log Safety comes before a more complete form One event needs one scope and one stable label First observed and last observed stopped are evidence boundaries Four stages stop an event from closing too early Seven fields preserve what happened without diagnosing it Four statuses describe workflow, not severity Separate observation, diagnosis, repair and recovery Notification rows show who was contacted without copying secrets Every unresolved ID receives exactly one owned next action Privacy filtering reduces accidental exposure Close the event by reconciling evidence, not by cleaning the page"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

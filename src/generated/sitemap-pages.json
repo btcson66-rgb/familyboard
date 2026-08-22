@@ -377,9 +377,9 @@
   },
   {
     "route": "/guides/water-leak-response-home-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/water-leak-response-home-records/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-23",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1640,6 +1640,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-water-leak-event-log/",
+    "alternateRoute": "/zh-tw/tools/household-water-leak-event-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2069,6 +2077,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/household-water-leak-event-log/",
+    "alternateRoute": "/tools/household-water-leak-event-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/how-to-track-product-warranties/",
     "alternateRoute": "/guides/how-to-track-product-warranties/",
     "indexable": true,
@@ -2213,6 +2228,13 @@
     "alternateRoute": "/features/warranty-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/water-leak-response-home-records/",
+    "alternateRoute": "/guides/water-leak-response-home-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   }
 ]

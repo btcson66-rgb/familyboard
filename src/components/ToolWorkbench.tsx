@@ -1201,6 +1201,166 @@ const definitions: Record<string, Definition> = {
       return `${values.household.trim()} — household power outage event log\nRecord stage: ${values.stage}\nObserved scope: ${values.scope}\nFirst observed: ${formatMoment(started)}\nRestoration observed: ${restored ? formatMoment(restored) : "Not yet recorded; no restoration prediction made"}\nNext household review: ${formatter.format(nextReview)}\nOfficial source / event evidence: ${values.source.trim()}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (workflow summary, not a safety or utility-performance score)\n\n${lines("Observed systems and conditions", observationRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — observed: ${row.parts[2]} — evidence: ${row.parts[3]} — action already taken: ${row.parts[4]} — owner/observer: ${row.parts[5]} — status: ${row.parts[6]}`))}\n\n${lines("Household-specific support references", supportRows.length ? supportRows.map((row) => `${row.parts[0]} — plan/instructions: ${row.parts[1]} — observed impact: ${row.parts[2]} — responsible role: ${row.parts[3]}`) : ["No separate support reference was recorded; confirm that this reflects the household rather than an omitted power-dependent need."])}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["All observation rows were closed only after recheck; preserve the supporting evidence with this record."])}\n\nProtected event-record location: ${values.storage.trim()}\n\nThis output records household observations and dated source checks. It does not establish the outage cause or exact utility duration, predict restoration, certify wiring or appliances, decide whether food, medicine or a power-dependent device is safe, or determine liability, compensation or insurance coverage. Do not approach or touch a fallen or exposed power line. In an active event, use the responsible utility, local authority, emergency services and qualified guidance for the actual location and condition.`;
     },
   },
+  "household-water-leak-event-log": {
+    intro:
+      "Create a dated household record of visible water, evidence, notifications and owner-linked follow-up. The tool does not diagnose the source, confirm electrical safety, certify drying, price damage or decide responsibility or coverage.",
+    fields: [
+      text("household", "Household label", "Use a private nickname, not a full address, utility account or policy number.", "Maple household"),
+      {
+        name: "stage",
+        label: "Record stage",
+        type: "select",
+        options: [
+          "Active water or spread still observed",
+          "No active water observed; assessment or repair open",
+          "Drying, repair or recovery checks open",
+          "Household close-out review complete",
+        ],
+      },
+      {
+        name: "scope",
+        label: "Observed scope",
+        type: "select",
+        options: [
+          "One fixture, appliance or visible connection",
+          "One room or material area",
+          "Multiple rooms or shared building area",
+          "Scope not yet established",
+        ],
+      },
+      { name: "startDate", label: "First observed date", type: "date" },
+      text("startTime", "First observed time (24-hour HH:MM)", "Use the time actually observed. Mark an estimate in the evidence text.", "08:40"),
+      { name: "stoppedDate", label: "Active water last observed stopped date (blank if ongoing)", type: "date" },
+      text("stoppedTime", "Active water last observed stopped time (blank if ongoing)", "This is an observation, not proof that the hidden source was repaired. Enter both date and time or leave both blank.", ""),
+      { name: "nextReview", label: "Next household review date", type: "date" },
+      text("authority", "Responsible source and event evidence", "Name the building contact, utility, qualified provider or official guidance, check date and a safe protected-record pointer. Do not paste contact details or case numbers.", "Building contact notified and qualified provider requested 2026-08-23; protected reference LEAK-1"),
+      {
+        name: "observations",
+        label: "Area and material observation rows",
+        type: "textarea",
+        help: "One line: ID | area or material | visible or measured condition | source/evidence | action already taken | owner/observer | Observed; monitoring, Qualified assessment pending, Drying or repair in progress, or Closed after recheck. Maximum 15 lines. Record facts, not a diagnosis.",
+        value: "WATER-1 | Ceiling below bathroom | Damp patch visible; edge marked at first check | Dated photo index LEAK-1-A | Belongings moved from dry accessible area; provider requested | Household coordinator | Qualified assessment pending\nFLOOR-1 | Hall flooring | Surface dampness observed beside doorway | Dated photo index LEAK-1-B | Area kept clear; no electrical equipment touched | Safety observer | Observed; monitoring\nITEM-1 | Storage box group | Outer surfaces damp; contents not assessed here | Inventory IDs linked in protected event folder | Items photographed from safe dry position | Records owner | Drying or repair in progress",
+      },
+      {
+        name: "notifications",
+        label: "Notification and source-check rows",
+        type: "textarea",
+        help: "Optional. One line: responsible role or organization | verified channel description | date checked/notified YYYY-MM-DD | response or protected reference | household owner. Maximum 10 lines. Do not enter a full phone number, email, address, account, claim or policy number.",
+        value: "Building manager | Contact channel verified in current resident notice | 2026-08-23 | Notice sent; protected message reference LEAK-1-N1 | Household coordinator\nQualified plumbing provider | Channel verified from current provider record | 2026-08-23 | Assessment requested; appointment evidence in protected folder | Repair owner",
+      },
+      {
+        name: "actions",
+        label: "Follow-up for every unresolved observation ID",
+        type: "textarea",
+        help: "One line: unresolved ID | next evidence-based action | owner or role | due date YYYY-MM-DD. Every row not Closed after recheck needs exactly one action. Due dates cannot be earlier than the event or later than the next review.",
+        value: "WATER-1 | Preserve the qualified assessment and link any confirmed repair to this event without rewriting the original observation | Repair owner | 2026-08-24\nFLOOR-1 | Recheck the marked boundary from the same safe position and add a dated observation | Safety observer | 2026-08-23\nITEM-1 | Follow current qualified guidance for assessment and drying; record only completed work and evidence | Records owner | 2026-08-24",
+      },
+      text("storage", "Protected event-record location", "Use a folder or envelope label, not a password, address, account, claim or policy number.", "Household records / water events / LEAK-1"),
+    ],
+    run: (values) => {
+      const started = localDateTime(values.startDate, values.startTime);
+      const stoppedDatePresent = Boolean(values.stoppedDate.trim());
+      const stoppedTimePresent = Boolean(values.stoppedTime.trim());
+      const stopped = stoppedDatePresent && stoppedTimePresent
+        ? localDateTime(values.stoppedDate, values.stoppedTime)
+        : null;
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.household.trim()) return "Enter a household label so the exported event record can be identified.";
+      if (!started) return "Enter a real first-observed date and a 24-hour time in HH:MM format.";
+      const now = new Date();
+      if (started.getTime() > now.getTime())
+        return "The first-observed water event time cannot be in the future.";
+      if (stoppedDatePresent !== stoppedTimePresent)
+        return "Enter both the date and time when active water was last observed stopped, or leave both blank while it remains active.";
+      if ((stoppedDatePresent || stoppedTimePresent) && !stopped)
+        return "Enter a real last-observed-stopped date and a 24-hour time in HH:MM format.";
+      if (stopped && stopped.getTime() < started.getTime())
+        return "The last-observed-stopped time cannot be earlier than the first observation.";
+      if (stopped && stopped.getTime() > now.getTime())
+        return "The last-observed-stopped time cannot be in the future.";
+      if (values.stage === "Active water or spread still observed" && stopped)
+        return "An active record must leave the last-observed-stopped date and time blank. Change the stage only after that observation exists.";
+      if (values.stage !== "Active water or spread still observed" && !stopped)
+        return "This stage requires the date and time when active water was last observed stopped. That timestamp does not prove the hidden source was repaired.";
+      if (!nextReview) return "Enter a real next household review date in YYYY-MM-DD format.";
+      const startedDay = strictIsoDate(values.startDate) as Date;
+      if (nextReview.getTime() < startedDay.getTime())
+        return "The next household review date cannot be earlier than the event date.";
+      if (stopped && nextReview.getTime() < (strictIsoDate(values.stoppedDate) as Date).getTime())
+        return "The next household review date cannot be earlier than the last-observed-stopped date.";
+      if (!values.authority.trim()) return "Add the responsible source and event evidence used for this record.";
+      if (!values.storage.trim()) return "Add a protected location where the event record can be found again.";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const observationRows = parseRows(values.observations);
+      if (observationRows.length === 0) return "Add at least one area or material condition that was actually observed.";
+      if (observationRows.length > 15) return "Use no more than 15 observation rows in one water event; split a complex event by location or review stage.";
+      const invalidObservations = observationRows.filter((row) => row.parts.length !== 7 || row.parts.some((part) => !part));
+      if (invalidObservations.length)
+        return `Observation line ${invalidObservations.map((row) => row.line).join(", ")} must contain all 7 pipe-separated fields.`;
+      const statuses = new Set(["observed; monitoring", "qualified assessment pending", "drying or repair in progress", "closed after recheck"]);
+      const invalidStatuses = observationRows.filter((row) => !statuses.has(row.parts[6].toLocaleLowerCase("en")));
+      if (invalidStatuses.length)
+        return `Observation line ${invalidStatuses.map((row) => row.line).join(", ")} must end with Observed; monitoring, Qualified assessment pending, Drying or repair in progress, or Closed after recheck.`;
+      const ids = observationRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length)
+        return "Every observation needs a unique ID so follow-up cannot attach to the wrong area or material.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Observation IDs must use 2–20 letters, numbers or hyphens, such as WATER-1.";
+      const notificationRows = parseRows(values.notifications);
+      if (notificationRows.length > 10) return "Use no more than 10 notification rows in one event.";
+      const invalidNotifications = notificationRows.filter((row) => row.parts.length !== 5 || row.parts.some((part) => !part));
+      if (invalidNotifications.length)
+        return `Notification line ${invalidNotifications.map((row) => row.line).join(", ")} must contain all 5 pipe-separated fields.`;
+      const invalidNotificationDates = notificationRows.filter((row) => {
+        const checked = strictIsoDate(row.parts[2]);
+        return !checked || checked.getTime() < startedDay.getTime() || checked.getTime() > nextReview.getTime();
+      });
+      if (invalidNotificationDates.length)
+        return `Notification line ${invalidNotificationDates.map((row) => row.line).join(", ")} needs a real YYYY-MM-DD date on or after the event date and no later than the next review.`;
+      const unresolvedRows = observationRows.filter((row) => row.parts[6].toLocaleLowerCase("en") !== "closed after recheck");
+      if (values.stage === "Household close-out review complete" && unresolvedRows.length)
+        return `A close-out record cannot contain unresolved observations. Recheck or update: ${unresolvedRows.map((row) => row.parts[0]).join(", ")}.`;
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 15) return "Use no more than 15 follow-up rows in one water event.";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `Follow-up line ${invalidActions.map((row) => row.line).join(", ")} must contain all 4 pipe-separated fields.`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length)
+        return "Each unresolved observation ID must have exactly one follow-up row.";
+      const unresolvedIds = new Set(unresolvedRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...unresolvedIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length)
+        return `Add one follow-up row for every unresolved observation ID: ${missingActions.join(", ")}.`;
+      const extraActions = actionIds.filter((id) => !unresolvedIds.has(id));
+      if (extraActions.length)
+        return `Follow-up rows may reference only unresolved observation IDs. Remove or update: ${extraActions.join(", ")}.`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() < startedDay.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `Follow-up line ${invalidDueDates.map((row) => row.line).join(", ")} needs a real YYYY-MM-DD date on or after the event date and no later than the next review.`;
+      const privacyText = [values.authority, values.observations, values.notifications, values.actions, values.storage].join("\n");
+      const contactPatternText = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(contactPatternText) || /(?:\d[\s().+-]*){7,}/.test(contactPatternText))
+        return "A full phone number or email address may be present. Keep actual contact details in the protected source and use only a verified-channel description here.";
+      if (/password|passcode|access code|alarm code|door code|utility account|account number|full address|policy number|claim number|bank account|social security|medical record|diagnosis|medication dose|dosage|government id|date of birth|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, account, address, claim, policy or unnecessary personal detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const formatMoment = (value: Date) => `${formatter.format(value)}, ${String(value.getHours()).padStart(2, "0")}:${String(value.getMinutes()).padStart(2, "0")}`;
+      const displayStatuses = ["Observed; monitoring", "Qualified assessment pending", "Drying or repair in progress", "Closed after recheck"];
+      const statusCounts = displayStatuses.map((status) => ({
+        status,
+        count: observationRows.filter((row) => row.parts[6].toLocaleLowerCase("en") === status.toLocaleLowerCase("en")).length,
+      })).filter((item) => item.count > 0);
+      return `${values.household.trim()} — household water leak event log\nRecord stage: ${values.stage}\nObserved scope: ${values.scope}\nFirst observed: ${formatMoment(started)}\nActive water last observed stopped: ${stopped ? `${formatMoment(stopped)} (observation only; source repair not proven)` : "Not yet recorded; active water or spread remains under observation"}\nNext household review: ${formatter.format(nextReview)}\nResponsible source / event evidence: ${values.authority.trim()}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")} (workflow summary, not a damage or safety score)\n\n${lines("Observed areas and materials", observationRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — observed: ${row.parts[2]} — evidence: ${row.parts[3]} — action already taken: ${row.parts[4]} — owner/observer: ${row.parts[5]} — status: ${row.parts[6]}`))}\n\n${lines("Notifications and source checks", notificationRows.length ? notificationRows.map((row) => `${row.parts[0]} — channel: ${row.parts[1]} — checked/notified: ${formatter.format(strictIsoDate(row.parts[2]) as Date)} — response/reference: ${row.parts[3]} — household owner: ${row.parts[4]}`) : ["No notification row was recorded; confirm which building, utility, landlord, insurer or qualified provider source applies before sharing the record."])}\n\n${lines("Required follow-up", actionRows.length ? actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — owner: ${row.parts[2]} — due: ${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["All observation rows were closed only after recheck; preserve the supporting evidence with this record."])}\n\nProtected event-record location: ${values.storage.trim()}\n\nThis output records household observations, source checks and workflow. It does not diagnose where water originated, prove that a hidden leak stopped, confirm electrical or structural safety, certify mold prevention or drying, estimate damage, authorize repairs, or determine landlord, provider, insurance or legal responsibility. If water is near electricity, there is contaminated water, structural movement, fire, injury or another immediate hazard, stay clear and use the current local emergency, utility, building and qualified-professional instructions for the actual condition.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -2691,6 +2851,161 @@ const zhTwDefinitions: Record<string, Definition> = {
         count: observationRows.filter((row) => row.parts[6] === status).length,
       })).filter((item) => item.count > 0);
       return `${values.household.trim()}｜家庭停電事件紀錄\n紀錄階段：${values.stage}\n觀察範圍：${values.scope}\n第一次觀察：${formatMoment(started)}\n觀察到恢復供電：${restored ? formatMoment(restored) : "尚未記錄；工具未預測復電時間"}\n家庭下次複查：${formatter.format(nextReview)}\n官方來源／事件證據：${values.source.trim()}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（只是工作摘要，不是安全或台電績效分數）\n\n${lines("系統與狀況觀察", observationRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜實際觀察：${row.parts[2]}｜證據：${row.parts[3]}｜已完成動作：${row.parts[4]}｜負責／觀察：${row.parts[5]}｜狀態：${row.parts[6]}`))}\n\n${lines("家庭個別支援來源", supportRows.length ? supportRows.map((row) => `${row.parts[0]}｜計畫／指示：${row.parts[1]}｜已觀察影響：${row.parts[2]}｜負責角色：${row.parts[3]}`) : ["本次未列獨立支援來源；請再確認這是家庭實況，而不是漏掉需要電力、通訊或照護支援的事項。"])}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["所有觀察都已在複查後結案；請將支持證據與本紀錄一起保存。"])}\n\n受保護的事件紀錄位置：${values.storage.trim()}\n\n這份輸出只記家庭觀察與有日期的來源查核。它不證明停電原因或台電計算時數、不預測復電、不認證配線或家電、不判定食品、藥品或需電力設備是否安全，也不決定責任、補償或保險理賠。看到掉落或外露電線不得靠近或碰觸；事件進行中，依台電、所在地主管機關、緊急服務與合格專業指示處理。`;
+    },
+  },
+  "household-water-leak-event-log": {
+    intro:
+      "建立有日期、證據、通知與負責人的家庭漏水事件紀錄。工具不診斷漏水來源、不確認電氣或結構安全、不認證乾燥成果，也不估價或判定房東、住戶、廠商及保險責任。",
+    fields: [
+      text("household", "家庭代稱", "使用私密代稱，不要填完整地址、水號、保單或案件編號。", "青葉家庭"),
+      {
+        name: "stage",
+        label: "紀錄階段",
+        type: "select",
+        options: [
+          "仍觀察到出水或範圍擴大",
+          "已未見持續出水，等待查核或修繕",
+          "乾燥、修繕或復原複查中",
+          "家庭結案複查已完成",
+        ],
+      },
+      {
+        name: "scope",
+        label: "已觀察範圍",
+        type: "select",
+        options: [
+          "單一衛浴、家電或可見接點",
+          "單一房間或材料區域",
+          "多房間或大樓共用區域",
+          "範圍尚未確認",
+        ],
+      },
+      { name: "startDate", label: "第一次觀察日期", type: "date" },
+      text("startTime", "第一次觀察時間（24 小時 HH:MM）", "只填真正看到的時間；若為推估，請在證據文字註明。", "08:40"),
+      { name: "stoppedDate", label: "最後觀察到持續出水停止日期（仍進行可留白）", type: "date" },
+      text("stoppedTime", "最後觀察到持續出水停止時間（仍進行可留白）", "這只是觀察，不代表隱蔽來源已修好。日期與時間必須一起填或一起留白。", ""),
+      { name: "nextReview", label: "家庭下次複查日期", type: "date" },
+      text("authority", "負責來源與事件證據", "寫管理單位、供水單位、合格廠商或官方資料、查核日期及受保護索引；不要貼聯絡細節或案件編號。", "已通知管理單位並於 2026-08-23 聯繫合格廠商；受保護索引 LEAK-1"),
+      {
+        name: "observations",
+        label: "區域與材料觀察",
+        type: "textarea",
+        help: "每行格式：ID | 區域或材料 | 可見或量測狀況 | 來源／證據 | 已完成動作 | 負責／觀察角色 | 已觀察持續追蹤、等待合格人員查核、乾燥或修繕進行中、複查後結案。最多 15 行，只寫事實，不寫自行診斷。",
+        value: "WATER-1 | 浴室下方天花板 | 第一次檢查可見潮濕區，已標示邊界 | 有日期照片索引 LEAK-1-A | 移開可安全接近區域的物品並聯繫查核 | 家庭協調人 | 等待合格人員查核\nFLOOR-1 | 走道地板 | 門邊觀察到表面潮濕 | 有日期照片索引 LEAK-1-B | 保持區域淨空，未接觸任何電氣設備 | 安全觀察人 | 已觀察持續追蹤\nITEM-1 | 收納箱組 | 外部潮濕，內容物尚未由本表判定 | 物品 ID 已連到受保護事件資料夾 | 從安全乾燥位置完成拍照 | 紀錄負責人 | 乾燥或修繕進行中",
+      },
+      {
+        name: "notifications",
+        label: "通知與來源查核",
+        type: "textarea",
+        help: "選填。每行格式：負責角色或機構 | 已驗證管道描述 | 查核／通知日 YYYY-MM-DD | 回應或受保護索引 | 家庭負責人。最多 10 行。不要填完整電話、Email、地址、水號、案件或保單編號。",
+        value: "大樓管理單位 | 依目前住戶公告核對聯絡管道 | 2026-08-23 | 已通知；受保護訊息索引 LEAK-1-N1 | 家庭協調人\n合格給排水廠商 | 依目前廠商紀錄核對管道 | 2026-08-23 | 已要求查核；預約證據存於受保護資料夾 | 修繕負責人",
+      },
+      {
+        name: "actions",
+        label: "每個未結案 ID 的追蹤",
+        type: "textarea",
+        help: "每行格式：未結案 ID | 下一個以證據為基礎的動作 | 負責角色 | 期限 YYYY-MM-DD。不是「複查後結案」的每筆觀察都要有且只能有一筆追蹤。",
+        value: "WATER-1 | 保存合格人員查核內容，若確認修繕則連回本事件，不改寫最初觀察 | 修繕負責人 | 2026-08-24\nFLOOR-1 | 從相同安全位置複查標示邊界並新增有日期觀察 | 安全觀察人 | 2026-08-23\nITEM-1 | 依目前合格指示進行評估與乾燥，只記已完成工作與證據 | 紀錄負責人 | 2026-08-24",
+      },
+      text("storage", "受保護的事件紀錄位置", "只寫資料夾或信封代稱，不要填密碼、地址、水號、案件或保單編號。", "家庭文件／漏水事件／LEAK-1"),
+    ],
+    run: (values) => {
+      const started = localDateTime(values.startDate, values.startTime);
+      const stoppedDatePresent = Boolean(values.stoppedDate.trim());
+      const stoppedTimePresent = Boolean(values.stoppedTime.trim());
+      const stopped = stoppedDatePresent && stoppedTimePresent
+        ? localDateTime(values.stoppedDate, values.stoppedTime)
+        : null;
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.household.trim()) return "請填家庭代稱，讓匯出的事件紀錄可以辨識。";
+      if (!started) return "請輸入真實的第一次觀察日期與 24 小時 HH:MM 時間。";
+      const now = new Date();
+      if (started.getTime() > now.getTime()) return "第一次觀察漏水事件的時間不能在未來。";
+      if (stoppedDatePresent !== stoppedTimePresent)
+        return "最後觀察到出水停止的日期與時間必須一起填；若仍在進行，兩者都留白。";
+      if ((stoppedDatePresent || stoppedTimePresent) && !stopped)
+        return "請輸入真實的出水停止觀察日期與 24 小時 HH:MM 時間。";
+      if (stopped && stopped.getTime() < started.getTime())
+        return "最後觀察到出水停止的時間不能早於第一次觀察。";
+      if (stopped && stopped.getTime() > now.getTime()) return "出水停止的觀察時間不能在未來。";
+      if (values.stage === "仍觀察到出水或範圍擴大" && stopped)
+        return "事件仍進行時，出水停止日期與時間必須留白；只有實際觀察後才能更改階段。";
+      if (values.stage !== "仍觀察到出水或範圍擴大" && !stopped)
+        return "這個階段需要填最後觀察到持續出水停止的日期與時間；這個時間不代表隱蔽來源已修好。";
+      if (!nextReview) return "請輸入真實的家庭下次複查日期。";
+      const startedDay = strictIsoDate(values.startDate) as Date;
+      if (nextReview.getTime() < startedDay.getTime()) return "家庭下次複查日期不能早於漏水事件日期。";
+      if (stopped && nextReview.getTime() < (strictIsoDate(values.stoppedDate) as Date).getTime())
+        return "家庭下次複查日期不能早於最後觀察到出水停止的日期。";
+      if (!values.authority.trim()) return "請填寫本紀錄使用的負責來源與事件證據。";
+      if (!values.storage.trim()) return "請填寫受保護的事件紀錄位置。";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const observationRows = parseRows(values.observations);
+      if (observationRows.length === 0) return "請至少新增一筆真正觀察到的區域或材料狀況。";
+      if (observationRows.length > 15) return "一份漏水事件最多 15 筆觀察；複雜事件請依區域或複查階段拆分。";
+      const invalidObservations = observationRows.filter((row) => row.parts.length !== 7 || row.parts.some((part) => !part));
+      if (invalidObservations.length)
+        return `觀察第 ${invalidObservations.map((row) => row.line).join("、")} 行必須完整填寫 7 個以直線分隔的欄位。`;
+      const statuses = new Set(["已觀察持續追蹤", "等待合格人員查核", "乾燥或修繕進行中", "複查後結案"]);
+      const invalidStatuses = observationRows.filter((row) => !statuses.has(row.parts[6]));
+      if (invalidStatuses.length)
+        return `觀察第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須是已觀察持續追蹤、等待合格人員查核、乾燥或修繕進行中、複查後結案。`;
+      const ids = observationRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length)
+        return "每筆觀察都要有唯一 ID，避免追蹤連到錯誤區域或材料。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "觀察 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 WATER-1。";
+      const notificationRows = parseRows(values.notifications);
+      if (notificationRows.length > 10) return "一份事件最多 10 筆通知與來源查核。";
+      const invalidNotifications = notificationRows.filter((row) => row.parts.length !== 5 || row.parts.some((part) => !part));
+      if (invalidNotifications.length)
+        return `通知第 ${invalidNotifications.map((row) => row.line).join("、")} 行必須完整填寫 5 個以直線分隔的欄位。`;
+      const invalidNotificationDates = notificationRows.filter((row) => {
+        const checked = strictIsoDate(row.parts[2]);
+        return !checked || checked.getTime() < startedDay.getTime() || checked.getTime() > nextReview.getTime();
+      });
+      if (invalidNotificationDates.length)
+        return `通知第 ${invalidNotificationDates.map((row) => row.line).join("、")} 行需要真實的 YYYY-MM-DD 日期，而且不得早於事件日、不得晚於下次複查。`;
+      const unresolvedRows = observationRows.filter((row) => row.parts[6] !== "複查後結案");
+      if (values.stage === "家庭結案複查已完成" && unresolvedRows.length)
+        return `結案紀錄不能留有未完成觀察，請先複查或更新：${unresolvedRows.map((row) => row.parts[0]).join("、")}。`;
+      const actionRows = parseRows(values.actions);
+      if (actionRows.length > 15) return "一份事件最多 15 筆追蹤工作。";
+      const invalidActions = actionRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidActions.length)
+        return `追蹤第 ${invalidActions.map((row) => row.line).join("、")} 行必須完整填寫 4 個以直線分隔的欄位。`;
+      const actionIds = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(actionIds).size !== actionIds.length)
+        return "每個未結案觀察 ID 只能有一筆追蹤；請合併同一項目的動作。";
+      const unresolvedIds = new Set(unresolvedRows.map((row) => row.parts[0].toLocaleUpperCase("en")));
+      const missingActions = [...unresolvedIds].filter((id) => !actionIds.includes(id));
+      if (missingActions.length) return `每個未結案觀察都要建立一筆追蹤，尚缺：${missingActions.join("、")}。`;
+      const extraActions = actionIds.filter((id) => !unresolvedIds.has(id));
+      if (extraActions.length) return `追蹤只能連到未結案觀察；請移除或更新：${extraActions.join("、")}。`;
+      const invalidDueDates = actionRows.filter((row) => {
+        const due = strictIsoDate(row.parts[3]);
+        return !due || due.getTime() < startedDay.getTime() || due.getTime() > nextReview.getTime();
+      });
+      if (invalidDueDates.length)
+        return `追蹤第 ${invalidDueDates.map((row) => row.line).join("、")} 行需要真實的 YYYY-MM-DD 日期，而且不得早於事件日、不得晚於下次複查。`;
+      const privacyText = [values.authority, values.observations, values.notifications, values.actions, values.storage].join("\n");
+      const contactPatternText = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(contactPatternText) || /(?:\d[\s().+-]*){7,}/.test(contactPatternText))
+        return "偵測到可能的完整電話或 Email。請只寫已驗證管道描述，實際聯絡資料放在受保護來源。";
+      if (/密碼|門禁碼|驗證碼|警報碼|水號|帳號|完整地址|保單編號|案件編號|銀行帳戶|完整(?:身分證|病歷)|診斷|藥物劑量|劑量|出生日期|password|passcode|access code|alarm code|account number|policy number|claim number|government id|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、水號、地址、案件、保單或不必要個資。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const formatMoment = (value: Date) => `${formatter.format(value)} ${String(value.getHours()).padStart(2, "0")}:${String(value.getMinutes()).padStart(2, "0")}`;
+      const displayStatuses = ["已觀察持續追蹤", "等待合格人員查核", "乾燥或修繕進行中", "複查後結案"];
+      const statusCounts = displayStatuses.map((status) => ({
+        status,
+        count: observationRows.filter((row) => row.parts[6] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.household.trim()}｜家庭漏水事件紀錄\n紀錄階段：${values.stage}\n觀察範圍：${values.scope}\n第一次觀察：${formatMoment(started)}\n最後觀察到持續出水停止：${stopped ? `${formatMoment(stopped)}（只是觀察，不代表隱蔽來源已修復）` : "尚未記錄；仍觀察出水或範圍變化"}\n家庭下次複查：${formatter.format(nextReview)}\n負責來源／事件證據：${values.authority.trim()}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}（只是工作摘要，不是損害或安全分數）\n\n${lines("區域與材料觀察", observationRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜實際觀察：${row.parts[2]}｜證據：${row.parts[3]}｜已完成動作：${row.parts[4]}｜負責／觀察：${row.parts[5]}｜狀態：${row.parts[6]}`))}\n\n${lines("通知與來源查核", notificationRows.length ? notificationRows.map((row) => `${row.parts[0]}｜管道：${row.parts[1]}｜查核／通知：${formatter.format(strictIsoDate(row.parts[2]) as Date)}｜回應／索引：${row.parts[3]}｜家庭負責：${row.parts[4]}`) : ["本次未列通知；分享前請確認實際適用的管理、供水、房東、保險或合格廠商來源。"])}\n\n${lines("必要追蹤", actionRows.length ? actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜負責：${row.parts[2]}｜期限：${formatter.format(strictIsoDate(row.parts[3]) as Date)}`) : ["所有觀察都已在複查後結案；請將支持證據與本紀錄一起保存。"])}\n\n受保護的事件紀錄位置：${values.storage.trim()}\n\n這份輸出只整理家庭觀察、來源查核與工作流程。它不診斷水從何處來、不證明隱蔽漏水已停止、不確認電氣或結構安全、不認證防霉或乾燥成果、不估算損失、不授權修繕，也不決定房東、住戶、廠商、保險或法律責任。若水接近電氣、疑似污染水、結構變形、起火、受傷或其他立即危險，請保持距離並依所在地緊急服務、供水／供電、管理單位及合格專業人員的最新指示。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

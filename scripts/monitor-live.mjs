@@ -66,6 +66,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-power-outage-event-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-power-outage-event-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/</loc>",
+      "<loc>https://familyboard.win/tools/household-water-leak-event-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-water-leak-event-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/water-leak-response-home-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -188,6 +191,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Begin with consequences, not products",
       "cdc.gov/natural-disasters/response/what-to-do-protect-yourself-during-a-power-outage.html",
+    ],
+  },
+  {
+    path: "/tools/household-water-leak-event-log/",
+    require: [
+      "Household Water Leak Event Log",
+      'hreflang="zh-TW"',
+      "Four statuses describe workflow, not severity",
+      "does not inspect pipes",
+    ],
+  },
+  {
+    path: "/guides/water-leak-response-home-records/",
+    require: [
+      "Water Leak Response Records",
+      'hreflang="zh-TW"',
+      "Keep four layers separate",
+      "epa.gov/mold/brief-guide-mold-moisture-and-your-home",
     ],
   },
   {
@@ -344,6 +365,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-water-leak-event-log/",
+    require: [
+      "家庭漏水事件紀錄表",
+      'hreflang="en"',
+      "四個狀態只管理工作",
+      "不會讀取水表",
+    ],
+  },
+  {
     path: "/zh-tw/guides/home-evacuation-information/",
     require: [
       "家庭避難計畫怎麼做",
@@ -377,6 +407,15 @@ const checks = [
       'hreflang="en"',
       "公寓大廈要把住戶、管理與台電三層分清楚",
       "1911",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/water-leak-response-home-records/",
+    require: [
+      "家裡漏水怎麼辦",
+      'hreflang="en"',
+      "公共供水、大樓共用、室內設備不是同一個窗口",
+      "1910",
     ],
   },
   {

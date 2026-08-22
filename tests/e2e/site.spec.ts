@@ -63,7 +63,7 @@ test("public SEO, keyboard and five production tools work", async ({
 test("representative routes have no serious accessibility violations", async ({
   page,
 }) => {
-  test.setTimeout(90_000);
+  test.setTimeout(120_000);
   for (const route of [
     "/",
     "/guides/home-maintenance-schedule/",
@@ -74,6 +74,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/emergency-contact-verification-log/",
     "/tools/household-power-outage-event-log/",
     "/guides/power-outage-home-preparedness/",
+    "/tools/household-water-leak-event-log/",
+    "/guides/water-leak-response-home-records/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -95,6 +97,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/emergency-supply-inventory-audit/",
     "/zh-tw/tools/emergency-contact-verification-log/",
     "/zh-tw/tools/household-power-outage-event-log/",
+    "/zh-tw/tools/household-water-leak-event-log/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -119,6 +122,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/emergency-supply-inventory/",
     "/zh-tw/guides/emergency-information-sheet/",
     "/zh-tw/guides/power-outage-home-preparedness/",
+    "/zh-tw/guides/water-leak-response-home-records/",
     "/zh-tw/guides/home-maintenance-log/",
     "/zh-tw/guides/appliance-replacement-planning/",
     "/zh-tw/guides/room-by-room-home-inventory/",
@@ -217,11 +221,17 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     page.locator(".site-footer").getByRole("link", { name: "家庭停電事件紀錄" }),
   ).toHaveAttribute("href", "/zh-tw/tools/household-power-outage-event-log/");
   await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭漏水事件紀錄" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/household-water-leak-event-log/");
+  await expect(
     page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭停電準備指南" }),
   ).toHaveAttribute("href", "/zh-tw/guides/power-outage-home-preparedness/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭漏水處理指南" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/water-leak-response-home-records/");
 
   for (const localized of [
     {
@@ -298,6 +308,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/power-outage-home-preparedness/",
       alternate: "/guides/power-outage-home-preparedness/",
       heading: "停電怎麼準備：台灣家庭需要的不是購物清單，而是一套可查證流程",
+    },
+    {
+      route: "/zh-tw/guides/water-leak-response-home-records/",
+      alternate: "/guides/water-leak-response-home-records/",
+      heading: "家裡漏水怎麼辦：台灣家庭要先保安全，再建立可查證時間線",
     },
     {
       route: "/zh-tw/features/household-handoff/",
@@ -502,6 +517,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/household-power-outage-event-log/",
       alternate: "/tools/household-power-outage-event-log/",
       heading: "家庭停電紀錄表",
+    },
+    {
+      route: "/zh-tw/tools/household-water-leak-event-log/",
+      alternate: "/tools/household-water-leak-event-log/",
+      heading: "家庭漏水事件紀錄表",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -862,6 +882,34 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "24 小時制 HH:MM 時間",
   );
 
+  await page.goto("/tools/household-water-leak-event-log/");
+  await page.getByLabel("First observed date").fill("2026-08-22");
+  await page.getByLabel("Next household review date").fill("2026-08-24");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Qualified assessment pending 1");
+  await expect(page.locator(".result")).toContainText("Observed; monitoring 1");
+  await expect(page.locator(".result")).toContainText(
+    "Not yet recorded; active water or spread remains under observation",
+  );
+  await expect(page.locator(".result")).toContainText(
+    "does not diagnose where water originated",
+  );
+  await page.getByLabel("First observed time (24-hour HH:MM)").fill("25:10");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("24-hour time in HH:MM format");
+
+  await page.goto("/zh-tw/tools/household-water-leak-event-log/");
+  await page.getByLabel("第一次觀察日期").fill("2026-08-22");
+  await page.getByLabel("家庭下次複查日期").fill("2026-08-24");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("等待合格人員查核 1 筆");
+  await expect(page.locator(".result")).toContainText("已觀察持續追蹤 1 筆");
+  await expect(page.locator(".result")).toContainText("尚未記錄；仍觀察出水或範圍變化");
+  await expect(page.locator(".result")).toContainText("不診斷水從何處來");
+  await page.getByLabel("第一次觀察時間（24 小時 HH:MM）").fill("24:10");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("24 小時 HH:MM 時間");
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1124,6 +1172,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-water-leak-event-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-water-leak-event-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/water-leak-response-home-records/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",

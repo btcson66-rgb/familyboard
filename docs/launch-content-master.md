@@ -3087,60 +3087,152 @@ Future affiliate recommendations should remain clearly disclosed, outside emerge
 
 ## Page 048 — Water Leak Response Home Records
 **Slug:** `/guides/water-leak-response-home-records/`
-**Primary intent:** document a household water leak and response
-**Title tag:** `Water Leak Response Records: What to Document While You Arrange Repair`
-**Meta description:** `Keep a clear timeline of a household water leak, observations, photos, contacts, service visits and repair outcomes while following safety and professional guidance.`
+**Primary intent:** document a household water leak safely from first observation through repair and recovery review
+**Title tag:** `Water Leak Response Records | A Safe Evidence and Follow-Up Workflow`
+**Meta description:** `Build a household water leak record with safe observations, original evidence, verified notices, qualified findings, repair history and recovery follow-up.`
 **Primary keyword concept:** water leak documentation checklist
-**Suggested internal links:** `/guides/home-repair-history/`, `/guides/home-service-provider-list/`, `/templates/printable-repair-log/`, `/features/free-home-management-app/`
+**Published date:** 2026-08-19
+**Editorial review date:** 2026-08-23
+**Content version:** 2
+**Suggested internal links:** `/tools/household-water-leak-event-log/`, `/guides/home-repair-history/`, `/templates/printable-repair-log/`, `/features/free-home-management-app/`
 
-# Water leak response records: what to document while you arrange repair
 
-When water shows up where it shouldn't, safety comes before documentation, and documentation is still worth doing carefully once safety is handled — a well-kept timeline is often what makes an insurance claim, a repeat-leak diagnosis, or a landlord dispute go smoothly instead of becoming its own separate problem.
+# Water leak response records: a safe evidence and follow-up workflow
 
-## If water is anywhere near electrical outlets, panels or wiring, stop and get out
+A household water leak is not one task called “fix the leak.” It is a sequence: someone first observes water, immediate hazards are separated from documentation, a responsible source is notified, the affected area is assessed, authorized work is performed, wet materials are addressed, and the condition is checked again. Each stage creates different evidence.
 
-This is the one point on this page that matters more than any record: water and electricity together are genuinely dangerous, and there is no safe DIY procedure for a homeowner to perform in a flooded area with active power. Do not enter a flooded room to reach a breaker panel, and do not touch a wet outlet, appliance or panel. If the panel isn't reachable without stepping into water or standing on a wet surface, the correct move is to leave the area and call your electric utility or an electrician to cut power from outside the hazard — not to improvise a path to the breaker yourself. This isn't overcaution; it's the same boundary the CONTENT_DEPTH_STANDARD for this site draws around all electrical work: professional-only, record what happened, don't attempt the procedure.
+When that sequence is scattered across a camera roll, text messages, invoices and memory, later questions become hard to answer. A contractor may not know which stain existed before a repair. A building manager may receive a photo with no date. A household member may hear that “the water stopped” and assume every material is dry. A useful record preserves what was known at each point without turning an observation into a diagnosis.
 
-## Once the area is safe, document what you actually observed
+This guide explains that record. It does not provide plumbing, electrical, structural, remediation, insurance or legal instructions. Use current local emergency services, utilities, building contacts, contracts and qualified professionals for the real property and condition.
 
-With safety handled, a leak record is built the same way any incident timeline is: facts, with dates.
+## Stop at the safety boundary before collecting more evidence
 
-- **Date and time first noticed**, and where exactly — "ceiling below the upstairs bathroom," not just "living room."
-- **What you saw** — a stain, active dripping, standing water, a specific sound. Describe it plainly rather than diagnosing the cause yourself.
-- **Photos**, taken only from a safe, dry vantage point — never by entering a hazardous area to get a better angle.
-- **Anything you did immediately** — shutting off a water supply valve you could safely reach, moving belongings out of the way, placing towels or a container.
+Do not enter standing water, cross a wet floor or touch an outlet, appliance, cord or electrical panel to reach a control or take a better photo. The U.S. Environmental Protection Agency's [flooded-home guidance](https://www.epa.gov/flooded-homes/coming-home) warns that standing water can create an electrical shock hazard when outlets or other electrical components are wet. A generic article cannot know whether a panel, circuit or surface is safe.
 
-## Act on the 24-to-48-hour drying window
+Stay out of an area with a sagging ceiling, falling material, structural movement, sewage or suspected contaminated water, fire, gas odor, injury or another immediate hazard. Use the responsible local emergency, electric-utility, building and qualified-professional instructions. Record `not safely accessible` rather than entering danger.
 
-The EPA is specific about this: wet building materials need to be dried within 24 to 48 hours to avoid mold growth taking hold. Source: [EPA — mold and moisture guidance](https://www.epa.gov/mold/mold-course-chapter-2). That window is worth recording against, not just acting on — note when drying (fans, a dehumidifier, a restoration company) actually started, since that timestamp can matter later if a mold question comes up, and because it tells you whether the response was fast enough to matter.
+Documentation begins only from a stable, dry and authorized position. A distant photo and a careful written boundary are valid. Evidence is not more important than the observer.
 
-## Keep every contact and response on the same timeline
+## Start with the earliest fact you can actually support
 
-Record when you contacted a landlord, insurer, plumber or building manager, how (call, text, portal, email), and what they said or scheduled in response. This single timeline — not scattered texts and a mental summary — is what makes a claim or a repair conversation go faster: an insurer or a plumber asking "when did this start" gets an exact answer instead of an estimate.
+Record the date and 24-hour time the condition was first observed. Identify the place and observer role, then describe only what was visible, heard or reliably measured: a damp patch, active drip, surface water, odor, marked edge or instrument reading.
 
-## Connect the eventual repair to the asset or area, not just the incident
+If the floor was dry at 07:00 and wet at 09:30, the first observed time is 09:30. The earlier dry observation belongs in the evidence field, but it does not create an exact start time. A photo timestamp, building alarm or qualified report can provide another source; name it rather than blending it into household memory.
 
-Once a plumber or contractor identifies and fixes the source, log that repair against the specific pipe, fixture or system it affected — the same way any repair history works. This is what makes a second leak in the same area immediately recognizable as a repeat problem rather than a fresh mystery, and it's information a future plumber will actually want if the leak recurs.
+Use a private event label such as `LEAK-1` instead of a full address. Assign stable IDs to affected units: `CEIL-1`, `FLOOR-1`, `CABINET-1`. Those IDs let later photos, findings, repairs and follow-up attach to the correct area.
 
-## Capture the follow-up work too, not just the stop-the-leak moment
+## Preserve original photos and make later images comparable
 
-Drying, inspection for hidden damage, and any finishing work (drywall, flooring, repainting) often happen well after the leak itself is fixed, sometimes weeks later. Keep those follow-up tasks tied to the original incident record rather than letting them become disconnected, unrelated to-dos — a mold inspection scheduled three weeks after the leak is easy to lose track of if it isn't linked back to why it was scheduled.
+Keep original files with timestamps and avoid overwriting them with annotated copies. A small evidence set usually needs context, condition and change: one image showing the location, one showing the affected boundary and later images from a similar safe position.
 
-## The record documents; it doesn't decide who pays or what's required
+Do not include unrelated mail, account information, access codes, medical documents, children or neighbors in the frame. Keep an original under household control and make a minimized sharing copy if a provider needs only the affected area.
 
-Nothing here determines what your insurance covers, what your lease requires, or what a landlord is obligated to do — those come from your policy, your lease and local law. What a good leak record does is put you in a position to answer every factual question about the incident accurately, which is exactly what's needed regardless of how those separate questions get resolved.
+A photo shows appearance at one moment. It does not authenticate cause, moisture content, water category, ownership or repair completion. Describe it as `dated photo index LEAK-1-A`, not `proof the upstairs pipe failed`.
 
-**Contextual CTA:** Create one incident record for the leak and keep updating that same entry — photos, contacts, repair, follow-up — instead of scattering notes and photos across separate apps and messages.
+## Keep four layers separate: observation, finding, work and recovery
+
+The first layer is the household observation. The second is a finding from the responsible utility, building representative or qualified provider. The third is the work actually authorized and completed. The fourth is drying, restoration and later review.
+
+These layers may disagree or change. A stain that appears below a bathroom can later be traced elsewhere. A stopped drip can return. A pipe repair can be complete while flooring remains open for assessment. Preserve the original observation and add each new source with its date; do not rewrite history so the first note looks like a professional diagnosis.
+
+This separation also makes the repair history useful. Link the confirmed work to the actual asset or area, provider record, service date and invoice pointer. If the condition returns, a future reviewer can compare the new event with the precise earlier work.
+
+## “Water stopped” is an observation, not proof of repair
+
+Record when active water was last observed to have stopped, but label the timestamp accurately. A closed valve, paused rain or intermittent appliance cycle can change visible flow without resolving a concealed source. Water can remain in materials or travel away from its origin.
+
+Do not collapse these different statements:
+
+- active water was no longer visible at the last check;
+- a qualified source identified the cause;
+- authorized repair was completed;
+- affected material was dried or removed;
+- a later recheck found no open condition.
+
+Each statement needs its own source and date. The [household water leak event log](/tools/household-water-leak-event-log/) enforces this distinction by keeping the stopped observation, area statuses and follow-up separate.
+
+## Treat a water-meter change as a clue, not a location diagnosis
+
+Some utilities advise households to observe the water meter when all known water use is off. Continued movement may support a leak concern. The observation should include the controlled conditions, start and end time, meter type and evidence pointer.
+
+It still may not reveal where water is going. Shared meters, storage tanks, automatic refill systems, irrigation and other equipment can affect the result. Do not operate unfamiliar valves or shared systems for a test. Use the serving utility and a qualified provider for the actual property.
+
+If a bill is unusual, preserve the billing period and protected statement rather than pasting the account number and service address into a shared log. Billing adjustment and meter-test procedures vary by utility and are separate from the household event record.
+
+## Verify the responsible notification channel
+
+A leak may require more than one contact: a public water utility for a street or utility-side problem, building management for shared infrastructure, a landlord under a lease, an insurer under a policy, and a qualified provider for the private system. One message does not automatically reach every responsible party.
+
+Record five facts for each notice:
+
+1. responsible role or organization;
+2. how the channel was verified;
+3. date sent or checked;
+4. response or protected-message reference; and
+5. household owner following up.
+
+Use the current official site, resident notice, lease, policy portal or verified provider record. An old magnet, search snippet or forwarded message is not final authority. Keep full phone, email, address, account, claim and policy details in a protected source; a shared summary needs only a channel description and safe pointer.
+
+Whether a notice satisfies a lease, policy, contract or law is a separate question. The record can show what the household did, but it cannot decide legal effect.
+
+## Drying should begin promptly without becoming a universal timer
+
+The EPA's [mold and moisture guide](https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home) emphasizes fixing the water problem and drying wet areas and items promptly, commonly within 24 to 48 hours. That is a valuable reason not to delay.
+
+It is not an automatic certificate. Clean water on one hard surface is not the same as contaminated water in porous material or moisture inside a wall. Extent, material, hidden spaces, HVAC involvement and occupant health can change the appropriate response. The EPA's [mold cleanup guidance](https://www.epa.gov/mold/mold-cleanup-your-home) advises professional support for extensive damage, contaminated water and other higher-risk conditions.
+
+Record when drying or professional remediation actually began, which areas it covered, the authority or work record used and what remains open. Do not mark a material closed merely because a fan or dehumidifier ran for a set number of hours. Do not run equipment where electrical safety has not been established.
+
+## Give each open area one evidence-based next action
+
+Every affected ID needs a status and, unless closed after recheck, one owner-linked action. Good actions specify the new evidence required:
+
+- `obtain and preserve the qualified assessment for CEIL-1`;
+- `compare the marked edge from the same safe position and add a dated photo`;
+- `link the completed work order to FLOOR-1 and schedule the material review`;
+- `confirm the current utility response through its official channel`.
+
+`Fix it`, `watch leak` and `call someone` do not define completion. A due date should sit inside the next household review window. If a provider performs the work, a household member can still own follow-up, evidence storage and status updates. Ownership never authorizes hazardous or licensed work.
+
+Use four workflow states rather than a severity score: observed and monitoring, qualified assessment pending, drying or repair in progress, and closed after recheck. One open electrical or structural concern cannot be outweighed by several closed low-consequence items.
+
+## Renters and owners need different sources, not different facts
+
+A renter should preserve the lease's notification channel, move-in condition record, messages and access arrangements. An owner may instead connect the event to asset history, building records and insurance sources. In a shared building, both may need management records for common systems.
+
+The factual core stays the same: when the household first observed the condition, which areas were affected, what original evidence exists, who was notified, what qualified finding followed, what work occurred and what remains open.
+
+Do not infer responsibility from the water's visible location or from who paid an initial invoice. Water can travel, and allocation can depend on contracts, building boundaries, qualified findings and local law. Obtain appropriate legal or insurance guidance when those decisions matter.
+
+## Record costs without turning them into a claim verdict
+
+Keep estimates, authorized work, invoices and payments distinct. An estimate is not an incurred cost; an emergency payment does not by itself determine final responsibility. Link each document to the event and affected ID, retain originals and use the verified insurer or organization channel for formal submission.
+
+A good event summary can help a reviewer find the evidence, but it does not authenticate documents, satisfy every notice deadline or calculate coverage. Avoid copying bank, policy, claim and identity data into an incident sheet that may be shared with several people.
+
+## Close the event only after a new observation
+
+Before close-out, reconcile the timeline: first observed, last observed stopped, source finding, authorized work, drying or recovery, notices and current condition. Every area ID should either have evidence supporting close-out or remain open with an owner and due date.
+
+Then update the household system. Connect the work to [home repair history](/guides/home-repair-history/), retain a paper working copy in the [printable repair log](/templates/printable-repair-log/) if needed, and add any future review to the FamilyBoard maintenance tracker. Review who received printed or downloaded copies and replace or destroy stale versions.
+
+Future affiliate recommendations must remain clearly disclosed outside the evidence workflow. A product placement must not obscure safety guidance or imply that purchasing a pump, moisture meter, dehumidifier or cleaner makes a hazardous condition suitable for do-it-yourself handling.
+
+**Next step:** open the [household water leak event log](/tools/household-water-leak-event-log/), enter the earliest supportable observation and create one unique ID and one accountable next action for every unresolved area.
+
+**Contextual CTA:** Open one incident record, preserve the earliest supportable observation and assign one owner and evidence-based action to each unresolved area.
 
 **FAQ:**
-- Q: Is it safe to go into a flooded basement to check on things or shut off the power myself?
-  A: No — if water is anywhere near outlets, appliances or the electrical panel, stay out and do not attempt to reach the breaker box yourself. Contact your electric utility or a licensed electrician to cut power from outside the hazard. This isn't a task with a safe DIY version; it's professional-only, every time.
-- Q: How fast do I actually need to dry out water damage to avoid mold?
-  A: The EPA recommends drying wet building materials within 24 to 48 hours to prevent mold growth from taking hold. Record when drying actually started (fans, a dehumidifier, a restoration company) against that window — both to act fast and to have an accurate record if a mold question comes up later.
-- Q: What should I photograph during a water leak, and is it safe to go get a better angle?
-  A: Photograph the visible damage — stains, standing water, the source if visible — but only from a position you can safely and dryly reach. Never enter a hazardous area, especially one with water near electrical components, just to get a clearer photo. A slightly worse photo taken safely is always the right tradeoff.
-- Q: Does keeping a detailed leak record affect my insurance claim or my landlord's obligations?
-  A: The record itself doesn't decide coverage or legal responsibility — your policy, lease and local law do that. What it does is give you an accurate, timestamped account of what happened and when, which is exactly what an insurer, landlord or plumber typically needs to process a claim or respond appropriately.
+- Q: Is it safe to enter standing water to reach the electrical panel or take a clearer photo?
+  A: No. Do not enter a wet electrical area or touch wet electrical equipment to improve the record. Keep clear and use the current local emergency, utility and qualified-electrician instructions for the actual condition. A record can say that an area was not safely accessible.
+- Q: How soon should wet materials be addressed after a leak?
+  A: The U.S. EPA advises prompt moisture control and commonly describes a 24-to-48-hour drying window for wet materials. That supports acting quickly, but it is not an automatic safety or mold certificate. Water type, material, extent, hidden spaces and health concerns can require qualified assessment.
+- Q: What is the difference between first observed, water stopped and repair completed?
+  A: First observed is when someone actually saw the condition. Water stopped is when active water was last observed to have stopped. Repair completed is supported by an authorized work record. Keep all three separate because a pause in visible water does not prove a concealed source was repaired.
+- Q: What should a notification record include?
+  A: Keep the responsible role or organization, how the channel was verified, the date sent or checked, a response or protected-message pointer, and the household owner. Do not copy full addresses, account, policy, claim, phone or email details into a broadly shared incident summary.
+- Q: Does a detailed leak record decide insurance coverage, landlord duties or liability?
+  A: No. It organizes household observations and source references. Coverage, notice effect, repair authority, causation and legal responsibility depend on the policy, lease, contract, jurisdiction, qualified findings and original evidence.
 
 **Depth:** verified
 
@@ -12004,6 +12096,164 @@ Use the [power outage preparedness guide](/guides/power-outage-home-preparedness
 **Depth:** verified
 
 ---
+
+## Page 206 — Household Water Leak Event Log
+**Slug:** `/tools/household-water-leak-event-log/`
+**Primary intent:** record a household water leak timeline, observed conditions, notifications and follow-up ownership
+**Title tag:** `Household Water Leak Event Log | Record Evidence, Notices and Follow-Up`
+**Meta description:** `Document a household water leak with observed times, area IDs, evidence, verified notices and owner-linked follow-up—without guessing the source or deciding liability.`
+**Primary keyword concept:** water leak event log
+**Cluster:** tools
+**Page type:** tool
+**Published date:** 2026-08-23
+**Editorial review date:** 2026-08-23
+**Content version:** 1
+**Suggested internal links:** `/guides/water-leak-response-home-records/`, `/guides/home-repair-history/`, `/templates/printable-repair-log/`, `/tools/household-power-outage-event-log/`
+
+
+# Household water leak event log
+
+A water event rarely arrives as a clean story. Someone sees a damp ceiling edge, another person moves a box, building management asks when it began, a plumber arrives later, and a drying company records a different condition after the visible flow has stopped. If those moments stay in photos, messages and memory, the household loses the sequence that makes each piece of evidence understandable.
+
+This free browser tool creates one structured event record. It stores the first-observed time, the time active water was last observed stopped, the scope, area or material IDs, visible conditions, evidence references, completed actions, notifications and one accountable follow-up for each open item. It does not inspect pipes, measure moisture, contact a provider or upload the form.
+
+The record is deliberately narrow. A stain does not reveal a pipe route. A dry surface does not certify a concealed cavity. A notification does not prove legal notice. A household timeline may help the right person understand the event, but it cannot decide diagnosis, safety, repair authority, damage value, insurance coverage or responsibility.
+
+**Ready to record facts? [Jump to the water leak event log](#tool-heading).**
+
+## Safety comes before a more complete form
+
+Do not walk into standing water, reach across a wet surface or touch an outlet, appliance, cord or electrical panel to collect a better observation. The U.S. Environmental Protection Agency's [flooded-home guidance](https://www.epa.gov/flooded-homes/coming-home) warns that standing water can create a shock hazard when electrical components are wet. Local conditions and electrical systems vary, so the event record never tells a user to reach a breaker or test a wet device.
+
+The same stop rule applies to structural movement, a sagging ceiling, falling material, sewage or other contaminated water, fire, gas odor, injury and any condition an ordinary household observer cannot safely approach. Leave the hazardous area and use the current emergency, utility, building-management and qualified-professional instructions for the actual location.
+
+Photos are optional evidence, not a reason to cross a boundary. A distant photo from a stable, dry position is more useful than a close image obtained by entering danger. Record `area not safely accessible` when that is the fact.
+
+## One event needs one scope and one stable label
+
+Use a household nickname such as `Maple household`, not the service address. Then choose the smallest supported scope: one visible connection, one room or material area, several rooms or a shared building area, or not yet established.
+
+Scope is not cause. Water visible under a dishwasher does not prove the appliance is the source. A ceiling stain below a bathroom does not establish which pipe, fixture, membrane or neighboring unit is responsible. If a qualified report later identifies a source, preserve that report separately and link it to the original observation; do not rewrite the first entry to make it look more certain than it was.
+
+Keep distinct events separate. A recurring mark after rain and a later supply-line failure may affect the same wall but have different dates, evidence and responsible contacts. Stable event labels such as `LEAK-1` and `LEAK-2` prevent a later repair from being attached to the wrong occurrence.
+
+## First observed and last observed stopped are evidence boundaries
+
+Enter the date and 24-hour time someone actually noticed the condition. If the earliest evidence is a photo timestamp, name that evidence. If a household member only knows that the floor was dry at 07:00 and wet at 09:30, record the 09:30 observation and explain the earlier fact; do not invent an exact start.
+
+For an active event, leave both stopped fields blank. After active water is no longer observed, enter both the date and time and move the record to the appropriate stage. The tool checks that the timestamp is real, is not in the future and is not before the first observation.
+
+The phrase `active water last observed stopped` is intentional. It does not prove that a valve, pipe, drain, roof, appliance or concealed connection was repaired. An intermittent source can pause. Materials can stay wet. Water may travel away from its origin. A later qualified assessment and recheck remain separate evidence.
+
+## Four stages stop an event from closing too early
+
+`Active water or spread still observed` is for an event in progress. It requires the stopped fields to remain blank.
+
+`No active water observed; assessment or repair open` records a transition: the visible flow or spread has stopped at the last check, but the source, affected area or repair is not resolved.
+
+`Drying, repair or recovery checks open` is for work after the immediate observation. Some rows may be under professional assessment, some in drying or repair, and others awaiting a later recheck.
+
+`Household close-out review complete` is strict. Every observation ID must already be `Closed after recheck`, with no unresolved follow-up row. Selecting the stage does not close work; completed evidence does.
+
+## Seven fields preserve what happened without diagnosing it
+
+Each observation line uses:
+
+`ID | area or material | visible or measured condition | source/evidence | action already taken | owner/observer | status`
+
+The ID must be unique and use 2–20 letters, numbers or hyphens. Examples include `WATER-1`, `CEIL-1` and `BOX-2`. Reuse that exact ID in the follow-up section.
+
+The area or material should be specific enough to revisit: `ceiling below upstairs bathroom`, `hall flooring beside doorway`, or `storage box group`. Avoid `whole home` unless the evidence really covers the whole home.
+
+The condition should remain observable: `damp patch visible inside marked boundary`, `surface water present`, `musty odor noted`, or `meter indicator moved during a controlled no-use check`. Do not convert these into `pipe broke behind wall` or `neighbor caused leak` without authoritative evidence.
+
+Evidence can be a dated photo index, a qualified report pointer, a building notice or an instrument record. Preserve originals. The tool only stores the pointer and cannot authenticate a file.
+
+Action already taken is history: `provider requested`, `dry accessible belongings moved`, or `marked boundary photographed`. It is not a place for FamilyBoard to prescribe valve, demolition, electrical or remediation work.
+
+## Four statuses describe workflow, not severity
+
+`Observed; monitoring` means another observation is scheduled. It does not mean the condition is minor.
+
+`Qualified assessment pending` means a household record cannot answer the open question. Concealed sources, wet electrical equipment, structural changes, contaminated water, extensive water damage and health concerns are common examples.
+
+`Drying or repair in progress` means identifiable work is underway but has not passed the household's planned recheck. It is not a certification that a method is appropriate or complete.
+
+`Closed after recheck` means the row has new evidence supporting its household close-out and no remaining action. One closed box does not balance an open ceiling or electrical concern. The status count is a workflow summary, not a score.
+
+## Separate observation, diagnosis, repair and recovery
+
+These four layers often happen at different times and may have different owners:
+
+1. A household member records the visible condition.
+2. A responsible utility, building contact or qualified provider assesses the source and boundaries.
+3. Authorized work addresses the confirmed problem.
+4. Drying, material recovery and later rechecks establish what remains open.
+
+Combining all four into `leak fixed` makes later review difficult. Preserve the original household observation, link the professional finding, record what work was actually completed and schedule a separate recheck. If the finding changes, add the new evidence rather than deleting the earlier statement.
+
+The EPA explains that moisture control is central to mold control and advises prompt drying of wet materials in its [mold and moisture guide](https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home). That is a reason to act promptly through appropriate guidance, not a guarantee that a generic timer can certify a wall, floor or personal item. Water type, material, extent, ventilation, hidden cavities and occupant health can change what professional support is appropriate.
+
+## Notification rows show who was contacted without copying secrets
+
+Each optional notification line uses:
+
+`responsible role or organization | verified channel description | date checked/notified | response or protected reference | household owner`
+
+The verified channel might be `current resident notice`, `official utility site`, `lease contact page`, `policy portal` or `provider record checked this month`. The response field should use a safe pointer such as `LEAK-1-N1`, not a full email, phone number, address, claim number or policy number.
+
+Record the date the channel was checked or the notice was sent. A number copied from an old magnet or search result may no longer be authoritative. Requirements for notifying a landlord, insurer, utility or association vary; the tool does not determine whether a particular message satisfies a contract or law.
+
+If the visible problem appears on public infrastructure, use the responsible local water utility's official reporting method. If it is inside a rental or shared building, the appropriate building or landlord channel may also be needed. Those are distinct responsibilities, and a household should not assume that one notification reached every responsible party.
+
+## Every unresolved ID receives exactly one owned next action
+
+The follow-up structure is:
+
+`unresolved ID | next evidence-based action | owner or role | due date YYYY-MM-DD`
+
+Every row except `Closed after recheck` needs exactly one action. Duplicate actions, missing IDs and actions attached to already-closed rows are rejected. The date cannot precede the event or extend beyond the record's next review.
+
+A useful action names the evidence needed next: `obtain and preserve the qualified assessment`, `recheck the marked edge from the same safe position`, or `link the completed repair invoice and schedule a condition review`. `Fix leak` is not enough because it does not identify who owns the next step or what proves it happened.
+
+When several people are involved, assign the household owner of the record even if a provider performs the work. That owner follows up, saves the evidence and updates the status. Ownership does not authorize a person to perform hazardous or licensed work.
+
+## Privacy filtering reduces accidental exposure
+
+The form rejects common credentials, full contact details, full addresses, utility accounts, policy numbers, claim numbers and unnecessary personal or medical details. A shared incident summary rarely needs them. Store originals in a protected household location and use a stable pointer.
+
+The calculation runs in the browser. Downloading, printing, copying or saving to the FamilyBoard App creates another copy under the user's control. Review the audience and remove outdated shared copies after the event closes. Do not submit records to a provider through an unverified channel merely because the record is neatly formatted.
+
+Future affiliate placements must remain outside this form and output, use clear disclosure and never imply that purchasing a moisture meter, pump, dehumidifier or restoration product makes an unsafe condition suitable for DIY handling. The event can be recorded and closed without buying anything through FamilyBoard.
+
+## Close the event by reconciling evidence, not by cleaning the page
+
+Before selecting close-out, compare the first observation, stopped observation, area IDs, notifications, qualified findings, repair records and recovery checks. Confirm that each open item has either new evidence or a preserved reason it remains open. Link related work into the home's repair history instead of leaving the event as an isolated note.
+
+Then review copies. Keep original photos, reports and invoices in their controlled location. Replace stale handoff sheets if they point to an open condition that has changed. Preserve an event summary that distinguishes household observations from professional conclusions.
+
+Use the [water leak response records guide](/guides/water-leak-response-home-records/) for the full response and documentation sequence, the [home repair history guide](/guides/home-repair-history/) to connect confirmed work to the affected asset, and the [printable repair log](/templates/printable-repair-log/) when a paper working copy is useful.
+
+**Next step:** record the earliest supportable observation, give each affected area a unique ID and assign one evidence-based follow-up to every row that is not closed.
+
+**Contextual CTA:** Create one event from facts you can support, then give every unresolved area ID one owner, one evidence-based action and one due date.
+
+**FAQ:**
+- Q: Can this tool tell me where the leak started?
+  A: No. A stain, drip or moving water-meter indicator can support an observation, but it may not identify the concealed source, path or responsible system. Preserve what was seen and let the responsible utility, building contact or qualified professional establish any diagnosis.
+- Q: Does entering a stopped time prove the leak was repaired?
+  A: No. It records when active water was last observed to have stopped. Water may remain inside materials, the source may be intermittent, and hidden damage may still need assessment. The output labels that timestamp as an observation rather than a repair finding.
+- Q: What if water is close to an outlet, appliance or electrical panel?
+  A: Do not enter or touch the wet electrical area to improve the record or reach equipment. Keep clear and use current local emergency, electric-utility and qualified-electrician instructions for the actual condition. The tool cannot confirm that an area or device is electrically safe.
+- Q: Why does the form reject phone numbers, addresses and claim numbers?
+  A: The exported record may be printed or shared. It should contain a verified-channel description and protected-record pointer, while full contact, address, account, policy and claim details stay in the household's controlled source.
+- Q: Can this log prove an insurance claim or decide who must pay?
+  A: No. It can organize dated household observations, notices and source references, but coverage, causation, notice requirements, repair authority and legal responsibility depend on the policy, lease, contract, jurisdiction and authoritative evidence.
+
+**Depth:** verified
+
+---
+
 
 # PART III — ESSENTIAL SUPPORTING PAGES
 
