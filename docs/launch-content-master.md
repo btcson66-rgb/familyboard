@@ -6637,60 +6637,98 @@ A future affiliate or sponsored area may introduce clearly labelled software, st
 
 ## Page 102 — Home Improvement Receipts
 **Slug:** `/guides/home-improvement-receipts/`
-**Primary intent:** organize receipts from renovations and improvements
-**Title tag:** `Home Improvement Receipts: Organize Costs and Proof by Project, Not by Shopping Trip`
-**Meta description:** `Keep home-improvement receipts attached to the renovation project they belong to — the specific evidence the IRS says supports your home's cost basis when you sell.`
+**Primary intent:** build an attributable home-improvement receipt and payment evidence archive
+**Title tag:** `Home Improvement Receipts | Invoices, Payments and Project Proof`
+**Meta description:** `Organize home-improvement receipts with contracts, invoice versions, payment evidence, credits, product records and current IRS recordkeeping guidance.`
 **Primary keyword concept:** organize home improvement receipts
 **Depth:** verified
-**Suggested internal links:** `/guides/renovation-records/`, `/guides/purchase-receipt-organizer/`, `/guides/home-purchase-records/`, `/features/household-documents-organizer/`
+**Suggested internal links:** `/tools/home-repair-closeout-checklist/`, `/guides/renovation-records/`, `/tools/home-repair-change-order-log/`, `/guides/home-purchase-records/`
 
-# An improvement receipt's real job is proving your cost basis later
+# A home-improvement receipt needs the project history around it
 
-A receipt for paint, flooring or fixtures is far more useful when the household knows which room and project it belongs to — and for anything that qualifies as a capital improvement rather than a routine repair, that receipt is also part of the evidence the IRS expects a household to keep to support its home's cost basis at sale.
+A receipt can show that a transaction occurred, yet still leave the future reader unable to tell which project it served, whether the household or contractor bought the item, whether the amount was later credited, which scope version controlled the purchase, what was installed or whether the document is even the final invoice. A useful home-improvement archive connects transaction evidence to the project chronology instead of treating a receipt as a self-explanatory conclusion.
 
-## Group receipts by project, not by shopping trip
+The archive can later support maintenance, a warranty request, household handoff, insurance questions, a dispute or a tax calculation. Those uses overlap, but they are not interchangeable. An invoice is not proof of workmanship, a bank debit is not proof of scope, a product label is not proof of installation and a FamilyBoard status is not a tax classification or payment authorization.
 
-Create one renovation or improvement record per project, then attach every related receipt to that project. A folder of receipts organized only by purchase date forces someone to reconstruct which trip was for which room years later; a project-organized record already answers that question by design. See [renovation records](/guides/renovation-records/) for what counts as a capital improvement under [IRS Publication 523](https://www.irs.gov/publications/p523) versus what's an ordinary repair — that distinction is what determines whether a given receipt actually matters for basis purposes at all.
+## Preserve five evidence layers instead of one receipt folder
 
-## Capture the exact product details while the receipt is still in hand
+Keep the controlling agreement or accepted estimate, every approved or declined change, invoice and receipt versions, payment or refund evidence, and completion or product records as separate layers. Each answers a different question:
 
-For materials or fixtures that might need matching or replacing later — flooring, tile, a specific paint color, a fixture model — record the product name, color code, size or model number directly from the receipt or packaging. Retrieving this later, once packaging is gone and the receipt has faded, is far harder than capturing it once at the time of purchase.
+- the scope says what was agreed;
+- a change record says what was added, deleted or substituted;
+- an invoice states what the issuer billed;
+- payment evidence states what moved and when;
+- a product, walkthrough or inspection record states only what that source actually documents.
 
-## Retention for improvement receipts follows the property, not a fixed number of years
+Use a private project ID such as `PROJECT-C1` across the layers. Keep signatures, full addresses, bank details, card numbers and complete private contacts in controlled originals; a shared household index needs only safe pointers such as `INVOICE-04`, `PAYMENT-03` and `PHOTO-27`.
 
-Unlike an ordinary purchase receipt with a clear multi-year retention window, an improvement receipt that affects cost basis needs to be kept, per IRS guidance, until the limitations period expires for the year the property is disposed of — in practice, for as long as the home is owned, and for several years after it's sold. A receipt from a kitchen remodel in year three of ownership can still matter in year twenty-two.
+## Label quote, order, invoice, receipt and statement accurately
 
-## Distinguish an estimate, an order confirmation and the final receipt
+An estimate or proposal describes a possible transaction. An order confirmation shows that an order was placed. An invoice is the seller's or provider's request or record of charges. A receipt may acknowledge payment. A card or bank statement records a transaction through that institution. None should silently replace another.
 
-Online and contractor purchases often generate multiple documents for what feels like one transaction — an initial estimate, an order confirmation, and eventually a final invoice that may differ from the original quote. Label each one accurately rather than treating any of them interchangeably, since only the final receipt actually proves what was paid; an estimate or an order confirmation with different numbers can create confusion about the real cost if it's the only document kept.
+Preserve the issuer, document date, version or number, line items, tax, credits, total and project pointer. If an invoice is revised, retain both versions and state which later document superseded the earlier one. Do not overwrite the amount on the original scan to match what was eventually paid.
 
-## Match each receipt to a real improvement category, not a vague "renovation" bucket
+## Record who bought materials and who was reimbursed
 
-It's worth being specific about which category a project actually falls into, since it makes the record more useful if a basis calculation ever needs to be reconstructed. A new roof and new siding are exterior improvements; a kitchen remodel with new cabinets and built-in appliances is an interior improvement; a new central air system is a systems improvement. Filing a project under one of these specific categories, rather than a generic "home renovation" label, mirrors how the underlying IRS guidance actually groups qualifying work, and makes it far easier to explain the total basis addition years later if it's ever questioned.
+A contractor invoice may include labor and supplied materials. A household member may buy a fixture directly. A provider may buy an item and seek reimbursement. Record the purchaser role, supplier, product line, linked scope item, amount, tax, return or credit and installation destination without duplicating one cost across two totals.
 
-## Photograph paper receipts before they fade, especially from smaller suppliers
+For paint, tile, flooring, fixtures and installed equipment, capture the product name, model, finish, color or batch pointer while the receipt and packaging are available. The transaction file explains cost; the product record helps with maintenance, matching, warranty and replacement. Link the two, but do not make the project folder the only long-term asset record.
 
-Thermal-printed receipts from hardware stores and building-supply counters fade the same way any other retail receipt does, often within a year or two — well before the years-long retention window an improvement receipt actually needs to survive. A contractor's printed invoice can suffer the same fate if it was produced on the same kind of printer. Photograph or scan these soon after the purchase rather than trusting the original paper to still be legible when it might actually matter, potentially decades later at the time of sale.
+## Reconcile charges, payments, refunds and reimbursements separately
 
-## A materials receipt and a labor invoice both count
+Keep one reconciliation row per billed or purchased item: document pointer, charged amount, paid amount, payment pointer, refund or credit, reimbursement or subsidy, and unresolved difference. A card authorization that later disappears is not the same as a settled charge. A payment does not prove that every invoiced item was delivered or accepted. A credit memo and returned material can reduce the net project cost without changing the historical invoice.
 
-Basis-relevant costs aren't limited to materials — labor paid to a contractor for a qualifying improvement counts too, not just what was purchased at a hardware store. Keep both the material receipts and the contractor's invoice together as part of the same project record, since together they represent the full cost of the improvement.
+Do not store full account or card numbers in the shared reconciliation. A safe entry can say `PAYMENT-03 — household account ending reference retained in protected file`. The original statement, receipt and transaction details remain access controlled.
 
-## A running project total catches problems while they're still fixable
+## Current U.S. tax guidance requires facts, not a folder label
 
-Adding each receipt's amount to a running project total as you go, rather than only tallying at the end, surfaces budget overruns while there's still time to make a decision about them — switching a material choice, adjusting scope — instead of discovering the full cost only once the project is finished and every decision is already locked in.
+[IRS Publication 530 for 2025](https://www.irs.gov/publications/p530) distinguishes ordinary repairs from improvements and explains that repairs performed as part of an extensive remodeling or restoration may be treated differently. It says records supporting basis should include receipts, canceled checks and similar evidence, and that records may need to be kept as long as they remain important to figuring the basis of the original or replacement property. [IRS Publication 523 for 2025](https://www.irs.gov/publications/p523) supplies current home-sale and adjusted-basis guidance.
 
-**Contextual CTA:** Organize receipts around the renovation project first — the project becomes the index that makes the individual files understandable years later, especially for anything that affects your home's cost basis.
+These sources do not make every renovation purchase a basis increase. Repairs, improvements no longer part of the home, credits, subsidies, insurance reimbursements, business or rental use and the taxpayer's facts can change the result. Preserve actual evidence and obtain current tax advice for the transaction rather than adding `capital improvement` to a household folder and treating that label as a determination.
+
+## Retention follows the purpose and current rule
+
+Avoid a universal delete date. A retailer return period, contract or warranty claim period, insurance need, tax limitation period and property-basis record all have different clocks. Publication 530 says basis records may need to remain available while they matter to the original or replacement property's basis, generally throughout ownership and after disposition for the applicable limitation period.
+
+Record the retention reason, responsible source, source review date and next review instead of inventing one permanent number. If tax, legal, warranty or insurance treatment changes, update the household retention decision without altering the original evidence.
+
+## Make paper and portal records durable while they are available
+
+Scan or photograph thermal paper while every line is legible, include the entire document and preserve the original if it still matters. Download invoices, credit memos and item detail from vendor portals before an account closes or a site's history window changes. Confirm that the saved file opens, has the correct pages and can still be tied to its issuer and project.
+
+A screenshot cropped to only a total is weak. Keep the issuer, date, document identifier, item description, subtotal, tax, adjustments and total when available. Never edit the evidence image to add missing facts; add a separate dated household note that explains the gap and its source.
+
+## Build the close-out manifest before people disperse
+
+At project close-out, reconcile the final scope, all change IDs, punch-list history, final invoices, payment evidence, refunds, permits or inspections when applicable, installed-product schedules, manuals, warranties, finish references, maintenance tasks and every unresolved gap. Use the [Home Repair Close-Out Checklist](/tools/home-repair-closeout-checklist/) as a manifest, not as a certificate.
+
+`Filed` should mean only that a dated source and protected location are linked. It must not imply that the document is legally sufficient, the work is accepted, a payment is due, an inspection passed, a lien issue is resolved or a warranty started. Preserve open requests and unresolved gaps instead of checking blank lines complete.
+
+## Protect dispute and payment information
+
+Shared indexes should use roles and document pointers. Full bank statements, payment credentials, signatures, addresses, account identifiers, private contacts and dispute strategy belong in controlled storage. Export only the minimum necessary record for an adviser, insurer, authority or household handoff.
+
+If a dispute develops, preserve every invoice version, payment record, credit, message and source as received. Do not rewrite earlier entries to match a later position, and do not publish accusations in a public or affiliate-facing area.
+
+## Commercial recommendations stay outside the evidence chain
+
+A future affiliate area may present clearly labelled scanners, document storage or project supplies beside this public guide. A paid placement cannot change a receipt, close a missing-document row, classify tax treatment, certify a product, authorize payment or imply that a sponsored provider satisfies the project scope.
+
+**Contextual CTA:** Give the project a stable ID, keep each evidence layer separate, then build a close-out manifest that preserves both filed sources and unresolved gaps.
 
 **FAQ:**
 - Q: How long should I keep home improvement receipts?
-  A: Until the tax limitations period expires for the year you eventually sell the property — in practice, for as long as you own the home plus several years afterward, not a fixed number of years from the purchase date. These receipts support your cost basis, which is only calculated when the property is sold.
-- Q: Do I need to keep receipts for every home project, or just big renovations?
-  A: Keep receipts for anything that qualifies as a capital improvement under IRS guidance — projects that add value, extend useful life, or adapt the home to new uses. Ordinary repairs and maintenance generally don't affect cost basis, so they don't carry the same long-term retention need.
-- Q: What's the difference between an estimate and a final receipt for improvement purposes?
-  A: An estimate is a proposed cost before work begins and can differ from what's actually paid; the final receipt or invoice is what actually proves the cost. Keep both if you have them, but label them clearly — only the final document should be relied on as proof of what was spent.
-- Q: Does labor cost count toward home improvement records, or just materials?
-  A: Both count. A contractor's labor invoice for a qualifying improvement is as much a part of the basis-relevant record as the materials receipt — keep them together as part of the same project so the full cost is documented, not just the purchased materials.
+  A: There is no universal project-age rule. Keep each record for its contract, warranty, insurance, tax and property-basis purpose. Current IRS Publication 530 says basis records may need to remain available as long as they matter to the basis and through the applicable period after disposition. Check the current rule for your facts.
+- Q: Is a paid invoice enough proof that the work was completed and accepted?
+  A: No. An invoice reports charges and payment evidence reports a transaction. Completion notice, household observation, inspection, legal acceptance and warranty commencement can be separate records governed by the contract and location.
+- Q: Should an estimate be deleted after the final invoice arrives?
+  A: Keep it as a labelled earlier version when it explains the controlling scope, changes or a difference. Link the final invoice as the later document instead of overwriting the estimate.
+- Q: Does a receipt automatically make a project a tax-deductible improvement?
+  A: No. A receipt is evidence of a transaction, not a tax conclusion. Current IRS guidance distinguishes repairs, improvements and remodeling facts, and credits, reimbursements, business or rental use and later replacement can change treatment.
+- Q: What belongs in a project close-out receipt package?
+  A: Preserve the controlling scope and changes, final invoices and receipts, payment and refund evidence, final punch-list history, relevant permit or inspection sources, installed-product records, manuals, warranties, finish references and a visible list of unresolved gaps.
+
+**Content version:** 2
 
 ---
 
@@ -13046,6 +13084,111 @@ A future affiliate area may show clearly labelled measuring tools, lights, docum
   A: A photo can support visible appearance at a date and angle. It usually cannot prove concealed work, cause, product identity, code compliance or safety. Keep inspection and professional findings as separate attributed sources.
 - Q: Does the target date change a contract or warranty deadline?
   A: No. It is only a household follow-up date. Contract notice, cure, payment, inspection, complaint, lien, insurance and warranty dates must come from the controlling current source.
+
+---
+
+## Page 211 — Home Repair Close-Out Checklist
+**Slug:** `/tools/home-repair-closeout-checklist/`
+**Primary intent:** reconcile a home repair close-out package without certifying completion or payment
+**Title tag:** `Home Repair Close-Out Checklist | Documents, Gaps and Owners`
+**Meta description:** `Build a private home-repair close-out manifest for scope, changes, punch lists, invoices, payments, permits, products, warranties and unresolved gaps.`
+**Primary keyword concept:** home repair closeout checklist
+**Cluster:** tools
+**Page type:** tool
+**Published date:** 2026-08-23
+**Editorial review date:** 2026-08-23
+**Content version:** 1
+**Suggested internal links:** `/guides/home-improvement-receipts/`, `/guides/renovation-records/`, `/tools/home-repair-punch-list/`, `/tools/home-repair-change-order-log/`
+
+# Home repair close-out checklist
+
+A project can look finished while its evidence remains scattered across inboxes, paper envelopes, vendor portals and one person's memory. A useful close-out package does not hide those gaps behind a single `complete` checkbox. It identifies each expected source, who should issue or retain it, when it was requested or received, where the protected original lives and what remains unresolved.
+
+This free browser tool validates project dates, unique close-out IDs, source pointers, evidence dates, five workflow statuses and target or filing dates. It separates open requests from filed sources and prints a versioned household manifest. Processing stays in the browser.
+
+It does not inspect work, certify completion or acceptance, decide whether a document is legally sufficient, authorize payment or withholding, validate a permit or inspection, release a claim or lien, start a warranty, classify tax treatment, extend a deadline or replace the contract, responsible authority or qualified professional.
+
+**Ready to reconcile the archive? [Jump to the Home Repair Close-Out Checklist](#tool-heading).**
+
+## Freeze the controlling project version first
+
+Use a private project label rather than a full address. Record the original agreement date and point to the controlling agreement plus every approved change, for example `CONTRACT-C1 plus approved CHG-1 and CHG-3; final scope reconciliation SCOPE-R1`. The close-out review date cannot precede the agreement or fall in the future.
+
+The next household review is the latest internal checkpoint for open document requests. It is not a contract notice, final-payment, permit, inspection, complaint, lien, insurance, tax or warranty deadline. Obtain those dates from the current controlling source.
+
+## Give every expected source its own row
+
+Each row contains eleven fields:
+
+`ID | package category | exact expected record | controlling scope, change or punch pointer | issuer or responsible source role | evidence date or MISSING | protected file or request pointer | next evidence step or closure reason | owner role | target or filing date | status`
+
+Use stable IDs such as `CO-1` and `CO-2`. Categories can include final scope, approved and declined changes, completion notice, punch-list history, invoices, payment or refund evidence, permits, inspection reports, installed-product schedule, manuals, warranty terms, finish references and maintenance handoff. These are prompts, not a universal legal package; omit or add rows only with a recorded source-based reason.
+
+`Final documents` is too vague. `Final invoice showing approved CHG-1 and credit memo CM-2` tells the responsible person what must be found. The controlling pointer connects that expectation to the actual project rather than a generic checklist.
+
+## Five statuses preserve where the evidence really is
+
+`Requested—awaiting source` means a dated request pointer exists, but the expected source has not been received. Use `MISSING` for the evidence date and a request pointer such as `REQUEST-5`.
+
+`Received—household review pending` means the household has a dated source and protected file pointer but has not completed its own indexing review. This is still open.
+
+`Filed—source date and pointer linked` means the household linked the source date and protected location. It does not declare the source correct, sufficient or legally effective.
+
+`Not applicable—reason and source linked` preserves why the project does not expect that item. It needs a dated decision or responsible-source reference; a blank row cannot be closed as not applicable.
+
+`Unresolved gap—archive note linked` preserves a missing item at archive without pretending it was received. Use `MISSING` for the evidence date, link a dated gap note and explain the last request, known limitation and next responsible source.
+
+## Open and filed rows use different dates
+
+Requested and received rows remain open. Their target dates must fall from this review through the next household review. A requested row needs a specific request pointer and next action. A received row needs the actual source date and protected file pointer, plus the review step that remains.
+
+Filed, not-applicable and unresolved-gap rows use the last field as the actual filing or archive-decision date. That date cannot precede the agreement or exceed this review. Filed and not-applicable rows need real evidence dates; an unresolved gap intentionally keeps `MISSING` but must link a dated archive note.
+
+These dates organize household work. They do not prove delivery, calculate notice, cure or retention periods, or change any outside deadline.
+
+## Keep invoices, payments and acceptance separate
+
+An invoice shows what its issuer billed. A receipt may acknowledge a transaction. A bank or card record supports that a payment moved. A completion notice reports the provider's position. A punch-list recheck records what the household observed. A permit or inspection source reports only its own scope and outcome.
+
+Do not merge those records into a single status. A filed invoice does not prove it is due, a payment does not prove scope completion, and a household archive does not create legal acceptance. Use the [home-improvement receipts guide](/guides/home-improvement-receipts/) to reconcile invoice versions, payments, refunds and product lines.
+
+## Do not turn permit and inspection rows into self-certification
+
+If a project required permits or inspections, the row should identify the responsible authority, document type, issue date, scope and protected pointer. Do not write `permit passed` based on a contractor message or treat a permit as proof of workmanship outside its recorded scope.
+
+If no permit or inspection applied, preserve the responsible source for that conclusion. The tool cannot determine applicability. If the answer is uncertain, keep the item requested or unresolved instead of selecting not applicable for convenience.
+
+## Hand installed products into their own life-cycle records
+
+For each appliance, HVAC component, water heater, pump, control, fixture or material that will need future maintenance, link the installed-product schedule, model evidence, purchase or installation record, manual, warranty terms, service contact source and first maintenance task. The project explains why the asset entered the home; the asset record follows what happens next.
+
+Do not infer a warranty start date from the close-out review. Use the actual warranty terms, purchase or installation evidence and responsible source. A `Filed` status does not register a product, start coverage or approve a claim.
+
+## Protect private originals and dispute material
+
+The form blocks common full phone, email, address, credential, financial, government-ID, licence, policy, claim, signature and private-contact patterns. Automated screening cannot detect every sensitive fact, so review the result before copying, printing or saving.
+
+Use roles and protected pointers in the shared manifest. Store original contracts, signatures, complete provider information, transaction records, access details, inspection documents and dispute files with appropriate controls. Preserve previous versions if the project becomes disputed.
+
+## Commercial recommendations stay outside close-out decisions
+
+A future affiliate area may show clearly labelled scanners, document storage, label makers or project supplies beside this public page. It cannot appear inside the form or result, mark a row filed, decide document sufficiency, approve payment, certify a product or imply that a sponsored provider satisfies the project.
+
+**Next step:** reconcile the unchanged scope and change history, then give every expected close-out source one ID, one responsible role and an honest evidence status.
+
+**Contextual CTA:** Build the close-out manifest in your browser, keep open requests visible and preserve unresolved gaps instead of checking blank rows complete.
+
+**FAQ:**
+- Q: Does a completed close-out checklist prove the project was legally completed or accepted?
+  A: No. It is a private household manifest. It cannot inspect work, certify completion, create acceptance, authorize payment, release rights or replace the contract, responsible authority, inspector or qualified professional.
+- Q: What should I do when a final document is still missing?
+  A: Keep it requested with a dated request pointer and next action. If the household archives the project before receiving it, use unresolved gap with a dated gap note instead of marking the item filed or not applicable.
+- Q: Is a received invoice the same as payment evidence?
+  A: No. An invoice reports charges, while a receipt or financial record may support payment. Credits, refunds, reimbursements and disputed amounts also need separate attributable evidence.
+- Q: Can I mark a permit or inspection not applicable myself?
+  A: The tool cannot decide applicability. Link the current responsible authority or qualified source for that conclusion; when uncertain, keep the question open rather than closing it for convenience.
+- Q: Does filing warranty paperwork start coverage?
+  A: No. Preserve the actual terms, purchase or installation evidence, product details and responsible source. A household filing date cannot create or change warranty coverage, registration or claim rights.
 
 ---
 

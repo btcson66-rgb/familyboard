@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T20:08:20.622Z
+Generated: 2026-08-22T20:30:12.647Z
 
 ## Summary
 
-- Indexable pages: 287
-- Generated HTML routes: 304
+- Indexable pages: 290
+- Generated HTML routes: 307
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 100
+- Pages without a contextual product/tool link: 102
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,9 +22,9 @@ Generated: 2026-08-22T20:08:20.622Z
 - appliances: 30
 - maintenance: 37
 - household-operations: 21
-- inventory-warranty: 31
+- inventory-warranty: 32
 - records-emergency: 27
-- tools: 69
+- tools: 71
 
 ## Word-count range
 
@@ -94,6 +94,7 @@ Generated: 2026-08-22T20:08:20.622Z
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
 - /zh-tw/guides/home-evacuation-information/
+- /zh-tw/guides/home-improvement-receipts/
 - /zh-tw/guides/home-maintenance-log/
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/guides/home-service-provider-list/
@@ -125,6 +126,7 @@ Generated: 2026-08-22T20:08:20.622Z
 - /zh-tw/tools/home-maintenance-cost-tracker/
 - /zh-tw/tools/home-maintenance-schedule-generator/
 - /zh-tw/tools/home-repair-change-order-log/
+- /zh-tw/tools/home-repair-closeout-checklist/
 - /zh-tw/tools/home-repair-cost-log/
 - /zh-tw/tools/home-repair-punch-list/
 - /zh-tw/tools/home-service-provider-verification-log/

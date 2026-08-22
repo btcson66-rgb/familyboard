@@ -1936,6 +1936,129 @@ const definitions: Record<string, Definition> = {
       return `${values.project.trim()} — home repair punch list\nWalkthrough context: ${values.context}\nControlling scope date: ${formatter.format(baselineDate)}\nPunch-list review: ${formatter.format(reviewDate)}\nNext household review: ${formatter.format(nextReview)}\nOpen items: ${openRows.length}\nClosed or archived items: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling scope and approved changes: ${values.baseline.trim()}\n\n${lines("Versioned punch-list items", itemRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — observed ${formatter.format(strictIsoDate(row.parts[4]) as Date)}: ${row.parts[2]} — controlling source: ${row.parts[3]} — evidence: ${row.parts[5]} — next evidence/correction/closure reason: ${row.parts[6]} — responsible role: ${row.parts[7]} — target/recheck/archive date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household observation and follow-up record. It does not inspect work or concealed conditions, diagnose cause, define a defect, verify products, permits or inspections, certify workmanship, completion, acceptance, safety, code or legal compliance, authorize work, payment or withholding, start or change a warranty, calculate or extend any deadline, waive a right, assign responsibility or resolve a dispute. Preserve original sources and use the contract, responsible authority and qualified professionals for the actual project.`;
     },
   },
+  "home-repair-closeout-checklist": {
+    intro:
+      "Build a versioned manifest for final scope, changes, punch-list history, invoices, payments, permits, products, warranties and unresolved gaps. This tool does not certify completion, acceptance or document sufficiency, authorize payment, start a warranty or replace a responsible source.",
+    fields: [
+      text("project", "Private project label", "Use a household nickname and work area, not a full address or private provider contact.", "Maple household kitchen renovation"),
+      {
+        name: "context",
+        label: "Close-out review context",
+        type: "select",
+        options: [
+          "Household package review before final project meeting",
+          "Review after provider completion notice",
+          "Post-walkthrough archive reconciliation",
+          "Incomplete or disputed history preservation",
+        ],
+      },
+      { name: "baselineDate", label: "Original agreement date", type: "date", value: "2026-08-01" },
+      { name: "reviewDate", label: "Close-out package review date", type: "date", value: "2026-08-23" },
+      { name: "nextReview", label: "Next household document review", type: "date", value: "2026-08-30" },
+      text("baseline", "Controlling scope and project-history evidence", "Name the agreement, approved changes and final scope reconciliation. Do not paste signatures or private contacts.", "CONTRACT-C1 plus approved CHG-1 and CHG-3; final scope reconciliation SCOPE-R1"),
+      {
+        name: "items",
+        label: "Versioned close-out package rows",
+        type: "textarea",
+        help: "One line: ID | package category | exact expected record | controlling scope, change or punch pointer | issuer or responsible source role | evidence date YYYY-MM-DD or MISSING | protected file or request pointer | next evidence step or closure reason | owner role | target or filing date YYYY-MM-DD | Requested—awaiting source, Received—household review pending, Filed—source date and pointer linked, Not applicable—reason and source linked, or Unresolved gap—archive note linked. Maximum 18 lines.",
+        value: "CO-1 | Final scope | Final scope reconciliation including approved CHG-1 and CHG-3 | CONTRACT-C1, CHG-1 and CHG-3 | Household project archive | 2026-08-23 | SCOPE-R1 | Cross-check final invoice and punch-list IDs against unchanged scope history | Household project owner | 2026-08-23 | Filed—source date and pointer linked\nCO-2 | Final invoice | Final invoice showing approved changes and CREDIT-2 | INVOICE-03, CHG-1, CHG-3 and CREDIT-2 | Provider billing role | MISSING | REQUEST-5 | Obtain the dated final invoice and preserve the original file before household review | Household project owner | 2026-08-29 | Requested—awaiting source\nCO-3 | Installed products | Product schedule, manuals and warranty terms for installed equipment | SCOPE-R1 and PRODUCT-SCHEDULE-P2 | Provider project close-out role | 2026-08-22 | PRODUCT-PACKAGE-2 | Check models, document pages and protected asset links before filing | Household asset owner | 2026-08-28 | Received—household review pending",
+      },
+      text("storage", "Protected original-document location", "Use a folder or envelope label, not an address, phone, email, signature, account, payment, identity, licence, policy or claim detail.", "Household records / renovation / PROJECT-C1 / close-out package"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.project.trim()) return "Enter a private project label so the exported close-out manifest can be identified.";
+      if (!baselineDate) return "Enter a real original agreement date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real close-out package review date in YYYY-MM-DD format.";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The close-out package review date cannot be in the future.";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "The original agreement date cannot be later than the close-out review.";
+      if (!nextReview) return "Enter a real next household document review date in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next household document review cannot be earlier than this close-out review.";
+      if (!values.baseline.trim()) return "Enter the controlling agreement, approved changes and final scope-reconciliation evidence.";
+      if (!values.storage.trim()) return "Enter the protected location for original close-out documents and gap notes.";
+      const itemRows = values.items.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (itemRows.length === 0) return "Add at least one expected close-out package row.";
+      if (itemRows.length > 18) return "Use no more than 18 items in one close-out review; create another dated version if needed.";
+      const invalidRows = itemRows.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Close-out line ${invalidRows.map((row) => row.line).join(", ")} must contain all 11 pipe-separated fields.`;
+      const ids = itemRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Each close-out package item must have a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Close-out IDs must use 2 to 20 letters, numbers or hyphens, such as CO-1.";
+      const statusOrder = [
+        "Requested—awaiting source",
+        "Received—household review pending",
+        "Filed—source date and pointer linked",
+        "Not applicable—reason and source linked",
+        "Unresolved gap—archive note linked",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = itemRows.filter((row) => !statuses.has(row.parts[10]));
+      if (invalidStatuses.length)
+        return `Close-out line ${invalidStatuses.map((row) => row.line).join(", ")} has an unsupported status. Use one of the five labels shown in the field instructions.`;
+      const requestedRows = itemRows.filter((row) => row.parts[10] === statusOrder[0]);
+      const receivedRows = itemRows.filter((row) => row.parts[10] === statusOrder[1]);
+      const filedRows = itemRows.filter((row) => row.parts[10] === statusOrder[2]);
+      const notApplicableRows = itemRows.filter((row) => row.parts[10] === statusOrder[3]);
+      const unresolvedRows = itemRows.filter((row) => row.parts[10] === statusOrder[4]);
+      const openRows = [...requestedRows, ...receivedRows];
+      const closedRows = [...filedRows, ...notApplicableRows, ...unresolvedRows];
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[9]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open close-out line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next household document review.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const filed = strictIsoDate(row.parts[9]);
+        return !filed || filed.getTime() < baselineDate.getTime() || filed.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Filed, not-applicable or unresolved line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual filing or archive-decision date between the agreement and this review.`;
+      const rowsRequiringEvidenceDate = [...receivedRows, ...filedRows, ...notApplicableRows];
+      const invalidEvidenceDates = rowsRequiringEvidenceDate.filter((row) => {
+        const evidence = strictIsoDate(row.parts[5]);
+        return !evidence || evidence.getTime() < baselineDate.getTime() || evidence.getTime() > reviewDate.getTime();
+      });
+      if (invalidEvidenceDates.length)
+        return `Close-out line ${invalidEvidenceDates.map((row) => row.line).join(", ")} needs a real source or decision date between the agreement and this review.`;
+      const shouldBeMissing = [...requestedRows, ...unresolvedRows].filter((row) => row.parts[5].toLocaleUpperCase("en") !== "MISSING");
+      if (shouldBeMissing.length)
+        return `Requested or unresolved line ${shouldBeMissing.map((row) => row.line).join(", ")} must use MISSING in the evidence-date field until the expected source exists.`;
+      const missingPointers = itemRows.filter((row) => row.parts[3].length < 4 || row.parts[4].length < 4 || row.parts[6].length < 4 || row.parts[6].toLocaleUpperCase("en") === "MISSING");
+      if (missingPointers.length)
+        return `Close-out line ${missingPointers.map((row) => row.line).join(", ")} needs a controlling pointer, responsible source role and protected file, request or gap-note pointer.`;
+      const vagueActions = itemRows.filter((row) =>
+        row.parts[7].length < 12 || /^(?:done|complete|completed|ok|none|n\/a|filed|follow up)$/i.test(row.parts[7]),
+      );
+      if (vagueActions.length)
+        return `Close-out line ${vagueActions.map((row) => row.line).join(", ")} needs a specific next evidence step or preserved closure reason—not a generic completion word.`;
+      const privacyText = [values.project, values.baseline, values.items, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email or complete numeric identifier was detected. Keep it in protected evidence and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|full address|account number|card number|bank account|routing number|social security|government id|personal licence number|personal license number|policy number|claim number|signature|date of birth|private contact|taxpayer id|invoice login|payment credential|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, financial, identity, licence, policy, signature, tax or private contact detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: itemRows.filter((row) => row.parts[10] === status).length,
+      })).filter((item) => item.count > 0);
+      const dateOrMissing = (value: string) => value.toLocaleUpperCase("en") === "MISSING" ? "MISSING" : formatter.format(strictIsoDate(value) as Date);
+      return `${values.project.trim()} — home repair close-out package manifest\nReview context: ${values.context}\nOriginal agreement: ${formatter.format(baselineDate)}\nPackage review: ${formatter.format(reviewDate)}\nNext household document review: ${formatter.format(nextReview)}\nOpen requests or reviews: ${openRows.length}\nFiled, not applicable or archived gaps: ${closedRows.length}\nUnresolved gaps: ${unresolvedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling scope and project history: ${values.baseline.trim()}\n\n${lines("Versioned close-out package rows", itemRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — expected record: ${row.parts[2]} — controlling source: ${row.parts[3]} — issuer/responsible source: ${row.parts[4]} — evidence date: ${dateOrMissing(row.parts[5])} — protected file/request/gap pointer: ${row.parts[6]} — next evidence step/closure reason: ${row.parts[7]} — owner: ${row.parts[8]} — target/filing/archive date: ${formatter.format(strictIsoDate(row.parts[9]) as Date)} — status: ${row.parts[10]}`))}\n\nProtected original-document location: ${values.storage.trim()}\n\nThis output is a private household document manifest. It does not inspect work, verify document authenticity or legal sufficiency, certify workmanship, completion, acceptance, safety, code or legal compliance, determine permit or inspection applicability or outcome, authorize payment or withholding, prove delivery, release a claim or lien, start or change a warranty, classify tax treatment, calculate or extend any deadline, waive a right, assign responsibility or resolve a dispute. Preserve original sources and use the contract, responsible authority and qualified professionals for the actual project.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -4156,6 +4279,129 @@ const zhTwDefinitions: Record<string, Definition> = {
         count: itemRows.filter((row) => row.parts[9] === status).length,
       })).filter((item) => item.count > 0);
       return `${values.project.trim()}｜居家修繕缺失複查表\n本次走查情境：${values.context}\n控制範圍基準日：${formatter.format(baselineDate)}\n本次缺失紀錄：${formatter.format(reviewDate)}\n家庭下次複查：${formatter.format(nextReview)}\n仍開放：${openRows.length} 筆\n已關閉或封存：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的範圍與已同意變更：${values.baseline.trim()}\n\n${lines("有版本的缺失複查列", itemRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜${formatter.format(strictIsoDate(row.parts[4]) as Date)} 觀察：${row.parts[2]}｜控制來源：${row.parts[3]}｜證據：${row.parts[5]}｜下一個證據／處理／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／複查／封存日：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭可見觀察與追蹤紀錄。它不檢查施工或隱蔽工程、不診斷原因、不認定瑕疵、不驗證產品、許可或檢查、不認證施工品質、完工、驗收、安全、法規或法律合規、不授權施工、付款或扣款、不啟動或變更保固、不計算或延長任何期限、不代表放棄權利、不分配責任，也不解決爭議。請保存原始來源，並依實際工程使用契約、主管機關與合格專業人員。`;
+    },
+  },
+  "home-repair-closeout-checklist": {
+    intro:
+      "整理最後範圍、變更、缺失歷史、發票、付款、許可、產品、保固與結案仍缺資料，誠實分開索取、收到、歸檔與缺件。工具不認證完工、驗收或文件效力、不批准付款、不啟動保固，也不取代負責來源。",
+    fields: [
+      text("project", "私密工程代稱", "使用家庭代稱與施工區域，不要填完整地址或私人業者聯絡資料。", "青葉家庭廚房裝潢"),
+      {
+        name: "context",
+        label: "本次結案資料檢視情境",
+        type: "select",
+        options: [
+          "最後工程會議前的家庭資料核對",
+          "收到業者完工通知後檢視",
+          "完成走查後的結案檔案核對",
+          "保存未完成或爭議中的歷史",
+        ],
+      },
+      { name: "baselineDate", label: "原約定日期", type: "date", value: "2026-08-01" },
+      { name: "reviewDate", label: "本次資料包檢視日", type: "date", value: "2026-08-23" },
+      { name: "nextReview", label: "家庭下次文件追蹤日", type: "date", value: "2026-08-30" },
+      text("baseline", "控制範圍與工程歷史證據", "寫明原約定、已同意變更與最後範圍核對，不要貼簽名或私人聯絡資料。", "CONTRACT-C1＋已同意 CHG-1、CHG-3；最後範圍核對 SCOPE-R1"),
+      {
+        name: "items",
+        label: "有版本的結案資料包列",
+        type: "textarea",
+        help: "每行格式：ID | 資料包類別 | 精確預期文件 | 控制範圍、變更或缺失索引 | 出具或負責來源角色 | 證據日期 YYYY-MM-DD 或 MISSING | 受保護檔案或索取紀錄索引 | 下一個證據步驟或結案理由 | 負責角色 | 目標或歸檔日期 YYYY-MM-DD | 已提出索取，等待來源、已收到，等待家庭檢視、已歸檔，連結來源日期與位置、不適用，已連結理由與來源、結案仍缺，已連結缺件說明。最多 18 行。",
+        value: "CO-1 | 最後範圍 | 包含已同意 CHG-1 與 CHG-3 的最後範圍核對 | CONTRACT-C1、CHG-1、CHG-3 | 家庭工程檔案 | 2026-08-23 | SCOPE-R1 | 依未改寫的範圍歷史核對最後發票與缺失 ID | 家庭工程負責人 | 2026-08-23 | 已歸檔，連結來源日期與位置\nCO-2 | 最後發票 | 反映已同意變更與 CREDIT-2 的最後發票 | INVOICE-03、CHG-1、CHG-3、CREDIT-2 | 業者請款角色 | MISSING | REQUEST-5 | 取得有日期的最後發票並保存原檔，再由家庭逐項檢視 | 家庭工程負責人 | 2026-08-29 | 已提出索取，等待來源\nCO-3 | 安裝產品 | 安裝設備產品表、說明書與保固條款 | SCOPE-R1、PRODUCT-SCHEDULE-P2 | 業者結案資料角色 | 2026-08-22 | PRODUCT-PACKAGE-2 | 核對型號、文件頁數與受保護資產連結後再歸檔 | 家庭資產負責人 | 2026-08-28 | 已收到，等待家庭檢視",
+      },
+      text("storage", "受保護的原始文件位置", "只寫資料夾或信封代稱，不要填地址、電話、Email、簽名、帳號、付款、身分、證照、保單或理賠資料。", "家庭文件／裝潢／PROJECT-C1／結案資料包"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.project.trim()) return "請填私密工程代稱，讓匯出的結案資料包清單可以辨識。";
+      if (!baselineDate) return "請輸入真實的原約定日期 YYYY-MM-DD。";
+      if (!reviewDate) return "請輸入真實的本次資料包檢視日 YYYY-MM-DD。";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次資料包檢視日不能在未來。";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "原約定日期不能晚於本次結案資料檢視。";
+      if (!nextReview) return "請輸入真實的家庭下次文件追蹤日 YYYY-MM-DD。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "家庭下次文件追蹤日不能早於本次資料包檢視。";
+      if (!values.baseline.trim()) return "請填控制中的原約定、已同意變更與最後範圍核對證據。";
+      if (!values.storage.trim()) return "請填原始結案文件與缺件說明的受保護位置。";
+      const itemRows = values.items.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (itemRows.length === 0) return "請至少新增一筆預期結案資料列。";
+      if (itemRows.length > 18) return "一份結案資料檢視最多 18 筆；更多項目請建立下一份有日期的版本。";
+      const invalidRows = itemRows.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `結案資料第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整填寫 11 個以直線分隔的欄位。`;
+      const ids = itemRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆結案資料都要有唯一 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "結案資料 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 CO-1。";
+      const statusOrder = [
+        "已提出索取，等待來源",
+        "已收到，等待家庭檢視",
+        "已歸檔，連結來源日期與位置",
+        "不適用，已連結理由與來源",
+        "結案仍缺，已連結缺件說明",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = itemRows.filter((row) => !statuses.has(row.parts[10]));
+      if (invalidStatuses.length)
+        return `結案資料第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須使用欄位說明中的五種文字之一。`;
+      const requestedRows = itemRows.filter((row) => row.parts[10] === statusOrder[0]);
+      const receivedRows = itemRows.filter((row) => row.parts[10] === statusOrder[1]);
+      const filedRows = itemRows.filter((row) => row.parts[10] === statusOrder[2]);
+      const notApplicableRows = itemRows.filter((row) => row.parts[10] === statusOrder[3]);
+      const unresolvedRows = itemRows.filter((row) => row.parts[10] === statusOrder[4]);
+      const openRows = [...requestedRows, ...receivedRows];
+      const closedRows = [...filedRows, ...notApplicableRows, ...unresolvedRows];
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[9]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的結案資料第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次檢視日起，到家庭下次文件追蹤日為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const filed = strictIsoDate(row.parts[9]);
+        return !filed || filed.getTime() < baselineDate.getTime() || filed.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已歸檔、不適用或結案仍缺的第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於原約定日與本次檢視日之間的實際歸檔或封存決定日。`;
+      const rowsRequiringEvidenceDate = [...receivedRows, ...filedRows, ...notApplicableRows];
+      const invalidEvidenceDates = rowsRequiringEvidenceDate.filter((row) => {
+        const evidence = strictIsoDate(row.parts[5]);
+        return !evidence || evidence.getTime() < baselineDate.getTime() || evidence.getTime() > reviewDate.getTime();
+      });
+      if (invalidEvidenceDates.length)
+        return `結案資料第 ${invalidEvidenceDates.map((row) => row.line).join("、")} 行需要介於原約定日與本次檢視日之間的真實來源或決定日期。`;
+      const shouldBeMissing = [...requestedRows, ...unresolvedRows].filter((row) => row.parts[5].toLocaleUpperCase("en") !== "MISSING");
+      if (shouldBeMissing.length)
+        return `已索取或結案仍缺的第 ${shouldBeMissing.map((row) => row.line).join("、")} 行，在預期來源尚不存在時，證據日期必須填 MISSING。`;
+      const missingPointers = itemRows.filter((row) => row.parts[3].length < 4 || row.parts[4].length < 4 || row.parts[6].length < 4 || row.parts[6].toLocaleUpperCase("en") === "MISSING");
+      if (missingPointers.length)
+        return `結案資料第 ${missingPointers.map((row) => row.line).join("、")} 行需要控制索引、負責來源角色，以及受保護的檔案、索取紀錄或缺件說明索引。`;
+      const vagueActions = itemRows.filter((row) =>
+        row.parts[7].length < 8 || /^(?:完成|好了|已好|已歸檔|無|不用|不適用|待追蹤|ok)$/i.test(row.parts[7]),
+      );
+      if (vagueActions.length)
+        return `結案資料第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的下一個證據步驟或保留的結案理由，不能只寫通用完成詞。`;
+      const privacyText = [values.project, values.baseline, values.items, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email 或完整數字識別資料。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|驗證碼|警報碼|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證|統一編號完整資料|個人證照完整號碼|保單編號|案件編號|簽名|出生日期|私人聯絡|發票載具登入|付款憑證完整資料|password|passcode|access code|account number|card number|government id|policy number|claim number|signature|taxpayer id|invoice login|payment credential|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、金融、身分、證照、保單、簽名、稅務或私人聯絡資料。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: itemRows.filter((row) => row.parts[10] === status).length,
+      })).filter((item) => item.count > 0);
+      const dateOrMissing = (value: string) => value.toLocaleUpperCase("en") === "MISSING" ? "MISSING" : formatter.format(strictIsoDate(value) as Date);
+      return `${values.project.trim()}｜居家修繕結案資料包清單\n本次檢視情境：${values.context}\n原約定日期：${formatter.format(baselineDate)}\n本次資料包檢視：${formatter.format(reviewDate)}\n家庭下次文件追蹤：${formatter.format(nextReview)}\n仍在索取或檢視：${openRows.length} 筆\n已歸檔、不適用或封存缺件：${closedRows.length} 筆\n結案仍缺：${unresolvedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的範圍與工程歷史：${values.baseline.trim()}\n\n${lines("有版本的結案資料包列", itemRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜預期文件：${row.parts[2]}｜控制來源：${row.parts[3]}｜出具／負責來源：${row.parts[4]}｜證據日期：${dateOrMissing(row.parts[5])}｜受保護檔案／索取／缺件索引：${row.parts[6]}｜下一個證據步驟／結案理由：${row.parts[7]}｜負責角色：${row.parts[8]}｜目標／歸檔／封存日：${formatter.format(strictIsoDate(row.parts[9]) as Date)}｜狀態：${row.parts[10]}`))}\n\n受保護的原始文件位置：${values.storage.trim()}\n\n這份輸出只是家庭文件清單。它不檢查施工、不驗證文件真偽或法律充分性、不認證施工品質、完工、驗收、安全、法規或法律合規、不判斷許可或檢查是否適用與結果、不授權付款或扣款、不證明送達、不解除請求或權利負擔、不啟動或變更保固、不分類稅務處理、不計算或延長任何期限、不代表放棄權利、不分配責任，也不解決爭議。請保存原始來源，並依實際工程使用契約、主管機關與合格專業人員。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

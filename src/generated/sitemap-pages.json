@@ -809,7 +809,7 @@
   },
   {
     "route": "/guides/home-improvement-receipts/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-improvement-receipts/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1680,6 +1680,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/home-repair-closeout-checklist/",
+    "alternateRoute": "/zh-tw/tools/home-repair-closeout-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -1983,6 +1991,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/home-improvement-receipts/",
+    "alternateRoute": "/guides/home-improvement-receipts/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/home-inventory-checklist-generator/",
     "alternateRoute": "/tools/home-inventory-checklist-generator/",
     "indexable": true,
@@ -2027,6 +2042,13 @@
   {
     "route": "/zh-tw/tools/home-repair-change-order-log/",
     "alternateRoute": "/tools/home-repair-change-order-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/home-repair-closeout-checklist/",
+    "alternateRoute": "/tools/home-repair-closeout-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"

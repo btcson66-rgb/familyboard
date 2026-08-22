@@ -776,12 +776,12 @@
     "headings": "Contractor records for home repairs: preserve what was agreed, what changed and what actually happened Start with an immutable baseline Separate the household observation from the proposed solution A change order is a versioned decision, not an overwritten estimate Record increases, decreases and zero-effect changes Connect approvals to the exact version Keep payments separate from progress and acceptance Site notes should say what was seen, not certify workmanship Close-out is a bundle, not one final invoice Lien, waiver and final-payment checks are local legal questions If the project becomes disputed, preserve history instead of rewriting it Sponsored services cannot enter the approval chain"
   },
   {
-    "title": "Home Improvement Receipts: Organize Costs and Proof by Project, Not by Shopping Trip",
-    "description": "Keep home-improvement receipts attached to the renovation project they belong to — the specific evidence the IRS says supports your home's cost basis when you sell.",
+    "title": "Home Improvement Receipts | Invoices, Payments and Project Proof",
+    "description": "Organize home-improvement receipts with contracts, invoice versions, payment evidence, credits, product records and current IRS recordkeeping guidance.",
     "route": "/guides/home-improvement-receipts/",
     "cluster": "inventory-warranty",
     "keywords": "organize home improvement receipts",
-    "headings": "An improvement receipt's real job is proving your cost basis later Group receipts by project, not by shopping trip Capture the exact product details while the receipt is still in hand Retention for improvement receipts follows the property, not a fixed number of years Distinguish an estimate, an order confirmation and the final receipt Match each receipt to a real improvement category, not a vague \"renovation\" bucket Photograph paper receipts before they fade, especially from smaller suppliers A materials receipt and a labor invoice both count A running project total catches problems while they're still fixable"
+    "headings": "A home-improvement receipt needs the project history around it Preserve five evidence layers instead of one receipt folder Label quote, order, invoice, receipt and statement accurately Record who bought materials and who was reimbursed Reconcile charges, payments, refunds and reimbursements separately Current U.S. tax guidance requires facts, not a folder label Retention follows the purpose and current rule Make paper and portal records durable while they are available Build the close-out manifest before people disperse Protect dispute and payment information Commercial recommendations stay outside the evidence chain"
   },
   {
     "title": "Moving Inventory: Track Boxes, Rooms, Valuable Items and What Needs Special Handling",
@@ -1574,6 +1574,14 @@
     "cluster": "tools",
     "keywords": "home repair punch list",
     "headings": "Home repair punch list Freeze the scope version before listing visible items Use one narrow, observable condition per item Separate observation from diagnosis, standard and responsibility Observation dates and evidence pointers must stay attributable Five statuses keep reports and rechecks distinct Open and closed rows use dates differently Keep completion, acceptance, payment and warranty outside the status field Reconcile the punch list with the full project archive Protect private household and dispute information Commercial recommendations stay outside walkthrough decisions"
+  },
+  {
+    "title": "Home Repair Close-Out Checklist | Documents, Gaps and Owners",
+    "description": "Build a private home-repair close-out manifest for scope, changes, punch lists, invoices, payments, permits, products, warranties and unresolved gaps.",
+    "route": "/tools/home-repair-closeout-checklist/",
+    "cluster": "tools",
+    "keywords": "home repair closeout checklist",
+    "headings": "Home repair close-out checklist Freeze the controlling project version first Give every expected source its own row Five statuses preserve where the evidence really is Open and filed rows use different dates Keep invoices, payments and acceptance separate Do not turn permit and inspection rows into self-certification Hand installed products into their own life-cycle records Protect private originals and dispute material Commercial recommendations stay outside close-out decisions"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

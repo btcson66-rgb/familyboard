@@ -81,6 +81,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/home-repair-punch-list/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-repair-punch-list/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/renovation-records/</loc>",
+      "<loc>https://familyboard.win/tools/home-repair-closeout-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-repair-closeout-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-improvement-receipts/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -292,6 +295,24 @@ const checks = [
       "Renovation records should preserve the project chronology",
       'hreflang="zh-TW"',
       "A punch list is a controlled observation queue",
+      "irs.gov/publications/p530",
+    ],
+  },
+  {
+    path: "/tools/home-repair-closeout-checklist/",
+    require: [
+      "Home Repair Close-Out Checklist",
+      'hreflang="zh-TW"',
+      "Five statuses preserve where the evidence really is",
+      "certify completion or acceptance",
+    ],
+  },
+  {
+    path: "/guides/home-improvement-receipts/",
+    require: [
+      "A home-improvement receipt needs the project history around it",
+      'hreflang="zh-TW"',
+      "Preserve five evidence layers instead of one receipt folder",
       "irs.gov/publications/p530",
     ],
   },
@@ -518,6 +539,24 @@ const checks = [
       'hreflang="en"',
       "現行官方範本把完工通知和驗收分成不同節點",
       "全國消費者服務專線 1950",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-repair-closeout-checklist/",
+    require: [
+      "居家修繕結案資料包檢查表",
+      'hreflang="en"',
+      "已提出索取和已收到不能混成同一狀態",
+      "不認證完工",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-improvement-receipts/",
+    require: [
+      "裝潢收據怎麼整理",
+      'hreflang="en"',
+      "台灣法律區分統一發票與普通收據",
+      "房地合一稅需要的是整組證據",
     ],
   },
   {
