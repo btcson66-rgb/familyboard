@@ -1889,6 +1889,235 @@ const zhTwDefinitions: Record<string, Definition> = {
       )}\n\n${lines("明確納入", included)}\n\n${lines("明確排除", omitted)}\n\n接受確認：接手人已逐項走讀、能指出工作來源與完成證據位置，並知道哪些內容沒有授權。\n交接人／接手人／日期：＿＿＿＿＿＿＿＿\n\n這份結果只來自目前輸入，不會讀取 FamilyBoard App、通知聯絡人或授予任何帳號與設備權限。分享前請再次核對日期與最小必要範圍。`;
     },
   },
+  "appliance-replacement-planner": {
+    intro:
+      "用家電身分、日期依據、目前狀況、書面估價與家庭自訂規劃年限建立查證順序。工具不內建壽命表，也不會替你判定一定要修或換。",
+    fields: [
+      text("name", "家電與位置", "名稱要能和維修、保固及財物紀錄對得起來。", "廚房冰箱"),
+      text("brandModel", "品牌、型號與可辨識資料", "優先照機身銘牌抄錄；序號可只留在安全的私人紀錄。", "品牌／型號；序號見家庭設備紀錄"),
+      { name: "purchase", label: "已知購買、交付或安裝日期", type: "date" },
+      {
+        name: "dateBasis",
+        label: "日期依據",
+        type: "select",
+        options: ["購買日期（有單據）", "交付／安裝日期（有文件）", "約略日期（沒有原始文件）"],
+      },
+      {
+        name: "planningYears",
+        label: "家庭自訂規劃年限（年）",
+        type: "number",
+        help: "只是你設定的複查尺度，不是原廠壽命；可填 1 到 50 的整數。",
+        value: "10",
+      },
+      {
+        name: "condition",
+        label: "目前查核狀況",
+        type: "select",
+        options: [
+          "運作正常，沒有已知異常",
+          "效能、耗能或運轉表現有可觀察變化",
+          "已有書面維修估價待評估",
+          "有安全警示、召回或應停用跡象",
+        ],
+      },
+      {
+        name: "observations",
+        label: "具體觀察或待查問題",
+        type: "textarea",
+        help: "每行一項，最多 8 項。寫日期、現象或錯誤碼，不要自行診斷。",
+        value: "近兩週冷藏溫度恢復時間變長\n上次維修單記載需追蹤門封狀態",
+      },
+      { name: "repair", label: "目前書面維修估價（新台幣，可填 0）", type: "number", value: "0" },
+      { name: "replacement", label: "目前替代方案書面報價（新台幣，可填 0）", type: "number", value: "0" },
+      text("quoteSource", "估價或價格來源", "沒有估價時請寫『尚未取得』，不要把網路廣告價當成完工總價。", "尚未取得"),
+      { name: "review", label: "下次人工複查日期", type: "date" },
+    ],
+    run: (values) => {
+      const start = date(values.purchase);
+      const review = date(values.review);
+      const planningYears = Number(values.planningYears);
+      const repair = Number(values.repair);
+      const replacement = Number(values.replacement);
+      const observations = uniqueList(values.observations);
+      if (!values.name.trim()) return "請填寫家電與位置。";
+      if (!values.brandModel.trim()) return "請填寫品牌、型號或可辨識資料，避免把估價與保固掛到錯誤設備。";
+      if (!start) return "請輸入有效的購買、交付或安裝日期。";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (start.getTime() > today.getTime()) return "購買、交付或安裝日期不能晚於今天。";
+      if (!Number.isInteger(planningYears) || planningYears < 1 || planningYears > 50)
+        return "家庭自訂規劃年限必須是 1 到 50 之間的整數。";
+      if (observations.length === 0) return "請至少寫一項具體觀察；即使目前正常，也可記錄『本次未見異常』。";
+      if (observations.length > 8) return "具體觀察一次最多 8 項；其餘請放入設備維修紀錄。";
+      if (!Number.isFinite(repair) || repair < 0 || repair > 10_000_000)
+        return "書面維修估價必須是 0 到 10,000,000 之間的數字。";
+      if (!Number.isFinite(replacement) || replacement < 0 || replacement > 10_000_000)
+        return "替代方案書面報價必須是 0 到 10,000,000 之間的數字。";
+      if (!values.quoteSource.trim()) return "請填寫估價或價格來源；尚未取得時也要明確標示。";
+      if (!review) return "請輸入有效的下次人工複查日期。";
+      const ageYears = Math.max(0, (today.getTime() - start.getTime()) / 31_557_600_000);
+      const remaining = planningYears - ageYears;
+      const status =
+        values.condition === "有安全警示、召回或應停用跡象"
+          ? "安全優先：停止把它當成一般正常設備使用，先核對實際型號、官方召回／安全資訊與合格服務指示。"
+          : values.condition === "已有書面維修估價待評估"
+            ? "現在查證：把故障原因、維修範圍、保固、替代方案與中斷影響放在同一張證據表比較。"
+            : values.condition === "效能、耗能或運轉表現有可觀察變化"
+              ? "建立比較：先記錄可重現現象、取得適當檢查，再更新維修與替代報價。"
+              : remaining > 2
+                ? "持續監測：目前回報正常，保留複查日與真實紀錄；規劃年限不是故障預測。"
+                : "到期複查：家庭自訂的規劃年限接近或已超過，現在更新條件與報價，但不能只靠年齡決定汰換。";
+      const ratio = replacement > 0
+        ? `${new Intl.NumberFormat("zh-TW", { maximumFractionDigits: 1 }).format((repair / replacement) * 100)}%`
+        : "無法計算（尚無大於 0 的替代方案報價）";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      return `${values.name.trim()}｜家電汰換查證卡\n設備辨識：${values.brandModel.trim()}\n已知日期：${formatter.format(start)}\n日期依據：${values.dateBasis}\n截至本次產生時的日曆年齡：約 ${ageYears.toFixed(1)} 年\n家庭自訂規劃年限：${planningYears} 年\n距規劃年限：${remaining >= 0 ? `約剩 ${remaining.toFixed(1)} 年` : `約超過 ${Math.abs(remaining).toFixed(1)} 年`}\n目前狀況：${values.condition}\n判讀：${status}\n下次人工複查：${formatter.format(review)}\n\n${lines("本次觀察", observations)}\n\n書面維修估價：${moneyFor(repair, "TWD")}\n替代方案書面報價：${moneyFor(replacement, "TWD")}\n維修估價相對於目前替代報價：${ratio}\n來源：${values.quoteSource.trim()}\n\n${lines("決定前逐項補證", [
+        "核對品牌、完整型號、批號／序號與標準檢驗局召回或商品安全資訊",
+        "由說明書、合格服務或可重現觀察確認問題，不以網路症狀清單自行診斷",
+        "確認維修估價包含的工作、零件、稅費、保固與未包含項目",
+        "量測安裝尺寸、門向、電壓、給排水、瓦斯、排氣或其他實際連接條件",
+        "比較替代方案的完整交付、拆除、安裝與必要改善成本，不只看裸機售價",
+        "查核目前適用的節能標章或能源效率資料，並依家庭實際使用情況解讀",
+        "記錄停機對食物保存、洗衣、冷房、熱水或照護工作的實際影響與備援",
+      ].map((item) => `[ ] ${item}`))}\n\n金額比例只是把兩份目前輸入放在同一尺度，不是修或換的門檻；年齡與家庭規劃年限也都不是剩餘壽命。遇焦味、冒煙、漏電、瓦斯、異常高溫、召回或其他安全風險時，先依官方與合格人員指示停用、隔離風險或求助，不要等待下次複查。`;
+    },
+  },
+  "room-inventory-generator": {
+    intro:
+      "一次完成一個實際房間：先按區帶走一遍，再按物品類別補證據。它不估價、不判定承保，也不把整個住家壓成一張通用清單。",
+    fields: [
+      {
+        name: "roomType",
+        label: "房間類型",
+        type: "select",
+        options: ["客廳", "廚房", "臥室", "浴室", "洗衣區", "書房", "陽台", "車庫／儲藏室", "機電／設備區", "其他"],
+      },
+      text("roomLabel", "這個房間的辨識名稱", "使用室內標籤即可，不必填完整地址。", "主要廚房"),
+      {
+        name: "purpose",
+        label: "本次盤點用途",
+        type: "select",
+        options: ["日常資產與保固管理", "搬家或住宅點交", "保險資料準備", "災後損失佐證準備"],
+      },
+      { name: "reviewed", label: "本次盤點日期", type: "date" },
+      {
+        name: "zones",
+        label: "房間內的實際區帶",
+        type: "textarea",
+        help: "每行一區，最多 10 區；依走動順序寫，避免重複或漏掉櫃內。",
+        value: "入口與門邊\n左側檯面與上櫃\n水槽與下櫃\n主要家電區\n餐具與食品收納",
+      },
+      {
+        name: "custom",
+        label: "這個家庭才有的物品類別",
+        type: "textarea",
+        help: "每行或逗號分隔，最多 12 類；例如咖啡器材、縫紉設備或樂器。",
+        value: "咖啡器材\n鑄鐵鍋與高單價鍋具",
+      },
+      text("evidenceLocation", "照片與原始文件的安全位置", "只寫位置索引，不要填密碼或公開連結。", "家庭文件／住宅財物／主要廚房"),
+    ],
+    run: (values) => {
+      const reviewed = date(values.reviewed);
+      const zones = uniqueList(values.zones);
+      const custom = uniqueList(values.custom);
+      if (!values.roomLabel.trim()) return "請填寫這個房間的辨識名稱。";
+      if (!reviewed) return "請輸入有效的本次盤點日期。";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (reviewed.getTime() > today.getTime()) return "本次盤點日期不能晚於今天。";
+      if (zones.length === 0) return "請至少輸入一個房間內的實際區帶。";
+      if (zones.length > 10) return "一個房間最多整理 10 個區帶；範圍太大時請拆成兩個盤點單位。";
+      if (custom.length > 12) return "家庭自訂物品類別一次最多 12 類。";
+      if (!values.evidenceLocation.trim()) return "請填寫照片與原始文件的安全位置索引。";
+      const shareable = [values.roomLabel, values.zones, values.custom, values.evidenceLocation].join("\n");
+      if (/密碼|驗證碼|門禁碼|解鎖碼|保全碼|password|pin\s*[:：]/i.test(shareable))
+        return "偵測到可能的密碼或門禁資訊。房間清冊只應記錄證據位置，不要放入任何存取憑證。";
+      const base = values.roomType === "其他"
+        ? ["主要家具與固定配件", "電子、電器與有型號的設備", "有保固、單據或較高價值的物品", "需要照片或特徵才能辨認的其他物品"]
+        : zhTwInventoryAreas[values.roomType] || [];
+      const categories = [...base, ...custom].filter(
+        (item, index, all) => all.findIndex((candidate) => candidate.toLocaleLowerCase("zh-TW") === item.toLocaleLowerCase("zh-TW")) === index,
+      );
+      const purposeEvidence: Record<string, string[]> = {
+        "日常資產與保固管理": ["品牌、型號、序號或其他辨識", "購買／安裝日期及依據", "收據、保固與維修紀錄位置", "目前狀況與下次複查日"],
+        "搬家或住宅點交": ["盤點前所在區帶與數量", "搬運前狀況照片及日期", "箱號或搬入後預定位置", "缺件、損傷與雙方確認紀錄"],
+        "保險資料準備": ["可辨識物品、數量與所在位置", "品牌型號、取得日期及原始憑證", "能看出整體與細節的日期化照片", "實際保單要求的其他資料"],
+        "災後損失佐證準備": ["先確保現場可安全進入並依官方指示保存跡證", "事故後照片、位置與可辨識物品", "損失清單及取得／修復相關憑證", "消防、保險、稅務或其他主管機關要求的個案文件"],
+      };
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      return `${values.roomLabel.trim()}｜單一房間盤點工作表\n房間類型：${values.roomType}\n用途：${values.purpose}\n盤點日期：${formatter.format(reviewed)}\n證據位置索引：${values.evidenceLocation.trim()}\n\n${lines("第一輪：依實際走動順序完成區帶", zones.map((zone, index) => `[ ] ${index + 1}. ${zone}｜已拍整體照：＿＿｜發現未歸類物品：＿＿`))}\n\n${lines("第二輪：依物品類別補查", categories.map((item) => `[ ] ${item}｜實際項目數：＿＿｜需完整建檔的項目：＿＿`))}\n\n${lines(`本次「${values.purpose}」至少核對`, purposeEvidence[values.purpose].map((item) => `[ ] ${item}`))}\n\n每個值得完整建檔的實際物品補上：清楚名稱、房間與區帶、數量、品牌／型號／序號（如適用）、取得或安裝日期及依據、照片日期、單據／保固位置、目前狀況與最後複查日。先拍房間整體位置，再拍識別細節；照片不要帶入證件、信件、螢幕、鑰匙齒形或鄰居資訊。\n\n這份結果只整理一個房間，不會讀取 App 既有資產、不會估算現值或重置成本，也不會證明物品所有權、承保範圍或可理賠金額。真正投保、點交、稅務或災損用途，請依實際契約、保單與主管機關要求補件。`;
+    },
+  },
+  "warranty-checklist-generator": {
+    intro:
+      "把商品身分、書面保證、起算依據、購買證明、服務窗口與人工複查串成可追溯資料鏈。它不假設登錄是保固成立要件。",
+    fields: [
+      text("item", "商品或設備", "名稱要能和發票、保固與維修紀錄對得起來。", "客廳冷氣"),
+      text("model", "品牌、型號與序號索引", "序號可存於私人設備紀錄，這裡只需能找到。", "品牌／型號；序號見設備紀錄"),
+      text("seller", "銷售者、安裝者或經銷商", "依實際交易填寫；安裝者不同時可一併註明。", "銷售門市；安裝服務商"),
+      { name: "transaction", label: "交易日期", type: "date" },
+      {
+        name: "startBasis",
+        label: "書面保固記載的起算方式",
+        type: "select",
+        options: ["自交易日起算", "自交付日起算", "自安裝／完工日起算", "自啟用或登錄日起算", "其他書面約定"],
+      },
+      { name: "start", label: "依書面內容確認的起算日", type: "date" },
+      text("termSource", "保證內容、期間與來源", "寫文件名稱、版本或頁次，不要只寫『原廠保固』。", "保證書第 2 頁：零件與工資範圍；期間另見同頁"),
+      text("proofLocation", "交易與保固證明位置", "索引發票／收據、付款證明、保證書、交付或安裝單；不要輸入密碼或完整卡號。", "家庭文件／家電與保固／客廳冷氣"),
+      {
+        name: "registration",
+        label: "產品登錄要求的查核結果",
+        type: "select",
+        options: ["書面內容未要求登錄", "書面內容要求登錄且已完成", "書面內容要求登錄但尚未完成", "尚未查明是否需要登錄"],
+      },
+      text("support", "已核對的申請服務管道", "使用保證書、官方網站或契約上的聯絡資訊。", "保證書所列客服電話與線上申請頁"),
+      text("owner", "家庭複查負責角色", "可填角色，不必填真名。", "家庭設備負責人"),
+      { name: "review", label: "下次人工複查日期", type: "date" },
+    ],
+    run: (values) => {
+      const transaction = date(values.transaction);
+      const start = date(values.start);
+      const review = date(values.review);
+      if (!values.item.trim()) return "請填寫商品或設備名稱。";
+      if (!values.model.trim()) return "請填寫品牌、型號與序號索引。";
+      if (!values.seller.trim()) return "請填寫銷售者、安裝者或經銷商。";
+      if (!transaction) return "請輸入有效的交易日期。";
+      if (!start) return "請輸入依書面內容確認的有效起算日。";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (transaction.getTime() > today.getTime() || start.getTime() > today.getTime())
+        return "交易日期與已確認起算日都不能晚於今天；尚未發生的交付或安裝請先列為待辦。";
+      if (!values.termSource.trim()) return "請填寫保證內容、期間與可回到原文的來源。";
+      if (!values.proofLocation.trim()) return "請填寫交易與保固證明的位置索引。";
+      if (!values.support.trim()) return "請填寫已從書面或官方來源核對的服務管道。";
+      if (!values.owner.trim()) return "請填寫家庭複查負責角色。";
+      if (!review) return "請輸入有效的下次人工複查日期。";
+      if (review.getTime() < start.getTime()) return "下次人工複查日期不能早於已確認的保固起算日。";
+      const shareable = [values.model, values.proofLocation, values.support].join("\n");
+      if (/密碼|驗證碼|門禁碼|完整卡號|password|pin\s*[:：]/i.test(shareable))
+        return "偵測到可能的密碼、驗證碼或完整卡號。保固索引只寫安全位置，不要複製存取憑證。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const registrationNote =
+        values.registration === "書面內容要求登錄但尚未完成"
+          ? "待辦：回到實際書面條款確認期限、資料範圍與官方登錄管道；不要用第三方表單代替。"
+          : values.registration === "尚未查明是否需要登錄"
+            ? "待查：先讀書面保證與官方說明，不要假設每項商品都必須登錄。"
+            : "已記錄目前查核結果；仍保留原始書面內容與完成證據。";
+      return `${values.item.trim()}｜保固資料查核卡\n設備辨識：${values.model.trim()}\n銷售／安裝來源：${values.seller.trim()}\n交易日期：${formatter.format(transaction)}\n書面起算方式：${values.startBasis}\n已確認起算日：${formatter.format(start)}\n保證內容與期間來源：${values.termSource.trim()}\n文件位置：${values.proofLocation.trim()}\n產品登錄：${values.registration}\n${registrationNote}\n服務管道：${values.support.trim()}\n負責角色：${values.owner.trim()}\n下次人工複查：${formatter.format(review)}\n\n${lines("到貨／完工時核對", [
+        "商品名稱、數量、品牌、型號、序號或批號與實物一致",
+        "銷售者、安裝者、交易、交付與安裝日期可由文件回查",
+        "書面保證載明內容、期間、起算方法及可識別的相關業者資料",
+        "外觀、配件、安裝與可安全測試項目完成驗收，異常留下日期化證據",
+      ].map((item) => `[ ] ${item}`))}\n\n${lines("保存與申請時核對", [
+        "保留可辨識交易的發票／收據、品項明細與必要付款證明，不保存完整卡號",
+        "保存書面保證、交付／安裝／驗收、登錄完成及歷次服務紀錄",
+        "申請前重讀涵蓋範圍、排除事項、通知方式與應備資料，不只看廣告標題",
+        "每次聯絡記錄日期、案件編號、對方回覆、送修物品與收件證明",
+        "完成後核對處理內容、返還狀況、費用、後續保證與下次複查依據",
+      ].map((item) => `[ ] ${item}`))}\n\n這張卡不計算到期日，也不判定法律責任或個案一定有免費維修權利。需要日期推算時，請把已確認的起算日與書面月數另交給保固到期計算器；若業者說法與文件不一致，保存往來並查詢行政院消保會或適當專業管道。`;
+    },
+  },
   "recurring-chore-planner": {
     intro:
       "依名單順序輪流分配例行家事，產生一份可以試行與複查的初稿。它能平均分配項目數，不能自動判斷每件事的工時、體力或照護負擔。",

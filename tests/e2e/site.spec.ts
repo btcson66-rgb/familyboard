@@ -88,6 +88,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
     "/zh-tw/tools/home-handoff-summary-generator/",
+    "/zh-tw/tools/appliance-replacement-planner/",
+    "/zh-tw/tools/room-inventory-generator/",
+    "/zh-tw/tools/warranty-checklist-generator/",
     "/zh-tw/tools/recurring-chore-planner/",
     "/zh-tw/tools/home-inventory-checklist-generator/",
     "/zh-tw/tools/household-document-index-generator/",
@@ -401,6 +404,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       heading: "家庭交接摘要產生器",
     },
     {
+      route: "/zh-tw/tools/appliance-replacement-planner/",
+      alternate: "/tools/appliance-replacement-planner/",
+      heading: "家電汰換評估表",
+    },
+    {
+      route: "/zh-tw/tools/room-inventory-generator/",
+      alternate: "/tools/room-inventory-generator/",
+      heading: "房間物品清冊產生器",
+    },
+    {
+      route: "/zh-tw/tools/warranty-checklist-generator/",
+      alternate: "/tools/warranty-checklist-generator/",
+      heading: "保固資料檢查表",
+    },
+    {
       route: "/zh-tw/tools/recurring-chore-planner/",
       alternate: "/tools/recurring-chore-planner/",
       heading: "家庭家事輪值表產生器",
@@ -593,6 +611,50 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不應納入一般交接摘要",
   );
 
+  await page.goto("/zh-tw/tools/appliance-replacement-planner/");
+  await page.getByLabel("已知購買、交付或安裝日期").fill("2020-08-22");
+  await page.getByLabel("下次人工複查日期").fill("2026-11-22");
+  await page
+    .getByLabel("目前查核狀況")
+    .selectOption("已有書面維修估價待評估");
+  await page
+    .getByRole("spinbutton", { name: "目前書面維修估價（新台幣，可填 0）" })
+    .fill("6000");
+  await page
+    .getByRole("spinbutton", { name: "目前替代方案書面報價（新台幣，可填 0）" })
+    .fill("30000");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("家電汰換查證卡");
+  await expect(page.locator(".result")).toContainText("20%");
+  await expect(page.locator(".result")).toContainText("金額比例只是把兩份目前輸入");
+  await page
+    .getByLabel("目前查核狀況")
+    .selectOption("有安全警示、召回或應停用跡象");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("安全優先");
+
+  await page.goto("/zh-tw/tools/room-inventory-generator/");
+  await page.getByLabel("房間類型").selectOption("廚房");
+  await page.getByLabel("本次盤點用途").selectOption("保險資料準備");
+  await page.getByLabel("本次盤點日期").fill("2026-08-22");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("單一房間盤點工作表");
+  await expect(page.locator(".result")).toContainText("第一輪：依實際走動順序完成區帶");
+  await expect(page.locator(".result")).toContainText("實際保單要求的其他資料");
+  await expect(page.locator(".result")).toContainText("咖啡器材");
+
+  await page.goto("/zh-tw/tools/warranty-checklist-generator/");
+  await page.getByLabel("交易日期").fill("2026-08-01");
+  await page.getByLabel("依書面內容確認的起算日").fill("2026-08-12");
+  await page.getByLabel("下次人工複查日期").fill("2027-07-12");
+  await page
+    .getByLabel("產品登錄要求的查核結果")
+    .selectOption("書面內容要求登錄但尚未完成");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("保固資料查核卡");
+  await expect(page.locator(".result")).toContainText("待辦：回到實際書面條款確認期限");
+  await expect(page.locator(".result")).toContainText("不計算到期日");
+
   await page.goto("/zh-tw/tools/recurring-chore-planner/");
   await page.getByLabel("下次一起複查日期").fill("2026-09-05");
   await page
@@ -680,6 +742,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/home-handoff-summary-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/appliance-replacement-planner/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/room-inventory-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/warranty-checklist-generator/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/recurring-chore-planner/",

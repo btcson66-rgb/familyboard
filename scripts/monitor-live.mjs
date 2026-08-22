@@ -55,6 +55,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-handoff-summary-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/appliance-replacement-planner/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/room-inventory-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/warranty-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/recurring-chore-planner/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-inventory-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-document-index-generator/</loc>",
@@ -254,6 +257,33 @@ const checks = [
       'hreflang="en"',
       "本次明確納入的資料類別",
       "接受確認不是簽名而已",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/appliance-replacement-planner/",
+    require: [
+      "家電汰換評估表",
+      'hreflang="en"',
+      "家庭自訂規劃年限",
+      "維修估價要能回答",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/room-inventory-generator/",
+    require: [
+      "房間物品清冊產生器",
+      'hreflang="en"',
+      "房間內的實際區帶",
+      "用區帶建立不漏掃的路線",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/warranty-checklist-generator/",
+    require: [
+      "保固資料檢查表",
+      'hreflang="en"',
+      "書面保固記載的起算方式",
+      "保固不是只存一張發票",
     ],
   },
   {

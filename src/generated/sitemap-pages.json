@@ -1265,7 +1265,7 @@
   },
   {
     "route": "/tools/appliance-replacement-planner/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/appliance-replacement-planner/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1321,7 +1321,7 @@
   },
   {
     "route": "/tools/room-inventory-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/room-inventory-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1393,7 +1393,7 @@
   },
   {
     "route": "/tools/warranty-checklist-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/warranty-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1749,6 +1749,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/appliance-replacement-planner/",
+    "alternateRoute": "/tools/appliance-replacement-planner/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/contact/",
     "alternateRoute": "/contact/",
     "indexable": true,
@@ -2008,6 +2015,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/room-inventory-generator/",
+    "alternateRoute": "/tools/room-inventory-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/security/",
     "alternateRoute": "/security/",
     "indexable": true,
@@ -2024,6 +2038,13 @@
   {
     "route": "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "alternateRoute": "/tools/vacation-shutdown-checklist-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/warranty-checklist-generator/",
+    "alternateRoute": "/tools/warranty-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
