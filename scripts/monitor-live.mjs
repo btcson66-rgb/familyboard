@@ -54,6 +54,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/move-out-condition-record-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/move-out-condition-record-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/move-out-home-records/</loc>",
+      "<loc>https://familyboard.win/tools/home-emergency-drill-record-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-emergency-drill-record-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-evacuation-information/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -131,6 +134,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Write an observation, not a verdict",
       "unsigned working record",
+    ],
+  },
+  {
+    path: "/tools/home-emergency-drill-record-generator/",
+    require: [
+      "Home Emergency Drill Record Generator",
+      'hreflang="zh-TW"',
+      "Four statuses prevent false completion",
+      "not a building inspection",
     ],
   },
   {
@@ -248,6 +260,24 @@ const checks = [
       'hreflang="en"',
       "屋況觀察",
       "押金與費用不能從屋況欄自動換算",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-emergency-drill-record-generator/",
+    require: [
+      "家庭防災演練紀錄表產生器",
+      'hreflang="en"',
+      "四種狀態是工作流程",
+      "不是住宅安全證明",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-evacuation-information/",
+    require: [
+      "家庭避難計畫怎麼做",
+      'hreflang="en"',
+      "避難收容處所是動態服務",
+      "全民防災 e 點通",
     ],
   },
   {

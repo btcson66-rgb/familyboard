@@ -945,7 +945,7 @@
   },
   {
     "route": "/guides/home-evacuation-information/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-evacuation-information/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1608,6 +1608,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/home-emergency-drill-record-generator/",
+    "alternateRoute": "/zh-tw/tools/home-emergency-drill-record-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -1852,6 +1860,20 @@
     "alternateRoute": "/features/home-dashboard/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/home-emergency-drill-record-generator/",
+    "alternateRoute": "/tools/home-emergency-drill-record-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-evacuation-information/",
+    "alternateRoute": "/guides/home-evacuation-information/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {

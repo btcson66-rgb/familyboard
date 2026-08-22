@@ -69,6 +69,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/home-maintenance-schedule/",
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
+    "/tools/home-emergency-drill-record-generator/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -86,6 +87,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-annual-review-generator/",
     "/zh-tw/tools/move-in-checklist-generator/",
     "/zh-tw/tools/move-out-condition-record-generator/",
+    "/zh-tw/tools/home-emergency-drill-record-generator/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -106,6 +108,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/terms/",
     "/zh-tw/guides/digital-home-inventory-backup/",
     "/zh-tw/guides/move-out-home-records/",
+    "/zh-tw/guides/home-evacuation-information/",
     "/zh-tw/guides/home-maintenance-log/",
     "/zh-tw/guides/appliance-replacement-planning/",
     "/zh-tw/guides/room-by-room-home-inventory/",
@@ -185,6 +188,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "清潔排程教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/cleaning-schedule/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭防災演練紀錄表" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/home-emergency-drill-record-generator/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭避難計畫教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/home-evacuation-information/");
 
   for (const localized of [
     {
@@ -241,6 +250,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/move-out-home-records/",
       alternate: "/guides/move-out-home-records/",
       heading: "退租點交注意事項：把搬離住宅變成可核對、可結案的流程",
+    },
+    {
+      route: "/zh-tw/guides/home-evacuation-information/",
+      alternate: "/guides/home-evacuation-information/",
+      heading: "家庭避難計畫怎麼做：先約定集合與聯絡，再用官方資訊更新路線",
     },
     {
       route: "/zh-tw/features/household-handoff/",
@@ -425,6 +439,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/move-out-condition-record-generator/",
       alternate: "/tools/move-out-condition-record-generator/",
       heading: "退租點交紀錄表產生器",
+    },
+    {
+      route: "/zh-tw/tools/home-emergency-drill-record-generator/",
+      alternate: "/tools/home-emergency-drill-record-generator/",
+      heading: "家庭防災演練紀錄表產生器",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -639,6 +658,36 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText(
     "偵測到可能的密碼、門禁碼、驗證碼",
+  );
+
+  await page.goto("/tools/home-emergency-drill-record-generator/");
+  await page.getByLabel("Exercise date").fill("2026-08-23");
+  await page.getByLabel("Next review or repeat date").fill("2026-09-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Needs follow-up 1");
+  await expect(page.locator(".result")).toContainText("Not tested 1");
+  await expect(page.locator(".result")).toContainText("not a safety certification");
+  await page
+    .getByRole("spinbutton", { name: "Observed exercise duration in minutes" })
+    .fill("0");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "1 to 240 whole minutes",
+  );
+
+  await page.goto("/zh-tw/tools/home-emergency-drill-record-generator/");
+  await page.getByLabel("實際演練日期").fill("2026-08-23");
+  await page.getByLabel("下次複查或重做日期").fill("2026-09-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("需要追蹤 1 筆");
+  await expect(page.locator(".result")).toContainText("未測試 1 筆");
+  await expect(page.locator(".result")).toContainText("不是住宅安全認證");
+  await page
+    .getByLabel("失聯、通訊與會合查核")
+    .fill("回家會合 | 門禁碼 1234 | 電話 | 未測試");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "偵測到可能的密碼、門禁碼、金融識別資料",
   );
 
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
@@ -870,6 +919,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/move-out-home-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/home-emergency-drill-record-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/home-emergency-drill-record-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/home-evacuation-information/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/",

@@ -1504,6 +1504,14 @@
     "headings": "Move-out condition report generator What the generator records Write an observation, not a verdict Four statuses that preserve uncertainty Count keys and access items separately Capture readings without pretending to settle the bill Date rules prevent a false inspection history A worked example Use the report during a real walkthrough Finish with controlled copies and a recoverable backup Privacy and legal boundary"
   },
   {
+    "title": "Home Emergency Drill Record Generator | Practice, Observe and Improve",
+    "description": "Create a private household emergency drill record with dated observations, support roles, communication checks, stopped items and assigned follow-up.",
+    "route": "/tools/home-emergency-drill-record-generator/",
+    "cluster": "tools",
+    "keywords": "home emergency drill record generator",
+    "headings": "Home emergency drill record generator Begin with the plan and authority, not the timer Announce the exercise and define what is simulated Choose one exercise purpose at a time Record participants as context, not signatures Five columns turn a memory into an observation Four statuses prevent false completion Test support roles without copying private medical details Separate communication from precise location disclosure A worked record that keeps an untested item visible Renters and multi-unit residents need building context Close the loop instead of filing the sheet Privacy and real-emergency boundary"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

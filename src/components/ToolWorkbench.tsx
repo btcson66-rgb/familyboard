@@ -670,6 +670,128 @@ const definitions: Record<string, Definition> = {
       return `${values.home.trim()} — move-out condition record\nStage: ${values.stage}\nInspection: ${formatter.format(inspected)}\nHandover: ${formatter.format(handover)}\nNext follow-up: ${formatter.format(followUp)}\nCompared against: ${values.source.trim()}\nParticipants / roles: ${participants.join("; ")}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\n${lines("Condition observations", conditionRows.map((row) => `${row.parts[0]} — observed: ${row.parts[1]} — evidence: ${row.parts[2]} — next action: ${row.parts[3]} — status: ${row.parts[4]}`))}\n\n${lines("Keys and access items", accessRows.map((row) => `${row.parts[0]} — count ${row.parts[1]} — ${row.parts[2]} — evidence: ${row.parts[3]}`))}\n\n${lines("Meters and services", meterRows.map((row) => `${row.parts[0]} — ${row.parts[1]} ${row.parts[2]} — evidence: ${row.parts[3]}`))}\n\nProtected record location: ${values.storage.trim()}\n\nClose-out check: preserve the original files, record disagreements instead of overwriting them, identify who accepted each next action, and give each intended party the agreed copy. This browser output is an unsigned working record—not proof of cause, liability, payment, deposit deductions, legal notice or final agreement. Your lease, local law and qualified advice control.`;
     },
   },
+  "home-emergency-drill-record-generator": {
+    intro:
+      "Record what a household actually practiced, where the exercise stopped, and who owns each improvement. Use a calm announced exercise based on current local official guidance; this tool does not direct a real emergency or certify that a home is safe.",
+    fields: [
+      text("household", "Household label", "Use a private nickname, not a full street address.", "Maple household"),
+      {
+        name: "drillType",
+        label: "Exercise type",
+        type: "select",
+        options: [
+          "Whole-home evacuation walk-through",
+          "Home fire escape practice",
+          "Earthquake response and post-shaking assembly review",
+          "Communication and reunion exercise",
+          "Accessibility, caregiver and pet support check",
+        ],
+      },
+      { name: "practiced", label: "Exercise date", type: "date" },
+      {
+        name: "minutes",
+        label: "Observed exercise duration in minutes",
+        type: "number",
+        value: "8",
+        help: "Record elapsed time only as an observation. It is not a pass/fail score.",
+      },
+      text("guidance", "Official plan or guidance reference", "Name the current local authority page, building plan or household plan version used for this exercise.", "Local emergency-management guidance checked 2026-08-23; household plan v3"),
+      text("scope", "Exercise goal and announced boundaries", "State what was practiced and what was intentionally simulated or excluded.", "Walk the planned exits, meet at the household meeting reference, and test the backup contact without creating a real alarm"),
+      {
+        name: "participants",
+        label: "Participants or roles",
+        type: "textarea",
+        help: "One per line or comma separated; 1–12 entries. Use only the detail needed for this household record.",
+        value: "Adult 1\nAdult 2\nChild participant\nPet support role",
+      },
+      {
+        name: "observations",
+        label: "Exercise observations",
+        type: "textarea",
+        help: "One line per phase: phase | planned check | observed result | improvement and owner | Observed as planned, Needs follow-up, Not tested, or Stopped for safety. Maximum 12 lines.",
+        value: "Start and awareness | Everyone recognizes the announced start | One participant needed a second prompt | Adult 1: review the agreed signal before the next exercise | Needs follow-up\nExit walk-through | Planned exits can be reached without moving stored items | Primary path clear; alternate window not tested | Adult 2: verify alternate option with local guidance | Not tested\nMeeting and count | Everyone goes to the household meeting reference and checks in | All participants accounted for at the practice point | Adult 1: record completion | Observed as planned",
+      },
+      {
+        name: "support",
+        label: "People, caregiver and pet support checks",
+        type: "textarea",
+        help: "One line per need: person/pet/support scenario | primary role | backup role | observed result. Maximum 8 lines; do not enter diagnoses or medication details.",
+        value: "Child participant | Adult 1 | Adult 2 | Both roles could explain the agreed support\nPet carrier | Adult 2 | Adult 1 | Carrier was retrievable without a key or code",
+      },
+      {
+        name: "communications",
+        label: "Communication and reunion checks",
+        type: "textarea",
+        help: "One line per scenario: scenario | primary method or meeting reference | backup | observed result. Maximum 8 lines; avoid publishing precise vulnerable-person locations.",
+        value: "Household separated locally | Family group text | Out-of-area contact | Test message acknowledged by the intended participants\nHome cannot be used | Primary meeting reference | Alternate meeting reference from protected plan | Both references could be found in the offline card",
+      },
+      { name: "followUp", label: "Next review or repeat date", type: "date" },
+      text("storage", "Protected record location", "Write a folder or envelope label, not a password, passcode or exact public location.", "Household records / emergency exercises / 2026"),
+    ],
+    run: (values) => {
+      const practiced = date(values.practiced);
+      const followUp = date(values.followUp);
+      if (!values.household.trim()) return "Enter a household label so the exported record can be identified.";
+      if (!practiced) return "Enter a valid exercise date.";
+      if (!followUp) return "Enter a valid next review or repeat date.";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (practiced.getTime() > today.getTime())
+        return "The exercise date cannot be in the future. Record the exercise after it actually occurs.";
+      if (followUp.getTime() <= practiced.getTime())
+        return "The next review or repeat date must be later than the exercise date.";
+      const minutes = Number(values.minutes);
+      if (!Number.isInteger(minutes) || minutes < 1 || minutes > 240)
+        return "Enter an observed duration from 1 to 240 whole minutes.";
+      if (!values.guidance.trim()) return "Add the official plan or guidance reference used for this exercise.";
+      if (!values.scope.trim()) return "Describe the exercise goal and announced boundaries.";
+      if (!values.storage.trim()) return "Add a protected record location so the exercise evidence can be found again.";
+      const participants = uniqueList(values.participants);
+      if (participants.length === 0) return "Add at least one participant or role.";
+      if (participants.length > 12) return "Use no more than 12 participants or roles in one record.";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const observations = parseRows(values.observations);
+      if (observations.length === 0) return "Add at least one exercise observation.";
+      if (observations.length > 12) return "Use no more than 12 exercise-observation rows.";
+      const invalidObservations = observations.filter((row) => row.parts.length !== 5 || row.parts.some((part) => !part));
+      if (invalidObservations.length)
+        return `Observation line ${invalidObservations.map((row) => row.line).join(", ")} must contain all 5 pipe-separated fields.`;
+      const validStatuses = new Set(["observed as planned", "needs follow-up", "not tested", "stopped for safety"]);
+      const invalidStatuses = observations.filter((row) => !validStatuses.has(row.parts[4].toLocaleLowerCase("en")));
+      if (invalidStatuses.length)
+        return `Observation line ${invalidStatuses.map((row) => row.line).join(", ")} must end with Observed as planned, Needs follow-up, Not tested, or Stopped for safety.`;
+      const phaseNames = observations.map((row) => row.parts[0].toLocaleLowerCase("en"));
+      if (new Set(phaseNames).size !== phaseNames.length)
+        return "Each exercise phase must appear only once; combine observations for the same phase.";
+      const supportRows = parseRows(values.support);
+      if (supportRows.length > 8) return "Use no more than 8 people, caregiver or pet support rows.";
+      const invalidSupport = supportRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidSupport.length)
+        return `Support line ${invalidSupport.map((row) => row.line).join(", ")} must contain all 4 pipe-separated fields.`;
+      const communicationRows = parseRows(values.communications);
+      if (communicationRows.length === 0) return "Add at least one communication or reunion check.";
+      if (communicationRows.length > 8) return "Use no more than 8 communication or reunion rows.";
+      const invalidCommunications = communicationRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidCommunications.length)
+        return `Communication line ${invalidCommunications.map((row) => row.line).join(", ")} must contain all 4 pipe-separated fields.`;
+      const shareable = [values.guidance, values.scope, values.participants, values.observations, values.support, values.communications, values.storage].join("\n");
+      if (/password|passcode|security code|access code|alarm code|door code|full card number|bank account|social security|medical record|diagnosis|medication dose|\bssn\b|\bpin\s*[:=]/i.test(shareable))
+        return "A possible password, access code, financial identifier or unnecessary medical detail was detected. Replace it with a protected-location or authoritative-source reference.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = ["Observed as planned", "Needs follow-up", "Not tested", "Stopped for safety"].map((status) => ({
+        status,
+        count: observations.filter((row) => row.parts[4].toLocaleLowerCase("en") === status.toLocaleLowerCase("en")).length,
+      })).filter((item) => item.count > 0);
+      const supportOutput = supportRows.length
+        ? supportRows.map((row) => `${row.parts[0]} — primary: ${row.parts[1]} — backup: ${row.parts[2]} — observed: ${row.parts[3]}`)
+        : ["No separate support scenario was recorded; confirm that this reflects the household rather than an omitted need."];
+      return `${values.household.trim()} — household emergency exercise record\nExercise type: ${values.drillType}\nExercise date: ${formatter.format(practiced)}\nObserved duration: ${minutes} minutes (observation only, not a pass/fail score)\nOfficial plan / guidance reference: ${values.guidance.trim()}\nGoal and announced boundaries: ${values.scope.trim()}\nParticipants / roles: ${participants.join("; ")}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\nNext review or repeat: ${formatter.format(followUp)}\n\n${lines("Exercise observations", observations.map((row) => `${row.parts[0]} — planned check: ${row.parts[1]} — observed: ${row.parts[2]} — improvement: ${row.parts[3]} — status: ${row.parts[4]}`))}\n\n${lines("People, caregiver and pet support", supportOutput)}\n\n${lines("Communication and reunion checks", communicationRows.map((row) => `${row.parts[0]} — primary: ${row.parts[1]} — backup: ${row.parts[2]} — observed: ${row.parts[3]}`))}\n\nProtected record location: ${values.storage.trim()}\n\nClose-out check: assign every Needs follow-up, Not tested or Stopped for safety row to a named owner and repeat only after the plan or environment has been corrected. This output records an announced practice; it is not a safety certification, building approval, medical plan or real-time emergency instruction. In an actual event, current official alerts, emergency services and on-scene conditions take priority.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -1651,6 +1773,128 @@ const zhTwDefinitions: Record<string, Definition> = {
         count: conditionRows.filter((row) => row.parts[4] === status).length,
       })).filter((item) => item.count > 0);
       return `${values.home.trim()}｜退租點交屋況紀錄\n紀錄階段：${values.stage}\n實際檢查：${formatter.format(inspected)}\n預定／實際點交：${formatter.format(handover)}\n下次追蹤：${formatter.format(followUp)}\n對照依據：${values.source.trim()}\n參與者／角色：${participants.join("、")}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n${lines("屋況觀察", conditionRows.map((row) => `${row.parts[0]}｜觀察：${row.parts[1]}｜證據：${row.parts[2]}｜後續：${row.parts[3]}｜狀態：${row.parts[4]}`))}\n\n${lines("鑰匙與門禁物品", accessRows.map((row) => `${row.parts[0]}｜${row.parts[1]} 件｜${row.parts[2]}｜證據：${row.parts[3]}`))}\n\n${lines("表計與服務狀態", meterRows.map((row) => `${row.parts[0]}｜${row.parts[1]} ${row.parts[2]}｜證據：${row.parts[3]}`))}\n\n受保護的紀錄位置：${values.storage.trim()}\n\n結案前查核：保存原始檔、歧見另行保留而非覆寫、每個後續動作都有負責角色，並讓應取得紀錄的一方拿到雙方同意的版本。這份瀏覽器輸出不是簽名、責任認定、押金計算、付款證明、正式通知或最終合意；仍應以實際契約、主管機關現行資料與個案專業意見為準。`;
+    },
+  },
+  "home-emergency-drill-record-generator": {
+    intro:
+      "記錄家庭實際演練過什麼、在哪裡卡住、哪些項目因安全停止，以及改善工作由誰負責。請依所在地最新官方資訊做事先告知的低風險演練；工具不會指揮真實災害，也不會認證住宅安全。",
+    fields: [
+      text("household", "家庭識別名稱", "使用家人看得懂的暱稱，不必輸入完整地址。", "我們家"),
+      {
+        name: "drillType",
+        label: "演練類型",
+        type: "select",
+        options: [
+          "全家避難動線走讀",
+          "住宅火災逃生演練",
+          "地震避難與震後集合演練",
+          "失聯通訊與會合演練",
+          "長者、兒少、照護與寵物支援演練",
+        ],
+      },
+      { name: "practiced", label: "實際演練日期", type: "date" },
+      {
+        name: "minutes",
+        label: "觀察到的演練分鐘數",
+        type: "number",
+        value: "8",
+        help: "只記實際經過時間，不把秒數或分鐘數當成安全及格標準。",
+      },
+      text("guidance", "本次核對的官方資訊或計畫版本", "寫消防署、地方政府、社區／大樓計畫或家庭防災計畫的名稱與核對日期。", "消防署家庭防災計畫資料，2026-08-23 核對；家庭計畫第 3 版"),
+      text("scope", "演練目標與事先告知的界線", "說明實際走讀什麼、哪些只模擬，以及哪些高風險動作不執行。", "走讀第一與替代方向、到家庭集合點代稱報到、測試備援聯絡；不製造真實火煙、不驚動鄰居、不操作危險設備"),
+      {
+        name: "participants",
+        label: "參與者或角色",
+        type: "textarea",
+        help: "每行或逗號分隔，1 至 12 位；只放這次紀錄所需的最少資料。",
+        value: "成人甲\n成人乙\n兒少參與者\n寵物支援角色",
+      },
+      {
+        name: "observations",
+        label: "演練觀察",
+        type: "textarea",
+        help: "每行格式：階段 | 原定查核 | 實際觀察 | 改善動作與負責角色 | 符合本次計畫、需要追蹤、未測試或因安全停止；最多 12 行。",
+        value: "開始與辨識 | 所有人知道事先約定的開始方式 | 一位參與者需要第二次提示 | 成人甲：下次演練前再核對開始方式 | 需要追蹤\n動線走讀 | 第一與替代方向不需移動雜物即可到達 | 第一方向順利，替代方向尚未走讀 | 成人乙：依官方與大樓資料查核後再測 | 未測試\n集合與點名 | 到家庭集合點代稱後完成點名 | 本次參與者都完成報到 | 成人甲：保存本次紀錄 | 符合本次計畫",
+      },
+      {
+        name: "support",
+        label: "人員、照護與寵物支援查核",
+        type: "textarea",
+        help: "每行格式：人員／寵物／支援情境 | 主要角色 | 備援角色 | 實際觀察；最多 8 行，不要填診斷、藥量或完整病歷。",
+        value: "兒少參與者 | 成人甲 | 成人乙 | 兩個角色都能說明本次約定支援\n寵物外出籠 | 成人乙 | 成人甲 | 外出籠置於家人可直接取用的位置",
+      },
+      {
+        name: "communications",
+        label: "失聯、通訊與會合查核",
+        type: "textarea",
+        help: "每行格式：情境 | 第一方法或地點代稱 | 替代方法 | 實際觀察；最多 8 行，不要把弱勢家人精確位置公開在分享稿。",
+        value: "家人在住家附近分散 | 家庭群組簡訊 | 外地聯絡人 | 測試訊息由預定參與者回覆\n住家無法使用 | 第一集合點代稱 | 受保護計畫中的替代集合點代稱 | 離線防災卡可找到兩個代稱",
+      },
+      { name: "followUp", label: "下次複查或重做日期", type: "date" },
+      text("storage", "受保護的演練紀錄位置", "只寫資料夾、信封或備份位置代稱，不要輸入密碼、門禁碼或可公開的精確位置。", "家庭文件／防災演練／2026"),
+    ],
+    run: (values) => {
+      const practiced = date(values.practiced);
+      const followUp = date(values.followUp);
+      if (!values.household.trim()) return "請填寫家庭識別名稱，讓匯出後的紀錄仍能辨識。";
+      if (!practiced) return "請輸入有效的實際演練日期。";
+      if (!followUp) return "請輸入有效的下次複查或重做日期。";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (practiced.getTime() > today.getTime())
+        return "實際演練日期不能晚於今天；請在演練真正發生後再建立完成紀錄。";
+      if (followUp.getTime() <= practiced.getTime())
+        return "下次複查或重做日期必須晚於實際演練日期。";
+      const minutes = Number(values.minutes);
+      if (!Number.isInteger(minutes) || minutes < 1 || minutes > 240)
+        return "觀察時間請輸入 1 到 240 的整數分鐘。";
+      if (!values.guidance.trim()) return "請填寫本次核對的官方資訊或計畫版本。";
+      if (!values.scope.trim()) return "請說明演練目標與事先告知的界線。";
+      if (!values.storage.trim()) return "請填寫受保護的演練紀錄位置。";
+      const participants = uniqueList(values.participants);
+      if (participants.length === 0) return "請至少輸入一位參與者或角色。";
+      if (participants.length > 12) return "一份紀錄最多列 12 位參與者或角色。";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const observations = parseRows(values.observations);
+      if (observations.length === 0) return "請至少輸入一筆演練觀察。";
+      if (observations.length > 12) return "一份紀錄最多整理 12 筆演練觀察。";
+      const invalidObservations = observations.filter((row) => row.parts.length !== 5 || row.parts.some((part) => !part));
+      if (invalidObservations.length)
+        return `演練觀察第 ${invalidObservations.map((row) => row.line).join("、")} 行必須完整填寫 5 個以直線分隔的欄位。`;
+      const validStatuses = new Set(["符合本次計畫", "需要追蹤", "未測試", "因安全停止"]);
+      const invalidStatuses = observations.filter((row) => !validStatuses.has(row.parts[4]));
+      if (invalidStatuses.length)
+        return `演練觀察第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須是「符合本次計畫、需要追蹤、未測試、因安全停止」之一。`;
+      const phaseNames = observations.map((row) => row.parts[0].toLocaleLowerCase("zh-TW"));
+      if (new Set(phaseNames).size !== phaseNames.length)
+        return "同一演練階段只能出現一次；請合併同階段的觀察。";
+      const supportRows = parseRows(values.support);
+      if (supportRows.length > 8) return "人員、照護與寵物支援最多 8 行。";
+      const invalidSupport = supportRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidSupport.length)
+        return `支援查核第 ${invalidSupport.map((row) => row.line).join("、")} 行必須完整填寫 4 個以直線分隔的欄位。`;
+      const communicationRows = parseRows(values.communications);
+      if (communicationRows.length === 0) return "請至少輸入一筆失聯、通訊或會合查核。";
+      if (communicationRows.length > 8) return "失聯、通訊與會合查核最多 8 行。";
+      const invalidCommunications = communicationRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidCommunications.length)
+        return `失聯／通訊第 ${invalidCommunications.map((row) => row.line).join("、")} 行必須完整填寫 4 個以直線分隔的欄位。`;
+      const shareable = [values.guidance, values.scope, values.participants, values.observations, values.support, values.communications, values.storage].join("\n");
+      if (/密碼|門禁碼|驗證碼|警報碼|完整(?:身分證|信用卡|銀行帳號|病歷)|診斷|藥物劑量|password|passcode|access code|alarm code|\bpin\s*[:：=]/i.test(shareable))
+        return "偵測到可能的密碼、門禁碼、金融識別資料或不必要醫療細節。請改寫成受保護位置或權威來源的索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = ["符合本次計畫", "需要追蹤", "未測試", "因安全停止"].map((status) => ({
+        status,
+        count: observations.filter((row) => row.parts[4] === status).length,
+      })).filter((item) => item.count > 0);
+      const supportOutput = supportRows.length
+        ? supportRows.map((row) => `${row.parts[0]}｜主要：${row.parts[1]}｜備援：${row.parts[2]}｜觀察：${row.parts[3]}`)
+        : ["本次未另外列支援情境；請確認這是家庭實況，而不是漏掉兒少、長者、身心障礙、照護或寵物需求。"];
+      return `${values.household.trim()}｜家庭緊急演練紀錄\n演練類型：${values.drillType}\n實際演練：${formatter.format(practiced)}\n觀察時間：${minutes} 分鐘（只記實況，不是安全及格分數）\n官方資訊／計畫版本：${values.guidance.trim()}\n目標與事先告知界線：${values.scope.trim()}\n參與者／角色：${participants.join("、")}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n下次複查或重做：${formatter.format(followUp)}\n\n${lines("演練觀察", observations.map((row) => `${row.parts[0]}｜原定查核：${row.parts[1]}｜實際觀察：${row.parts[2]}｜改善：${row.parts[3]}｜狀態：${row.parts[4]}`))}\n\n${lines("人員、照護與寵物支援", supportOutput)}\n\n${lines("失聯、通訊與會合查核", communicationRows.map((row) => `${row.parts[0]}｜第一方法：${row.parts[1]}｜替代：${row.parts[2]}｜觀察：${row.parts[3]}`))}\n\n受保護的演練紀錄位置：${values.storage.trim()}\n\n結案前查核：每一筆「需要追蹤、未測試、因安全停止」都要有負責角色，先修正計畫或環境，再安排重做。這份輸出只記錄事先告知的演練，不是住宅安全認證、建築許可、醫療計畫或真實災害指令；實際事件一律以最新官方警報、緊急服務與現場安全為優先。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

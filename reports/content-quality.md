@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T16:21:05.706Z
+Generated: 2026-08-22T16:44:22.666Z
 
 ## Summary
 
-- Indexable pages: 260
-- Generated HTML routes: 277
+- Indexable pages: 263
+- Generated HTML routes: 280
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 82
+- Pages without a contextual product/tool link: 84
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,13 +23,13 @@ Generated: 2026-08-22T16:21:05.706Z
 - maintenance: 33
 - household-operations: 21
 - inventory-warranty: 29
-- records-emergency: 23
-- tools: 52
+- records-emergency: 24
+- tools: 54
 
 ## Word-count range
 
 - Lowest: https://familyboard.win/search/ (19 words)
-- Highest: https://familyboard.win/zh-tw/guides/move-out-home-records/ (4302 words)
+- Highest: https://familyboard.win/zh-tw/tools/home-emergency-drill-record-generator/ (4508 words)
 
 ## Highest similarity pairs
 
@@ -90,6 +90,7 @@ Generated: 2026-08-22T16:21:05.706Z
 - /zh-tw/guides/appliance-replacement-planning/
 - /zh-tw/guides/cleaning-schedule/
 - /zh-tw/guides/digital-home-inventory-backup/
+- /zh-tw/guides/home-evacuation-information/
 - /zh-tw/guides/home-maintenance-log/
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/guides/household-documents-organizer/
@@ -108,6 +109,7 @@ Generated: 2026-08-22T16:21:05.706Z
 - /zh-tw/tools/cleaning-schedule-generator/
 - /zh-tw/tools/emergency-binder-generator/
 - /zh-tw/tools/emergency-contact-sheet-generator/
+- /zh-tw/tools/home-emergency-drill-record-generator/
 - /zh-tw/tools/home-handoff-summary-generator/
 - /zh-tw/tools/home-inventory-checklist-generator/
 - /zh-tw/tools/home-maintenance-cost-tracker/
