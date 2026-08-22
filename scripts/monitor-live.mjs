@@ -49,6 +49,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/home-repair-cost-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-service-reminder-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/receipt-retention-organizer/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-annual-review-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/move-in-checklist-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/recurring-chore-planner/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-inventory-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-document-index-generator/</loc>",
@@ -194,6 +197,33 @@ const checks = [
       'hreflang="en"',
       "人工複查日",
       "雲端發票解決",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-annual-review-generator/",
+    require: [
+      "家庭年度總整理清單",
+      'hreflang="en"',
+      "本次總整理負責角色",
+      "備份要有驗證證據",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/move-in-checklist-generator/",
+    require: [
+      "搬入新家清單產生器",
+      'hreflang="en"',
+      "點交或取得使用權日期",
+      "住宅租賃契約書範本",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
+    require: [
+      "旅行前住家檢查清單",
+      'hreflang="en"',
+      "需要交接的照護或收取事項",
+      "不提供通用水電瓦斯關閉指令",
     ],
   },
   {

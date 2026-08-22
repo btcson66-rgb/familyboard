@@ -1353,7 +1353,7 @@
   },
   {
     "route": "/tools/household-annual-review-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/household-annual-review-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1361,7 +1361,7 @@
   },
   {
     "route": "/tools/move-in-checklist-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/move-in-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1369,7 +1369,7 @@
   },
   {
     "route": "/tools/vacation-shutdown-checklist-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1868,6 +1868,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/household-annual-review-generator/",
+    "alternateRoute": "/tools/household-annual-review-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/household-calendar/",
     "alternateRoute": "/features/household-calendar/",
     "indexable": true,
@@ -1931,6 +1938,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/move-in-checklist-generator/",
+    "alternateRoute": "/tools/move-in-checklist-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/offline-household-organizer/",
     "alternateRoute": "/features/offline-household-organizer/",
     "indexable": true,
@@ -1982,6 +1996,13 @@
   {
     "route": "/zh-tw/terms/",
     "alternateRoute": "/terms/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/vacation-shutdown-checklist-generator/",
+    "alternateRoute": "/tools/vacation-shutdown-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

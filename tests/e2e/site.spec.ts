@@ -82,6 +82,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/home-repair-cost-log/",
     "/zh-tw/tools/home-service-reminder-generator/",
     "/zh-tw/tools/receipt-retention-organizer/",
+    "/zh-tw/tools/household-annual-review-generator/",
+    "/zh-tw/tools/move-in-checklist-generator/",
+    "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/recurring-chore-planner/",
     "/zh-tw/tools/home-inventory-checklist-generator/",
     "/zh-tw/tools/household-document-index-generator/",
@@ -365,6 +368,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       heading: "收據保存整理器",
     },
     {
+      route: "/zh-tw/tools/household-annual-review-generator/",
+      alternate: "/tools/household-annual-review-generator/",
+      heading: "家庭年度總整理清單",
+    },
+    {
+      route: "/zh-tw/tools/move-in-checklist-generator/",
+      alternate: "/tools/move-in-checklist-generator/",
+      heading: "搬入新家清單產生器",
+    },
+    {
+      route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
+      alternate: "/tools/vacation-shutdown-checklist-generator/",
+      heading: "旅行前住家檢查清單",
+    },
+    {
       route: "/zh-tw/tools/recurring-chore-planner/",
       alternate: "/tools/recurring-chore-planner/",
       heading: "家庭家事輪值表產生器",
@@ -477,6 +495,37 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText("不能晚於今天");
 
+  await page.goto("/zh-tw/tools/household-annual-review-generator/");
+  await page.getByLabel("目前居住情境").selectOption("承租住宅");
+  await page.getByLabel("本次查核日期").fill("2026-08-22");
+  await page.getByLabel("下次年度複查日期").fill("2027-08-22");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("七個固定查核區");
+  await expect(page.locator(".result")).toContainText("租約、現況／點交紀錄");
+  await expect(page.locator(".result")).toContainText("驗證最新備份可以開啟");
+
+  await page.goto("/zh-tw/tools/move-in-checklist-generator/");
+  await page.getByLabel("居住身分").selectOption("承租人");
+  await page.getByLabel("住宅型態").selectOption("公寓大廈");
+  await page.getByLabel("點交或取得使用權日期").fill("2026-09-01");
+  await page.getByLabel("正式搬入日期").fill("2026-09-03");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("2026年9月10日");
+  await expect(page.locator(".result")).toContainText("2026年10月3日");
+  await expect(page.locator(".result")).toContainText("租賃標的現況確認書");
+  await expect(page.locator(".result")).toContainText("電梯搬運");
+
+  await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
+  await page.getByLabel("離家日期").fill("2026-09-01");
+  await page.getByLabel("預計返家日期").fill("2026-09-08");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("離家日數：7 天");
+  await expect(page.locator(".result")).toContainText("貓咪｜代管：家庭照護者");
+  await expect(page.locator(".result")).toContainText("不會查詢即時天氣");
+  await page.getByLabel("需要交接的照護或收取事項").fill("貓咪 | 家庭照護者");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("第 1 行格式不完整");
+
   await page.goto("/zh-tw/tools/recurring-chore-planner/");
   await page.getByLabel("下次一起複查日期").fill("2026-09-05");
   await page
@@ -546,6 +595,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/receipt-retention-organizer/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-annual-review-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/move-in-checklist-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/recurring-chore-planner/",

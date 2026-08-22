@@ -1313,6 +1313,203 @@ const zhTwDefinitions: Record<string, Definition> = {
       return `${values.item.trim()}｜收據保存索引\n用途：${values.purpose}\n交易／完工日：${formatter.format(purchase)}\n人工複查日：${formatter.format(review)}\n期間依據：${values.source.trim()}\n文件位置：${values.location.trim()}\n狀態：${reviewState}\n\n一起保存或交叉索引：可辨識交易的發票／收據、品項或工作明細、付款證明、保固／退換貨條款、服務或驗收紀錄，以及日後往來。避免保存完整信用卡號、密碼或與用途無關的身分資料。\n\n複查日不是銷毀日。稅務、保險、房屋交易或爭議案件的保存期間，應以當下適用的主管機關規定、契約與專業意見為準。`;
     },
   },
+  "household-annual-review-generator": {
+    intro:
+      "建立一次有負責人、查核日期、完成證據與下次複查日的家庭年度總整理。這不是大掃除清單，而是檢查家庭資料與工作流程是否仍可信。",
+    fields: [
+      text("household", "家庭或住家名稱", "可用暱稱，不必填完整地址。", "我的家庭"),
+      {
+        name: "housing",
+        label: "目前居住情境",
+        type: "select",
+        options: ["自有住宅", "承租住宅", "與親友同住／其他"],
+      },
+      text("owner", "本次總整理負責角色", "負責召集與關閉未完成項目，可填角色。", "家庭資料整理人"),
+      { name: "reviewed", label: "本次查核日期", type: "date" },
+      { name: "nextReview", label: "下次年度複查日期", type: "date" },
+      {
+        name: "priorities",
+        label: "今年特別要處理的重點",
+        type: "textarea",
+        help: "每行或逗號分隔，最多 8 項；寫可查證的問題，不要只寫『整理好』。",
+        value: "清掉無人負責的自動續約\n更新緊急聯絡與家庭交接\n驗證最新備份可以開啟",
+      },
+    ],
+    run: (values) => {
+      const reviewed = date(values.reviewed);
+      const nextReview = date(values.nextReview);
+      const priorities = uniqueList(values.priorities);
+      if (!values.household.trim()) return "請填寫家庭或住家名稱，讓匯出後的清單仍能辨識。";
+      if (!values.owner.trim()) return "請填寫本次總整理的負責角色。";
+      if (!reviewed) return "請輸入有效的本次查核日期。";
+      if (!nextReview) return "請輸入有效的下次年度複查日期。";
+      if (nextReview.getTime() <= reviewed.getTime()) return "下次年度複查日期必須晚於本次查核日期。";
+      if (priorities.length === 0) return "請至少輸入一項今年特別要處理的重點。";
+      if (priorities.length > 8) return "一次最多設定 8 項年度重點；其餘先放入待辦池，不要讓年度總整理失去焦點。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const housingTask =
+        values.housing === "承租住宅"
+          ? "核對租約、現況／點交紀錄、修繕責任、費用與重要通知位置"
+          : values.housing === "自有住宅"
+            ? "核對房屋交付、裝修、主要設備、保險與必要服務文件位置"
+            : "核對居住安排、可處理範圍、費用分工與重要聯絡方式";
+      const sections = [
+        "設備與文件：逐項抽查資產、型號、保固、收據與文件索引能否回到原件",
+        "保養與修繕：核對已完成紀錄、逾期項目、重複故障及下一日期的實際依據",
+        "費用與續約：確認有效訂閱、取消狀態、年度費用、續約日與唯一負責人",
+        "聯絡與防災：實際核對緊急、管理、維修與照護聯絡方式，更新家庭防災計畫",
+        `居住情境：${housingTask}`,
+        "隱私與交接：抽查家庭看板、交接摘要與共享檔案沒有暴露不必要敏感資料",
+        "備份與復原：匯出新備份、記錄版本與位置，開啟檔案並在不覆蓋正式資料的前提下驗證內容",
+      ];
+      return `${values.household.trim()}｜家庭年度總整理\n居住情境：${values.housing}\n本次查核：${formatter.format(reviewed)}\n總整理負責角色：${values.owner.trim()}\n下次年度複查：${formatter.format(nextReview)}\n\n${lines("七個固定查核區", sections.map((item) => `[ ] ${item}｜證據／位置：＿＿＿＿｜後續負責人與日期：＿＿＿＿`))}\n\n${lines("今年重點", priorities.map((item) => `[ ] ${item}｜完成定義：＿＿＿＿｜負責人與期限：＿＿＿＿`))}\n\n關閉條件：每個發現都要標示「已修正、已建立有負責人的後續任務、確認不適用」三者之一；只有看過清單不算完成。不要把密碼、完整證件號碼、醫療內容或其他不必要敏感資料複製到共用版本。`;
+    },
+  },
+  "move-in-checklist-generator": {
+    intro:
+      "依搬入日、點交日、居住身分與住宅型態建立四階段清單，特別保留屋況、表計、鑰匙、契約及修繕責任的證據位置。它不判定租賃或買賣權利。",
+    fields: [
+      {
+        name: "tenure",
+        label: "居住身分",
+        type: "select",
+        options: ["承租人", "自有住宅入住", "與親友同住／其他"],
+      },
+      {
+        name: "homeType",
+        label: "住宅型態",
+        type: "select",
+        options: ["公寓大廈", "透天住宅", "其他"],
+      },
+      { name: "handover", label: "點交或取得使用權日期", type: "date" },
+      { name: "moveIn", label: "正式搬入日期", type: "date" },
+      text("owner", "搬入總負責角色", "負責追蹤跨階段事項，可填角色。", "搬家主要聯絡人"),
+      {
+        name: "needs",
+        label: "這個家庭的額外需求",
+        type: "textarea",
+        help: "每行或逗號分隔，最多 10 項，例如寵物、停車位、長者動線、網路或濾水器。",
+        value: "寵物入住安排\n停車位與管理規則\n網路裝機\n濾水器型號與濾芯",
+      },
+    ],
+    run: (values) => {
+      const handover = date(values.handover);
+      const moveIn = date(values.moveIn);
+      const needs = uniqueList(values.needs);
+      if (!handover) return "請輸入有效的點交或取得使用權日期。";
+      if (!moveIn) return "請輸入有效的正式搬入日期。";
+      if (handover.getTime() > moveIn.getTime()) return "點交或取得使用權日期不能晚於正式搬入日期；若實際安排不同，請確認日期與用途後分開建任務。";
+      if (!values.owner.trim()) return "請填寫搬入總負責角色。";
+      if (needs.length > 10) return "額外需求一次最多 10 項；其餘請另外建立搬家專案待辦。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const firstWeek = new Date(moveIn);
+      firstWeek.setDate(firstWeek.getDate() + 7);
+      const firstMonth = addMonths(moveIn, 1);
+      const tenureTasks =
+        values.tenure === "承租人"
+          ? ["逐條核對實際租約、租賃標的現況確認書、附屬設備與修繕責任", "和出租方／管理方共同確認屋況、表計、鑰匙與已知問題，保存雙方可辨識的紀錄"]
+          : values.tenure === "自有住宅入住"
+            ? ["核對交屋／交易、設備保固、裝修與管理文件位置", "記錄交付缺失、改善承諾、表計、鑰匙與公共設施交接狀態"]
+            : ["和住宅管理者確認可使用範圍、費用、設備、鑰匙與修繕聯絡方式", "記錄搬入時既有屋況與家庭物品界線"];
+      const buildingTasks =
+        values.homeType === "公寓大廈"
+          ? ["確認管理室、門禁、電梯搬運、垃圾、停車與公共設施規則", "找到不妨礙逃生的公共動線與官方緊急資訊"]
+          : values.homeType === "透天住宅"
+            ? ["辨識各樓層主要設備、表計與可由住戶安全操作的關閉點", "確認垃圾、郵件、停車、排水與外部維護責任"]
+            : ["確認住宅管理、公共動線、垃圾、郵件、停車及緊急聯絡方式"];
+      return `${values.tenure}｜${values.homeType}搬入清單\n點交／取得使用權：${formatter.format(handover)}\n正式搬入：${formatter.format(moveIn)}\n總負責角色：${values.owner.trim()}\n\n${lines("點交前完成", [
+        ...tenureTasks,
+        "確認水、電、瓦斯、網路與管理費的實際申辦／結算責任，不沿用前住戶假設",
+        "建立搬入證據的安全存放位置與命名方式",
+      ].map((item) => `[ ] ${item}`))}\n\n${lines(`點交日｜${formatter.format(handover)}`, [
+        "依空間逐一拍攝屋況與附屬設備；照片保留日期、位置與問題說明",
+        "拍攝並核對可辨識的水電等表計讀數，不公開用戶或住址敏感資料",
+        "測試雙方同意可測的設備，記錄無法測試或待修項目，不以口頭帶過",
+        "點算鑰匙、門禁、遙控器與交付文件，記錄數量及接收人",
+        ...buildingTasks,
+      ].map((item) => `[ ] ${item}`))}\n\n${lines(`搬入後七天內｜${formatter.format(firstWeek)}`, [
+        "確認帳單、通知與必要服務已改到正確接收方式，舊住戶資料未留在共用設備",
+        "把重大設備、保固、維修窗口與已知問題建立成長期紀錄",
+        "檢查第一週實際使用才出現的漏水、排水、異音或門窗問題，依契約與適當管道回報",
+        ...needs.map((item) => `完成需求設定：${item}｜負責人與完成證據：＿＿＿＿`),
+      ].map((item) => `[ ] ${item}`))}\n\n${lines(`搬入後一個月複查｜${formatter.format(firstMonth)}`, [
+        "關閉已完成的一次性搬家任務，保留仍有用途的屋況、契約、表計與設備紀錄",
+        "只依實際說明書、契約與住家情況建立保養或續約任務",
+        "匯出第一份 FamilyBoard 備份並開啟驗證，不把唯一副本留在同一瀏覽器",
+      ].map((item) => `[ ] ${item}`))}\n\n這份清單不判定押金、修繕、費用、點交或公共設施的法律責任；請以實際契約、主管機關資料及個案專業意見為準。`;
+    },
+  },
+  "vacation-shutdown-checklist-generator": {
+    intro:
+      "依出發、返家日期、住宅型態與每項照護交接產生旅行前住家清單。工具不會讀取即時天氣，也不會用通用指令要求關閉水、電、瓦斯或必要設備。",
+    fields: [
+      { name: "departure", label: "離家日期", type: "date" },
+      { name: "return", label: "預計返家日期", type: "date" },
+      {
+        name: "homeType",
+        label: "住宅型態",
+        type: "select",
+        options: ["公寓大廈", "透天住宅", "其他"],
+      },
+      text("coordinator", "旅行前檢查負責角色", "負責完成最後巡視，可填角色。", "出發前最後離家者"),
+      {
+        name: "care",
+        label: "需要交接的照護或收取事項",
+        type: "textarea",
+        help: "每行格式：事項 | 代管角色 | 頻率或觸發條件；不要填門禁密碼。",
+        value: "貓咪 | 家庭照護者 | 每日早晚\n植物 | 鄰居 | 每三天一次\n包裹 | 管理室 | 收到通知時代收",
+      },
+      text("contact", "緊急代理聯絡角色", "填家人知道的角色與安全聯絡管道，不要放公開門禁資料。", "在地緊急聯絡人／已核對電話"),
+    ],
+    run: (values) => {
+      const departure = date(values.departure);
+      const returning = date(values.return);
+      if (!departure) return "請輸入有效的離家日期。";
+      if (!returning) return "請輸入有效的預計返家日期。";
+      if (returning.getTime() <= departure.getTime()) return "預計返家日期必須晚於離家日期。";
+      const daysAway = Math.round((returning.getTime() - departure.getTime()) / 86_400_000);
+      if (daysAway > 365) return "單次清單最多規劃 365 天；更長期的空置住宅需要獨立管理計畫與專業檢查。";
+      if (!values.coordinator.trim()) return "請填寫旅行前檢查負責角色。";
+      if (!values.contact.trim()) return "請填寫緊急代理聯絡角色與已核對的安全聯絡管道。";
+      const careRows = values.care
+        .split("\n")
+        .map((source, index) => ({
+          line: index + 1,
+          parts: source.split("|").map((part) => part.trim()),
+        }))
+        .filter((row) => row.parts.some(Boolean));
+      if (careRows.length > 12) return "一次最多整理 12 項照護或收取事項；過多工作應另做完整交接文件。";
+      const invalid = careRows.filter((row) => row.parts.length !== 3 || row.parts.some((part) => !part));
+      if (invalid.length) return `第 ${invalid.map((row) => row.line).join("、")} 行格式不完整。請使用「事項 | 代管角色 | 頻率或觸發條件」，三欄都要填寫。`;
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const buildingTask =
+        values.homeType === "公寓大廈"
+          ? "確認管理室代收、公共設施、停車與緊急聯絡規則，交接資訊只給需要的人"
+          : values.homeType === "透天住宅"
+            ? "檢查外部排水、信箱、門窗與可見異常；需要定期巡視時指定在地角色"
+            : "依實際住宅管理方式確認郵件、包裹、公共動線與緊急聯絡安排";
+      const careOutput = careRows.length
+        ? careRows.map((row) => `[ ] ${row.parts[0]}｜代管：${row.parts[1]}｜頻率／條件：${row.parts[2]}｜已確認接受：＿＿＿＿`)
+        : ["[ ] 本次沒有照護或收取事項；最後巡視時再次確認沒有遺漏人、寵物、植物、包裹或必要設備。"];
+      return `${values.homeType}旅行前住家清單\n離家：${formatter.format(departure)}\n返家：${formatter.format(returning)}\n離家日數：${daysAway} 天（返家日減離家日）\n最後巡視負責角色：${values.coordinator.trim()}\n緊急代理：${values.contact.trim()}\n\n${lines("出發前數日", [
+        "查看中央氣象署與所在地官方警特報；有颱風、豪雨、強風、低溫或其他風險時重新評估住宅措施與行程",
+        buildingTask,
+        "暫停或改期不需要的配送、清潔與到府服務，保留確認紀錄",
+        "依每台設備的說明書、建物規則與家中持續運作需求，決定安全設定；不要套用通用關閉指令",
+      ].map((item) => `[ ] ${item}`))}\n\n${lines("照護與收取交接", careOutput)}\n\n${lines("最後一人離家前", [
+        "確認所有人與寵物已離開或已有明確照護安排；清除易腐食物與垃圾",
+        "依實際安全程序檢查爐火、火源、必要電器、門窗及上鎖狀態，不拆修設備",
+        "確認沒有正在漏水、異味、異音或警示；發現異常先處理，不用勾選取代判斷",
+        "讓離線可取得的緊急、管理、保險與維修聯絡方式保持最新",
+        "只向必要代理人提供最少資訊；不要把完整旅程、門禁密碼或無人在家細節公開發布",
+      ].map((item) => `[ ] ${item}`))}\n\n${lines("返家後", [
+        "進屋前先查看外觀與異常；聞到瓦斯味、焦味或發現積水時不要直接操作開關，先依官方安全指引求助",
+        "逐步恢復曾調整的設備與服務，依說明書確認狀態，不憑記憶一次全開",
+        "關閉臨時代管與配送安排，向照護者確認事件、費用及剩餘物品",
+        "把這次漏掉或臨時處理的事項加入下一次清單，但不要保留已失效的敏感交接內容",
+      ].map((item) => `[ ] ${item}`))}\n\n這份清單不會查詢即時天氣、不會通知代理人，也不會替你申請警方或管理服務。遇到警特報、設備異常或長期空置時，請依所在地官方資訊、建物規則、保險條款與設備說明處理。`;
+    },
+  },
   "recurring-chore-planner": {
     intro:
       "依名單順序輪流分配例行家事，產生一份可以試行與複查的初稿。它能平均分配項目數，不能自動判斷每件事的工時、體力或照護負擔。",

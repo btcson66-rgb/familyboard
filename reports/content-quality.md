@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T14:27:45.467Z
+Generated: 2026-08-22T14:45:24.970Z
 
 ## Summary
 
-- Indexable pages: 242
-- Generated HTML routes: 259
+- Indexable pages: 245
+- Generated HTML routes: 262
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 65
+- Pages without a contextual product/tool link: 68
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -24,7 +24,7 @@ Generated: 2026-08-22T14:27:45.467Z
 - household-operations: 20
 - inventory-warranty: 27
 - records-emergency: 23
-- tools: 38
+- tools: 41
 
 ## Word-count range
 
@@ -105,10 +105,13 @@ Generated: 2026-08-22T14:27:45.467Z
 - /zh-tw/tools/home-maintenance-schedule-generator/
 - /zh-tw/tools/home-repair-cost-log/
 - /zh-tw/tools/home-service-reminder-generator/
+- /zh-tw/tools/household-annual-review-generator/
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-subscription-cost-calculator/
+- /zh-tw/tools/move-in-checklist-generator/
 - /zh-tw/tools/receipt-retention-organizer/
 - /zh-tw/tools/recurring-chore-planner/
+- /zh-tw/tools/vacation-shutdown-checklist-generator/
 - /zh-tw/tools/warranty-expiration-calculator/
 
 ## Blockers
