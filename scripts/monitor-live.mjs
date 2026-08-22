@@ -55,6 +55,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-handoff-summary-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/annual-subscription-cost-calculator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/emergency-binder-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/cleaning-schedule-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-replacement-planner/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/room-inventory-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/warranty-checklist-generator/</loc>",
@@ -257,6 +260,33 @@ const checks = [
       'hreflang="en"',
       "本次明確納入的資料類別",
       "接受確認不是簽名而已",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/annual-subscription-cost-calculator/",
+    require: [
+      "訂閱年成本計算器",
+      'hreflang="en"',
+      "真正扣款週期",
+      "每 4 週不是每月",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/emergency-binder-generator/",
+    require: [
+      "家庭緊急資料夾產生器",
+      'hreflang="en"',
+      "集合與失聯安排",
+      "目的不是集中最多秘密",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/cleaning-schedule-generator/",
+    require: [
+      "家庭清潔排程產生器",
+      'hreflang="en"',
+      "空間、時間與完成定義",
+      "先算容量，再談意志力",
     ],
   },
   {

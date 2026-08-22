@@ -88,6 +88,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
     "/zh-tw/tools/home-handoff-summary-generator/",
+    "/zh-tw/tools/annual-subscription-cost-calculator/",
+    "/zh-tw/tools/emergency-binder-generator/",
+    "/zh-tw/tools/cleaning-schedule-generator/",
     "/zh-tw/tools/appliance-replacement-planner/",
     "/zh-tw/tools/room-inventory-generator/",
     "/zh-tw/tools/warranty-checklist-generator/",
@@ -404,6 +407,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       heading: "家庭交接摘要產生器",
     },
     {
+      route: "/zh-tw/tools/annual-subscription-cost-calculator/",
+      alternate: "/tools/annual-subscription-cost-calculator/",
+      heading: "訂閱年成本計算器",
+    },
+    {
+      route: "/zh-tw/tools/emergency-binder-generator/",
+      alternate: "/tools/emergency-binder-generator/",
+      heading: "家庭緊急資料夾產生器",
+    },
+    {
+      route: "/zh-tw/tools/cleaning-schedule-generator/",
+      alternate: "/tools/cleaning-schedule-generator/",
+      heading: "家庭清潔排程產生器",
+    },
+    {
       route: "/zh-tw/tools/appliance-replacement-planner/",
       alternate: "/tools/appliance-replacement-planner/",
       heading: "家電汰換評估表",
@@ -655,6 +673,47 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(page.locator(".result")).toContainText("待辦：回到實際書面條款確認期限");
   await expect(page.locator(".result")).toContainText("不計算到期日");
 
+  await page.goto("/zh-tw/tools/annual-subscription-cost-calculator/");
+  await page.getByLabel("目前每次實際扣款金額").fill("0");
+  await page.getByLabel("真正扣款週期").selectOption("每月");
+  await page.getByLabel("目前價格階段").selectOption("促銷或免費試用仍有效");
+  await page
+    .getByLabel("促銷結束後每次標準扣款（非促銷可填同額）")
+    .fill("320");
+  await page.getByLabel("促銷或免費試用結束日（非促銷可留空）").fill("2026-09-10");
+  await page.getByLabel("已核對的下次扣款／續約日").fill("2026-09-30");
+  await page.getByRole("spinbutton", { name: "預留幾天做續約決定" }).fill("10");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("標準價年化：NT$3,840");
+  await expect(page.locator(".result")).toContainText("2026年9月20日");
+  await expect(page.locator(".result")).toContainText("無法以目前 0 元價格計算百分比");
+
+  await page.goto("/zh-tw/tools/emergency-binder-generator/");
+  await page.getByLabel("本次全家核對日期").fill("2026-08-22");
+  await page.getByLabel("下次全家複查日期").fill("2027-02-22");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("可分享的家庭防災卡");
+  await expect(page.locator(".result")).toContainText("火災、救護與急難救助：119");
+  await expect(page.locator(".result")).toContainText("只放位置索引的受保護部分");
+  await page
+    .getByLabel("家庭與必要服務聯絡")
+    .fill("家庭主要聯絡 | 家人 | 門禁碼 1234");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("不應放入可分享防災卡");
+
+  await page.goto("/zh-tw/tools/cleaning-schedule-generator/");
+  await page.getByLabel("第一輪開始日期").fill("2026-08-22");
+  await page.getByRole("spinbutton", { name: "全家每天可用分鐘" }).fill("20");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("超出目前每日容量 10 分鐘");
+  await expect(page.locator(".result")).toContainText("2026年8月22日｜廚房");
+  await expect(page.locator(".result")).toContainText("平均件數不等於公平");
+  await page
+    .getByLabel("安全、健康或能力限制")
+    .fill("清潔用品 | 漂白水與鹽酸混用");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("混用的危險描述");
+
   await page.goto("/zh-tw/tools/recurring-chore-planner/");
   await page.getByLabel("下次一起複查日期").fill("2026-09-05");
   await page
@@ -742,6 +801,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/home-handoff-summary-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/annual-subscription-cost-calculator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/emergency-binder-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/cleaning-schedule-generator/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/appliance-replacement-planner/",

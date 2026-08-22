@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T15:15:10.443Z
+Generated: 2026-08-22T15:37:46.023Z
 
 ## Summary
 
-- Indexable pages: 251
-- Generated HTML routes: 268
+- Indexable pages: 254
+- Generated HTML routes: 271
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 74
+- Pages without a contextual product/tool link: 77
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -24,12 +24,12 @@ Generated: 2026-08-22T15:15:10.443Z
 - household-operations: 20
 - inventory-warranty: 27
 - records-emergency: 23
-- tools: 47
+- tools: 50
 
 ## Word-count range
 
 - Lowest: https://familyboard.win/search/ (19 words)
-- Highest: https://familyboard.win/zh-tw/tools/warranty-checklist-generator/ (3475 words)
+- Highest: https://familyboard.win/zh-tw/tools/cleaning-schedule-generator/ (3522 words)
 
 ## Highest similarity pairs
 
@@ -97,9 +97,12 @@ Generated: 2026-08-22T15:15:10.443Z
 - /zh-tw/privacy/
 - /zh-tw/security/
 - /zh-tw/terms/
+- /zh-tw/tools/annual-subscription-cost-calculator/
 - /zh-tw/tools/appliance-age-calculator/
 - /zh-tw/tools/appliance-maintenance-checklist-generator/
 - /zh-tw/tools/appliance-replacement-planner/
+- /zh-tw/tools/cleaning-schedule-generator/
+- /zh-tw/tools/emergency-binder-generator/
 - /zh-tw/tools/emergency-contact-sheet-generator/
 - /zh-tw/tools/home-handoff-summary-generator/
 - /zh-tw/tools/home-inventory-checklist-generator/

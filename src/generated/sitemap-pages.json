@@ -1281,7 +1281,7 @@
   },
   {
     "route": "/tools/annual-subscription-cost-calculator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/annual-subscription-cost-calculator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1305,7 +1305,7 @@
   },
   {
     "route": "/tools/emergency-binder-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/emergency-binder-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1337,7 +1337,7 @@
   },
   {
     "route": "/tools/cleaning-schedule-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/cleaning-schedule-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1735,6 +1735,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/annual-subscription-cost-calculator/",
+    "alternateRoute": "/tools/annual-subscription-cost-calculator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/appliance-age-calculator/",
     "alternateRoute": "/tools/appliance-age-calculator/",
     "indexable": true,
@@ -1756,6 +1763,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/cleaning-schedule-generator/",
+    "alternateRoute": "/tools/cleaning-schedule-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/contact/",
     "alternateRoute": "/contact/",
     "indexable": true,
@@ -1765,6 +1779,13 @@
   {
     "route": "/zh-tw/guides/digital-home-inventory-backup/",
     "alternateRoute": "/guides/digital-home-inventory-backup/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/emergency-binder-generator/",
+    "alternateRoute": "/tools/emergency-binder-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

@@ -1889,6 +1889,299 @@ const zhTwDefinitions: Record<string, Definition> = {
       )}\n\n${lines("明確納入", included)}\n\n${lines("明確排除", omitted)}\n\n接受確認：接手人已逐項走讀、能指出工作來源與完成證據位置，並知道哪些內容沒有授權。\n交接人／接手人／日期：＿＿＿＿＿＿＿＿\n\n這份結果只來自目前輸入，不會讀取 FamilyBoard App、通知聯絡人或授予任何帳號與設備權限。分享前請再次核對日期與最小必要範圍。`;
     },
   },
+  "annual-subscription-cost-calculator": {
+    intro:
+      "把單一訂閱的每次實付、真正扣款週期、促銷與標準價分開，換算比較用月均與年化成本，再從下次扣款日倒推人工決定日。",
+    fields: [
+      text("service", "訂閱服務與方案", "寫到能分辨方案等級與付款管道。", "影音服務／個人標準方案"),
+      {
+        name: "currency",
+        label: "帳單幣別",
+        type: "select",
+        options: ["TWD", "USD", "JPY"],
+      },
+      {
+        name: "amount",
+        label: "目前每次實際扣款金額",
+        type: "number",
+        help: "輸入同一帳單上不可避免的稅費後金額；免費試用可填 0。",
+        value: "199",
+      },
+      {
+        name: "frequency",
+        label: "真正扣款週期",
+        type: "select",
+        options: ["每週", "每 4 週", "每月", "每季", "每半年", "每年"],
+      },
+      {
+        name: "pricingStage",
+        label: "目前價格階段",
+        type: "select",
+        options: ["已是一般／標準價", "促銷或免費試用仍有效"],
+      },
+      {
+        name: "standardAmount",
+        label: "促銷結束後每次標準扣款（非促銷可填同額）",
+        type: "number",
+        value: "199",
+      },
+      { name: "promoEnd", label: "促銷或免費試用結束日（非促銷可留空）", type: "date" },
+      { name: "nextCharge", label: "已核對的下次扣款／續約日", type: "date" },
+      {
+        name: "noticeDays",
+        label: "預留幾天做續約決定",
+        type: "number",
+        help: "依實際取消流程、客服時間與家庭討論決定；可填 0 到 365 的整數。",
+        value: "7",
+      },
+      text("source", "價格、週期與取消方式來源", "寫帳單日期、方案頁或平台官方說明；不要填帳號密碼。", "最新帳單與平台訂閱管理頁"),
+    ],
+    run: (values) => {
+      const amount = Number(values.amount);
+      const standardAmount = Number(values.standardAmount);
+      const promoEnd = date(values.promoEnd);
+      const nextCharge = date(values.nextCharge);
+      const noticeDays = Number(values.noticeDays);
+      if (!values.service.trim()) return "請填寫訂閱服務與方案。";
+      if (!Number.isFinite(amount) || amount < 0 || amount > 10_000_000)
+        return "目前每次實際扣款必須是 0 到 10,000,000 之間的數字。";
+      if (!Number.isFinite(standardAmount) || standardAmount < 0 || standardAmount > 10_000_000)
+        return "標準扣款必須是 0 到 10,000,000 之間的數字。";
+      if (values.pricingStage === "促銷或免費試用仍有效" && !promoEnd)
+        return "促銷或免費試用仍有效時，請輸入有效的結束日。";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (promoEnd && promoEnd.getTime() < today.getTime())
+        return "促銷結束日已早於今天；請重新核對目前是否已轉為標準價。";
+      if (!nextCharge) return "請輸入有效的下次扣款或續約日。";
+      if (nextCharge.getTime() < today.getTime())
+        return "下次扣款或續約日不能早於今天；請先查看最新帳單與訂閱管理頁。";
+      if (!Number.isInteger(noticeDays) || noticeDays < 0 || noticeDays > 365)
+        return "預留天數必須是 0 到 365 之間的整數。";
+      if (!values.source.trim()) return "請填寫價格、週期與取消方式的可回查來源。";
+      if (/密碼|驗證碼|完整卡號|password|pin\s*[:：]/i.test(values.source))
+        return "來源欄只寫文件或頁面位置，不要輸入密碼、驗證碼或完整卡號。";
+      const factors: Record<string, number> = {
+        每週: 52,
+        "每 4 週": 13,
+        每月: 12,
+        每季: 4,
+        每半年: 2,
+        每年: 1,
+      };
+      const factor = factors[values.frequency] || 0;
+      const annual = amount * factor;
+      const standardAnnual = standardAmount * factor;
+      const difference = standardAnnual - annual;
+      const differencePercent = annual > 0
+        ? `${new Intl.NumberFormat("zh-TW", { maximumFractionDigits: 1 }).format((difference / annual) * 100)}%`
+        : "無法以目前 0 元價格計算百分比";
+      const decision = new Date(nextCharge);
+      decision.setDate(decision.getDate() - noticeDays);
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const daysUntilDecision = Math.round((decision.getTime() - today.getTime()) / 86_400_000);
+      const decisionStatus =
+        daysUntilDecision < 0
+          ? `人工決定日已過 ${Math.abs(daysUntilDecision)} 天；現在就核對取消或續約狀態。`
+          : daysUntilDecision === 0
+            ? "今天是人工決定日。"
+            : `距人工決定日還有 ${daysUntilDecision} 天。`;
+      const stageOutput = values.pricingStage === "促銷或免費試用仍有效"
+        ? `促銷／試用結束：${formatter.format(promoEnd!)}\n標準價每次扣款：${moneyFor(standardAmount, values.currency)}\n標準價比較用月均：${moneyFor(standardAnnual / 12, values.currency)}\n標準價年化：${moneyFor(standardAnnual, values.currency)}\n由目前價轉為標準價的年化差額：${moneyFor(difference, values.currency)}（${differencePercent}）`
+        : `目前已標示為一般／標準價；仍應在續約前重新核對是否調價。\n依標準價欄位計算的年化：${moneyFor(standardAnnual, values.currency)}`;
+      return `${values.service.trim()}｜單項訂閱年成本比較\n帳單幣別：${values.currency}\n真正扣款週期：${values.frequency}\n目前每次實付：${moneyFor(amount, values.currency)}\n目前比較用月均：${moneyFor(annual / 12, values.currency)}\n目前年化成本：${moneyFor(annual, values.currency)}\n目前價格階段：${values.pricingStage}\n${stageOutput}\n\n下次扣款／續約：${formatter.format(nextCharge)}\n預留決定天數：${noticeDays} 天\n人工決定日：${formatter.format(decision)}\n狀態：${decisionStatus}\n資料來源：${values.source.trim()}\n\n續約前核對：目前方案名稱、實際扣款金額與幣別、週期、促銷結束後價格、自動續約狀態、取消路徑、生效時間、取消完成證據，以及刪除 App 是否等於取消訂閱。\n\n這是比較用年化，不是未來帳單預測。「每週」按一年 52 次、「每 4 週」按 13 次、「每月」按 12 次計算；不處理匯率、價格調整、用量計費、退費、跨境稅務或首尾不完整週期。不同幣別不可直接相加。`;
+    },
+  },
+  "emergency-binder-generator": {
+    intro:
+      "建立可分享的家庭防災卡與受保護資料索引，不把完整證件、醫療內容、保單或密碼複製到同一張紙。實際應變仍以所在地官方資訊為準。",
+    fields: [
+      text("household", "家庭或住家標籤", "可用暱稱，不必填完整地址。", "我的家庭"),
+      {
+        name: "region",
+        label: "主要使用地區",
+        type: "select",
+        options: ["台灣", "其他地區"],
+      },
+      { name: "reviewed", label: "本次全家核對日期", type: "date" },
+      { name: "nextReview", label: "下次全家複查日期", type: "date" },
+      {
+        name: "meetings",
+        label: "集合與失聯安排",
+        type: "textarea",
+        help: "每行格式：情境 | 約定地點或聯絡方法 | 無法使用時的替代；最多 4 行。地點需另用官方資料現場核對。",
+        value: "住家附近可安全移動 | 家庭已查核的第一集合點 | 依災情改用第二集合點\n白天家人分散 | 先用簡訊回報平安 | 通訊恢復後聯絡外地親友",
+      },
+      {
+        name: "contacts",
+        label: "家庭與必要服務聯絡",
+        type: "textarea",
+        help: "每行格式：用途 | 聯絡角色 | 已核對的安全管道；最多 10 行。不要填密碼或完整證件號碼。",
+        value: "家庭主要聯絡 | 家庭成員 A | 已核對電話\n外地備援聯絡 | 親友 B | 已核對電話\n住宅管理 | 管理室 | 公開服務電話",
+      },
+      {
+        name: "needs",
+        label: "家庭特殊需求與權威來源",
+        type: "textarea",
+        help: "每行格式：需求 | 已核對的官方／專業來源 | 私密細節的安全位置；最多 10 行。只寫索引，不抄醫療內容。",
+        value: "寵物照護 | 飼主與動物醫院確認的書面計畫 | 私人照護文件\n行動支持 | 使用者與專業人員確認的安排 | 受保護家庭文件\n需持續供電設備 | 設備說明與服務單位 | 受保護設備紀錄",
+      },
+      text("privateIndex", "完整敏感資料的受保護位置", "只寫家人找得到的位置標籤，不要輸入密碼。", "加密家庭文件／緊急資料索引"),
+      text("offlineCopy", "停電或離線時可取得的有限副本", "說明由誰保管、放在哪個安全位置及版本日期。", "紙本防災卡／家庭避難包／版本日期見封面"),
+    ],
+    run: (values) => {
+      const reviewed = date(values.reviewed);
+      const nextReview = date(values.nextReview);
+      if (!values.household.trim()) return "請填寫家庭或住家標籤。";
+      if (!reviewed) return "請輸入有效的本次全家核對日期。";
+      if (!nextReview) return "請輸入有效的下次全家複查日期。";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (reviewed.getTime() > today.getTime()) return "本次全家核對日期不能晚於今天。";
+      if (nextReview.getTime() <= reviewed.getTime()) return "下次全家複查日期必須晚於本次核對日期。";
+      const parseRows = (source: string) => source
+        .split("\n")
+        .map((line, index) => ({ line: index + 1, parts: line.split("|").map((part) => part.trim()) }))
+        .filter((row) => row.parts.some(Boolean));
+      const meetingRows = parseRows(values.meetings);
+      const contactRows = parseRows(values.contacts);
+      const needRows = parseRows(values.needs);
+      if (meetingRows.length === 0 || meetingRows.length > 4)
+        return "請輸入 1 到 4 項集合與失聯安排。";
+      const badMeetings = meetingRows.filter((row) => row.parts.length !== 3 || row.parts.some((part) => !part));
+      if (badMeetings.length) return `集合與失聯安排的第 ${badMeetings.map((row) => row.line).join("、")} 行格式不完整。請使用三欄格式。`;
+      if (contactRows.length === 0 || contactRows.length > 10)
+        return "請輸入 1 到 10 個家庭或必要服務聯絡。";
+      const badContacts = contactRows.filter((row) => row.parts.length !== 3 || row.parts.some((part) => !part));
+      if (badContacts.length) return `家庭與服務聯絡的第 ${badContacts.map((row) => row.line).join("、")} 行格式不完整。請使用三欄格式。`;
+      if (needRows.length > 10) return "家庭特殊需求一次最多整理 10 項。";
+      const badNeeds = needRows.filter((row) => row.parts.length !== 3 || row.parts.some((part) => !part));
+      if (badNeeds.length) return `家庭特殊需求的第 ${badNeeds.map((row) => row.line).join("、")} 行格式不完整。請使用三欄格式。`;
+      if (!values.privateIndex.trim()) return "請填寫完整敏感資料的受保護位置。";
+      if (!values.offlineCopy.trim()) return "請填寫停電或離線時可取得的有限副本位置。";
+      const shareable = [values.household, values.meetings, values.contacts, values.offlineCopy].join("\n");
+      if (/密碼|驗證碼|門禁碼|保全碼|完整身分證|完整卡號|完整病歷|password|pin\s*[:：]/i.test(shareable))
+        return "偵測到不應放入可分享防災卡的敏感內容。請只保留必要聯絡與安排，把完整資料移到受保護索引。";
+      if (/密碼|驗證碼|門禁碼|保全碼|password|pin\s*[:：]/i.test(values.privateIndex))
+        return "受保護位置欄只能寫位置標籤，不要直接輸入密碼或驗證碼。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const official = values.region === "台灣"
+        ? [
+            "警察報案：110",
+            "火災、救護與急難救助：119",
+            "行動電話在緊急危難且 110／119 無法接通時：112，依語音轉接",
+            "避難收容處所、災情與家庭防災卡：使用前重新查核全民防災 e 點通",
+          ]
+        : ["所在地警察、消防、救護、避難收容與災害資訊：請向當地主管機關查核並填入有限副本"];
+      const protectedSections = [
+        "身分、住宅、保險與契約原件的位置索引，不放進一般共享版本",
+        "醫療、用藥、照護與輔具內容由本人、醫療或適當專業來源維護，防災卡只指向位置",
+        "設備、公共事業與服務資料保留官方操作／聯絡來源，不自製危險關閉步驟",
+        ...needRows.map((row) => `${row.parts[0]}｜來源：${row.parts[1]}｜私密細節位置：${row.parts[2]}`),
+      ];
+      return `${values.household.trim()}｜家庭緊急資料夾索引\n主要使用地區：${values.region}\n全家核對：${formatter.format(reviewed)}\n下次全家複查：${formatter.format(nextReview)}\n\n【可分享的家庭防災卡】\n${lines("官方緊急與防災資訊", official)}\n\n${lines("集合與失聯安排", meetingRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜替代：${row.parts[2]}`))}\n\n${lines("家庭與必要服務聯絡", contactRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜${row.parts[2]}`))}\n\n有限離線副本：${values.offlineCopy.trim()}\n\n【只放位置索引的受保護部分】\n受保護位置：${values.privateIndex.trim()}\n${protectedSections.map((item) => `• ${item}`).join("\n")}\n\n${lines("完成前實測", [
+        "[ ] 每位家庭成員能說出第一與替代集合／聯絡方式",
+        "[ ] 依所在地最新官方圖資查核避難收容處所與可行路線，不把舊截圖當永久答案",
+        "[ ] 在不揭露敏感內容下，能從防災卡找到受保護原件與必要用品",
+        "[ ] 停電、手機沒電或網路中斷時，有限紙本／離線副本仍可取得",
+        "[ ] 全家知道立即危險要先聯絡官方緊急服務，行動電話報案先說明案發地點",
+      ])}\n\n這是資料結構與演練清單，不是任何災害的即時指令。避難處所、路線、警報與災情會變動，使用時必須重新查詢所在地官方資訊；不要為了集中管理，把密碼、完整證件、完整病歷、金融資料或所有家庭紀錄複製到一份容易攜出的紙本。`;
+    },
+  },
+  "cleaning-schedule-generator": {
+    intro:
+      "用每個空間的估計分鐘與可驗收定義，先檢查每日／每週容量，再建立角色分工和輪替查核；不替家庭猜清潔劑、消毒濃度或危險作業方法。",
+    fields: [
+      {
+        name: "spaces",
+        label: "空間、時間與完成定義",
+        type: "textarea",
+        help: "每行格式：空間 | 日常復位分鐘 | 每週基本清潔分鐘 | 看得見的完成定義；最多 12 行，分鐘可填 0 到 480 的整數。",
+        value: "廚房 | 10 | 30 | 檯面與水槽已復位，垃圾依地方規則處理\n浴室 | 5 | 25 | 常用表面與地面完成，用品回到安全位置\n客廳 | 10 | 25 | 走道與常用表面清楚，物品回到指定位置\n臥室 | 5 | 20 | 衣物與常用物品復位，地面可安全通行",
+      },
+      text("owners", "可分工的家庭成員或角色", "每行或逗號分隔，最多 8 個；平均件數不代表負擔公平。", "大人 A\n大人 B"),
+      { name: "dailyBudget", label: "全家每天可用分鐘", type: "number", value: "30" },
+      { name: "weeklyBudget", label: "全家每週可用分鐘（不含每日復位）", type: "number", value: "120" },
+      {
+        name: "rotation",
+        label: "深入查核輪替",
+        type: "select",
+        options: ["每週輪替一區", "每兩週輪替一區", "每月輪替一區"],
+      },
+      { name: "start", label: "第一輪開始日期", type: "date" },
+      {
+        name: "constraints",
+        label: "安全、健康或能力限制",
+        type: "textarea",
+        help: "每行格式：限制或條件 | 已確認的調整／負責來源；最多 8 行。不要在此發明醫療或化學指令。",
+        value: "寵物活動區 | 依產品標示完成並確認安全後再讓寵物進入\n無法高處作業 | 另指派適合角色或使用合格專業服務\n清潔劑與消毒 | 詳讀產品標示、保持通風且不混用不同產品",
+      },
+    ],
+    run: (values) => {
+      const start = date(values.start);
+      const dailyBudget = Number(values.dailyBudget);
+      const weeklyBudget = Number(values.weeklyBudget);
+      const owners = uniqueList(values.owners);
+      if (!start) return "請輸入有效的第一輪開始日期。";
+      if (owners.length === 0) return "請至少輸入一位可分工的家庭成員或角色。";
+      if (owners.length > 8) return "一份排程最多分配 8 個家庭成員或角色。";
+      if (!Number.isInteger(dailyBudget) || dailyBudget < 0 || dailyBudget > 1440)
+        return "每天可用分鐘必須是 0 到 1,440 之間的整數。";
+      if (!Number.isInteger(weeklyBudget) || weeklyBudget < 0 || weeklyBudget > 10_080)
+        return "每週可用分鐘必須是 0 到 10,080 之間的整數。";
+      const spaceRows = values.spaces
+        .split("\n")
+        .map((line, index) => ({ line: index + 1, parts: line.split("|").map((part) => part.trim()) }))
+        .filter((row) => row.parts.some(Boolean));
+      if (spaceRows.length === 0 || spaceRows.length > 12)
+        return "請輸入 1 到 12 個空間。";
+      const badSpaces = spaceRows.filter((row) => {
+        const daily = Number(row.parts[1]);
+        const weekly = Number(row.parts[2]);
+        return row.parts.length !== 4 || row.parts.some((part) => !part) || !Number.isInteger(daily) || daily < 0 || daily > 480 || !Number.isInteger(weekly) || weekly < 0 || weekly > 480;
+      });
+      if (badSpaces.length)
+        return `空間資料的第 ${badSpaces.map((row) => row.line).join("、")} 行格式或分鐘不正確。請使用四欄格式，分鐘填 0 到 480 的整數。`;
+      const names = spaceRows.map((row) => row.parts[0].toLocaleLowerCase("zh-TW"));
+      if (new Set(names).size !== names.length) return "空間名稱不可重複；同一空間的工作請合併成可驗收定義。";
+      const constraintRows = values.constraints
+        .split("\n")
+        .map((line, index) => ({ line: index + 1, parts: line.split("|").map((part) => part.trim()) }))
+        .filter((row) => row.parts.some(Boolean));
+      if (constraintRows.length === 0 || constraintRows.length > 8)
+        return "請輸入 1 到 8 項安全、健康或能力限制。";
+      const badConstraints = constraintRows.filter((row) => row.parts.length !== 2 || row.parts.some((part) => !part));
+      if (badConstraints.length)
+        return `限制資料的第 ${badConstraints.map((row) => row.line).join("、")} 行格式不完整。請使用「限制或條件 | 已確認的調整／負責來源」。`;
+      const unsafe = constraintRows.some((row) => {
+        const content = row.parts.join(" ");
+        return /漂白水|含氯/i.test(content) &&
+          /鹽酸|酸性|氨|阿摩尼亞|酒精/i.test(content) &&
+          /混合|混用/i.test(content);
+      });
+      if (unsafe) return "偵測到把含氯／漂白水與酸性、含氨或酒精產品混用的危險描述。請刪除並改為依產品標示、保持通風且不混用。";
+      const dailyTotal = spaceRows.reduce((sum, row) => sum + Number(row.parts[1]), 0);
+      const weeklyTotal = spaceRows.reduce((sum, row) => sum + Number(row.parts[2]), 0);
+      const capacity = (used: number, budget: number, unit: string) =>
+        used <= budget
+          ? `在目前${unit}容量內，尚餘 ${budget - used} 分鐘；仍需試行確認估時。`
+          : `超出目前${unit}容量 ${used - budget} 分鐘；先刪減、拆分、降低頻率或增加可承擔角色，不要把超載排程當成承諾。`;
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const rotationDates = spaceRows.map((_, index) => {
+        if (values.rotation === "每月輪替一區") return addMonths(start, index);
+        const result = new Date(start);
+        result.setDate(result.getDate() + index * (values.rotation === "每兩週輪替一區" ? 14 : 7));
+        return result;
+      });
+      const dailyRows = spaceRows
+        .map((row, index) => ({ row, index }))
+        .filter(({ row }) => Number(row.parts[1]) > 0)
+        .map(({ row, index }) => `[ ] ${row.parts[0]}｜約 ${row.parts[1]} 分鐘｜${owners[index % owners.length]}｜完成：${row.parts[3]}`);
+      const weeklyRows = spaceRows
+        .map((row, index) => `[ ] ${row.parts[0]}｜約 ${row.parts[2]} 分鐘｜${owners[(index + 1) % owners.length]}｜完成：${row.parts[3]}`);
+      return `家庭清潔排程試行版\n第一輪開始：${formatter.format(start)}\n參與角色：${owners.join("、")}\n\n每日復位估計：${dailyTotal} 分鐘；可用：${dailyBudget} 分鐘\n容量判讀：${capacity(dailyTotal, dailyBudget, "每日")}\n${lines("每日復位", dailyRows.length ? dailyRows : ["本次沒有設定每日復位；請確認這是家庭有意識的選擇。"])}\n\n每週基本清潔估計：${weeklyTotal} 分鐘；可用：${weeklyBudget} 分鐘\n容量判讀：${capacity(weeklyTotal, weeklyBudget, "每週")}\n${lines("每週基本清潔", weeklyRows)}\n\n${lines(values.rotation, spaceRows.map((row, index) => `[ ] ${formatter.format(rotationDates[index])}｜${row.parts[0]}｜由家庭另定本輪深入查核項目與完成證據`))}\n\n${lines("開始前確認的限制", constraintRows.map((row) => `${row.parts[0]}｜${row.parts[1]}`))}\n\n公平性提醒：平均件數不等於公平。分配只依輸入順序輪替，不知道年齡、體力、照護負擔、健康限制、技能或每項工作的真實難度。試行一輪後記錄實際分鐘、跳過原因與需要協助處，再由全家調整；不要用勾選率責怪無法安全執行的人。清潔用品應詳讀產品標示、保持通風且不混用；高處、重物、病媒、災後污染或其他風險工作應依官方指引及適合人員處理。`;
+    },
+  },
   "appliance-replacement-planner": {
     intro:
       "用家電身分、日期依據、目前狀況、書面估價與家庭自訂規劃年限建立查證順序。工具不內建壽命表，也不會替你判定一定要修或換。",
