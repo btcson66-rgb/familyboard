@@ -53,7 +53,7 @@
     "route": "/features/household-documents-organizer/",
     "cluster": "product",
     "keywords": "household documents organizer",
-    "headings": "A document index, not a file cabinet What a document record stores — and doesn't Linking a document to an asset is what makes it findable later The review date field A worked example Categories worth using The honest limit"
+    "headings": "A document index, not a file cabinet What a document record stores — and doesn't Linking a document to an asset is what makes it findable later The review date field is visible and sorted, but it is not a notification A worked example Categories worth using The honest limit"
   },
   {
     "title": "Household Subscription Tracker for Renewals, Costs and Cancellation Notes | FamilyBoard",
@@ -110,6 +110,14 @@
     "cluster": "product",
     "keywords": "private family organizer",
     "headings": "Local-first, offline and no-account are one design decision, not three features What \"no account\" means in practice What \"offline\" means in practice What \"local-first\" means for backup, concretely The bulk-edit path: master CSV One household per browser profile — the honest limit What local-first does not protect against"
+  },
+  {
+    "title": "Offline Household Organizer — Access Home Records Without an Internet Connection | FamilyBoard",
+    "description": "Use core household records, tasks and maintenance information offline through a local-first PWA with user-controlled backup.",
+    "route": "/features/offline-household-organizer/",
+    "cluster": "product",
+    "keywords": "offline household organizer",
+    "headings": "An offline household organizer should survive a real network test Finish one connected load before relying on it What continues to work without a connection Run a five-minute offline acceptance test Offline cache and household data are different stores Backups remain essential Updates need one connected window"
   },
   {
     "title": "Free Home Management App — Every Feature, No Account, No Paywall | FamilyBoard",

@@ -49,9 +49,9 @@
   },
   {
     "route": "/features/household-documents-organizer/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/household-documents-organizer/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
@@ -113,19 +113,19 @@
   },
   {
     "route": "/features/private-family-organizer/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/private-family-organizer/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
     "redirectTo": ""
   },
   {
     "route": "/features/offline-household-organizer/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "alternateRoute": "/zh-tw/features/offline-household-organizer/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
     "locale": "en",
-    "redirectTo": "/features/private-family-organizer/"
+    "redirectTo": ""
   },
   {
     "route": "/features/no-account-family-organizer/",
@@ -1868,6 +1868,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/features/household-documents-organizer/",
+    "alternateRoute": "/features/household-documents-organizer/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/household-documents-organizer/",
     "alternateRoute": "/guides/household-documents-organizer/",
     "indexable": true,
@@ -1910,6 +1917,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/features/offline-household-organizer/",
+    "alternateRoute": "/features/offline-household-organizer/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/organize-household-subscriptions/",
     "alternateRoute": "/guides/organize-household-subscriptions/",
     "indexable": true,
@@ -1919,6 +1933,13 @@
   {
     "route": "/zh-tw/privacy/",
     "alternateRoute": "/privacy/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/features/private-family-organizer/",
+    "alternateRoute": "/features/private-family-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

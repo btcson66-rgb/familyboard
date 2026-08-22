@@ -4,7 +4,6 @@ import { createRedirectStub } from "../src/lib/redirect-stub";
 
 const consolidations = [
   ["/features/local-first-home-organizer/", "/features/private-family-organizer/"],
-  ["/features/offline-household-organizer/", "/features/private-family-organizer/"],
   ["/features/no-account-family-organizer/", "/features/private-family-organizer/"],
   ["/features/home-record-keeper/", "/features/free-home-management-app/"],
   ["/features/household-operations-system/", "/features/free-home-management-app/"],

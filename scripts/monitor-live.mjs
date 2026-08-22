@@ -66,6 +66,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/features/household-calendar/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/emergency-information-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/family-display-mode/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/household-documents-organizer/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/private-family-organizer/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/offline-household-organizer/</loc>",
+      "<loc>https://familyboard.win/features/offline-household-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/how-to-track-product-warranties/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-household-subscriptions/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/household-documents-organizer/</loc>",
@@ -350,6 +354,43 @@ const checks = [
       "每分鐘重新整理",
       "不是跨裝置同步",
     ],
+  },
+  {
+    path: "/zh-tw/features/household-documents-organizer/",
+    require: [
+      "家庭文件管理 App 教學",
+      'hreflang="en"',
+      "原始文件存放位置",
+      "有日期的紀錄放在沒有日期的紀錄前",
+    ],
+  },
+  {
+    path: "/zh-tw/features/private-family-organizer/",
+    require: [
+      "隱私家庭管理 App",
+      'hreflang="en"',
+      "不載入 Google Analytics 4 或廣告程式碼",
+      "PBKDF2-SHA-256",
+    ],
+  },
+  {
+    path: "/zh-tw/features/offline-household-organizer/",
+    require: [
+      "離線家庭管理 App 教學",
+      'hreflang="en"',
+      "離線 App 快取已就緒",
+      "關掉網路前的五分鐘驗收",
+    ],
+  },
+  {
+    path: "/features/offline-household-organizer/",
+    require: [
+      "An offline household organizer should survive a real network test",
+      'hreflang="zh-TW"',
+      "Offline app cache ready",
+      "five-minute offline acceptance test",
+    ],
+    forbid: ['http-equiv="refresh"'],
   },
   {
     path: "/zh-tw/guides/how-to-track-product-warranties/",

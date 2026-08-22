@@ -9,7 +9,7 @@ pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-08-22"
 nextStep: "Open the app without creating an account, add one real record, and export a JSON backup — that three-step loop is the entire trust model in action."
 related:
   - "/features/free-home-management-app/"
@@ -27,11 +27,11 @@ faq:
     answer: "Not automatically — there's no account or cloud sync, so each browser profile has its own independent local database. To move data between devices, export a JSON backup on one and restore it on the other; that's a manual, one-time transfer, not ongoing sync."
   - question: "What happens if I clear my browser data without a backup?"
     answer: "You lose the household database — there's no server-side copy to recover it from. This is why FamilyBoard's Settings screen actively warns when your last backup is more than seven days old, or when none has ever been made."
-contentVersion: 1
+contentVersion: 2
 ---
 # Local-first, offline and no-account are one design decision, not three features
 
-A household organizer knows a surprising amount about how your family actually lives: when you travel, what you own, who your emergency contacts are, which services you pay for. `FamilyBoard`'s answer to that is architectural, not a policy promise — the app is built with Dexie (a wrapper around the browser's built-in IndexedDB) as its only datastore. There is no server-side database behind it, no login, and no network request that carries your household data anywhere. That single design choice is what "local-first," "offline" and "no-account" all describe from three different angles.
+A household organizer knows a surprising amount about how your family actually lives: when you travel, what you own, who your emergency contacts are, which services you pay for. `FamilyBoard`'s answer is architectural, not just a policy promise: household records use Dexie over the browser's IndexedDB, and the App routes do not load GA4 or advertising code. There is no FamilyBoard login, household cloud database or sync API receiving a second copy. The browser still fetches the App's own HTML, JavaScript and updates from the website while online, and the status row sends a same-origin `HEAD` request with no household fields to check whether the site is reachable; none of those application requests contains the household records stored in IndexedDB.
 
 ## What "no account" means in practice
 
@@ -39,7 +39,7 @@ Opening the app for the first time shows one form: a home name and, optionally, 
 
 ## What "offline" means in practice
 
-FamilyBoard is a Progressive Web App with a service worker and a web manifest declaring a standalone display mode. Once loaded and cached, the core screens keep working without a network connection, because every read and write goes to the local IndexedDB database rather than a remote API — there's nothing to wait on. This is also why the app requests persistent storage from the browser (a button in Settings triggers `navigator.storage.persist()`) — it's asking the browser not to silently evict the database under storage pressure, which matters more for an app with no server copy to fall back to.
+FamilyBoard is a Progressive Web App with a service worker and a web manifest declaring a standalone display mode. Once the service worker reports that the offline App cache is ready, the core screens keep working without a network connection because every household-record read and write goes to IndexedDB rather than a remote API. The App asks the browser for persistent storage on startup and exposes the request again in Settings when it has not been granted. The browser decides whether to grant it; the setting lowers automatic-eviction risk but does not protect against deliberate site-data clearing, profile deletion or device failure.
 
 ## What "local-first" means for backup, concretely
 

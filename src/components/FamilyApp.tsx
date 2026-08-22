@@ -324,6 +324,10 @@ function FamilyAppBody() {
   const [tab, setTab] = useState<Tab>("today");
   const [message, setMessage] = useState("");
   const [toolDrafts, setToolDrafts] = useState<ToolDraft[]>([]);
+  const [online, setOnline] = useState(
+    typeof navigator === "undefined" ? true : navigator.onLine,
+  );
+  const [offlineCacheReady, setOfflineCacheReady] = useState(false);
   const household = data.households[0];
   const householdId = household?.id || "";
   const refresh = useCallback(async () => {
@@ -347,6 +351,9 @@ function FamilyAppBody() {
   useEffect(() => {
     refresh();
     navigator.storage?.persist?.().catch(() => false);
+    navigator.serviceWorker?.ready
+      .then(() => setOfflineCacheReady(true))
+      .catch(() => setOfflineCacheReady(false));
     try {
       setToolDrafts(
         JSON.parse(localStorage.getItem("familyboard:tool-inbox") || "[]"),
@@ -355,6 +362,31 @@ function FamilyAppBody() {
       localStorage.removeItem("familyboard:tool-inbox");
     }
   }, [refresh]);
+  useEffect(() => {
+    const updateConnection = async () => {
+      if (!navigator.onLine) {
+        setOnline(false);
+        return;
+      }
+      try {
+        const response = await fetch(
+          `/robots.txt?connection-check=${Date.now()}`,
+          { method: "HEAD", cache: "no-store" },
+        );
+        setOnline(response.ok);
+      } catch {
+        setOnline(false);
+      }
+    };
+    const handleConnectionChange = () => void updateConnection();
+    void updateConnection();
+    window.addEventListener("online", handleConnectionChange);
+    window.addEventListener("offline", handleConnectionChange);
+    return () => {
+      window.removeEventListener("online", handleConnectionChange);
+      window.removeEventListener("offline", handleConnectionChange);
+    };
+  }, []);
   useEffect(() => {
     const sync = () => refresh();
     const timer = window.setInterval(sync, 60_000);
@@ -511,7 +543,12 @@ function FamilyAppBody() {
           <div className="app-context" role="note">
             <span>Saved on this device</span>
             <span>No account</span>
-            <span>Offline-ready</span>
+            <span role="status">{online ? "Online now" : "Offline now"}</span>
+            <span>
+              {offlineCacheReady
+                ? "Offline app cache ready"
+                : "Keep this page open once to prepare offline use"}
+            </span>
           </div>
           <div className="app-title">
             <div>
@@ -1143,7 +1180,16 @@ function FamilyAppBody() {
                 }
               />
               <div className="app-grid">
-                {data.documents.map((item) => (
+                {data.documents.length === 0 && (
+                  <Empty>
+                    No document references yet. Add a pointer to one important
+                    original you need to find again.
+                  </Empty>
+                )}
+                {sortByOptionalIsoDate(
+                  data.documents,
+                  (item) => item.reviewDate,
+                ).map((item) => (
                   <div className="app-card" key={item.id}>
                     <h2>{item.name}</h2>
                     <p>
@@ -1151,8 +1197,11 @@ function FamilyAppBody() {
                     </p>
                     <p className="detail">
                       {assets[item.relatedAssetId] || "No asset link"} ·{" "}
-                      <span>Review:</span>{" "}
-                      {labelDate(item.reviewDate)}
+                      <span>Review:</span> {dueStatus(item.reviewDate)}
+                      {item.reviewDate &&
+                        item.reviewDate <= localIsoDate() && (
+                          <> · {labelDate(item.reviewDate)}</>
+                        )}
                     </p>
                     {item.notes && <p className="detail">Notes: {item.notes}</p>}
                   </div>

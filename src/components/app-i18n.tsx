@@ -57,7 +57,10 @@ const zhTw: Record<string, string> = {
   "Local data · no app analytics": "本機資料 · App 不載入分析追蹤",
   "Saved on this device": "資料儲存在這台裝置",
   "No account": "不需帳號",
-  "Offline-ready": "可離線使用",
+  "Online now": "目前有網路",
+  "Offline now": "目前已離線",
+  "Offline app cache ready": "離線 App 快取已就緒",
+  "Keep this page open once to prepare offline use": "請先保持本頁開啟，完成離線使用準備",
   "Saved locally on this device.": "已儲存在這台裝置。",
   "The browser storage quota is full. Export a backup, free space safely and try again.":
     "瀏覽器儲存空間已滿。請先匯出備份、安全釋放空間後再試一次。",
@@ -173,6 +176,8 @@ const zhTw: Record<string, string> = {
   "Review date": "複查日期",
   "Review:": "複查日：",
   "No asset link": "未連結資產",
+  "No document references yet. Add a pointer to one important original you need to find again.":
+    "目前沒有文件索引。先為一份日後必須找得到的重要原件建立位置指引。",
   "This v1 stores document references, not uploaded document files. Keep durable originals in storage you control.":
     "目前版本只保存文件索引，不會上傳文件檔案。請把耐久副本保存在自己控制的儲存空間。",
   "No account needed": "不需建立帳號",

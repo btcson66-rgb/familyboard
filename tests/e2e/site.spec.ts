@@ -43,7 +43,12 @@ test("public SEO, keyboard and five production tools work", async ({
 
   const sitemap = await (await page.request.get("/sitemap-0.xml")).text();
   expect(sitemap).not.toContain("/app/");
-  expect(sitemap).not.toContain("/offline/");
+  expect(sitemap).not.toContain(
+    "<loc>https://familyboard.win/offline/</loc>",
+  );
+  expect(sitemap).toContain(
+    "<loc>https://familyboard.win/features/offline-household-organizer/</loc>",
+  );
   await page.goto("/app/");
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
     "content",
@@ -58,6 +63,7 @@ test("public SEO, keyboard and five production tools work", async ({
 test("representative routes have no serious accessibility violations", async ({
   page,
 }) => {
+  test.setTimeout(90_000);
   for (const route of [
     "/",
     "/guides/home-maintenance-schedule/",
@@ -93,6 +99,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/features/household-calendar/",
     "/zh-tw/features/emergency-information-organizer/",
     "/zh-tw/features/family-display-mode/",
+    "/zh-tw/features/household-documents-organizer/",
+    "/zh-tw/features/private-family-organizer/",
+    "/zh-tw/features/offline-household-organizer/",
     "/zh-tw/guides/how-to-track-product-warranties/",
     "/zh-tw/guides/organize-household-subscriptions/",
     "/zh-tw/guides/household-documents-organizer/",
@@ -232,6 +241,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/features/family-display-mode/",
       alternate: "/features/family-display-mode/",
       heading: "舊平板家庭電子看板教學：先釐清本機資料，再把共用畫面放上牆",
+    },
+    {
+      route: "/zh-tw/features/household-documents-organizer/",
+      alternate: "/features/household-documents-organizer/",
+      heading: "家庭文件管理 App 教學：真正要管理的是「去哪裡找」，不是多複製一份檔案",
+    },
+    {
+      route: "/zh-tw/features/private-family-organizer/",
+      alternate: "/features/private-family-organizer/",
+      heading: "隱私家庭管理 App：沒有雲端帳號，並不等於不用做安全管理",
+    },
+    {
+      route: "/zh-tw/features/offline-household-organizer/",
+      alternate: "/features/offline-household-organizer/",
+      heading: "離線家庭管理 App 教學：不要等到停電或斷網才第一次測試",
     },
     {
       route: "/zh-tw/guides/how-to-track-product-warranties/",
@@ -520,6 +544,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "https://familyboard.win/zh-tw/features/family-display-mode/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/household-documents-organizer/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/private-family-organizer/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/offline-household-organizer/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/how-to-track-product-warranties/",
   );
   expect(sitemap).toContain(
@@ -553,6 +586,8 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByLabel("家庭名稱").fill("繁中測試家庭");
   await page.getByRole("button", { name: "建立本機家庭" }).click();
   await expect(page.getByRole("heading", { name: "今日總覽" })).toBeVisible();
+  await expect(page.getByText("目前有網路")).toBeVisible();
+  await expect(page.getByText("離線 App 快取已就緒")).toBeVisible();
   await page.getByRole("button", { name: "家庭資產" }).click();
   await page.getByLabel("資產名稱").fill("測試冰箱");
   await page.getByLabel("序號").fill("ZH-ASSET-001");
@@ -714,8 +749,26 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByRole("button", { name: "新增紀錄" }).click();
   const documentCard = page.locator(".app-card").filter({ hasText: "測試保單" });
   await expect(documentCard).toContainText("加密雲端/保險");
-  await expect(documentCard).toContainText("複查日： 2027年1月15日");
+  await expect(documentCard).toContainText("複查日： 到期日 2027年1月15日");
   await expect(documentCard).toContainText("內含敏感保單編號");
+  await page.getByLabel("紀錄名稱").fill("更晚文件");
+  await page.getByLabel("原始文件存放位置").fill("紙本文件盒/B");
+  await page.getByLabel("複查日期").fill("2028-01-15");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  await expect(
+    page.locator(".app-card").filter({ hasText: "更晚文件" }),
+  ).toBeVisible();
+  await page.getByLabel("紀錄名稱").fill("無日期文件");
+  await page.getByLabel("原始文件存放位置").fill("紙本文件盒/C");
+  await page.getByRole("button", { name: "新增紀錄" }).click();
+  await expect(
+    page.locator(".app-card").filter({ hasText: "無日期文件" }),
+  ).toBeVisible();
+  await expect(page.locator(".app-main > .app-grid .app-card h2")).toHaveText([
+    "測試保單",
+    "更晚文件",
+    "無日期文件",
+  ]);
 
   await page.getByRole("button", { name: "交接" }).click();
   await expect(page.getByText("繁中測試家庭 家庭交接摘要")).toBeVisible();
@@ -892,5 +945,29 @@ test("complete local app lifecycle survives backup, reset, restore and offline r
   await context.setOffline(true);
   await page.reload({ waitUntil: "domcontentloaded" });
   await expect(page.getByRole("heading", { name: "Today" })).toBeVisible();
+  await expect(page.getByText("Offline now")).toBeVisible();
+  await expect(page.getByText("Offline app cache ready")).toBeVisible();
   await context.setOffline(false);
+});
+
+test("first connected visit precaches both app shells for offline opening", async ({
+  page,
+  context,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name !== "chromium",
+    "One service-worker lifecycle is sufficient; public smoke runs in every project.",
+  );
+
+  await page.goto("/");
+  await page.evaluate(() => navigator.serviceWorker.ready);
+  await context.setOffline(true);
+  try {
+    await page.goto("/zh-tw/app/", { waitUntil: "domcontentloaded" });
+    await expect(
+      page.getByRole("heading", { name: "不用註冊帳號，立即建立家庭工作區。" }),
+    ).toBeVisible();
+  } finally {
+    await context.setOffline(false);
+  }
 });

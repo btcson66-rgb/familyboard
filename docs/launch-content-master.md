@@ -704,6 +704,8 @@ It does not read your warranty terms or tell you whether a specific repair is co
 **Meta description:** `Organize household document references around the home, asset or responsibility they belong to instead of relying on disconnected folders.`
 **Primary keyword concept:** household documents organizer
 **Depth:** verified
+**Editorial review date:** 2026-08-22
+**Content version:** 2
 **Suggested internal links:** `/features/home-inventory-tracker/`, `/features/warranty-tracker/`, `/features/private-family-organizer/`, `/features/free-home-management-app/`
 
 # A document index, not a file cabinet
@@ -718,9 +720,9 @@ The quick-add form asks for a record name, a category (defaulting to "Home recor
 
 A document with no asset link is just a name and a location string, no more useful than a well-labeled folder. Link it to an asset, though, and it shows up alongside that asset's other records — the same connective pattern the Maintenance and Warranty tabs use. A "Water heater installation manual" document linked to the Water Heater asset becomes something you'd actually find again when a technician asks which model you have.
 
-## The review date field
+## The review date field is visible and sorted, but it is not a notification
 
-Documents like insurance policies, service contracts or lease agreements benefit from a periodic look, not a one-time filing. The review date field exists for exactly that — set it to when the document should next be checked (a renewal date, an annual review), and it becomes a normal date field you can track the same way you'd track any other household deadline, even though the Documents tab itself doesn't currently surface "review due soon" as a dashboard counter the way maintenance does.
+Documents like insurance policies, service contracts or lease agreements benefit from a periodic look, not a one-time filing. Set the review date to the real decision point: a renewal window, notice deadline or scheduled accuracy check. The Documents tab puts dated records before undated records and describes each date as overdue, due today or due on the formatted date. It still does not add document reviews to the Today dashboard or send push, email or text alerts. If missing the date has consequences, create a separate household task with a real owner and matching due date.
 
 ## A worked example
 
@@ -742,7 +744,7 @@ Because documents are references and not uploads, the durable copy of anything i
 - Q: What's a good location reference to write if my documents are just scattered in email?
   A: Something specific enough to search for later: the sender, subject line and rough date ("email from LG Support, subject 'Order Confirmation,' March 2026") works better than "in email," since you can search Gmail or Outlook directly for that phrase.
 - Q: What happens on the review date — does FamilyBoard remind me?
-  A: The review date is stored as a field on the document record, but the Documents tab doesn't currently show a "review due" counter or alert. It's most useful paired with a task you create with a matching due date, which does show up on the dashboard.
+  A: The Documents tab sorts dated records before undated ones and shows whether the review is overdue, due today or due on the formatted date. It does not put that review on the Today dashboard or send an alert, so pair consequential dates with a household task that has an owner and matching due date.
 - Q: Is my document backup safe if my browser data gets cleared?
   A: Only if you've exported a JSON backup from Settings beforehand — that backup includes your document references and notes. Clearing browser data without a recent backup means losing the index, though any actual files you referenced (stored elsewhere) are unaffected.
 
@@ -1098,11 +1100,13 @@ If encrypted cloud sync is built later, it should be an opt-in service that exte
 **Meta description:** `A household organizer that stores records in your browser, works offline, needs no account, and gives you password-protected backups you control.`
 **Primary keyword concept:** private family organizer
 **Depth:** verified
+**Editorial review date:** 2026-08-22
+**Content version:** 2
 **Suggested internal links:** `/features/free-home-management-app/`, `/features/household-handoff/`, `/features/emergency-information-organizer/`, `/features/home-dashboard/`
 
 # Local-first, offline and no-account are one design decision, not three features
 
-A household organizer knows a surprising amount about how your family actually lives: when you travel, what you own, who your emergency contacts are, which services you pay for. `FamilyBoard`'s answer to that is architectural, not a policy promise — the app is built with Dexie (a wrapper around the browser's built-in IndexedDB) as its only datastore. There is no server-side database behind it, no login, and no network request that carries your household data anywhere. That single design choice is what "local-first," "offline" and "no-account" all describe from three different angles.
+A household organizer knows a surprising amount about how your family actually lives: when you travel, what you own, who your emergency contacts are, which services you pay for. `FamilyBoard`'s answer is architectural, not just a policy promise: household records use Dexie over the browser's IndexedDB, and the App routes do not load GA4 or advertising code. There is no FamilyBoard login, household cloud database or sync API receiving a second copy. The browser still fetches the App's own HTML, JavaScript and updates from the website while online, and the status row sends a same-origin `HEAD` request with no household fields to check whether the site is reachable; none of those application requests contains the household records stored in IndexedDB.
 
 ## What "no account" means in practice
 
@@ -1110,7 +1114,7 @@ Opening the app for the first time shows one form: a home name and, optionally, 
 
 ## What "offline" means in practice
 
-FamilyBoard is a Progressive Web App with a service worker and a web manifest declaring a standalone display mode. Once loaded and cached, the core screens keep working without a network connection, because every read and write goes to the local IndexedDB database rather than a remote API — there's nothing to wait on. This is also why the app requests persistent storage from the browser (a button in Settings triggers `navigator.storage.persist()`) — it's asking the browser not to silently evict the database under storage pressure, which matters more for an app with no server copy to fall back to.
+FamilyBoard is a Progressive Web App with a service worker and a web manifest declaring a standalone display mode. Once the service worker reports that the offline App cache is ready, the core screens keep working without a network connection because every household-record read and write goes to IndexedDB rather than a remote API. The App asks the browser for persistent storage on startup and exposes the request again in Settings when it has not been granted. The browser decides whether to grant it; the setting lowers automatic-eviction risk but does not protect against deliberate site-data clearing, profile deletion or device failure.
 
 ## What "local-first" means for backup, concretely
 
@@ -1150,28 +1154,64 @@ Local storage isn't the same as invincible storage. Anyone who can unlock your d
 **Title tag:** `Offline Household Organizer — Access Home Records Without an Internet Connection | FamilyBoard`
 **Meta description:** `Use core household records, tasks and maintenance information offline through a local-first PWA with user-controlled backup.`
 **Primary keyword concept:** offline household organizer
-**Redirects to:** `/features/private-family-organizer/`
+**Depth:** verified
+**Editorial review date:** 2026-08-22
+**Content version:** 2
 **Suggested internal links:** `/features/private-family-organizer/`, `/features/family-display-mode/`, `/guides/digital-home-inventory-backup/`, `/app/`
 
-# Household information should still exist when the internet does not
+# An offline household organizer should survive a real network test
 
-Internet outages are usually inconvenient, not catastrophic. But a home organizer is especially useful when normal systems are disrupted: during travel, an outage, a service visit or a move. A PWA can keep the core interface and local records available without a live connection.
+An "offline" badge means little if the screen fails the moment Wi-Fi disappears. FamilyBoard separates two pieces that an offline household organizer needs: a service worker caches the application shell, while IndexedDB stores the household records in the current browser profile. Once the status row says **Offline app cache ready**, losing the connection should remove access to external websites—not to the records and forms already inside the App.
 
-## What can work offline
+## Finish one connected load before relying on it
 
-The local database can continue to provide previously stored household members, assets, maintenance tasks, subscriptions, emergency notes and other records. Creating or editing those records can also remain local.
+Service workers are installed by a browser after an online page registers them; they are not available before the first visit. FamilyBoard precaches the English and Traditional Chinese App shells plus their generated JavaScript and CSS when its service worker installs. Keep the first connected page open until the App status says its offline cache is ready. Then open the App once, create a harmless sample record and perform the test below. An install icon or home-screen shortcut is convenient, but it is not proof that every asset required to start the App has actually reached the cache.
 
-Features that depend on external websites, maps, cloud sync or remote product data would naturally require a connection if added in the future.
+The service worker lifecycle is why first-load wording matters: according to the [web.dev service-worker guide](https://web.dev/learn/pwa/service-workers), a worker does not control the page before registration and activation. FamilyBoard therefore reports cache readiness in the App instead of treating a manifest alone as evidence.
 
-## Offline should be tested, not merely advertised
+## What continues to work without a connection
 
-The build pipeline should include an offline smoke test: install/cache the app, disable network access, reload the core app and verify that essential screens still work. A service worker that exists but fails during a real outage is not an offline feature.
+Existing household members, assets, maintenance tasks and history, warranties, subscriptions, tasks, calendar events, contacts, document references, handoff profiles and settings come from IndexedDB. The forms that add records write to that same local database, so normal creating, reading and updating supported by the interface continues offline. JSON backup export, encrypted export, backup validation, restore and master-table CSV work in the browser too; saving a downloaded file may still depend on the device's file and permission behavior.
+
+Links to manufacturers, government guidance, retailers or any other external page need a network connection. FamilyBoard has no cloud sync queue, background server reconciliation, maps, remote product lookup or push-notification service to fall back to. An offline change stays on that browser profile; it will not appear on a phone, laptop or wall tablet automatically when the connection returns.
+
+## Run a five-minute offline acceptance test
+
+1. While connected, open FamilyBoard and wait for **Offline app cache ready**.
+2. Add a sample task with a recognizable title, then confirm it appears in the task list.
+3. Use the browser or operating system's network controls to go offline. Airplane mode is clearer than merely disconnecting one Wi-Fi network if the device has mobile data.
+4. Reload the App. Confirm the top status changes to **Offline now**, the sample task remains visible and a second harmless record can be saved.
+5. Return online, reload and confirm both records are still present. Delete or replace test data only through a process you understand, and export a backup before any destructive reset.
+
+The automated browser suite also performs an offline lifecycle check, but that test is evidence about the tested build and browser—not a guarantee about every device. Your own device, profile, storage policy and installed extensions can change the result.
+
+## Offline cache and household data are different stores
+
+The Cache Storage API holds requested resources such as HTML, CSS and JavaScript. IndexedDB holds structured household records. The [web.dev offline-data guide](https://web.dev/learn/pwa/offline-data) describes those separate roles. Clearing all site data may remove both, while a browser update or cache refresh can replace application files without deleting IndexedDB records. Do not diagnose the safety of household data merely by checking whether an icon still opens.
+
+The App's Settings page reports whether persistent storage was granted. The [MDN documentation for `StorageManager.persist()`](https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist) explains that the browser may grant or deny the request. Even a grant is not a backup: a person can still clear site data, delete the browser profile or lose the device.
 
 ## Backups remain essential
 
-Offline availability protects against network failure; it does not protect against device loss or cleared browser data. The product must keep those concepts separate.
+Offline availability protects against a missing network path. A JSON export protects against losing the one local database only if the file is current, stored elsewhere and actually restorable. Private browsing is especially unsuitable for long-lived records because its IndexedDB lifetime follows that private session. Use a normal, device-protected browser profile, request persistent storage, keep a separate backup and periodically validate that file.
+
+## Updates need one connected window
+
+FamilyBoard's service worker can keep the last cached App available while offline. New code, content corrections and cache versions still arrive from the website, so reconnect periodically. When the App reports that a new version is ready, export a current backup first, choose the update action and let the page reload. The cached version is a continuity mechanism, not a promise that an indefinitely disconnected device will receive fixes.
 
 **Contextual CTA:** Install the PWA, create sample records, then deliberately test it offline. A privacy-first product should prove its local behavior in normal use.
+
+**FAQ:**
+- Q: Can I open FamilyBoard offline on a device that has never visited the site?
+  A: No. The browser must first load the site, register and activate the service worker, and cache the App shell. Wait for the App to show "Offline app cache ready," then run an intentional offline reload before depending on it.
+- Q: Does installing the PWA prove offline mode is ready?
+  A: Not by itself. Installation and service-worker caching are related but separate browser processes. The readiness status and a successful offline reload are stronger evidence than an icon alone.
+- Q: Will records entered offline sync to another device later?
+  A: No. They remain in that browser profile's IndexedDB. FamilyBoard has no account or cloud-sync queue; moving data requires a deliberate backup export and restore.
+- Q: Does persistent storage mean I no longer need backups?
+  A: No. The browser may deny the request, and even a grant does not protect against deliberate clearing, profile deletion, device loss or hardware failure. Keep a separate, tested JSON backup.
+- Q: What should I do before accepting an App update?
+  A: Reconnect, export a current JSON backup, then use the update prompt. After reload, verify one important record and the Settings version before continuing normal use.
 
 ---
 
