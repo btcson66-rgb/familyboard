@@ -1,21 +1,41 @@
 ---
 import { monetization } from '../config/monetization';
-const { route } = Astro.props as { route: string };
+interface Props { route: string; locale?: 'en' | 'zh-TW'; }
+const { route, locale = 'en' } = Astro.props;
+const isZhTw = locale === 'zh-TW';
 const groups = [
-  { test: /filter|air-conditioner|furnace|refrigerator|range-hood/, items: [['Replacement filters', 'replacement filters home appliance'], ['Filter labels', 'waterproof label maker household']] },
-  { test: /emergency|storm|outage/, items: [['Emergency supply organizer', 'emergency supply organizer bins'], ['Battery and flashlight organizer', 'battery storage organizer flashlight']] },
-  { test: /display|tablet/, items: [['Tablet stand', 'tablet stand home dashboard'], ['Wall mount', 'tablet wall mount home']] },
-  { test: /document|receipt|warranty|manual/, items: [['Document scanner', 'document scanner home receipts'], ['Fire-resistant document pouch', 'fire resistant document pouch']] },
-  { test: /inventory|label|organizer/, items: [['Label maker', 'label maker home organization'], ['Storage labels', 'home storage labels']] }
+  { test: /filter|air-conditioner|furnace|refrigerator|range-hood/, items: [
+    { en: 'Replacement filters', zh: '替換濾網', query: 'replacement filters home appliance' },
+    { en: 'Filter labels', zh: '防水標籤', query: 'waterproof label maker household' }
+  ] },
+  { test: /emergency|storm|outage/, items: [
+    { en: 'Emergency supply organizer', zh: '緊急用品收納', query: 'emergency supply organizer bins' },
+    { en: 'Battery and flashlight organizer', zh: '電池與手電筒收納', query: 'battery storage organizer flashlight' }
+  ] },
+  { test: /display|tablet/, items: [
+    { en: 'Tablet stand', zh: '平板支架', query: 'tablet stand home dashboard' },
+    { en: 'Wall mount', zh: '平板壁掛架', query: 'tablet wall mount home' }
+  ] },
+  { test: /document|receipt|warranty|manual/, items: [
+    { en: 'Document scanner', zh: '文件掃描器', query: 'document scanner home receipts' },
+    { en: 'Fire-resistant document pouch', zh: '防火文件袋', query: 'fire resistant document pouch' }
+  ] },
+  { test: /inventory|label|organizer/, items: [
+    { en: 'Label maker', zh: '標籤機', query: 'label maker home organization' },
+    { en: 'Storage labels', zh: '收納標籤', query: 'home storage labels' }
+  ] }
 ];
 const group = groups.find((candidate) => candidate.test.test(route));
 const enabled = monetization.affiliateEnabled && group;
 const link = (query: string) => `https://www.amazon.com/s?k=${encodeURIComponent(query)}&tag=${encodeURIComponent(monetization.affiliateTag)}`;
 ---
 {enabled && <aside class="recommendations" aria-labelledby="recommended-heading">
-  <div class="affiliate-label">Affiliate recommendation</div>
-  <h2 id="recommended-heading">Useful shopping categories for this task</h2>
-  <p>These links help you compare relevant products. Verify compatibility, current specifications, price and manufacturer guidance before buying.</p>
-  <div class="recommendation-grid">{group.items.map(([label, query]) => <a class="recommendation-link" data-affiliate-category={label} href={link(query)} rel="sponsored nofollow noopener" target="_blank"><strong>{label}</strong><span>Compare current listings →</span></a>)}</div>
-  <p class="help">As an affiliate, FamilyBoard may earn from qualifying purchases. <a href="/affiliate-disclosure/">Read the full disclosure.</a></p>
+  <div class="affiliate-label">{isZhTw ? '聯盟商品推薦' : 'Affiliate recommendation'}</div>
+  <h2 id="recommended-heading">{isZhTw ? '這項工作可能會用到的商品類別' : 'Useful shopping categories for this task'}</h2>
+  <p>{isZhTw ? '連結只協助比較相關商品。購買前請確認型號相容性、最新規格、價格與原廠說明。' : 'These links help you compare relevant products. Verify compatibility, current specifications, price and manufacturer guidance before buying.'}</p>
+  <div class="recommendation-grid">{group.items.map((item) => {
+    const label = isZhTw ? item.zh : item.en;
+    return <a class="recommendation-link" data-affiliate-category={item.en} href={link(item.query)} rel="sponsored nofollow noopener" target="_blank"><strong>{label}</strong><span>{isZhTw ? '查看目前商品 →' : 'Compare current listings →'}</span></a>;
+  })}</div>
+  <p class="help">{isZhTw ? <>若你透過連結完成符合條件的購買，FamilyBoard 可能獲得佣金，價格不會因此增加。<a href="/affiliate-disclosure/">閱讀聯盟行銷揭露（英文）。</a></> : <>As an affiliate, FamilyBoard may earn from qualifying purchases. <a href="/affiliate-disclosure/">Read the full disclosure.</a></>}</p>
 </aside>}

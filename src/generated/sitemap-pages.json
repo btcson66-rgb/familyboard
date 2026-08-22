@@ -153,7 +153,7 @@
   },
   {
     "route": "/features/free-home-management-app/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/free-home-management-app/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1609,7 +1609,7 @@
   },
   {
     "route": "/privacy/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/privacy/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1633,7 +1633,7 @@
   },
   {
     "route": "/contact/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/contact/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1728,6 +1728,20 @@
     "redirectTo": ""
   },
   {
+    "route": "/zh-tw/contact/",
+    "alternateRoute": "/contact/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/features/free-home-management-app/",
+    "alternateRoute": "/features/free-home-management-app/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/home-maintenance-schedule/",
     "alternateRoute": "/guides/home-maintenance-schedule/",
     "indexable": true,
@@ -1739,6 +1753,13 @@
     "alternateRoute": "/",
     "indexable": true,
     "lastReviewedAt": "2026-08-20",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/privacy/",
+    "alternateRoute": "/privacy/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
   },
   {

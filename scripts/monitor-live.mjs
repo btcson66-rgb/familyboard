@@ -39,7 +39,10 @@ const checks = [
       "<loc>https://familyboard.win/</loc>",
       "<loc>https://familyboard.win/zh-tw/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-schedule/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/free-home-management-app/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/privacy/</loc>",
+      "<loc>https://familyboard.win/zh-tw/contact/</loc>",
     ],
     forbid: [
       "<loc>https://familyboard.win/app/</loc>",
@@ -85,6 +88,33 @@ const checks = [
       'hreflang="en"',
       "保固起算日",
       "消費者保護法",
+    ],
+  },
+  {
+    path: "/zh-tw/privacy/",
+    require: [
+      "FamilyBoard 隱私權政策",
+      'hreflang="en"',
+      "家庭資料不會傳到 FamilyBoard",
+      "/zh-tw/contact/",
+    ],
+  },
+  {
+    path: "/zh-tw/contact/",
+    require: [
+      "聯絡 FamilyBoard",
+      'hreflang="en"',
+      "GitHub 私人漏洞回報",
+      "/zh-tw/privacy/",
+    ],
+  },
+  {
+    path: "/zh-tw/features/free-home-management-app/",
+    require: [
+      "FamilyBoard 使用教學",
+      'hreflang="en"',
+      "家庭資料總表 CSV",
+      "/zh-tw/app/",
     ],
   },
 ];

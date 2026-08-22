@@ -3,9 +3,14 @@ import path from "node:path";
 import { countBodyWords } from "./lib/word-count.mjs";
 
 const directory = path.resolve("src/content/pages");
+const localizedDirectory = path.resolve("src/content/pages-zh-tw");
 const files = fs.readdirSync(directory).filter((file) => file.endsWith(".md"));
+const localizedFiles = fs.existsSync(localizedDirectory)
+  ? fs.readdirSync(localizedDirectory).filter((file) => file.endsWith(".md"))
+  : [];
 const minimumCorePages = 200;
 const records = [];
+const localizedRecords = [];
 const errors = [];
 const hedgingPatterns = [
   "Do not invent a fixed universal interval",
@@ -86,6 +91,62 @@ for (const file of files) {
   }
 }
 
+for (const file of localizedFiles) {
+  const raw = fs.readFileSync(path.join(localizedDirectory, file), "utf8");
+  const match = raw.match(/^---\n([\s\S]*?)\n---\n?/);
+  const frontmatter = match?.[1] || "";
+  const body = raw.slice(match?.[0].length || 0);
+  const record = {
+    file,
+    title: frontmatterValue(frontmatter, "title"),
+    description: frontmatterValue(frontmatter, "description"),
+    route: frontmatterValue(frontmatter, "route"),
+    alternateRoute: frontmatterValue(frontmatter, "alternateRoute"),
+    locale: frontmatterValue(frontmatter, "locale"),
+    keyword: frontmatterValue(frontmatter, "primaryKeyword"),
+    cluster: frontmatterValue(frontmatter, "cluster"),
+    pageType: frontmatterValue(frontmatter, "pageType"),
+    indexable: frontmatterValue(frontmatter, "indexable") === "true",
+    faqCount: (frontmatter.match(/^\s*- question:\s/gm) || []).length,
+    wordCount: countBodyWords(body),
+    cjkCharacters:
+      body.match(
+        /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/gu,
+      )?.length || 0,
+    body,
+  };
+  localizedRecords.push(record);
+
+  if (
+    !record.title ||
+    !record.description ||
+    !record.route ||
+    !record.alternateRoute ||
+    !record.keyword
+  )
+    errors.push(`pages-zh-tw/${file}: missing localized SEO metadata`);
+  if (record.locale !== "zh-TW")
+    errors.push(`pages-zh-tw/${file}: locale must be zh-TW`);
+  if (!record.route.startsWith("/zh-tw/"))
+    errors.push(`pages-zh-tw/${file}: route must start with /zh-tw/`);
+  if (record.pageType !== "tool" && !/^# [^#]/m.test(body))
+    errors.push(`pages-zh-tw/${file}: missing H1`);
+  const minimumCjkCharacters =
+    record.pageType === "tool" ? 850 : record.pageType === "support" ? 1000 : 1200;
+  if (record.indexable && record.cjkCharacters < minimumCjkCharacters)
+    errors.push(
+      `pages-zh-tw/${file}: indexable localized ${record.pageType} has ${record.cjkCharacters} CJK characters; minimum is ${minimumCjkCharacters}`,
+    );
+  if (record.indexable && record.faqCount < 3)
+    errors.push(
+      `pages-zh-tw/${file}: indexable localized page has ${record.faqCount} FAQ entries; minimum is 3`,
+    );
+  if (/\b(TODO|FIXME|Lorem ipsum|example\.com|localhost)\b/i.test(raw))
+    errors.push(`pages-zh-tw/${file}: placeholder`);
+  if (/Contextual CTA|^\*\*CTA:\*\*/im.test(raw))
+    errors.push(`pages-zh-tw/${file}: contains an authoring artifact`);
+}
+
 for (const key of ["title", "description", "route"]) {
   const seen = new Map();
   for (const item of records) {
@@ -97,7 +158,24 @@ for (const key of ["title", "description", "route"]) {
   }
 }
 
+for (const key of ["title", "description", "route", "alternateRoute"]) {
+  const seen = new Map();
+  for (const item of localizedRecords) {
+    if (seen.has(item[key]))
+      errors.push(
+        `duplicate localized ${key}: ${item[key]} (${seen.get(item[key])}, ${item.file})`,
+      );
+    seen.set(item[key], item.file);
+  }
+}
+
 const recordByRoute = new Map(records.map((record) => [record.route, record]));
+for (const record of localizedRecords) {
+  if (!recordByRoute.has(record.alternateRoute))
+    errors.push(
+      `pages-zh-tw/${record.file}: English alternate route does not exist: ${record.alternateRoute}`,
+    );
+}
 for (const record of records.filter((item) => item.redirectTo)) {
   const target = recordByRoute.get(record.redirectTo);
   if (!target)
@@ -145,6 +223,18 @@ const clusterTable = Object.entries(Object.groupBy(records, (item) => item.clust
 
 console.log("Content audit by cluster:");
 console.table(clusterTable);
+if (localizedRecords.length) {
+  console.log("Traditional Chinese content audit:");
+  console.table(
+    localizedRecords.map((record) => ({
+      route: record.route,
+      pageType: record.pageType,
+      cjkCharacters: record.cjkCharacters,
+      faq: record.faqCount,
+      alternateRoute: record.alternateRoute,
+    })),
+  );
+}
 
 if (errors.length) {
   console.error([...new Set(errors)].join("\n"));
@@ -152,5 +242,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Content audit PASS: ${files.length} pages, ${core.length} core pages (minimum ${minimumCorePages}), ${records.filter((record) => record.indexable).length} indexable.`,
+  `Content audit PASS: ${files.length} English pages, ${localizedFiles.length} zh-TW pages, ${core.length} core pages (minimum ${minimumCorePages}), ${records.filter((record) => record.indexable).length + localizedRecords.filter((record) => record.indexable).length} indexable.`,
 );

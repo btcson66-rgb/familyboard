@@ -66,7 +66,10 @@ test("representative routes have no serious accessibility violations", async ({
     "/pricing/",
     "/zh-tw/",
     "/zh-tw/guides/home-maintenance-schedule/",
+    "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
+    "/zh-tw/privacy/",
+    "/zh-tw/contact/",
     "/zh-tw/app/",
   ]) {
     await page.goto(route);
@@ -100,6 +103,45 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     .locator('script[type="application/ld+json"]')
     .allTextContents();
   expect(structuredData.join(" ")).toContain('"@type":"FAQPage"');
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "隱私權政策" }),
+  ).toHaveAttribute("href", "/zh-tw/privacy/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "聯絡我們" }),
+  ).toHaveAttribute("href", "/zh-tw/contact/");
+
+  for (const localized of [
+    {
+      route: "/zh-tw/privacy/",
+      alternate: "/privacy/",
+      heading: "FamilyBoard 隱私權政策：公開網站與私密 App 是兩個不同空間",
+    },
+    {
+      route: "/zh-tw/contact/",
+      alternate: "/contact/",
+      heading: "聯絡 FamilyBoard：先選對回報管道，也保護自己的家庭資料",
+    },
+    {
+      route: "/zh-tw/features/free-home-management-app/",
+      alternate: "/features/free-home-management-app/",
+      heading: "FamilyBoard 使用教學：先建立一套會持續使用的家庭管理流程",
+    },
+  ]) {
+    await page.goto(localized.route);
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
+    await expect(page.locator("h1")).toHaveText(localized.heading);
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+      "href",
+      `https://familyboard.win${localized.route}`,
+    );
+    await expect(
+      page.locator('link[rel="alternate"][hreflang="en"]'),
+    ).toHaveAttribute("href", `https://familyboard.win${localized.alternate}`);
+    await expect(
+      page.getByRole("link", { name: "Switch to English" }),
+    ).toHaveAttribute("href", localized.alternate);
+    await expect(page.locator(".recommendations")).toHaveCount(0);
+  }
 
   await page.goto("/tools/warranty-expiration-calculator/");
   await expect(
@@ -129,6 +171,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/",
+  );
+  expect(sitemap).toContain("https://familyboard.win/zh-tw/privacy/");
+  expect(sitemap).toContain("https://familyboard.win/zh-tw/contact/");
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/features/free-home-management-app/",
   );
   expect(sitemap).not.toContain("https://familyboard.win/zh-tw/app/");
 

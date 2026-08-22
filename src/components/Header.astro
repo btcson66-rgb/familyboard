@@ -12,7 +12,7 @@ const isZhTw = locale === 'zh-TW';
     <a class="brand" href={isZhTw ? '/zh-tw/' : '/'} aria-label={isZhTw ? `${brand.name} 繁體中文首頁` : `${brand.name} home`}><img class="brand-logo" src="/brand/familyboard-mark.png" width="42" height="42" alt="" />{brand.name}</a>
     <nav class="nav-links" aria-label={isZhTw ? '主要導覽' : 'Primary navigation'}>
       {isZhTw ? <>
-        <a href="/zh-tw/guides/home-maintenance-schedule/">居家保養指南</a><a href="/zh-tw/tools/warranty-expiration-calculator/">免費工具</a>
+        <a href="/zh-tw/features/free-home-management-app/">App 使用教學</a><a href="/zh-tw/guides/home-maintenance-schedule/">居家保養指南</a><a href="/zh-tw/tools/warranty-expiration-calculator/">免費工具</a>
       </> : <>
         <a href="/features/">Product</a><a href="/guides/">Guides</a><a href="/tools/">Tools</a><a href="/checklists/">Printables</a><a href="/pricing/">Free</a><a href="/search/" aria-label="Search">Search</a>
       </>}

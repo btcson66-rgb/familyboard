@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-21T16:39:58.595Z
+Generated: 2026-08-22T05:05:42.926Z
 
 ## Summary
 
-- Indexable pages: 205
-- Generated HTML routes: 223
+- Indexable pages: 208
+- Generated HTML routes: 226
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 29
+- Pages without a contextual product/tool link: 32
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
-- support: 16
+- support: 18
 - printables: 20
-- product: 16
+- product: 17
 - appliances: 30
 - maintenance: 31
 - household-operations: 19
@@ -29,7 +29,7 @@ Generated: 2026-08-21T16:39:58.595Z
 ## Word-count range
 
 - Lowest: https://familyboard.win/search/ (19 words)
-- Highest: https://familyboard.win/zh-tw/guides/home-maintenance-schedule/ (1941 words)
+- Highest: https://familyboard.win/zh-tw/features/free-home-management-app/ (2862 words)
 
 ## Highest similarity pairs
 
@@ -71,8 +71,11 @@ Generated: 2026-08-21T16:39:58.595Z
 - /roadmap/
 - /security/
 - /terms/
+- /zh-tw/contact/
+- /zh-tw/features/free-home-management-app/
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/
+- /zh-tw/privacy/
 - /zh-tw/tools/warranty-expiration-calculator/
 
 ## Blockers
