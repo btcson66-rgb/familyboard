@@ -104,6 +104,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/terms/",
     "/zh-tw/guides/digital-home-inventory-backup/",
     "/zh-tw/guides/home-maintenance-log/",
+    "/zh-tw/guides/appliance-replacement-planning/",
+    "/zh-tw/guides/room-by-room-home-inventory/",
+    "/zh-tw/guides/cleaning-schedule/",
     "/zh-tw/features/household-handoff/",
     "/zh-tw/features/home-inventory-tracker/",
     "/zh-tw/features/family-task-manager/",
@@ -170,6 +173,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "使用條款" }),
   ).toHaveAttribute("href", "/zh-tw/terms/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家電修換決策教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/appliance-replacement-planning/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭財物清冊教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/room-by-room-home-inventory/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "清潔排程教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/cleaning-schedule/");
 
   for (const localized of [
     {
@@ -206,6 +218,21 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/home-maintenance-log/",
       alternate: "/guides/home-maintenance-log/",
       heading: "居家保養紀錄教學：把「做過了」變成下次真的找得到的歷程",
+    },
+    {
+      route: "/zh-tw/guides/appliance-replacement-planning/",
+      alternate: "/guides/appliance-replacement-planning/",
+      heading: "家電要修還是換？台灣家庭的汰換時機與查證流程",
+    },
+    {
+      route: "/zh-tw/guides/room-by-room-home-inventory/",
+      alternate: "/guides/room-by-room-home-inventory/",
+      heading: "家庭財物清冊怎麼做？逐房間盤點、拍照與更新方法",
+    },
+    {
+      route: "/zh-tw/guides/cleaning-schedule/",
+      alternate: "/guides/cleaning-schedule/",
+      heading: "家庭清潔排程怎麼排？依空間、時間容量與分工建立可持續週期",
     },
     {
       route: "/zh-tw/features/household-handoff/",
@@ -810,6 +837,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/cleaning-schedule-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/appliance-replacement-planning/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/room-by-room-home-inventory/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/cleaning-schedule/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/appliance-replacement-planner/",

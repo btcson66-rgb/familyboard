@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T15:37:46.023Z
+Generated: 2026-08-22T15:55:15.231Z
 
 ## Summary
 
-- Indexable pages: 254
-- Generated HTML routes: 271
+- Indexable pages: 257
+- Generated HTML routes: 274
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 77
+- Pages without a contextual product/tool link: 80
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,8 +21,8 @@ Generated: 2026-08-22T15:37:46.023Z
 - product: 31
 - appliances: 30
 - maintenance: 32
-- household-operations: 20
-- inventory-warranty: 27
+- household-operations: 21
+- inventory-warranty: 29
 - records-emergency: 23
 - tools: 50
 
@@ -87,12 +87,15 @@ Generated: 2026-08-22T15:37:46.023Z
 - /zh-tw/features/offline-household-organizer/
 - /zh-tw/features/private-family-organizer/
 - /zh-tw/features/warranty-tracker/
+- /zh-tw/guides/appliance-replacement-planning/
+- /zh-tw/guides/cleaning-schedule/
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/home-maintenance-log/
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/guides/household-documents-organizer/
 - /zh-tw/guides/how-to-track-product-warranties/
 - /zh-tw/guides/organize-household-subscriptions/
+- /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/
 - /zh-tw/privacy/
 - /zh-tw/security/

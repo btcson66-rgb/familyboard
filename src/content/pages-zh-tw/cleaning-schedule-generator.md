@@ -12,6 +12,7 @@ indexable: true
 publishedAt: "2026-08-22"
 lastReviewedAt: "2026-08-22"
 related:
+  - "/zh-tw/guides/cleaning-schedule/"
   - "/zh-tw/tools/recurring-chore-planner/"
   - "/zh-tw/features/family-task-manager/"
   - "/zh-tw/features/household-calendar/"
@@ -144,4 +145,3 @@ faq:
 不會。每日容量和每週容量分開比較；每週分鐘欄應只放額外的基本清潔，不重複加入每天已做的復位。深入查核又是第三層，需要家庭在輪到該區時另定內容與證據。
 
 **下一步：** 先用真實可用時間產生一版並試行一週，記下每區實際分鐘、跳過原因與安全限制；共同複查後，再把穩定且有負責人的工作加入[家庭任務 App](/zh-tw/features/family-task-manager/)。
-

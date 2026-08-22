@@ -58,6 +58,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/annual-subscription-cost-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-binder-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/cleaning-schedule-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/appliance-replacement-planning/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/room-by-room-home-inventory/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/cleaning-schedule/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-replacement-planner/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/room-inventory-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/warranty-checklist-generator/</loc>",
@@ -287,6 +290,33 @@ const checks = [
       'hreflang="en"',
       "空間、時間與完成定義",
       "先算容量，再談意志力",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/appliance-replacement-planning/",
+    require: [
+      "家電要修還是換？台灣家庭的汰換時機與查證流程",
+      'hreflang="en"',
+      "安全與召回優先於價格",
+      "新機標價不等於可使用的替代總成本",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/room-by-room-home-inventory/",
+    require: [
+      "家庭財物清冊怎麼做？逐房間盤點、拍照與更新方法",
+      'hreflang="en"',
+      "把房間切成看得見的區帶",
+      "清單、照片與取得憑證要分開保存",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/cleaning-schedule/",
+    require: [
+      "家庭清潔排程怎麼排？依空間、時間容量與分工建立可持續週期",
+      'hreflang="en"',
+      "用容量先判斷排程能不能成立",
+      "分工要看負擔與安全",
     ],
   },
   {

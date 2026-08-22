@@ -12,6 +12,7 @@ indexable: true
 publishedAt: "2026-08-22"
 lastReviewedAt: "2026-08-22"
 related:
+  - "/zh-tw/guides/appliance-replacement-planning/"
   - "/zh-tw/tools/appliance-age-calculator/"
   - "/zh-tw/tools/home-repair-cost-log/"
   - "/zh-tw/tools/warranty-checklist-generator/"
@@ -125,4 +126,3 @@ faq:
 可以作為盤點起點，但日期依據要選約略日期，輸出與後續分享都保留不確定性。不要把估計日偽裝成精確購買日；可再從保證書、訂單、交付單、安裝紀錄或舊照片回查。
 
 **下一步：** 產生查證卡後先核對完整型號與商品安全資訊，再補齊兩份書面估價的實際範圍；決定維修或汰換後，把完工、驗收與後續保證寫回[保養維護紀錄](/zh-tw/features/maintenance-tracker/)。
-

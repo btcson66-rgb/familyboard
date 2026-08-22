@@ -665,7 +665,7 @@
   },
   {
     "route": "/guides/room-by-room-home-inventory/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/room-by-room-home-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -761,7 +761,7 @@
   },
   {
     "route": "/guides/appliance-replacement-planning/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/appliance-replacement-planning/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1185,7 +1185,7 @@
   },
   {
     "route": "/guides/cleaning-schedule/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/cleaning-schedule/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1763,8 +1763,22 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/appliance-replacement-planning/",
+    "alternateRoute": "/guides/appliance-replacement-planning/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/cleaning-schedule-generator/",
     "alternateRoute": "/tools/cleaning-schedule-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/cleaning-schedule/",
+    "alternateRoute": "/guides/cleaning-schedule/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
@@ -2031,6 +2045,13 @@
   {
     "route": "/zh-tw/tools/recurring-chore-planner/",
     "alternateRoute": "/tools/recurring-chore-planner/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/room-by-room-home-inventory/",
+    "alternateRoute": "/guides/room-by-room-home-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"

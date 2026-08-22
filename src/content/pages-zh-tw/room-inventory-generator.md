@@ -12,6 +12,7 @@ indexable: true
 publishedAt: "2026-08-22"
 lastReviewedAt: "2026-08-22"
 related:
+  - "/zh-tw/guides/room-by-room-home-inventory/"
   - "/zh-tw/tools/home-inventory-checklist-generator/"
   - "/zh-tw/features/home-inventory-tracker/"
   - "/zh-tw/tools/warranty-checklist-generator/"
@@ -141,4 +142,3 @@ faq:
 應先確保人身與建物安全並遵循消防、保險與主管機關指示。官方資料常要求照片、損失清單及相關證明；過早清理可能影響跡證，所以本工具的災後模式也明確要求先確認安全與保存要求。
 
 **下一步：** 選一個房間完成兩輪盤點，抽查三筆重要物品是否能從清冊回到照片與原始文件；確認無敏感資訊後，再把需要長期管理的項目存進[家庭資產 App](/zh-tw/features/home-inventory-tracker/)。
-
