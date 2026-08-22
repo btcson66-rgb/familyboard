@@ -563,6 +563,113 @@ const definitions: Record<string, Definition> = {
     run: (v) =>
       `${lines("Before arrival", ["Confirm utilities and access", "Preserve lease/closing and condition records", "List essential contacts"])}\n\n${lines("First day", ["Locate official emergency and utility information", "Photograph initial condition where appropriate", `Identify major ${v.home || "home"} systems and equipment`])}\n\n${lines("First month", ["Add high-value assets and warranties", "Create only recurring tasks that apply", "Export the first backup", ...list(v.needs).map((item) => `Set up: ${item}`)])}`,
   },
+  "move-out-condition-record-generator": {
+    intro:
+      "Build a structured move-out inspection and handover draft without turning observations into legal conclusions. Keep signatures, identity documents, payment details and access secrets outside this tool.",
+    fields: [
+      text("home", "Premises label", "Use a nickname or unit label rather than a full public address.", "Rental home"),
+      {
+        name: "stage",
+        label: "Record stage",
+        type: "select",
+        options: ["Pre-move self-check", "Joint handover", "Post-handover follow-up"],
+      },
+      { name: "inspected", label: "Inspection date", type: "date" },
+      { name: "handover", label: "Planned or completed handover date", type: "date" },
+      text("source", "Agreement and starting-condition reference", "Name the lease, check-in inventory, dated photo set or other source you can reopen.", "Lease and check-in inventory dated 2025-09-01"),
+      {
+        name: "participants",
+        label: "Participants or roles",
+        type: "textarea",
+        help: "One per line or comma separated; 1–8 entries. This is not a signature field.",
+        value: "Tenant\nProperty manager",
+      },
+      {
+        name: "conditions",
+        label: "Condition observations",
+        type: "textarea",
+        help: "One line per area: area | observed condition | evidence reference | next action and owner | Open, Ready to confirm, Disputed, or Confirmed. Maximum 12 lines.",
+        value: "Kitchen | Sink cabinet dry during agreed check | IMG_001–003 | Both: compare with check-in record | Ready to confirm\nBedroom | Existing wall mark remains visible | IMG_004 and check-in IMG_019 | Manager: acknowledge in handover copy | Disputed\nLiving room | Personal items removed; floor visible | IMG_005–008 | Tenant: no further action recorded | Confirmed",
+      },
+      {
+        name: "accessItems",
+        label: "Keys and access items",
+        type: "textarea",
+        help: "One line per item: item | whole-number count | recipient or return status | evidence reference. Maximum 8 lines; never enter a code.",
+        value: "Front-door key | 2 | Return to property manager at handover | KEY_001\nAccess card | 1 | Return to property manager at handover | KEY_002",
+      },
+      {
+        name: "meters",
+        label: "Meter or service readings",
+        type: "textarea",
+        help: "One line per service: service | observed reading or status | unit | evidence reference. Maximum 8 lines.",
+        value: "Electricity | 012345 | kWh | METER_001\nWater | 00678 | local billing unit | METER_002",
+      },
+      { name: "followUp", label: "Next follow-up date", type: "date" },
+      text("storage", "Protected record location", "Write a folder or envelope label, not a password or access code.", "Household records / move-out / final handover"),
+    ],
+    run: (values) => {
+      const inspected = date(values.inspected);
+      const handover = date(values.handover);
+      const followUp = date(values.followUp);
+      if (!values.home.trim()) return "Enter a premises label so the exported record can be identified.";
+      if (!inspected) return "Enter a valid inspection date.";
+      if (!handover) return "Enter a valid planned or completed handover date.";
+      if (!followUp) return "Enter a valid next follow-up date.";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (inspected.getTime() > today.getTime())
+        return "The inspection date cannot be in the future. Use the handover and follow-up fields to plan future work.";
+      if (handover.getTime() < inspected.getTime())
+        return "The handover date cannot be earlier than the inspection date.";
+      if (followUp.getTime() < handover.getTime())
+        return "The follow-up date cannot be earlier than the handover date.";
+      if (!values.source.trim()) return "Add the agreement and starting-condition source you will use for comparison.";
+      if (!values.storage.trim()) return "Add a protected record location so the evidence can be found again.";
+      const participants = uniqueList(values.participants);
+      if (participants.length === 0) return "Add at least one participant or role.";
+      if (participants.length > 8) return "Use no more than 8 participant or role entries in one record.";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const conditionRows = parseRows(values.conditions);
+      if (conditionRows.length === 0) return "Add at least one condition observation.";
+      if (conditionRows.length > 12) return "Use no more than 12 condition rows in one record.";
+      const invalidConditions = conditionRows.filter((row) => row.parts.length !== 5 || row.parts.some((part) => !part));
+      if (invalidConditions.length)
+        return `Condition line ${invalidConditions.map((row) => row.line).join(", ")} must contain all 5 pipe-separated fields.`;
+      const validStatuses = new Set(["open", "ready to confirm", "disputed", "confirmed"]);
+      const invalidStatuses = conditionRows.filter((row) => !validStatuses.has(row.parts[4].toLocaleLowerCase("en")));
+      if (invalidStatuses.length)
+        return `Condition line ${invalidStatuses.map((row) => row.line).join(", ")} must end with Open, Ready to confirm, Disputed, or Confirmed.`;
+      const areaNames = conditionRows.map((row) => row.parts[0].toLocaleLowerCase("en"));
+      if (new Set(areaNames).size !== areaNames.length)
+        return "Each condition area must appear only once; combine observations for the same area.";
+      const accessRows = parseRows(values.accessItems);
+      if (accessRows.length === 0) return "Add at least one key or access-item row, or record a Not applicable row with a count of 0.";
+      if (accessRows.length > 8) return "Use no more than 8 key and access-item rows.";
+      const invalidAccess = accessRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part) || !Number.isInteger(Number(row.parts[1])) || Number(row.parts[1]) < 0 || Number(row.parts[1]) > 99);
+      if (invalidAccess.length)
+        return `Access line ${invalidAccess.map((row) => row.line).join(", ")} needs 4 fields and a whole-number count from 0 to 99.`;
+      const meterRows = parseRows(values.meters);
+      if (meterRows.length === 0) return "Add at least one meter or service row, or record why it is not applicable.";
+      if (meterRows.length > 8) return "Use no more than 8 meter or service rows.";
+      const invalidMeters = meterRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidMeters.length)
+        return `Meter line ${invalidMeters.map((row) => row.line).join(", ")} must contain all 4 pipe-separated fields.`;
+      const shareable = [values.source, values.conditions, values.accessItems, values.meters, values.storage].join("\n");
+      if (/password|passcode|security code|access code|full card number|bank account|social security|\bssn\b|\bpin\s*[:=]/i.test(shareable))
+        return "A possible password, access code, PIN or sensitive identifier was detected. Replace it with a protected-location reference.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = ["Open", "Ready to confirm", "Disputed", "Confirmed"].map((status) => ({
+        status,
+        count: conditionRows.filter((row) => row.parts[4].toLocaleLowerCase("en") === status.toLocaleLowerCase("en")).length,
+      })).filter((item) => item.count > 0);
+      return `${values.home.trim()} — move-out condition record\nStage: ${values.stage}\nInspection: ${formatter.format(inspected)}\nHandover: ${formatter.format(handover)}\nNext follow-up: ${formatter.format(followUp)}\nCompared against: ${values.source.trim()}\nParticipants / roles: ${participants.join("; ")}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\n${lines("Condition observations", conditionRows.map((row) => `${row.parts[0]} — observed: ${row.parts[1]} — evidence: ${row.parts[2]} — next action: ${row.parts[3]} — status: ${row.parts[4]}`))}\n\n${lines("Keys and access items", accessRows.map((row) => `${row.parts[0]} — count ${row.parts[1]} — ${row.parts[2]} — evidence: ${row.parts[3]}`))}\n\n${lines("Meters and services", meterRows.map((row) => `${row.parts[0]} — ${row.parts[1]} ${row.parts[2]} — evidence: ${row.parts[3]}`))}\n\nProtected record location: ${values.storage.trim()}\n\nClose-out check: preserve the original files, record disagreements instead of overwriting them, identify who accepted each next action, and give each intended party the agreed copy. This browser output is an unsigned working record—not proof of cause, liability, payment, deposit deductions, legal notice or final agreement. Your lease, local law and qualified advice control.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -1437,6 +1544,113 @@ const zhTwDefinitions: Record<string, Definition> = {
         "只依實際說明書、契約與住家情況建立保養或續約任務",
         "匯出第一份 FamilyBoard 備份並開啟驗證，不把唯一副本留在同一瀏覽器",
       ].map((item) => `[ ] ${item}`))}\n\n這份清單不判定押金、修繕、費用、點交或公共設施的法律責任；請以實際契約、主管機關資料及個案專業意見為準。`;
+    },
+  },
+  "move-out-condition-record-generator": {
+    intro:
+      "建立可逐欄核對的退租屋況、鑰匙／門禁、表計與後續處理紀錄。工具只整理觀察與證據索引，不會判定修繕責任、押金返還、費用或法律效果。",
+    fields: [
+      text("home", "租賃標的識別名稱", "可用住家暱稱或房號，不必輸入完整地址。", "目前租屋處"),
+      {
+        name: "stage",
+        label: "紀錄階段",
+        type: "select",
+        options: ["退租前自主檢查", "雙方點交", "點交後補件"],
+      },
+      { name: "inspected", label: "實際檢查日期", type: "date" },
+      { name: "handover", label: "預定或實際點交日期", type: "date" },
+      text("source", "契約與搬入現況依據", "寫可重新開啟的租約、現況確認書、點交附件或照片組名稱。", "住宅租賃契約、搬入現況確認書與 2025-09-01 照片組"),
+      {
+        name: "participants",
+        label: "參與者或角色",
+        type: "textarea",
+        help: "每行或逗號分隔，1 至 8 位；這裡不收身分證資料，也不是簽名欄。",
+        value: "承租人\n出租人／管理方",
+      },
+      {
+        name: "conditions",
+        label: "屋況觀察",
+        type: "textarea",
+        help: "每行格式：空間 | 實際觀察 | 照片／檔案索引 | 後續動作與負責角色 | 待處理、待共同確認、有歧見待記錄或已共同確認；最多 12 行。",
+        value: "廚房 | 雙方約定檢查時水槽櫃內乾燥，未見漏水 | IMG_001–003 | 雙方：對照搬入現況確認書 | 待共同確認\n主臥 | 搬入紀錄已有的牆面痕跡仍可見 | IMG_004、搬入 IMG_019 | 管理方：在點交副本註記 | 有歧見待記錄\n客廳 | 個人物品已移除，地板可完整檢視 | IMG_005–008 | 承租人：目前無其他動作 | 已共同確認",
+      },
+      {
+        name: "accessItems",
+        label: "鑰匙與門禁物品",
+        type: "textarea",
+        help: "每行格式：物品 | 整數數量 | 接收角色或返還狀態 | 照片／文件索引；最多 8 行，禁止輸入門禁密碼。",
+        value: "大門鑰匙 | 2 | 點交時交還管理方 | KEY_001\n門禁磁扣 | 1 | 點交時交還管理方 | KEY_002",
+      },
+      {
+        name: "meters",
+        label: "表計或服務狀態",
+        type: "textarea",
+        help: "每行格式：項目 | 實際讀數或狀態 | 單位 | 照片／文件索引；最多 8 行。",
+        value: "電表 | 012345 | 度 | METER_001\n水表 | 00678 | 依帳單單位 | METER_002",
+      },
+      { name: "followUp", label: "下次追蹤日期", type: "date" },
+      text("storage", "受保護的紀錄位置", "只寫資料夾、信封或備份位置索引，不要輸入密碼或門禁碼。", "家庭文件／退租／最終點交"),
+    ],
+    run: (values) => {
+      const inspected = date(values.inspected);
+      const handover = date(values.handover);
+      const followUp = date(values.followUp);
+      if (!values.home.trim()) return "請填寫租賃標的識別名稱，讓匯出後的紀錄仍能辨識。";
+      if (!inspected) return "請輸入有效的實際檢查日期。";
+      if (!handover) return "請輸入有效的預定或實際點交日期。";
+      if (!followUp) return "請輸入有效的下次追蹤日期。";
+      const today = new Date();
+      today.setHours(12, 0, 0, 0);
+      if (inspected.getTime() > today.getTime())
+        return "實際檢查日期不能晚於今天；尚未檢查的工作請用點交日與追蹤日規劃。";
+      if (handover.getTime() < inspected.getTime())
+        return "點交日期不能早於實際檢查日期。";
+      if (followUp.getTime() < handover.getTime())
+        return "下次追蹤日期不能早於點交日期。";
+      if (!values.source.trim()) return "請填寫契約與搬入現況依據，避免只用退租當下的記憶比較。";
+      if (!values.storage.trim()) return "請填寫受保護的紀錄位置，否則日後無法回到原始證據。";
+      const participants = uniqueList(values.participants);
+      if (participants.length === 0) return "請至少輸入一位參與者或角色。";
+      if (participants.length > 8) return "一份紀錄最多列 8 位參與者或角色。";
+      const parseRows = (source: string) =>
+        source.split("\n").map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        })).filter((row) => row.parts.some(Boolean));
+      const conditionRows = parseRows(values.conditions);
+      if (conditionRows.length === 0) return "請至少輸入一筆屋況觀察。";
+      if (conditionRows.length > 12) return "一份紀錄最多整理 12 筆屋況；其餘空間請另開一份。";
+      const invalidConditions = conditionRows.filter((row) => row.parts.length !== 5 || row.parts.some((part) => !part));
+      if (invalidConditions.length)
+        return `屋況第 ${invalidConditions.map((row) => row.line).join("、")} 行必須完整填寫 5 個以直線分隔的欄位。`;
+      const validStatuses = new Set(["待處理", "待共同確認", "有歧見待記錄", "已共同確認"]);
+      const invalidStatuses = conditionRows.filter((row) => !validStatuses.has(row.parts[4]));
+      if (invalidStatuses.length)
+        return `屋況第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須是「待處理、待共同確認、有歧見待記錄、已共同確認」之一。`;
+      const areaNames = conditionRows.map((row) => row.parts[0].toLocaleLowerCase("zh-TW"));
+      if (new Set(areaNames).size !== areaNames.length)
+        return "同一空間只能出現一次；請把同空間的觀察合併後再產生紀錄。";
+      const accessRows = parseRows(values.accessItems);
+      if (accessRows.length === 0) return "請至少輸入一筆鑰匙或門禁物品；若確實沒有，請以 0 件的不適用項目留下紀錄。";
+      if (accessRows.length > 8) return "鑰匙與門禁物品最多 8 行。";
+      const invalidAccess = accessRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part) || !Number.isInteger(Number(row.parts[1])) || Number(row.parts[1]) < 0 || Number(row.parts[1]) > 99);
+      if (invalidAccess.length)
+        return `鑰匙／門禁第 ${invalidAccess.map((row) => row.line).join("、")} 行需有 4 個欄位，數量必須是 0 到 99 的整數。`;
+      const meterRows = parseRows(values.meters);
+      if (meterRows.length === 0) return "請至少輸入一筆表計或服務狀態；不適用時也要寫明原因。";
+      if (meterRows.length > 8) return "表計或服務狀態最多 8 行。";
+      const invalidMeters = meterRows.filter((row) => row.parts.length !== 4 || row.parts.some((part) => !part));
+      if (invalidMeters.length)
+        return `表計第 ${invalidMeters.map((row) => row.line).join("、")} 行必須完整填寫 4 個以直線分隔的欄位。`;
+      const shareable = [values.source, values.conditions, values.accessItems, values.meters, values.storage].join("\n");
+      if (/密碼|門禁碼|驗證碼|完整(?:身分證|信用卡|銀行帳號)|password|passcode|access code|\bpin\s*[:：=]/i.test(shareable))
+        return "偵測到可能的密碼、門禁碼、驗證碼或完整敏感識別資料。請改寫成受保護位置的索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = ["待處理", "待共同確認", "有歧見待記錄", "已共同確認"].map((status) => ({
+        status,
+        count: conditionRows.filter((row) => row.parts[4] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.home.trim()}｜退租點交屋況紀錄\n紀錄階段：${values.stage}\n實際檢查：${formatter.format(inspected)}\n預定／實際點交：${formatter.format(handover)}\n下次追蹤：${formatter.format(followUp)}\n對照依據：${values.source.trim()}\n參與者／角色：${participants.join("、")}\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n${lines("屋況觀察", conditionRows.map((row) => `${row.parts[0]}｜觀察：${row.parts[1]}｜證據：${row.parts[2]}｜後續：${row.parts[3]}｜狀態：${row.parts[4]}`))}\n\n${lines("鑰匙與門禁物品", accessRows.map((row) => `${row.parts[0]}｜${row.parts[1]} 件｜${row.parts[2]}｜證據：${row.parts[3]}`))}\n\n${lines("表計與服務狀態", meterRows.map((row) => `${row.parts[0]}｜${row.parts[1]} ${row.parts[2]}｜證據：${row.parts[3]}`))}\n\n受保護的紀錄位置：${values.storage.trim()}\n\n結案前查核：保存原始檔、歧見另行保留而非覆寫、每個後續動作都有負責角色，並讓應取得紀錄的一方拿到雙方同意的版本。這份瀏覽器輸出不是簽名、責任認定、押金計算、付款證明、正式通知或最終合意；仍應以實際契約、主管機關現行資料與個案專業意見為準。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

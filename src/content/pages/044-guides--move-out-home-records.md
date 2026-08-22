@@ -14,7 +14,7 @@ nextStep: "Create a verified export first, then work through the rest of the mov
 related:
   - "/guides/moving-house-organizer/"
   - "/guides/moving-inventory/"
-  - "/tools/household-document-index-generator/"
+  - "/tools/move-out-condition-record-generator/"
   - "/features/free-home-management-app/"
 faq:
   - question: "What's the single most important step before moving out, from a records standpoint?"
@@ -30,6 +30,8 @@ contentVersion: 1
 # Move-out home records: what to close, export, transfer and keep
 
 Moving out is partly a physical project and partly a data-cleanup one, and the data side is easy to skip in the rush of the physical one. A household record system holds two genuinely different kinds of information — records tied to the place, and records tied to the people and things leaving with you — and moving is the one moment where separating them cleanly actually matters, before they get muddled together in a new home's records.
+
+If you are leaving a rental, use the [Move-Out Condition Report Generator](/tools/move-out-condition-record-generator/) to structure room observations, evidence references, key counts, readings and unresolved actions. It creates an unsigned working record; your lease and local procedure still control the official inspection and handover.
 
 ## Close what's tied to the location, deliberately
 

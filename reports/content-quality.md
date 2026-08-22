@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T15:55:15.231Z
+Generated: 2026-08-22T16:21:05.706Z
 
 ## Summary
 
-- Indexable pages: 257
-- Generated HTML routes: 274
+- Indexable pages: 260
+- Generated HTML routes: 277
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 80
+- Pages without a contextual product/tool link: 82
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,16 +20,16 @@ Generated: 2026-08-22T15:55:15.231Z
 - printables: 20
 - product: 31
 - appliances: 30
-- maintenance: 32
+- maintenance: 33
 - household-operations: 21
 - inventory-warranty: 29
 - records-emergency: 23
-- tools: 50
+- tools: 52
 
 ## Word-count range
 
 - Lowest: https://familyboard.win/search/ (19 words)
-- Highest: https://familyboard.win/zh-tw/tools/cleaning-schedule-generator/ (3522 words)
+- Highest: https://familyboard.win/zh-tw/guides/move-out-home-records/ (4302 words)
 
 ## Highest similarity pairs
 
@@ -94,6 +94,7 @@ Generated: 2026-08-22T15:55:15.231Z
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/guides/household-documents-organizer/
 - /zh-tw/guides/how-to-track-product-warranties/
+- /zh-tw/guides/move-out-home-records/
 - /zh-tw/guides/organize-household-subscriptions/
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/
@@ -118,6 +119,7 @@ Generated: 2026-08-22T15:55:15.231Z
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-subscription-cost-calculator/
 - /zh-tw/tools/move-in-checklist-generator/
+- /zh-tw/tools/move-out-condition-record-generator/
 - /zh-tw/tools/pet-sitter-instruction-generator/
 - /zh-tw/tools/receipt-retention-organizer/
 - /zh-tw/tools/recurring-chore-planner/

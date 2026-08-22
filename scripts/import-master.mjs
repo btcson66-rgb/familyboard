@@ -86,7 +86,8 @@ const records = headingIndexes.map((start, index) => {
   const related = [...relatedRaw.matchAll(/`(\/[^`]+)`/g)].map((m) =>
     normalizeRoute(m[1]),
   );
-  const cluster = clusterFor(number);
+  const cluster = authoringField(block, "Cluster") || clusterFor(number);
+  const explicitPageType = authoringField(block, "Page type");
   return {
     id: `${String(number).padStart(3, "0")}-${idFor(route)}`,
     number,
@@ -97,14 +98,16 @@ const records = headingIndexes.map((start, index) => {
     primaryKeyword,
     cluster,
     pageType:
-      cluster === "tools"
+      explicitPageType ||
+      (cluster === "tools"
         ? "tool"
         : cluster === "printables"
           ? "printable"
-          : "content",
+          : "content"),
     indexable: true,
     depthVerified: authoringField(block, "Depth").toLowerCase() === "verified",
     lastReviewedAt: authoringField(block, "Editorial review date") || launchDate,
+    publishedAt: authoringField(block, "Published date") || launchDate,
     contentVersion: Number(authoringField(block, "Content version")) || 1,
     redirectTo: redirectValue ? normalizeRoute(redirectValue) : "",
     nextStep: nextStepField(block).replaceAll("`", ""),

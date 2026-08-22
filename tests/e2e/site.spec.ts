@@ -68,6 +68,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/",
     "/guides/home-maintenance-schedule/",
     "/tools/appliance-age-calculator/",
+    "/tools/move-out-condition-record-generator/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -84,6 +85,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/receipt-retention-organizer/",
     "/zh-tw/tools/household-annual-review-generator/",
     "/zh-tw/tools/move-in-checklist-generator/",
+    "/zh-tw/tools/move-out-condition-record-generator/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -103,6 +105,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/affiliate-disclosure/",
     "/zh-tw/terms/",
     "/zh-tw/guides/digital-home-inventory-backup/",
+    "/zh-tw/guides/move-out-home-records/",
     "/zh-tw/guides/home-maintenance-log/",
     "/zh-tw/guides/appliance-replacement-planning/",
     "/zh-tw/guides/room-by-room-home-inventory/",
@@ -233,6 +236,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/cleaning-schedule/",
       alternate: "/guides/cleaning-schedule/",
       heading: "家庭清潔排程怎麼排？依空間、時間容量與分工建立可持續週期",
+    },
+    {
+      route: "/zh-tw/guides/move-out-home-records/",
+      alternate: "/guides/move-out-home-records/",
+      heading: "退租點交注意事項：把搬離住宅變成可核對、可結案的流程",
     },
     {
       route: "/zh-tw/features/household-handoff/",
@@ -412,6 +420,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/move-in-checklist-generator/",
       alternate: "/tools/move-in-checklist-generator/",
       heading: "搬入新家清單產生器",
+    },
+    {
+      route: "/zh-tw/tools/move-out-condition-record-generator/",
+      alternate: "/tools/move-out-condition-record-generator/",
+      heading: "退租點交紀錄表產生器",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -595,6 +608,38 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(page.locator(".result")).toContainText("2026年10月3日");
   await expect(page.locator(".result")).toContainText("租賃標的現況確認書");
   await expect(page.locator(".result")).toContainText("電梯搬運");
+
+  await page.goto("/tools/move-out-condition-record-generator/");
+  await page.getByLabel("Inspection date").fill("2026-08-23");
+  await page.getByLabel("Planned or completed handover date").fill("2026-08-28");
+  await page.getByLabel("Next follow-up date").fill("2026-09-02");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Disputed 1");
+  await expect(page.locator(".result")).toContainText("KEY_001");
+  await expect(page.locator(".result")).toContainText("unsigned working record");
+  await page
+    .getByLabel("Keys and access items")
+    .fill("Front-door key | 2.5 | Return at handover | KEY_001");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "whole-number count from 0 to 99",
+  );
+
+  await page.goto("/zh-tw/tools/move-out-condition-record-generator/");
+  await page.getByLabel("實際檢查日期").fill("2026-08-23");
+  await page.getByLabel("預定或實際點交日期").fill("2026-08-28");
+  await page.getByLabel("下次追蹤日期").fill("2026-09-02");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("有歧見待記錄 1 筆");
+  await expect(page.locator(".result")).toContainText("KEY_001");
+  await expect(page.locator(".result")).toContainText("不是簽名、責任認定");
+  await page
+    .getByLabel("鑰匙與門禁物品")
+    .fill("門禁磁扣 | 1 | 門禁碼 1234 | KEY_002");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "偵測到可能的密碼、門禁碼、驗證碼",
+  );
 
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
@@ -816,6 +861,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/move-in-checklist-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/move-out-condition-record-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/move-out-condition-record-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/move-out-home-records/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/",

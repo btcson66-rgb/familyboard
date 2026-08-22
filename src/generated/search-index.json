@@ -1496,6 +1496,14 @@
     "headings": "Printable Household Handoff Sheet Next 30 days Recurring household responsibilities Current home issues Pets / dependents Key household contacts Secure records How to test the handoff"
   },
   {
+    "title": "Move-Out Condition Report Generator | Record Rooms, Keys and Meters",
+    "description": "Create a private move-out condition report with dated room observations, evidence references, key counts, meter readings, unresolved items and a follow-up date.",
+    "route": "/tools/move-out-condition-record-generator/",
+    "cluster": "tools",
+    "keywords": "move out condition report generator",
+    "headings": "Move-out condition report generator What the generator records Write an observation, not a verdict Four statuses that preserve uncertainty Count keys and access items separately Capture readings without pretending to settle the bill Date rules prevent a false inspection history A worked example Use the report during a real walkthrough Finish with controlled copies and a recoverable backup Privacy and legal boundary"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

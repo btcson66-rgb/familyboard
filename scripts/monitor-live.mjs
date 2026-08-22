@@ -51,6 +51,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/receipt-retention-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-annual-review-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/move-in-checklist-generator/</loc>",
+      "<loc>https://familyboard.win/tools/move-out-condition-record-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/move-out-condition-record-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/move-out-home-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -120,6 +123,15 @@ const checks = [
   {
     path: "/tools/home-maintenance-cost-tracker/",
     require: ["Home Maintenance Cost Tracker", 'rel="canonical"'],
+  },
+  {
+    path: "/tools/move-out-condition-record-generator/",
+    require: [
+      "Move-Out Condition Report Generator",
+      'hreflang="zh-TW"',
+      "Write an observation, not a verdict",
+      "unsigned working record",
+    ],
   },
   {
     path: "/zh-tw/guides/home-maintenance-schedule/",
@@ -230,6 +242,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/move-out-condition-record-generator/",
+    require: [
+      "退租點交紀錄表產生器",
+      'hreflang="en"',
+      "屋況觀察",
+      "押金與費用不能從屋況欄自動換算",
+    ],
+  },
+  {
     path: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     require: [
       "旅行前住家檢查清單",
@@ -317,6 +338,15 @@ const checks = [
       'hreflang="en"',
       "用容量先判斷排程能不能成立",
       "分工要看負擔與安全",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/move-out-home-records/",
+    require: [
+      "退租點交注意事項：把搬離住宅變成可核對、可結案的流程",
+      'hreflang="en"',
+      "共同點交要同時處理四張清單",
+      "FamilyBoard 資料遷移順序",
     ],
   },
   {

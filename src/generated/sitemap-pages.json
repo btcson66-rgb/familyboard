@@ -345,7 +345,7 @@
   },
   {
     "route": "/guides/move-out-home-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/move-out-home-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1600,6 +1600,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/move-out-condition-record-generator/",
+    "alternateRoute": "/zh-tw/tools/move-out-condition-record-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -1998,6 +2006,20 @@
     "alternateRoute": "/tools/move-in-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/move-out-condition-record-generator/",
+    "alternateRoute": "/tools/move-out-condition-record-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/move-out-home-records/",
+    "alternateRoute": "/guides/move-out-home-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {

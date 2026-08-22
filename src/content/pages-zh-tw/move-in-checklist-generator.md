@@ -14,7 +14,7 @@ lastReviewedAt: "2026-08-22"
 related:
   - "/zh-tw/features/home-inventory-tracker/"
   - "/zh-tw/features/household-documents-organizer/"
-  - "/zh-tw/guides/home-maintenance-schedule/"
+  - "/zh-tw/guides/move-out-home-records/"
   - "/zh-tw/features/free-home-management-app/"
 contentVersion: 1
 faq:
@@ -103,4 +103,3 @@ faq:
 契約或交付文件、屋況與表計證據、鑰匙／門禁交付、重大設備與保固、已知缺失與修繕往來值得保留；純粹搬箱子的一次性工作完成後可以關閉。
 
 **下一步：** 在點交前產生清單並指定總負責人；搬入後把屋況、設備、文件與第一週問題整理到[繁中 FamilyBoard App](/zh-tw/app/)，不要讓證據只留在聊天訊息裡。
-
