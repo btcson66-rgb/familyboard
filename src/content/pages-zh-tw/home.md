@@ -10,12 +10,13 @@ cluster: "product"
 pageType: "content"
 indexable: true
 publishedAt: "2026-08-20"
-lastReviewedAt: "2026-08-20"
+lastReviewedAt: "2026-08-22"
 related:
-  - "/zh-tw/guides/home-maintenance-schedule/"
-  - "/zh-tw/tools/warranty-expiration-calculator/"
+  - "/zh-tw/tools/home-maintenance-schedule-generator/"
+  - "/zh-tw/tools/household-subscription-cost-calculator/"
+  - "/zh-tw/tools/emergency-contact-sheet-generator/"
   - "/zh-tw/app/"
-contentVersion: 1
+contentVersion: 2
 faq:
   - question: "FamilyBoard 現在需要付費或註冊嗎？"
     answer: "不需要。現在的瀏覽器版可免費使用，不需建立帳號，也沒有結帳或付費功能牆。"
@@ -44,7 +45,14 @@ FamilyBoard 的目標很單純：讓這些資料有固定位置、有日期、�
 - 產生不含密碼與敏感文件的家庭交接摘要；
 - 匯出 JSON 備份、檢查備份摘要，並在同一或另一個支援的瀏覽器還原。
 
-你也可以先用公開的繁中工具，例如[保固到期日計算器](/zh-tw/tools/warranty-expiration-calculator/)，不必輸入帳號或把資料送到 FamilyBoard。
+你也可以先使用四項公開繁中工具，不必輸入帳號或把資料送到 FamilyBoard：
+
+- [居家保養排程產生器](/zh-tw/tools/home-maintenance-schedule-generator/)：依自家設備、負責人與複查日期產生起始清單；
+- [保固到期日計算器](/zh-tw/tools/warranty-expiration-calculator/)：依確認過的起算日與保固月數估算複查日期；
+- [家庭訂閱費用計算器](/zh-tw/tools/household-subscription-cost-calculator/)：把週、月、季與年繳費用換算成家庭月均與年總額；
+- [家庭緊急聯絡表產生器](/zh-tw/tools/emergency-contact-sheet-generator/)：整理台灣官方緊急專線與家庭自訂聯絡人，產生可列印版本。
+
+四項工具都有實際輸入與輸出，也能列印、下載或暫存到目前瀏覽器的 App；它們不是只放一段教學文字的假工具。
 
 ## Local-first 是什麼意思？
 

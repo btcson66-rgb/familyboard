@@ -68,6 +68,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/home-maintenance-schedule/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
+    "/zh-tw/tools/home-maintenance-schedule-generator/",
+    "/zh-tw/tools/household-subscription-cost-calculator/",
+    "/zh-tw/tools/emergency-contact-sheet-generator/",
     "/zh-tw/privacy/",
     "/zh-tw/contact/",
     "/zh-tw/app/",
@@ -164,6 +167,66 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(page.locator(".result")).toContainText("2026年2月28日");
   await expect(page.locator(".result")).toContainText("預估期間終點");
 
+  for (const localizedTool of [
+    {
+      route: "/zh-tw/tools/home-maintenance-schedule-generator/",
+      alternate: "/tools/home-maintenance-schedule-generator/",
+      heading: "免費居家保養排程產生器",
+    },
+    {
+      route: "/zh-tw/tools/household-subscription-cost-calculator/",
+      alternate: "/tools/household-subscription-cost-calculator/",
+      heading: "家庭訂閱費用計算器",
+    },
+    {
+      route: "/zh-tw/tools/emergency-contact-sheet-generator/",
+      alternate: "/tools/emergency-contact-sheet-generator/",
+      heading: "家庭緊急聯絡表產生器",
+    },
+  ]) {
+    await page.goto(localizedTool.route);
+    await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
+    await expect(page.locator("h1")).toHaveText(localizedTool.heading);
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+      "href",
+      `https://familyboard.win${localizedTool.route}`,
+    );
+    await expect(
+      page.locator('link[rel="alternate"][hreflang="en"]'),
+    ).toHaveAttribute("href", `https://familyboard.win${localizedTool.alternate}`);
+    await expect(
+      page.getByRole("link", { name: "Switch to English" }),
+    ).toHaveAttribute("href", localizedTool.alternate);
+    await expect(page.locator(".recommendations")).toHaveCount(0);
+
+    await page.goto(localizedTool.alternate);
+    await expect(
+      page.locator('link[rel="alternate"][hreflang="zh-TW"]'),
+    ).toHaveAttribute("href", `https://familyboard.win${localizedTool.route}`);
+  }
+
+  await page.goto("/zh-tw/tools/home-maintenance-schedule-generator/");
+  await page.getByLabel("第一次複查日期").fill("2026-09-01");
+  await page.getByLabel("整份清單複查頻率").selectOption("每季複查");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("2026年12月1日");
+  await expect(page.locator(".result")).toContainText(
+    "不是每項設備的保養週期",
+  );
+
+  await page.goto("/zh-tw/tools/household-subscription-cost-calculator/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("家庭年總額");
+  await expect(page.locator(".result")).toContainText("51,030");
+
+  await page.goto("/zh-tw/tools/emergency-contact-sheet-generator/");
+  await page.getByLabel("本次複查日期").fill("2026-08-22");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("警察報案：110");
+  await expect(page.locator(".result")).toContainText(
+    "行動電話報案時優先說明案發地點",
+  );
+
   const sitemap = await (await page.request.get("/sitemap-0.xml")).text();
   expect(sitemap).toContain("https://familyboard.win/zh-tw/");
   expect(sitemap).toContain(
@@ -171,6 +234,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/",
   );
   expect(sitemap).toContain("https://familyboard.win/zh-tw/privacy/");
   expect(sitemap).toContain("https://familyboard.win/zh-tw/contact/");

@@ -1241,7 +1241,7 @@
   },
   {
     "route": "/tools/home-maintenance-schedule-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/home-maintenance-schedule-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1273,7 +1273,7 @@
   },
   {
     "route": "/tools/household-subscription-cost-calculator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/household-subscription-cost-calculator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1417,7 +1417,7 @@
   },
   {
     "route": "/tools/emergency-contact-sheet-generator/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/tools/emergency-contact-sheet-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1735,8 +1735,22 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/emergency-contact-sheet-generator/",
+    "alternateRoute": "/tools/emergency-contact-sheet-generator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/free-home-management-app/",
     "alternateRoute": "/features/free-home-management-app/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/home-maintenance-schedule-generator/",
+    "alternateRoute": "/tools/home-maintenance-schedule-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
@@ -1752,7 +1766,14 @@
     "route": "/zh-tw/",
     "alternateRoute": "/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-20",
+    "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-subscription-cost-calculator/",
+    "alternateRoute": "/tools/household-subscription-cost-calculator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-22",
     "locale": "zh-TW"
   },
   {

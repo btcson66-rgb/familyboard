@@ -41,6 +41,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-schedule/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/free-home-management-app/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/privacy/</loc>",
       "<loc>https://familyboard.win/zh-tw/contact/</loc>",
     ],
@@ -88,6 +91,33 @@ const checks = [
       'hreflang="en"',
       "保固起算日",
       "消費者保護法",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-maintenance-schedule-generator/",
+    require: [
+      "免費居家保養排程產生器",
+      'hreflang="en"',
+      "第一次複查日期",
+      "家電選購與使用注意事項",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-subscription-cost-calculator/",
+    require: [
+      "家庭訂閱費用計算器",
+      'hreflang="en"',
+      "家庭訂閱清單",
+      "週、月、季與年繳費用",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/emergency-contact-sheet-generator/",
+    require: [
+      "家庭緊急聯絡表產生器",
+      'hreflang="en"',
+      "警察報案：110",
+      "119 報案要領",
     ],
   },
   {

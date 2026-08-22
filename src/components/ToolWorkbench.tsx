@@ -51,6 +51,12 @@ const money = (value: number) =>
   new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
     value,
   );
+const moneyFor = (value: number, currency: string) =>
+  new Intl.NumberFormat("zh-TW", {
+    style: "currency",
+    currency,
+    maximumFractionDigits: currency === "USD" ? 2 : 0,
+  }).format(value);
 const lines = (heading: string, items: string[]) =>
   `${heading}\n${items.map((item) => `• ${item}`).join("\n")}`;
 const text = (
@@ -743,6 +749,48 @@ const definitions: Record<string, Definition> = {
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
+  "home-maintenance-schedule-generator": {
+    intro:
+      "把家中實際設備整理成可複查的起始排程。工具不會替原廠說明書發明保養週期，產生後仍要逐項補上真正依據。",
+    fields: [
+      {
+        name: "systems",
+        label: "設備或系統",
+        type: "textarea",
+        help: "每行或逗號分隔一項。",
+        value: "冷氣濾網\n冰箱\n住宅用火災警報器",
+      },
+      text("owner", "主要複查人", "可以填姓名、角色或「全家共同」。", "全家共同"),
+      {
+        name: "cadence",
+        label: "整份清單複查頻率",
+        type: "select",
+        options: ["每月複查", "每季複查", "每半年複查"],
+      },
+      { name: "start", label: "第一次複查日期", type: "date" },
+    ],
+    run: (values) => {
+      const systems = list(values.systems);
+      const start = date(values.start);
+      if (systems.length === 0) return "請至少輸入一項家中實際存在的設備或系統。";
+      if (!start) return "請輸入有效的第一次複查日期。";
+      const cadenceMonths: Record<string, number> = {
+        每月複查: 1,
+        每季複查: 3,
+        每半年複查: 6,
+      };
+      const cadence = values.cadence || "每月複查";
+      const next = addMonths(start, cadenceMonths[cadence] || 1);
+      const format = (value: Date) =>
+        new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" }).format(value);
+      return `${cadence}起始表\n負責人：${values.owner || "尚未指定"}\n第一次複查：${format(start)}\n下一次整表複查：${format(next)}\n\n${systems
+        .flatMap((item) => [
+          `• ${item}：確認型號、說明書與真正適用的檢查／保養依據。`,
+          `  完成時記錄日期、狀況、費用、異常與下一個到期條件。`,
+        ])
+        .join("\n")}\n\n這是整份清單的複查節奏，不是每項設備的保養週期。涉及電力、瓦斯、冷媒、消防、結構或高處作業時，只記錄異常與聯絡合格專業人員，不要依通用清單自行拆修。`;
+    },
+  },
   "warranty-expiration-calculator": {
     intro:
       "依你確認的保固起算日與書面月數，計算預估期間終點及提前複查日；實際權利仍以保證書與適用規則為準。",
@@ -770,6 +818,137 @@ const zhTwDefinitions: Record<string, Definition> = {
       const format = (value: Date) =>
         new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" }).format(value);
       return `預估期間終點：${format(end)}\n建議複查日：${format(review)}\n\n請以書面保證確認涵蓋範圍、起算方式、登錄要求與真正的截止規則。`;
+    },
+  },
+  "household-subscription-cost-calculator": {
+    intro:
+      "將每週、每月、每季與每年扣款換算成同一個月均與年總額。只做你輸入資料的算術整理，不會連接銀行或判斷哪一項應取消。",
+    fields: [
+      {
+        name: "entries",
+        label: "家庭訂閱清單",
+        type: "textarea",
+        help: "每行格式：名稱 | 每次金額 | 週、月、季或年。",
+        value: "影音串流 | 320 | 月\n雲端空間 | 2990 | 年\n餐食配送 | 850 | 週",
+      },
+      {
+        name: "currency",
+        label: "幣別",
+        type: "select",
+        options: ["TWD", "USD", "JPY"],
+      },
+    ],
+    run: (values) => {
+      const factors: Record<string, number> = {
+        週: 52,
+        每週: 52,
+        weekly: 52,
+        月: 12,
+        每月: 12,
+        monthly: 12,
+        季: 4,
+        每季: 4,
+        quarterly: 4,
+        年: 1,
+        每年: 1,
+        annual: 1,
+        yearly: 1,
+      };
+      const parsed = values.entries
+        .split("\n")
+        .map((source, index) => {
+          const [name = "", rawAmount = "", cadence = ""] = source
+            .split("|")
+            .map((part) => part.trim());
+          const amount = Number(rawAmount.replace(/[,$，\s]/g, ""));
+          const factor = factors[cadence.toLowerCase()];
+          return {
+            line: index + 1,
+            name,
+            cadence,
+            amount,
+            factor,
+            valid:
+              Boolean(name) &&
+              Number.isFinite(amount) &&
+              amount >= 0 &&
+              Boolean(factor),
+          };
+        })
+        .filter((row) => row.name || row.cadence || Number.isFinite(row.amount));
+      const valid = parsed.filter((row) => row.valid);
+      const invalid = parsed.filter((row) => !row.valid);
+      if (valid.length === 0)
+        return "沒有可計算的項目。請使用「名稱 | 每次金額 | 週、月、季或年」格式，每行一項。";
+      const currency = values.currency || "TWD";
+      const rows = valid.map((row) => ({
+        ...row,
+        annual: row.amount * row.factor,
+      }));
+      const annual = rows.reduce((sum, row) => sum + row.annual, 0);
+      const invalidMessage = invalid.length
+        ? `\n\n未納入：第 ${invalid.map((row) => row.line).join("、")} 行。請檢查名稱、非負金額與週／月／季／年單位。`
+        : "";
+      return `${lines(
+        "各項年化費用",
+        rows.map(
+          (row) =>
+            `${row.name}：${moneyFor(row.annual, currency)}（每次 ${moneyFor(row.amount, currency)}／${row.cadence}）`,
+        ),
+      )}\n\n家庭月均：${moneyFor(annual / 12, currency)}\n家庭年總額：${moneyFor(annual, currency)}${invalidMessage}\n\n換算採每年 52 週、12 個月、4 季；尚未包含匯率、價格調整、稅費或取消條款。`;
+    },
+  },
+  "emergency-contact-sheet-generator": {
+    intro:
+      "產生容易掃讀、可列印的家庭緊急聯絡表。台灣版會標示 110、119 與 112 的正確角色；若人在其他地區，必須改成所在地官方號碼。",
+    fields: [
+      text("household", "家庭或住家名稱", "不要填完整身分證號或其他不必要敏感資料。", "我的家庭"),
+      {
+        name: "region",
+        label: "使用地區",
+        type: "select",
+        options: ["台灣", "其他地區"],
+      },
+      {
+        name: "contacts",
+        label: "自訂聯絡人",
+        type: "textarea",
+        help: "每行格式：類別 | 名稱 | 電話。",
+        value:
+          "家庭主要聯絡人 | 姓名 | 電話\n社區管理室 | 名稱 | 電話\n電力／瓦斯業者 | 業者名稱 | 緊急電話\n寵物醫院 | 院所名稱 | 電話",
+      },
+      { name: "reviewed", label: "本次複查日期", type: "date" },
+    ],
+    run: (values) => {
+      const reviewed = date(values.reviewed);
+      if (!reviewed) return "請輸入有效的複查日期，讓使用者知道這張表是否仍為最新版本。";
+      const contacts = values.contacts
+        .split("\n")
+        .map((row) => row.split("|").map((part) => part.trim()))
+        .filter((row) => row.some(Boolean));
+      const malformed = contacts.filter(
+        (row) => row.length < 3 || row.some((part) => !part),
+      );
+      if (contacts.length === 0 || malformed.length > 0)
+        return "請把每位聯絡人寫成「類別 | 名稱 | 電話」，每行一位，且三個欄位都不能空白。";
+      const official =
+        values.region === "台灣"
+          ? [
+              "警察報案：110",
+              "火災、救護與急難救助：119",
+              "手機在緊急危難且 110、119 無法接通時：112（依語音選擇警察或救援）",
+            ]
+          : [
+              "所在地警察／消防／救護：請向當地主管機關確認並填入",
+            ];
+      const format = new Intl.DateTimeFormat("zh-TW", {
+        dateStyle: "long",
+      }).format(reviewed);
+      return `${values.household || "家庭"}緊急聯絡表\n複查日期：${format}\n\n官方緊急專線\n${official
+        .map((item) => `• ${item}`)
+        .join("\n")}\n\n家庭與服務聯絡人\n${contacts
+        .map((row) => `• ${row.join(" — ")}`)
+        .join("\n")}\n\n使用前再次確認所在地官方號碼。遇到立即危險時應直接聯絡緊急服務，不要先等待一般聯絡人回覆；行動電話報案時優先說明案發地點。`;
     },
   },
 };
@@ -868,7 +1047,7 @@ export default function ToolWorkbench({
     <section className="tool-shell" aria-labelledby="tool-heading">
       <span className="card-tag">{copy.tag}</span>
       <h2 id="tool-heading">
-        {copy.usePrefix} {title.replace(/^Free /, "").replace(/ [|｜].*$/, "")}
+        {copy.usePrefix} {title.replace(/^Free /, "").replace(/\s*[|｜].*$/, "")}
       </h2>
       <p>{definition.intro}</p>
       <div className="notice">{copy.privacy}</div>
