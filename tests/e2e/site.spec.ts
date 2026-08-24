@@ -106,6 +106,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/important-household-documents/",
     "/tools/household-record-retention-decision-log/",
     "/guides/how-long-to-keep-household-records/",
+    "/tools/appliance-manual-source-check-log/",
+    "/guides/organize-appliance-manuals/",
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
     "/templates/printable-home-inventory-template/",
@@ -159,6 +161,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/important-household-documents/",
     "/zh-tw/tools/household-record-retention-decision-log/",
     "/zh-tw/guides/how-long-to-keep-household-records/",
+    "/zh-tw/tools/appliance-manual-source-check-log/",
+    "/zh-tw/guides/organize-appliance-manuals/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -350,6 +354,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭文件保存期限" }),
   ).toHaveAttribute("href", "/zh-tw/guides/how-long-to-keep-household-records/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家電說明書來源核對" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/appliance-manual-source-check-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家電說明書整理" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/organize-appliance-manuals/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電清冊教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/appliance-inventory/");
@@ -827,6 +837,16 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/how-long-to-keep-household-records/",
       alternate: "/guides/how-long-to-keep-household-records/",
       heading: "家庭文件保存期限不是每個資料夾都填「五年」",
+    },
+    {
+      route: "/zh-tw/tools/appliance-manual-source-check-log/",
+      alternate: "/tools/appliance-manual-source-check-log/",
+      heading: "家電說明書來源核對紀錄",
+    },
+    {
+      route: "/zh-tw/guides/organize-appliance-manuals/",
+      alternate: "/guides/organize-appliance-manuals/",
+      heading: "家電說明書怎麼整理？先確認完整型號、官方來源與召回資訊",
     },
     {
       route: "/zh-tw/guides/purchase-receipt-organizer/",
@@ -1651,6 +1671,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不能早於本次保存決策檢視日",
   );
 
+  await page.goto("/tools/appliance-manual-source-check-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open model, source, coverage, access or safety rows: 1");
+  await expect(page.locator(".result")).toContainText("Reviewed, retired or not-applicable rows: 1");
+  await expect(page.locator(".result")).toContainText("Source, coverage, access and notice routes reviewed 1");
+  await page.getByLabel("Next source or access checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+  await page.goto("/tools/appliance-manual-source-check-log/");
+  await page.getByLabel("Protected labels, full manuals, saved copies and review-history location").fill("account number 123456789");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible full phone, email, address, account");
+
+  await page.goto("/zh-tw/tools/appliance-manual-source-check-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的型號、來源、範圍、存取或安全列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對、退役或不適用列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對來源、範圍、存取與公告入口 1 筆");
+  await page.getByLabel("下一次來源或存取核點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次核對日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -2066,6 +2112,18 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/how-long-to-keep-household-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/appliance-manual-source-check-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/appliance-manual-source-check-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/organize-appliance-manuals/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/organize-appliance-manuals/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/",

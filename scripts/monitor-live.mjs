@@ -117,6 +117,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-record-retention-decision-log/</loc>",
       "<loc>https://familyboard.win/guides/how-long-to-keep-household-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/how-long-to-keep-household-records/</loc>",
+      "<loc>https://familyboard.win/tools/appliance-manual-source-check-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/appliance-manual-source-check-log/</loc>",
+      "<loc>https://familyboard.win/guides/organize-appliance-manuals/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/organize-appliance-manuals/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -528,6 +532,24 @@ const checks = [
       'hreflang="zh-TW"',
       "U.S. federal tax periods are conditional, not a three-year label",
       "Warranty expiry is one trigger, not automatic disposal",
+    ],
+  },
+  {
+    path: "/tools/appliance-manual-source-check-log/",
+    require: [
+      "Appliance Manual Source Check Log",
+      'hreflang="zh-TW"',
+      "Eleven statuses show what is known and what remains open",
+      "It does not identify an appliance; move, open, disconnect or inspect equipment",
+    ],
+  },
+  {
+    path: "/guides/organize-appliance-manuals/",
+    require: [
+      "The right appliance manual is a source match, not merely a PDF",
+      'hreflang="zh-TW"',
+      "product-support record as the source map",
+      "Recall and safety notices remain a separate current check",
     ],
   },
   {
@@ -969,6 +991,24 @@ const checks = [
       'hreflang="en"',
       "綜合所得稅憑證要跟申報用途走",
       "七日解除權不是交易紀錄保存期限",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/appliance-manual-source-check-log/",
+    require: [
+      "家電說明書來源核對紀錄",
+      'hreflang="en"',
+      "十一種狀態把型號、來源、文件與公告分開",
+      "工具不辨識家電、不移動／拆開／斷開或檢查設備",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/organize-appliance-manuals/",
+    require: [
+      "家電說明書怎麼整理",
+      'hreflang="en"',
+      "從製造商目前支援頁找",
+      "召回、召修與安全公告一定要另外查",
     ],
   },
   {

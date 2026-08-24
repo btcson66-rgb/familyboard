@@ -3392,6 +3392,132 @@ const definitions: Record<string, Definition> = {
       return `${values.review.trim()} — household record retention decision log\nReview context: ${values.context}\nSource-map baseline: ${formatter.format(baselineDate)}\nCurrent decision review: ${formatter.format(reviewDate)}\nNext policy or source checkpoint: ${formatter.format(nextReview)}\nOpen source, trigger, screen or action rows: ${openRows.length}\nClosed continued-retention, disposal, transfer or not-applicable rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling authority, issuer, agreement, policy, hold and disposal-process references: ${values.basis.trim()}\n\n${lines("Versioned household retention decisions", recordRows.map((row) => `${row.parts[0]} — record class/purpose: ${row.parts[1]} — source checked: ${formatter.format(strictIsoDate(row.parts[2]) as Date)} — controlling source/rule/jurisdiction: ${row.parts[3]} — source-defined trigger/end event: ${row.parts[4]} — active use/exception/hold screen: ${row.parts[5]} — protected original/current version: ${row.parts[6]} — proposed/observed action and evidence: ${row.parts[7]} — owner: ${row.parts[8]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[9]) as Date)} — status: ${row.parts[10]}`))}\n\nProtected originals, approvals and decision-evidence location: ${values.storage.trim()}\n\nThis output is a household decision index, not a retention schedule or disposal instruction. It does not calculate or extend an external deadline; determine a legal, tax, warranty, policy, contract, claim, court, benefit, employment, identity, medical or records duty; open, read, classify, upload, copy, redact, archive, transfer, shred, erase, destroy, retain or remove a record; inspect a browser, device, synchronized folder, cloud service, email, download, backup or recipient; authorize a person; release a hold; prove that every copy is gone; or make a destructive action reversible. Preserve protected originals and approvals separately, and use the current responsible source and qualified advice for the actual decision.`;
     },
   },
+  "appliance-manual-source-check-log": {
+    intro:
+      "Record exact-model evidence, the current manufacturer or authority source, document role, stated coverage, access result and a separate recall or safety-notice check. The tool does not search for or verify manuals, recalls or equipment.",
+    fields: [
+      text("review", "Private manual-source review reference", "Use a household code, not a person, address, account, full serial, registration, service case or exact protected location.", "MANUAL-2026-A"),
+      {
+        name: "context",
+        label: "Manual-source review context",
+        type: "select",
+        options: [
+          "First household appliance inventory",
+          "New purchase, delivery or installation",
+          "Maintenance-record setup",
+          "Service, error or instruction follow-up",
+          "Recall, correction or safety review",
+          "Manufacturer or support-source migration",
+          "Asset retirement, transfer or handoff",
+        ],
+      },
+      { name: "baselineDate", label: "Appliance and source-map baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "Current manual-source review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next source or access checkpoint", type: "date", value: "2026-09-14" },
+      text("basis", "Manufacturer support, responsible-authority, recall and protected-evidence source map", "Use safe source/version IDs or dated public URLs. Keep full labels, serials, registrations, invoices, service messages and credentials protected.", "MFR-SUPPORT-M2; CPSC-RECALL-R1; LABEL-EVIDENCE-L2 protected; MANUAL-ARCHIVE-A1"),
+      {
+        name: "records",
+        label: "Versioned appliance manual source and access rows",
+        type: "textarea",
+        help: "One line: ID | safe asset, household purpose and brand | exact-model evidence state | source checked date YYYY-MM-DD | official source, document role, language and version clue | stated model, suffix, region or configuration coverage | current access test and protected saved-copy state | recall or safety-notice source and discrepancy | owner role | target or outcome date YYYY-MM-DD | one of the eleven listed statuses. Maximum 14 lines.",
+        value: "FRIDGE-1 | Kitchen refrigerator owner-operation and filter reference; example brand | Full model observed safely; complete rating-label evidence protected at LABEL-L2 | 2026-08-24 | Manufacturer product-support page SUPPORT-M2; owner manual; English; document ID OM-2026-07 | Manual states model EXAMPLE-X1 and X2; household X1 suffix compared in protected review | Product page and owner manual opened; title and coverage visible; saved-copy pointer MANUAL-A1 | CPSC recall search and manufacturer safety notices checked 2026-08-24; no discrepancy observed in this dated review | Household appliance-records role | 2026-08-24 | Source, coverage, access and notice routes reviewed\nLEGACY-1 | Legacy laundry appliance needs operating and safe-service source; example brand | Exact model observed safely; complete rating-label evidence protected at LABEL-L4 | 2026-08-23 | Current manufacturer and successor support routes checked; attributable owner manual not found | Coverage unresolved; third-party file is retained only as an unverified clue | Unofficial clue opened separately; no protected official saved copy claimed | CPSC recall search checked by brand and model on 2026-08-23; serial-range comparison remains protected and pending | Household appliance-records role | 2026-09-14 | Official source unavailable—manufacturer or authorized route pending",
+      },
+      text("storage", "Protected labels, full manuals, saved copies and review-history location", "Use a folder or process label. Do not enter full serials, addresses, accounts, registrations, invoices, service cases, private messages, credentials or file contents.", "Household assets / manual sources / MANUAL-2026-A / protected evidence"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review.trim()) return "Enter a private manual-source review reference so this exported version can be identified.";
+      if (!baselineDate) return "Enter the real appliance and source-map baseline date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current manual-source review date in YYYY-MM-DD format.";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current manual-source review date cannot be in the future.";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "The appliance and source-map baseline cannot be later than the current review.";
+      if (!nextReview) return "Enter a real next source or access checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next source or access checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 12) return "Identify the manufacturer support, responsible-authority, recall and protected-evidence source map with safe pointers.";
+      if (!values.storage.trim()) return "Enter the protected location for labels, full manuals, saved copies and review history.";
+      const recordRows = values.records.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (recordRows.length === 0) return "Add at least one appliance and document-purpose row.";
+      if (recordRows.length > 14) return "One manual-source review version supports at most 14 rows; freeze this version before starting another scope.";
+      const invalidRows = recordRows.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Manual-source line ${invalidRows.map((row) => row.line).join(", ")} must contain all eleven pipe-separated fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Every manual-source row needs a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Use 2 to 20 letters, numbers or hyphens for each row ID, such as FRIDGE-1 or HVAC-MANUAL.";
+      const statusOrder = [
+        "Asset recorded—exact-model evidence pending",
+        "Exact model recorded—official support source pending",
+        "Official source located—document identity pending",
+        "Document identified—stated model coverage pending",
+        "Coverage compared—current access test pending",
+        "Access tested—recall and safety sources pending",
+        "Official source unavailable—manufacturer or authorized route pending",
+        "Safety notice, recall or instruction conflict—responsible review pending",
+        "Source, coverage, access and notice routes reviewed",
+        "Asset retired or transferred—manual custody and remaining purpose recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[10]));
+      if (invalidStatuses.length)
+        return `Manual-source line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the eleven evidence statuses in the field instructions.`;
+      const invalidSourceDates = recordRows.filter((row) => {
+        const sourceDate = strictIsoDate(row.parts[3]);
+        return !sourceDate || sourceDate.getTime() < baselineDate.getTime() || sourceDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `Manual-source line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a real source-checked date from the baseline through the current review.`;
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 8).includes(row.parts[10]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(8).includes(row.parts[10]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[9]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open manual-source line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next source or access checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[9]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Closed manual-source line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from the baseline through this review.`;
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 10 || row.parts[2].length < 10 || row.parts[4].length < 12 || row.parts[5].length < 8 || row.parts[6].length < 8 || row.parts[7].length < 10 || row.parts[8].length < 4);
+      if (missingLayers.length)
+        return `Manual-source line ${missingLayers.map((row) => row.line).join(", ")} needs a real asset purpose, model-evidence state, source/document identity, stated coverage, access result, separate notice check and owner.`;
+      const completedWithoutEvidence = recordRows.filter((row) => row.parts[10] === statusOrder[8] && (!/(?:manufacturer|official|authority|regulator|support)/i.test(row.parts[4]) || /(?:pending|unknown|unresolved|not checked|not opened)/i.test([row.parts[5], row.parts[6], row.parts[7]].join(" ")) || !/(?:opened|loaded|visible|accessed)/i.test(row.parts[6]) || !/(?:recall|safety|notice|cpsc|regulator|authority)/i.test(row.parts[7])));
+      if (completedWithoutEvidence.length)
+        return `Completed source-review line ${completedWithoutEvidence.map((row) => row.line).join(", ")} must link an attributable source, stated coverage, observed access and a separate recall or safety-notice route with no unresolved state.`;
+      const unavailableClaimingVerification = recordRows.filter((row) => row.parts[10] === statusOrder[6] && /\b(?:verified|confirmed|current official|fully applicable|complete)\b/i.test([row.parts[4], row.parts[5], row.parts[6]].join(" ")));
+      if (unavailableClaimingVerification.length)
+        return `Unavailable-source line ${unavailableClaimingVerification.map((row) => row.line).join(", ")} cannot claim that an unofficial clue is verified, current, fully applicable or complete.`;
+      const conflictWithoutResponsibleRoute = recordRows.filter((row) => row.parts[10] === statusOrder[7] && (!/(?:recall|notice|warning|stop|conflict|contradict|correction)/i.test(row.parts[7]) || !/(?:manufacturer|authority|regulator|qualified|authorized|responsible|support)/i.test([row.parts[4], row.parts[7], row.parts[8]].join(" "))));
+      if (conflictWithoutResponsibleRoute.length)
+        return `Safety-conflict line ${conflictWithoutResponsibleRoute.map((row) => row.line).join(", ")} must name the observed notice or conflict and the responsible manufacturer, authority or qualified review route.`;
+      const retiredWithoutCustody = recordRows.filter((row) => row.parts[10] === statusOrder[9] && !/(?:retired|transferred|handoff|custody|archive|remaining purpose|next owner)/i.test([row.parts[1], row.parts[6], row.parts[7]].join(" ")));
+      if (retiredWithoutCustody.length)
+        return `Retired or transferred line ${retiredWithoutCustody.map((row) => row.line).join(", ")} must record changed asset status, manual custody and any remaining purpose without exposing private evidence.`;
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[10] === statusOrder[10] && !/(?:reopen|review again|if |when |after |new asset|new document|installation|transfer|role change)/i.test([row.parts[5], row.parts[6], row.parts[7]].join(" ")));
+      if (notApplicableWithoutTrigger.length)
+        return `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and event that reopens this document role.`;
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone, email, address, account, registration, serial, service case or complete numeric identifier was detected. Keep it protected and use a safe evidence pointer here.";
+      if (/password|passphrase|passcode|access code|wifi password|network key|recovery code|verification code|registration token|account number|customer number|full serial|serial number\s*[:=]|production code\s*[:=]|full address|street address|service case|repair case|invoice contents|receipt contents|private message|login credential|api key|person name|customer name|resident name|exact location|label photo contents|manual file contents|full name|credit card|bank account|signature|date of birth|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, account, full serial, registration, service-case, invoice, private participant or protected file detail was detected. Replace it with a safe source, process or evidence pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[10] === status).length })).filter((item) => item.count > 0);
+      return `${values.review.trim()} — appliance manual source check log\nReview context: ${values.context}\nAppliance/source-map baseline: ${formatter.format(baselineDate)}\nCurrent manual-source review: ${formatter.format(reviewDate)}\nNext source or access checkpoint: ${formatter.format(nextReview)}\nOpen model, source, coverage, access or safety rows: ${openRows.length}\nReviewed, retired or not-applicable rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nManufacturer support, responsible-authority, recall and protected-evidence source map: ${values.basis.trim()}\n\n${lines("Versioned appliance manual source evidence", recordRows.map((row) => `${row.parts[0]} — asset/purpose/brand: ${row.parts[1]} — exact-model evidence: ${row.parts[2]} — source checked: ${formatter.format(strictIsoDate(row.parts[3]) as Date)} — source/document/language/version: ${row.parts[4]} — stated coverage: ${row.parts[5]} — access/saved copy: ${row.parts[6]} — recall/safety route and discrepancy: ${row.parts[7]} — owner: ${row.parts[8]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[9]) as Date)} — status: ${row.parts[10]}`))}\n\nProtected labels, full manuals, saved copies and review-history location: ${values.storage.trim()}\n\nThis output is a household source index, not an operating, installation, maintenance, repair or safety instruction. It does not identify, move, open, disconnect or inspect equipment; visit a URL; search, open, download, upload, copy, hash, compare, update or preserve a document; read a rating label; verify a manufacturer, model, serial, production range, configuration, region, language, part, accessory, notice, recall, remedy or compatibility; contact support; authorize a task; release a stop-use instruction; or certify safety or closure. Use the current manufacturer, responsible safety authority, recall notice and qualified service source for the actual product.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -8140,6 +8266,132 @@ const zhTwDefinitions: Record<string, Definition> = {
       const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
       const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[10] === status).length })).filter((item) => item.count > 0);
       return `${values.review.trim()}｜家庭紀錄保存與銷毀決策紀錄\n盤點情境：${values.context}\n來源地圖基準：${formatter.format(baselineDate)}\n本次保存決策檢視：${formatter.format(reviewDate)}\n下一次規則或來源核點：${formatter.format(nextReview)}\n仍開放的來源、事件、檢查或動作：${openRows.length} 筆\n已結束本版的保存、處分、移交或不適用：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的主管機關、發行者、契約、保單、暫停處分與處理流程來源：${values.basis.trim()}\n\n${lines("有版本的家庭紀錄保存決策", recordRows.map((row) => `${row.parts[0]}｜紀錄類別／用途：${row.parts[1]}｜來源核對日：${formatter.format(strictIsoDate(row.parts[2]) as Date)}｜控制來源／規則／範圍：${row.parts[3]}｜來源定義的起算／結束事件：${row.parts[4]}｜目前用途／例外／暫停處分檢查：${row.parts[5]}｜受保護原件／目前版本：${row.parts[6]}｜預定／已觀察動作與證據：${row.parts[7]}｜負責角色：${row.parts[8]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[9]) as Date)}｜狀態：${row.parts[10]}`))}\n\n受保護原件、核准與決策證據位置：${values.storage.trim()}\n\n這份輸出只是家庭決策索引，不是保存期限表或銷毀指令。它不計算或延長外部期限，不判定法律、稅務、保固、保單、契約、理賠、法院、福利、勞動、身分、醫療或紀錄義務，不開啟、閱讀、分類、上傳、複製、遮蔽、封存、移交、碎紙、清除、銷毀、保存或移除紀錄，不檢查瀏覽器、裝置、同步資料夾、雲端服務、Email、下載、備份或收件人，不授權某人、不解除暫停處分、不證明所有副本消失，也不能讓破壞性動作復原。請分開保護原件與核准證據，並以目前負責來源及合格專業意見處理真實決定。`;
+    },
+  },
+  "appliance-manual-source-check-log": {
+    intro:
+      "逐筆記錄完整型號證據、目前製造商或主管來源、文件角色、自述適用範圍、存取結果，以及獨立的召回／安全公告查核。工具不搜尋或驗證說明書、召回與設備。",
+    fields: [
+      text("review", "家庭私人說明書來源核對代號", "使用家庭內部代號，不要輸入姓名、地址、帳號、完整序號、產品登錄、服務案件或精確受保護位置。", "MANUAL-2026-A"),
+      {
+        name: "context",
+        label: "說明書來源核對情境",
+        type: "select",
+        options: [
+          "第一次家庭家電盤點",
+          "新購、交付或安裝",
+          "建立家電保養紀錄",
+          "故障、錯誤或說明追蹤",
+          "召回、勘誤或安全查核",
+          "製造商或支援來源轉移",
+          "家電退役、移交或交接",
+        ],
+      },
+      { name: "baselineDate", label: "家電與來源地圖基準日", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "本次說明書來源核對日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "下一次來源或存取核點", type: "date", value: "2026-09-14" },
+      text("basis", "製造商支援、主管機關、召回與受保護證據來源地圖", "使用安全來源／版本代號或有日期的公開網址；完整銘牌、序號、登錄、發票、服務通信與憑證放受保護位置。", "MFR-SUPPORT-M2；BSMI-SAFETY-R1；LABEL-EVIDENCE-L2 受保護；MANUAL-ARCHIVE-A1"),
+      {
+        name: "records",
+        label: "有版本的家電說明書來源與存取列",
+        type: "textarea",
+        help: "每行：ID｜安全物品、家庭用途與品牌｜完整型號證據狀態｜來源核對日 YYYY-MM-DD｜官方來源、文件角色、語言與版本線索｜文件自述的機型、尾碼、地區或規格範圍｜目前開啟測試與受保護離線副本狀態｜召回或安全公告來源與差異｜負責角色｜目標或結果日期 YYYY-MM-DD｜十一種指定狀態之一。最多 14 行。",
+        value: "FRIDGE-1 | 廚房冰箱日常操作與濾網來源；示例品牌 | 完整型號已安全觀察；完整銘牌與序號證據留在 LABEL-L2 | 2026-08-24 | 製造商官方產品支援頁 SUPPORT-M2；使用說明；繁體中文；文件代號 OM-2026-07 | 文件列出 EXAMPLE-X1 與 X2；家庭 X1 尾碼已在受保護流程比對 | 產品頁與使用說明已開啟；標題與適用範圍可見；離線副本代號 MANUAL-A1 | 標檢局商品召回與製造商安全公告於 2026-08-24 查核；本次有日期檢視未觀察到差異 | 家庭家電紀錄負責角色 | 2026-08-24 | 已核對來源、範圍、存取與公告入口\nLEGACY-1 | 舊洗衣設備需要操作與安全服務來源；示例品牌 | 完整型號已安全觀察；完整銘牌證據留在 LABEL-L4 | 2026-08-23 | 已查目前製造商與品牌繼受支援路徑；尚未找到可歸屬使用說明 | 適用範圍未解；第三方檔案只保留為未驗證線索 | 未驗證線索另行開啟；沒有宣稱存在官方離線副本 | 標檢局商品安全入口於 2026-08-23 依品牌與型號查核；產製範圍比對仍在受保護流程等待處理 | 家庭家電紀錄負責角色 | 2026-09-14 | 官方來源找不到，等待製造商或授權路徑",
+      },
+      text("storage", "受保護銘牌、完整手冊、離線副本與核對歷程位置", "使用資料夾或流程代號，不要輸入完整序號、地址、帳號、登錄、發票、服務案件、私人通信、憑證或檔案內容。", "家庭物品／說明書來源／MANUAL-2026-A／受保護證據"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review.trim()) return "請輸入家庭私人說明書來源核對代號，讓匯出版本可以辨認。";
+      if (!baselineDate) return "請用 YYYY-MM-DD 輸入真實的家電與來源地圖基準日。";
+      if (!reviewDate) return "請用 YYYY-MM-DD 輸入真實的本次說明書來源核對日。";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次說明書來源核對日不能晚於今天。";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "家電與來源地圖基準日不能晚於本次核對日。";
+      if (!nextReview) return "請用 YYYY-MM-DD 輸入真實的下一次來源或存取核點。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "下一次來源或存取核點不能早於本次核對日。";
+      if (values.basis.trim().length < 12) return "請用安全索引指出製造商支援、主管機關、召回與受保護證據來源地圖。";
+      if (!values.storage.trim()) return "請輸入受保護銘牌、完整手冊、離線副本與核對歷程位置。";
+      const recordRows = values.records.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (recordRows.length === 0) return "請至少加入一筆家電與文件用途。";
+      if (recordRows.length > 14) return "一個說明書來源核對版本最多支援 14 行；請先凍結本版，再建立另一個範圍。";
+      const invalidRows = recordRows.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `說明書來源第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整包含十一個以直線分隔的欄位。`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆說明書來源列都需要不重複的 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "每個 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 FRIDGE-1 或 HVAC-MANUAL。";
+      const statusOrder = [
+        "已記錄物品，等待完整型號證據",
+        "已記錄完整型號，等待官方支援來源",
+        "已找到官方來源，等待文件身分",
+        "已辨認文件，等待核對自述機型範圍",
+        "已比對適用範圍，等待目前存取測試",
+        "已測試存取，等待召回與安全來源",
+        "官方來源找不到，等待製造商或授權路徑",
+        "安全公告、召回或指示衝突，等待負責來源處理",
+        "已核對來源、範圍、存取與公告入口",
+        "家電已退役或移交，記錄手冊保管與剩餘用途",
+        "不適用，記錄理由與重新打開條件",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[10]));
+      if (invalidStatuses.length)
+        return `說明書來源第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用欄位說明中的十一種證據狀態之一。`;
+      const invalidSourceDates = recordRows.filter((row) => {
+        const sourceDate = strictIsoDate(row.parts[3]);
+        return !sourceDate || sourceDate.getTime() < baselineDate.getTime() || sourceDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `說明書來源第 ${invalidSourceDates.map((row) => row.line).join("、")} 行，需要介於基準日與本次核對日之間的真實來源核對日。`;
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 8).includes(row.parts[10]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(8).includes(row.parts[10]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[9]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的說明書來源第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次核對日起，到下一次來源或存取核點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[9]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已結束本版的說明書來源第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於基準日與本次核對日之間的實際結果日期。`;
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 6 || row.parts[2].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 6 || row.parts[6].length < 6 || row.parts[7].length < 8 || row.parts[8].length < 3);
+      if (missingLayers.length)
+        return `說明書來源第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實物品用途、型號證據、來源／文件身分、自述範圍、存取結果、獨立公告查核與負責角色。`;
+      const completedWithoutEvidence = recordRows.filter((row) => row.parts[10] === statusOrder[8] && (!/(?:製造商|官方|主管機關|標檢局|支援)/.test(row.parts[4]) || /(?:等待|未知|未解|未查|未開啟|尚未)/.test([row.parts[5], row.parts[6], row.parts[7]].join(" ")) || !/(?:開啟|載入|可見|存取)/.test(row.parts[6]) || !/(?:召回|安全|公告|標檢局|主管機關)/.test(row.parts[7])));
+      if (completedWithoutEvidence.length)
+        return `已完成來源核對第 ${completedWithoutEvidence.map((row) => row.line).join("、")} 行必須連結可歸屬來源、文件自述範圍、實際存取及獨立召回／安全入口，且不能仍有未解狀態。`;
+      const unavailableClaimingVerification = recordRows.filter((row) => row.parts[10] === statusOrder[6] && /(?:已驗證|已確認官方|完全適用|完整完成)/.test([row.parts[4], row.parts[5], row.parts[6]].join(" ")));
+      if (unavailableClaimingVerification.length)
+        return `官方來源找不到第 ${unavailableClaimingVerification.map((row) => row.line).join("、")} 行不能宣稱第三方線索已驗證、已確認官方、完全適用或完整完成。`;
+      const conflictWithoutResponsibleRoute = recordRows.filter((row) => row.parts[10] === statusOrder[7] && (!/(?:召回|公告|警告|停止|衝突|矛盾|勘誤)/.test(row.parts[7]) || !/(?:製造商|主管機關|標檢局|合格|授權|負責|支援)/.test([row.parts[4], row.parts[7], row.parts[8]].join(" "))));
+      if (conflictWithoutResponsibleRoute.length)
+        return `安全衝突第 ${conflictWithoutResponsibleRoute.map((row) => row.line).join("、")} 行必須記錄觀察到的公告或矛盾，以及負責製造商、主管機關或合格服務路徑。`;
+      const retiredWithoutCustody = recordRows.filter((row) => row.parts[10] === statusOrder[9] && !/(?:退役|移交|交接|保管|封存|剩餘用途|下一負責)/.test([row.parts[1], row.parts[6], row.parts[7]].join(" ")));
+      if (retiredWithoutCustody.length)
+        return `家電退役或移交第 ${retiredWithoutCustody.map((row) => row.line).join("、")} 行必須記錄物品狀態變更、手冊保管與剩餘用途，且不能暴露私人證據。`;
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[10] === statusOrder[10] && !/(?:重新打開|重新檢視|若|如果|當|之後|新家電|新文件|安裝|移交|角色改變)/.test([row.parts[5], row.parts[6], row.parts[7]].join(" ")));
+      if (notApplicableWithoutTrigger.length)
+        return `不適用第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須寫目前理由，以及重新打開這個文件角色的事件。`;
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、地址、帳號、登錄、序號、服務案件或完整數字識別。請留在受保護原件，只在這裡放安全證據索引。";
+      if (/密碼|通關密語|Wi-Fi 密碼|網路金鑰|復原碼|驗證碼|產品登錄 token|登錄權杖|帳號|客戶編號|完整序號|序號\s*[:：=]|產製碼\s*[:：=]|完整地址|完整門牌|服務案件|維修案件|發票內容|收據內容|私人通信|登入憑證|API 金鑰|完整姓名|客戶姓名|住戶姓名|精確位置|銘牌照片內容|手冊檔案內容|信用卡|銀行帳戶|簽名|出生日期|password|passphrase|passcode|access code|wifi password|network key|recovery code|verification code|registration token|account number|full serial|serial number\s*[:=]|production code\s*[:=]|full address|service case|invoice contents|private message|login credential|api key|full name|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、帳號、完整序號、產品登錄、服務案件、發票、私人參與者或受保護檔案資料。請改寫成安全來源、流程或證據索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[10] === status).length })).filter((item) => item.count > 0);
+      return `${values.review.trim()}｜家電說明書來源核對紀錄\n核對情境：${values.context}\n家電／來源地圖基準：${formatter.format(baselineDate)}\n本次說明書來源核對：${formatter.format(reviewDate)}\n下一次來源或存取核點：${formatter.format(nextReview)}\n仍開放的型號、來源、範圍、存取或安全列：${openRows.length} 筆\n已核對、退役或不適用列：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n製造商支援、主管機關、召回與受保護證據來源地圖：${values.basis.trim()}\n\n${lines("有版本的家電說明書來源證據", recordRows.map((row) => `${row.parts[0]}｜物品／用途／品牌：${row.parts[1]}｜完整型號證據：${row.parts[2]}｜來源核對日：${formatter.format(strictIsoDate(row.parts[3]) as Date)}｜來源／文件／語言／版本：${row.parts[4]}｜文件自述範圍：${row.parts[5]}｜存取／離線副本：${row.parts[6]}｜召回／安全入口與差異：${row.parts[7]}｜負責角色：${row.parts[8]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[9]) as Date)}｜狀態：${row.parts[10]}`))}\n\n受保護銘牌、完整手冊、離線副本與核對歷程位置：${values.storage.trim()}\n\n這份輸出只是家庭來源索引，不是操作、安裝、保養、維修或安全指令。它不辨識、移動、拆開、斷開或檢查設備，不造訪網址，不搜尋、開啟、下載、上傳、複製、雜湊、比較、更新或保存文件，不讀取銘牌，不驗證製造商、型號、序號、產製範圍、規格、地區、語言、零件、配件、公告、召回、補救或相容性，不聯絡支援、不授權工作、不解除停止使用指示，也不認證安全或結案。真實產品請使用目前製造商、負責安全主管機關、召回公告與合格服務來源。`;
     },
   },
 };

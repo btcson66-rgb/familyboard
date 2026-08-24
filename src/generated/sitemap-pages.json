@@ -873,9 +873,9 @@
   },
   {
     "route": "/guides/organize-appliance-manuals/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/organize-appliance-manuals/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1776,6 +1776,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/appliance-manual-source-check-log/",
+    "alternateRoute": "/zh-tw/tools/appliance-manual-source-check-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -1936,6 +1944,13 @@
     "alternateRoute": "/tools/appliance-maintenance-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/appliance-manual-source-check-log/",
+    "alternateRoute": "/tools/appliance-manual-source-check-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {
@@ -2391,6 +2406,13 @@
     "alternateRoute": "/features/offline-household-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/organize-appliance-manuals/",
+    "alternateRoute": "/guides/organize-appliance-manuals/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {

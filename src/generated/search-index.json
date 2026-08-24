@@ -840,12 +840,12 @@
     "headings": "A household record does not earn a disposal date from its filename Record five facts before writing any period U.S. federal tax periods are conditional, not a three-year label Property records follow basis and disposition Warranty expiry is one trigger, not automatic disposal Current version and historical evidence are different jobs A review date never releases an active hold Separate approval from the disposal method Build a small source-led review queue Affiliate products belong after the decision"
   },
   {
-    "title": "How to Organize Appliance Manuals So You Can Find the Right One During a Problem",
-    "description": "Organize appliance manuals by the actual asset and model, using official digital manuals where possible and preserving only the versions you need.",
+    "title": "How to Organize Appliance Manuals by Exact Model and Current Source",
+    "description": "Organize appliance manuals by exact model, official support source, document role, version, access check and separate recall or safety notice.",
     "route": "/guides/organize-appliance-manuals/",
     "cluster": "records-emergency",
     "keywords": "organize appliance manuals",
-    "headings": "Appliance manuals make more sense linked to the appliance than filed as a separate collection Model numbers are not interchangeable — get the exact one Save the operating and maintenance sections, skip the rest Link maintenance tasks back to their source Archive manuals with retired assets instead of deleting them The manuals worth prioritizing first Check recall status while you have the model number in hand Manuals for built-in and installed appliances need an installer reference too"
+    "headings": "The right appliance manual is a source match, not merely a PDF Start with the household asset, not the document filename Use the manufacturer's product-support record as the source map Separate owner, installation, service, warranty and safety documents Confirm the document's stated model and regional coverage A live link and a saved copy solve different failure modes Recall and safety notices remain a separate current check Maintenance records must cite the applicable section, not a copied interval Retiring an appliance does not create a universal deletion date Affiliate recommendations come after source and compatibility checks"
   },
   {
     "title": "How to Organize Household Insurance Documents Without Exposing Sensitive Details",
@@ -1670,6 +1670,14 @@
     "cluster": "tools",
     "keywords": "household record retention schedule",
     "headings": "Household record retention decision log Use a decision scope, not a person or account name Each row preserves eleven decision facts Twelve statuses show what is known and what remains open A disposal candidate is intentionally incomplete Continued retention needs a source and another checkpoint Privacy screening catches common mistakes, not every risk Affiliate products cannot approve destruction"
+  },
+  {
+    "title": "Appliance Manual Source Check Log | Model, Version and Recall Sources",
+    "description": "Create a private appliance manual source log with exact-model evidence, official support page, document role, stated coverage, access test and recall check.",
+    "route": "/tools/appliance-manual-source-check-log/",
+    "cluster": "tools",
+    "keywords": "appliance manual organizer",
+    "headings": "Appliance manual source check log Define the review without exposing a household Each row preserves eleven source and access facts Eleven statuses show what is known and what remains open A full model is evidence, not permission to move equipment Document role and stated coverage must agree Access and saved-copy states are separate observations Recall and safety checks never collapse into the manual check Privacy screening is a last line, not a safe-storage system Affiliate products cannot determine compatibility or safety"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
