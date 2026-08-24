@@ -792,12 +792,12 @@
     "headings": "A moving inventory checklist should track custody, not just contents Use three linked records instead of one overloaded spreadsheet Build box IDs that remain useful after stacking Photograph context without creating unsafe evidence For a U.S. interstate move, preserve the mover's inventory and bill of lading Correctly separate valuation from inventory detail Loading needs a count and an attributable custody event Reconcile at destination before unpacking disperses the evidence Describe observable condition, not blame A notice draft is not a delivered notice Retention ends when the purpose ends, not when the last box opens Affiliate supplies are operational aids, not evidence"
   },
   {
-    "title": "Storage Unit Inventory: Know What Is Off-Site Without Opening Every Box",
-    "description": "Track storage-unit contents with zones, box IDs and photos — and understand what your homeowners or renters policy does and doesn't cover for off-site storage.",
+    "title": "Storage Unit Inventory Checklist | Box Locations, Visits and Move-Out Records",
+    "description": "Build a storage-unit inventory that separates box locations, access visits, transfers, condition observations, contract notices and final move-out evidence.",
     "route": "/guides/storage-unit-inventory/",
     "cluster": "inventory-warranty",
     "keywords": "storage unit inventory",
-    "headings": "Off-site storage becomes expensive and frustrating when nobody remembers what's inside Insurance coverage for storage units is real, but limited Zones and box IDs make retrieval possible without a full unpack Photograph major items and box labels Access credentials do not belong in the item inventory Storage climate matters for what gets recorded there Note what actually needs climate control, and what doesn't A storage inventory is also useful for insurance claims, not just retrieval Let the inventory prompt the \"is this still worth it\" question A unit that's hard to search in person should be easy to search on paper"
+    "headings": "A storage unit inventory should show location and change, not just contents Keep five linked records instead of one overloaded list Start with a private unit ID and a dated empty-unit baseline Freeze a placement version before rearranging the unit Every visit needs an attributable change record Describe observable condition without deciding cause Insurance, rent, liens and notices stay in controlling sources Move-out has three separate outcomes Retain versions while a purpose remains Affiliate supplies are operational aids, not evidence"
   },
   {
     "title": "Digital Home Inventory Backup: Protect the Records That Describe Your Home",
@@ -1638,6 +1638,14 @@
     "cluster": "tools",
     "keywords": "moving box handover log",
     "headings": "Moving box handover log Start with a private move ID Loading, destination handover and review dates are different Preserve controlling documents outside the result Each event uses ten fields Nine statuses prevent premature closure Destination-dependent statuses require a real handover date Record observation rather than blame A notice draft is not a delivered notice Privacy screening cannot replace human review Affiliate products remain outside the evidence chain"
+  },
+  {
+    "title": "Storage Unit Access & Inventory Log | Visits, Boxes and Move-Out",
+    "description": "Create a private storage-unit log for box locations, visits, placement, retrieval, visible condition observations, notices and final move-out sources.",
+    "route": "/tools/storage-unit-access-inventory-log/",
+    "cluster": "tools",
+    "keywords": "storage unit inventory log",
+    "headings": "Storage unit access and inventory log Use a household unit reference, not a public locator Four dates define this version Keep controlling sources outside the generated result Every row contains ten fields Nine statuses separate access from inventory evidence Visit-dependent statuses need a real physical-visit date Record what changed, not who is to blame A notice draft and a delivered notice are different events Insurance is not a status the tool can decide Privacy screening supports, but cannot replace, review Stop the checklist when conditions may be dangerous Affiliate products remain separate from records and outcomes"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

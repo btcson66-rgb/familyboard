@@ -825,9 +825,9 @@
   },
   {
     "route": "/guides/storage-unit-inventory/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/storage-unit-inventory/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1744,6 +1744,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/storage-unit-access-inventory-log/",
+    "alternateRoute": "/zh-tw/tools/storage-unit-access-inventory-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2434,6 +2442,20 @@
   {
     "route": "/zh-tw/guides/service-history/",
     "alternateRoute": "/guides/service-history/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/storage-unit-access-inventory-log/",
+    "alternateRoute": "/tools/storage-unit-access-inventory-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/storage-unit-inventory/",
+    "alternateRoute": "/guides/storage-unit-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"

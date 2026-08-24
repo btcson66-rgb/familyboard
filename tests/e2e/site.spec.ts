@@ -98,6 +98,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/purchase-delivery-evidence-log/",
     "/tools/moving-box-handover-log/",
     "/guides/moving-inventory/",
+    "/tools/storage-unit-access-inventory-log/",
+    "/guides/storage-unit-inventory/",
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
     "/templates/printable-home-inventory-template/",
@@ -143,6 +145,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/purchase-delivery-evidence-log/",
     "/zh-tw/tools/moving-box-handover-log/",
     "/zh-tw/guides/moving-inventory/",
+    "/zh-tw/tools/storage-unit-access-inventory-log/",
+    "/zh-tw/guides/storage-unit-inventory/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -310,6 +314,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "搬家物品清單教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/moving-inventory/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "迷你倉進出與物品紀錄" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/storage-unit-access-inventory-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "迷你倉物品清單教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/storage-unit-inventory/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電清冊教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/appliance-inventory/");
@@ -747,6 +757,16 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/moving-inventory/",
       alternate: "/guides/moving-inventory/",
       heading: "搬家物品清單要追蹤「誰在何時接到哪一箱」",
+    },
+    {
+      route: "/zh-tw/tools/storage-unit-access-inventory-log/",
+      alternate: "/tools/storage-unit-access-inventory-log/",
+      heading: "迷你倉進出與物品紀錄表",
+    },
+    {
+      route: "/zh-tw/guides/storage-unit-inventory/",
+      alternate: "/guides/storage-unit-inventory/",
+      heading: "迷你倉物品清單要回答「放哪裡、何時看過、後來怎麼變」",
     },
     {
       route: "/zh-tw/guides/purchase-receipt-organizer/",
@@ -1479,6 +1499,28 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不能早於本次檢視日",
   );
 
+  await page.goto("/tools/storage-unit-access-inventory-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open storage events: 2");
+  await expect(page.locator(".result")).toContainText("Reconciled, completed or handed-off events: 0");
+  await expect(page.locator(".result")).toContainText("Baseline indexed—first placement reconciliation pending 1");
+  await page.getByLabel("Next visit or inventory checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+
+  await page.goto("/zh-tw/tools/storage-unit-access-inventory-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放倉位事件：2 筆");
+  await expect(page.locator(".result")).toContainText("已核對、完成或移交事件：0 筆");
+  await expect(page.locator(".result")).toContainText("已建立基線索引，等待首次箱位核對 1 筆");
+  await page.getByLabel("下一次訪視或物品核對點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次檢視日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1849,6 +1891,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/moving-inventory/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/storage-unit-access-inventory-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/storage-unit-access-inventory-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/storage-unit-inventory/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/",

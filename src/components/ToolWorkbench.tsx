@@ -2907,6 +2907,126 @@ const definitions: Record<string, Definition> = {
       return `${values.move.trim()} — moving box handover log\nMove context: ${values.context}\nLoading date: ${formatter.format(loadingDate)}\nDestination handover: ${handoverDate ? formatter.format(handoverDate) : "Not yet recorded"}\nCurrent inventory review: ${formatter.format(reviewDate)}\nNext box reconciliation checkpoint: ${formatter.format(nextReview)}\nOpen moving-box events: ${openRows.length}\nReconciled, completed or handed-off events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling estimate, contract, mover inventory, custody, handover, notice and outcome sources: ${values.basis.trim()}\n\n${lines("Versioned moving-box and handover evidence", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable packing/loading/custody/handover/condition/notice/outcome fact: ${row.parts[2]} — custodian/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next gap/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household index. It does not replace or amend an estimate, contract, order for service, bill of lading, mover inventory, valuation selection, insurance source, declaration, delivery receipt, notice, complaint or claim; verify a mover, broker, license, vehicle, box, seal, item, packing, loading, custody, handover, condition, loss, damage, communication or outcome; determine ownership, acceptance, fault, liability, valuation, coverage, damages, waiver, claim or settlement; interpret law or calculate a deadline; contact anyone; submit or authorize a notice, claim, complaint, access or payment; or certify completion. Preserve originals and use the current contract, responsible authority, insurer, qualified professional or emergency service that applies.`;
     },
   },
+  "storage-unit-access-inventory-log": {
+    intro:
+      "Create a private, versioned log for unit zones, placement, physical visits, relocation, removal, observable condition, notices and actual move-out outcomes. It does not verify a facility or decide contracts, insurance, liability or deadlines.",
+    fields: [
+      text("unit", "Private household storage reference", "Use a stable household ID, not a facility name, address, unit number, account, contract, access or lock identifier.", "STORE-2026-A"),
+      {
+        name: "context",
+        label: "Storage context",
+        type: "select",
+        options: [
+          "Commercial self-service storage",
+          "Building or community storage locker",
+          "Portable storage container",
+          "Shared private outbuilding",
+          "Other contract-controlled storage space",
+        ],
+      },
+      { name: "baselineDate", label: "Occupancy or placement baseline date", type: "date", value: "2026-08-20" },
+      { name: "visitDate", label: "Last physical visit date (optional until observed)", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: "Current storage-log review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next visit or inventory checkpoint", type: "date", value: "2026-08-31" },
+      text("basis", "Controlling agreement, rate, rules, insurance, baseline, visit, notice and move-out sources", "Use safe source IDs or public URLs with dates. Keep complete documents, access details, account identifiers and valuable-property records protected.", "AGREE-A1; RATE-R2; RULES-F1; INS-S1; BASE-P1; VISIT-V1; NOTICE-N1 if needed; MOVEOUT-M1 if applicable"),
+      {
+        name: "events",
+        label: "Versioned storage-zone, access and inventory rows",
+        type: "textarea",
+        help: "One line: ID | zone, box or item group | attributable placement, visit, transfer, condition, notice or outcome fact | observer or source role | event date YYYY-MM-DD | protected evidence pointer | next gap or closure reason | owner role | target or outcome date YYYY-MM-DD | one of the nine listed statuses. Maximum 18 lines.",
+        value: "BASE-1 | Front shelf A and floor zone B | Household baseline photo links the visible zones and private box IDs without proving facility custody | Household storage reviewer role | 2026-08-20 | BASE-P1 protected | Compare every placed ID to the dated zone map and preserve unobserved areas | Household inventory owner role | 2026-08-24 | Baseline indexed—first placement reconciliation pending\nVISIT-1 | Front shelf A | Dated physical visit found BOX-D-07 label visible on shelf A; rear wrapped-furniture zone was not reviewed | Authorized household reviewer role | 2026-08-22 | VISIT-V1 protected | Reconcile the remaining zones without treating access alone as proof of contents | Household storage reviewer role | 2026-08-31 | Physical visit recorded—inventory update pending",
+      },
+      text("storage", "Protected original-evidence location", "Use a folder label, not a facility address, unit, account, agreement, policy, claim, access, payment, participant or valuable-item detail.", "Household records / storage / STORE-2026-A / protected originals"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const visitDate = strictIsoDate(values.visitDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.unit.trim()) return "Enter a private household storage reference so the exported log can be identified.";
+      if (!baselineDate) return "Enter a real occupancy or placement baseline date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current storage-log review date in YYYY-MM-DD format.";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current storage-log review date cannot be in the future.";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "The occupancy or placement baseline cannot be later than the current review.";
+      if (visitDate && visitDate.getTime() < baselineDate.getTime()) return "The last physical visit cannot be earlier than the baseline.";
+      if (visitDate && visitDate.getTime() > reviewDate.getTime()) return "The last physical visit cannot be later than the current review.";
+      if (!nextReview) return "Enter a real next visit or inventory checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next visit or inventory checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 16) return "Identify controlling agreement, rate, rules, insurance, baseline, visit, notice and move-out sources with safe pointers.";
+      if (!values.storage.trim()) return "Enter the protected location for original storage, visit, condition, notice and outcome evidence.";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "Add at least one storage-zone, access or inventory event.";
+      if (eventRows.length > 18) return "One review supports at most 18 storage events; create a later dated version for more.";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Storage event line ${invalidRows.map((row) => row.line).join(", ")} must contain all ten pipe-separated fields.`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Every storage event needs a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Use 2 to 20 letters, numbers or hyphens for each event ID, such as VISIT-1.";
+      const statusOrder = [
+        "Baseline indexed—first placement reconciliation pending",
+        "Box or item placed—location/source reconciliation pending",
+        "Physical visit recorded—inventory update pending",
+        "Box or item removed—household destination confirmation pending",
+        "Access or visible condition issue recorded—notice delivery pending",
+        "Notice delivered—response or inspection pending",
+        "Reviewed scope reconciled—next periodic review linked",
+        "Move-out or transfer completed—final sources linked",
+        "Limited archive or external handoff—gap and ownership preserved",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `Storage event line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the nine storage statuses in the field instructions.`;
+      const visitStatuses = new Set([statusOrder[2], statusOrder[3], statusOrder[4], statusOrder[6], statusOrder[7]]);
+      const needsVisit = eventRows.filter((row) => visitStatuses.has(row.parts[9]));
+      if (!visitDate && needsVisit.length)
+        return `Storage event line ${needsVisit.map((row) => row.line).join(", ")} uses a physical-visit, removal, visible-condition, reconciliation or completed move-out status, so add the real last physical visit date.`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < baselineDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `Storage event line ${invalidEventDates.map((row) => row.line).join(", ")} needs a real event date from the baseline through the current review.`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 6).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(6).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open storage event line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Reconciled, completed or handed-off storage event line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from the baseline through this review.`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `Storage event line ${missingSources.map((row) => row.line).join(", ")} needs an observer or source role and a protected placement, visit, condition, notice or outcome pointer.`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 12 || /^(?:done|complete|completed|visited|removed|empty|safe|secure|covered|insured|lost|damaged|approved|paid|settled|ok|none|n\/a|follow up|closed)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `Storage event line ${vagueActions.map((row) => row.line).join(", ")} needs a specific evidence gap, next step or source-based closure reason—not a generic access, safety, coverage or completion word.`;
+      const privacyText = [values.unit, values.basis, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, address, unit, account, agreement, policy, claim, serial or complete numeric identifier was detected. Keep it protected and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|gate code|lock combination|key number|full address|street address|facility address|business name|facility name|storage unit number|unit number|account number|card number|bank account|routing number|social security|government id|full serial|serial number|agreement number|contract number|claim number|case number|policy number|signature|date of birth|private contact|payment credential|login credential|complaint form|complaint letter|legal strategy|medical record|child name|valuable contents|valuable item details|owner name|employee name|customer name|resident name|remote access|one-time code|verification code|exact access route|exact unit location|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, location, access, financial, identity, unit, contract, policy, valuable-property, complaint, legal or private participant detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: eventRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
+      return `${values.unit.trim()} — storage unit access and inventory log\nStorage context: ${values.context}\nOccupancy or placement baseline: ${formatter.format(baselineDate)}\nLast physical visit: ${visitDate ? formatter.format(visitDate) : "Not yet recorded"}\nCurrent storage-log review: ${formatter.format(reviewDate)}\nNext visit or inventory checkpoint: ${formatter.format(nextReview)}\nOpen storage events: ${openRows.length}\nReconciled, completed or handed-off events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling agreement, rate, rules, insurance, baseline, visit, notice and move-out sources: ${values.basis.trim()}\n\n${lines("Versioned storage-zone, access and inventory evidence", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable placement/visit/transfer/condition/notice/outcome fact: ${row.parts[2]} — observer/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next gap/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household index. It does not replace or amend a rental agreement, rate or fee notice, facility rule, insurance policy, property inventory, ownership or value source, access record, move-out document, notice, complaint or claim; verify a facility, owner, registration, license, zoning, building or fire compliance, unit, size, lock, access, monitoring, security, environment, property, communication or outcome; inspect a site; determine custody, negligence, liability, coverage, value, damage, waiver, claim, complaint or legal rights; calculate a payment, rate, notice, lien, auction, termination, insurance, claim or legal deadline; contact anyone; submit or authorize access, notice, payment, disposal, complaint or claim; or certify a unit as safe, covered, reconciled or empty. Preserve originals and use the current agreement, facility, responsible authority, insurer, qualified professional or emergency service that applies.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -7188,6 +7308,120 @@ const zhTwDefinitions: Record<string, Definition> = {
       const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
       const statusCounts = statusOrder.map((status) => ({ status, count: eventRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
       return `${values.move.trim()}｜搬家箱件交接紀錄\n搬家情境：${values.context}\n裝載日：${formatter.format(loadingDate)}\n目的地交接：${handoverDate ? formatter.format(handoverDate) : "尚未記錄"}\n本次箱件清冊檢視：${formatter.format(reviewDate)}\n下一個箱件核對點：${formatter.format(nextReview)}\n仍開放箱件事件：${openRows.length} 筆\n已核對、完成或移交事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的估價、契約、業者清冊、保管、點交、通知與結果來源：${values.basis.trim()}\n\n${lines("有版本的箱件與交接證據", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的裝箱／裝載／保管／點交／狀況／通知／結果事實：${row.parts[2]}｜保管／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一個缺口／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭箱件索引。它不取代或修改估價單、契約、服務單、運單、業者清冊、價值選擇、保險、聲明、簽收、通知、申訴或求償，不驗證業者、營業資格、車輛、箱件、封條、物品、包裝、裝載、保管、點交、狀況、遺失、損傷、溝通或結果，不判定所有權、驗收、責任、賠償、價值、涵蓋、損害、放棄、求償或和解，不解釋法律或計算期限，不聯絡任何人、不提交或授權通知、求償、申訴、門禁或付款，也不認證完成。請保存原件，並使用實際契約、主管機關、保險、合格專業或緊急服務的現行指示。`;
+    },
+  },
+  "storage-unit-access-inventory-log": {
+    intro:
+      "把迷你倉區帶、箱件放入、實際訪視、移位、取出、可見狀況、通知與退租結果做成安全版本索引。工具不驗證業者，也不判定契約、責任、保險或期限。",
+    fields: [
+      text("unit", "家庭私人倉位代號", "使用固定代號，不要輸入業者名稱、完整地址、倉號、帳號、契約、門禁、鑰匙或鎖具識別。", "STORE-2026-A"),
+      {
+        name: "context",
+        label: "倉儲情境",
+        type: "select",
+        options: ["商用自助儲物空間", "社區或大樓附屬儲物櫃", "可移動式儲存貨櫃", "共用私人儲物空間", "其他受契約或規則控制的空間"],
+      },
+      { name: "baselineDate", label: "入住或箱位基線日", type: "date", value: "2026-08-20" },
+      { name: "visitDate", label: "最後一次實際訪視日（尚未看見可留空）", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: "本次倉位紀錄檢視日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "下一次訪視或物品核對點", type: "date", value: "2026-08-31" },
+      text("basis", "控制中的契約、費率、規則、保險、基線、訪視、通知與退租來源", "使用安全來源代號或附日期的官方網址；完整文件、門禁、帳號與貴重物資料放受保護位置。", "CONTRACT-C1；RATE-R2；RULES-F1；INS-S1；BASE-P1；VISIT-V1；必要時 NOTICE-N1；退租時 MOVEOUT-M1"),
+      {
+        name: "events",
+        label: "有版本的倉位、進出與物品事件",
+        type: "textarea",
+        help: "每行：ID｜區帶、箱件或物品群組｜有來源的放入、訪視、移位、取出、狀況、通知或結果事實｜觀察或來源角色｜事件日期 YYYY-MM-DD｜受保護證據索引｜下一個缺口或結案理由｜負責角色｜目標或結果日期 YYYY-MM-DD｜九種指定狀態之一。最多 18 行。",
+        value: "BASE-1 | 前方層架 A 與地面區 B | 家庭基線照片連結可見區帶與私人箱號，不證明業者保管 | 家庭倉位複查角色 | 2026-08-20 | BASE-P1 受保護 | 依有日期區帶圖核對每個放入箱號並保留未看見範圍 | 家庭物品清單負責角色 | 2026-08-24 | 已建立基線索引，等待首次箱位核對\nVISIT-1 | 前方層架 A | 實際訪視看見 BOX-D-07 標籤位於層架 A，後方包覆家具區未檢查 | 家庭授權訪視角色 | 2026-08-22 | VISIT-V1 受保護 | 核對其餘區帶，不能把進入倉位本身寫成已看見全部物品 | 家庭倉位複查負責角色 | 2026-08-31 | 已記錄實際訪視，等待更新物品清單",
+      },
+      text("storage", "受保護的原始證據位置", "使用資料夾名稱，不要放業者地址、倉號、帳號、契約、保單、理賠、門禁、付款、私人參與者或貴重物明細。", "家庭紀錄／迷你倉／STORE-2026-A／受保護原件"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const visitDate = strictIsoDate(values.visitDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.unit.trim()) return "請輸入家庭私人倉位代號，讓匯出結果可以辨認。";
+      if (!baselineDate) return "請用 YYYY-MM-DD 輸入真實的入住或箱位基線日。";
+      if (!reviewDate) return "請用 YYYY-MM-DD 輸入真實的本次倉位紀錄檢視日。";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次倉位紀錄檢視日不能晚於今天。";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "入住或箱位基線日不能晚於本次檢視日。";
+      if (visitDate && visitDate.getTime() < baselineDate.getTime()) return "最後一次實際訪視日不能早於基線日。";
+      if (visitDate && visitDate.getTime() > reviewDate.getTime()) return "最後一次實際訪視日不能晚於本次檢視日。";
+      if (!nextReview) return "請用 YYYY-MM-DD 輸入真實的下一次訪視或物品核對點。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "下一次訪視或物品核對點不能早於本次檢視日。";
+      if (values.basis.trim().length < 12) return "請用安全索引指出控制中的契約、費率、規則、保險、基線、訪視、通知與退租來源。";
+      if (!values.storage.trim()) return "請輸入倉位、訪視、狀況、通知與結果原始證據的受保護位置。";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "請至少加入一筆倉位、進出或物品事件。";
+      if (eventRows.length > 18) return "一個版本最多支援 18 筆倉位事件；更多變化請另建下一個有日期版本。";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `倉位事件第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整包含十個以直線分隔的欄位。`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆倉位事件都需要不重複的 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "每個事件 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 VISIT-1。";
+      const statusOrder = [
+        "已建立基線索引，等待首次箱位核對",
+        "箱件或物品已放入，等待位置與來源核對",
+        "已記錄實際訪視，等待更新物品清單",
+        "箱件或物品已取出，等待家庭目的地確認",
+        "已記錄門禁或可見狀況問題，等待通知送達",
+        "通知已送達，等待回覆或檢視",
+        "本次檢視範圍已核對，連結下次定期複查",
+        "退租或轉倉已完成，連結最終來源",
+        "有限歸檔或已移交外部流程，缺口與責任已保存",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `倉位事件第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用欄位說明中的九種倉位狀態之一。`;
+      const visitStatuses = new Set([statusOrder[2], statusOrder[3], statusOrder[4], statusOrder[6], statusOrder[7]]);
+      const needsVisit = eventRows.filter((row) => visitStatuses.has(row.parts[9]));
+      if (!visitDate && needsVisit.length)
+        return `倉位事件第 ${needsVisit.map((row) => row.line).join("、")} 行使用實際訪視、取出、可見狀況、核對或完成退租狀態，因此必須填入真實的最後一次實際訪視日。`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < baselineDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `倉位事件第 ${invalidEventDates.map((row) => row.line).join("、")} 行需要介於基線日與本次檢視日之間的真實事件日期。`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 6).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(6).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的倉位事件第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次檢視日起，到下一次訪視或物品核對點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已核對、完成或移交的倉位事件第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於基線日與本次檢視日之間的實際結果日期。`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 3 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `倉位事件第 ${missingSources.map((row) => row.line).join("、")} 行需要觀察或來源角色，以及受保護的放入、訪視、狀況、通知或結果索引。`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 8 || /^(?:完成|好了|已訪視|已取出|空了|安全|有保全|已承保|遺失|損傷|已賠|已和解|核准|無|不用|不適用|待追蹤|已結案|ok)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `倉位事件第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的證據缺口、下一步或有來源的結案理由，不能只寫通用門禁、安全、承保或完成詞。`;
+      const privacyText = [values.unit, values.basis, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、地址、倉號、帳號、契約、保單、理賠、序號或完整數字識別。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|鑰匙號碼|鎖具組合|鑰匙盒密碼|驗證碼|一次性代碼|警報碼|完整地址|完整門牌|業者地址|業者名稱|公司名稱|完整倉號|倉位號碼|帳號|卡號|銀行帳戶|匯款帳號|身分證|完整序號|契約編號|案件編號|理賠編號|保單編號|簽名|出生日期|私人聯絡|完整付款資料|登入憑證|申訴表全文|申訴信全文|法律策略|醫療紀錄|兒童姓名|貴重物明細|貴重品內容|業者負責人姓名|員工姓名|客戶姓名|住戶姓名|遠端控制|完整門禁路線|精確倉位位置|password|passcode|access code|gate code|lock combination|unit number|account number|card number|government id|full serial|serial number|contract number|claim number|case number|policy number|signature|payment credential|complaint form|legal strategy|medical record|child name|valuable contents|owner name|employee name|customer name|resident name|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、位置、門禁、金融、身分、倉號、契約、保單、貴重物、申訴、法律或私人參與者資料。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: eventRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
+      return `${values.unit.trim()}｜迷你倉進出與物品紀錄\n倉儲情境：${values.context}\n入住或箱位基線日：${formatter.format(baselineDate)}\n最後一次實際訪視：${visitDate ? formatter.format(visitDate) : "尚未記錄"}\n本次倉位紀錄檢視：${formatter.format(reviewDate)}\n下一次訪視或物品核對點：${formatter.format(nextReview)}\n仍開放倉位事件：${openRows.length} 筆\n已核對、完成或移交事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的契約、費率、規則、保險、基線、訪視、通知與退租來源：${values.basis.trim()}\n\n${lines("有版本的倉位、進出與物品證據", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的放入／訪視／移位／取出／狀況／通知／結果事實：${row.parts[2]}｜觀察／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一個缺口／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭倉位索引。它不取代或修改租用契約、費率或費用通知、場地規則、保單、物品清單、所有權或價值來源、門禁紀錄、退租文件、通知、申訴或理賠，不驗證業者、負責人、登記、營業資格、土地使用、建築或消防、倉位、尺寸、門鎖、門禁、監控、保全、環境、物品、溝通或結果，不檢查現場、不判定保管、疏失、責任、承保、價值、損害、放棄、理賠、申訴或法律權利，不計算繳費、調價、通知、欠租、物品處理、拍賣、終止、保險、理賠或法律期限，不聯絡任何人、不提交或授權門禁、通知、付款、處分、申訴或理賠，也不認證倉位安全、承保、已核對或已清空。請保存原件，並使用實際契約、業者、主管機關、保險、合格專業或緊急服務的現行指示。`;
     },
   },
 };

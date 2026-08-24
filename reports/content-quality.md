@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-24T05:34:54.146Z
+Generated: 2026-08-24T06:06:23.167Z
 
 ## Summary
 
-- Indexable pages: 310
-- Generated HTML routes: 327
+- Indexable pages: 313
+- Generated HTML routes: 330
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 115
+- Pages without a contextual product/tool link: 117
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,9 +22,9 @@ Generated: 2026-08-24T05:34:54.146Z
 - appliances: 30
 - maintenance: 37
 - household-operations: 21
-- inventory-warranty: 38
+- inventory-warranty: 39
 - records-emergency: 27
-- tools: 85
+- tools: 87
 
 ## Word-count range
 
@@ -111,6 +111,7 @@ Generated: 2026-08-24T05:34:54.146Z
 - /zh-tw/guides/repair-history/
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/guides/service-history/
+- /zh-tw/guides/storage-unit-inventory/
 - /zh-tw/guides/storm-preparation-home-checklist/
 - /zh-tw/guides/water-leak-response-home-records/
 - /zh-tw/
@@ -156,6 +157,7 @@ Generated: 2026-08-24T05:34:54.146Z
 - /zh-tw/tools/receipt-retention-organizer/
 - /zh-tw/tools/recurring-chore-planner/
 - /zh-tw/tools/room-inventory-generator/
+- /zh-tw/tools/storage-unit-access-inventory-log/
 - /zh-tw/tools/vacation-shutdown-checklist-generator/
 - /zh-tw/tools/warranty-checklist-generator/
 - /zh-tw/tools/warranty-claim-evidence-log/

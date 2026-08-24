@@ -102,6 +102,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/moving-box-handover-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/moving-box-handover-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/moving-inventory/</loc>",
+      "<loc>https://familyboard.win/tools/storage-unit-access-inventory-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/storage-unit-access-inventory-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/storage-unit-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -441,6 +444,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Use three linked records",
       "Unless a customer selects Released Value",
+    ],
+  },
+  {
+    path: "/tools/storage-unit-access-inventory-log/",
+    require: [
+      "Storage Unit Access &amp; Inventory Log",
+      'hreflang="zh-TW"',
+      "Nine statuses separate access from inventory evidence",
+      "Privacy screening supports",
+    ],
+  },
+  {
+    path: "/guides/storage-unit-inventory/",
+    require: [
+      "A storage unit inventory should show location and change",
+      'hreflang="zh-TW"',
+      "Keep five linked records",
+      "Move-out has three separate outcomes",
     ],
   },
   {
@@ -810,6 +831,24 @@ const checks = [
       'hreflang="en"',
       "台灣搬家契約不能只留口頭報價",
       "定型化契約範本是訂約參考",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/storage-unit-access-inventory-log/",
+    require: [
+      "迷你倉進出與物品紀錄表",
+      'hreflang="en"',
+      "九種狀態把進入倉位與看見物品分開",
+      "不會把「有登記」",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/storage-unit-inventory/",
+    require: [
+      "迷你倉物品清單要回答",
+      'hreflang="en"',
+      "一次建立五層資料",
+      "退租要分成物品、空倉狀況與契約帳務",
     ],
   },
   {
