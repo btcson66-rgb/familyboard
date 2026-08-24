@@ -753,9 +753,9 @@
   },
   {
     "route": "/guides/service-history/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/service-history/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1699,7 +1699,15 @@
     "route": "/tools/product-recall-action-log/",
     "alternateRoute": "/zh-tw/tools/product-recall-action-log/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-23",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/tools/appliance-service-visit-log/",
+    "alternateRoute": "/zh-tw/tools/appliance-service-visit-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1871,6 +1879,13 @@
     "alternateRoute": "/guides/appliance-replacement-planning/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/appliance-service-visit-log/",
+    "alternateRoute": "/tools/appliance-service-visit-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {
@@ -2326,6 +2341,13 @@
     "alternateRoute": "/security/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/service-history/",
+    "alternateRoute": "/guides/service-history/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {

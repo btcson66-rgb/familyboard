@@ -2293,6 +2293,124 @@ const definitions: Record<string, Definition> = {
       return `${values.asset.trim()} — product recall action record\nReview context: ${values.context}\nOfficial notice publication or update: ${formatter.format(noticeDate)}\nHousehold recall review: ${formatter.format(reviewDate)}\nNext household checkpoint: ${formatter.format(nextReview)}\nOpen actions: ${openRows.length}\nCompleted, not affected or no longer held: ${closedRows.length}\nAffected-confirmed or remedy-underway rows: ${confirmedAffected}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling authority and manufacturer notices: ${values.noticeSources.trim()}\nProtected product-identity comparison basis: ${values.identityBasis.trim()}\n\n${lines("Versioned recall actions", actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable instruction/comparison/request/response/outcome: ${row.parts[2]} — actor/source: ${row.parts[3]} — action date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next step/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not search current recalls, inspect a product, compare or validate identifiers, decide affected or safety status, create stop-use, unplugging, movement, repair, destruction, return, shipping or disposal instructions, verify a notice or remedy, contact a company or authority, submit an incident or remedy complaint, authorize a refund or replacement, calculate a deadline, assign responsibility or certify completion. Follow the current responsible authority and manufacturer notice immediately, use emergency or medical resources for urgent conditions and preserve original sources.`;
     },
   },
+  "appliance-service-visit-log": {
+    intro:
+      "Create a dated appliance or home-system service visit record from the original request through provider evidence and household recheck. The tool does not diagnose equipment, verify a provider, approve work or judge safety, price or workmanship.",
+    fields: [
+      text("asset", "Private asset label", "Use a household asset label, not a full serial, address, account, case number or private contact.", "Laundry washer ASSET-A4"),
+      {
+        name: "context",
+        label: "Current visit context",
+        type: "select",
+        options: [
+          "Request and appointment preparation",
+          "Provider identity, estimate or authorization review",
+          "On-site finding, work or part documentation",
+          "Completion, household recheck or handoff review",
+        ],
+      },
+      { name: "requestDate", label: "Original service request date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "Current visit-record review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next household follow-up checkpoint", type: "date", value: "2026-08-31" },
+      text("baseline", "Controlling request, provider, estimate and written-term sources", "Use safe source IDs or public URLs with dates. State the provider role the source actually supports and preserve fee or scope terms without private details.", "REQUEST-R1; independent repair provider source PROVIDER-P1; estimate QUOTE-Q1; written warranty TERMS-T1"),
+      text("observation", "Starting household observation", "Describe visible or audible facts and what was not attempted. Do not diagnose or paste a full identifier, address or private contact.", "Cycle stopped during rinse and displayed E7; cabinet was not opened; original observation stored as OBS-O1"),
+      {
+        name: "events",
+        label: "Versioned service visit event rows",
+        type: "textarea",
+        help: "One line: ID | event type | attributable observation, estimate, finding, authorization, work, part, invoice or outcome | actor or source role | event date YYYY-MM-DD | protected evidence pointer | next step or closure reason | owner role | target or outcome date YYYY-MM-DD | Scope/request recorded—visit pending, Provider/estimate recorded—authorization pending, Visit finding recorded—decision pending, Work authorized/in progress—scope linked, Work completed—household recheck pending, Closed—service evidence and household recheck linked, Deferred/declined—reason and source linked, or Handed off—warranty, recall or complaint pointer linked. Maximum 16 lines.",
+        value: "SV-1 | Original service request | Requested inspection of the observed rinse-cycle interruption and an estimate before parts or added work | Household asset owner through provider booking source | 2026-08-20 | REQUEST-R1 plus delivery acknowledgement | Confirm provider role, disclosed visit fee and appointment scope before arrival | Household asset owner | 2026-08-24 | Scope/request recorded—visit pending\nSV-2 | Provider and estimate source | Preserved the independent provider identity source, stated diagnostic fee and estimate-before-parts condition | Independent repair business booking and estimate roles | 2026-08-22 | PROVIDER-P1 plus QUOTE-Q1 | Obtain an attributable visit finding before deciding whether to authorize work | Household asset owner | 2026-08-24 | Provider/estimate recorded—authorization pending",
+      },
+      text("storage", "Protected original-evidence location", "Use a folder label, not a full serial, address, phone, email, case, order, tracking, account, credential, signature, access or payment detail.", "Household records / appliances / ASSET-A4 / service visit SERVICE-S2"),
+    ],
+    run: (values) => {
+      const requestDate = strictIsoDate(values.requestDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.asset.trim()) return "Enter a private asset label so the exported service visit record can be identified.";
+      if (!requestDate) return "Enter the real original service request date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current visit-record review date in YYYY-MM-DD format.";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current visit-record review date cannot be in the future.";
+      if (requestDate.getTime() > reviewDate.getTime()) return "The original service request date cannot be later than the current review date.";
+      if (!nextReview) return "Enter a real next household follow-up checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next household follow-up checkpoint cannot be earlier than the current review.";
+      if (values.baseline.trim().length < 12) return "Identify the controlling request, provider, estimate and written-term sources with safe pointers and dates.";
+      if (values.observation.trim().length < 12) return "Describe the starting household observation without diagnosing the equipment or exposing private details.";
+      if (!values.storage.trim()) return "Enter the protected location for original booking, provider, estimate, approval, service, part, invoice and recheck evidence.";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "Add at least one service visit event row.";
+      if (eventRows.length > 16) return "Use no more than 16 service visit events in one review; create another dated version if needed.";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Service visit event line ${invalidRows.map((row) => row.line).join(", ")} must contain all 10 pipe-separated fields.`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Each service visit event must have a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Service visit event IDs must use 2 to 20 letters, numbers or hyphens, such as SV-1.";
+      const statusOrder = [
+        "Scope/request recorded—visit pending",
+        "Provider/estimate recorded—authorization pending",
+        "Visit finding recorded—decision pending",
+        "Work authorized/in progress—scope linked",
+        "Work completed—household recheck pending",
+        "Closed—service evidence and household recheck linked",
+        "Deferred/declined—reason and source linked",
+        "Handed off—warranty, recall or complaint pointer linked",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `Service visit event line ${invalidStatuses.map((row) => row.line).join(", ")} has an unsupported status. Use one of the eight labels shown in the field instructions.`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < requestDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `Service visit event line ${invalidEventDates.map((row) => row.line).join(", ")} needs a real event date from the original request through this review.`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 5).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(5).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open service visit event line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next household checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < requestDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Closed, deferred or handed-off event line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from the original request through this review.`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `Service visit event line ${missingSources.map((row) => row.line).join(", ")} needs an actor or source role and a protected request, estimate, finding, authorization, service, invoice or outcome pointer.`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 12 || /^(?:done|complete|completed|fixed|resolved|safe|approved|ok|none|n\/a|follow up|closed)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `Service visit event line ${vagueActions.map((row) => row.line).join(", ")} needs a specific next evidence step or preserved closure reason—not a generic approval, safety or completion word.`;
+      const privacyText = [values.asset, values.baseline, values.observation, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, serial, case, order, tracking or complete numeric identifier was detected. Keep it in protected evidence and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|gate code|lockbox code|full address|account number|card number|bank account|routing number|social security|government id|full serial|serial number|case number|claim number|tracking number|order number|policy number|signature|date of birth|private contact|payment credential|login credential|complaint form|legal strategy|medical record|child name|remote access|one-time code|verification code|technician name|customer name|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, access, address, financial, identity, full serial, case, order, tracking, signature, complaint or private contact detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: eventRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.asset.trim()} — appliance service visit record\nCurrent visit context: ${values.context}\nOriginal service request: ${formatter.format(requestDate)}\nCurrent record review: ${formatter.format(reviewDate)}\nNext household follow-up checkpoint: ${formatter.format(nextReview)}\nOpen events: ${openRows.length}\nClosed, deferred or handed-off events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling request, provider, estimate and written-term sources: ${values.baseline.trim()}\nStarting household observation: ${values.observation.trim()}\n\n${lines("Versioned service visit events", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable observation/estimate/finding/authorization/work/part/invoice/outcome: ${row.parts[2]} — actor/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next step/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not inspect or diagnose equipment, verify provider identity, authorization, licensing, insurance or arrival, judge an estimate, price, part, repair value, cause, workmanship, safety, code or legal compliance, authorize work, payment or access, test a product, decide warranty, recall, contract or complaint rights, calculate a deadline, assign responsibility, waive a right or certify completion. Follow current manufacturer and responsible authority safety instructions, use emergency or qualified help for urgent or hazardous conditions and preserve original sources.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -4870,6 +4988,124 @@ const zhTwDefinitions: Record<string, Definition> = {
       })).filter((item) => item.count > 0);
       const confirmedAffected = actionRows.filter((row) => [statusOrder[2], statusOrder[3]].includes(row.parts[9])).length;
       return `${values.asset.trim()}｜產品召回處置紀錄\n目前複查情境：${values.context}\n官方公告發布或更新：${formatter.format(noticeDate)}\n家庭本次召回複查：${formatter.format(reviewDate)}\n家庭下次追蹤節點：${formatter.format(nextReview)}\n仍開放行動：${openRows.length} 筆\n已完成、未受影響或家庭已不持有：${closedRows.length} 筆\n已確認受影響或官方改善處理中：${confirmedAffected} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的主管機關與業者公告：${values.noticeSources.trim()}\n受保護的產品身分比對依據：${values.identityBasis.trim()}\n\n${lines("有版本的召回處置行動", actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的指示／比對／請求／回覆／結果：${row.parts[2]}｜行動者／來源：${row.parts[3]}｜行動日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一步／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭證據索引。它不查詢現行召回、不檢驗產品、不比對或驗證識別資料、不判斷是否受影響或產品安全、不產生停用、拔除電源、移動、檢修、銷毀、退回、運送或廢棄指示、不驗證公告或改善、不聯絡業者或主管機關、不提交事故或改善申訴、不授權退款或更換、不計算期限、不分配責任，也不認證完成。請立即遵循主管機關與業者現行公告，緊急情況使用適當緊急或醫療資源，並保存原始來源。`;
+    },
+  },
+  "appliance-service-visit-log": {
+    intro:
+      "從原始報修、業者與估價，到技師說明、家人授權、工作、零件及家庭複查，建立有日期的家電或居家設備訪視紀錄。工具不診斷、不驗證業者，也不判斷安全、價格或施工品質。",
+    fields: [
+      text("asset", "私密資產代稱", "使用家庭資產代號，不要填完整序號、地址、帳號、案件編號或私人聯絡資料。", "洗衣區洗衣機 ASSET-A4"),
+      {
+        name: "context",
+        label: "目前訪視情境",
+        type: "select",
+        options: [
+          "原始報修與到府預約準備",
+          "業者身分、估價或授權複查",
+          "到場發現、工作或零件紀錄",
+          "完工、家庭複查或移交檢視",
+        ],
+      },
+      { name: "requestDate", label: "第一次服務報修日", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "本次訪視紀錄檢視日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "家庭下次追蹤節點", type: "date", value: "2026-08-31" },
+      text("baseline", "控制中的報修、業者、估價與書面條款來源", "使用安全來源 ID 或公開網址與日期；照來源實際支持的角色寫業者身分，保存費用與範圍，不貼私人資料。", "原始報修 REQUEST-R1；獨立維修業者來源 PROVIDER-P1；估價 QUOTE-Q1；書面保證 TERMS-T1"),
+      text("observation", "第一次家庭觀察", "只寫可見或可聽事實及未進行事項，不自行診斷，也不要貼完整識別、地址或私人聯絡。", "清洗進入脫水前停止並顯示 E7；未拆外殼；原始觀察保存於 OBS-O1"),
+      {
+        name: "events",
+        label: "有版本的服務訪視事件列",
+        type: "textarea",
+        help: "每行格式：ID | 事件類型 | 有來源的觀察、估價、發現、授權、工作、零件、發票或結果 | 行動者或來源角色 | 事件日期 YYYY-MM-DD | 受保護證據索引 | 下一步或結案理由 | 負責角色 | 目標或結果日期 YYYY-MM-DD | 範圍／報修已記錄，等待訪視、業者／估價已記錄，等待授權、訪視發現已記錄，等待決定、工作已授權或進行中，連結範圍、工作完成，等待家庭複查、已結案，連結服務證據與家庭複查、已暫緩或拒絕，連結理由與來源、已移交，連結保固／召回／申訴索引。最多 16 行。",
+        value: "SV-1 | 原始服務報修 | 請業者檢查清洗中斷的可見狀況，零件或追加工作前先提供估價 | 家庭資產負責人透過業者預約來源 | 2026-08-20 | REQUEST-R1 與送達確認 | 到場前確認業者角色、已揭露費用與預約範圍 | 家庭資產負責人 | 2026-08-24 | 範圍／報修已記錄，等待訪視\nSV-2 | 業者與估價來源 | 保存獨立維修業者身分來源、檢測費與零件前估價條件 | 獨立維修業者預約與估價角色 | 2026-08-22 | PROVIDER-P1 與 QUOTE-Q1 | 取得可歸屬的訪視發現後，再決定是否授權工作 | 家庭資產負責人 | 2026-08-24 | 業者／估價已記錄，等待授權",
+      },
+      text("storage", "受保護的原始證據位置", "只寫資料夾代稱，不要填完整序號、地址、電話、Email、案件、訂單、物流、帳號、憑證、簽名、門禁或付款資料。", "家庭文件／家電／ASSET-A4／服務訪視 SERVICE-S2"),
+    ],
+    run: (values) => {
+      const requestDate = strictIsoDate(values.requestDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.asset.trim()) return "請填私密資產代稱，讓匯出的服務訪視紀錄可以辨識。";
+      if (!requestDate) return "請輸入真實的第一次服務報修日 YYYY-MM-DD。";
+      if (!reviewDate) return "請輸入真實的本次訪視紀錄檢視日 YYYY-MM-DD。";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次訪視紀錄檢視日不能在未來。";
+      if (requestDate.getTime() > reviewDate.getTime()) return "第一次服務報修日不能晚於本次檢視日。";
+      if (!nextReview) return "請輸入真實的家庭下次追蹤節點 YYYY-MM-DD。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "家庭下次追蹤節點不能早於本次檢視。";
+      if (values.baseline.trim().length < 8) return "請以安全索引與日期辨識控制中的報修、業者、估價與書面條款來源。";
+      if (values.observation.trim().length < 8) return "請描述第一次家庭觀察，不要診斷設備或暴露私人資料。";
+      if (!values.storage.trim()) return "請填原始預約、業者、估價、授權、服務、零件、發票與複查證據的受保護位置。";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "請至少新增一筆服務訪視事件。";
+      if (eventRows.length > 16) return "一次複查最多 16 筆服務訪視事件；更多內容請建立下一份有日期的版本。";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `服務訪視事件第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整填寫 10 個以直線分隔的欄位。`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆服務訪視事件都要有唯一 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "服務訪視事件 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 SV-1。";
+      const statusOrder = [
+        "範圍／報修已記錄，等待訪視",
+        "業者／估價已記錄，等待授權",
+        "訪視發現已記錄，等待決定",
+        "工作已授權或進行中，連結範圍",
+        "工作完成，等待家庭複查",
+        "已結案，連結服務證據與家庭複查",
+        "已暫緩或拒絕，連結理由與來源",
+        "已移交，連結保固／召回／申訴索引",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `服務訪視事件第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須使用欄位說明中的八種文字之一。`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < requestDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `服務訪視事件第 ${invalidEventDates.map((row) => row.line).join("、")} 行需要介於第一次報修日與本次檢視日之間的真實事件日期。`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 5).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(5).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的服務訪視事件第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次檢視日起，到家庭下次追蹤節點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < requestDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已結案、暫緩或移交的第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於第一次報修日與本次檢視日之間的實際結果日期。`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `服務訪視事件第 ${missingSources.map((row) => row.line).join("、")} 行需要行動者或來源角色，以及受保護的報修、估價、發現、授權、服務、發票或結果索引。`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 8 || /^(?:完成|好了|已好|修好|已解決|安全|已同意|核准|無|不用|不適用|待追蹤|已結案|ok)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `服務訪視事件第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的下一個證據步驟或保留的結案理由，不能只寫通用授權、安全或完成詞。`;
+      const privacyText = [values.asset, values.baseline, values.observation, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、序號、案件、訂單、物流或完整數字識別資料。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|鑰匙盒密碼|驗證碼|一次性代碼|警報碼|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證|完整序號|案件編號|理賠編號|物流追蹤碼|訂單編號|保單編號|簽名|出生日期|私人聯絡|付款憑證完整資料|登入憑證|申訴表全文|法律策略|醫療紀錄|兒童姓名|遠端控制|技師姓名|客戶姓名|password|passcode|access code|gate code|lockbox code|account number|card number|government id|full serial|serial number|case number|claim number|tracking number|order number|policy number|signature|payment credential|login credential|complaint form|legal strategy|medical record|child name|remote access|one-time code|verification code|technician name|customer name|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、門禁、地址、金融、身分、完整序號、案件、訂單、物流、簽名、申訴或私人聯絡資料。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: eventRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.asset.trim()}｜家電到府維修訪視紀錄\n目前訪視情境：${values.context}\n第一次服務報修：${formatter.format(requestDate)}\n本次紀錄檢視：${formatter.format(reviewDate)}\n家庭下次追蹤節點：${formatter.format(nextReview)}\n仍開放事件：${openRows.length} 筆\n已結案、暫緩或移交事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的報修、業者、估價與書面條款來源：${values.baseline.trim()}\n第一次家庭觀察：${values.observation.trim()}\n\n${lines("有版本的服務訪視事件", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的觀察／估價／發現／授權／工作／零件／發票／結果：${row.parts[2]}｜行動者／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一步／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭證據索引。它不檢驗或診斷設備、不驗證業者身分、授權、登記、保險或到場、不判斷估價、價格、零件、修理價值、原因、施工品質、安全、法規或法律合規、不替家人授權工作、付款或進入住宅、不測試產品、不決定保固、召回、契約或申訴權利、不計算期限、不分配責任、不代表放棄權利，也不認證完成。請遵循品牌與主管機關現行安全指示，緊急或危險情況使用合適緊急及合格專業協助，並保存原始來源。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

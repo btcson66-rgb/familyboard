@@ -720,12 +720,12 @@
     "headings": "Repair history turns isolated failures into a pattern you can actually act on Record the symptom before the diagnosis Record what was actually done, not just what it cost Use the 50% rule as a starting point, not a formula Repeated repairs are a signal, not an automatic verdict Note whether a repair was covered by warranty or paid out of pocket Keep the provider attached to the work, not just a contact list Photograph error codes and visible damage while they're still there"
   },
   {
-    "title": "Service History Tracker for Home Systems and Appliances",
-    "description": "Track inspections, maintenance, repairs and professional service in one timeline for each household asset — and why some manufacturer warranties require proof of it.",
+    "title": "Appliance Service History: Visits, Work, Parts and Follow-Up",
+    "description": "Build an appliance service history that separates requests, estimates, technician findings, authorized work, parts, invoices and household follow-up.",
     "route": "/guides/service-history/",
     "cluster": "inventory-warranty",
-    "keywords": "home service history tracker",
-    "headings": "Service history is the record that proves the maintenance actually happened Why this record can matter even when nothing's broken Use event types to keep a long timeline scannable A provider's name alone doesn't tell you much later Turn \"check this next time\" into an actual task Keep historical providers even after switching companies Seasonal patterns become visible only with a full timeline Multiple systems, one household timeline Distinguish \"this was serviced\" from \"this was serviced well\" Older history is worth adding selectively, not all at once"
+    "keywords": "appliance service history",
+    "headings": "Appliance service history: turn each visit into a record the next visit can use Keep five layers separate Verify who is arriving without turning the history into a rating page Capture the estimate before the scope changes Record parts precisely without exposing a full identifier Separate completed work from a successful household recheck Warranty, service contract and repair-work promises are different sources Use one asset timeline, not one household-wide receipt pile Convert every open recommendation into owned work Add older history selectively and preserve unknowns Commercial recommendations must not influence the service record"
   },
   {
     "title": "Appliance Replacement Planning: Use Age, Repair History and Household Needs Without Predicting Failure",
@@ -1598,6 +1598,14 @@
     "cluster": "tools",
     "keywords": "product recall tracker",
     "headings": "Product recall action log Start from an authority or manufacturer source, not a forwarded headline Immediate instructions do not wait for perfect household paperwork Compare the exact scope without exposing the full identifier Seven statuses keep uncertainty visible Give each action one source and one owner Preserve what the remedy actually requires Keep product registration, warranty and recall files connected but separate Secondhand, donated and sold products need an honest status Escalate a stalled US remedy without rewriting the history Protect the record before sharing it Commercial recommendations stay outside safety actions"
+  },
+  {
+    "title": "Appliance Service Visit Log | Scope, Findings, Parts and Follow-Up",
+    "description": "Create a private appliance service visit record for the request, provider source, estimate, findings, authorization, parts, invoice and household recheck.",
+    "route": "/tools/appliance-service-visit-log/",
+    "cluster": "tools",
+    "keywords": "appliance service visit log",
+    "headings": "Appliance service visit log Fix the asset and request before the provider arrives Verify the provider role from a controlling source Preserve the estimate as a source, not just a total Attribute observations, findings and decisions Eight statuses keep work and evidence honest Parts and settings deserve their own evidence Completion needs two sources Keep warranty and recall workflows separate Protect the visit record before sharing Affiliate recommendations stay outside the decision"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T21:20:01.087Z
+Generated: 2026-08-24T03:27:11.259Z
 
 ## Summary
 
-- Indexable pages: 295
-- Generated HTML routes: 312
+- Indexable pages: 298
+- Generated HTML routes: 315
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 105
+- Pages without a contextual product/tool link: 107
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,9 +22,9 @@ Generated: 2026-08-22T21:20:01.087Z
 - appliances: 30
 - maintenance: 37
 - household-operations: 21
-- inventory-warranty: 33
+- inventory-warranty: 34
 - records-emergency: 27
-- tools: 75
+- tools: 77
 
 ## Word-count range
 
@@ -106,6 +106,7 @@ Generated: 2026-08-22T21:20:01.087Z
 - /zh-tw/guides/product-registration-tracker/
 - /zh-tw/guides/renovation-records/
 - /zh-tw/guides/room-by-room-home-inventory/
+- /zh-tw/guides/service-history/
 - /zh-tw/guides/storm-preparation-home-checklist/
 - /zh-tw/guides/water-leak-response-home-records/
 - /zh-tw/
@@ -116,6 +117,7 @@ Generated: 2026-08-22T21:20:01.087Z
 - /zh-tw/tools/appliance-age-calculator/
 - /zh-tw/tools/appliance-maintenance-checklist-generator/
 - /zh-tw/tools/appliance-replacement-planner/
+- /zh-tw/tools/appliance-service-visit-log/
 - /zh-tw/tools/cleaning-schedule-generator/
 - /zh-tw/tools/emergency-binder-generator/
 - /zh-tw/tools/emergency-contact-sheet-generator/

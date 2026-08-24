@@ -89,6 +89,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/product-recall-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/product-recall-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/product-registration-tracker/</loc>",
+      "<loc>https://familyboard.win/tools/appliance-service-visit-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/appliance-service-visit-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/service-history/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -363,6 +366,24 @@ const checks = [
       "A warranty expiration date answers",
       "Do not assume registration is always irrelevant or always decisive",
       "full warranty",
+    ],
+  },
+  {
+    path: "/tools/appliance-service-visit-log/",
+    require: [
+      "Appliance Service Visit Log",
+      'hreflang="zh-TW"',
+      "Eight statuses keep work and evidence honest",
+      "does not diagnose equipment",
+    ],
+  },
+  {
+    path: "/guides/service-history/",
+    require: [
+      "Appliance service history",
+      'hreflang="zh-TW"',
+      "Keep five layers separate",
+      "consumer.ftc.gov/articles/warranties",
     ],
   },
   {
@@ -642,6 +663,24 @@ const checks = [
       'hreflang="en"',
       "先把四種不同事情拆開",
       "商品召回訊息列表",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/appliance-service-visit-log/",
+    require: [
+      "家電到府維修訪視紀錄表",
+      'hreflang="en"',
+      "八種狀態表示不同證據階段",
+      "不診斷、不驗證業者",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/service-history/",
+    require: [
+      "家電到府維修紀錄怎麼寫",
+      'hreflang="en"',
+      "到場後把四種聲音分開",
+      "手機送修注意事項",
     ],
   },
   {

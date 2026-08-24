@@ -1,68 +1,104 @@
 ---
-title: "Service History Tracker for Home Systems and Appliances"
-description: "Track inspections, maintenance, repairs and professional service in one timeline for each household asset — and why some manufacturer warranties require proof of it."
+title: "Appliance Service History: Visits, Work, Parts and Follow-Up"
+description: "Build an appliance service history that separates requests, estimates, technician findings, authorized work, parts, invoices and household follow-up."
 route: "/guides/service-history/"
-primaryIntent: "track all service performed on household equipment"
-primaryKeyword: "home service history tracker"
+primaryIntent: "build an evidence-based service history for household appliances and systems"
+primaryKeyword: "appliance service history"
 cluster: "inventory-warranty"
 pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
-nextStep: "Import the last year of significant service events first, prioritizing anything on a system with a maintenance-dependent warranty. Older history can be added later, only where it's still useful."
+lastReviewedAt: "2026-08-24"
+nextStep: "Open the Appliance Service Visit Log for the active visit, then carry only the source-linked events and open follow-up into the asset's long-term history."
 related:
+  - "/tools/appliance-service-visit-log/"
   - "/guides/repair-history/"
   - "/guides/how-to-track-product-warranties/"
   - "/guides/appliance-inventory/"
-  - "/features/free-home-management-app/"
 faq:
   - question: "How is a service history different from a repair history?"
-    answer: "Repair history covers fixing something that broke. Service history is broader — it includes inspection, cleaning, routine maintenance and installation too, whether or not anything was actually wrong. Repairs are a subset of the full service timeline, not the whole picture."
-  - question: "Can skipping routine maintenance actually affect warranty coverage?"
-    answer: "Yes, for some systems. HVAC and water heater warranties in particular are sometimes written to require documented, regular professional maintenance to stay valid — a household that did the maintenance but never recorded it is in a weaker position during a claim than one that can show dates and a provider."
-  - question: "What should a service history entry actually include beyond the date and cost?"
-    answer: "What was actually done (not just the invoice total), the provider, and any recommendation for future attention. \"Annual tune-up, replaced igniter, flagged heat exchanger for next year\" is far more useful a year later than a bare dollar amount."
-  - question: "Should I keep service records from a provider we no longer use?"
-    answer: "Yes — archive rather than delete them. Old service history still explains a system's condition and past work, which is useful both for the household's own understanding and for a new provider picking up where the old one left off."
-contentVersion: 1
+    answer: "Repair history focuses on a failure, diagnosis, repair and recurrence. Service history is broader: requests, estimates, inspections, maintenance, installation, repair, parts, invoices, callbacks and household follow-up. A repair can be one event within the larger service timeline."
+  - question: "Does a service invoice prove that maintenance was done correctly?"
+    answer: "No. It proves only what the invoice actually states. Preserve the service report, attributable work description, part pointer and household follow-up separately. FamilyBoard cannot inspect workmanship or certify safety, quality or compliance."
+  - question: "Does using an independent repair shop automatically void a US warranty?"
+    answer: "Not automatically. FTC guidance says a manufacturer generally cannot require branded parts or service solely to maintain coverage unless they are provided free or a waiver applies, but damage caused by outside parts or service and the actual written terms may still matter. This is US-specific information, not a global rule or a coverage decision."
+  - question: "What should I record before authorizing extra work?"
+    answer: "Preserve the original scope, provider finding, proposed addition, price or pricing basis, schedule effect, parts description, approving role and dated authorization source. Do not overwrite the original estimate."
+  - question: "When should a service visit be marked closed?"
+    answer: "After the provider's completion evidence and the household's dated follow-up are both linked, or after a documented deferral or handoff. An appointment, estimate, arrival, verbal statement or invoice alone is not the whole outcome."
+contentVersion: 2
 ---
-# Service history is the record that proves the maintenance actually happened
+# Appliance service history: turn each visit into a record the next visit can use
 
-A repair record proves something broke and got fixed. A service history is broader — it also covers inspection, cleaning, routine maintenance, installation and follow-up visits, whether or not anything was actually wrong. Kept as one timeline per asset, it shows the household's whole relationship with a piece of equipment, not just the moments something went wrong.
+An appointment confirmation proves that a visit was scheduled. An invoice proves that a provider charged for something. Neither one, by itself, tells the next person what the household observed, which product was serviced, what the provider found, what work the household authorized, which part was installed or whether the result held after the technician left.
 
-## Why this record can matter even when nothing's broken
+An appliance service history connects those facts to one asset over time. It includes routine service, inspection, diagnosis, repair, installation, callback and post-visit observation. The useful unit is not a vague line such as `technician came — $180`; it is a source-linked event that another household member, provider or warranty reviewer can understand without relying on memory.
 
-This is the detail that makes service history worth keeping deliberately, not just repair history: some manufacturer warranties, particularly for HVAC systems and water heaters, are written to require documented, regular professional maintenance to remain valid — skipping it can give the manufacturer grounds to deny an otherwise-covered claim. A household that's actually had the annual service done but has no record of it is in a weaker position than one that can produce dates and a provider name, even though both did the same maintenance. The service history is what turns "we definitely had that serviced" into something a claim can lean on.
+**Recording a visit now? [Use the free Appliance Service Visit Log](/tools/appliance-service-visit-log/).**
 
-## Use event types to keep a long timeline scannable
+## Keep five layers separate
 
-Label each entry with what kind of event it was: installation, routine maintenance, inspection, repair, replacement, or consultation. A system that's been in place for eight years can accumulate a long timeline, and clear event types are what let a household or a new technician scan it quickly instead of reading every entry to figure out what happened when.
+One service visit can generate five different layers of information:
 
-## A provider's name alone doesn't tell you much later
+1. **Household observation:** what was seen, heard, smelled, displayed or interrupted before anyone diagnosed the cause.
+2. **Requested scope and estimate:** what the household asked the provider to inspect, the estimate basis and any disclosed diagnostic, travel or administrative charge.
+3. **Provider finding:** the attributable diagnosis, test result or recommendation in the service report.
+4. **Authorized and completed work:** what the household actually approved, what the provider says was done, and which part or setting changed.
+5. **Household follow-up:** the dated condition after return to normal use, including a recurring symptom, incomplete work or a separate warranty issue.
 
-"John's HVAC — $180" is a record with almost no future value. "John's HVAC — annual furnace tune-up, replaced igniter, flagged the heat exchanger for next year" is a record worth having. Preserve a short note about what was actually done, and attach the invoice reference where one exists, rather than letting the entry collapse into just a name and a price.
+Do not rewrite the first observation after receiving a diagnosis. `Unit stopped after 12 minutes and displayed E7` remains a household observation. `Provider report says fan-motor fault` is a separate provider finding. The distinction makes it possible to see later whether the same symptom returned or whether a new provider reached a different conclusion.
 
-## Turn "check this next time" into an actual task
+## Verify who is arriving without turning the history into a rating page
 
-Technicians frequently mention something worth watching — a part that's wearing but not failed yet, a recommendation to revisit next season. That note is easy to lose if it stays buried in an old service entry. Convert it into a connected future task at the time it's said, so the household doesn't have to reread old history to remember something a professional already flagged.
+Search advertising, a familiar logo or a brand name in a business title does not prove that a provider is the manufacturer or an authorized service center. Before sharing an address, product identifier or payment information, start from the manufacturer's official support channel or independently verify the business identity, service role, contact source and estimate terms.
 
-## Keep historical providers even after switching companies
+The record should state the role the source actually supports: `manufacturer service team`, `retailer-arranged provider`, `independent appliance repair business` or `building maintenance contractor`. Do not change `independent` to `authorized` because a person arrived in a branded shirt. Equally, do not use FamilyBoard notes to accuse or rank a provider. Preserve objective sources and move a real dispute into the appropriate protected process.
 
-If a household changes HVAC companies, plumbers or appliance-service providers, the old provider's history doesn't stop mattering. It still explains what was done, when, and by whom — useful context for the new provider and for the household's own understanding of a system's condition, even though it's no longer who they'd call next.
+## Capture the estimate before the scope changes
 
-## Seasonal patterns become visible only with a full timeline
+Write down what the estimate includes, what it excludes, whether a diagnostic or travel charge applies, whether approval is required before additional work and how changed scope will be confirmed. Preserve the actual estimate rather than copying a total into a note. A total without scope cannot show whether a later invoice reflects added work, a different part or a fee that was disclosed before the visit.
 
-A single service visit tells you what happened once. A year or two of entries on the same system starts showing patterns a single visit can't — whether a furnace consistently needs the same part replaced each fall, whether a particular provider's fixes tend to hold, whether "inspection only" visits are quietly turning into "needed a part" visits more often over time. None of that is visible from any one entry; it only shows up once there's enough history to compare against.
+If the provider recommends extra work during the visit, create a new source-linked event: the observed finding, proposed addition, price or basis, schedule effect, household decision and approving role. Do not overwrite the original request. The [home repair change order log](/tools/home-repair-change-order-log/) is better for a larger project with multiple scope changes; the service visit log is for one appliance or system visit.
 
-## Multiple systems, one household timeline
+## Record parts precisely without exposing a full identifier
 
-A household with several major systems — HVAC, water heater, major appliances, a septic or well system if applicable — benefits from keeping each on its own asset-linked timeline rather than one undifferentiated household log. A shared household-wide list makes it hard to answer "when was the furnace last serviced" without scrolling past unrelated entries for the dishwasher and the water heater; per-asset timelines keep that question answerable in seconds.
+For a replaced part, preserve the provider's description, part-number pointer, new or refurbished status if stated, quantity, stated coverage or workmanship terms and any removed-part disposition that matters. Use the exact service-document wording; do not infer that a compatible part is original equipment, that an installed part is new or that a verbal promise creates a particular warranty.
 
-## Distinguish "this was serviced" from "this was serviced well"
+The shareable timeline needs only a safe pointer such as `PART-P2` or `SERVICE-S4`. Full serial numbers, claim identifiers, technician names, phone numbers, addresses, signatures and payment credentials remain in protected evidence.
 
-Not every service visit resolves cleanly. If a technician's fix didn't hold, or a maintenance visit was rushed or incomplete, note that alongside the entry rather than letting a mediocre visit look identical to a thorough one in the record. That distinction is exactly the kind of thing memory loses first and a written record preserves.
+## Separate completed work from a successful household recheck
 
-## Older history is worth adding selectively, not all at once
+`Work completed` should mean the provider supplied a service record describing what it says was done. It does not mean the problem is resolved, the product is safe or the household accepts every conclusion. Keep that event open until the household performs the appropriate normal-use observation allowed by the manufacturer and any safety instruction.
 
-Reconstructing a decade of service history from old emails and paper receipts is a large, low-value project if done all at once. Add the last year or two first, since that's the window most likely to matter for an active warranty or an upcoming decision, and fill in older entries opportunistically — when an old invoice turns up during an unrelated search, or when a specific past date actually becomes relevant to a current question.
+If the same symptom returns, add a new dated observation and link the earlier visit. Do not alter the old entry to say the repair failed. If a different symptom appears, keep it distinct. This structure lets the [repair history guide](/guides/repair-history/) reveal recurrence without turning a household record into a technical diagnosis.
+
+## Warranty, service contract and repair-work promises are different sources
+
+The US Federal Trade Commission's [consumer warranty guidance](https://consumer.ftc.gov/articles/warranties) advises keeping the written warranty and receipt and checking who handles claims, what repair costs may apply and whether shipping or labor is included. It also explains that US federal law generally does not let a manufacturer require specific branded parts or service merely to keep warranty coverage unless they are provided free or the FTC grants a waiver. Damage actually caused by an outside part or service can still be a different issue, and state law may add protections.
+
+Do not turn that US rule into a worldwide statement, and do not assume every post-sale service promise is the original product warranty. The FTC's [Businessperson's Guide to Federal Warranty Law](https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law) distinguishes warranties on services from written warranties on consumer goods and explains that parts and workmanship may be treated differently depending on what the written terms cover.
+
+For any location, preserve the purchase-time warranty, separately paid service contract, current estimate, service report, parts terms and provider promise as separate sources. A FamilyBoard entry cannot decide which document controls.
+
+## Use one asset timeline, not one household-wide receipt pile
+
+Keep each service event linked to the exact appliance or system. A household-wide folder named `repairs` makes it hard to answer whether the refrigerator was serviced twice or whether one invoice belonged to the freezer. A private asset label connects installation, routine maintenance, warranty claims, recall work, repair visits and replacement without exposing complete product identifiers.
+
+Use event types such as `request`, `estimate`, `arrival`, `inspection`, `finding`, `authorization`, `work`, `part`, `invoice`, `household recheck`, `callback` and `handoff`. A long timeline stays scannable because every event has a purpose, source and date.
+
+## Convert every open recommendation into owned work
+
+`Watch this next season` is not a usable follow-up. Record what the provider actually recommended, where that statement lives, which household role will review it and the household checkpoint date. The date is an internal reminder, not a manufacturer interval, legal deadline or prediction of failure.
+
+If a provider says the equipment should not be used, or the household observes smoke, fuel odor, overheating, electric shock, injury or another urgent condition, follow current manufacturer, product-safety authority, emergency and qualified professional guidance. Do not continue testing to improve the record.
+
+## Add older history selectively and preserve unknowns
+
+Start with the most recent significant visit and any current open recommendation. Older invoices can be added when they answer a real question. Mark uncertain fields as unknown and link the source you have; do not invent the part, diagnosis or completion date from a bank transaction or calendar entry.
+
+A reconstructed entry should say `invoice confirms service on 2024-05-18; detailed scope unavailable`, not `annual maintenance completed` unless a source supports that wording. Evidence quality matters more than a cosmetically complete timeline.
+
+## Commercial recommendations must not influence the service record
+
+A future affiliate area may show clearly labelled storage supplies, label makers, replacement filters or household record products. It cannot select a provider, label a business authorized, recommend a repair, infer a diagnosis, change the service scope, decide whether to approve work, mark a visit complete or suggest that a purchase changes warranty rights.

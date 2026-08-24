@@ -8,8 +8,8 @@ cluster: "tools"
 pageType: "tool"
 indexable: true
 depthVerified: true
-publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+publishedAt: "2026-08-23"
+lastReviewedAt: "2026-08-23"
 nextStep: "Build the versioned recall record in your browser and leave uncertain matches open until an attributable source supports the status."
 related:
   - "/guides/product-registration-tracker/"

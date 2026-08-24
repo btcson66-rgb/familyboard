@@ -90,6 +90,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/how-to-track-product-warranties/",
     "/tools/product-recall-action-log/",
     "/guides/product-registration-tracker/",
+    "/tools/appliance-service-visit-log/",
+    "/guides/service-history/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -125,6 +127,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/how-to-track-product-warranties/",
     "/zh-tw/tools/product-recall-action-log/",
     "/zh-tw/guides/product-registration-tracker/",
+    "/zh-tw/tools/appliance-service-visit-log/",
+    "/zh-tw/guides/service-history/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -273,11 +277,17 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     page.locator(".site-footer").getByRole("link", { name: "產品召回處置紀錄表" }),
   ).toHaveAttribute("href", "/zh-tw/tools/product-recall-action-log/");
   await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家電到府維修紀錄表" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/appliance-service-visit-log/");
+  await expect(
     page.locator(".site-footer").getByRole("link", { name: "保固申請與追蹤教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/how-to-track-product-warranties/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "產品註冊與召回教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/product-registration-tracker/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家電到府維修教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/service-history/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
@@ -475,6 +485,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       heading: "產品註冊與召回通知怎麼整理？台灣家庭查核流程",
     },
     {
+      route: "/zh-tw/guides/service-history/",
+      alternate: "/guides/service-history/",
+      heading: "家電到府維修紀錄怎麼寫？預約、報價、零件與複查流程",
+    },
+    {
       route: "/zh-tw/guides/organize-household-subscriptions/",
       alternate: "/guides/organize-household-subscriptions/",
       heading: "家庭訂閱管理教學：在自動續約前看見費用、日期與負責人",
@@ -657,6 +672,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/product-recall-action-log/",
       alternate: "/tools/product-recall-action-log/",
       heading: "產品召回處置紀錄表",
+    },
+    {
+      route: "/zh-tw/tools/appliance-service-visit-log/",
+      alternate: "/tools/appliance-service-visit-log/",
+      heading: "家電到府維修訪視紀錄表",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -1058,7 +1078,7 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(page.locator(".result")).toContainText(
     "not a risk score or safety certificate",
   );
-  await page.getByLabel("Review date", { exact: true }).fill("2026-08-24");
+  await page.getByLabel("Review date", { exact: true }).fill("2099-08-24");
   await page.getByRole("button", { name: "Generate result" }).click();
   await expect(page.locator(".result")).toContainText(
     "review date cannot be in the future",
@@ -1259,6 +1279,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText(
     "目標日必須從本次複查日起",
+  );
+
+  await page.goto("/tools/appliance-service-visit-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open events: 2");
+  await expect(page.locator(".result")).toContainText("Closed, deferred or handed-off events: 0");
+  await expect(page.locator(".result")).toContainText("does not inspect or diagnose equipment");
+  await page.getByLabel("Versioned service visit event rows").fill(
+    "SV-1 | On-site finding | Provider report preserved an attributable finding without a household diagnosis | Independent repair provider service role | 2026-08-24 | SERVICE-S2 | Review the written finding and decide whether to authorize only the quoted scope | Household asset owner | 2026-08-23 | Visit finding recorded—decision pending",
+  );
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "needs a target date from this review",
+  );
+
+  await page.goto("/zh-tw/tools/appliance-service-visit-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放事件：2 筆");
+  await expect(page.locator(".result")).toContainText("已結案、暫緩或移交事件：0 筆");
+  await expect(page.locator(".result")).toContainText("不檢驗或診斷設備");
+  await page.getByLabel("有版本的服務訪視事件列").fill(
+    "SV-1 | 到場發現 | 業者服務報告保存可歸屬的發現，家庭沒有自行診斷 | 獨立維修業者服務角色 | 2026-08-24 | SERVICE-S2 | 複查書面發現並只針對報價範圍決定是否授權 | 家庭資產負責人 | 2026-08-23 | 訪視發現已記錄，等待決定",
+  );
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "目標日必須從本次檢視日起",
   );
 
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
@@ -1592,6 +1638,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/product-registration-tracker/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/appliance-service-visit-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/appliance-service-visit-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/service-history/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",
