@@ -129,6 +129,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-utility-provider-service-handoff-log/</loc>",
       "<loc>https://familyboard.win/guides/organize-utility-account-information/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-utility-account-information/</loc>",
+      "<loc>https://familyboard.win/tools/household-vehicle-document-source-status-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-vehicle-document-source-status-log/</loc>",
+      "<loc>https://familyboard.win/guides/organize-vehicle-documents-at-home/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/organize-vehicle-documents-at-home/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -594,6 +598,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Separate portal access, billing state and service state",
       "Treat a move as a sequence of evidence, not one cancellation checkbox",
+    ],
+  },
+  {
+    path: "/tools/household-vehicle-document-source-status-log/",
+    require: [
+      "Household Vehicle Document Source and Status Log",
+      'hreflang="zh-TW"',
+      "Twelve statuses keep discovery, action and result separate",
+      "It does not decode, identify, locate, inspect, appraise, insure, register, title, renew, transfer, sell, donate, export, scrap, repair or certify a vehicle",
+    ],
+  },
+  {
+    path: "/guides/organize-vehicle-documents-at-home/",
+    require: [
+      "Organize vehicle documents by authority, vehicle match and current status",
+      'hreflang="zh-TW"',
+      "Keep title, registration, insurance and inspection as separate evidence",
+      "Record recall research and vehicle-specific remedy evidence separately",
     ],
   },
   {
@@ -1089,6 +1111,24 @@ const checks = [
       'hreflang="en"',
       "台電的搬家結算、戶名變更與停電通報是不同流程",
       "電信爭議保留業者申訴與後續調處來源",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-vehicle-document-source-status-log/",
+    require: [
+      "家庭車輛文件來源與狀態紀錄",
+      'hreflang="en"',
+      "十二種狀態分開找到文件、提出行動與看到結果",
+      "工具不查車牌、車身號碼、引擎號碼、行照、車籍、駕照、保險、驗車、召回",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/organize-vehicle-documents-at-home/",
+    require: [
+      "汽車行照、驗車、強制險與召回怎麼整理？台灣車輛文件清單",
+      'hreflang="en"',
+      "驗車日、預約、到場與合格結果是四件事",
+      "召回研究要從車型線索走到受保護車輛比對",
     ],
   },
   {

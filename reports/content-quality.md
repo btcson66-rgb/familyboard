@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-24T09:33:52.340Z
+Generated: 2026-08-24T10:07:14.433Z
 
 ## Summary
 
-- Indexable pages: 331
-- Generated HTML routes: 348
+- Indexable pages: 334
+- Generated HTML routes: 351
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 128
+- Pages without a contextual product/tool link: 131
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-24T09:33:52.340Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 33
-- tools: 99
+- records-emergency: 34
+- tools: 101
 
 ## Word-count range
 
@@ -70,6 +70,7 @@ Generated: 2026-08-24T09:33:52.340Z
 - /roadmap/
 - /security/
 - /terms/
+- /tools/household-vehicle-document-source-status-log/
 - /zh-tw/affiliate-disclosure/
 - /zh-tw/contact/
 - /zh-tw/features/emergency-information-organizer/
@@ -109,6 +110,7 @@ Generated: 2026-08-24T09:33:52.340Z
 - /zh-tw/guides/organize-household-subscriptions/
 - /zh-tw/guides/organize-insurance-documents/
 - /zh-tw/guides/organize-utility-account-information/
+- /zh-tw/guides/organize-vehicle-documents-at-home/
 - /zh-tw/guides/power-outage-home-preparedness/
 - /zh-tw/guides/product-registration-tracker/
 - /zh-tw/guides/purchase-receipt-organizer/
@@ -157,6 +159,7 @@ Generated: 2026-08-24T09:33:52.340Z
 - /zh-tw/tools/household-storm-readiness-review/
 - /zh-tw/tools/household-subscription-cost-calculator/
 - /zh-tw/tools/household-utility-provider-service-handoff-log/
+- /zh-tw/tools/household-vehicle-document-source-status-log/
 - /zh-tw/tools/household-water-leak-event-log/
 - /zh-tw/tools/important-household-document-review/
 - /zh-tw/tools/move-in-checklist-generator/

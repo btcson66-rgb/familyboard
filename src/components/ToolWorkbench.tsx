@@ -160,6 +160,315 @@ const zhTwAppliancePrompts: Record<string, string[]> = {
   其他: ["在說明書中找出可由使用者執行的清潔、觀察與耗材項目", "記錄正常運作基準與現在看到的差異", "核對耗材、零件、客服與維修資料", "先標示電氣、瓦斯、冷媒、高處或其他不適合自行處理的範圍"],
 };
 
+const vehicleDocumentDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusOrder = zh
+    ? [
+        "已記錄車輛用途，等待確認文件分類",
+        "已記錄文件分類，等待確認管轄地或負責來源",
+        "已記錄負責來源，等待受保護車輛比對",
+        "已記錄受保護車輛比對，等待目前文件或版本",
+        "已記錄目前文件或版本，等待存取與保管核對",
+        "已測試存取與保管，等待官方狀態來源",
+        "已映射官方狀態來源，等待必要行動",
+        "已記錄更新、驗車、投保、召回、貸款或過戶行動，等待官方結果",
+        "文件、車輛比對、狀態或安全矛盾，等待負責來源審查",
+        "已核對來源、車輛比對、版本、存取與狀態",
+        "更新、驗車、召回改正、貸款或過戶已完成，記錄官方結果與保管",
+        "不適用，已記錄原因與重新開啟事件",
+      ]
+    : [
+        "Vehicle purpose recorded—document category pending",
+        "Document category recorded—jurisdiction or responsible source pending",
+        "Responsible source recorded—protected vehicle match pending",
+        "Protected vehicle match recorded—current document or version pending",
+        "Current document or version recorded—access and custody pending",
+        "Access and custody tested—official status sources pending",
+        "Official status sources mapped—required action pending",
+        "Renewal, inspection, insurance, recall, lien or transfer action recorded—official result pending",
+        "Document, vehicle-match, status or safety conflict—responsible review pending",
+        "Source, vehicle match, version, access and status reviewed",
+        "Renewal, inspection, recall remedy, lien or transfer completed—observed result and custody recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaultRecords = zh
+    ? `REG-A | FAMILY-CAR-A 行照／車籍文件；家庭車輛紀錄角色 | 監理機關與監理服務官方來源；目前管轄地受保護簽發資料 VEH-A-REG2 | 受保護車身與目前行照資料已比對；證據 VEH-A-ID2；核對 2026-08-24 | 目前行照／車籍版本已開啟；所示版本與期間已觀察 | 受保護目前文件可開啟；原件與車上必要文件保管角色已核對 | 監理官方車籍與後續異動來源已映射；強制險、驗車與召回維持分開來源 | 目前文件保留；本次沒有更新申請；收到新通知、搬家、車主、來源或存取改變時重新檢視 | 監理機關更正入口與合格協助來源已映射；本次有日期檢視無來源差異 | 家庭車輛紀錄角色 | 2026-08-24 | 已核對來源、車輛比對、版本、存取與狀態\nRECALL-A | FAMILY-CAR-A 召回來源與改正追蹤；家庭車輛安全來源角色 | 交通部委託車安資訊網與車廠召回官方來源；受保護車輛證據 VEH-A-R2 | 受保護車身資料已依召回來源比對；證據 VEH-A-R2；核對 2026-08-24 | 目前召回公告與車廠適用觀察已保留；版本來源可追溯 | 官方來源已開啟；受保護公告與車輛比對證據可取得 | 車廠召回案件、目前安全指示與交通部委託來源已映射 | 授權改正預約已記錄；官方完成結果與改正證明仍待觀察 | 車廠召回窗口與交通部委託安全來源已映射；依目前安全指示處理 | 家庭車輛安全來源角色 | 2026-09-14 | 已記錄更新、驗車、投保、召回、貸款或過戶行動，等待官方結果`
+    : `REG-A | Family-car A registration document; household vehicle-records role | State motor vehicle authority and protected issued-registration source for the current jurisdiction | Protected VIN and current registration matched; evidence VEH-A-ID2; checked 2026-08-24 | Current issued registration version opened; stated version and period observed | Protected current record opened; original and limited vehicle-copy custody roles observed | State registration status and renewal source mapped; insurance, inspection and recall remain separate | Current record retained; no renewal action open; reopen on a new notice, move, ownership, source or access change | State authority correction route and qualified-help source mapped; no source gap observed in this dated review | Household vehicle-records role | 2026-08-24 | Source, vehicle match, version, access and status reviewed\nRECALL-A | Family-car A recall-source and remedy follow-up; household vehicle-safety source role | NHTSA recall lookup and manufacturer recall source; protected vehicle evidence VEH-A-R2 | Protected VIN matched in the responsible recall process; evidence VEH-A-R2; checked 2026-08-24 | Current recall notice and manufacturer applicability observation preserved; version source attributable | Official sources opened; protected notice and vehicle-match evidence accessible | Open manufacturer recall campaign and current interim safety source observed | Authorized remedy appointment recorded; official completion result and remedy evidence pending | Manufacturer recall team and NHTSA source mapped; follow current safety instructions | Household vehicle-safety source role | 2026-09-14 | Renewal, inspection, insurance, recall, lien or transfer action recorded—official result pending`;
+
+  return {
+    intro: zh
+      ? "記錄行照／車籍、強制險、驗車、召回、貸款與過戶的負責來源、受保護車輛比對、版本、存取、行動與實際結果。工具不查車籍，也不判定車能否上路。"
+      : "Record responsible sources, protected vehicle match, current version, access, status, action and observed results for title, registration, insurance, inspection, recalls, liens and transfers. The tool never searches a VIN or decides whether a vehicle may be driven.",
+    fields: [
+      text(
+        "review",
+        zh ? "家庭私人車輛文件核對代號" : "Private vehicle-document review reference",
+        zh
+          ? "使用家庭內部代號，不要輸入姓名、地址、車牌、VIN、行照、保險、駕照、案件或交易資料。"
+          : "Use a household code, not a person, address, plate, VIN, title, registration, policy, driver, case or transaction detail.",
+        "VEH-DOCS-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "車輛文件核對情境" : "Vehicle-document review context",
+        type: "select",
+        options: zh
+          ? [
+              "第一次家庭車輛文件盤點",
+              "行照、車籍或監理資料版本核對",
+              "強制險或其他保險證據交接",
+              "定期、臨時或變更檢驗來源核對",
+              "召回公告、適用與改正結果追蹤",
+              "搬家、地址或管轄來源改變",
+              "買賣、贈與、繼承、停駛或報廢準備",
+              "貸款、動產擔保、租賃或留置來源改變",
+              "文件、車輛比對、狀態或安全來源矛盾",
+            ]
+          : [
+              "First household vehicle-document map",
+              "Title or registration source and version review",
+              "Insurance evidence handoff",
+              "Inspection or emissions source review",
+              "Recall source, applicability and remedy follow-up",
+              "Move or jurisdiction change",
+              "Sale, gift, inheritance, lease return or disposal preparation",
+              "Lien, lender or lease-source change",
+              "Document, vehicle-match, status or safety conflict",
+            ],
+      },
+      {
+        name: "baselineDate",
+        label: zh ? "車輛文件與來源地圖基準日" : "Vehicle-document and source-map baseline date",
+        type: "date",
+        value: "2026-08-20",
+      },
+      {
+        name: "reviewDate",
+        label: zh ? "本次車輛文件核對日" : "Current vehicle-document review date",
+        type: "date",
+        value: "2026-08-24",
+      },
+      {
+        name: "nextReview",
+        label: zh ? "下一次來源或行動核點" : "Next source or action checkpoint",
+        type: "date",
+        value: "2026-09-14",
+      },
+      text(
+        "basis",
+        zh
+          ? "監理、保險、車廠、驗車、召回、貸款與受保護資料來源地圖"
+          : "Motor-vehicle authority, insurer, manufacturer, inspection, recall, lender and protected-record source map",
+        zh
+          ? "使用安全來源／證據代號或有日期的公開網址；完整車輛、身分、帳戶與交易資料留在受保護位置。"
+          : "Use safe source and evidence IDs or dated public URLs. Keep vehicle, identity, account and transaction details protected.",
+        zh
+          ? "MVDIS-OFFICIAL-R2；CAR-SAFETY-R1；INSURER-SOURCE-I2；PROTECTED-VEH-A"
+          : "STATE-MVA-R2; NHTSA-R1; INSURER-SOURCE-I2; PROTECTED-VEH-A",
+      ),
+      {
+        name: "records",
+        label: zh ? "有版本的家庭車輛文件來源與狀態列" : "Versioned household vehicle-document source and status rows",
+        type: "textarea",
+        help: zh
+          ? "每行：ID｜安全車輛代號、文件用途與家庭角色｜管轄地及負責來源｜受保護車輛比對與來源核對日 YYYY-MM-DD｜目前文件／版本／期間觀察｜存取與保管觀察｜官方狀態來源｜家庭或官方行動與實際結果｜差異／安全／申訴／合格審查來源｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。最多 14 行。"
+          : "One line: ID | safe vehicle alias, document purpose and household role | jurisdiction and responsible source | protected vehicle-match evidence plus source checked date YYYY-MM-DD | current document, version or period observation | access and custody observation | official status source | household or official action and observed result | discrepancy, safety, complaint or qualified-review route | owner role | target or outcome date YYYY-MM-DD | one of the twelve listed statuses. Maximum 14 lines.",
+        value: defaultRecords,
+      },
+      text(
+        "storage",
+        zh
+          ? "受保護行照、車籍、保險、檢驗、召回、貸款、交易與核對歷程位置"
+          : "Protected title, registration, insurance, inspection, recall, lien, transaction and review-history location",
+        zh
+          ? "只寫資料夾或流程代號；不要輸入姓名、地址、車牌、VIN、證號、帳戶、付款、簽名、案件或私人通信。"
+          : "Use a folder or process label. Do not enter names, addresses, plates, VINs, document numbers, accounts, payments, signatures, cases or private messages.",
+        zh
+          ? "家庭紀錄／車輛／VEH-DOCS-2026-A／受保護車籍與文件證據"
+          : "Household records / vehicles / VEH-DOCS-2026-A / protected issued evidence",
+      ),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review.trim())
+        return zh
+          ? "請輸入家庭私人車輛文件核對代號，讓匯出的版本仍能辨識。"
+          : "Enter a private vehicle-document review reference so this exported version can be identified.";
+      if (!baselineDate)
+        return zh ? "請以 YYYY-MM-DD 輸入有效的車輛文件與來源地圖基準日。" : "Enter the real vehicle-document and source-map baseline date in YYYY-MM-DD format.";
+      if (!reviewDate)
+        return zh ? "請以 YYYY-MM-DD 輸入有效的本次車輛文件核對日。" : "Enter a real current vehicle-document review date in YYYY-MM-DD format.";
+      const now = new Date();
+      const today = strictIsoDate([
+        now.getFullYear(),
+        String(now.getMonth() + 1).padStart(2, "0"),
+        String(now.getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime())
+        return zh ? "本次車輛文件核對日不能在未來。" : "The current vehicle-document review date cannot be in the future.";
+      if (baselineDate.getTime() > reviewDate.getTime())
+        return zh ? "車輛文件與來源地圖基準日不能晚於本次核對日。" : "The vehicle-document and source-map baseline cannot be later than the current review.";
+      if (!nextReview)
+        return zh ? "請以 YYYY-MM-DD 輸入有效的下一次來源或行動核點。" : "Enter a real next source or action checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime())
+        return zh ? "下一次來源或行動核點不能早於本次車輛文件核對日。" : "The next source or action checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 12)
+        return zh ? "請用安全指標說明監理、保險、車廠、驗車、召回、貸款與受保護資料來源地圖。" : "Identify the authority, insurer, manufacturer, inspection, recall, lender and protected-record source map with safe pointers.";
+      if (!values.storage.trim())
+        return zh ? "請輸入受保護車輛文件與核對歷程位置。" : "Enter the protected location for vehicle documents and review history.";
+
+      const recordRows = values.records
+        .split("\n")
+        .map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split("|").map((part) => part.trim()),
+        }))
+        .filter((row) => row.parts.some(Boolean));
+      if (recordRows.length === 0)
+        return zh ? "請至少加入一筆車輛文件用途與官方狀態關係。" : "Add at least one vehicle-document purpose and official-status relationship row.";
+      if (recordRows.length > 14)
+        return zh ? "每一版最多 14 列；請先凍結本版，再開始下一個範圍。" : "One vehicle-document review version supports at most 14 rows; freeze this version before starting another scope.";
+      const invalidRows = recordRows.filter((row) => row.parts.length !== 12 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return zh
+          ? `車輛文件第 ${invalidRows.map((row) => row.line).join("、")} 行必須包含全部十二個以 | 分隔的欄位。`
+          : `Vehicle-document line ${invalidRows.map((row) => row.line).join(", ")} must contain all twelve pipe-separated fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase(locale));
+      if (new Set(ids).size !== ids.length) return zh ? "每一列車輛文件都需要唯一 ID。" : "Every vehicle-document row needs a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return zh ? "每列 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 REG-A 或 RECALL-1。" : "Use 2 to 20 letters, numbers or hyphens for each row ID, such as REG-A or RECALL-1.";
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[11]));
+      if (invalidStatuses.length)
+        return zh
+          ? `車輛文件第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用欄位說明中的十二種證據狀態之一。`
+          : `Vehicle-document line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve evidence statuses in the field instructions.`;
+      const checkedDate = (value: string) => {
+        const matches = value.match(/\b\d{4}-\d{2}-\d{2}\b/g) || [];
+        return matches.length === 1 ? strictIsoDate(matches[0]) : null;
+      };
+      const invalidSourceDates = recordRows.filter((row) => {
+        const sourceDate = checkedDate(row.parts[3]);
+        return !sourceDate || sourceDate.getTime() < baselineDate.getTime() || sourceDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return zh
+          ? `車輛文件第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要一個介於基準日與本次核對日的來源核對日，並保留受保護車輛比對指標。`
+          : `Vehicle-document line ${invalidSourceDates.map((row) => row.line).join(", ")} needs one source-checked date from the baseline through the current review plus a protected vehicle-match pointer.`;
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 9).includes(row.parts[11]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(9).includes(row.parts[11]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return zh
+          ? `開放的車輛文件第 ${invalidOpenDates.map((row) => row.line).join("、")} 行需要介於本次核對日與下一核點的目標日。`
+          : `Open vehicle-document line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next source or action checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return zh
+          ? `已核對、完成或不適用的車輛文件第 ${invalidClosedDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的實際結果日。`
+          : `Closed reviewed, completed or not-applicable vehicle-document line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from the baseline through this review.`;
+      const missingLayers = recordRows.filter((row) =>
+        row.parts[1].length < 8 || row.parts[2].length < 12 || row.parts[3].length < 18 || row.parts[4].length < 12 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 12 || row.parts[8].length < 10 || row.parts[9].length < 4,
+      );
+      if (missingLayers.length)
+        return zh
+          ? `車輛文件第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實的用途、負責來源、受保護比對、版本、存取／保管、狀態、行動／結果、差異來源與負責角色。`
+          : `Vehicle-document line ${missingLayers.map((row) => row.line).join(", ")} needs a real purpose, responsible source, protected match, version, access/custody, status, action/result, discrepancy route and owner.`;
+      const reviewedWithoutEvidence = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[9]) return false;
+        const evidence = row.parts.slice(2, 9).join(" ");
+        const sourceOk = zh
+          ? /(?:監理|公路|保險|車廠|製造|驗車|檢驗|貸款|租賃|官方|簽發)/.test(row.parts[2])
+          : /(?:state|territor|motor vehicle|dmv|authority|nhtsa|manufacturer|insurer|inspection|lender|lease|official|issued)/i.test(row.parts[2]);
+        const matchOk = zh ? /(?:受保護|比對|證據)/.test(row.parts[3]) : /(?:protected|match|evidence)/i.test(row.parts[3]);
+        const versionOk = zh ? /(?:目前|版本|期間|簽發|公告)/.test(row.parts[4]) : /(?:current|version|period|issued|notice)/i.test(row.parts[4]);
+        const accessOk = zh ? /(?:開啟|存取|可取得|保管|原件)/.test(row.parts[5]) : /(?:opened|access|available|custody|original)/i.test(row.parts[5]);
+        const statusOk = zh ? /(?:車籍|行照|保險|驗車|檢驗|召回|貸款|過戶|狀態|更新)/.test(row.parts[6]) : /(?:title|registration|insurance|inspection|emissions|recall|lien|transfer|status|renewal)/i.test(row.parts[6]);
+        const actionOk = zh ? /(?:保留|重新|異動|更新|行動|沒有.*申請)/.test(row.parts[7]) : /(?:retained|reopen|change|renew|action|no .* open)/i.test(row.parts[7]);
+        const routeOk = zh ? /(?:監理|車廠|保險|檢驗|貸款|更正|申訴|合格)/.test(row.parts[8]) : /(?:authority|manufacturer|insurer|inspection|lender|correction|complaint|qualified)/i.test(row.parts[8]);
+        const unresolved = zh ? /(?:等待|未知|未解|未核對|矛盾|缺少)/.test(evidence) : /(?:pending|unknown|unresolved|not checked|conflict|missing)/i.test(evidence);
+        return !sourceOk || !matchOk || !versionOk || !accessOk || !statusOk || !actionOk || !routeOk || unresolved;
+      });
+      if (reviewedWithoutEvidence.length)
+        return zh
+          ? `完成核對的車輛文件第 ${reviewedWithoutEvidence.map((row) => row.line).join("、")} 行必須連結負責來源、受保護車輛比對、目前版本、實際存取／保管、官方狀態、行動或重查條件及負責處理來源，且不能仍有未解差異。`
+          : `Completed vehicle-document review line ${reviewedWithoutEvidence.map((row) => row.line).join(", ")} must link a responsible source, protected vehicle match, current version, actual access/custody, official status, action or reopen rule and responsible review route with no unresolved gap.`;
+      const actionClaimingCompletion = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[7]) return false;
+        const textValue = row.parts[7];
+        return zh
+          ? /(?:已完成|已更新完成|過戶完成|召回完成|驗車合格|官方結果已確認)/.test(textValue) || !/(?:已記錄|預約|送出|申請|等待|仍待|尚待)/.test(textValue)
+          : /(?:confirmed complete|completed|renewed successfully|transfer complete|recall complete|inspection passed|official result observed)/i.test(textValue) || !/(?:recorded|appointment|submitted|requested|pending|awaiting)/i.test(textValue);
+      });
+      if (actionClaimingCompletion.length)
+        return zh
+          ? `已行動但等待結果的第 ${actionClaimingCompletion.map((row) => row.line).join("、")} 行必須保持開放，描述已做行動與仍待的官方結果，不能宣稱完成。`
+          : `Action-recorded line ${actionClaimingCompletion.map((row) => row.line).join(", ")} must remain open and describe the action plus pending official result, not claim completion.`;
+      const conflictWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[8]) return false;
+        const conflict = [row.parts[4], row.parts[6], row.parts[7], row.parts[8]].join(" ");
+        const conflictOk = zh ? /(?:矛盾|不同|差異|安全|召回|警示|不一致|異常)/.test(conflict) : /(?:conflict|different|discrepancy|safety|recall|warning|mismatch|unexpected)/i.test(conflict);
+        const routeOk = zh ? /(?:監理|車廠|保險|檢驗|貸款|租賃|交通部|合格|負責)/.test([row.parts[8], row.parts[9]].join(" ")) : /(?:authority|manufacturer|insurer|inspection|lender|lessor|nhtsa|qualified|responsible)/i.test([row.parts[8], row.parts[9]].join(" "));
+        return !conflictOk || !routeOk;
+      });
+      if (conflictWithoutRoute.length)
+        return zh
+          ? `矛盾列第 ${conflictWithoutRoute.map((row) => row.line).join("、")} 行必須寫出看到的文件、車輛比對、狀態或安全差異，以及負責的監理、車廠、保險、檢驗、貸款或合格審查來源。`
+          : `Conflict line ${conflictWithoutRoute.map((row) => row.line).join(", ")} must name the observed document, vehicle-match, status or safety conflict and the responsible authority, manufacturer, insurer, inspection, lender or qualified review route.`;
+      const completedWithoutResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[10]) return false;
+        const result = [row.parts[7], row.parts[8]].join(" ");
+        const observed = zh ? /(?:官方結果|監理結果|檢驗結果|車廠完成|保險結果|貸款結果|過戶結果|改正證明).*(?:觀察|收到|開啟|確認|記錄)/.test(result) : /(?:(?:official|authority|inspection|manufacturer|insurer|lender|transfer|remedy) (?:result|confirmation|record|evidence)).*(?:observed|received|opened|recorded)/i.test(result);
+        const custody = zh ? /(?:行照|牌照|保險|貸款|舊文件|原件|爭議|保管)/.test(result) : /(?:registration|plate|insurance|lien|prior record|original|dispute|custody)/i.test(result);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知)/.test(result) : /(?:pending|awaiting|unresolved|unknown)/i.test(result);
+        return !observed || !custody || unresolved;
+      });
+      if (completedWithoutResult.length)
+        return zh
+          ? `完成結果的第 ${completedWithoutResult.map((row) => row.line).join("、")} 行必須記錄已觀察的官方／負責來源結果，並檢查行照、牌照、保險、貸款、舊文件、爭議與原件保管，不能仍有等待事項。`
+          : `Completed result line ${completedWithoutResult.map((row) => row.line).join(", ")} must record an observed official or responsible-source result and screen registration, plates, insurance, liens, prior records, disputes and original custody without a pending claim.`;
+      const notApplicableWithoutTrigger = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[11]) return false;
+        const trigger = [row.parts[7], row.parts[8]].join(" ");
+        return zh
+          ? !/(?:重新開啟|重新檢視|如果|當.*時|車輛|車主|管轄|保險|召回|驗車|交易.*改變)/.test(trigger)
+          : !/(?:reopen|review again|if |when |after |vehicle|owner|jurisdiction|insurance|recall|inspection|transaction.*change)/i.test(trigger);
+      });
+      if (notApplicableWithoutTrigger.length)
+        return zh
+          ? `不適用的第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須記錄目前原因，以及車輛、車主、管轄地、保險、召回、驗車或交易變更時的重新開啟事件。`
+          : `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and vehicle, owner, jurisdiction, insurance, recall, inspection or transaction change that reopens it.`;
+
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return zh
+          ? "偵測到可能的完整電話、Email、車牌、證號、車身／引擎、保險、貸款、案件或其他長數字識別資料。請改用安全證據代號。"
+          : "A possible full phone, email, plate, document, vehicle, insurance, lender, case or other long numeric identifier was detected. Keep it protected and use a safe evidence pointer here.";
+      if (/password|passphrase|passcode|access code|recovery code|verification code|login credential|api key|full address|street address|full name|person name|owner name|driver name|driver.?s license|license number\s*[:=]|plate number|license plate\s*[:=]|full vin|complete vin|vin number|vin\s*[:=]|vehicle identification number|title number|registration number|policy number|claim number|lien account|loan account|bank account|credit card|citation number|ticket number|signature|bill of sale contents|purchase amount|sale amount|private portal|private message|correspondence|完整地址|完整姓名|車主姓名|駕駛姓名|駕照號碼|車牌號碼|完整車牌|完整車身|車身號碼\s*[:：]|引擎號碼\s*[:：]|行照號碼|車籍號碼|保險證號|保單號碼|理賠號碼|貸款帳號|銀行帳號|信用卡|罰單號碼|簽名|買賣內容|成交金額|登入密碼|驗證碼|私人入口|私人訊息|通信內容/i.test(privacyText))
+        return zh
+          ? "偵測到可能的地址、姓名、車牌、VIN／車身、引擎、行照、車籍、駕照、保險、貸款、付款、罰單、簽名、交易、登入或私人通信資料。請改成安全來源、流程或證據代號。"
+          : "A possible address, person, plate, VIN, vehicle, title, registration, driver, insurance, lender, payment, citation, signature, transaction, credential or private correspondence detail was detected. Replace it with a safe source, process or evidence pointer.";
+
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const statusCounts = statusOrder
+        .map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length }))
+        .filter((item) => item.count > 0);
+      if (zh)
+        return `${values.review.trim()}｜家庭車輛文件來源與狀態紀錄\n核對情境：${values.context}\n車輛文件／來源地圖基準：${formatter.format(baselineDate)}\n本次車輛文件核對：${formatter.format(reviewDate)}\n下一次來源或行動核點：${formatter.format(nextReview)}\n仍開放的文件、車輛比對、版本、存取、狀態、安全或結果列：${openRows.length} 筆\n已核對、完成或不適用列：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n監理、保險、車廠、驗車、召回、貸款與受保護資料來源地圖：${values.basis.trim()}\n\n${lines("有版本的家庭車輛文件來源與狀態證據", recordRows.map((row) => `${row.parts[0]}｜車輛／文件用途：${row.parts[1]}｜管轄地／負責來源：${row.parts[2]}｜受保護車輛比對／來源核對：${row.parts[3]}｜目前文件／版本／期間：${row.parts[4]}｜存取／保管：${row.parts[5]}｜官方狀態來源：${row.parts[6]}｜行動／實際結果：${row.parts[7]}｜差異／安全／申訴／審查來源：${row.parts[8]}｜負責角色：${row.parts[9]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[10]) as Date)}｜狀態：${row.parts[11]}`))}\n\n受保護行照、車籍、保險、檢驗、召回、貸款、交易與核對歷程位置：${values.storage.trim()}\n\n這份輸出只是家庭來源與工作流程索引，不是行照、車籍、駕照、保險證、檢驗、召回、貸款、車況、交易或所有權證明。它不查詢、造訪、登入、比對、讀取、上傳、驗證或更新車牌、VIN／車身、引擎、行照、車籍、駕照、保險、驗車、召回、里程、貸款、失竊、報廢、稅費、罰鍰或車主資料，不付款、預約、送件、投保、報案、辦理異動或聯絡機關，也不計算期限、不提供交通安全、保險、稅務、買賣或法律意見。真實結果請使用目前監理機關、交通部委託安全來源、車廠、保險公司、檢驗單位、貸款／租賃機構及合格專業來源。`;
+      return `${values.review.trim()} — household vehicle document source and status log\nReview context: ${values.context}\nVehicle-document/source-map baseline: ${formatter.format(baselineDate)}\nCurrent vehicle-document review: ${formatter.format(reviewDate)}\nNext source or action checkpoint: ${formatter.format(nextReview)}\nOpen document, match, version, access, status, safety or result rows: ${openRows.length}\nReviewed, completed or not-applicable rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nAuthority, insurer, manufacturer, inspection, recall, lender and protected-record source map: ${values.basis.trim()}\n\n${lines("Versioned household vehicle-document source and status evidence", recordRows.map((row) => `${row.parts[0]} — vehicle/document purpose: ${row.parts[1]} — jurisdiction/responsible source: ${row.parts[2]} — protected vehicle match/source check: ${row.parts[3]} — current document/version/period: ${row.parts[4]} — access/custody: ${row.parts[5]} — official status source: ${row.parts[6]} — action/observed result: ${row.parts[7]} — discrepancy/safety/complaint/review route: ${row.parts[8]} — owner: ${row.parts[9]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[10]) as Date)} — status: ${row.parts[11]}`))}\n\nProtected title, registration, insurance, inspection, recall, lien, transaction and review-history location: ${values.storage.trim()}\n\nThis output is a household source and workflow index, not proof of title, registration, licensing, insurance, inspection, recall status, liens, condition, transfer or ownership. It does not search, visit, sign in, decode, compare, read, upload, authenticate or update a plate, VIN, title, registration, driver, insurance, inspection, recall, mileage, lien, theft, salvage, tax, citation or owner record; submit a payment, appointment, form, claim, complaint or safety report; calculate a deadline; or provide driving, safety, insurance, tax, transaction or legal advice. Use the current responsible motor vehicle authority, NHTSA, manufacturer, insurer, inspection program, lender or lessor and qualified professional for every real result.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
     intro:
@@ -4136,11 +4445,17 @@ const definitions: Record<string, Definition> = {
     run: (v) =>
       `${lines(`Household handoff for ${v.person || "recipient"}`, list(v.tasks))}\n\nSafe contacts: ${v.contacts || "Add contacts"}\nIntentionally omitted: ${v.omitted || "List private categories"}\nGenerated: ${new Date().toLocaleDateString()}\n\nConfirm all time-sensitive details before sharing.`,
   },
+  "household-vehicle-document-source-status-log": {
+    ...vehicleDocumentDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
   "household-utility-provider-service-handoff-log":
     definitions["__zh-tw-household-utility-provider-service-handoff-log"],
+  "household-vehicle-document-source-status-log": {
+    ...vehicleDocumentDefinition("zh-TW"),
+  },
   "home-inventory-checklist-generator": {
     intro:
       "依台灣家庭常見空間產生住宅財物盤點起始表，並保留照片、型號、單據與複查欄位。這不是估價或理賠保證。",

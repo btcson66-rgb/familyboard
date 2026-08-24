@@ -1789,6 +1789,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不能早於本次核對日",
   );
 
+  await page.goto("/tools/household-vehicle-document-source-status-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open document, match, version, access, status, safety or result rows: 1");
+  await expect(page.locator(".result")).toContainText("Reviewed, completed or not-applicable rows: 1");
+  await expect(page.locator(".result")).toContainText("Source, vehicle match, version, access and status reviewed 1");
+  await page.getByLabel("Next source or action checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+  await page.goto("/tools/household-vehicle-document-source-status-log/");
+  await page.getByLabel("Protected title, registration, insurance, inspection, recall, lien, transaction and review-history location").fill("VIN number 1HGCM82633A004352");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible address, person, plate, VIN, vehicle, title");
+
+  await page.goto("/zh-tw/tools/household-vehicle-document-source-status-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的文件、車輛比對、版本、存取、狀態、安全或結果列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對、完成或不適用列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對來源、車輛比對、版本、存取與狀態 1 筆");
+  await page.getByLabel("下一次來源或行動核點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次車輛文件核對日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
