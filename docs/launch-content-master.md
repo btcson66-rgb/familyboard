@@ -7316,52 +7316,92 @@ The best validation is handing the index to a partner or adult family member and
 
 ## Page 107 — Digital Home Binder
 **Slug:** `/guides/digital-home-binder/`
-**Primary intent:** create a digital binder for running a household
-**Title tag:** `Digital Home Binder: A Practical Structure for Home Records, Maintenance and Emergency Information`
-**Meta description:** `Build a digital home binder that combines a household index, asset records, maintenance history, contacts and emergency information.`
-**Primary keyword concept:** digital home binder
+**Primary intent:** build and test a findable, share-safe digital home binder
+**Title tag:** `Digital Home Binder Checklist | Records, Access, Backups and Handoff`
+**Meta description:** `Build a digital home binder that separates record indexes, current-source pointers, access views, offline references, backups and retrieval tests.`
+**Primary keyword concept:** digital home binder checklist
 **Depth:** verified
-**Suggested internal links:** `/guides/home-maintenance-binder/`, `/guides/household-documents-organizer/`, `/guides/emergency-binder/`, `/features/free-home-management-app/`
+**Suggested internal links:** `/tools/household-record-retrieval-drill-log/`, `/guides/household-documents-organizer/`, `/guides/digital-home-inventory-backup/`, `/features/household-handoff/`, `/features/household-documents-organizer/`
 
-# A digital home binder should help operate the home, not merely store files
+# A digital home binder is an operating map, not one giant vault
 
-The traditional three-ring household binder works because everyone in the house knows where it lives and roughly what's inside it: a tab for insurance, a tab for the furnace, a tab for "in case of emergency." A digital version should keep that same instant recognizability while adding what paper can't do — cross-links between a record and the asset it belongs to, and a structure that updates itself as household events happen rather than going stale in a drawer.
+Quick answer: build a short catalog that says what each record is for, which source is current, where the protected original lives, who may use it and when it was last checked. Keep passwords, full identity numbers, private medical details and the original sensitive files in systems designed for them. Then ask a second authorized household member to find a few records without coaching. The dated retrieval result is what separates a working binder from a folder structure that only its creator understands.
 
-## The ten sections that make a binder complete
+A digital home binder can help with ordinary work—finding an appliance manual, the source for a renewal or the latest repair record—and with a limited household handoff. It is not a legal-document vault, password manager, cloud-sync service, emergency alert source, insurance determination or proof that a copied file is authentic, current or sufficient. FamilyBoard records pointers and relationships; the controlling original and responsible issuer remain outside the generated index.
 
-A structure that covers a typical household without becoming unwieldy: home overview (address, move-in date, key measurements), household member roles, key contacts, major systems (HVAC, water heater, electrical panel), appliance inventory, maintenance history, warranties, renovation and project records, subscriptions, and emergency information. Ten sections is enough breadth to answer nearly any "where do I find" question without forcing every document into an unrelated bucket.
+**Want to test the binder instead of assuming it works? [Use the free Household Record Retrieval & Handoff Drill Log](/tools/household-record-retrieval-drill-log/).**
 
-## Put quick-reference information before archives
+## Start with retrieval questions, not a universal folder list
 
-A family member looking for the plumber's number should not have to page past three years of paid receipts to find it. Structure the binder so contacts, current obligations (what's due this month) and emergency information sit at the top level, while service history and closed-out records live one layer deeper. This mirrors how a household actually uses the binder: daily and monthly lookups are frequent, archive lookups are rare.
+No fixed set of ten tabs makes every household complete. A renter with one vehicle, a homeowner managing a renovation, a caregiver and a household with pets will ask different questions. Begin with five to eight real retrieval prompts: Where is the current lease or ownership source? Which document supports this appliance warranty? Who services this home system? What obligation renews next? Which minimized contact reference is available if the usual coordinator cannot answer?
 
-## Use links between sections instead of duplicating data
+For every prompt, identify the record category, current-source pointer, protected location, responsible role, intended audience and review trigger. Mark a category `not applicable` when it truly does not belong. Empty folders copied from somebody else's template create the appearance of completeness without helping anyone retrieve a real source.
 
-A water heater's asset record can link directly to its warranty record and its most recent repair invoice, instead of that information being retyped in three places. A service provider's contact record can link back to every asset they've worked on, so "who fixed the dishwasher last time" is a one-click answer instead of a memory test. This relational structure — record linked to record — is the specific advantage a digital binder has over a paper one or a folder of scanned PDFs, where every cross-reference has to be remembered by a person instead of stored by the system.
+## Build six linked layers instead of one overloaded directory
 
-## Decide what belongs in the binder versus a secure vault
+The **catalog layer** names the record and purpose in ordinary language. `Water heater—current manual and warranty source` is more useful than `PDFs/2026`. It may point to an original paper location, an encrypted file, an official issuer portal or a provider record without copying the protected contents.
 
-Not every household fact belongs in the same place. Operational information — which contractor services the furnace, when the roof was last inspected, which insurer covers the home — belongs in the binder because it needs to be found quickly by more than one person. Sensitive originals — passports, Social Security cards, financial account numbers — belong in a fireproof safe or a dedicated encrypted vault, with only a location reference ("safe deposit box, branch X") appearing in the binder itself.
+The **authority and version layer** records who issued the source, the document or event date, the version marker a household can safely retain and the next review trigger. A downloaded policy, instruction page or government form is not permanently current merely because it is saved. Preserve the original capture date and return to the responsible issuer when a current answer matters.
 
-## Keep paper where paper still helps
+The **relationship layer** connects the pointer to the asset, home area, maintenance event, warranty, subscription, project or responsibility it explains. FamilyBoard's document record stores a name, category, location reference, related asset, review date and notes. It does not upload the document file. This is why the binder can answer `what records relate to this water heater?` without becoming another copy of the original archive.
 
-A digital binder does not eliminate every use for paper. A printed one-page emergency summary taped inside a kitchen cabinet is genuinely useful during a power outage when phones are dead and Wi-Fi is down — that's a case where paper outperforms a screen. The binder should support print-friendly exports of its most time-critical sections (contacts, emergency information) rather than assuming every scenario has power and connectivity.
+The **audience layer** separates the private master index from a routine household view, temporary handoff and printed emergency reference. Each view should contain only what that audience needs. A useful shared pointer might say `current insurer contact source: POLICY-CONTACT-1`; it should not expose a policy number, full account, signature, identity document, claim narrative, home access detail or password.
 
-## Build it incrementally, not all at once
+The **availability layer** identifies the ordinary route, an alternate or offline route and the separately managed backup. Ready.gov's [Emergency Financial First Aid Kit](https://www.ready.gov/sites/default/files/2020-03/ready_effak-toolkit-large-print.pdf) recommends safeguarding paper and electronic copies in appropriate safe locations and considering access if the usual owner cannot act. That is U.S. preparedness guidance, not a requirement to put every household record into one kit.
 
-A binder attempted in one sitting usually stalls at the appliance inventory and never reaches emergency information — the highest-stakes section. Build the ten-section skeleton first with empty or partial entries, then fill sections as real household events create the record naturally: a repair happens, add it; a policy renews, update it. A binder that's 40% complete but has real emergency contacts beats one that's 90% complete on appliances and has none.
+The **test and exception layer** records who tried to retrieve which source, what scope was actually found, what remained unavailable or overexposed, who owns the correction and whether a dated retest passed. This layer keeps the binder honest when a folder was renamed, a link expired, an old version looked current or a backup person could not reproduce the creator's mental map.
 
-**Contextual CTA:** Build the binder index first, then fill the sections gradually as household events happen.
+## Current, findable and shareable are three different checks
+
+Finding a file only proves that a location path worked on that date. It does not prove the file is the latest version, came from the responsible source, applies to the current household or is appropriate to share. Likewise, a current original may exist but remain unusable when the usual administrator is away because nobody else knows the protected access process.
+
+Record these checks separately. `Located` should name the limited source found. `Current-source reviewed` should identify the issuer or controlling record used for comparison. `Minimum disclosure reviewed` should say which fields or entire categories were withheld from the intended recipient. Do not collapse all three into a green `done` badge.
+
+## Test retrieval without turning the exercise into credential sharing
+
+Choose an authorized tester and give them a purpose, not a tour of your file system: `Find the current manufacturer manual for appliance ASSET-A2`; `locate the protected source for the next insurance review`; `find the minimized power-outage contact card`. Observe whether the person can start from the shared index, distinguish the current source and explain what they intentionally did not open or copy.
+
+Use private role labels in the drill log. Never paste a password, recovery answer, one-time code, full address, account number, identity record, medical content or vulnerable-person schedule into a result intended for printing or handoff. If access requires a credential, the binder should point to the household's controlled credential process; the drill log records only whether that process could be followed by the authorized role.
+
+A failed attempt is useful evidence. Preserve the exact gap—expired link, ambiguous label, inaccessible paper location, unclear current version, missing permission or disclosure wider than intended—then assign one correction and a retest. Do not rewrite the failed row as `passed`, because doing so removes the history that explains why the structure changed.
+
+## Keep backup recovery and binder retrieval as linked but separate jobs
+
+An index may be perfectly readable while its only browser database is lost. A backup may restore every record while the restored categories still make no sense to another person. Test both. FamilyBoard's complete JSON backup and optional encrypted export cover application recovery; CSV is for review and editing, not the complete disaster-recovery copy. The [backup and restore guide](/guides/digital-home-inventory-backup/) explains how to validate a file before writing records and how to check restored data.
+
+CISA's [Data Backup Options](https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf) describes the 3-2-1 pattern for home and organizational users: primary data plus two backups, two media types and one offsite copy. Use that as a resilience model, then choose storage and protection appropriate to the actual sensitivity. A copy in the same Downloads folder as the working file is not an independent failure path.
+
+The retrieval drill should not decrypt, reset, overwrite or delete the working household database. Use prepared non-sensitive test records or a controlled restore environment for recovery testing. Record the export version, verification result and protected backup pointer, not the backup password or the backup's private contents.
+
+## Design a limited offline view before an emergency
+
+An emergency view is not the entire binder printed out. Select only current, time-critical information intended for the people who may use it, identify the official source and review date, and keep the protected master elsewhere. Ready.gov encourages secure access to important-document copies during emergencies; current alerts, responsible authorities and on-scene conditions still override a saved household summary.
+
+Paper may be the right alternate route for a short, minimized contact or action reference when power, a device or connectivity is unavailable. A broadly visible sheet should not contain complete financial, identity, medical, child, access or security information. Record where the protected extension lives and who is authorized to use it.
+
+## Version the binder around real changes
+
+Freeze a dated version after a move, household-role change, new dependent, property purchase, major renovation, insurance or service-provider change, new device, archive migration or recovery-process change. Also update the affected entry when its controlling source changes. A fixed annual review can catch quiet drift, but it should not delay an update after a material event.
+
+Archive old pointers with their replacement source and date instead of silently overwriting them. If a document is retired, record whether the household no longer needs the category, the issuer replaced it or the record moved to a protected archive. The binder does not decide statutory, contractual, tax, insurance or legal retention; keep the applicable source outside the household checklist.
+
+## Affiliate products are aids, not proof of continuity
+
+A future clearly labelled affiliate area may suggest scanners, document sleeves, encrypted storage devices, label makers or fire-resistant document containers. A commission cannot make a record authentic, current, legally sufficient, backed up, accessible to the intended role or safe to disclose. Buying a product never changes a failed retrieval test into a pass.
+
+**Contextual CTA:** Select three real retrieval prompts, ask an authorized backup household role to use the current index without coaching, record the observed result and correct every failed or overexposed path before calling the binder ready.
 
 **FAQ:**
-- Q: What sections should a digital home binder have?
-  A: Ten core sections cover most households: home overview, household members, key contacts, major systems, appliance inventory, maintenance history, warranties, renovation records, subscriptions and emergency information. Build the skeleton with all ten first, even mostly empty, rather than perfecting one section while others don't exist yet.
-- Q: Should the emergency section be at the front or the back of the binder?
-  A: Front. Contacts, current obligations and emergency information get looked up under time pressure or by someone unfamiliar with the household, so they should never be buried behind years of archived receipts. Put service history and closed-out records in a deeper layer that's still searchable but not the first thing anyone sees.
-- Q: What's the advantage of a digital binder over just scanning documents into folders?
-  A: Linking. A digital binder connects a warranty to the specific appliance it covers and a repair invoice to the same asset, so a household can ask "what do I know about the water heater" and get everything in one place. A folder of scanned PDFs only answers that question if someone remembers exactly what the file was named.
-- Q: Does a digital home binder replace paper entirely?
-  A: No — a printed one-page emergency summary is still genuinely useful during a power or internet outage, when a phone-based binder may be hard to access. The digital binder should make print-friendly exports of its emergency and contacts sections easy to generate, not assume every situation has power and Wi-Fi.
+- Q: How many sections should a digital home binder have?
+  A: Use only the categories your household can connect to real retrieval questions. Begin with housing, assets and warranties, service history, recurring obligations, protected contacts and limited emergency references when they apply. A copied ten-tab template is not complete merely because every folder exists.
+- Q: Is a document index the same as a backup?
+  A: No. The index tells an authorized person what exists and where a protected source lives. A backup preserves a recoverable copy of application data or files. Test retrieval and recovery separately because either one can work while the other fails.
+- Q: Should passwords or full document numbers appear in the binder?
+  A: Not in a routine index, printed view or handoff log. Store secrets and sensitive originals in systems designed for them. The binder may use a safe pointer to the controlled location or credential process without reproducing the secret.
+- Q: What counts as a passed retrieval drill?
+  A: The intended authorized role followed the current index, located the limited source, distinguished its version or responsible issuer, avoided opening or copying unnecessary information and preserved a dated result. A creator finding their own folder does not test handoff.
+- Q: Does a successful drill prove a document is legally valid or sufficient?
+  A: No. It proves only the recorded retrieval and audience-scope checks on that date. Authenticity, applicability, retention, rights and legal sufficiency remain with the current issuer, applicable rules and qualified advisers.
 
 ---
 
@@ -14496,6 +14536,118 @@ A future labelled affiliate area may offer labels, document sleeves, scanners, s
   A: No. Keep the actual agreement and notices protected and verify the applicable law and process outside FamilyBoard. A household checkpoint is not a legal calculation.
 - Q: What is required before using the completed move-out status?
   A: Link attributable physical reconciliation, empty-unit condition and contract/account outcome sources for the completed scope. If one layer remains open, keep a separate open row or explicitly hand it to another controlled process.
+
+---
+
+## Page 220 — Household Record Retrieval & Handoff Drill Log
+**Slug:** `/tools/household-record-retrieval-drill-log/`
+**Primary intent:** test whether an authorized household member can retrieve current records through a digital home binder without unnecessary disclosure
+**Title tag:** `Household Record Retrieval Drill Log | Test a Digital Home Binder`
+**Meta description:** `Create a private retrieval-drill log for household record pointers, current-source checks, offline access, minimum disclosure, corrections and retests.`
+**Primary keyword concept:** digital home binder audit
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-24
+**Editorial review date:** 2026-08-24
+**Content version:** 1
+**Suggested internal links:** `/guides/digital-home-binder/`, `/guides/household-documents-organizer/`, `/guides/digital-home-inventory-backup/`, `/features/household-handoff/`
+
+# Household record retrieval and handoff drill log
+
+A household binder can look organized while still depending on one person's memory. The folder names make sense to the creator, an old copy looks current, the alternate route requires a device nobody else can unlock, or a handoff sheet exposes far more than the recipient needs. Those failures appear only when another authorized person tries to retrieve a real source.
+
+This free browser tool creates a private, versioned record of assigned retrieval prompts, actual attempts, current-source checks, minimum-disclosure review, alternate or offline paths, corrections and dated retests. It does not search a device, open a file, connect to FamilyBoard records, validate a backup, share a handoff, authenticate a document, test a password, contact an issuer or certify household continuity.
+
+**Ready to test a small scope? [Jump to the Household Record Retrieval & Handoff Drill Log](#tool-heading).**
+
+## Use a household drill reference, not a person or address
+
+Choose a private label such as `BINDER-DRILL-2026-A`. Do not use a household member's full name, street address, account identifier or a title that reveals a vulnerable person, valuable asset or exact document location. The output may be reviewed or printed, so it should remain useful without becoming a map to identity documents, money, medication, keys or property.
+
+Select the context that explains why the drill exists: a routine digital-binder review, a temporary household handoff, a move or device change, a limited emergency/offline reference review, or a new backup responsible person. Context helps reviewers understand the scope; it does not create authority or permission for the tester.
+
+## Four dates define what was actually tested
+
+The **binder baseline version date** marks the catalog and access-map version being reviewed. The **first assignment or exercise date** begins the drill window. The **current drill review date** is when this version is reconciled. The **next correction or retest checkpoint** organizes every open gap.
+
+The tool enforces chronological order. It does not calculate a legal retention period, policy renewal, notice deadline, emergency review frequency or time in which another person must receive access. If a controlling source supplies a real date, preserve that source separately and set an earlier household checkpoint without treating the checkpoint as the external deadline.
+
+## Keep originals, permissions and credentials outside the result
+
+The controlling-source field should name safe references for the current household catalog, issuer or official source list, audience rules, credential process, backup verification, printed or offline view and handoff profile. Examples are `CATALOG-C3`, `AUDIENCE-A2`, `ACCESS-PROCESS-P1`, `BACKUP-VERIFY-B4` and `OFFLINE-O2`.
+
+Do not paste a contract, policy, identity file, account statement, medical record, password-manager entry or encryption password. The drill needs to know which protected source controlled the attempt and whether the authorized role could follow the process—not the contents of the protected source.
+
+Ready.gov's [Emergency Financial First Aid Kit](https://www.ready.gov/sites/default/files/2020-03/ready_effak-toolkit-large-print.pdf) separates gathering, safeguarding and updating important household records and discusses appropriate paper, removable-media and offsite copies. It can help identify preparedness questions for a U.S. household, but it does not make this generated log an official emergency kit or prove any document is sufficient.
+
+## Every row contains ten fields
+
+Enter one line per retrieval prompt or observed attempt:
+
+`ID | requested record and purpose | authorized tester role | attempt or assignment date | indexed pointer and current-source reference | observed retrieval result | disclosure, access or version gap and correction or closure reason | owner role | target or outcome date | status`
+
+The event date must fall between the first assignment and current review. An open row needs a target date from the current review through the next checkpoint. A passed, retired or handed-off row needs an actual outcome date between the first assignment and current review. One version accepts at most 16 rows so the result stays reviewable; freeze another dated version for the next set of prompts.
+
+Use a new row for a retest instead of rewriting the failed attempt. `DOC-03 could not distinguish the current warranty source` and `RETEST-03 located WARRANTY-W4 through the revised asset pointer` are two attributable facts. Keeping both explains what the correction changed.
+
+## Eight statuses keep finding, currentness and disclosure separate
+
+1. **Prompt assigned—retrieval attempt pending:** the record and purpose are defined, but no actual attempt has occurred.
+2. **Attempt recorded—indexed pointer not resolved:** the authorized role tried the documented path and did not locate the intended source.
+3. **Source located—current-source review pending:** a source was found, but its issuer, version, applicable date or replacement status remains open.
+4. **Source located—minimum-disclosure review pending:** the source is identifiable, but the household has not confirmed what this audience should see.
+5. **Alternate or offline route attempted—follow-up pending:** the non-primary route was exercised, while usability, currency or safe access still needs work.
+6. **Gap corrected—retest pending:** a label, permission, version pointer, alternate route or audience rule changed, but the corrected path has not been observed in use.
+7. **Retest passed—current source and audience scope linked:** an attributable retest located the limited current source and preserved the intended disclosure boundary.
+8. **Limited archive or external handoff—gap and owner preserved:** the household drill stopped or moved to another controlled process without inventing a pass.
+
+The first six remain open. Only the final two close the household drill row. A successful login, a file that opens, a printed page, a backup export or the creator saying `it is there` cannot by itself qualify as a passed retest.
+
+## A passed retest needs an actual second observation
+
+The tool rejects a passed-retest state unless the row describes a retest and links the current source plus audience scope. The tester should begin from the same entry point the real recipient would have, not from a direct link supplied during the exercise. Record only the limited result: `backup household coordinator used catalog C3, located current manufacturer manual M4 and left the protected receipt unopened`.
+
+Do not use the tool to trick a child, older adult, caregiver or household member into revealing a credential. Authority and consent must exist before the drill. If the intended recipient should not access the master source, test a minimized view or protected handoff process instead.
+
+## Test an alternate route without claiming emergency readiness
+
+An offline card, printed quick reference, encrypted copy or alternate authorized device may help when the usual path is unavailable. Test whether the intended role can locate and understand the prepared copy, whether its review date is visible and whether it points back to current official information where appropriate.
+
+The tool does not simulate a disaster, disconnect medical equipment, disable home systems, suppress current alerts or decide what emergency content a household needs. In a real event, current official alerts, emergency services, responsible providers and on-scene conditions take priority over a stored household page.
+
+CISA's [Data Backup Options](https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf) describes three copies, two media types and one offsite copy as a resilience pattern. A retrieval drill can point to a separately verified backup, but it does not decrypt, restore or inspect that backup. Use a controlled recovery test and the [backup guide](/guides/digital-home-inventory-backup/) for those checks.
+
+## Preserve failed, overexposed and stale-source results
+
+Useful gaps are precise: `paper pointer names old cabinet`; `issuer link redirects to a generic home page`; `two files share the same current label`; `handoff view includes a document location outside the recipient's purpose`; `offline copy lacks a review date`; `backup role cannot reach the controlled credential process`.
+
+Avoid blame and vague closure words such as `fixed`, `safe`, `complete`, `accessible`, `verified` or `ready`. Assign one responsible role, a concrete correction and a retest date. The tool blocks generic pass language because a label is not evidence of what another person actually observed.
+
+## Privacy screening is a backstop, not a sharing decision
+
+The form blocks common phone and email patterns, long identifiers, full addresses, personal names, accounts, policies, claims, serials, identity and financial data, passwords, passcodes, recovery secrets, encryption keys, signatures, access routes, valuable-property details and sensitive medical, child, care or legal content. Automated screening cannot recognize every private fact or every unsafe combination.
+
+Review every line before copying, downloading, printing or sharing. The working entries remain in the current browser. FamilyBoard does not receive them, inspect the source pointers, know who is authorized or back up the original records.
+
+## Affiliate products cannot turn a failed path into a pass
+
+A future clearly labelled affiliate area may offer document sleeves, scanners, label makers, encrypted storage or fire-resistant containers. A commission cannot prove authenticity, currentness, access permission, minimum disclosure, backup recovery, legal sufficiency or emergency readiness. A purchase never changes the row status.
+
+**Contextual CTA:** Choose three real records with different audiences, ask an authorized backup role to begin from the current binder index, preserve each observed gap and mark a pass only after a separate dated retest locates the current limited source.
+
+**FAQ:**
+- Q: Does this tool open my folders or FamilyBoard database?
+  A: No. It formats only what you enter in the current browser. It cannot search files, inspect a record, validate a backup, authenticate a source or confirm who has permission.
+- Q: Should the drill row contain the document or password?
+  A: No. Use a safe source pointer and a controlled credential-process reference. Keep full documents, passwords, codes, identity data and sensitive contents in storage designed for them.
+- Q: Is finding a file enough to pass?
+  A: No. A passed retest also identifies the current source or version, the limited intended audience and the dated second observation. Finding a stale or overexposed file remains an open result.
+- Q: Is this the same as testing a backup restore?
+  A: No. Retrieval tests whether a person can follow the binder map. Recovery testing proves a backup can reconstruct data in a controlled environment. Link the evidence, but keep the tests separate.
+- Q: Can the log prove the household is ready for an emergency or legal process?
+  A: No. It records a limited household exercise. Current official instructions, actual source documents, responsible issuers, permissions and qualified advice control real decisions.
 
 ---
 

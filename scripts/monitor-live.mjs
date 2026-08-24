@@ -105,6 +105,10 @@ const checks = [
       "<loc>https://familyboard.win/tools/storage-unit-access-inventory-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/storage-unit-access-inventory-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/storage-unit-inventory/</loc>",
+      "<loc>https://familyboard.win/tools/household-record-retrieval-drill-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-record-retrieval-drill-log/</loc>",
+      "<loc>https://familyboard.win/guides/digital-home-binder/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/digital-home-binder/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -462,6 +466,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Keep five linked records",
       "Move-out has three separate outcomes",
+    ],
+  },
+  {
+    path: "/tools/household-record-retrieval-drill-log/",
+    require: [
+      "Household Record Retrieval Drill Log",
+      'hreflang="zh-TW"',
+      "Eight statuses keep finding, currentness and disclosure separate",
+      "does not search a device",
+    ],
+  },
+  {
+    path: "/guides/digital-home-binder/",
+    require: [
+      "A digital home binder is an operating map",
+      'hreflang="zh-TW"',
+      "Build six linked layers",
+      "Current, findable and shareable are three different checks",
     ],
   },
   {
@@ -849,6 +871,24 @@ const checks = [
       'hreflang="en"',
       "一次建立五層資料",
       "退租要分成物品、空倉狀況與契約帳務",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-record-retrieval-drill-log/",
+    require: [
+      "家庭文件查找與交接演練紀錄",
+      'hreflang="en"',
+      "八種狀態把「找到」與「可安全交接」分開",
+      "不搜尋檔案",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/digital-home-binder/",
+    require: [
+      "家庭數位資料夾不是把所有檔案塞進同一個雲端硬碟",
+      'hreflang="en"',
+      "一次建立六層",
+      "查找演練不應變成交換密碼",
     ],
   },
   {

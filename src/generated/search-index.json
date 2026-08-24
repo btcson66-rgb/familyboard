@@ -816,12 +816,12 @@
     "headings": "Household documents are easier to manage when the filing system mirrors real decisions Build around household areas of responsibility, not file type Connect documents to the thing they describe, not to a generic bin Understand what the organizer actually stores Keep sensitive originals in appropriate storage Set a review date instead of guessing when to declean Test the system with someone who didn't build it"
   },
   {
-    "title": "Digital Home Binder: A Practical Structure for Home Records, Maintenance and Emergency Information",
-    "description": "Build a digital home binder that combines a household index, asset records, maintenance history, contacts and emergency information.",
+    "title": "Digital Home Binder Checklist | Records, Access, Backups and Handoff",
+    "description": "Build a digital home binder that separates record indexes, current-source pointers, access views, offline references, backups and retrieval tests.",
     "route": "/guides/digital-home-binder/",
     "cluster": "records-emergency",
-    "keywords": "digital home binder",
-    "headings": "A digital home binder should help operate the home, not merely store files The ten sections that make a binder complete Put quick-reference information before archives Use links between sections instead of duplicating data Decide what belongs in the binder versus a secure vault Keep paper where paper still helps Build it incrementally, not all at once"
+    "keywords": "digital home binder checklist",
+    "headings": "A digital home binder is an operating map, not one giant vault Start with retrieval questions, not a universal folder list Build six linked layers instead of one overloaded directory Current, findable and shareable are three different checks Test retrieval without turning the exercise into credential sharing Keep backup recovery and binder retrieval as linked but separate jobs Design a limited offline view before an emergency Version the binder around real changes Affiliate products are aids, not proof of continuity"
   },
   {
     "title": "Important Household Documents: What Deserves a Reliable Place to Live",
@@ -1646,6 +1646,14 @@
     "cluster": "tools",
     "keywords": "storage unit inventory log",
     "headings": "Storage unit access and inventory log Use a household unit reference, not a public locator Four dates define this version Keep controlling sources outside the generated result Every row contains ten fields Nine statuses separate access from inventory evidence Visit-dependent statuses need a real physical-visit date Record what changed, not who is to blame A notice draft and a delivered notice are different events Insurance is not a status the tool can decide Privacy screening supports, but cannot replace, review Stop the checklist when conditions may be dangerous Affiliate products remain separate from records and outcomes"
+  },
+  {
+    "title": "Household Record Retrieval Drill Log | Test a Digital Home Binder",
+    "description": "Create a private retrieval-drill log for household record pointers, current-source checks, offline access, minimum disclosure, corrections and retests.",
+    "route": "/tools/household-record-retrieval-drill-log/",
+    "cluster": "tools",
+    "keywords": "digital home binder audit",
+    "headings": "Household record retrieval and handoff drill log Use a household drill reference, not a person or address Four dates define what was actually tested Keep originals, permissions and credentials outside the result Every row contains ten fields Eight statuses keep finding, currentness and disclosure separate A passed retest needs an actual second observation Test an alternate route without claiming emergency readiness Preserve failed, overexposed and stale-source results Privacy screening is a backstop, not a sharing decision Affiliate products cannot turn a failed path into a pass"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-24T06:06:23.167Z
+Generated: 2026-08-24T06:38:47.108Z
 
 ## Summary
 
-- Indexable pages: 313
-- Generated HTML routes: 330
+- Indexable pages: 316
+- Generated HTML routes: 333
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 117
+- Pages without a contextual product/tool link: 119
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-24T06:06:23.167Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 27
-- tools: 87
+- records-emergency: 28
+- tools: 89
 
 ## Word-count range
 
@@ -91,6 +91,7 @@ Generated: 2026-08-24T06:06:23.167Z
 - /zh-tw/guides/appliance-replacement-planning/
 - /zh-tw/guides/cleaning-schedule/
 - /zh-tw/guides/contractor-records/
+- /zh-tw/guides/digital-home-binder/
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
@@ -145,6 +146,7 @@ Generated: 2026-08-24T06:06:23.167Z
 - /zh-tw/tools/household-annual-review-generator/
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-power-outage-event-log/
+- /zh-tw/tools/household-record-retrieval-drill-log/
 - /zh-tw/tools/household-storm-readiness-review/
 - /zh-tw/tools/household-subscription-cost-calculator/
 - /zh-tw/tools/household-water-leak-event-log/

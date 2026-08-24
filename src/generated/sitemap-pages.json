@@ -849,7 +849,7 @@
   },
   {
     "route": "/guides/digital-home-binder/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/digital-home-binder/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1752,6 +1752,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-record-retrieval-drill-log/",
+    "alternateRoute": "/zh-tw/tools/household-record-retrieval-drill-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -1975,6 +1983,13 @@
     "alternateRoute": "/guides/contractor-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/digital-home-binder/",
+    "alternateRoute": "/guides/digital-home-binder/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {
@@ -2241,6 +2256,13 @@
     "alternateRoute": "/tools/household-power-outage-event-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-record-retrieval-drill-log/",
+    "alternateRoute": "/tools/household-record-retrieval-drill-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {

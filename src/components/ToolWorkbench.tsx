@@ -3027,6 +3027,125 @@ const definitions: Record<string, Definition> = {
       return `${values.unit.trim()} — storage unit access and inventory log\nStorage context: ${values.context}\nOccupancy or placement baseline: ${formatter.format(baselineDate)}\nLast physical visit: ${visitDate ? formatter.format(visitDate) : "Not yet recorded"}\nCurrent storage-log review: ${formatter.format(reviewDate)}\nNext visit or inventory checkpoint: ${formatter.format(nextReview)}\nOpen storage events: ${openRows.length}\nReconciled, completed or handed-off events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling agreement, rate, rules, insurance, baseline, visit, notice and move-out sources: ${values.basis.trim()}\n\n${lines("Versioned storage-zone, access and inventory evidence", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable placement/visit/transfer/condition/notice/outcome fact: ${row.parts[2]} — observer/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next gap/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household index. It does not replace or amend a rental agreement, rate or fee notice, facility rule, insurance policy, property inventory, ownership or value source, access record, move-out document, notice, complaint or claim; verify a facility, owner, registration, license, zoning, building or fire compliance, unit, size, lock, access, monitoring, security, environment, property, communication or outcome; inspect a site; determine custody, negligence, liability, coverage, value, damage, waiver, claim, complaint or legal rights; calculate a payment, rate, notice, lien, auction, termination, insurance, claim or legal deadline; contact anyone; submit or authorize access, notice, payment, disposal, complaint or claim; or certify a unit as safe, covered, reconciled or empty. Preserve originals and use the current agreement, facility, responsible authority, insurer, qualified professional or emergency service that applies.`;
     },
   },
+  "household-record-retrieval-drill-log": {
+    intro:
+      "Record whether an authorized backup household role can follow the current binder index, locate a limited source, distinguish its version and preserve the intended audience boundary. This tool does not search files, validate backups or grant access.",
+    fields: [
+      text("drill", "Private household drill reference", "Use a stable household label, not a name, address, account, vulnerable person, valuable asset or exact document location.", "BINDER-DRILL-2026-A"),
+      {
+        name: "context",
+        label: "Retrieval and handoff context",
+        type: "select",
+        options: [
+          "Routine digital home binder review",
+          "Temporary household handoff",
+          "Move, device change or archive migration",
+          "Limited emergency or offline-reference review",
+          "New backup household records role",
+        ],
+      },
+      { name: "baselineDate", label: "Binder baseline version date", type: "date", value: "2026-08-20" },
+      { name: "exerciseDate", label: "First assignment or exercise date", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: "Current drill review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next correction or retest checkpoint", type: "date", value: "2026-08-31" },
+      text("basis", "Controlling catalog, current-source, audience, access, backup and offline references", "Use safe IDs or dated public-source URLs. Keep documents, permissions, credentials, backup contents and sensitive audience rules protected.", "CATALOG-C3; SOURCE-LIST-S2; AUDIENCE-A2; ACCESS-PROCESS-P1; BACKUP-VERIFY-B4; OFFLINE-O2"),
+      {
+        name: "events",
+        label: "Versioned retrieval, disclosure and retest rows",
+        type: "textarea",
+        help: "One line: ID | requested record and purpose | authorized tester role | attempt or assignment date YYYY-MM-DD | indexed pointer and current-source reference | observed retrieval result | disclosure, access or version gap and correction/closure reason | owner role | target or outcome date YYYY-MM-DD | one of the eight listed statuses. Maximum 16 lines.",
+        value: "DOC-1 | Current manufacturer manual for asset ASSET-A2 to support maintenance planning | Backup household records role | 2026-08-22 | CATALOG-C3 to MANUAL-M4; official manufacturer source captured 2026-08-20 | Located M4 through the shared index and left the protected receipt unopened | Confirm the issuer page remains current and preserve the receipt outside routine handoff | Household records owner role | 2026-08-31 | Source located—current-source review pending\nOFFLINE-1 | Minimized power-outage contact card for the household offline reference | Backup household coordinator role | 2026-08-22 | OFFLINE-O2 and AUDIENCE-A2 | Printed card was located from the agreed cabinet label and its review date was visible | Compare the limited audience and official-source pointer without adding full contact data | Household continuity owner role | 2026-08-31 | Alternate or offline route attempted—follow-up pending",
+      },
+      text("storage", "Protected originals, permissions and drill-evidence location", "Use a folder or process label, not a document, password, full address, account, identity, medical, financial, access or vulnerable-person detail.", "Household records / binder drills / BINDER-DRILL-2026-A / protected evidence"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const exerciseDate = strictIsoDate(values.exerciseDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.drill.trim()) return "Enter a private household drill reference so the exported record can be identified.";
+      if (!baselineDate) return "Enter the real binder baseline version date in YYYY-MM-DD format.";
+      if (!exerciseDate) return "Enter the real first assignment or exercise date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current drill review date in YYYY-MM-DD format.";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current drill review date cannot be in the future.";
+      if (baselineDate.getTime() > exerciseDate.getTime()) return "The binder baseline version date cannot be later than the first assignment or exercise date.";
+      if (exerciseDate.getTime() > reviewDate.getTime()) return "The first assignment or exercise date cannot be later than the current drill review date.";
+      if (!nextReview) return "Enter a real next correction or retest checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next correction or retest checkpoint cannot be earlier than the current drill review date.";
+      if (values.basis.trim().length < 12) return "Identify the controlling catalog, current-source, audience, access, backup and offline references with safe pointers.";
+      if (!values.storage.trim()) return "Enter the protected location for originals, permissions and drill evidence.";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "Add at least one retrieval prompt or observed attempt.";
+      if (eventRows.length > 16) return "One drill version supports at most 16 rows; freeze this scope and create a later dated version for more.";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Retrieval drill line ${invalidRows.map((row) => row.line).join(", ")} must contain all ten pipe-separated fields.`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Every retrieval or retest row needs a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Use 2 to 20 letters, numbers or hyphens for each row ID, such as DOC-1 or RETEST-1.";
+      const statusOrder = [
+        "Prompt assigned—retrieval attempt pending",
+        "Attempt recorded—indexed pointer not resolved",
+        "Source located—current-source review pending",
+        "Source located—minimum-disclosure review pending",
+        "Alternate or offline route attempted—follow-up pending",
+        "Gap corrected—retest pending",
+        "Retest passed—current source and audience scope linked",
+        "Limited archive or external handoff—gap and owner preserved",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `Retrieval drill line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the eight evidence statuses in the field instructions.`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[3]);
+        return !eventDate || eventDate.getTime() < exerciseDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `Retrieval drill line ${invalidEventDates.map((row) => row.line).join(", ")} needs a real assignment or attempt date from the first exercise through the current review.`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 6).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(6).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open retrieval drill line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next correction or retest checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < exerciseDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Passed, archived or handed-off drill line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from the first exercise through this review.`;
+      const missingEvidence = eventRows.filter((row) => row.parts[2].length < 4 || row.parts[4].length < 8 || row.parts[5].length < 8);
+      if (missingEvidence.length)
+        return `Retrieval drill line ${missingEvidence.map((row) => row.line).join(", ")} needs an authorized tester role, safe indexed/current-source pointer and attributable observed result.`;
+      const passedWithoutProof = eventRows.filter((row) => row.parts[9] === statusOrder[6] && !/retest/i.test(`${row.parts[1]} ${row.parts[5]} ${row.parts[6]}`));
+      if (passedWithoutProof.length)
+        return `Passed drill line ${passedWithoutProof.map((row) => row.line).join(", ")} must describe the separate observed retest rather than only the original attempt or correction.`;
+      const passedWithoutSourceOrScope = eventRows.filter((row) => row.parts[9] === statusOrder[6] && (!/(?:current|issuer|official|controlling)\s+(?:source|version)|source\s+(?:current|version)|version\s+(?:current|checked)/i.test(`${row.parts[4]} ${row.parts[5]} ${row.parts[6]}`) || !/(?:audience|scope|minimum disclosure|withheld|not opened|not copied)/i.test(`${row.parts[4]} ${row.parts[5]} ${row.parts[6]}`)));
+      if (passedWithoutSourceOrScope.length)
+        return `Passed drill line ${passedWithoutSourceOrScope.map((row) => row.line).join(", ")} must link the current or controlling source and the tested audience or minimum-disclosure scope.`;
+      const vagueActions = eventRows.filter((row) => row.parts[6].length < 10 || /^(?:done|fixed|safe|complete|accessible|verified|ready|passed|found|current|shared|no issue|none|n\/a|ok)$/i.test(row.parts[6]));
+      if (vagueActions.length)
+        return `Retrieval drill line ${vagueActions.map((row) => row.line).join(", ")} needs a specific disclosure, access or version gap and a source-based correction or closure reason—not a generic pass word.`;
+      const privacyText = [values.drill, values.basis, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, address, account, policy, claim, serial, identity or complete numeric identifier was detected. Keep it protected and use a safe pointer here.";
+      if (/password|passphrase|passcode|access code|alarm code|door code|gate code|recovery answer|recovery code|one-time code|verification code|encryption key|private key|seed phrase|full address|street address|account number|card number|bank account|routing number|social security|government id|passport number|driver license|full serial|serial number|policy number|claim number|case number|contract number|signature|date of birth|private contact|payment credential|login credential|medical record|diagnosis|medication detail|child name|school name|care schedule|vulnerable person|valuable contents|valuable item details|exact document location|exact access route|person name|customer name|resident name|legal strategy|complaint letter|remote access|document contents|backup contents|backup password|full name|identity document|financial statement|health record|power of attorney|will contents|trust contents|biometric|security answer|authenticator secret|api key|credit card|tax id|ssn|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, recovery secret, address, financial, identity, medical, child, care, access, valuable-property, legal, backup-content or private participant detail was detected. Replace it with a protected-process or source pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: eventRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
+      return `${values.drill.trim()} — household record retrieval and handoff drill\nDrill context: ${values.context}\nBinder baseline version: ${formatter.format(baselineDate)}\nFirst assignment or exercise: ${formatter.format(exerciseDate)}\nCurrent drill review: ${formatter.format(reviewDate)}\nNext correction or retest checkpoint: ${formatter.format(nextReview)}\nOpen prompts, attempts or corrections: ${openRows.length}\nPassed, archived or handed-off rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling catalog, current-source, audience, access, backup and offline references: ${values.basis.trim()}\n\n${lines("Versioned retrieval, disclosure and retest evidence", eventRows.map((row) => `${row.parts[0]} — requested record/purpose: ${row.parts[1]} — authorized tester role: ${row.parts[2]} — assignment/attempt date: ${formatter.format(strictIsoDate(row.parts[3]) as Date)} — indexed/current-source pointer: ${row.parts[4]} — observed result: ${row.parts[5]} — disclosure/access/version gap and correction/closure: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected originals, permissions and drill-evidence location: ${values.storage.trim()}\n\nThis output is a private household drill index. It does not search a browser, device, folder, cloud service or FamilyBoard database; open, copy, upload, decrypt, restore, validate, modify, delete or share any file, document, credential or backup; authenticate a source, issuer, signature, version, permission or identity; determine legal authority, consent, sufficiency, retention, coverage, ownership, access rights or emergency readiness; grant, revoke or test an account, lock, device or service; contact a household member, issuer, provider, authority or emergency service; or certify a binder, backup, handoff or household as current, secure, accessible, compliant or complete. Preserve originals, permissions and credentials in systems appropriate to them, and use current responsible sources for real decisions.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -7422,6 +7541,119 @@ const zhTwDefinitions: Record<string, Definition> = {
       const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
       const statusCounts = statusOrder.map((status) => ({ status, count: eventRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
       return `${values.unit.trim()}｜迷你倉進出與物品紀錄\n倉儲情境：${values.context}\n入住或箱位基線日：${formatter.format(baselineDate)}\n最後一次實際訪視：${visitDate ? formatter.format(visitDate) : "尚未記錄"}\n本次倉位紀錄檢視：${formatter.format(reviewDate)}\n下一次訪視或物品核對點：${formatter.format(nextReview)}\n仍開放倉位事件：${openRows.length} 筆\n已核對、完成或移交事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的契約、費率、規則、保險、基線、訪視、通知與退租來源：${values.basis.trim()}\n\n${lines("有版本的倉位、進出與物品證據", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的放入／訪視／移位／取出／狀況／通知／結果事實：${row.parts[2]}｜觀察／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一個缺口／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭倉位索引。它不取代或修改租用契約、費率或費用通知、場地規則、保單、物品清單、所有權或價值來源、門禁紀錄、退租文件、通知、申訴或理賠，不驗證業者、負責人、登記、營業資格、土地使用、建築或消防、倉位、尺寸、門鎖、門禁、監控、保全、環境、物品、溝通或結果，不檢查現場、不判定保管、疏失、責任、承保、價值、損害、放棄、理賠、申訴或法律權利，不計算繳費、調價、通知、欠租、物品處理、拍賣、終止、保險、理賠或法律期限，不聯絡任何人、不提交或授權門禁、通知、付款、處分、申訴或理賠，也不認證倉位安全、承保、已核對或已清空。請保存原件，並使用實際契約、業者、主管機關、保險、合格專業或緊急服務的現行指示。`;
+    },
+  },
+  "household-record-retrieval-drill-log": {
+    intro:
+      "記錄已有授權的備援家庭角色能否依目前資料夾索引找到有限來源、分辨版本並維持預定揭露範圍。工具不搜尋檔案、不驗證備份，也不會授予存取權。",
+    fields: [
+      text("drill", "家庭私人演練代號", "使用固定家庭代號，不要輸入姓名、完整地址、帳號、弱勢家人、貴重資產或精確文件位置。", "BINDER-DRILL-2026-A"),
+      {
+        name: "context",
+        label: "查找與交接情境",
+        type: "select",
+        options: ["一般家庭數位資料夾複查", "臨時家庭交接", "搬家、裝置更換或封存遷移", "有限防災或離線參考複查", "新增備援家庭資料角色"],
+      },
+      { name: "baselineDate", label: "資料夾基準版本日", type: "date", value: "2026-08-20" },
+      { name: "exerciseDate", label: "首次指派或演練日", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: "本次演練檢視日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "下一次修正或複測點", type: "date", value: "2026-08-31" },
+      text("basis", "控制中的目錄、目前來源、對象、存取、備份與離線索引", "使用安全代號或附日期的公開來源網址；完整文件、權限、憑證、備份內容與敏感對象規則放受保護位置。", "CATALOG-C3；SOURCE-LIST-S2；AUDIENCE-A2；ACCESS-PROCESS-P1；BACKUP-VERIFY-B4；OFFLINE-O2"),
+      {
+        name: "events",
+        label: "有版本的查找、揭露與複測列",
+        type: "textarea",
+        help: "每行：ID｜要查找的紀錄與用途｜已授權測試角色｜嘗試或指派日期 YYYY-MM-DD｜索引位置與目前來源｜實際查找結果｜揭露、存取或版本缺口及修正／結案理由｜負責角色｜目標或結果日期 YYYY-MM-DD｜八種指定狀態之一。最多 16 行。",
+        value: "DOC-1 | 找到設備 ASSET-A2 的目前原廠說明書，供保養規劃使用 | 備援家庭資料角色 | 2026-08-22 | CATALOG-C3 連到 MANUAL-M4；2026-08-20 擷取原廠官方來源 | 依共同索引找到 M4，且未開啟受保護收據 | 核對發行者頁面仍為目前控制來源，收據維持在日常交接之外 | 家庭文件負責角色 | 2026-08-31 | 已找到來源，等待最新來源核對\nOFFLINE-1 | 找到停電時使用的最小家庭離線聯絡卡 | 備援家庭協調角色 | 2026-08-22 | OFFLINE-O2 與 AUDIENCE-A2 | 依約定櫃位標籤找到紙本卡，且可看見複查日 | 核對限定對象與官方來源索引，不加入完整聯絡資料 | 家庭持續運作負責角色 | 2026-08-31 | 已嘗試替代或離線路徑，等待後續",
+      },
+      text("storage", "受保護的原件、權限與演練證據位置", "使用資料夾或流程代號，不要放文件、密碼、完整地址、帳號、身分、醫療、財務、門禁或弱勢家人資訊。", "家庭紀錄／資料夾演練／BINDER-DRILL-2026-A／受保護證據"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const exerciseDate = strictIsoDate(values.exerciseDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.drill.trim()) return "請輸入家庭私人演練代號，讓匯出結果可以辨認。";
+      if (!baselineDate) return "請用 YYYY-MM-DD 輸入真實的資料夾基準版本日。";
+      if (!exerciseDate) return "請用 YYYY-MM-DD 輸入真實的首次指派或演練日。";
+      if (!reviewDate) return "請用 YYYY-MM-DD 輸入真實的本次演練檢視日。";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次演練檢視日不能晚於今天。";
+      if (baselineDate.getTime() > exerciseDate.getTime()) return "資料夾基準版本日不能晚於首次指派或演練日。";
+      if (exerciseDate.getTime() > reviewDate.getTime()) return "首次指派或演練日不能晚於本次演練檢視日。";
+      if (!nextReview) return "請用 YYYY-MM-DD 輸入真實的下一次修正或複測點。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "下一次修正或複測點不能早於本次演練檢視日。";
+      if (values.basis.trim().length < 12) return "請用安全索引指出控制中的目錄、目前來源、對象、存取、備份與離線來源。";
+      if (!values.storage.trim()) return "請輸入原件、權限與演練證據的受保護位置。";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "請至少加入一個查找題目或實際嘗試。";
+      if (eventRows.length > 16) return "一個演練版本最多支援 16 行；請先凍結這個範圍，再另建下一個有日期版本。";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `查找演練第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整包含十個以直線分隔的欄位。`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆查找或複測列都需要不重複的 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "每個 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 DOC-1 或 RETEST-1。";
+      const statusOrder = [
+        "已指派題目，等待實際查找",
+        "已記錄嘗試，索引位置未解決",
+        "已找到來源，等待最新來源核對",
+        "已找到來源，等待最小揭露核對",
+        "已嘗試替代或離線路徑，等待後續",
+        "缺口已修正，等待另次複測",
+        "複測通過，已連結目前來源與對象範圍",
+        "有限封存或已移交外部流程，保留缺口與負責人",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `查找演練第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用欄位說明中的八種證據狀態之一。`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[3]);
+        return !eventDate || eventDate.getTime() < exerciseDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `查找演練第 ${invalidEventDates.map((row) => row.line).join("、")} 行需要介於首次演練日與本次檢視日之間的真實指派或嘗試日期。`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 6).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(6).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的查找演練第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次檢視日起，到下一次修正或複測點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < exerciseDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已通過、封存或移交的演練第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於首次演練日與本次檢視日之間的實際結果日期。`;
+      const missingEvidence = eventRows.filter((row) => row.parts[2].length < 3 || row.parts[4].length < 8 || row.parts[5].length < 8);
+      if (missingEvidence.length)
+        return `查找演練第 ${missingEvidence.map((row) => row.line).join("、")} 行需要已授權測試角色、安全的索引／目前來源位置，以及可歸屬的實際觀察結果。`;
+      const passedWithoutProof = eventRows.filter((row) => row.parts[9] === statusOrder[6] && !/複測/.test(`${row.parts[1]} ${row.parts[5]} ${row.parts[6]}`));
+      if (passedWithoutProof.length)
+        return `通過的演練第 ${passedWithoutProof.map((row) => row.line).join("、")} 行必須描述另一次實際複測，不能只寫原本嘗試或修正。`;
+      const passedWithoutSourceOrScope = eventRows.filter((row) => row.parts[9] === statusOrder[6] && (!/(?:目前|控制|發行|官方).{0,6}(?:來源|版本)|(?:來源|版本).{0,6}(?:目前|控制|核對)/.test(`${row.parts[4]} ${row.parts[5]} ${row.parts[6]}`) || !/(?:對象|範圍|最小揭露|未開啟|未複製|刻意不看)/.test(`${row.parts[4]} ${row.parts[5]} ${row.parts[6]}`)));
+      if (passedWithoutSourceOrScope.length)
+        return `通過的演練第 ${passedWithoutSourceOrScope.map((row) => row.line).join("、")} 行必須連結目前或控制來源，以及實測對象或最小揭露範圍。`;
+      const vagueActions = eventRows.filter((row) => row.parts[6].length < 8 || /^(?:完成|修好|安全|完整|可存取|已驗證|準備好|通過|已找到|最新版|已分享|沒問題|無|不用|不適用|ok)$/i.test(row.parts[6]));
+      if (vagueActions.length)
+        return `查找演練第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的揭露、存取或版本缺口，以及有來源的修正或結案理由，不能只寫通用通過詞。`;
+      const privacyText = [values.drill, values.basis, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、地址、帳號、保單、案件、序號、身分或完整數字識別。請留在受保護原件，只在這裡放安全索引。";
+      if (/密碼|通關密語|門禁碼|警報碼|驗證碼|一次性代碼|復原答案|復原碼|加密金鑰|私鑰|助記詞|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證|護照號碼|駕照號碼|完整序號|保單編號|理賠編號|案件編號|契約編號|簽名|出生日期|私人聯絡|完整付款資料|登入憑證|醫療紀錄|診斷|用藥明細|兒童姓名|學校名稱|照護行程|弱勢家人|貴重物明細|貴重品內容|精確文件位置|完整門禁路線|姓名|客戶姓名|住戶姓名|法律策略|申訴信全文|遠端控制|文件內容|備份內容|備份密碼|完整姓名|身分文件|財務報表|健康紀錄|授權書內容|遺囑內容|信託內容|生物辨識|安全答案|驗證器秘密|API 金鑰|信用卡|統一編號|password|passphrase|passcode|access code|recovery answer|recovery code|one-time code|verification code|encryption key|private key|seed phrase|full address|account number|card number|government id|passport number|driver license|full serial|serial number|policy number|claim number|case number|contract number|signature|payment credential|medical record|diagnosis|medication detail|child name|school name|care schedule|vulnerable person|valuable contents|exact document location|person name|customer name|resident name|legal strategy|complaint letter|document contents|backup contents|backup password|full name|identity document|financial statement|health record|power of attorney|will contents|trust contents|biometric|security answer|authenticator secret|api key|credit card|tax id|ssn|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、復原秘密、地址、金融、身分、醫療、兒少、照護、門禁、貴重物、法律、備份內容或私人參與者資料。請改寫成受保護流程或來源索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: eventRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
+      return `${values.drill.trim()}｜家庭文件查找與交接演練\n演練情境：${values.context}\n資料夾基準版本：${formatter.format(baselineDate)}\n首次指派或演練：${formatter.format(exerciseDate)}\n本次演練檢視：${formatter.format(reviewDate)}\n下一次修正或複測點：${formatter.format(nextReview)}\n仍開放題目、嘗試或修正：${openRows.length} 筆\n已通過、封存或移交：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的目錄、目前來源、對象、存取、備份與離線索引：${values.basis.trim()}\n\n${lines("有版本的查找、揭露與複測證據", eventRows.map((row) => `${row.parts[0]}｜要查找的紀錄／用途：${row.parts[1]}｜已授權測試角色：${row.parts[2]}｜指派／嘗試日期：${formatter.format(strictIsoDate(row.parts[3]) as Date)}｜索引／目前來源：${row.parts[4]}｜實際結果：${row.parts[5]}｜揭露／存取／版本缺口與修正／結案：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原件、權限與演練證據位置：${values.storage.trim()}\n\n這份輸出只是家庭查找演練索引。它不搜尋瀏覽器、裝置、資料夾、雲端服務或 FamilyBoard 資料庫，不開啟、複製、上傳、解密、還原、驗證、修改、刪除或分享任何檔案、文件、憑證或備份，不驗證來源、發行者、簽名、版本、權限或身分，不判定法律授權、同意、充分性、保存期限、承保、所有權、存取權或防災就緒，不授予、撤銷或測試帳戶、門鎖、裝置或服務，不聯絡家人、發行者、業者、主管機關或緊急服務，也不認證資料夾、備份、交接或家庭已最新、安全、可存取、合規或完整。請把原件、權限與憑證保存在適合的系統，真實決定使用目前負責來源。`;
     },
   },
 };

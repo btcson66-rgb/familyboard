@@ -100,6 +100,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/moving-inventory/",
     "/tools/storage-unit-access-inventory-log/",
     "/guides/storage-unit-inventory/",
+    "/tools/household-record-retrieval-drill-log/",
+    "/guides/digital-home-binder/",
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
     "/templates/printable-home-inventory-template/",
@@ -147,6 +149,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/moving-inventory/",
     "/zh-tw/tools/storage-unit-access-inventory-log/",
     "/zh-tw/guides/storage-unit-inventory/",
+    "/zh-tw/tools/household-record-retrieval-drill-log/",
+    "/zh-tw/guides/digital-home-binder/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -320,6 +324,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "迷你倉物品清單教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/storage-unit-inventory/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭文件查找演練" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/household-record-retrieval-drill-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭數位資料夾教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/digital-home-binder/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電清冊教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/appliance-inventory/");
@@ -767,6 +777,16 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/storage-unit-inventory/",
       alternate: "/guides/storage-unit-inventory/",
       heading: "迷你倉物品清單要回答「放哪裡、何時看過、後來怎麼變」",
+    },
+    {
+      route: "/zh-tw/tools/household-record-retrieval-drill-log/",
+      alternate: "/tools/household-record-retrieval-drill-log/",
+      heading: "家庭文件查找與交接演練紀錄",
+    },
+    {
+      route: "/zh-tw/guides/digital-home-binder/",
+      alternate: "/guides/digital-home-binder/",
+      heading: "家庭數位資料夾不是把所有檔案塞進同一個雲端硬碟",
     },
     {
       route: "/zh-tw/guides/purchase-receipt-organizer/",
@@ -1521,6 +1541,28 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不能早於本次檢視日",
   );
 
+  await page.goto("/tools/household-record-retrieval-drill-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open prompts, attempts or corrections: 2");
+  await expect(page.locator(".result")).toContainText("Passed, archived or handed-off rows: 0");
+  await expect(page.locator(".result")).toContainText("Source located—current-source review pending 1");
+  await page.getByLabel("Next correction or retest checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current drill review date",
+  );
+
+  await page.goto("/zh-tw/tools/household-record-retrieval-drill-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放題目、嘗試或修正：2 筆");
+  await expect(page.locator(".result")).toContainText("已通過、封存或移交：0 筆");
+  await expect(page.locator(".result")).toContainText("已找到來源，等待最新來源核對 1 筆");
+  await page.getByLabel("下一次修正或複測點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次演練檢視日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1900,6 +1942,18 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/storage-unit-inventory/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-record-retrieval-drill-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-record-retrieval-drill-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/digital-home-binder/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/digital-home-binder/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/",
