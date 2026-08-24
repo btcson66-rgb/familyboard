@@ -704,12 +704,12 @@
     "headings": "A warranty expiration date answers \"when,\" not \"what's covered\" What actually starts the clock Typical warranty term lengths, as a planning reference Registration doesn't move the start date \"Full\" and \"limited\" change what the expiration date actually guarantees Multi-year and split terms are common enough to expect Keep the original document, not just the typed term Mark an uncertain start date as an estimate"
   },
   {
-    "title": "Product Registration Tracker: Keep Household Registrations and Reference Numbers Organized",
-    "description": "Track product registrations even though they're rarely legally required for warranty coverage — because recalls, support access and transfer rules still depend on it.",
+    "title": "Product Registration Tracker: Notices, Accounts and Recall Follow-Up",
+    "description": "Track manufacturer registration evidence, account ownership, consent choices, recall-notice sources and follow-up without storing passwords or full serial numbers.",
     "route": "/guides/product-registration-tracker/",
     "cluster": "inventory-warranty",
     "keywords": "product registration tracker",
-    "headings": "Registration doesn't decide your warranty — but it still does real things What registration actually affects Record what happened, not just that you meant to do it Why recall notification specifically depends on registration Track registration state, not just registration completion Keep the account reference; skip the password Registration often comes with a marketing choice — record it if it matters to your household Not every product is worth the effort Archive, don't delete, when a product leaves the household"
+    "headings": "A product registration record is a notification map, not proof of warranty coverage Read the actual warranty instead of repeating a registration myth Registration has a special safety role for some children's products in the United States Verify the destination before giving a form personal information Use a small set of evidence states Record the minimum that another household member can verify Registration cannot replace authoritative recall checks Not every product is worth the effort Handle secondhand products and ownership changes explicitly A worked household example Commercial recommendations stay outside registration and safety status"
   },
   {
     "title": "Repair History Tracker: Know What Was Fixed, When and Whether the Problem Returned",
@@ -1590,6 +1590,14 @@
     "cluster": "tools",
     "keywords": "warranty claim tracker",
     "headings": "Warranty claim evidence log Start with one exact asset and one governing promise Record a safety check before treating the problem as routine service Write observations, not unsupported diagnoses Use six statuses that describe evidence, not optimism Preserve delivery separately from the message Give the requested outcome its own wording Keep appointments, findings and coverage positions separate Use review dates without inventing statutory periods Hand off a dispute without exposing the complaint file Protect the unredacted record Commercial content cannot enter the evidence chain"
+  },
+  {
+    "title": "Product Recall Action Log | Verify Notices and Track Remedies",
+    "description": "Create a private product-recall record for official notices, identity checks, immediate instructions, company contacts, remedy progress and completion evidence.",
+    "route": "/tools/product-recall-action-log/",
+    "cluster": "tools",
+    "keywords": "product recall tracker",
+    "headings": "Product recall action log Start from an authority or manufacturer source, not a forwarded headline Immediate instructions do not wait for perfect household paperwork Compare the exact scope without exposing the full identifier Seven statuses keep uncertainty visible Give each action one source and one owner Preserve what the remedy actually requires Keep product registration, warranty and recall files connected but separate Secondhand, donated and sold products need an honest status Escalate a stalled US remedy without rewriting the history Protect the record before sharing it Commercial recommendations stay outside safety actions"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

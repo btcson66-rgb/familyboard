@@ -88,6 +88,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/home-improvement-receipts/",
     "/tools/warranty-claim-evidence-log/",
     "/guides/how-to-track-product-warranties/",
+    "/tools/product-recall-action-log/",
+    "/guides/product-registration-tracker/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -121,6 +123,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/home-improvement-receipts/",
     "/zh-tw/tools/warranty-claim-evidence-log/",
     "/zh-tw/guides/how-to-track-product-warranties/",
+    "/zh-tw/tools/product-recall-action-log/",
+    "/zh-tw/guides/product-registration-tracker/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -266,8 +270,14 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     page.locator(".site-footer").getByRole("link", { name: "產品保固申請紀錄表" }),
   ).toHaveAttribute("href", "/zh-tw/tools/warranty-claim-evidence-log/");
   await expect(
+    page.locator(".site-footer").getByRole("link", { name: "產品召回處置紀錄表" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/product-recall-action-log/");
+  await expect(
     page.locator(".site-footer").getByRole("link", { name: "保固申請與追蹤教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/how-to-track-product-warranties/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "產品註冊與召回教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/product-registration-tracker/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
@@ -460,6 +470,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       heading: "產品保固怎麼整理：先建立證據鏈，再處理報修申請",
     },
     {
+      route: "/zh-tw/guides/product-registration-tracker/",
+      alternate: "/guides/product-registration-tracker/",
+      heading: "產品註冊與召回通知怎麼整理？台灣家庭查核流程",
+    },
+    {
       route: "/zh-tw/guides/organize-household-subscriptions/",
       alternate: "/guides/organize-household-subscriptions/",
       heading: "家庭訂閱管理教學：在自動續約前看見費用、日期與負責人",
@@ -637,6 +652,11 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/warranty-claim-evidence-log/",
       alternate: "/tools/warranty-claim-evidence-log/",
       heading: "產品保固申請證據紀錄表",
+    },
+    {
+      route: "/zh-tw/tools/product-recall-action-log/",
+      alternate: "/tools/product-recall-action-log/",
+      heading: "產品召回處置紀錄表",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -1215,6 +1235,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "目標日必須從本次檢視日起",
   );
 
+  await page.goto("/tools/product-recall-action-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open actions: 2");
+  await expect(page.locator(".result")).toContainText("Completed, not affected or no longer held: 0");
+  await expect(page.locator(".result")).toContainText("does not search current recalls");
+  await page.getByLabel("Versioned recall action rows").fill(
+    "RC-1 | Official match response | Manufacturer source confirmed the protected unit is included and linked the current remedy instruction | Manufacturer recall role | 2026-08-23 | RESPONSE-RC1 | Preserve the current instruction and request the next attributed remedy step | Household asset owner | 2026-08-22 | Affected status confirmed—official source linked",
+  );
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "needs a target date from this review",
+  );
+
+  await page.goto("/zh-tw/tools/product-recall-action-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放行動：2 筆");
+  await expect(page.locator(".result")).toContainText("已完成、未受影響或家庭已不持有：0 筆");
+  await expect(page.locator(".result")).toContainText("不查詢現行召回");
+  await page.getByLabel("有版本的召回處置行動").fill(
+    "RC-1 | 官方比對回覆 | 業者來源確認受保護產品在公告範圍並連結現行改善指示 | 業者召回角色 | 2026-08-23 | RESPONSE-RC1 | 保存現行指示並要求下一個有來源的改善步驟 | 家庭資產負責人 | 2026-08-22 | 已確認受影響，連結官方來源",
+  );
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "目標日必須從本次複查日起",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1537,6 +1583,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/warranty-claim-evidence-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/product-recall-action-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/product-recall-action-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/product-registration-tracker/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",

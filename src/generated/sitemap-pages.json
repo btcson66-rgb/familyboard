@@ -737,7 +737,7 @@
   },
   {
     "route": "/guides/product-registration-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/product-registration-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1696,6 +1696,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/product-recall-action-log/",
+    "alternateRoute": "/zh-tw/tools/product-recall-action-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2262,6 +2270,20 @@
     "alternateRoute": "/features/private-family-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/product-recall-action-log/",
+    "alternateRoute": "/tools/product-recall-action-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/product-registration-tracker/",
+    "alternateRoute": "/guides/product-registration-tracker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-23",
     "locale": "zh-TW"
   },
   {

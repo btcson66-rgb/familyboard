@@ -86,6 +86,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/home-improvement-receipts/</loc>",
       "<loc>https://familyboard.win/tools/warranty-claim-evidence-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/warranty-claim-evidence-log/</loc>",
+      "<loc>https://familyboard.win/tools/product-recall-action-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/product-recall-action-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/product-registration-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -334,6 +337,32 @@ const checks = [
       'hreflang="zh-TW"',
       "Separate the six evidence layers",
       "consumer.ftc.gov/articles/warranties",
+    ],
+  },
+  {
+    path: "/tools/product-recall-action-log/",
+    require: [
+      "Product Recall Action Log",
+      'hreflang="zh-TW"',
+      "Seven statuses keep uncertainty visible",
+      "does not search live recall databases",
+    ],
+  },
+  {
+    path: "/guides/product-registration-tracker/",
+    require: [
+      "A product registration record is a notification map",
+      'hreflang="zh-TW"',
+      "Read the actual warranty instead of repeating a registration myth",
+      "cpsc.gov/FAQ/Registration-Forms",
+    ],
+  },
+  {
+    path: "/guides/warranty-expiration/",
+    require: [
+      "A warranty expiration date answers",
+      "Do not assume registration is always irrelevant or always decisive",
+      "full warranty",
     ],
   },
   {
@@ -595,6 +624,24 @@ const checks = [
       'hreflang="en"',
       "先把六層資料分開",
       "商品安全資訊網",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/product-recall-action-log/",
+    require: [
+      "產品召回處置紀錄表",
+      'hreflang="en"',
+      "七種狀態保留真正的不確定性",
+      "不會連線查召回",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/product-registration-tracker/",
+    require: [
+      "產品註冊與召回通知怎麼整理",
+      'hreflang="en"',
+      "先把四種不同事情拆開",
+      "商品召回訊息列表",
     ],
   },
   {

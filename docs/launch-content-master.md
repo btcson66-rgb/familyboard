@@ -5971,6 +5971,7 @@ A future affiliate area may show clearly labelled scanners, storage media, label
 **Title tag:** `Warranty Expiration: How to Track the Date Without Assuming Coverage`
 **Meta description:** `Understand what actually starts a warranty clock, how long common product categories typically run, and why the calculated date is a planning aid, not a coverage decision.`
 **Primary keyword concept:** warranty expiration date
+**Content version:** 2
 **Depth:** verified
 **Suggested internal links:** `/tools/warranty-expiration-calculator/`, `/features/warranty-tracker/`, `/guides/how-to-track-product-warranties/`, `/guides/repair-history/`
 
@@ -5987,7 +5988,7 @@ Warranty terms don't all start from the same event, and the difference matters:
 | Purchase date | Most retail electronics and appliances bought off the shelf |
 | Delivery date | Larger appliances and furniture, especially when delivery happens days or weeks after purchase |
 | Installation date | HVAC systems, water heaters and built-in appliances installed by a contractor |
-| Registration date (for extended terms only) | Promotional warranty extensions some manufacturers offer — not the base warranty itself |
+| Registration date, if the written terms make it relevant | A recorded registration can support a service step or optional extension, but the exact written warranty and jurisdiction control the effect |
 
 A household that assumes "purchase date" when the manufacturer actually measures from installation can end up thinking a warranty has more time left than it does, or less. Recording which trigger applies — not just typing in a date — is what keeps the calculation honest.
 
@@ -5997,7 +5998,7 @@ Terms vary by manufacturer and product, and the written document always governs,
 
 ## Registration doesn't move the start date
 
-It's worth repeating here because it directly affects this calculation: under the Magnuson-Moss Warranty Act, a manufacturer cannot make the base warranty's validity depend on registration — coverage runs from purchase (or delivery, or installation, per the terms), whether or not a registration card was ever submitted. See the [warranty-tracking guide](/guides/how-to-track-product-warranties/) for more on what the law actually requires as proof.
+Do not assume registration is always irrelevant or always decisive. In the United States, the FTC's business guidance says requiring a returned registration card is an unreasonable precondition for a **full** warranty; a limited warranty can contain duties that a full warranty cannot. The FTC's current consumer guidance also says some warranties may require a registration card before service. Read the actual designation and terms, preserve the version that applied to the purchase and record registration separately from the date calculation. See the [warranty-tracking guide](/guides/how-to-track-product-warranties/) for the evidence workflow.
 
 ## "Full" and "limited" change what the expiration date actually guarantees
 
@@ -6021,7 +6022,7 @@ If you're not sure whether a warranty started at purchase or at a later installa
 - Q: Does a warranty always start on the purchase date?
   A: Not always. Most retail purchases do start the clock at purchase, but larger appliances are sometimes measured from delivery, and installed systems like HVAC or water heaters are often measured from installation instead. Recording which trigger actually applies matters more than the calculation itself.
 - Q: Does registering a product move up or extend when the warranty starts?
-  A: No — under the Magnuson-Moss Warranty Act, the base warranty can't be made conditional on registration, and it runs from purchase, delivery or installation regardless of whether registration happened. Some manufacturers offer a separate, optional extended term tied to registering, but that's a different, additional benefit, not the base warranty's start date.
+  A: Not automatically. The written terms may use purchase, delivery, installation, registration or another event, and a promotion may add separate coverage. In the United States, registration cannot be treated as a universal rule: FTC guidance distinguishes duties permitted in limited warranties from the stricter requirements for full warranties. Record the actual term and source instead of assuming either outcome.
 - Q: How long do most appliance and electronics warranties actually last?
   A: A one-year manufacturer's parts-and-labor warranty is a common default for both major appliances and consumer electronics, sometimes with a longer secondary term on one specific component. The written terms for your exact product always govern — treat this as what to expect, not a guarantee.
 - Q: What should I do if I'm not sure when a warranty actually started?
@@ -6031,63 +6032,111 @@ If you're not sure whether a warranty started at purchase or at a later installa
 
 ## Page 093 — Product Registration Tracker
 **Slug:** `/guides/product-registration-tracker/`
-**Primary intent:** track whether household products were registered
-**Title tag:** `Product Registration Tracker: Keep Household Registrations and Reference Numbers Organized`
-**Meta description:** `Track product registrations even though they're rarely legally required for warranty coverage — because recalls, support access and transfer rules still depend on it.`
+**Primary intent:** document manufacturer registration, notification and recall-follow-up evidence
+**Title tag:** `Product Registration Tracker: Notices, Accounts and Recall Follow-Up`
+**Meta description:** `Track manufacturer registration evidence, account ownership, consent choices, recall-notice sources and follow-up without storing passwords or full serial numbers.`
 **Primary keyword concept:** product registration tracker
+**Content version:** 2
 **Depth:** verified
-**Suggested internal links:** `/guides/how-to-track-product-warranties/`, `/guides/appliance-inventory/`, `/guides/warranty-expiration/`, `/features/home-inventory-tracker/`
+**Suggested internal links:** `/tools/product-recall-action-log/`, `/guides/how-to-track-product-warranties/`, `/guides/appliance-inventory/`, `/features/home-inventory-tracker/`
 
-# Registration doesn't decide your warranty — but it still does real things
+# A product registration record is a notification map, not proof of warranty coverage
 
-It's worth starting with what registration is *not*: under the Magnuson-Moss Warranty Act, a manufacturer cannot make a product's base warranty conditional on registration — coverage runs from purchase whether or not the registration form ever gets submitted. That fact tends to make registration feel optional to the point of not mattering. It isn't quite that simple, because registration does control a few things that a receipt alone doesn't.
+A registration confirmation can show that a manufacturer received contact and product information on a particular date. It may help the manufacturer send a recall or safety notice, connect the product to an account, enable a support portal or document an optional promotion. It does **not**, by itself, prove which warranty applies, establish that a product is safe, show that a later notice reached the household or confirm that a recall remedy was completed.
 
-## What registration actually affects
+The useful record therefore has two layers. The registration layer answers who registered what, through which verified channel and with what confirmation. The safety-notice layer records where the household checks authoritative notices and what happened when a specific notice appeared. Keeping the layers separate avoids a dangerous assumption: `registered` does not mean `all recalls automatically handled`.
 
-- **Recall notifications**: manufacturers use registration data to contact owners directly when a safety recall is issued — without it, you're relying on general news coverage or checking the manufacturer's site yourself.
-- **Support and account access**: some manufacturers tie online support portals, firmware updates, or app-based device management to a registered account.
-- **Promotional extended coverage**: distinct from the base warranty, some brands offer an extra few months or years of coverage specifically as a registration incentive — a real benefit, but an addition to the legally required warranty, not a substitute for it.
-- **Transfer and resale rules**: a few manufacturers structure warranty transfer to a new owner around whichever account the product is registered under.
+## Read the actual warranty instead of repeating a registration myth
 
-## Record what happened, not just that you meant to do it
+Registration and warranty rules are not one universal yes-or-no proposition. The US Federal Trade Commission's current [consumer warranty guidance](https://consumer.ftc.gov/articles/warranties) says some warranties may require a returned registration card before warranty service. Its [business guidance on federal warranty law](https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law) explains the narrower point: requiring a registration card is an unreasonable precondition for a warranty designated **full**, while limited warranties can contain duties that would keep them from qualifying as full.
 
-For each significant purchase, note whether it was registered, the date, which household member's account it's under, and any confirmation or reference number the manufacturer provided. This is the kind of task that's easy to complete in the moment and easy to lose track of a year later — a household record turns "I think I registered that" into a checkable fact.
+That is US-specific information, not a global rule and not a coverage opinion for one purchase. Save the written warranty version available before or at purchase, its full-or-limited designation when applicable, the section that mentions registration, and the evidence of any completed step. A form labelled `registration` might support recall contact, a warranty procedure, an optional extension, an app account or marketing; the label alone does not tell you which.
 
-## Why recall notification specifically depends on registration
+## Registration has a special safety role for some children's products in the United States
 
-Of everything registration affects, the recall case is the one with the clearest stakes. A manufacturer that issues a safety recall typically relies on its registered-owner list to reach people directly by mail or email; unregistered purchasers are left to notice the recall through news coverage, a retailer's own notification (if the retailer keeps that data and chooses to use it), or by actively checking a manufacturer's site. For a major appliance or a child-safety-relevant product, that gap between "the manufacturer could reach me" and "the manufacturer has no way to reach me" is the practical reason registration is worth doing even though it isn't legally tied to the warranty.
+The US Consumer Product Safety Commission's current [registration-form FAQ](https://www.cpsc.gov/FAQ/Registration-Forms) says covered durable infant and toddler products must include registration forms so manufacturers or retailers can contact registrants about recalls or other safety information. For this regulated category, the firm must keep registrant contact information for that safety purpose and cannot use it for marketing or promotion.
 
-## Track registration state, not just registration completion
+That specific rule should not be generalized to every household product. It does show why a registration receipt can matter: direct notification is a distinct safety channel. If a household receives one of these cards, use the printed manufacturer and permanent product marking, follow the official registration destination and preserve a safe confirmation pointer. Do not copy the full address, telephone, email or child-related details into a broadly shared household export.
 
-A product can be in more than one useful state: never registered, registered directly with the manufacturer, or registered through a retailer's own program (some retailers register extended-protection-plan purchases automatically at checkout). Recording which of these applies — rather than a single yes/no checkbox — avoids the situation where a household assumes a product is registered because the retailer mentioned something at checkout, when in fact no registration reached the manufacturer at all.
+## Verify the destination before giving a form personal information
 
-## Keep the account reference; skip the password
+A search result, QR code, marketplace message or postcard can lead to a look-alike registration page. Start from the manufacturer's official website printed in the manual, packaging or responsible authority notice. Confirm the domain and product identity before entering contact information. A page that asks for payment credentials, a remote-access session, an account password or unrelated identity documents is not something a household tracker should normalize.
 
-A record that says "registered under Alex's Samsung account" is exactly as useful as one with the account password in it, for tracking purposes — and far safer. Store the account owner or reference, and keep the actual credential in a password manager, not the household inventory.
+Record which fields the form requested and why, especially when safety registration and marketing consent appear in the same journey. Save the consent choice as its own fact. `Safety notices accepted; marketing declined` is more useful than `registered online`, because a later household member can understand what contact was expected without reopening the account.
 
-## Registration often comes with a marketing choice — record it if it matters to your household
+## Use a small set of evidence states
 
-Registering a product frequently involves an opt-in (or opt-out) for marketing communications and sometimes broader data sharing. If a household wants to track which registrations came with marketing consent, that's a reasonable field to add — it's a real choice made at registration time, distinct from the registration itself. It's also worth noting which channel the registration used, since manufacturer web forms, mailed cards and app-based registration can carry different marketing defaults, and a household that registers several products over the years can otherwise end up with no memory of which ones opted into which kind of contact.
+A single checkbox hides too much. A practical product-registration tracker can use these states:
+
+1. **Not reviewed:** the household has not yet checked whether a useful manufacturer registration channel exists.
+2. **Not offered or not selected:** the household found no official form or intentionally chose not to submit it, with a dated reason.
+3. **Submitted—receipt pending:** a form was sent, but no attributable confirmation exists yet.
+4. **Confirmed—source linked:** the manufacturer receipt, email or account view is saved by protected pointer.
+5. **Change pending:** ownership, contact channel or account needs an update under the manufacturer's current process.
+6. **Archived—product left household:** the record preserves the exit date and transfer or disposal pointer without pretending the manufacturer updated its system.
+
+The state describes household evidence, not the manufacturer's database. A successful web screen may support submission; only an attributable confirmation or later account view supports the stronger `confirmed` state.
+
+## Record the minimum that another household member can verify
+
+For each product worth tracking, preserve:
+
+- a private asset ID pointing to the complete model, serial or date-code record;
+- the manufacturer or responsible brand and the official registration-channel source;
+- purchase, delivery or manufacture evidence relevant to the form;
+- the registration purpose shown by the source;
+- the submitting household role and channel;
+- the submission date, confirmation date and protected receipt pointer;
+- the account owner **role**, not the account password or recovery answers;
+- marketing or safety-contact consent choices when material;
+- the next date for an intentional safety-notice review; and
+- an archive, transfer or disposal pointer when the product leaves.
+
+Use `ASSET-C1`, `REG-C1` and `NOTICE-C1` as safe cross-references. Store complete identifiers and personal contact data in the protected original. A shared tracker should not contain a full serial number, home address, telephone, email, password, order number or child information.
+
+## Registration cannot replace authoritative recall checks
+
+The CPSC [recalls and product safety warnings database](https://www.cpsc.gov/Recalls) says recall data is updated as announcements and remedy availability change. A household should therefore keep a direct authority source and manufacturer recall page in its review plan even when a product was registered. Contact data can become outdated, a used item may never have been transferred, a notice may be filtered, and not every safety warning has an individually registered-owner list.
+
+When a notice appears, compare the exact brand, model, date code, manufacturing range and other identifiers stated by the notice. A similar product name is not a match. If a current official notice says to stop using, isolate, return, repair, update, destroy or dispose of a product, follow that source rather than a generic household checklist. Record the process separately in the [product recall action log](/tools/product-recall-action-log/).
+
+Absence from one search is not a safety certification. It only records that the named source was checked on the named date and no matching notice was located by that method. Product-specific damage, unusual heat, smoke, gas, electrical behavior or injury concerns still require the manufacturer, responsible authority, emergency guidance or a qualified professional.
 
 ## Not every product is worth the effort
 
-Registration takes a few minutes per product, and for a $15 kitchen gadget with no realistic recall risk and no manufacturer ecosystem to speak of, that effort rarely pays off. It earns its place for products where a recall would actually matter for household safety (child-related equipment, major appliances, anything with a battery or heating element), for expensive electronics where extended-coverage promotions are common, and for anything installed permanently enough that a future owner might ask "was this ever registered?" during a resale. Treat registration the same way the rest of a household inventory treats any record: worth doing where it has a real, specific reason, not as a blanket habit applied to everything that comes through the door.
+Prioritize products where direct safety notice matters, identifiers are difficult to recover or the manufacturer actually offers a useful account process. Examples include covered infant or toddler products, major appliances, installed equipment, products with batteries or heating elements, accessibility or safety equipment and expensive electronics with firmware or service records. That list is a prioritization aid, not a declaration that unlisted items are risk-free.
 
-## Archive, don't delete, when a product leaves the household
+For a low-value item with no official registration channel, the better record may be a private asset ID, receipt pointer and scheduled authoritative recall search. Do not submit personal information to an unofficial form merely to make every inventory row say `registered`.
 
-When a registered product is sold, donated or disposed of, archive its registration record along with the rest of its asset history rather than deleting it. A registration reference number can still matter after the fact — for a recall notice on a unit you no longer own but might be asked about, for instance — even though the product is no longer part of the household's active inventory.
+## Handle secondhand products and ownership changes explicitly
 
-**Contextual CTA:** Add a registration-status field to major purchases so nobody has to search old confirmation emails to remember whether it was ever completed.
+A secondhand product does not inherit proof that the current household can be contacted. Check the permanent product markings, current manufacturer process and current safety authority database. If the manufacturer permits an ownership or contact update, preserve the new confirmation. If it does not, document the source checked and keep an independent recall-review route.
+
+When selling, donating or disposing of a product, do not simply delete its record. Archive the household exit date, recipient **role** or disposal source, any official instruction that affected transfer and the attempt to update manufacturer registration. A product subject to a stop-use or do-not-sell instruction must be handled according to that notice; a generic `donated` status is not a safe workaround.
+
+## A worked household example
+
+A household buys a stroller and records `ASSET-ST1`, the permanent model and manufacture-date label in a protected file, the purchase receipt pointer and the official registration URL printed by the manufacturer. The registration confirmation arrives under `REG-ST1`; the shared tracker says only `household caregiver account role`, not the email or password. Marketing was not selected, and the next CPSC and manufacturer recall review is assigned for the household's annual child-equipment check.
+
+Months later, a retailer email mentions a similar stroller. The family does not mark the item affected from the email subject. It opens the current CPSC and manufacturer notices, compares the protected model and date code, and records the comparison source. If the exact unit is included, it moves the response into a separate recall action log and follows the notice immediately. The original registration record remains useful, but it never substitutes for that exact comparison.
+
+## Commercial recommendations stay outside registration and safety status
+
+A future affiliate area may show clearly labelled label makers, document storage, scanners or replacement products outside the tracker. It cannot choose a registration destination, preselect consent, declare a product affected or unaffected, recommend continued use, mark a remedy complete or imply that a purchase changes warranty or recall rights.
+
+**Contextual CTA:** Record the official registration source and safe confirmation pointer, then schedule an independent recall-source review instead of relying on registration alone.
 
 **FAQ:**
-- Q: If registration isn't required for warranty coverage, why track it at all?
-  A: Because registration still controls things a warranty doesn't: recall notifications go to registered owners directly, some manufacturers tie support or firmware access to a registered account, and a few offer bonus coverage specifically as a registration incentive. None of that is automatic without the registration step.
+- Q: Does product registration prove my warranty is valid?
+  A: No. It proves only what the confirmation actually shows. Read the written warranty and applicable law. US FTC guidance distinguishes full from limited warranties and does not support a universal claim that registration always matters or never matters.
 - Q: What should a product registration record actually contain?
-  A: Whether it was registered, the date, which household member's account it's under, and any confirmation or reference number provided. That's enough to answer "did we register this?" definitively instead of relying on memory or searching old emails.
+  A: Keep a private asset pointer, verified manufacturer channel, stated purpose, submission and confirmation dates, protected receipt pointer, account-owner role, consent choice, next recall-review date and later archive or transfer evidence. Keep full identifiers and contacts out of the shared copy.
 - Q: Should I store my manufacturer account password in the registration tracker?
-  A: No. Record which account a product is registered under — "registered under Alex's account" — and keep the actual password in a dedicated password manager. The household record only needs the reference, not the credential.
+  A: No. Record the account-owner role and protected password-manager pointer. Do not store passwords, recovery answers, one-time codes or full contact details in a household registration export.
+- Q: If a product is registered, do I still need to check recalls?
+  A: Yes. Registration is one possible notification channel, not a safety monitor or completion certificate. Use the current responsible authority and manufacturer sources, compare exact identifiers and follow the notice that applies.
 - Q: What happens to a registration record after a product is sold or discarded?
-  A: Archive it along with the rest of that item's history rather than deleting it. A recall or manufacturer inquiry can still reference a registration for a product the household no longer owns, so the record retains some value even after the item is gone.
+  A: Archive the exit date, transfer or disposal source and any manufacturer-update attempt. If an official notice limits sale, donation, use or disposal, follow that notice instead of treating a household archive label as permission.
 
 ---
 
@@ -13359,6 +13408,126 @@ A future affiliate area may show clearly labelled scanners, storage products, sh
   A: No. It is an internal checkpoint. Verify contractual, statutory, regulatory and complaint-process periods from the current responsible source for the transaction.
 - Q: When should a claim row be closed?
   A: Only when the outcome source and the household's closure reason or post-service observation are linked. A provider acknowledgement, appointment or return shipment alone is not a completed outcome.
+
+---
+
+## Page 213 — Product Recall Action Log
+**Slug:** `/tools/product-recall-action-log/`
+**Primary intent:** verify a product safety notice and track the household response without deciding safety
+**Title tag:** `Product Recall Action Log | Verify Notices and Track Remedies`
+**Meta description:** `Create a private product-recall record for official notices, identity checks, immediate instructions, company contacts, remedy progress and completion evidence.`
+**Primary keyword concept:** product recall tracker
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Suggested internal links:** `/guides/product-registration-tracker/`, `/tools/warranty-claim-evidence-log/`, `/guides/appliance-inventory/`, `/guides/serial-number-tracker/`
+
+# Product recall action log
+
+A recall email or news story is not the end of a household safety task. Someone still has to find the authoritative notice, compare the exact product identifiers, follow any immediate instruction, contact the named company or authority, preserve the remedy evidence and confirm what happened afterward. Those steps may span days or months and should not disappear into one inbox thread.
+
+This free browser tool creates a versioned action record. It keeps the notice source, identity-comparison evidence, household actions, company responses and remedy outcome distinct. It does not search live recall databases, inspect a product, decide whether a unit is affected or tell anyone to use, unplug, move, repair, destroy, return or dispose of an item. Only the current official notice and responsible sources can provide those instructions.
+
+**Working on a notice now? [Jump to the Product Recall Action Log](#tool-heading).**
+
+## Start from an authority or manufacturer source, not a forwarded headline
+
+Treat a retailer email, social post, marketplace message or family chat as a lead. Find the notice on the responsible product-safety authority and the manufacturer's verified recall page. In the United States, use the [CPSC recalls and product safety warnings database](https://www.cpsc.gov/Recalls). Its current page notes that recall data and remedy availability can change, which is why the tool asks for both the notice date and the date the household reviewed that exact version.
+
+Record a safe notice ID, public URL, issuing authority or company role, publication or update date and the specific hazard and consumer-action sections. Do not shorten `stop using immediately` to `monitor for now`, or copy an old remedy from a third-party article when the official page has changed.
+
+The manufacturer's page is useful for current claim forms, contact channels and logistics. The authority notice establishes the public recall or safety warning. Preserve both when available instead of treating either one as a substitute for the other.
+
+## Immediate instructions do not wait for perfect household paperwork
+
+If the current notice says to stop using, unplug, isolate, keep away from children, avoid sale or donation, return the product or follow another precaution, follow that source first. Do not keep operating a product to reproduce the defect, take a better video or finish this form. If there is smoke, fire, gas, electric shock, injury, poisoning or another urgent condition, use the appropriate emergency and medical resources rather than a web tracker.
+
+Record the household action afterward with an attributable date and source pointer. The tool deliberately cannot generate a universal `safe shutdown` checklist because touching, moving, disconnecting or disposing of different products can create different hazards.
+
+## Compare the exact scope without exposing the full identifier
+
+Many notices apply to only certain models, batches, date codes, serial ranges, colors, sizes, sellers or production windows. A matching brand or marketing name is not enough. The CPSC's [recall remedy complaint guidance](https://www.cpsc.gov/form/recall-complaint-form) tells consumers to pay close attention to model numbers and product information because only specific batches may be included.
+
+Keep the complete label photograph, serial, order number and purchase details in protected evidence. In the shareable log, use a pointer such as `ASSET-P7/LABEL-2` and write only the comparison conclusion that an attributable source supports: `manufacturer lookup returned affected on 2026-08-23` or `authority notice range compared; protected model falls outside listed range`. The tool cannot reproduce the comparison and does not certify either result.
+
+If the identifier is missing, unreadable or unsafe to access, use `Identity check pending` and assign the next responsible source. Do not choose `Not affected` merely because the label cannot be found.
+
+## Seven statuses keep uncertainty visible
+
+Each action row uses one evidence state:
+
+1. **Notice captured—identity check pending:** an authoritative notice is saved, but the household has not completed an attributable unit comparison.
+2. **Identity comparison underway—source linked:** the relevant protected identifiers and comparison source are linked; no final affected-status claim is made.
+3. **Affected status confirmed—official source linked:** the responsible authority or manufacturer source confirms that the unit is included and its current instructions are preserved.
+4. **Official remedy underway—evidence linked:** the household started the stated return, repair, replacement, refund, update, disposal or other remedy and linked delivery or provider evidence.
+5. **Official remedy completed—outcome linked:** the outcome source and a dated household close-out check are preserved.
+6. **Not affected—comparison source linked:** an exact comparison source supports exclusion from this notice; this is not a general safety certificate.
+7. **No longer held—transfer or disposal pointer linked:** the household no longer possesses the item and preserves when and how that happened, plus any notice-specific restriction or follow-up.
+
+The first four statuses remain open. Their target dates must fall between the current review and the next household checkpoint. The last three use an actual completion, comparison or exit date between the notice date and current review. These are household workflow dates, not regulatory, contractual, claim or limitation periods.
+
+## Give each action one source and one owner
+
+Use the ten-field row format:
+
+`ID | action type | attributable instruction, comparison, request, response or outcome | actor or source role | action date | protected evidence pointer | next step or closure reason | owner role | target or outcome date | status`
+
+A row should describe one change. `RC-1` might capture the official notice, `RC-2` the protected identity comparison, `RC-3` an immediate stop-use action, `RC-4` the manufacturer remedy request, and `RC-5` a shipment, visit or outcome. Do not collapse all five into `recall handled`.
+
+Role labels such as `household asset owner`, `CPSC notice`, `manufacturer recall team` and `authorized service role` make the record shareable. Full names, email addresses, phone numbers, shipping addresses, case numbers, tracking numbers and account credentials belong behind protected pointers.
+
+## Preserve what the remedy actually requires
+
+Recall remedies are not interchangeable. The CPSC database describes repair, replacement, refund, disposal and new-instruction remedies, and an individual notice may add a required photo, label, order reference, return route, software update or authorized-service step. Copy the exact current requirement into protected evidence and summarize it without changing the meaning.
+
+Do not improvise destruction or disposal. Some notices tell consumers to cut a cord, mark a product, remove a component or submit a photograph, while others require a return or special waste route. Those steps can be unsafe or can destroy evidence when borrowed from the wrong notice. The tool records the action named by the specific source; it never generates one.
+
+A refund request is not a refund. A return label is not a delivered parcel. A service appointment is not a completed repair. A software-update prompt is not confirmation that the target version installed. Record each source separately and close only after the stated outcome and household recheck are linked.
+
+## Keep product registration, warranty and recall files connected but separate
+
+Registration may help a manufacturer contact an owner. A warranty may describe coverage for defects. A recall or product safety warning gives notice-specific safety and remedy instructions. These workflows can involve the same product but do not prove one another.
+
+Link the registration record from the [product registration tracker guide](/guides/product-registration-tracker/) and keep any ordinary service claim in the [warranty claim evidence log](/tools/warranty-claim-evidence-log/). The recall log should retain the official notice and remedy history even when the remedy uses a support portal that looks like a warranty case.
+
+## Secondhand, donated and sold products need an honest status
+
+For a used product, start with the product's permanent markings and current authority notice rather than assuming a prior owner registered it. If the exact unit is affected, follow the notice. Do not sell or donate it when the notice prohibits transfer or requires another action.
+
+If the household already sold, donated or discarded the item before learning about a notice, record the exit date and safe transfer or disposal pointer. Preserve any attempt to notify the current holder or responsible source without placing the recipient's identity in the shared log. `No longer held` does not prove that the safety issue was resolved; it identifies who or what process owns the next question.
+
+## Escalate a stalled US remedy without rewriting the history
+
+The CPSC maintains a [recall remedy complaint form](https://www.cpsc.gov/form/recall-complaint-form) for consumers who already contacted a company and are having trouble obtaining the offered remedy or believe the company is unresponsive. Its guidance recommends confirming the exact product match, submitting requested documentation, continuing to contact the company and understanding the remedy stated in the recall.
+
+If that path is relevant, create a separate protected complaint file and leave only a safe handoff pointer in the household log. FamilyBoard does not submit the form, determine whether a complaint is appropriate, calculate a deadline or evaluate the merits. Outside the United States, use the responsible local authority and current process.
+
+## Protect the record before sharing it
+
+The tool screens common patterns for complete contact details, addresses, account and payment data, credentials, government identifiers, case and tracking numbers, full serial numbers, signatures and complaint material. Pattern screening cannot catch every sensitive fact. Review the output manually before downloading, printing or sharing it.
+
+Keep the unredacted notice, label photos, purchase and registration records, company messages, shipping evidence, service documents and outcome photographs in protected storage. Browser-only processing means FamilyBoard does not receive or back up the entries.
+
+## Commercial recommendations stay outside safety actions
+
+A future affiliate area may display clearly labelled document storage, label makers, shipping supplies or replacement products beside the article. It cannot select a notice, infer a product match, tell someone to continue using an item, change an official remedy, choose a service provider, mark completion or imply that buying through a link improves recall treatment.
+
+**Next step:** save the current authority and manufacturer notices, follow any immediate instruction, then add one dated row for every identity check, household action, provider response and remedy outcome.
+
+**Contextual CTA:** Build the versioned recall record in your browser and leave uncertain matches open until an attributable source supports the status.
+
+**FAQ:**
+- Q: Does this tool tell me whether my product is recalled?
+  A: No. It does not search live databases or compare identifiers. Use the current responsible authority and manufacturer notice, keep full identifiers protected and record the attributable comparison result.
+- Q: Can I continue using a product while I complete the log?
+  A: The tool cannot answer that. Follow the current notice immediately. Do not delay a stop-use, isolation, return or other safety instruction merely to collect more household evidence.
+- Q: Is a matching brand or model name enough to mark the item affected?
+  A: Usually not. Notices can be limited by exact model, batch, serial or date-code range, seller, size, color or production window. Preserve the complete protected identity and the source that performed or supports the comparison.
+- Q: When is a recall remedy complete?
+  A: When the stated outcome source and a dated household close-out check are linked. A submitted form, case number, label, appointment or shipped parcel alone is an intermediate event.
+- Q: Does not affected mean the product is safe?
+  A: No. It means only that an attributable comparison excluded the product from one named notice as of the review. It does not inspect the product or rule out another notice, defect or hazard.
 
 ---
 

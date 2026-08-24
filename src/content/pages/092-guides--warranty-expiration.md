@@ -20,12 +20,12 @@ faq:
   - question: "Does a warranty always start on the purchase date?"
     answer: "Not always. Most retail purchases do start the clock at purchase, but larger appliances are sometimes measured from delivery, and installed systems like HVAC or water heaters are often measured from installation instead. Recording which trigger actually applies matters more than the calculation itself."
   - question: "Does registering a product move up or extend when the warranty starts?"
-    answer: "No — under the Magnuson-Moss Warranty Act, the base warranty can't be made conditional on registration, and it runs from purchase, delivery or installation regardless of whether registration happened. Some manufacturers offer a separate, optional extended term tied to registering, but that's a different, additional benefit, not the base warranty's start date."
+    answer: "Not automatically. The written terms may use purchase, delivery, installation, registration or another event, and a promotion may add separate coverage. In the United States, registration cannot be treated as a universal rule: FTC guidance distinguishes duties permitted in limited warranties from the stricter requirements for full warranties. Record the actual term and source instead of assuming either outcome."
   - question: "How long do most appliance and electronics warranties actually last?"
     answer: "A one-year manufacturer's parts-and-labor warranty is a common default for both major appliances and consumer electronics, sometimes with a longer secondary term on one specific component. The written terms for your exact product always govern — treat this as what to expect, not a guarantee."
   - question: "What should I do if I'm not sure when a warranty actually started?"
     answer: "Record the calculated end date as an estimate rather than a confirmed fact, and note why it's uncertain. An honestly labeled estimate is more useful later than a precise-looking date that turns out to be based on a guess."
-contentVersion: 1
+contentVersion: 2
 ---
 # A warranty expiration date answers "when," not "what's covered"
 
@@ -40,7 +40,7 @@ Warranty terms don't all start from the same event, and the difference matters:
 | Purchase date | Most retail electronics and appliances bought off the shelf |
 | Delivery date | Larger appliances and furniture, especially when delivery happens days or weeks after purchase |
 | Installation date | HVAC systems, water heaters and built-in appliances installed by a contractor |
-| Registration date (for extended terms only) | Promotional warranty extensions some manufacturers offer — not the base warranty itself |
+| Registration date, if the written terms make it relevant | A recorded registration can support a service step or optional extension, but the exact written warranty and jurisdiction control the effect |
 
 A household that assumes "purchase date" when the manufacturer actually measures from installation can end up thinking a warranty has more time left than it does, or less. Recording which trigger applies — not just typing in a date — is what keeps the calculation honest.
 
@@ -50,7 +50,7 @@ Terms vary by manufacturer and product, and the written document always governs,
 
 ## Registration doesn't move the start date
 
-It's worth repeating here because it directly affects this calculation: under the Magnuson-Moss Warranty Act, a manufacturer cannot make the base warranty's validity depend on registration — coverage runs from purchase (or delivery, or installation, per the terms), whether or not a registration card was ever submitted. See the [warranty-tracking guide](/guides/how-to-track-product-warranties/) for more on what the law actually requires as proof.
+Do not assume registration is always irrelevant or always decisive. In the United States, the FTC's business guidance says requiring a returned registration card is an unreasonable precondition for a **full** warranty; a limited warranty can contain duties that a full warranty cannot. The FTC's current consumer guidance also says some warranties may require a registration card before service. Read the actual designation and terms, preserve the version that applied to the purchase and record registration separately from the date calculation. See the [warranty-tracking guide](/guides/how-to-track-product-warranties/) for the evidence workflow.
 
 ## "Full" and "limited" change what the expiration date actually guarantees
 

@@ -2175,6 +2175,124 @@ const definitions: Record<string, Definition> = {
       return `${values.asset.trim()} — warranty claim evidence timeline\nReview context: ${values.context}\nProblem first observed: ${formatter.format(observedDate)}\nTimeline review: ${formatter.format(reviewDate)}\nNext household follow-up review: ${formatter.format(nextReview)}\nOpen events: ${openRows.length}\nClosed or handed-off events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling product, purchase and written-term sources: ${values.basis.trim()}\nFirst household observation: ${values.observation.trim()}\n\n${lines("Versioned warranty-claim timeline", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — observation/request/response: ${row.parts[2]} — actor/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next step/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/closure/handoff date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not diagnose a product, determine safety or recall status, verify evidence or delivery, decide warranty or service-contract coverage, authorize service, shipping, payment, replacement or refund, calculate a contractual or legal deadline, create a consumer complaint, assign fault or liability, waive a right or resolve a dispute. Follow current manufacturer and responsible product-safety instructions, preserve original sources and use the applicable issuer, authority or qualified adviser for actual decisions.`;
     },
   },
+  "product-recall-action-log": {
+    intro:
+      "Create a dated record of an official product-safety notice, exact identity comparison, household actions, provider responses and remedy outcome. The tool does not search recalls, inspect a product or issue safety instructions.",
+    fields: [
+      text("asset", "Private product label", "Use a household asset label, not a full serial, order number, address, account or private contact.", "Countertop appliance ASSET-P7"),
+      {
+        name: "context",
+        label: "Current recall-review context",
+        type: "select",
+        options: [
+          "Authoritative notice received—identity check not finished",
+          "Exact product identity comparison underway",
+          "Official remedy or company response in progress",
+          "Outcome, transfer or disposal evidence under review",
+        ],
+      },
+      { name: "noticeDate", label: "Official notice publication or update date", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: "Household recall review date", type: "date", value: "2026-08-23" },
+      { name: "nextReview", label: "Next household follow-up checkpoint", type: "date", value: "2026-08-30" },
+      text("noticeSources", "Controlling authority and manufacturer notice sources", "Use public URLs or safe source IDs with version dates. Do not paste private case or contact details.", "CPSC notice NOTICE-N1 published 2026-08-22; manufacturer recall page MFR-N1 reviewed 2026-08-23"),
+      text("identityBasis", "Protected product-identity comparison basis", "Point to the complete label, model, batch, date-code or serial-range comparison without exposing the full identifier.", "ASSET-P7/LABEL-2 compared with NOTICE-N1 scope; exact affected status not yet concluded"),
+      {
+        name: "actions",
+        label: "Versioned recall action rows",
+        type: "textarea",
+        help: "One line: ID | action type | attributable instruction, comparison, request, response or outcome | actor or source role | action date YYYY-MM-DD | protected evidence pointer | next step or closure reason | owner role | target or outcome date YYYY-MM-DD | Notice captured—identity check pending, Identity comparison underway—source linked, Affected status confirmed—official source linked, Official remedy underway—evidence linked, Official remedy completed—outcome linked, Not affected—comparison source linked, or No longer held—transfer or disposal pointer linked. Maximum 16 lines.",
+        value: "RC-1 | Authoritative notice capture | Preserved the notice scope, hazard section, current consumer action and remedy wording without changing the instruction | Responsible product-safety authority notice | 2026-08-22 | NOTICE-N1 | Follow the notice's immediate instruction and complete an exact protected identity comparison | Household asset owner | 2026-08-23 | Notice captured—identity check pending\nRC-2 | Protected identity comparison | Linked the product label record to the model, batch and date-code fields named by the notice; conclusion remains pending | Household asset owner using authority and manufacturer sources | 2026-08-23 | ASSET-P7-LABEL-2 plus NOTICE-N1 | Ask the manufacturer recall role to confirm the comparison through the official channel and preserve the response | Household asset owner | 2026-08-25 | Identity comparison underway—source linked",
+      },
+      text("storage", "Protected original-evidence location", "Use a folder label, not a full serial, address, phone, email, case, tracking, account, credential, signature or payment detail.", "Household records / product safety / ASSET-P7 / recall NOTICE-N1"),
+    ],
+    run: (values) => {
+      const noticeDate = strictIsoDate(values.noticeDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.asset.trim()) return "Enter a private product label so the exported recall record can be identified.";
+      if (!noticeDate) return "Enter the real publication or update date from the controlling notice in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real household recall review date in YYYY-MM-DD format.";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The household recall review date cannot be in the future.";
+      if (noticeDate.getTime() > reviewDate.getTime()) return "The official notice date cannot be later than the household review date.";
+      if (!nextReview) return "Enter a real next household follow-up checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next household follow-up checkpoint cannot be earlier than this review.";
+      if (values.noticeSources.trim().length < 12) return "Identify the controlling authority and manufacturer notice sources with safe IDs or public URLs and version dates.";
+      if (values.identityBasis.trim().length < 12) return "Enter a protected product-identity comparison basis without exposing the complete identifier.";
+      if (!values.storage.trim()) return "Enter the protected location for original notice, label, contact, remedy and outcome evidence.";
+      const actionRows = values.actions.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (actionRows.length === 0) return "Add at least one recall action row.";
+      if (actionRows.length > 16) return "Use no more than 16 recall actions in one review; create another dated version if needed.";
+      const invalidRows = actionRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Recall action line ${invalidRows.map((row) => row.line).join(", ")} must contain all 10 pipe-separated fields.`;
+      const ids = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Each recall action must have a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Recall action IDs must use 2 to 20 letters, numbers or hyphens, such as RC-1.";
+      const statusOrder = [
+        "Notice captured—identity check pending",
+        "Identity comparison underway—source linked",
+        "Affected status confirmed—official source linked",
+        "Official remedy underway—evidence linked",
+        "Official remedy completed—outcome linked",
+        "Not affected—comparison source linked",
+        "No longer held—transfer or disposal pointer linked",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = actionRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `Recall action line ${invalidStatuses.map((row) => row.line).join(", ")} has an unsupported status. Use one of the seven labels shown in the field instructions.`;
+      const invalidActionDates = actionRows.filter((row) => {
+        const actionDate = strictIsoDate(row.parts[4]);
+        return !actionDate || actionDate.getTime() < noticeDate.getTime() || actionDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidActionDates.length)
+        return `Recall action line ${invalidActionDates.map((row) => row.line).join(", ")} needs a real action date from the notice date through this review.`;
+      const openRows = actionRows.filter((row) => statusOrder.slice(0, 4).includes(row.parts[9]));
+      const closedRows = actionRows.filter((row) => statusOrder.slice(4).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open recall action line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next household checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < noticeDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Completed, not-affected or no-longer-held line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome, comparison or exit date from the notice date through this review.`;
+      const missingSources = actionRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `Recall action line ${missingSources.map((row) => row.line).join(", ")} needs an actor or source role and a protected notice, comparison, contact, delivery or outcome pointer.`;
+      const vagueActions = actionRows.filter((row) =>
+        row.parts[6].length < 12 || /^(?:done|complete|completed|fixed|resolved|safe|not affected|ok|none|n\/a|follow up|closed)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `Recall action line ${vagueActions.map((row) => row.line).join(", ")} needs a specific source-based next step or preserved closure reason—not a generic safety or completion word.`;
+      const privacyText = [values.asset, values.noticeSources, values.identityBasis, values.actions, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, serial, case, tracking or complete numeric identifier was detected. Keep it in protected evidence and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|full address|account number|card number|bank account|routing number|social security|government id|full serial|serial number|case number|claim number|tracking number|order number|policy number|signature|date of birth|private contact|payment credential|login credential|complaint form|medical record|child name|remote access|one-time code|verification code|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, financial, identity, full serial, case, tracking, order, signature, complaint, child or private contact detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: actionRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      const confirmedAffected = actionRows.filter((row) => [statusOrder[2], statusOrder[3]].includes(row.parts[9])).length;
+      return `${values.asset.trim()} — product recall action record\nReview context: ${values.context}\nOfficial notice publication or update: ${formatter.format(noticeDate)}\nHousehold recall review: ${formatter.format(reviewDate)}\nNext household checkpoint: ${formatter.format(nextReview)}\nOpen actions: ${openRows.length}\nCompleted, not affected or no longer held: ${closedRows.length}\nAffected-confirmed or remedy-underway rows: ${confirmedAffected}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling authority and manufacturer notices: ${values.noticeSources.trim()}\nProtected product-identity comparison basis: ${values.identityBasis.trim()}\n\n${lines("Versioned recall actions", actionRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable instruction/comparison/request/response/outcome: ${row.parts[2]} — actor/source: ${row.parts[3]} — action date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next step/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not search current recalls, inspect a product, compare or validate identifiers, decide affected or safety status, create stop-use, unplugging, movement, repair, destruction, return, shipping or disposal instructions, verify a notice or remedy, contact a company or authority, submit an incident or remedy complaint, authorize a refund or replacement, calculate a deadline, assign responsibility or certify completion. Follow the current responsible authority and manufacturer notice immediately, use emergency or medical resources for urgent conditions and preserve original sources.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -4634,6 +4752,124 @@ const zhTwDefinitions: Record<string, Definition> = {
         count: eventRows.filter((row) => row.parts[9] === status).length,
       })).filter((item) => item.count > 0);
       return `${values.asset.trim()}｜產品保固申請證據時間線\n目前檢視情境：${values.context}\n問題首次發現：${formatter.format(observedDate)}\n本次時間線檢視：${formatter.format(reviewDate)}\n家庭下次追蹤複查：${formatter.format(nextReview)}\n仍開放事件：${openRows.length} 筆\n已結案或移交事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的產品、交易與書面保證來源：${values.basis.trim()}\n第一次家庭觀察：${values.observation.trim()}\n\n${lines("有版本的保固申請時間線", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜觀察／請求／回覆：${row.parts[2]}｜行動者／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一步／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結案／移交日：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭證據索引。它不診斷產品、不判斷安全或召回狀態、不驗證證據或送達、不決定保固或服務契約涵蓋、不授權檢修、寄送、付款、更換或退款、不計算契約或法律期限、不建立消費申訴、不分配過失或責任、不代表放棄權利，也不解決爭議。請依製造商與負責商品安全機關的現行指示處理，保存原始來源，並由實際保證提供者、主管機關或合適專業人士作成真正決定。`;
+    },
+  },
+  "product-recall-action-log": {
+    intro:
+      "依主管機關與業者公告建立產品身分比對、家庭行動、業者回覆及改善結果時間線。工具不會連線查召回、不檢驗產品，也不產生停用或處理指示。",
+    fields: [
+      text("asset", "私密產品代稱", "使用家庭資產代號，不要填完整序號、訂單號、地址、帳號或私人聯絡資料。", "檯面家電 ASSET-P7"),
+      {
+        name: "context",
+        label: "目前召回複查情境",
+        type: "select",
+        options: [
+          "已收到官方公告，產品身分尚未完成比對",
+          "正在比對完整產品識別與公告範圍",
+          "官方改善或業者回覆正在處理",
+          "正在複查結果、移轉或處理證據",
+        ],
+      },
+      { name: "noticeDate", label: "官方公告發布或更新日", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: "家庭本次召回複查日", type: "date", value: "2026-08-23" },
+      { name: "nextReview", label: "家庭下次追蹤節點", type: "date", value: "2026-08-30" },
+      text("noticeSources", "控制中的主管機關與業者公告來源", "使用公開網址或安全來源 ID 並保留版本日期，不要貼私人案件或聯絡資料。", "標檢局公告 NOTICE-N1，2026-08-22 發布；業者召回頁 MFR-N1，2026-08-23 複查"),
+      text("identityBasis", "受保護的產品身分比對依據", "指向完整銘牌、型號、批號、製造日期或序號區間比對，不暴露完整識別。", "ASSET-P7/LABEL-2 與 NOTICE-N1 公告範圍比對；是否受影響尚未作成結論"),
+      {
+        name: "actions",
+        label: "有版本的召回處置行動",
+        type: "textarea",
+        help: "每行格式：ID | 行動類型 | 有來源的指示、比對、請求、回覆或結果 | 行動者或來源角色 | 行動日期 YYYY-MM-DD | 受保護證據索引 | 下一步或結案理由 | 負責角色 | 目標或結果日期 YYYY-MM-DD | 公告已保存，產品身分待比對、產品身分比對中，連結來源、已確認受影響，連結官方來源、官方改善處理中，連結證據、官方改善已完成，連結結果、未受影響，連結精確比對來源、家庭已不持有，連結移轉或處理紀錄。最多 16 行。",
+        value: "RC-1 | 官方公告保存 | 保存公告範圍、危害說明、現行消費者行動與改善文字，未自行改寫指示 | 商品安全主管機關公告 | 2026-08-22 | NOTICE-N1 | 先遵循公告立即指示，再完成受保護產品身分精確比對 | 家庭資產負責人 | 2026-08-23 | 公告已保存，產品身分待比對\nRC-2 | 受保護身分比對 | 已連結銘牌紀錄與公告所列型號、批號及製造日期欄位，結論仍待來源確認 | 家庭資產負責人依主管機關與業者來源 | 2026-08-23 | ASSET-P7-LABEL-2 與 NOTICE-N1 | 透過公告指定管道請業者召回角色確認比對並保存回覆 | 家庭資產負責人 | 2026-08-25 | 產品身分比對中，連結來源",
+      },
+      text("storage", "受保護的原始證據位置", "只寫資料夾代稱，不要填完整序號、地址、電話、Email、案件、物流、帳號、憑證、簽名或付款資料。", "家庭文件／商品安全／ASSET-P7／召回 NOTICE-N1"),
+    ],
+    run: (values) => {
+      const noticeDate = strictIsoDate(values.noticeDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.asset.trim()) return "請填私密產品代稱，讓匯出的召回處置紀錄可以辨識。";
+      if (!noticeDate) return "請輸入控制公告的真實發布或更新日 YYYY-MM-DD。";
+      if (!reviewDate) return "請輸入真實的家庭本次召回複查日 YYYY-MM-DD。";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "家庭本次召回複查日不能在未來。";
+      if (noticeDate.getTime() > reviewDate.getTime()) return "官方公告日期不能晚於家庭本次複查日。";
+      if (!nextReview) return "請輸入真實的家庭下次追蹤節點 YYYY-MM-DD。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "家庭下次追蹤節點不能早於本次複查。";
+      if (values.noticeSources.trim().length < 8) return "請用安全 ID 或公開網址與版本日期，辨識控制中的主管機關及業者公告來源。";
+      if (values.identityBasis.trim().length < 8) return "請填受保護的產品身分比對依據，不要暴露完整識別。";
+      if (!values.storage.trim()) return "請填原始公告、銘牌、聯絡、改善與結果證據的受保護位置。";
+      const actionRows = values.actions.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (actionRows.length === 0) return "請至少新增一筆召回處置行動。";
+      if (actionRows.length > 16) return "一次複查最多 16 筆召回行動；更多內容請建立下一份有日期的版本。";
+      const invalidRows = actionRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `召回行動第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整填寫 10 個以直線分隔的欄位。`;
+      const ids = actionRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆召回處置行動都要有唯一 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "召回行動 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 RC-1。";
+      const statusOrder = [
+        "公告已保存，產品身分待比對",
+        "產品身分比對中，連結來源",
+        "已確認受影響，連結官方來源",
+        "官方改善處理中，連結證據",
+        "官方改善已完成，連結結果",
+        "未受影響，連結精確比對來源",
+        "家庭已不持有，連結移轉或處理紀錄",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = actionRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `召回行動第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須使用欄位說明中的七種文字之一。`;
+      const invalidActionDates = actionRows.filter((row) => {
+        const actionDate = strictIsoDate(row.parts[4]);
+        return !actionDate || actionDate.getTime() < noticeDate.getTime() || actionDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidActionDates.length)
+        return `召回行動第 ${invalidActionDates.map((row) => row.line).join("、")} 行需要介於公告日與本次複查日之間的真實行動日期。`;
+      const openRows = actionRows.filter((row) => statusOrder.slice(0, 4).includes(row.parts[9]));
+      const closedRows = actionRows.filter((row) => statusOrder.slice(4).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的召回行動第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次複查日起，到家庭下次追蹤節點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < noticeDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已完成、未受影響或家庭已不持有的第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於公告日與本次複查日之間的實際結果、比對或離開日期。`;
+      const missingSources = actionRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `召回行動第 ${missingSources.map((row) => row.line).join("、")} 行需要行動者或來源角色，以及受保護的公告、比對、聯絡、遞送或結果索引。`;
+      const vagueActions = actionRows.filter((row) =>
+        row.parts[6].length < 8 || /^(?:完成|好了|已好|修好|已解決|安全|未受影響|無|不用|不適用|待追蹤|已結案|ok)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `召回行動第 ${vagueActions.map((row) => row.line).join("、")} 行需要有來源的具體下一步或保留的結案理由，不能只寫通用安全或完成詞。`;
+      const privacyText = [values.asset, values.noticeSources, values.identityBasis, values.actions, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、序號、案件、物流或完整數字識別資料。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|驗證碼|一次性代碼|警報碼|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證|完整序號|案件編號|理賠編號|物流追蹤碼|訂單編號|保單編號|簽名|出生日期|私人聯絡|付款憑證完整資料|登入憑證|申訴表全文|醫療紀錄|兒童姓名|遠端控制|password|passcode|access code|account number|card number|government id|full serial|serial number|case number|claim number|tracking number|order number|policy number|signature|payment credential|login credential|complaint form|medical record|child name|remote access|one-time code|verification code|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、金融、身分、完整序號、案件、物流、訂單、簽名、申訴、兒童或私人聯絡資料。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: actionRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      const confirmedAffected = actionRows.filter((row) => [statusOrder[2], statusOrder[3]].includes(row.parts[9])).length;
+      return `${values.asset.trim()}｜產品召回處置紀錄\n目前複查情境：${values.context}\n官方公告發布或更新：${formatter.format(noticeDate)}\n家庭本次召回複查：${formatter.format(reviewDate)}\n家庭下次追蹤節點：${formatter.format(nextReview)}\n仍開放行動：${openRows.length} 筆\n已完成、未受影響或家庭已不持有：${closedRows.length} 筆\n已確認受影響或官方改善處理中：${confirmedAffected} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的主管機關與業者公告：${values.noticeSources.trim()}\n受保護的產品身分比對依據：${values.identityBasis.trim()}\n\n${lines("有版本的召回處置行動", actionRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的指示／比對／請求／回覆／結果：${row.parts[2]}｜行動者／來源：${row.parts[3]}｜行動日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一步／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭證據索引。它不查詢現行召回、不檢驗產品、不比對或驗證識別資料、不判斷是否受影響或產品安全、不產生停用、拔除電源、移動、檢修、銷毀、退回、運送或廢棄指示、不驗證公告或改善、不聯絡業者或主管機關、不提交事故或改善申訴、不授權退款或更換、不計算期限、不分配責任，也不認證完成。請立即遵循主管機關與業者現行公告，緊急情況使用適當緊急或醫療資源，並保存原始來源。`;
     },
   },
   "vacation-shutdown-checklist-generator": {

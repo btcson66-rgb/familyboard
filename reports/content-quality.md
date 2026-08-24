@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-22T20:52:33.474Z
+Generated: 2026-08-22T21:20:01.087Z
 
 ## Summary
 
-- Indexable pages: 292
-- Generated HTML routes: 309
+- Indexable pages: 295
+- Generated HTML routes: 312
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 103
+- Pages without a contextual product/tool link: 105
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,9 +22,9 @@ Generated: 2026-08-22T20:52:33.474Z
 - appliances: 30
 - maintenance: 37
 - household-operations: 21
-- inventory-warranty: 32
+- inventory-warranty: 33
 - records-emergency: 27
-- tools: 73
+- tools: 75
 
 ## Word-count range
 
@@ -103,6 +103,7 @@ Generated: 2026-08-22T20:52:33.474Z
 - /zh-tw/guides/move-out-home-records/
 - /zh-tw/guides/organize-household-subscriptions/
 - /zh-tw/guides/power-outage-home-preparedness/
+- /zh-tw/guides/product-registration-tracker/
 - /zh-tw/guides/renovation-records/
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/guides/storm-preparation-home-checklist/
@@ -141,6 +142,7 @@ Generated: 2026-08-22T20:52:33.474Z
 - /zh-tw/tools/move-in-checklist-generator/
 - /zh-tw/tools/move-out-condition-record-generator/
 - /zh-tw/tools/pet-sitter-instruction-generator/
+- /zh-tw/tools/product-recall-action-log/
 - /zh-tw/tools/receipt-retention-organizer/
 - /zh-tw/tools/recurring-chore-planner/
 - /zh-tw/tools/room-inventory-generator/
