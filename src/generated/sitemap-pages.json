@@ -817,9 +817,9 @@
   },
   {
     "route": "/guides/moving-inventory/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/moving-inventory/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1736,6 +1736,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/moving-box-handover-log/",
+    "alternateRoute": "/zh-tw/tools/moving-box-handover-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2288,6 +2296,20 @@
     "alternateRoute": "/guides/move-out-home-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/moving-box-handover-log/",
+    "alternateRoute": "/tools/moving-box-handover-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/moving-inventory/",
+    "alternateRoute": "/guides/moving-inventory/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {

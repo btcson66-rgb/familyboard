@@ -99,6 +99,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/appliance-purchase-installation-record/</loc>",
       "<loc>https://familyboard.win/tools/purchase-delivery-evidence-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/purchase-delivery-evidence-log/</loc>",
+      "<loc>https://familyboard.win/tools/moving-box-handover-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/moving-box-handover-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/moving-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -420,6 +423,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Nine statuses separate a delivery scan from an outcome",
       "Mail, Internet, or Telephone Order Merchandise Rule business guide",
+    ],
+  },
+  {
+    path: "/tools/moving-box-handover-log/",
+    require: [
+      "Moving Box Handover Log",
+      'hreflang="zh-TW"',
+      "Nine statuses prevent premature closure",
+      "private, versioned source map for those events",
+    ],
+  },
+  {
+    path: "/guides/moving-inventory/",
+    require: [
+      "A moving inventory checklist should track custody",
+      'hreflang="zh-TW"',
+      "Use three linked records",
+      "Unless a customer selects Released Value",
     ],
   },
   {
@@ -771,6 +792,24 @@ const checks = [
       'hreflang="en"',
       "九種狀態不讓物流掃描冒充結果",
       "零售業等網路交易定型化契約應記載及不得記載事項",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/moving-box-handover-log/",
+    require: [
+      "搬家箱件交接紀錄表",
+      'hreflang="en"',
+      "九種狀態避免過早寫成完成",
+      "搬家貨運定型化契約應記載及不得記載事項",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/moving-inventory/",
+    require: [
+      "搬家物品清單要追蹤",
+      'hreflang="en"',
+      "台灣搬家契約不能只留口頭報價",
+      "定型化契約範本是訂約參考",
     ],
   },
   {

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-24T04:55:29.910Z
+Generated: 2026-08-24T05:34:54.146Z
 
 ## Summary
 
-- Indexable pages: 307
-- Generated HTML routes: 324
+- Indexable pages: 310
+- Generated HTML routes: 327
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 113
+- Pages without a contextual product/tool link: 115
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,9 +22,9 @@ Generated: 2026-08-24T04:55:29.910Z
 - appliances: 30
 - maintenance: 37
 - household-operations: 21
-- inventory-warranty: 37
+- inventory-warranty: 38
 - records-emergency: 27
-- tools: 83
+- tools: 85
 
 ## Word-count range
 
@@ -102,6 +102,7 @@ Generated: 2026-08-24T04:55:29.910Z
 - /zh-tw/guides/household-documents-organizer/
 - /zh-tw/guides/how-to-track-product-warranties/
 - /zh-tw/guides/move-out-home-records/
+- /zh-tw/guides/moving-inventory/
 - /zh-tw/guides/organize-household-subscriptions/
 - /zh-tw/guides/power-outage-home-preparedness/
 - /zh-tw/guides/product-registration-tracker/
@@ -148,6 +149,7 @@ Generated: 2026-08-24T04:55:29.910Z
 - /zh-tw/tools/household-water-leak-event-log/
 - /zh-tw/tools/move-in-checklist-generator/
 - /zh-tw/tools/move-out-condition-record-generator/
+- /zh-tw/tools/moving-box-handover-log/
 - /zh-tw/tools/pet-sitter-instruction-generator/
 - /zh-tw/tools/product-recall-action-log/
 - /zh-tw/tools/purchase-delivery-evidence-log/

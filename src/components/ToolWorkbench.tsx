@@ -2788,6 +2788,125 @@ const definitions: Record<string, Definition> = {
       return `${values.purchase.trim()} — purchase and delivery evidence log\nItem reference: ${values.item.trim()}\nPurchase channel: ${values.channel}\nTransaction or order date: ${formatter.format(orderDate)}\nDelivery or household possession: ${possessionDate ? formatter.format(possessionDate) : "Not yet recorded"}\nCurrent purchase-record review: ${formatter.format(reviewDate)}\nNext household evidence checkpoint: ${formatter.format(nextReview)}\nOpen purchase and delivery events: ${openRows.length}\nKept, completed or handed-off events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling offer, order, payment, fulfillment, policy, notice, response and outcome sources: ${values.basis.trim()}\n\n${lines("Versioned purchase and delivery evidence", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable order/fulfillment/possession/condition/notice/response/outcome fact: ${row.parts[2]} — actor/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next gap/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not verify a seller, platform, carrier, item, package, shipment, pickup, possession, delivery, condition, contents, communication or outcome; inspect or test an item; determine fault, acceptance, fraud, ownership, coverage, return, refund, replacement, chargeback, complaint or other legal rights; interpret a policy, warranty, contract or law; calculate a seller, platform, carrier, card, warranty or legal deadline; contact a company or authority; submit a return, claim, dispute, chargeback, complaint or payment; provide an address, access or credential; assign responsibility; waive a right; or certify completion. Preserve original sources, follow current manufacturer and responsible-authority safety instructions and use qualified or emergency help for urgent conditions.`;
     },
   },
+  "moving-box-handover-log": {
+    intro:
+      "Build a private, versioned index from household packing through loading custody, destination handover, box reconciliation, missing or visibly changed items, notice and actual outcome. It does not replace mover documents or decide liability, coverage or deadlines.",
+    fields: [
+      text("move", "Private household move ID", "Use a stable household ID, not a name, full address, shipment, contract, storage, vehicle or account number.", "MOVE-2026-A"),
+      {
+        name: "context",
+        label: "Move context",
+        type: "select",
+        options: [
+          "Interstate professional household-goods move",
+          "Intrastate or local professional move",
+          "Self-move or rental vehicle",
+          "Portable container or storage transfer",
+          "Family, friend or mixed handoff",
+        ],
+      },
+      { name: "loadingDate", label: "Planned or actual loading date", type: "date", value: "2026-08-20" },
+      { name: "handoverDate", label: "Destination handover date (optional until received)", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: "Current inventory review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next box reconciliation checkpoint", type: "date", value: "2026-08-31" },
+      text("basis", "Controlling estimate, contract, mover inventory, custody, handover, notice and outcome sources", "Use safe source IDs or public URLs with dates. Keep full addresses, signatures, shipment identifiers and document contents protected.", "EST-E1; CONTRACT-C1; BOL-B1 if applicable; MOVER-INV-M1; LOAD-L1; HANDOVER-H1; NOTICE-N1 if needed"),
+      {
+        name: "events",
+        label: "Versioned moving-box and handover rows",
+        type: "textarea",
+        help: "One line: ID | box or item group | attributable packing, loading, custody, handover, condition, notice or outcome fact | custodian or source role | event date YYYY-MM-DD | protected evidence pointer | next gap or closure reason | owner role | target or outcome date YYYY-MM-DD | one of the nine listed statuses. Maximum 18 lines.",
+        value: "BOX-14 | Kitchen box group K-014 | Household packing photo links the sealed box ID and broad contents group without proving loading | Household packing source role | 2026-08-20 | BOX-PHOTO-P14 protected | Compare the ID to the controlling loading source; do not imply custodian acceptance | Household loading lead role | 2026-08-24 | Packed and household-indexed—loading handoff pending\nHANDOFF-1 | Kitchen loading batch | Household destination count and handover photo show the batch present; individual box reconciliation remains open | Household destination observation role | 2026-08-22 | HANDOVER-H1 and PHOTO-P20 protected | Reconcile every box ID against destination zones and preserve exceptions | Household reconciliation lead role | 2026-08-31 | Destination handoff recorded—box reconciliation pending",
+      },
+      text("storage", "Protected original-evidence location", "Use a folder label, not a complete address, contract, shipment, claim, phone, email, account, credential, signature, access or valuable-item detail.", "Household records / moves / MOVE-2026-A / protected originals"),
+    ],
+    run: (values) => {
+      const loadingDate = strictIsoDate(values.loadingDate);
+      const handoverDate = strictIsoDate(values.handoverDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.move.trim()) return "Enter a private household move ID so the exported handover log can be identified.";
+      if (!loadingDate) return "Enter the real planned or actual loading date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current inventory review date in YYYY-MM-DD format.";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current inventory review date cannot be in the future.";
+      if (loadingDate.getTime() > reviewDate.getTime()) return "The loading date cannot be later than the current inventory review.";
+      if (handoverDate && handoverDate.getTime() < loadingDate.getTime()) return "The destination handover date cannot be earlier than loading.";
+      if (handoverDate && handoverDate.getTime() > reviewDate.getTime()) return "The destination handover date cannot be later than the current inventory review.";
+      if (!nextReview) return "Enter a real next box reconciliation checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next box reconciliation checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 16) return "Identify the controlling estimate, contract, mover inventory, custody, handover, notice and outcome sources with safe pointers.";
+      if (!values.storage.trim()) return "Enter the protected location for original moving, custody, condition, notice and outcome evidence.";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "Add at least one moving-box or handover event.";
+      if (eventRows.length > 18) return "One review supports at most 18 moving-box events; create a later dated version for more.";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Moving-box event line ${invalidRows.map((row) => row.line).join(", ")} must contain all ten pipe-separated fields.`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Every moving-box event needs a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Use 2 to 20 letters, numbers or hyphens for each event ID, such as BOX-14.";
+      const statusOrder = [
+        "Packed and household-indexed—loading handoff pending",
+        "Loaded or accepted by custodian—destination handoff pending",
+        "Destination handoff recorded—box reconciliation pending",
+        "Box or item missing—notice delivery pending",
+        "Visible condition issue recorded—notice delivery pending",
+        "Notice delivered—response or inspection pending",
+        "Reconciled and unpacked—household outcome linked",
+        "Loss or damage process completed—outcome source linked",
+        "Limited archive or external handoff—gap and ownership preserved",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `Moving-box event line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the nine handover statuses in the field instructions.`;
+      const needsHandover = eventRows.filter((row) => statusOrder.slice(2, 8).includes(row.parts[9]));
+      if (!handoverDate && needsHandover.length)
+        return `Moving-box event line ${needsHandover.map((row) => row.line).join(", ")} uses a destination, missing, condition, notice or completed-outcome status, so add the real destination handover date.`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < loadingDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `Moving-box event line ${invalidEventDates.map((row) => row.line).join(", ")} needs a real event date from loading through the current review.`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 6).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(6).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open moving-box event line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next reconciliation checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < loadingDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Reconciled, completed or handed-off event line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from loading through this review.`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `Moving-box event line ${missingSources.map((row) => row.line).join(", ")} needs a custodian or source role and a protected packing, loading, custody, handover, condition, notice or outcome pointer.`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 12 || /^(?:done|complete|completed|delivered|accepted|safe|lost|damaged|approved|paid|settled|ok|none|n\/a|follow up|closed)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `Moving-box event line ${vagueActions.map((row) => row.line).join(", ")} needs a specific evidence gap, next step or source-based closure reason—not a generic delivery, damage, acceptance or completion word.`;
+      const privacyText = [values.move, values.basis, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, address, serial, shipment, contract, claim or complete numeric identifier was detected. Keep it in protected evidence and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|gate code|lockbox code|full address|street address|origin address|destination address|account number|card number|bank account|routing number|social security|government id|driver license|license plate|full serial|serial number|shipment number|bill of lading number|contract number|claim number|case number|policy number|signature|date of birth|private contact|payment credential|login credential|complaint form|complaint letter|legal strategy|medical record|child name|valuable contents|mover name|driver name|customer name|resident name|remote access|one-time code|verification code|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, access, address, financial, identity, shipment, contract, signature, valuable-item, complaint, legal or private participant detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: eventRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
+      return `${values.move.trim()} — moving box handover log\nMove context: ${values.context}\nLoading date: ${formatter.format(loadingDate)}\nDestination handover: ${handoverDate ? formatter.format(handoverDate) : "Not yet recorded"}\nCurrent inventory review: ${formatter.format(reviewDate)}\nNext box reconciliation checkpoint: ${formatter.format(nextReview)}\nOpen moving-box events: ${openRows.length}\nReconciled, completed or handed-off events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling estimate, contract, mover inventory, custody, handover, notice and outcome sources: ${values.basis.trim()}\n\n${lines("Versioned moving-box and handover evidence", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable packing/loading/custody/handover/condition/notice/outcome fact: ${row.parts[2]} — custodian/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next gap/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household index. It does not replace or amend an estimate, contract, order for service, bill of lading, mover inventory, valuation selection, insurance source, declaration, delivery receipt, notice, complaint or claim; verify a mover, broker, license, vehicle, box, seal, item, packing, loading, custody, handover, condition, loss, damage, communication or outcome; determine ownership, acceptance, fault, liability, valuation, coverage, damages, waiver, claim or settlement; interpret law or calculate a deadline; contact anyone; submit or authorize a notice, claim, complaint, access or payment; or certify completion. Preserve originals and use the current contract, responsible authority, insurer, qualified professional or emergency service that applies.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -6956,6 +7075,119 @@ const zhTwDefinitions: Record<string, Definition> = {
         count: eventRows.filter((row) => row.parts[9] === status).length,
       })).filter((item) => item.count > 0);
       return `${values.purchase.trim()}｜購買與到貨證據紀錄\n品項參考：${values.item.trim()}\n購買管道：${values.channel}\n交易或下單日：${formatter.format(orderDate)}\n到貨或家庭實際取得：${possessionDate ? formatter.format(possessionDate) : "尚未記錄"}\n本次購買紀錄檢視：${formatter.format(reviewDate)}\n家庭下次證據查核點：${formatter.format(nextReview)}\n仍開放購買與到貨事件：${openRows.length} 筆\n已保留、完成或移交事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的商品資訊、訂單、付款、履行、政策、通知、回覆與結果來源：${values.basis.trim()}\n\n${lines("有版本的購買與到貨證據", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的訂購／履行／實際取得／狀況／通知／回覆／結果事實：${row.parts[2]}｜行動者／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一個缺口／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭證據索引。它不驗證賣家、平台、物流、品項、包裹、出貨、取貨、實際取得、到貨、狀況、內容、溝通或結果，不檢查或測試品項、不判定責任、驗收、詐欺、所有權、涵蓋、退貨、退款、換貨、刷卡爭議、申訴或其他法律權利、不解釋政策、保固、契約或法律、不計算店家、平台、物流、信用卡、保固或法律期限、不聯絡業者或主管機關、不提交退貨、申請、爭議、刷卡爭議、申訴或付款、不提供地址、門禁或憑證、不分配責任、不代表放棄權利，也不認證完成。請保存原始來源、遵循品牌與主管機關現行安全指示，緊急情況使用合適的合格專業或緊急協助。`;
+    },
+  },
+  "moving-box-handover-log": {
+    intro:
+      "把家庭裝箱、裝載保管、目的地點交、箱件核對、未找到、可見狀況、通知與實際結果做成安全版本索引。工具不取代正式搬運文件，也不判定責任、賠償、涵蓋或期限。",
+    fields: [
+      text("move", "家庭私人搬家代號", "使用固定代號，不要輸入姓名、完整地址、車號、契約、運單、倉儲或帳號完整編號。", "MOVE-2026-A"),
+      {
+        name: "context",
+        label: "搬家情境",
+        type: "select",
+        options: ["專業搬家公司搬運", "自行搬運或租車", "貨櫃／倉儲轉運", "家人朋友協助", "混合搬運與多階段交接"],
+      },
+      { name: "loadingDate", label: "預定或實際裝載日", type: "date", value: "2026-08-20" },
+      { name: "handoverDate", label: "目的地交接日（尚未收到可留空）", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: "本次箱件清冊檢視日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "下一個箱件核對點", type: "date", value: "2026-08-31" },
+      text("basis", "控制中的估價、契約、業者清冊、保管、點交、通知與結果來源", "使用安全來源代號或附日期的官方網址；完整地址、簽名、運單識別與文件內容放受保護位置。", "EST-E1；CONTRACT-C1；MOVER-INV-M1；LOAD-L1；HANDOVER-H1；必要時 NOTICE-N1"),
+      {
+        name: "events",
+        label: "有版本的箱件與交接事件",
+        type: "textarea",
+        help: "每行：ID｜箱件或物品群組｜有來源的裝箱、裝載、保管、點交、狀況、通知或結果事實｜保管或來源角色｜事件日期 YYYY-MM-DD｜受保護證據索引｜下一個缺口或結案理由｜負責角色｜目標或結果日期 YYYY-MM-DD｜九種指定狀態之一。最多 18 行。",
+        value: "BOX-14 | 廚房箱件 K-014 | 家庭裝箱照片連結已封箱代號與內容大類，不證明已裝載 | 家庭裝箱來源角色 | 2026-08-20 | BOX-PHOTO-P14 受保護 | 依控制中的裝載來源核對箱號，不自行寫成保管角色已收受 | 家庭裝載負責角色 | 2026-08-24 | 已裝箱並建立家庭索引，等待裝載交接\nHANDOFF-1 | 廚房裝載批次 | 家庭目的地點數與點交照片顯示批次已到，個別箱號核對仍開放 | 家庭目的地觀察角色 | 2026-08-22 | HANDOVER-H1 與 PHOTO-P20 受保護 | 逐一比對目的區箱號並保存未找到或臨時改放事件 | 家庭核對負責角色 | 2026-08-31 | 已記錄目的地交接，等待箱件核對",
+      },
+      text("storage", "受保護的原始證據位置", "使用資料夾名稱，不要放完整地址、契約、運單、申訴、電話、Email、帳號、憑證、簽名、門禁或貴重物明細。", "家庭紀錄／搬家／MOVE-2026-A／受保護原件"),
+    ],
+    run: (values) => {
+      const loadingDate = strictIsoDate(values.loadingDate);
+      const handoverDate = strictIsoDate(values.handoverDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.move.trim()) return "請輸入家庭私人搬家代號，讓匯出結果可以辨認。";
+      if (!loadingDate) return "請用 YYYY-MM-DD 輸入真實的預定或實際裝載日。";
+      if (!reviewDate) return "請用 YYYY-MM-DD 輸入真實的本次箱件清冊檢視日。";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次箱件清冊檢視日不能晚於今天。";
+      if (loadingDate.getTime() > reviewDate.getTime()) return "裝載日不能晚於本次箱件清冊檢視日。";
+      if (handoverDate && handoverDate.getTime() < loadingDate.getTime()) return "目的地交接日不能早於裝載日。";
+      if (handoverDate && handoverDate.getTime() > reviewDate.getTime()) return "目的地交接日不能晚於本次箱件清冊檢視日。";
+      if (!nextReview) return "請用 YYYY-MM-DD 輸入真實的下一個箱件核對點。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "下一個箱件核對點不能早於本次檢視日。";
+      if (values.basis.trim().length < 12) return "請用安全索引指出控制中的估價、契約、業者清冊、保管、點交、通知與結果來源。";
+      if (!values.storage.trim()) return "請輸入搬運、保管、狀況、通知與結果原始證據的受保護位置。";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "請至少加入一筆箱件或交接事件。";
+      if (eventRows.length > 18) return "一個版本最多支援 18 筆箱件事件；更多變化請另建下一個有日期版本。";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `箱件事件第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整包含十個以直線分隔的欄位。`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆箱件事件都需要不重複的 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "每個事件 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 BOX-14。";
+      const statusOrder = [
+        "已裝箱並建立家庭索引，等待裝載交接",
+        "已裝載或由保管角色收受，等待目的地交接",
+        "已記錄目的地交接，等待箱件核對",
+        "箱件或物品未找到，等待通知送達",
+        "已記錄可見狀況問題，等待通知送達",
+        "通知已送達，等待回覆或檢視",
+        "已核對並開箱，連結家庭結果",
+        "遺失或損傷流程已完成，連結結果來源",
+        "有限歸檔或已移交外部流程，缺口與責任已保存",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `箱件事件第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用欄位說明中的九種交接狀態之一。`;
+      const needsHandover = eventRows.filter((row) => statusOrder.slice(2, 8).includes(row.parts[9]));
+      if (!handoverDate && needsHandover.length)
+        return `箱件事件第 ${needsHandover.map((row) => row.line).join("、")} 行使用目的地、未找到、狀況、通知或已完成結果狀態，因此必須填入真實目的地交接日。`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < loadingDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `箱件事件第 ${invalidEventDates.map((row) => row.line).join("、")} 行需要介於裝載日與本次檢視日之間的真實事件日期。`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 6).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(6).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的箱件事件第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次檢視日起，到下一個箱件核對點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < loadingDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已核對、完成或移交的第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於裝載日與本次檢視日之間的實際結果日期。`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 3 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `箱件事件第 ${missingSources.map((row) => row.line).join("、")} 行需要保管或來源角色，以及受保護的裝箱、裝載、保管、點交、狀況、通知或結果索引。`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 8 || /^(?:完成|好了|已交貨|已到貨|已驗收|安全|遺失|損傷|已賠|已和解|核准|無|不用|不適用|待追蹤|已結案|ok)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `箱件事件第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的證據缺口、下一步或有來源的結案理由，不能只寫通用交貨、損傷、驗收或完成詞。`;
+      const privacyText = [values.move, values.basis, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、地址、序號、運單、契約、案件或完整數字識別。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|鑰匙盒密碼|驗證碼|一次性代碼|警報碼|完整地址|完整門牌|起點地址|目的地地址|帳號|卡號|銀行帳戶|匯款帳號|身分證|駕照|車牌|完整序號|運單號碼|契約編號|案件編號|理賠編號|保單編號|簽名|出生日期|私人聯絡|完整付款資料|登入憑證|申訴表全文|申訴信全文|法律策略|醫療紀錄|兒童姓名|貴重物明細|搬家公司名稱|司機姓名|客戶姓名|住戶姓名|遠端控制|password|passcode|access code|gate code|lockbox code|account number|card number|government id|driver license|license plate|full serial|serial number|shipment number|bill of lading number|contract number|claim number|case number|policy number|signature|payment credential|complaint form|legal strategy|medical record|child name|valuable contents|mover name|driver name|customer name|resident name|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、門禁、地址、金融、身分、運單、契約、簽名、貴重物、申訴、法律或私人參與者資料。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: eventRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
+      return `${values.move.trim()}｜搬家箱件交接紀錄\n搬家情境：${values.context}\n裝載日：${formatter.format(loadingDate)}\n目的地交接：${handoverDate ? formatter.format(handoverDate) : "尚未記錄"}\n本次箱件清冊檢視：${formatter.format(reviewDate)}\n下一個箱件核對點：${formatter.format(nextReview)}\n仍開放箱件事件：${openRows.length} 筆\n已核對、完成或移交事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的估價、契約、業者清冊、保管、點交、通知與結果來源：${values.basis.trim()}\n\n${lines("有版本的箱件與交接證據", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的裝箱／裝載／保管／點交／狀況／通知／結果事實：${row.parts[2]}｜保管／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一個缺口／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭箱件索引。它不取代或修改估價單、契約、服務單、運單、業者清冊、價值選擇、保險、聲明、簽收、通知、申訴或求償，不驗證業者、營業資格、車輛、箱件、封條、物品、包裝、裝載、保管、點交、狀況、遺失、損傷、溝通或結果，不判定所有權、驗收、責任、賠償、價值、涵蓋、損害、放棄、求償或和解，不解釋法律或計算期限，不聯絡任何人、不提交或授權通知、求償、申訴、門禁或付款，也不認證完成。請保存原件，並使用實際契約、主管機關、保險、合格專業或緊急服務的現行指示。`;
     },
   },
 };

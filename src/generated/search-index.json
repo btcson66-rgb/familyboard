@@ -784,12 +784,12 @@
     "headings": "A home-improvement receipt needs the project history around it Preserve five evidence layers instead of one receipt folder Label quote, order, invoice, receipt and statement accurately Record who bought materials and who was reimbursed Reconcile charges, payments, refunds and reimbursements separately Current U.S. tax guidance requires facts, not a folder label Retention follows the purpose and current rule Make paper and portal records durable while they are available Build the close-out manifest before people disperse Protect dispute and payment information Commercial recommendations stay outside the evidence chain"
   },
   {
-    "title": "Moving Inventory: Track Boxes, Rooms, Valuable Items and What Needs Special Handling",
-    "description": "Create a moving inventory that separates box-level tracking from valuable-item documentation — and understand what federal law actually protects if a mover loses something.",
+    "title": "Moving Inventory Checklist | Box IDs, Loading, Delivery and Damage Records",
+    "description": "Build a moving inventory that separates household box IDs, the mover's official inventory, loading custody, delivery reconciliation and unresolved loss or damage records.",
     "route": "/guides/moving-inventory/",
     "cluster": "inventory-warranty",
     "keywords": "moving inventory checklist",
-    "headings": "A moving inventory answers \"where is it,\" not \"what do we own\" Box-level records are enough for ordinary contents What federal law actually protects if something goes wrong Keep valuable or fragile items separate from the box system Destination labeling does double duty A numbering system beats a purely descriptive one Photograph anything you disassemble The first-night box is its own separate category The moving layer is temporary; archive it once you're settled"
+    "headings": "A moving inventory checklist should track custody, not just contents Use three linked records instead of one overloaded spreadsheet Build box IDs that remain useful after stacking Photograph context without creating unsafe evidence For a U.S. interstate move, preserve the mover's inventory and bill of lading Correctly separate valuation from inventory detail Loading needs a count and an attributable custody event Reconcile at destination before unpacking disperses the evidence Describe observable condition, not blame A notice draft is not a delivered notice Retention ends when the purpose ends, not when the last box opens Affiliate supplies are operational aids, not evidence"
   },
   {
     "title": "Storage Unit Inventory: Know What Is Off-Site Without Opening Every Box",
@@ -1630,6 +1630,14 @@
     "cluster": "tools",
     "keywords": "purchase delivery record",
     "headings": "Purchase and delivery evidence log Use a household purchase ID, not a transaction number Order, possession and review dates do different jobs Freeze the controlling sources Each row has ten fields Nine statuses separate a delivery scan from an outcome Partial delivery stays partial Record observation, not blame A sent message needs delivery evidence Keep policies, warranty and payment disputes separate Privacy screening is only a backstop Affiliate placement cannot become transaction evidence"
+  },
+  {
+    "title": "Moving Box Handover Log | Loading, Delivery, Missing and Damage Records",
+    "description": "Create a private, versioned moving-box log for packing, loading custody, destination handover, missing boxes, visible condition issues, notice and outcome sources.",
+    "route": "/tools/moving-box-handover-log/",
+    "cluster": "tools",
+    "keywords": "moving box handover log",
+    "headings": "Moving box handover log Start with a private move ID Loading, destination handover and review dates are different Preserve controlling documents outside the result Each event uses ten fields Nine statuses prevent premature closure Destination-dependent statuses require a real handover date Record observation rather than blame A notice draft is not a delivered notice Privacy screening cannot replace human review Affiliate products remain outside the evidence chain"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

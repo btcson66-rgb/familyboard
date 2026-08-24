@@ -6990,60 +6990,109 @@ A future affiliate area may present clearly labelled scanners, document storage 
 
 ## Page 103 — Moving Inventory
 **Slug:** `/guides/moving-inventory/`
-**Primary intent:** inventory items for a move
-**Title tag:** `Moving Inventory: Track Boxes, Rooms, Valuable Items and What Needs Special Handling`
-**Meta description:** `Create a moving inventory that separates box-level tracking from valuable-item documentation — and understand what federal law actually protects if a mover loses something.`
+**Primary intent:** create a box and handover inventory before, during and after a household move
+**Title tag:** `Moving Inventory Checklist | Box IDs, Loading, Delivery and Damage Records`
+**Meta description:** `Build a moving inventory that separates household box IDs, the mover's official inventory, loading custody, delivery reconciliation and unresolved loss or damage records.`
 **Primary keyword concept:** moving inventory checklist
 **Depth:** verified
-**Suggested internal links:** `/guides/room-by-room-home-inventory/`, `/guides/valuable-item-inventory/`, `/guides/storage-unit-inventory/`, `/features/home-inventory-tracker/`
+**Published date:** 2026-08-19
+**Editorial review date:** 2026-08-24
+**Content version:** 2
+**Suggested internal links:** `/tools/moving-box-handover-log/`, `/guides/room-by-room-home-inventory/`, `/guides/valuable-item-inventory/`, `/tools/move-in-checklist-generator/`
 
-# A moving inventory answers "where is it," not "what do we own"
+# A moving inventory checklist should track custody, not just contents
 
-A permanent home inventory answers "what do we own?" A moving inventory answers a narrower, more urgent question: where is each thing right now, where is it going, and does it need special handling along the way? Treating these as the same project is what makes moving inventories feel overwhelming — they're not the same task.
+A packing list can tell you that `BOX-K-014` contains everyday dishes. A useful moving inventory also tells you whether that box was included in the loading count, which source recorded the handoff, where it should go, whether it appeared at destination and who owns the next check if it did not. Packing, carrier custody and household possession are separate events.
 
-## Box-level records are enough for ordinary contents
+This guide is for household organization. It does not verify a mover, broker, license, vehicle, insurance, contract, estimate, bill of lading, inventory, packing, loading, delivery or condition; calculate a claim or legal deadline; decide fault, liability, valuation, coverage, damages, acceptance or settlement; file a claim or complaint; or certify that a move is complete.
 
-You don't need to list every plate. A box needs an ID, a source room, a destination room, and a short contents note — "kitchen → kitchen, everyday dishes and glasses" is a complete, useful record. This level of detail is what actually gets used during unloading; itemizing every object inside slows the packing process down for no real benefit.
+**Already packing? [Open the free Moving Box Handover Log](/tools/moving-box-handover-log/) and keep the shareable index separate from private originals.**
 
-## What federal law actually protects if something goes wrong
+## Use three linked records instead of one overloaded spreadsheet
 
-For an interstate move using a professional mover, it's worth knowing what the default protection actually covers, because it's less than most people assume. Under federal regulation, [interstate movers are required to offer Released Value Protection at $0.60 per pound per article, included at no additional cost](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-375) — which means a $2,000, 50-pound television damaged in transit would be compensated at roughly $30 under the default option, not its actual value. Full Value Protection is the paid alternative, where the mover is liable for the item's actual replacement value rather than a weight-based calculation. Knowing this before the move — not after something breaks — is what makes the valuable-item documentation below actually matter.
+The **household box index** gives each box, wrapped furniture group or separately handled item a short private ID. It records source zone, intended destination zone, broad contents category, handling note and a protected photo pointer when useful. It helps the household pack and reconcile; it is not a contract or valuation declaration.
 
-## Keep valuable or fragile items separate from the box system
+The **controlling move documents** include the estimate, order for service, contract or bill of lading, mover-prepared inventory, amendments, valuation selection, insurance source and special-item declaration. Keep originals protected. A household timeline should use safe references such as `BOL-B1`, `MOVER-INV-M1` and `EST-E1`, not full addresses, signatures, shipment numbers or payment details.
 
-High-value, serialized or fragile possessions deserve individual records and photos taken before the move, not just a line in a box's contents note. This is also where declaring a high-value item to the mover, if using Full Value Protection, actually matters — an undeclared valuable inside an ordinary box is treated as ordinary box contents if something happens to it. See [valuable item inventory](/guides/valuable-item-inventory/) for how to document these properly.
+The **handover and outcome timeline** records packing, loading or custodian acceptance, destination handover, reconciliation, missing items, visible condition issues, notice, response and actual outcome. Each event needs an attributable source, not just a changed status.
 
-## Destination labeling does double duty
+These layers can cross-reference one another without becoming interchangeable. A household photo does not amend the mover's inventory; a carrier inventory does not prove every box was unpacked; a signed receipt should not be summarized as `no damage` unless the actual source and applicable process support that wording.
 
-Labeling which room a box belongs to in the new home does more than speed up unloading day — it also becomes a natural checkpoint for confirming everything arrived. A box labeled for a specific destination room that never turns up during unpacking is a much easier thing to notice and report than a gap in an unlabeled pile.
+## Build box IDs that remain useful after stacking
 
-## A numbering system beats a purely descriptive one
+A box ID should be short, unique and visible on more than one side. `K-014` or `BED2-006` is easier to call out during unloading than a paragraph. The protected index can expand the ID into source and destination zones, broad contents group, an approximate count only when useful, handling instructions, photo pointer and current custody or reconciliation status.
 
-"Box 14 — kitchen → kitchen, everyday dishes" is easier to track across a move than relying on written descriptions alone on the outside of each box, especially once boxes get stacked and the labels facing outward aren't always the ones with the full contents note. A simple sequential number per box, cross-referenced to the fuller contents note in the household record, means a mover or family member can call out "box 14" and everyone knows immediately which one that is, without reading a paragraph off the side of a box.
+Avoid writing a complete address, resident name, phone number, work schedule, valuable-item list or access instruction on the outer label. Labels may be visible to movers, neighbors, storage staff and passersby. The outside needs enough information to route the box, not a map of private contents.
 
-## Photograph anything you disassemble
+`Bedroom` is unclear in a three-bedroom home. Use stable protected zones such as `Origin kitchen / lower pantry`, `Destination bedroom 2 / north wall` or `Storage unit / rack C`. If the destination changes, keep the plan and add the actual placement event. Overwriting the plan can make a rerouted box appear missing.
 
-Furniture disassembled for a move — a bed frame, a modular shelving unit, anything with hardware that needs to go back together correctly — is much easier to reassemble correctly with a photo of how it looked put together, plus a photo of the hardware taped to the corresponding piece. This is a small step at disassembly time that saves real frustration during setup in the new home, especially for furniture with non-obvious assembly.
+## Photograph context without creating unsafe evidence
 
-## The first-night box is its own separate category
+Before closing a box, a broad photo can link the visible contents group to its ID. For furniture, photograph the overall item, pre-existing observable condition and disassembly layout before work begins. Keep hardware in a labelled container tied to the furniture ID.
 
-Beyond the general box system, it's worth keeping one clearly marked box or bag entirely separate from the numbered system — the items needed the first night in a new home before anything else is unpacked: toiletries, a change of clothes, basic kitchen items, chargers, any medication. This isn't really inventory in the same sense as the rest of the move; it's a practical exception worth planning for so the first evening in a new home doesn't mean digging through numbered boxes to find a toothbrush.
+Do not move a heavy object, climb on unstable furniture, open energized equipment or reproduce a fault for a photograph. A photo records what the camera captured; it does not establish cause, ownership, value, safe operation or responsibility. Keep the unedited original and capture date protected. Preserve annotated copies as derivatives rather than replacing the original.
 
-## The moving layer is temporary; archive it once you're settled
+## For a U.S. interstate move, preserve the mover's inventory and bill of lading
 
-Once unpacking is complete, box-level records have served their purpose and can be archived or removed, while permanent asset records for the possessions that matter long-term stay in place. A moving inventory isn't meant to become a permanent fixture — its job ends when the move does.
+FMCSA's current [pickup guidance](https://www.fmcsa.dot.gov/protect-your-move/how-to/subpartE) says an interstate mover must prepare an inventory before or at loading. The inventory records existence and condition; the customer may note disagreements, should retain a copy, and the completed mover inventory becomes an attachment to the bill of lading. The bill of lading is the contract for that interstate shipment, not the household spreadsheet.
 
-**Contextual CTA:** Use a room-based box ID system for ordinary contents, document valuable items individually before the move, and keep permanent asset records only for what still matters after unpacking.
+Before signing, compare item and condition entries with what you can safely observe. Use the document's actual correction or notation process for disagreements. Do not change a FamilyBoard row to make it look as if the mover accepted a household note.
+
+This federal guidance applies to interstate household-goods moves. Intrastate movers, portable containers, rental vehicles, self-moves and international moves may use different documents and rules. Start with the actual contract and responsible regulator instead of borrowing the federal workflow by analogy.
+
+## Correctly separate valuation from inventory detail
+
+FMCSA's current [liability and protection guidance](https://www.fmcsa.dot.gov/consumer-protection/protect-your-move/are-you-moving/liability-protection) says interstate movers must offer Full Value Protection and Released Value. Unless a customer selects Released Value, Full Value Protection applies. Released Value provides no more than $0.60 per pound per article; it is not a statement of market price. FMCSA describes extraordinary-value items as worth more than $100 per pound and explains that a mover may limit responsibility unless those items are specifically listed in shipping documents.
+
+Do not turn those general rules into an automatic coverage result. The chosen option, written terms, declared items, packing, exclusions, insurance and facts still matter. FMCSA also warns that packing your own boxes can make a claim harder to establish. Keep declarations and valuation selections with official shipment documents, not exposed on a box exterior.
+
+## Loading needs a count and an attributable custody event
+
+Before loading, freeze a dated household version. Group boxes so the team can count without blocking safe work: by room, loading zone or rolling batch. Record `household count observed`, `mover inventory reference` or `container seal source` accurately. Do not write `mover accepted all boxes` unless an attributable mover document supports that exact fact.
+
+For friend or family help, use role labels such as `household loading lead`, `rental-vehicle driver role` or `storage receiving role`. Private names and contact details stay protected.
+
+## Reconcile at destination before unpacking disperses the evidence
+
+At delivery, compare incoming box IDs and separately handled items with the controlling inventory. FMCSA's [delivery guidance](https://www.fmcsa.dot.gov/protect-your-move/how-to/subpartG) tells interstate customers to check delivered items against the inventory and record loss or damage. Other moves follow their applicable contracts and processes.
+
+Run a **handover check** for which IDs were observed at destination and what visible condition existed before dispersal. Then run a **reconciliation check** for which planned groups are present, missing, rerouted or still unverified. Keep `destination handover recorded—reconciliation pending` separate from `reconciled and unpacked`. One truck unloading event does not prove every box is present.
+
+## Describe observable condition, not blame
+
+Useful wording is narrow: `BOX-K-014 not located in kitchen, bedroom 2 or staging zone during 2026-08-24 count`; `wrapped desk showed a visible split at lower-left edge before unwrapping; photo P7`; or `mover inventory line 42 was marked received while household reconciliation remains open`.
+
+Avoid unsupported conclusions such as `stolen`, `mover broke it`, `unsafe`, `claim approved`, `fully delivered` or `waived`. Preserve the source, date and next evidence gap. For electrical, fuel, chemical, structural, sharp-object or lifting danger, stop routine checking and follow current emergency, manufacturer and qualified-professional instructions.
+
+## A notice draft is not a delivered notice
+
+If a box is missing or an item appears damaged, preserve the current inventory, photos and contract sources before editing. A draft email or planned call does not prove delivery. Keep an attributable sent copy, portal receipt, signed notation or other source required by the applicable process.
+
+FMCSA publishes [loss and damage guidance](https://www.fmcsa.dot.gov/protect-your-move/resources/discovered-loss-damage) for interstate moves, but FMCSA does not settle private claims. State, local, international, insurance and contract processes differ. FamilyBoard does not calculate a federal, state or contract deadline. Record an externally verified date as a protected source pointer and household checkpoint.
+
+## Retention ends when the purpose ends, not when the last box opens
+
+Unpacking is one milestone, not a universal deletion date. Keep the relevant version while a shortage, damage observation, correction, payment, claim, insurance, tax, ownership, warranty, storage or legal purpose remains. Keep official documents for the period required by their controlling source. If a permanent asset record links to a moving photo, migrate or preserve useful evidence before minimizing the move file.
+
+When every group has an attributable outcome and no external purpose remains, archive a limited final index or delete redundant working copies according to a verified household retention plan. Do not erase the only source merely because the living room is clear.
+
+## Affiliate supplies are operational aids, not evidence
+
+A future clearly labelled affiliate area may recommend ordinary labels, markers, document sleeves, storage bins or scanners. A commission cannot verify a mover, contract, inventory, box, condition, delivery, notice, claim or result. Buying a recommended product cannot move an event to `loaded`, `delivered` or `completed`.
+
+**Contextual CTA:** Create private box IDs before tape hides the contents, then use the Moving Box Handover Log to preserve loading, destination reconciliation and unresolved issues as separate attributable events.
 
 **FAQ:**
-- Q: How much does a mover actually owe me if they lose or damage something?
-  A: Under the federal default, Released Value Protection, interstate movers are liable for only $0.60 per pound per item — a 50-pound television worth $2,000 would be compensated around $30. Full Value Protection is the paid alternative that covers actual replacement value instead, and it's worth considering for anything genuinely valuable.
-- Q: Do I need to list every item in every box for a moving inventory?
-  A: No. A box ID, source room, destination room and a short contents description is enough for ordinary belongings. The detail that actually matters is reserved for high-value or fragile items, which deserve individual records rather than being folded into a general box list.
-- Q: What happens to a moving inventory after the move is done?
-  A: The box-level records can be archived or deleted once unpacking is complete — they were only needed to track the move itself. Permanent asset records for possessions that matter long-term should already exist separately and simply continue on afterward.
-- Q: Should valuable items be declared to the mover specifically?
-  A: Yes, if using Full Value Protection. An undeclared valuable item packed in an ordinary box is generally treated the same as any other box contents if something happens to it, so declaring high-value items separately is what makes that higher protection level actually apply to them.
+- Q: Do I need to list every item inside every moving box?
+  A: Usually no. Ordinary contents can use a private box ID, source zone, destination zone, broad contents group and handling note. Separately identify items whose contract, mover inventory, valuation, insurance, safety or household purpose requires item-level evidence.
+- Q: Is my household moving spreadsheet the same as the mover's inventory?
+  A: No. For a U.S. interstate move, FMCSA says the mover must prepare an inventory before or at loading and attach a completed mover inventory to the bill of lading. A household list can cross-reference those documents but cannot replace, amend or prove them.
+- Q: Does signing at delivery mean everything arrived undamaged?
+  A: Do not let a household status imply that conclusion. Compare delivered items with the controlling inventory, record observable shortages or new condition issues, and read the actual receipt before signing. Its effect depends on the document, jurisdiction and facts.
+- Q: What protection applies to a U.S. interstate move?
+  A: FMCSA says interstate movers must offer Full Value Protection and Released Value. Unless the customer chooses Released Value, Full Value Protection applies; Released Value is limited to 60 cents per pound per article. FamilyBoard does not select or interpret coverage.
+- Q: When can I delete a moving inventory?
+  A: Use purpose-based retention, not an automatic unpacking date. Keep the relevant version while an unresolved or linked contract, claim, insurance, tax, ownership, warranty, storage or legal purpose remains.
 
 ---
 
@@ -14170,6 +14219,115 @@ A future labelled affiliate area may show document sleeves, label makers, receip
 
 ---
 
+## Page 218 — Moving Box Handover Log
+**Slug:** `/tools/moving-box-handover-log/`
+**Primary intent:** track moving boxes from household packing through loading, destination handover and exception resolution
+**Title tag:** `Moving Box Handover Log | Loading, Delivery, Missing and Damage Records`
+**Meta description:** `Create a private, versioned moving-box log for packing, loading custody, destination handover, missing boxes, visible condition issues, notice and outcome sources.`
+**Primary keyword concept:** moving box handover log
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-24
+**Editorial review date:** 2026-08-24
+**Content version:** 1
+**Suggested internal links:** `/guides/moving-inventory/`, `/tools/move-in-checklist-generator/`, `/guides/moving-house-organizer/`, `/guides/valuable-item-inventory/`
+
+# Moving box handover log
+
+A moving box changes hands more than once: household packing, loading team, mover or rental vehicle, storage or container custody, destination unloading and household reconciliation. A single checkbox labelled `moved` hides those transitions and makes it hard to isolate a missing box or condition issue.
+
+This free browser tool creates a private, versioned source map for those events. It does not replace a mover's inventory, bill of lading, estimate, contract, valuation selection or insurance source; verify a mover, broker, license, vehicle, packing, box, seal, custody, delivery, condition or communication; determine fault, liability, valuation, coverage, damages, acceptance, waiver, claim or settlement; calculate a legal or contract deadline; contact anyone; file a notice, complaint or claim; authorize access or payment; or certify completion.
+
+**Ready to build the handover record? [Jump to the Moving Box Handover Log](#tool-heading).**
+
+## Start with a private move ID
+
+Use `MOVE-2026-A` rather than a family name, full origin or destination address, mover shipment number or storage account. The shareable result needs enough context for household reconciliation, not enough detail to reveal where valuable contents are travelling.
+
+Choose the move context that describes the workflow: interstate professional move, intrastate or local professional move, self-move, portable container or storage transfer, or family/friend/mixed handoff. The selection is a label only. It does not determine which law, contract, regulator or insurance applies.
+
+## Loading, destination handover and review dates are different
+
+The planned or actual loading date begins the household event window. Destination handover may be blank while goods remain in transit or storage. The current review date is when the household checked this version; the next reconciliation checkpoint organizes pending work.
+
+The tool enforces date order but never calculates a delivery promise, notice period, claim period or limitation date. If a controlling source provides an important external date, preserve it in protected storage and assign a household check before it. FamilyBoard does not decide whether that date is correct or applicable.
+
+## Preserve controlling documents outside the result
+
+Use the source field for safe references to the estimate, contract, order for service, bill of lading, mover inventory, amendments, valuation selection, insurance source, container or rental agreement, loading source, destination source, notices and outcomes. Examples are `EST-E1`, `BOL-B1`, `INV-M1`, `PHOTO-P4` and `NOTICE-N1`.
+
+For a U.S. interstate move, FMCSA's [pickup guidance](https://www.fmcsa.dot.gov/protect-your-move/how-to/subpartE) explains that the mover's completed inventory is attached to the bill of lading and that customers can note disagreement. This household log can reference those originals but cannot create or amend them. Other move types use their own controlling sources.
+
+## Each event uses ten fields
+
+Enter one line per versioned event:
+
+`ID | box or item group | attributable packing, loading, custody, handover, condition, notice or outcome fact | custodian or source role | event date | protected evidence pointer | next gap or closure reason | owner role | target or outcome date | status`
+
+Event dates fall from loading through the current review. Open rows need a target between the review and next checkpoint. Closed rows need a real outcome date between loading and review. The tool accepts at most 18 rows so one output remains reviewable; start a later dated version for more events.
+
+## Nine statuses prevent premature closure
+
+1. **Packed and household-indexed—loading handoff pending:** household packing evidence exists; custodian acceptance is not implied.
+2. **Loaded or accepted by custodian—destination handoff pending:** an attributable custody event exists; destination possession is not implied.
+3. **Destination handoff recorded—box reconciliation pending:** a destination event exists; contents and completeness remain unchecked.
+4. **Box or item missing—notice delivery pending:** a dated search or reconciliation gap exists; no external notice is implied.
+5. **Visible condition issue recorded—notice delivery pending:** an observable condition source exists; cause and responsibility remain unknown.
+6. **Notice delivered—response or inspection pending:** an attributable sent or received source exists; agreement and outcome are not implied.
+7. **Reconciled and unpacked—household outcome linked:** the household linked a dated reconciliation source and no event remains open in this version.
+8. **Loss or damage process completed—outcome source linked:** an actual repair, replacement, payment, return or other controlling outcome source exists.
+9. **Limited archive or external handoff—gap and ownership preserved:** unresolved work moved to another controlled process without inventing a result.
+
+The first six are open. The last three are closed household states, but they do not establish legal acceptance, waiver, coverage or liability. A scheduled inspection, claim number, repair promise or `delivered` scan does not qualify as a completed outcome.
+
+## Destination-dependent statuses require a real handover date
+
+The tool rejects destination reconciliation, missing-item, visible-condition, notice or completed-outcome states when no destination handover date is recorded. This prevents a planned delivery from masquerading as physical possession.
+
+An in-transit issue can remain in the custody status with a specific attributable fact and next step. If a separate process begins before destination handover, use the limited external-handoff state only when that transfer actually occurred and the gap, owner and protected source are retained.
+
+## Record observation rather than blame
+
+Good text identifies the source and limitation: `Household count found 13 of 14 kitchen IDs in destination zones`; `wrapped table showed a visible split on lower edge before wrap removal`; `mover inventory line 42 was checked at delivery while household contents review remains pending`.
+
+Do not write `mover stole box`, `driver broke table`, `insurance covers it`, `accepted without damage` or `claim approved` without a controlling source. Even where one exists, keep the original protected. The tool blocks generic closure terms because they erase the evidence gap.
+
+For heavy objects, stairs, sharp materials, electricity, fuel, chemicals or structural hazards, stop routine checking and follow current responsible-authority, manufacturer, emergency and qualified-professional guidance. Do not recreate a dangerous condition for a photograph.
+
+## A notice draft is not a delivered notice
+
+Preparing an email, support form or call reminder proves only that the household planned a step. An attributable sent copy, receipt, portal acknowledgement or source required by the applicable process is a later event. FamilyBoard does not choose the recipient, wording or channel.
+
+FMCSA publishes [loss and damage guidance](https://www.fmcsa.dot.gov/protect-your-move/resources/discovered-loss-damage) for interstate moves, but FMCSA does not settle private claims. State, local, international, insurance and contract processes can differ. The tool never calculates a federal, state, contract, insurance or legal deadline.
+
+## Privacy screening cannot replace human review
+
+The form blocks common phone and email patterns, long identifiers, complete addresses, access codes, account and payment details, signatures, mover or customer names, full shipment, contract, claim, policy and serial numbers, and sensitive medical, child, complaint or legal content. It cannot recognize every private fact.
+
+Review every row before copying, printing, downloading or sharing. FamilyBoard processes the working record in the current browser; it does not receive, validate or back up the photos and move documents behind your pointers.
+
+## Affiliate products remain outside the evidence chain
+
+A future labelled affiliate block may offer labels, markers, document sleeves, scanners, storage bins or moving supplies. The commission relationship cannot verify packing quality, mover conduct, custody, condition, delivery, notice or outcome. A product purchase cannot change a status or close a row.
+
+**Contextual CTA:** Freeze the box index and controlling document pointers before loading, then add only attributable handover and destination facts. Keep exceptions open until a dated reconciliation, actual outcome or explicit external handoff source exists.
+
+**FAQ:**
+- Q: Does this log replace the mover's inventory or bill of lading?
+  A: No. It is a household index. Preserve the mover's official inventory, bill of lading, estimate, contract, valuation and other controlling sources separately, then link them with safe pointers.
+- Q: Can a loaded status prove that the mover accepted a box?
+  A: No. A status needs an attributable source and describes only that source. Household observation, mover documentation, storage custody and destination possession remain separate facts.
+- Q: Should I put full addresses or valuable contents in the tool?
+  A: No. Use a private move ID, broad zones and safe source pointers. Keep complete addresses, names, contacts, signatures, shipment numbers, valuable-item details and access instructions in protected originals.
+- Q: Will the tool calculate a mover notice or claim deadline?
+  A: No. Interstate, state, local, international, insurance and contract procedures differ. Verify the controlling source outside FamilyBoard and use a household checkpoint without treating it as a legal calculation.
+- Q: When is a row closed?
+  A: Only when a dated household reconciliation, actual loss or damage outcome, or limited external handoff source exists. A delivery promise, scheduled inspection, draft notice or case number alone remains open.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.
@@ -16883,7 +17041,7 @@ This file is intended to be handed directly to Codex/Claude Code after the `fami
 | 100 | `/guides/renovation-records/` | Renovation Records: Keep Contractors, Materials, Dates, Warranties and Before/After History | keep records of home renovations | renovation records organizer | 233 |
 | 101 | `/guides/contractor-records/` | Contractor Records: Keep Quotes, Work History and Household Context Organized | organize home contractor contacts and work history | contractor records organizer | 208 |
 | 102 | `/guides/home-improvement-receipts/` | Home Improvement Receipts: Organize Costs and Proof by Project, Not by Shopping Trip | organize receipts from renovations and improvements | organize home improvement receipts | 216 |
-| 103 | `/guides/moving-inventory/` | Moving Inventory: Track Boxes, Rooms, Valuable Items and What Needs Special Handling | inventory items for a move | moving inventory checklist | 212 |
+| 103 | `/guides/moving-inventory/` | Moving Inventory Checklist \| Box IDs, Loading, Delivery and Damage Records | create a box and handover inventory before, during and after a household move | moving inventory checklist | 289 |
 | 104 | `/guides/storage-unit-inventory/` | Storage Unit Inventory: Know What Is Off-Site Without Opening Every Box | know what is stored off-site | storage unit inventory | 213 |
 | 105 | `/guides/digital-home-inventory-backup/` | Digital Home Inventory Backup: Protect the Records That Describe Your Home | back up a digital home inventory safely | home inventory backup | 258 |
 | 106 | `/guides/household-documents-organizer/` | How to Organize Household Documents Without Building a Giant Digital Junk Drawer | organize household documents into a useful system | how to organize household documents | 274 |
