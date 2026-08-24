@@ -125,6 +125,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-insurance-policy-source-version-log/</loc>",
       "<loc>https://familyboard.win/guides/organize-insurance-documents/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-insurance-documents/</loc>",
+      "<loc>https://familyboard.win/tools/household-utility-provider-service-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-utility-provider-service-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/organize-utility-account-information/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/organize-utility-account-information/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -572,6 +576,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Assemble the issued document stack in controlling order",
       "Keep claim and complaint records connected but separate",
+    ],
+  },
+  {
+    path: "/tools/household-utility-provider-service-handoff-log/",
+    require: [
+      "Household Utility Provider and Service Handoff Log",
+      'hreflang="zh-TW"',
+      "Twelve statuses preserve the difference between discovery, request and result",
+      "It does not search for a provider; validate a service area, address, meter, account, rate, bill, payment, deposit, contract, customer or authorization",
+    ],
+  },
+  {
+    path: "/guides/organize-utility-account-information/",
+    require: [
+      "How to organize utility account information without turning the index into a security risk",
+      'hreflang="zh-TW"',
+      "Separate portal access, billing state and service state",
+      "Treat a move as a sequence of evidence, not one cancellation checkbox",
     ],
   },
   {
@@ -1049,6 +1071,24 @@ const checks = [
       'hreflang="en"',
       "保單不是單一 PDF，要保存發行文件的組成關係",
       "台灣保險申訴流程要連到目前官方來源",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-utility-provider-service-handoff-log/",
+    require: [
+      "家庭公用事業供應與服務交接紀錄",
+      'hreflang="en"',
+      "十二種狀態分清找到來源、提出申請與實際完成",
+      "工具不搜尋供應單位，不查地址、電號、水號、瓦斯／網路帳號或表號",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/organize-utility-account-information/",
+    require: [
+      "水電過戶怎麼整理？先分清供應單位、戶名、結算與安全入口",
+      'hreflang="en"',
+      "台電的搬家結算、戶名變更與停電通報是不同流程",
+      "電信爭議保留業者申訴與後續調處來源",
     ],
   },
   {

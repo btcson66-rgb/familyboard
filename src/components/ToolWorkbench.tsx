@@ -3520,6 +3520,138 @@ const definitions: Record<string, Definition> = {
       return `${values.review.trim()} — household insurance policy source and version log\nReview context: ${values.context}\nInsurance catalog/source-map baseline: ${formatter.format(baselineDate)}\nCurrent insurance-source review: ${formatter.format(reviewDate)}\nNext source or status checkpoint: ${formatter.format(nextReview)}\nOpen source, insurer, document, version, access or status rows: ${openRows.length}\nReviewed, ended or not-applicable rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nInsurer, regulator, ombudsman and protected issued-document source map: ${values.basis.trim()}\n\n${lines("Versioned insurance source evidence", recordRows.map((row) => `${row.parts[0]} — policy purpose/household role: ${row.parts[1]} — legal-insurer evidence: ${row.parts[2]} — source checked: ${formatter.format(strictIsoDate(row.parts[3]) as Date)} — issued set/version/effective-period clue: ${row.parts[4]} — form/endorsement relationship: ${row.parts[5]} — access/protected original: ${row.parts[6]} — status/claim/complaint source and discrepancy: ${row.parts[7]} — owner: ${row.parts[8]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[9]) as Date)} — status: ${row.parts[10]}`))}\n\nProtected issued policies, endorsements, notices and review-history location: ${values.storage.trim()}\n\nThis output is a household source index, not proof of insurance, coverage, payment, validity or claim outcome. It does not search, authenticate, issue, renew, replace, cancel or change insurance; visit a portal; identify a person, insurer, agent, policy, claim or insured asset; read, compare or interpret wording, exclusions, limits, deductibles, beneficiaries, duties, notices or rights; calculate a premium, benefit, claim, appeal, complaint or legal deadline; contact an insurer, regulator or ombudsman; submit a request, claim or complaint; or provide insurance, financial or legal advice. Use the actual issued documents, current insurer, applicable regulator or dispute source and qualified advice.`;
     },
   },
+  "__zh-tw-household-utility-provider-service-handoff-log": {
+    intro:
+      "逐筆記錄供應單位與服務地點證據、戶名或大樓責任、官方存取與帳務／服務觀察、安全入口、搬家行動及業者確認。工具不聯絡業者，也不驗證帳戶。",
+    fields: [
+      text("review", "家庭私人公用事業核對代號", "使用家庭內部代號，不要輸入姓名、地址、帳戶、表號、案件或精確受保護位置。", "UTILITY-HANDOFF-2026-A"),
+      {
+        name: "context",
+        label: "公用事業服務核對情境",
+        type: "select",
+        options: [
+          "第一次家庭水電瓦斯網路盤點",
+          "家庭戶名或帳務備援交接",
+          "搬入開通、過戶或移機",
+          "搬出停止、結算或設備歸還",
+          "供應單位、屋主或管委會責任改變",
+          "目前官方 APP、網站與服務狀態核對",
+          "停電、停水、瓦斯或備援來源複查",
+          "帳單、繳費或服務狀態差異",
+          "網路、電話或有線電視申訴準備",
+        ],
+      },
+      { name: "baselineDate", label: "服務清單與來源地圖基準日", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "本次公用事業服務核對日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "下一次來源或交接核點", type: "date", value: "2026-09-14" },
+      text("basis", "供應單位、房屋、障礙、安全、主管機關與受保護資料來源地圖", "使用安全來源／證據代號或有日期的公開網址；地址、帳戶、帳單、案件、憑證與通信留在受保護位置。", "TAIPOWER-OFFICIAL-P2；PROPERTY-SOURCE-B1；OUTAGE-SOURCE-E2；NCC-R1；PROTECTED-SET-U2"),
+      {
+        name: "records",
+        label: "有版本的公用事業供應與服務交接列",
+        type: "textarea",
+        help: "每行：ID｜安全服務用途與家庭角色｜供應單位與服務地點適用證據｜來源核對日 YYYY-MM-DD｜用戶、住戶、屋主、房東或管委會責任狀態｜官方存取與帳單／服務狀態觀察｜停電、停水、瓦斯或其他安全來源｜開通、過戶、變更戶名、移機、停止、結算或日常交接行動與業者確認｜主管機關、申訴來源或未解差異｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。最多 14 行。",
+        value: "ELEC-1 | 自住房屋電力服務；家庭公用事業紀錄角色 | 台電官方帳單來源與目前服務資料支持供應地點適用；受保護證據 UTIL-P2 | 2026-08-24 | 受保護業者資料已觀察登記用戶角色；家庭備援角色只可查找索引 | 台灣電力 APP 官方入口已開啟；本期帳單與服務狀態可見；未由扣繳設定推定付款結果 | 台電停電查詢通報、官方安全來源與 119 入口已在本次核對日映射 | 目前服務保留；沒有搬家申請；當住戶、供應、責任或存取變更時重新檢視 | 台電意見來源與適用消費爭議入口已映射；本次有日期檢視無來源差異 | 家庭公用事業紀錄角色 | 2026-08-24 | 已核對供應來源、責任、存取、狀態與交接入口\nNET-MOVE-1 | 舊住處網路服務；搬出停止與租用設備追蹤 | 電信業者官方帳單來源支持舊住處服務；受保護證據 NET-P1 | 2026-08-23 | 受保護業者資料已觀察登記用戶角色；設備保管已有負責人 | 官方帳戶來源已開啟；目前帳單可見；停止服務結果尚未觀察 | 業者障礙與服務狀態入口已映射；119 等緊急來源與網路客服保持分開 | 官方停止申請已記錄；業者確認、最後帳單與租用設備結果等待處理 | 業者申訴與 NCC／電消中心來源已映射；最後帳務或設備差異仍待結果 | 家庭通信紀錄角色 | 2026-09-14 | 已記錄開通、過戶、移機、停止或結算申請，等待業者確認",
+      },
+      text("storage", "受保護帳單、確認、設備與核對歷程位置", "使用資料夾或流程代號；不要輸入姓名、地址、帳戶、表號、帳單、餘額、付款、憑證、案件、私人通信或設備精確位置。", "家庭紀錄／公用事業服務／UTILITY-HANDOFF-2026-A／受保護業者證據"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review.trim()) return "請輸入家庭私人公用事業核對代號，讓匯出版本可以辨認。";
+      if (!baselineDate) return "請用 YYYY-MM-DD 輸入真實的服務清單與來源地圖基準日。";
+      if (!reviewDate) return "請用 YYYY-MM-DD 輸入真實的本次公用事業服務核對日。";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次公用事業服務核對日不能晚於今天。";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "服務清單與來源地圖基準日不能晚於本次核對日。";
+      if (!nextReview) return "請用 YYYY-MM-DD 輸入真實的下一次來源或交接核點。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "下一次來源或交接核點不能早於本次核對日。";
+      if (values.basis.trim().length < 12) return "請用安全索引指出供應單位、房屋、障礙、安全、主管機關與受保護資料來源地圖。";
+      if (!values.storage.trim()) return "請輸入受保護帳單、確認、設備與核對歷程位置。";
+      const recordRows = values.records.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (recordRows.length === 0) return "請至少加入一筆公用事業服務用途與交接關係。";
+      if (recordRows.length > 14) return "一個公用事業核對版本最多支援 14 行；請先凍結本版，再建立另一個範圍。";
+      const invalidRows = recordRows.filter((row) => row.parts.length !== 12 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `公用事業服務第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整包含十二個以直線分隔的欄位。`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆公用事業服務列都需要不重複的 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "每個 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 ELEC-1 或 WATER-MOVE。";
+      const statusOrder = [
+        "已記錄服務用途，等待供應單位來源",
+        "已記錄供應單位，等待服務地點適用證據",
+        "已記錄地點適用證據，等待戶名與責任關係",
+        "已記錄責任關係，等待目前官方存取",
+        "已測試官方存取，等待帳單與服務狀態",
+        "已觀察帳單或服務狀態，等待停電、停水與安全入口",
+        "已映射障礙與安全入口，等待搬家或家庭交接行動",
+        "已記錄開通、過戶、移機、停止或結算申請，等待業者確認",
+        "供應、帳務、安全或責任資料衝突，等待負責來源處理",
+        "已核對供應來源、責任、存取、狀態與交接入口",
+        "服務已開通、過戶、移機、停止或結算，記錄官方結果與保管",
+        "不適用，記錄理由與重新打開條件",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[11]));
+      if (invalidStatuses.length)
+        return `公用事業服務第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用欄位說明中的十二種證據狀態之一。`;
+      const invalidSourceDates = recordRows.filter((row) => {
+        const sourceDate = strictIsoDate(row.parts[3]);
+        return !sourceDate || sourceDate.getTime() < baselineDate.getTime() || sourceDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `公用事業服務第 ${invalidSourceDates.map((row) => row.line).join("、")} 行，需要介於基準日與本次核對日之間的真實來源核對日。`;
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 9).includes(row.parts[11]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(9).includes(row.parts[11]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的公用事業服務第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次核對日起，到下一次來源或交接核點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已核對、完成或不適用的公用事業服務第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於基準日與本次核對日之間的實際結果日期。`;
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 6 || row.parts[2].length < 8 || row.parts[4].length < 6 || row.parts[5].length < 8 || row.parts[6].length < 6 || row.parts[7].length < 8 || row.parts[8].length < 6 || row.parts[9].length < 3);
+      if (missingLayers.length)
+        return `公用事業服務第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實服務用途、供應來源、責任、存取／狀態觀察、安全入口、交接行動、申訴來源與負責角色。`;
+      const completedWithoutEvidence = recordRows.filter((row) => row.parts[11] === statusOrder[9] && (!/(?:官方|供應|台電|自來水|天然氣|業者|管委會|租約|帳單來源)/.test(row.parts[2]) || !/(?:登記用戶|住戶|承租人|屋主|房東|管委會|大樓|負責)/.test(row.parts[4]) || !/(?:開啟|存取|可見|觀察)/.test(row.parts[5]) || !/(?:帳單|繳費|付款|服務|狀態|供應)/.test(row.parts[5]) || !/(?:停電|停水|消防|119|安全|障礙|危險)/.test(row.parts[6]) || !/(?:交接|保留|重新檢視|搬家|開通|過戶|移機|停止|結算|責任|存取變更)/.test(row.parts[7]) || !/(?:申訴|主管|NCC|電消|消保|業者|台電)/i.test(row.parts[8]) || /(?:等待|未知|未解|缺少|找不到|尚未|衝突)/.test([row.parts[2], row.parts[4], row.parts[5], row.parts[6], row.parts[7], row.parts[8]].join(" "))));
+      if (completedWithoutEvidence.length)
+        return `已完成公用事業核對第 ${completedWithoutEvidence.map((row) => row.line).join("、")} 行必須連結可歸屬供應來源、責任、實際存取與狀態觀察、安全入口、交接或重新開啟規則及申訴來源，且不能仍有未解差異。`;
+      const requestClaimingCompletion = recordRows.filter((row) => row.parts[11] === statusOrder[7] && (/(?:已完成|已結清|已停止|已過戶|已移機|餘額歸零|設備已歸還)/.test(row.parts[7]) || !/(?:申請|送出|記錄|等待|待確認|尚未)/.test(row.parts[7])));
+      if (requestClaimingCompletion.length)
+        return `申請已記錄第 ${requestClaimingCompletion.map((row) => row.line).join("、")} 行必須保持開放，寫出申請與等待業者確認，不能宣稱服務或結算已完成。`;
+      const conflictWithoutResponsibleRoute = recordRows.filter((row) => row.parts[11] === statusOrder[8] && (!/(?:衝突|爭議|不同|不一致|危險|不安全|障礙|責任不明|異常)/.test([row.parts[5], row.parts[6], row.parts[7], row.parts[8]].join(" ")) || !/(?:供應單位|台電|自來水|天然氣|電信業者|房東|管委會|消防|119|主管機關|合格|負責)/.test([row.parts[6], row.parts[7], row.parts[8], row.parts[9]].join(" "))));
+      if (conflictWithoutResponsibleRoute.length)
+        return `資料衝突第 ${conflictWithoutResponsibleRoute.map((row) => row.line).join("、")} 行必須記錄供應、帳務、安全或責任差異，以及負責供應單位、房東／管委會、消防、主管機關或合格處理來源。`;
+      const concludedWithoutConfirmation = recordRows.filter((row) => row.parts[11] === statusOrder[10] && (!/(?:業者確認|官方確認|官方結果|最後帳單|完成通知|已觀察確認)/.test(row.parts[7]) || !/(?:最後|帳單|押金|退款|設備|爭議|保管|紀錄)/.test([row.parts[7], row.parts[8]].join(" ")) || /(?:等待|尚未|未知|未解)/.test([row.parts[7], row.parts[8]].join(" "))));
+      if (concludedWithoutConfirmation.length)
+        return `服務結果已完成第 ${concludedWithoutConfirmation.map((row) => row.line).join("、")} 行必須記錄已觀察的業者確認，並檢查最後帳單、押金／退款、設備、爭議與資料保管，不能仍有等待狀態。`;
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[11] === statusOrder[11] && !/(?:重新打開|重新檢視|若|如果|當|之後|搬家|住戶|新服務|供應改變|大樓改變|角色改變)/.test([row.parts[7], row.parts[8]].join(" ")));
+      if (notApplicableWithoutTrigger.length)
+        return `不適用第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須寫目前理由，以及重新打開這項服務的住處、住戶、供應或責任變化。`;
+      const earlyRowsClaimingCompletion = recordRows.filter((row) => statusOrder.slice(0, 7).includes(row.parts[11]) && /(?:全部驗證|帳戶有效|保證供應|已全額繳清|過戶完成|結清完成|沒有欠費)/.test([row.parts[2], row.parts[4], row.parts[5], row.parts[7], row.parts[8]].join(" ")));
+      if (earlyRowsClaimingCompletion.length)
+        return `仍開放的公用事業服務第 ${earlyRowsClaimingCompletion.map((row) => row.line).join("、")} 行不能宣稱全部驗證、帳戶有效、保證供應、已繳清、過戶或結清完成。`;
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、地址、公用事業帳戶、表號、帳單、案件或完整數字識別。請留在受保護原件，只在這裡放安全證據索引。";
+      if (/密碼|通關密語|門禁碼|一次性代碼|驗證碼|安全答案|復原碼|完整地址|完整門牌|服務地址|電號|水號|瓦斯用戶號碼|網路客戶編號|公用事業帳號|完整帳號|客戶編號|電表編號|水表編號|瓦斯表號|設備序號|帳單條碼|帳單內容|對帳單內容|餘額金額|繳費金額|銀行帳戶|匯款帳號|卡號|信用卡|扣繳權杖|身分證字號|護照號碼|駕照號碼|身分文件|出生日期|戶名全名|客戶姓名|住戶姓名|完整姓名|私人帳戶網址|案件編號|申訴內容|私人通信|Email 內容|登入憑證|API 金鑰|設備精確位置|醫療設備明細|照護行程|簽名|password|passphrase|passcode|access code|one-time code|verification code|full address|service address|account number|customer number|meter number|bill barcode|balance amount|payment amount|bank account|card number|government id|customer name|full name|private portal|case number|complaint contents|private message|login credential|exact equipment location|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、帳戶、表號、帳單、付款、身分、私人參與者、案件、通信或設備精確資料。請改寫成安全來源、流程或證據索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length })).filter((item) => item.count > 0);
+      return `${values.review.trim()}｜家庭公用事業供應與服務交接紀錄\n核對情境：${values.context}\n服務清單／來源地圖基準：${formatter.format(baselineDate)}\n本次公用事業服務核對：${formatter.format(reviewDate)}\n下一次來源或交接核點：${formatter.format(nextReview)}\n仍開放的供應、責任、存取、狀態、安全或確認列：${openRows.length} 筆\n已核對、完成或不適用列：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n供應單位、房屋、障礙、安全、主管機關與受保護資料來源地圖：${values.basis.trim()}\n\n${lines("有版本的公用事業供應與服務交接證據", recordRows.map((row) => `${row.parts[0]}｜服務／用途：${row.parts[1]}｜供應單位／地點適用：${row.parts[2]}｜來源核對日：${formatter.format(strictIsoDate(row.parts[3]) as Date)}｜戶名／責任：${row.parts[4]}｜官方存取／帳單／服務觀察：${row.parts[5]}｜障礙／安全入口：${row.parts[6]}｜開通／過戶／移機／停止／結算／交接與確認：${row.parts[7]}｜主管／申訴／差異來源：${row.parts[8]}｜負責角色：${row.parts[9]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[10]) as Date)}｜狀態：${row.parts[11]}`))}\n\n受保護帳單、確認、設備與核對歷程位置：${values.storage.trim()}\n\n這份輸出只是家庭來源與工作流程索引，不是公用事業帳戶、業者確認、帳單、付款紀錄、障礙通報或安全指示。它不搜尋、造訪、登入、讀表、下載用量，不辨識或驗證供應單位、服務範圍、地址、帳戶、戶名、授權、表號、費率、帳單、餘額、付款、押金、退款、契約、設備、開通、過戶、移機、停止、復供或結算，不送出申請、報修、申訴或歸還，不診斷公用事業狀況，不估算用量、費用、停電時間或恢復時間，不計算期限，不聯絡供應單位、房東／管委會、消防或主管機關，也不提供安全、財務、法律或監理意見。真實服務請使用實際供應單位與目前的消防、主管機關、房屋及合格專業來源。`;
+    },
+  },
   "appliance-manual-source-check-log": {
     intro:
       "Record exact-model evidence, the current manufacturer or authority source, document role, stated coverage, access result and a separate recall or safety-notice check. The tool does not search for or verify manuals, recalls or equipment.",
@@ -3644,6 +3776,138 @@ const definitions: Record<string, Definition> = {
       const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
       const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[10] === status).length })).filter((item) => item.count > 0);
       return `${values.review.trim()} — appliance manual source check log\nReview context: ${values.context}\nAppliance/source-map baseline: ${formatter.format(baselineDate)}\nCurrent manual-source review: ${formatter.format(reviewDate)}\nNext source or access checkpoint: ${formatter.format(nextReview)}\nOpen model, source, coverage, access or safety rows: ${openRows.length}\nReviewed, retired or not-applicable rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nManufacturer support, responsible-authority, recall and protected-evidence source map: ${values.basis.trim()}\n\n${lines("Versioned appliance manual source evidence", recordRows.map((row) => `${row.parts[0]} — asset/purpose/brand: ${row.parts[1]} — exact-model evidence: ${row.parts[2]} — source checked: ${formatter.format(strictIsoDate(row.parts[3]) as Date)} — source/document/language/version: ${row.parts[4]} — stated coverage: ${row.parts[5]} — access/saved copy: ${row.parts[6]} — recall/safety route and discrepancy: ${row.parts[7]} — owner: ${row.parts[8]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[9]) as Date)} — status: ${row.parts[10]}`))}\n\nProtected labels, full manuals, saved copies and review-history location: ${values.storage.trim()}\n\nThis output is a household source index, not an operating, installation, maintenance, repair or safety instruction. It does not identify, move, open, disconnect or inspect equipment; visit a URL; search, open, download, upload, copy, hash, compare, update or preserve a document; read a rating label; verify a manufacturer, model, serial, production range, configuration, region, language, part, accessory, notice, recall, remedy or compatibility; contact support; authorize a task; release a stop-use instruction; or certify safety or closure. Use the current manufacturer, responsible safety authority, recall notice and qualified service source for the actual product.`;
+    },
+  },
+  "household-utility-provider-service-handoff-log": {
+    intro:
+      "Record the serving-provider source, service-location fit, protected account responsibility, access and status observations, safety routes, move action and provider confirmation. The tool does not contact a utility or validate an account.",
+    fields: [
+      text("review", "Private utility-service review reference", "Use a household code, not a person, address, account, meter, case or exact protected location.", "UTILITY-HANDOFF-2026-A"),
+      {
+        name: "context",
+        label: "Utility service review context",
+        type: "select",
+        options: [
+          "First household utility map",
+          "Household account-holder backup",
+          "Move-in service start or transfer",
+          "Move-out stop or final settlement",
+          "Provider, owner or building responsibility change",
+          "Current portal and service-status access check",
+          "Outage, emergency or continuity-source review",
+          "Billing, payment or service-status discrepancy",
+          "Internet, phone or TV complaint preparation",
+        ],
+      },
+      { name: "baselineDate", label: "Utility and source-map baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "Current utility-service review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next source or handoff checkpoint", type: "date", value: "2026-09-14" },
+      text("basis", "Provider, property, outage, emergency, regulator and protected-record source map", "Use safe source and evidence IDs or dated public URLs. Keep addresses, accounts, bills, cases, credentials and correspondence protected.", "UTILITY-OFFICIAL-P2; PROPERTY-SOURCE-B1; OUTAGE-SOURCE-E2; REGULATOR-R1; PROTECTED-SET-U2"),
+      {
+        name: "records",
+        label: "Versioned utility provider and service handoff rows",
+        type: "textarea",
+        help: "One line: ID | safe service purpose and household role | serving-provider and service-location evidence | source checked date YYYY-MM-DD | account, occupant, owner or building responsibility state | official access plus billing or service-status observation | emergency, outage and safety-source route | start, transfer, stop, settlement or routine handoff action and provider confirmation | regulator, complaint or dispute source and unresolved gap | owner role | target or outcome date YYYY-MM-DD | one of the twelve listed statuses. Maximum 14 lines.",
+        value: "ELEC-1 | Primary-home electricity service; household utility-records role | Official utility bill source and current service-area page support serving-provider fit; protected evidence UTIL-P2 | 2026-08-24 | Resident account-holder role observed in protected provider record; backup role has index access only | Official portal opened; current statement and service status visible; payment result not inferred from settings | Utility official outage page, provider safety source and local emergency route mapped on this review date | Existing service retained; no move request open; reopen on occupancy, provider, responsibility or access change | Provider complaint route and applicable state regulator source mapped; no source gap observed in this dated review | Household utility-records role | 2026-08-24 | Provider source, responsibility, access, status and handoff reviewed\nNET-MOVE-1 | Prior-home internet service; move-out stop and rented-equipment follow-up | Official provider statement source supports prior-location service; protected evidence NET-P1 | 2026-08-23 | Resident account-holder role observed in protected provider record; equipment custody assigned | Official account source opened; current statement visible; service stop result not yet observed | Provider outage and service-status routes mapped; local emergency route remains separate from internet support | Official stop request recorded; provider confirmation, final statement and rented-equipment result pending | Provider complaint source and FCC consumer route mapped; final billing or equipment discrepancy not yet determined | Household communications-records role | 2026-09-14 | Start, transfer, stop or settlement request recorded—provider confirmation pending",
+      },
+      text("storage", "Protected statements, confirmations, equipment and review-history location", "Use a folder or process label. Do not enter names, addresses, accounts, meters, bills, balances, payment data, credentials, cases, private messages or exact equipment locations.", "Household records / utility services / UTILITY-HANDOFF-2026-A / protected provider evidence"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review.trim()) return "Enter a private utility-service review reference so this exported version can be identified.";
+      if (!baselineDate) return "Enter the real utility and source-map baseline date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current utility-service review date in YYYY-MM-DD format.";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current utility-service review date cannot be in the future.";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "The utility and source-map baseline cannot be later than the current review.";
+      if (!nextReview) return "Enter a real next source or handoff checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next source or handoff checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 12) return "Identify the provider, property, outage, emergency, regulator and protected-record source map with safe pointers.";
+      if (!values.storage.trim()) return "Enter the protected location for statements, confirmations, equipment and review history.";
+      const recordRows = values.records.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (recordRows.length === 0) return "Add at least one utility service purpose and handoff relationship row.";
+      if (recordRows.length > 14) return "One utility-service review version supports at most 14 rows; freeze this version before starting another scope.";
+      const invalidRows = recordRows.filter((row) => row.parts.length !== 12 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Utility-service line ${invalidRows.map((row) => row.line).join(", ")} must contain all twelve pipe-separated fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Every utility-service row needs a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Use 2 to 20 letters, numbers or hyphens for each row ID, such as ELEC-1 or WATER-MOVE.";
+      const statusOrder = [
+        "Service purpose recorded—serving provider pending",
+        "Serving provider recorded—service-location fit pending",
+        "Service-location fit recorded—account responsibility pending",
+        "Account responsibility recorded—current official access pending",
+        "Official access tested—billing and service status pending",
+        "Billing or service status observed—emergency and outage routes pending",
+        "Emergency and outage routes mapped—move or handoff action pending",
+        "Start, transfer, stop or settlement request recorded—provider confirmation pending",
+        "Provider, status, billing, safety or responsibility conflict—responsible source review pending",
+        "Provider source, responsibility, access, status and handoff reviewed",
+        "Service started, transferred, stopped or settled—observed confirmation and custody recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[11]));
+      if (invalidStatuses.length)
+        return `Utility-service line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve evidence statuses in the field instructions.`;
+      const invalidSourceDates = recordRows.filter((row) => {
+        const sourceDate = strictIsoDate(row.parts[3]);
+        return !sourceDate || sourceDate.getTime() < baselineDate.getTime() || sourceDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `Utility-service line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a real source-checked date from the baseline through the current review.`;
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 9).includes(row.parts[11]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(9).includes(row.parts[11]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open utility-service line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next source or handoff checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Closed reviewed, completed or not-applicable utility-service line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from the baseline through this review.`;
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 12 || row.parts[4].length < 10 || row.parts[5].length < 12 || row.parts[6].length < 10 || row.parts[7].length < 12 || row.parts[8].length < 10 || row.parts[9].length < 4);
+      if (missingLayers.length)
+        return `Utility-service line ${missingLayers.map((row) => row.line).join(", ")} needs a real service purpose, serving source, responsibility, access/status observation, safety route, handoff action, complaint source and owner.`;
+      const completedWithoutEvidence = recordRows.filter((row) => row.parts[11] === statusOrder[9] && (!/(?:official|provider|utility|municipal|building|lease|statement|bill source|service-area)/i.test(row.parts[2]) || !/(?:account-holder|resident|occupant|owner|landlord|building|association|responsib)/i.test(row.parts[4]) || !/(?:opened|accessed|visible|observed)/i.test(row.parts[5]) || !/(?:statement|billing|payment|service|active|status)/i.test(row.parts[5]) || !/(?:outage|emergency|safety|911|hazard)/i.test(row.parts[6]) || !/(?:handoff|retained|reopen|move|start|transfer|stop|settlement|responsibility|access change)/i.test(row.parts[7]) || !/(?:complaint|regulator|commission|fcc|consumer|provider)/i.test(row.parts[8]) || /(?:pending|unknown|unresolved|not checked|not opened|conflict|missing)/i.test([row.parts[2], row.parts[4], row.parts[5], row.parts[6], row.parts[7], row.parts[8]].join(" "))));
+      if (completedWithoutEvidence.length)
+        return `Completed utility-service review line ${completedWithoutEvidence.map((row) => row.line).join(", ")} must link an attributable serving source, responsibility, actual access and status observation, safety routes, handoff or reopen rule and complaint source with no unresolved gap.`;
+      const requestClaimingCompletion = recordRows.filter((row) => row.parts[11] === statusOrder[7] && (/(?:confirmed complete|completed|service ended|settled|final balance cleared|equipment returned)/i.test(row.parts[7]) || !/(?:request|submitted|recorded|pending|awaiting)/i.test(row.parts[7])));
+      if (requestClaimingCompletion.length)
+        return `Submitted-request line ${requestClaimingCompletion.map((row) => row.line).join(", ")} must remain open and describe the request plus pending provider confirmation, not claim the service or settlement is complete.`;
+      const conflictWithoutResponsibleRoute = recordRows.filter((row) => row.parts[11] === statusOrder[8] && (!/(?:conflict|dispute|different|mismatch|hazard|unsafe|outage|unknown responsibility|unexpected)/i.test([row.parts[5], row.parts[6], row.parts[7], row.parts[8]].join(" ")) || !/(?:provider|utility|building|landlord|authority|regulator|emergency|911|qualified|responsible)/i.test([row.parts[6], row.parts[7], row.parts[8], row.parts[9]].join(" "))));
+      if (conflictWithoutResponsibleRoute.length)
+        return `Conflict line ${conflictWithoutResponsibleRoute.map((row) => row.line).join(", ")} must name the observed provider, status, billing, safety or responsibility conflict and the responsible review route.`;
+      const concludedWithoutConfirmation = recordRows.filter((row) => row.parts[11] === statusOrder[10] && (!/(?:provider confirmation|official confirmation|official result|final statement|completion notice|observed confirmation)/i.test(row.parts[7]) || !/(?:final|statement|deposit|refund|equipment|dispute|custody|record)/i.test([row.parts[7], row.parts[8]].join(" ")) || /(?:pending|awaiting|unknown|unresolved)/i.test([row.parts[7], row.parts[8]].join(" "))));
+      if (concludedWithoutConfirmation.length)
+        return `Completed service-result line ${concludedWithoutConfirmation.map((row) => row.line).join(", ")} must record observed provider confirmation and screen final statement, deposit or refund, equipment, dispute and record custody without a pending claim.`;
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[11] === statusOrder[11] && !/(?:reopen|review again|if |when |after |move|occupancy|new service|provider change|building change|role change)/i.test([row.parts[7], row.parts[8]].join(" ")));
+      if (notApplicableWithoutTrigger.length)
+        return `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and property, occupancy, service or responsibility change that reopens it.`;
+      const earlyRowsClaimingCompletion = recordRows.filter((row) => statusOrder.slice(0, 7).includes(row.parts[11]) && /(?:fully verified|account valid|service guaranteed|paid in full|transfer complete|settled|no balance)/i.test([row.parts[2], row.parts[4], row.parts[5], row.parts[7], row.parts[8]].join(" ")));
+      if (earlyRowsClaimingCompletion.length)
+        return `Open utility-service line ${earlyRowsClaimingCompletion.map((row) => row.line).join(", ")} cannot claim a fully verified account, guaranteed service, paid balance, completed transfer or settlement.`;
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone, email, address, utility account, meter, bill, case or complete numeric identifier was detected. Keep it protected and use a safe evidence pointer here.";
+      if (/password|passphrase|passcode|access code|one-time code|verification code|security answer|recovery code|full address|street address|service address|account number|customer number|utility account|meter number|device serial|bill barcode|statement contents|bill contents|balance amount|payment amount|bank account|routing number|card number|credit card|payment credential|autopay token|government id|social security|driver license|passport|identity document|date of birth|customer name|resident name|account holder name|full name|private portal|private url|case number|ticket number|complaint contents|private message|email contents|login credential|api key|exact equipment location|medical device details|care schedule|signature|ssn|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, account, meter, bill, payment, identity, private participant, case, communication or exact equipment detail was detected. Replace it with a safe source, process or evidence pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length })).filter((item) => item.count > 0);
+      return `${values.review.trim()} — household utility provider and service handoff log\nReview context: ${values.context}\nUtility/source-map baseline: ${formatter.format(baselineDate)}\nCurrent utility-service review: ${formatter.format(reviewDate)}\nNext source or handoff checkpoint: ${formatter.format(nextReview)}\nOpen provider, responsibility, access, status, safety or confirmation rows: ${openRows.length}\nReviewed, completed or not-applicable rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nProvider, property, outage, emergency, regulator and protected-record source map: ${values.basis.trim()}\n\n${lines("Versioned utility provider and service handoff evidence", recordRows.map((row) => `${row.parts[0]} — service/purpose: ${row.parts[1]} — serving provider/location fit: ${row.parts[2]} — source checked: ${formatter.format(strictIsoDate(row.parts[3]) as Date)} — account/responsibility: ${row.parts[4]} — official access/billing/service observation: ${row.parts[5]} — emergency/outage/safety route: ${row.parts[6]} — start/transfer/stop/settlement/handoff and confirmation: ${row.parts[7]} — regulator/complaint/dispute source: ${row.parts[8]} — owner: ${row.parts[9]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[10]) as Date)} — status: ${row.parts[11]}`))}\n\nProtected statements, confirmations, equipment and review-history location: ${values.storage.trim()}\n\nThis output is a household source and workflow index, not a utility account, provider confirmation, bill, payment record, outage report or safety instruction. It does not search, visit, sign in, read a meter, download usage, identify or validate a provider, service area, address, account, customer, authorization, meter, rate, bill, balance, payment, deposit, refund, contract, equipment, start, transfer, stop, restoration or settlement; submit a request, report, complaint or return; diagnose a utility condition; estimate usage, cost, outage duration or restoration; calculate a deadline; contact a provider, building, emergency service or regulator; or provide safety, financial, legal or regulatory advice. Use the provider actually serving the location and the current emergency, authority, building and qualified-professional sources.`;
     },
   },
   "vacation-shutdown-checklist-generator": {
@@ -3875,6 +4139,8 @@ const definitions: Record<string, Definition> = {
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
+  "household-utility-provider-service-handoff-log":
+    definitions["__zh-tw-household-utility-provider-service-handoff-log"],
   "home-inventory-checklist-generator": {
     intro:
       "依台灣家庭常見空間產生住宅財物盤點起始表，並保留照片、型號、單據與複查欄位。這不是估價或理賠保證。",

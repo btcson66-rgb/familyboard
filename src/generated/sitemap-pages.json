@@ -889,9 +889,9 @@
   },
   {
     "route": "/guides/organize-utility-account-information/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/organize-utility-account-information/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1792,6 +1792,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-utility-provider-service-handoff-log/",
+    "alternateRoute": "/zh-tw/tools/household-utility-provider-service-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2340,6 +2348,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/household-utility-provider-service-handoff-log/",
+    "alternateRoute": "/tools/household-utility-provider-service-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/household-water-leak-event-log/",
     "alternateRoute": "/tools/household-water-leak-event-log/",
     "indexable": true,
@@ -2440,6 +2455,13 @@
   {
     "route": "/zh-tw/guides/organize-insurance-documents/",
     "alternateRoute": "/guides/organize-insurance-documents/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/organize-utility-account-information/",
+    "alternateRoute": "/guides/organize-utility-account-information/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"

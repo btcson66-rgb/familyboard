@@ -7810,56 +7810,110 @@ A future clearly labelled affiliate area may compare fire-resistant document con
 
 ## Page 112 — Organize Utility Account Information
 **Slug:** `/guides/organize-utility-account-information/`
-**Primary intent:** keep household utility information easy to hand off
-**Title tag:** `How to Organize Utility Account Information for a Household Handoff`
-**Meta description:** `Keep utility providers, service contacts, account ownership, billing dates and non-sensitive management notes in one household index.`
+**Primary intent:** organize household utility providers, safe account-role pointers, current service status and move handoff evidence
+**Title tag:** `How to Organize Utility Account Information Without Exposing Account Numbers`
+**Meta description:** `Build a private utility service index for providers, account responsibility, current status, outage routes and moving confirmations without copying credentials.`
 **Primary keyword concept:** organize utility account information
 **Depth:** verified
-**Suggested internal links:** `/guides/household-account-list/`, `/guides/household-admin-backup-person/`, `/guides/power-outage-home-preparedness/`, `/features/household-handoff/`
+**Suggested internal links:** `/tools/household-utility-provider-service-handoff-log/`, `/guides/household-account-list/`, `/guides/household-admin-backup-person/`, `/guides/power-outage-home-preparedness/`, `/features/household-handoff/`
+**Editorial review date:** 2026-08-24
+**Content version:** 2
 
-# Utility information becomes surprisingly important when the usual account holder is unavailable
+# How to organize utility account information without turning the index into a security risk
 
-Electricity, water, gas, internet, trash and sometimes a separate sewer or HOA service can each have a different account owner, a different billing cycle and a different support number — and in most households, one person knows all of this from memory while everyone else would have to dig through old bills to reconstruct it. That single point of failure is exactly what a utility index exists to remove.
+The safest useful utility index does not copy every bill. It identifies each service the household actually depends on, the provider shown by a current attributable source, why that provider fits the service location, who is authorized or responsible for the account, where protected account records live, whether official access worked on a stated date, which outage or safety route applies, and what evidence closes a start, transfer, stop or final-settlement task.
 
-## Record the service, not the credential
+That distinction matters. A provider logo found in search does not prove the company serves the home. An autopay setting does not prove a bill was paid. A stop request does not prove service ended. A household observation that the lights came back does not establish the utility's official outage duration. This guide builds a source map that preserves those differences.
 
-A useful utility record holds: provider name, service type, the household member who's the primary account holder, the general support number, the management portal URL, and billing or renewal notes (due date, autopay status, typical amount range). What it should never hold is the account password — that belongs in a dedicated password manager, not in a household record field that might be visible on a shared view or a family wall display.
+Use the free [Household Utility Provider and Service Handoff Log](/tools/household-utility-provider-service-handoff-log/) when you want a dated review with open and closed evidence states.
 
-## Separate the outage line from the billing line
+## Keep a public-safe index and protected records separate
 
-A utility's general customer-service number is rarely the fastest way to report a gas smell or a downed power line — most utilities operate a separate emergency or outage line, staffed differently and reachable faster. Record both numbers distinctly: "billing support" and "outage/emergency line," because the situation that makes this record valuable — a leak, an outage, an alarm going off — is exactly the situation where dialing the slow general-support queue costs real time.
+The shared household index can show a code such as `ELEC-HOME-A`, the service type, provider name from a dated official source, the responsible household role, current review status, outage-source label and a protected-record pointer. It should not show a full service address, account or meter number, bill barcode, phone or email used for authentication, payment details, identity documents, login credentials, security answers, private correspondence or a provider case number.
 
-## Build a moving checklist from the same records
+The protected layer holds the actual statements, contracts, account identifiers, start or stop confirmations and any identity or payment records the provider requires. A password manager or protected document system can hold credentials and originals. FamilyBoard's public tool only holds source and workflow pointers; it does not encrypt an exported result or control copies after you print, download or paste them elsewhere.
 
-The utility index doubles as a move checklist almost for free: each entry can carry a service-start date and, when the household moves, a service-stop date. Walking the index at move time turns "did I cancel everything" from a guess into a literal list — every active row needs either a transfer request or a stop request, and nothing gets forgotten because it wasn't top-of-mind on moving day.
+This split also improves handoffs. A backup household administrator can learn that an electric service exists, who owns the next action and where the protected record belongs without receiving every credential or being represented as authorized to change the account.
 
-## Keep account numbers out of shared views
+## Identify the serving provider for the actual service location
 
-If an account number is recorded at all — sometimes needed to set up a transfer or dispute a bill — it should stay in the protected household record, never rendered on a family wall screen, exported into a printed sheet handed to a sitter, or logged anywhere that isn't the household's own protected storage. A full utility account number in the wrong hands is a real vector for account takeover or fraudulent service changes.
+Electricity, gas, water, sewer, trash and communications services do not all follow the same territory model. A city may provide water while a regional authority handles sewer. A building may bundle trash or heat. An owner or association may hold the master account while an occupant pays a separate allocation. Broadband availability can differ by address even within one block.
 
-## Why this list matters most during a handoff
+For each row, preserve an attributable source and check date: a current bill kept in protected storage, an official provider service-area page, a lease or association record, a closing or move-in document, or a provider response linked by a safe evidence code. Search results, old refrigerator magnets and neighborhood recommendations can help locate a source, but should not become the source themselves.
 
-The moment this index earns its keep is rarely a normal week — it's when the usual bill-payer is traveling, hospitalized, or otherwise unreachable and someone else needs to keep the lights and water running. A backup household administrator who can open one list and see every active service, its provider and its support number can act immediately; one who has to guess which of a dozen email folders holds "the electric bill" cannot.
+For U.S. water service, the Environmental Protection Agency publishes [local drinking-water information](https://www.epa.gov/ground-water-and-drinking-water/local-drinking-water-information) and a route to local Consumer Confidence Reports. A report can help identify a water system and its public water-quality information; it does not prove who holds the household account, whether a private well applies, or who is responsible for an internal plumbing issue.
 
-## A vacant or lightly used home needs its own utility notes
+## Record account responsibility, not a person's identity
 
-If the household travels for extended periods, or a property sits vacant part of the year, the utility index is also where seasonal instructions belong: whether the water is shut off and the pipes drained for a winter departure, what temperature the thermostat is set to while away, and who's checking on the property. These aren't billing facts, but they belong next to the utility record because the person acting on them — a backup admin, a neighbor, a property manager — needs the utility and the seasonal instruction together, not in two different places.
+Use role descriptions such as `resident account holder`, `property owner`, `building management`, `association master account` or `household backup administrator`. Link the actual named person, authorization and account identifier through a protected pointer.
 
-## Review the utility list annually, the same way you'd review insurance
+These roles are not interchangeable. The person who pays a landlord's utility allocation may not be the provider's customer. A resident may report an outage without authority to change service. A property manager may control a common-area meter but not the dwelling's internet contract. The index should say which relationship was observed and what remains unverified.
 
-Providers change, service plans get upgraded or downgraded, and a household that switched internet providers eighteen months ago sometimes still has the old provider's support number sitting in the index as if it were current. An annual pass through the utility list — confirming each provider, each support number and each account holder is still accurate — keeps the list trustworthy enough that a backup administrator can rely on it without double-checking every entry.
+Do not promise a backup person that the index grants access. Test the permitted route while the account holder is available: can the responsible person locate the official provider domain, find the protected record and understand whom to contact? Do not share one-time codes or add another user unless the provider and household intentionally authorize it.
 
-**Contextual CTA:** Build the utility index before travel or moving so another trusted household member can identify every active service without searching old bills.
+## Separate portal access, billing state and service state
+
+Write observations with dates: `official portal opened; current statement visible`, `paper statement source checked`, `payment method setting visible; payment result not checked`, or `service active at property; provider account status not independently confirmed`.
+
+Avoid merging these claims:
+
+| Evidence | What it supports | What it does not prove |
+|---|---|---|
+| Autopay enabled | A payment setting was observed | A particular charge cleared or no balance remains |
+| Current bill opened | A dated provider document was accessible | Continuous service, correct meter, or future price |
+| Utility data download | Usage data was exported from an authenticated source | The file is safe to share or the bill is correct |
+| Service works in the home | A household observation | The account holder, contract status, or provider's official start time |
+| Stop request submitted | A request entered the provider process | Service ended, equipment was collected, or the final balance was settled |
+
+The U.S. Department of Energy's [Green Button](https://www.energy.gov/data/green-button) explanation is a useful privacy example: customer energy data may be downloaded after authentication, and automated transfer to a third party depends on customer permission where supported. Treat downloaded usage files as protected records, not as harmless attachments for a shared family screen.
+
+## Map billing, outage, safety and complaint routes separately
+
+One provider may expose several channels: ordinary account service, outage status or reporting, emergency or safety instructions, accessibility or continuity programs, and a regulator or consumer complaint path. Store the role and official source, not a memorized number copied without a date. Some providers use one contact route; others use several. Do not claim that every utility has a separate emergency line.
+
+During an active hazard, stop organizing records. A suspected gas or pipeline leak is not a billing question. The U.S. Pipeline and Hazardous Materials Safety Administration tells the public to [leave the area and call 911 from a safe location](https://www.phmsa.dot.gov/incident-reporting), then notify the pipeline company or local emergency route if known. Downed lines, fire, electrical exposure, flooding near electricity or another immediate danger likewise require the current local emergency and utility instructions, not a FamilyBoard workflow.
+
+For internet, phone or TV disputes in the United States, the Federal Communications Commission maintains a [Consumer Inquiries and Complaints Center](https://consumercomplaints.fcc.gov/hc/en-us). It is a separate route from the provider's account page and does not prove a complaint is eligible or preserve every contractual or legal deadline. Record the applicable source and keep sensitive complaint evidence protected.
+
+## Treat a move as a sequence of evidence, not one cancellation checkbox
+
+For each service, identify the action the responsible provider actually offers: start, transfer, name or responsibility change, meter read, stop, final bill, equipment return or another local process. Do not assume one request covers all services or that a utility serving the old location also serves the new one.
+
+A strong moving row has five points:
+
+1. the old and new service purposes are distinguished by private codes, not full addresses;
+2. the official provider route and source-check date are recorded;
+3. the requested effective date comes from the household's real occupancy plan;
+4. the submission, provider response and any meter or equipment observation remain separate evidence;
+5. the row closes only after the provider's observed confirmation, final document or other required result is preserved.
+
+Do not label a service `settled` merely because a final payment was scheduled. Do not label it `stopped` because the home looked vacant. If a final statement, refund, deposit, equipment return, disputed charge or shared-building responsibility remains open, keep the row open with an owner and a follow-up date.
+
+## Review on triggers, not only on an annual calendar
+
+An annual review may be useful, but it is not enough for every household. Reopen a row when the household moves, an account holder or building responsibility changes, a provider merges, a portal domain changes, a bill stops arriving, service is interrupted, equipment is exchanged, a complaint begins, a continuity need changes or the previous access test fails.
+
+The next review date in the tool is a household checkpoint. It is not a due date, shutoff deadline, complaint period, refund deadline or legal limitation period. Use the provider's current document and the applicable regulator or qualified adviser when an external deadline matters.
+
+## Affiliate placement must remain outside the evidence workflow
+
+A future clearly labelled affiliate area may compare cable labels, document wallets, scanners, battery banks or offline storage after the educational answer or generated result. A commission cannot identify a serving utility, grant account authority, verify a meter, prevent an outage, make a battery safe for a medical device, settle a bill or determine emergency action. Product cards must never interrupt a safety warning, source check or unresolved status.
+
+**Contextual CTA:** Start with two contrasting rows: one currently used service and one service being started, transferred or stopped. Record the serving-provider source, account-responsibility role, dated access and status observations, emergency or outage route, handoff action and protected confirmation pointer.
 
 **FAQ:**
-- Q: What information should a utility record include?
-  A: Provider name, service type, the primary account holder, a general support number, a separate outage/emergency number if the utility offers one, the management portal URL, and billing notes like due date and autopay status. Passwords and full account numbers should stay in a dedicated password manager or protected storage instead.
-- Q: Why keep a separate outage number from the billing number?
-  A: Most utilities route billing questions and safety emergencies through different lines, and the general customer-service queue is rarely the fastest path during a gas smell, downed line or major outage. Recording both numbers distinctly means the household reaches the right line immediately instead of navigating a phone tree under time pressure.
-- Q: How does a utility index help during a move?
-  A: Each entry can carry a service-start date, and adding a service-stop date at move time turns the utility list into a literal transfer/cancel checklist — every active row needs action, and nothing gets missed because it wasn't the one bill someone happened to remember.
-- Q: Is it safe to display utility account numbers on a shared family screen?
-  A: No. Account numbers can be used to request service changes or disputes in some providers' systems, so they should stay in protected household storage rather than a shared wall display, a printed handoff sheet, or anywhere outside the household's own secure records.
+- Q: What utility information belongs in a shared household index?
+  A: Use a safe service code, service type, provider name from an attributable source, responsible role, last source-check date, current evidence status, official outage or safety-source label, next action and protected-record pointer. Keep full addresses, account and meter numbers, credentials, payment data and private correspondence out.
+- Q: Does an autopay setting prove the utility bill was paid?
+  A: No. It proves only that a setting was observed. Preserve the provider's actual payment or statement result separately when that evidence matters.
+- Q: How do I know which utility serves a new address?
+  A: Use the provider's current service-area or address-check process, a property or lease source, or direct provider confirmation. A search result, neighbor's provider or old bill can be a clue but does not prove service-location fit.
+- Q: Can I put an outage or gas emergency number in the same field as billing support?
+  A: Keep the roles separate even if the provider ultimately uses one number or portal. During an active gas smell, downed line or other immediate hazard, leave the record workflow and follow current local emergency and provider instructions.
+- Q: When is a moved service complete?
+  A: A request is not completion. Close the row only after the provider's required confirmation or final record is observed and any final bill, deposit, equipment, dispute or responsibility issue has an explicit owner or result.
+- Q: Does the tool contact a provider or regulator?
+  A: No. It creates a local household index from what you enter. It does not visit a portal, validate a service area, submit a request, report an outage, file a complaint or calculate a deadline.
 
 ---
 
@@ -15243,6 +15297,122 @@ A future clearly labelled affiliate area may compare document containers, scanne
   A: No. The next checkpoint is only a household follow-up date. Use the exact issued notice, current insurer process, applicable regulator or ombudsman and qualified advice for real deadlines.
 - Q: What happens when a policy is replaced or cancelled?
   A: Link the prior and new sets, record the attributable status source, preserve protected custody and screen unresolved claims, disputes, tax, property, lender, legal or complaint purposes before making a retention decision.
+
+---
+
+## Page 225 — Household Utility Provider and Service Handoff Log
+**Slug:** `/tools/household-utility-provider-service-handoff-log/`
+**Primary intent:** document utility provider sources, account responsibility, current service evidence, emergency routes and moving handoff results
+**Title tag:** `Household Utility Provider and Service Handoff Log`
+**Meta description:** `Create a private utility service log for providers, account roles, official access, billing status, outage routes and moving confirmations.`
+**Primary keyword concept:** utility account organizer
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-24
+**Editorial review date:** 2026-08-24
+**Content version:** 1
+**Suggested internal links:** `/guides/organize-utility-account-information/`, `/guides/household-account-list/`, `/guides/household-admin-backup-person/`, `/guides/power-outage-home-preparedness/`, `/tools/household-power-outage-event-log/`
+
+# Household utility provider and service handoff log
+
+A utility folder can contain an old bill, a new-provider welcome message, an autopay screen, an outage bookmark and a stop-service request without proving which company serves the property, who controls the account or whether the move task finished. This free browser tool creates a dated household index for the service purpose, serving-provider evidence, service-location fit, protected account-responsibility pointer, official access and billing or service observation, emergency or outage route, move action, provider confirmation, complaint source, owner role, target or outcome date and exact evidence state.
+
+It does not search for a provider; validate a service area, address, meter, account, rate, bill, payment, deposit, contract, customer or authorization; visit or sign in to a portal; read a meter; download usage data; start, transfer, stop, restore or settle service; submit a meter reading, outage report, complaint or equipment return; diagnose a utility condition; estimate consumption, cost, outage duration or restoration; calculate a deadline; or provide safety, financial, legal or regulatory advice. Use the provider actually serving the location and the current emergency, regulator, building and qualified-professional sources.
+
+**Ready to replace a vague `utilities done` checklist? [Jump to the Household Utility Provider and Service Handoff Log](#tool-heading).**
+
+## Create one review version without exposing the service address
+
+Use a private code such as `UTILITY-HANDOFF-2026-A`. Choose the real context: first household utility map, account-holder backup, move-in start, move-out stop or final settlement, provider or building responsibility change, current portal access check, outage or emergency source review, billing or service-status discrepancy, or communications-provider complaint preparation.
+
+The baseline date marks the source map this review began with. The current review date records when the sources and protected evidence were observed. The next source or handoff checkpoint bounds open follow-up rows. It is not a payment due date, requested service date, shutoff notice deadline, complaint deadline, refund deadline or legal limitation period.
+
+The global map may name official provider domains, a building or lease source, local outage and emergency pages, a regulator or consumer complaint route and protected record IDs. Do not paste a full address, account or meter number, bill barcode, authentication contact, payment detail, login, private portal URL, case number or correspondence.
+
+## Each row has twelve evidence fields
+
+Enter one service purpose and handoff relationship per line:
+
+`ID | safe service purpose and household role | serving-provider and service-location evidence | source checked date | account, occupant, owner or building responsibility state | official access plus billing or service-status observation | emergency, outage and safety-source route | start, transfer, stop, settlement or routine handoff action and provider confirmation | regulator, complaint or dispute source and unresolved gap | owner role | target or outcome date | status`
+
+The source-checked date must fall from the baseline through the current review. An open row needs a household target from the current review through the next checkpoint. A closed row needs an observed outcome date from the baseline through the current review. One version supports at most 14 rows so each line can receive a genuine source and result check.
+
+Use safe descriptions: `official utility bill source and service-area page support provider fit; protected evidence ELEC-P2` or `official portal opened; current statement visible; payment result not inferred`. Do not enter the actual account holder, address, customer number, meter or device identifier, amount, bank or card, credentials, one-time code, identity document, private message or precise equipment location.
+
+## Twelve statuses preserve the difference between discovery, request and result
+
+1. **Service purpose recorded—serving provider pending:** the household knows what service it needs to map, but no attributable current provider source exists.
+2. **Serving provider recorded—service-location fit pending:** a provider is named, while evidence that it serves this property or building remains open.
+3. **Service-location fit recorded—account responsibility pending:** the service source fits, while the customer, occupant, owner, landlord, association or building responsibility is unresolved.
+4. **Account responsibility recorded—current official access pending:** the responsible role and protected pointer exist, but the current official route has not been opened in this version.
+5. **Official access tested—billing and service status pending:** a current provider source opened, while payment, statement, service or account status has not been safely observed.
+6. **Billing or service status observed—emergency and outage routes pending:** a dated status exists, while the correct hazard, outage or continuity source is not mapped.
+7. **Emergency and outage routes mapped—move or handoff action pending:** safety and interruption sources exist, while a move, role change, continuity or routine handoff still lacks a specific action.
+8. **Start, transfer, stop or settlement request recorded—provider confirmation pending:** the request is attributable, but completion, final statement, deposit, equipment or other result remains open.
+9. **Provider, status, billing, safety or responsibility conflict—responsible source review pending:** evidence disagrees or a potential hazard exists, and the provider, building, authority, emergency or qualified route is named.
+10. **Provider source, responsibility, access, status and handoff reviewed:** this dated version links the serving source, service-location fit, responsibility, observed access and status, safety routes, and either the current handoff action or an explicit reopen trigger.
+11. **Service started, transferred, stopped or settled—observed confirmation and custody recorded:** the provider's required result was observed and remaining statement, deposit, equipment, dispute and record custody were screened.
+12. **Not applicable—reason and reopen event recorded:** the service does not currently apply and the row says what property, occupancy, building or provider change would reopen it.
+
+The first nine remain open. The final three close only this review version. A new bill, account-holder change, move, portal failure, provider merger, outage source change, equipment return, complaint, disputed charge, building-responsibility change or safety event creates a new row or version instead of rewriting history.
+
+## Provider and service-location evidence must be attributable
+
+The tool rejects a completed row if the serving source is only `search result`, `neighbor uses them` or `old logo`. Name a current official provider, utility, municipality, building, lease or protected bill source and describe why it fits the service purpose. A service-area lookup can support availability; it does not establish an account or guarantee installation.
+
+Water, sewer, electricity, gas, trash and communications may have different providers and customer relationships. An apartment may use a building master account for one service and a direct resident account for another. Record the observed relationship instead of forcing every service into `account holder`.
+
+## Access and billing settings are not service results
+
+`Official portal opened` is an access observation. `Autopay enabled` is a setting. `Current statement visible` is a document observation. `Payment posted` or `service active` requires its own attributable evidence. The tool does not connect to an account or verify any of those statements; its validation only requires the user to write a sufficiently specific evidence description before choosing a closed status.
+
+If the account cannot be accessed, do not paste a recovery answer, authentication phone, email, one-time code or login screenshot into the form. Keep the row open, identify the official recovery or service route and preserve sensitive evidence outside the generated summary.
+
+## Emergency routes are operational records, not instructions generated by the tool
+
+Map the current provider outage page, emergency contact role, local emergency service and any building route that applies. Do not rely on a number copied years ago. Some providers combine channels; others separate billing, outage and safety contacts. Record what the current source actually says.
+
+If there is a suspected gas leak, downed or exposed line, fire, shock risk, flooding near electricity, injury or another immediate danger, stop using the tool. The U.S. Pipeline and Hazardous Materials Safety Administration directs the public in a pipeline emergency or gas smell to [move to a safe location and call 911](https://www.phmsa.dot.gov/incident-reporting). Current local emergency and serving-utility instructions take priority over completing a record.
+
+## A submitted move request remains open until evidence closes it
+
+A household can record `stop request submitted through official portal; confirmation pending` without pretending the service ended. The request status stays open until the required confirmation or final record is observed. A completed move row should also screen for a final statement, deposit or refund, rented router or other equipment, disputed balance, new responsible party and custody of the old account records.
+
+Do not turn a target date into an official effective date. Provider processing, identity requirements, meter access, property rules and service availability differ. The tool cannot decide whether a name change, stop and restart, transfer or new application is the right transaction.
+
+## Regulator and complaint sources remain jurisdiction-specific
+
+Keep the provider's complaint path distinct from a public utility commission, consumer office or communications regulator. For U.S. internet, phone and TV service, the [FCC Consumer Inquiries and Complaints Center](https://consumercomplaints.fcc.gov/hc/en-us) is an official research route. For public water, the EPA's [local drinking-water information](https://www.epa.gov/ground-water-and-drinking-water/local-drinking-water-information) helps locate system and report information. Neither source proves a household claim, billing adjustment or account right.
+
+If a dispute or deadline may affect service, money, housing or legal rights, preserve the provider documents and obtain current qualified help promptly. The next checkpoint in this tool never extends an external period.
+
+## Privacy screening is intentionally conservative
+
+The form rejects common full phone and email patterns, long numeric identifiers and terms associated with full addresses, account or meter numbers, barcodes, bills, balances, payment instruments, named customers, identity documents, credentials, access codes, private portals, case numbers, communications and precise equipment locations. It cannot recognize every sensitive value or determine who is authorized.
+
+Entries are processed in the current browser and are not sent to FamilyBoard. The result is not encrypted or backed up. Copying, downloading, printing or saving to the FamilyBoard App creates another user-controlled copy, so review the audience and protected storage before sharing it.
+
+## Affiliate products cannot validate a utility or solve an outage
+
+A future clearly labelled affiliate area may compare label makers, cable tags, document wallets, scanners, battery banks or offline storage after the generated result. A commission cannot identify a serving provider, establish authority, verify a meter or payment, guarantee service, make backup power appropriate for a medical device, diagnose a hazard, settle a bill or choose an emergency action. Product placement must remain outside every evidence and safety decision.
+
+**Next step in FamilyBoard:** review two contrasting services: one current service with stable access and one move, transfer, stop, dispute or building-responsibility change. Preserve the provider and location-fit source, responsibility pointer, access and status observations, emergency route, requested action, confirmation state and protected evidence custody.
+
+**FAQ:**
+- Q: Does this tool find the utility company serving my address?
+  A: No. Use a current provider service-area process, protected bill, property document, municipality or building source. The log records that evidence without storing the full address.
+- Q: Can I enter an account or meter number?
+  A: No. Keep complete identifiers in protected provider records. Use a safe service code and evidence pointer in the household log.
+- Q: Does `official access tested` mean the bill is paid and service is active?
+  A: No. Access, billing setting, payment result and service observation are separate evidence. Record only what was actually observed.
+- Q: Can the tool start, transfer or stop service?
+  A: No. It does not visit or submit any provider process. A household request remains open until the responsible provider's required confirmation or final record is observed.
+- Q: What should I do if provider information conflicts or there is a hazard?
+  A: Keep the row open and name the responsible provider, building, authority, emergency or qualified route. During an immediate hazard, leave the tool and follow current local emergency instructions.
+- Q: Does a closed row prove there is no balance or dispute?
+  A: No. It closes only this dated household evidence review. The provider, regulator, contract and actual records control account, billing, service and legal outcomes.
 
 ---
 

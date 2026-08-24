@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-24T09:00:56.542Z
+Generated: 2026-08-24T09:33:52.340Z
 
 ## Summary
 
-- Indexable pages: 328
-- Generated HTML routes: 345
+- Indexable pages: 331
+- Generated HTML routes: 348
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 126
+- Pages without a contextual product/tool link: 128
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-24T09:00:56.542Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 32
-- tools: 97
+- records-emergency: 33
+- tools: 99
 
 ## Word-count range
 
@@ -108,6 +108,7 @@ Generated: 2026-08-24T09:00:56.542Z
 - /zh-tw/guides/organize-appliance-manuals/
 - /zh-tw/guides/organize-household-subscriptions/
 - /zh-tw/guides/organize-insurance-documents/
+- /zh-tw/guides/organize-utility-account-information/
 - /zh-tw/guides/power-outage-home-preparedness/
 - /zh-tw/guides/product-registration-tracker/
 - /zh-tw/guides/purchase-receipt-organizer/
@@ -155,6 +156,7 @@ Generated: 2026-08-24T09:00:56.542Z
 - /zh-tw/tools/household-record-retrieval-drill-log/
 - /zh-tw/tools/household-storm-readiness-review/
 - /zh-tw/tools/household-subscription-cost-calculator/
+- /zh-tw/tools/household-utility-provider-service-handoff-log/
 - /zh-tw/tools/household-water-leak-event-log/
 - /zh-tw/tools/important-household-document-review/
 - /zh-tw/tools/move-in-checklist-generator/

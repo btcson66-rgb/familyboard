@@ -110,6 +110,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/organize-appliance-manuals/",
     "/tools/household-insurance-policy-source-version-log/",
     "/guides/organize-insurance-documents/",
+    "/tools/household-utility-provider-service-handoff-log/",
+    "/guides/organize-utility-account-information/",
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
     "/templates/printable-home-inventory-template/",
@@ -167,6 +169,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/organize-appliance-manuals/",
     "/zh-tw/tools/household-insurance-policy-source-version-log/",
     "/zh-tw/guides/organize-insurance-documents/",
+    "/zh-tw/tools/household-utility-provider-service-handoff-log/",
+    "/zh-tw/guides/organize-utility-account-information/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -370,6 +374,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "保單整理教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/organize-insurance-documents/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "水電瓦斯網路交接紀錄" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/household-utility-provider-service-handoff-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "水電過戶與結清教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/organize-utility-account-information/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電清冊教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/appliance-inventory/");
@@ -867,6 +877,16 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/organize-insurance-documents/",
       alternate: "/guides/organize-insurance-documents/",
       heading: "保單怎麼整理？先分清保險契約、批單、續保通知與申訴來源",
+    },
+    {
+      route: "/zh-tw/tools/household-utility-provider-service-handoff-log/",
+      alternate: "/tools/household-utility-provider-service-handoff-log/",
+      heading: "家庭公用事業供應與服務交接紀錄",
+    },
+    {
+      route: "/zh-tw/guides/organize-utility-account-information/",
+      alternate: "/guides/organize-utility-account-information/",
+      heading: "水電過戶怎麼整理？先分清供應單位、戶名、結算與安全入口",
     },
     {
       route: "/zh-tw/guides/purchase-receipt-organizer/",
@@ -1743,6 +1763,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不能早於本次保單來源核對日",
   );
 
+  await page.goto("/tools/household-utility-provider-service-handoff-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open provider, responsibility, access, status, safety or confirmation rows: 1");
+  await expect(page.locator(".result")).toContainText("Reviewed, completed or not-applicable rows: 1");
+  await expect(page.locator(".result")).toContainText("Provider source, responsibility, access, status and handoff reviewed 1");
+  await page.getByLabel("Next source or handoff checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+  await page.goto("/tools/household-utility-provider-service-handoff-log/");
+  await page.getByLabel("Protected statements, confirmations, equipment and review-history location").fill("account number 123456789");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible full phone, email, address, utility account");
+
+  await page.goto("/zh-tw/tools/household-utility-provider-service-handoff-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的供應、責任、存取、狀態、安全或確認列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對、完成或不適用列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對供應來源、責任、存取、狀態與交接入口 1 筆");
+  await page.getByLabel("下一次來源或交接核點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次核對日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -2182,6 +2228,18 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/organize-insurance-documents/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-utility-provider-service-handoff-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-utility-provider-service-handoff-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/organize-utility-account-information/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/organize-utility-account-information/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/",
