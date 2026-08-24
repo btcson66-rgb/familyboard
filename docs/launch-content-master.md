@@ -5817,69 +5817,100 @@ A complete list of every appliance and electronic device's serial number in a ho
 
 ## Page 090 — Purchase Receipt Organizer
 **Slug:** `/guides/purchase-receipt-organizer/`
-**Primary intent:** organize household purchase receipts
-**Title tag:** `Purchase Receipt Organizer: How Long to Actually Keep Each Receipt (IRS Rules)`
-**Meta description:** `Organize household receipts by purchase, with the actual IRS retention periods — 3, 6 or 7 years — for tax-relevant receipts instead of one guessed rule.`
+**Primary intent:** build a source-linked household purchase record around a receipt
+**Title tag:** `Purchase Receipt Organizer | Orders, Delivery, Returns and Warranties`
+**Meta description:** `Organize purchase receipts with offer, order, payment, delivery, condition, return, refund and warranty evidence instead of treating one receipt as the whole transaction.`
 **Primary keyword concept:** receipt organizer for home purchases
 **Depth:** verified
-**Suggested internal links:** `/guides/how-long-to-keep-household-records/`, `/guides/warranty-expiration/`, `/guides/home-improvement-receipts/`, `/features/household-documents-organizer/`
+**Published date:** 2026-08-19
+**Editorial review date:** 2026-08-24
+**Content version:** 2
+**Suggested internal links:** `/tools/purchase-delivery-evidence-log/`, `/guides/how-long-to-keep-household-records/`, `/guides/how-to-track-product-warranties/`, `/guides/appliance-inventory/`, `/features/household-documents-organizer/`
 
-# Purchase receipt organizer: the actual retention periods, not a guessed rule
+# A purchase receipt organizer should preserve the transaction around the receipt
 
-A folder called "Receipts" eventually becomes hundreds of unsearchable scans. A better system links each receipt to the purchase it proves and keeps it only as long as it has a real reason to exist — which, for anything tax-relevant, is a period the IRS actually publishes.
+A receipt is one source in a purchase history. It may show a seller, date, item description and amount, yet say nothing about the offer that influenced the purchase, the seller's shipping promise, which package arrived, whether the contents matched, what condition the household observed, which return policy applied or how a refund, replacement or warranty issue ended.
 
-## How long to keep a receipt, by reason
+A folder called `Receipts` therefore fails in two ways. It groups unrelated purposes together, and it asks one document to prove facts it may never state. Organize important purchases by a private household purchase ID, keep protected originals in storage you control and use a source map to connect each fact to the document that actually supports it.
 
-| Reason you're keeping it | Retention period | Source |
-|---|---|---|
-| Standard tax return support (you reported income correctly) | 3 years from filing | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| You filed a claim for credit or refund after filing | 3 years from filing, or 2 years from the date you paid the tax, whichever is later | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| You underreported income by more than 25% of gross income shown | 6 years | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| You claimed a loss from worthless securities or a bad-debt deduction | 7 years | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| Property-related receipts (home improvements, major purchases affecting basis) | Until the limitations period expires for the year you dispose of the property — often many years | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| You didn't file a return, or filed a fraudulent one | No limit — keep indefinitely | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
+**A delivery problem already exists? [Use the free Purchase and Delivery Evidence Log](/tools/purchase-delivery-evidence-log/) to preserve the order-to-outcome timeline.**
 
-Warranty and insurance receipts follow a different clock entirely — keep those for the length of the warranty or policy coverage, not the IRS tax-record schedule, since they're solving a different problem.
+## Separate six evidence layers
 
-## The best way to find a receipt is through the item, not the date
+For a major household purchase, save or safely reference these layers:
 
-Link each receipt to the asset it proves — the specific washing machine, the specific home-improvement project — rather than filing purely by date. A generic "April 2026 receipts" folder is far harder to search two years later than a washing machine record with its receipt, warranty and repair history attached in one place.
+1. **Offer or listing:** the product description, public model, included parts, condition claim, price, seller role and date the offer was captured.
+2. **Order or sales record:** what the household submitted or agreed to, including quantity, options, delivery method and seller-stated timing.
+3. **Payment and receipt:** the final amount, discounts, shipping, tax, payment-method category and a protected transaction pointer.
+4. **Fulfillment:** shipment, pickup readiness, carrier handoff, delay or substitution sources attributable to the seller, platform or carrier.
+5. **Possession and household check:** when the item entered household control, visible package and product condition, identifiable contents and any safe ordinary check actually performed.
+6. **Outcome:** kept as delivered, return, refund, exchange, replacement, warranty transfer or an unresolved issue handed to another process.
 
-## Keep high-value or high-purpose receipts; skip the rest
+Do not silently replace an earlier layer with a later one. A corrected invoice does not erase the original order. A replacement does not turn the first delivery into the replacement delivery. Keep versions and link the outcome back to the source event it resolves.
 
-Receipts earn their keep for warranties, returns, insurance documentation, the tax-relevant categories above, and major household purchases. There's little value in scanning every small grocery or takeout receipt without a specific reason — that effort is better spent on the receipts that actually matter later.
+## A receipt does not prove delivery or condition
 
-## Use meaningful file names and searchable fields
+A receipt supports only what it states. It may support the transaction date, seller, description and amount, but it does not automatically prove seller acceptance, shipment, carrier delivery, correct model, complete contents, undamaged condition, safe operation, installation or household acceptance.
 
-Include the date and item in the file name, such as `2026-04-18-washing-machine-receipt.pdf`, so the file stays understandable even outside the app. Record the seller and purchase date as separate fields too — don't force a future search to mean opening every PDF to find out where something was bought.
+Keep carrier delivery evidence and the household's dated observation separately. A tracking page may say `delivered`; a household photograph may show one package at the door; an unpacking note may identify a visible dent or missing accessory. Those facts can coexist without any of them deciding cause, legal responsibility or remedy.
 
-## Paper receipts fade — capture them before they're unreadable
+## Freeze the policies and promises that existed at purchase
 
-Thermal-printer receipts, the kind most retail registers still print, are notorious for fading to blank within a year or two, well before most of the retention periods above expire. If a receipt matters for a tax record, a warranty claim or an insurance file, photograph or scan it soon after purchase rather than filing the paper original and assuming it will still be legible when you need it — a faded receipt is functionally the same as no receipt at all.
+Return, refund, marketplace-protection and warranty pages can change while keeping the same URL. Save the version the household relied on, the retrieval date and the seller or platform role. Keep an order-specific promise separate from a generic current policy.
 
-## Digital and emailed receipts need the same organization as paper ones
+The FTC's current [online shopping guidance](https://consumer.ftc.gov/online-shopping) recommends keeping the company name and website, what was ordered, order date and amount, return policy, shipment promise, communications and payment statement. It also tells shoppers to read return shipping, return-period and restocking-fee terms. Preserve those sources; do not let a household tool invent a policy or deadline that the seller never stated.
 
-An emailed order confirmation or a PDF invoice is just as easy to lose in a crowded inbox as a paper receipt is to lose in a drawer. Save a copy into the household record at the time of purchase rather than relying on email search later — email providers change, accounts get migrated, and a purchase confirmation from a retailer that later closes its online order history isn't guaranteed to stay retrievable years down the line.
+## Shipping, possession and arrival are different events
 
-## When a receipt's job is done, let it go
+For most goods ordered in the United States by mail, phone or online, the FTC's [Mail, Internet, or Telephone Order Merchandise Rule](https://www.ftc.gov/legal-library/browse/rules/mail-internet-or-telephone-order-merchandise-rule) addresses when a seller must ship. The advertised shipment time matters; if no time is stated, the rule generally uses 30 days after a properly completed order. When the seller cannot ship on time, the rule addresses delay consent or refund for unshipped merchandise.
 
-Not every receipt needs to survive with the file forever. Once a return window has closed, a warranty has expired and the item has been discarded or sold, and no tax-relevant retention period applies, the receipt has finished its job — removing it keeps the collection useful instead of turning into the same unsearchable pile the folder system was meant to replace.
+That is not a universal arrival guarantee, a rule for every service or transaction, or a substitute for state law and the actual agreement. `Shipped` means placed with a carrier under the federal rule; it does not by itself prove delivery to the household. Record the seller's promise, shipment source, carrier event and household possession as separate facts, and never use FamilyBoard to calculate a legal deadline.
 
-## A quick sort for the receipts already piled up
+## Partial orders and substitutions need versioned rows
 
-Facing an existing shoebox or downloads folder full of receipts is different from starting fresh. Rather than processing them in date order, sort first by whether the purchase is still under warranty or return window (keep and attach to the asset), still tax-relevant under the table above (keep, filed by year and reason), or neither (safe to discard once you've confirmed there's no ongoing need). This three-way sort clears the backlog faster than trying to make a permanent filing decision on every single receipt in the pile.
+If three items were ordered and two arrived, do not close the entire purchase as delivered. Link each shipment or pickup event to the relevant line or safe item reference. A backorder, seller-proposed substitution, split shipment, cancelled line and later replacement are different events.
 
-**Contextual CTA:** Start with receipts for active warranties, tax-relevant purchases and expensive household items — attach each one to its asset record rather than filing by date alone.
+The FTC's current business guide explains that a materially different substitute is not one of the rule's default responses to a backorder without the customer's express agreement. A household record should preserve the proposal and any attributable consent source without deciding whether a legal standard was met.
+
+## Record visible condition without creating a diagnosis
+
+Use neutral observations: `outer carton crushed on lower-right corner before opening`, `two shelves shown on the packing list; one visible in package`, or `model label differs from order source`. Avoid conclusions such as `carrier broke it`, `seller committed fraud`, `unsafe`, `accepted` or `warranty covered` unless a qualified or controlling source actually says so.
+
+Do not energize, connect, move, open or test a product when doing so could be hazardous. Smoke, fire, fuel or gas odor, electric shock, overheating, leaking, damaged power connections, injury or an official product-safety notice require current manufacturer, responsible-authority, emergency or qualified-professional guidance—not another household checklist step.
+
+## Return, refund, warranty and billing disputes are separate workflows
+
+A seller return policy, an included product warranty, a separately purchased service contract, a marketplace protection process and a credit-card billing dispute have different issuers, requirements and time limits. Record each source and route the issue to the applicable process; do not collapse them into `refund pending` without naming who owns the next response.
+
+The FTC's [problem-resolution guidance](https://consumer.ftc.gov/articles/solving-problems-business-returns-refunds-and-other-resolutions) recommends collecting receipts, warranties, statements, invoices, contracts and communications, keeping originals and copies, describing the problem and requested resolution, and preserving notes of what happened. Its credit-card guidance uses a separate statutory dispute process with strict facts and timing. FamilyBoard should index a protected source, not store complete card, account, transaction or complaint details in a shareable result.
+
+## Retention follows purpose, not one magic receipt rule
+
+There is no safe universal instruction to delete a receipt when a return window or written warranty ends. The same source may still matter to an active refund, replacement, service history, insurance record, property basis, tax position, ownership transfer, product recall or dispute. Mark why the household is keeping it, who reviews that purpose and which current authority or agreement controls.
+
+If a purchase has a genuine tax purpose, use current IRS material for that tax record and the household's actual filing circumstances. Do not apply tax limitation periods for omitted income, bad debts or unfiled returns to every appliance or household receipt. The [household-record retention guide](/guides/how-long-to-keep-household-records/) explains how to separate purposes before setting a review date.
+
+## Use safe, durable names without exposing transaction identifiers
+
+A protected original can use the full receipt or order number. A shared index should use a safe purchase ID such as `PURCHASE-KITCHEN-2026-A` and source pointers such as `ORDER-O1`, `DELIVERY-D2` and `PHOTO-P3`. Avoid complete addresses, phone numbers, email addresses, account numbers, card details, credentials, tracking numbers, signatures and private complaint correspondence.
+
+## Affiliate recommendations must stay outside the evidence record
+
+A future labelled affiliate area may show document sleeves, label makers, receipt scanners or general storage supplies. It cannot select a seller, verify a purchase or delivery, decide a return or warranty right, calculate a deadline, change a status or receive preference in the household record because a commission might be earned.
+
+**Contextual CTA:** Give the next meaningful household purchase a safe ID, freeze the offer and policy sources, then add order, payment, fulfillment, possession, condition and outcome as separate events.
 
 **FAQ:**
-- Q: How long does the IRS actually say to keep a receipt?
-  A: It depends on why you're keeping it. Standard tax support is 3 years from filing; underreporting income by more than 25% extends that to 6 years; a worthless-securities or bad-debt claim extends it to 7 years; and if you never filed a return, there's no time limit at all. There's no single universal number.
-- Q: Do warranty receipts follow the same retention rule as tax receipts?
-  A: No — keep a warranty receipt for as long as the warranty itself runs, which has nothing to do with the IRS's tax-record schedule. A receipt can matter for two entirely different reasons (proving a tax position vs. proving a warranty claim), so it's worth tracking which reason applies to each one you keep.
-- Q: Should I scan every receipt to be safe?
-  A: Not necessarily. Receipts earn their keep for warranties, returns, insurance documentation, tax-relevant purchases and major household items. Digitizing every small day-to-day receipt without a specific future use mostly creates clutter that makes the receipts that do matter harder to find.
-- Q: What's the best way to organize receipts so I can actually find one later?
-  A: Attach the receipt to the specific item or asset it proves, rather than filing purely by date. A washing machine record that holds its receipt, warranty terms and repair history together is far easier to search two years later than a generic monthly receipts folder.
+- Q: Does a receipt prove that the correct item arrived undamaged?
+  A: No. It supports only the transaction facts it states. Preserve fulfillment evidence and a separate dated household observation for product identity, visible condition and contents.
+- Q: Does the FTC's 30-day rule mean an online order must arrive within 30 days?
+  A: No. The federal rule generally concerns when covered merchandise must be shipped when no shipment time is stated. Shipping, carrier delivery and household possession are separate events, and coverage can vary by transaction.
+- Q: Can FamilyBoard calculate my return or card-dispute deadline?
+  A: No. Seller policies, warranties, marketplace programs, federal and state law and payment-method rules differ. Preserve the current source and use the responsible process or qualified advice for an actual deadline.
+- Q: Should I delete the receipt when the written warranty ends?
+  A: Not automatically. It may still support an active issue, ownership, service, insurance, property, tax, recall or transfer purpose. Close or remove it only after reviewing every purpose and any preservation requirement.
+- Q: Should complete order and tracking numbers go in a shared household export?
+  A: No. Keep full identifiers in protected original storage and use safe source pointers in the shareable index.
 
 ---
 
@@ -14026,6 +14057,119 @@ A future labelled affiliate area may show document sleeves, label makers, receip
 
 ---
 
+## Page 217 — Purchase and Delivery Evidence Log
+**Slug:** `/tools/purchase-delivery-evidence-log/`
+**Primary intent:** document purchase, fulfillment, possession, condition, issue notice and return or replacement outcomes
+**Title tag:** `Purchase and Delivery Evidence Log | Missing, Damaged and Return Records`
+**Meta description:** `Create a private purchase and delivery timeline for orders, shipment or pickup, visible condition, missing contents, seller notices, returns, refunds and replacements.`
+**Primary keyword concept:** purchase delivery record
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-24
+**Editorial review date:** 2026-08-24
+**Content version:** 1
+**Suggested internal links:** `/guides/purchase-receipt-organizer/`, `/tools/appliance-purchase-installation-record/`, `/guides/how-to-track-product-warranties/`, `/tools/warranty-claim-evidence-log/`
+
+# Purchase and delivery evidence log
+
+An important household purchase can generate an offer page, order confirmation, payment receipt, shipment or pickup record, carrier event, household unpacking observation, seller response and later refund or replacement. When those sources live in separate inboxes and portals, a missing part or damaged item becomes difficult to explain without exposing complete transaction data.
+
+This free browser tool creates a versioned source map from transaction through outcome. It does not verify a seller, marketplace, carrier, package, item, delivery, condition or communication; inspect a product; determine fault, acceptance, fraud, coverage or legal rights; calculate a shipping, return, dispute, warranty or limitation deadline; submit a return, claim, chargeback or complaint; contact anyone; authorize payment or access; or certify resolution.
+
+**Documenting a household purchase? [Jump to the Purchase and Delivery Evidence Log](#tool-heading).**
+
+## Use a household purchase ID, not a transaction number
+
+Create a safe ID such as `PURCHASE-LAUNDRY-2026-A`. The complete order, invoice, tracking, account and payment references stay in protected original storage. The shared timeline uses short source pointers such as `ORDER-O1`, `SHIP-S1`, `DELIVERY-D1` and `PHOTO-P1`.
+
+The public item reference can contain a product name, brand or public model when useful. Do not paste a full serial number, delivery address, private seller identity, customer name, phone, email, account, card or marketplace message into a shareable output.
+
+## Order, possession and review dates do different jobs
+
+The tool asks for a transaction or order date, an optional delivery or household-possession date, a current review date and a next household evidence checkpoint. The order date cannot be after possession; possession cannot be after the current review; the next checkpoint cannot be before the review.
+
+An empty possession date means the household has not recorded physical receipt. It does not mean an item was lost, late, cancelled or refunded. Likewise, a carrier scan does not become household possession unless an attributable source supports that fact. These dates organize the private record and never calculate an external deadline.
+
+## Freeze the controlling sources
+
+The source field should identify the offer or listing version, order or sales record, receipt or payment pointer, seller-stated shipping or pickup promise, return and refund policy version, marketplace protection source, shipment or pickup evidence and any later seller, platform or carrier response.
+
+The FTC's current [online shopping guidance](https://consumer.ftc.gov/online-shopping) recommends keeping what was ordered, when and how much was paid, seller and website information, the return policy, shipment promise, communications and payment statement. This tool stores safe pointers to those originals; it does not copy complete private documents or assume that today's webpage is the version that controlled an earlier purchase.
+
+## Each row has ten fields
+
+Use one versioned row per attributable event:
+
+`ID | evidence stage | attributable order, fulfillment, possession, condition, notice, response or outcome fact | actor or source role | event date | protected evidence pointer | next gap or closure reason | owner role | target or outcome date | status`
+
+The event date must fall from the transaction date through the current review. Open rows use a target from the current review through the next checkpoint. Closed rows use an actual outcome date from the transaction through the review. The tool accepts no more than 16 rows in one version.
+
+## Nine statuses separate a delivery scan from an outcome
+
+The accepted states are:
+
+1. **Purchase source recorded—fulfillment pending:** an order, receipt or sales source exists; shipment or pickup is not implied.
+2. **Shipment or pickup source recorded—possession pending:** a fulfillment source exists; household possession is not implied.
+3. **Possession recorded—condition and contents check pending:** the household has an attributable possession source and still needs a safe review.
+4. **Issue observed—notice delivery pending:** a dated household observation exists; no seller, platform or carrier notice is implied.
+5. **Notice delivered—seller, platform or carrier response pending:** an attributable sent or received source exists; agreement or remedy is not implied.
+6. **Remedy arranged—outcome pending:** a return, pickup, replacement, repair, credit or refund step was proposed or accepted; completion is not implied.
+7. **Kept as delivered—dated household check linked:** the household linked its chosen dated review and no open event remains in this record.
+8. **Return, refund or replacement completed—outcome source linked:** the relevant completed outcome is attributable to a protected source.
+9. **Limited archive or external handoff—gap and ownership preserved:** an unresolved issue moved to another controlled process or remains incomplete without invented facts.
+
+The first six are open; the last three are closed. A `Kept as delivered` state is a household organizational outcome, not legal acceptance, a product inspection, a waiver or a safety certificate. `Completed` requires the real outcome source rather than a promise, label, appointment or case number.
+
+## Partial delivery stays partial
+
+If an order has multiple lines or packages, use separate event rows and safe item references. A delivered package does not close undelivered lines. A replacement order receives its own shipment and possession events; it does not overwrite the damaged or incorrect original.
+
+For a material substitution, preserve the original order, seller proposal and any attributable household response. The FTC's current [Mail, Internet, or Telephone Order Merchandise Rule business guide](https://www.ftc.gov/business-guidance/resources/business-guide-ftcs-mail-internet-or-telephone-order-merchandise-rule) distinguishes delayed shipment or refund from an unapproved materially different substitution. FamilyBoard does not decide whether that federal rule or another legal source applies to a particular transaction.
+
+## Record observation, not blame
+
+A strong observation says `sealed carton showed a 9 cm crush at lower-right corner before opening; photo P1`; `packing list showed two shelves; one visible`; or `public model on product label differs from order source`. A weak row says `carrier destroyed it`, `seller scammed us`, `unsafe`, `accepted` or `full refund owed` without a controlling source.
+
+Do not reproduce a fault or energize, connect, move, disassemble or test a product unsafely. If there is smoke, fire, fuel or gas odor, electric shock, overheating, leaking, damaged power connections, injury or an official safety notice, stop the routine record and follow current manufacturer, responsible-authority, emergency and qualified-professional guidance.
+
+## A sent message needs delivery evidence
+
+Drafting an email or opening a support form does not prove it was sent. Preserve an attributable sent copy, submission receipt, portal acknowledgement or other source. A seller response should identify the speaker's role and what was actually proposed without copying private contact or complaint text into the output.
+
+The FTC's [problem-resolution guide](https://consumer.ftc.gov/articles/solving-problems-business-returns-refunds-and-other-resolutions) recommends gathering purchase documents, explaining the problem and desired resolution and keeping notes and copies. Use the seller, platform, carrier, warranty, payment-provider or responsible public process that actually applies. This tool does not choose the proper respondent or create a legally sufficient notice.
+
+## Keep policies, warranty and payment disputes separate
+
+A seller's voluntary return policy, a federal shipment rule, state law, a product warranty, marketplace buyer protection, carrier claim and credit-card billing dispute can use different facts and clocks. Index them separately. Do not put `return deadline`, `chargeback due` or `warranty covered` into a status unless a controlling source supports the wording and the household still verifies the actual process outside FamilyBoard.
+
+## Privacy screening is only a backstop
+
+The tool blocks common full phone and email patterns, long numeric identifiers, addresses, access instructions, full serial and transaction numbers, accounts, payment cards, credentials, signatures, private contacts, complaint or legal material and names of private participants. Automated screening cannot identify every sensitive fact.
+
+Review the output before copying, printing, downloading or sharing. FamilyBoard processes the working record in the current browser and does not receive, verify or back up the original transaction documents.
+
+## Affiliate placement cannot become transaction evidence
+
+A future labelled affiliate area may show document sleeves, label makers, receipt scanners or general household storage products. A commission cannot verify a seller, listing, policy, shipment, delivery, condition, return, refund, replacement or warranty, and it cannot move a row to a completed state.
+
+**Contextual CTA:** Preserve the order and policy versions first, then add fulfillment, possession, household observation, notice, response and final outcome as separate attributable events.
+
+**FAQ:**
+- Q: Does a carrier `delivered` scan mean the household accepted the item?
+  A: No. Preserve the carrier event and the household's actual possession and condition observations separately. Neither creates legal acceptance or a product-safety conclusion.
+- Q: Can I use the tool before an order arrives?
+  A: Yes. Leave the possession date empty, preserve the order and seller-stated fulfillment sources and keep the event open. Do not mark the order lost, late or cancelled without an attributable source and applicable process.
+- Q: What if only part of the order arrived?
+  A: Keep separate rows for the packages or safe item references. Close only the portion with an attributable outcome and leave missing lines open with an owner and checkpoint.
+- Q: Does a return label mean the return is complete?
+  A: No. It means a label or instruction exists. Add carrier acceptance, seller receipt, refund, replacement or other outcome sources as later events.
+- Q: Should I paste the complete complaint and order number into the tool?
+  A: No. Keep full correspondence and identifiers in protected storage. Use a safe purchase ID and source pointers in the shareable timeline.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.
@@ -16726,7 +16870,7 @@ This file is intended to be handed directly to Codex/Claude Code after the `fami
 | 087 | `/guides/furniture-inventory/` | Furniture Inventory: What Is Worth Recording for Moving, Insurance and Home Records | decide which furniture to record | furniture inventory | 236 |
 | 088 | `/guides/valuable-item-inventory/` | Valuable Item Inventory: Build Clear Records Without Turning the App into an Appraisal Tool | create records for higher-value household possessions | valuable item inventory | 234 |
 | 089 | `/guides/serial-number-tracker/` | Serial Number Tracker for Appliances, Electronics and Household Equipment | store serial numbers for household equipment | serial number tracker | 214 |
-| 090 | `/guides/purchase-receipt-organizer/` | Purchase Receipt Organizer: Keep Receipts Connected to the Things You Bought | organize household purchase receipts | receipt organizer for home purchases | 225 |
+| 090 | `/guides/purchase-receipt-organizer/` | Purchase Receipt Organizer \| Orders, Delivery, Returns and Warranties | organize household purchase receipts | receipt organizer for home purchases | 225 |
 | 091 | `/guides/how-to-track-product-warranties/` | How to Track Product Warranties Without Keeping Every Box | build a warranty-tracking process | how to track warranties | 234 |
 | 092 | `/guides/warranty-expiration/` | Warranty Expiration: How to Track the Date Without Assuming Coverage | understand and calculate a warranty end date | warranty expiration date | 244 |
 | 093 | `/guides/product-registration-tracker/` | Product Registration Tracker: Keep Household Registrations and Reference Numbers Organized | track whether household products were registered | product registration tracker | 217 |

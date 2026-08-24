@@ -713,9 +713,9 @@
   },
   {
     "route": "/guides/purchase-receipt-organizer/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/purchase-receipt-organizer/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1728,6 +1728,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/purchase-delivery-evidence-log/",
+    "alternateRoute": "/zh-tw/tools/purchase-delivery-evidence-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2336,6 +2344,20 @@
     "alternateRoute": "/guides/product-registration-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/purchase-delivery-evidence-log/",
+    "alternateRoute": "/tools/purchase-delivery-evidence-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/purchase-receipt-organizer/",
+    "alternateRoute": "/guides/purchase-receipt-organizer/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {

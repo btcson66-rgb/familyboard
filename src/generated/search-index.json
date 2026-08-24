@@ -680,12 +680,12 @@
     "headings": "A serial number by itself is just a string of characters What a serial number is actually needed for Serial number and model number are not the same thing Store it with the item, never as a standalone list Photograph the label instead of trusting a single transcription A serial number alone doesn't prove you own the item Don't create risk chasing a label A serial number is what makes a recall check possible Treat the full serial list as private, not public, information"
   },
   {
-    "title": "Purchase Receipt Organizer: How Long to Actually Keep Each Receipt (IRS Rules)",
-    "description": "Organize household receipts by purchase, with the actual IRS retention periods — 3, 6 or 7 years — for tax-relevant receipts instead of one guessed rule.",
+    "title": "Purchase Receipt Organizer | Orders, Delivery, Returns and Warranties",
+    "description": "Organize purchase receipts with offer, order, payment, delivery, condition, return, refund and warranty evidence instead of treating one receipt as the whole transaction.",
     "route": "/guides/purchase-receipt-organizer/",
     "cluster": "inventory-warranty",
     "keywords": "receipt organizer for home purchases",
-    "headings": "Purchase receipt organizer: the actual retention periods, not a guessed rule How long to keep a receipt, by reason The best way to find a receipt is through the item, not the date Keep high-value or high-purpose receipts; skip the rest Use meaningful file names and searchable fields Paper receipts fade — capture them before they're unreadable Digital and emailed receipts need the same organization as paper ones When a receipt's job is done, let it go A quick sort for the receipts already piled up"
+    "headings": "A purchase receipt organizer should preserve the transaction around the receipt Separate six evidence layers A receipt does not prove delivery or condition Freeze the policies and promises that existed at purchase Shipping, possession and arrival are different events Partial orders and substitutions need versioned rows Record visible condition without creating a diagnosis Return, refund, warranty and billing disputes are separate workflows Retention follows purpose, not one magic receipt rule Use safe, durable names without exposing transaction identifiers Affiliate recommendations must stay outside the evidence record"
   },
   {
     "title": "How to Track Product Warranties and Warranty Claims | FamilyBoard",
@@ -1622,6 +1622,14 @@
     "cluster": "tools",
     "keywords": "appliance purchase record",
     "headings": "Appliance purchase and installation record Use a private asset ID before copying purchase data Keep acquisition, possession and activation dates separate Use a ten-field evidence row Nine statuses prevent a receipt from pretending to be activation The written warranty owns its start method Delivery evidence is narrower than household acceptance Installer evidence does not certify workmanship Gifts, transfers and appliances already in the home need an honest baseline Keep electronic receipts outside the shareable output Model and serial evidence support later service and recall work Privacy screening is a backstop Affiliate placement cannot change activation status"
+  },
+  {
+    "title": "Purchase and Delivery Evidence Log | Missing, Damaged and Return Records",
+    "description": "Create a private purchase and delivery timeline for orders, shipment or pickup, visible condition, missing contents, seller notices, returns, refunds and replacements.",
+    "route": "/tools/purchase-delivery-evidence-log/",
+    "cluster": "tools",
+    "keywords": "purchase delivery record",
+    "headings": "Purchase and delivery evidence log Use a household purchase ID, not a transaction number Order, possession and review dates do different jobs Freeze the controlling sources Each row has ten fields Nine statuses separate a delivery scan from an outcome Partial delivery stays partial Record observation, not blame A sent message needs delivery evidence Keep policies, warranty and payment disputes separate Privacy screening is only a backstop Affiliate placement cannot become transaction evidence"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

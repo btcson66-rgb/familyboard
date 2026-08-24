@@ -97,6 +97,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/repair-history/</loc>",
       "<loc>https://familyboard.win/tools/appliance-purchase-installation-record/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-purchase-installation-record/</loc>",
+      "<loc>https://familyboard.win/tools/purchase-delivery-evidence-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/purchase-delivery-evidence-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
@@ -408,6 +411,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Nine statuses prevent a receipt from pretending to be activation",
       "written warranty owns its start method",
+    ],
+  },
+  {
+    path: "/tools/purchase-delivery-evidence-log/",
+    require: [
+      "Purchase and Delivery Evidence Log",
+      'hreflang="zh-TW"',
+      "Nine statuses separate a delivery scan from an outcome",
+      "Mail, Internet, or Telephone Order Merchandise Rule business guide",
+    ],
+  },
+  {
+    path: "/guides/purchase-receipt-organizer/",
+    require: [
+      "A purchase receipt organizer should preserve the transaction around the receipt",
+      'hreflang="zh-TW"',
+      "Separate six evidence layers",
+      "consumer.ftc.gov/online-shopping",
     ],
   },
   {
@@ -741,6 +762,24 @@ const checks = [
       'hreflang="en"',
       "九種狀態避免過早宣稱完成",
       "保證書與發票要連結但不能合併",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/purchase-delivery-evidence-log/",
+    require: [
+      "購買與到貨證據紀錄表",
+      'hreflang="en"',
+      "九種狀態不讓物流掃描冒充結果",
+      "零售業等網路交易定型化契約應記載及不得記載事項",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/purchase-receipt-organizer/",
+    require: [
+      "網購到貨缺件或損壞怎麼辦？發票、拆封與退換貨紀錄",
+      'hreflang="en"',
+      "七日解除權不是所有購買的通用試用期",
+      "通訊交易解除權合理例外情事適用準則",
     ],
   },
   {

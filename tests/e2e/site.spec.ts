@@ -63,7 +63,7 @@ test("public SEO, keyboard and five production tools work", async ({
 test("representative routes have no serious accessibility violations", async ({
   page,
 }) => {
-  test.setTimeout(150_000);
+  test.setTimeout(210_000);
   for (const route of [
     "/",
     "/guides/home-maintenance-schedule/",
@@ -95,6 +95,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/appliance-repair-callback-log/",
     "/guides/repair-history/",
     "/tools/appliance-purchase-installation-record/",
+    "/tools/purchase-delivery-evidence-log/",
+    "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
@@ -136,6 +138,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/appliance-repair-callback-log/",
     "/zh-tw/guides/repair-history/",
     "/zh-tw/tools/appliance-purchase-installation-record/",
+    "/zh-tw/tools/purchase-delivery-evidence-log/",
+    "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
@@ -294,8 +298,14 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     page.locator(".site-footer").getByRole("link", { name: "家電購買與安裝紀錄" }),
   ).toHaveAttribute("href", "/zh-tw/tools/appliance-purchase-installation-record/");
   await expect(
+    page.locator(".site-footer").getByRole("link", { name: "購買與到貨證據紀錄" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/purchase-delivery-evidence-log/");
+  await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電清冊教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/appliance-inventory/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "網購到貨與退換貨教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/purchase-receipt-organizer/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "保固申請與追蹤教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/how-to-track-product-warranties/");
@@ -712,6 +722,16 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/appliance-purchase-installation-record/",
       alternate: "/tools/appliance-purchase-installation-record/",
       heading: "家電購買與安裝紀錄表",
+    },
+    {
+      route: "/zh-tw/tools/purchase-delivery-evidence-log/",
+      alternate: "/tools/purchase-delivery-evidence-log/",
+      heading: "購買與到貨證據紀錄表",
+    },
+    {
+      route: "/zh-tw/guides/purchase-receipt-organizer/",
+      alternate: "/guides/purchase-receipt-organizer/",
+      heading: "網購到貨缺件或損壞怎麼辦？發票、拆封與退換貨紀錄",
     },
     {
       route: "/zh-tw/guides/appliance-inventory/",
@@ -1395,6 +1415,28 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不能早於本次檢視日",
   );
 
+  await page.goto("/tools/purchase-delivery-evidence-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open purchase and delivery events: 2");
+  await expect(page.locator(".result")).toContainText("Kept, completed or handed-off events: 0");
+  await expect(page.locator(".result")).toContainText("Purchase source recorded—fulfillment pending 1");
+  await page.getByLabel("Next household evidence checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+
+  await page.goto("/zh-tw/tools/purchase-delivery-evidence-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放購買與到貨事件：2 筆");
+  await expect(page.locator(".result")).toContainText("已保留、完成或移交事件：0 筆");
+  await expect(page.locator(".result")).toContainText("已記錄購買來源，等待履行 1 筆");
+  await page.getByLabel("家庭下次證據查核點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次檢視日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1750,6 +1792,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/appliance-purchase-installation-record/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/purchase-delivery-evidence-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/purchase-delivery-evidence-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/appliance-inventory/",

@@ -2664,6 +2664,130 @@ const definitions: Record<string, Definition> = {
       return `${values.asset.trim()} — appliance purchase and installation record\nProduct reference: ${values.model.trim()}\nAcquisition context: ${values.context}\nPurchase, contract or household acquisition: ${formatter.format(acquisitionDate)}\nDelivery or household possession: ${formatter.format(possessionDate)}\nInstallation or first use: ${formatter.format(activationDate)}\nCurrent record review: ${formatter.format(reviewDate)}\nNext household evidence checkpoint: ${formatter.format(nextReview)}\nOpen activation events: ${openRows.length}\nActive, limited, transferred or returned events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling purchase, delivery, installation, warranty and manual sources: ${values.basis.trim()}\n\n${lines("Versioned purchase and activation evidence", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable product/purchase/delivery/installation/warranty/recheck fact: ${row.parts[2]} — actor/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next gap/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not verify a product, seller, carrier, installer, identity, delivery, authorization, licensing, insurance, workmanship, settings, connections, permits, code compliance or safety; inspect equipment; interpret a warranty, service contract, return policy or law; select a warranty start date; calculate a deadline; register a product; compare a recall; submit a claim, complaint or payment; determine ownership, acceptance, coverage, refund or replacement; assign responsibility; waive a right; or certify activation. Follow current manufacturer and responsible-authority safety instructions, use emergency or qualified help for urgent conditions and preserve original sources.`;
     },
   },
+  "purchase-delivery-evidence-log": {
+    intro:
+      "Build a private, versioned index from a household purchase source through shipment or pickup, actual possession, condition review, notice and return, refund or replacement outcome. The tool does not decide acceptance, fault, coverage or a legal deadline.",
+    fields: [
+      text("purchase", "Private household purchase ID", "Use a stable household ID, not a complete order, invoice, tracking, account, address or private contact.", "PURCHASE-P4"),
+      text("item", "Public item reference", "Use a general product name or public model reference. Keep full identifiers and label photos behind protected pointers.", "Countertop mixer / public model MX-20"),
+      {
+        name: "channel",
+        label: "Purchase channel",
+        type: "select",
+        options: [
+          "Online retailer or brand store",
+          "Online marketplace seller",
+          "Mail or telephone order",
+          "In-person retailer or pickup purchase",
+          "Contractor-supplied or custom household item",
+        ],
+      },
+      { name: "orderDate", label: "Transaction or order date", type: "date", value: "2026-08-20" },
+      { name: "possessionDate", label: "Delivery or household-possession date (optional until received)", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: "Current purchase-record review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next household evidence checkpoint", type: "date", value: "2026-08-31" },
+      text("basis", "Controlling offer, order, payment, fulfillment, policy, notice, response and outcome sources", "Use safe source IDs or public URLs with dates. Preserve the exact seller or platform policy version separately; do not paste full transaction or private identifiers.", "LISTING-L1; ORDER-O1; RECEIPT-R1; DELIVERY-D1; POLICY-P1; NOTICE-N1 if needed; RESPONSE-S1 if received"),
+      {
+        name: "events",
+        label: "Versioned purchase and delivery evidence rows",
+        type: "textarea",
+        help: "One line: ID | evidence stage | attributable order, fulfillment, possession, condition, notice, response or outcome fact | actor or source role | event date YYYY-MM-DD | protected evidence pointer | next gap or closure reason | owner role | target or outcome date YYYY-MM-DD | one of the nine listed statuses. Maximum 16 lines.",
+        value: "PURCHASE-1 | Transaction | Retailer order confirmation identifies the item, price and seller-stated fulfillment basis without proving shipment | Seller order source role | 2026-08-20 | ORDER-O1 and RECEIPT-R1 protected | Preserve shipment or pickup source and the exact policy version; do not claim possession | Household purchaser role | 2026-08-24 | Purchase source recorded—fulfillment pending\nDELIVERY-1 | Possession | Carrier source and household photo show one package received; item identity and contents remain under review | Carrier source and household observation roles | 2026-08-22 | DELIVERY-D1 and PHOTO-P1 protected | Compare visible item and included contents to the order source without unsafe testing | Household receiving role | 2026-08-31 | Possession recorded—condition and contents check pending",
+      },
+      text("storage", "Protected original-evidence location", "Use a folder label, not a complete order, invoice, tracking, case, address, phone, email, account, card, credential, signature, access or complaint detail.", "Household records / purchases / PURCHASE-P4 / evidence review 2026-08"),
+    ],
+    run: (values) => {
+      const orderDate = strictIsoDate(values.orderDate);
+      const possessionDate = strictIsoDate(values.possessionDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.purchase.trim()) return "Enter a private household purchase ID so the exported evidence log can be identified.";
+      if (values.item.trim().length < 4) return "Enter a public item reference, or state that the item reference remains unverified.";
+      if (!orderDate) return "Enter the real transaction or order date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current purchase-record review date in YYYY-MM-DD format.";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current purchase-record review date cannot be in the future.";
+      if (orderDate.getTime() > reviewDate.getTime()) return "The transaction or order date cannot be later than the current review.";
+      if (possessionDate && possessionDate.getTime() < orderDate.getTime()) return "The delivery or household-possession date cannot be earlier than the transaction or order date.";
+      if (possessionDate && possessionDate.getTime() > reviewDate.getTime()) return "The delivery or household-possession date cannot be later than the current review.";
+      if (!nextReview) return "Enter a real next household evidence checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next household evidence checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 16) return "Identify the controlling offer, order, payment, fulfillment, policy, notice, response and outcome sources with safe pointers.";
+      if (!values.storage.trim()) return "Enter the protected location for original purchase, fulfillment, condition, communication and outcome evidence.";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "Add at least one purchase or delivery evidence event.";
+      if (eventRows.length > 16) return "One review supports at most 16 purchase and delivery events; create a later dated version for more.";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Purchase and delivery event line ${invalidRows.map((row) => row.line).join(", ")} must contain all ten pipe-separated fields.`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Every purchase and delivery event needs a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Use 2 to 20 letters, numbers or hyphens for each event ID, such as DELIVERY-1.";
+      const statusOrder = [
+        "Purchase source recorded—fulfillment pending",
+        "Shipment or pickup source recorded—possession pending",
+        "Possession recorded—condition and contents check pending",
+        "Issue observed—notice delivery pending",
+        "Notice delivered—seller, platform or carrier response pending",
+        "Remedy arranged—outcome pending",
+        "Kept as delivered—dated household check linked",
+        "Return, refund or replacement completed—outcome source linked",
+        "Limited archive or external handoff—gap and ownership preserved",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `Purchase and delivery event line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the nine evidence statuses in the field instructions.`;
+      const needsPossession = eventRows.filter((row) => statusOrder.slice(2, 8).includes(row.parts[9]));
+      if (!possessionDate && needsPossession.length)
+        return `Purchase and delivery event line ${needsPossession.map((row) => row.line).join(", ")} uses a possession, condition, notice, remedy or outcome status, so add the real household-possession date.`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < orderDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `Purchase and delivery event line ${invalidEventDates.map((row) => row.line).join(", ")} needs a real event date from the transaction through the current review.`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 6).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(6).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open purchase and delivery event line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next household checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < orderDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Kept, completed or handed-off event line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from the transaction through this review.`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `Purchase and delivery event line ${missingSources.map((row) => row.line).join(", ")} needs an actor or source role and a protected order, fulfillment, possession, condition, notice, response or outcome pointer.`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 12 || /^(?:done|complete|completed|delivered|accepted|safe|refund|refunded|replaced|approved|ok|none|n\/a|follow up|closed)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `Purchase and delivery event line ${vagueActions.map((row) => row.line).join(", ")} needs a specific next evidence step or source-based closure reason—not a generic delivery, acceptance, safety, refund or completion word.`;
+      const privacyText = [values.purchase, values.item, values.basis, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, serial, invoice, order, case, tracking or complete numeric identifier was detected. Keep it in protected evidence and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|gate code|lockbox code|full address|account number|card number|bank account|routing number|social security|government id|full serial|serial number|invoice number|receipt number|complete order|order number|tracking number|case number|claim number|policy number|signature|date of birth|private contact|payment credential|login credential|complaint form|complaint letter|legal strategy|medical record|child name|remote access|one-time code|verification code|buyer name|seller name|customer name|carrier recipient name|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, access, address, financial, identity, full serial, transaction, tracking, case, complaint, legal or private contact detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: eventRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.purchase.trim()} — purchase and delivery evidence log\nItem reference: ${values.item.trim()}\nPurchase channel: ${values.channel}\nTransaction or order date: ${formatter.format(orderDate)}\nDelivery or household possession: ${possessionDate ? formatter.format(possessionDate) : "Not yet recorded"}\nCurrent purchase-record review: ${formatter.format(reviewDate)}\nNext household evidence checkpoint: ${formatter.format(nextReview)}\nOpen purchase and delivery events: ${openRows.length}\nKept, completed or handed-off events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling offer, order, payment, fulfillment, policy, notice, response and outcome sources: ${values.basis.trim()}\n\n${lines("Versioned purchase and delivery evidence", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable order/fulfillment/possession/condition/notice/response/outcome fact: ${row.parts[2]} — actor/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next gap/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not verify a seller, platform, carrier, item, package, shipment, pickup, possession, delivery, condition, contents, communication or outcome; inspect or test an item; determine fault, acceptance, fraud, ownership, coverage, return, refund, replacement, chargeback, complaint or other legal rights; interpret a policy, warranty, contract or law; calculate a seller, platform, carrier, card, warranty or legal deadline; contact a company or authority; submit a return, claim, dispute, chargeback, complaint or payment; provide an address, access or credential; assign responsibility; waive a right; or certify completion. Preserve original sources, follow current manufacturer and responsible-authority safety instructions and use qualified or emergency help for urgent conditions.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -6708,6 +6832,130 @@ const zhTwDefinitions: Record<string, Definition> = {
         count: eventRows.filter((row) => row.parts[9] === status).length,
       })).filter((item) => item.count > 0);
       return `${values.asset.trim()}｜家電購買與安裝紀錄\n產品參考：${values.model.trim()}\n家庭取得情境：${values.context}\n購買、契約或家庭取得：${formatter.format(acquisitionDate)}\n交貨或家庭實際取得：${formatter.format(possessionDate)}\n安裝或第一次使用：${formatter.format(activationDate)}\n本次紀錄檢視：${formatter.format(reviewDate)}\n家庭下次證據查核點：${formatter.format(nextReview)}\n仍開放啟用事件：${openRows.length} 筆\n已啟用、有限歸檔、移轉或退貨事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的購買、交貨、安裝、保證書與說明書來源：${values.basis.trim()}\n\n${lines("有版本的購買與啟用證據", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的產品／購買／交貨／安裝／保固／複查事實：${row.parts[2]}｜行動者／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一個缺口／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭證據索引。它不驗證產品、賣家、物流、安裝者、身分、交貨、授權、證照、保險、工法、設定、連接、許可、法規或安全，不檢驗設備、不解釋保固、服務方案、退貨政策或法律、不選擇保固起算日、不計算期限、不註冊產品、不比對召回、不提交申請、申訴或付款、不判定所有權、驗收、涵蓋、退款或換貨、不分配責任、不代表放棄權利，也不認證啟用。請遵循品牌與主管機關現行安全指示，緊急情況使用合適緊急及合格專業協助，並保存原始來源。`;
+    },
+  },
+  "purchase-delivery-evidence-log": {
+    intro:
+      "把家庭購買來源一路連到出貨或取貨、實際取得、狀況複查、通知與退貨、退款或換貨結果，建立私密且有版本的證據索引。工具不判定驗收、責任、涵蓋或法律期限。",
+    fields: [
+      text("purchase", "私密家庭購買代號", "使用穩定的家庭 ID，不要填完整訂單、發票、物流、帳號、地址或私人聯絡。", "PURCHASE-P4"),
+      text("item", "公開品項參考", "使用一般品名或公開型號；完整識別資料與標籤照片留在受保護索引。", "桌上型攪拌機／公開型號 MX-20"),
+      {
+        name: "channel",
+        label: "購買管道",
+        type: "select",
+        options: [
+          "品牌或零售商網路商店",
+          "網路平台中的賣家",
+          "郵購或電話訂購",
+          "實體店面購買或到店取貨",
+          "由承攬業者供應或客製的家庭品項",
+        ],
+      },
+      { name: "orderDate", label: "交易或下單日", type: "date", value: "2026-08-20" },
+      { name: "possessionDate", label: "到貨或家庭實際取得日（尚未取得可留空）", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: "本次購買紀錄檢視日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "家庭下次證據查核點", type: "date", value: "2026-08-31" },
+      text("basis", "控制中的商品資訊、訂單、付款、履行、政策、通知、回覆與結果來源", "使用安全來源 ID 或有日期的公開網址。另行保存當時適用的店家或平台政策版本，不要貼完整交易或私人識別。", "商品頁 LISTING-L1；訂單 ORDER-O1；發票 RECEIPT-R1；物流 DELIVERY-D1；政策 POLICY-P1；必要時通知 NOTICE-N1；已收到則回覆 RESPONSE-S1"),
+      {
+        name: "events",
+        label: "有版本的購買與到貨證據列",
+        type: "textarea",
+        help: "每行格式：ID | 證據階段 | 有來源的訂購、履行、實際取得、狀況、通知、回覆或結果事實 | 行動者或來源角色 | 事件日期 YYYY-MM-DD | 受保護證據索引 | 下一個缺口或結案理由 | 負責角色 | 目標或結果日期 YYYY-MM-DD | 欄位說明列出的九種狀態之一。最多 16 行。",
+        value: "PURCHASE-1 | 交易 | 零售商訂單確認品項、價格與店家陳述的履行依據，但不代表已出貨 | 店家訂單來源角色 | 2026-08-20 | ORDER-O1 與 RECEIPT-R1 受保護 | 保存出貨或取貨來源與當時政策版本，不宣稱已實際取得 | 家庭購買負責角色 | 2026-08-24 | 已記錄購買來源，等待履行\nDELIVERY-1 | 實際取得 | 物流來源與家庭照片支持收到一件包裹，品項身分與內容仍待複查 | 物流來源與家庭觀察角色 | 2026-08-22 | DELIVERY-D1 與 PHOTO-P1 受保護 | 不進行不安全測試，依訂單來源核對可見品項與隨附內容 | 家庭收受負責角色 | 2026-08-31 | 已記錄實際取得，等待狀況與內容複查",
+      },
+      text("storage", "受保護的原始證據位置", "只寫資料夾代稱，不要填完整訂單、發票、物流、案件、地址、電話、Email、帳號、卡號、憑證、簽名、門禁或申訴資料。", "家庭文件／購買／PURCHASE-P4／證據複查 2026-08"),
+    ],
+    run: (values) => {
+      const orderDate = strictIsoDate(values.orderDate);
+      const possessionDate = strictIsoDate(values.possessionDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.purchase.trim()) return "請填私密家庭購買代號，讓匯出的證據紀錄可以辨識。";
+      if (values.item.trim().length < 4) return "請填公開品項參考，或明確標示品項參考尚未核對。";
+      if (!orderDate) return "請輸入真實的交易或下單日 YYYY-MM-DD。";
+      if (!reviewDate) return "請輸入真實的本次購買紀錄檢視日 YYYY-MM-DD。";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次購買紀錄檢視日不能在未來。";
+      if (orderDate.getTime() > reviewDate.getTime()) return "交易或下單日不能晚於本次檢視日。";
+      if (possessionDate && possessionDate.getTime() < orderDate.getTime()) return "到貨或家庭實際取得日不能早於交易或下單日。";
+      if (possessionDate && possessionDate.getTime() > reviewDate.getTime()) return "到貨或家庭實際取得日不能晚於本次檢視日。";
+      if (!nextReview) return "請輸入真實的家庭下次證據查核點 YYYY-MM-DD。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "家庭下次證據查核點不能早於本次檢視日。";
+      if (values.basis.trim().length < 16) return "請用安全索引辨識控制中的商品資訊、訂單、付款、履行、政策、通知、回覆與結果來源。";
+      if (!values.storage.trim()) return "請填購買、履行、品項狀況、溝通與結果原件的受保護位置。";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "請至少新增一筆購買或到貨證據事件。";
+      if (eventRows.length > 16) return "一次複查最多 16 筆購買與到貨事件；更多內容請建立下一份有日期的版本。";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `購買與到貨事件第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整填寫 10 個以直線分隔的欄位。`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆購買與到貨事件都要有唯一 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "購買與到貨事件 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 DELIVERY-1。";
+      const statusOrder = [
+        "已記錄購買來源，等待履行",
+        "已記錄出貨或取貨來源，等待實際取得",
+        "已記錄實際取得，等待狀況與內容複查",
+        "已觀察問題，等待通知送達",
+        "通知已送達，等待店家、平台或物流回覆",
+        "已安排處理，等待實際結果",
+        "依到貨狀態保留，已連結家庭複查",
+        "退貨、退款或換貨已完成，連結結果來源",
+        "有限歸檔或已移交外部流程，缺口與責任已保存",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `購買與到貨事件第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須使用欄位說明中的九種文字之一。`;
+      const needsPossession = eventRows.filter((row) => statusOrder.slice(2, 8).includes(row.parts[9]));
+      if (!possessionDate && needsPossession.length)
+        return `購買與到貨事件第 ${needsPossession.map((row) => row.line).join("、")} 行使用實際取得、品項狀況、通知、處理或結果狀態，因此必須補上真實家庭取得日。`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < orderDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `購買與到貨事件第 ${invalidEventDates.map((row) => row.line).join("、")} 行需要介於交易日與本次檢視日之間的真實事件日期。`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 6).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(6).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的購買與到貨事件第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次檢視日起，到家庭下次證據查核點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < orderDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已保留、完成或移交的第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於交易日與本次檢視日之間的實際結果日期。`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `購買與到貨事件第 ${missingSources.map((row) => row.line).join("、")} 行需要行動者或來源角色，以及受保護的訂購、履行、實際取得、狀況、通知、回覆或結果索引。`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 8 || /^(?:完成|好了|已交貨|已到貨|已驗收|安全|退款|已退款|已換貨|已同意|核准|無|不用|不適用|待追蹤|已結案|ok)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `購買與到貨事件第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的下一個證據步驟或有來源的結案理由，不能只寫通用交貨、驗收、安全、退款或完成詞。`;
+      const privacyText = [values.purchase, values.item, values.basis, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、序號、發票、訂單、案件、物流或完整數字識別資料。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|鑰匙盒密碼|驗證碼|一次性代碼|警報碼|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證|完整序號|發票號碼|收據號碼|完整訂單|訂單編號|物流追蹤碼|案件編號|理賠編號|保單編號|簽名|出生日期|私人聯絡|完整付款資料|登入憑證|申訴表全文|申訴信全文|法律策略|醫療紀錄|兒童姓名|遠端控制|買方姓名|賣家姓名|客戶姓名|收件人姓名|password|passcode|access code|gate code|lockbox code|account number|card number|government id|full serial|serial number|invoice number|receipt number|complete order|order number|tracking number|case number|claim number|policy number|signature|payment credential|login credential|complaint form|complaint letter|legal strategy|medical record|child name|remote access|one-time code|verification code|buyer name|seller name|customer name|carrier recipient name|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、門禁、地址、金融、身分、完整序號、交易、物流、案件、申訴、法律或私人聯絡資料。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: eventRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.purchase.trim()}｜購買與到貨證據紀錄\n品項參考：${values.item.trim()}\n購買管道：${values.channel}\n交易或下單日：${formatter.format(orderDate)}\n到貨或家庭實際取得：${possessionDate ? formatter.format(possessionDate) : "尚未記錄"}\n本次購買紀錄檢視：${formatter.format(reviewDate)}\n家庭下次證據查核點：${formatter.format(nextReview)}\n仍開放購買與到貨事件：${openRows.length} 筆\n已保留、完成或移交事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的商品資訊、訂單、付款、履行、政策、通知、回覆與結果來源：${values.basis.trim()}\n\n${lines("有版本的購買與到貨證據", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的訂購／履行／實際取得／狀況／通知／回覆／結果事實：${row.parts[2]}｜行動者／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一個缺口／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭證據索引。它不驗證賣家、平台、物流、品項、包裹、出貨、取貨、實際取得、到貨、狀況、內容、溝通或結果，不檢查或測試品項、不判定責任、驗收、詐欺、所有權、涵蓋、退貨、退款、換貨、刷卡爭議、申訴或其他法律權利、不解釋政策、保固、契約或法律、不計算店家、平台、物流、信用卡、保固或法律期限、不聯絡業者或主管機關、不提交退貨、申請、爭議、刷卡爭議、申訴或付款、不提供地址、門禁或憑證、不分配責任、不代表放棄權利，也不認證完成。請保存原始來源、遵循品牌與主管機關現行安全指示，緊急情況使用合適的合格專業或緊急協助。`;
     },
   },
 };
