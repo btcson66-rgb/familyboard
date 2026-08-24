@@ -1,75 +1,104 @@
 ---
-title: "Appliance Inventory: Models, Serial Numbers, Warranties and Maintenance in One List"
-description: "Create an appliance inventory that links models, serial numbers, purchase details, warranties, manuals, maintenance and repair history."
+title: "Appliance Inventory: Purchase, Installation, Warranty and Service Records"
+description: "Build an appliance inventory that connects model and serial evidence to purchase, delivery, installation, warranty, maintenance, repair and recall records."
 route: "/guides/appliance-inventory/"
-primaryIntent: "create an inventory of household appliances"
+primaryIntent: "build an appliance inventory that preserves purchase, delivery, installation, warranty and lifecycle evidence"
 primaryKeyword: "appliance inventory"
 cluster: "inventory-warranty"
 pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
-nextStep: "Add the five appliances most likely to need service first — refrigerator, range, dishwasher, washer and dryer, water heater — before extending the inventory to lower-value equipment."
+lastReviewedAt: "2026-08-24"
+nextStep: "Create one purchase-and-installation record for the newest major appliance, then attach its protected serial evidence, written warranty, manual and first-use recheck to the same household asset ID."
 related:
-  - "/templates/printable-appliance-inventory/"
+  - "/tools/appliance-purchase-installation-record/"
   - "/guides/serial-number-tracker/"
   - "/guides/how-to-track-product-warranties/"
-  - "/guides/appliance-lifespan-planning/"
+  - "/tools/product-recall-action-log/"
   - "/features/home-inventory-tracker/"
 faq:
   - question: "What fields actually matter for an appliance inventory?"
-    answer: "Name, room, brand, model, serial number, purchase date, seller, warranty end date, manual reference and service provider. That set answers the questions that come up during an actual repair call or warranty claim; purchase price is worth adding mainly for major appliances where insurance or replacement budgeting matters."
-  - question: "Where do I usually find an appliance's serial number?"
-    answer: "It varies by type: commonly inside the fresh-food compartment for refrigerators, the inner door edge for dishwashers, behind the door or on the back panel for washers and dryers, and inside the door frame or a lower drawer for ranges. Photograph the label the first time you find it so you don't have to search again later."
-  - question: "Is a manufacturer's warranty the same thing as an appliance's expected lifespan?"
-    answer: "No, and it's a common mix-up. A warranty (often around a year for parts and labor, sometimes longer for specific components) is about what's covered for free. Lifespan is a separate, usually much longer, published range that describes how long the appliance is typically expected to keep working at all."
+    answer: "Use a stable household ID, product type, brand, model reference, protected serial evidence, purchase or acquisition source, delivery or possession date, installation or first-use source, written warranty start method, manual, current owner and links to service, recall and retirement history."
+  - question: "Should the full serial number appear in every shared inventory export?"
+    answer: "No. Keep the complete serial and label photo in protected storage and use a safe pointer in ordinary household summaries. Retrieve the original only for an authorized service, warranty, insurance or recall process that actually needs it."
+  - question: "Does the purchase date always start the appliance warranty?"
+    answer: "No. Preserve the receipt, written warranty and exact start method. Purchase, delivery and installation dates can differ, and the tool does not select one as the legal or contractual start without a controlling source."
+  - question: "Does an installer invoice prove the appliance was installed correctly?"
+    answer: "It proves only the invoiced or reported scope. Keep the attributable installation source and a separate household recheck; FamilyBoard cannot inspect workmanship, safety, licensing or code compliance."
   - question: "What should happen to the record when an appliance is replaced?"
-    answer: "Archive it instead of deleting it. The archived repair and cost history for that specific unit becomes useful, household-specific evidence the next time a similar replacement decision comes up — more relevant than any generic published average, because it reflects how that exact appliance actually performed."
-contentVersion: 1
+    answer: "Archive the old physical unit with its dated disposition or transfer source and create a new asset ID for the replacement. Do not reuse the old ID or erase the prior repair, cost and recall history."
+contentVersion: 2
 ---
-# An appliance inventory earns its keep by connecting to what happens after purchase
+# Build an appliance inventory that survives delivery, service and recall
 
-Any spreadsheet can list "refrigerator, washer, dishwasher." What makes an appliance inventory actually useful is that each entry accumulates the record of everything that happens to that specific unit — the warranty it came with, the service it's had, and how its age compares to what's typically expected for its type.
+An appliance inventory should answer more than `Do we own a refrigerator?` When a delivery is incomplete, an installer returns, a warranty claim opens or a recall names a serial range, the household needs to identify one physical unit and trace the sources that belong to it.
 
-## The field set that actually gets used
+That requires an asset record with several linked events, not one crowded row. The purchase source says what was ordered. The delivery source says what arrived. The installation source says what a provider reported doing. The household recheck says what was observed after first use. A written warranty says how its own coverage begins. None of those sources should silently overwrite another.
 
-Name, room, brand, model, serial number, purchase date, seller, warranty end date, manual reference and service provider cover the questions that come up during an actual repair call or a warranty claim. Purchase price is useful mainly for insurance and replacement-budget purposes — worth adding for major appliances, less critical for smaller ones.
+**Adding or replacing an appliance now? [Use the free Appliance Purchase and Installation Record](/tools/appliance-purchase-installation-record/) to preserve the handoff from purchase to active inventory.**
 
-## Where to find the serial label without guessing
+## Give one physical unit a durable household ID
 
-Serial and model plates are usually in a predictable spot, though it varies by appliance type and manufacturer:
+Start with a private household identifier such as `KITCHEN-FRIDGE-A2`. That ID should remain stable if the unit moves rooms, receives a repair, changes the person responsible for it or becomes archived. Brand, public model reference and product type describe what it is; the household ID keeps every later event attached to the same unit.
 
-| Appliance | Common label location |
-|---|---|
-| Refrigerator | Inside the fresh-food compartment, on the side wall or behind the crisper drawer |
-| Dishwasher | Inner edge of the door, visible when the door is open |
-| Washer / dryer | Behind the door, on the frame, or on the back panel |
-| Range / oven | Inside the door frame or in a storage drawer beneath the oven |
-| Water heater | Printed directly on the tank, usually near the top |
+The National Association of Insurance Commissioners' [home inventory guidance](https://content.naic.org/consumer/home-inventory) recommends grouping belongings, taking pictures and preserving identifying information. For a major appliance, a practical record includes:
 
-Photograph the label the first time you find it rather than transcribing it once and hoping you remember where it was. If a label is in an unsafe or hard-to-reach spot, it's fine to add it later during a service visit instead of moving a heavy appliance to get it now.
+- household asset ID and current location;
+- product type, brand and model reference;
+- a protected serial-label photo or serial pointer;
+- purchase or household-acquisition source and date;
+- delivery or possession source and date;
+- installation or first-use source and date;
+- written warranty and its stated start method;
+- manual and safety-warning source;
+- current owner role and next evidence gap;
+- linked maintenance, service, recall and retirement records.
 
-## Build a timeline, not just a snapshot
+Do not move a heavy, connected or built-in appliance merely to improve the inventory. Use the manufacturer manual or current provider instructions to locate the label safely, or capture it during an appropriate installation or service visit.
 
-Maintenance completion, repairs, part replacements and eventual disposal or replacement should all attach to the same asset record as history entries, not as separate disconnected notes. The value compounds: the second time a dishwasher acts up, a household with a timeline can immediately see whether it's the same symptom as eighteen months ago or something new, instead of starting the diagnosis from zero.
+## Model and serial evidence do different jobs
 
-## Purchase date and installed date are not always the same thing
+A model number identifies a product configuration shared by multiple units. A serial number or date code can identify a narrower production range or one unit. CPSC recall notices routinely specify model and serial ranges, and the label location can differ by product. Do not assume the location from a generic table or treat a matching model alone as a confirmed recall match.
 
-For an appliance you carry home yourself — a microwave, a small countertop unit — purchase date and the date it's actually in use are effectively the same day. For anything a contractor installs — a water heater, a built-in dishwasher, central HVAC equipment — there can be a real gap between the two, and some manufacturer warranties are measured from installation rather than purchase. Recording both dates when they differ, rather than only one, avoids a warranty-date mistake down the line and gives an accurate baseline for judging the unit's real age later.
+Keep the complete serial number and full label photograph in protected storage. A shareable household summary can use `SERIAL-PHOTO-S1` or a redacted suffix. This still allows another family member to find the controlling original without exposing a reusable identifier in every printout or exported tool result.
 
-## Attach the manual instead of retyping it
+## Purchase, delivery and installation are three separate dates
 
-Rather than summarizing a manual's maintenance instructions into a household task by memory, keep a direct reference to the manual itself with the asset record — a saved PDF, a bookmarked manufacturer support page, or a photo of the printed booklet's relevant page. Instructions get updated, model variants differ in small but real ways, and a household's own paraphrase of "clean the filter sometimes" is a worse source than the actual document six months later when nobody remembers exactly what it said.
+The purchase or contract date shows when the transaction began. Delivery or possession shows when the household received the unit. Installation or first use shows when it entered service. Those dates may be identical for a countertop appliance and weeks apart for contractor-supplied equipment.
 
-## Warranty terms and appliance lifespan are different questions — record both
+Do not make the earliest or latest date the warranty start by default. The [FTC's warranty guidance](https://consumer.ftc.gov/articles/warranties) says to preserve the written warranty and receipt; the controlling document still decides its own coverage and claim procedure. Record the exact start method stated in the source, the source pointer and any unresolved ambiguity. A calculator cannot invent a missing term.
 
-A manufacturer's warranty (commonly one year on parts and labor for major appliances, sometimes longer on specific components like a refrigerator compressor or a washer's drum motor) tells you what's covered for free. It has nothing to do with how long the appliance is actually expected to last — [published lifespan ranges](/guides/appliance-lifespan-planning/) run well past most warranty periods for every major appliance category. Recording both the warranty end date and the purchase date lets the household see, at a glance, when free coverage ends and separately when the unit is entering the age range where repair-versus-replace decisions start to matter.
+For delivery, preserve the seller or carrier source, date, product identity, included components and visible condition that the household actually observed. For installation, preserve the installer role, stated scope, configuration or setting evidence, completion source and a separate household first-use recheck. A delivery signature proves only what that source says; an installer invoice does not by itself prove correct, safe or code-compliant work.
 
-## Record who to call, not just what to record
+## Contractor-supplied equipment needs the same identity chain
 
-Beyond the manufacturer, note which local service provider (if any) has already worked on a given appliance. Over time this turns a generic "who fixes dishwashers" search into "who fixed our dishwasher last time, and did that go well" — a much better starting point when something breaks again.
+Built-in dishwashers, water heaters, HVAC equipment and similar assets may arrive through a contractor rather than a retail checkout. Record who supplied the equipment, who installed it and which document identifies the actual model and unit. Do not assume the proposal model is the model delivered, or that the contractor's workmanship promise is the manufacturer's product warranty.
 
-## Archive instead of deleting a replaced appliance
+If the household did not buy the unit directly — for example, it came with a home, rental or gift — mark the acquisition context and preserve what is unknown. Do not invent a purchase date, original owner or transferable coverage. An incomplete but honest inventory is more useful than a confident false history.
 
-When an appliance is replaced, archive its record rather than removing it. The archived history — what it cost, what it needed repaired, how long it actually lasted in this household — becomes real, household-specific data the next time a similar purchase decision comes up, which is more useful than any generic published average.
+## A receipt is one source, not the whole warranty
+
+The receipt can support the purchase date, seller and original ownership. It does not state every warranty term or prove installation. Save it with the written warranty, not instead of the warranty. If a paper receipt may fade, retain a legible copy and a protected pointer to the original.
+
+For an online purchase, preserve the invoice or final order source rather than relying forever on a retailer account. For a returned, cancelled or replaced order, add a later outcome event instead of editing the original purchase out of the timeline.
+
+## Connect the manual and current safety sources
+
+Keep the manual matched to the exact model rather than retyping its intervals or warnings from memory. Preserve the source URL or saved document date, because support pages can change. Manufacturer registration may help with notices, but it is not proof that every recall will reach the household.
+
+Use current CPSC recall sources for US products and the responsible authority for the household's location. Match the full protected identifiers only in the appropriate official or manufacturer process. The inventory should link to the resulting recall record; it must not decide that the product is safe, affected or remedied.
+
+## Turn the asset into a lifecycle index
+
+Maintenance, service visits, parts, callbacks, warranty claims, recalls and eventual replacement should attach to the same household asset ID. Keep each source in its original state and add events over time. A later recurrence should not rewrite an earlier provider completion statement; a replacement should not erase the old unit's performance history.
+
+Archive a sold, donated, returned or disposed unit with a dated outcome source and remove only the private details that no longer belong in an active household handoff. If a replacement takes the old physical location, give it a new asset ID rather than reusing the prior unit's identity.
+
+## Insurance inventory and service inventory overlap but are not identical
+
+An insurance-oriented inventory may emphasize original cost, photos and proof of ownership. A service-oriented appliance record adds model, protected serial, installation, manual, warranty, maintenance and repair history. Keep the common identity once, then link the purpose-specific sources. FamilyBoard does not value property, interpret a policy or guarantee claim acceptance.
+
+## Keep affiliate recommendations outside the evidence record
+
+A future labelled affiliate area may show label makers, document sleeves, receipt scanners or general record-storage supplies. A commercial link must not decide which appliance was delivered, what a warranty covers, whether installation was correct, whether a recall applies or when an asset is closed. Purchase evidence and affiliate tracking stay separate.

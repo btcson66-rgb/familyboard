@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-24T03:56:36.119Z
+Generated: 2026-08-24T04:22:57.204Z
 
 ## Summary
 
-- Indexable pages: 301
-- Generated HTML routes: 318
+- Indexable pages: 304
+- Generated HTML routes: 321
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 109
+- Pages without a contextual product/tool link: 111
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,9 +22,9 @@ Generated: 2026-08-24T03:56:36.119Z
 - appliances: 30
 - maintenance: 37
 - household-operations: 21
-- inventory-warranty: 35
+- inventory-warranty: 36
 - records-emergency: 27
-- tools: 79
+- tools: 81
 
 ## Word-count range
 
@@ -87,6 +87,7 @@ Generated: 2026-08-24T03:56:36.119Z
 - /zh-tw/features/offline-household-organizer/
 - /zh-tw/features/private-family-organizer/
 - /zh-tw/features/warranty-tracker/
+- /zh-tw/guides/appliance-inventory/
 - /zh-tw/guides/appliance-replacement-planning/
 - /zh-tw/guides/cleaning-schedule/
 - /zh-tw/guides/contractor-records/
@@ -117,6 +118,7 @@ Generated: 2026-08-24T03:56:36.119Z
 - /zh-tw/tools/annual-subscription-cost-calculator/
 - /zh-tw/tools/appliance-age-calculator/
 - /zh-tw/tools/appliance-maintenance-checklist-generator/
+- /zh-tw/tools/appliance-purchase-installation-record/
 - /zh-tw/tools/appliance-repair-callback-log/
 - /zh-tw/tools/appliance-replacement-planner/
 - /zh-tw/tools/appliance-service-visit-log/

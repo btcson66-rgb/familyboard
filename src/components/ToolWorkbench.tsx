@@ -2540,6 +2540,130 @@ const definitions: Record<string, Definition> = {
       return `${values.asset.trim()} — appliance repair callback record\nCurrent callback context: ${values.context}\nEarlier provider-reported completion: ${formatter.format(priorCompletionDate)}\nFirst current recurrence observation: ${formatter.format(recurrenceDate)}\nCurrent callback review: ${formatter.format(reviewDate)}\nNext household callback checkpoint: ${formatter.format(nextReview)}\nOpen callback events: ${openRows.length}\nClosed, separated, handed-off or deferred events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling earlier service, work, warranty and recheck sources: ${values.baseline.trim()}\nCurrent recurrence household observation: ${values.observation.trim()}\n\n${lines("Versioned repair callback events", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable recurrence observation/request/response/scope/work/outcome: ${row.parts[2]} — actor/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — linked earlier service/callback: ${row.parts[5]} — protected evidence: ${row.parts[6]} — next step/closure reason: ${row.parts[7]} — owner: ${row.parts[8]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[9]) as Date)} — status: ${row.parts[10]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not inspect or diagnose equipment, decide that an earlier repair failed, determine whether symptoms or defects are the same, verify a provider or delivery, count legal repair attempts, interpret a warranty or service contract, decide coverage, refund, replacement, damages, complaint or other rights, calculate a deadline, authorize follow-up work, payment or access, assign responsibility, recommend repair or replacement, contact a company or authority, submit a claim or complaint, waive a right or certify completion. Follow current manufacturer and responsible authority safety instructions, use emergency or qualified help for urgent conditions and preserve original sources.`;
     },
   },
+  "appliance-purchase-installation-record": {
+    intro:
+      "Connect an appliance's acquisition, delivery, installation or first use, written warranty start basis and household recheck without exposing full serial or transaction details. The tool does not verify a seller or installer, interpret coverage or certify activation.",
+    fields: [
+      text("asset", "Private household asset ID", "Use a stable household ID, not a full serial, order, invoice, account, address or private contact.", "Laundry washer ASSET-A3"),
+      text("model", "Brand and public model reference", "Record the public brand and model. Keep the complete serial or label photo behind a protected pointer.", "Example brand / model WM-420"),
+      {
+        name: "context",
+        label: "Acquisition context",
+        type: "select",
+        options: [
+          "Retail purchase with delivery or installation",
+          "Online purchase with separate delivery",
+          "Contractor-supplied installed equipment",
+          "Used, gifted, transferred or pre-installed appliance",
+        ],
+      },
+      { name: "acquisitionDate", label: "Purchase, contract or household-acquisition date", type: "date", value: "2026-08-10" },
+      { name: "possessionDate", label: "Delivery or household-possession date", type: "date", value: "2026-08-18" },
+      { name: "activationDate", label: "Installation or first-use date", type: "date", value: "2026-08-19" },
+      { name: "reviewDate", label: "Current activation-record review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next household evidence checkpoint", type: "date", value: "2026-08-31" },
+      text("basis", "Controlling purchase, delivery, installation, warranty and manual sources", "Use safe source IDs or public URLs with dates. State the written warranty start method exactly or mark it unresolved; do not paste full transaction or private identifiers.", "ORDER-O1; RECEIPT-R1; DELIVERY-D1; INSTALL-I1; WRITTEN-WARRANTY-W1 start method pending; MANUAL-M1; SERIAL-PHOTO-S1 protected"),
+      {
+        name: "events",
+        label: "Versioned purchase and activation evidence rows",
+        type: "textarea",
+        help: "One line: ID | evidence stage | attributable product, purchase, delivery, installation, warranty or recheck fact | actor or source role | event date YYYY-MM-DD | protected evidence pointer | next gap or closure reason | owner role | target or outcome date YYYY-MM-DD | Purchase source recorded—delivery pending, Delivery received—condition and contents review pending, Installation arranged—installer outcome pending, Installation source recorded—household recheck pending, Warranty start basis pending—written terms needed, Active record—identity, receipt, warranty basis and household recheck linked, Limited archive—missing source named and ownership assigned, Transferred or gifted—origin and coverage uncertainty preserved, or Returned, cancelled or replaced—outcome source linked. Maximum 16 lines.",
+        value: "BUY-1 | Purchase | Seller order identifies the washer model, included delivery and separately stated installation scope | Seller order source role | 2026-08-10 | ORDER-O1 and RECEIPT-R1 protected copies | Preserve delivery source and compare the delivered model without implying acceptance | Household asset owner | 2026-08-24 | Purchase source recorded—delivery pending\nDELIVERY-1 | Delivery | Carrier source shows possession and household observation links the visible model and included components; no installation conclusion | Carrier source and household observation roles | 2026-08-18 | DELIVERY-D1 and OBS-D1 protected pointers | Link installer outcome, written warranty start method and dated household first-use recheck | Household asset owner | 2026-08-31 | Delivery received—condition and contents review pending",
+      },
+      text("storage", "Protected original-evidence location", "Use a folder label, not a full serial, invoice, order, address, phone, email, account, card, credential, signature, access or complaint detail.", "Household records / appliances / ASSET-A3 / acquisition ACQ-1"),
+    ],
+    run: (values) => {
+      const acquisitionDate = strictIsoDate(values.acquisitionDate);
+      const possessionDate = strictIsoDate(values.possessionDate);
+      const activationDate = strictIsoDate(values.activationDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.asset.trim()) return "Enter a private household asset ID so the exported activation record can be identified.";
+      if (values.model.trim().length < 4) return "Enter the brand and public model reference, or state that the model remains unverified.";
+      if (!acquisitionDate) return "Enter the real purchase, contract or household-acquisition date in YYYY-MM-DD format.";
+      if (!possessionDate) return "Enter the real delivery or household-possession date in YYYY-MM-DD format.";
+      if (!activationDate) return "Enter the real installation or first-use date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current activation-record review date in YYYY-MM-DD format.";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current activation-record review date cannot be in the future.";
+      if (acquisitionDate.getTime() > possessionDate.getTime()) return "The purchase, contract or household-acquisition date cannot be later than possession.";
+      if (possessionDate.getTime() > activationDate.getTime()) return "The delivery or possession date cannot be later than installation or first use.";
+      if (activationDate.getTime() > reviewDate.getTime()) return "The installation or first-use date cannot be later than the current review.";
+      if (!nextReview) return "Enter a real next household evidence checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next household evidence checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 16) return "Identify the controlling purchase, delivery, installation, written warranty, manual and protected product-identity sources with safe pointers.";
+      if (!values.storage.trim()) return "Enter the protected location for original purchase, product-label, delivery, installation, warranty and recheck evidence.";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "Add at least one purchase or activation evidence event.";
+      if (eventRows.length > 16) return "One review supports at most 16 purchase and activation events; create a later dated version for more.";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Purchase and activation event line ${invalidRows.map((row) => row.line).join(", ")} must contain all ten pipe-separated fields.`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Every purchase and activation event needs a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Use 2 to 20 letters, numbers or hyphens for each event ID, such as BUY-1.";
+      const statusOrder = [
+        "Purchase source recorded—delivery pending",
+        "Delivery received—condition and contents review pending",
+        "Installation arranged—installer outcome pending",
+        "Installation source recorded—household recheck pending",
+        "Warranty start basis pending—written terms needed",
+        "Active record—identity, receipt, warranty basis and household recheck linked",
+        "Limited archive—missing source named and ownership assigned",
+        "Transferred or gifted—origin and coverage uncertainty preserved",
+        "Returned, cancelled or replaced—outcome source linked",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `Purchase and activation event line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the nine evidence statuses in the field instructions.`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < acquisitionDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `Purchase and activation event line ${invalidEventDates.map((row) => row.line).join(", ")} needs a real event date from household acquisition through the current review.`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 5).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(5).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open purchase and activation event line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next household checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < acquisitionDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Active, limited, transferred or returned event line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from acquisition through this review.`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `Purchase and activation event line ${missingSources.map((row) => row.line).join(", ")} needs an actor or source role and a protected purchase, identity, delivery, installation, warranty or recheck pointer.`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 12 || /^(?:done|complete|completed|installed|delivered|accepted|safe|approved|active|ok|none|n\/a|follow up|closed)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `Purchase and activation event line ${vagueActions.map((row) => row.line).join(", ")} needs a specific evidence gap, next step or source-based closure reason—not a generic delivery, installation, safety or completion word.`;
+      const privacyText = [values.asset, values.model, values.basis, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, serial, invoice, order, case, tracking or complete numeric identifier was detected. Keep it in protected evidence and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|gate code|lockbox code|full address|account number|card number|bank account|routing number|social security|government id|full serial|serial number|invoice number|receipt number|order number|tracking number|case number|claim number|policy number|signature|date of birth|private contact|payment credential|login credential|complaint form|legal strategy|medical record|child name|remote access|one-time code|verification code|installer name|customer name|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, access, address, financial, identity, full serial, transaction, signature, complaint or private contact detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: eventRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.asset.trim()} — appliance purchase and installation record\nProduct reference: ${values.model.trim()}\nAcquisition context: ${values.context}\nPurchase, contract or household acquisition: ${formatter.format(acquisitionDate)}\nDelivery or household possession: ${formatter.format(possessionDate)}\nInstallation or first use: ${formatter.format(activationDate)}\nCurrent record review: ${formatter.format(reviewDate)}\nNext household evidence checkpoint: ${formatter.format(nextReview)}\nOpen activation events: ${openRows.length}\nActive, limited, transferred or returned events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling purchase, delivery, installation, warranty and manual sources: ${values.basis.trim()}\n\n${lines("Versioned purchase and activation evidence", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable product/purchase/delivery/installation/warranty/recheck fact: ${row.parts[2]} — actor/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next gap/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not verify a product, seller, carrier, installer, identity, delivery, authorization, licensing, insurance, workmanship, settings, connections, permits, code compliance or safety; inspect equipment; interpret a warranty, service contract, return policy or law; select a warranty start date; calculate a deadline; register a product; compare a recall; submit a claim, complaint or payment; determine ownership, acceptance, coverage, refund or replacement; assign responsibility; waive a right; or certify activation. Follow current manufacturer and responsible-authority safety instructions, use emergency or qualified help for urgent conditions and preserve original sources.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -6460,6 +6584,130 @@ const zhTwDefinitions: Record<string, Definition> = {
         .join("\n")}\n\n家庭與服務聯絡人\n${contacts
         .map((row) => `• ${row.join(" — ")}`)
         .join("\n")}\n\n使用前再次確認所在地官方號碼。遇到立即危險時應直接聯絡緊急服務，不要先等待一般聯絡人回覆；行動電話報案時優先說明案發地點。`;
+    },
+  },
+  "appliance-purchase-installation-record": {
+    intro:
+      "把家電的家庭取得、交貨、安裝或第一次使用、書面保固起算依據與家庭複查連起來，不暴露完整序號或交易資料。工具不驗證賣家或安裝者、不解釋涵蓋，也不認證啟用。",
+    fields: [
+      text("asset", "私密家庭資產代號", "使用穩定的家庭 ID，不要填完整序號、訂單、發票、帳號、地址或私人聯絡。", "洗衣區洗衣機 ASSET-A3"),
+      text("model", "品牌與公開型號參考", "可寫公開品牌與型號；完整製造號碼或標籤照片留在受保護索引。", "範例品牌／型號 WM-420"),
+      {
+        name: "context",
+        label: "家庭取得情境",
+        type: "select",
+        options: [
+          "實體通路購買，含交貨或安裝",
+          "網路購買，交貨另行安排",
+          "由承攬或安裝業者供應設備",
+          "中古、贈與、移轉或住宅既有家電",
+        ],
+      },
+      { name: "acquisitionDate", label: "購買、契約或家庭取得日", type: "date", value: "2026-08-10" },
+      { name: "possessionDate", label: "交貨或家庭實際取得日", type: "date", value: "2026-08-18" },
+      { name: "activationDate", label: "安裝或第一次使用日", type: "date", value: "2026-08-19" },
+      { name: "reviewDate", label: "本次啟用紀錄檢視日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "家庭下次證據查核點", type: "date", value: "2026-08-31" },
+      text("basis", "控制中的購買、交貨、安裝、保證書與說明書來源", "使用安全來源 ID 或公開網址與日期。照原文寫保固起算方法，或標示尚待確認；不要貼完整交易與私人識別。", "訂單 ORDER-O1；發票 RECEIPT-R1；交貨 DELIVERY-D1；安裝 INSTALL-I1；書面保證 WARRANTY-W1 起算方法待確認；說明書 MANUAL-M1；標籤 SERIAL-PHOTO-S1 受保護"),
+      {
+        name: "events",
+        label: "有版本的購買與啟用證據列",
+        type: "textarea",
+        help: "每行格式：ID | 證據階段 | 有來源的產品、購買、交貨、安裝、保固或複查事實 | 行動者或來源角色 | 事件日期 YYYY-MM-DD | 受保護證據索引 | 下一個缺口或結案理由 | 負責角色 | 目標或結果日期 YYYY-MM-DD | 已記錄購買來源，等待交貨、已收受交貨，等待外觀與內容複查、已安排安裝，等待業者結果、已記錄安裝來源，等待家庭複查、保固起算依據待確認，需要書面條款、已啟用，產品身分、購買、保固依據與家庭複查已連結、有限歸檔，缺少來源已標示並指派責任、已移轉或受贈，來源與保固不確定性已保存、已退貨、取消或替換，連結結果來源。最多 16 行。",
+        value: "BUY-1 | 購買 | 店家訂單辨識洗衣機型號、包含交貨並另列安裝範圍 | 店家訂單來源角色 | 2026-08-10 | ORDER-O1 與 RECEIPT-R1 受保護副本 | 保存交貨來源並比對實際型號，不推定已經驗收 | 家庭資產負責人 | 2026-08-24 | 已記錄購買來源，等待交貨\nDELIVERY-1 | 交貨 | 物流來源支持家庭取得，家庭觀察連結可見型號與配件，不下安裝結論 | 物流來源與家庭觀察角色 | 2026-08-18 | DELIVERY-D1 與 OBS-D1 受保護索引 | 連結安裝結果、書面保固起算方法與家庭第一次使用複查 | 家庭資產負責人 | 2026-08-31 | 已收受交貨，等待外觀與內容複查",
+      },
+      text("storage", "受保護的原始證據位置", "只寫資料夾代稱，不要填完整序號、發票、訂單、地址、電話、Email、帳號、卡號、憑證、簽名、門禁或申訴資料。", "家庭文件／家電／ASSET-A3／取得 ACQ-1"),
+    ],
+    run: (values) => {
+      const acquisitionDate = strictIsoDate(values.acquisitionDate);
+      const possessionDate = strictIsoDate(values.possessionDate);
+      const activationDate = strictIsoDate(values.activationDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.asset.trim()) return "請填私密家庭資產代號，讓匯出的啟用紀錄可以辨識。";
+      if (values.model.trim().length < 4) return "請填品牌與公開型號參考，或明確標示型號尚未核對。";
+      if (!acquisitionDate) return "請輸入真實的購買、契約或家庭取得日 YYYY-MM-DD。";
+      if (!possessionDate) return "請輸入真實的交貨或家庭實際取得日 YYYY-MM-DD。";
+      if (!activationDate) return "請輸入真實的安裝或第一次使用日 YYYY-MM-DD。";
+      if (!reviewDate) return "請輸入真實的本次啟用紀錄檢視日 YYYY-MM-DD。";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次啟用紀錄檢視日不能在未來。";
+      if (acquisitionDate.getTime() > possessionDate.getTime()) return "購買、契約或家庭取得日不能晚於實際取得日。";
+      if (possessionDate.getTime() > activationDate.getTime()) return "交貨或家庭實際取得日不能晚於安裝或第一次使用日。";
+      if (activationDate.getTime() > reviewDate.getTime()) return "安裝或第一次使用日不能晚於本次檢視日。";
+      if (!nextReview) return "請輸入真實的家庭下次證據查核點 YYYY-MM-DD。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "家庭下次證據查核點不能早於本次檢視日。";
+      if (values.basis.trim().length < 16) return "請用安全索引辨識控制中的購買、交貨、安裝、書面保證、說明書與受保護產品身分來源。";
+      if (!values.storage.trim()) return "請填購買、產品標籤、交貨、安裝、保證書與家庭複查原件的受保護位置。";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "請至少新增一筆購買或啟用證據事件。";
+      if (eventRows.length > 16) return "一次複查最多 16 筆購買與啟用事件；更多內容請建立下一份有日期的版本。";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `購買與啟用事件第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整填寫 10 個以直線分隔的欄位。`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆購買與啟用事件都要有唯一 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "購買與啟用事件 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 BUY-1。";
+      const statusOrder = [
+        "已記錄購買來源，等待交貨",
+        "已收受交貨，等待外觀與內容複查",
+        "已安排安裝，等待業者結果",
+        "已記錄安裝來源，等待家庭複查",
+        "保固起算依據待確認，需要書面條款",
+        "已啟用，產品身分、購買、保固依據與家庭複查已連結",
+        "有限歸檔，缺少來源已標示並指派責任",
+        "已移轉或受贈，來源與保固不確定性已保存",
+        "已退貨、取消或替換，連結結果來源",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `購買與啟用事件第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須使用欄位說明中的九種文字之一。`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < acquisitionDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `購買與啟用事件第 ${invalidEventDates.map((row) => row.line).join("、")} 行需要介於家庭取得日與本次檢視日之間的真實事件日期。`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 5).includes(row.parts[9]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(5).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的購買與啟用事件第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次檢視日起，到家庭下次證據查核點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < acquisitionDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已啟用、有限歸檔、移轉或退貨的第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於家庭取得日與本次檢視日之間的實際結果日期。`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[5].length < 4 || row.parts[5].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `購買與啟用事件第 ${missingSources.map((row) => row.line).join("、")} 行需要行動者或來源角色，以及受保護的購買、身分、交貨、安裝、保固或複查索引。`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[6].length < 8 || /^(?:完成|好了|已交貨|已安裝|已驗收|已啟用|安全|已同意|核准|無|不用|不適用|待追蹤|已結案|ok)$/i.test(row.parts[6]),
+      );
+      if (vagueActions.length)
+        return `購買與啟用事件第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的證據缺口、下一步或有來源的結案理由，不能只寫通用交貨、安裝、安全或完成詞。`;
+      const privacyText = [values.asset, values.model, values.basis, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、序號、發票、訂單、案件、物流或完整數字識別資料。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|鑰匙盒密碼|驗證碼|一次性代碼|警報碼|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證|完整序號|發票號碼|收據號碼|訂單編號|物流追蹤碼|案件編號|理賠編號|保單編號|簽名|出生日期|私人聯絡|付款憑證完整資料|登入憑證|申訴表全文|申訴信全文|法律策略|醫療紀錄|兒童姓名|遠端控制|安裝者姓名|客戶姓名|password|passcode|access code|gate code|lockbox code|account number|card number|government id|full serial|serial number|invoice number|receipt number|order number|tracking number|case number|claim number|policy number|signature|payment credential|login credential|complaint form|legal strategy|medical record|child name|remote access|one-time code|verification code|installer name|customer name|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、門禁、地址、金融、身分、完整序號、交易、申訴、法律或私人聯絡資料。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: eventRows.filter((row) => row.parts[9] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.asset.trim()}｜家電購買與安裝紀錄\n產品參考：${values.model.trim()}\n家庭取得情境：${values.context}\n購買、契約或家庭取得：${formatter.format(acquisitionDate)}\n交貨或家庭實際取得：${formatter.format(possessionDate)}\n安裝或第一次使用：${formatter.format(activationDate)}\n本次紀錄檢視：${formatter.format(reviewDate)}\n家庭下次證據查核點：${formatter.format(nextReview)}\n仍開放啟用事件：${openRows.length} 筆\n已啟用、有限歸檔、移轉或退貨事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的購買、交貨、安裝、保證書與說明書來源：${values.basis.trim()}\n\n${lines("有版本的購買與啟用證據", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的產品／購買／交貨／安裝／保固／複查事實：${row.parts[2]}｜行動者／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一個缺口／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭證據索引。它不驗證產品、賣家、物流、安裝者、身分、交貨、授權、證照、保險、工法、設定、連接、許可、法規或安全，不檢驗設備、不解釋保固、服務方案、退貨政策或法律、不選擇保固起算日、不計算期限、不註冊產品、不比對召回、不提交申請、申訴或付款、不判定所有權、驗收、涵蓋、退款或換貨、不分配責任、不代表放棄權利，也不認證啟用。請遵循品牌與主管機關現行安全指示，緊急情況使用合適緊急及合格專業協助，並保存原始來源。`;
     },
   },
 };

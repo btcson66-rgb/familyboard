@@ -94,6 +94,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/service-history/",
     "/tools/appliance-repair-callback-log/",
     "/guides/repair-history/",
+    "/tools/appliance-purchase-installation-record/",
+    "/guides/appliance-inventory/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -133,6 +135,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/service-history/",
     "/zh-tw/tools/appliance-repair-callback-log/",
     "/zh-tw/guides/repair-history/",
+    "/zh-tw/tools/appliance-purchase-installation-record/",
+    "/zh-tw/guides/appliance-inventory/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -286,6 +290,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電維修後復發紀錄" }),
   ).toHaveAttribute("href", "/zh-tw/tools/appliance-repair-callback-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家電購買與安裝紀錄" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/appliance-purchase-installation-record/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家電清冊教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/appliance-inventory/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "保固申請與追蹤教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/how-to-track-product-warranties/");
@@ -697,6 +707,16 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/repair-history/",
       alternate: "/guides/repair-history/",
       heading: "家電修了又壞怎麼辦？送修三次、保固與維修紀錄",
+    },
+    {
+      route: "/zh-tw/tools/appliance-purchase-installation-record/",
+      alternate: "/tools/appliance-purchase-installation-record/",
+      heading: "家電購買與安裝紀錄表",
+    },
+    {
+      route: "/zh-tw/guides/appliance-inventory/",
+      alternate: "/guides/appliance-inventory/",
+      heading: "家電清冊怎麼做？型號、序號、發票與保固起算紀錄",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -1353,6 +1373,28 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "目標日必須從本次檢視日起",
   );
 
+  await page.goto("/tools/appliance-purchase-installation-record/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open activation events: 2");
+  await expect(page.locator(".result")).toContainText("Active, limited, transferred or returned events: 0");
+  await expect(page.locator(".result")).toContainText("Purchase source recorded—delivery pending 1");
+  await page.getByLabel("Next household evidence checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+
+  await page.goto("/zh-tw/tools/appliance-purchase-installation-record/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放啟用事件：2 筆");
+  await expect(page.locator(".result")).toContainText("已啟用、有限歸檔、移轉或退貨事件：0 筆");
+  await expect(page.locator(".result")).toContainText("已記錄購買來源，等待交貨 1 筆");
+  await page.getByLabel("家庭下次證據查核點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次檢視日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1702,6 +1744,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/repair-history/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/appliance-purchase-installation-record/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/appliance-purchase-installation-record/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/appliance-inventory/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",

@@ -673,9 +673,9 @@
   },
   {
     "route": "/guides/appliance-inventory/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/appliance-inventory/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1720,6 +1720,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/appliance-purchase-installation-record/",
+    "alternateRoute": "/zh-tw/tools/appliance-purchase-installation-record/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -1869,10 +1877,24 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/appliance-inventory/",
+    "alternateRoute": "/guides/appliance-inventory/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/appliance-maintenance-checklist-generator/",
     "alternateRoute": "/tools/appliance-maintenance-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/appliance-purchase-installation-record/",
+    "alternateRoute": "/tools/appliance-purchase-installation-record/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {

@@ -640,12 +640,12 @@
     "headings": "A room-by-room inventory finishes because it has a visible end point Three priority levels, applied per room Kitchen: 15–20 minutes Living and dining areas: 10–15 minutes Bedrooms and home office: 10–15 minutes per room Utility, garage and storage spaces: 15–20 minutes Bathrooms and entryways: usually five minutes or less Do the rooms in the order that reduces the most risk first Revisit a finished room only when something actually changes A finished kitchen beats an abandoned whole house"
   },
   {
-    "title": "Appliance Inventory: Models, Serial Numbers, Warranties and Maintenance in One List",
-    "description": "Create an appliance inventory that links models, serial numbers, purchase details, warranties, manuals, maintenance and repair history.",
+    "title": "Appliance Inventory: Purchase, Installation, Warranty and Service Records",
+    "description": "Build an appliance inventory that connects model and serial evidence to purchase, delivery, installation, warranty, maintenance, repair and recall records.",
     "route": "/guides/appliance-inventory/",
     "cluster": "inventory-warranty",
     "keywords": "appliance inventory",
-    "headings": "An appliance inventory earns its keep by connecting to what happens after purchase The field set that actually gets used Where to find the serial label without guessing Build a timeline, not just a snapshot Purchase date and installed date are not always the same thing Attach the manual instead of retyping it Warranty terms and appliance lifespan are different questions — record both Record who to call, not just what to record Archive instead of deleting a replaced appliance"
+    "headings": "Build an appliance inventory that survives delivery, service and recall Give one physical unit a durable household ID Model and serial evidence do different jobs Purchase, delivery and installation are three separate dates Contractor-supplied equipment needs the same identity chain A receipt is one source, not the whole warranty Connect the manual and current safety sources Turn the asset into a lifecycle index Insurance inventory and service inventory overlap but are not identical Keep affiliate recommendations outside the evidence record"
   },
   {
     "title": "Electronics Inventory: Track Devices, Owners, Serial Numbers and Warranties",
@@ -1614,6 +1614,14 @@
     "cluster": "tools",
     "keywords": "appliance repair callback log",
     "headings": "Appliance repair callback log Link the earlier repair before opening a callback Record the recurrence before obtaining a new diagnosis Use an eleven-field callback row Nine statuses separate observation from remedy Delivery evidence is different from a reminder A new visit does not erase the earlier work Warranty coverage is a separate decision Build a protected complaint package only when needed Closure needs a result source Urgent conditions do not wait for the next checkpoint Privacy screening is a backstop Affiliate placement cannot influence a callback"
+  },
+  {
+    "title": "Appliance Purchase and Installation Record | Receipt, Delivery and Warranty",
+    "description": "Create a private appliance purchase record linking receipt, delivery, installation, model evidence, written warranty start method and first-use recheck.",
+    "route": "/tools/appliance-purchase-installation-record/",
+    "cluster": "tools",
+    "keywords": "appliance purchase record",
+    "headings": "Appliance purchase and installation record Use a private asset ID before copying purchase data Keep acquisition, possession and activation dates separate Use a ten-field evidence row Nine statuses prevent a receipt from pretending to be activation The written warranty owns its start method Delivery evidence is narrower than household acceptance Installer evidence does not certify workmanship Gifts, transfers and appliances already in the home need an honest baseline Keep electronic receipts outside the shareable output Model and serial evidence support later service and recall work Privacy screening is a backstop Affiliate placement cannot change activation status"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

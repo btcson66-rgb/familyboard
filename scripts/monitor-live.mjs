@@ -95,6 +95,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/appliance-repair-callback-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-repair-callback-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/repair-history/</loc>",
+      "<loc>https://familyboard.win/tools/appliance-purchase-installation-record/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/appliance-purchase-installation-record/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -396,6 +399,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Nine statuses separate observation from remedy",
       "does not decide that an earlier repair failed",
+    ],
+  },
+  {
+    path: "/tools/appliance-purchase-installation-record/",
+    require: [
+      "Appliance Purchase and Installation Record",
+      'hreflang="zh-TW"',
+      "Nine statuses prevent a receipt from pretending to be activation",
+      "written warranty owns its start method",
+    ],
+  },
+  {
+    path: "/guides/appliance-inventory/",
+    require: [
+      "Build an appliance inventory that survives delivery",
+      'hreflang="zh-TW"',
+      "Purchase, delivery and installation are three separate dates",
+      "content.naic.org/consumer/home-inventory",
     ],
   },
   {
@@ -711,6 +732,24 @@ const checks = [
       'hreflang="en"',
       "九種狀態表示不同證據階段",
       "不計算法律上的送修次數",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/appliance-purchase-installation-record/",
+    require: [
+      "家電購買與安裝紀錄表",
+      'hreflang="en"',
+      "九種狀態避免過早宣稱完成",
+      "保證書與發票要連結但不能合併",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/appliance-inventory/",
+    require: [
+      "家電清冊怎麼做",
+      'hreflang="en"',
+      "購買、交貨與安裝是三個不同事件",
+      "電器買賣定型化契約應記載及不得記載事項",
     ],
   },
   {
