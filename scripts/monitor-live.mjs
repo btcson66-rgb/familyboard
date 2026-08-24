@@ -92,6 +92,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/appliance-service-visit-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-service-visit-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/service-history/</loc>",
+      "<loc>https://familyboard.win/tools/appliance-repair-callback-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/appliance-repair-callback-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/repair-history/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -384,6 +387,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Keep five layers separate",
       "consumer.ftc.gov/articles/warranties",
+    ],
+  },
+  {
+    path: "/tools/appliance-repair-callback-log/",
+    require: [
+      "Appliance Repair Callback Log",
+      'hreflang="zh-TW"',
+      "Nine statuses separate observation from remedy",
+      "does not decide that an earlier repair failed",
+    ],
+  },
+  {
+    path: "/guides/repair-history/",
+    require: [
+      "Appliance repair history",
+      'hreflang="zh-TW"',
+      "Do not let a percentage heuristic overwrite the evidence",
+      "usa.gov/company-product-service-complaints",
     ],
   },
   {
@@ -681,6 +702,24 @@ const checks = [
       'hreflang="en"',
       "到場後把四種聲音分開",
       "手機送修注意事項",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/appliance-repair-callback-log/",
+    require: [
+      "家電維修後又壞紀錄表",
+      'hreflang="en"',
+      "九種狀態表示不同證據階段",
+      "不計算法律上的送修次數",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/repair-history/",
+    require: [
+      "家電修了又壞怎麼辦",
+      'hreflang="en"',
+      "送修三次的規則有明確前提",
+      "電器買賣定型化契約應記載及不得記載事項",
     ],
   },
   {

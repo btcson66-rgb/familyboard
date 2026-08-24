@@ -712,12 +712,12 @@
     "headings": "A product registration record is a notification map, not proof of warranty coverage Read the actual warranty instead of repeating a registration myth Registration has a special safety role for some children's products in the United States Verify the destination before giving a form personal information Use a small set of evidence states Record the minimum that another household member can verify Registration cannot replace authoritative recall checks Not every product is worth the effort Handle secondhand products and ownership changes explicitly A worked household example Commercial recommendations stay outside registration and safety status"
   },
   {
-    "title": "Repair History Tracker: Know What Was Fixed, When and Whether the Problem Returned",
-    "description": "Build an asset-level repair history that separates symptom from diagnosis, tracks cost and outcome, and uses the widely cited 50% rule correctly when a repair recurs.",
+    "title": "Repair History Tracker: Recurring Symptoms, Callbacks and Outcomes",
+    "description": "Build an appliance repair history that links each symptom, provider finding, completed work, recurrence, callback response and household recheck.",
     "route": "/guides/repair-history/",
     "cluster": "inventory-warranty",
-    "keywords": "repair history tracker",
-    "headings": "Repair history turns isolated failures into a pattern you can actually act on Record the symptom before the diagnosis Record what was actually done, not just what it cost Use the 50% rule as a starting point, not a formula Repeated repairs are a signal, not an automatic verdict Note whether a repair was covered by warranty or paid out of pocket Keep the provider attached to the work, not just a contact list Photograph error codes and visible damage while they're still there"
+    "keywords": "appliance repair history",
+    "headings": "Appliance repair history: show whether a repair held, returned or became a different issue Freeze the earlier visit before adding the recurrence Compare observations without deciding the cause Build a callback chain, not another isolated appointment Keep four kinds of promises separate Do not let a percentage heuristic overwrite the evidence A repair count is not a legal conclusion Escalation needs a document set, not a longer complaint note Safety events bypass ordinary callback housekeeping Keep private identifiers behind pointers Commercial recommendations stay outside the outcome"
   },
   {
     "title": "Appliance Service History: Visits, Work, Parts and Follow-Up",
@@ -1606,6 +1606,14 @@
     "cluster": "tools",
     "keywords": "appliance service visit log",
     "headings": "Appliance service visit log Fix the asset and request before the provider arrives Verify the provider role from a controlling source Preserve the estimate as a source, not just a total Attribute observations, findings and decisions Eight statuses keep work and evidence honest Parts and settings deserve their own evidence Completion needs two sources Keep warranty and recall workflows separate Protect the visit record before sharing Affiliate recommendations stay outside the decision"
+  },
+  {
+    "title": "Appliance Repair Callback Log | Recurring Symptoms and Follow-Up",
+    "description": "Create a private callback timeline linking an earlier appliance repair to a recurring symptom, provider response, follow-up work and household recheck.",
+    "route": "/tools/appliance-repair-callback-log/",
+    "cluster": "tools",
+    "keywords": "appliance repair callback log",
+    "headings": "Appliance repair callback log Link the earlier repair before opening a callback Record the recurrence before obtaining a new diagnosis Use an eleven-field callback row Nine statuses separate observation from remedy Delivery evidence is different from a reminder A new visit does not erase the earlier work Warranty coverage is a separate decision Build a protected complaint package only when needed Closure needs a result source Urgent conditions do not wait for the next checkpoint Privacy screening is a backstop Affiliate placement cannot influence a callback"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

@@ -92,6 +92,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/product-registration-tracker/",
     "/tools/appliance-service-visit-log/",
     "/guides/service-history/",
+    "/tools/appliance-repair-callback-log/",
+    "/guides/repair-history/",
     "/templates/printable-home-inventory-template/",
     "/pricing/",
     "/zh-tw/",
@@ -129,6 +131,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/product-registration-tracker/",
     "/zh-tw/tools/appliance-service-visit-log/",
     "/zh-tw/guides/service-history/",
+    "/zh-tw/tools/appliance-repair-callback-log/",
+    "/zh-tw/guides/repair-history/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -280,6 +284,9 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     page.locator(".site-footer").getByRole("link", { name: "家電到府維修紀錄表" }),
   ).toHaveAttribute("href", "/zh-tw/tools/appliance-service-visit-log/");
   await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家電維修後復發紀錄" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/appliance-repair-callback-log/");
+  await expect(
     page.locator(".site-footer").getByRole("link", { name: "保固申請與追蹤教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/how-to-track-product-warranties/");
   await expect(
@@ -288,6 +295,9 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電到府維修教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/service-history/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家電屢修不復教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/repair-history/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
@@ -677,6 +687,16 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/tools/appliance-service-visit-log/",
       alternate: "/tools/appliance-service-visit-log/",
       heading: "家電到府維修訪視紀錄表",
+    },
+    {
+      route: "/zh-tw/tools/appliance-repair-callback-log/",
+      alternate: "/tools/appliance-repair-callback-log/",
+      heading: "家電維修後又壞紀錄表",
+    },
+    {
+      route: "/zh-tw/guides/repair-history/",
+      alternate: "/guides/repair-history/",
+      heading: "家電修了又壞怎麼辦？送修三次、保固與維修紀錄",
     },
     {
       route: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -1307,6 +1327,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "目標日必須從本次檢視日起",
   );
 
+  await page.goto("/tools/appliance-repair-callback-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open callback events: 2");
+  await expect(page.locator(".result")).toContainText("Closed, separated, handed-off or deferred events: 0");
+  await expect(page.locator(".result")).toContainText("does not inspect or diagnose equipment");
+  await page.getByLabel("Versioned repair callback event rows").fill(
+    "CB-1 | Provider response | Provider support source acknowledged the recurrence and proposed another inspection without deciding cause | Provider support role | 2026-08-24 | SERVICE-S2 | RESPONSE-C2 | Preserve the proposed scope before deciding whether to arrange another visit | Household asset owner | 2026-08-23 | Provider response recorded—scope decision pending",
+  );
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "needs a target date from this review",
+  );
+
+  await page.goto("/zh-tw/tools/appliance-repair-callback-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放 callback 事件：2 筆");
+  await expect(page.locator(".result")).toContainText("已結案、分流、移交、暫緩或拒絕事件：0 筆");
+  await expect(page.locator(".result")).toContainText("不檢驗或診斷設備");
+  await page.getByLabel("有版本的維修後 callback 事件列").fill(
+    "CB-1 | 業者回覆 | 業者客服來源確認收到復發紀錄並提出再次檢查，不判定原因 | 業者客服角色 | 2026-08-24 | SERVICE-S2 | RESPONSE-C2 | 先保存業者提出的範圍，再決定是否安排到場 | 家庭資產負責人 | 2026-08-23 | 已記錄業者回覆，等待範圍決定",
+  );
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "目標日必須從本次檢視日起",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1647,6 +1693,15 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/service-history/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/appliance-repair-callback-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/appliance-repair-callback-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/repair-history/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",

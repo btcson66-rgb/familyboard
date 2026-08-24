@@ -745,9 +745,9 @@
   },
   {
     "route": "/guides/repair-history/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/repair-history/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1712,6 +1712,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/appliance-repair-callback-log/",
+    "alternateRoute": "/zh-tw/tools/appliance-repair-callback-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -1865,6 +1873,13 @@
     "alternateRoute": "/tools/appliance-maintenance-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/appliance-repair-callback-log/",
+    "alternateRoute": "/tools/appliance-repair-callback-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {
@@ -2320,6 +2335,13 @@
     "alternateRoute": "/guides/renovation-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/repair-history/",
+    "alternateRoute": "/guides/repair-history/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {

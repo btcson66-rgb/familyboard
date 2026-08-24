@@ -6142,56 +6142,109 @@ A future affiliate area may show clearly labelled label makers, document storage
 
 ## Page 094 — Repair History
 **Slug:** `/guides/repair-history/`
-**Primary intent:** track repeated repairs for an asset
-**Title tag:** `Repair History Tracker: Know What Was Fixed, When and Whether the Problem Returned`
-**Meta description:** `Build an asset-level repair history that separates symptom from diagnosis, tracks cost and outcome, and uses the widely cited 50% rule correctly when a repair recurs.`
-**Primary keyword concept:** repair history tracker
+**Primary intent:** document recurring appliance symptoms, repair callbacks and outcomes
+**Title tag:** `Repair History Tracker: Recurring Symptoms, Callbacks and Outcomes`
+**Meta description:** `Build an appliance repair history that links each symptom, provider finding, completed work, recurrence, callback response and household recheck.`
+**Primary keyword concept:** appliance repair history
 **Depth:** verified
-**Suggested internal links:** `/guides/appliance-replacement-planning/`, `/guides/service-history/`, `/guides/appliance-inventory/`, `/features/free-home-management-app/`
+**Published date:** 2026-08-19
+**Editorial review date:** 2026-08-24
+**Content version:** 2
+**Suggested internal links:** `/tools/appliance-repair-callback-log/`, `/tools/appliance-service-visit-log/`, `/guides/service-history/`, `/guides/appliance-replacement-planning/`
 
-# Repair history turns isolated failures into a pattern you can actually act on
+# Appliance repair history: show whether a repair held, returned or became a different issue
 
-The most important question when an appliance breaks a second time usually isn't "how much will this cost to fix" — it's "is this the same problem as last time." A repair record that only stores the final invoice can't answer that. One that separates symptom, diagnosis, action and outcome can.
+A repair invoice can show that money changed hands. A service report can show what a provider says was found and done. Neither proves what the household observed after the appliance returned to ordinary use. When a symptom comes back, the useful question is not simply “How many repairs has this appliance had?” It is “Which earlier symptom, finding, authorized work and completion source does this new observation connect to?”
 
-## Record the symptom before the diagnosis
+An appliance repair history answers that question without diagnosing the equipment or rewriting the past. It preserves each source as it existed, then adds the recurrence, callback and follow-up outcome as new dated events.
 
-Write down what the household actually observed — "making a grinding noise on the spin cycle," "not cooling below 50°F" — as its own entry, separate from whatever a technician later determines caused it. This ordering matters because diagnoses sometimes turn out to be wrong or incomplete; if the fridge doesn't fully improve after a first repair, a record that kept the original symptom separate from the first diagnosis makes it obvious that the real cause is still unresolved, rather than looking like two unrelated events.
+**Documenting a problem that returned? [Use the free Appliance Repair Callback Log](/tools/appliance-repair-callback-log/).**
 
-## Record what was actually done, not just what it cost
+## Freeze the earlier visit before adding the recurrence
 
-An invoice total alone hides the information that matters most for a future decision. Capture instead: was a part replaced (and which one), was the issue simply monitored, did the fix actually hold, and did the technician say anything about what to expect next time. "Replaced the water inlet valve, resolved" and "cleared an error code, no root cause found" are two very different outcomes that cost roughly the same amount and would look identical on a receipt alone.
+Start with a private asset label and the earlier service-event ID. Preserve five facts from the completed visit:
 
-## Use the 50% rule as a starting point, not a formula
+1. the household’s original observable symptom;
+2. the provider’s attributable finding or stated limitation;
+3. the exact work and part the household authorized;
+4. the provider’s completion or invoice source; and
+5. the dated household recheck, including what normal use was actually observed.
 
-A widely cited rule of thumb holds that if a repair costs more than about 50% of a new unit's price, replacement is usually the better call — and for a mid-range appliance under about 10 years old, that's a reasonable default. But the rule breaks down at both ends: a built-in or luxury-brand appliance can cost far more to *replace* (including cabinetry and installation) than the repair itself, and a very young appliance is often worth repairing even at a meaningful cost, since replacing it restarts the depreciation clock on a barely-used unit. A more reliable question than "is this repair over 50%?" is "what's the next thing likely to fail?" — a single isolated repair favors fixing it; a growing list of separate issues on the same unit favors replacement, regardless of what any one repair costs.
+Do not edit `repair complete` into `repair failed` after a later recurrence. The earlier provider completion statement remains a real source, even if the result did not last. Add a separate dated observation that shows what happened next.
 
-## Repeated repairs are a signal, not an automatic verdict
+## Compare observations without deciding the cause
 
-Two appliances of the same age with different repair histories are not equally close to needing replacement — one with two service calls in the past year is a genuinely different situation from one with zero, even if both are otherwise identical. A repair history exists to make that comparison visible; it shouldn't try to auto-decide replacement on the household's behalf, since age, how critical the appliance is to daily life, and the household's own risk tolerance all belong in that decision too. See [appliance replacement planning](/guides/appliance-replacement-planning/) for how to weigh those factors together.
+“The washer again stopped during rinse and displayed E7” can be compared with an earlier household observation. “The replacement pump failed” is a diagnosis unless an attributable source supports it. A useful callback record therefore keeps three questions separate:
 
-## Note whether a repair was covered by warranty or paid out of pocket
+- Is the current household observation similar to the earlier observation?
+- Does a provider say it is the same cause, a different cause or still undetermined?
+- What evidence supports the follow-up scope and outcome?
 
-The same $0 line item means something very different depending on why it's $0 — warranty coverage versus a provider who simply didn't charge for a small fix. Recording which repairs were warranty claims versus paid-for work matters for two reasons: it's evidence if a warranty dispute ever comes up, and a household with several out-of-pocket repairs on an aging unit has a clearer replacement case building than one whose repairs were mostly free warranty work. Cost by itself, without that context, can understate how much a unit has actually needed.
+Similarity is not identity. The same error code can have more than one cause, and a different visible symptom can still relate to prior work. FamilyBoard records the comparison and the source; it does not decide whether the problem is the “same defect.”
 
-## Keep the provider attached to the work, not just a contact list
+## Build a callback chain, not another isolated appointment
 
-A technician or company that has already diagnosed a specific unit's quirks is often the best first call if the same symptom comes back — they don't need to re-learn the appliance's history from scratch. Linking the provider to the specific repair event, not just storing them as a general contact, preserves that context.
+A callback chain should connect the current contact to the earlier service rather than starting with an empty inbox. Use an event sequence such as:
 
-## Photograph error codes and visible damage while they're still there
+`CB-1 recurrence observation → CB-2 callback request → CB-3 provider response → CB-4 follow-up scope → CB-5 reported work → CB-6 household recheck`
 
-A digital display's error code, a visible leak, a scorch mark or a part that failed can all disappear the moment a technician resets or replaces something. A quick photo before the repair starts gives the record something a written description alone doesn't — evidence a future technician, an insurance adjuster, or the household's own memory can refer back to, rather than relying on a secondhand recollection of what the error code said months later.
+Each event needs its own date, actor or source role, protected evidence pointer, next step, owner and target or outcome date. If the provider does not respond, preserve the request and delivery evidence as an open event. If the provider says the new issue is unrelated, preserve that statement without adopting it as a household diagnosis.
 
-**Contextual CTA:** Add the most recent repair to the exact asset it belongs to, recording both the original symptom and the final outcome — not just the invoice total.
+## Keep four kinds of promises separate
+
+The original product warranty, a separately purchased service contract, a provider’s repair-work warranty and a one-time goodwill callback can come from different entities and use different procedures. A no-charge visit does not by itself prove warranty coverage, and a paid invoice does not prove that no warranty applied.
+
+The US Federal Trade Commission’s [consumer warranty guidance](https://consumer.ftc.gov/articles/warranties) recommends keeping the written warranty and receipt, checking who handles claims, and reviewing labor, shipping and repair procedures. It also says that when a defect is reported during the warranty period and is not fixed properly, the company must correct the problem even if the written warranty expires before the problem is resolved. The controlling terms and applicable state law still matter.
+
+The FTC’s [Businessperson’s Guide to Federal Warranty Law](https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law) explains that replacement or refund after a reasonable number of unsuccessful repair attempts is one requirement of a US **full** warranty. A limited warranty can have different terms. Do not turn “reasonable number” into a universal numeric rule or assume that every repair promise is a full product warranty.
+
+## Do not let a percentage heuristic overwrite the evidence
+
+There is no universal official “50% rule” that decides whether every appliance should be repaired or replaced. A price ratio cannot tell whether the estimate covers the observed problem, whether the same issue already returned, whether a built-in replacement requires installation work, whether coverage applies or whether the appliance presents an urgent safety condition.
+
+Keep the repair history factual. Put replacement price, installation impact, remaining household need and uncertainty into the separate [appliance replacement planning guide](/guides/appliance-replacement-planning/). The repair log should not recommend a purchase, and an affiliate offer must never influence whether an event is marked resolved.
+
+## A repair count is not a legal conclusion
+
+Counting rows without reading them can be misleading. Three visits might concern three unrelated symptoms. One visit might include several unsuccessful attempts. A retailer, manufacturer, service-contract administrator and independent repair provider may have different roles. State consumer law and the written warranty may also use different triggers.
+
+Record the chronology another person can verify: when the problem was first reported, when the product was made available, which issue was described, who responded, what was attempted, whether the appliance was unavailable, and what the dated recheck found. The tool may count open and closed evidence events for household workflow, but it does not decide a right to repair, replacement, refund or damages.
+
+## Escalation needs a document set, not a longer complaint note
+
+If the ordinary callback does not resolve the problem, build a protected package containing the purchase record, written warranty or service contract, earlier work orders, invoices, callback requests, delivery acknowledgements, provider responses and dated observations. Keep originals and share copies only through the appropriate channel.
+
+[USAGov’s current complaint guidance](https://www.usa.gov/company-product-service-complaints) tells consumers to gather receipts, warranties, contracts, work orders and communication records before contacting the company, and to explain the problem and requested resolution. That is a useful evidence sequence, not a promise that a particular remedy applies.
+
+Do not paste a complaint letter, legal strategy, full serial number, address, phone number, account number or signature into the shareable FamilyBoard timeline. Store a safe pointer to the protected file. If the matter moves to a manufacturer, seller, warranty administrator, government office or legal adviser, close the household callback only as a sourced handoff—not as a claim that the dispute was won.
+
+## Safety events bypass ordinary callback housekeeping
+
+Smoke, fire, fuel or gas odor, electrical shock, overheating, injury, a product-safety notice or another urgent condition should not wait for a routine callback date. Follow current manufacturer, responsible-authority, emergency and qualified-professional instructions. Do not operate, reproduce, disassemble or test a potentially unsafe appliance merely to collect better evidence.
+
+## Keep private identifiers behind pointers
+
+Use labels such as `ASSET-A4`, `SERVICE-S2`, `CALLBACK-C1`, `WORKORDER-W3` and `RECHECK-R2`. Keep complete serial numbers, case and order numbers, technician and customer names, contact details, addresses, access instructions, payment data, signatures and complaint material in protected originals.
+
+FamilyBoard screens common private-data patterns, but no automated screen can catch every identifying detail. Review the output before downloading, printing or sharing it. The tool runs in the current browser and does not receive or back up the record.
+
+## Commercial recommendations stay outside the outcome
+
+A future labelled affiliate area may show document storage, label makers, replacement filters or general record supplies. It cannot choose a provider, diagnose a recurrence, decide whether earlier work failed, determine coverage, select a part, recommend a repair or replacement, calculate a remedy, mark a callback closed or imply that buying through a link changes warranty rights.
+
+**Contextual CTA:** Open the Appliance Repair Callback Log, link the recurrence to the earlier completed service event and add a new row for every request, response, follow-up scope and household recheck.
 
 **FAQ:**
-- Q: Why record the symptom separately from the technician's diagnosis?
-  A: Because diagnoses aren't always right the first time. If a repair doesn't fully resolve the issue, having the original symptom recorded separately makes it clear the underlying problem is still open, rather than looking like two unrelated repairs when it's really the same one continuing.
-- Q: Is the "50% rule" for repair versus replace actually reliable?
-  A: It's a reasonable default for a mid-range appliance under about 10 years old, but it breaks down for high-end built-in appliances (where replacement includes cabinetry and installation costs) and for very young units, where repairing is often smarter than restarting the depreciation clock. Treat it as a starting point, not a formula.
-- Q: How many repairs on the same appliance should trigger a replacement conversation?
-  A: There's no fixed number, but a pattern of separate, unrelated issues on the same unit is a stronger signal than one isolated repair, even if the isolated repair cost more. Asking "what's likely to fail next" is usually more useful than counting past repairs alone.
-- Q: What should a repair history record actually include beyond the cost?
-  A: The observed symptom, the technician's diagnosis, what was physically done (part replaced, issue monitored, etc.), whether the fix held, and any provider notes about what to expect going forward. The cost alone doesn't tell you whether the same problem is likely to recur.
+- Q: Does the same symptom mean the same repair failed?
+  A: Not by itself. Record the similar household observation and link the earlier event, then preserve any provider finding as a separate attributable source. The log does not diagnose the cause or decide whether two events are legally the same defect.
+- Q: How many repair attempts automatically require a refund or replacement in the United States?
+  A: There is no universal number for every product and warranty. FTC guidance describes a reasonable-number-of-tries remedy as a condition of a full warranty, while limited warranties and state law can differ. Read the controlling warranty and get local consumer or legal guidance when needed.
+- Q: Should I replace an appliance when a repair costs more than 50% of a new one?
+  A: Treat any percentage as an unsourced heuristic, not a decision rule. Compare the documented scope, recurrence, coverage, replacement and installation cost, safety, downtime and household needs in a separate replacement decision.
+- Q: What proves that I asked for a callback?
+  A: Preserve the dated request and a source that supports delivery or receipt, such as a portal acknowledgement, sent-message copy or work-order update. A calendar reminder alone shows household intent, not that the provider received it.
+- Q: When can a callback record be closed?
+  A: Close it only when a dated household recheck and attributable provider outcome are linked, when a source supports a separate-issue disposition, or when another protected warranty, seller or complaint workflow has formally taken ownership.
 
 ---
 
@@ -13692,6 +13745,127 @@ A future clearly labelled affiliate area may show document storage, label makers
   A: No. It is an internal household review date. Verify warranty, contract, statutory and complaint periods from the responsible current source.
 - Q: What if the service visit becomes a warranty dispute or recall action?
   A: Preserve the visit facts, then hand the unresolved issue to a separate protected warranty-claim, product-recall or complaint workflow. Do not rewrite the original visit history or paste private dispute material into the shared log.
+
+---
+
+## Page 215 — Appliance Repair Callback Log
+**Slug:** `/tools/appliance-repair-callback-log/`
+**Primary intent:** document a recurring appliance symptom and the repair callback that follows
+**Title tag:** `Appliance Repair Callback Log | Recurring Symptoms and Follow-Up`
+**Meta description:** `Create a private callback timeline linking an earlier appliance repair to a recurring symptom, provider response, follow-up work and household recheck.`
+**Primary keyword concept:** appliance repair callback log
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-24
+**Editorial review date:** 2026-08-24
+**Content version:** 1
+**Suggested internal links:** `/guides/repair-history/`, `/tools/appliance-service-visit-log/`, `/tools/warranty-claim-evidence-log/`, `/guides/appliance-replacement-planning/`
+
+# Appliance repair callback log
+
+When a symptom returns after a provider reported work complete, the household needs more than another appointment reminder. It needs a bridge from the earlier service evidence to the new observation: what the household originally saw, what the provider found, what work was authorized, what the completion source said, when the symptom returned, how the callback was delivered and what happened next.
+
+This free browser tool creates that bridge. It does not decide that an earlier repair failed, diagnose a recurring symptom, count legal repair attempts, interpret a warranty, demand a remedy or recommend replacing the appliance.
+
+**Did a problem return after service? [Jump to the Appliance Repair Callback Log](#tool-heading).**
+
+## Link the earlier repair before opening a callback
+
+Use a private asset label such as `KITCHEN-FRIDGE-A2` and an earlier service pointer such as `SERVICE-S2`. Preserve the earlier request, household symptom, provider finding, authorized work, part or setting, work order, invoice and dated household recheck behind protected pointers.
+
+The tool asks for the earlier reported-completion date. That date is a chronology anchor, not proof that the appliance was fixed, safe or accepted. The provider may have reported work complete while the household had not yet completed a normal-use recheck.
+
+## Record the recurrence before obtaining a new diagnosis
+
+Write the current household observation in concrete terms. Include when it happened, the relevant operating context, what could be seen, heard, smelled or displayed and what the household did not attempt. `Cooling rose above the household baseline and code E4 returned; no panel opened` is useful. `The replacement board failed` is a diagnosis unless an attributable source supports it.
+
+The tool checks that the recurrence observation date is not earlier than the earlier completion date and not later than the current review. This prevents an impossible timeline, but it does not decide whether the recurrence is the same problem.
+
+## Use an eleven-field callback row
+
+Each versioned row uses this format:
+
+`ID | event type | attributable recurrence observation, request, response, scope, work or outcome | actor or source role | event date | linked earlier service or callback ID | protected evidence pointer | next step or closure reason | owner role | target or outcome date | status`
+
+The linked-event field keeps the chain explicit. `CB-2` can link to `CB-1`, while `CB-1` links to `SERVICE-S2`. Do not paste a full serial, case number, work-order number or private contact into that field; use safe household IDs.
+
+## Nine statuses separate observation from remedy
+
+The tool accepts nine evidence states:
+
+1. **Recurrence observed—comparison pending:** a dated household observation is linked, but no provider comparison is implied.
+2. **Callback requested—provider response pending:** the request and delivery source are preserved; response remains open.
+3. **Provider response recorded—scope decision pending:** an attributable response exists; the household has not approved follow-up work.
+4. **Follow-up visit arranged—outcome pending:** the appointment or handoff is documented; no finding or remedy is implied.
+5. **Follow-up work reported complete—household recheck pending:** provider completion evidence exists; the household outcome is still open.
+6. **Closed—provider outcome and dated household recheck linked:** both sources support the recorded closure.
+7. **Separated—different-issue source and new record linked:** an attributable source supports separating the matter and the new record is identified.
+8. **Handed off—warranty, seller or complaint pointer linked:** a protected workflow now owns the unresolved matter.
+9. **Deferred/declined—reason and source linked:** the household or provider did not proceed, and the reason and next ownership are preserved.
+
+The first five remain open. Their target date must fall from the current review through the next household checkpoint. The last four require a real outcome date from the recurrence through the current review. These are household workflow dates, not warranty, statutory, complaint or limitation periods.
+
+## Delivery evidence is different from a reminder
+
+A calendar item that says `call service center` proves only that the household planned to act. A portal acknowledgement, sent-message copy, email delivery record or updated work-order source can support that a callback request was sent or received. Preserve the source and date without exposing the actual contact details or full case identifier.
+
+If the provider responds by phone, write an attributable summary of what the provider role said and keep a protected call note. Do not convert a verbal statement into a written warranty term or claim a person made a binding promise without an appropriate source.
+
+## A new visit does not erase the earlier work
+
+If a provider arranges another visit, use the [Appliance Service Visit Log](/tools/appliance-service-visit-log/) for the detailed estimate, finding, authorization, work, part and invoice. The callback log should preserve the bridge: why the follow-up began, which earlier service it links to, what the provider response was and where the detailed new visit lives.
+
+Do not alter the original service report so that it appears the provider never claimed completion. Do not combine two visits into one invoice summary. Versioned evidence allows the chronology to show both the original statement and the later observation.
+
+## Warranty coverage is a separate decision
+
+The US Federal Trade Commission’s [warranty guidance](https://consumer.ftc.gov/articles/warranties) recommends saving the written warranty and receipt and checking the claim and repair procedure. It also distinguishes a separately paid service contract from a warranty included with the product.
+
+If the callback becomes a warranty request, use the [Warranty Claim Evidence Log](/tools/warranty-claim-evidence-log/) to preserve delivery, coverage response, requests, outcomes and escalation. The callback log does not decide whether the original product warranty, a service contract, a part warranty or a repair-work promise controls.
+
+The FTC’s [Businessperson’s Guide to Federal Warranty Law](https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law) describes replacement or refund after a reasonable number of unsuccessful attempts as a condition of a full warranty. It does not create one numeric rule for every limited warranty, repair service or state. This tool therefore does not calculate an “attempt count” or display a remedy badge.
+
+## Build a protected complaint package only when needed
+
+If ordinary provider contact does not resolve the issue, [USAGov’s complaint guidance](https://www.usa.gov/company-product-service-complaints) recommends gathering receipts, warranties, contracts, work orders and communication records before contacting the company and then seeking further help if the company does not solve the problem.
+
+FamilyBoard can index those files, but a shareable callback output should not contain a complaint form, legal strategy, full correspondence, personal names, addresses, phone numbers, email addresses, serial numbers, case numbers, signatures or payment details. Use a protected pointer and move the matter into the appropriate formal channel.
+
+## Closure needs a result source
+
+A callback should not close merely because a message was answered, a visit was booked, a provider arrived, a new invoice was issued or a household stopped following up. For an ordinary resolved callback, link what the provider says happened and a dated household recheck.
+
+If an attributable provider source describes the current problem as different from the earlier issue, preserve that statement and link a new record; the tool does not adopt the diagnosis as fact. If a seller, manufacturer, warranty administrator or complaint office takes over, close as a handoff with the protected pointer. If the matter is deferred or declined, preserve whose decision it was, the stated reason and what remains open.
+
+## Urgent conditions do not wait for the next checkpoint
+
+Smoke, fire, fuel or gas odor, electric shock, overheating, injury, a product-safety notice or another urgent condition should bypass the routine callback workflow. Follow current manufacturer, responsible-authority, emergency and qualified-professional instructions. Do not operate, reproduce or test a potentially unsafe appliance to improve the record.
+
+## Privacy screening is a backstop
+
+The tool blocks common patterns for complete contact details, addresses and access instructions, full serial and case identifiers, account and payment data, credentials, signatures, complaint or legal material, medical or child details, remote-access codes and technician or customer names. It cannot catch every private fact.
+
+Review every field before printing, downloading or sending it. Keep original work orders, invoices, correspondence, photos and recordings in protected storage. FamilyBoard processes the working record in the current browser and does not receive or back it up.
+
+## Affiliate placement cannot influence a callback
+
+A future clearly labelled affiliate area may show document folders, label makers, replacement filters or general household record supplies. It cannot choose a provider, interpret a warranty, diagnose a recurrence, decide that prior work failed, select a part, recommend repair or replacement, assign fault, calculate a remedy or mark the callback complete.
+
+**Contextual CTA:** Link the earlier service event, preserve the first recurrence observation and add each callback request, provider response, follow-up visit and household recheck as a new sourced row.
+
+**FAQ:**
+- Q: What is the difference between a service visit log and a repair callback log?
+  A: The service visit log documents one bounded visit from request through work and household recheck. The callback log begins after an earlier completion source and links a recurrence, new contact and follow-up outcome back to that prior visit.
+- Q: Does a returned symptom prove the first repair failed?
+  A: No. It proves only the new household observation. Preserve the comparison and any provider finding as separate sourced events; the tool does not diagnose the cause or assign responsibility.
+- Q: Does the tool count repair attempts for warranty or lemon-law purposes?
+  A: No. Definitions, covered products, warranty types and legal triggers vary. The tool preserves events and sources so a qualified person or responsible program can evaluate them.
+- Q: Can I close the callback when another appointment is booked?
+  A: Booking is still open. Close after an attributable provider outcome and dated household recheck, or with a documented separate-issue, formal handoff or source-based deferral.
+- Q: Where should I put the full case number and complaint letter?
+  A: Keep them in protected original storage and place only a safe pointer in the callback timeline. Do not paste complaint or legal material into a shareable household output.
 
 ---
 

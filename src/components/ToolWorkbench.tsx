@@ -2411,6 +2411,135 @@ const definitions: Record<string, Definition> = {
       return `${values.asset.trim()} — appliance service visit record\nCurrent visit context: ${values.context}\nOriginal service request: ${formatter.format(requestDate)}\nCurrent record review: ${formatter.format(reviewDate)}\nNext household follow-up checkpoint: ${formatter.format(nextReview)}\nOpen events: ${openRows.length}\nClosed, deferred or handed-off events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling request, provider, estimate and written-term sources: ${values.baseline.trim()}\nStarting household observation: ${values.observation.trim()}\n\n${lines("Versioned service visit events", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable observation/estimate/finding/authorization/work/part/invoice/outcome: ${row.parts[2]} — actor/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — protected evidence: ${row.parts[5]} — next step/closure reason: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not inspect or diagnose equipment, verify provider identity, authorization, licensing, insurance or arrival, judge an estimate, price, part, repair value, cause, workmanship, safety, code or legal compliance, authorize work, payment or access, test a product, decide warranty, recall, contract or complaint rights, calculate a deadline, assign responsibility, waive a right or certify completion. Follow current manufacturer and responsible authority safety instructions, use emergency or qualified help for urgent or hazardous conditions and preserve original sources.`;
     },
   },
+  "appliance-repair-callback-log": {
+    intro:
+      "Link a recurring appliance symptom to an earlier completed service event, then record the callback request, provider response, follow-up work and household recheck. The tool does not diagnose, count legal repair attempts or decide warranty, refund or replacement rights.",
+    fields: [
+      text("asset", "Private asset label", "Use a household asset label, not a full serial, address, account, case number or private contact.", "Kitchen refrigerator ASSET-A2"),
+      {
+        name: "context",
+        label: "Current callback context",
+        type: "select",
+        options: [
+          "First recurrence observation and comparison",
+          "Callback request or provider response review",
+          "Follow-up visit, work or household recheck",
+          "Warranty, seller or complaint handoff review",
+        ],
+      },
+      { name: "priorCompletionDate", label: "Earlier provider-reported completion date", type: "date", value: "2026-08-10" },
+      { name: "recurrenceDate", label: "First current recurrence observation date", type: "date", value: "2026-08-21" },
+      { name: "reviewDate", label: "Current callback-record review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next household callback checkpoint", type: "date", value: "2026-08-31" },
+      text("baseline", "Controlling earlier service, work, warranty and recheck sources", "Use safe source IDs or public URLs with dates. Preserve the earlier symptom, provider finding, authorized work, completion source and household recheck behind protected pointers.", "SERVICE-S2; WORKORDER-W3; provider completion COMPLETE-C1; household recheck RECHECK-R1; written warranty TERMS-T1"),
+      text("observation", "Current recurrence household observation", "Describe visible, audible or displayed facts and what was not attempted. Do not decide the cause or paste a full identifier or private contact.", "Cooling again rose above the household baseline and E4 returned; no panel opened; observation stored as OBS-R2"),
+      {
+        name: "events",
+        label: "Versioned repair callback event rows",
+        type: "textarea",
+        help: "One line: ID | event type | attributable recurrence observation, request, response, scope, work or outcome | actor or source role | event date YYYY-MM-DD | linked earlier service or callback ID | protected evidence pointer | next step or closure reason | owner role | target or outcome date YYYY-MM-DD | Recurrence observed—comparison pending, Callback requested—provider response pending, Provider response recorded—scope decision pending, Follow-up visit arranged—outcome pending, Follow-up work reported complete—household recheck pending, Closed—provider outcome and dated household recheck linked, Separated—different-issue source and new record linked, Handed off—warranty, seller or complaint pointer linked, or Deferred/declined—reason and source linked. Maximum 16 lines.",
+        value: "CB-1 | Recurrence observation | Cooling again rose above the household baseline and E4 returned during ordinary use; no cause inferred | Household asset owner observation role | 2026-08-21 | SERVICE-S2 | OBS-R2 plus protected photo pointer | Compare the current observation with the earlier service source before requesting a remedy | Household asset owner | 2026-08-24 | Recurrence observed—comparison pending\nCB-2 | Callback request | Requested provider review of the dated recurrence and linked the earlier service without alleging a cause | Household asset owner through provider support channel | 2026-08-22 | CB-1 | CALLBACK-C1 plus delivery acknowledgement | Preserve the attributable provider response and any proposed follow-up scope | Household asset owner | 2026-08-24 | Callback requested—provider response pending",
+      },
+      text("storage", "Protected original-evidence location", "Use a folder label, not a full serial, address, phone, email, case, order, tracking, account, credential, signature, access, payment, complaint or legal detail.", "Household records / appliances / ASSET-A2 / callback CALLBACK-C1"),
+    ],
+    run: (values) => {
+      const priorCompletionDate = strictIsoDate(values.priorCompletionDate);
+      const recurrenceDate = strictIsoDate(values.recurrenceDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.asset.trim()) return "Enter a private asset label so the exported callback record can be identified.";
+      if (!priorCompletionDate) return "Enter the real earlier provider-reported completion date in YYYY-MM-DD format.";
+      if (!recurrenceDate) return "Enter the real first current recurrence observation date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current callback-record review date in YYYY-MM-DD format.";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current callback-record review date cannot be in the future.";
+      if (priorCompletionDate.getTime() > recurrenceDate.getTime()) return "The earlier provider-reported completion date cannot be later than the recurrence observation.";
+      if (recurrenceDate.getTime() > reviewDate.getTime()) return "The recurrence observation date cannot be later than the current review.";
+      if (!nextReview) return "Enter a real next household callback checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next household callback checkpoint cannot be earlier than the current review.";
+      if (values.baseline.trim().length < 16) return "Identify the controlling earlier service, work, warranty and household-recheck sources with safe pointers and dates.";
+      if (values.observation.trim().length < 12) return "Describe the current recurrence observation without diagnosing the equipment or exposing private details.";
+      if (!values.storage.trim()) return "Enter the protected location for original service, recurrence, callback, response, follow-up and outcome evidence.";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "Add at least one repair callback event row.";
+      if (eventRows.length > 16) return "Use no more than 16 repair callback events in one review; create another dated version if needed.";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Repair callback event line ${invalidRows.map((row) => row.line).join(", ")} must contain all 11 pipe-separated fields.`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Each repair callback event must have a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Repair callback event IDs must use 2 to 20 letters, numbers or hyphens, such as CB-1.";
+      const statusOrder = [
+        "Recurrence observed—comparison pending",
+        "Callback requested—provider response pending",
+        "Provider response recorded—scope decision pending",
+        "Follow-up visit arranged—outcome pending",
+        "Follow-up work reported complete—household recheck pending",
+        "Closed—provider outcome and dated household recheck linked",
+        "Separated—different-issue source and new record linked",
+        "Handed off—warranty, seller or complaint pointer linked",
+        "Deferred/declined—reason and source linked",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[10]));
+      if (invalidStatuses.length)
+        return `Repair callback event line ${invalidStatuses.map((row) => row.line).join(", ")} has an unsupported status. Use one of the nine labels shown in the field instructions.`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < recurrenceDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `Repair callback event line ${invalidEventDates.map((row) => row.line).join(", ")} needs a real event date from the recurrence observation through this review.`;
+      const invalidLinks = eventRows.filter((row) => {
+        const link = row.parts[5].toLocaleUpperCase("en");
+        return !/^[A-Z0-9][A-Z0-9-]{1,29}$/.test(link) || (!ids.includes(link) && !values.baseline.toLocaleUpperCase("en").includes(link));
+      });
+      if (invalidLinks.length)
+        return `Repair callback event line ${invalidLinks.map((row) => row.line).join(", ")} must link a safe earlier service ID named in the controlling sources or another callback ID in this version.`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 5).includes(row.parts[10]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(5).includes(row.parts[10]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[9]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open repair callback event line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next household callback checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[9]);
+        return !outcome || outcome.getTime() < recurrenceDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Closed, separated, handed-off or deferred event line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from the recurrence observation through this review.`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[6].length < 4 || row.parts[6].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `Repair callback event line ${missingSources.map((row) => row.line).join(", ")} needs an actor or source role and a protected recurrence, request, response, visit, work or outcome pointer.`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[7].length < 12 || /^(?:done|complete|completed|fixed|failed|resolved|safe|same issue|different issue|approved|ok|none|n\/a|follow up|closed)$/i.test(row.parts[7]),
+      );
+      if (vagueActions.length)
+        return `Repair callback event line ${vagueActions.map((row) => row.line).join(", ")} needs a specific next evidence step or preserved closure reason—not a generic diagnosis, safety or completion word.`;
+      const privacyText = [values.asset, values.baseline, values.observation, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, serial, case, order, tracking or complete numeric identifier was detected. Keep it in protected evidence and use a safe pointer here.";
+      if (/password|passcode|access code|alarm code|door code|gate code|lockbox code|full address|account number|card number|bank account|routing number|social security|government id|full serial|serial number|case number|claim number|tracking number|order number|policy number|signature|date of birth|private contact|payment credential|login credential|complaint form|complaint letter|legal strategy|medical record|child name|remote access|one-time code|verification code|technician name|customer name|\bssn\b|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, access, address, financial, identity, full serial, case, complaint, legal or private contact detail was detected. Replace it with a protected-record pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: eventRows.filter((row) => row.parts[10] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.asset.trim()} — appliance repair callback record\nCurrent callback context: ${values.context}\nEarlier provider-reported completion: ${formatter.format(priorCompletionDate)}\nFirst current recurrence observation: ${formatter.format(recurrenceDate)}\nCurrent callback review: ${formatter.format(reviewDate)}\nNext household callback checkpoint: ${formatter.format(nextReview)}\nOpen callback events: ${openRows.length}\nClosed, separated, handed-off or deferred events: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling earlier service, work, warranty and recheck sources: ${values.baseline.trim()}\nCurrent recurrence household observation: ${values.observation.trim()}\n\n${lines("Versioned repair callback events", eventRows.map((row) => `${row.parts[0]} — ${row.parts[1]} — attributable recurrence observation/request/response/scope/work/outcome: ${row.parts[2]} — actor/source: ${row.parts[3]} — event date: ${formatter.format(strictIsoDate(row.parts[4]) as Date)} — linked earlier service/callback: ${row.parts[5]} — protected evidence: ${row.parts[6]} — next step/closure reason: ${row.parts[7]} — owner: ${row.parts[8]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[9]) as Date)} — status: ${row.parts[10]}`))}\n\nProtected original-evidence location: ${values.storage.trim()}\n\nThis output is a private household evidence index. It does not inspect or diagnose equipment, decide that an earlier repair failed, determine whether symptoms or defects are the same, verify a provider or delivery, count legal repair attempts, interpret a warranty or service contract, decide coverage, refund, replacement, damages, complaint or other rights, calculate a deadline, authorize follow-up work, payment or access, assign responsibility, recommend repair or replacement, contact a company or authority, submit a claim or complaint, waive a right or certify completion. Follow current manufacturer and responsible authority safety instructions, use emergency or qualified help for urgent conditions and preserve original sources.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -5106,6 +5235,135 @@ const zhTwDefinitions: Record<string, Definition> = {
         count: eventRows.filter((row) => row.parts[9] === status).length,
       })).filter((item) => item.count > 0);
       return `${values.asset.trim()}｜家電到府維修訪視紀錄\n目前訪視情境：${values.context}\n第一次服務報修：${formatter.format(requestDate)}\n本次紀錄檢視：${formatter.format(reviewDate)}\n家庭下次追蹤節點：${formatter.format(nextReview)}\n仍開放事件：${openRows.length} 筆\n已結案、暫緩或移交事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的報修、業者、估價與書面條款來源：${values.baseline.trim()}\n第一次家庭觀察：${values.observation.trim()}\n\n${lines("有版本的服務訪視事件", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的觀察／估價／發現／授權／工作／零件／發票／結果：${row.parts[2]}｜行動者／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜受保護證據：${row.parts[5]}｜下一步／結案理由：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭證據索引。它不檢驗或診斷設備、不驗證業者身分、授權、登記、保險或到場、不判斷估價、價格、零件、修理價值、原因、施工品質、安全、法規或法律合規、不替家人授權工作、付款或進入住宅、不測試產品、不決定保固、召回、契約或申訴權利、不計算期限、不分配責任、不代表放棄權利，也不認證完成。請遵循品牌與主管機關現行安全指示，緊急或危險情況使用合適緊急及合格專業協助，並保存原始來源。`;
+    },
+  },
+  "appliance-repair-callback-log": {
+    intro:
+      "把家電維修後再次出現的狀況連回前次完成來源，再保存回訪要求、業者回覆、後續工作與家庭複查。工具不診斷、不計算法律上的送修次數，也不判定保固、退款或換貨權利。",
+    fields: [
+      text("asset", "私密資產代稱", "使用家庭資產代號，不要填完整序號、地址、帳號、案件編號或私人聯絡資料。", "廚房冰箱 ASSET-A2"),
+      {
+        name: "context",
+        label: "目前 callback 情境",
+        type: "select",
+        options: [
+          "第一次復發觀察與前次紀錄比對",
+          "再次報修或業者回覆複查",
+          "後續到場、工作或家庭複查",
+          "保固、賣方或消費申訴移交檢視",
+        ],
+      },
+      { name: "priorCompletionDate", label: "前次業者回報完成日", type: "date", value: "2026-08-10" },
+      { name: "recurrenceDate", label: "本次第一次復發觀察日", type: "date", value: "2026-08-21" },
+      { name: "reviewDate", label: "本次 callback 紀錄檢視日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "家庭下次 callback 追蹤節點", type: "date", value: "2026-08-31" },
+      text("baseline", "控制中的前次服務、工作、保固與家庭複查來源", "使用安全來源 ID 或公開網址與日期；把前次症狀、業者發現、授權工作、完成來源與家庭複查留在受保護索引。", "前次服務 SERVICE-S2；工作單 WORKORDER-W3；業者完成來源 COMPLETE-C1；家庭複查 RECHECK-R1；書面保證 TERMS-T1"),
+      text("observation", "本次家庭復發觀察", "只寫可見、可聽或顯示事實及未進行事項，不自行決定原因，也不要貼完整識別或私人聯絡。", "冷藏溫度再次高於家庭基準並重新顯示 E4；未拆面板；觀察保存於 OBS-R2"),
+      {
+        name: "events",
+        label: "有版本的維修後 callback 事件列",
+        type: "textarea",
+        help: "每行格式：ID | 事件類型 | 有來源的復發觀察、要求、回覆、範圍、工作或結果 | 行動者或來源角色 | 事件日期 YYYY-MM-DD | 連結的前次服務或 callback ID | 受保護證據索引 | 下一步或結案理由 | 負責角色 | 目標或結果日期 YYYY-MM-DD | 已觀察復發，等待比對、已要求回訪，等待業者回覆、已記錄業者回覆，等待範圍決定、已安排後續到場，等待結果、業者回報後續工作完成，等待家庭複查、已結案，連結業者結果與家庭複查、已分流，連結不同問題來源與新紀錄、已移交，連結保固／賣方／申訴索引、已暫緩或拒絕，連結理由與來源。最多 16 行。",
+        value: "CB-1 | 復發觀察 | 一般使用時冷藏溫度再次高於家庭基準並重新顯示 E4；未推測原因 | 家庭資產負責人觀察角色 | 2026-08-21 | SERVICE-S2 | OBS-R2 與受保護照片索引 | 先與前次服務來源比對本次觀察，再提出有範圍的處理要求 | 家庭資產負責人 | 2026-08-24 | 已觀察復發，等待比對\nCB-2 | 再次報修 | 請業者複查有日期的復發觀察並連結前次服務，不自行主張原因 | 家庭資產負責人透過業者客服管道 | 2026-08-22 | CB-1 | CALLBACK-C1 與送達確認 | 保存可歸屬的業者回覆與後續範圍 | 家庭資產負責人 | 2026-08-24 | 已要求回訪，等待業者回覆",
+      },
+      text("storage", "受保護的原始證據位置", "只寫資料夾代稱，不要填完整序號、地址、電話、Email、案件、訂單、物流、帳號、憑證、簽名、門禁、付款、申訴或法律資料。", "家庭文件／家電／ASSET-A2／callback CALLBACK-C1"),
+    ],
+    run: (values) => {
+      const priorCompletionDate = strictIsoDate(values.priorCompletionDate);
+      const recurrenceDate = strictIsoDate(values.recurrenceDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.asset.trim()) return "請填私密資產代稱，讓匯出的 callback 紀錄可以辨識。";
+      if (!priorCompletionDate) return "請輸入真實的前次業者回報完成日 YYYY-MM-DD。";
+      if (!recurrenceDate) return "請輸入真實的本次第一次復發觀察日 YYYY-MM-DD。";
+      if (!reviewDate) return "請輸入真實的本次 callback 紀錄檢視日 YYYY-MM-DD。";
+      const today = strictIsoDate([
+        new Date().getFullYear(),
+        String(new Date().getMonth() + 1).padStart(2, "0"),
+        String(new Date().getDate()).padStart(2, "0"),
+      ].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次 callback 紀錄檢視日不能在未來。";
+      if (priorCompletionDate.getTime() > recurrenceDate.getTime()) return "前次業者回報完成日不能晚於復發觀察日。";
+      if (recurrenceDate.getTime() > reviewDate.getTime()) return "復發觀察日不能晚於本次檢視日。";
+      if (!nextReview) return "請輸入真實的家庭下次 callback 追蹤節點 YYYY-MM-DD。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "家庭下次 callback 追蹤節點不能早於本次檢視。";
+      if (values.baseline.trim().length < 12) return "請以安全索引與日期辨識控制中的前次服務、工作、保固與家庭複查來源。";
+      if (values.observation.trim().length < 8) return "請描述本次家庭復發觀察，不要診斷設備或暴露私人資料。";
+      if (!values.storage.trim()) return "請填原始服務、復發、再次報修、回覆、後續工作與結果證據的受保護位置。";
+      const eventRows = values.events.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (eventRows.length === 0) return "請至少新增一筆維修後 callback 事件。";
+      if (eventRows.length > 16) return "一次複查最多 16 筆維修後 callback 事件；更多內容請建立下一份有日期的版本。";
+      const invalidRows = eventRows.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `維修後 callback 事件第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整填寫 11 個以直線分隔的欄位。`;
+      const ids = eventRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆維修後 callback 事件都要有唯一 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "維修後 callback 事件 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 CB-1。";
+      const statusOrder = [
+        "已觀察復發，等待比對",
+        "已要求回訪，等待業者回覆",
+        "已記錄業者回覆，等待範圍決定",
+        "已安排後續到場，等待結果",
+        "業者回報後續工作完成，等待家庭複查",
+        "已結案，連結業者結果與家庭複查",
+        "已分流，連結不同問題來源與新紀錄",
+        "已移交，連結保固／賣方／申訴索引",
+        "已暫緩或拒絕，連結理由與來源",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = eventRows.filter((row) => !statuses.has(row.parts[10]));
+      if (invalidStatuses.length)
+        return `維修後 callback 事件第 ${invalidStatuses.map((row) => row.line).join("、")} 行狀態必須使用欄位說明中的九種文字之一。`;
+      const invalidEventDates = eventRows.filter((row) => {
+        const eventDate = strictIsoDate(row.parts[4]);
+        return !eventDate || eventDate.getTime() < recurrenceDate.getTime() || eventDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidEventDates.length)
+        return `維修後 callback 事件第 ${invalidEventDates.map((row) => row.line).join("、")} 行需要介於復發觀察日與本次檢視日之間的真實事件日期。`;
+      const invalidLinks = eventRows.filter((row) => {
+        const link = row.parts[5].toLocaleUpperCase("en");
+        return !/^[A-Z0-9][A-Z0-9-]{1,29}$/.test(link) || (!ids.includes(link) && !values.baseline.toLocaleUpperCase("en").includes(link));
+      });
+      if (invalidLinks.length)
+        return `維修後 callback 事件第 ${invalidLinks.map((row) => row.line).join("、")} 行必須連結控制來源中已命名的安全前次服務 ID，或本版本另一個 callback ID。`;
+      const openRows = eventRows.filter((row) => statusOrder.slice(0, 5).includes(row.parts[10]));
+      const closedRows = eventRows.filter((row) => statusOrder.slice(5).includes(row.parts[10]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[9]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的維修後 callback 事件第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次檢視日起，到家庭下次 callback 追蹤節點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[9]);
+        return !outcome || outcome.getTime() < recurrenceDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已結案、分流、移交、暫緩或拒絕的第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於復發觀察日與本次檢視日之間的實際結果日期。`;
+      const missingSources = eventRows.filter((row) => row.parts[3].length < 4 || row.parts[6].length < 4 || row.parts[6].toLocaleUpperCase("en") === "MISSING");
+      if (missingSources.length)
+        return `維修後 callback 事件第 ${missingSources.map((row) => row.line).join("、")} 行需要行動者或來源角色，以及受保護的復發、要求、回覆、到場、工作或結果索引。`;
+      const vagueActions = eventRows.filter((row) =>
+        row.parts[7].length < 8 || /^(?:完成|好了|已好|修好|沒修好|失敗|已解決|安全|相同問題|不同問題|已同意|核准|無|不用|不適用|待追蹤|已結案|ok)$/i.test(row.parts[7]),
+      );
+      if (vagueActions.length)
+        return `維修後 callback 事件第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的下一個證據步驟或保留的結案理由，不能只寫通用診斷、安全或完成詞。`;
+      const privacyText = [values.asset, values.baseline, values.observation, values.events, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、序號、案件、訂單、物流或完整數字識別資料。請留在受保護原始證據，只在這裡放安全索引。";
+      if (/密碼|門禁碼|鑰匙盒密碼|驗證碼|一次性代碼|警報碼|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證|完整序號|案件編號|理賠編號|物流追蹤碼|訂單編號|保單編號|簽名|出生日期|私人聯絡|付款憑證完整資料|登入憑證|申訴表全文|申訴信全文|法律策略|醫療紀錄|兒童姓名|遠端控制|技師姓名|客戶姓名|password|passcode|access code|gate code|lockbox code|account number|card number|government id|full serial|serial number|case number|claim number|tracking number|order number|policy number|signature|payment credential|login credential|complaint form|complaint letter|legal strategy|medical record|child name|remote access|one-time code|verification code|technician name|customer name|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、門禁、地址、金融、身分、完整序號、案件、申訴、法律或私人聯絡資料。請改寫成受保護紀錄索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({
+        status,
+        count: eventRows.filter((row) => row.parts[10] === status).length,
+      })).filter((item) => item.count > 0);
+      return `${values.asset.trim()}｜家電維修後 callback 紀錄\n目前 callback 情境：${values.context}\n前次業者回報完成：${formatter.format(priorCompletionDate)}\n本次第一次復發觀察：${formatter.format(recurrenceDate)}\n本次 callback 檢視：${formatter.format(reviewDate)}\n家庭下次 callback 追蹤節點：${formatter.format(nextReview)}\n仍開放 callback 事件：${openRows.length} 筆\n已結案、分流、移交、暫緩或拒絕事件：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的前次服務、工作、保固與家庭複查來源：${values.baseline.trim()}\n本次家庭復發觀察：${values.observation.trim()}\n\n${lines("有版本的維修後 callback 事件", eventRows.map((row) => `${row.parts[0]}｜${row.parts[1]}｜有來源的復發觀察／要求／回覆／範圍／工作／結果：${row.parts[2]}｜行動者／來源：${row.parts[3]}｜事件日期：${formatter.format(strictIsoDate(row.parts[4]) as Date)}｜連結的前次服務／callback：${row.parts[5]}｜受保護證據：${row.parts[6]}｜下一步／結案理由：${row.parts[7]}｜負責角色：${row.parts[8]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[9]) as Date)}｜狀態：${row.parts[10]}`))}\n\n受保護的原始證據位置：${values.storage.trim()}\n\n這份輸出只是家庭證據索引。它不檢驗或診斷設備、不判定前次維修失敗、不決定症狀或瑕疵是否相同、不驗證業者或送達、不計算法律上的送修次數、不解釋保固或服務方案、不判定涵蓋、退款、換貨、賠償、申訴或其他權利、不計算期限、不授權後續工作、付款或進入住宅、不分配責任、不建議維修或汰換、不聯絡業者或主管機關、不提交保固或申訴、不代表放棄權利，也不認證完成。請遵循品牌與主管機關現行安全指示，緊急情況使用合適緊急及合格專業協助，並保存原始來源。`;
     },
   },
   "vacation-shutdown-checklist-generator": {
