@@ -881,9 +881,9 @@
   },
   {
     "route": "/guides/organize-insurance-documents/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/organize-insurance-documents/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1784,6 +1784,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-insurance-policy-source-version-log/",
+    "alternateRoute": "/zh-tw/tools/household-insurance-policy-source-version-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2283,6 +2291,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/household-insurance-policy-source-version-log/",
+    "alternateRoute": "/tools/household-insurance-policy-source-version-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/household-power-outage-event-log/",
     "alternateRoute": "/tools/household-power-outage-event-log/",
     "indexable": true,
@@ -2420,6 +2435,13 @@
     "alternateRoute": "/guides/organize-household-subscriptions/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/organize-insurance-documents/",
+    "alternateRoute": "/guides/organize-insurance-documents/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {

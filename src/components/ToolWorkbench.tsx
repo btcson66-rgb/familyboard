@@ -3392,6 +3392,134 @@ const definitions: Record<string, Definition> = {
       return `${values.review.trim()} — household record retention decision log\nReview context: ${values.context}\nSource-map baseline: ${formatter.format(baselineDate)}\nCurrent decision review: ${formatter.format(reviewDate)}\nNext policy or source checkpoint: ${formatter.format(nextReview)}\nOpen source, trigger, screen or action rows: ${openRows.length}\nClosed continued-retention, disposal, transfer or not-applicable rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling authority, issuer, agreement, policy, hold and disposal-process references: ${values.basis.trim()}\n\n${lines("Versioned household retention decisions", recordRows.map((row) => `${row.parts[0]} — record class/purpose: ${row.parts[1]} — source checked: ${formatter.format(strictIsoDate(row.parts[2]) as Date)} — controlling source/rule/jurisdiction: ${row.parts[3]} — source-defined trigger/end event: ${row.parts[4]} — active use/exception/hold screen: ${row.parts[5]} — protected original/current version: ${row.parts[6]} — proposed/observed action and evidence: ${row.parts[7]} — owner: ${row.parts[8]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[9]) as Date)} — status: ${row.parts[10]}`))}\n\nProtected originals, approvals and decision-evidence location: ${values.storage.trim()}\n\nThis output is a household decision index, not a retention schedule or disposal instruction. It does not calculate or extend an external deadline; determine a legal, tax, warranty, policy, contract, claim, court, benefit, employment, identity, medical or records duty; open, read, classify, upload, copy, redact, archive, transfer, shred, erase, destroy, retain or remove a record; inspect a browser, device, synchronized folder, cloud service, email, download, backup or recipient; authorize a person; release a hold; prove that every copy is gone; or make a destructive action reversible. Preserve protected originals and approvals separately, and use the current responsible source and qualified advice for the actual decision.`;
     },
   },
+  "household-insurance-policy-source-version-log": {
+    intro:
+      "Record the legal-insurer evidence, issued document set, form and endorsement relationship, access observation, current status source and complaint route. The tool does not verify insurance, interpret coverage or calculate a deadline.",
+    fields: [
+      text("review", "Private insurance-source review reference", "Use a household code, not a person, address, policy, claim, account or exact protected location.", "INS-SOURCE-2026-A"),
+      {
+        name: "context",
+        label: "Insurance document review context",
+        type: "select",
+        options: [
+          "First household insurance inventory",
+          "New issue or renewal document set",
+          "Endorsement, rider or amendment received",
+          "Household access or backup-role handoff",
+          "Possible missing issued document",
+          "Cancellation, nonrenewal or status notice",
+          "Claim or complaint preparation",
+          "Insurer legal-name or source research",
+          "Policy replacement, end or archive",
+        ],
+      },
+      { name: "baselineDate", label: "Insurance catalog and source-map baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "Current insurance-source review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next source or status checkpoint", type: "date", value: "2026-09-14" },
+      text("basis", "Insurer, regulator, ombudsman and protected issued-document source map", "Use safe source and evidence IDs or dated public URLs. Keep identifiers, account pages, notices, claim files and correspondence protected.", "INSURER-SERVICE-S2; STATE-DOI-D1; OMBUDSMAN-O1; ISSUED-SET-A2 protected"),
+      {
+        name: "records",
+        label: "Versioned insurance policy source and document rows",
+        type: "textarea",
+        help: "One line: ID | safe policy purpose and household role | insurer legal-entity evidence state | source checked date YYYY-MM-DD | issued document set and version or effective-period clue | declarations, certificate, form, endorsement or rider relationship | current access and protected-original observation | renewal, replacement, cancellation, nonrenewal, claim or complaint source and discrepancy | owner role | target or outcome date YYYY-MM-DD | one of the eleven listed statuses. Maximum 14 lines.",
+        value: "HOME-1 | Primary-home property policy record; household insurance-documents role | Example insurer legal entity shown on protected issued declarations; evidence INS-LEGAL-A2 | 2026-08-24 | Insurer-issued declarations set INS-DOC-A2; term and form-edition clues recorded in protected review | Declarations list base form and two endorsements; all three relationships recorded | Protected declarations, base form and both listed endorsements opened; titles visible | Insurer-issued renewal declarations observed; insurer complaint route and state DOI source mapped; no source discrepancy observed in this dated review | Household insurance-documents role | 2026-08-24 | Issued source, document relationship, access and status routes reviewed\nPRIOR-1 | Replaced household liability policy set; archive and unresolved-purpose screen | Prior insurer legal entity shown on protected declarations; evidence INS-LEGAL-B1 | 2026-08-23 | Prior issued set INS-DOC-B1 and replacement pointer INS-DOC-B2; supersession clue recorded | Prior declarations list an endorsement that is not present in the protected set | Prior declarations opened; missing listed endorsement prevents complete access claim | Replacement notice source recorded; missing endorsement routed to prior insurer document service before archive decision | Household insurance-documents role | 2026-09-14 | Possible missing document, status notice or term conflict—insurer or qualified review pending",
+      },
+      text("storage", "Protected issued policies, endorsements, notices and review-history location", "Use a folder or process label. Do not enter names, addresses, identifiers, insured assets or people, benefits, health, payment, credentials, claim details or correspondence.", "Household records / insurance sources / INS-SOURCE-2026-A / protected issued sets"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review.trim()) return "Enter a private insurance-source review reference so this exported version can be identified.";
+      if (!baselineDate) return "Enter the real insurance catalog and source-map baseline date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current insurance-source review date in YYYY-MM-DD format.";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current insurance-source review date cannot be in the future.";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "The insurance catalog and source-map baseline cannot be later than the current review.";
+      if (!nextReview) return "Enter a real next source or status checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next source or status checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 12) return "Identify the insurer, regulator, ombudsman and protected issued-document source map with safe pointers.";
+      if (!values.storage.trim()) return "Enter the protected location for issued policies, endorsements, notices and review history.";
+      const recordRows = values.records.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (recordRows.length === 0) return "Add at least one insurance purpose and issued-document relationship row.";
+      if (recordRows.length > 14) return "One insurance-source review version supports at most 14 rows; freeze this version before starting another scope.";
+      const invalidRows = recordRows.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Insurance-source line ${invalidRows.map((row) => row.line).join(", ")} must contain all eleven pipe-separated fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Every insurance-source row needs a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Use 2 to 20 letters, numbers or hyphens for each row ID, such as HOME-1 or PRIOR-A.";
+      const statusOrder = [
+        "Purpose recorded—issued policy source pending",
+        "Issued source recorded—legal insurer entity pending",
+        "Legal insurer recorded—current document set pending",
+        "Document set found—form and endorsement relationship pending",
+        "Endorsements or riders identified—version comparison pending",
+        "Version compared—current access test pending",
+        "Access tested—status and complaint sources pending",
+        "Possible missing document, status notice or term conflict—insurer or qualified review pending",
+        "Issued source, document relationship, access and status routes reviewed",
+        "Policy ended or replaced—custody and unresolved purpose recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[10]));
+      if (invalidStatuses.length)
+        return `Insurance-source line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the eleven evidence statuses in the field instructions.`;
+      const invalidSourceDates = recordRows.filter((row) => {
+        const sourceDate = strictIsoDate(row.parts[3]);
+        return !sourceDate || sourceDate.getTime() < baselineDate.getTime() || sourceDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `Insurance-source line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a real source-checked date from the baseline through the current review.`;
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 8).includes(row.parts[10]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(8).includes(row.parts[10]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[9]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open insurance-source line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next source or status checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[9]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Closed reviewed, ended or not-applicable insurance-source line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from the baseline through this review.`;
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 8 || row.parts[4].length < 10 || row.parts[5].length < 10 || row.parts[6].length < 8 || row.parts[7].length < 10 || row.parts[8].length < 4);
+      if (missingLayers.length)
+        return `Insurance-source line ${missingLayers.map((row) => row.line).join(", ")} needs a real purpose, legal-insurer evidence, issued set, document relationship, access observation, status or complaint source and owner role.`;
+      const completedWithoutEvidence = recordRows.filter((row) => row.parts[10] === statusOrder[8] && (!/(?:insurer|carrier|underwriter|issued)/i.test([row.parts[2], row.parts[4]].join(" ")) || !/(?:declarations|certificate|policy form|contract form|endorsement|rider|amendment)/i.test(row.parts[5]) || !/(?:opened|accessed|visible|retrieved)/i.test(row.parts[6]) || !/(?:renewal|replacement|cancellation|nonrenewal|status|complaint|regulator|department of insurance|ombudsman|insurer)/i.test(row.parts[7]) || /(?:pending|unknown|unresolved|missing|not found|not checked|not opened|conflict)/i.test([row.parts[4], row.parts[5], row.parts[6], row.parts[7]].join(" "))));
+      if (completedWithoutEvidence.length)
+        return `Completed insurance-source line ${completedWithoutEvidence.map((row) => row.line).join(", ")} must link attributable legal-insurer evidence, the issued document relationship, an actual access observation and a current status or complaint route with no unresolved gap.`;
+      const earlyRowsClaimingCompletion = recordRows.filter((row) => statusOrder.slice(0, 7).includes(row.parts[10]) && /(?:fully verified|policy valid|coverage confirmed|complete set confirmed|continuous coverage confirmed)/i.test([row.parts[2], row.parts[4], row.parts[5], row.parts[6], row.parts[7]].join(" ")));
+      if (earlyRowsClaimingCompletion.length)
+        return `Open insurance-source line ${earlyRowsClaimingCompletion.map((row) => row.line).join(", ")} cannot claim a fully verified or valid policy, confirmed coverage, complete set or continuous coverage.`;
+      const conflictWithoutResponsibleRoute = recordRows.filter((row) => row.parts[10] === statusOrder[7] && (!/(?:missing|conflict|difference|contradiction|cancellation|nonrenewal|status notice|term)/i.test([row.parts[5], row.parts[7]].join(" ")) || !/(?:insurer|regulator|department of insurance|ombudsman|qualified|legal counsel|licensed adviser|responsible source)/i.test([row.parts[7], row.parts[8]].join(" "))));
+      if (conflictWithoutResponsibleRoute.length)
+        return `Conflict line ${conflictWithoutResponsibleRoute.map((row) => row.line).join(", ")} must name the observed missing document, notice or term discrepancy and the responsible insurer, regulator, ombudsman or qualified review route.`;
+      const endedWithoutCustody = recordRows.filter((row) => row.parts[10] === statusOrder[9] && (!/(?:ended|replaced|cancelled|canceled|nonrenewed|superseded|expired)/i.test([row.parts[4], row.parts[7]].join(" ")) || !/(?:custody|archive|protected|retained|claim|dispute|complaint|tax|property|lender|legal|remaining purpose|unresolved purpose)/i.test([row.parts[6], row.parts[7]].join(" "))));
+      if (endedWithoutCustody.length)
+        return `Ended or replaced line ${endedWithoutCustody.map((row) => row.line).join(", ")} must record the attributable status event, protected custody and any remaining or screened purpose.`;
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[10] === statusOrder[10] && !/(?:reopen|review again|if |when |after |new policy|new coverage purpose|household change|asset change|role change|purchase|move)/i.test([row.parts[5], row.parts[6], row.parts[7]].join(" ")));
+      if (notApplicableWithoutTrigger.length)
+        return `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and event that reopens this insurance purpose.`;
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, policy, claim, account, vehicle, payment or other complete numeric identifier was detected. Keep it protected and use a safe pointer here.";
+      if (/password|passphrase|passcode|access code|recovery code|one-time code|verification code|private key|seed phrase|account number|policy number|claim number|case number|contract number|card number|bank account|routing number|social security|government id|passport number|driver license number|full address|street address|full name|policyholder name|insured person name|beneficiary name|date of birth|signature|health record|medical record|diagnosis|prescription|vehicle identification number|\bvin\b|license plate|premium amount|coverage limit|deductible amount|payment credential|login credential|private correspondence contents|claim contents|complaint contents|api key|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, identity, policy, claim, insured-person, beneficiary, health, vehicle, financial, signature or private-correspondence detail was detected. Replace it with a protected source, document or evidence pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[10] === status).length })).filter((item) => item.count > 0);
+      return `${values.review.trim()} — household insurance policy source and version log\nReview context: ${values.context}\nInsurance catalog/source-map baseline: ${formatter.format(baselineDate)}\nCurrent insurance-source review: ${formatter.format(reviewDate)}\nNext source or status checkpoint: ${formatter.format(nextReview)}\nOpen source, insurer, document, version, access or status rows: ${openRows.length}\nReviewed, ended or not-applicable rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nInsurer, regulator, ombudsman and protected issued-document source map: ${values.basis.trim()}\n\n${lines("Versioned insurance source evidence", recordRows.map((row) => `${row.parts[0]} — policy purpose/household role: ${row.parts[1]} — legal-insurer evidence: ${row.parts[2]} — source checked: ${formatter.format(strictIsoDate(row.parts[3]) as Date)} — issued set/version/effective-period clue: ${row.parts[4]} — form/endorsement relationship: ${row.parts[5]} — access/protected original: ${row.parts[6]} — status/claim/complaint source and discrepancy: ${row.parts[7]} — owner: ${row.parts[8]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[9]) as Date)} — status: ${row.parts[10]}`))}\n\nProtected issued policies, endorsements, notices and review-history location: ${values.storage.trim()}\n\nThis output is a household source index, not proof of insurance, coverage, payment, validity or claim outcome. It does not search, authenticate, issue, renew, replace, cancel or change insurance; visit a portal; identify a person, insurer, agent, policy, claim or insured asset; read, compare or interpret wording, exclusions, limits, deductibles, beneficiaries, duties, notices or rights; calculate a premium, benefit, claim, appeal, complaint or legal deadline; contact an insurer, regulator or ombudsman; submit a request, claim or complaint; or provide insurance, financial or legal advice. Use the actual issued documents, current insurer, applicable regulator or dispute source and qualified advice.`;
+    },
+  },
   "appliance-manual-source-check-log": {
     intro:
       "Record exact-model evidence, the current manufacturer or authority source, document role, stated coverage, access result and a separate recall or safety-notice check. The tool does not search for or verify manuals, recalls or equipment.",
@@ -8266,6 +8394,134 @@ const zhTwDefinitions: Record<string, Definition> = {
       const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
       const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[10] === status).length })).filter((item) => item.count > 0);
       return `${values.review.trim()}｜家庭紀錄保存與銷毀決策紀錄\n盤點情境：${values.context}\n來源地圖基準：${formatter.format(baselineDate)}\n本次保存決策檢視：${formatter.format(reviewDate)}\n下一次規則或來源核點：${formatter.format(nextReview)}\n仍開放的來源、事件、檢查或動作：${openRows.length} 筆\n已結束本版的保存、處分、移交或不適用：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的主管機關、發行者、契約、保單、暫停處分與處理流程來源：${values.basis.trim()}\n\n${lines("有版本的家庭紀錄保存決策", recordRows.map((row) => `${row.parts[0]}｜紀錄類別／用途：${row.parts[1]}｜來源核對日：${formatter.format(strictIsoDate(row.parts[2]) as Date)}｜控制來源／規則／範圍：${row.parts[3]}｜來源定義的起算／結束事件：${row.parts[4]}｜目前用途／例外／暫停處分檢查：${row.parts[5]}｜受保護原件／目前版本：${row.parts[6]}｜預定／已觀察動作與證據：${row.parts[7]}｜負責角色：${row.parts[8]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[9]) as Date)}｜狀態：${row.parts[10]}`))}\n\n受保護原件、核准與決策證據位置：${values.storage.trim()}\n\n這份輸出只是家庭決策索引，不是保存期限表或銷毀指令。它不計算或延長外部期限，不判定法律、稅務、保固、保單、契約、理賠、法院、福利、勞動、身分、醫療或紀錄義務，不開啟、閱讀、分類、上傳、複製、遮蔽、封存、移交、碎紙、清除、銷毀、保存或移除紀錄，不檢查瀏覽器、裝置、同步資料夾、雲端服務、Email、下載、備份或收件人，不授權某人、不解除暫停處分、不證明所有副本消失，也不能讓破壞性動作復原。請分開保護原件與核准證據，並以目前負責來源及合格專業意見處理真實決定。`;
+    },
+  },
+  "household-insurance-policy-source-version-log": {
+    intro:
+      "逐筆記錄承保公司證據、發行文件組、條款與批單關係、存取觀察、目前狀態及申訴來源。工具不驗證保險、不解讀保障，也不計算期限。",
+    fields: [
+      text("review", "家庭私人保單來源核對代號", "使用家庭內部代號，不要輸入姓名、地址、保單、理賠、帳號或精確受保護位置。", "INS-SOURCE-2026-A"),
+      {
+        name: "context",
+        label: "保單文件核對情境",
+        type: "select",
+        options: [
+          "第一次家庭保單盤點",
+          "新契約或續保文件組",
+          "收到附約、批單、批註或其他變更",
+          "家庭備援取用或交接",
+          "疑似缺少發行文件",
+          "停效、復效、終止或不續保通知",
+          "理賠或申訴準備",
+          "承保公司完整名稱或來源研究",
+          "保單替換、結束或封存",
+        ],
+      },
+      { name: "baselineDate", label: "保單清單與來源地圖基準日", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "本次保單來源核對日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "下一次來源或狀態核點", type: "date", value: "2026-09-14" },
+      text("basis", "保險公司、保險局、評議與受保護發行文件來源地圖", "使用安全來源／證據代號或有日期的公開網址；完整識別、帳戶頁、通知、理賠與通信留在受保護位置。", "INSURER-SERVICE-S2；IB-GOV-D1；FOI-O1；ISSUED-SET-A2 受保護"),
+      {
+        name: "records",
+        label: "有版本的家庭保單來源與文件關係列",
+        type: "textarea",
+        help: "每行：ID｜安全保險用途與家庭角色｜承保公司完整名稱證據狀態｜來源核對日 YYYY-MM-DD｜發行文件組與版本或保險期間線索｜保單面頁、保險證、條款、附約、批單或批註關係｜目前存取與受保護原件觀察｜續保、替換、停效、復效、終止、不續保、理賠或申訴來源與差異｜負責角色｜目標或結果日期 YYYY-MM-DD｜十一種指定狀態之一。最多 14 行。",
+        value: "HOME-1 | 自住房屋財產保險文件；家庭保單管理角色 | 示例承保公司完整名稱已在受保護發行面頁觀察；證據 INS-LEGAL-A2 | 2026-08-24 | 保險公司發行面頁組 INS-DOC-A2；期間與條款版次線索已留在受保護檢視 | 面頁列出主條款與兩份批單；三份文件關係均已記錄 | 受保護面頁、主條款及兩份批單已開啟；標題可見 | 已觀察保險公司發行的續保面頁；保險公司申訴與保險局／評議來源已映射；本次有日期檢視未觀察到來源差異 | 家庭保單管理角色 | 2026-08-24 | 已核對發行來源、文件關係、存取與狀態入口\nPRIOR-1 | 已替換家庭責任保險；封存與未結用途檢查 | 舊承保公司完整名稱已在受保護面頁觀察；證據 INS-LEGAL-B1 | 2026-08-23 | 舊發行文件組 INS-DOC-B1 與替換指標 INS-DOC-B2；替換線索已記錄 | 舊面頁列出一份批單，但受保護文件組目前缺少該文件 | 舊面頁已開啟；缺少列出的批單，因此不能宣稱完整存取 | 替換通知來源已記錄；缺少批單交由原承保公司文件服務處理後再做封存決定 | 家庭保單管理角色 | 2026-09-14 | 疑似缺文件、狀態通知或條款衝突，等待保險公司或合格來源處理",
+      },
+      text("storage", "受保護保單、條款、批單、通知與核對歷程位置", "使用資料夾或流程代號；不要輸入姓名地址、完整識別、被保險人／受益人、財產、健康、保費保額、付款、憑證、理賠或通信。", "家庭紀錄／保單來源／INS-SOURCE-2026-A／受保護發行文件組"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review.trim()) return "請輸入家庭私人保單來源核對代號，讓匯出版本可以辨認。";
+      if (!baselineDate) return "請用 YYYY-MM-DD 輸入真實的保單清單與來源地圖基準日。";
+      if (!reviewDate) return "請用 YYYY-MM-DD 輸入真實的本次保單來源核對日。";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次保單來源核對日不能晚於今天。";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "保單清單與來源地圖基準日不能晚於本次核對日。";
+      if (!nextReview) return "請用 YYYY-MM-DD 輸入真實的下一次來源或狀態核點。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "下一次來源或狀態核點不能早於本次保單來源核對日。";
+      if (values.basis.trim().length < 12) return "請用安全索引指出保險公司、保險局、評議與受保護發行文件來源地圖。";
+      if (!values.storage.trim()) return "請輸入受保護保單、條款、批單、通知與核對歷程位置。";
+      const recordRows = values.records.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (recordRows.length === 0) return "請至少加入一筆保險用途與發行文件關係。";
+      if (recordRows.length > 14) return "一個保單來源核對版本最多支援 14 行；請先凍結本版，再建立另一個範圍。";
+      const invalidRows = recordRows.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `保單來源第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整包含十一個以直線分隔的欄位。`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆保單來源列都需要不重複的 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "每個 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 HOME-1 或 PRIOR-A。";
+      const statusOrder = [
+        "已記錄保險用途，等待發行保單來源",
+        "已記錄發行來源，等待承保公司完整名稱",
+        "已記錄承保公司，等待目前文件組",
+        "已找到文件組，等待核對條款與批單關係",
+        "已辨認附約、批單或批註，等待版本比較",
+        "已比較版本，等待目前存取測試",
+        "已測試存取，等待狀態與申訴來源",
+        "疑似缺文件、狀態通知或條款衝突，等待保險公司或合格來源處理",
+        "已核對發行來源、文件關係、存取與狀態入口",
+        "保單已終止或替換，記錄保管與未結用途",
+        "不適用，記錄理由與重新打開條件",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[10]));
+      if (invalidStatuses.length)
+        return `保單來源第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用欄位說明中的十一種證據狀態之一。`;
+      const invalidSourceDates = recordRows.filter((row) => {
+        const sourceDate = strictIsoDate(row.parts[3]);
+        return !sourceDate || sourceDate.getTime() < baselineDate.getTime() || sourceDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `保單來源第 ${invalidSourceDates.map((row) => row.line).join("、")} 行，需要介於基準日與本次核對日之間的真實來源核對日。`;
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 8).includes(row.parts[10]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(8).includes(row.parts[10]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[9]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的保單來源第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次核對日起，到下一次來源或狀態核點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[9]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已核對、終止或不適用的保單來源第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於基準日與本次核對日之間的實際結果日期。`;
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 6 || row.parts[2].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 8 || row.parts[6].length < 6 || row.parts[7].length < 8 || row.parts[8].length < 3);
+      if (missingLayers.length)
+        return `保單來源第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實用途、承保公司證據、發行文件組、條款／批單關係、存取觀察、狀態／申訴來源與負責角色。`;
+      const completedWithoutEvidence = recordRows.filter((row) => row.parts[10] === statusOrder[8] && (!/(?:保險公司|承保|發行)/.test([row.parts[2], row.parts[4]].join(" ")) || !/(?:面頁|保險證|條款|契約|附約|批單|批註)/.test(row.parts[5]) || !/(?:開啟|存取|可見|取用)/.test(row.parts[6]) || !/(?:續保|替換|停效|復效|終止|不續保|狀態|申訴|保險局|評議|保險公司)/.test(row.parts[7]) || /(?:等待|未知|未解|缺少|找不到|未查|未開啟|衝突)/.test([row.parts[4], row.parts[5], row.parts[6], row.parts[7]].join(" "))));
+      if (completedWithoutEvidence.length)
+        return `已完成保單來源核對第 ${completedWithoutEvidence.map((row) => row.line).join("、")} 行必須連結可歸屬承保公司證據、發行文件關係、實際存取及目前狀態／申訴入口，且不能仍有未解缺口。`;
+      const earlyRowsClaimingCompletion = recordRows.filter((row) => statusOrder.slice(0, 7).includes(row.parts[10]) && /(?:完全驗證|保單有效|保障已確認|文件完整確認|持續有效確認)/.test([row.parts[2], row.parts[4], row.parts[5], row.parts[6], row.parts[7]].join(" ")));
+      if (earlyRowsClaimingCompletion.length)
+        return `仍開放的保單來源第 ${earlyRowsClaimingCompletion.map((row) => row.line).join("、")} 行不能宣稱完全驗證、保單有效、保障確認、文件完整或持續有效。`;
+      const conflictWithoutResponsibleRoute = recordRows.filter((row) => row.parts[10] === statusOrder[7] && (!/(?:缺少|缺件|衝突|差異|矛盾|停效|終止|不續保|狀態通知|條款)/.test([row.parts[5], row.parts[7]].join(" ")) || !/(?:承保公司|保險公司|保險局|評議|主管機關|合格|律師|專業|負責來源)/.test([row.parts[7], row.parts[8]].join(" "))));
+      if (conflictWithoutResponsibleRoute.length)
+        return `文件或狀態衝突第 ${conflictWithoutResponsibleRoute.map((row) => row.line).join("、")} 行必須記錄缺件、通知或條款差異，以及負責保險公司、主管機關、評議或合格專業路徑。`;
+      const endedWithoutCustody = recordRows.filter((row) => row.parts[10] === statusOrder[9] && (!/(?:終止|替換|停效|不續保|到期|失效)/.test([row.parts[4], row.parts[7]].join(" ")) || !/(?:保管|封存|受保護|保存|理賠|爭議|申訴|稅務|房屋|貸款|法律|剩餘用途|未結用途)/.test([row.parts[6], row.parts[7]].join(" "))));
+      if (endedWithoutCustody.length)
+        return `保單終止或替換第 ${endedWithoutCustody.map((row) => row.line).join("、")} 行必須記錄可歸屬狀態事件、受保護保管，以及剩餘或已檢查的用途。`;
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[10] === statusOrder[10] && !/(?:重新打開|重新檢視|若|如果|當|之後|新保單|新保障用途|家庭變化|財產變化|角色改變|購買|搬家)/.test([row.parts[5], row.parts[6], row.parts[7]].join(" ")));
+      if (notApplicableWithoutTrigger.length)
+        return `不適用第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須寫目前理由，以及重新打開這個保險用途的事件。`;
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、保單、理賠、帳號、車輛、付款或其他完整數字識別。請留在受保護原件，只在這裡放安全索引。";
+      if (/密碼|通關密語|存取碼|復原碼|驗證碼|私鑰|助記詞|完整帳號|帳號號碼|完整保單號碼|保單號碼|完整理賠編號|理賠編號|案件編號|契約編號|卡號|銀行帳戶|身分證|護照號碼|駕照號碼|完整地址|完整門牌|完整姓名|要保人姓名|被保險人姓名|受益人姓名|出生日期|簽名|健康紀錄|醫療紀錄|診斷|處方|車身識別號碼|車牌號碼|完整車號|保費金額|保額|自負額金額|付款憑證|登入憑證|私人通信內容|理賠內容|申訴內容|API 金鑰|password|passphrase|passcode|access code|recovery code|verification code|account number|policy number|claim number|full address|full name|policyholder name|insured person name|beneficiary name|date of birth|vehicle identification number|\bvin\b|license plate|private correspondence contents|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、身分、保單、理賠、被保險人、受益人、健康、車輛、財務、簽名或私人通信資料。請改寫成受保護來源、文件或證據索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[10] === status).length })).filter((item) => item.count > 0);
+      return `${values.review.trim()}｜家庭保單來源與版本核對紀錄\n核對情境：${values.context}\n保單清單／來源地圖基準：${formatter.format(baselineDate)}\n本次保單來源核對：${formatter.format(reviewDate)}\n下一次來源或狀態核點：${formatter.format(nextReview)}\n仍開放的來源、公司、文件、版本、存取或狀態列：${openRows.length} 筆\n已核對、終止或不適用列：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n保險公司、保險局、評議與受保護發行文件來源地圖：${values.basis.trim()}\n\n${lines("有版本的家庭保單來源證據", recordRows.map((row) => `${row.parts[0]}｜保險用途／家庭角色：${row.parts[1]}｜承保公司證據：${row.parts[2]}｜來源核對日：${formatter.format(strictIsoDate(row.parts[3]) as Date)}｜發行文件組／版本／期間線索：${row.parts[4]}｜面頁／條款／批單關係：${row.parts[5]}｜存取／受保護原件：${row.parts[6]}｜狀態／理賠／申訴來源與差異：${row.parts[7]}｜負責角色：${row.parts[8]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[9]) as Date)}｜狀態：${row.parts[10]}`))}\n\n受保護保單、條款、批單、通知與核對歷程位置：${values.storage.trim()}\n\n這份輸出只是家庭來源索引，不證明投保、保障、付款、效力或理賠結果。它不搜尋、驗證、投保、承保、續保、替換、停效、復效、終止或變更保險，不登入入口，不辨識個人、保險公司、業務員、保單、理賠或財產，不閱讀、比較或解讀條款、除外、保額、自負額、受益人、義務、通知與權利，不計算保費、理賠、申訴、評議或法律期限，不聯絡保險公司、保險局或評議機構，不送出申請、理賠或申訴，也不提供保險、財務或法律意見。請使用實際發行文件、目前保險公司、適用主管／爭議來源與合格專業意見。`;
     },
   },
   "appliance-manual-source-check-log": {

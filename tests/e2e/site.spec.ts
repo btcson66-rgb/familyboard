@@ -108,6 +108,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/how-long-to-keep-household-records/",
     "/tools/appliance-manual-source-check-log/",
     "/guides/organize-appliance-manuals/",
+    "/tools/household-insurance-policy-source-version-log/",
+    "/guides/organize-insurance-documents/",
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
     "/templates/printable-home-inventory-template/",
@@ -163,6 +165,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/how-long-to-keep-household-records/",
     "/zh-tw/tools/appliance-manual-source-check-log/",
     "/zh-tw/guides/organize-appliance-manuals/",
+    "/zh-tw/tools/household-insurance-policy-source-version-log/",
+    "/zh-tw/guides/organize-insurance-documents/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -360,6 +364,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電說明書整理" }),
   ).toHaveAttribute("href", "/zh-tw/guides/organize-appliance-manuals/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭保單來源與版本核對" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/household-insurance-policy-source-version-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "保單整理教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/organize-insurance-documents/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電清冊教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/appliance-inventory/");
@@ -847,6 +857,16 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/organize-appliance-manuals/",
       alternate: "/guides/organize-appliance-manuals/",
       heading: "家電說明書怎麼整理？先確認完整型號、官方來源與召回資訊",
+    },
+    {
+      route: "/zh-tw/tools/household-insurance-policy-source-version-log/",
+      alternate: "/tools/household-insurance-policy-source-version-log/",
+      heading: "家庭保單來源與版本核對紀錄",
+    },
+    {
+      route: "/zh-tw/guides/organize-insurance-documents/",
+      alternate: "/guides/organize-insurance-documents/",
+      heading: "保單怎麼整理？先分清保險契約、批單、續保通知與申訴來源",
     },
     {
       route: "/zh-tw/guides/purchase-receipt-organizer/",
@@ -1697,6 +1717,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不能早於本次核對日",
   );
 
+  await page.goto("/tools/household-insurance-policy-source-version-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open source, insurer, document, version, access or status rows: 1");
+  await expect(page.locator(".result")).toContainText("Reviewed, ended or not-applicable rows: 1");
+  await expect(page.locator(".result")).toContainText("Issued source, document relationship, access and status routes reviewed 1");
+  await page.getByLabel("Next source or status checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+  await page.goto("/tools/household-insurance-policy-source-version-log/");
+  await page.getByLabel("Protected issued policies, endorsements, notices and review-history location").fill("policy number 123456789");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible full phone number, email, policy, claim");
+
+  await page.goto("/zh-tw/tools/household-insurance-policy-source-version-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的來源、公司、文件、版本、存取或狀態列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對、終止或不適用列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對發行來源、文件關係、存取與狀態入口 1 筆");
+  await page.getByLabel("下一次來源或狀態核點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次保單來源核對日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -2124,6 +2170,18 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/organize-appliance-manuals/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-insurance-policy-source-version-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-insurance-policy-source-version-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/organize-insurance-documents/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/organize-insurance-documents/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/",

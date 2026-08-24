@@ -848,12 +848,12 @@
     "headings": "The right appliance manual is a source match, not merely a PDF Start with the household asset, not the document filename Use the manufacturer's product-support record as the source map Separate owner, installation, service, warranty and safety documents Confirm the document's stated model and regional coverage A live link and a saved copy solve different failure modes Recall and safety notices remain a separate current check Maintenance records must cite the applicable section, not a copied interval Retiring an appliance does not create a universal deletion date Affiliate recommendations come after source and compatibility checks"
   },
   {
-    "title": "How to Organize Household Insurance Documents Without Exposing Sensitive Details",
-    "description": "Create a household insurance index with policy type, provider, renewal date and secure document references while keeping sensitive information protected.",
+    "title": "How to Organize Insurance Documents by Policy Version and Status",
+    "description": "Build a private insurance document index that separates issued policies, declarations, endorsements, renewal notices, current status and complaint routes.",
     "route": "/guides/organize-insurance-documents/",
     "cluster": "records-emergency",
-    "keywords": "organize insurance documents",
-    "headings": "Insurance documents need both findability and restraint Build the insurance index around what a renewal decision needs Separate the shared summary from the protected original Use the home inventory as the other half of the insurance record Use renewal dates as review checkpoints, not just reminders The organizer should never interpret coverage What a claims adjuster actually asks for first Bundled and multi-policy households need one index, not several"
+    "keywords": "how to organize insurance documents",
+    "headings": "The current insurance record is an issued document set, not a renewal reminder Start with a safe household purpose, not a policy number Record the insurer's legal entity, not only a brand or agent Assemble the issued document stack in controlling order Separate document version, policy term and current status Make access testing narrower than coverage interpretation Renewal and status notices need their own evidence Keep claim and complaint records connected but separate A home inventory supports a claim; it does not decide it Closed, replaced and cancelled policies may still have a purpose Affiliate placement belongs after the insurance answer"
   },
   {
     "title": "How to Organize Utility Account Information for a Household Handoff",
@@ -1678,6 +1678,14 @@
     "cluster": "tools",
     "keywords": "appliance manual organizer",
     "headings": "Appliance manual source check log Define the review without exposing a household Each row preserves eleven source and access facts Eleven statuses show what is known and what remains open A full model is evidence, not permission to move equipment Document role and stated coverage must agree Access and saved-copy states are separate observations Recall and safety checks never collapse into the manual check Privacy screening is a last line, not a safe-storage system Affiliate products cannot determine compatibility or safety"
+  },
+  {
+    "title": "Household Insurance Policy Source and Version Log",
+    "description": "Create a private insurance document log for issued policy sources, legal insurer identity, declarations, endorsements, access, status and complaint routes.",
+    "route": "/tools/household-insurance-policy-source-version-log/",
+    "cluster": "tools",
+    "keywords": "insurance policy document organizer",
+    "headings": "Household insurance policy source and version log Define one dated review without exposing the household Each row has eleven evidence fields Eleven statuses distinguish discovery from a reviewed set A legal insurer name and an issued policy are different evidence layers Declarations and endorsements must remain connected Access, status and coverage are three separate claims Complaint sources are mapped, not automatically started Privacy screening is deliberately strict Affiliate products cannot decide an insurance question"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

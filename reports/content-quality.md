@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-24T08:21:26.231Z
+Generated: 2026-08-24T09:00:56.542Z
 
 ## Summary
 
-- Indexable pages: 325
-- Generated HTML routes: 342
+- Indexable pages: 328
+- Generated HTML routes: 345
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 124
+- Pages without a contextual product/tool link: 126
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-24T08:21:26.231Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 31
-- tools: 95
+- records-emergency: 32
+- tools: 97
 
 ## Word-count range
 
@@ -107,6 +107,7 @@ Generated: 2026-08-24T08:21:26.231Z
 - /zh-tw/guides/moving-inventory/
 - /zh-tw/guides/organize-appliance-manuals/
 - /zh-tw/guides/organize-household-subscriptions/
+- /zh-tw/guides/organize-insurance-documents/
 - /zh-tw/guides/power-outage-home-preparedness/
 - /zh-tw/guides/product-registration-tracker/
 - /zh-tw/guides/purchase-receipt-organizer/
@@ -148,6 +149,7 @@ Generated: 2026-08-24T08:21:26.231Z
 - /zh-tw/tools/house-sitter-instruction-generator/
 - /zh-tw/tools/household-annual-review-generator/
 - /zh-tw/tools/household-document-index-generator/
+- /zh-tw/tools/household-insurance-policy-source-version-log/
 - /zh-tw/tools/household-power-outage-event-log/
 - /zh-tw/tools/household-record-retention-decision-log/
 - /zh-tw/tools/household-record-retrieval-drill-log/

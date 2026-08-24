@@ -121,6 +121,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/appliance-manual-source-check-log/</loc>",
       "<loc>https://familyboard.win/guides/organize-appliance-manuals/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-appliance-manuals/</loc>",
+      "<loc>https://familyboard.win/tools/household-insurance-policy-source-version-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-insurance-policy-source-version-log/</loc>",
+      "<loc>https://familyboard.win/guides/organize-insurance-documents/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/organize-insurance-documents/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -550,6 +554,24 @@ const checks = [
       'hreflang="zh-TW"',
       "product-support record as the source map",
       "Recall and safety notices remain a separate current check",
+    ],
+  },
+  {
+    path: "/tools/household-insurance-policy-source-version-log/",
+    require: [
+      "Household Insurance Policy Source and Version Log",
+      'hreflang="zh-TW"',
+      "Eleven statuses distinguish discovery from a reviewed set",
+      "It does not search for, authenticate, issue, renew, replace, cancel or change insurance",
+    ],
+  },
+  {
+    path: "/guides/organize-insurance-documents/",
+    require: [
+      "The current insurance record is an issued document set, not a renewal reminder",
+      'hreflang="zh-TW"',
+      "Assemble the issued document stack in controlling order",
+      "Keep claim and complaint records connected but separate",
     ],
   },
   {
@@ -1009,6 +1031,24 @@ const checks = [
       'hreflang="en"',
       "從製造商目前支援頁找",
       "召回、召修與安全公告一定要另外查",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-insurance-policy-source-version-log/",
+    require: [
+      "家庭保單來源與版本核對紀錄",
+      'hreflang="en"',
+      "十一種狀態把公司、文件、版本、存取與爭議分開",
+      "工具不搜尋、驗證、投保、承保、續保、換約、停效、復效、終止或變更保險",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/organize-insurance-documents/",
+    require: [
+      "保單怎麼整理？先分清保險契約、批單、續保通知與申訴來源",
+      'hreflang="en"',
+      "保單不是單一 PDF，要保存發行文件的組成關係",
+      "台灣保險申訴流程要連到目前官方來源",
     ],
   },
   {
