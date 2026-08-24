@@ -113,6 +113,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/important-household-document-review/</loc>",
       "<loc>https://familyboard.win/guides/important-household-documents/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/important-household-documents/</loc>",
+      "<loc>https://familyboard.win/tools/household-record-retention-decision-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-record-retention-decision-log/</loc>",
+      "<loc>https://familyboard.win/guides/how-long-to-keep-household-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/how-long-to-keep-household-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -506,6 +510,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Ask five questions before adding any document class",
       "Current source, useful copy and accepted evidence are different",
+    ],
+  },
+  {
+    path: "/tools/household-record-retention-decision-log/",
+    require: [
+      "Household Record Retention Decision Log",
+      'hreflang="zh-TW"',
+      "Twelve statuses show what is known and what remains open",
+      "It does not calculate a tax, legal, warranty, policy, court, benefit, employment, identity, medical or contractual deadline.",
+    ],
+  },
+  {
+    path: "/guides/how-long-to-keep-household-records/",
+    require: [
+      "A household record does not earn a disposal date from its filename",
+      'hreflang="zh-TW"',
+      "U.S. federal tax periods are conditional, not a three-year label",
+      "Warranty expiry is one trigger, not automatic disposal",
     ],
   },
   {
@@ -929,6 +951,24 @@ const checks = [
       'hreflang="en"',
       "每一類文件先回答五個問題",
       "MyData 是取用來源，不是 FamilyBoard 雲端硬碟",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-record-retention-decision-log/",
+    require: [
+      "家庭紀錄保存與銷毀決策紀錄",
+      'hreflang="en"',
+      "十二種狀態把來源、事件與結果分開",
+      "工具不計算期限，也不銷毀紀錄",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/how-long-to-keep-household-records/",
+    require: [
+      "家庭文件保存期限不是每個資料夾都填「五年」",
+      'hreflang="en"',
+      "綜合所得稅憑證要跟申報用途走",
+      "七日解除權不是交易紀錄保存期限",
     ],
   },
   {

@@ -7511,62 +7511,96 @@ A future clearly labelled affiliate area may compare document sleeves, scanners,
 
 ## Page 109 — How Long to Keep Household Records
 **Slug:** `/guides/how-long-to-keep-household-records/`
-**Primary intent:** decide when household records can be discarded
-**Title tag:** `How Long Should You Keep Household Records? Use the Reason for the Record, Not One Magic Number`
-**Meta description:** `Decide how long to keep household records by warranty, legal, tax, insurance, property and practical needs rather than applying one universal retention period.`
+**Primary intent:** decide how long to keep a household record from its current source, trigger and active exceptions
+**Title tag:** `How Long to Keep Household Records | A Source-First Retention Guide`
+**Meta description:** `Decide how long to keep household records by purpose, controlling source, trigger event, active claim or dispute, review date and documented disposal decision.`
 **Primary keyword concept:** how long to keep household records
 **Depth:** verified
-**Suggested internal links:** `/guides/how-long-to-keep-household-records/`, `/guides/home-purchase-records/`, `/guides/household-documents-organizer/`, `/tools/receipt-retention-organizer/`
+**Editorial review date:** 2026-08-24
+**Content version:** 2
+**Suggested internal links:** `/tools/household-record-retention-decision-log/`, `/tools/receipt-retention-organizer/`, `/guides/important-household-documents/`, `/guides/home-purchase-records/`, `/guides/household-documents-organizer/`
 
-# The retention period depends on what the record proves — here are the actual numbers
+# A household record does not earn a disposal date from its filename
 
-Receipts, tax records, property documents, warranties and service invoices exist for different reasons, and each reason carries its own retention window published by an authoritative source. The table below covers the common cases; assign each household document the reason it's being kept, and set its review date to match that reason rather than a single household-wide rule.
+Quick answer: ask what the record supports, which current authority or agreement controls that purpose, what event starts or ends the period, and whether an audit, amended filing, refund request, ownership period, warranty, recall, insurance claim, creditor requirement, investigation or dispute keeps the record active. A review date is only a prompt to repeat those checks. It is not permission to shred or delete.
 
-## Retention periods by document type
+This guide is a household organizing framework, not legal, tax, insurance or records-management advice. U.S. federal tax periods do not automatically answer state, local, contractual or non-tax needs. A suggested consumer checklist is not a statute. The current agency, issuer, receiving institution, agreement, policy and qualified adviser for the actual matter control the decision.
 
-| Document type | Typical retention | Source |
-|---|---|---|
-| Ordinary tax records (most individual returns) | 3 years from filing | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| Underreported income (over 25% of gross income omitted) | 6 years | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| Worthless securities or bad-debt deduction claim | 7 years | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| No return filed, or a fraudulent return | Indefinitely | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| Employment tax records | At least 4 years after the tax is due or paid | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| Filed tax returns themselves | Permanently (IRS recommendation) | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| Property purchase and improvement records | As long as you own the home, plus the applicable IRS window after selling | [IRS](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) |
-| Warranty documents | Until the warranty expires | Manufacturer terms |
-| Household insurance policy documents | Current policy, plus prior policies while any related claim remains open | Insurer terms |
+**Need to turn a pile into attributable decisions? [Use the free Household Record Retention Decision Log](#tool-link).**
 
-## Why property records outlast the purchase itself
+## Record five facts before writing any period
 
-Home-improvement receipts are the record most households discard too early. The IRS treats documented capital improvements as additions to a home's cost basis, which reduces taxable gain when the home is eventually sold — so a kitchen renovation receipt from year three of ownership can still matter in year twenty, at sale. The practical rule: keep property-related receipts for as long as you own the home, then apply the standard individual retention window after the sale closes.
+First, name the **actual purpose**. `Receipt` is a format; `supports the purchase date for a written warranty` is a purpose. The same receipt may also support a return, asset inventory, repair history, product recall, insurance conversation, property basis or tax item. One purpose ending does not prove every other purpose ended.
 
-## Tax records: the three-year default, and when it's longer
+Second, identify the **controlling source and jurisdiction**. Examples include a current IRS page for one federal tax question, a state revenue agency for a state filing, written warranty terms for a product, an insurer for a claim, a lender or creditor for an agreement, or a government issuing office for a credential. Save a dated safe pointer or source version outside the household summary.
 
-For most individual filers, the IRS's baseline is three years from the filing date. That window extends to six years if a return omits more than 25% of gross income, and to seven years specifically for a claim involving worthless securities or a bad-debt deduction. If a return was never filed, or was fraudulent, there is no time limit at all — the IRS can examine those records indefinitely. Employment tax records carry their own four-year minimum from when the tax was due or paid.
+Third, record the **trigger event**. A period may run from filing, payment, a refund claim, sale or other disposition, expiration, termination, final claim outcome, completed repair, replacement, transfer or another source-defined event. `Created in 2022` is often not enough.
 
-## Warranties and receipts follow the product, not the calendar
+Fourth, screen for a **longer active purpose or exception**. An open audit, amended filing, refund request, claim, charge dispute, investigation, litigation, ownership relationship, replacement process or explicit request from a responsible source can change the practical decision. Do not use a general website to release a hold placed by the actual institution or adviser.
 
-A warranty document is only useful until its stated expiration — record that date directly rather than guessing an interval, since manufacturer terms vary widely (a water heater might carry a 6-year warranty, a laptop 1 year). Pair the receipt with the warranty record so both retire together; a receipt kept for a product you no longer own is clutter, not protection.
+Fifth, record an **observed action and evidence**. `Review due` means someone must check. `Disposal candidate` means a human still has to approve. `Disposed` should identify the method, date, responsible role and limited evidence without copying the document contents. FamilyBoard does not destroy a file, empty cloud trash, operate a shredder or verify that another copy is gone.
 
-## Separate "must keep" from "useful to keep"
+## U.S. federal tax periods are conditional, not a three-year label
 
-Some records carry a real legal or tax consequence if missing — the categories above. Others simply save time later, like an old manual or a superseded service quote. Label the reason on each record ("tax — 3yr," "property basis — until sale," "warranty — expires 2028") so a future cleanup pass can act on the actual reason instead of guessing whether a document is still needed.
+The IRS says the length of time depends on the action, expense or event recorded. Its [current recordkeeping page](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) gives several federal income-tax periods: three years when its longer listed situations do not apply; three years from filing or two years from payment, whichever is later, for certain later credit or refund claims; seven years for a worthless-securities loss or bad-debt deduction claim; six years when unreported income exceeds the stated threshold; and no limit for no return or a fraudulent return. Employment tax records have a separate rule that matters only when the household actually has that responsibility.
 
-## Review rather than auto-delete
+Do not collapse those branches into `tax = 3 years`. Record the tax year, filing and payment events, what the evidence supports, which IRS branch was reviewed, whether an amended return, refund claim or examination exists, and whether state, local, creditor, insurance or other needs last longer.
 
-A household record system should never destroy documents automatically on a generic timer — retention reasons vary too much for a single rule to be safe, and a deleted deed or improvement receipt cannot be recreated. A review date should prompt a person to confirm disposal, not trigger it silently.
+The IRS page says to keep copies of filed returns because they help with later returns and computations. It does **not** state on that page that every household must permanently retain every filed return. FamilyBoard therefore records the source and household decision instead of turning a useful practice into a universal legal requirement.
 
-**Contextual CTA:** Use the Receipt Retention Organizer to assign each record a reason for keeping it before deciding on a review date.
+## Property records follow basis and disposition
+
+For U.S. federal tax purposes, the IRS generally says to keep property records until the limitation period expires for the year in which the property is disposed of. Those records may establish depreciation, amortization, depletion or gain and loss, and certain exchanges can carry the old property's basis into a replacement property. That is why the record chain may begin at acquisition or improvement but does not become reviewable merely because construction ended.
+
+Build a property row with the property role, acquisition or improvement purpose, protected source pointer, ownership or disposition event, applicable tax source and next review. Do not promise that every repair is a capital improvement or calculate basis in a household organizer. Classification and deductible amounts belong to current tax sources and qualified advice for the actual facts.
+
+## Warranty expiry is one trigger, not automatic disposal
+
+Written warranty terms should control the warranty purpose: exact product, covered party, term, start method, exclusions, claim route and later written changes. But an expired warranty does not prove the receipt or service history has no remaining ownership, recall, insurance, tax, repair or dispute purpose. Likewise, selling or disposing of an item does not resolve an open claim.
+
+The Federal Trade Commission's 2025 [personal-document article](https://consumer.ftc.gov/consumer-alerts/2025/06/protecting-your-personal-information-which-documents-keep-which-shred) offers consumer suggestions for common documents and emphasizes locking up what is kept and shredding or deleting sensitive material when it is time to dispose. Treat that list as a useful U.S. consumer starting point, not a substitute for the IRS, an issuer, an agreement, an insurer, a court or state law.
+
+## Current version and historical evidence are different jobs
+
+A current insurance policy, lease, benefit notice, identity credential or service agreement may replace the operating copy, while a prior version still explains a covered date, prior obligation, paid amount, notice, claim or change. Mark `superseded for current use` separately from `approved for disposal`.
+
+Keep three pointers when history matters: the current controlling version, the protected historical evidence, and the event that will permit another review. A household dashboard needs only the current pointer and next action; it should not expose old account, medical, identity, child or legal content.
+
+## A review date never releases an active hold
+
+Before approving disposal, ask whether any return, refund, audit, claim, repair, recall, transfer, benefit, investigation, charge dispute, complaint or legal matter is open; whether another household responsibility still uses the record; whether a lender, insurer, receiving institution or adviser asked for it; and whether the only surviving copy is actually replaceable.
+
+Use `hold` as a household warning label, not as a legal conclusion. State who or what placed it, which records it covers, when that source was checked, and who may release it. If the answer is unknown, retain the protected source and escalate to the responsible institution or qualified adviser rather than guessing.
+
+## Separate approval from the disposal method
+
+A safe disposal workflow has two decisions. The retention decision asks whether every applicable purpose, source, trigger and hold was reviewed by an authorized person. The handling decision asks how to remove or destroy the particular paper, local file, cloud copy, backup, device or shared copy without exposing personal information.
+
+A row can close only after recording what actually happened. `Moved to archive` is not `destroyed`; `deleted from one folder` is not proof that synchronized copies, backups or recipients are gone; `shredded paper` says nothing about a scan. Preserve only a safe evidence pointer in the retention log, not the sensitive contents being disposed.
+
+## Build a small source-led review queue
+
+Start with five classes that have different triggers: a filed-tax evidence set, one property-cost record, one written warranty and receipt, one prior insurance or lease version, and one obsolete routine document. For each, write the current purpose, source checked date, controlling source and jurisdiction, trigger event, active-use or exception screen, protected location, proposed action, owner and next checkpoint.
+
+Do not begin with every file in the household. Resolve the riskiest uncertainty first: a source that has never been checked, a trigger that is missing, an active dispute hidden in a cleanup pile, a superseded copy confused with the current version, or a sensitive disposal candidate with no authorized owner.
+
+## Affiliate products belong after the decision
+
+A future clearly labelled affiliate area may compare shredders, document sleeves, locking containers, scanners or encrypted storage after the educational answer or completed result. A commission cannot set a retention period, release a hold, classify a tax item, verify that every copy is gone or authorize destruction. Product placement must never appear inside a status rule or before the source-led decision.
+
+**Contextual CTA:** Use the Household Record Retention Decision Log to preserve the source, trigger, hold screen, owner and observed outcome. Use the narrower Receipt Retention Organizer only when one purchase or project needs a practical review date.
 
 **FAQ:**
 - Q: How long should I keep tax records?
-  A: Three years from the filing date covers most individual returns, per IRS guidance. That extends to six years if more than 25% of gross income was omitted, seven years for a worthless-securities or bad-debt claim, and indefinitely if a return was never filed or was fraudulent. Keep the filed returns themselves permanently as a simple default.
+  A: There is no safe one-line answer. The current IRS page lists several federal periods based on filing, payment, refund claims and special situations, and it tells taxpayers to check non-tax needs before discarding. State, local and household-specific circumstances may differ. Record the applicable source branch and trigger rather than a generic `tax` label.
 - Q: How long should I keep home improvement receipts?
-  A: As long as you own the home, then for the applicable IRS retention window after you sell. Documented improvements add to your home's cost basis, which can reduce taxable capital gain at sale — a receipt from a renovation a decade earlier can still have real tax value.
+  A: Keep records that may establish property basis or gain and loss while they remain material, then apply the limitation period for the year of disposition using current tax guidance. Whether work is an improvement, deductible expense or neither depends on the actual facts and controlling source.
 - Q: Can I set one retention rule for my whole household document index?
-  A: No — the correct period depends on why the document matters: tax law, warranty terms, or how long you'll own the related property or asset. Assign a reason to each record instead, and let the review date follow that reason.
+  A: No. A filename or folder cannot reveal the jurisdiction, purpose, trigger, longer active use or exception. Give each record class its own source-led row, and keep sensitive originals outside the shared index.
 - Q: Should household records ever auto-delete after their review date?
-  A: No. A review date should prompt a person to confirm the document is genuinely no longer needed, not trigger automatic deletion — retention rules have enough exceptions (audits, disputes, extended ownership) that silent auto-deletion risks losing something that still matters.
+  A: No. A FamilyBoard review date starts a human source and hold check. It is not a disposal date and does not authorize deleting local, cloud, backup or shared copies.
+- Q: Does an expired warranty mean I can discard the receipt?
+  A: Not automatically. The warranty purpose may end, but the receipt can still support ownership, a recall, service history, insurance, tax or an unresolved dispute. Check every current purpose and responsible source first.
 
 ---
 
@@ -14803,6 +14837,102 @@ A future clearly labelled affiliate area may offer scanners, document sleeves, l
   A: No. This review determines which classes apply and what source/protection/replacement layers are missing. The index organizes safe locations. The retrieval drill later observes whether an authorized person can follow the index.
 - Q: Can I mark a class not applicable?
   A: Yes, when you record the current reason and the change that would reopen the class. Not applicable is not appropriate when a real household responsibility exists but the source has not been found.
+
+---
+
+## Page 222 — Household Record Retention Decision Log
+**Slug:** `/tools/household-record-retention-decision-log/`
+**Primary intent:** document a source-led household record retention, archive or disposal decision
+**Title tag:** `Household Record Retention Decision Log | Sources, Triggers and Holds`
+**Meta description:** `Create a private retention decision log with record purpose, controlling source, trigger event, hold screen, protected location, owner and observed outcome.`
+**Primary keyword concept:** household record retention schedule
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-24
+**Editorial review date:** 2026-08-24
+**Content version:** 1
+**Suggested internal links:** `/guides/how-long-to-keep-household-records/`, `/tools/receipt-retention-organizer/`, `/guides/important-household-documents/`, `/tools/important-household-document-review/`, `/guides/home-purchase-records/`
+
+# Household record retention decision log
+
+A generic retention chart can attach a number to `tax`, `receipt` or `insurance` without knowing the jurisdiction, purpose, filing or payment event, ownership period, written term, claim, dispute or other active use. This free browser tool records a versioned household decision: record class and purpose, source checked date, controlling source and jurisdiction, source-defined trigger, active-use or exception screen, protected version state, proposed or observed action, owner, dated checkpoint and evidence status.
+
+It does not calculate a tax, legal, warranty, policy, court, benefit, employment, identity, medical or contractual deadline. It does not decide that a record may be destroyed; open, read, classify, archive, redact, shred, erase or remove a document; inspect a cloud account, backup, device or recipient; release a hold; or verify that every copy is gone. The responsible authority, issuer, agreement, institution and qualified adviser still control the real decision.
+
+**Ready to replace a magic-number chart with an attributable review? [Jump to the Household Record Retention Decision Log](#tool-heading).**
+
+## Use a decision scope, not a person or account name
+
+Choose a private reference such as `RETENTION-2026-A`. Do not use a person's name, address, taxpayer or account identifier, claim number, diagnosis, child detail or exact protected location. The context explains why this version exists: an annual record review, tax-season source check, move or transfer, product or property disposition, claim or dispute change, or controlled cleanup after an issuer or policy update.
+
+The source-map baseline identifies the catalog used to start the review. The current decision review date says when the household actually compared its rows. The next policy or source checkpoint bounds every open action. The tool rejects a future review date and reversed checkpoints, but it does not turn a checkpoint into an external deadline.
+
+## Each row preserves eleven decision facts
+
+Enter one record class per line:
+
+`ID | record class and actual household purpose | source checked date | controlling source, rule and jurisdiction | source-defined trigger or end event | active use, exception or hold screen | protected original and current-version state | proposed or observed action and evidence | owner role | target or outcome date | status`
+
+The source-checked date must fall between the baseline and current review. An open row needs a target date from the current review through the next checkpoint. A closed row records an actual household outcome date from the baseline through the current review. One version accepts at most 14 rows.
+
+Keep the controlling-source field at pointer level: `IRS-RETENTION-2026-08`, `STATE-TAX-S2`, `WARRANTY-W4`, `POLICY-P3`, `AGREEMENT-A2` or a dated public URL. Keep returns, receipts, statements, identity documents, medical information, contracts, signatures, legal communications, credentials and document contents in appropriate protected systems.
+
+## Twelve statuses show what is known and what remains open
+
+1. **Purpose recorded—controlling source pending:** the household knows why the record matters but has not identified the responsible source.
+2. **Source located—current rule not yet reviewed:** a likely source is mapped, but the current version, jurisdiction or branch is not confirmed.
+3. **Rule reviewed—trigger event not confirmed:** the source was read, while filing, payment, disposition, expiry, closure or another start/end event remains uncertain.
+4. **Trigger recorded—exception and active-use screen pending:** the event is dated, but another purpose, request, claim, dispute or exception has not been cleared.
+5. **Active use, term, ownership, claim or dispute—retain and recheck:** the record still supports an operating responsibility.
+6. **Responsible source requires continued retention—next review pending:** a current source or authorized adviser says to keep it, and the household has recorded another checkpoint.
+7. **Disposal candidate—human approval pending:** source, trigger and screen have been documented, but nobody has recorded an authorized completed action.
+8. **Replacement or redaction plan prepared—completion pending:** a safer copy or archive is planned, while the observed result remains open.
+9. **Retention continued—source and next review linked:** this dated decision keeps the protected record and links the next source review.
+10. **Disposal completed—method and evidence recorded:** an authorized person recorded what was actually removed or destroyed and a safe evidence pointer; this does not prove every copy is gone.
+11. **Transferred or archived—custody and next owner linked:** the record moved to another controlled owner or archive without pretending it was destroyed.
+12. **Not applicable—reason and reopen event recorded:** the class does not apply to this household now, and the row says what change would reopen it.
+
+The first eight remain open. The final four close only this dated decision version. A later source, claim, audit, ownership change, replacement, request or discovered copy creates another row or version.
+
+## A disposal candidate is intentionally incomplete
+
+The tool will not let `candidate` mean `gone`. The row should name the source that was checked, the source-defined trigger, every active-use or exception category considered, the proposed paper or digital handling method, the person responsible and the next approval date. Until a human completes and records the action, the status stays open.
+
+Completed disposal is also limited. It records an observed method such as approved paper shredding or deletion from a named controlled location and a safe evidence pointer. It cannot inspect synchronized folders, device copies, email attachments, backups, downloads or recipients. Never paste the sensitive document into the evidence field to prove it was deleted.
+
+## Continued retention needs a source and another checkpoint
+
+`Keep forever` is too vague for a decision log. If a vital or historical record has continuing value, say which current source or household purpose supports retention, which protected version is authoritative, who controls access, and when the source or protection arrangement will be reviewed. Continued retention is not permission to overexpose the record.
+
+For U.S. federal income-tax evidence, use the IRS's [current recordkeeping page](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records) and identify the applicable filing, payment, refund, property or special-situation branch. The tool deliberately has no `3 years` preset because a preset cannot know whether a longer IRS branch, state rule or non-tax purpose applies.
+
+The FTC's 2025 [personal-document guidance](https://consumer.ftc.gov/consumer-alerts/2025/06/protecting-your-personal-information-which-documents-keep-which-shred) can help a U.S. household create a first review queue and a safe handling question. It remains general consumer guidance; it does not release an IRS, state, contractual, insurance, creditor or legal requirement.
+
+## Privacy screening catches common mistakes, not every risk
+
+The form blocks common full phone and email patterns, long identifiers and terms suggesting passwords, taxpayer or account numbers, financial statements, identity documents, diagnoses, child information, signatures, access routes, claim or legal contents and private participants. Automated screening cannot understand every sensitive fact or combination.
+
+Review the full output before copying, printing, downloading or sharing. Working values stay in the current browser and are not sent to FamilyBoard. The tool does not back up the log, know who is authorized, preserve an original or make a destructive action reversible.
+
+## Affiliate products cannot approve destruction
+
+A future clearly labelled affiliate area may compare shredders, lockable document containers, scanners or encrypted storage after the educational decision or generated result. A commission cannot set a period, clear a hold, authorize a person, classify a tax item, verify deletion or certify a disposal method. The product area must remain outside the status workflow.
+
+**Next step in FamilyBoard:** review no more than five varied record classes first. Resolve missing sources and open holds before creating disposal candidates. Freeze the dated result, preserve protected originals separately, and use a later version for any changed source, trigger, request or observed action.
+
+**FAQ:**
+- Q: Does this tool create a legal household record retention schedule?
+  A: No. It creates a private decision log and forces every row to identify a current source, trigger, active-use screen, owner and dated outcome. Responsible authorities, agreements and qualified advice control actual duties.
+- Q: Why does the tool not calculate three, six or seven years?
+  A: A calculator cannot know which jurisdiction, filing or payment event, special rule, claim, dispute or other purpose applies. Record the current source branch and an earlier household checkpoint without calling it the external deadline.
+- Q: Can the tool delete or shred a record after approval?
+  A: No. It never opens or changes a record. A completed status only records an action an authorized person says was observed, and it does not prove cloud, backup, device or recipient copies are gone.
+- Q: What is the difference between transfer, archive and disposal?
+  A: Transfer changes the responsible owner, archive changes controlled storage or active use, and disposal records an observed removal or destruction method. They are not interchangeable outcomes.
+- Q: Should I include document contents or account numbers?
+  A: No. Use safe source, version, process and evidence IDs. Keep returns, receipts, agreements, statements, identity details, medical or legal content and access credentials protected elsewhere.
 
 ---
 

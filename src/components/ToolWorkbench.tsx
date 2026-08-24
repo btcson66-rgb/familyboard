@@ -3263,6 +3263,135 @@ const definitions: Record<string, Definition> = {
       return `${values.review.trim()} — important household document coverage review\nReview context: ${values.context}\nSource-list baseline: ${formatter.format(baselineDate)}\nCurrent coverage review: ${formatter.format(reviewDate)}\nNext source or access checkpoint: ${formatter.format(nextReview)}\nOpen source, protection or replacement gaps: ${openRows.length}\nReconciled, not-applicable or archived rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling issuer, current-source, access, replacement and protection references: ${values.basis.trim()}\n\n${lines("Versioned household document coverage evidence", recordRows.map((row) => `${row.parts[0]} — household purpose: ${row.parts[1]} — source checked: ${formatter.format(strictIsoDate(row.parts[2]) as Date)} — issuer/current source: ${row.parts[3]} — protected original/limited copy/authorized access: ${row.parts[4]} — replacement/reconstruction route: ${row.parts[5]} — gap/correction/closure: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected originals, authority evidence and review-history location: ${values.storage.trim()}\n\nThis output is a private household planning index. It does not open, search, upload, copy, authenticate, validate, replace, renew, revoke, destroy, retain or share a document, credential, account or record; contact an issuer, institution, provider, authority or household member; prove identity, relationship, occupancy, ownership, authority, consent, signature, version, acceptance, coverage, value, condition, claim or legal sufficiency; determine applicability or retention; calculate any external deadline; grant access; complete a government, financial, insurance, medical, school, employment, immigration, property or legal process; or certify continuity or emergency readiness. Preserve originals and authority evidence in appropriate protected systems, and use the current issuer, receiving institution, agreement, policy, responsible authority and qualified advice for real decisions.`;
     },
   },
+  "household-record-retention-decision-log": {
+    intro:
+      "Create a versioned household retention decision with a current source, source-defined trigger, active-use or hold screen, protected-version state, owner and observed outcome. The tool does not calculate deadlines or destroy records.",
+    fields: [
+      text("review", "Private retention-review reference", "Use a household code, not a person, address, taxpayer, account, claim, vulnerable person or exact protected location.", "RETENTION-2026-A"),
+      {
+        name: "context",
+        label: "Decision-review context",
+        type: "select",
+        options: [
+          "Annual household record review",
+          "Tax-season source check",
+          "Move, sale, transfer or disposal of property",
+          "Warranty, policy or agreement version change",
+          "Claim, complaint, audit or dispute change",
+          "Controlled paper and digital cleanup",
+        ],
+      },
+      { name: "baselineDate", label: "Source-map baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "Current retention decision review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next policy or source checkpoint", type: "date", value: "2026-09-14" },
+      text("basis", "Controlling authority, issuer, agreement, policy, hold and disposal-process references", "Use safe source/version IDs or dated public URLs. Keep returns, agreements, statements, claims, credentials and document contents protected.", "SOURCE-MAP-S2; IRS-RETENTION-R4; STATE-SOURCE-T2; WARRANTY-W3; POLICY-P2; DISPOSAL-D1"),
+      {
+        name: "records",
+        label: "Versioned retention, archive and disposal decision rows",
+        type: "textarea",
+        help: "One line: ID | record class and actual household purpose | source checked date YYYY-MM-DD | controlling source, rule and jurisdiction | source-defined trigger or end event | active use, exception or hold screen | protected original and current-version state | proposed or observed action and evidence | owner role | target or outcome date YYYY-MM-DD | one of the twelve listed statuses. Maximum 14 lines.",
+        value: "TAX-2025 | Support the filed household federal return and claimed items | 2026-08-23 | IRS-RETENTION-R4 federal recordkeeping source checked; state source still unmapped | Filing and payment events are indexed in protected source TAX-EVENT-E2 | Audit, amended-return, refund, state and non-tax purpose screen is not complete | Protected tax-year archive TAX-A4; household index exposes year and source only | Review the applicable IRS branch and state source, then record the real event without treating this checkpoint as disposal approval | Household tax-records role | 2026-09-14 | Source located—current rule not yet reviewed\nWARRANTY-1 | Support written appliance warranty, repair and recall history while the asset remains managed | 2026-08-23 | WARRANTY-W3 written terms and manufacturer current support source checked | Written term start method and asset transfer event are indexed in EVENT-W2 | Product remains owned and repair follow-up is open; retain while those purposes remain active | Protected receipt and terms in ASSET-A3; current support pointer in household index | Recheck repair closure, recall source and any insurance or tax purpose before creating a disposal candidate | Household asset-records role | 2026-09-14 | Active use, term, ownership, claim or dispute—retain and recheck",
+      },
+      text("storage", "Protected originals, approvals and decision-evidence location", "Use a folder or process label. Do not enter a return, receipt, agreement, statement, identity, medical, child, legal, account, credential or disposal-evidence content.", "Household records / retention reviews / RETENTION-2026-A / protected history"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review.trim()) return "Enter a private retention-review reference so this exported decision version can be identified.";
+      if (!baselineDate) return "Enter the real source-map baseline date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current retention decision review date in YYYY-MM-DD format.";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current retention decision review date cannot be in the future.";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "The source-map baseline date cannot be later than the current decision review.";
+      if (!nextReview) return "Enter a real next policy or source checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next policy or source checkpoint cannot be earlier than the current decision review.";
+      if (values.basis.trim().length < 12) return "Identify the controlling authority, issuer, agreement, policy, hold and disposal-process sources with safe pointers.";
+      if (!values.storage.trim()) return "Enter the protected location for originals, approvals and decision evidence.";
+      const recordRows = values.records.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (recordRows.length === 0) return "Add at least one household record class and actual purpose.";
+      if (recordRows.length > 14) return "One retention-decision version supports at most 14 rows; freeze this version before creating another scope.";
+      const invalidRows = recordRows.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Retention decision line ${invalidRows.map((row) => row.line).join(", ")} must contain all eleven pipe-separated fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Every retention-decision row needs a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Use 2 to 20 letters, numbers or hyphens for each row ID, such as TAX-2025 or WARRANTY-1.";
+      const statusOrder = [
+        "Purpose recorded—controlling source pending",
+        "Source located—current rule not yet reviewed",
+        "Rule reviewed—trigger event not confirmed",
+        "Trigger recorded—exception and active-use screen pending",
+        "Active use, term, ownership, claim or dispute—retain and recheck",
+        "Responsible source requires continued retention—next review pending",
+        "Disposal candidate—human approval pending",
+        "Replacement or redaction plan prepared—completion pending",
+        "Retention continued—source and next review linked",
+        "Disposal completed—method and evidence recorded",
+        "Transferred or archived—custody and next owner linked",
+        "Not applicable—reason and reopen event recorded",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[10]));
+      if (invalidStatuses.length)
+        return `Retention decision line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve evidence statuses in the field instructions.`;
+      const invalidSourceDates = recordRows.filter((row) => {
+        const sourceDate = strictIsoDate(row.parts[2]);
+        return !sourceDate || sourceDate.getTime() < baselineDate.getTime() || sourceDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `Retention decision line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a real source-checked date from the baseline through the current review.`;
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 8).includes(row.parts[10]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(8).includes(row.parts[10]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[9]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open retention decision line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next policy or source checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[9]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Closed retention, disposal, transfer or not-applicable line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from the baseline through this review.`;
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 10 || row.parts[3].length < 10 || row.parts[4].length < 8 || row.parts[5].length < 8 || row.parts[6].length < 8 || row.parts[7].length < 12 || row.parts[8].length < 4);
+      if (missingLayers.length)
+        return `Retention decision line ${missingLayers.map((row) => row.line).join(", ")} needs a real purpose, controlling source, trigger, active-use/hold screen, protected-version state, attributable action and owner.`;
+      const disposalCandidatesThatClaimCompletion = recordRows.filter((row) => row.parts[10] === statusOrder[6] && /(?:completed|destroyed|shredded|deleted|erased|removed|all copies gone)/i.test(row.parts[7]));
+      if (disposalCandidatesThatClaimCompletion.length)
+        return `Disposal candidate line ${disposalCandidatesThatClaimCompletion.map((row) => row.line).join(", ")} must remain a proposed action; use a completed status only after an authorized observed outcome.`;
+      const unsafeCompletedDisposals = recordRows.filter((row) => row.parts[10] === statusOrder[9] && (/(?:active|open|pending|hold|audit|claim|dispute|investigation|refund|appeal|complaint|litigation|not checked|unknown)/i.test(row.parts[5]) || !/(?:observed|completed|shredded|deleted|erased|destroyed|removed).{0,40}(?:method|paper|file|location|evidence|record)|(?:evidence|method).{0,40}(?:observed|completed|shredded|deleted|erased|destroyed|removed)/i.test(row.parts[7])));
+      if (unsafeCompletedDisposals.length)
+        return `Completed disposal line ${unsafeCompletedDisposals.map((row) => row.line).join(", ")} must show no unresolved active-use or hold in this review and record an observed limited method plus safe evidence pointer.`;
+      const continuedWithoutSource = recordRows.filter((row) => row.parts[10] === statusOrder[8] && (!/(?:source|authority|issuer|agreement|policy|rule|adviser)/i.test(row.parts[3]) || !/(?:retain|keep|continue).{0,40}(?:next|review|recheck|source|checkpoint)/i.test(row.parts[7])));
+      if (continuedWithoutSource.length)
+        return `Continued-retention line ${continuedWithoutSource.map((row) => row.line).join(", ")} must link the responsible source and an attributable next review, not only say keep forever.`;
+      const transferWithoutCustody = recordRows.filter((row) => row.parts[10] === statusOrder[10] && !/(?:transfer|archive|custody|owner|responsib)/i.test(row.parts[7]));
+      if (transferWithoutCustody.length)
+        return `Transferred or archived line ${transferWithoutCustody.map((row) => row.line).join(", ")} must identify the observed custody or archive action and next responsible owner.`;
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[10] === statusOrder[11] && !/(?:reopen|review again|if |when |after |purchase|ownership|claim|agreement|role change|new responsibility)/i.test(row.parts[7]));
+      if (notApplicableWithoutTrigger.length)
+        return `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and event that reopens the record class.`;
+      const vagueActions = recordRows.filter((row) => row.parts[7].length < 12 || /^(?:done|keep|forever|delete|deleted|shred|shredded|archive|safe|valid|legal|complete|verified|ready|expired|none|n\/a|ok)$/i.test(row.parts[7]));
+      if (vagueActions.length)
+        return `Retention decision line ${vagueActions.map((row) => row.line).join(", ")} needs a specific proposed or observed action, source-led reason and safe evidence pointer—not a generic keep, delete or expiry word.`;
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, address, account, taxpayer, policy, claim, case, identity or complete numeric identifier was detected. Keep it protected and use a safe pointer here.";
+      if (/password|passphrase|passcode|access code|alarm code|door code|gate code|recovery answer|recovery code|one-time code|verification code|encryption key|private key|seed phrase|certificate pin|full address|street address|account number|card number|bank account|routing number|social security|government id|passport number|driver license number|taxpayer number|tax id|ssn|policy number|claim number|case number|contract number|signature|date of birth|private contact|payment credential|login credential|medical record|diagnosis|prescription detail|medication detail|child name|school name|care schedule|vulnerable person|exact document location|exact access route|person name|customer name|resident name|legal strategy|complaint letter|return contents|statement contents|agreement contents|claim contents|document contents|will contents|trust contents|authorization contents|financial statement|health record|biometric|security answer|authenticator secret|api key|credit card|disposal evidence contents|full name|identity document|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, address, financial, tax, identity, medical, child, care, access, legal-content, disposal-evidence or private participant detail was detected. Replace it with a protected source, process or evidence pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[10] === status).length })).filter((item) => item.count > 0);
+      return `${values.review.trim()} — household record retention decision log\nReview context: ${values.context}\nSource-map baseline: ${formatter.format(baselineDate)}\nCurrent decision review: ${formatter.format(reviewDate)}\nNext policy or source checkpoint: ${formatter.format(nextReview)}\nOpen source, trigger, screen or action rows: ${openRows.length}\nClosed continued-retention, disposal, transfer or not-applicable rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling authority, issuer, agreement, policy, hold and disposal-process references: ${values.basis.trim()}\n\n${lines("Versioned household retention decisions", recordRows.map((row) => `${row.parts[0]} — record class/purpose: ${row.parts[1]} — source checked: ${formatter.format(strictIsoDate(row.parts[2]) as Date)} — controlling source/rule/jurisdiction: ${row.parts[3]} — source-defined trigger/end event: ${row.parts[4]} — active use/exception/hold screen: ${row.parts[5]} — protected original/current version: ${row.parts[6]} — proposed/observed action and evidence: ${row.parts[7]} — owner: ${row.parts[8]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[9]) as Date)} — status: ${row.parts[10]}`))}\n\nProtected originals, approvals and decision-evidence location: ${values.storage.trim()}\n\nThis output is a household decision index, not a retention schedule or disposal instruction. It does not calculate or extend an external deadline; determine a legal, tax, warranty, policy, contract, claim, court, benefit, employment, identity, medical or records duty; open, read, classify, upload, copy, redact, archive, transfer, shred, erase, destroy, retain or remove a record; inspect a browser, device, synchronized folder, cloud service, email, download, backup or recipient; authorize a person; release a hold; prove that every copy is gone; or make a destructive action reversible. Preserve protected originals and approvals separately, and use the current responsible source and qualified advice for the actual decision.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -7882,6 +8011,135 @@ const zhTwDefinitions: Record<string, Definition> = {
       const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
       const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
       return `${values.review.trim()}｜家庭重要文件適用性與來源盤點\n盤點情境：${values.context}\n來源清單基準：${formatter.format(baselineDate)}\n本次適用性盤點：${formatter.format(reviewDate)}\n下一次來源或存取查核點：${formatter.format(nextReview)}\n仍開放的來源、保護或補發缺口：${openRows.length} 筆\n已核對、不適用或封存：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的機關、目前來源、存取、補發與保護索引：${values.basis.trim()}\n\n${lines("有版本的家庭重要文件適用性證據", recordRows.map((row) => `${row.parts[0]}｜家庭用途：${row.parts[1]}｜來源核對日：${formatter.format(strictIsoDate(row.parts[2]) as Date)}｜機關／目前來源：${row.parts[3]}｜受保護原件／有限影本／授權存取：${row.parts[4]}｜補發／重建路徑：${row.parts[5]}｜缺口／修正／結案：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原件、授權證據與盤點歷程位置：${values.storage.trim()}\n\n這份輸出只是家庭規劃索引。它不開啟、搜尋、上傳、複製、驗證、補發、換發、續期、撤銷、銷毀、保存或分享任何文件、憑證、帳戶或紀錄，不聯絡機關、業者、接收單位、家人或緊急服務，不證明身分、關係、租住、所有權、代理權、同意、簽章、版本、機關接受、承保、價值、狀況、理賠或法律充分性，不決定適用性或保存期限、不計算外部期限、不授予存取，也不完成政府、金融、保險、醫療、就學、就業、移民、財產或法律程序，或認證家庭持續運作與防災準備。請把原件與授權證據保存在適合的受保護系統，真實決定使用目前發行機關、接收單位、契約、保單、主管機關及合格專業來源。`;
+    },
+  },
+  "household-record-retention-decision-log": {
+    intro:
+      "用目前主管來源、來源定義的起算事件、未結用途或暫停處分檢查、受保護版本、負責人與實際結果建立版本化決策。工具不計算期限，也不銷毀紀錄。",
+    fields: [
+      text("review", "家庭私人保存決策代號", "使用家庭內部代號，不要輸入姓名、地址、身分／稅務／帳號／案件識別、弱勢家人或精確受保護位置。", "RETENTION-2026-A"),
+      {
+        name: "context",
+        label: "保存決策盤點情境",
+        type: "select",
+        options: [
+          "年度家庭紀錄複查",
+          "報稅季來源核對",
+          "搬家、出售、移轉或物品處分",
+          "保固、保單或契約換版",
+          "理賠、申訴、查核或爭議變化",
+          "受控的紙本與數位資料清理",
+        ],
+      },
+      { name: "baselineDate", label: "來源地圖基準日", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "本次保存決策檢視日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "下一次規則或來源核點", type: "date", value: "2026-09-14" },
+      text("basis", "控制中的主管機關、發行者、契約、保單、暫停處分與處理流程來源", "使用安全來源／版本代號或有日期的公開網址；申報、契約、帳單、案件、憑證與文件內容放受保護位置。", "SOURCE-MAP-S2；MOF-TAX-T4；PROPERTY-P2；WARRANTY-W3；POLICY-I2；DISPOSAL-D1"),
+      {
+        name: "records",
+        label: "有版本的保存、封存與處分決策列",
+        type: "textarea",
+        help: "每行：ID｜紀錄類別與實際家庭用途｜來源核對日 YYYY-MM-DD｜控制來源、規則與適用範圍｜來源定義的起算或結束事件｜目前用途、例外或暫停處分檢查｜受保護原件與目前版本狀態｜預定或已觀察動作與證據｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。最多 14 行。",
+        value: "TAX-2025 | 支援家庭該年度綜合所得稅申報項目與繳納證明 | 2026-08-23 | MOF-TAX-T4 財政部當年度申報與憑證來源已定位，個案分支仍待核對 | 申報、繳納與附件成功事件只以受保護來源 TAX-EVENT-E2 索引 | 補件、查核、退補稅、其他年度與非稅務用途尚未完成逐項檢查 | 受保護年度資料夾 TAX-A4；日常索引只顯示年度與來源代號 | 核對適用年度官方來源及個案狀態，再記錄真實事件，不把本次家庭核點寫成可銷毀日 | 家庭稅務紀錄負責角色 | 2026-09-14 | 已找到來源，尚未核對目前規則\nWARRANTY-1 | 支援仍在管理家電的書面保證、維修與召回歷程 | 2026-08-23 | WARRANTY-W3 書面保證與製造商目前支援來源已核對 | 保證起算方法與物品移轉事件存於 EVENT-W2 安全索引 | 家電仍持有且維修追蹤未結束；用途仍進行時繼續保存 | 受保護收據與保證書在 ASSET-A3；家庭索引只放目前服務入口 | 維修結案後再核對召回、保險、房屋成本、稅務或爭議用途，確認前不建立處分候選 | 家庭財物紀錄負責角色 | 2026-09-14 | 用途、期間、持有、理賠或爭議仍進行，繼續保存並複查",
+      },
+      text("storage", "受保護原件、核准與決策證據位置", "使用資料夾或流程代號，不要輸入申報、收據、保單、契約、帳單、身分、醫療、兒少、法律、帳號、憑證或處理證據內容。", "家庭紀錄／保存決策／RETENTION-2026-A／受保護歷程"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review.trim()) return "請輸入家庭私人保存決策代號，讓匯出版本可以辨認。";
+      if (!baselineDate) return "請用 YYYY-MM-DD 輸入真實的來源地圖基準日。";
+      if (!reviewDate) return "請用 YYYY-MM-DD 輸入真實的本次保存決策檢視日。";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次保存決策檢視日不能晚於今天。";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "來源地圖基準日不能晚於本次保存決策檢視日。";
+      if (!nextReview) return "請用 YYYY-MM-DD 輸入真實的下一次規則或來源核點。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "下一次規則或來源核點不能早於本次保存決策檢視日。";
+      if (values.basis.trim().length < 12) return "請用安全索引指出主管機關、發行者、契約、保單、暫停處分與處理流程來源。";
+      if (!values.storage.trim()) return "請輸入受保護原件、核准與決策證據位置。";
+      const recordRows = values.records.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (recordRows.length === 0) return "請至少加入一類家庭紀錄與實際用途。";
+      if (recordRows.length > 14) return "一個保存決策版本最多支援 14 行；請先凍結本版，再建立另一個範圍。";
+      const invalidRows = recordRows.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `保存決策第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整包含十一個以直線分隔的欄位。`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆保存決策列都需要不重複的 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "每個 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 TAX-2025 或 WARRANTY-1。";
+      const statusOrder = [
+        "已記錄用途，等待決定控制來源",
+        "已找到來源，尚未核對目前規則",
+        "已核對規則，尚未確認起算事件",
+        "已記錄起算事件，等待例外與目前用途檢查",
+        "用途、期間、持有、理賠或爭議仍進行，繼續保存並複查",
+        "負責來源要求繼續保存，等待下一次複查",
+        "處分候選，等待人工核准",
+        "已準備替換或遮蔽計畫，等待完成",
+        "決定繼續保存，已連結來源與下次複查",
+        "已完成處分，記錄方法與有限證據",
+        "已移交或封存，連結保管與下一負責人",
+        "不適用，記錄理由與重新打開條件",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[10]));
+      if (invalidStatuses.length)
+        return `保存決策第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用欄位說明中的十二種證據狀態之一。`;
+      const invalidSourceDates = recordRows.filter((row) => {
+        const sourceDate = strictIsoDate(row.parts[2]);
+        return !sourceDate || sourceDate.getTime() < baselineDate.getTime() || sourceDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `保存決策第 ${invalidSourceDates.map((row) => row.line).join("、")} 行，需要介於基準日與本次檢視日之間的真實來源核對日。`;
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 8).includes(row.parts[10]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(8).includes(row.parts[10]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[9]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的保存決策第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次檢視日起，到下一次規則或來源核點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[9]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已結束本版的保存、處分、移交或不適用第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於基準日與本次檢視日之間的實際結果日期。`;
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 6 || row.parts[3].length < 8 || row.parts[4].length < 6 || row.parts[5].length < 6 || row.parts[6].length < 6 || row.parts[7].length < 8 || row.parts[8].length < 3);
+      if (missingLayers.length)
+        return `保存決策第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實用途、控制來源、起算事件、目前用途／暫停處分檢查、受保護版本、可歸屬動作與負責角色。`;
+      const disposalCandidatesThatClaimCompletion = recordRows.filter((row) => row.parts[10] === statusOrder[6] && /(?:已完成|已銷毀|已碎紙|已刪除|已清除|全部副本消失)/.test(row.parts[7]));
+      if (disposalCandidatesThatClaimCompletion.length)
+        return `處分候選第 ${disposalCandidatesThatClaimCompletion.map((row) => row.line).join("、")} 行只能寫預定動作；有權人實際完成並觀察結果後，才能改用已完成狀態。`;
+      const unsafeCompletedDisposals = recordRows.filter((row) => row.parts[10] === statusOrder[9] && (/(?:未結|進行中|等待|暫停|查核|理賠|爭議|調查|退款|申訴|訴訟|尚未|未知)/.test(row.parts[5]) || !/(?:已觀察|已完成|碎紙|刪除|清除|銷毀|移除).{0,30}(?:方法|紙本|檔案|位置|證據|紀錄)|(?:證據|方法).{0,30}(?:已觀察|已完成|碎紙|刪除|清除|銷毀|移除)/.test(row.parts[7])));
+      if (unsafeCompletedDisposals.length)
+        return `已完成處分第 ${unsafeCompletedDisposals.map((row) => row.line).join("、")} 行必須顯示本次沒有未解的用途或暫停處分，並記錄限定的實際方法與安全證據代號。`;
+      const continuedWithoutSource = recordRows.filter((row) => row.parts[10] === statusOrder[8] && (!/(?:來源|機關|發行者|契約|保單|規則|專業)/.test(row.parts[3]) || !/(?:繼續保存|保留).{0,30}(?:下次|複查|核對|來源|核點)/.test(row.parts[7])));
+      if (continuedWithoutSource.length)
+        return `決定繼續保存第 ${continuedWithoutSource.map((row) => row.line).join("、")} 行必須連結負責來源與下一次複查，不能只寫永久保存。`;
+      const transferWithoutCustody = recordRows.filter((row) => row.parts[10] === statusOrder[10] && !/(?:移交|封存|保管|負責人|負責角色)/.test(row.parts[7]));
+      if (transferWithoutCustody.length)
+        return `已移交或封存第 ${transferWithoutCustody.map((row) => row.line).join("、")} 行必須記錄實際保管／封存動作與下一負責角色。`;
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[10] === statusOrder[11] && !/(?:重新打開|重新檢視|若|如果|當|之後|購買|持有|理賠|契約|角色改變|新增責任)/.test(row.parts[7]));
+      if (notApplicableWithoutTrigger.length)
+        return `不適用第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須寫目前理由，以及重新打開這個類別的事件。`;
+      const vagueActions = recordRows.filter((row) => row.parts[7].length < 8 || /^(?:完成|保留|永久|刪除|已刪除|碎紙|已碎紙|封存|安全|有效|合法|完整|已驗證|準備好|過期|無|不用|不適用|ok)$/i.test(row.parts[7]));
+      if (vagueActions.length)
+        return `保存決策第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的預定或實際動作、來源化理由與安全證據代號，不能只寫保留、刪除或過期。`;
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、地址、帳號、納稅、保單、理賠、案件、身分或完整數字識別。請留在受保護原件，只在這裡放安全索引。";
+      if (/密碼|通關密語|門禁碼|警報碼|驗證碼|一次性代碼|復原答案|復原碼|加密金鑰|私鑰|助記詞|自然人憑證 PIN|憑證 PIN|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證字號|護照號碼|駕照號碼|納稅義務人編號|統一編號|保單編號|理賠編號|案件編號|契約編號|簽名|出生日期|私人聯絡|完整付款資料|登入憑證|醫療紀錄|診斷|處方明細|用藥明細|兒童姓名|學校名稱|照護行程|弱勢家人|精確文件位置|完整門禁路線|完整姓名|客戶姓名|住戶姓名|法律策略|申訴信全文|申報內容|帳單內容|契約內容|理賠內容|文件內容|遺囑內容|信託內容|授權書內容|財務報表|健康紀錄|生物辨識|安全答案|驗證器秘密|API 金鑰|信用卡|銷毀證據內容|password|passphrase|passcode|access code|recovery answer|recovery code|one-time code|verification code|encryption key|private key|seed phrase|full address|account number|card number|government id|taxpayer number|tax id|ssn|policy number|claim number|case number|contract number|signature|payment credential|medical record|diagnosis|child name|care schedule|exact document location|person name|legal strategy|complaint letter|return contents|statement contents|agreement contents|claim contents|document contents|financial statement|health record|disposal evidence contents|full name|identity document|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、地址、金融、稅務、身分、醫療、兒少、照護、門禁、法律內容、銷毀證據或私人參與者資料。請改寫成受保護來源、流程或證據索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[10] === status).length })).filter((item) => item.count > 0);
+      return `${values.review.trim()}｜家庭紀錄保存與銷毀決策紀錄\n盤點情境：${values.context}\n來源地圖基準：${formatter.format(baselineDate)}\n本次保存決策檢視：${formatter.format(reviewDate)}\n下一次規則或來源核點：${formatter.format(nextReview)}\n仍開放的來源、事件、檢查或動作：${openRows.length} 筆\n已結束本版的保存、處分、移交或不適用：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的主管機關、發行者、契約、保單、暫停處分與處理流程來源：${values.basis.trim()}\n\n${lines("有版本的家庭紀錄保存決策", recordRows.map((row) => `${row.parts[0]}｜紀錄類別／用途：${row.parts[1]}｜來源核對日：${formatter.format(strictIsoDate(row.parts[2]) as Date)}｜控制來源／規則／範圍：${row.parts[3]}｜來源定義的起算／結束事件：${row.parts[4]}｜目前用途／例外／暫停處分檢查：${row.parts[5]}｜受保護原件／目前版本：${row.parts[6]}｜預定／已觀察動作與證據：${row.parts[7]}｜負責角色：${row.parts[8]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[9]) as Date)}｜狀態：${row.parts[10]}`))}\n\n受保護原件、核准與決策證據位置：${values.storage.trim()}\n\n這份輸出只是家庭決策索引，不是保存期限表或銷毀指令。它不計算或延長外部期限，不判定法律、稅務、保固、保單、契約、理賠、法院、福利、勞動、身分、醫療或紀錄義務，不開啟、閱讀、分類、上傳、複製、遮蔽、封存、移交、碎紙、清除、銷毀、保存或移除紀錄，不檢查瀏覽器、裝置、同步資料夾、雲端服務、Email、下載、備份或收件人，不授權某人、不解除暫停處分、不證明所有副本消失，也不能讓破壞性動作復原。請分開保護原件與核准證據，並以目前負責來源及合格專業意見處理真實決定。`;
     },
   },
 };

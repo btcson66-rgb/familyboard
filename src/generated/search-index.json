@@ -832,12 +832,12 @@
     "headings": "An important household document earns a place because of a real decision, not a generic master list Ask five questions before adding any document class Build categories from household responsibilities Housing, occupancy and property Income, tax, benefits and recurring financial obligations Insurance, claims and active disputes Vehicles, equipment, purchases and maintained assets Identity, family status, care, school, pet and travel responsibilities Emergency and limited continuity references Current source, useful copy and accepted evidence are different Use three views instead of one overexposed list Record gaps as repairable facts Review after real changes, not only once a year Affiliate products do not decide what is important"
   },
   {
-    "title": "How Long Should You Keep Household Records? Use the Reason for the Record, Not One Magic Number",
-    "description": "Decide how long to keep household records by warranty, legal, tax, insurance, property and practical needs rather than applying one universal retention period.",
+    "title": "How Long to Keep Household Records | A Source-First Retention Guide",
+    "description": "Decide how long to keep household records by purpose, controlling source, trigger event, active claim or dispute, review date and documented disposal decision.",
     "route": "/guides/how-long-to-keep-household-records/",
     "cluster": "records-emergency",
     "keywords": "how long to keep household records",
-    "headings": "The retention period depends on what the record proves — here are the actual numbers Retention periods by document type Why property records outlast the purchase itself Tax records: the three-year default, and when it's longer Warranties and receipts follow the product, not the calendar Separate \"must keep\" from \"useful to keep\" Review rather than auto-delete"
+    "headings": "A household record does not earn a disposal date from its filename Record five facts before writing any period U.S. federal tax periods are conditional, not a three-year label Property records follow basis and disposition Warranty expiry is one trigger, not automatic disposal Current version and historical evidence are different jobs A review date never releases an active hold Separate approval from the disposal method Build a small source-led review queue Affiliate products belong after the decision"
   },
   {
     "title": "How to Organize Appliance Manuals So You Can Find the Right One During a Problem",
@@ -1662,6 +1662,14 @@
     "cluster": "tools",
     "keywords": "important household documents checklist",
     "headings": "Important household document coverage review Review household responsibilities, not a stranger's filing cabinet Three dates keep the review attributable Keep the controlling-source field at pointer level Every row contains ten fields Ten statuses separate scope, source, protection and replacement A reconciled review is not document validation Treat not applicable as evidence, not an empty checkbox Disaster copies are one limited view Privacy screening is a backstop Affiliate products cannot supply missing authority"
+  },
+  {
+    "title": "Household Record Retention Decision Log | Sources, Triggers and Holds",
+    "description": "Create a private retention decision log with record purpose, controlling source, trigger event, hold screen, protected location, owner and observed outcome.",
+    "route": "/tools/household-record-retention-decision-log/",
+    "cluster": "tools",
+    "keywords": "household record retention schedule",
+    "headings": "Household record retention decision log Use a decision scope, not a person or account name Each row preserves eleven decision facts Twelve statuses show what is known and what remains open A disposal candidate is intentionally incomplete Continued retention needs a source and another checkpoint Privacy screening catches common mistakes, not every risk Affiliate products cannot approve destruction"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

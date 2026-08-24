@@ -104,6 +104,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/digital-home-binder/",
     "/tools/important-household-document-review/",
     "/guides/important-household-documents/",
+    "/tools/household-record-retention-decision-log/",
+    "/guides/how-long-to-keep-household-records/",
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
     "/templates/printable-home-inventory-template/",
@@ -155,6 +157,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/digital-home-binder/",
     "/zh-tw/tools/important-household-document-review/",
     "/zh-tw/guides/important-household-documents/",
+    "/zh-tw/tools/household-record-retention-decision-log/",
+    "/zh-tw/guides/how-long-to-keep-household-records/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -340,6 +344,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭重要文件清單" }),
   ).toHaveAttribute("href", "/zh-tw/guides/important-household-documents/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭文件保存決策" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/household-record-retention-decision-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭文件保存期限" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/how-long-to-keep-household-records/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電清冊教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/appliance-inventory/");
@@ -807,6 +817,16 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/important-household-documents/",
       alternate: "/guides/important-household-documents/",
       heading: "家庭重要文件清單不是把所有證件影本集中在同一個資料夾",
+    },
+    {
+      route: "/zh-tw/tools/household-record-retention-decision-log/",
+      alternate: "/tools/household-record-retention-decision-log/",
+      heading: "家庭紀錄保存與銷毀決策紀錄",
+    },
+    {
+      route: "/zh-tw/guides/how-long-to-keep-household-records/",
+      alternate: "/guides/how-long-to-keep-household-records/",
+      heading: "家庭文件保存期限不是每個資料夾都填「五年」",
     },
     {
       route: "/zh-tw/guides/purchase-receipt-organizer/",
@@ -1605,6 +1625,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不能早於本次適用性盤點日",
   );
 
+  await page.goto("/tools/household-record-retention-decision-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open source, trigger, screen or action rows: 2");
+  await expect(page.locator(".result")).toContainText("Closed continued-retention, disposal, transfer or not-applicable rows: 0");
+  await expect(page.locator(".result")).toContainText("Source located—current rule not yet reviewed 1");
+  await page.getByLabel("Next policy or source checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current decision review",
+  );
+  await page.goto("/tools/household-record-retention-decision-log/");
+  await page.getByLabel("Protected originals, approvals and decision-evidence location").fill("account number 123456789");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible full phone number, email, address, account");
+
+  await page.goto("/zh-tw/tools/household-record-retention-decision-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的來源、事件、檢查或動作：2 筆");
+  await expect(page.locator(".result")).toContainText("已結束本版的保存、處分、移交或不適用：0 筆");
+  await expect(page.locator(".result")).toContainText("已找到來源，尚未核對目前規則 1 筆");
+  await page.getByLabel("下一次規則或來源核點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次保存決策檢視日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -2008,6 +2054,18 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/important-household-documents/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-record-retention-decision-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-record-retention-decision-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/how-long-to-keep-household-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/how-long-to-keep-household-records/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/",

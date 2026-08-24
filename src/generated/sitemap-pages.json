@@ -865,9 +865,9 @@
   },
   {
     "route": "/guides/how-long-to-keep-household-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/how-long-to-keep-household-records/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1768,6 +1768,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-record-retention-decision-log/",
+    "alternateRoute": "/zh-tw/tools/household-record-retention-decision-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2267,6 +2275,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/household-record-retention-decision-log/",
+    "alternateRoute": "/tools/household-record-retention-decision-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/household-record-retrieval-drill-log/",
     "alternateRoute": "/tools/household-record-retrieval-drill-log/",
     "indexable": true,
@@ -2299,6 +2314,13 @@
     "alternateRoute": "/tools/household-water-leak-event-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/how-long-to-keep-household-records/",
+    "alternateRoute": "/guides/how-long-to-keep-household-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {
