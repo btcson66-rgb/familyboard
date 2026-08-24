@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-24T06:38:47.108Z
+Generated: 2026-08-24T07:09:00.100Z
 
 ## Summary
 
-- Indexable pages: 316
-- Generated HTML routes: 333
+- Indexable pages: 319
+- Generated HTML routes: 336
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 119
+- Pages without a contextual product/tool link: 120
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-24T06:38:47.108Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 28
-- tools: 89
+- records-emergency: 29
+- tools: 91
 
 ## Word-count range
 
@@ -57,7 +57,6 @@ Generated: 2026-08-24T06:38:47.108Z
 - /guides/household-admin-day/
 - /guides/household-handoff/
 - /guides/household-shopping-staples/
-- /guides/important-household-documents/
 - /guides/
 - /guides/recurring-household-tasks/
 - /guides/seasonal-home-maintenance-checklist/
@@ -102,6 +101,7 @@ Generated: 2026-08-24T06:38:47.108Z
 - /zh-tw/guides/home-service-provider-list/
 - /zh-tw/guides/household-documents-organizer/
 - /zh-tw/guides/how-to-track-product-warranties/
+- /zh-tw/guides/important-household-documents/
 - /zh-tw/guides/move-out-home-records/
 - /zh-tw/guides/moving-inventory/
 - /zh-tw/guides/organize-household-subscriptions/
@@ -150,6 +150,7 @@ Generated: 2026-08-24T06:38:47.108Z
 - /zh-tw/tools/household-storm-readiness-review/
 - /zh-tw/tools/household-subscription-cost-calculator/
 - /zh-tw/tools/household-water-leak-event-log/
+- /zh-tw/tools/important-household-document-review/
 - /zh-tw/tools/move-in-checklist-generator/
 - /zh-tw/tools/move-out-condition-record-generator/
 - /zh-tw/tools/moving-box-handover-log/

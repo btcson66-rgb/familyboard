@@ -3146,6 +3146,123 @@ const definitions: Record<string, Definition> = {
       return `${values.drill.trim()} — household record retrieval and handoff drill\nDrill context: ${values.context}\nBinder baseline version: ${formatter.format(baselineDate)}\nFirst assignment or exercise: ${formatter.format(exerciseDate)}\nCurrent drill review: ${formatter.format(reviewDate)}\nNext correction or retest checkpoint: ${formatter.format(nextReview)}\nOpen prompts, attempts or corrections: ${openRows.length}\nPassed, archived or handed-off rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling catalog, current-source, audience, access, backup and offline references: ${values.basis.trim()}\n\n${lines("Versioned retrieval, disclosure and retest evidence", eventRows.map((row) => `${row.parts[0]} — requested record/purpose: ${row.parts[1]} — authorized tester role: ${row.parts[2]} — assignment/attempt date: ${formatter.format(strictIsoDate(row.parts[3]) as Date)} — indexed/current-source pointer: ${row.parts[4]} — observed result: ${row.parts[5]} — disclosure/access/version gap and correction/closure: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected originals, permissions and drill-evidence location: ${values.storage.trim()}\n\nThis output is a private household drill index. It does not search a browser, device, folder, cloud service or FamilyBoard database; open, copy, upload, decrypt, restore, validate, modify, delete or share any file, document, credential or backup; authenticate a source, issuer, signature, version, permission or identity; determine legal authority, consent, sufficiency, retention, coverage, ownership, access rights or emergency readiness; grant, revoke or test an account, lock, device or service; contact a household member, issuer, provider, authority or emergency service; or certify a binder, backup, handoff or household as current, secure, accessible, compliant or complete. Preserve originals, permissions and credentials in systems appropriate to them, and use current responsible sources for real decisions.`;
     },
   },
+  "important-household-document-review": {
+    intro:
+      "Review which document classes support real household responsibilities, then link each to a current-source pointer, protected original or limited-copy state, replacement route, owner and dated next action. This tool does not open, authenticate, replace or retain a document.",
+    fields: [
+      text("review", "Private household review reference", "Use a stable household label, not a person, address, account, claim, vulnerable household member or exact protected location.", "DOC-COVERAGE-2026-A"),
+      {
+        name: "context",
+        label: "Coverage review context",
+        type: "select",
+        options: [
+          "First household binder setup",
+          "Move or household-role change",
+          "Annual issuer and source review",
+          "Reconstruction after a lost device or folder",
+          "Limited handoff or offline-view preparation",
+        ],
+      },
+      { name: "baselineDate", label: "Source-list baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "Current coverage review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "Next source or access checkpoint", type: "date", value: "2026-09-07" },
+      text("basis", "Controlling issuer, current-source, access, replacement and protection references", "Use safe IDs or dated public-source URLs. Keep originals, document contents, authority evidence, credentials and sensitive access rules protected.", "ISSUER-LIST-I2; SOURCE-CURRENT-S3; ACCESS-A2; REPLACEMENT-R3; BACKUP-B4"),
+      {
+        name: "records",
+        label: "Versioned applicability, source, protection and replacement rows",
+        type: "textarea",
+        help: "One line: ID | household decision or record purpose | source checked date YYYY-MM-DD | controlling issuer or current-source pointer | protected original, limited-copy and authorized-access state | official replacement or reconstruction route | specific gap, correction or closure reason | owner role | target or outcome date YYYY-MM-DD | one of the ten listed statuses. Maximum 14 lines.",
+        value: "HOUSING-1 | Current occupancy source for routine household administration | 2026-08-23 | ISSUER-I2 current agreement issuer source reviewed 2026-08-23 | Protected original O1; routine index exposes only a limited location pointer and owner role | REPLACEMENT-R3 official issuer copy-request route recorded; access requirements remain protected | Confirm an authorized backup role can begin the controlled request route without viewing agreement contents | Household records owner role | 2026-09-07 | Replacement or reconstruction route recorded—follow-up pending\nOFFLINE-1 | Limited emergency household reference for the intended backup role | 2026-08-23 | SOURCE-CURRENT-S3 and official preparedness source captured 2026-08-23 | Limited offline copy O2 has an audience label and review date; master remains protected | REPLACEMENT-R4 rebuilds the limited view from the current source list | Compare minimum disclosure before the next printed version and keep private master fields withheld | Household continuity owner role | 2026-09-07 | Limited continuity reference prepared—audience review pending",
+      },
+      text("storage", "Protected originals, authority evidence and review-history location", "Use a folder or process label, not a document image, full address, account, identity, medical, financial, child, legal, access or private participant detail.", "Household records / coverage reviews / DOC-COVERAGE-2026-A / protected history"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review.trim()) return "Enter a private household review reference so the exported version can be identified.";
+      if (!baselineDate) return "Enter the real source-list baseline date in YYYY-MM-DD format.";
+      if (!reviewDate) return "Enter a real current coverage review date in YYYY-MM-DD format.";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "The current coverage review date cannot be in the future.";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "The source-list baseline date cannot be later than the current coverage review date.";
+      if (!nextReview) return "Enter a real next source or access checkpoint in YYYY-MM-DD format.";
+      if (nextReview.getTime() < reviewDate.getTime()) return "The next source or access checkpoint cannot be earlier than the current coverage review date.";
+      if (values.basis.trim().length < 12) return "Identify the controlling issuer, current-source, access, replacement and protection references with safe pointers.";
+      if (!values.storage.trim()) return "Enter the protected location for originals, authority evidence and review history.";
+      const recordRows = values.records.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (recordRows.length === 0) return "Add at least one applicable or explicitly not-applicable household responsibility.";
+      if (recordRows.length > 14) return "One coverage-review version supports at most 14 rows; freeze this version and create a later dated scope for more.";
+      const invalidRows = recordRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `Coverage review line ${invalidRows.map((row) => row.line).join(", ")} must contain all ten pipe-separated fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "Every coverage-review row needs a unique ID.";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "Use 2 to 20 letters, numbers or hyphens for each row ID, such as HOUSING-1 or OFFLINE-1.";
+      const statusOrder = [
+        "Scope recorded—issuer decision pending",
+        "Applicable—controlling source not confirmed",
+        "Controlling source confirmed—current version review pending",
+        "Original or limited copy located—authorized-access review pending",
+        "Replacement or reconstruction route recorded—follow-up pending",
+        "Limited continuity reference prepared—audience review pending",
+        "Gap corrected—recheck pending",
+        "Current review reconciled—source, protection and retrieval route linked",
+        "Not applicable—reason and review trigger recorded",
+        "Limited archive or external process—gap and owner preserved",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `Coverage review line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the ten evidence statuses in the field instructions.`;
+      const invalidSourceDates = recordRows.filter((row) => {
+        const sourceDate = strictIsoDate(row.parts[2]);
+        return !sourceDate || sourceDate.getTime() < baselineDate.getTime() || sourceDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `Coverage review line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a real source-checked date from the baseline through the current review.`;
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 7).includes(row.parts[9]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(7).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `Open coverage review line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next source or access checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `Reconciled, not-applicable or archived line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an actual outcome date from the baseline through this review.`;
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[3].length < 8 || row.parts[4].length < 8 || row.parts[5].length < 8 || row.parts[7].length < 4);
+      if (missingLayers.length)
+        return `Coverage review line ${missingLayers.map((row) => row.line).join(", ")} needs a real purpose, controlling-source pointer, protection/access state, replacement route and owner role.`;
+      const reconciledWithoutLayers = recordRows.filter((row) => row.parts[9] === statusOrder[7] && (!/(?:current|controlling|issuer|official).{0,12}(?:source|version)|(?:source|version).{0,12}(?:current|controlling|checked)/i.test(row.parts[3]) || !/(?:protected|limited|authorized|audience|access|withheld)/i.test(row.parts[4]) || !/(?:replacement|replace|reissue|reconstruct|retrieve|official request|issuer request)/i.test(row.parts[5])));
+      if (reconciledWithoutLayers.length)
+        return `Reconciled coverage line ${reconciledWithoutLayers.map((row) => row.line).join(", ")} must link a current or controlling source, protected or limited access state, and responsible replacement, reissue, reconstruction or retrieval route.`;
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[9] === statusOrder[8] && !/(?:reopen|review again|if |when |after |purchase|lease|move|claim|dependent|role change|new responsibility)/i.test(row.parts[6]));
+      if (notApplicableWithoutTrigger.length)
+        return `Not-applicable coverage line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and the event that reopens the class.`;
+      const vagueActions = recordRows.filter((row) => row.parts[6].length < 12 || /^(?:done|safe|valid|legal|complete|verified|ready|current|covered|accepted|accessible|no issue|none|n\/a|ok)$/i.test(row.parts[6]));
+      if (vagueActions.length)
+        return `Coverage review line ${vagueActions.map((row) => row.line).join(", ")} needs a specific source, protection, access or replacement gap and a source-based correction or closure reason—not a generic status word.`;
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "A possible full phone number, email, address, account, policy, claim, case, serial, identity or complete numeric identifier was detected. Keep it protected and use a safe pointer here.";
+      if (/password|passphrase|passcode|access code|alarm code|door code|gate code|recovery answer|recovery code|one-time code|verification code|encryption key|private key|seed phrase|certificate pin|full address|street address|account number|card number|bank account|routing number|social security|government id|passport number|driver license number|full serial|serial number|policy number|claim number|case number|contract number|signature|date of birth|private contact|payment credential|login credential|medical record|diagnosis|prescription detail|medication detail|child name|school name|care schedule|vulnerable person|valuable contents|exact document location|exact access route|person name|customer name|resident name|legal strategy|complaint letter|document contents|will contents|trust contents|authorization contents|financial statement|health record|biometric|security answer|authenticator secret|api key|credit card|tax id|ssn|\bpin\s*[:=]/i.test(privacyText))
+        return "A possible credential, recovery secret, address, financial, identity, medical, child, care, access, valuable-property, legal-content or private participant detail was detected. Replace it with a protected-process or source pointer.";
+      const formatter = new Intl.DateTimeFormat("en", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
+      return `${values.review.trim()} — important household document coverage review\nReview context: ${values.context}\nSource-list baseline: ${formatter.format(baselineDate)}\nCurrent coverage review: ${formatter.format(reviewDate)}\nNext source or access checkpoint: ${formatter.format(nextReview)}\nOpen source, protection or replacement gaps: ${openRows.length}\nReconciled, not-applicable or archived rows: ${closedRows.length}\nStatus count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}\n\nControlling issuer, current-source, access, replacement and protection references: ${values.basis.trim()}\n\n${lines("Versioned household document coverage evidence", recordRows.map((row) => `${row.parts[0]} — household purpose: ${row.parts[1]} — source checked: ${formatter.format(strictIsoDate(row.parts[2]) as Date)} — issuer/current source: ${row.parts[3]} — protected original/limited copy/authorized access: ${row.parts[4]} — replacement/reconstruction route: ${row.parts[5]} — gap/correction/closure: ${row.parts[6]} — owner: ${row.parts[7]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[8]) as Date)} — status: ${row.parts[9]}`))}\n\nProtected originals, authority evidence and review-history location: ${values.storage.trim()}\n\nThis output is a private household planning index. It does not open, search, upload, copy, authenticate, validate, replace, renew, revoke, destroy, retain or share a document, credential, account or record; contact an issuer, institution, provider, authority or household member; prove identity, relationship, occupancy, ownership, authority, consent, signature, version, acceptance, coverage, value, condition, claim or legal sufficiency; determine applicability or retention; calculate any external deadline; grant access; complete a government, financial, insurance, medical, school, employment, immigration, property or legal process; or certify continuity or emergency readiness. Preserve originals and authority evidence in appropriate protected systems, and use the current issuer, receiving institution, agreement, policy, responsible authority and qualified advice for real decisions.`;
+    },
+  },
   "vacation-shutdown-checklist-generator": {
     intro:
       "Create a pre-travel household list. Follow local authority, manufacturer and insurance guidance for property-specific precautions.",
@@ -7654,6 +7771,117 @@ const zhTwDefinitions: Record<string, Definition> = {
       const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
       const statusCounts = statusOrder.map((status) => ({ status, count: eventRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
       return `${values.drill.trim()}｜家庭文件查找與交接演練\n演練情境：${values.context}\n資料夾基準版本：${formatter.format(baselineDate)}\n首次指派或演練：${formatter.format(exerciseDate)}\n本次演練檢視：${formatter.format(reviewDate)}\n下一次修正或複測點：${formatter.format(nextReview)}\n仍開放題目、嘗試或修正：${openRows.length} 筆\n已通過、封存或移交：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的目錄、目前來源、對象、存取、備份與離線索引：${values.basis.trim()}\n\n${lines("有版本的查找、揭露與複測證據", eventRows.map((row) => `${row.parts[0]}｜要查找的紀錄／用途：${row.parts[1]}｜已授權測試角色：${row.parts[2]}｜指派／嘗試日期：${formatter.format(strictIsoDate(row.parts[3]) as Date)}｜索引／目前來源：${row.parts[4]}｜實際結果：${row.parts[5]}｜揭露／存取／版本缺口與修正／結案：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原件、權限與演練證據位置：${values.storage.trim()}\n\n這份輸出只是家庭查找演練索引。它不搜尋瀏覽器、裝置、資料夾、雲端服務或 FamilyBoard 資料庫，不開啟、複製、上傳、解密、還原、驗證、修改、刪除或分享任何檔案、文件、憑證或備份，不驗證來源、發行者、簽名、版本、權限或身分，不判定法律授權、同意、充分性、保存期限、承保、所有權、存取權或防災就緒，不授予、撤銷或測試帳戶、門鎖、裝置或服務，不聯絡家人、發行者、業者、主管機關或緊急服務，也不認證資料夾、備份、交接或家庭已最新、安全、可存取、合規或完整。請把原件、權限與憑證保存在適合的系統，真實決定使用目前負責來源。`;
+    },
+  },
+  "important-household-document-review": {
+    intro:
+      "盤點哪些文件類別支援真實家庭責任，逐項連結目前來源、受保護原件或有限影本、補發路徑、負責角色與日期。工具不開啟、驗證、補發或保存任何文件。",
+    fields: [
+      text("review", "家庭私人盤點代號", "使用固定家庭代號，不要輸入姓名、完整地址、帳號、案件、弱勢家人或精確受保護位置。", "DOC-COVERAGE-2026-A"),
+      {
+        name: "context",
+        label: "文件適用性盤點情境",
+        type: "select",
+        options: ["第一次建立家庭資料夾", "搬家或家庭角色改變", "年度機關與來源複查", "裝置或資料夾遺失後重建", "準備有限交接或離線版本"],
+      },
+      { name: "baselineDate", label: "來源清單基準日", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: "本次適用性盤點日", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: "下一次來源或存取查核點", type: "date", value: "2026-09-07" },
+      text("basis", "控制中的機關、目前來源、存取、補發與保護索引", "使用安全代號或附日期的公開來源網址；原件、文件內容、授權證據、憑證與敏感存取規則放受保護位置。", "ISSUER-LIST-I2；SOURCE-CURRENT-S3；ACCESS-A2；REPLACEMENT-R3；BACKUP-B4"),
+      {
+        name: "records",
+        label: "有版本的適用性、來源、保護與補發列",
+        type: "textarea",
+        help: "每行：ID｜家庭決定或文件用途｜來源核對日 YYYY-MM-DD｜控制中的機關／業者或目前來源索引｜受保護原件、有限影本與授權存取狀態｜官方補發或重建路徑｜具體缺口、修正或結案理由｜負責角色｜目標或結果日期 YYYY-MM-DD｜十種指定狀態之一。最多 14 行。",
+        value: "HOUSING-1 | 目前租住來源供一般家庭行政使用 | 2026-08-23 | ISSUER-I2；2026-08-23 核對目前契約發行來源 | 受保護原件 O1；日常索引只顯示有限位置代號與負責角色 | REPLACEMENT-R3 已記錄向原發行來源申請副本的官方路徑；存取條件維持受保護 | 核對已有授權的備援角色能否從受控入口開始，不查看契約內容 | 家庭文件負責角色 | 2026-09-07 | 已記錄補發或重建路徑，等待後續\nOFFLINE-1 | 提供預定備援角色使用的有限家庭防災參考 | 2026-08-23 | SOURCE-CURRENT-S3 與 2026-08-23 擷取的官方防災來源 | 有限離線影本 O2 已標示對象與複查日；私人主檔維持受保護 | REPLACEMENT-R4 可從目前來源清單重建有限版本 | 下次列印前核對最小揭露，完整私人欄位維持不提供 | 家庭持續運作負責角色 | 2026-09-07 | 已準備有限持續運作參考，等待對象複查",
+      },
+      text("storage", "受保護原件、授權證據與盤點歷程位置", "使用資料夾或流程代號，不要放文件影像、完整地址、帳號、身分、醫療、財務、兒少、法律、門禁或私人參與者資料。", "家庭紀錄／文件適用性盤點／DOC-COVERAGE-2026-A／受保護歷程"),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review.trim()) return "請輸入家庭私人盤點代號，讓匯出版本可以辨認。";
+      if (!baselineDate) return "請用 YYYY-MM-DD 輸入真實的來源清單基準日。";
+      if (!reviewDate) return "請用 YYYY-MM-DD 輸入真實的本次適用性盤點日。";
+      const now = new Date();
+      const today = strictIsoDate([now.getFullYear(), String(now.getMonth() + 1).padStart(2, "0"), String(now.getDate()).padStart(2, "0")].join("-")) as Date;
+      if (reviewDate.getTime() > today.getTime()) return "本次適用性盤點日不能晚於今天。";
+      if (baselineDate.getTime() > reviewDate.getTime()) return "來源清單基準日不能晚於本次適用性盤點日。";
+      if (!nextReview) return "請用 YYYY-MM-DD 輸入真實的下一次來源或存取查核點。";
+      if (nextReview.getTime() < reviewDate.getTime()) return "下一次來源或存取查核點不能早於本次適用性盤點日。";
+      if (values.basis.trim().length < 12) return "請用安全索引指出控制中的機關、目前來源、存取、補發與保護來源。";
+      if (!values.storage.trim()) return "請輸入原件、授權證據與盤點歷程的受保護位置。";
+      const recordRows = values.records.split("\n").map((raw, index) => ({
+        line: index + 1,
+        parts: raw.split("|").map((part) => part.trim()),
+      })).filter((row) => row.parts.some(Boolean));
+      if (recordRows.length === 0) return "請至少加入一個適用或明確不適用的家庭責任。";
+      if (recordRows.length > 14) return "一個適用性盤點版本最多支援 14 行；請先凍結本版，再建立下一個有日期範圍。";
+      const invalidRows = recordRows.filter((row) => row.parts.length !== 10 || row.parts.some((part) => !part));
+      if (invalidRows.length)
+        return `文件適用性盤點第 ${invalidRows.map((row) => row.line).join("、")} 行必須完整包含十個以直線分隔的欄位。`;
+      const ids = recordRows.map((row) => row.parts[0].toLocaleUpperCase("en"));
+      if (new Set(ids).size !== ids.length) return "每筆文件適用性盤點列都需要不重複的 ID。";
+      if (ids.some((id) => !/^[A-Z0-9][A-Z0-9-]{1,19}$/.test(id)))
+        return "每個 ID 請使用 2 到 20 個英文字母、數字或連字號，例如 HOUSING-1 或 OFFLINE-1。";
+      const statusOrder = [
+        "已記錄適用範圍，等待決定控制來源",
+        "確認適用，尚未核對控制來源",
+        "已確認控制來源，等待版本或效期複查",
+        "已找到原件或有限影本，等待授權存取複查",
+        "已記錄補發或重建路徑，等待後續",
+        "已準備有限持續運作參考，等待對象複查",
+        "缺口已修正，等待再次核對",
+        "本次盤點已核對，連結來源、保護與取用路徑",
+        "不適用，已記錄理由與重新檢視條件",
+        "有限封存或外部流程，保留缺口與負責人",
+      ];
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[9]));
+      if (invalidStatuses.length)
+        return `文件適用性盤點第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用欄位說明中的十種證據狀態之一。`;
+      const invalidSourceDates = recordRows.filter((row) => {
+        const sourceDate = strictIsoDate(row.parts[2]);
+        return !sourceDate || sourceDate.getTime() < baselineDate.getTime() || sourceDate.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return `文件適用性盤點第 ${invalidSourceDates.map((row) => row.line).join("、")} 行，需要介於基準日與本次盤點日之間的真實來源核對日。`;
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 7).includes(row.parts[9]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(7).includes(row.parts[9]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[8]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return `仍開放的文件適用性盤點第 ${invalidOpenDates.map((row) => row.line).join("、")} 行，目標日必須從本次盤點日起，到下一次來源或存取查核點為止。`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[8]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return `已核對、不適用或封存的第 ${invalidClosedDates.map((row) => row.line).join("、")} 行，需要介於基準日與本次盤點日之間的實際結果日期。`;
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 6 || row.parts[3].length < 8 || row.parts[4].length < 8 || row.parts[5].length < 8 || row.parts[7].length < 3);
+      if (missingLayers.length)
+        return `文件適用性盤點第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實用途、控制來源索引、保護／存取狀態、補發路徑與負責角色。`;
+      const reconciledWithoutLayers = recordRows.filter((row) => row.parts[9] === statusOrder[7] && (!/(?:目前|控制|發行|機關|官方).{0,8}(?:來源|版本)|(?:來源|版本).{0,8}(?:目前|控制|核對)/.test(row.parts[3]) || !/(?:受保護|有限|授權|對象|存取|未提供)/.test(row.parts[4]) || !/(?:補發|換發|重建|重新取得|取用|官方申請|原發行)/.test(row.parts[5])));
+      if (reconciledWithoutLayers.length)
+        return `已核對的第 ${reconciledWithoutLayers.map((row) => row.line).join("、")} 行必須連結目前或控制來源、受保護或有限存取狀態，以及負責的補發、換發、重建或取用路徑。`;
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[9] === statusOrder[8] && !/(?:重新檢視|重開|若|如果|當|之後|購買|租用|搬家|理賠|受照顧|角色改變|新增責任)/.test(row.parts[6]));
+      if (notApplicableWithoutTrigger.length)
+        return `不適用的第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須寫目前理由，以及重新打開這個類別的事件。`;
+      const vagueActions = recordRows.filter((row) => row.parts[6].length < 8 || /^(?:完成|安全|有效|合法|完整|已驗證|準備好|最新版|已承保|已接受|可存取|沒問題|無|不用|不適用|ok)$/i.test(row.parts[6]));
+      if (vagueActions.length)
+        return `文件適用性盤點第 ${vagueActions.map((row) => row.line).join("、")} 行需要具體的來源、保護、存取或補發缺口，以及有來源的修正／結案理由，不能只寫通用狀態詞。`;
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return "偵測到可能的完整電話、Email、地址、帳號、保單、理賠、案件、序號、身分或完整數字識別。請留在受保護原件，只在這裡放安全索引。";
+      if (/密碼|通關密語|門禁碼|警報碼|驗證碼|一次性代碼|復原答案|復原碼|加密金鑰|私鑰|助記詞|自然人憑證 PIN|憑證 PIN|完整地址|完整門牌|帳號|卡號|銀行帳戶|匯款帳號|身分證字號|護照號碼|駕照號碼|完整序號|保單編號|理賠編號|案件編號|契約編號|簽名|出生日期|私人聯絡|完整付款資料|登入憑證|醫療紀錄|診斷|處方明細|用藥明細|兒童姓名|學校名稱|照護行程|弱勢家人|貴重物內容|精確文件位置|完整門禁路線|完整姓名|客戶姓名|住戶姓名|法律策略|申訴信全文|文件內容|遺囑內容|信託內容|授權書內容|財務報表|健康紀錄|生物辨識|安全答案|驗證器秘密|API 金鑰|信用卡|統一編號|password|passphrase|passcode|access code|recovery answer|recovery code|one-time code|verification code|encryption key|private key|seed phrase|full address|account number|card number|government id|passport number|driver license number|full serial|serial number|policy number|claim number|case number|contract number|signature|payment credential|medical record|diagnosis|prescription detail|medication detail|child name|school name|care schedule|vulnerable person|valuable contents|exact document location|person name|customer name|resident name|legal strategy|complaint letter|document contents|will contents|trust contents|authorization contents|financial statement|health record|biometric|security answer|authenticator secret|api key|credit card|tax id|ssn|\bpin\s*[:：=]/i.test(privacyText))
+        return "偵測到可能的憑證、復原秘密、地址、金融、身分、醫療、兒少、照護、門禁、貴重物、法律內容或私人參與者資料。請改寫成受保護流程或來源索引。";
+      const formatter = new Intl.DateTimeFormat("zh-TW", { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[9] === status).length })).filter((item) => item.count > 0);
+      return `${values.review.trim()}｜家庭重要文件適用性與來源盤點\n盤點情境：${values.context}\n來源清單基準：${formatter.format(baselineDate)}\n本次適用性盤點：${formatter.format(reviewDate)}\n下一次來源或存取查核點：${formatter.format(nextReview)}\n仍開放的來源、保護或補發缺口：${openRows.length} 筆\n已核對、不適用或封存：${closedRows.length} 筆\n狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}\n\n控制中的機關、目前來源、存取、補發與保護索引：${values.basis.trim()}\n\n${lines("有版本的家庭重要文件適用性證據", recordRows.map((row) => `${row.parts[0]}｜家庭用途：${row.parts[1]}｜來源核對日：${formatter.format(strictIsoDate(row.parts[2]) as Date)}｜機關／目前來源：${row.parts[3]}｜受保護原件／有限影本／授權存取：${row.parts[4]}｜補發／重建路徑：${row.parts[5]}｜缺口／修正／結案：${row.parts[6]}｜負責角色：${row.parts[7]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[8]) as Date)}｜狀態：${row.parts[9]}`))}\n\n受保護的原件、授權證據與盤點歷程位置：${values.storage.trim()}\n\n這份輸出只是家庭規劃索引。它不開啟、搜尋、上傳、複製、驗證、補發、換發、續期、撤銷、銷毀、保存或分享任何文件、憑證、帳戶或紀錄，不聯絡機關、業者、接收單位、家人或緊急服務，不證明身分、關係、租住、所有權、代理權、同意、簽章、版本、機關接受、承保、價值、狀況、理賠或法律充分性，不決定適用性或保存期限、不計算外部期限、不授予存取，也不完成政府、金融、保險、醫療、就學、就業、移民、財產或法律程序，或認證家庭持續運作與防災準備。請把原件與授權證據保存在適合的受保護系統，真實決定使用目前發行機關、接收單位、契約、保單、主管機關及合格專業來源。`;
     },
   },
 };

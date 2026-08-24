@@ -857,9 +857,9 @@
   },
   {
     "route": "/guides/important-household-documents/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/important-household-documents/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1760,6 +1760,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/important-household-document-review/",
+    "alternateRoute": "/zh-tw/tools/important-household-document-review/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2298,6 +2306,20 @@
     "alternateRoute": "/guides/how-to-track-product-warranties/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/important-household-document-review/",
+    "alternateRoute": "/tools/important-household-document-review/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/important-household-documents/",
+    "alternateRoute": "/guides/important-household-documents/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"
   },
   {

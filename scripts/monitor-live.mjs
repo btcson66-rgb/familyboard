@@ -109,6 +109,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-record-retrieval-drill-log/</loc>",
       "<loc>https://familyboard.win/guides/digital-home-binder/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/digital-home-binder/</loc>",
+      "<loc>https://familyboard.win/tools/important-household-document-review/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/important-household-document-review/</loc>",
+      "<loc>https://familyboard.win/guides/important-household-documents/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/important-household-documents/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -484,6 +488,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Build six linked layers",
       "Current, findable and shareable are three different checks",
+    ],
+  },
+  {
+    path: "/tools/important-household-document-review/",
+    require: [
+      "Important Household Document Review",
+      'hreflang="zh-TW"',
+      "Ten statuses separate scope, source, protection and replacement",
+      "does not open, upload, authenticate, replace, renew or destroy a document",
+    ],
+  },
+  {
+    path: "/guides/important-household-documents/",
+    require: [
+      "An important household document earns a place because of a real decision",
+      'hreflang="zh-TW"',
+      "Ask five questions before adding any document class",
+      "Current source, useful copy and accepted evidence are different",
     ],
   },
   {
@@ -889,6 +911,24 @@ const checks = [
       'hreflang="en"',
       "一次建立六層",
       "查找演練不應變成交換密碼",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/important-household-document-review/",
+    require: [
+      "家庭重要文件適用性與來源盤點",
+      'hreflang="en"',
+      "十種狀態把「適用」與「已經有檔案」分開",
+      "不開啟、驗證、補發或保存任何文件",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/important-household-documents/",
+    require: [
+      "家庭重要文件清單不是把所有證件影本集中在同一個資料夾",
+      'hreflang="en"',
+      "每一類文件先回答五個問題",
+      "MyData 是取用來源，不是 FamilyBoard 雲端硬碟",
     ],
   },
   {

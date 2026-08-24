@@ -824,12 +824,12 @@
     "headings": "A digital home binder is an operating map, not one giant vault Start with retrieval questions, not a universal folder list Build six linked layers instead of one overloaded directory Current, findable and shareable are three different checks Test retrieval without turning the exercise into credential sharing Keep backup recovery and binder retrieval as linked but separate jobs Design a limited offline view before an emergency Version the binder around real changes Affiliate products are aids, not proof of continuity"
   },
   {
-    "title": "Important Household Documents: What Deserves a Reliable Place to Live",
-    "description": "Identify household documents that are worth organizing, from property and insurance records to warranties, service history and emergency references.",
+    "title": "Important Household Documents Checklist | Sources, Copies and Replacement Paths",
+    "description": "Build an important household documents checklist around real decisions, current issuers, protected originals, limited copies and replacement paths.",
     "route": "/guides/important-household-documents/",
     "cluster": "records-emergency",
     "keywords": "important household documents",
-    "headings": "The important document list depends on what your household owns and manages Property and housing Household purchases: warranties, receipts, manuals Services and recurring obligations Vehicles and pets Emergency and continuity information Sensitive identity records need extra care, not extra convenience Build the list around your household, not a generic checklist Revisit the list once a year, or after a major change"
+    "headings": "An important household document earns a place because of a real decision, not a generic master list Ask five questions before adding any document class Build categories from household responsibilities Housing, occupancy and property Income, tax, benefits and recurring financial obligations Insurance, claims and active disputes Vehicles, equipment, purchases and maintained assets Identity, family status, care, school, pet and travel responsibilities Emergency and limited continuity references Current source, useful copy and accepted evidence are different Use three views instead of one overexposed list Record gaps as repairable facts Review after real changes, not only once a year Affiliate products do not decide what is important"
   },
   {
     "title": "How Long Should You Keep Household Records? Use the Reason for the Record, Not One Magic Number",
@@ -1654,6 +1654,14 @@
     "cluster": "tools",
     "keywords": "digital home binder audit",
     "headings": "Household record retrieval and handoff drill log Use a household drill reference, not a person or address Four dates define what was actually tested Keep originals, permissions and credentials outside the result Every row contains ten fields Eight statuses keep finding, currentness and disclosure separate A passed retest needs an actual second observation Test an alternate route without claiming emergency readiness Preserve failed, overexposed and stale-source results Privacy screening is a backstop, not a sharing decision Affiliate products cannot turn a failed path into a pass"
+  },
+  {
+    "title": "Important Household Document Review | Sources, Copies and Replacement Routes",
+    "description": "Review important household document classes by purpose, current issuer, protected copy state, replacement route, owner and next action.",
+    "route": "/tools/important-household-document-review/",
+    "cluster": "tools",
+    "keywords": "important household documents checklist",
+    "headings": "Important household document coverage review Review household responsibilities, not a stranger's filing cabinet Three dates keep the review attributable Keep the controlling-source field at pointer level Every row contains ten fields Ten statuses separate scope, source, protection and replacement A reconciled review is not document validation Treat not applicable as evidence, not an empty checkbox Disaster copies are one limited view Privacy screening is a backstop Affiliate products cannot supply missing authority"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

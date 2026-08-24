@@ -102,6 +102,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/storage-unit-inventory/",
     "/tools/household-record-retrieval-drill-log/",
     "/guides/digital-home-binder/",
+    "/tools/important-household-document-review/",
+    "/guides/important-household-documents/",
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
     "/templates/printable-home-inventory-template/",
@@ -151,6 +153,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/storage-unit-inventory/",
     "/zh-tw/tools/household-record-retrieval-drill-log/",
     "/zh-tw/guides/digital-home-binder/",
+    "/zh-tw/tools/important-household-document-review/",
+    "/zh-tw/guides/important-household-documents/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
@@ -330,6 +334,12 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭數位資料夾教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/digital-home-binder/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭重要文件盤點" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/important-household-document-review/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭重要文件清單" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/important-household-documents/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電清冊教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/appliance-inventory/");
@@ -787,6 +797,16 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
       route: "/zh-tw/guides/digital-home-binder/",
       alternate: "/guides/digital-home-binder/",
       heading: "家庭數位資料夾不是把所有檔案塞進同一個雲端硬碟",
+    },
+    {
+      route: "/zh-tw/tools/important-household-document-review/",
+      alternate: "/tools/important-household-document-review/",
+      heading: "家庭重要文件適用性與來源盤點",
+    },
+    {
+      route: "/zh-tw/guides/important-household-documents/",
+      alternate: "/guides/important-household-documents/",
+      heading: "家庭重要文件清單不是把所有證件影本集中在同一個資料夾",
     },
     {
       route: "/zh-tw/guides/purchase-receipt-organizer/",
@@ -1563,6 +1583,28 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不能早於本次演練檢視日",
   );
 
+  await page.goto("/tools/important-household-document-review/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open source, protection or replacement gaps: 2");
+  await expect(page.locator(".result")).toContainText("Reconciled, not-applicable or archived rows: 0");
+  await expect(page.locator(".result")).toContainText("Replacement or reconstruction route recorded—follow-up pending 1");
+  await page.getByLabel("Next source or access checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current coverage review date",
+  );
+
+  await page.goto("/zh-tw/tools/important-household-document-review/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的來源、保護或補發缺口：2 筆");
+  await expect(page.locator(".result")).toContainText("已核對、不適用或封存：0 筆");
+  await expect(page.locator(".result")).toContainText("已記錄補發或重建路徑，等待後續 1 筆");
+  await page.getByLabel("下一次來源或存取查核點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次適用性盤點日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");
@@ -1954,6 +1996,18 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/digital-home-binder/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/important-household-document-review/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/important-household-document-review/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/important-household-documents/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/important-household-documents/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/",
