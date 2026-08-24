@@ -872,12 +872,12 @@
     "headings": "Organize vehicle documents by authority, vehicle match and current status Start with a safe vehicle alias, not a dashboard full of identifiers Keep title, registration, insurance and inspection as separate evidence Identify the vehicle without treating a decoder as an ownership record Record recall research and vehicle-specific remedy evidence separately Keep title history research distinct from repair and condition history Make renewals event-driven instead of guessing a universal calendar Treat a transfer, sale or disposal as a chain of official results Design a handoff that helps drivers without exposing the protected file Keep future affiliate placement outside compliance and safety decisions"
   },
   {
-    "title": "How to Organize Pet Records for Everyday Care, Sitters and Emergencies",
-    "description": "Keep pet identification, care contacts, routine records, sitter instructions and document references organized for household handoffs.",
+    "title": "How to Organize Pet Records by Source, Pet Match and Care Handoff",
+    "description": "Build a private pet record index for microchip sources, vaccination evidence, veterinary instructions, travel and sitter handoffs.",
     "route": "/guides/organize-pet-records/",
     "cluster": "records-emergency",
     "keywords": "organize pet records",
-    "headings": "Pet records become most valuable the moment someone else has to take over care Build a profile around identification and vaccination status, not just a name Separate the daily routine from medical instructions Build a sitter-ready export that leaves out unrelated household data Review before every trip, not just once at setup One record can serve several roles"
+    "headings": "Organize pet records without turning the shared care sheet into a medical file Give each pet a safe alias and keep the real match protected Treat a microchip, registry and owner contact record as three related layers Separate current certificates from the rule or venue that asks for them Keep veterinary instructions in their issued source, not in app-generated prose Build a least-information sitter handoff Make travel records destination- and date-specific Connect emergency preparation without publishing the private file Close a row only on an observed responsible result Keep future affiliate placement outside veterinary and authority decisions"
   },
   {
     "title": "How to Organize School Records at Home Without Mixing Them into General Household Clutter",
@@ -1702,6 +1702,14 @@
     "cluster": "tools",
     "keywords": "vehicle document organizer",
     "headings": "Household vehicle document source and status log Create one dated review without entering a VIN or plate Each row has twelve source and result fields Twelve statuses keep discovery, action and result separate A source must control the document role it is used to support Vehicle match belongs in protected evidence Current access is not current legal or safety status Safety conflicts stop the organization workflow A transfer or renewal closes only on observed evidence Privacy screening is deliberately conservative Affiliate products cannot certify a vehicle record or safe condition"
+  },
+  {
+    "title": "Household Pet Record Source and Handoff Log",
+    "description": "Create a private pet record index for microchip sources, vaccination evidence, veterinary instructions, travel and sitter handoffs.",
+    "route": "/tools/household-pet-record-source-handoff-log/",
+    "cluster": "tools",
+    "keywords": "pet records organizer",
+    "headings": "Household pet record source and handoff log Create one dated review with a safe pet alias Each row has twelve source and handoff fields Twelve statuses preserve discovery, protected match, handoff and result A responsible source must control the stated purpose Protected pet match is evidence, not a public identifier Veterinary access never authorizes the app to create care instructions A sent document or generated sheet is still an open action Animal-welfare, emergency and adverse-event conflicts stop the workflow Privacy screening is deliberately conservative Affiliate products cannot validate pet identity, care or travel"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

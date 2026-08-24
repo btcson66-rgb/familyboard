@@ -133,6 +133,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-vehicle-document-source-status-log/</loc>",
       "<loc>https://familyboard.win/guides/organize-vehicle-documents-at-home/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-vehicle-documents-at-home/</loc>",
+      "<loc>https://familyboard.win/tools/household-pet-record-source-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-pet-record-source-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/organize-pet-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/organize-pet-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -616,6 +620,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Keep title, registration, insurance and inspection as separate evidence",
       "Record recall research and vehicle-specific remedy evidence separately",
+    ],
+  },
+  {
+    path: "/tools/household-pet-record-source-handoff-log/",
+    require: [
+      "Household Pet Record Source and Handoff Log",
+      'hreflang="zh-TW"',
+      "Twelve statuses preserve discovery, protected match, handoff and result",
+      "It does not scan or search a microchip; identify an animal or owner",
+    ],
+  },
+  {
+    path: "/guides/organize-pet-records/",
+    require: [
+      "Organize pet records without turning the shared care sheet into a medical file",
+      'hreflang="zh-TW"',
+      "Treat a microchip, registry and owner contact record as three related layers",
+      "Keep veterinary instructions in their issued source, not in app-generated prose",
     ],
   },
   {
@@ -1129,6 +1151,24 @@ const checks = [
       'hreflang="en"',
       "驗車日、預約、到場與合格結果是四件事",
       "召回研究要從車型線索走到受保護車輛比對",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-pet-record-source-handoff-log/",
+    require: [
+      "家庭寵物紀錄來源與交接狀態表",
+      'hreflang="en"',
+      "十二種狀態分開找到來源、交接行動與負責結果",
+      "工具不查晶片、不辨認飼主、不登入寵物登記或獸醫系統",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/organize-pet-records/",
+    require: [
+      "寵物登記、晶片、疫苗與病歷怎麼整理？台灣家庭寵物紀錄指南",
+      'hreflang="en"',
+      "晶片、登記、飼主資料與登記證明是四層",
+      "病歷、診斷與用藥指示留在獸醫來源",
     ],
   },
   {

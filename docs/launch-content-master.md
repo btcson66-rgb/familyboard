@@ -8028,48 +8028,99 @@ A future clearly labelled affiliate area may compare document sleeves, fire-resi
 
 ## Page 114 — Organize Pet Records
 **Slug:** `/guides/organize-pet-records/`
-**Primary intent:** organize pet care contacts and records for household continuity
-**Title tag:** `How to Organize Pet Records for Everyday Care, Sitters and Emergencies`
-**Meta description:** `Keep pet identification, care contacts, routine records, sitter instructions and document references organized for household handoffs.`
+**Primary intent:** organize pet identification, veterinary-source, travel and care-handoff records without exposing medical details
+**Title tag:** `How to Organize Pet Records by Source, Pet Match and Care Handoff`
+**Meta description:** `Build a private pet record index for microchip sources, vaccination evidence, veterinary instructions, travel and sitter handoffs.`
 **Primary keyword concept:** organize pet records
 **Depth:** verified
-**Suggested internal links:** `/guides/pet-sitter-information/`, `/tools/pet-sitter-instruction-generator/`, `/guides/household-admin-backup-person/`, `/features/emergency-information-organizer/`
+**Published date:** 2026-08-19
+**Editorial review date:** 2026-08-24
+**Content version:** 2
+**Suggested internal links:** `/tools/household-pet-record-source-handoff-log/`, `/guides/pet-sitter-information/`, `/tools/pet-sitter-instruction-generator/`, `/guides/home-evacuation-information/`, `/features/emergency-information-organizer/`
 
-# Pet records become most valuable the moment someone else has to take over care
+# Organize pet records without turning the shared care sheet into a medical file
 
-The everyday caregiver usually carries feeding amounts, the vet's name, medication timing and quirks like "won't take pills in cheese" entirely from memory — which works fine until that person is unavailable and a sitter, boarding facility or emergency vet needs answers immediately. Pet records exist to move that knowledge out of one person's head and into something a stranger can act on.
+A household may have a microchip card, registry account, rabies certificate, vaccination history, veterinary discharge sheet, labelled medicine, insurance document, boarding form and travel certificate for the same animal. Those records do different jobs. A useful organizer says which source controls each job, how the protected record was matched to the intended pet, which version was actually opened, who may access it and what result is still pending.
 
-## Build a profile around identification and vaccination status, not just a name
+Keep a public-safe household index and a protected evidence set. The shared index may show a safe pet alias, record purpose, responsible source, source-check date, protected match pointer, current-version observation, access result, care-handoff owner and next checkpoint. Keep the complete microchip number, owner contacts, medical record, diagnosis, laboratory result, prescription, dose, payment, authorization and travel case outside that index.
 
-A useful pet profile holds: name, species and breed, identifying details (microchip number if chipped, distinguishing markings), the primary veterinarian's name and phone number, and current vaccination status with the expiration date printed on the certificate — not a guessed interval. Vaccination schedules, including rabies, are set by state and local law and by which vaccine product your veterinarian uses, so the certificate itself states the actual expiration; record that exact date rather than assuming a fixed yearly or multi-year cycle applies universally. This certificate is also frequently required by boarding facilities, groomers and some sitters before they'll accept the animal, so having the expiration date on hand — not just "vaccinated at some point" — avoids a scramble before a trip.
+Use the free [Household Pet Record Source and Handoff Log](/tools/household-pet-record-source-handoff-log/) when you need a dated version that separates finding a source, making a protected pet match, rehearsing a care handoff and receiving a responsible result.
 
-## Separate the daily routine from medical instructions
+## Give each pet a safe alias and keep the real match protected
 
-Feeding amount, walk schedule, favorite hiding spots during thunderstorms — this is caregiver knowledge the household can record and hand off freely. Medication dosing, treatment plans and anything a veterinarian prescribed is different: the household record should reproduce the vet's actual instruction exactly (drug name, dose, frequency, as written on the label or discharge paperwork) rather than paraphrasing it, and the app itself should never suggest a dose or a schedule change. A caregiver record that says "give 1 tablet with food, twice daily, per Dr. Alvarez's June visit" is safe to hand to a sitter; one that says "give medication as needed" is not.
+Use a code such as `HOUSEHOLD-PET-A` in the shared household view. A household member should be able to follow a protected pointer such as `PET-A / identification / current registry source` without the screen displaying the chip number or owner details. A nickname alone is not a reliable match when two pets have similar names, appearances or veterinary histories.
 
-## Build a sitter-ready export that leaves out unrelated household data
+The protected match can combine a veterinarian or shelter scan, the current registry source, issued adoption or registration evidence and a current photo kept in the appropriate private location. FamilyBoard records only that the match was performed and where its evidence is protected. It cannot scan a chip, identify the animal or authenticate a person.
 
-A pet care sheet handed to a sitter needs: feeding routine, walk/exercise schedule, location of food and supplies, the vet's contact and after-hours emergency clinic number, and any access notes (where the leash is, which door sticks). It does not need the household's financial records, other pets' unrelated medical history, or anything outside what this specific sitter needs for this specific stay — export a filtered view, not the full household database.
+## Treat a microchip, registry and owner contact record as three related layers
 
-## Review before every trip, not just once at setup
+A microchip does not act like GPS and does not carry a household medical file. The [American Veterinary Medical Association's microchip guidance](https://ebusiness.avma.org/files/productdownloads/mcm-client-brochures-microchips-2022.pdf) explains that a chip carries an identification number that must be linked to contact information in a registry. The physical chip, the registry that currently holds information and the accuracy of that registry entry are therefore separate observations.
 
-Routines drift — a new medication gets added, a food gets switched after a stomach issue, a vaccination gets renewed with a new expiration date. Put a visible last-reviewed date on the sitter sheet and treat "have I looked at this since the last trip" as a real pre-departure step, not an assumption that last year's sheet is still accurate.
+The [AAHA Microchip Registry Lookup](https://www.aaha.org/for-veterinary-professionals/microchip-registry-lookup-tool-aaha-find-your-pets-microchip-registry/) can help identify participating registries associated with a scanned number. AAHA states that the lookup does not display owner information, does not update a registration and does not maintain the registries itself. A lookup result should therefore be recorded as `registry source identified on date; protected result PET-A-ID2`, not `owner verified` or `chip current forever`.
 
-## One record can serve several roles
+Reopen the identification row after adoption, transfer, move, phone or address change, registry closure, failed lookup, pet loss, recovered-pet event or a new scan that conflicts with the existing evidence. Never paste the complete number or contact profile into a sitter sheet.
 
-The same underlying pet profile should feed the everyday household view, the sitter export, and — in a real emergency, like an evacuation — the go-bag checklist for what the animal needs to travel. Building it once, linked, is more reliable than maintaining three separate lists that quietly drift out of sync with each other.
+## Separate current certificates from the rule or venue that asks for them
 
-**Contextual CTA:** Use the Pet Sitter Instruction Generator to discover which details currently live only in the primary caregiver's memory.
+A vaccination record, rabies certificate, local license, boarding requirement and travel health certificate are not interchangeable. Preserve the issuing veterinarian or authority, animal match, issue or administration date shown, version, stated validity information, source-check date and the exact use for which another party requested it. Do not turn one certificate into a claim that every vaccination, law, boarding facility or destination requirement is satisfied.
+
+Rabies and licensing rules vary by state, locality, species, age, product, travel destination and individual circumstances. The household checkpoint is only a reminder to consult the current veterinarian, certificate, local authority or destination. FamilyBoard does not calculate a vaccine due date, legal grace period or boarding eligibility.
+
+A boarding, grooming, daycare or sitter source may ask for specific documents or may change its rules. Record `facility requirement received; veterinary source requested; acceptance result pending` until the actual provider confirms the current version. A sent email, uploaded form or appointment does not prove acceptance.
+
+## Keep veterinary instructions in their issued source, not in app-generated prose
+
+Routine notes such as where supplies are stored, what carrier belongs to which pet and which household role owns the next check can live in a care handoff. A diagnosis, test result, prescription and medication direction belong in the veterinarian-issued or pharmacy-labelled source. The shared index should point to that source and say when access was tested; it should not copy the private clinical content.
+
+The [FDA's veterinary medication-error guidance](https://www.fda.gov/animal-veterinary/product-safety-information/veterinary-medication-errors) describes risks from look-alike names, confusing labels, abbreviations, miscommunication and improper storage. Its consumer guidance says to read labels, follow directions, keep animal drugs in original labelled containers and contact the veterinarian with questions. The [FDA pet-medication questions page](https://www.fda.gov/animal-veterinary/animal-health-literacy/medications-your-pet-questions-your-vet) also explains that a missed, extra, vomited or spit-out dose depends on the medicine and should be handled with veterinarian guidance.
+
+FamilyBoard must never calculate, restate or adjust a dose; tell a sitter whether to repeat, skip, split or stop a medicine; interpret a symptom; or decide whether care is urgent. A safe handoff says `current veterinarian-written instruction and original labelled container are in protected location PET-A-CARE2; prescribing and emergency routes confirmed`. If the source conflicts, the label is unclear, the animal reacts unexpectedly or a dose may be missed or duplicated, stop the household workflow and contact the veterinarian or emergency animal hospital.
+
+## Build a least-information sitter handoff
+
+A sitter needs the records required for the assigned stay, not the household's entire pet archive. Start with the safe pet alias, current care routine owned by the household, supplies and carrier location, permitted contact routes, the protected veterinary-instruction pointer, the planned emergency escalation path and what the sitter is authorized to do. Keep unrelated owner identity, finances, claim documents, complete veterinary history and other pets' records out of the export.
+
+Rehearse the handoff before travel. Ask the sitter to locate the correct supplies, open the intended limited record and explain whom they would contact if the routine cannot be followed. Record the rehearsal result and unresolved question. Generating or sending a sheet is an action; a successful handoff requires the recipient to find and understand the intended current version.
+
+## Make travel records destination- and date-specific
+
+The [USDA APHIS Pet Travel Process Overview](https://www.aphis.usda.gov/pet-travel/pet-travel-process-overview) says each destination can have its own identification, vaccination, testing and certificate requirements. It also warns that after an accredited veterinarian signs a health certificate, the time for endorsement and travel may be limited. This is why a generic `pet travel ready` checkbox is unsafe.
+
+Create one version for the actual species, destination, route and planned dates. Preserve the destination authority source, accredited-veterinarian step if required, protected pet match, certificate version, endorsement or acceptance status, carrier or airline source and observed result. An appointment booked, document uploaded or fee paid remains open until the responsible authority or carrier produces the required result. FamilyBoard does not obtain a certificate, endorse it, decide fitness to travel or calculate the destination's deadline.
+
+## Connect emergency preparation without publishing the private file
+
+Ready.gov's [Prepare Your Pets for Disasters](https://www.ready.gov/sites/default/files/2023-06/ready.gov_prepare-pets-for-disasters.pdf) recommends including pets in the emergency plan, developing a buddy system, keeping vaccination-record copies and maintaining current microchip contact information. The household index can show who owns the go-kit review, which safe pet alias maps to which carrier and where a limited emergency copy is protected.
+
+That does not make a shelter, hotel, evacuation transport or veterinary facility accept the animal. Verify the actual destination and current official instructions. Keep emergency contact details in the protected or limited handoff appropriate for the real caregiver, not on a public household display.
+
+## Close a row only on an observed responsible result
+
+`Registry form submitted`, `vaccination appointment booked`, `record emailed to boarding`, `health certificate visit scheduled` and `sitter sheet generated` are actions. Keep them open. A closed row identifies the result actually received or observed, where the current evidence is protected and which change triggers a new version.
+
+Use event-driven reopen conditions: adoption or transfer, move or contact change, new veterinarian, new instruction, medication change, new vaccination evidence, boarding policy change, trip, pet loss, recovery, registry problem, access failure, adverse event or conflicting animal match. Do not overwrite the old row; preserve the dated version so the household can see which source changed.
+
+## Keep future affiliate placement outside veterinary and authority decisions
+
+A future clearly labelled affiliate area may compare document sleeves, waterproof pouches, carriers, ID-tag holders, scanners or offline storage after the educational answer. A commission cannot validate a microchip, registry, vaccine, medical instruction, boarding acceptance, emergency readiness or travel certificate; make a carrier escape-proof; or replace veterinarian or authority guidance. Product cards must never interrupt an emergency warning, veterinary-source step or unresolved record.
+
+**Next step in FamilyBoard:** create two contrasting rows: one identification or registry source that can be opened and one current care, boarding or travel handoff that still awaits a responsible result. Record only the safe pet alias, protected match pointer, current source, access result, owner and exact reopen event.
 
 **FAQ:**
-- Q: What core information should a pet record include?
-  A: Name, species/breed, microchip number if applicable, the primary veterinarian's contact, and current vaccination status with the actual expiration date from the certificate rather than an assumed interval. Vaccination timing is set by state/local law and the specific vaccine used, so the printed expiration date is the reliable figure to record.
-- Q: How should medication instructions be recorded for a pet sitter?
-  A: Reproduce the veterinarian's instruction exactly as given — drug name, dose, frequency — rather than paraphrasing or simplifying it. The household record should preserve the vet's actual instruction, and neither the household nor the app should generate or adjust a dosing recommendation.
-- Q: Why does a sitter sometimes need proof of vaccination?
-  A: Many boarding facilities, groomers, and some individual sitters require current vaccination proof, often specifically rabies, before accepting an animal. Keeping the actual expiration date on hand — not just a note that the pet "is vaccinated" — avoids a last-minute scramble to get proof before a trip or a boarding stay.
-- Q: How often should a pet sitter instruction sheet be updated?
-  A: Before every trip, not just once when it's first created. Feeding amounts, medications and vaccination status can all change between trips, so a visible last-reviewed date and a habit of checking it before departure keeps the sheet from quietly going stale.
+- Q: Should the shared household index store a complete microchip number?
+  A: No. Use the number only in the veterinarian, shelter, registry or other protected process that needs it. FamilyBoard should store a safe pet alias, source-check date, match observation and protected evidence pointer.
+- Q: Does the AAHA lookup verify the owner or update a microchip registration?
+  A: No. AAHA says the tool identifies participating registries associated with a number; it does not display owner information, update a record or maintain the registries. Contact the responsible registry for the actual record.
+- Q: Can FamilyBoard copy medication directions into a sitter sheet?
+  A: Keep the veterinarian-issued instruction and original labelled container as the source. The household index may point to the current version and responsible contact, but it should not calculate, paraphrase or change a dose or tell a sitter what to do after a missed, extra or vomited dose.
+- Q: Does a vaccination certificate prove a pet meets every boarding or travel rule?
+  A: No. It proves only what its issuer and text support. Local law, facility policy, species, destination and travel date may require different current evidence. Record the actual requesting source and its acceptance result separately.
+- Q: Is a booked veterinary or health-certificate appointment a completed travel record?
+  A: No. An appointment, upload, payment or signature is an action. Keep the row open until the required veterinarian, authority, carrier or destination result is observed and protected.
+- Q: What should happen if instructions conflict or the pet has an unexpected reaction?
+  A: Stop updating the organizer and contact the treating or prescribing veterinarian, emergency animal hospital or responsible authority. FamilyBoard cannot diagnose, interpret a reaction or decide whether to give, repeat, skip or stop a medicine.
+- Q: How often should the record be reviewed?
+  A: Review it before every sitter handoff, boarding stay or trip, and reopen it after an identity, registry, contact, veterinarian, medication, vaccination, travel, loss, recovery, access or care change. The next checkpoint is a household reminder, not a medical or legal deadline.
 
 ---
 
@@ -15585,6 +15636,124 @@ A future clearly labelled affiliate area may compare document wallets, fire-resi
   A: Stop routine organization, keep the row open and follow current NHTSA, manufacturer, regulator and qualified-service instructions. The tool cannot decide whether a vehicle is safe to drive or whether a remedy is complete.
 - Q: Does a transfer-completed row prove the buyer owns the vehicle?
   A: No. It records that the household observed a responsible result and screened record custody. The actual title, registration, lien, tax, plate, insurance and ownership consequences remain with the applicable authority and documents.
+
+---
+
+## Page 227 — Household Pet Record Source and Handoff Log
+**Slug:** `/tools/household-pet-record-source-handoff-log/`
+**Primary intent:** document pet registry, veterinary-source, travel, boarding and care-handoff evidence without storing identity or medical details
+**Title tag:** `Household Pet Record Source and Handoff Log`
+**Meta description:** `Create a private pet record index for microchip sources, vaccination evidence, veterinary instructions, travel and sitter handoffs.`
+**Primary keyword concept:** pet records organizer
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-24
+**Editorial review date:** 2026-08-24
+**Content version:** 1
+**Suggested internal links:** `/guides/organize-pet-records/`, `/guides/pet-sitter-information/`, `/tools/pet-sitter-instruction-generator/`, `/guides/home-evacuation-information/`, `/features/emergency-information-organizer/`
+
+# Household pet record source and handoff log
+
+A microchip card, registry screen, rabies certificate, veterinary instruction, labelled medicine, boarding form and travel certificate can all refer to one animal while supporting different decisions. This free browser tool creates a dated public-safe index for a safe pet alias, record purpose, responsible source, protected pet match, current version observation, access and custody, care or official status source, handoff action, observed result, escalation route, owner role and next checkpoint.
+
+It does not scan or search a microchip; identify an animal or owner; access a registry, veterinary clinic, pharmacy, shelter, boarding facility, airline or authority; read or store a medical record, diagnosis, test, prescription or dose; verify a vaccine, registration, license, insurance, health certificate, boarding acceptance or travel eligibility; create feeding, medication, treatment or emergency instructions; calculate a legal, vaccination, treatment, boarding or travel deadline; or tell anyone whether an animal is healthy, safe to travel or needs urgent care. Use the current veterinarian, emergency animal hospital, registry, local animal or public-health authority, destination and actual care provider.
+
+**Ready to replace `pet records current` with a source and an observed result? [Jump to the Household Pet Record Source and Handoff Log](#tool-heading).**
+
+## Create one dated review with a safe pet alias
+
+Use a private review code such as `PET-RECORDS-2026-A` and a pet alias such as `HOUSEHOLD-PET-A`. Choose the real context: initial source map, registry or microchip-source review, vaccination certificate handoff, current veterinary-instruction access, boarding preparation, travel research, adoption or move, lost-pet event, or conflicting source.
+
+The baseline date marks the source map used at the start. The current review date says when responsible sources and protected evidence were observed. The next checkpoint bounds open household follow-up. It is not a vaccination due date, medication time, legal deadline, boarding cutoff, health-certificate validity period or travel deadline.
+
+The global map may name a protected veterinarian source, registry, local animal authority, public-health or rabies source, USDA APHIS travel source, destination authority, boarding provider and protected evidence IDs. Keep full owner and pet names, contact details, addresses, microchip or registration numbers, tag and certificate numbers, clinical records, diagnosis, test values, prescription, medicine and dose, payments, signatures and private messages out of the form.
+
+## Each row has twelve source and handoff fields
+
+Enter one pet-record purpose and responsible-source relationship per line:
+
+`ID | safe pet alias, record purpose and household role | responsible source and scope | protected pet-match evidence plus source checked date YYYY-MM-DD | current document, version or written-instruction observation | access and custody observation | care or official status source | handoff or action plus observed result | discrepancy, emergency, adverse-event, veterinary or authority route | owner role | target or outcome date YYYY-MM-DD | one of the twelve listed statuses`
+
+The source-check date must fall from the baseline through the current review. An open row needs a household target from the current review through the next checkpoint. A closed row needs an outcome date from the baseline through the current review. One dated version supports at most 14 rows.
+
+Use safe statements such as `protected veterinary scan matched; evidence PET-A-ID2; checked 2026-08-24`, `current registry source opened; owner contact content not copied` and `current veterinarian-issued instruction accessible in protected source PET-A-CARE2`. Do not type the actual chip, person, contact, clinical, prescription, dose, financial or case value.
+
+## Twelve statuses preserve discovery, protected match, handoff and result
+
+1. **Pet-care purpose recorded—record category pending:** the household knows why the information matters but has not classified the responsible record.
+2. **Record category recorded—responsible source pending:** identification, registry, vaccination, veterinary, boarding, travel or emergency purpose is known while the controlling source remains open.
+3. **Responsible source recorded—protected pet match pending:** a veterinarian, registry, authority, destination or provider is identified but the record has not been matched to protected pet evidence.
+4. **Protected pet match recorded—current record or instruction version pending:** the match pointer exists while the current issued record, certificate or written instruction is unresolved.
+5. **Current record or instruction version recorded—access and custody pending:** a current version clue exists while the protected source, original or limited copy has not been opened in this review.
+6. **Access and custody tested—care or official status source pending:** the intended record opened, while the registry, vaccination, care, boarding or travel status source is not mapped.
+7. **Care or official status sources mapped—handoff or action pending:** responsible sources exist while a household handoff, external step and owner remain open.
+8. **Registration, vaccination, travel, boarding or care handoff action recorded—responsible result pending:** a submission, appointment, upload or rehearsal is attributable, but the veterinarian, registry, authority, provider or recipient result is not yet observed.
+9. **Identity, care-instruction, status or animal-welfare conflict—veterinary or authority review pending:** sources disagree or a possible emergency, adverse event or welfare concern exists, and the responsible route is named.
+10. **Source, pet match, version, access and handoff reviewed:** the dated row links the responsible source, protected match, current version, actual access, status source and current handoff or reopen rule.
+11. **Responsible-source result received—custody and next-care condition recorded:** the required result was observed and the current certificate, original, labelled container or limited handoff is protected with a new-care trigger.
+12. **Not applicable—reason and reopen event recorded:** the record role does not currently apply and the row says which adoption, transfer, move, loss, travel, boarding or care event reopens it.
+
+The first nine remain open. The final three close only this dated review. A new veterinarian, registry change, vaccination record, written instruction, prescription label, boarding policy, trip, pet loss, recovery, adoption, transfer, access failure or conflicting source creates a new version rather than erasing history.
+
+## A responsible source must control the stated purpose
+
+The tool rejects a reviewed row if it relies only on `internet search`, `sitter said`, `old card` or `family memory`. Name the current veterinarian, registry, local animal or public-health authority, destination, carrier or actual boarding provider and explain which record role it controls.
+
+Do not stretch one source across every claim. A microchip lookup may identify a participating registry without verifying the owner or updating the record. A rabies certificate does not prove every vaccination or boarding requirement. A veterinary invoice does not contain every current instruction. A health-certificate appointment does not prove endorsement or destination acceptance. A sitter confirmation does not replace an emergency veterinary route.
+
+## Protected pet match is evidence, not a public identifier
+
+The household must distinguish the intended animal without exposing the complete identifier. Perform a scan, registry, certificate or veterinary-record comparison in the responsible protected process. Record only a safe pointer, the source-check date and what type of match was observed.
+
+`Protected scan and current registry source matched; evidence PET-A-ID2` is useful workflow evidence. The tool cannot see the scan, authenticate the document, verify ownership or decide whether a registry entry is accurate. Keep the row open when the scan, registry, issued document, owner status or animal description conflicts.
+
+## Veterinary access never authorizes the app to create care instructions
+
+`Current veterinarian-written instruction opened` describes access. It does not authorize FamilyBoard to reproduce, interpret or alter private clinical content. Keep the original labelled container and current issued instruction protected. Give a caregiver the least information and access needed for the real assignment.
+
+The form intentionally rejects text that appears to contain a medicine name, prescription number, diagnosis, laboratory result, explicit dose or measured amount. It cannot detect every private or clinical detail. If a direction is unclear, a dose may have been missed or duplicated, the pet vomits or reacts unexpectedly, or sources conflict, leave the tool and contact the treating or prescribing veterinarian or emergency animal hospital.
+
+## A sent document or generated sheet is still an open action
+
+`Registry update submitted`, `vaccination visit booked`, `boarding form uploaded`, `travel appointment scheduled` and `sitter sheet generated` are actions. The action status requires the row to name what was done and which responsible result remains pending. It rejects a completion claim in an open row.
+
+A closed result row must state that a veterinarian, registry, authority, boarding provider or other responsible source produced an observed result. It must also record custody of the current certificate, original, labelled container or limited copy and the change that starts a new care version. A household checkbox cannot make an external record valid.
+
+## Animal-welfare, emergency and adverse-event conflicts stop the workflow
+
+The conflict status is for an identity mismatch, unclear or contradictory care instruction, possible medication error, unexpected reaction, urgent change, lost-pet event, unsafe boarding condition or other welfare concern. It requires a specific responsible veterinary, emergency, registry, animal-service, public-health, travel or provider route.
+
+Do not wait for the form to validate, diagnose a symptom, guess an antidote, repeat or skip a dose, transport an animal based on an app result or decide that an emergency has ended. The generated output is documentation for household continuity, never veterinary triage.
+
+## Privacy screening is deliberately conservative
+
+The form rejects common full phone and email patterns, long numeric identifiers and terms associated with owner or pet names, addresses, microchips, registry and certificate numbers, rabies tags, medical records, diagnosis, laboratory results, prescriptions, medicines, doses, banking, signatures, credentials and private messages. It cannot recognize every sensitive value or determine who is authorized.
+
+Entries stay in the current browser and are not sent to FamilyBoard. The result is not automatically encrypted or backed up. Copying, printing, downloading or saving to the FamilyBoard App creates another user-controlled copy, so review the limited audience and every row before sharing it.
+
+## Affiliate products cannot validate pet identity, care or travel
+
+A future clearly labelled affiliate area may compare document sleeves, waterproof pouches, carriers, ID-tag holders, scanners or offline storage after the generated result. A commission cannot validate a microchip, registry, vaccination, veterinary instruction, boarding acceptance, emergency plan or health certificate; make a carrier escape-proof; or replace veterinarian, public-health, animal-authority or destination guidance. Product placement must remain outside every emergency, medical-source and unresolved-status step.
+
+**Next step in FamilyBoard:** start with one reviewed identification or registry row and one open care, boarding or travel handoff row. Confirm the safe alias, responsible source, protected match, current version, access result, handoff owner and exact result still pending.
+
+**FAQ:**
+- Q: Can I enter a complete microchip number or owner contact profile?
+  A: No. Use those only in the protected veterinarian, shelter, registry or authority process. Record a safe pet alias, protected match pointer, source-check date and observation here.
+- Q: Does this tool verify vaccinations or medical records?
+  A: No. It cannot read or authenticate a certificate or veterinary system. It records which responsible source and current version the household actually opened.
+- Q: Can it make medication instructions for a sitter?
+  A: No. It deliberately avoids clinical content and never calculates or changes a dose. Keep the veterinarian-issued instruction and original labelled container as the source and contact the veterinarian with questions.
+- Q: Why does an uploaded boarding or travel form remain open?
+  A: Uploading, booking, paying or signing is an action. The row closes only after the responsible provider or authority result is observed and its current evidence is protected.
+- Q: Does the next checkpoint calculate a vaccine or travel deadline?
+  A: No. It is only a household follow-up date. Use the current veterinarian, certificate, local authority, destination and provider for actual requirements and dates.
+- Q: What should I do with conflicting instructions or an unexpected reaction?
+  A: Stop using the organizer and contact the treating or prescribing veterinarian, emergency animal hospital or responsible authority. The tool cannot diagnose, triage or recommend whether to give, repeat, skip or stop anything.
+- Q: Does a closed row prove a pet is registered, healthy or accepted for travel?
+  A: No. It closes only this dated household source-and-handoff review. The responsible registry, authority, veterinarian, provider and actual issued records control every external result.
 
 ---
 

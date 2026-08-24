@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-24T10:07:14.433Z
+Generated: 2026-08-24T10:41:56.112Z
 
 ## Summary
 
-- Indexable pages: 334
-- Generated HTML routes: 351
+- Indexable pages: 337
+- Generated HTML routes: 354
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 131
+- Pages without a contextual product/tool link: 133
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-24T10:07:14.433Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 34
-- tools: 101
+- records-emergency: 35
+- tools: 103
 
 ## Word-count range
 
@@ -109,6 +109,7 @@ Generated: 2026-08-24T10:07:14.433Z
 - /zh-tw/guides/organize-appliance-manuals/
 - /zh-tw/guides/organize-household-subscriptions/
 - /zh-tw/guides/organize-insurance-documents/
+- /zh-tw/guides/organize-pet-records/
 - /zh-tw/guides/organize-utility-account-information/
 - /zh-tw/guides/organize-vehicle-documents-at-home/
 - /zh-tw/guides/power-outage-home-preparedness/
@@ -153,6 +154,7 @@ Generated: 2026-08-24T10:07:14.433Z
 - /zh-tw/tools/household-annual-review-generator/
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-insurance-policy-source-version-log/
+- /zh-tw/tools/household-pet-record-source-handoff-log/
 - /zh-tw/tools/household-power-outage-event-log/
 - /zh-tw/tools/household-record-retention-decision-log/
 - /zh-tw/tools/household-record-retrieval-drill-log/

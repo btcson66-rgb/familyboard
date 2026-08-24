@@ -905,9 +905,9 @@
   },
   {
     "route": "/guides/organize-pet-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/organize-pet-records/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1808,6 +1808,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-pet-record-source-handoff-log/",
+    "alternateRoute": "/zh-tw/tools/household-pet-record-source-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2314,6 +2322,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/household-pet-record-source-handoff-log/",
+    "alternateRoute": "/tools/household-pet-record-source-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/household-power-outage-event-log/",
     "alternateRoute": "/tools/household-power-outage-event-log/",
     "indexable": true,
@@ -2470,6 +2485,13 @@
   {
     "route": "/zh-tw/guides/organize-insurance-documents/",
     "alternateRoute": "/guides/organize-insurance-documents/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/organize-pet-records/",
+    "alternateRoute": "/guides/organize-pet-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
     "locale": "zh-TW"

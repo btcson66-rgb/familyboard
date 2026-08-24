@@ -1815,6 +1815,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不能早於本次車輛文件核對日",
   );
 
+  await page.goto("/tools/household-pet-record-source-handoff-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open source, pet-match, version, access, handoff or result rows: 1");
+  await expect(page.locator(".result")).toContainText("Reviewed, completed or not-applicable rows: 1");
+  await expect(page.locator(".result")).toContainText("Source, pet match, version, access and handoff reviewed 1");
+  await page.getByLabel("Next source, care or action checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+  await page.goto("/tools/household-pet-record-source-handoff-log/");
+  await page.getByLabel("Protected registry, microchip, vaccination, veterinary, travel, boarding and review-history location").fill("medication name: example; dose: 5 mg");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible identity, address, chip, registry, vaccination, health, prescription, dose");
+
+  await page.goto("/zh-tw/tools/household-pet-record-source-handoff-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的來源、寵物比對、版本、存取、交接或結果列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對、完成或不適用列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對來源、寵物比對、版本、存取與交接 1 筆");
+  await page.getByLabel("下一次來源、照護或行動核點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次寵物紀錄核對日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");

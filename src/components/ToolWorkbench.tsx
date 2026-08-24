@@ -469,6 +469,238 @@ const vehicleDocumentDefinition = (locale: Locale): Definition => {
   };
 };
 
+const petRecordDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusOrder = zh
+    ? [
+        "已記錄寵物照護用途，等待確認紀錄分類",
+        "已記錄紀錄分類，等待確認負責來源",
+        "已記錄負責來源，等待受保護寵物比對",
+        "已記錄受保護寵物比對，等待目前文件或指示版本",
+        "已記錄目前文件或指示版本，等待存取與保管核對",
+        "已測試存取與保管，等待照護或官方狀態來源",
+        "已映射照護或官方狀態來源，等待必要交接或行動",
+        "已記錄登記、疫苗、旅運、寄養或照護交接行動，等待負責結果",
+        "身分、照護指示、狀態或動物福利矛盾，等待獸醫或主管來源審查",
+        "已核對來源、寵物比對、版本、存取與交接",
+        "已收到負責來源結果，記錄保管與下次照護條件",
+        "不適用，已記錄原因與重新開啟事件",
+      ]
+    : [
+        "Pet-care purpose recorded—record category pending",
+        "Record category recorded—responsible source pending",
+        "Responsible source recorded—protected pet match pending",
+        "Protected pet match recorded—current record or instruction version pending",
+        "Current record or instruction version recorded—access and custody pending",
+        "Access and custody tested—care or official status source pending",
+        "Care or official status sources mapped—handoff or action pending",
+        "Registration, vaccination, travel, boarding or care handoff action recorded—responsible result pending",
+        "Identity, care-instruction, status or animal-welfare conflict—veterinary or authority review pending",
+        "Source, pet match, version, access and handoff reviewed",
+        "Responsible-source result received—custody and next-care condition recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaultRecords = zh
+    ? `ID-A | 家庭寵物 A 登記與晶片登錄來源；家庭身分紀錄角色 | 寵物登記管理資訊網、登記機構與受保護獸醫掃描證據；犬貓及地方適用來源分開 | 受保護晶片掃描與寵物登記證明已比對；證據 PET-A-ID2；核對 2026-08-24 | 目前寵物登記證明與登錄來源已開啟；飼主聯絡內容未複製 | 受保護登記證明可取得；共用清單只保存代號 | 登記機構、寵物登記網與地方主管機關來源已映射；狂犬病、獸醫照護與旅運分開 | 本次來源與存取已核對；取得、轉讓、住居所、聯絡、遺失或寵物狀態改變時重新檢視 | 登記機構、地方動保機關與獸醫來源已映射；所有已比對來源一致 | 家庭寵物紀錄角色 | 2026-08-24 | 已核對來源、寵物比對、版本、存取與交接
+CARE-A | 家庭寵物 A 目前獸醫指示交接；家庭照護角色 | 目前開立獸醫師與原標示容器／書面指示來源；急診獸醫入口分開 | 受保護寵物紀錄與標示容器已比對；證據 PET-A-CARE2；核對 2026-08-24 | 目前書面指示版本已觀察；共用列只保留版本與來源代號 | 受保護原標示容器與書面來源可取得；照護者只拿到必要入口 | 開立獸醫師目前指示與異常、漏給或多給時的聯絡來源已映射 | 照護交接演練已記錄；開立獸醫師對目前交接版本的確認結果仍待取得 | 開立獸醫師、急診獸醫與藥物錯誤／不良反應處理來源已映射 | 家庭照護角色 | 2026-09-14 | 已記錄登記、疫苗、旅運、寄養或照護交接行動，等待負責結果`
+    : `ID-A | Household pet A identification and microchip-registry source; household identity-record role | Veterinary scan evidence, identified registry source and current local animal authority; each role remains separate | Protected scan and pet record matched; evidence PET-A-ID2; checked 2026-08-24 | Current registry source and contact-review screen opened; owner contact content not copied | Protected evidence is accessible; shared index retains only safe pointers | Registry contact route and local animal authority source mapped; rabies, veterinary care and travel remain separate | Current source and access reviewed; reopen after adoption, move, contact, loss, registry or pet-status change | Veterinarian, registry and local animal-services routes mapped; all compared sources agree | Household pet-record role | 2026-08-24 | Source, pet match, version, access and handoff reviewed
+CARE-A | Household pet A current veterinary-instruction handoff; household care role | Current prescribing veterinarian and original labelled container or written instruction source; emergency veterinary route separate | Protected pet record and labelled container matched; evidence PET-A-CARE2; checked 2026-08-24 | Current written instruction version observed; shared row keeps only version and source pointers | Protected original labelled container and written source accessible; caregiver receives only the necessary route | Prescribing veterinarian instruction and contact route for a missed, extra or unexpected administration mapped | Caregiver handoff rehearsal recorded; prescribing-veterinarian confirmation of the current handoff version remains pending | Prescribing veterinarian, emergency veterinary and medication-error or adverse-event routes mapped | Household care role | 2026-09-14 | Registration, vaccination, travel, boarding or care handoff action recorded—responsible result pending`;
+
+  return {
+    intro: zh
+      ? "分開記錄寵物登記／晶片、狂犬病或其他證明、獸醫書面來源、旅運／寄養文件與照護交接結果。工具不查晶片、不保存病歷，也不產生診斷或用藥指示。"
+      : "Separate pet identification, registry, vaccination, veterinary-source, travel, boarding and care-handoff evidence. The tool never searches a microchip, stores a medical record or creates diagnosis or medication instructions.",
+    fields: [
+      text(
+        "review",
+        zh ? "家庭私人寵物紀錄核對代號" : "Private household pet-record review reference",
+        zh ? "使用家庭代號，不要輸入飼主或寵物本名、地址、電話、晶片、登記、病歷、處方或旅運案件資料。" : "Use a household code, not an owner or pet name, address, phone, chip, registry, medical, prescription or travel-case detail.",
+        "PET-RECORDS-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "寵物紀錄核對情境" : "Pet-record review context",
+        type: "select",
+        options: zh
+          ? ["第一次家庭寵物紀錄盤點", "寵物登記或晶片來源核對", "疫苗或證明版本交接", "獸醫書面指示與照護交接", "寄養、美容、日托或到府照護準備", "國內移動、出入境或運輸文件研究", "搬家、取得、轉讓、遺失或聯絡資料改變", "身分、照護指示、狀態或動物福利矛盾"]
+          : ["First household pet-record map", "Pet registry or microchip-source review", "Vaccination or certificate version handoff", "Veterinary written-instruction and care handoff", "Boarding, grooming, daycare or sitter preparation", "Domestic move, international travel or transport research", "Move, adoption, transfer, loss or contact change", "Identity, care-instruction, status or animal-welfare conflict"],
+      },
+      { name: "baselineDate", label: zh ? "寵物紀錄與來源地圖基準日" : "Pet-record and source-map baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: zh ? "本次寵物紀錄核對日" : "Current pet-record review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: zh ? "下一次來源、照護或行動核點" : "Next source, care or action checkpoint", type: "date", value: "2026-09-14" },
+      text(
+        "basis",
+        zh ? "登記、晶片、獸醫、疫苗、旅運、寄養與緊急照護來源地圖" : "Registry, microchip, veterinary, vaccination, travel, boarding and emergency-care source map",
+        zh ? "使用安全來源或證據代號；身分、聯絡、健康與案件內容留在受保護來源。" : "Use safe source or evidence IDs. Keep identity, contact, health and case content in the protected responsible source.",
+        zh ? "PET-REGISTRY-R2；VET-SOURCE-V2；TRAVEL-SOURCE-T1；PROTECTED-PET-A" : "REGISTRY-R2; VET-SOURCE-V2; APHIS-TRAVEL-T1; PROTECTED-PET-A",
+      ),
+      {
+        name: "records",
+        label: zh ? "有版本的家庭寵物紀錄來源與交接狀態列" : "Versioned household pet-record source and handoff rows",
+        type: "textarea",
+        help: zh ? "每行：ID｜安全寵物代號、紀錄用途與家庭角色｜負責來源及適用範圍｜受保護寵物比對與來源核對日 YYYY-MM-DD｜目前文件／版本／書面指示觀察｜存取與保管觀察｜照護或官方狀態來源｜交接／行動與實際結果｜差異／緊急／不良事件／獸醫或主管來源｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。最多 14 行。" : "One line: ID | safe pet alias, record purpose and household role | responsible source and scope | protected pet-match evidence plus source checked date YYYY-MM-DD | current document, version or written-instruction observation | access and custody observation | care or official status source | handoff/action and observed result | discrepancy, emergency, adverse-event, veterinary or authority route | owner role | target or outcome date YYYY-MM-DD | one of the twelve listed statuses. Maximum 14 lines.",
+        value: defaultRecords,
+      },
+      text(
+        "storage",
+        zh ? "受保護登記、晶片、疫苗、獸醫、旅運、寄養與核對歷程位置" : "Protected registry, microchip, vaccination, veterinary, travel, boarding and review-history location",
+        zh ? "只寫資料夾或流程代號，不要貼身分、聯絡、晶片、病歷、處方、付款、授權或案件內容。" : "Use a folder or process label. Do not paste identity, contact, chip, medical, prescription, payment, authorization or case content.",
+        zh ? "家庭紀錄／寵物／PET-RECORDS-2026-A／受保護簽發與獸醫來源" : "Household records / pets / PET-RECORDS-2026-A / protected issued and veterinary sources",
+      ),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!values.review?.trim() || !baselineDate || !reviewDate || !nextReview)
+        return zh ? "請填寫私人核對代號與三個有效日期。" : "Enter a private review reference and all three valid dates.";
+      if (baselineDate.getTime() > reviewDate.getTime())
+        return zh ? "寵物紀錄基準日不能晚於本次核對日。" : "The pet-record baseline cannot be later than the current review.";
+      if (nextReview.getTime() < reviewDate.getTime())
+        return zh ? "下一次來源、照護或行動核點不能早於本次寵物紀錄核對日。" : "The next source, care or action checkpoint cannot be earlier than the current review.";
+      if (!values.basis?.trim() || !values.storage?.trim())
+        return zh ? "請填寫來源地圖與受保護資料位置代號。" : "Enter the source map and protected-record location pointer.";
+
+      const rawRows = (values.records || "").split(/\r?\n/).map((item) => item.trim()).filter(Boolean);
+      if (!rawRows.length || rawRows.length > 14)
+        return zh ? "請輸入 1 至 14 行寵物紀錄來源與交接狀態。" : "Enter 1 to 14 pet-record source and handoff rows.";
+      const recordRows = rawRows.map((raw, index) => ({ line: index + 1, parts: raw.split(/\s*\|\s*/).map((part) => part.trim()) }));
+      const wrongParts = recordRows.filter((row) => row.parts.length !== 12);
+      if (wrongParts.length)
+        return zh ? `寵物紀錄第 ${wrongParts.map((row) => row.line).join("、")} 行必須剛好有十二個欄位。` : `Pet-record line ${wrongParts.map((row) => row.line).join(", ")} must contain exactly twelve fields.`;
+      const invalidIds = recordRows.filter((row) => !/^[A-Z0-9][A-Z0-9-]{1,23}$/i.test(row.parts[0]));
+      const ids = recordRows.map((row) => row.parts[0].toLowerCase());
+      if (invalidIds.length || new Set(ids).size !== ids.length)
+        return zh ? "每行需要唯一的 2 至 24 字元安全 ID，只能使用英數與連字號。" : "Every row needs a unique 2-to-24-character safe ID using letters, numbers and hyphens.";
+      const statuses = new Set(statusOrder);
+      const invalidStatuses = recordRows.filter((row) => !statuses.has(row.parts[11]));
+      if (invalidStatuses.length)
+        return zh ? `寵物紀錄第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用欄位說明中的十二種狀態之一。` : `Pet-record line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve listed statuses.`;
+
+      const sourceDateFor = (value: string) => {
+        const matches = value.match(/\b\d{4}-\d{2}-\d{2}\b/g) || [];
+        return matches.length === 1 ? strictIsoDate(matches[0]) : null;
+      };
+      const invalidSourceDates = recordRows.filter((row) => {
+        const checked = sourceDateFor(row.parts[3]);
+        return !checked || checked.getTime() < baselineDate.getTime() || checked.getTime() > reviewDate.getTime();
+      });
+      if (invalidSourceDates.length)
+        return zh ? `寵物紀錄第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要一個介於基準日與本次核對日的來源核對日及受保護寵物比對指標。` : `Pet-record line ${invalidSourceDates.map((row) => row.line).join(", ")} needs one source-checked date from the baseline through this review plus a protected pet-match pointer.`;
+
+      const openRows = recordRows.filter((row) => statusOrder.slice(0, 9).includes(row.parts[11]));
+      const closedRows = recordRows.filter((row) => statusOrder.slice(9).includes(row.parts[11]));
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target.getTime() < reviewDate.getTime() || target.getTime() > nextReview.getTime();
+      });
+      if (invalidOpenDates.length)
+        return zh ? `開放的寵物紀錄第 ${invalidOpenDates.map((row) => row.line).join("、")} 行需要介於本次核對日與下一核點的目標日。` : `Open pet-record line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome.getTime() < baselineDate.getTime() || outcome.getTime() > reviewDate.getTime();
+      });
+      if (invalidClosedDates.length)
+        return zh ? `已核對、完成或不適用的寵物紀錄第 ${invalidClosedDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的結果日。` : `Closed pet-record line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an outcome date from the baseline through this review.`;
+
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 12 || row.parts[3].length < 18 || row.parts[4].length < 12 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 12 || row.parts[8].length < 10 || row.parts[9].length < 4);
+      if (missingLayers.length)
+        return zh ? `寵物紀錄第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實的用途、負責來源、受保護比對、版本、存取／保管、狀態、交接／結果、處理來源與負責角色。` : `Pet-record line ${missingLayers.map((row) => row.line).join(", ")} needs a real purpose, responsible source, protected match, version, access/custody, status, handoff/result, review route and owner.`;
+
+      const reviewedWithoutEvidence = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[9]) return false;
+        const evidence = row.parts.slice(2, 9).join(" ");
+        const sourceOk = zh ? /(?:登記|獸醫|防疫|檢疫|寄養|主管|官方|簽發)/.test(row.parts[2]) : /(?:registry|veterinar|animal service|authority|official|issued|boarding|travel)/i.test(row.parts[2]);
+        const matchOk = zh ? /(?:受保護|比對|證據)/.test(row.parts[3]) : /(?:protected|match|evidence)/i.test(row.parts[3]);
+        const versionOk = zh ? /(?:目前|版本|證明|指示|登錄)/.test(row.parts[4]) : /(?:current|version|certificate|instruction|registry)/i.test(row.parts[4]);
+        const accessOk = zh ? /(?:開啟|存取|可取得|保管|原件)/.test(row.parts[5]) : /(?:opened|access|available|custody|original)/i.test(row.parts[5]);
+        const statusOk = zh ? /(?:登記|狂犬病|疫苗|獸醫|旅運|寄養|狀態|照護)/.test(row.parts[6]) : /(?:registry|rabies|vaccin|veterinar|travel|boarding|status|care)/i.test(row.parts[6]);
+        const actionOk = zh ? /(?:核對|保留|重新|改變|交接|行動)/.test(row.parts[7]) : /(?:reviewed|retained|reopen|change|handoff|action)/i.test(row.parts[7]);
+        const routeOk = zh ? /(?:登記|獸醫|動保|防疫|檢疫|寄養|主管|合格)/.test(row.parts[8]) : /(?:registry|veterinar|animal service|public health|travel|boarding|authority|qualified)/i.test(row.parts[8]);
+        const unresolved = zh ? /(?:等待|未知|未解|未核對|矛盾|缺少)/.test(evidence) : /(?:pending|unknown|unresolved|not checked|conflict|missing)/i.test(evidence);
+        return !sourceOk || !matchOk || !versionOk || !accessOk || !statusOk || !actionOk || !routeOk || unresolved;
+      });
+      if (reviewedWithoutEvidence.length)
+        return zh ? `完成核對的第 ${reviewedWithoutEvidence.map((row) => row.line).join("、")} 行必須連結負責來源、受保護寵物比對、目前版本、實際存取、狀態、交接或重查條件及負責處理來源，且不能仍有未解差異。` : `Completed pet-record review line ${reviewedWithoutEvidence.map((row) => row.line).join(", ")} must link a responsible source, protected pet match, current version, actual access, status, handoff or reopen rule and responsible route with no unresolved gap.`;
+
+      const actionClaimingCompletion = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[7]) return false;
+        return zh ? /(?:已完成|已生效|登記完成|接種完成|檢疫完成|獸醫確認完成)/.test(row.parts[7]) || !/(?:已記錄|已送出|已預約|等待|仍待|尚待|待取得)/.test(row.parts[7]) : /(?:confirmed complete|completed|effective|registration complete|vaccination complete|travel cleared|veterinarian confirmed)/i.test(row.parts[7]) || !/(?:recorded|submitted|appointment|pending|awaiting|remains)/i.test(row.parts[7]);
+      });
+      if (actionClaimingCompletion.length)
+        return zh ? `已交接或行動但等待結果的第 ${actionClaimingCompletion.map((row) => row.line).join("、")} 行必須保持開放，不能把送出、預約或轉述寫成完成。` : `Action-recorded line ${actionClaimingCompletion.map((row) => row.line).join(", ")} must remain open and cannot turn a submission, appointment or handoff into completion.`;
+
+      const conflictWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[8]) return false;
+        const combined = [row.parts[4], row.parts[6], row.parts[7], row.parts[8], row.parts[9]].join(" ");
+        const conflict = zh ? /(?:矛盾|不同|差異|錯誤|緊急|不良|福利|異常)/.test(combined) : /(?:conflict|different|discrepancy|error|emergency|adverse|welfare|unexpected)/i.test(combined);
+        const route = zh ? /(?:獸醫|登記|動保|防疫|檢疫|寄養|主管|負責)/.test(combined) : /(?:veterinar|registry|animal service|public health|travel|boarding|authority|responsible)/i.test(combined);
+        return !conflict || !route;
+      });
+      if (conflictWithoutRoute.length)
+        return zh ? `矛盾列第 ${conflictWithoutRoute.map((row) => row.line).join("、")} 行必須寫出身分、照護指示、狀態或動物福利差異，以及負責獸醫、登記、動保、防疫、檢疫或寄養來源。` : `Conflict line ${conflictWithoutRoute.map((row) => row.line).join(", ")} must name the identity, care-instruction, status or animal-welfare conflict and the responsible veterinary, registry, animal-service, public-health, travel or boarding route.`;
+
+      const completedWithoutResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[10]) return false;
+        const result = [row.parts[7], row.parts[8]].join(" ");
+        const observed = zh ? /(?:負責來源|獸醫|登記|防疫|檢疫|寄養|官方).*(?:結果|證明|確認).*(?:收到|開啟|觀察|記錄)/.test(result) : /(?:(?:responsible source|veterinary|registry|public-health|travel|boarding|official) (?:result|certificate|confirmation)).*(?:received|opened|observed|recorded)/i.test(result);
+        const custody = zh ? /(?:保管|原件|容器|證明|下一次|重新開啟)/.test(result) : /(?:custody|original|container|certificate|next care|reopen)/i.test(result);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知)/.test(result) : /(?:pending|awaiting|unresolved|unknown)/i.test(result);
+        return !observed || !custody || unresolved;
+      });
+      if (completedWithoutResult.length)
+        return zh ? `完成結果的第 ${completedWithoutResult.map((row) => row.line).join("、")} 行必須記錄已收到或觀察的負責來源結果、證明／原件保管與下次照護或重開條件。` : `Completed result line ${completedWithoutResult.map((row) => row.line).join(", ")} must record an observed responsible-source result, certificate or original custody and the next-care or reopen condition.`;
+
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[11] === statusOrder[11] && !(zh ? /(?:重新開啟|重新檢視|如果|當.*時|取得|轉讓|搬家|遺失|旅運|寄養|照護.*改變)/.test([row.parts[7], row.parts[8]].join(" ")) : /(?:reopen|review again|if |when |after |adoption|transfer|move|loss|travel|boarding|care.*change)/i.test([row.parts[7], row.parts[8]].join(" "))));
+      if (notApplicableWithoutTrigger.length)
+        return zh ? `不適用的第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須記錄目前原因，以及取得、轉讓、搬家、遺失、旅運、寄養或照護改變時的重開事件。` : `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and the adoption, transfer, move, loss, travel, boarding or care change that reopens it.`;
+
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return zh ? "偵測到可能的完整電話、Email、晶片、登記、證明、處方、案件或其他長數字識別資料。請改用安全證據代號。" : "A possible full phone, email, chip, registry, certificate, prescription, case or other long numeric identifier was detected. Use a safe evidence pointer.";
+      if (/password|passphrase|passcode|access code|recovery code|verification code|login credential|full address|street address|owner name\s*[:=]|pet name\s*[:=]|caregiver name\s*[:=]|microchip (?:number|id)\s*[:=]|chip number\s*[:=]|registry number\s*[:=]|rabies tag\s*[:=]|certificate number\s*[:=]|medical record|diagnosis\s*[:=]|lab result|prescription number|medication name\s*[:=]|drug name\s*[:=]|dose\s*[:=]|dosage\s*[:=]|\b\d+(?:\.\d+)?\s*(?:mg|mcg|ml)\b|payment card|bank account|signature|private message|correspondence|完整地址|飼主姓名|寵物本名|照護者姓名|晶片號碼\s*[:：]|寵物登記證號|狂犬病牌號\s*[:：]|證明書號碼|病歷內容|診斷\s*[:：]|檢驗數值|處方號碼|藥名\s*[:：]|劑量\s*[:：]|銀行帳號|信用卡|簽名|登入密碼|驗證碼|私人訊息|通信內容/i.test(privacyText))
+        return zh ? "偵測到可能的身分、地址、晶片、登記、疫苗、健康、處方、劑量、付款、授權、登入或私人通信內容。請改成安全來源、流程或證據代號。" : "A possible identity, address, chip, registry, vaccination, health, prescription, dose, payment, authorization, credential or private correspondence detail was detected. Replace it with a safe source, process or evidence pointer.";
+
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length })).filter((item) => item.count > 0);
+      if (zh)
+        return `${values.review.trim()}｜家庭寵物紀錄來源與交接狀態
+核對情境：${values.context}
+寵物紀錄／來源地圖基準：${formatter.format(baselineDate)}
+本次寵物紀錄核對：${formatter.format(reviewDate)}
+下一次來源、照護或行動核點：${formatter.format(nextReview)}
+仍開放的來源、寵物比對、版本、存取、交接或結果列：${openRows.length} 筆
+已核對、完成或不適用列：${closedRows.length} 筆
+狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}
+
+登記、晶片、獸醫、疫苗、旅運、寄養與緊急照護來源地圖：${values.basis.trim()}
+
+${lines("有版本的家庭寵物紀錄來源與交接證據", recordRows.map((row) => `${row.parts[0]}｜寵物／紀錄用途：${row.parts[1]}｜負責來源／適用範圍：${row.parts[2]}｜受保護寵物比對／來源核對：${row.parts[3]}｜目前文件／版本／書面指示：${row.parts[4]}｜存取／保管：${row.parts[5]}｜照護／官方狀態來源：${row.parts[6]}｜交接／行動／實際結果：${row.parts[7]}｜差異／緊急／不良事件／審查來源：${row.parts[8]}｜負責角色：${row.parts[9]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[10]) as Date)}｜狀態：${row.parts[11]}`))}
+
+受保護登記、晶片、疫苗、獸醫、旅運、寄養與核對歷程位置：${values.storage.trim()}
+
+這份輸出只是家庭來源與交接索引，不是寵物身分、登記、疫苗、健康、處方、旅運、寄養、授權或照護結果證明。它不搜尋晶片、不查飼主、不登入登記或獸醫系統、不讀取或上傳證明／病歷／檢驗／處方、不產生診斷、用藥、劑量、餵食或緊急處置建議，不預約、申報、變更登記、購藥、送件、付款或聯絡任何機構，也不計算法定、疫苗、治療、寄養或旅運期限。真實照護與緊急狀況請直接使用目前開立或照護獸醫師、急診動物醫院、寵物登記機構、地方動保／防疫機關、檢疫機關、旅運目的地及實際寄養來源。`;
+      return `${values.review.trim()} — household pet-record source and handoff status
+Review context: ${values.context}
+Pet-record/source-map baseline: ${formatter.format(baselineDate)}
+Current pet-record review: ${formatter.format(reviewDate)}
+Next source, care or action checkpoint: ${formatter.format(nextReview)}
+Open source, pet-match, version, access, handoff or result rows: ${openRows.length}
+Reviewed, completed or not-applicable rows: ${closedRows.length}
+Status count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}
+
+Registry, microchip, veterinary, vaccination, travel, boarding and emergency-care source map: ${values.basis.trim()}
+
+${lines("Versioned household pet-record source and handoff evidence", recordRows.map((row) => `${row.parts[0]} — pet/record purpose: ${row.parts[1]} — responsible source/scope: ${row.parts[2]} — protected pet match/source check: ${row.parts[3]} — current record/version/written instruction: ${row.parts[4]} — access/custody: ${row.parts[5]} — care/official status source: ${row.parts[6]} — handoff/action/observed result: ${row.parts[7]} — discrepancy/emergency/adverse-event/review route: ${row.parts[8]} — owner: ${row.parts[9]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[10]) as Date)} — status: ${row.parts[11]}`))}
+
+Protected registry, microchip, vaccination, veterinary, travel, boarding and review-history location: ${values.storage.trim()}
+
+This output is a household source and handoff index, not proof of pet identity, registry, vaccination, health, prescription, travel, boarding, authorization or care result. It does not search a microchip, identify an owner, sign in to a registry or veterinary system, read or upload a certificate, medical record, test or prescription, create diagnosis, medication, dose, feeding or emergency instructions, book care, report or update a registry, buy medicine, submit a form, pay or contact an organization, or calculate legal, vaccine, treatment, boarding or travel deadlines. Use the current prescribing or treating veterinarian, emergency animal hospital, registry, local animal or public-health authority, travel destination and actual boarding source for every real action and result.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
     intro:
@@ -4448,6 +4680,9 @@ const definitions: Record<string, Definition> = {
   "household-vehicle-document-source-status-log": {
     ...vehicleDocumentDefinition("en"),
   },
+  "household-pet-record-source-handoff-log": {
+    ...petRecordDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -4455,6 +4690,9 @@ const zhTwDefinitions: Record<string, Definition> = {
     definitions["__zh-tw-household-utility-provider-service-handoff-log"],
   "household-vehicle-document-source-status-log": {
     ...vehicleDocumentDefinition("zh-TW"),
+  },
+  "household-pet-record-source-handoff-log": {
+    ...petRecordDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:
