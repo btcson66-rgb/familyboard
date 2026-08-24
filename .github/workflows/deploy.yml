@@ -27,7 +27,14 @@ jobs:
       - run: npm run build
         env:
           PUBLIC_GA4_MEASUREMENT_ID: ${{ vars.PUBLIC_GA4_MEASUREMENT_ID }}
-          PUBLIC_ADSENSE_PUBLISHER_ID: ${{ vars.PUBLIC_ADSENSE_PUBLISHER_ID }}
+          # 2026-08-24: was ${{ vars.PUBLIC_ADSENSE_PUBLISHER_ID }}. That repo variable's
+          # state cannot be verified from source, and if it is unset the build injects an
+          # empty string, which silently drops both the account meta and the verification
+          # loader — the site would go to AdSense review with no ad code at all. The
+          # publisher ID is public information anyway (public/ads.txt serves it verbatim),
+          # so it is written literally here, the same way funnytools, roomfeng and
+          # worthcalc do it. Keep in sync with public/ads.txt and scripts/monitor-live.mjs.
+          PUBLIC_ADSENSE_PUBLISHER_ID: pub-9117672212804270
           PUBLIC_AMAZON_ASSOCIATES_TAG: ${{ vars.PUBLIC_AMAZON_ASSOCIATES_TAG }}
       - run: npx playwright install --with-deps chromium
       - run: npm run e2e

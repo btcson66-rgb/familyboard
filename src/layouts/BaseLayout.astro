@@ -49,6 +49,15 @@ const languageSwitchPath = alternatePath || (isZhTw ? '/' : '/zh-tw/');
 const isApp = /^\/(?:zh-tw\/)?app\//.test(canonicalPath);
 const ga4Id = import.meta.env.PROD && !isApp && publicIntegrationsEnabled ? import.meta.env.PUBLIC_GA4_MEASUREMENT_ID?.trim() : '';
 const adsenseAccount = !isApp && publicIntegrationsEnabled && monetization.adsensePublisherId ? `ca-${monetization.adsensePublisherId.replace(/^ca-/, '')}` : '';
+// AdSense verification loader. The account meta alone is not what review looks for —
+// it looks for the adsbygoogle.js tag in the served HTML of real pages. Gated on
+// adsenseAccount so it inherits the exclusions that were already correct: /app/
+// surfaces (isApp) and redirect stubs (publicIntegrationsEnabled: false, which
+// postbuild-audit asserts must carry no AdSense metadata). The extra noindex check
+// keeps it off 404 and any other page Google is told to ignore — a noindex page must
+// not request ads. Loads the script only; monetization.adsEnabled still gates every
+// visible unit, so no ad renders anywhere while the site is under review.
+const adsenseLoader = adsenseAccount && !robotsContent.includes('noindex') ? adsenseAccount : '';
 const organizationId = `${brand.origin}/#organization`;
 const websiteId = `${brand.origin}/#website`;
 const logoUrl = `${brand.origin}/brand/familyboard-mark.png`;
@@ -109,6 +118,7 @@ const faqSchema = faq.length > 0 ? {
     <meta name="robots" content={robotsContent} />
     {redirectRefresh && <meta http-equiv="refresh" content={redirectRefresh} />}
     {adsenseAccount && <meta name="google-adsense-account" content={adsenseAccount} />}
+    {adsenseLoader && <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseLoader}`} crossorigin="anonymous"></script>}
     <link rel="canonical" href={canonical} />
     {alternate && <>
       <link rel="alternate" hreflang="en" href={englishUrl} />
