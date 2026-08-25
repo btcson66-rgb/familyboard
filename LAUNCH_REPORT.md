@@ -26,7 +26,7 @@ This report separates deployed evidence from provider work that still requires a
 | GA4 production traffic verified | PASS, INTERNAL VALIDATION INCLUDED | Browser collection request returned HTTP 204 and Realtime API returned data. Activation checks are marked `codex_launch_validation`; do not interpret them as natural traffic |
 | Private App analytics exclusion | PASS | `/app/` and `/zh-tw/app/` build artifacts have `noindex,follow`, no GA4 tag and no AdSense tag; v1.4.0 production verification is required after deploy |
 | Bing / IndexNow | RECEIVED, INDEXING UNKNOWN | Root verification key and guarded 219-URL bulk submission tool ship in v1.2.2; initial full submission returned HTTP 200. Receipt is not proof of indexing or ranking |
-| AdSense technical connection | PASS | Public pages expose `ca-pub-7052036786750044` account meta; `ads.txt` is live; ad script remains disabled |
+| AdSense technical connection | PASS | Public pages expose `ca-pub-9117672212804270` account meta and the AdSense verification loader; `ads.txt` is live; no visible ad slot is enabled |
 | AdSense review requested | PENDING | AdSense OAuth client is disabled; a controllable browser is open at Google sign-in but still requires the owner's interactive login |
 | Affiliate recommendations | READY, DISABLED | Compliant disclosure/link system exists, but activation requires a confirmed program/tag registered for this site |
 
