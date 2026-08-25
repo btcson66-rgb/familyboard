@@ -1606,13 +1606,5 @@
     "cluster": "support",
     "keywords": "household information disclaimer",
     "headings": "Household Information Disclaimer Use records as a prompt to verify"
-  },
-  {
-    "title": "Search Household Guides and Tools | FamilyBoard",
-    "description": "Search FamilyBoard household guides, calculators, generators, checklists and templates.",
-    "route": "/search/",
-    "cluster": "support",
-    "keywords": "search home management guides",
-    "headings": "Search FamilyBoard"
   }
 ]

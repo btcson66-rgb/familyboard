@@ -11177,18 +11177,6 @@ See the [changelog](/changelog/) for changes that are already shipped.
 
 # Changelog
 
-Do not pre-fill fake release history. Start with the real launch release.
-
-Each release entry should include:
-
-- release date;
-- app version;
-- added;
-- changed;
-- fixed;
-- data migration notes, if any;
-- known limitations.
-
 Content updates belong here only when they represent meaningful site-wide work. Individual article review dates should stay on those articles.
 
 ---
@@ -11223,8 +11211,6 @@ Build emergency information, sitter packets and household handoff systems so the
 
 Create chore systems, reviews, subscription records, annual-renewal calendars and practical household routines.
 
-The hub should dynamically list guides by editorial cluster with 1-2 sentence descriptions, not just a wall of links.
-
 ---
 
 ## Supporting Page I — Tools Hub
@@ -11235,9 +11221,7 @@ The hub should dynamically list guides by editorial cluster with 1-2 sentence de
 
 # Free Home Management Tools
 
-These tools are designed to do useful work without requiring an account.
-
-Group the tools by task:
+These tools are designed to do useful work without requiring an account. They are grouped by task:
 
 - Maintenance planning
 - Warranty and appliance planning
@@ -11247,9 +11231,7 @@ Group the tools by task:
 - Moving and travel
 - Household routines
 
-Each card must state exactly what the tool produces. Do not use vague labels such as “AI-powered planner” when the tool is deterministic.
-
-All private form values should remain client-side unless a future feature explicitly says otherwise.
+Each tool states exactly what it produces, and your private form values stay in this browser.
 
 ---
 

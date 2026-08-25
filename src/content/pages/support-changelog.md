@@ -16,18 +16,6 @@ contentVersion: 1
 ---
 # Changelog
 
-Do not pre-fill fake release history. Start with the real launch release.
-
-Each release entry should include:
-
-- release date;
-- app version;
-- added;
-- changed;
-- fixed;
-- data migration notes, if any;
-- known limitations.
-
 Content updates belong here only when they represent meaningful site-wide work. Individual article review dates should stay on those articles.
 
 ## Version 1.4.0 — August 20, 2026

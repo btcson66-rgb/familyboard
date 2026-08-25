@@ -233,7 +233,10 @@ const extraRecords = [
     primaryKeyword: "search home management guides",
     cluster: "support",
     pageType: "support",
-    indexable: true,
+    // Search results are user-input-dependent and duplicate/thin relative to the
+    // guides/tools already indexed individually; keep the entry page crawlable
+    // (so internal links resolve and PageRank flows through) but out of the index.
+    indexable: false,
     related: ["/guides/", "/tools/"],
     body: `# Search FamilyBoard\n\nFind a guide, calculator, generator, checklist or printable by the household job you need to complete.`,
   },
