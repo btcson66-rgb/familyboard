@@ -6,7 +6,7 @@ primaryIntent: "search FamilyBoard content"
 primaryKeyword: "search home management guides"
 cluster: "support"
 pageType: "support"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

@@ -37,5 +37,3 @@ Build emergency information, sitter packets and household handoff systems so the
 ## Organize recurring life
 
 Create chore systems, reviews, subscription records, annual-renewal calendars and practical household routines.
-
-The hub should dynamically list guides by editorial cluster with 1-2 sentence descriptions, not just a wall of links.

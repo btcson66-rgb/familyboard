@@ -1,14 +1,15 @@
 # Content quality report
 
-Generated: 2026-08-21T16:39:58.595Z
+Generated: 2026-08-25T09:42:51.120Z
 
 ## Summary
 
-- Indexable pages: 205
+- Indexable pages: 204
 - Generated HTML routes: 223
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
+- Internal instruction leakage: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
 - Pages without a contextual product/tool link: 29
@@ -16,7 +17,7 @@ Generated: 2026-08-21T16:39:58.595Z
 
 ## Indexable pages by cluster
 
-- support: 16
+- support: 15
 - printables: 20
 - product: 16
 - appliances: 30
@@ -28,7 +29,7 @@ Generated: 2026-08-21T16:39:58.595Z
 
 ## Word-count range
 
-- Lowest: https://familyboard.win/search/ (19 words)
+- Lowest: https://familyboard.win/checklists/printable-pet-sitter-checklist/ (64 words)
 - Highest: https://familyboard.win/zh-tw/guides/home-maintenance-schedule/ (1941 words)
 
 ## Highest similarity pairs

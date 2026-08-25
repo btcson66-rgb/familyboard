@@ -16,9 +16,7 @@ contentVersion: 1
 ---
 # Free Home Management Tools
 
-These tools are designed to do useful work without requiring an account.
-
-Group the tools by task:
+These tools are designed to do useful work without requiring an account. They are grouped by task:
 
 - Maintenance planning
 - Warranty and appliance planning
@@ -28,6 +26,4 @@ Group the tools by task:
 - Moving and travel
 - Household routines
 
-Each card must state exactly what the tool produces. Do not use vague labels such as “AI-powered planner” when the tool is deterministic.
-
-All private form values should remain client-side unless a future feature explicitly says otherwise.
+Each tool states exactly what it produces, and your private form values stay in this browser.

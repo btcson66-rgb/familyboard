@@ -61,6 +61,34 @@ const wordCount = (value) => {
     .filter(Boolean).length;
   return cjkCharacters + nonCjkWords;
 };
+// Routes where reader-facing prose legitimately discusses editorial process or
+// AI-assisted drafting (a transparency disclosure, not a leaked instruction).
+// Keep this list narrow and explicit — see docs/seo/SEO_RULES.md.
+const instructionLeakAllowlist = new Set(["/editorial-policy/"]);
+// Phrases that are near-certainly a developer instruction, AI prompt, or
+// unfilled template artifact rather than reader-facing copy. Deliberately
+// specific (exact phrases / all-caps tokens) to avoid flagging ordinary prose
+// that happens to use a word like "placeholder" or "instructions" correctly.
+const instructionLeakPatterns = [
+  { label: "Lorem ipsum", pattern: /lorem ipsum/i },
+  { label: "TODO", pattern: /\bTODO\b/ },
+  { label: "FIXME", pattern: /\bFIXME\b/ },
+  { label: "PLACEHOLDER", pattern: /\bPLACEHOLDER\b/ },
+  { label: "do not pre-fill", pattern: /do not pre-fill/i },
+  { label: "should dynamically", pattern: /should dynamically\b/i },
+  { label: "content goes here", pattern: /content goes here/i },
+  // "replace this [text/copy/...]" — narrower than bare "replace this" so it
+  // doesn't flag ordinary reader-facing prose like a rhetorical "should I
+  // replace this?" about a household appliance.
+  { label: "replace this", pattern: /\breplace this (?:text|copy|paragraph|section|sentence|placeholder|line|content)\b/i },
+  { label: "insert here", pattern: /insert here/i },
+  { label: "the build pipeline should", pattern: /the build pipeline should\b/i },
+  { label: "editor/developer note", pattern: /\b(?:editor|developer|dev)\s+note\b/i },
+  { label: "write a compelling description here", pattern: /write a compelling description here/i },
+  { label: "page title goes here", pattern: /page title goes here/i },
+  { label: "AI prompt", pattern: /\bAI prompt\b/i },
+];
+
 const frontmatterValue = (raw, key) =>
   (raw.match(new RegExp(`^${key}:\\s*(.+)$`, "m"))?.[1] || "")
     .replace(/^"|"$/g, "")
@@ -97,6 +125,7 @@ const toolDefinitions = new Set(
 );
 const htmlFiles = walk(root).filter((file) => file.endsWith(".html"));
 const errors = [];
+const instructionLeaks = [];
 const brokenLinks = [];
 const placeholders = [];
 const sourceWarnings = [];
@@ -208,6 +237,13 @@ for (const file of htmlFiles) {
     errors.push(`${route}: no registered production tool definition`);
   if (/\b(TODO|FIXME|Lorem ipsum|example\.com|localhost)\b/i.test(html))
     placeholders.push(route);
+  if (!instructionLeakAllowlist.has(route)) {
+    const visibleText = clean(html);
+    for (const { label, pattern } of instructionLeakPatterns) {
+      const matched = (visibleText.match(pattern) || title.match(pattern) || description.match(pattern))?.[0];
+      if (matched) instructionLeaks.push({ route, label, matched });
+    }
+  }
   if (/Contextual CTA/i.test(html))
     errors.push(`${route}: contains the Contextual CTA authoring artifact`);
   // The bare **CTA:** marker renders as "<strong>CTA:</strong>" once Markdown runs.
@@ -266,6 +302,12 @@ for (const file of htmlFiles) {
     toolFunctional,
     lastReviewed: meta?.lastReviewed || "",
   });
+}
+
+for (const leak of instructionLeaks) {
+  errors.push(
+    `❌ Internal instruction leaked into public HTML\nPage:    ${leak.route}\nMatched: "${leak.matched}"`,
+  );
 }
 
 for (const key of ["title", "metaDescription", "canonical"]) {
@@ -440,6 +482,7 @@ Generated: ${new Date().toISOString()}
 - Duplicate metadata blockers: ${uniqueErrors.filter((item) => item.startsWith("duplicate ")).length}
 - Broken internal links: ${new Set(brokenLinks).size}
 - Placeholder findings: ${placeholders.length}
+- Internal instruction leakage: ${instructionLeaks.length}
 - Missing-source warnings on safety-sensitive numeric claims: ${sourceWarnings.length}
 - Duplicate primary-keyword groups: ${keywordDuplicates.length}
 - Pages without a contextual product/tool link: ${noContextualLink.length}

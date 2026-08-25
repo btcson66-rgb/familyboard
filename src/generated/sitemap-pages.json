@@ -1722,7 +1722,7 @@
   {
     "route": "/search/",
     "alternateRoute": "",
-    "indexable": true,
+    "indexable": false,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
