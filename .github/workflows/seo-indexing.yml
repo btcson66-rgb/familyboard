@@ -1,0 +1,85 @@
+# 搜尋引擎索引提交（手動觸發）
+#
+# 為什麼是 workflow_dispatch 而不是 on:push：submit-indexnow.mjs 刻意拒絕隱含的
+# 大量提交（沒有 --initial-full 或 --url 就直接 throw），因為對搜尋引擎重複灌整份
+# sitemap 沒有好處。索引提交是有意識的動作，不該每次 push 都自動發生。
+#
+# 為什麼需要這個 workflow：提交必須從網路可達 familyboard.win 與 api.indexnow.org
+# 的環境發出。開發用的遠端容器對這兩個位址都不可達，GitHub runner 可以。
+#
+# 重要限制：IndexNow 由 Bing、Yandex、Seznam、Naver 採用，**Google 並未參與**。
+# 這個 workflow 不會加速 Google 的收錄，也不會讓 GSC 更快出現數據。Google 的發現
+# 途徑是 sitemap 與自然爬取。
+
+name: SEO Indexing Submission
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "initial-full = 提交 sitemap 全部 URL；dry-run = 只印出將提交什麼，不實際送出"
+        type: choice
+        options: [dry-run, initial-full]
+        default: dry-run
+
+permissions:
+  contents: read
+
+concurrency:
+  group: familyboard-seo-indexing
+  cancel-in-progress: false
+
+jobs:
+  indexnow:
+    name: IndexNow (Bing / Yandex / Seznam / Naver)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - name: Submit
+        run: |
+          if [ "${{ inputs.mode }}" = "initial-full" ]; then
+            node scripts/submit-indexnow.mjs --initial-full
+          else
+            node scripts/submit-indexnow.mjs --initial-full --dry-run
+          fi
+
+  gsc-sitemap:
+    name: GSC sitemap 重新提交
+    runs-on: ubuntu-latest
+    # 憑證不在 repo 裡。未設定 secrets 時整個 job 跳過，而不是紅一個假失敗。
+    # 需要的 secrets（值分別是兩個 JSON 檔的完整內容）：
+    #   GSC_OAUTH_CLIENT_JSON  OAuth client（installed 或 web）
+    #   GSC_OAUTH_TOKEN_JSON   含 refresh_token
+    if: ${{ github.event.inputs.mode == 'initial-full' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - name: 檢查憑證是否已設定
+        id: creds
+        env:
+          CLIENT_JSON: ${{ secrets.GSC_OAUTH_CLIENT_JSON }}
+          TOKEN_JSON: ${{ secrets.GSC_OAUTH_TOKEN_JSON }}
+        run: |
+          if [ -n "$CLIENT_JSON" ] && [ -n "$TOKEN_JSON" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "GSC_OAUTH_CLIENT_JSON / GSC_OAUTH_TOKEN_JSON 未設定，略過 GSC 提交。" >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: 寫出憑證並提交 sitemap
+        if: steps.creds.outputs.present == 'true'
+        env:
+          CLIENT_JSON: ${{ secrets.GSC_OAUTH_CLIENT_JSON }}
+          TOKEN_JSON: ${{ secrets.GSC_OAUTH_TOKEN_JSON }}
+        run: |
+          umask 077
+          printf '%s' "$CLIENT_JSON" > "$RUNNER_TEMP/gsc-client.json"
+          printf '%s' "$TOKEN_JSON" > "$RUNNER_TEMP/gsc-token.json"
+          GSC_OAUTH_CLIENT_PATH="$RUNNER_TEMP/gsc-client.json" \
+          GSC_OAUTH_TOKEN_PATH="$RUNNER_TEMP/gsc-token.json" \
+          node scripts/gsc-bootstrap.mjs --apply
+          rm -f "$RUNNER_TEMP/gsc-client.json" "$RUNNER_TEMP/gsc-token.json"
