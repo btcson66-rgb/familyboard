@@ -42,7 +42,7 @@ Values you enter into a calculator, generator or printable are processed in your
 
 Google Analytics sets cookies on the public site to distinguish visitors and sessions.
 
-FamilyBoard's publisher identifier is `pub-7052036786750044` and the site publishes an `ads.txt` file naming Google as an authorised seller. Advertising is not being displayed at the time of writing: the ad script is disabled in the site configuration and no ad slots render. When advertising is enabled, Google and its partners will use cookies or similar technologies to serve and measure ads, including personalised advertising where you have permitted it.
+FamilyBoard's publisher identifier is `pub-9117672212804270` and the site publishes an `ads.txt` file naming Google as an authorised seller. No advertising is displayed at the time of writing: the Google AdSense script is loaded on public pages so the site can be verified for review, but no ad slot renders anywhere and no ad is served. The script is not loaded in the private app, on the offline page, on the error page, or on redirect pages. When advertising is enabled, Google and its partners will use cookies or similar technologies to serve and measure ads, including personalised advertising where you have permitted it.
 
 You can control this independently of FamilyBoard:
 

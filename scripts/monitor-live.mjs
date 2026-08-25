@@ -48,7 +48,7 @@ const checks = [
   },
   {
     path: "/ads.txt",
-    require: ["pub-7052036786750044"],
+    require: ["pub-9117672212804270"],
   },
   {
     path: "/app/",
