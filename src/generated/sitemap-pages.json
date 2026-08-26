@@ -969,9 +969,9 @@
   },
   {
     "route": "/guides/household-medical-information-organization/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/household-medical-information-organization/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-26",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1824,6 +1824,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-medical-information-source-handoff-log/",
+    "alternateRoute": "/zh-tw/tools/household-medical-information-source-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-26",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2327,6 +2335,20 @@
     "alternateRoute": "/tools/household-insurance-policy-source-version-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/household-medical-information-organization/",
+    "alternateRoute": "/guides/household-medical-information-organization/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-26",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-medical-information-source-handoff-log/",
+    "alternateRoute": "/tools/household-medical-information-source-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-26",
     "locale": "zh-TW"
   },
   {

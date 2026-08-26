@@ -927,6 +927,232 @@ This output is a household source and handoff index, not proof of student identi
   };
 };
 
+const medicalInformationDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusOrder = zh
+    ? [
+        "已記錄家庭醫療資訊用途，等待確認資訊分類",
+        "已記錄資訊分類，等待確認負責醫療來源",
+        "已記錄負責醫療來源，等待受保護本人比對",
+        "已記錄受保護本人比對，等待目前病歷、清單或通知版本",
+        "已記錄目前病歷、清單或通知版本，等待存取、保管與授權接收人核對",
+        "已測試存取、保管與接收人，等待醫療、藥事、給付或官方狀態來源",
+        "已映射醫療、藥事、給付或官方狀態來源，等待家庭交接或存取行動",
+        "已記錄病歷存取、更正、轉移、用藥清單、轉診、給付或照護交接行動，等待負責結果",
+        "身分、版本、存取、用藥安全或授權矛盾，等待醫療院所、藥師、保險或合格來源審查",
+        "已核對來源、受保護本人比對、版本、存取與交接",
+        "已收到負責來源結果，記錄保管與下次照護條件",
+        "不適用，已記錄原因與重新開啟事件",
+      ]
+    : [
+        "Household health-information purpose recorded—information category pending",
+        "Information category recorded—responsible health source pending",
+        "Responsible health source recorded—protected person match pending",
+        "Protected person match recorded—current record, list or notice version pending",
+        "Current record, list or notice version recorded—access, custody and authorized recipient pending",
+        "Access, custody and recipient tested—clinical, pharmacy, coverage or official status source pending",
+        "Clinical, pharmacy, coverage or official status sources mapped—household handoff or access action pending",
+        "Record access, correction, transfer, medication-list, referral, coverage or caregiver handoff action recorded—responsible result pending",
+        "Identity, version, access, medication-safety or authorization conflict—provider, pharmacist, plan or qualified review pending",
+        "Source, protected person match, version, access and handoff reviewed",
+        "Responsible-source result received—custody and next-care condition recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaultRecords = zh
+    ? `RECORD-A | 家庭成員 A 的院所病歷來源與家庭保管交接；家庭醫療資料角色 | 目前醫療院所病歷窗口與受保護入口；健康存摺、藥局及保險來源分開 | 受保護本人資料已比對；證據 PERSON-A-MATCH2；核對 2026-08-26 | 目前可取得病歷範圍與版本已開啟；未複製診斷、檢驗或治療內容 | 受保護入口可存取；授權接收人與家庭保管位置已核對 | 醫療院所病歷窗口與正式存取程序已映射；藥事與給付來源分開 | 本次來源、實際存取與保管已核對；院所、照護、授權或所需資料範圍改變時重新開啟 | 醫療院所病歷窗口與合格審查來源已映射；比對來源一致 | 家庭醫療資料角色 | 2026-08-26 | 已核對來源、受保護本人比對、版本、存取與交接
+HANDOFF-A | 家庭成員 A 目前照護轉換與用藥清單來源交接；家庭照護交接角色 | 目前照護院所、開立醫師與藥師來源；藥品內容留在受保護清單 | 受保護本人與目前交接來源已比對；證據 PERSON-A-HANDOFF2；核對 2026-08-26 | 目前照護通知與用藥清單版本已觀察；共用列只保留安全版本代號 | 受保護目前來源可取得；只有已授權接收人可取得必要內容 | 照護院所、開立醫師、藥師與給付來源已映射；檢驗影像判讀留給合格來源 | 照護交接與目前用藥清單來源已記錄；負責院所或藥師對目前版本的結果仍待取得 | 負責醫療院所、藥師、保險與合格審查來源已映射 | 家庭照護交接角色 | 2026-09-10 | 已記錄病歷存取、更正、轉移、用藥清單、轉診、給付或照護交接行動，等待負責結果`
+    : `RECORD-A | Household member A provider-record source and household custody handoff; household health-information role | Current provider medical-records office and protected access route; patient portal, pharmacy and plan sources remain separate | Protected person record matched; evidence PERSON-A-MATCH2; checked 2026-08-26 | Current available record scope and version opened; diagnosis, test and treatment content not copied | Protected route is accessible; authorized recipient and household custody location reviewed | Provider medical-records office and official access process mapped; pharmacy and coverage sources remain separate | Current source, actual access and custody reviewed; reopen when provider, care, authority or requested record scope changes | Provider medical-records office and qualified review route mapped; compared sources agree | Household health-information role | 2026-08-26 | Source, protected person match, version, access and handoff reviewed
+HANDOFF-A | Household member A current care-transition and medication-list source handoff; household care-handoff role | Current care provider, prescriber and pharmacist sources; medication content stays in the protected list | Protected person and current handoff source matched; evidence PERSON-A-HANDOFF2; checked 2026-08-26 | Current care notice and medication-list version observed; shared row keeps only a safe version pointer | Protected current sources accessible; only an authorized recipient gets necessary content | Treating provider, prescriber, pharmacist and coverage sources mapped; test interpretation remains with qualified sources | Care handoff and current medication-list source recorded; responsible provider or pharmacist result remains pending | Responsible provider, pharmacist, health plan and qualified review routes mapped | Household care-handoff role | 2026-09-10 | Record access, correction, transfer, medication-list, referral, coverage or caregiver handoff action recorded—responsible result pending`;
+
+  return {
+    intro: zh
+      ? "分開記錄健康存摺、院所病歷、目前用藥清單、檢驗影像、轉診、給付與照護交接來源。工具只建立安全索引，不保存醫療內容，也不做診斷、判讀或用藥決定。"
+      : "Separate patient-portal, provider-record, current medication-list, test, imaging, referral, coverage and care-handoff sources. This tool builds a safe index; it never stores clinical content or makes diagnostic, interpretive or medication decisions.",
+    fields: [
+      text(
+        "review",
+        zh ? "家庭私人醫療資訊核對代號" : "Private household medical-information review reference",
+        zh ? "使用安全家庭代號；不要輸入姓名、出生日期、病歷號、診斷、用藥、劑量、檢驗數值、授權內容或登入資料。" : "Use a safe household code. Do not enter names, birth dates, record numbers, diagnoses, medications, doses, test values, authorization content or login details.",
+        "MEDICAL-SOURCES-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "家庭醫療資訊核對情境" : "Household medical-information review context",
+        type: "select",
+        options: zh
+          ? ["第一次來源地圖盤點", "醫療院所或健康存摺存取", "病歷更正或轉移", "目前用藥清單來源交接", "出院或照護轉換", "檢驗或影像來源核對", "轉診、給付或理賠來源核對", "照護者存取或授權核對", "身分、版本、存取、用藥安全或授權矛盾"]
+          : ["First source map", "Provider or patient-portal access", "Record correction or transfer", "Current medication-list source handoff", "Discharge or care transition", "Test or imaging source review", "Referral, coverage or claim source review", "Caregiver access or authorization review", "Identity, version, access, medication-safety or authorization conflict"],
+      },
+      { name: "baselineDate", label: zh ? "醫療資訊／來源地圖基準日" : "Medical-information and source-map baseline date", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: zh ? "本次家庭醫療資訊核對日" : "Current household medical-information review date", type: "date", value: "2026-08-26" },
+      { name: "nextReview", label: zh ? "下一次來源、交接或負責結果核點" : "Next source, handoff or responsible-result checkpoint", type: "date", value: "2026-09-10" },
+      text(
+        "basis",
+        zh ? "健康存摺、院所、藥事、檢驗影像、轉診、給付與照護來源地圖" : "Patient-portal, provider, pharmacy, test, imaging, referral, coverage and care source map",
+        zh ? "只放安全來源或證據代號；本人、診斷、藥品、檢驗、授權與給付內容留在受保護來源。" : "Use safe source or evidence IDs only. Keep person, diagnosis, medication, test, authorization and coverage content in protected sources.",
+        "PROVIDER-RECORDS-S1; PORTAL-V2; PHARMACY-SOURCE-P1; PROTECTED-PERSON-A",
+      ),
+      {
+        name: "records",
+        label: zh ? "有版本的家庭醫療資訊來源與交接狀態列" : "Versioned household medical-information source and handoff rows",
+        type: "textarea",
+        help: zh ? "每行：ID｜安全本人代號、資訊用途與家庭角色｜負責醫療來源及範圍｜受保護本人比對與來源核對日 YYYY-MM-DD｜目前病歷／清單／通知版本觀察｜存取、保管與接收人觀察｜醫療／藥事／給付／官方狀態來源｜家庭交接、行動與實際結果｜矛盾、用藥安全、授權或合格審查來源｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。最多 14 行。" : "One line: ID | safe person alias, information purpose and household role | responsible health source and scope | protected person-match evidence plus source checked date YYYY-MM-DD | current record, list or notice version observation | access, custody and recipient observation | clinical, pharmacy, coverage or official status source | household handoff/action and observed result | conflict, medication-safety, authorization or qualified review route | owner role | target or outcome date YYYY-MM-DD | one of the twelve listed statuses. Maximum 14 lines.",
+        value: defaultRecords,
+      },
+      text(
+        "storage",
+        zh ? "受保護院所、健保、藥事、病歷、授權與核對歷程位置" : "Protected provider, plan, pharmacy, record, authorization and review-history location",
+        zh ? "只寫保管流程或容器代號，不要貼醫療內容、身分、授權、付款或登入資料。" : "Name a custody process or container, not clinical, identity, authorization, payment or login content.",
+        zh ? "家庭紀錄／醫療／MEDICAL-SOURCES-2026-A／受保護來源" : "Household records / health / MEDICAL-SOURCES-2026-A / protected sources",
+      ),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!baselineDate || !reviewDate || !nextReview)
+        return zh ? "請輸入有效的基準日、本次核對日與下一次核點日期。" : "Enter valid baseline, review and next-checkpoint dates.";
+      if (baselineDate > reviewDate)
+        return zh ? "醫療資訊基準日不能晚於本次核對日。" : "The medical-information baseline cannot be later than the current review.";
+      if (nextReview < reviewDate)
+        return zh ? "下一次來源、交接或負責結果核點不能早於本次家庭醫療資訊核對日。" : "The next source, handoff or responsible-result checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 12 || values.storage.trim().length < 10)
+        return zh ? "請提供安全的醫療來源地圖與受保護保管位置代號。" : "Provide a safe health-source map and protected storage-process label.";
+
+      const rows = values.records.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14)
+        return zh ? "請輸入 1 至 14 行家庭醫療資訊來源與交接狀態。" : "Enter 1 to 14 household medical-information source and handoff rows.";
+      const recordRows = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = recordRows.filter((row) => row.parts.length !== 12 || row.parts.some((part) => !part));
+      if (malformed.length)
+        return zh ? `家庭醫療資訊第 ${malformed.map((row) => row.line).join("、")} 行必須剛好有 12 個非空白欄位。` : `Medical-information line ${malformed.map((row) => row.line).join(", ")} must contain exactly 12 non-empty fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toUpperCase());
+      if (new Set(ids).size !== ids.length)
+        return zh ? "每一行家庭醫療資訊都需要唯一 ID。" : "Every household medical-information row needs a unique ID.";
+      const invalidStatuses = recordRows.filter((row) => !statusOrder.includes(row.parts[11]));
+      if (invalidStatuses.length)
+        return zh ? `家庭醫療資訊第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用十二種指定狀態之一。` : `Medical-information line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve exact statuses.`;
+
+      const openRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) < 9);
+      const closedRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) >= 9);
+      const sourceDateOf = (textValue: string) => strictIsoDate(textValue.match(/\b\d{4}-\d{2}-\d{2}\b/)?.[0] ?? "");
+      const invalidSourceDates = recordRows.filter((row) => {
+        const checked = sourceDateOf(row.parts[3]);
+        return !checked || checked < baselineDate || checked > reviewDate;
+      });
+      if (invalidSourceDates.length)
+        return zh ? `家庭醫療資訊第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的來源核對日。` : `Medical-information line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a source checked date from the baseline through this review.`;
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target < reviewDate || target > nextReview;
+      });
+      if (invalidOpenDates.length)
+        return zh ? `仍開放的家庭醫療資訊第 ${invalidOpenDates.map((row) => row.line).join("、")} 行需要介於本次核對日與下一核點的目標日。` : `Open medical-information line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome < baselineDate || outcome > reviewDate;
+      });
+      if (invalidClosedDates.length)
+        return zh ? `已核對、完成或不適用的家庭醫療資訊第 ${invalidClosedDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的結果日。` : `Closed medical-information line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an outcome date from the baseline through this review.`;
+
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 12 || row.parts[3].length < 18 || row.parts[4].length < 12 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 12 || row.parts[8].length < 10 || row.parts[9].length < 4);
+      if (missingLayers.length)
+        return zh ? `家庭醫療資訊第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實的用途、負責來源、受保護比對、版本、存取／保管、狀態、交接／結果、審查來源與負責角色。` : `Medical-information line ${missingLayers.map((row) => row.line).join(", ")} needs a real purpose, responsible source, protected match, version, access/custody, status, handoff/result, review route and owner.`;
+
+      const reviewedWithoutEvidence = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[9]) return false;
+        const evidence = row.parts.slice(2, 9).join(" ");
+        const sourceOk = zh ? /(?:醫療院所|院所|醫師|藥師|健保|保險|病歷窗口|官方)/.test(row.parts[2]) : /(?:provider|physician|pharmacist|health plan|medical-records office|official)/i.test(row.parts[2]);
+        const matchOk = zh ? /(?:受保護|本人|比對|證據)/.test(row.parts[3]) : /(?:protected|person|match|evidence)/i.test(row.parts[3]);
+        const versionOk = zh ? /(?:目前|版本|病歷|清單|通知)/.test(row.parts[4]) : /(?:current|version|record|list|notice)/i.test(row.parts[4]);
+        const accessOk = zh ? /(?:開啟|存取|可取得|保管|接收人)/.test(row.parts[5]) : /(?:opened|access|available|custody|recipient)/i.test(row.parts[5]);
+        const statusOk = zh ? /(?:醫療|院所|醫師|藥師|藥事|健保|給付|病歷|存取程序)/.test(row.parts[6]) : /(?:clinical|provider|prescriber|pharmac|plan|coverage|record|access process)/i.test(row.parts[6]);
+        const actionOk = zh ? /(?:核對|保管|重新|改變|交接|行動)/.test(row.parts[7]) : /(?:reviewed|custody|reopen|change|handoff|action)/i.test(row.parts[7]);
+        const routeOk = zh ? /(?:醫療院所|院所|醫師|藥師|健保|保險|病歷窗口|合格)/.test(row.parts[8]) : /(?:provider|physician|pharmacist|health plan|medical-records office|qualified)/i.test(row.parts[8]);
+        const unresolved = zh ? /(?:等待|未知|未解|未核對|矛盾|缺少)/.test(evidence) : /(?:pending|unknown|unresolved|not checked|conflict|missing)/i.test(evidence);
+        return !sourceOk || !matchOk || !versionOk || !accessOk || !statusOk || !actionOk || !routeOk || unresolved;
+      });
+      if (reviewedWithoutEvidence.length)
+        return zh ? `完成核對的第 ${reviewedWithoutEvidence.map((row) => row.line).join("、")} 行必須連結負責醫療來源、受保護本人比對、目前版本、實際存取、狀態、交接或重查條件及負責審查來源，且不能仍有未解差異。` : `Completed medical-information line ${reviewedWithoutEvidence.map((row) => row.line).join(", ")} must link a responsible health source, protected person match, current version, actual access, status, handoff or reopen rule and responsible review route with no unresolved gap.`;
+
+      const actionClaimingCompletion = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[7]) return false;
+        return zh ? /(?:已完成|已生效|更正完成|轉移完成|授權完成|院所確認完成)/.test(row.parts[7]) || !/(?:已記錄|已送出|已提出|已預約|等待|仍待|尚待|待取得)/.test(row.parts[7]) : /(?:confirmed complete|completed|effective|correction complete|transfer complete|authorization complete|provider confirmed)/i.test(row.parts[7]) || !/(?:recorded|submitted|requested|scheduled|pending|awaiting|remains)/i.test(row.parts[7]);
+      });
+      if (actionClaimingCompletion.length)
+        return zh ? `已交接或行動但等待負責結果的第 ${actionClaimingCompletion.map((row) => row.line).join("、")} 行必須保持開放，不能把送出、預約、付款或家庭轉述寫成完成。` : `Action-recorded line ${actionClaimingCompletion.map((row) => row.line).join(", ")} must remain open and cannot turn a submission, request, appointment, payment or household handoff into completion.`;
+
+      const conflictWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[8]) return false;
+        const combined = [row.parts[4], row.parts[6], row.parts[7], row.parts[8], row.parts[9]].join(" ");
+        const conflict = zh ? /(?:矛盾|不同|差異|錯誤|用藥安全|授權|存取|版本)/.test(combined) : /(?:conflict|different|discrepancy|error|medication safety|authorization|access|version)/i.test(combined);
+        const route = zh ? /(?:醫療院所|院所|醫師|藥師|健保|保險|病歷窗口|合格)/.test(combined) : /(?:provider|physician|pharmacist|health plan|medical-records office|qualified)/i.test(combined);
+        return !conflict || !route;
+      });
+      if (conflictWithoutRoute.length)
+        return zh ? `矛盾列第 ${conflictWithoutRoute.map((row) => row.line).join("、")} 行必須寫出身分、版本、存取、用藥安全或授權差異，以及負責醫療院所、醫師、藥師、保險或合格審查來源。` : `Conflict line ${conflictWithoutRoute.map((row) => row.line).join(", ")} must name the identity, version, access, medication-safety or authorization conflict and the responsible provider, physician, pharmacist, health plan or qualified review route.`;
+
+      const completedWithoutResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[10]) return false;
+        const result = [row.parts[7], row.parts[8]].join(" ");
+        const observed = zh ? /(?:負責來源|醫療院所|院所|醫師|藥師|健保|保險|病歷窗口).*(?:結果|病歷|通知|確認).*(?:收到|開啟|觀察|記錄)/.test(result) : /(?:(?:responsible source|provider|physician|pharmacist|health plan|medical-records office) (?:result|record|notice|confirmation)).*(?:received|opened|observed|recorded)/i.test(result);
+        const custody = zh ? /(?:保管|原件|目前版本|下次照護|重新開啟)/.test(result) : /(?:custody|original|current version|next care|reopen)/i.test(result);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知)/.test(result) : /(?:pending|awaiting|unresolved|unknown)/i.test(result);
+        return !observed || !custody || unresolved;
+      });
+      if (completedWithoutResult.length)
+        return zh ? `完成結果的第 ${completedWithoutResult.map((row) => row.line).join("、")} 行必須記錄已收到或觀察的負責來源結果、目前版本保管與下次照護或重開條件。` : `Completed result line ${completedWithoutResult.map((row) => row.line).join(", ")} must record an observed responsible-source result, current-version custody and the next-care or reopen condition.`;
+
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[11] === statusOrder[11] && !(zh ? /(?:重新開啟|重新檢視|如果|當.*時|院所|照護|授權|用藥|轉診|給付.*改變)/.test([row.parts[7], row.parts[8]].join(" ")) : /(?:reopen|review again|if |when |after |provider|care|authority|medication|referral|coverage.*change)/i.test([row.parts[7], row.parts[8]].join(" "))));
+      if (notApplicableWithoutTrigger.length)
+        return zh ? `不適用的第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須記錄目前原因，以及院所、照護、授權、用藥、轉診或給付改變時的重開事件。` : `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and the provider, care, authority, medication, referral or coverage change that reopens it.`;
+
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return zh ? "偵測到可能的完整電話、Email、病歷、會員、保單、理賠、處方或其他長數字識別資料。請改用安全證據代號。" : "A possible full phone, email, medical-record, member, policy, claim, prescription or other long numeric identifier was detected. Use a safe evidence pointer.";
+      if (/password|passphrase|passcode|access code|recovery code|verification code|login credential|full address|street address|patient name\s*[:=]|person name\s*[:=]|provider name\s*[:=]|date of birth\s*[:=]|(?:mrn|medical record number|member number|policy number|claim number|prescription number)\s*[:=]|social security|ssn\s*[:=]|diagnosis\s*[:=]|condition\s*[:=]|symptom\s*[:=]|allerg(?:y|ies)\s*[:=]|medication name\s*[:=]|drug name\s*[:=]|medicine name\s*[:=]|dose\s*[:=]|dosage\s*[:=]|\b\d+(?:\.\d+)?\s*(?:mg|mcg|ml)\b|lab (?:value|result content)|imaging (?:report|result) content|procedure content|treatment plan|discharge instruction content|mental health record|counseling record|reproductive health|genetic information|vaccination detail|authorization content|consent signature|payment card|bank account|private message|correspondence|完整地址|病人姓名\s*[:：]|本人姓名\s*[:：]|院所名稱\s*[:：]|出生日期\s*[:：]|病歷號\s*[:：]|會員號\s*[:：]|保單號\s*[:：]|理賠號\s*[:：]|處方號\s*[:：]|身分證號\s*[:：]|診斷\s*[:：]|病況\s*[:：]|症狀\s*[:：]|過敏\s*[:：]|藥名\s*[:：]|用藥名稱\s*[:：]|劑量\s*[:：]|檢驗數值|檢驗結果內容|影像報告內容|處置內容|治療計畫|出院指示內容|心理健康紀錄|諮商紀錄|生殖健康資料|基因資料|疫苗明細|授權內容|同意書簽名|銀行帳號|信用卡|登入密碼|驗證碼|私人訊息|通信內容/i.test(privacyText))
+        return zh ? "偵測到可能的本人身分、院所、地址、診斷、用藥、劑量、檢驗、授權、付款、登入或私人通信內容。請改成安全來源、流程或證據代號。" : "A possible patient identity, provider, address, diagnosis, medication, dose, test, authorization, payment, credential or private correspondence detail was detected.";
+
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length })).filter((item) => item.count > 0);
+      if (zh)
+        return `${values.review.trim()}｜家庭醫療資訊來源與交接狀態
+核對情境：${values.context}
+醫療資訊／來源地圖基準：${formatter.format(baselineDate)}
+本次家庭醫療資訊核對：${formatter.format(reviewDate)}
+下一次來源、交接或負責結果核點：${formatter.format(nextReview)}
+仍開放的來源、本人比對、版本、存取、交接或負責結果列：${openRows.length} 筆
+已核對、完成或不適用列：${closedRows.length} 筆
+狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}
+
+健康存摺、院所、藥事、檢驗影像、轉診、給付與照護來源地圖：${values.basis.trim()}
+
+${lines("有版本的家庭醫療資訊來源與交接證據", recordRows.map((row) => `${row.parts[0]}｜本人／資訊用途：${row.parts[1]}｜負責醫療來源／適用範圍：${row.parts[2]}｜受保護本人比對／來源核對：${row.parts[3]}｜目前病歷／清單／通知版本：${row.parts[4]}｜存取／保管／接收人：${row.parts[5]}｜醫療／藥事／給付／官方狀態來源：${row.parts[6]}｜家庭交接／行動／實際結果：${row.parts[7]}｜矛盾／用藥安全／授權／審查來源：${row.parts[8]}｜負責角色：${row.parts[9]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[10]) as Date)}｜狀態：${row.parts[11]}`))}
+
+受保護院所、健保、藥事、病歷、授權與核對歷程位置：${values.storage.trim()}
+
+這份輸出只是家庭來源與交接索引，不是本人身分、診斷、病歷、用藥、檢驗、影像、轉診、給付、授權或照護結果證明。它不登入健康存摺、院所、藥局或保險系統，不讀取、建立、上傳、更正或轉移正式病歷，不判讀檢驗影像、不做診斷或檢傷、不核對或調整藥物與劑量、不替任何人授權照護，也不預約、送件、付款、聯絡機構或計算醫療、保險、申訴或法律期限。真實行動、緊急狀況與結果請直接使用目前醫療院所、醫師、藥師、健保／保險來源、官方程序與合格專業人員。`;
+      return `${values.review.trim()} — household medical-information source and handoff status
+Review context: ${values.context}
+Medical-information/source-map baseline: ${formatter.format(baselineDate)}
+Current household medical-information review: ${formatter.format(reviewDate)}
+Next source, handoff or responsible-result checkpoint: ${formatter.format(nextReview)}
+Open source, person-match, version, access, handoff or responsible-result rows: ${openRows.length}
+Reviewed, completed or not-applicable rows: ${closedRows.length}
+Status count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}
+
+Patient-portal, provider, pharmacy, test, imaging, referral, coverage and care source map: ${values.basis.trim()}
+
+${lines("Versioned household medical-information source and handoff evidence", recordRows.map((row) => `${row.parts[0]} — person/information purpose: ${row.parts[1]} — responsible health source/scope: ${row.parts[2]} — protected person match/source check: ${row.parts[3]} — current record/list/notice version: ${row.parts[4]} — access/custody/recipient: ${row.parts[5]} — clinical/pharmacy/coverage/official status source: ${row.parts[6]} — household handoff/action/observed result: ${row.parts[7]} — conflict/medication-safety/authorization/review route: ${row.parts[8]} — owner: ${row.parts[9]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[10]) as Date)} — status: ${row.parts[11]}`))}
+
+Protected provider, plan, pharmacy, record, authorization and review-history location: ${values.storage.trim()}
+
+This output is a household source and handoff index, not proof of identity, diagnosis, medical record, medication, test, imaging, referral, coverage, authorization or a care result. It does not sign in to a patient portal, provider, pharmacy or health-plan system; read, create, upload, amend or transfer an official record; interpret a test or image; diagnose or triage; reconcile, recommend, change, stop or repeat a medication or dose; grant caregiver authority; book care, submit a form, pay, contact an organization; or calculate medical, plan, appeal or legal deadlines. Use the current provider, physician, pharmacist, health-plan or official process and qualified professional for every real action, emergency and result.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
     intro:
@@ -4912,6 +5138,9 @@ const definitions: Record<string, Definition> = {
   "household-school-record-source-handoff-log": {
     ...schoolRecordDefinition("en"),
   },
+  "household-medical-information-source-handoff-log": {
+    ...medicalInformationDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -4925,6 +5154,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-school-record-source-handoff-log": {
     ...schoolRecordDefinition("zh-TW"),
+  },
+  "household-medical-information-source-handoff-log": {
+    ...medicalInformationDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

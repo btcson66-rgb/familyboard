@@ -141,6 +141,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-school-record-source-handoff-log/</loc>",
       "<loc>https://familyboard.win/guides/organize-school-records-at-home/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-school-records-at-home/</loc>",
+      "<loc>https://familyboard.win/tools/household-medical-information-source-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-medical-information-source-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/household-medical-information-organization/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/household-medical-information-organization/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -660,6 +664,24 @@ const checks = [
       'hreflang="zh-TW"',
       "official record and the household index as different systems",
       "Pickup and transport handoffs require",
+    ],
+  },
+  {
+    path: "/tools/household-medical-information-source-handoff-log/",
+    require: [
+      "Household Medical Information Source and Handoff Log",
+      'hreflang="zh-TW"',
+      "Twelve statuses preserve source, protected access and responsible result",
+      "It does not sign in to a provider, health plan, pharmacy",
+    ],
+  },
+  {
+    path: "/guides/household-medical-information-organization/",
+    require: [
+      "Organize household medical information without building an unprotected shadow chart",
+      'hreflang="zh-TW"',
+      "The provider record, plan record and household index are different systems",
+      "A current medication list belongs in a protected clinical handoff",
     ],
   },
   {
@@ -1209,6 +1231,24 @@ const checks = [
       'hreflang="en"',
       "學籍不是一份通用文件，要先分教育階段與負責來源",
       "交通、接送與放學授權是安全流程，不是一般聯絡表",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-medical-information-source-handoff-log/",
+    require: [
+      "家庭醫療資訊來源與交接狀態表",
+      'hreflang="en"',
+      "十二種狀態分開來源、受保護存取與負責結果",
+      "工具不登入健康存摺、院所、藥局、檢驗影像或保險系統",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/household-medical-information-organization/",
+    require: [
+      "家庭醫療資料怎麼整理？健康存摺、病歷複製、用藥與照護交接指南",
+      'hreflang="en"',
+      "健康存摺、院所病歷與家庭索引是三套不同來源",
+      "用藥清單要保持目前版本，但不能貼在共用表單",
     ],
   },
   {

@@ -1867,6 +1867,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
     "不能早於本次家庭學校紀錄核對日",
   );
 
+  await page.goto("/tools/household-medical-information-source-handoff-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open source, person-match, version, access, handoff or responsible-result rows: 1");
+  await expect(page.locator(".result")).toContainText("Reviewed, completed or not-applicable rows: 1");
+  await expect(page.locator(".result")).toContainText("Source, protected person match, version, access and handoff reviewed 1");
+  await page.getByLabel("Next source, handoff or responsible-result checkpoint").fill("2026-08-25");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+  await page.goto("/tools/household-medical-information-source-handoff-log/");
+  await page.getByLabel("Protected provider, plan, pharmacy, record, authorization and review-history location").fill("patient name: example; medication name: aspirin");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible patient identity, provider, address, diagnosis, medication, dose, test");
+
+  await page.goto("/zh-tw/tools/household-medical-information-source-handoff-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的來源、本人比對、版本、存取、交接或負責結果列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對、完成或不適用列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對來源、受保護本人比對、版本、存取與交接 1 筆");
+  await page.getByLabel("下一次來源、交接或負責結果核點").fill("2026-08-25");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次家庭醫療資訊核對日",
+  );
+
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");
   await page.getByLabel("預計返家日期").fill("2026-09-08");

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-26T01:04:07.845Z
+Generated: 2026-08-26T01:41:19.776Z
 
 ## Summary
 
-- Indexable pages: 340
-- Generated HTML routes: 357
+- Indexable pages: 343
+- Generated HTML routes: 360
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 135
+- Pages without a contextual product/tool link: 137
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-26T01:04:07.845Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 36
-- tools: 105
+- records-emergency: 37
+- tools: 107
 
 ## Word-count range
 
@@ -101,6 +101,7 @@ Generated: 2026-08-26T01:04:07.845Z
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/guides/home-service-provider-list/
 - /zh-tw/guides/household-documents-organizer/
+- /zh-tw/guides/household-medical-information-organization/
 - /zh-tw/guides/how-long-to-keep-household-records/
 - /zh-tw/guides/how-to-track-product-warranties/
 - /zh-tw/guides/important-household-documents/
@@ -155,6 +156,7 @@ Generated: 2026-08-26T01:04:07.845Z
 - /zh-tw/tools/household-annual-review-generator/
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-insurance-policy-source-version-log/
+- /zh-tw/tools/household-medical-information-source-handoff-log/
 - /zh-tw/tools/household-pet-record-source-handoff-log/
 - /zh-tw/tools/household-power-outage-event-log/
 - /zh-tw/tools/household-record-retention-decision-log/

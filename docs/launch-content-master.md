@@ -8656,48 +8656,97 @@ An affiliate product card, if introduced later, must never determine whether a r
 
 ## Page 122 — Household Medical Information Organization
 **Slug:** `/guides/household-medical-information-organization/`
-**Primary intent:** organize household medical information cautiously
-**Title tag:** `Household Medical Information Organization: Keep Emergency References Without Overexposing Health Data`
-**Meta description:** `Organize limited household medical emergency references, provider contacts and document locations while keeping sensitive health records in appropriately secure systems.`
+**Primary intent:** organize household medical information by responsible source, protected access and observed handoff result
+**Title tag:** `How to Organize Household Medical Information by Source, Access and Care Handoff`
+**Meta description:** `Build a private medical-information index for records, medication lists, referrals, coverage and caregiver handoffs without exposing health details.`
 **Primary keyword concept:** organize family medical information
 **Depth:** verified
-**Suggested internal links:** `/guides/emergency-information-sheet/`, `/privacy/`, `/features/emergency-information-organizer/`
+**Published date:** 2026-08-19
+**Editorial review date:** 2026-08-26
+**Content version:** 2
+**Suggested internal links:** `/tools/household-medical-information-source-handoff-log/`, `/guides/emergency-information-sheet/`, `/privacy/`, `/features/emergency-information-organizer/`, `/features/household-documents-organizer/`
 
-# Medical information needs a stricter privacy boundary than an ordinary household note
+# Organize household medical information without building an unprotected shadow chart
 
-A home-management app can help a caregiver find where an emergency plan or medical reference is stored. It should never become an uncontrolled health-record database just because a text field is easy to add. The distinction that matters: record enough for someone else to respond correctly in an emergency, and no more.
+The safest household medical organizer is a source map, not a second clinical record. It should tell an authorized household member which provider, health plan, pharmacy, portal or protected file controls a purpose; which safe person alias was matched; which dated version was opened; whether access worked; what household request or handoff occurred; and what responsible-source result is still pending. It should not display names, birth dates, diagnoses, allergies, medications, doses, lab values, images, treatment plans, member numbers or private messages on the household dashboard.
 
-## What a real emergency health information card actually contains
+FamilyBoard does not sign in to a patient portal, retrieve a medical record, interpret a test, reconcile medications, diagnose a condition, create care instructions, authorize a caregiver, submit a records request or calculate a health-plan, provider, appeal or legal deadline. Use the free [Household Medical Information Source and Handoff Log](/tools/household-medical-information-source-handoff-log/) for a dated source-and-result index, not for clinical content.
 
-Public-health guidance on this exact document gives a useful, tested structure rather than a guess. [Connecticut's Department of Public Health](https://portal.ct.gov/dph/public-health-preparedness/bioterrorism/creating-an-emergency-health-information-card) recommends a front side with name, address, phone numbers, birth date, blood type and health insurance carrier information, and a back side covering emergency contacts, medical conditions or disabilities, current medications with dosage and administration details, allergies and sensitivities, immunization dates, and any special communication or equipment needs — wheelchairs, oxygen, hearing or vision aids. The guidance recommends keeping copies in multiple places: the emergency kit, the car, a wallet or purse, and any bag carried daily, so it's on hand regardless of where the emergency happens.
+## Start with a safe person alias and one current care purpose
 
-## Store the minimum a responder or substitute caregiver actually needs
+Use a code such as `HOUSEHOLD-PERSON-A`, not a name, nickname, initials, date of birth or patient number. Create separate rows for record access, current medication-list source, discharge or care-transition handoff, lab or imaging source, referral, health-plan or claim workflow, pharmacy handoff and caregiver authorization. A single `medical information current` checkbox cannot show which source controls which decision.
 
-For most households, that means: the name of a diagnosed condition where it affects emergency response (a severe allergy, a seizure disorder, diabetes), any critical care instruction already provided by a clinician, the primary physician's name and phone number, and where the full formal medical record is kept if more detail is ever needed. It does not mean transcribing full visit notes, lab results or a complete medical history into a shared household field — those belong in the health system's own record, with only a location reference in the household organizer.
+The protected source performs the real person match. The household index may say `protected person and current portal source matched; evidence HEALTH-A-ID2; checked 2026-08-26`. It must not copy the match value. If two people have similar names, a portal changed organizations or the record belongs to a different date of service, keep the row open until the responsible source resolves the identity and version.
 
-## Medication instructions should be copied exactly, never generated
+## The provider record, plan record and household index are different systems
 
-Where medication information is recorded for caregiver handoff — a grandparent needs to give an afternoon dose, a sitter needs to know what's in the medicine cabinet — it should reproduce the clinician's or pharmacy's actual instruction verbatim: drug name, dose, timing, exactly as printed on the label or discharge paperwork. Neither a household member's paraphrase nor the app itself should generate, adjust or suggest a dosing schedule. If treatment changes, the record needs updating the same day, not at the next scheduled review — an outdated dose is actively dangerous in a way an outdated phone number is not.
+The [HHS guide to the HIPAA right of access](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/access/index.html) explains that a covered provider or health plan may maintain a designated record set broader than one portal screen. Depending on the covered entity, it can include medical, billing, payment, claims, enrollment, case-management and other decision records, with defined exceptions. An electronic portal view, downloaded visit summary or insurance explanation therefore should not be labelled `complete medical record` by a household app.
 
-## Keep medical notes off shared displays by default
+Separate the controlling source and scope. A provider chart supports clinical records maintained by that provider. A health-plan portal supports its enrollment, claim and payment view. A pharmacy source supports the prescription or dispensing record it controls. A family-created note supports only what the family observed. One source may help reconcile another, but the household index cannot merge them into a new authoritative chart.
 
-A family wall screen or a general household dashboard is the wrong place for medical information to appear automatically. If a household genuinely wants a medical note visible on a shared view — a child's severe allergy that every caregiver needs to see immediately — that should be a deliberate, explicit choice for that specific note, not the default behavior for anything tagged "medical."
+## Record access is a request-and-result workflow
 
-## Route complex or ongoing care to a system built for it
+[HHS medical-record guidance for individuals](https://www.hhs.gov/hipaa/for-individuals/medical-records/index.html) describes access to medical and billing records held by covered providers and plans, subject to exceptions. It also distinguishes a correction request from the provider or plan's response and from a statement of disagreement when a request is not accepted.
 
-For a household managing chronic illness, multiple providers, or detailed treatment plans, a dedicated clinical or health-record system is the right tool for the depth that situation needs. The household organizer's role in that case is narrower and still useful: a pointer — "full care plan kept with [provider/system], last updated [date]" — inside the household's broader continuity plan, not an attempt to replace purpose-built medical record software.
+Create separate observations: `portal view opened`, `specific record requested`, `identity or authority evidence submitted`, `provider response received`, `copy opened`, `correction requested`, `amendment response observed`. Do not convert a request confirmation or tracking number into proof that the record is complete, corrected or transferred. State law, the responsible organization, the record category and current notice can change the actual process; a FamilyBoard checkpoint is only a household follow-up date.
 
-**Contextual CTA:** Store only what another trusted caregiver truly needs and keep the rest in the appropriate secure health-record system.
+## Family relationship does not automatically prove record authority
+
+HHS notes that access by a family member can depend on whether that person is a personal representative under applicable law, whether the individual directed a copy to that person or whether another permitted disclosure applies. `Spouse`, `parent`, `adult child`, `caregiver` and `emergency contact` are not interchangeable authorization states.
+
+Keep the authorization document, signature, legal status and identity proof in the responsible protected process. The shared index may record `authorized-recipient route checked; protected evidence AUTH-A2; scope not copied`. If capacity, guardianship, minor status, revocation, deceased-person authority or the recipient's scope is unclear, stop the household workflow and use the covered entity, current notice and qualified legal or professional source.
+
+## A current medication list belongs in a protected clinical handoff
+
+The [FDA advises keeping a current medication list](https://www.fda.gov/consumers/consumer-updates/create-and-keep-medication-list-your-health) that accounts for prescription medicines, over-the-counter medicines, vitamins and supplements, and updating it when something changes. That safety purpose does not make a public household text field an appropriate medication list.
+
+In FamilyBoard, record only the source and version: `current provider or pharmacy list opened in protected source; caregiver access route tested; contents not copied`. Keep the actual names, strengths, reasons, directions, allergies and conditions in the provider-, pharmacy- or patient-controlled protected list chosen for the care task. The app must not generate, paraphrase, reconcile, restart, stop, substitute or calculate any medicine or dose. Questions about a missed, extra, conflicting or unexpected administration belong with the prescribing or dispensing professional or emergency service, not the organizer.
+
+## A result is not an interpretation
+
+`Lab result available`, `imaging report posted`, `pathology notice opened` and `clinician reviewed with patient` are distinct events. The household index can record the responsible source, availability, protected person match, version date, access result and whether a qualified review result is pending. It must not copy values, images, impressions, diagnoses or recommendations, and it cannot tell whether a result is normal, urgent or complete.
+
+When a portal, phone message and clinician instruction conflict, use a conflict status and name the responsible provider or qualified review route. Do not choose the most recent timestamp or the most reassuring wording as the winner. For symptoms, an emergency or a care decision, contact the appropriate licensed professional or emergency service immediately.
+
+## Discharge, referral, appointment and coverage each need their own result
+
+A discharge document may identify follow-up sources, but a household copy does not prove that another provider received it. A referral request does not prove an appointment is scheduled. A scheduled appointment does not prove the visit occurred. A prior-authorization submission does not prove coverage, and a paid claim does not prove the clinical record is correct.
+
+Use separate rows when different organizations control the outcome. One row can close when the responsible provider produced an observed copy or handoff confirmation. Another may remain open for the receiving provider, plan or pharmacy. Preserve the source-issued instructions in their protected location; do not rewrite them into FamilyBoard prose.
+
+## Emergency access is a different audience and version
+
+A private health-record index, a caregiver handoff and an emergency reference do not have the same audience. Decide who will carry or see each version, what the responsible clinician or official source says is needed and how it will be protected. Do not place a complete record, medication list, insurance identifiers or portal credentials on a wall display merely because they might be useful someday.
+
+Use the [emergency information sheet guide](/guides/emergency-information-sheet/) to design a deliberately limited emergency layer. FamilyBoard cannot determine what a responder needs for a particular person or condition. If an emergency is occurring, use local emergency services and the person's current clinical emergency plan instead of searching or editing the household index.
+
+## Reopen on care events, access changes and source conflicts
+
+A calendar review is useful, but the real triggers are a new provider, pharmacy, health plan, portal, prescription list, discharge, referral, test, image, procedure, caregiver, authorization, identity correction, access failure, lost device or source conflict. Preserve the prior household version so it remains clear which source and handoff were checked at that time.
+
+Do not apply a universal household destruction period to medical copies. Provider retention duties, access rights, active care, claims, disputes, dependent status and local law are separate questions. When a duplicate is no longer needed, confirm the responsible source and any open purpose before disposing of the household copy securely.
+
+## Affiliate products belong after the complete health-information answer
+
+A future clearly labelled affiliate area may compare opaque document sleeves, fire-resistant document containers, scanners, shredders or offline encrypted storage after the guide. A commission cannot make a record complete, protect an exposed file, verify a patient match, reconcile a medication list, interpret a test, authorize a caregiver, prove coverage or replace a provider, pharmacist, plan, records office or emergency service. Product placement must stay outside every safety warning, protected handoff and unresolved result.
+
+**Next step in FamilyBoard:** create one row for a provider or portal record source and one open row for the current care handoff. Record only the safe person alias, responsible source, protected match, version, access, household action and observed responsible result.
 
 **FAQ:**
-- Q: What should go on the front versus the back of a household medical emergency card?
-  A: Public-health guidance puts identity basics — name, address, phone, birth date, blood type, insurance carrier — on the front, and medical specifics — conditions, current medications with dosage, allergies, immunization dates, equipment needs — on the back. That split keeps the fast-reference identity information separate from the detail a responder needs once they know who they're helping.
-- Q: How much medical detail should a shared household record actually contain?
-  A: The minimum needed for someone else to respond correctly: a relevant condition name, any critical clinician-provided instruction, the primary physician's contact, and where the full record is kept. Full visit notes, lab results and detailed history belong in the formal health-record system, not a shared household field.
-- Q: Should a household app suggest or adjust a medication dose?
-  A: No. Medication instructions recorded for caregiver handoff should reproduce the clinician's or pharmacy's exact instruction, and neither a family member's paraphrase nor the app should generate or modify dosing guidance. Update the record the same day treatment changes — an outdated dose is a safety issue, not a minor inconvenience.
-- Q: Is it okay to display medical information on a shared family dashboard?
-  A: Only as a deliberate, specific choice — for example, a child's severe allergy that every caregiver genuinely needs to see immediately. It shouldn't be the default behavior for anything tagged medical; most medical information should stay out of general shared views.
+- Q: Should FamilyBoard contain the full family medical record?
+  A: No. Keep clinical, billing, claim, medication, test and authorization content in the responsible protected systems. FamilyBoard should hold only safe aliases, source pointers, dates, access observations and handoff status.
+- Q: Does downloading a portal summary mean I received my complete record?
+  A: Not necessarily. A portal view or download supports only the content and scope it actually exposes. Use the covered provider or plan's current access process for the specific designated-record-set information you need.
+- Q: Can another family member automatically access my health information?
+  A: No universal family-role rule proves access. Authority can depend on applicable law, personal-representative status, an individual direction, authorization, permitted disclosure and the responsible organization's current process.
+- Q: Can the tool store medication names and doses for a caregiver?
+  A: No. Keep the actual current list and source-issued directions in an appropriate protected provider, pharmacy or patient-controlled source. This tool records only its version, access and handoff result and never creates dosing guidance.
+- Q: Can FamilyBoard explain a lab or imaging result?
+  A: No. It can record that a result was available and which qualified source still owns review. It cannot read, classify, diagnose, triage or recommend action from clinical content.
+- Q: Does a records, referral or coverage submission close a row?
+  A: No. Submission is a household action. Close only after the responsible organization produces an observed response or result and the current evidence is protected.
+- Q: Does a closed row prove that the medical information is accurate or care is complete?
+  A: No. It closes only one dated household source-and-handoff review. The responsible provider, plan, pharmacy, records office, current issued record and qualified professional control real accuracy and care decisions.
 
 ---
 
@@ -15921,6 +15970,124 @@ A future clearly labelled affiliate area may compare document sleeves, accordion
   A: Stop routine organization and contact the responsible school, education agency, healthcare, emergency or qualified professional source. FamilyBoard cannot resolve the conflict or decide what service or action is appropriate.
 - Q: Does a closed row prove enrollment, grades, support or consent is valid?
   A: No. It closes only this dated household source-and-handoff review. The responsible institution, agency, current notice and official record control every external result.
+
+---
+
+## Page 229 — Household Medical Information Source and Handoff Log
+**Slug:** `/tools/household-medical-information-source-handoff-log/`
+**Primary intent:** document health-information sources, protected person matches, access actions and observed care-handoff results without storing medical details
+**Title tag:** `Household Medical Information Source and Handoff Log`
+**Meta description:** `Create a private source index for medical records, medication lists, referrals, coverage and caregiver handoffs without exposing health details.`
+**Primary keyword concept:** medical information organizer
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-26
+**Editorial review date:** 2026-08-26
+**Content version:** 1
+**Suggested internal links:** `/guides/household-medical-information-organization/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`, `/features/household-documents-organizer/`, `/privacy/`
+
+# Household medical information source and handoff log
+
+Provider charts, health-plan records, pharmacy lists, patient portals, discharge documents, referrals, test or imaging sources, claim workflows and caregiver authorizations may concern the same person while supporting different purposes. This free browser tool creates a dated public-safe index for a safe person alias, information purpose, responsible health source, protected person match, current record or notice version, access and authorized-recipient state, clinical or administrative status source, household action, observed responsible result, review route, owner and next checkpoint.
+
+It does not sign in to a provider, health plan, pharmacy, laboratory, imaging center, patient portal or government system; read, create, retrieve, download, upload, transfer, amend or delete a medical record; authenticate a patient, representative or caregiver; verify a diagnosis, allergy, medication, prescription, dose, test, image, referral, coverage, claim, bill, appointment or authorization; reconcile medicines; interpret a clinical result; diagnose, triage or recommend care; calculate a HIPAA, state, plan, provider, appeal or legal deadline; or contact any organization. Use the current provider, plan, pharmacy, records office, qualified professional and emergency service for every real action and result.
+
+**Ready to replace `medical file is somewhere in the portal` with a responsible source and observed result? [Jump to the Household Medical Information Source and Handoff Log](#tool-heading).**
+
+## Create one dated source map with safe person aliases
+
+Use a private review code such as `HEALTH-SOURCES-2026-A` and person aliases such as `HOUSEHOLD-PERSON-A`. Choose the actual context: first source map, provider or portal record access, correction or transfer request, current medication-list source handoff, discharge or care transition, lab or imaging source, referral or coverage workflow, caregiver access, or identity, version, safety or authorization conflict.
+
+The baseline marks the source map used at the start. The current review date says when responsible sources and protected evidence were observed. The next checkpoint bounds open household follow-up. It is not a record-access, correction, prescription, follow-up, referral, authorization, claim, appeal, coverage or legal deadline.
+
+The global map may name safe provider, plan, pharmacy, records-office, portal, laboratory, imaging, emergency and protected-evidence codes. Do not type a real person, provider or facility name; patient, member, policy, claim, prescription or medical-record number; birth date; address; contact; diagnosis; symptom; allergy; medicine; strength; dose; test value; report; image; procedure; treatment; mental-health, reproductive or genetic information; authorization; signature; credential; payment or private message.
+
+## Each row has twelve source, access and handoff fields
+
+Enter one information purpose and responsible-source relationship per line:
+
+`ID | safe person alias, information purpose and household role | responsible provider, plan, pharmacy or records source and scope | protected person-match evidence plus source checked date YYYY-MM-DD | current record, list or notice version observation | access, custody and authorized-recipient observation | clinical, pharmacy, coverage or official status source | household access, transfer, correction or handoff action plus observed result | identity, version, access, medication-safety or authorization conflict and responsible review route | owner role | target or outcome date YYYY-MM-DD | one of the twelve listed statuses`
+
+The source-check date must fall from the baseline through the current review. An open row needs a household target from the current review through the next checkpoint. A closed row needs an observed outcome date from the baseline through the current review. One dated version supports at most 14 rows.
+
+Use safe observations such as `protected person and provider record source matched; evidence HEALTH-A-ID2; checked 2026-08-26`, `current portal source opened; clinical contents not copied` and `current provider-issued medication-list source available; list contents remain protected`. Do not enter the actual identity, clinical, insurance, financial, authorization or case value.
+
+## Twelve statuses preserve source, protected access and responsible result
+
+1. **Household health-information purpose recorded—information category pending:** the household knows why information matters but has not classified the record, list, referral, coverage or handoff role.
+2. **Information category recorded—responsible health source pending:** the purpose is known while the provider, plan, pharmacy, records office or other responsible source remains open.
+3. **Responsible health source recorded—protected person match pending:** a source is identified but the intended person and source have not been compared in a protected process.
+4. **Protected person match recorded—current record, list or notice version pending:** the match pointer exists while the current issued version remains unresolved.
+5. **Current record, list or notice version recorded—access, custody and authorized recipient pending:** a version clue exists while protected access and recipient scope have not been tested.
+6. **Access, custody and recipient tested—clinical, pharmacy, coverage or official status source pending:** the intended source opened while the status source controlling the stated purpose remains unmapped.
+7. **Clinical, pharmacy, coverage or official status sources mapped—household handoff or access action pending:** responsible sources exist while the necessary household action and owner remain open.
+8. **Record access, correction, transfer, medication-list, referral, coverage or caregiver handoff action recorded—responsible result pending:** a request, submission, authorization handoff or rehearsal is attributable, but the responsible result is not observed.
+9. **Identity, version, access, medication-safety or authorization conflict—provider, pharmacist, plan or qualified review pending:** sources disagree or a protected identity, access, instruction or authority issue remains and the responsible route is named.
+10. **Source, protected person match, version, access and handoff reviewed:** the dated row links the responsible source, protected match, current version, actual access, status source and current handoff or reopen rule.
+11. **Responsible-source result received—custody and next-care condition recorded:** the requested response or handoff result was observed and protected with a care-event reopen condition.
+12. **Not applicable—reason and reopen event recorded:** the source role does not currently apply and the row says which provider, plan, pharmacy, care, authorization or household event reopens it.
+
+The first nine remain open. The final three close only this dated household review. A new provider, plan, pharmacy, portal, prescription list, discharge, referral, test, image, procedure, caregiver, authorization, identity correction, access failure, lost device or source conflict creates a new version rather than erasing history.
+
+## A portal view is not automatically the complete record
+
+The [HHS HIPAA access guidance](https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/access/index.html) describes designated record sets that may include provider, billing, plan, claim and other decision records maintained electronically or on paper, subject to defined exceptions. A household row must therefore describe what was actually opened: `current portal visit summary observed`, not `all medical records complete`.
+
+Keep provider, plan, pharmacy and household sources separate. A health-plan claim does not prove the provider chart. A pharmacy history does not prove every current instruction. A download does not show that a recipient can still access its protected copy. A family summary does not become authoritative because it combines several screenshots.
+
+## Requests, submissions and downloads remain actions until a result is observed
+
+`Record requested`, `correction submitted`, `copy directed to recipient`, `referral sent`, `authorization uploaded`, `appointment requested` and `claim filed` are actions. The eighth status exists to preserve the waiting state. Name the responsible source, action date, safe evidence pointer and exact response still needed.
+
+Closing a responsible-result row requires an observed response attributable to that source plus current custody and a reopen condition. The tool cannot decide whether a denial is valid, whether the information is complete, whether an amendment was required or whether an appeal should be filed.
+
+## Actual medication and clinical content stays out of the tool
+
+The [FDA recommends maintaining a current medication list](https://www.fda.gov/consumers/consumer-updates/create-and-keep-medication-list-your-health) and updating it when medicines change. Use a suitable protected provider, pharmacy or patient-controlled format for the actual list. In this tool record only its responsible source, version observation, authorized access and handoff result.
+
+Do not paste drug names, strengths, doses, timing, reasons, allergies, conditions, pharmacy numbers or label text. The tool does not create instructions or answer what to take, skip, repeat, stop or substitute. A missing, extra, conflicting or unexpected administration needs the prescribing or dispensing professional, poison or emergency service appropriate to the situation.
+
+## Test, imaging and discharge availability is not clinical interpretation
+
+A row may distinguish `result posted`, `report opened`, `qualified review pending` and `clinician discussion observed`. It cannot contain the value, image, impression, diagnosis or recommendation. Do not mark `normal`, `safe`, `cleared`, `urgent` or `care complete` based on household interpretation.
+
+Discharge and care-transition rows must preserve the source-issued document and the receiving-source result separately. A discharge instruction does not prove a follow-up appointment occurred, a receiving provider accepted a transfer or a health plan approved coverage.
+
+## Family access and caregiver authority remain protected
+
+The [HHS medical-record guide](https://www.hhs.gov/hipaa/for-individuals/medical-records/index.html) limits direct access to the individual or personal representative, while other disclosures can depend on permission and circumstances. A family title or emergency-contact listing is not enough for the tool to infer authority.
+
+Keep signatures, identity documents, personal-representative evidence, court or legal materials, consent scope and revocation in the responsible protected process. The shared row may contain only a safe authorization pointer, scope observation and responsible-source result. If authority or capacity conflicts, use the ninth status and obtain provider, plan or qualified review.
+
+## Privacy screening is deliberately conservative
+
+The form rejects common full phone and email patterns, long numeric identifiers and terms associated with patient, person or provider names; birth dates and addresses; patient, member, policy, claim, prescription and medical-record numbers; diagnoses, symptoms, allergies, medicines and doses; lab, imaging, procedure, treatment, discharge and mental-health content; genetic and reproductive information; authorizations, signatures, credentials, payment and private messages. It cannot recognize every sensitive value or determine who has permission.
+
+Entries stay in the current browser and are not sent to FamilyBoard. The result is not automatically encrypted or backed up. Copying, printing, downloading or saving to the FamilyBoard App creates another user-controlled copy, so recheck the intended recipient, minimum scope and protected evidence before sharing it.
+
+## Affiliate products cannot make health information safe or correct
+
+A future clearly labelled affiliate area may compare opaque document sleeves, portable scanners, fire-resistant document containers, shredders or offline encrypted storage after the generated result. A commission cannot verify a person, protect an exposed file, make a chart complete, reconcile medicines, interpret a test, authorize access, prove coverage or replace a provider, pharmacist, plan, records office, qualified professional or emergency service. Product placement must remain outside every safety warning, protected access, caregiver-authority and unresolved-result step.
+
+**Next step in FamilyBoard:** keep the two default rows to learn the distinction. The first is a reviewed provider-record source and protected-access version. The second records a care-handoff action while the responsible source result remains pending. Replace both with safe person aliases and source pointers before saving.
+
+**FAQ:**
+- Q: Can I enter a patient name, diagnosis, medication or test result?
+  A: No. Keep all identity and clinical content in the responsible protected health source. Record only a safe person alias, protected match pointer, version, access observation and handoff result here.
+- Q: Does the tool connect to a patient portal or Health app?
+  A: No. It has no connection to any provider, plan, pharmacy, laboratory, government or device health system and cannot read or verify a record.
+- Q: Can the next checkpoint calculate a HIPAA, provider or appeal deadline?
+  A: No. It is only a household follow-up date. Use the responsible organization, current notice, applicable law and qualified advice for actual requirements and dates.
+- Q: Why does a downloaded record or submitted referral remain open?
+  A: Downloading or submitting proves a household action, not completeness, receipt, acceptance or care. The row closes only after the responsible source result is observed and its current evidence is protected.
+- Q: Can a generated handoff authorize a caregiver or change treatment?
+  A: No. It can identify which protected authorization and professional source must be used, but it cannot grant access, consent to care or create or change clinical instructions.
+- Q: What should I do if a person match, medication source or instruction conflicts?
+  A: Stop routine organization and contact the responsible provider, pharmacist, health plan, qualified professional or emergency service. FamilyBoard cannot resolve or triage the conflict.
+- Q: Does a closed row prove a record is accurate or care is complete?
+  A: No. It closes only this dated household source-and-handoff review. The responsible health organization, current issued record and qualified professional control external accuracy and care.
 
 ---
 

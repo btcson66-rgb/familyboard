@@ -928,12 +928,12 @@
     "headings": "Emergency supply inventory: inspect first, compare second, buy last Choose an authority before choosing quantities Separate the portable bag from supplies used at home Give every item a stable identifier Record quantities as observations, not invented prescriptions Condition evidence is item-specific Four statuses preserve uncertainty Every unresolved ID needs an owner and due date Build around accessibility, care and pet needs without exposing details Review on a calendar and after real use Privacy and commercial independence"
   },
   {
-    "title": "Household Medical Information Organization: Keep Emergency References Without Overexposing Health Data",
-    "description": "Organize limited household medical emergency references, provider contacts and document locations while keeping sensitive health records in appropriately secure systems.",
+    "title": "How to Organize Household Medical Information by Source, Access and Care Handoff",
+    "description": "Build a private medical-information index for records, medication lists, referrals, coverage and caregiver handoffs without exposing health details.",
     "route": "/guides/household-medical-information-organization/",
     "cluster": "records-emergency",
     "keywords": "organize family medical information",
-    "headings": "Medical information needs a stricter privacy boundary than an ordinary household note What a real emergency health information card actually contains Store the minimum a responder or substitute caregiver actually needs Medication instructions should be copied exactly, never generated Keep medical notes off shared displays by default Route complex or ongoing care to a system built for it"
+    "headings": "Organize household medical information without building an unprotected shadow chart Start with a safe person alias and one current care purpose The provider record, plan record and household index are different systems Record access is a request-and-result workflow Family relationship does not automatically prove record authority A current medication list belongs in a protected clinical handoff A result is not an interpretation Discharge, referral, appointment and coverage each need their own result Emergency access is a different audience and version Reopen on care events, access changes and source conflicts Affiliate products belong after the complete health-information answer"
   },
   {
     "title": "Caregiver Handoff Checklist: Transfer Routines, Contacts and Household Responsibilities Clearly",
@@ -1718,6 +1718,14 @@
     "cluster": "tools",
     "keywords": "school records organizer",
     "headings": "Household school record source and handoff log Create one dated review with a safe learner alias Each row has twelve school-source and handoff fields Twelve statuses preserve discovery, protected match, handoff and result A responsible source must control the stated school purpose Protected student match is evidence, not a shared identity profile Official-record access and amendment are separate events Health, counseling and learning-support content stays protected Pickup, transport, activities and consent close only on acceptance Privacy screening is deliberately conservative Affiliate products cannot validate a school record or decision"
+  },
+  {
+    "title": "Household Medical Information Source and Handoff Log",
+    "description": "Create a private source index for medical records, medication lists, referrals, coverage and caregiver handoffs without exposing health details.",
+    "route": "/tools/household-medical-information-source-handoff-log/",
+    "cluster": "tools",
+    "keywords": "medical information organizer",
+    "headings": "Household medical information source and handoff log Create one dated source map with safe person aliases Each row has twelve source, access and handoff fields Twelve statuses preserve source, protected access and responsible result A portal view is not automatically the complete record Requests, submissions and downloads remain actions until a result is observed Actual medication and clinical content stays out of the tool Test, imaging and discharge availability is not clinical interpretation Family access and caregiver authority remain protected Privacy screening is deliberately conservative Affiliate products cannot make health information safe or correct"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
