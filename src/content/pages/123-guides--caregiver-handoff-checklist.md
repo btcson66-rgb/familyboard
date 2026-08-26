@@ -13,6 +13,7 @@ lastReviewedAt: "2026-08-26"
 nextStep: "Build one dated source-and-authorization map, then ask the receiving caregiver to demonstrate access and name the route for a missing or conflicting instruction."
 related:
   - "/tools/caregiver-handoff-source-authorization-log/"
+  - "/tools/home-care-visit-scope-service-result-log/"
   - "/guides/household-medical-information-organization/"
   - "/guides/emergency-information-sheet/"
   - "/guides/household-admin-backup-person/"
@@ -39,6 +40,8 @@ contentVersion: 2
 A handoff for a child, older adult, person with a disability or another person receiving support is not one giant summary. It is a controlled connection among the person receiving care, the current source of each instruction, the recipient's authority and minimum access, the everyday logistics for this care period, and a result showing that the receiving caregiver could actually use the handoff.
 
 FamilyBoard does not decide who may receive protected information, appoint a representative, create a care plan, interpret a discharge instruction, recommend a treatment, reconcile medication, assess capacity, verify a home-care agency or caregiver, book respite or transport, submit an application, contact a provider or calculate a medical, insurance, program or legal deadline. Use the free [Caregiver Handoff Source and Authorization Log](/tools/caregiver-handoff-source-authorization-log/) to record safe source and result pointers. Keep names, diagnoses, medicines, care instructions, addresses, access codes, schedules and authority documents in the responsible protected system.
+
+When the handoff involves recurring agency visits, keep the recipient's authority and access here, then use the [Home Care Visit Scope and Service Result Log](/tools/home-care-visit-scope-service-result-log/) for the separate service-plan version, official arrival-and-departure evidence pointer, household exception and responsible agency result. A caregiver handoff does not prove that a visit occurred, and a visit event does not prove that the receiving person held the right information or authority.
 
 ## Begin with a safe alias, care window and stated purpose
 

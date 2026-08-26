@@ -1736,6 +1736,14 @@
     "headings": "Caregiver handoff source and authorization log Create one version for one care period Each row has twelve source, authority and acceptance fields Twelve statuses preserve source, authority, access and acceptance A caregiver label does not create authority Keep source-issued care instructions in their protected source Separate household routines from qualified care sources Test actual access, custody and the return route A discharge checklist or application is not service acceptance Briefing, acceptance and responsible result remain separate Caregiver support and respite need their own responsible source The privacy gate rejects care and identity details Product recommendations stay outside the care decision"
   },
   {
+    "title": "Home Care Visit Scope and Service Result Log",
+    "description": "Build a private home-care visit log for current service sources, arrival and departure evidence, scope exceptions and agency results without storing care details.",
+    "route": "/tools/home-care-visit-scope-service-result-log/",
+    "cluster": "tools",
+    "keywords": "home care visit log",
+    "headings": "Home care visit scope and service result log Create one review for one service relationship and period Each row has twelve evidence layers Twelve statuses separate visit source, evidence, exception and result A calendar entry, clock-in and completed visit are different claims Official EVV contains data this tool intentionally avoids Service plan, contract, authorization and visit evidence are separate Record an exception without writing a care narrative A household report is not an agency finding Notice and complaint routes belong to the responsible program Privacy is part of visit evidence design Affiliate products stay outside the worker and care relationship"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

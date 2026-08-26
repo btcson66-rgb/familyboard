@@ -41,7 +41,8 @@ const pagesZhTw = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/pages-zh-tw" }),
   schema: pageSchema.extend({
     locale: z.literal("zh-TW").default("zh-TW"),
-    alternateRoute: z.string(),
+    alternateRoute: z.string().optional(),
+    languageExclusive: z.boolean().default(false),
   }),
 });
 

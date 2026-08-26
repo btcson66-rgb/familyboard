@@ -14,6 +14,7 @@ lastReviewedAt: "2026-08-26"
 nextStep: "先選一個實際照護時段，用安全代號分開記錄被照顧者參與、負責照護來源、目前版本、接收者權限、實際存取、生活安排、說明接受與負責結果。"
 related:
   - "/zh-tw/tools/caregiver-handoff-source-authorization-log/"
+  - "/zh-tw/tools/home-care-visit-scope-service-result-log/"
   - "/zh-tw/guides/household-medical-information-organization/"
   - "/zh-tw/guides/emergency-information-sheet/"
   - "/zh-tw/guides/household-handoff/"
@@ -41,6 +42,8 @@ contentVersion: 1
 FamilyBoard 只協助建立安全來源與結果索引，不驗證照護者、院所、居家服務單位、個案管理員或代理人，不授予、撤銷或解釋權限，不登入健康存摺或長照系統，不替人申請長照、判定資格與需要等級、計算給付或排定服務，也不產生或判讀用藥、餵食吞嚥、移位、如廁沐浴、傷口、管路、輔具、行為、臨床或緊急指示。真實照護決定與緊急事件要使用目前醫療院所、長照服務單位、個案管理員、合格專業人員及所在地緊急流程。
 
 想把來源、權限、存取、生活安排與接受結果逐列分開？使用[免費照護者交接來源與授權狀態表](/zh-tw/tools/caregiver-handoff-source-authorization-log/)。
+
+若交接同時牽涉固定居家服務到訪，權限與存取仍留在這份交接流程；到離場證據、服務範圍例外與服務單位回覆則使用[居家照護服務到離場、範圍與結果紀錄表](/zh-tw/tools/home-care-visit-scope-service-result-log/)分開追蹤。照護者已接受交接不證明服務人員已到訪，而到訪事件也不證明接收者持有正確版本與權限。
 
 ## 先定義這次照護時段，不建立「永久通用版」
 

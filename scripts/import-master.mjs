@@ -341,11 +341,10 @@ const zhTwPages = fs.existsSync(zhTwDir)
       .filter((file) => file.endsWith(".md"))
       .map((file) => {
         const markdown = fs.readFileSync(path.join(zhTwDir, file), "utf8");
+        const alternateRoute = frontmatterValue(markdown, "alternateRoute");
         return {
           route: normalizeRoute(frontmatterValue(markdown, "route")),
-          alternateRoute: normalizeRoute(
-            frontmatterValue(markdown, "alternateRoute"),
-          ),
+          alternateRoute: alternateRoute ? normalizeRoute(alternateRoute) : "",
           indexable: frontmatterValue(markdown, "indexable") !== "false",
           lastReviewedAt: frontmatterValue(markdown, "lastReviewedAt"),
           locale: "zh-TW",
@@ -353,7 +352,9 @@ const zhTwPages = fs.existsSync(zhTwDir)
       })
   : [];
 const zhTwByEnglishRoute = new Map(
-  zhTwPages.map((page) => [page.alternateRoute, page.route]),
+  zhTwPages
+    .filter((page) => page.alternateRoute)
+    .map((page) => [page.alternateRoute, page.route]),
 );
 const sitemapPages = [
   ...all.map((record) => ({

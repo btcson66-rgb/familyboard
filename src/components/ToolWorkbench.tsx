@@ -1385,6 +1385,240 @@ This output is a household caregiver-handoff source, authority, access and accep
   };
 };
 
+const homeCareVisitDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusOrder = zh
+    ? [
+        "已記錄居家照護服務到訪用途，等待確認服務情境",
+        "已記錄服務情境，等待確認負責服務單位或方案來源",
+        "已記錄負責服務來源，等待受保護本人比對",
+        "已記錄受保護本人比對，等待目前照顧計畫、契約或服務授權版本",
+        "已記錄目前服務範圍版本，等待服務時段代號、工作角色與本人參與來源",
+        "已記錄服務時段代號、工作角色與本人參與來源，等待正式到離場證據",
+        "已記錄到離場證據，等待服務範圍與例外觀察",
+        "已記錄服務範圍與例外觀察，等待負責服務單位或方案結果",
+        "身分、時間、範圍、安全或計費矛盾，等待服務單位、方案或合格來源審查",
+        "已核對來源、受保護本人比對、版本、到訪證據與服務結果",
+        "已收到負責服務結果，記錄紀錄保管與下次到訪條件",
+        "不適用，已記錄原因與重新開啟事件",
+      ]
+    : [
+        "Home-care visit purpose recorded—service context pending",
+        "Service context recorded—responsible agency or program source pending",
+        "Responsible service source recorded—protected person match pending",
+        "Protected person match recorded—current service-plan, contract or authorization version pending",
+        "Current service scope version recorded—service window, worker role and participation pending",
+        "Service window, worker role and participation recorded—official arrival and departure evidence pending",
+        "Arrival and departure evidence recorded—service scope and exception observation pending",
+        "Service scope and exception observation recorded—responsible agency or program result pending",
+        "Identity, timing, scope, safety or billing conflict—agency, program or qualified review pending",
+        "Source, protected person match, version, visit evidence and service result reviewed",
+        "Responsible service result received—record custody and next-visit condition recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+
+  const defaultRecords = zh
+    ? `VISIT-A | 被照顧者 A 的目前居家服務核對；已授權到訪目的 | 目前居家服務單位、照顧計畫與契約來源；給付來源與家庭觀察分開 | 受保護本人與目前服務來源已比對；證據 CARE-A-VISIT2；核對 2026-08-26 | 已開啟目前服務單位照顧計畫範圍與契約版本；照護內容留在受保護來源 | 服務時段代號 WINDOW-A、指派工作角色與本人參與來源已由負責服務單位核對 | 已觀察正式服務單位到離場證據指標 EVV-A2；時點細節留在負責系統 | 已觀察授權服務範圍結果；未複製照護內容；此版本沒有例外 | 已核對服務單位結果；方案與申訴路徑已映射；服務計畫、工作角色、時段或下次到訪改變時重新開啟 | 家庭服務協調角色 | 2026-08-26 | 已核對來源、受保護本人比對、版本、到訪證據與服務結果
+EXCEPTION-A | 被照顧者 A 的居家服務更改、未到或縮短核對；例外追蹤用途 | 目前居家服務單位、長照方案與契約來源；家庭觀察保持分開 | 受保護本人與目前服務來源已比對；證據 CARE-A-EXCEPTION2；核對 2026-08-26 | 已觀察目前照顧計畫範圍、契約與服務授權版本；照護內容留在受保護來源 | 服務時段代號 WINDOW-B、工作角色與本人參與來源已由負責服務單位核對 | 已觀察正式服務單位到離場例外證據指標 EVV-B2；時點與位置細節留在負責系統 | 已用安全證據代號記錄授權範圍例外；照護與事件細節留在受保護來源 | 已向負責服務單位回報例外；服務結果仍待取得；方案、合格審查與申訴路徑已映射 | 家庭服務追蹤角色 | 2026-09-10 | 已記錄服務範圍與例外觀察，等待負責服務單位或方案結果`
+    : `VISIT-A | Care person A current in-home service review; authorized visit purpose | Current home-care agency, service-plan and contract sources; payer and household sources remain separate | Protected person and current service source matched; evidence CARE-A-VISIT2; checked 2026-08-26 | Current agency service-plan scope and contract version opened; care details stay protected | Service-window code WINDOW-A, assigned worker role and care-person participation source reviewed by responsible agency | Official agency or EVV visit pointer EVV-A2 observed; timing details remain in the responsible system | Authorized service scope result observed; care details not copied; no exception in this version | Agency service result reviewed; program and complaint routes mapped; reopen when service plan, worker role, window or next visit changes | Household service-coordination role | 2026-08-26 | Source, protected person match, version, visit evidence and service result reviewed
+EXCEPTION-A | Care person A changed, missed or shortened in-home service review; exception follow-up purpose | Current home-care agency, program and contract sources; household observation remains separate | Protected person and current service source matched; evidence CARE-A-EXCEPTION2; checked 2026-08-26 | Current service-plan scope, contract and authorization version observed; care details stay protected | Service-window code WINDOW-B, worker role and care-person participation source reviewed by responsible agency | Official agency or EVV arrival and departure exception pointer EVV-B2 observed; timing and location details remain in the responsible system | Authorized scope exception recorded with safe evidence pointer; care and incident details stay in protected source | Exception reported to responsible agency; service response remains pending; program, qualified and complaint routes mapped | Household service-follow-up role | 2026-09-10 | Service scope and exception observation recorded—responsible agency or program result pending`;
+
+  return {
+    intro: zh
+      ? "用安全代號分開居家服務來源、本人比對、目前契約或照顧計畫版本、服務時段角色、正式到離場證據、家庭觀察、例外與負責結果。工具不是正式服務紀錄、電子到訪驗證、工時、計費、申訴或照護品質系統。"
+      : "Separate home-care service sources, protected person match, current plan or contract version, visit role, official arrival/departure evidence, household observation, exceptions and responsible results with safe codes. This is not an official service record, EVV, timesheet, billing, complaint or care-quality system.",
+    fields: [
+      text(
+        "review",
+        zh ? "居家照護服務私人核對代號" : "Private home-care service review reference",
+        zh ? "只用安全家庭代號；不要輸入姓名、地址、健康或照護內容、工作人員資料、精確時間位置、案件、計費或登入內容。" : "Use a safe household code. Do not enter names, addresses, health or care content, worker details, exact times or locations, case, billing or login data.",
+        "HOME-CARE-VISIT-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "居家照護服務核對情境" : "Home-care service review context",
+        type: "select",
+        options: zh
+          ? ["第一次服務到訪", "例行居家服務", "服務時段或工作角色改變", "未到、遲到、提早離場或服務縮短", "照顧計畫、契約或服務授權改變", "服務範圍或家庭觀察不同", "安全、事件或緊急升級", "計費、申訴或負責結果追蹤"]
+          : ["First in-home service visit", "Routine home-care service", "Service window or worker-role change", "Missed, late, early-departure or shortened visit", "Service-plan, contract or authorization change", "Service-scope or household-observation difference", "Safety, incident or emergency escalation", "Billing, complaint or responsible-result follow-up"],
+      },
+      { name: "baselineDate", label: zh ? "居家服務來源／版本基準日" : "Home-care service source and version baseline date", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: zh ? "本次居家照護服務核對日" : "Current home-care service review date", type: "date", value: "2026-08-26" },
+      { name: "nextReview", label: zh ? "下一次到訪、例外或負責結果核點" : "Next visit, exception or responsible-result checkpoint", type: "date", value: "2026-09-10" },
+      text(
+        "basis",
+        zh ? "服務單位、方案、契約、照顧計畫、到離場與申訴來源地圖" : "Agency, program, contract, service-plan, visit-evidence and complaint source map",
+        zh ? "只放安全來源或證據代號；本人、服務內容、工作人員、到離場精確資料、計費與申訴內容留在負責受保護來源。" : "Use safe source or evidence IDs only. Keep identity, service content, worker data, exact arrival/departure data, billing and complaint content in responsible protected sources.",
+        "AGENCY-S1; SERVICE-PLAN-P2; CONTRACT-C2; VISIT-EVIDENCE-E2; PROGRAM-ROUTE-R1; COMPLAINT-ROUTE-Q1",
+      ),
+      {
+        name: "records",
+        label: zh ? "有版本的居家服務到離場、範圍、例外與結果狀態列" : "Versioned home-care visit, scope, exception and result rows",
+        type: "textarea",
+        help: zh ? "每行：ID｜安全本人代號、到訪目的與情境｜負責服務單位、方案、契約來源與範圍｜受保護本人比對與來源核對日 YYYY-MM-DD｜目前照顧計畫、契約或服務授權版本｜服務時段代號、工作角色與本人參與來源｜正式到離場證據指標與家庭觀察｜授權服務範圍結果、例外或事件指標｜溝通、行動、服務單位回覆、矛盾或申訴路徑｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。最多 14 行。" : "One line: ID | safe care-person alias, visit purpose and context | responsible agency, program, contract source and scope | protected person-match evidence plus source checked date YYYY-MM-DD | current service-plan, contract or authorization version | service-window code, worker role and care-person participation source | official arrival/departure evidence pointer and household observation | authorized service-scope result, exception or incident pointer | communication, action, agency response, conflict or complaint route | owner role | target or outcome date YYYY-MM-DD | one of the twelve exact statuses. Maximum 14 lines.",
+        value: defaultRecords,
+      },
+      text(
+        "storage",
+        zh ? "受保護服務單位、照顧計畫、到離場、例外、申訴與核對歷程位置" : "Protected agency, service-plan, EVV, exception, complaint and review-history location",
+        zh ? "只寫保管流程或容器代號，不要貼本人、照護、工作人員、時間位置、計費、案件、申訴、登入或私人內容。" : "Name a custody process or container, not identity, care, worker, timing, location, billing, case, complaint, login or private content.",
+        zh ? "家庭紀錄／居家服務／HOME-CARE-VISIT-2026-A／受保護來源" : "Household records / home care / HOME-CARE-VISIT-2026-A / protected sources",
+      ),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!baselineDate || !reviewDate || !nextReview)
+        return zh ? "請輸入有效的基準日、本次核對日與下一次核點日期。" : "Enter valid baseline, review and next-checkpoint dates.";
+      if (baselineDate > reviewDate)
+        return zh ? "居家服務來源／版本基準日不能晚於本次核對日。" : "The home-care service baseline cannot be later than the current review.";
+      if (nextReview < reviewDate)
+        return zh ? "下一次到訪、例外或負責結果核點不能早於本次居家照護服務核對日。" : "The next visit, exception or responsible-result checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 12 || values.storage.trim().length < 10)
+        return zh ? "請提供安全的居家服務來源地圖與受保護保管位置代號。" : "Provide a safe home-care service source map and protected storage-process label.";
+
+      const rows = values.records.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14)
+        return zh ? "請輸入 1 至 14 行居家服務到訪、例外與結果狀態。" : "Enter 1 to 14 home-care visit, exception and result rows.";
+      const recordRows = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = recordRows.filter((row) => row.parts.length !== 12 || row.parts.some((part) => !part));
+      if (malformed.length)
+        return zh ? `居家服務第 ${malformed.map((row) => row.line).join("、")} 行必須剛好有 12 個非空白欄位。` : `Home-care visit line ${malformed.map((row) => row.line).join(", ")} must contain exactly 12 non-empty fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toUpperCase());
+      if (new Set(ids).size !== ids.length)
+        return zh ? "每一行居家服務紀錄都需要唯一 ID。" : "Every home-care visit row needs a unique ID.";
+      const invalidStatuses = recordRows.filter((row) => !statusOrder.includes(row.parts[11]));
+      if (invalidStatuses.length)
+        return zh ? `居家服務第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用十二種指定狀態之一。` : `Home-care visit line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve exact statuses.`;
+
+      const openRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) < 9);
+      const closedRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) >= 9);
+      const sourceDateOf = (textValue: string) => strictIsoDate(textValue.match(/\b\d{4}-\d{2}-\d{2}\b/)?.[0] ?? "");
+      const invalidSourceDates = recordRows.filter((row) => {
+        const checked = sourceDateOf(row.parts[3]);
+        return !checked || checked < baselineDate || checked > reviewDate;
+      });
+      if (invalidSourceDates.length)
+        return zh ? `居家服務第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的受保護來源核對日。` : `Home-care visit line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a protected-source checked date from the baseline through this review.`;
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target < reviewDate || target > nextReview;
+      });
+      if (invalidOpenDates.length)
+        return zh ? `仍開放的居家服務第 ${invalidOpenDates.map((row) => row.line).join("、")} 行需要介於本次核對日與下一核點的目標日。` : `Open home-care visit line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome < baselineDate || outcome > reviewDate;
+      });
+      if (invalidClosedDates.length)
+        return zh ? `已核對、完成或不適用的居家服務第 ${invalidClosedDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的結果日。` : `Closed home-care visit line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an outcome date from the baseline through this review.`;
+
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 12 || row.parts[3].length < 18 || row.parts[4].length < 12 || row.parts[5].length < 12 || row.parts[6].length < 12 || row.parts[7].length < 12 || row.parts[8].length < 12 || row.parts[9].length < 4);
+      if (missingLayers.length)
+        return zh ? `居家服務第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實的到訪目的、負責來源、受保護本人比對、目前版本、服務時段與角色、到離場證據、服務範圍／例外、負責行動及角色。` : `Home-care visit line ${missingLayers.map((row) => row.line).join(", ")} needs a real visit purpose, responsible source, protected person match, current version, service window and role, arrival/departure evidence, service scope or exception, responsible action and owner.`;
+
+      const reviewedWithoutEvidence = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[9]) return false;
+        const evidence = row.parts.slice(2, 9).join(" ");
+        const sourceOk = zh ? /(?:服務單位|長照|方案|契約|照顧計畫)/.test(row.parts[2]) : /(?:agency|program|provider|contract|service-plan)/i.test(row.parts[2]);
+        const matchOk = zh ? /(?:受保護|本人|比對|證據)/.test(row.parts[3]) : /(?:protected|person|match|evidence)/i.test(row.parts[3]);
+        const versionOk = zh ? /(?:目前|版本|照顧計畫|契約|服務授權)/.test(row.parts[4]) : /(?:current|version|service-plan|contract|authorization)/i.test(row.parts[4]);
+        const visitSourceOk = zh ? /(?:服務時段|工作角色|本人參與|服務單位)/.test(row.parts[5]) : /(?:service-window|worker role|participation|agency)/i.test(row.parts[5]);
+        const visitEvidenceOk = zh ? /(?:正式|服務單位|到離場|證據|觀察)/.test(row.parts[6]) : /(?:official|agency|EVV|arrival|departure|evidence|observed)/i.test(row.parts[6]);
+        const scopeOk = zh ? /(?:授權|服務範圍|結果|例外|觀察)/.test(row.parts[7]) : /(?:authorized|service scope|result|exception|observed)/i.test(row.parts[7]);
+        const resultOk = zh ? /(?:服務單位|方案).*(?:結果|回覆|核對)/.test(row.parts[8]) : /(?:agency|program).*(?:result|response|reviewed)/i.test(row.parts[8]);
+        const routeOk = zh ? /(?:服務單位|方案|合格|申訴)/.test(row.parts[8]) : /(?:agency|program|qualified|complaint)/i.test(row.parts[8]);
+        const reopenOk = zh ? /(?:重新開啟|改變|下次到訪)/.test(row.parts[8]) : /(?:reopen|change|next visit)/i.test(row.parts[8]);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知|矛盾|缺少)/.test(evidence) : /(?:pending|awaiting|unresolved|unknown|conflict|missing)/i.test(evidence);
+        return !sourceOk || !matchOk || !versionOk || !visitSourceOk || !visitEvidenceOk || !scopeOk || !resultOk || !routeOk || !reopenOk || unresolved;
+      });
+      if (reviewedWithoutEvidence.length)
+        return zh ? `完成核對的第 ${reviewedWithoutEvidence.map((row) => row.line).join("、")} 行必須連結負責服務來源、受保護本人比對、目前版本、服務時段與角色、正式到離場證據、服務範圍觀察、負責結果、申訴／合格路徑與重開條件，且不能仍有未解差異。` : `Reviewed home-care visit line ${reviewedWithoutEvidence.map((row) => row.line).join(", ")} must link a responsible service source, protected person match, current version, service window and role, official arrival/departure evidence, service-scope observation, responsible result, complaint or qualified route and reopen rule with no unresolved gap.`;
+
+      const exceptionWithoutPendingResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[7]) return false;
+        const action = [row.parts[7], row.parts[8]].join(" ");
+        const exception = zh ? /(?:例外|未到|縮短|更改|事件)/.test(action) : /(?:exception|missed|shortened|changed|incident)/i.test(action);
+        const reported = zh ? /(?:回報|已報告|服務單位|方案|申訴)/.test(action) : /(?:reported|agency|program|complaint)/i.test(action);
+        const pending = zh ? /(?:等待|仍待|尚待|待取得)/.test(action) : /(?:pending|awaiting|remains)/i.test(action);
+        const completionClaim = zh ? /(?:服務完成|問題解決|申訴完成|已全部完成)/.test(action) : /(?:service completed|issue resolved|complaint completed|fully completed)/i.test(action);
+        return !exception || !reported || !pending || completionClaim;
+      });
+      if (exceptionWithoutPendingResult.length)
+        return zh ? `等待負責服務結果的第 ${exceptionWithoutPendingResult.map((row) => row.line).join("、")} 行必須記錄例外與已回報的服務單位、方案或申訴路徑，保持等待，不能把家庭觀察寫成完成結果。` : `Responsible-result-pending line ${exceptionWithoutPendingResult.map((row) => row.line).join(", ")} must record an exception and a reported agency, program or complaint route, stay pending and not turn a household observation into a completed result.`;
+
+      const conflictWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[8]) return false;
+        const combined = row.parts.slice(4, 9).join(" ");
+        const conflict = zh ? /(?:身分|時間|範圍|安全|計費|矛盾|不同|差異|錯誤)/.test(combined) : /(?:identity|timing|scope|safety|billing|conflict|different|discrepancy|error)/i.test(combined);
+        const route = zh ? /(?:服務單位|方案|合格|申訴)/.test(combined) : /(?:agency|program|qualified|complaint)/i.test(combined);
+        return !conflict || !route;
+      });
+      if (conflictWithoutRoute.length)
+        return zh ? `矛盾列第 ${conflictWithoutRoute.map((row) => row.line).join("、")} 行必須寫出身分、時間、範圍、安全或計費差異，以及負責服務單位、方案、合格審查或申訴路徑。` : `Conflict line ${conflictWithoutRoute.map((row) => row.line).join(", ")} must name the identity, timing, scope, safety or billing conflict and the responsible agency, program, qualified review or complaint route.`;
+
+      const completedWithoutResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[10]) return false;
+        const result = [row.parts[6], row.parts[7], row.parts[8]].join(" ");
+        const observed = zh ? /(?:負責服務單位|方案).*(?:結果|回覆|確認).*(?:收到|觀察|記錄)/.test(result) : /(?:(?:responsible agency|program) (?:result|response|confirmation)).*(?:received|observed|recorded)/i.test(result);
+        const custody = zh ? /(?:保管|目前版本|下次到訪|重新開啟)/.test(result) : /(?:custody|current version|next visit|reopen)/i.test(result);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知)/.test(result) : /(?:pending|awaiting|unresolved|unknown)/i.test(result);
+        return !observed || !custody || unresolved;
+      });
+      if (completedWithoutResult.length)
+        return zh ? `完成結果的第 ${completedWithoutResult.map((row) => row.line).join("、")} 行必須記錄已收到或觀察的負責服務結果、紀錄保管及下次到訪或重開條件。` : `Completed service-result line ${completedWithoutResult.map((row) => row.line).join(", ")} must record an observed responsible agency or program result, record custody and the next-visit or reopen condition.`;
+
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[11] === statusOrder[11] && !(zh ? /(?:重新開啟|重新檢視|如果|當.*時|服務|契約|計畫|到訪|家庭.*改變)/.test(row.parts[8]) : /(?:reopen|review again|if |when |after |service|contract|plan|visit|household.*change)/i.test(row.parts[8])));
+      if (notApplicableWithoutTrigger.length)
+        return zh ? `不適用的第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須記錄目前原因，以及服務、契約、計畫、到訪或家庭改變時的重開事件。` : `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and the service, contract, plan, visit or household change that reopens it.`;
+
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return zh ? "偵測到可能的完整電話、Email、案件、會員、服務對象、工作人員、計費或其他長數字識別資料。請改用安全證據代號。" : "A possible full phone, email, case, member, care-recipient, worker, billing or other long numeric identifier was detected. Use a safe evidence pointer.";
+      if (/password|passphrase|passcode|access code|door code|alarm code|security code|recovery code|verification code|login credential|full address|street address|care-recipient name\s*[:=]|patient name\s*[:=]|person name\s*[:=]|provider name\s*[:=]|agency name\s*[:=]|worker name\s*[:=]|employee name\s*[:=]|date of birth\s*[:=]|diagnosis\s*[:=]|condition\s*[:=]|symptom\s*[:=]|allerg(?:y|ies)\s*[:=]|medication name\s*[:=]|drug name\s*[:=]|medicine name\s*[:=]|dose\s*[:=]|dosage\s*[:=]|\b\d+(?:\.\d+)?\s*(?:mg|mcg|ml)\b|feeding|swallowing|transfer step|lifting step|mobility detail|toileting|bathing|wound|device instruction|behavior(?:al)? detail|mental health|care note|service note content|treatment plan|exact time|arrival time\s*[:=]|departure time\s*[:=]|clock[- ]?in\s*[:=]|clock[- ]?out\s*[:=]|exact location|precise location|GPS|location\s*[:=]|case number\s*[:=]|member number\s*[:=]|patient ID\s*[:=]|provider ID\s*[:=]|worker ID\s*[:=]|employee ID\s*[:=]|billing amount\s*[:=]|claim amount\s*[:=]|invoice amount\s*[:=]|photo|audio recording|video recording|signature|private message|correspondence|完整地址|被照顧者姓名\s*[:：]|病人姓名\s*[:：]|本人姓名\s*[:：]|院所名稱\s*[:：]|服務單位名稱\s*[:：]|工作人員姓名\s*[:：]|居服員姓名\s*[:：]|出生日期\s*[:：]|診斷\s*[:：]|病況\s*[:：]|症狀\s*[:：]|過敏\s*[:：]|藥名\s*[:：]|用藥名稱\s*[:：]|劑量\s*[:：]|餵食|吞嚥|移位步驟|攙扶步驟|行動細節|如廁|沐浴|傷口|管路|輔具指示|行為處理|心理健康內容|照護紀錄內容|服務紀錄內容|精確時間|到場時間\s*[:：]|離場時間\s*[:：]|打卡時間\s*[:：]|精確位置|詳細地點|GPS|位置\s*[:：]|案件編號\s*[:：]|會員號\s*[:：]|服務對象編號\s*[:：]|服務單位編號\s*[:：]|工作人員編號\s*[:：]|計費金額\s*[:：]|請款金額\s*[:：]|照片|錄音|錄影|簽名|門鎖密碼|保全密碼|登入密碼|驗證碼|私人訊息|通信內容/i.test(privacyText))
+        return zh ? "偵測到可能的被照顧者身分、服務單位、地址、診斷、用藥、劑量、餵食、移位、如廁、工作人員、精確時間或位置、案件、計費、影像、簽名、登入或私人通信內容。請改成安全來源、流程或證據代號。" : "A possible care-recipient identity, provider, address, diagnosis, medication, dose, feeding, mobility, exact time or location, worker, case, billing, media, signature, credential or private correspondence detail was detected.";
+
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length })).filter((item) => item.count > 0);
+      if (zh)
+        return `${values.review.trim()}｜居家照護服務到離場、範圍與結果狀態
+核對情境：${values.context}
+居家服務來源／版本基準：${formatter.format(baselineDate)}
+本次居家照護服務核對：${formatter.format(reviewDate)}
+下一次到訪、例外或負責結果核點：${formatter.format(nextReview)}
+仍開放的來源、本人比對、版本、到訪證據、例外或服務單位結果列：${openRows.length} 筆
+已核對、完成或不適用列：${closedRows.length} 筆
+狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}
+
+服務單位、方案、契約、照顧計畫、到離場與申訴來源地圖：${values.basis.trim()}
+
+${lines("有版本的居家服務到離場、範圍、例外與結果證據", recordRows.map((row) => `${row.parts[0]}｜本人／到訪目的：${row.parts[1]}｜負責服務來源／範圍：${row.parts[2]}｜受保護本人比對／來源核對：${row.parts[3]}｜目前照顧計畫／契約／授權版本：${row.parts[4]}｜服務時段／工作角色／本人參與：${row.parts[5]}｜正式到離場證據／家庭觀察：${row.parts[6]}｜服務範圍／例外／事件：${row.parts[7]}｜行動／服務單位回覆／矛盾／申訴：${row.parts[8]}｜負責角色：${row.parts[9]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[10]) as Date)}｜狀態：${row.parts[11]}`))}
+
+受保護服務單位、照顧計畫、到離場、例外、申訴與核對歷程位置：${values.storage.trim()}
+
+這份輸出只是家庭居家服務來源、版本、到離場證據、範圍觀察、例外與負責結果索引，不是正式電子到訪驗證、服務紀錄、工時表、薪資、計費、請款、照顧計畫、醫療紀錄、事件報告、申訴文件或服務品質證明。它不驗證服務人員或單位，不授權進入住家，不追蹤工作人員或位置，不讀寫服務單位或長照系統，不送出到離場、工時、請款、事件或申訴資料，不聯絡任何單位，也不判斷照護是否正確、安全或完成及不計算服務、給付、申訴或法律期限。真實服務、健康安全、緊急事件與申訴結果請直接使用目前照顧計畫、契約、服務單位、長照方案、地方主管機關、合格專業來源及所在地緊急服務。`;
+      return `${values.review.trim()} — home-care visit scope and service result status
+Review context: ${values.context}
+Home-care service source/version baseline: ${formatter.format(baselineDate)}
+Current home-care service review: ${formatter.format(reviewDate)}
+Next visit, exception or responsible-result checkpoint: ${formatter.format(nextReview)}
+Open source, person-match, version, visit-evidence, exception or agency-result rows: ${openRows.length}
+Reviewed, completed or not-applicable rows: ${closedRows.length}
+Status count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}
+
+Agency, program, contract, service-plan, visit-evidence and complaint source map: ${values.basis.trim()}
+
+${lines("Versioned home-care visit, scope, exception and result evidence", recordRows.map((row) => `${row.parts[0]} — person/visit purpose: ${row.parts[1]} — responsible service source/scope: ${row.parts[2]} — protected person match/source check: ${row.parts[3]} — current service-plan/contract/authorization version: ${row.parts[4]} — service window/worker role/participation: ${row.parts[5]} — official arrival/departure evidence/household observation: ${row.parts[6]} — service scope/exception/incident: ${row.parts[7]} — action/agency response/conflict/complaint: ${row.parts[8]} — owner: ${row.parts[9]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[10]) as Date)} — status: ${row.parts[11]}`))}
+
+Protected agency, service-plan, EVV, exception, complaint and review-history location: ${values.storage.trim()}
+
+This output is a household home-care service source, version, visit-evidence, scope-observation, exception and responsible-result index, not official EVV, a service record, timesheet, payroll, billing, claim, care plan, clinical chart, incident report, complaint filing or proof of service quality. It does not verify a worker or agency; authorize home access; track a worker or location; read or write an agency, Medicaid, Medicare or program system; submit EVV, time, claim, incident or complaint data; contact anyone; decide whether care was correct, safe or complete; or calculate service, coverage, appeal, complaint or legal deadlines. Use the current care plan, contract, responsible agency, program, qualified source, official complaint process and local emergency service for every real service, health, safety, emergency and result.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
     intro:
@@ -5376,6 +5610,9 @@ const definitions: Record<string, Definition> = {
   "caregiver-handoff-source-authorization-log": {
     ...caregiverHandoffDefinition("en"),
   },
+  "home-care-visit-scope-service-result-log": {
+    ...homeCareVisitDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -5395,6 +5632,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "caregiver-handoff-source-authorization-log": {
     ...caregiverHandoffDefinition("zh-TW"),
+  },
+  "home-care-visit-scope-service-result-log": {
+    ...homeCareVisitDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

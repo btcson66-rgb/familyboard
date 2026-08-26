@@ -13,6 +13,7 @@ lastReviewedAt: "2026-08-26"
 nextStep: "Generate the source-and-authorization index, then verify the current source, minimum recipient scope, actual protected access and caregiver acceptance before the care period starts."
 related:
   - "/guides/caregiver-handoff-checklist/"
+  - "/tools/home-care-visit-scope-service-result-log/"
   - "/guides/household-medical-information-organization/"
   - "/guides/emergency-information-sheet/"
   - "/guides/household-admin-backup-person/"
@@ -112,6 +113,8 @@ Likewise, `respite inquiry sent`, `home-care application submitted`, `case manag
 A briefing records that defined sources and logistics were presented. Caregiver acceptance records the recipient's stated acceptance of the defined period and scope. A responsible result records what a provider, agency, program or handoff process actually confirmed. Do not close a row because a family member believes that the recipient understood it.
 
 The receiving caregiver can demonstrate the protected source they would use, the route for a missing instruction and the boundary of their assigned logistics without repeating private content in the tool. Record the safe result and evidence pointer. If the demonstration exposes a gap, keep the row open with an owner and target date.
+
+For agency-delivered visits, the handoff result and visit result remain separate. Use the [Home Care Visit Scope and Service Result Log](/tools/home-care-visit-scope-service-result-log/) to preserve the current service-plan or contract version, official arrival-and-departure evidence pointer, service-scope observation, exception action and agency response without copying worker or care details.
 
 ## Caregiver support and respite need their own responsible source
 

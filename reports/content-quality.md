@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-26T05:59:29.112Z
+Generated: 2026-08-26T06:49:34.851Z
 
 ## Summary
 
-- Indexable pages: 346
-- Generated HTML routes: 363
+- Indexable pages: 349
+- Generated HTML routes: 366
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 2
-- Pages without a contextual product/tool link: 140
+- Duplicate primary-keyword groups: 3
+- Pages without a contextual product/tool link: 141
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-26T05:59:29.112Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 38
-- tools: 109
+- records-emergency: 39
+- tools: 111
 
 ## Word-count range
 
@@ -43,6 +43,7 @@ Generated: 2026-08-26T05:59:29.112Z
 
 - caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
 - 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
+- 居家服務紀錄: /zh-tw/guides/home-care-service-visit-records/, /zh-tw/tools/home-care-visit-scope-service-result-log/
 
 ## Pages without contextual product/tool links
 
@@ -71,7 +72,6 @@ Generated: 2026-08-26T05:59:29.112Z
 - /roadmap/
 - /security/
 - /terms/
-- /tools/caregiver-handoff-source-authorization-log/
 - /tools/household-vehicle-document-source-status-log/
 - /zh-tw/affiliate-disclosure/
 - /zh-tw/contact/
@@ -98,6 +98,7 @@ Generated: 2026-08-26T05:59:29.112Z
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
+- /zh-tw/guides/home-care-service-visit-records/
 - /zh-tw/guides/home-evacuation-information/
 - /zh-tw/guides/home-improvement-receipts/
 - /zh-tw/guides/home-maintenance-log/
@@ -145,6 +146,7 @@ Generated: 2026-08-26T05:59:29.112Z
 - /zh-tw/tools/emergency-contact-sheet-generator/
 - /zh-tw/tools/emergency-contact-verification-log/
 - /zh-tw/tools/emergency-supply-inventory-audit/
+- /zh-tw/tools/home-care-visit-scope-service-result-log/
 - /zh-tw/tools/home-emergency-drill-record-generator/
 - /zh-tw/tools/home-handoff-summary-generator/
 - /zh-tw/tools/home-inventory-checklist-generator/

@@ -113,6 +113,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-utility-provider-service-handoff-log/",
     "/guides/organize-utility-account-information/",
     "/tools/caregiver-handoff-source-authorization-log/",
+    "/tools/home-care-visit-scope-service-result-log/",
     "/guides/caregiver-handoff-checklist/",
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
@@ -174,6 +175,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-utility-provider-service-handoff-log/",
     "/zh-tw/guides/organize-utility-account-information/",
     "/zh-tw/tools/caregiver-handoff-source-authorization-log/",
+    "/zh-tw/tools/home-care-visit-scope-service-result-log/",
+    "/zh-tw/guides/home-care-service-visit-records/",
     "/zh-tw/guides/caregiver-handoff-checklist/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
@@ -238,7 +241,7 @@ test("representative routes have no serious accessibility violations", async ({
   }
 });
 
-test("Traditional Chinese pages are indexable, paired and functional", async ({
+test("Traditional Chinese pages are indexable, correctly localized and functional", async ({
   page,
 }) => {
   test.setTimeout(240_000);
@@ -1921,6 +1924,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText(
     "不能早於本次照護者交接核對日",
+  );
+
+  await page.goto("/tools/home-care-visit-scope-service-result-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open source, person-match, version, visit-evidence, exception or agency-result rows: 1");
+  await expect(page.locator(".result")).toContainText("Reviewed, completed or not-applicable rows: 1");
+  await expect(page.locator(".result")).toContainText("Source, protected person match, version, visit evidence and service result reviewed 1");
+  await page.getByLabel("Next visit, exception or responsible-result checkpoint").fill("2026-08-25");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+  await page.goto("/tools/home-care-visit-scope-service-result-log/");
+  await page.getByLabel("Protected agency, service-plan, EVV, exception, complaint and review-history location").fill("patient name: example; medication name: aspirin; exact time: 08:15");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible care-recipient identity, provider, address, diagnosis, medication, dose, feeding, mobility, exact time or location");
+
+  await page.goto("/zh-tw/tools/home-care-visit-scope-service-result-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的來源、本人比對、版本、到訪證據、例外或服務單位結果列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對、完成或不適用列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對來源、受保護本人比對、版本、到訪證據與服務結果 1 筆");
+  await page.getByLabel("下一次到訪、例外或負責結果核點").fill("2026-08-25");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次居家照護服務核對日",
   );
 
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");

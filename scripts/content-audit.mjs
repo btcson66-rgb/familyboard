@@ -102,6 +102,8 @@ for (const file of localizedFiles) {
     description: frontmatterValue(frontmatter, "description"),
     route: frontmatterValue(frontmatter, "route"),
     alternateRoute: frontmatterValue(frontmatter, "alternateRoute"),
+    languageExclusive:
+      frontmatterValue(frontmatter, "languageExclusive") === "true",
     locale: frontmatterValue(frontmatter, "locale"),
     keyword: frontmatterValue(frontmatter, "primaryKeyword"),
     cluster: frontmatterValue(frontmatter, "cluster"),
@@ -121,10 +123,14 @@ for (const file of localizedFiles) {
     !record.title ||
     !record.description ||
     !record.route ||
-    !record.alternateRoute ||
-    !record.keyword
+    !record.keyword ||
+    (!record.alternateRoute && !record.languageExclusive)
   )
     errors.push(`pages-zh-tw/${file}: missing localized SEO metadata`);
+  if (record.alternateRoute && record.languageExclusive)
+    errors.push(
+      `pages-zh-tw/${file}: choose alternateRoute or languageExclusive, not both`,
+    );
   if (record.locale !== "zh-TW")
     errors.push(`pages-zh-tw/${file}: locale must be zh-TW`);
   if (!record.route.startsWith("/zh-tw/"))
@@ -158,7 +164,7 @@ for (const key of ["title", "description", "route"]) {
   }
 }
 
-for (const key of ["title", "description", "route", "alternateRoute"]) {
+for (const key of ["title", "description", "route"]) {
   const seen = new Map();
   for (const item of localizedRecords) {
     if (seen.has(item[key]))
@@ -169,9 +175,20 @@ for (const key of ["title", "description", "route", "alternateRoute"]) {
   }
 }
 
+{
+  const seen = new Map();
+  for (const item of localizedRecords.filter((record) => record.alternateRoute)) {
+    if (seen.has(item.alternateRoute))
+      errors.push(
+        `duplicate localized alternateRoute: ${item.alternateRoute} (${seen.get(item.alternateRoute)}, ${item.file})`,
+      );
+    seen.set(item.alternateRoute, item.file);
+  }
+}
+
 const recordByRoute = new Map(records.map((record) => [record.route, record]));
 for (const record of localizedRecords) {
-  if (!recordByRoute.has(record.alternateRoute))
+  if (record.alternateRoute && !recordByRoute.has(record.alternateRoute))
     errors.push(
       `pages-zh-tw/${record.file}: English alternate route does not exist: ${record.alternateRoute}`,
     );

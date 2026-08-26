@@ -149,6 +149,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/caregiver-handoff-source-authorization-log/</loc>",
       "<loc>https://familyboard.win/guides/caregiver-handoff-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/caregiver-handoff-checklist/</loc>",
+      "<loc>https://familyboard.win/tools/home-care-visit-scope-service-result-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-care-visit-scope-service-result-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-care-service-visit-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -704,6 +707,15 @@ const checks = [
       'hreflang="zh-TW"',
       "A caregiver title, permitted disclosure and personal-representative authority are different",
       "Briefing, caregiver acceptance and an observed handoff result are three events",
+    ],
+  },
+  {
+    path: "/tools/home-care-visit-scope-service-result-log/",
+    require: [
+      "Home Care Visit Scope and Service Result Log",
+      'hreflang="zh-TW"',
+      "Twelve statuses separate visit source, evidence, exception and result",
+      "This household index is not an official EVV, service record, timesheet",
     ],
   },
   {
@@ -1289,6 +1301,24 @@ const checks = [
       'hreflang="en"',
       "長照申請、到府評估、照顧計畫與服務開始是四個事件",
       "照護者身分、可接收資訊與可做決定是三種權限",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/home-care-visit-scope-service-result-log/",
+    require: [
+      "居家照護服務到離場、範圍與結果紀錄表",
+      'hreflang="en"',
+      "十二種狀態分開到訪來源、證據、例外與負責結果",
+      "家庭索引不是正式到離場、服務紀錄、工時或計費系統",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-care-service-visit-records/",
+    require: [
+      "居家服務紀錄怎麼做？長照契約、到離場、服務範圍、例外與申訴指南",
+      'lang="zh-TW"',
+      "照顧計畫、契約、服務紀錄與家庭觀察是四套來源",
+      "排定、到場、離場、服務例外與負責回覆是五個事件",
     ],
   },
   {
