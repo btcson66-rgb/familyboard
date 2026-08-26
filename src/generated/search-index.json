@@ -1752,6 +1752,14 @@
     "headings": "Home care service plan change and notice log Start with the change relationship, not the message Each row preserves twelve different claims Twelve statuses stop one “changed” checkbox from hiding gaps A change signal, approved version, notice and first changed visit are separate HHCCN, ABN and NOMNC are not three names for one letter Receipt, acknowledgment, agreement and waiver are different An effective date does not prove implementation Worker changes and plan changes may overlap without being the same Keep cost, coverage, service and rights questions in separate lanes Privacy is part of a defensible change record Affiliate products stay outside service and rights decisions"
   },
   {
+    "title": "Home Care Service Interruption and Backup Log",
+    "description": "Track temporary home-care interruptions, safety routes, qualified backups, replacement service, resumption and unresolved gaps without storing care details.",
+    "route": "/tools/home-care-service-interruption-backup-continuity-log/",
+    "cluster": "tools",
+    "keywords": "home care service interruption backup plan",
+    "headings": "Home care service interruption, backup and continuity log This page starts after an unexpected interruption, not before a planned change Each row preserves twelve claims without copying a care file Twelve statuses stop “backup arranged” from hiding what happened Safety check, provider call and continuity record are three actions A missed visit record and a continuity record answer different questions “A relative can help today” is not automatically authorized replacement service Medicaid HCBS backup arrangements are program-specific Medicare home health has its own service and complaint routes Disaster continuity is not the same as a one-worker scheduling gap Replacement offered, accepted, activated and delivered are four events A resumed schedule does not erase the service gap Privacy is a continuity requirement, not an optional cleanup step Affiliate products stay after safety, service and complaint answers"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

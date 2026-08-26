@@ -96,6 +96,8 @@ Do not jump from step one to step seven. A scheduler's call cannot prove that an
 
 Use the [Home Care Visit Scope and Service Result Log](/tools/home-care-visit-scope-service-result-log/) for the separate visit evidence, service-scope exception and responsible agency result. Use this page for the change chain that controls which version should apply.
 
+If the approved version is not changing but an expected service becomes temporarily unavailable, use the [Home Care Service Interruption, Backup and Continuity Log](/tools/home-care-service-interruption-backup-continuity-log/) to keep the safety route, responsible interruption confirmation, qualified backup, actual replacement or resumption and uncompensated gap separate from this planned-change record.
+
 ## HHCCN, ABN and NOMNC are not three names for one letter
 
 The [CMS Home Health Change of Care Notice page](https://www.cms.gov/medicare/forms-notices/beneficiary-notices-initiative/ffs-hhccn) says Form CMS-10280 is used to notify Original Medicare beneficiaries receiving home-health benefits of plan-of-care changes and that written notification is required before an agency reduces or terminates an item or service when the notice is required. This is a specific Original Medicare process, not a universal form for every home-care arrangement.

@@ -155,6 +155,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/home-care-service-plan-change-notice-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-care-service-plan-change-notice-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-care-service-plan-changes/</loc>",
+      "<loc>https://familyboard.win/tools/home-care-service-interruption-backup-continuity-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-care-service-interruption-backup-continuity-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-care-service-interruption-backup-plan/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -728,6 +731,15 @@ const checks = [
       'hreflang="zh-TW"',
       "A change signal, approved version, notice and first changed visit are separate",
       "HHCCN, ABN and NOMNC are not three names for one letter",
+    ],
+  },
+  {
+    path: "/tools/home-care-service-interruption-backup-continuity-log/",
+    require: [
+      "Home Care Service Interruption and Backup Log",
+      'hreflang="zh-TW"',
+      "Twelve statuses stop “backup arranged” from hiding what happened",
+      "A missed visit record and a continuity record answer different questions",
     ],
   },
   {
@@ -1349,6 +1361,25 @@ const checks = [
       'lang="zh-TW"',
       "先問「哪一層變了」，不要只問「改了什麼」",
       "收到、簽收、理解、同意與異議是五個不同狀態",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/tools/home-care-service-interruption-backup-continuity-log/",
+    require: [
+      "居家服務臨時中斷與備援銜接紀錄表",
+      'hreflang="en"',
+      "十二種狀態分開訊號、安全、備援與實際結果",
+      "未到事件與服務連續性是兩張不同表",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-care-service-interruption-backup-plan/",
+    require: [
+      "居服員臨時沒來怎麼辦？取消、未到、備援、喘息與恢復服務指南",
+      'lang="zh-TW"',
+      "把「沒來」拆成七個可以核對的問題",
+      "喘息服務可以詢問，但不能假設當天可用",
     ],
     forbid: ['rel="alternate"'],
   },

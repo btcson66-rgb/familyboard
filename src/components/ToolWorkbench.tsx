@@ -1853,6 +1853,240 @@ This output is a household home-care change-source, version, notice, response, t
   };
 };
 
+const homeCareInterruptionDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusOrder = zh
+    ? [
+        "已收到臨時服務中斷訊號，等待安全與急迫性核對",
+        "已完成安全與急迫性核對，等待負責方案、契約或服務單位來源",
+        "已記錄負責服務來源，等待受保護本人與目前服務時段比對",
+        "已記錄本人與服務時段比對，等待目前照顧計畫、契約或授權版本",
+        "已記錄目前服務版本，等待中斷確認、原因類別與負責回覆",
+        "已記錄中斷確認與負責回覆，等待合格備援或服務不中斷選項",
+        "已記錄備援選項，等待本人參與、接受或啟動結果",
+        "已記錄本人參與與備援啟動，等待實際替代服務或恢復結果",
+        "安全、來源、服務範圍、費用或權利矛盾，等待負責申訴或合格審查",
+        "已核對中斷來源、安全路徑、備援決定、替代服務與恢復結果",
+        "已收到負責持續服務結果，記錄保管、未補缺口與重新開啟條件",
+        "不適用，已記錄原因與重新開啟事件",
+      ]
+    : [
+        "Temporary service-interruption signal received—safety and urgency check pending",
+        "Safety and urgency check recorded—responsible program, contract or agency source pending",
+        "Responsible service source recorded—protected person and current service-window match pending",
+        "Person and service-window match recorded—current plan, contract or authorization version pending",
+        "Current service version recorded—interruption confirmation, reason category and responsible response pending",
+        "Interruption confirmation and responsible response recorded—qualified backup or continuity options pending",
+        "Backup options recorded—person participation, acceptance or activation result pending",
+        "Participation and backup activation recorded—actual replacement service or resumption result pending",
+        "Safety, source, service-scope, cost or rights conflict—responsible complaint or qualified review pending",
+        "Interruption source, safety route, backup decision, replacement service and resumption result reviewed",
+        "Responsible continuity result received—custody, uncompensated gap and reopen condition recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+
+  const defaultRecords = zh
+    ? `GAP-A | 被照顧者 A 的臨時居家服務中斷；本次服務連續性核對 | 目前長照方案、A 單位個案管理、居家服務契約與服務單位來源；責任保持分開 | 受保護本人與原排定服務批次 WINDOW-A 已比對；證據 CARE-A-GAP4；核對 2026-08-26 | 目前核定照顧計畫 P3、契約附件 C3 與服務批次 WINDOW-A 指標已開啟；內容留在受保護來源 | 服務單位來源已確認本次臨時異動與一般人力中斷類別；正式回覆 R4 已收到；沒有推測工作人員原因 | 家庭已先依目前照護與所在地來源完成安全核對；沒有立即危險；若狀況改變使用原有緊急路徑 | 合格替代服務選項 BACKUP-B 由負責單位提出；本人參與與接受結果已記錄；沒有把親友自動視為正式替代 | 替代服務已由負責服務單位來源觀察，後續原服務已恢復；未補服務缺口 GAP-0 與申訴路徑已核對；服務再次中斷時重新開啟 | 家庭服務連續性角色 | 2026-08-26 | 已核對中斷來源、安全路徑、備援決定、替代服務與恢復結果
+RESTORE-A | 被照顧者 A 的臨時排班取消；等待實際替代或恢復 | 目前居家服務單位、契約與 A 單位個案管理來源；家庭行事曆不是正式來源 | 受保護本人與原排定服務批次 WINDOW-B 已比對；證據 CARE-A-RESTORE4；核對 2026-08-26 | 目前契約附件 C3 與服務批次 WINDOW-B 指標已開啟；照顧計畫 P3 保持不變 | 服務單位已確認臨時取消與排班中斷類別；回覆 R5 指出將提供合格替代安排；沒有推測個人原因 | 家庭依目前照護來源完成安全核對；沒有立即危險；需要升級時使用既有合格或緊急來源 | 替代選項 BACKUP-C 已由負責服務單位提出；本人參與並接受本次安排；啟動指標已記錄 | 實際替代服務或原服務恢復仍待服務單位來源觀察；未補服務缺口與後續申訴路徑已映射 | 家庭排班追蹤角色 | 2026-09-10 | 已記錄本人參與與備援啟動，等待實際替代服務或恢復結果`
+    : `GAP-A | Care person A temporary home-care service interruption; current continuity review | Current program, case-management, home-care contract and agency sources; responsibilities remain separate | Protected person and scheduled service batch WINDOW-A matched; evidence CARE-A-GAP4; checked 2026-08-26 | Current approved service plan P3, contract attachment C3 and service batch WINDOW-A pointers opened; content stays protected | Responsible agency source confirmed a temporary staffing interruption category; attributable response R4 received; no worker cause inferred | Household completed a safety check through the current care and local source; no immediate danger identified; use the existing emergency route if circumstances change | Qualified replacement option BACKUP-B offered by the responsible agency; person participation and acceptance result recorded; an informal helper is not treated as authorized service | Replacement service observed in the responsible agency source and regular service resumed; uncompensated service gap GAP-0 and complaint route checked; reopen if service is interrupted again | Household service-continuity role | 2026-08-26 | Interruption source, safety route, backup decision, replacement service and resumption result reviewed
+RESTORE-A | Care person A temporary scheduled-service cancellation; actual replacement or resumption pending | Current home-care agency, contract and case-management sources; household calendar is not an official source | Protected person and scheduled service batch WINDOW-B matched; evidence CARE-A-RESTORE4; checked 2026-08-26 | Current contract attachment C3 and service batch WINDOW-B pointers opened; service plan P3 remains unchanged | Responsible agency confirmed a temporary scheduling interruption; response R5 states a qualified replacement arrangement will be offered; no personal cause inferred | Household completed a safety check through the current care source; no immediate danger identified; existing qualified or emergency route remains available | Backup option BACKUP-C offered by the responsible agency; person participated and accepted this event arrangement; activation pointer recorded | Actual replacement service or regular-service resumption remains pending in the responsible agency source; uncompensated service gap and complaint route mapped | Household scheduling follow-up role | 2026-09-10 | Participation and backup activation recorded—actual replacement service or resumption result pending`;
+
+  return {
+    intro: zh
+      ? "用安全代號分開臨時中斷訊號、安全與急迫性核對、負責服務來源、目前版本、中斷確認、合格備援、本人參與、實際替代或恢復及未補缺口。這不是緊急照護計畫、排班系統、正式服務紀錄、醫療建議、申訴或責任判定工具。"
+      : "Separate a temporary interruption signal, safety and urgency check, responsible source, current version, interruption confirmation, qualified backup, person participation, actual replacement or resumption and uncompensated gap with safe codes. This is not an emergency care plan, scheduling system, official service record, medical advice, complaint or liability decision.",
+    fields: [
+      text(
+        "review",
+        zh ? "臨時服務中斷私人核對代號" : "Private temporary service-interruption review reference",
+        zh ? "只用安全家庭代號；不要輸入姓名、健康或照護內容、地址、工作人員、原因敘述、精確時段、費用、申訴內文或登入資料。" : "Use a safe household code. Do not enter names, health or care content, addresses, worker details, cause narratives, exact schedules, costs, complaint text or credentials.",
+        "HOME-CARE-CONTINUITY-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "臨時服務中斷情境" : "Temporary service-interruption context",
+        type: "select",
+        options: zh
+          ? ["臨時取消或未到", "服務人員臨時無法提供服務", "服務時間臨時異動", "服務單位通訊或排班中斷", "天災、事變或不可抗力造成異動", "家庭臨時取消及後續恢復", "替代人力、喘息或其他合格資源連結", "重複中斷、未補缺口或申訴追蹤"]
+          : ["Temporary cancellation or missed service", "Worker temporarily unavailable", "Temporary service-window change", "Agency communication or scheduling interruption", "Disaster, incident or force-majeure disruption", "Household cancellation and later resumption", "Replacement staff, respite or other qualified-resource linkage", "Repeated interruption, uncompensated gap or complaint follow-up"],
+      },
+      { name: "baselineDate", label: zh ? "原服務與來源版本基準日" : "Original service and source-version baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: zh ? "本次中斷與持續服務核對日" : "Current interruption and service-continuity review date", type: "date", value: "2026-08-26" },
+      { name: "nextReview", label: zh ? "下一次替代服務、恢復或負責結果核點" : "Next replacement-service, resumption or responsible-result checkpoint", type: "date", value: "2026-09-10" },
+      text(
+        "basis",
+        zh ? "方案、個案管理、契約、服務單位、備援、申訴與安全來源地圖" : "Program, case-management, contract, agency, backup, complaint and safety-source map",
+        zh ? "只放安全來源與版本代號；真正本人、照護指示、排班、服務、事件及申訴內容留在負責受保護來源。" : "Use safe source and version IDs only. Keep identity, care instructions, schedules, services, incidents and complaint content in responsible protected sources.",
+        "PROGRAM-P1; PLAN-P3; CONTRACT-C3; AGENCY-S1; BACKUP-B; SAFETY-ROUTE-E1; COMPLAINT-R2",
+      ),
+      {
+        name: "records",
+        label: zh ? "有版本的臨時中斷、備援、替代服務與恢復結果列" : "Versioned interruption, backup, replacement-service and resumption-result rows",
+        type: "textarea",
+        help: zh ? "每行：ID｜安全本人代號與中斷情境｜負責方案、契約、個案管理或服務單位來源｜受保護本人與目前服務時段比對及來源核對日 YYYY-MM-DD｜目前照顧計畫、契約、授權或服務批次版本｜中斷訊號、負責確認、原因類別與回覆｜安全與急迫性核對及合格升級路徑｜合格備援選項、權限、本人參與、接受與啟動｜實際替代服務、恢復、未補缺口或申訴結果｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。最多 14 行。" : "One line: ID | safe care-person alias and interruption context | responsible program, contract, case-management or agency source | protected person and current service-window match plus source checked date YYYY-MM-DD | current plan, contract, authorization or service-batch version | interruption signal, responsible confirmation, reason category and response | safety and urgency check plus qualified escalation route | qualified backup option, authority, person participation, acceptance and activation | actual replacement service, resumption, uncompensated gap or complaint result | owner role | target or outcome date YYYY-MM-DD | one of the twelve exact statuses. Maximum 14 lines.",
+        value: defaultRecords,
+      },
+      text(
+        "storage",
+        zh ? "受保護排班、契約、服務回覆、備援、實際結果與申訴歷程位置" : "Protected schedule, contract, agency response, backup, actual-result and complaint-history location",
+        zh ? "只寫保管流程或容器代號；不要貼本人、照護、工作人員、精確時段、事件、費用、申訴、登入或私人內容。" : "Name a custody process or container, not identity, care, worker, exact schedule, incident, cost, complaint, login or private content.",
+        zh ? "家庭紀錄／居家服務連續性／HOME-CARE-CONTINUITY-2026-A／受保護來源" : "Household records / home-care continuity / HOME-CARE-CONTINUITY-2026-A / protected sources",
+      ),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!baselineDate || !reviewDate || !nextReview)
+        return zh ? "請輸入有效的原服務基準日、本次核對日與下一核點日期。" : "Enter valid original-service baseline, current-review and next-checkpoint dates.";
+      if (baselineDate > reviewDate)
+        return zh ? "原服務與來源版本基準日不能晚於本次中斷核對日。" : "The original-service source baseline cannot be later than the current interruption review.";
+      if (nextReview < reviewDate)
+        return zh ? "下一次替代服務、恢復或負責結果核點不能早於本次核對日。" : "The next replacement-service, resumption or responsible-result checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 16 || values.storage.trim().length < 10)
+        return zh ? "請提供安全的持續服務來源地圖與受保護保管位置代號。" : "Provide a safe service-continuity source map and protected storage-process label.";
+
+      const rows = values.records.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14)
+        return zh ? "請輸入 1 至 14 行臨時中斷、備援、替代服務與恢復狀態。" : "Enter 1 to 14 interruption, backup, replacement-service and resumption rows.";
+      const recordRows = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = recordRows.filter((row) => row.parts.length !== 12 || row.parts.some((part) => !part));
+      if (malformed.length)
+        return zh ? `臨時中斷第 ${malformed.map((row) => row.line).join("、")} 行必須剛好有 12 個非空白欄位。` : `Interruption line ${malformed.map((row) => row.line).join(", ")} must contain exactly 12 non-empty fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toUpperCase());
+      if (new Set(ids).size !== ids.length)
+        return zh ? "每一行臨時中斷紀錄都需要唯一 ID。" : "Every interruption row needs a unique ID.";
+      const invalidStatuses = recordRows.filter((row) => !statusOrder.includes(row.parts[11]));
+      if (invalidStatuses.length)
+        return zh ? `臨時中斷第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用十二種指定狀態之一。` : `Interruption line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve exact statuses.`;
+
+      const openRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) < 9);
+      const closedRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) >= 9);
+      const checkedDateOf = (textValue: string) => strictIsoDate(textValue.match(/\b\d{4}-\d{2}-\d{2}\b/)?.[0] ?? "");
+      const invalidSourceDates = recordRows.filter((row) => {
+        const checked = checkedDateOf(row.parts[3]);
+        return !checked || checked < baselineDate || checked > reviewDate;
+      });
+      if (invalidSourceDates.length)
+        return zh ? `臨時中斷第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的受保護來源核對日。` : `Interruption line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a protected-source checked date from the baseline through this review.`;
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target < reviewDate || target > nextReview;
+      });
+      if (invalidOpenDates.length)
+        return zh ? `仍開放的臨時中斷第 ${invalidOpenDates.map((row) => row.line).join("、")} 行需要介於本次核對日與下一核點的目標日。` : `Open interruption line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome < baselineDate || outcome > reviewDate;
+      });
+      if (invalidClosedDates.length)
+        return zh ? `已核對、完成或不適用的臨時中斷第 ${invalidClosedDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的結果日。` : `Closed interruption line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an outcome date from the baseline through this review.`;
+
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 12 || row.parts[3].length < 18 || row.parts[4].length < 14 || row.parts[5].length < 14 || row.parts[6].length < 14 || row.parts[7].length < 14 || row.parts[8].length < 14 || row.parts[9].length < 4);
+      if (missingLayers.length)
+        return zh ? `臨時中斷第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實的中斷情境、負責來源、本人與時段比對、目前版本、中斷確認、安全路徑、合格備援、實際替代或恢復結果及負責角色。` : `Interruption line ${missingLayers.map((row) => row.line).join(", ")} needs a real interruption context, responsible source, person and service-window match, current version, interruption confirmation, safety route, qualified backup, actual replacement or resumption result and owner.`;
+
+      const reviewedWithoutEvidence = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[9]) return false;
+        const sourceOk = zh ? /(?:方案|個案管理|契約|服務單位)/.test(row.parts[2]) : /(?:program|case-management|contract|agency)/i.test(row.parts[2]);
+        const matchOk = zh ? /(?:受保護|本人).*(?:服務批次|時段|比對|證據)/.test(row.parts[3]) : /(?:protected|person).*(?:service batch|window|match|evidence)/i.test(row.parts[3]);
+        const versionOk = zh ? /(?:照顧計畫|契約|授權|服務批次|目前)/.test(row.parts[4]) : /(?:plan|contract|authorization|service batch|current)/i.test(row.parts[4]);
+        const interruptionOk = zh ? /(?:服務單位|負責).*(?:確認|回覆)/.test(row.parts[5]) : /(?:agency|responsible).*(?:confirmed|response)/i.test(row.parts[5]);
+        const safetyOk = zh ? /(?:安全|急迫|緊急).*(?:核對|路徑)/.test(row.parts[6]) : /(?:safety|urgency|emergency).*(?:check|route)/i.test(row.parts[6]);
+        const backupOk = zh ? /(?:合格|負責).*(?:替代|備援|喘息).*(?:本人|參與|接受|啟動)/.test(row.parts[7]) : /(?:qualified|responsible).*(?:replacement|backup|respite).*(?:person|participation|accepted|activation)/i.test(row.parts[7]);
+        const resultOk = zh ? /(?:替代服務|恢復).*(?:觀察|結果|收到)/.test(row.parts[8]) : /(?:replacement service|resumed|resumption).*(?:observed|result|received)/i.test(row.parts[8]);
+        const gapOk = zh ? /(?:未補|缺口|申訴)/.test(row.parts[8]) : /(?:uncompensated|gap|complaint)/i.test(row.parts[8]);
+        const reopenOk = zh ? /(?:重新開啟|再次中斷)/.test(row.parts[8]) : /(?:reopen|interrupted again)/i.test(row.parts[8]);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知)/.test(row.parts.slice(2, 9).join(" ")) : /(?:pending|awaiting|unresolved|unknown)/i.test(row.parts.slice(2, 9).join(" "));
+        return !sourceOk || !matchOk || !versionOk || !interruptionOk || !safetyOk || !backupOk || !resultOk || !gapOk || !reopenOk || unresolved;
+      });
+      if (reviewedWithoutEvidence.length)
+        return zh ? `已核對的第 ${reviewedWithoutEvidence.map((row) => row.line).join("、")} 行必須具備負責來源、本人與時段比對、目前版本、中斷確認、安全路徑、合格備援與本人參與、實際替代或恢復、未補缺口／申訴及重開條件，且沒有未解缺口。` : `Reviewed interruption line ${reviewedWithoutEvidence.map((row) => row.line).join(", ")} must include the responsible source, person and service-window match, current version, interruption confirmation, safety route, qualified backup and person participation, actual replacement or resumption, uncompensated-gap or complaint route and reopen rule with no unresolved gap.`;
+
+      const activationWithoutResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[7]) return false;
+        const backup = row.parts[7];
+        const result = row.parts[8];
+        const participation = zh ? /(?:本人|參與|接受|啟動)/.test(backup) : /(?:person|participation|accepted|activation)/i.test(backup);
+        const pending = zh ? /(?:等待|仍待|尚待)/.test(result) : /(?:pending|awaiting|remains)/i.test(result);
+        const responsible = zh ? /(?:服務單位|方案|負責)/.test(result) : /(?:agency|program|responsible)/i.test(result);
+        const gapRoute = zh ? /(?:未補|缺口|申訴)/.test(result) : /(?:uncompensated|gap|complaint)/i.test(result);
+        return !participation || !pending || !responsible || !gapRoute;
+      });
+      if (activationWithoutResult.length)
+        return zh ? `等待實際替代或恢復的第 ${activationWithoutResult.map((row) => row.line).join("、")} 行必須記錄本人參與及備援啟動，並把實際結果保持為負責來源待確認，同時指出未補缺口或申訴路徑。` : `Replacement-pending line ${activationWithoutResult.map((row) => row.line).join(", ")} must record person participation and backup activation, keep the actual result pending from a responsible source and identify an uncompensated-gap or complaint route.`;
+
+      const conflictWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[8]) return false;
+        const combined = row.parts.slice(4, 9).join(" ");
+        const conflict = zh ? /(?:安全|來源|服務範圍|費用|權利|矛盾|差異)/.test(combined) : /(?:safety|source|service scope|cost|rights|conflict|difference)/i.test(combined);
+        const route = zh ? /(?:服務單位|方案|申訴|調處|合格|審查)/.test(combined) : /(?:agency|program|complaint|mediation|qualified|review)/i.test(combined);
+        return !conflict || !route;
+      });
+      if (conflictWithoutRoute.length)
+        return zh ? `矛盾列第 ${conflictWithoutRoute.map((row) => row.line).join("、")} 行必須指出安全、來源、服務範圍、費用或權利差異，以及負責服務單位、方案、申訴、調處或合格審查路徑。` : `Conflict line ${conflictWithoutRoute.map((row) => row.line).join(", ")} must name the safety, source, service-scope, cost or rights conflict and the responsible agency, program, complaint, mediation or qualified review route.`;
+
+      const completedWithoutResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[10]) return false;
+        const result = row.parts[8];
+        const responsibleResult = zh ? /(?:負責|服務單位|方案).*(?:結果|回覆|確認).*(?:收到|觀察|記錄)/.test(result) : /(?:(?:responsible|agency|program).*(?:result|response|confirmation)).*(?:received|observed|recorded)/i.test(result);
+        const custodyGapReopen = zh ? /(?:保管|未補|缺口|重新開啟)/.test(result) : /(?:custody|uncompensated|gap|reopen)/i.test(result);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知)/.test(result) : /(?:pending|awaiting|unresolved|unknown)/i.test(result);
+        return !responsibleResult || !custodyGapReopen || unresolved;
+      });
+      if (completedWithoutResult.length)
+        return zh ? `完成結果的第 ${completedWithoutResult.map((row) => row.line).join("、")} 行必須記錄已收到或觀察的負責持續服務結果、受保護保管、未補缺口及重新開啟條件。` : `Completed continuity-result line ${completedWithoutResult.map((row) => row.line).join(", ")} must record an observed responsible continuity result, protected custody, uncompensated gap and reopen condition.`;
+
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[11] === statusOrder[11] && !(zh ? /(?:重新開啟|重新檢視|如果|當.*時|服務|方案|契約.*改變|再次中斷)/.test(row.parts[8]) : /(?:reopen|review again|if |when |service|program|contract.*change|interrupted again)/i.test(row.parts[8])));
+      if (notApplicableWithoutTrigger.length)
+        return zh ? `不適用的第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須記錄目前原因，以及服務、方案、契約改變或再次中斷時的重開事件。` : `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and the service, program, contract change or later interruption that reopens it.`;
+
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return zh ? "偵測到可能的完整電話、Email、案件、會員、服務對象、工作人員、費用或其他長數字識別資料。請改用安全來源、服務批次與結果代號。" : "A possible full phone, email, case, member, care-recipient, worker, cost or other long numeric identifier was detected. Use a safe source, service-batch and result pointer.";
+      if (/password|passphrase|passcode|access code|door code|alarm code|security code|recovery code|verification code|login credential|full address|street address|care-recipient name\s*[:=]|patient name\s*[:=]|person name\s*[:=]|provider name\s*[:=]|agency name\s*[:=]|worker name\s*[:=]|employee name\s*[:=]|date of birth\s*[:=]|diagnosis\s*[:=]|condition\s*[:=]|symptom\s*[:=]|allerg(?:y|ies)\s*[:=]|medication name\s*[:=]|drug name\s*[:=]|medicine name\s*[:=]|dose\s*[:=]|dosage\s*[:=]|\b\d+(?:\.\d+)?\s*(?:mg|mcg|ml)\b|feeding|swallowing|transfer step|lifting step|mobility detail|toileting|bathing|wound|device instruction|behavior(?:al)? detail|mental health|care note|treatment plan|exact time|arrival time\s*[:=]|departure time\s*[:=]|exact location|precise location|GPS|case number\s*[:=]|member number\s*[:=]|patient ID\s*[:=]|provider ID\s*[:=]|worker ID\s*[:=]|billing amount\s*[:=]|claim amount\s*[:=]|invoice amount\s*[:=]|incident text\s*[:=]|complaint text\s*[:=]|signature|signed form|private message|correspondence|完整地址|被照顧者姓名\s*[:：]|病人姓名\s*[:：]|本人姓名\s*[:：]|服務單位名稱\s*[:：]|工作人員姓名\s*[:：]|居服員姓名\s*[:：]|出生日期\s*[:：]|診斷\s*[:：]|病況\s*[:：]|症狀\s*[:：]|過敏\s*[:：]|藥名\s*[:：]|用藥名稱\s*[:：]|劑量\s*[:：]|餵食|吞嚥|移位步驟|攙扶步驟|行動細節|如廁|沐浴|傷口|管路|輔具指示|行為處理|心理健康內容|照護紀錄內容|精確時間|到場時間\s*[:：]|離場時間\s*[:：]|精確位置|詳細地點|GPS|案件編號\s*[:：]|會員號\s*[:：]|服務對象編號\s*[:：]|工作人員編號\s*[:：]|計費金額\s*[:：]|請款金額\s*[:：]|事件全文|申訴全文|簽名|門鎖密碼|保全密碼|登入密碼|驗證碼|私人訊息|通信內容/i.test(privacyText))
+        return zh ? "偵測到可能的本人、服務單位、地址、健康照護、工作人員、中斷原因、精確時間位置、案件費用、事件／申訴全文、簽名、登入或私人通信內容。請改成安全來源、類別、服務批次、備援或結果代號。" : "A possible identity, provider, address, health or care, worker, interruption-cause, exact time or location, case or cost, incident or complaint text, signature, credential or private correspondence detail was detected. Use a safe source, category, service-batch, backup or result pointer.";
+
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length })).filter((item) => item.count > 0);
+      if (zh)
+        return `${values.review.trim()}｜居家服務臨時中斷、備援與恢復狀態
+中斷情境：${values.context}
+原服務與來源版本基準：${formatter.format(baselineDate)}
+本次中斷與持續服務核對：${formatter.format(reviewDate)}
+下一次替代服務、恢復或負責結果核點：${formatter.format(nextReview)}
+仍開放的安全、來源、版本、備援、替代服務或審查列：${openRows.length} 筆
+已核對、完成或不適用列：${closedRows.length} 筆
+狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}
+
+方案、個案管理、契約、服務單位、備援、申訴與安全來源地圖：${values.basis.trim()}
+
+${lines("有版本的臨時中斷、備援、替代服務與恢復結果證據", recordRows.map((row) => `${row.parts[0]}｜本人／中斷情境：${row.parts[1]}｜負責服務來源：${row.parts[2]}｜受保護本人與服務時段比對：${row.parts[3]}｜目前服務版本：${row.parts[4]}｜中斷確認／原因類別／負責回覆：${row.parts[5]}｜安全與急迫性核對／升級路徑：${row.parts[6]}｜合格備援／權限／本人參與／接受／啟動：${row.parts[7]}｜實際替代／恢復／未補缺口／申訴結果：${row.parts[8]}｜負責角色：${row.parts[9]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[10]) as Date)}｜狀態：${row.parts[11]}`))}
+
+受保護排班、契約、服務回覆、備援、實際結果與申訴歷程位置：${values.storage.trim()}
+
+這份輸出只是家庭居家服務臨時中斷、備援、替代與恢復來源索引，不是緊急照護計畫、醫療建議、正式排班、EVV、工時、服務、事件、契約、給付、申訴、調處或法律紀錄。它不判斷安全或責任、不提供臨時照護、不指揮親友執行照護、不聯絡或派遣人員、不保證替代服務、不計算費用或期限，也不把非正式協助寫成已授權服務。若有立即危險，先使用所在地緊急服務與目前合格照護來源；其他真實中斷、備援與權利請直接使用目前照顧計畫、契約、服務單位、A 單位個案管理、照管中心、地方主管機關及合格來源。`;
+      return `${values.review.trim()} — home-care temporary interruption, backup and resumption status
+Interruption context: ${values.context}
+Original service and source-version baseline: ${formatter.format(baselineDate)}
+Current interruption and continuity review: ${formatter.format(reviewDate)}
+Next replacement-service, resumption or responsible-result checkpoint: ${formatter.format(nextReview)}
+Open safety, source, version, backup, replacement-service or review rows: ${openRows.length}
+Reviewed, completed or not-applicable rows: ${closedRows.length}
+Status count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}
+
+Program, case-management, contract, agency, backup, complaint and safety-source map: ${values.basis.trim()}
+
+${lines("Versioned interruption, backup, replacement-service and resumption-result evidence", recordRows.map((row) => `${row.parts[0]} — person/interruption context: ${row.parts[1]} — responsible service source: ${row.parts[2]} — protected person and service-window match: ${row.parts[3]} — current service version: ${row.parts[4]} — interruption confirmation/reason category/responsible response: ${row.parts[5]} — safety and urgency check/escalation route: ${row.parts[6]} — qualified backup/authority/person participation/acceptance/activation: ${row.parts[7]} — actual replacement/resumption/uncompensated gap/complaint result: ${row.parts[8]} — owner: ${row.parts[9]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[10]) as Date)} — status: ${row.parts[11]}`))}
+
+Protected schedule, contract, agency response, backup, actual-result and complaint-history location: ${values.storage.trim()}
+
+This output is a household home-care temporary-interruption, backup, replacement and resumption source index, not an emergency care plan, medical advice, official schedule, EVV, timesheet, service, incident, contract, coverage, complaint, mediation or legal record. It does not determine safety or responsibility; provide temporary care; direct an informal helper to perform care; contact or dispatch staff; guarantee replacement service; calculate costs or deadlines; or convert informal help into authorized service. If there is immediate danger, use local emergency services and the current qualified care source first. Use the current service plan, contract, responsible agency, case manager, program, state or local authority and qualified source for every real interruption, backup arrangement and right.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
     intro:
@@ -5850,6 +6084,9 @@ const definitions: Record<string, Definition> = {
   "home-care-service-plan-change-notice-log": {
     ...homeCareServiceChangeDefinition("en"),
   },
+  "home-care-service-interruption-backup-continuity-log": {
+    ...homeCareInterruptionDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -5875,6 +6112,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "home-care-service-plan-change-notice-log": {
     ...homeCareServiceChangeDefinition("zh-TW"),
+  },
+  "home-care-service-interruption-backup-continuity-log": {
+    ...homeCareInterruptionDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

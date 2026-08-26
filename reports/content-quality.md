@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-26T11:42:16.229Z
+Generated: 2026-08-26T12:11:39.592Z
 
 ## Summary
 
-- Indexable pages: 352
-- Generated HTML routes: 369
+- Indexable pages: 355
+- Generated HTML routes: 372
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 143
+- Pages without a contextual product/tool link: 145
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-26T11:42:16.229Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 40
-- tools: 113
+- records-emergency: 41
+- tools: 115
 
 ## Word-count range
 
@@ -99,6 +99,7 @@ Generated: 2026-08-26T11:42:16.229Z
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
+- /zh-tw/guides/home-care-service-interruption-backup-plan/
 - /zh-tw/guides/home-care-service-plan-changes/
 - /zh-tw/guides/home-care-service-visit-records/
 - /zh-tw/guides/home-evacuation-information/
@@ -148,6 +149,7 @@ Generated: 2026-08-26T11:42:16.229Z
 - /zh-tw/tools/emergency-contact-sheet-generator/
 - /zh-tw/tools/emergency-contact-verification-log/
 - /zh-tw/tools/emergency-supply-inventory-audit/
+- /zh-tw/tools/home-care-service-interruption-backup-continuity-log/
 - /zh-tw/tools/home-care-service-plan-change-notice-log/
 - /zh-tw/tools/home-care-visit-scope-service-result-log/
 - /zh-tw/tools/home-emergency-drill-record-generator/
