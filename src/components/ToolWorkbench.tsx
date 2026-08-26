@@ -1619,6 +1619,240 @@ This output is a household home-care service source, version, visit-evidence, sc
   };
 };
 
+const homeCareServiceChangeDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusOrder = zh
+    ? [
+        "已收到居家照護服務變更訊號，等待確認變更情境",
+        "已確認變更情境，等待負責方案、服務單位或通知來源",
+        "已記錄負責變更來源，等待受保護本人比對",
+        "已記錄受保護本人比對，等待變更前後照顧計畫、契約、授權或通知版本",
+        "已記錄變更前後版本，等待變更權限、原因類別與生效服務批次",
+        "已記錄變更權限、原因與生效批次，等待正式通知、交付、可取得副本與無障礙需求",
+        "已記錄正式通知與交付，等待本人參與、家庭回應或異議結果",
+        "已記錄參與、回應或異議，等待銜接安排與首次新版服務結果",
+        "版本、通知、生效、服務中斷、費用或權利矛盾，等待負責方案、申訴或合格審查",
+        "已核對變更來源、版本、通知、回應、銜接與首次新版服務結果",
+        "已收到負責變更結果，記錄保管、持續服務與重新開啟條件",
+        "不適用，已記錄原因與重新開啟事件",
+      ]
+    : [
+        "Home-care service change signal received—change context pending",
+        "Change context recorded—responsible program, agency or notice source pending",
+        "Responsible change source recorded—protected person match pending",
+        "Protected person match recorded—before-and-after plan, contract, authorization or notice versions pending",
+        "Before-and-after versions recorded—change authority, reason category and effective service batch pending",
+        "Change authority, reason and effective batch recorded—formal notice, delivery, copy and accessibility pending",
+        "Formal notice and delivery recorded—person participation, household response or disagreement result pending",
+        "Participation, response or disagreement recorded—transition and first changed-service result pending",
+        "Version, notice, effective date, service continuity, cost or rights conflict—program, complaint or qualified review pending",
+        "Change source, versions, notice, response, transition and first changed-service result reviewed",
+        "Responsible change result received—custody, service continuity and reopen condition recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+
+  const defaultRecords = zh
+    ? `CHANGE-A | 被照顧者 A 的居家服務方案調整；目前變更通知核對 | 目前長照方案、個案管理與居家服務單位來源；各自責任分開 | 受保護本人與目前服務關係已比對；證據 CARE-A-CHANGE3；核對 2026-08-26 | 變更前照顧計畫 P2、目前核定版本 P3 與契約附件 C3 指標已開啟；內容留在受保護來源 | 變更由目前照管或個案管理流程核定；原因類別為需求重新評估；新版服務批次 BATCH-C 生效來源已觀察 | 正式通知 N3 已由負責管道交付；本人或簽約者可取得副本；無障礙或語言需求已由負責來源處理 | 本人參與來源與家庭回應已記錄；沒有把簽收寫成同意；所有記錄問題均有可歸屬結果 | 首次依新版提供的服務結果已由服務單位來源觀察；銜接、服務不中斷與申訴路徑已核對；計畫、契約、單位或服務結果改變時重新開啟 | 家庭長照協調角色 | 2026-08-26 | 已核對變更來源、版本、通知、回應、銜接與首次新版服務結果
+NOTICE-A | 被照顧者 A 的服務時段或人員異動；通知與銜接追蹤 | 目前居家服務單位與契約來源；長照方案和家庭行事曆保持分開 | 受保護本人與目前服務關係已比對；證據 CARE-A-NOTICE3；核對 2026-08-26 | 目前契約附件 C3 與服務單位異動通知 N4 指標已開啟；照顧計畫是否受影響仍由負責來源確認 | 服務單位提出異動；原因類別為排班或服務人員銜接；預計生效服務批次 WINDOW-D 已記錄 | 正式通知 N4 已交付並可取得副本；通知管道與無障礙需求已記錄 | 家庭已確認收到並提出銜接問題；不代表同意；負責服務單位回應仍待取得 | 替代安排、服務不中斷及首次依新時段提供服務仍待負責服務單位結果；申訴路徑已映射 | 家庭服務追蹤角色 | 2026-09-10 | 已記錄參與、回應或異議，等待銜接安排與首次新版服務結果`
+    : `CHANGE-A | Care person A home-care plan adjustment; current change-notice review | Current program, case-management and home-care agency sources; responsibilities remain separate | Protected person and current service relationship matched; evidence CARE-A-CHANGE3; checked 2026-08-26 | Before-change service plan P2, current approved version P3 and contract attachment C3 pointers opened; content stays protected | Change approved through the responsible program or ordering process; reason category is reassessment; effective service batch BATCH-C source observed | Formal notice N3 delivered through the responsible route; recipient can obtain a copy; accessibility or language need handled by responsible source | Care-person participation source and household response recorded; receipt is not treated as agreement; every recorded question has an attributable result | First changed-service result observed in responsible agency source; transition, service continuity and review route checked; reopen when plan, contract, agency or service result changes | Household care-coordination role | 2026-08-26 | Change source, versions, notice, response, transition and first changed-service result reviewed
+NOTICE-A | Care person A service-window or worker-role change; notice and transition follow-up | Current home-care agency and contract sources; program authorization and household calendar remain separate | Protected person and current service relationship matched; evidence CARE-A-NOTICE3; checked 2026-08-26 | Current contract attachment C3 and agency change notice N4 pointers opened; responsible source still deciding whether plan authorization changes | Agency issued a scheduling or worker-transition change; proposed effective service batch WINDOW-D recorded | Formal notice N4 delivered and a copy is available; delivery route and accessibility need recorded | Household confirmed receipt and asked a transition question; this is not agreement; responsible agency response remains pending | Replacement arrangement, service continuity and first visit under the changed window remain pending from responsible agency; complaint route mapped | Household service follow-up role | 2026-09-10 | Participation, response or disagreement recorded—transition and first changed-service result pending`;
+
+  return {
+    intro: zh
+      ? "用安全代號分開居家服務變更訊號、負責來源、本人比對、變更前後版本、變更權限與原因、正式通知、本人參與、銜接、首次新版服務及負責結果。這不是照顧計畫、契約附件、法定通知、同意書、申訴或權利期限計算器。"
+      : "Separate a home-care change signal, responsible source, protected person match, before-and-after versions, authority, formal notice, participation, transition, first changed service and responsible result with safe codes. This is not a care plan, contract amendment, legal notice, consent, appeal or rights-deadline calculator.",
+    fields: [
+      text(
+        "review",
+        zh ? "居家服務變更私人核對代號" : "Private home-care change review reference",
+        zh ? "只用安全家庭代號；不要輸入姓名、地址、健康照護內容、通知全文、簽名、案件、費用、精確時段或登入資料。" : "Use a safe household code. Do not enter names, addresses, health or care content, notice text, signatures, case or cost details, exact schedules or credentials.",
+        "HOME-CARE-CHANGE-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "居家服務變更情境" : "Home-care service change context",
+        type: "select",
+        options: zh
+          ? ["重新評估或照顧計畫調整", "契約、附件或自費服務範圍變更", "服務時段或服務人員異動", "服務項目、頻率或授權範圍減少或停止", "服務項目、頻率或授權範圍增加", "服務單位、方案或負責角色更換", "費用、給付或付款責任通知", "異議、申訴、終止或服務不中斷追蹤"]
+          : ["Reassessment or plan-of-care change", "Contract, attachment or private-pay scope change", "Service-window or worker-role change", "Service item, frequency or authorization reduction or termination", "Service item, frequency or authorization increase", "Agency, program or responsible-role transition", "Cost, coverage or payment-responsibility notice", "Disagreement, complaint, termination or service-continuity follow-up"],
+      },
+      { name: "baselineDate", label: zh ? "變更前來源版本基準日" : "Before-change source-version baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: zh ? "本次變更通知核對日" : "Current change-notice review date", type: "date", value: "2026-08-26" },
+      { name: "nextReview", label: zh ? "下一次通知、銜接或首次新版服務核點" : "Next notice, transition or first changed-service checkpoint", type: "date", value: "2026-09-10" },
+      text(
+        "basis",
+        zh ? "方案、照管／個案管理、服務單位、照顧計畫、契約、通知與申訴來源地圖" : "Program, ordering or case-management, agency, plan, contract, notice and review-route source map",
+        zh ? "只放安全來源與版本代號；本人、計畫、契約、通知、費用、簽名、服務內容及案件資料留在負責受保護來源。" : "Use safe source and version IDs only. Keep identity, plan, contract, notice, cost, signature, service and case content in responsible protected sources.",
+        "PROGRAM-P1; PLAN-BEFORE-P2; PLAN-CURRENT-P3; CONTRACT-C3; NOTICE-N3; AGENCY-S1; REVIEW-ROUTE-R2",
+      ),
+      {
+        name: "records",
+        label: zh ? "有版本的服務變更、通知、回應、銜接與結果列" : "Versioned service-change, notice, response, transition and result rows",
+        type: "textarea",
+        help: zh ? "每行：ID｜安全本人代號與變更情境｜負責方案、服務單位、照管／個案管理或通知來源｜受保護本人比對與來源核對日 YYYY-MM-DD｜變更前後照顧計畫、契約、授權或通知版本｜變更權限、原因類別與生效服務批次｜正式通知類型、交付、可取得副本與無障礙需求｜本人參與、家庭回應、簽收或異議結果｜銜接、服務不中斷、首次新版服務或正式審查結果｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。最多 14 行。" : "One line: ID | safe care-person alias and change context | responsible program, agency, ordering, case-management or notice source | protected person-match evidence plus source checked date YYYY-MM-DD | before-and-after plan, contract, authorization or notice versions | change authority, reason category and effective service batch | formal notice type, delivery, available copy and accessibility need | person participation, household response, receipt or disagreement result | transition, service continuity, first changed service or official review result | owner role | target or outcome date YYYY-MM-DD | one of the twelve exact statuses. Maximum 14 lines.",
+        value: defaultRecords,
+      },
+      text(
+        "storage",
+        zh ? "受保護照顧計畫、契約、通知、回應、服務銜接與審查歷程位置" : "Protected plan, contract, notice, response, service-transition and review-history location",
+        zh ? "只寫保管流程或容器代號；不要貼本人、照護、通知、簽名、費用、申訴、精確服務時段、登入或私人內容。" : "Name a custody process or container, not identity, care, notice, signature, cost, appeal, exact schedule, login or private content.",
+        zh ? "家庭紀錄／居家服務變更／HOME-CARE-CHANGE-2026-A／受保護來源" : "Household records / home-care changes / HOME-CARE-CHANGE-2026-A / protected sources",
+      ),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!baselineDate || !reviewDate || !nextReview)
+        return zh ? "請輸入有效的變更前基準日、本次核對日與下一核點日期。" : "Enter valid before-change baseline, current-review and next-checkpoint dates.";
+      if (baselineDate > reviewDate)
+        return zh ? "變更前來源版本基準日不能晚於本次變更通知核對日。" : "The before-change source baseline cannot be later than the current change review.";
+      if (nextReview < reviewDate)
+        return zh ? "下一次通知、銜接或首次新版服務核點不能早於本次核對日。" : "The next notice, transition or first changed-service checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 16 || values.storage.trim().length < 10)
+        return zh ? "請提供安全的服務變更來源地圖與受保護保管位置代號。" : "Provide a safe service-change source map and protected storage-process label.";
+
+      const rows = values.records.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14)
+        return zh ? "請輸入 1 至 14 行服務變更、通知、銜接與結果狀態。" : "Enter 1 to 14 service-change, notice, transition and result rows.";
+      const recordRows = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = recordRows.filter((row) => row.parts.length !== 12 || row.parts.some((part) => !part));
+      if (malformed.length)
+        return zh ? `服務變更第 ${malformed.map((row) => row.line).join("、")} 行必須剛好有 12 個非空白欄位。` : `Service-change line ${malformed.map((row) => row.line).join(", ")} must contain exactly 12 non-empty fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toUpperCase());
+      if (new Set(ids).size !== ids.length)
+        return zh ? "每一行服務變更紀錄都需要唯一 ID。" : "Every service-change row needs a unique ID.";
+      const invalidStatuses = recordRows.filter((row) => !statusOrder.includes(row.parts[11]));
+      if (invalidStatuses.length)
+        return zh ? `服務變更第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用十二種指定狀態之一。` : `Service-change line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve exact statuses.`;
+
+      const openRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) < 9);
+      const closedRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) >= 9);
+      const checkedDateOf = (textValue: string) => strictIsoDate(textValue.match(/\b\d{4}-\d{2}-\d{2}\b/)?.[0] ?? "");
+      const invalidSourceDates = recordRows.filter((row) => {
+        const checked = checkedDateOf(row.parts[3]);
+        return !checked || checked < baselineDate || checked > reviewDate;
+      });
+      if (invalidSourceDates.length)
+        return zh ? `服務變更第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的受保護來源核對日。` : `Service-change line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a protected-source checked date from the baseline through this review.`;
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target < reviewDate || target > nextReview;
+      });
+      if (invalidOpenDates.length)
+        return zh ? `仍開放的服務變更第 ${invalidOpenDates.map((row) => row.line).join("、")} 行需要介於本次核對日與下一核點的目標日。` : `Open service-change line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome < baselineDate || outcome > reviewDate;
+      });
+      if (invalidClosedDates.length)
+        return zh ? `已核對、完成或不適用的服務變更第 ${invalidClosedDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的結果日。` : `Closed service-change line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an outcome date from the baseline through this review.`;
+
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 12 || row.parts[3].length < 18 || row.parts[4].length < 14 || row.parts[5].length < 14 || row.parts[6].length < 14 || row.parts[7].length < 12 || row.parts[8].length < 14 || row.parts[9].length < 4);
+      if (missingLayers.length)
+        return zh ? `服務變更第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實的變更情境、負責來源、本人比對、前後版本、變更權限與生效批次、通知交付、參與或異議、銜接／首次新版服務及負責角色。` : `Service-change line ${missingLayers.map((row) => row.line).join(", ")} needs a real change context, responsible source, person match, before-and-after versions, authority and effective batch, notice delivery, participation or disagreement, transition or first changed service and owner.`;
+
+      const reviewedWithoutEvidence = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[9]) return false;
+        const combined = row.parts.slice(2, 9).join(" ");
+        const sourceOk = zh ? /(?:方案|照管|個案管理|服務單位|契約|通知)/.test(row.parts[2]) : /(?:program|ordering|case-management|agency|contract|notice)/i.test(row.parts[2]);
+        const matchOk = zh ? /(?:受保護|本人|比對|證據)/.test(row.parts[3]) : /(?:protected|person|match|evidence)/i.test(row.parts[3]);
+        const versionsOk = zh ? /(?:變更前|目前|新版|版本|照顧計畫|契約|附件)/.test(row.parts[4]) : /(?:before|current|changed|version|plan|contract|attachment)/i.test(row.parts[4]);
+        const authorityOk = zh ? /(?:核定|負責|提出|變更|原因|生效|批次)/.test(row.parts[5]) : /(?:approved|responsible|issued|change|reason|effective|batch)/i.test(row.parts[5]);
+        const noticeOk = zh ? /(?:正式通知|交付|副本|取得|無障礙|語言)/.test(row.parts[6]) : /(?:formal notice|delivered|copy|available|accessibility|language)/i.test(row.parts[6]);
+        const responseOk = zh ? /(?:本人參與|家庭回應|收到|異議|簽收|同意)/.test(row.parts[7]) : /(?:participation|household response|received|disagreement|receipt|agreement)/i.test(row.parts[7]);
+        const transitionOk = zh ? /(?:首次|新版|銜接|服務不中斷|服務結果)/.test(row.parts[8]) : /(?:first|changed service|transition|continuity|service result)/i.test(row.parts[8]);
+        const routeOk = zh ? /(?:申訴|審查|服務單位|方案|負責)/.test(row.parts[8]) : /(?:complaint|review|agency|program|responsible)/i.test(row.parts[8]);
+        const reopenOk = zh ? /(?:重新開啟|改變|異動)/.test(row.parts[8]) : /(?:reopen|change)/i.test(row.parts[8]);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知|矛盾)/.test(combined) : /(?:pending|awaiting|unresolved|unknown|conflict)/i.test(combined);
+        return !sourceOk || !matchOk || !versionsOk || !authorityOk || !noticeOk || !responseOk || !transitionOk || !routeOk || !reopenOk || unresolved;
+      });
+      if (reviewedWithoutEvidence.length)
+        return zh ? `完成核對的第 ${reviewedWithoutEvidence.map((row) => row.line).join("、")} 行必須連結負責來源、本人比對、變更前後版本、權限與生效批次、正式通知、本人參與或家庭回應、銜接、首次新版服務、申訴／審查路徑及重開條件，且不能仍有未解差異。` : `Reviewed service-change line ${reviewedWithoutEvidence.map((row) => row.line).join(", ")} must link the responsible source, person match, before-and-after versions, authority and effective batch, formal notice, participation or household response, transition, first changed service, complaint or review route and reopen rule with no unresolved gap.`;
+
+      const responseWithoutTransition = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[7]) return false;
+        const response = row.parts[7];
+        const transition = row.parts[8];
+        const responseOk = zh ? /(?:參與|收到|回應|提出|異議|簽收|不代表同意)/.test(response) : /(?:participation|receipt|response|asked|disagreement|not agreement)/i.test(response);
+        const pending = zh ? /(?:等待|仍待|尚待|待取得)/.test(transition) : /(?:pending|awaiting|remains)/i.test(transition);
+        const sourceRoute = zh ? /(?:服務單位|方案|申訴|負責)/.test(transition) : /(?:agency|program|complaint|responsible)/i.test(transition);
+        return !responseOk || !pending || !sourceRoute;
+      });
+      if (responseWithoutTransition.length)
+        return zh ? `等待銜接的第 ${responseWithoutTransition.map((row) => row.line).join("、")} 行必須記錄本人參與或家庭回應，並把替代安排、服務不中斷及首次新版服務保持為負責來源待確認。` : `Transition-pending line ${responseWithoutTransition.map((row) => row.line).join(", ")} must record person participation or household response and keep the replacement arrangement, service continuity and first changed service pending from a responsible source.`;
+
+      const conflictWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[8]) return false;
+        const combined = row.parts.slice(4, 9).join(" ");
+        const conflict = zh ? /(?:版本|通知|生效|中斷|費用|權利|矛盾|差異|不同)/.test(combined) : /(?:version|notice|effective|continuity|cost|rights|conflict|difference|discrepancy)/i.test(combined);
+        const route = zh ? /(?:方案|服務單位|申訴|調處|合格|審查)/.test(combined) : /(?:program|agency|complaint|mediation|qualified|review)/i.test(combined);
+        return !conflict || !route;
+      });
+      if (conflictWithoutRoute.length)
+        return zh ? `矛盾列第 ${conflictWithoutRoute.map((row) => row.line).join("、")} 行必須指出版本、通知、生效、服務中斷、費用或權利差異，以及負責方案、服務單位、申訴、調處或合格審查路徑。` : `Conflict line ${conflictWithoutRoute.map((row) => row.line).join(", ")} must name the version, notice, effective-date, continuity, cost or rights conflict and the responsible program, agency, complaint, mediation or qualified review route.`;
+
+      const completedWithoutResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[10]) return false;
+        const result = row.parts[8];
+        const responsibleResult = zh ? /(?:負責|服務單位|方案).*(?:結果|回覆|確認).*(?:收到|觀察|記錄)/.test(result) : /(?:(?:responsible|agency|program).*(?:result|response|confirmation)).*(?:received|observed|recorded)/i.test(result);
+        const custody = zh ? /(?:保管|服務不中斷|持續服務|重新開啟)/.test(result) : /(?:custody|service continuity|continued service|reopen)/i.test(result);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知)/.test(result) : /(?:pending|awaiting|unresolved|unknown)/i.test(result);
+        return !responsibleResult || !custody || unresolved;
+      });
+      if (completedWithoutResult.length)
+        return zh ? `完成結果的第 ${completedWithoutResult.map((row) => row.line).join("、")} 行必須記錄已收到或觀察的負責變更結果、受保護保管、持續服務及重新開啟條件。` : `Completed change-result line ${completedWithoutResult.map((row) => row.line).join(", ")} must record an observed responsible change result, protected custody, service continuity and reopen condition.`;
+
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[11] === statusOrder[11] && !(zh ? /(?:重新開啟|重新檢視|如果|當.*時|計畫|契約|通知|服務|方案.*改變)/.test(row.parts[8]) : /(?:reopen|review again|if |when |plan|contract|notice|service|program.*change)/i.test(row.parts[8])));
+      if (notApplicableWithoutTrigger.length)
+        return zh ? `不適用的第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須記錄目前原因，以及計畫、契約、通知、服務或方案改變時的重開事件。` : `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and the plan, contract, notice, service or program change that reopens it.`;
+
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return zh ? "偵測到可能的完整電話、Email、案件、會員、服務對象、工作人員、費用或其他長數字識別資料。請改用安全來源與版本代號。" : "A possible full phone, email, case, member, care-recipient, worker, cost or other long numeric identifier was detected. Use a safe source and version pointer.";
+      if (/password|passphrase|passcode|access code|door code|alarm code|security code|recovery code|verification code|login credential|full address|street address|care-recipient name\s*[:=]|patient name\s*[:=]|person name\s*[:=]|provider name\s*[:=]|agency name\s*[:=]|worker name\s*[:=]|employee name\s*[:=]|date of birth\s*[:=]|diagnosis\s*[:=]|condition\s*[:=]|symptom\s*[:=]|allerg(?:y|ies)\s*[:=]|medication name\s*[:=]|drug name\s*[:=]|medicine name\s*[:=]|dose\s*[:=]|dosage\s*[:=]|\b\d+(?:\.\d+)?\s*(?:mg|mcg|ml)\b|feeding|swallowing|transfer step|lifting step|mobility detail|toileting|bathing|wound|device instruction|behavior(?:al)? detail|mental health|care note|treatment plan|exact time|arrival time\s*[:=]|departure time\s*[:=]|exact location|precise location|GPS|case number\s*[:=]|member number\s*[:=]|patient ID\s*[:=]|provider ID\s*[:=]|worker ID\s*[:=]|billing amount\s*[:=]|claim amount\s*[:=]|invoice amount\s*[:=]|notice text\s*[:=]|appeal text\s*[:=]|complaint text\s*[:=]|signature|signed form|private message|correspondence|完整地址|被照顧者姓名\s*[:：]|病人姓名\s*[:：]|本人姓名\s*[:：]|服務單位名稱\s*[:：]|工作人員姓名\s*[:：]|居服員姓名\s*[:：]|出生日期\s*[:：]|診斷\s*[:：]|病況\s*[:：]|症狀\s*[:：]|過敏\s*[:：]|藥名\s*[:：]|用藥名稱\s*[:：]|劑量\s*[:：]|餵食|吞嚥|移位步驟|攙扶步驟|行動細節|如廁|沐浴|傷口|管路|輔具指示|行為處理|心理健康內容|照護紀錄內容|精確時間|到場時間\s*[:：]|離場時間\s*[:：]|精確位置|詳細地點|GPS|案件編號\s*[:：]|會員號\s*[:：]|服務對象編號\s*[:：]|工作人員編號\s*[:：]|計費金額\s*[:：]|請款金額\s*[:：]|通知全文|申訴全文|異議全文|簽名|門鎖密碼|保全密碼|登入密碼|驗證碼|私人訊息|通信內容/i.test(privacyText))
+        return zh ? "偵測到可能的本人、服務單位、地址、健康照護、工作人員、精確時間位置、案件費用、通知／申訴全文、簽名、登入或私人通信內容。請改成安全來源、版本、交付或結果代號。" : "A possible identity, provider, address, health or care, worker, exact time or location, case or cost, notice or appeal text, signature, credential or private correspondence detail was detected. Use a safe source, version, delivery or result pointer.";
+
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length })).filter((item) => item.count > 0);
+      if (zh)
+        return `${values.review.trim()}｜居家服務變更、通知與銜接狀態
+變更情境：${values.context}
+變更前來源版本基準：${formatter.format(baselineDate)}
+本次變更通知核對：${formatter.format(reviewDate)}
+下一次通知、銜接或首次新版服務核點：${formatter.format(nextReview)}
+仍開放的來源、版本、通知、回應、銜接或審查列：${openRows.length} 筆
+已核對、完成或不適用列：${closedRows.length} 筆
+狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}
+
+方案、照管／個案管理、服務單位、照顧計畫、契約、通知與申訴來源地圖：${values.basis.trim()}
+
+${lines("有版本的服務變更、通知、回應、銜接與結果證據", recordRows.map((row) => `${row.parts[0]}｜本人／變更情境：${row.parts[1]}｜負責變更來源：${row.parts[2]}｜受保護本人比對／來源核對：${row.parts[3]}｜變更前後版本：${row.parts[4]}｜變更權限／原因／生效批次：${row.parts[5]}｜正式通知／交付／副本／無障礙：${row.parts[6]}｜本人參與／家庭回應／簽收／異議：${row.parts[7]}｜銜接／服務不中斷／首次新版服務／審查結果：${row.parts[8]}｜負責角色：${row.parts[9]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[10]) as Date)}｜狀態：${row.parts[11]}`))}
+
+受保護照顧計畫、契約、通知、回應、服務銜接與審查歷程位置：${values.storage.trim()}
+
+這份輸出只是家庭居家服務變更來源、版本、通知、回應、銜接與結果索引，不是照顧計畫、契約附件、法定通知、簽收或同意書、醫療紀錄、服務中斷決定、計費／給付決定、申訴、調處或法律文件。它不重新評估、不核定或改寫服務、不簽署或送達通知、不代表任何人同意、不聯絡單位、不提交異議或申訴、不計算生效、回覆、申訴或法律期限，也不保證替代服務或服務不中斷。真實變更與權利請直接使用目前照管／個案管理、照顧計畫、契約、服務單位、地方主管機關、合格專業來源及通知指定程序。`;
+      return `${values.review.trim()} — home-care service change, notice and transition status
+Change context: ${values.context}
+Before-change source-version baseline: ${formatter.format(baselineDate)}
+Current change-notice review: ${formatter.format(reviewDate)}
+Next notice, transition or first changed-service checkpoint: ${formatter.format(nextReview)}
+Open source, version, notice, response, transition or review rows: ${openRows.length}
+Reviewed, completed or not-applicable rows: ${closedRows.length}
+Status count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}
+
+Program, ordering or case-management, agency, plan, contract, notice and review-route source map: ${values.basis.trim()}
+
+${lines("Versioned service-change, notice, response, transition and result evidence", recordRows.map((row) => `${row.parts[0]} — person/change context: ${row.parts[1]} — responsible change source: ${row.parts[2]} — protected person match/source check: ${row.parts[3]} — before-and-after versions: ${row.parts[4]} — change authority/reason/effective batch: ${row.parts[5]} — formal notice/delivery/copy/accessibility: ${row.parts[6]} — participation/household response/receipt/disagreement: ${row.parts[7]} — transition/service continuity/first changed service/review result: ${row.parts[8]} — owner: ${row.parts[9]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[10]) as Date)} — status: ${row.parts[11]}`))}
+
+Protected plan, contract, notice, response, service-transition and review-history location: ${values.storage.trim()}
+
+This output is a household home-care change-source, version, notice, response, transition and result index, not a care plan, contract amendment, legal notice, receipt or consent form, clinical record, service-termination decision, billing or coverage determination, appeal, complaint, mediation or legal filing. It does not reassess, authorize or change care; sign or deliver a notice; establish agreement; contact an agency; submit a disagreement, appeal or complaint; calculate an effective, response, appeal or legal deadline; or guarantee replacement or uninterrupted service. Use the current ordering or case-management source, care plan, contract, responsible agency, program, official notice route, qualified source and local authority for every real change, right and result.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
     intro:
@@ -5613,6 +5847,9 @@ const definitions: Record<string, Definition> = {
   "home-care-visit-scope-service-result-log": {
     ...homeCareVisitDefinition("en"),
   },
+  "home-care-service-plan-change-notice-log": {
+    ...homeCareServiceChangeDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -5635,6 +5872,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "home-care-visit-scope-service-result-log": {
     ...homeCareVisitDefinition("zh-TW"),
+  },
+  "home-care-service-plan-change-notice-log": {
+    ...homeCareServiceChangeDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

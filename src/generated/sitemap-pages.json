@@ -1848,6 +1848,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/home-care-service-plan-change-notice-log/",
+    "alternateRoute": "/zh-tw/tools/home-care-service-plan-change-notice-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-26",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2176,6 +2184,20 @@
     "alternateRoute": "/features/free-home-management-app/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/home-care-service-plan-change-notice-log/",
+    "alternateRoute": "/tools/home-care-service-plan-change-notice-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-26",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-care-service-plan-changes/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-26",
     "locale": "zh-TW"
   },
   {

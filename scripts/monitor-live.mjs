@@ -152,6 +152,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/home-care-visit-scope-service-result-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-care-visit-scope-service-result-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-care-service-visit-records/</loc>",
+      "<loc>https://familyboard.win/tools/home-care-service-plan-change-notice-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-care-service-plan-change-notice-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-care-service-plan-changes/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -716,6 +719,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Twelve statuses separate visit source, evidence, exception and result",
       "This household index is not an official EVV, service record, timesheet",
+    ],
+  },
+  {
+    path: "/tools/home-care-service-plan-change-notice-log/",
+    require: [
+      "Home Care Service Plan Change and Notice Log",
+      'hreflang="zh-TW"',
+      "A change signal, approved version, notice and first changed visit are separate",
+      "HHCCN, ABN and NOMNC are not three names for one letter",
     ],
   },
   {
@@ -1320,6 +1332,25 @@ const checks = [
       "照顧計畫、契約、服務紀錄與家庭觀察是四套來源",
       "排定、到場、離場、服務例外與負責回覆是五個事件",
     ],
+  },
+  {
+    path: "/zh-tw/tools/home-care-service-plan-change-notice-log/",
+    require: [
+      "居家服務方案變更與通知紀錄表",
+      'hreflang="en"',
+      "十二種狀態把「變更」拆成真正可核對的流程",
+      "重新評估、照顧計畫、契約附件與排班通知不是同一件事",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-care-service-plan-changes/",
+    require: [
+      "居家服務變更怎麼處理？照顧計畫、契約通知、換人、改時段與終止指南",
+      'lang="zh-TW"',
+      "先問「哪一層變了」，不要只問「改了什麼」",
+      "收到、簽收、理解、同意與異議是五個不同狀態",
+    ],
+    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/guides/purchase-receipt-organizer/",

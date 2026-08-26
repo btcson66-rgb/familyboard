@@ -114,6 +114,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/organize-utility-account-information/",
     "/tools/caregiver-handoff-source-authorization-log/",
     "/tools/home-care-visit-scope-service-result-log/",
+    "/tools/home-care-service-plan-change-notice-log/",
     "/guides/caregiver-handoff-checklist/",
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
@@ -177,6 +178,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/caregiver-handoff-source-authorization-log/",
     "/zh-tw/tools/home-care-visit-scope-service-result-log/",
     "/zh-tw/guides/home-care-service-visit-records/",
+    "/zh-tw/tools/home-care-service-plan-change-notice-log/",
+    "/zh-tw/guides/home-care-service-plan-changes/",
     "/zh-tw/guides/caregiver-handoff-checklist/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
@@ -1950,6 +1953,32 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText(
     "不能早於本次居家照護服務核對日",
+  );
+
+  await page.goto("/tools/home-care-service-plan-change-notice-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open source, version, notice, response, transition or review rows: 1");
+  await expect(page.locator(".result")).toContainText("Reviewed, completed or not-applicable rows: 1");
+  await expect(page.locator(".result")).toContainText("Change source, versions, notice, response, transition and first changed-service result reviewed 1");
+  await page.getByLabel("Next notice, transition or first changed-service checkpoint").fill("2026-08-25");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+  await page.goto("/tools/home-care-service-plan-change-notice-log/");
+  await page.getByLabel("Protected plan, contract, notice, response, service-transition and review-history location").fill("patient name: example; medication name: aspirin; notice text: private");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible identity, provider, address, health or care, worker, exact time or location");
+
+  await page.goto("/zh-tw/tools/home-care-service-plan-change-notice-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的來源、版本、通知、回應、銜接或審查列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對、完成或不適用列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對變更來源、版本、通知、回應、銜接與首次新版服務結果 1 筆");
+  await page.getByLabel("下一次通知、銜接或首次新版服務核點").fill("2026-08-25");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次核對日",
   );
 
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");

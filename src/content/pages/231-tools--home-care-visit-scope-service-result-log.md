@@ -103,6 +103,8 @@ The [Medicare home-health coverage page](https://www.medicare.gov/coverage/home-
 
 When a service plan changes, open its current protected version and record only a version pointer. When a contract or authorization changes, add a new version. Never copy diagnoses, functional limits, medicines, care tasks, clinical notes or plan details into this household log.
 
+Use the [Home Care Service Plan Change and Notice Log](/tools/home-care-service-plan-change-notice-log/) for the separate change chain: responsible issuer, before-and-after versions, effective service batch, formal notice, person participation or household response, transition and first changed-service result. Keep this visit log focused on what happened during a particular service event.
+
 ## Record an exception without writing a care narrative
 
 An exception may be a missed visit, a materially changed window, early departure, unavailable official event, scope difference, unexpected substitution, safety concern or billing mismatch. The public-safe row needs only the category, safe evidence pointer, responsible action, owner and target date.

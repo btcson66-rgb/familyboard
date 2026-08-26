@@ -1744,6 +1744,14 @@
     "headings": "Home care visit scope and service result log Create one review for one service relationship and period Each row has twelve evidence layers Twelve statuses separate visit source, evidence, exception and result A calendar entry, clock-in and completed visit are different claims Official EVV contains data this tool intentionally avoids Service plan, contract, authorization and visit evidence are separate Record an exception without writing a care narrative A household report is not an agency finding Notice and complaint routes belong to the responsible program Privacy is part of visit evidence design Affiliate products stay outside the worker and care relationship"
   },
   {
+    "title": "Home Care Service Plan Change and Notice Log",
+    "description": "Track home-care plan changes, notices, responses, transition steps and first changed-service results without storing care details or legal forms.",
+    "route": "/tools/home-care-service-plan-change-notice-log/",
+    "cluster": "tools",
+    "keywords": "home care plan change notice",
+    "headings": "Home care service plan change and notice log Start with the change relationship, not the message Each row preserves twelve different claims Twelve statuses stop one “changed” checkbox from hiding gaps A change signal, approved version, notice and first changed visit are separate HHCCN, ABN and NOMNC are not three names for one letter Receipt, acknowledgment, agreement and waiver are different An effective date does not prove implementation Worker changes and plan changes may overlap without being the same Keep cost, coverage, service and rights questions in separate lanes Privacy is part of a defensible change record Affiliate products stay outside service and rights decisions"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

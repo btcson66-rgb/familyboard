@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-26T06:49:34.851Z
+Generated: 2026-08-26T11:42:16.229Z
 
 ## Summary
 
-- Indexable pages: 349
-- Generated HTML routes: 366
+- Indexable pages: 352
+- Generated HTML routes: 369
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 3
-- Pages without a contextual product/tool link: 141
+- Duplicate primary-keyword groups: 4
+- Pages without a contextual product/tool link: 143
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-26T06:49:34.851Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 39
-- tools: 111
+- records-emergency: 40
+- tools: 113
 
 ## Word-count range
 
@@ -43,6 +43,7 @@ Generated: 2026-08-26T06:49:34.851Z
 
 - caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
 - 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
+- 居家服務變更: /zh-tw/guides/home-care-service-plan-changes/, /zh-tw/tools/home-care-service-plan-change-notice-log/
 - 居家服務紀錄: /zh-tw/guides/home-care-service-visit-records/, /zh-tw/tools/home-care-visit-scope-service-result-log/
 
 ## Pages without contextual product/tool links
@@ -98,6 +99,7 @@ Generated: 2026-08-26T06:49:34.851Z
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
+- /zh-tw/guides/home-care-service-plan-changes/
 - /zh-tw/guides/home-care-service-visit-records/
 - /zh-tw/guides/home-evacuation-information/
 - /zh-tw/guides/home-improvement-receipts/
@@ -146,6 +148,7 @@ Generated: 2026-08-26T06:49:34.851Z
 - /zh-tw/tools/emergency-contact-sheet-generator/
 - /zh-tw/tools/emergency-contact-verification-log/
 - /zh-tw/tools/emergency-supply-inventory-audit/
+- /zh-tw/tools/home-care-service-plan-change-notice-log/
 - /zh-tw/tools/home-care-visit-scope-service-result-log/
 - /zh-tw/tools/home-emergency-drill-record-generator/
 - /zh-tw/tools/home-handoff-summary-generator/
