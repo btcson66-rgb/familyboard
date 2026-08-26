@@ -977,9 +977,9 @@
   },
   {
     "route": "/guides/caregiver-handoff-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/caregiver-handoff-checklist/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-26",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1832,6 +1832,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/caregiver-handoff-source-authorization-log/",
+    "alternateRoute": "/zh-tw/tools/caregiver-handoff-source-authorization-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-26",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2034,6 +2042,20 @@
     "alternateRoute": "/tools/appliance-service-visit-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/caregiver-handoff-checklist/",
+    "alternateRoute": "/guides/caregiver-handoff-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-26",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/caregiver-handoff-source-authorization-log/",
+    "alternateRoute": "/tools/caregiver-handoff-source-authorization-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-26",
     "locale": "zh-TW"
   },
   {

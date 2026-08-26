@@ -936,12 +936,12 @@
     "headings": "Organize household medical information without building an unprotected shadow chart Start with a safe person alias and one current care purpose The provider record, plan record and household index are different systems Record access is a request-and-result workflow Family relationship does not automatically prove record authority A current medication list belongs in a protected clinical handoff A result is not an interpretation Discharge, referral, appointment and coverage each need their own result Emergency access is a different audience and version Reopen on care events, access changes and source conflicts Affiliate products belong after the complete health-information answer"
   },
   {
-    "title": "Caregiver Handoff Checklist: Transfer Routines, Contacts and Household Responsibilities Clearly",
-    "description": "Create a caregiver handoff with routines, contacts, household logistics and current instructions while protecting sensitive information.",
+    "title": "Caregiver Handoff Checklist: Sources, Authority, Access and Acceptance",
+    "description": "Build a caregiver handoff around the current source, recipient authority, minimum access, daily logistics and observed acceptance without exposing care details.",
     "route": "/guides/caregiver-handoff-checklist/",
     "cluster": "records-emergency",
     "keywords": "caregiver handoff checklist",
-    "headings": "A caregiver handoff should describe the current routine, not the entire family history Organize the day the way the caregiver will actually live it Separate care instructions from household logistics — and never generate the former Provide contacts a caregiver can act on immediately, and protect the ones that shouldn't be shared Limit access to what this handoff actually requires Test it from the caregiver's side before you need it"
+    "headings": "Build a caregiver handoff that another person can accept without exposing a care file Begin with a safe alias, care window and stated purpose Record the care recipient's participation and preference separately A caregiver title, permitted disclosure and personal-representative authority are different Link to the current plan or instruction; do not copy it into the index Organize daily logistics without turning them into clinical instructions Test access and custody from the receiving side Treat discharge, agency changes and respite as source changes Briefing, caregiver acceptance and an observed handoff result are three events Include caregiver capacity and respite routes without promising service Reopen the handoff when a meaningful event changes Keep recommendations outside the critical workflow"
   },
   {
     "title": "Travel Household Handoff: What Someone at Home Needs While You Are Away",
@@ -1726,6 +1726,14 @@
     "cluster": "tools",
     "keywords": "medical information organizer",
     "headings": "Household medical information source and handoff log Create one dated source map with safe person aliases Each row has twelve source, access and handoff fields Twelve statuses preserve source, protected access and responsible result A portal view is not automatically the complete record Requests, submissions and downloads remain actions until a result is observed Actual medication and clinical content stays out of the tool Test, imaging and discharge availability is not clinical interpretation Family access and caregiver authority remain protected Privacy screening is deliberately conservative Affiliate products cannot make health information safe or correct"
+  },
+  {
+    "title": "Caregiver Handoff Source and Authorization Log",
+    "description": "Create a private caregiver-handoff index for current source, authority, minimum access, daily logistics and observed acceptance without exposing care details.",
+    "route": "/tools/caregiver-handoff-source-authorization-log/",
+    "cluster": "tools",
+    "keywords": "caregiver handoff checklist",
+    "headings": "Caregiver handoff source and authorization log Create one version for one care period Each row has twelve source, authority and acceptance fields Twelve statuses preserve source, authority, access and acceptance A caregiver label does not create authority Keep source-issued care instructions in their protected source Separate household routines from qualified care sources Test actual access, custody and the return route A discharge checklist or application is not service acceptance Briefing, acceptance and responsible result remain separate Caregiver support and respite need their own responsible source The privacy gate rejects care and identity details Product recommendations stay outside the care decision"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

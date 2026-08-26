@@ -1153,6 +1153,238 @@ This output is a household source and handoff index, not proof of identity, diag
   };
 };
 
+const caregiverHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusOrder = zh
+    ? [
+        "已記錄照護者交接用途，等待確認照護情境",
+        "已記錄照護情境，等待確認負責照護來源",
+        "已記錄負責照護來源，等待受保護本人比對",
+        "已記錄受保護本人比對，等待目前作息、計畫或指示版本",
+        "已記錄目前作息、計畫或指示版本，等待接收人權限與最少範圍核對",
+        "已記錄接收人權限與最少範圍，等待實際存取與保管核對",
+        "已測試存取與保管，等待照護、生活、服務與升級來源",
+        "已映射照護、生活、服務與升級來源，等待照護者說明或接受結果",
+        "身分、版本、權限、指示或安全矛盾，等待院所、服務單位或合格來源審查",
+        "已核對來源、受保護本人比對、版本、權限、存取與交接",
+        "已收到負責交接結果，記錄保管與下次照護條件",
+        "不適用，已記錄原因與重新開啟事件",
+      ]
+    : [
+        "Caregiver-handoff purpose recorded—care context pending",
+        "Care context recorded—responsible care source pending",
+        "Responsible care source recorded—protected person match pending",
+        "Protected person match recorded—current routine, plan or instruction version pending",
+        "Current routine, plan or instruction version recorded—recipient authority and minimum scope pending",
+        "Recipient authority and minimum scope recorded—actual access and custody pending",
+        "Access and custody tested—care, logistics, service and escalation sources pending",
+        "Care, logistics, service and escalation sources mapped—caregiver briefing or acceptance pending",
+        "Identity, version, authority, instruction or safety conflict—provider, agency or qualified review pending",
+        "Source, protected person match, version, authority, access and handoff reviewed",
+        "Responsible handoff result received—custody and next-care condition recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+
+  const defaultRecords = zh
+    ? `CARE-A | 被照顧者 A 的目前居家照護交接；一般照護時段 | 目前服務單位協調角色、院所照顧計畫來源與家庭作息來源分開 | 受保護本人與目前服務來源已比對；證據 CARE-A-MATCH2；核對 2026-08-26 | 目前照顧計畫與家庭作息版本已於受保護來源開啟；未複製照護內容 | 接收者角色、最少資訊範圍與本人參與來源已由負責服務單位核對 | 預定照護者已開啟受保護目前版本；臨時存取、保管與歸還流程已測試 | 照顧計畫、家庭生活、目前服務與緊急升級來源已分開映射 | 本次來源、接收範圍、實際存取與交接已核對；院所、服務單位與合格審查路徑已映射；照護者、版本、權限或服務改變時重新開啟 | 家庭照護協調角色 | 2026-08-26 | 已核對來源、受保護本人比對、版本、權限、存取與交接
+RELIEF-A | 被照顧者 A 的暫代或喘息交接；短期替代照護時段 | 目前服務單位、個案管理角色、院所來源與家庭生活來源分開 | 受保護本人與目前替代照護來源已比對；證據 CARE-A-RELIEF2；核對 2026-08-26 | 目前照顧計畫、服務通知與家庭作息版本已於受保護來源觀察 | 替代照護者角色與最少資訊範圍已由負責服務單位核對；本人參與留在受保護來源 | 預定接收角色可開啟必要受保護來源；保管與歸還流程已測試 | 照護、家庭生活、喘息服務、接送與緊急升級來源已映射 | 已記錄照護者說明；接受結果仍待服務單位協調角色與合格來源取得 | 家庭替代照護協調角色 | 2026-09-10 | 已映射照護、生活、服務與升級來源，等待照護者說明或接受結果`
+    : `CARE-A | Care person A current home-care handoff; regular care window | Current agency coordinator, provider care-plan source and household routine source remain separate | Protected person and current service source matched; evidence CARE-A-MATCH2; checked 2026-08-26 | Current care-plan and household-routine versions opened in protected sources; care content not copied | Recipient role, minimum information scope and care-person participation source reviewed by responsible agency | Intended caregiver opened the protected current version; temporary access, custody and return route tested | Care-plan, household logistics, current service and emergency escalation sources mapped separately | Current source, recipient scope, actual access and handoff reviewed; provider, agency and qualified review routes mapped; reopen when caregiver, version, authority or service changes | Household care-coordination role | 2026-08-26 | Source, protected person match, version, authority, access and handoff reviewed
+RELIEF-A | Care person A substitute or respite handoff; short-term relief window | Current service agency, case manager, provider source and household logistics source remain separate | Protected person and current relief-care source matched; evidence CARE-A-RELIEF2; checked 2026-08-26 | Current care-plan, service-notice and household-routine versions observed in protected sources | Substitute caregiver role and minimum information scope reviewed by responsible agency; participation stays in protected source | Intended recipient can open necessary protected sources; custody and return route tested | Care, household logistics, respite service, transport and emergency escalation sources mapped | Caregiver briefing recorded; acceptance result remains pending with the agency coordinator and qualified route | Household relief-care coordination role | 2026-09-10 | Care, logistics, service and escalation sources mapped—caregiver briefing or acceptance pending`;
+
+  return {
+    intro: zh
+      ? "用安全代號分開被照顧者參與、負責照護來源、目前版本、接收人權限、實際存取、生活服務與接受結果。工具不保存照護內容，也不授權、申請服務或產生照護指示。"
+      : "Separate care-person participation, responsible sources, current versions, recipient authority, actual access, logistics and acceptance results with safe codes. The tool never stores care content, grants authority, applies for services or generates care instructions.",
+    fields: [
+      text(
+        "review",
+        zh ? "照護者交接私人核對代號" : "Private caregiver-handoff review reference",
+        zh ? "只用安全家庭代號；不要輸入姓名、地址、診斷、用藥、照護步驟、詳細時段、權限文件或登入資料。" : "Use a safe household code. Do not enter names, addresses, diagnoses, medications, care steps, detailed schedules, authority documents or login details.",
+        "CAREGIVER-HANDOFF-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "照護者交接情境" : "Caregiver-handoff context",
+        type: "select",
+        options: zh
+          ? ["第一次照護交接", "家人暫代或喘息安排", "出院或照護轉換", "居家服務單位或人員更換", "兒少、高齡、身心障礙或其他依賴支持交接", "回診、日照或服務接送", "作息、照顧計畫或服務改變", "身分、版本、權限、指示或安全矛盾"]
+          : ["First caregiver handoff", "Temporary substitute or respite", "Discharge or care transition", "Home-care agency or worker change", "Child, older-adult, disability or other dependent-support handoff", "Appointment, day-service or care transport", "Routine, care-plan or service change", "Identity, version, authority, instruction or safety conflict"],
+      },
+      { name: "baselineDate", label: zh ? "照護者交接／來源地圖基準日" : "Caregiver-handoff and source-map baseline date", type: "date", value: "2026-08-22" },
+      { name: "reviewDate", label: zh ? "本次照護者交接核對日" : "Current caregiver-handoff review date", type: "date", value: "2026-08-26" },
+      { name: "nextReview", label: zh ? "下一次來源、交接或接受結果核點" : "Next source, handoff or acceptance-result checkpoint", type: "date", value: "2026-09-10" },
+      text(
+        "basis",
+        zh ? "院所、長照、服務單位、家庭生活與緊急升級來源地圖" : "Provider, care-program, agency, household-logistics and emergency-escalation source map",
+        zh ? "只放安全來源或證據代號；本人、照顧計畫、權限、地址、行程與照護內容留在受保護來源。" : "Use safe source or evidence IDs only. Keep identity, care plans, authority, addresses, schedules and care content in protected sources.",
+        "PROVIDER-PLAN-S1; AGENCY-S2; CASE-ROUTE-C1; HOUSEHOLD-LOGISTICS-H1; PROTECTED-CARE-A",
+      ),
+      {
+        name: "records",
+        label: zh ? "有版本的照護者交接來源、授權與接受狀態列" : "Versioned caregiver-handoff source, authorization and acceptance rows",
+        type: "textarea",
+        help: zh ? "每行：ID｜安全本人代號、交接目的與照護情境｜負責院所、服務單位、個案管理、方案或家庭來源與範圍｜受保護本人比對與來源核對日 YYYY-MM-DD｜目前作息、計畫或指示版本｜接收者權限、最少資訊範圍與本人參與｜實際存取、保管與歸還｜生活、照護、服務與緊急升級來源｜說明、照護者接受、實際結果、矛盾與負責審查路徑｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。最多 14 行。" : "One line: ID | safe care-person alias, purpose and context | responsible provider, agency, case-manager, program or household source and scope | protected person-match evidence plus source checked date YYYY-MM-DD | current routine, plan or instruction version | recipient authority, minimum scope and participation | actual access, custody and return | care, logistics, service and escalation sources | briefing, caregiver acceptance, observed result, conflict and responsible review route | owner role | target or outcome date YYYY-MM-DD | one of the twelve listed statuses. Maximum 14 lines.",
+        value: defaultRecords,
+      },
+      text(
+        "storage",
+        zh ? "受保護照顧計畫、權限、服務、存取與交接歷程位置" : "Protected care-plan, authority, service, access and handoff-history location",
+        zh ? "只寫保管流程或容器代號，不要貼本人、照護、位置、權限、付款或登入內容。" : "Name a custody process or container, not identity, care, location, authority, payment or login content.",
+        zh ? "家庭紀錄／照護／CAREGIVER-HANDOFF-2026-A／受保護來源" : "Household records / care / CAREGIVER-HANDOFF-2026-A / protected sources",
+      ),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!baselineDate || !reviewDate || !nextReview)
+        return zh ? "請輸入有效的基準日、本次核對日與下一次核點日期。" : "Enter valid baseline, review and next-checkpoint dates.";
+      if (baselineDate > reviewDate)
+        return zh ? "照護者交接基準日不能晚於本次核對日。" : "The caregiver-handoff baseline cannot be later than the current review.";
+      if (nextReview < reviewDate)
+        return zh ? "下一次來源、交接或接受結果核點不能早於本次照護者交接核對日。" : "The next source, handoff or acceptance-result checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 12 || values.storage.trim().length < 10)
+        return zh ? "請提供安全的照護來源地圖與受保護保管位置代號。" : "Provide a safe care-source map and protected storage-process label.";
+
+      const rows = values.records.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14)
+        return zh ? "請輸入 1 至 14 行照護者交接來源與授權狀態。" : "Enter 1 to 14 caregiver-handoff source and authorization rows.";
+      const recordRows = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = recordRows.filter((row) => row.parts.length !== 12 || row.parts.some((part) => !part));
+      if (malformed.length)
+        return zh ? `照護者交接第 ${malformed.map((row) => row.line).join("、")} 行必須剛好有 12 個非空白欄位。` : `Caregiver-handoff line ${malformed.map((row) => row.line).join(", ")} must contain exactly 12 non-empty fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toUpperCase());
+      if (new Set(ids).size !== ids.length)
+        return zh ? "每一行照護者交接紀錄都需要唯一 ID。" : "Every caregiver-handoff row needs a unique ID.";
+      const invalidStatuses = recordRows.filter((row) => !statusOrder.includes(row.parts[11]));
+      if (invalidStatuses.length)
+        return zh ? `照護者交接第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用十二種指定狀態之一。` : `Caregiver-handoff line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve exact statuses.`;
+
+      const openRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) < 9);
+      const closedRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) >= 9);
+      const sourceDateOf = (textValue: string) => strictIsoDate(textValue.match(/\b\d{4}-\d{2}-\d{2}\b/)?.[0] ?? "");
+      const invalidSourceDates = recordRows.filter((row) => {
+        const checked = sourceDateOf(row.parts[3]);
+        return !checked || checked < baselineDate || checked > reviewDate;
+      });
+      if (invalidSourceDates.length)
+        return zh ? `照護者交接第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的受保護來源核對日。` : `Caregiver-handoff line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a protected-source checked date from the baseline through this review.`;
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target < reviewDate || target > nextReview;
+      });
+      if (invalidOpenDates.length)
+        return zh ? `仍開放的照護者交接第 ${invalidOpenDates.map((row) => row.line).join("、")} 行需要介於本次核對日與下一核點的目標日。` : `Open caregiver-handoff line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome < baselineDate || outcome > reviewDate;
+      });
+      if (invalidClosedDates.length)
+        return zh ? `已核對、完成或不適用的照護者交接第 ${invalidClosedDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的結果日。` : `Closed caregiver-handoff line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an outcome date from the baseline through this review.`;
+
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 12 || row.parts[3].length < 18 || row.parts[4].length < 12 || row.parts[5].length < 12 || row.parts[6].length < 10 || row.parts[7].length < 12 || row.parts[8].length < 12 || row.parts[9].length < 4);
+      if (missingLayers.length)
+        return zh ? `照護者交接第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實的目的、負責來源、受保護本人比對、版本、權限範圍、存取保管、生活服務來源、說明／接受／結果與負責角色。` : `Caregiver-handoff line ${missingLayers.map((row) => row.line).join(", ")} needs a real purpose, responsible source, protected person match, version, authority scope, access/custody, care and logistics sources, briefing/acceptance/result and owner.`;
+
+      const reviewedWithoutEvidence = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[9]) return false;
+        const evidence = row.parts.slice(2, 9).join(" ");
+        const sourceOk = zh ? /(?:院所|服務單位|個案管理|長照|照顧計畫|家庭來源)/.test(row.parts[2]) : /(?:provider|agency|case manager|care program|care-plan|household source)/i.test(row.parts[2]);
+        const matchOk = zh ? /(?:受保護|本人|比對|證據)/.test(row.parts[3]) : /(?:protected|person|match|evidence)/i.test(row.parts[3]);
+        const versionOk = zh ? /(?:目前|版本|作息|計畫|指示)/.test(row.parts[4]) : /(?:current|version|routine|plan|instruction)/i.test(row.parts[4]);
+        const authorityOk = zh ? /(?:接收|權限|範圍|本人參與|角色)/.test(row.parts[5]) : /(?:recipient|authority|scope|participation|role)/i.test(row.parts[5]);
+        const accessOk = zh ? /(?:開啟|存取|保管|歸還|可取得)/.test(row.parts[6]) : /(?:opened|access|custody|return|available)/i.test(row.parts[6]);
+        const sourcesOk = zh ? /(?:照護|照顧計畫|生活|服務|升級|緊急)/.test(row.parts[7]) : /(?:care|care-plan|logistics|service|escalation|emergency)/i.test(row.parts[7]);
+        const handoffOk = zh ? /(?:核對|交接|重新開啟|改變)/.test(row.parts[8]) : /(?:reviewed|handoff|reopen|change)/i.test(row.parts[8]);
+        const routeOk = zh ? /(?:院所|服務單位|個案管理|長照|合格)/.test(row.parts[8]) : /(?:provider|agency|case manager|care program|qualified)/i.test(row.parts[8]);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知|矛盾|缺少)/.test(evidence) : /(?:pending|awaiting|unresolved|unknown|conflict|missing)/i.test(evidence);
+        return !sourceOk || !matchOk || !versionOk || !authorityOk || !accessOk || !sourcesOk || !handoffOk || !routeOk || unresolved;
+      });
+      if (reviewedWithoutEvidence.length)
+        return zh ? `完成核對的第 ${reviewedWithoutEvidence.map((row) => row.line).join("、")} 行必須連結負責照護來源、受保護本人比對、目前版本、接收權限與最少範圍、實際存取、生活服務來源、交接／重開及負責審查路徑，且不能仍有未解差異。` : `Reviewed caregiver-handoff line ${reviewedWithoutEvidence.map((row) => row.line).join(", ")} must link a responsible care source, protected person match, current version, recipient authority and minimum scope, actual access, care and logistics sources, handoff or reopen rule and responsible review route with no unresolved gap.`;
+
+      const mappedClaimingCompletion = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[7]) return false;
+        const action = row.parts[8];
+        const actionPresent = zh ? /(?:說明|簡報|交接|接受)/.test(action) : /(?:briefing|briefed|handoff|acceptance)/i.test(action);
+        const stillOpen = zh ? /(?:等待|仍待|尚待|待取得|未接受)/.test(action) : /(?:pending|awaiting|remains|not accepted)/i.test(action);
+        const completionClaim = zh ? /(?:已完成照護|已接受完成|服務完成|交接完成)/.test(action) : /(?:care completed|acceptance complete|service completed|handoff completed)/i.test(action);
+        return !actionPresent || !stillOpen || completionClaim;
+      });
+      if (mappedClaimingCompletion.length)
+        return zh ? `等待照護者說明或接受結果的第 ${mappedClaimingCompletion.map((row) => row.line).join("、")} 行必須記錄說明或接受行動並保持等待，不能把來源映射或家庭轉述寫成完成。` : `Briefing-or-acceptance-pending line ${mappedClaimingCompletion.map((row) => row.line).join(", ")} must record a briefing or acceptance action, stay pending and not turn a source map or household report into completion.`;
+
+      const conflictWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[8]) return false;
+        const combined = row.parts.slice(4, 9).join(" ");
+        const conflict = zh ? /(?:身分|版本|權限|指示|安全|矛盾|不同|差異|錯誤)/.test(combined) : /(?:identity|version|authority|instruction|safety|conflict|different|discrepancy|error)/i.test(combined);
+        const route = zh ? /(?:院所|服務單位|個案管理|長照|合格)/.test(combined) : /(?:provider|agency|case manager|care program|qualified)/i.test(combined);
+        return !conflict || !route;
+      });
+      if (conflictWithoutRoute.length)
+        return zh ? `矛盾列第 ${conflictWithoutRoute.map((row) => row.line).join("、")} 行必須寫出身分、版本、權限、指示或安全差異，以及負責院所、服務單位、個案管理或合格審查來源。` : `Conflict line ${conflictWithoutRoute.map((row) => row.line).join(", ")} must name the identity, version, authority, instruction or safety conflict and the responsible provider, agency, case manager or qualified review route.`;
+
+      const completedWithoutResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[10]) return false;
+        const result = [row.parts[6], row.parts[8]].join(" ");
+        const observed = zh ? /(?:負責來源|院所|服務單位|個案管理|長照).*(?:結果|回覆|確認|交接).*(?:收到|觀察|記錄|開啟)/.test(result) : /(?:(?:responsible source|provider|agency|case manager|care program) (?:result|response|confirmation|handoff)).*(?:received|observed|recorded|opened)/i.test(result);
+        const custody = zh ? /(?:保管|歸還|目前版本|下次照護|重新開啟)/.test(result) : /(?:custody|return|current version|next care|reopen)/i.test(result);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知)/.test(result) : /(?:pending|awaiting|unresolved|unknown)/i.test(result);
+        return !observed || !custody || unresolved;
+      });
+      if (completedWithoutResult.length)
+        return zh ? `完成結果的第 ${completedWithoutResult.map((row) => row.line).join("、")} 行必須記錄已收到或觀察的負責交接結果、目前版本保管與下次照護或重開條件。` : `Completed handoff-result line ${completedWithoutResult.map((row) => row.line).join(", ")} must record an observed responsible handoff result, current-version custody and the next-care or reopen condition.`;
+
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[11] === statusOrder[11] && !(zh ? /(?:重新開啟|重新檢視|如果|當.*時|照護|院所|服務|權限|家庭.*改變)/.test(row.parts[8]) : /(?:reopen|review again|if |when |after |care|provider|agency|authority|household.*change)/i.test(row.parts[8])));
+      if (notApplicableWithoutTrigger.length)
+        return zh ? `不適用的第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須記錄目前原因，以及照護、院所、服務、權限或家庭改變時的重開事件。` : `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and the care, provider, agency, authority or household change that reopens it.`;
+
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return zh ? "偵測到可能的完整電話、Email、案件、會員、保險或其他長數字識別資料。請改用安全證據代號。" : "A possible full phone, email, case, member, insurance or other long numeric identifier was detected. Use a safe evidence pointer.";
+      if (/password|passphrase|passcode|access code|door code|alarm code|security code|recovery code|verification code|login credential|full address|street address|care-recipient name\s*[:=]|patient name\s*[:=]|person name\s*[:=]|provider name\s*[:=]|agency name\s*[:=]|date of birth\s*[:=]|diagnosis\s*[:=]|condition\s*[:=]|symptom\s*[:=]|allerg(?:y|ies)\s*[:=]|medication name\s*[:=]|drug name\s*[:=]|medicine name\s*[:=]|dose\s*[:=]|dosage\s*[:=]|\b\d+(?:\.\d+)?\s*(?:mg|mcg|ml)\b|feeding (?:instruction|detail)|swallowing (?:instruction|detail)|transfer (?:instruction|step)|lifting (?:instruction|step)|mobility (?:instruction|detail)|toileting (?:instruction|detail)|bathing (?:instruction|detail)|wound (?:instruction|detail)|device instruction|behavior(?:al)? (?:plan|instruction|detail)|de-escalation instruction|mental health|care plan content|treatment plan|emergency instruction content|exact location|detailed location|location\s*[:=]|exact schedule|detailed schedule|schedule\s*[:=]|case number\s*[:=]|member number\s*[:=]|policy number\s*[:=]|insurance number\s*[:=]|authorization content|authority document|consent signature|payment card|bank account|private message|correspondence|完整地址|被照顧者姓名\s*[:：]|病人姓名\s*[:：]|本人姓名\s*[:：]|院所名稱\s*[:：]|服務單位名稱\s*[:：]|出生日期\s*[:：]|診斷\s*[:：]|病況\s*[:：]|症狀\s*[:：]|過敏\s*[:：]|藥名\s*[:：]|用藥名稱\s*[:：]|劑量\s*[:：]|餵食指示|吞嚥指示|移位步驟|攙扶步驟|行動指示|如廁細節|沐浴細節|傷口指示|管路指示|輔具指示|行為處理|降溫指示|心理健康內容|照顧計畫內容|治療計畫|緊急指示內容|精確位置|詳細地點|位置\s*[:：]|精確行程|詳細行程|行程\s*[:：]|門鎖密碼|保全密碼|案件編號\s*[:：]|會員號\s*[:：]|保單號\s*[:：]|保險號\s*[:：]|授權內容|權限文件|同意書簽名|銀行帳號|信用卡|登入密碼|驗證碼|私人訊息|通信內容/i.test(privacyText))
+        return zh ? "偵測到可能的被照顧者身分、院所、地址、診斷、用藥、劑量、餵食、移位、如廁、行為、位置、行程、門禁、案件、授權、付款、登入或私人通信內容。請改成安全來源、流程或證據代號。" : "A possible care-recipient identity, provider, address, diagnosis, medication, dose, feeding, mobility, toileting, behavior, location, schedule, access, case, authority, payment, credential or private correspondence detail was detected.";
+
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length })).filter((item) => item.count > 0);
+      if (zh)
+        return `${values.review.trim()}｜照護者交接來源與授權狀態
+交接情境：${values.context}
+照護者交接／來源地圖基準：${formatter.format(baselineDate)}
+本次照護者交接核對：${formatter.format(reviewDate)}
+下一次來源、交接或接受結果核點：${formatter.format(nextReview)}
+仍開放的來源、本人比對、版本、權限、存取、交接或接受結果列：${openRows.length} 筆
+已核對、完成或不適用列：${closedRows.length} 筆
+狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}
+
+院所、長照、服務單位、家庭生活與緊急升級來源地圖：${values.basis.trim()}
+
+${lines("有版本的照護者交接來源、授權與接受證據", recordRows.map((row) => `${row.parts[0]}｜本人／交接目的：${row.parts[1]}｜負責照護來源／範圍：${row.parts[2]}｜受保護本人比對／來源核對：${row.parts[3]}｜目前作息／計畫／指示版本：${row.parts[4]}｜接收者權限／最少範圍／本人參與：${row.parts[5]}｜實際存取／保管／歸還：${row.parts[6]}｜生活／照護／服務／升級來源：${row.parts[7]}｜說明／接受／結果／矛盾／審查來源：${row.parts[8]}｜負責角色：${row.parts[9]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[10]) as Date)}｜狀態：${row.parts[11]}`))}
+
+受保護照顧計畫、權限、服務、存取與交接歷程位置：${values.storage.trim()}
+
+這份輸出只是家庭照護交接來源、權限、存取與接受索引，不是本人身分、照顧計畫、醫療內容、照護指示、法定權限、長照資格、服務承接或照護品質證明。它不登入健康存摺或長照系統，不驗證或授權任何人，不申請、預約、付款、聯絡或追蹤服務，不產生或判讀用藥、餵食、吞嚥、移位、如廁、沐浴、傷口、管路、行為、臨床或緊急指示，也不計算院所、長照、保險、申訴或法律期限。真實決定、緊急狀況與結果請直接使用目前院所、服務單位、個案管理員、官方程序、合格專業人員與所在地緊急服務。`;
+      return `${values.review.trim()} — caregiver-handoff source and authorization status
+Handoff context: ${values.context}
+Caregiver-handoff/source-map baseline: ${formatter.format(baselineDate)}
+Current caregiver-handoff review: ${formatter.format(reviewDate)}
+Next source, handoff or acceptance-result checkpoint: ${formatter.format(nextReview)}
+Open source, person-match, version, authority, access, handoff or acceptance rows: ${openRows.length}
+Reviewed, completed or not-applicable rows: ${closedRows.length}
+Status count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}
+
+Provider, care-program, agency, household-logistics and emergency-escalation source map: ${values.basis.trim()}
+
+${lines("Versioned caregiver-handoff source, authorization and acceptance evidence", recordRows.map((row) => `${row.parts[0]} — person/handoff purpose: ${row.parts[1]} — responsible care source/scope: ${row.parts[2]} — protected person match/source check: ${row.parts[3]} — current routine/plan/instruction version: ${row.parts[4]} — recipient authority/minimum scope/participation: ${row.parts[5]} — actual access/custody/return: ${row.parts[6]} — care/logistics/service/escalation sources: ${row.parts[7]} — briefing/acceptance/result/conflict/review route: ${row.parts[8]} — owner: ${row.parts[9]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[10]) as Date)} — status: ${row.parts[11]}`))}
+
+Protected care-plan, authority, service, access and handoff-history location: ${values.storage.trim()}
+
+This output is a household caregiver-handoff source, authority, access and acceptance index, not proof of identity, a care plan, clinical content, care instructions, legal authority, program eligibility, service acceptance or care quality. It does not sign in to a patient portal or care system; verify or authorize anyone; apply for, book, pay, contact or track a service; generate or interpret medication, feeding, swallowing, transfer, mobility, toileting, bathing, wound, device, behavioral, clinical or emergency instructions; or calculate provider, program, insurance, appeal or legal deadlines. Use the current provider, agency, case manager, official process, qualified professional and local emergency service for every real decision, emergency and result.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
     intro:
@@ -5141,6 +5373,9 @@ const definitions: Record<string, Definition> = {
   "household-medical-information-source-handoff-log": {
     ...medicalInformationDefinition("en"),
   },
+  "caregiver-handoff-source-authorization-log": {
+    ...caregiverHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -5157,6 +5392,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-medical-information-source-handoff-log": {
     ...medicalInformationDefinition("zh-TW"),
+  },
+  "caregiver-handoff-source-authorization-log": {
+    ...caregiverHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

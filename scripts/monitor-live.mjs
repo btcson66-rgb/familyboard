@@ -145,6 +145,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-medical-information-source-handoff-log/</loc>",
       "<loc>https://familyboard.win/guides/household-medical-information-organization/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/household-medical-information-organization/</loc>",
+      "<loc>https://familyboard.win/tools/caregiver-handoff-source-authorization-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/caregiver-handoff-source-authorization-log/</loc>",
+      "<loc>https://familyboard.win/guides/caregiver-handoff-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/caregiver-handoff-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -682,6 +686,24 @@ const checks = [
       'hreflang="zh-TW"',
       "The provider record, plan record and household index are different systems",
       "A current medication list belongs in a protected clinical handoff",
+    ],
+  },
+  {
+    path: "/tools/caregiver-handoff-source-authorization-log/",
+    require: [
+      "Caregiver Handoff Source and Authorization Log",
+      'hreflang="zh-TW"',
+      "Twelve statuses preserve source, authority, access and acceptance",
+      "It does not verify a caregiver, provider, agency, case manager",
+    ],
+  },
+  {
+    path: "/guides/caregiver-handoff-checklist/",
+    require: [
+      "Build a caregiver handoff that another person can accept without exposing a care file",
+      'hreflang="zh-TW"',
+      "A caregiver title, permitted disclosure and personal-representative authority are different",
+      "Briefing, caregiver acceptance and an observed handoff result are three events",
     ],
   },
   {
@@ -1249,6 +1271,24 @@ const checks = [
       'hreflang="en"',
       "健康存摺、院所病歷與家庭索引是三套不同來源",
       "用藥清單要保持目前版本，但不能貼在共用表單",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/caregiver-handoff-source-authorization-log/",
+    require: [
+      "照護者交接來源與授權狀態表",
+      'hreflang="en"',
+      "十二種狀態分開來源、權限、存取與接受結果",
+      "工具不驗證照護者身分、不授予照護權限",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/caregiver-handoff-checklist/",
+    require: [
+      "照護者交接怎麼做？作息、授權、長照服務、喘息與緊急升級指南",
+      'hreflang="en"',
+      "長照申請、到府評估、照顧計畫與服務開始是四個事件",
+      "照護者身分、可接收資訊與可做決定是三種權限",
     ],
   },
   {

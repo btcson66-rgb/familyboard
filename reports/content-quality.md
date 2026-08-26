@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-26T01:41:19.776Z
+Generated: 2026-08-26T05:59:29.112Z
 
 ## Summary
 
-- Indexable pages: 343
-- Generated HTML routes: 360
+- Indexable pages: 346
+- Generated HTML routes: 363
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 137
+- Duplicate primary-keyword groups: 2
+- Pages without a contextual product/tool link: 140
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-26T01:41:19.776Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 37
-- tools: 107
+- records-emergency: 38
+- tools: 109
 
 ## Word-count range
 
@@ -41,7 +41,8 @@ Generated: 2026-08-26T01:41:19.776Z
 
 ## Duplicate primary keywords
 
-- None.
+- caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
+- 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
 
 ## Pages without contextual product/tool links
 
@@ -70,6 +71,7 @@ Generated: 2026-08-26T01:41:19.776Z
 - /roadmap/
 - /security/
 - /terms/
+- /tools/caregiver-handoff-source-authorization-log/
 - /tools/household-vehicle-document-source-status-log/
 - /zh-tw/affiliate-disclosure/
 - /zh-tw/contact/
@@ -89,6 +91,7 @@ Generated: 2026-08-26T01:41:19.776Z
 - /zh-tw/features/warranty-tracker/
 - /zh-tw/guides/appliance-inventory/
 - /zh-tw/guides/appliance-replacement-planning/
+- /zh-tw/guides/caregiver-handoff-checklist/
 - /zh-tw/guides/cleaning-schedule/
 - /zh-tw/guides/contractor-records/
 - /zh-tw/guides/digital-home-binder/
@@ -136,6 +139,7 @@ Generated: 2026-08-26T01:41:19.776Z
 - /zh-tw/tools/appliance-repair-callback-log/
 - /zh-tw/tools/appliance-replacement-planner/
 - /zh-tw/tools/appliance-service-visit-log/
+- /zh-tw/tools/caregiver-handoff-source-authorization-log/
 - /zh-tw/tools/cleaning-schedule-generator/
 - /zh-tw/tools/emergency-binder-generator/
 - /zh-tw/tools/emergency-contact-sheet-generator/
