@@ -14,6 +14,8 @@ lastReviewedAt: "2026-08-26"
 nextStep: "先產生預設版本，逐項核對一列已恢復事件與一列仍待實際替代服務的事件；只要替代或恢復結果還沒有負責來源證據，就保持開放。"
 related:
   - "/zh-tw/guides/home-care-service-interruption-backup-plan/"
+  - "/zh-tw/tools/home-care-complaint-response-resolution-log/"
+  - "/zh-tw/guides/home-care-service-complaint-resolution/"
   - "/zh-tw/tools/home-care-visit-scope-service-result-log/"
   - "/zh-tw/guides/home-care-service-plan-changes/"
   - "/zh-tw/tools/caregiver-handoff-source-authorization-log/"
@@ -124,6 +126,8 @@ contentVersion: 1
 原服務後來恢復，代表後續事件有結果；先前服務仍可能尚未補做、改期、折抵、說明或處理。用 `GAP-1` 這類安全代號保存未補缺口，交由目前方案、契約、服務單位、給付來源或申訴程序決定。
 
 FamilyBoard 不計算少了幾小時、應退多少費用、可補幾次、損害或正式期限。若同類中斷重複發生，每次服務批次、備援選項、本人回應、實際結果或申訴狀態改變時，新建一個版本，不覆寫歷史。
+
+中斷已經進入正式反映或申訴時，改用[居家服務申訴、回覆與改善結果紀錄表](/zh-tw/tools/home-care-complaint-response-resolution-log/)分開受理、調查、本人參與、可歸屬回覆、改善行動與後續實際服務結果；需要選擇服務單位、1966、地方主管機關或調處路徑時，先讀[居家服務申訴指南](/zh-tw/guides/home-care-service-complaint-resolution/)。不要讓一句「已反映」同時關閉中斷與申訴兩張表。
 
 ## 隱私檢查是草稿防線
 

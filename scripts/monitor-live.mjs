@@ -158,6 +158,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/home-care-service-interruption-backup-continuity-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-care-service-interruption-backup-continuity-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-care-service-interruption-backup-plan/</loc>",
+      "<loc>https://familyboard.win/tools/home-care-complaint-response-resolution-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-care-complaint-response-resolution-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-care-service-complaint-resolution/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -740,6 +743,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Twelve statuses stop “backup arranged” from hiding what happened",
       "A missed visit record and a continuity record answer different questions",
+    ],
+  },
+  {
+    path: "/tools/home-care-complaint-response-resolution-log/",
+    require: [
+      "Home Care Complaint, Response and Resolution Log",
+      'hreflang="zh-TW"',
+      "An inquiry, complaint, appeal and regulator report are different records",
+      "Complaint received, response issued and service improved are three claims",
     ],
   },
   {
@@ -1380,6 +1392,25 @@ const checks = [
       'lang="zh-TW"',
       "把「沒來」拆成七個可以核對的問題",
       "喘息服務可以詢問，但不能假設當天可用",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/tools/home-care-complaint-response-resolution-log/",
+    require: [
+      "居家服務申訴、回覆與改善結果紀錄表",
+      'hreflang="en"',
+      "十二種狀態不要把「已回覆」藏在「已改善」裡",
+      "已收件、已調查、已回覆、已改善是四件事",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-care-service-complaint-resolution/",
+    require: [
+      "居家服務怎麼申訴？服務單位回覆、1966、地方主管機關、調處與改善結果指南",
+      'lang="zh-TW"',
+      "第二步先回答：你遇到的是哪一種問題？",
+      "何時使用地方主管機關陳情、申訴或調處",
     ],
     forbid: ['rel="alternate"'],
   },

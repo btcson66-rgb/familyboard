@@ -1760,6 +1760,14 @@
     "headings": "Home care service interruption, backup and continuity log This page starts after an unexpected interruption, not before a planned change Each row preserves twelve claims without copying a care file Twelve statuses stop “backup arranged” from hiding what happened Safety check, provider call and continuity record are three actions A missed visit record and a continuity record answer different questions “A relative can help today” is not automatically authorized replacement service Medicaid HCBS backup arrangements are program-specific Medicare home health has its own service and complaint routes Disaster continuity is not the same as a one-worker scheduling gap Replacement offered, accepted, activated and delivered are four events A resumed schedule does not erase the service gap Privacy is a continuity requirement, not an optional cleanup step Affiliate products stay after safety, service and complaint answers"
   },
   {
+    "title": "Home Care Complaint, Response and Resolution Log",
+    "description": "Track home-care concerns, intake, investigation, agency responses, corrective actions and actual service improvement without storing complaint narratives.",
+    "route": "/tools/home-care-complaint-response-resolution-log/",
+    "cluster": "tools",
+    "keywords": "home care complaint tracking log",
+    "headings": "Home care complaint, response and resolution log Start with safety and the correct route, not a narrative An inquiry, complaint, appeal and regulator report are different records Each row preserves twelve evidence layers Twelve statuses keep intake, response and improvement separate Complaint received, response issued and service improved are three claims Person participation is not the same as family dissatisfaction Certified Medicare home health agencies have specific complaint duties Medicaid grievance and appeal paths depend on delivery system and current rules Safety, abuse, neglect and retaliation cannot wait for an ordinary queue Investigation scope and household evidence must not be confused A closed case may still need household follow-up Link interruption, visit and change records without duplicating private content Privacy is part of complaint integrity Affiliate products must remain outside rights and outcome decisions"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

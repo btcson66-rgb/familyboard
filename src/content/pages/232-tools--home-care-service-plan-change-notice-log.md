@@ -13,6 +13,8 @@ lastReviewedAt: "2026-08-26"
 nextStep: "Generate one fully reviewed change and one transition-pending notice. Compare the first with the protected old and current versions; keep the second open until the replacement or first changed-service result is actually observed."
 related:
   - "/tools/home-care-visit-scope-service-result-log/"
+  - "/tools/home-care-service-interruption-backup-continuity-log/"
+  - "/tools/home-care-complaint-response-resolution-log/"
   - "/tools/caregiver-handoff-source-authorization-log/"
   - "/guides/caregiver-handoff-checklist/"
   - "/guides/household-medical-information-organization/"
@@ -97,6 +99,8 @@ Do not jump from step one to step seven. A scheduler's call cannot prove that an
 Use the [Home Care Visit Scope and Service Result Log](/tools/home-care-visit-scope-service-result-log/) for the separate visit evidence, service-scope exception and responsible agency result. Use this page for the change chain that controls which version should apply.
 
 If the approved version is not changing but an expected service becomes temporarily unavailable, use the [Home Care Service Interruption, Backup and Continuity Log](/tools/home-care-service-interruption-backup-continuity-log/) to keep the safety route, responsible interruption confirmation, qualified backup, actual replacement or resumption and uncompensated gap separate from this planned-change record.
+
+If the household disagrees with the change, service response or implementation, use the [Home Care Complaint, Response and Resolution Log](/tools/home-care-complaint-response-resolution-log/) to keep complaint intake, investigation, person participation, agency response, corrective action and the later actual service result separate from the change notice itself. A delivered notice, grievance response and implemented improvement are three different claims.
 
 ## HHCCN, ABN and NOMNC are not three names for one letter
 

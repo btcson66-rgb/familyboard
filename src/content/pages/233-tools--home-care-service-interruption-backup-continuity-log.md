@@ -14,6 +14,7 @@ nextStep: "Generate one fully reviewed interruption and one replacement-pending 
 related:
   - "/tools/home-care-visit-scope-service-result-log/"
   - "/tools/home-care-service-plan-change-notice-log/"
+  - "/tools/home-care-complaint-response-resolution-log/"
   - "/tools/caregiver-handoff-source-authorization-log/"
   - "/guides/caregiver-handoff-checklist/"
   - "/privacy/"
@@ -118,6 +119,8 @@ The current [Medicare home health coverage page](https://www.medicare.gov/covera
 The current [Medicare complaint page](https://www.medicare.gov/providers-services/claims-appeals-complaints/complaints) directs concerns about a home health agency first to the agency administrator and, if unresolved, to the state home-health hotline supplied by the agency. It also identifies separate routes for quality-of-care concerns. The correct path depends on the provider, service and concern.
 
 Record an agency-response or complaint-route pointer rather than copying the complaint. If a service ending or reduction involves a formal notice, use the change-notice log and read the actual notice immediately. A complaint, coverage appeal and plan-change notice are not interchangeable.
+
+Use the [Home Care Complaint, Response and Resolution Log](/tools/home-care-complaint-response-resolution-log/) when the household needs to follow the separate intake, investigation, person-participation, attributable-response, corrective-action and later-service-result chain. Keep the interruption row focused on immediate safety, qualified continuity and what service actually occurred.
 
 ## Disaster continuity is not the same as a one-worker scheduling gap
 

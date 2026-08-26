@@ -14,6 +14,8 @@ lastReviewedAt: "2026-08-26"
 nextStep: "選最近一次居家服務臨時取消或未到事件，寫出安全處理來源、原服務版本、服務單位正式回覆、合格替代、本人參與、實際結果與仍未補的缺口。"
 related:
   - "/zh-tw/tools/home-care-service-interruption-backup-continuity-log/"
+  - "/zh-tw/guides/home-care-service-complaint-resolution/"
+  - "/zh-tw/tools/home-care-complaint-response-resolution-log/"
   - "/zh-tw/guides/home-care-service-visit-records/"
   - "/zh-tw/guides/home-care-service-plan-changes/"
   - "/zh-tw/tools/caregiver-handoff-source-authorization-log/"
@@ -159,6 +161,8 @@ FamilyBoard 只能建立安全來源索引，不會判斷危險、不提供照�
 衛福部的[長期照顧服務陳情、申訴及調處機制](https://1966.gov.tw/LTC/cp-6443-69922-207.html)說明地方主管機關應建立相關機制，[各縣市長期照顧管理中心聯絡資訊](https://1966.gov.tw/LTC/cp-6443-69944-207.html)提供官方起點。實際要找服務單位、A 單位個管、照管中心、1966、地方主管機關或其他管道，取決於問題性質與目前契約。
 
 FamilyBoard 不選擇管轄、不送件、不保存申訴全文，也不計算期限。完整事實、證據與本人資料應依負責程序放在受保護管道。
+
+要把服務單位受理、A 單位協調、1966 詢問、地方主管機關正式收件、調查範圍、本人參與、回覆與真正改善分開時，依[居家服務申訴指南](/zh-tw/guides/home-care-service-complaint-resolution/)分類，再用[居家服務申訴、回覆與改善結果紀錄表](/zh-tw/tools/home-care-complaint-response-resolution-log/)建立來源索引。中斷表仍保留安全、備援、替代與未補缺口，不因案件結案而刪除。
 
 ## 一個可追溯的家庭事件時間軸
 

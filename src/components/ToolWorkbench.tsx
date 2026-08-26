@@ -2087,6 +2087,239 @@ This output is a household home-care temporary-interruption, backup, replacement
   };
 };
 
+const homeCareComplaintDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusOrder = zh
+    ? [
+        "已收到居家服務疑慮訊號，等待安全核對與路徑分類",
+        "已完成安全與不利處分風險核對，等待負責詢問、申訴或調處來源",
+        "已記錄負責處理來源，等待受保護本人與服務關係比對",
+        "已記錄本人與服務關係比對，等待事件來源版本與證據保管",
+        "已記錄事件來源與保管，等待受理類型、收件或案件狀態",
+        "已記錄受理與案件狀態，等待調查角色、回覆範圍與下一程序",
+        "已記錄調查與回覆範圍，等待本人參與及希望處理結果",
+        "已記錄本人參與與希望結果，等待可歸屬回覆、改善行動與實際服務結果",
+        "安全、事實、服務、給付、費用、管轄或權利矛盾，等待負責審查",
+        "已核對疑慮來源、受理、調查、本人參與、回覆與實際改善結果",
+        "已收到負責處理結果，記錄實際改變、保管與重新開啟條件",
+        "不適用，已記錄原因與重新開啟事件",
+      ]
+    : [
+        "Home-care concern signal received—safety check and route classification pending",
+        "Safety and retaliation-risk check recorded—responsible inquiry, complaint or mediation source pending",
+        "Responsible handling source recorded—protected person and service-relationship match pending",
+        "Person and service-relationship match recorded—event-source version and evidence custody pending",
+        "Event source and custody recorded—intake type, receipt or case status pending",
+        "Intake and case status recorded—investigator, response scope and next process pending",
+        "Investigation and response scope recorded—person participation and requested outcome pending",
+        "Participation and requested outcome recorded—attributable response, corrective action and actual service result pending",
+        "Safety, fact, service, benefit, cost, jurisdiction or rights conflict—responsible review pending",
+        "Concern source, intake, investigation, participation, response and actual improvement result reviewed",
+        "Responsible handling result received—actual change, custody and reopen condition recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+
+  const defaultRecords = zh
+    ? `COMPLAINT-A | 被照顧者 A 的居家服務持續性疑慮；本次正式處理結果核對 | 目前服務單位內部申訴、A 單位個案管理與地方主管機關來源；詢問、申訴與調處分開 | 受保護本人與目前服務關係已比對；證據 CARE-A-COMPLAINT5；核對 2026-08-26 | 事件來源 VISIT-E4、服務單位回覆 R6 與受保護證據容器 CUSTODY-C 已開啟；敘述留在正式程序 | 受理類型為服務單位內部申訴；收件 ACK-4 與案件狀態 CASE-OPEN 已由負責來源觀察 | 調查角色為服務單位管理窗口；回覆範圍、預計下一程序與外部主管機關路徑已記錄；沒有自行判定責任 | 本人參與來源與希望處理結果已記錄；沒有把家屬不滿自動寫成本人決定；授權留在受保護來源 | 可歸屬回覆 RESULT-4 已收到；改善行動 ACTION-3 與後續實際服務結果已觀察；未解項目 GAP-0；服務、回覆或結果改變時重新開啟 | 家庭申訴來源協調角色 | 2026-08-26 | 已核對疑慮來源、受理、調查、本人參與、回覆與實際改善結果
+RESPONSE-A | 被照顧者 A 的重複臨時取消疑慮；等待實際改善結果 | 目前服務單位內部申訴與地方主管機關陳情來源；給付異議與服務品質路徑保持分開 | 受保護本人與目前服務關係已比對；證據 CARE-A-RESPONSE5；核對 2026-08-26 | 中斷事件 GAP-B、契約版本 C3 與服務單位收件 ACK-5 指標已開啟；內容留在正式程序 | 受理類型為服務持續性申訴；收件 ACK-5 已觀察；案件狀態 INVESTIGATING | 負責調查角色與回覆範圍已確認；若內部結果未解，地方主管機關陳情或調處路徑已映射 | 本人參與與希望取得持續服務說明的結果已記錄；沒有要求工具判定賠償、違約或處分 | 服務單位初步回覆已收到，但改善行動後的實際服務結果仍待負責來源觀察；未解缺口與外部申訴路徑已保留 | 家庭服務結果追蹤角色 | 2026-09-10 | 已記錄本人參與與希望結果，等待可歸屬回覆、改善行動與實際服務結果`
+    : `COMPLAINT-A | Care person A home-care continuity concern; current formal handling-result review | Current agency complaint, case-management and state or local authority sources; inquiry, complaint and external review remain separate | Protected person and current service relationship matched; evidence CARE-A-COMPLAINT5; checked 2026-08-26 | Event source VISIT-E4, agency response R6 and protected evidence container CUSTODY-C opened; narrative stays in the official process | Intake type is an agency complaint; receipt ACK-4 and case status CASE-OPEN observed from the responsible source | Investigator is the agency administrative route; response scope, next process and state hotline or responsible external route recorded; no liability inferred | Person participation source and requested outcome recorded; family dissatisfaction is not treated as the person's decision; authority stays protected | Attributable response RESULT-4 received; corrective action ACTION-3 and later actual service result observed; unresolved item GAP-0; reopen if service, response or result changes | Household complaint-source coordination role | 2026-08-26 | Concern source, intake, investigation, participation, response and actual improvement result reviewed
+RESPONSE-A | Care person A repeated temporary-cancellation concern; actual improvement result pending | Current agency complaint and state program or authority sources; benefit appeal and service-quality routes remain separate | Protected person and current service relationship matched; evidence CARE-A-RESPONSE5; checked 2026-08-26 | Interruption event GAP-B, contract version C3 and agency receipt ACK-5 pointers opened; narrative stays in the official process | Intake type is a service-continuity complaint; receipt ACK-5 observed; case status INVESTIGATING | Responsible investigator and response scope confirmed; state complaint or program review route mapped if the internal result remains unresolved | Person participation and requested continuity explanation recorded; the tool is not asked to decide damages, breach or sanctions | Initial agency response received, but actual service result after corrective action remains pending from the responsible source; unresolved gap and external complaint route preserved | Household service-result follow-up role | 2026-09-10 | Participation and requested outcome recorded—attributable response, corrective action and actual service result pending`;
+
+  return {
+    intro: zh
+      ? "用安全代號分開居家服務疑慮、安全與不利處分風險、負責處理來源、本人與服務關係、事件證據、受理類型、調查、本人參與、可歸屬回覆、改善行動與實際結果。這不是申訴書、法律意見、送件器、調查或成功率預測工具。"
+      : "Separate a home-care concern, safety and retaliation risk, responsible handling source, person and service relationship, event evidence, intake type, investigation, person participation, attributable response, corrective action and actual result with safe codes. This is not a complaint form, legal advice, filing service, investigation or success prediction.",
+    fields: [
+      text(
+        "review",
+        zh ? "居家服務疑慮私人核對代號" : "Private home-care concern review reference",
+        zh ? "只用安全家庭代號；不要輸入姓名、地址、健康照護內容、工作人員、指控敘述、完整申訴、案件、費用、簽名或登入資料。" : "Use a safe household code. Do not enter names, addresses, health or care content, worker details, allegation narratives, complaint text, case or cost details, signatures or credentials.",
+        "HOME-CARE-COMPLAINT-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "居家服務疑慮與處理情境" : "Home-care concern and handling context",
+        type: "select",
+        options: zh
+          ? ["一般詢問或說明需求", "服務單位內部抱怨或申訴", "服務品質、未提供或不一致疑慮", "持續服務、排班或溝通疑慮", "照顧計畫、給付或不利決定異議", "契約、費用或付款責任爭議", "地方主管機關陳情、申訴或調處", "安全、權利、不利處分或外部審查追蹤"]
+          : ["Customer-service inquiry or explanation request", "Agency complaint or grievance", "Care quality, failure-to-furnish or inconsistency concern", "Service continuity, scheduling or communication concern", "Plan, benefit or adverse-decision appeal", "Contract, cost or payment-responsibility dispute", "State program, survey agency or external complaint", "Safety, rights, retaliation or external-review follow-up"],
+      },
+      { name: "baselineDate", label: zh ? "事件與來源版本基準日" : "Event and source-version baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: zh ? "本次受理、回覆與結果核對日" : "Current intake, response and result review date", type: "date", value: "2026-08-26" },
+      { name: "nextReview", label: zh ? "下一次調查、回覆或實際改善結果核點" : "Next investigation, response or actual-improvement checkpoint", type: "date", value: "2026-09-10" },
+      text(
+        "basis",
+        zh ? "服務單位、方案、個案管理、主管機關、申訴、調處與安全來源地圖" : "Agency, program, case-management, authority, complaint, mediation and safety-source map",
+        zh ? "只放安全來源與版本代號；完整事件、本人、服務、契約、費用、證據、申訴及調查內容留在負責受保護程序。" : "Use safe source and version IDs only. Keep complete event, person, service, contract, cost, evidence, complaint and investigation content in responsible protected processes.",
+        "AGENCY-C1; PROGRAM-P1; CASE-MGMT-A1; AUTHORITY-S1; COMPLAINT-R2; REVIEW-R3; SAFETY-E1",
+      ),
+      {
+        name: "records",
+        label: zh ? "有版本的疑慮、受理、調查、回覆、改善與實際結果列" : "Versioned concern, intake, investigation, response, correction and actual-result rows",
+        type: "textarea",
+        help: zh ? "每行：ID｜安全本人代號與疑慮情境｜負責服務單位、方案、個案管理或主管機關處理來源｜受保護本人與服務關係比對及來源核對日 YYYY-MM-DD｜事件來源版本與證據保管｜受理類型、收件及案件狀態｜安全、不利處分風險、調查角色、回覆範圍與下一程序｜本人參與及希望處理結果｜可歸屬回覆、改善行動、實際服務結果、未解項目與重開條件｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。最多 14 行。" : "One line: ID | safe care-person alias and concern context | responsible agency, program, case-management or authority handling source | protected person and service-relationship match plus source checked date YYYY-MM-DD | event-source version and evidence custody | intake type, receipt and case status | safety, retaliation risk, investigator, response scope and next process | person participation and requested outcome | attributable response, corrective action, actual service result, unresolved item and reopen rule | owner role | target or outcome date YYYY-MM-DD | one of the twelve exact statuses. Maximum 14 lines.",
+        value: defaultRecords,
+      },
+      text(
+        "storage",
+        zh ? "受保護事件、收件、調查、回覆、改善、結果與申訴歷程位置" : "Protected event, receipt, investigation, response, correction, result and complaint-history location",
+        zh ? "只寫保管流程或容器代號；不要貼本人、照護、工作人員、指控、證據全文、費用、申訴、簽名、登入或私人內容。" : "Name a custody process or container, not identity, care, worker, allegation, full evidence, cost, complaint, signature, login or private content.",
+        zh ? "家庭紀錄／居家服務申訴／HOME-CARE-COMPLAINT-2026-A／受保護程序" : "Household records / home-care complaints / HOME-CARE-COMPLAINT-2026-A / protected process",
+      ),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!baselineDate || !reviewDate || !nextReview)
+        return zh ? "請輸入有效的事件基準日、本次核對日與下一核點日期。" : "Enter valid event baseline, current-review and next-checkpoint dates.";
+      if (baselineDate > reviewDate)
+        return zh ? "事件與來源版本基準日不能晚於本次受理、回覆與結果核對日。" : "The event and source-version baseline cannot be later than the current intake, response and result review.";
+      if (nextReview < reviewDate)
+        return zh ? "下一次調查、回覆或實際改善結果核點不能早於本次核對日。" : "The next investigation, response or actual-improvement checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 16 || values.storage.trim().length < 10)
+        return zh ? "請提供安全的疑慮處理來源地圖與受保護程序位置代號。" : "Provide a safe concern-handling source map and protected-process label.";
+
+      const rows = values.records.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14)
+        return zh ? "請輸入 1 至 14 行疑慮、受理、調查、回覆、改善與實際結果狀態。" : "Enter 1 to 14 concern, intake, investigation, response, correction and actual-result rows.";
+      const recordRows = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = recordRows.filter((row) => row.parts.length !== 12 || row.parts.some((part) => !part));
+      if (malformed.length)
+        return zh ? `疑慮處理第 ${malformed.map((row) => row.line).join("、")} 行必須剛好有 12 個非空白欄位。` : `Concern-handling line ${malformed.map((row) => row.line).join(", ")} must contain exactly 12 non-empty fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toUpperCase());
+      if (new Set(ids).size !== ids.length)
+        return zh ? "每一行疑慮處理紀錄都需要唯一 ID。" : "Every concern-handling row needs a unique ID.";
+      const invalidStatuses = recordRows.filter((row) => !statusOrder.includes(row.parts[11]));
+      if (invalidStatuses.length)
+        return zh ? `疑慮處理第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用十二種指定狀態之一。` : `Concern-handling line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve exact statuses.`;
+
+      const openRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) < 9);
+      const closedRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) >= 9);
+      const checkedDateOf = (textValue: string) => strictIsoDate(textValue.match(/\b\d{4}-\d{2}-\d{2}\b/)?.[0] ?? "");
+      const invalidSourceDates = recordRows.filter((row) => {
+        const checked = checkedDateOf(row.parts[3]);
+        return !checked || checked < baselineDate || checked > reviewDate;
+      });
+      if (invalidSourceDates.length)
+        return zh ? `疑慮處理第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的受保護來源核對日。` : `Concern-handling line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a protected-source checked date from the baseline through this review.`;
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target < reviewDate || target > nextReview;
+      });
+      if (invalidOpenDates.length)
+        return zh ? `仍開放的疑慮處理第 ${invalidOpenDates.map((row) => row.line).join("、")} 行需要介於本次核對日與下一核點的目標日。` : `Open concern-handling line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome < baselineDate || outcome > reviewDate;
+      });
+      if (invalidClosedDates.length)
+        return zh ? `已核對、完成或不適用的疑慮處理第 ${invalidClosedDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的結果日。` : `Closed concern-handling line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an outcome date from the baseline through this review.`;
+
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 12 || row.parts[3].length < 18 || row.parts[4].length < 14 || row.parts[5].length < 12 || row.parts[6].length < 14 || row.parts[7].length < 12 || row.parts[8].length < 14 || row.parts[9].length < 4);
+      if (missingLayers.length)
+        return zh ? `疑慮處理第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實的疑慮情境、負責來源、本人與服務關係、事件與保管、受理、調查與安全路徑、本人參與、回覆／改善／實際結果及負責角色。` : `Concern-handling line ${missingLayers.map((row) => row.line).join(", ")} needs a real concern context, responsible source, person and service relationship, event and custody, intake, investigation and safety route, person participation, response or correction or actual result and owner.`;
+
+      const reviewedWithoutEvidence = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[9]) return false;
+        const sourceOk = zh ? /(?:服務單位|個案管理|主管機關|方案)/.test(row.parts[2]) : /(?:agency|case-management|authority|program)/i.test(row.parts[2]);
+        const matchOk = zh ? /(?:受保護|本人).*(?:服務關係|比對|證據)/.test(row.parts[3]) : /(?:protected|person).*(?:service relationship|match|evidence)/i.test(row.parts[3]);
+        const custodyOk = zh ? /(?:事件|證據|保管|容器)/.test(row.parts[4]) : /(?:event|evidence|custody|container)/i.test(row.parts[4]);
+        const intakeOk = zh ? /(?:受理|收件|案件狀態|申訴)/.test(row.parts[5]) : /(?:intake|receipt|case status|complaint)/i.test(row.parts[5]);
+        const investigationOk = zh ? /(?:調查|回覆範圍|下一程序|主管機關)/.test(row.parts[6]) : /(?:investigator|response scope|next process|state|authority)/i.test(row.parts[6]);
+        const participationOk = zh ? /(?:本人參與|希望.*結果|授權)/.test(row.parts[7]) : /(?:person participation|requested outcome|authority)/i.test(row.parts[7]);
+        const responseOk = zh ? /(?:回覆|結果).*(?:收到|觀察)/.test(row.parts[8]) : /(?:response|result).*(?:received|observed)/i.test(row.parts[8]);
+        const actionOk = zh ? /(?:改善行動|實際服務結果)/.test(row.parts[8]) : /(?:corrective action|actual service result)/i.test(row.parts[8]);
+        const unresolvedOk = zh ? /(?:未解|GAP-0)/.test(row.parts[8]) : /(?:unresolved|GAP-0)/i.test(row.parts[8]);
+        const reopenOk = zh ? /(?:重新開啟|改變)/.test(row.parts[8]) : /(?:reopen|change)/i.test(row.parts[8]);
+        const pending = zh ? /(?:等待|仍待|尚待|未知)/.test(row.parts.slice(2, 9).join(" ")) : /(?:pending|awaiting|unknown)/i.test(row.parts.slice(2, 9).join(" "));
+        return !sourceOk || !matchOk || !custodyOk || !intakeOk || !investigationOk || !participationOk || !responseOk || !actionOk || !unresolvedOk || !reopenOk || pending;
+      });
+      if (reviewedWithoutEvidence.length)
+        return zh ? `已核對的第 ${reviewedWithoutEvidence.map((row) => row.line).join("、")} 行必須具備負責來源、本人與服務關係、事件保管、受理、調查與下一程序、本人參與、可歸屬回覆、改善行動、實際服務結果、未解項目及重開條件，且沒有待確認缺口。` : `Reviewed concern line ${reviewedWithoutEvidence.map((row) => row.line).join(", ")} must include the responsible source, person and service relationship, event custody, intake, investigation and next process, person participation, attributable response, corrective action, actual service result, unresolved item and reopen rule with no pending gap.`;
+
+      const responsePendingWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[7]) return false;
+        const participation = zh ? /(?:本人參與|希望.*結果)/.test(row.parts[7]) : /(?:person participation|requested outcome)/i.test(row.parts[7]);
+        const pending = zh ? /(?:等待|仍待|尚待)/.test(row.parts[8]) : /(?:pending|awaiting|remains)/i.test(row.parts[8]);
+        const responsible = zh ? /(?:服務單位|方案|主管機關|負責)/.test(row.parts[8]) : /(?:agency|program|authority|responsible)/i.test(row.parts[8]);
+        const externalRoute = zh ? /(?:未解|申訴|主管機關|調處)/.test(row.parts[8]) : /(?:unresolved|complaint|authority|mediation)/i.test(row.parts[8]);
+        return !participation || !pending || !responsible || !externalRoute;
+      });
+      if (responsePendingWithoutRoute.length)
+        return zh ? `等待實際改善的第 ${responsePendingWithoutRoute.map((row) => row.line).join("、")} 行必須記錄本人參與與希望結果，把改善後服務結果保持為負責來源待確認，並保留未解或外部處理路徑。` : `Improvement-pending line ${responsePendingWithoutRoute.map((row) => row.line).join(", ")} must record person participation and requested outcome, keep the post-correction service result pending from a responsible source and preserve an unresolved or external handling route.`;
+
+      const conflictWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[8]) return false;
+        const combined = row.parts.slice(4, 9).join(" ");
+        const conflict = zh ? /(?:安全|事實|服務|給付|費用|管轄|權利|矛盾|差異)/.test(combined) : /(?:safety|fact|service|benefit|cost|jurisdiction|rights|conflict|difference)/i.test(combined);
+        const route = zh ? /(?:服務單位|方案|主管機關|申訴|調處|審查)/.test(combined) : /(?:agency|program|authority|complaint|mediation|review)/i.test(combined);
+        return !conflict || !route;
+      });
+      if (conflictWithoutRoute.length)
+        return zh ? `矛盾列第 ${conflictWithoutRoute.map((row) => row.line).join("、")} 行必須指出安全、事實、服務、給付、費用、管轄或權利差異，以及負責服務單位、方案、主管機關、申訴、調處或審查路徑。` : `Conflict line ${conflictWithoutRoute.map((row) => row.line).join(", ")} must name the safety, fact, service, benefit, cost, jurisdiction or rights conflict and the responsible agency, program, authority, complaint, mediation or review route.`;
+
+      const completedWithoutResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[10]) return false;
+        const result = row.parts[8];
+        const responsibleResult = zh ? /(?:負責|服務單位|方案|主管機關).*(?:結果|回覆).*(?:收到|觀察|記錄)/.test(result) : /(?:(?:responsible|agency|program|authority).*(?:result|response)).*(?:received|observed|recorded)/i.test(result);
+        const changeCustodyReopen = zh ? /(?:實際改變|保管|重新開啟)/.test(result) : /(?:actual change|custody|reopen)/i.test(result);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未知)/.test(result) : /(?:pending|awaiting|unknown)/i.test(result);
+        return !responsibleResult || !changeCustodyReopen || unresolved;
+      });
+      if (completedWithoutResult.length)
+        return zh ? `完成結果的第 ${completedWithoutResult.map((row) => row.line).join("、")} 行必須記錄已收到或觀察的負責處理結果、實際改變、受保護保管及重新開啟條件。` : `Completed handling-result line ${completedWithoutResult.map((row) => row.line).join(", ")} must record an observed responsible handling result, actual change, protected custody and reopen condition.`;
+
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[11] === statusOrder[11] && !(zh ? /(?:重新開啟|重新檢視|如果|當.*時|服務|回覆|結果|方案.*改變)/.test(row.parts[8]) : /(?:reopen|review again|if |when |service|response|result|program.*change)/i.test(row.parts[8])));
+      if (notApplicableWithoutTrigger.length)
+        return zh ? `不適用的第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須記錄目前原因，以及服務、回覆、結果或方案改變時的重開事件。` : `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and the service, response, result or program change that reopens it.`;
+
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return zh ? "偵測到可能的完整電話、Email、案件、會員、服務對象、工作人員、費用或其他長數字識別資料。請改用安全事件、收件、案件狀態與結果代號。" : "A possible full phone, email, case, member, care-recipient, worker, cost or other long numeric identifier was detected. Use a safe event, receipt, case-status and result pointer.";
+      if (/password|passphrase|passcode|access code|door code|alarm code|security code|recovery code|verification code|login credential|full address|street address|care-recipient name\s*[:=]|patient name\s*[:=]|person name\s*[:=]|provider name\s*[:=]|agency name\s*[:=]|worker name\s*[:=]|employee name\s*[:=]|date of birth\s*[:=]|diagnosis\s*[:=]|condition\s*[:=]|symptom\s*[:=]|allerg(?:y|ies)\s*[:=]|medication name\s*[:=]|drug name\s*[:=]|medicine name\s*[:=]|dose\s*[:=]|dosage\s*[:=]|\b\d+(?:\.\d+)?\s*(?:mg|mcg|ml)\b|feeding|swallowing|transfer step|lifting step|mobility detail|toileting|bathing|wound|device instruction|behavior(?:al)? detail|mental health|care note|treatment plan|exact time|arrival time\s*[:=]|departure time\s*[:=]|exact location|precise location|GPS|case number\s*[:=]|member number\s*[:=]|patient ID\s*[:=]|provider ID\s*[:=]|worker ID\s*[:=]|billing amount\s*[:=]|claim amount\s*[:=]|invoice amount\s*[:=]|allegation\s*[:=]|evidence text\s*[:=]|complaint text\s*[:=]|appeal text\s*[:=]|signature|signed form|private message|correspondence|完整地址|被照顧者姓名\s*[:：]|病人姓名\s*[:：]|本人姓名\s*[:：]|服務單位名稱\s*[:：]|工作人員姓名\s*[:：]|居服員姓名\s*[:：]|出生日期\s*[:：]|診斷\s*[:：]|病況\s*[:：]|症狀\s*[:：]|過敏\s*[:：]|藥名\s*[:：]|用藥名稱\s*[:：]|劑量\s*[:：]|餵食|吞嚥|移位步驟|攙扶步驟|行動細節|如廁|沐浴|傷口|管路|輔具指示|行為處理|心理健康內容|照護紀錄內容|精確時間|到場時間\s*[:：]|離場時間\s*[:：]|精確位置|詳細地點|GPS|案件編號\s*[:：]|會員號\s*[:：]|服務對象編號\s*[:：]|工作人員編號\s*[:：]|計費金額\s*[:：]|請款金額\s*[:：]|指控內容|證據全文|申訴全文|異議全文|簽名|門鎖密碼|保全密碼|登入密碼|驗證碼|私人訊息|通信內容/i.test(privacyText))
+        return zh ? "偵測到可能的本人、服務單位、地址、健康照護、工作人員、精確時間位置、案件費用、指控／證據／申訴全文、簽名、登入或私人通信內容。請改成安全事件、來源、收件、案件狀態、改善或結果代號。" : "A possible identity, provider, address, health or care, worker, exact time or location, case or cost, allegation or evidence or complaint text, signature, credential or private correspondence detail was detected. Use a safe event, source, receipt, case-status, correction or result pointer.";
+
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length })).filter((item) => item.count > 0);
+      if (zh)
+        return `${values.review.trim()}｜居家服務疑慮、受理、回覆與實際改善狀態
+疑慮與處理情境：${values.context}
+事件與來源版本基準：${formatter.format(baselineDate)}
+本次受理、回覆與結果核對：${formatter.format(reviewDate)}
+下一次調查、回覆或實際改善結果核點：${formatter.format(nextReview)}
+仍開放的安全、來源、受理、調查、回覆、改善或審查列：${openRows.length} 筆
+已核對、完成或不適用列：${closedRows.length} 筆
+狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}
+
+服務單位、方案、個案管理、主管機關、申訴、調處與安全來源地圖：${values.basis.trim()}
+
+${lines("有版本的疑慮、受理、調查、回覆、改善與實際結果證據", recordRows.map((row) => `${row.parts[0]}｜本人／疑慮情境：${row.parts[1]}｜負責處理來源：${row.parts[2]}｜受保護本人與服務關係：${row.parts[3]}｜事件來源／證據保管：${row.parts[4]}｜受理類型／收件／案件狀態：${row.parts[5]}｜安全／不利處分風險／調查／回覆範圍／下一程序：${row.parts[6]}｜本人參與／希望結果：${row.parts[7]}｜回覆／改善行動／實際結果／未解項目／重開：${row.parts[8]}｜負責角色：${row.parts[9]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[10]) as Date)}｜狀態：${row.parts[11]}`))}
+
+受保護事件、收件、調查、回覆、改善、結果與申訴歷程位置：${values.storage.trim()}
+
+這份輸出只是家庭居家服務疑慮來源、受理、回覆、改善與實際結果索引，不是申訴書、陳情、調處申請、法律意見、醫療或服務紀錄、正式案件、調查、證詞或證據。它不判斷安全、虐待、疏忽、違約、責任或處分；不代表本人授權或送件；不聯絡單位、不提交申訴、不選管轄、不計算期限、不保證結果，也不把服務單位回覆寫成實際改善。有立即危險或依法應立即通報的情況，先使用所在地緊急與正式通報來源；其他疑慮請直接使用目前服務單位、A 單位個案管理、照管中心、1966、地方主管機關、契約、方案及合格程序。`;
+      return `${values.review.trim()} — home-care concern, intake, response and actual-improvement status
+Concern and handling context: ${values.context}
+Event and source-version baseline: ${formatter.format(baselineDate)}
+Current intake, response and result review: ${formatter.format(reviewDate)}
+Next investigation, response or actual-improvement checkpoint: ${formatter.format(nextReview)}
+Open safety, source, intake, investigation, response, correction or review rows: ${openRows.length}
+Reviewed, completed or not-applicable rows: ${closedRows.length}
+Status count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}
+
+Agency, program, case-management, authority, complaint, mediation and safety-source map: ${values.basis.trim()}
+
+${lines("Versioned concern, intake, investigation, response, correction and actual-result evidence", recordRows.map((row) => `${row.parts[0]} — person/concern context: ${row.parts[1]} — responsible handling source: ${row.parts[2]} — protected person and service relationship: ${row.parts[3]} — event source/evidence custody: ${row.parts[4]} — intake type/receipt/case status: ${row.parts[5]} — safety/retaliation risk/investigator/response scope/next process: ${row.parts[6]} — person participation/requested outcome: ${row.parts[7]} — response/corrective action/actual result/unresolved item/reopen: ${row.parts[8]} — owner: ${row.parts[9]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[10]) as Date)} — status: ${row.parts[11]}`))}
+
+Protected event, receipt, investigation, response, correction, result and complaint-history location: ${values.storage.trim()}
+
+This output is a household home-care concern-source, intake, response, correction and actual-result index, not a complaint, grievance, appeal, mediation request, legal advice, clinical or service record, official case, investigation, testimony or evidence. It does not determine safety, abuse, neglect, breach, liability or sanctions; establish person authority or file anything; contact an agency; select jurisdiction; calculate a deadline; guarantee an outcome; or treat an agency response as actual improvement. If there is immediate danger or a situation requiring immediate official reporting, use local emergency and reporting sources first. Use the current agency, case manager, program, plan, state or local authority, contract, official notice and qualified process for every real concern and right.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
     intro:
@@ -6087,6 +6320,9 @@ const definitions: Record<string, Definition> = {
   "home-care-service-interruption-backup-continuity-log": {
     ...homeCareInterruptionDefinition("en"),
   },
+  "home-care-complaint-response-resolution-log": {
+    ...homeCareComplaintDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -6115,6 +6351,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "home-care-service-interruption-backup-continuity-log": {
     ...homeCareInterruptionDefinition("zh-TW"),
+  },
+  "home-care-complaint-response-resolution-log": {
+    ...homeCareComplaintDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

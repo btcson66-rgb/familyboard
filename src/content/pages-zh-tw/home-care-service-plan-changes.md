@@ -14,6 +14,8 @@ lastReviewedAt: "2026-08-26"
 nextStep: "選最近一則居家服務變更訊息，先回答誰有權提出變更、哪個舊版本仍有效、正式通知在哪裡，以及第一次新版服務是否真的發生。"
 related:
   - "/zh-tw/tools/home-care-service-plan-change-notice-log/"
+  - "/zh-tw/guides/home-care-service-complaint-resolution/"
+  - "/zh-tw/tools/home-care-complaint-response-resolution-log/"
   - "/zh-tw/guides/home-care-service-visit-records/"
   - "/zh-tw/tools/home-care-visit-scope-service-result-log/"
   - "/zh-tw/guides/caregiver-handoff-checklist/"
@@ -178,6 +180,8 @@ FamilyBoard 只能建立安全來源索引，不會重新評估、不會核定�
 衛福部的長期照顧服務[陳情、申訴及調處機制](https://1966.gov.tw/LTC/cp-6443-69922-207.html)說明地方主管機關應建立相關機制；[各縣市長期照顧管理中心聯絡資訊](https://1966.gov.tw/LTC/cp-6443-69944-207.html)提供官方聯絡起點。實際要先找服務單位、照管中心、個案管理、1966、地方主管機關或其他路徑，取決於問題是計畫、契約、排班、專業服務、費用、服務中斷或安全。
 
 家庭安全索引只記受理路徑代號和實際收到的結果。完整異議理由、證據、通信、簽名和個人資料應放在負責程序要求的受保護管道。
+
+需要繼續追蹤時，依[居家服務申訴指南](/zh-tw/guides/home-care-service-complaint-resolution/)分辨服務單位申訴、照顧計畫或給付異議、1966 諮詢、地方主管機關陳情與調處，再用[居家服務申訴、回覆與改善結果紀錄表](/zh-tw/tools/home-care-complaint-response-resolution-log/)保留收件、調查、本人參與、回覆、改善與後續服務結果。變更表本身仍保存前後版本、通知與第一次新版服務。
 
 ## 家庭內部分工：一人保存來源，一人核對實際結果
 

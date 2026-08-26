@@ -116,6 +116,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/home-care-visit-scope-service-result-log/",
     "/tools/home-care-service-plan-change-notice-log/",
     "/tools/home-care-service-interruption-backup-continuity-log/",
+    "/tools/home-care-complaint-response-resolution-log/",
     "/guides/caregiver-handoff-checklist/",
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
@@ -183,6 +184,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/home-care-service-plan-changes/",
     "/zh-tw/tools/home-care-service-interruption-backup-continuity-log/",
     "/zh-tw/guides/home-care-service-interruption-backup-plan/",
+    "/zh-tw/tools/home-care-complaint-response-resolution-log/",
+    "/zh-tw/guides/home-care-service-complaint-resolution/",
     "/zh-tw/guides/caregiver-handoff-checklist/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
@@ -2005,6 +2008,32 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(page.locator(".result")).toContainText("已核對、完成或不適用列：1 筆");
   await expect(page.locator(".result")).toContainText("已核對中斷來源、安全路徑、備援決定、替代服務與恢復結果 1 筆");
   await page.getByLabel("下一次替代服務、恢復或負責結果核點").fill("2026-08-25");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次核對日",
+  );
+
+  await page.goto("/tools/home-care-complaint-response-resolution-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open safety, source, intake, investigation, response, correction or review rows: 1");
+  await expect(page.locator(".result")).toContainText("Reviewed, completed or not-applicable rows: 1");
+  await expect(page.locator(".result")).toContainText("Concern source, intake, investigation, participation, response and actual improvement result reviewed 1");
+  await page.getByLabel("Next investigation, response or actual-improvement checkpoint").fill("2026-08-25");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+  await page.goto("/tools/home-care-complaint-response-resolution-log/");
+  await page.getByLabel("Protected event, receipt, investigation, response, correction, result and complaint-history location").fill("patient name: example; medication name: aspirin; complaint text: private");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible identity, provider, address, health or care, worker, exact time or location, case or cost, allegation or evidence or complaint text");
+
+  await page.goto("/zh-tw/tools/home-care-complaint-response-resolution-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的安全、來源、受理、調查、回覆、改善或審查列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對、完成或不適用列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對疑慮來源、受理、調查、本人參與、回覆與實際改善結果 1 筆");
+  await page.getByLabel("下一次調查、回覆或實際改善結果核點").fill("2026-08-25");
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText(
     "不能早於本次核對日",

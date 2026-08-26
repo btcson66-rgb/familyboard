@@ -14,6 +14,8 @@ lastReviewedAt: "2026-08-26"
 nextStep: "先產生預設版本，逐一核對一列已完成的方案變更與一列仍待銜接的服務異動；不要因收到通知就提前關閉第二列。"
 related:
   - "/zh-tw/guides/home-care-service-plan-changes/"
+  - "/zh-tw/tools/home-care-complaint-response-resolution-log/"
+  - "/zh-tw/guides/home-care-service-complaint-resolution/"
   - "/zh-tw/tools/home-care-visit-scope-service-result-log/"
   - "/zh-tw/guides/home-care-service-visit-records/"
   - "/zh-tw/tools/caregiver-handoff-source-authorization-log/"
@@ -112,6 +114,8 @@ contentVersion: 1
 工具不估算長照額度、自付比例、服務次數、取消費、退費或其他費用，也不判斷某次調整是否有效。收到費用或給付通知後，保存原始版本，指出負責來源及家庭回應；需要爭議處理時，使用目前契約提供的服務單位窗口、照管／個案管理、1966、地方主管機關或原始通知指定程序。
 
 衛福部的長期照顧服務[陳情、申訴及調處機制](https://1966.gov.tw/LTC/cp-6443-69922-207.html)及[各縣市長期照顧管理中心聯絡資訊](https://1966.gov.tw/LTC/cp-6443-69944-207.html)提供官方起點，但實際路徑仍依爭議性質、所在地、目前契約與方案決定。FamilyBoard 不替你選管轄、送件或計算期限。
+
+家庭不同意變更、通知或第一次新版服務結果時，使用[居家服務申訴、回覆與改善結果紀錄表](/zh-tw/tools/home-care-complaint-response-resolution-log/)另記正式受理、調查、本人參與、回覆與實際改善；先讀[居家服務申訴指南](/zh-tw/guides/home-care-service-complaint-resolution/)判斷是服務單位申訴、給付異議、地方主管機關陳情或調處。不要把通知簽收寫成申訴收件。
 
 ## 隱私阻擋是草稿防線，不是正確性證明
 

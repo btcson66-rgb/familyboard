@@ -1864,6 +1864,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/home-care-complaint-response-resolution-log/",
+    "alternateRoute": "/zh-tw/tools/home-care-complaint-response-resolution-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2192,6 +2200,20 @@
     "alternateRoute": "/features/free-home-management-app/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/home-care-complaint-response-resolution-log/",
+    "alternateRoute": "/tools/home-care-complaint-response-resolution-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-care-service-complaint-resolution/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {
