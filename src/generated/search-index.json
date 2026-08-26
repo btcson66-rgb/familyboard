@@ -880,12 +880,12 @@
     "headings": "Organize pet records without turning the shared care sheet into a medical file Give each pet a safe alias and keep the real match protected Treat a microchip, registry and owner contact record as three related layers Separate current certificates from the rule or venue that asks for them Keep veterinary instructions in their issued source, not in app-generated prose Build a least-information sitter handoff Make travel records destination- and date-specific Connect emergency preparation without publishing the private file Close a row only on an observed responsible result Keep future affiliate placement outside veterinary and authority decisions"
   },
   {
-    "title": "How to Organize School Records at Home Without Mixing Them into General Household Clutter",
-    "description": "Create a household index for school contacts, schedules, permissions and document references while keeping sensitive student records protected.",
+    "title": "How to Organize School Records by Source, Student Match and School Result",
+    "description": "Build a private school-record index for enrollment, attendance, learning support, health, transport and consent without exposing student details.",
     "route": "/guides/organize-school-records-at-home/",
     "cluster": "records-emergency",
     "keywords": "organize school records at home",
-    "headings": "School information changes every year, so the household needs a current index, not a permanent archive What FERPA actually covers, and why it matters for home organization Store current contacts and key dates, not a running archive Keep the sensitive record categories separate from the shared index Do the reset at the end of every school year Build handoff notes for anyone who isn't the usual parent at pickup Households with children at multiple schools need separate entries, not one merged note Recurring annual forms deserve a reminder, not just a folder"
+    "headings": "Organize school records without putting a student file on the household dashboard Start with a safe learner alias and a dated school year Treat the school's official record and the household index as different systems Separate enrollment, attendance, assessment and support records Record access, amendment and disagreement as different outcomes Keep health, counseling and learning-support content in protected sources Treat directory information, photos and activity consent as source-specific choices Pickup and transport handoffs require the school's actual acceptance Use event-driven review instead of deleting every record in June Keep future affiliate placement outside student decisions"
   },
   {
     "title": "Emergency Binder: What to Organize Before Your Household Is Under Stress",
@@ -1710,6 +1710,14 @@
     "cluster": "tools",
     "keywords": "pet records organizer",
     "headings": "Household pet record source and handoff log Create one dated review with a safe pet alias Each row has twelve source and handoff fields Twelve statuses preserve discovery, protected match, handoff and result A responsible source must control the stated purpose Protected pet match is evidence, not a public identifier Veterinary access never authorizes the app to create care instructions A sent document or generated sheet is still an open action Animal-welfare, emergency and adverse-event conflicts stop the workflow Privacy screening is deliberately conservative Affiliate products cannot validate pet identity, care or travel"
+  },
+  {
+    "title": "Household School Record Source and Handoff Log",
+    "description": "Create a private school-record index for enrollment, attendance, learning support, health, transport, activities and consent.",
+    "route": "/tools/household-school-record-source-handoff-log/",
+    "cluster": "tools",
+    "keywords": "school records organizer",
+    "headings": "Household school record source and handoff log Create one dated review with a safe learner alias Each row has twelve school-source and handoff fields Twelve statuses preserve discovery, protected match, handoff and result A responsible source must control the stated school purpose Protected student match is evidence, not a shared identity profile Official-record access and amendment are separate events Health, counseling and learning-support content stays protected Pickup, transport, activities and consent close only on acceptance Privacy screening is deliberately conservative Affiliate products cannot validate a school record or decision"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",

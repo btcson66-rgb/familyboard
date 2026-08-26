@@ -137,6 +137,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-pet-record-source-handoff-log/</loc>",
       "<loc>https://familyboard.win/guides/organize-pet-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-pet-records/</loc>",
+      "<loc>https://familyboard.win/tools/household-school-record-source-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-school-record-source-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/organize-school-records-at-home/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/organize-school-records-at-home/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -638,6 +642,24 @@ const checks = [
       'hreflang="zh-TW"',
       "Treat a microchip, registry and owner contact record as three related layers",
       "Keep veterinary instructions in their issued source, not in app-generated prose",
+    ],
+  },
+  {
+    path: "/tools/household-school-record-source-handoff-log/",
+    require: [
+      "Household School Record Source and Handoff Log",
+      'hreflang="zh-TW"',
+      "Twelve statuses preserve discovery, protected match, handoff and result",
+      "It does not sign in to a school, district, state, health, transport or activity system",
+    ],
+  },
+  {
+    path: "/guides/organize-school-records-at-home/",
+    require: [
+      "Organize school records without putting a student file on the household dashboard",
+      'hreflang="zh-TW"',
+      "official record and the household index as different systems",
+      "Pickup and transport handoffs require",
     ],
   },
   {
@@ -1169,6 +1191,24 @@ const checks = [
       'hreflang="en"',
       "晶片、登記、飼主資料與登記證明是四層",
       "病歷、診斷與用藥指示留在獸醫來源",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-school-record-source-handoff-log/",
+    require: [
+      "家庭學校紀錄來源與交接狀態表",
+      'hreflang="en"',
+      "十二種狀態分開找到來源、學生比對、交接與校方結果",
+      "工具不登入學校、教育主管機關、健康、輔導、特教、交通、繳費或活動系統",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/organize-school-records-at-home/",
+    require: [
+      "學籍、成績、健康與同意書怎麼整理？台灣家庭學校紀錄指南",
+      'hreflang="en"',
+      "學籍不是一份通用文件，要先分教育階段與負責來源",
+      "交通、接送與放學授權是安全流程，不是一般聯絡表",
     ],
   },
   {

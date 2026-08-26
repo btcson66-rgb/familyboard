@@ -237,7 +237,7 @@ test("representative routes have no serious accessibility violations", async ({
 test("Traditional Chinese pages are indexable, paired and functional", async ({
   page,
 }) => {
-  test.setTimeout(180_000);
+  test.setTimeout(240_000);
   await page.goto("/zh-tw/");
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
@@ -1839,6 +1839,32 @@ test("Traditional Chinese pages are indexable, paired and functional", async ({
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText(
     "不能早於本次寵物紀錄核對日",
+  );
+
+  await page.goto("/tools/household-school-record-source-handoff-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open source, student-match, version, access, handoff or school-result rows: 1");
+  await expect(page.locator(".result")).toContainText("Reviewed, completed or not-applicable rows: 1");
+  await expect(page.locator(".result")).toContainText("Source, student match, version, access and handoff reviewed 1");
+  await page.getByLabel("Next source, handoff or school-result checkpoint").fill("2026-08-23");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "cannot be earlier than the current review",
+  );
+  await page.goto("/tools/household-school-record-source-handoff-log/");
+  await page.getByLabel("Protected enrollment, assessment, support, health, consent and review-history location").fill("student name: example; grade: A");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible student identity, school, address, grade, attendance");
+
+  await page.goto("/zh-tw/tools/household-school-record-source-handoff-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的來源、學生比對、版本、存取、交接或校方結果列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對、完成或不適用列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對來源、學生比對、版本、存取與交接 1 筆");
+  await page.getByLabel("下一次來源、交接或校方結果核點").fill("2026-08-23");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "不能早於本次家庭學校紀錄核對日",
   );
 
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");

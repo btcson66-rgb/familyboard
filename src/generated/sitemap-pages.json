@@ -913,9 +913,9 @@
   },
   {
     "route": "/guides/organize-school-records-at-home/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/organize-school-records-at-home/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-08-24",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1816,6 +1816,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-school-record-source-handoff-log/",
+    "alternateRoute": "/zh-tw/tools/household-school-record-source-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-24",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2350,6 +2358,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/household-school-record-source-handoff-log/",
+    "alternateRoute": "/tools/household-school-record-source-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-26",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/household-storm-readiness-review/",
     "alternateRoute": "/tools/household-storm-readiness-review/",
     "indexable": true,
@@ -2494,6 +2509,13 @@
     "alternateRoute": "/guides/organize-pet-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/organize-school-records-at-home/",
+    "alternateRoute": "/guides/organize-school-records-at-home/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-26",
     "locale": "zh-TW"
   },
   {

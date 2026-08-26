@@ -8126,56 +8126,105 @@ A future clearly labelled affiliate area may compare document sleeves, waterproo
 
 ## Page 115 — Organize School Records at Home
 **Slug:** `/guides/organize-school-records-at-home/`
-**Primary intent:** organize school-related household information
-**Title tag:** `How to Organize School Records at Home Without Mixing Them into General Household Clutter`
-**Meta description:** `Create a household index for school contacts, schedules, permissions and document references while keeping sensitive student records protected.`
+**Primary intent:** organize school records by responsible source, protected student match and observed school result
+**Title tag:** `How to Organize School Records by Source, Student Match and School Result`
+**Meta description:** `Build a private school-record index for enrollment, attendance, learning support, health, transport and consent without exposing student details.`
 **Primary keyword concept:** organize school records at home
 **Depth:** verified
-**Suggested internal links:** `/guides/household-account-list/`, `/guides/emergency-information-sheet/`, `/guides/annual-renewal-calendar/`, `/features/household-documents-organizer/`
+**Published date:** 2026-08-19
+**Editorial review date:** 2026-08-24
+**Content version:** 2
+**Suggested internal links:** `/tools/household-school-record-source-handoff-log/`, `/guides/household-account-list/`, `/guides/emergency-information-sheet/`, `/guides/annual-renewal-calendar/`, `/features/household-documents-organizer/`
 
-# School information changes every year, so the household needs a current index, not a permanent archive
+# Organize school records without putting a student file on the household dashboard
 
-Teacher contacts, pickup lists, transportation notes, activity schedules and annual permission forms arrive through email, apps and paper backpack folders, and most of it is only correct for a single school year. A household organizer that treats school information as a growing, never-pruned pile becomes less useful every September; one that treats it as a current-year operations layer stays genuinely useful.
+Enrollment notices, attendance messages, assessment reports, learning-support plans, school-health records, bus information, activity forms and pickup permissions may all concern one learner while being controlled by different school sources. A useful household organizer says which source controls each purpose, which protected learner record was matched, which dated version was actually opened, who owns the next action and what school result remains pending.
 
-## What FERPA actually covers, and why it matters for home organization
+Keep a public-safe household index and a separate protected evidence set. The shared index may show a safe learner alias, record purpose, responsible school source, source-check date, protected match pointer, current-version observation, access result, household handoff owner and next checkpoint. Keep the learner's full name, student ID, birth date, address, grades, attendance details, discipline, health, disability, counseling, support-plan content, pickup names, signatures, credentials and payment details outside that view.
 
-Under federal law, [the U.S. Department of Education defines an "education record"](https://studentprivacy.ed.gov/faq/what-education-record) broadly — it includes "grades, transcripts, class lists, student course schedules, health records (at the K-12 level), student financial information (at the postsecondary level), and student discipline files," in whatever format they're kept. FERPA gives parents specific rights to access and review those official records, which are held by the school, not the household. The practical distinction that matters at home: FERPA governs the school's official record, while the household's own organizer is a separate, informal operational index — current contacts and dates, not a copy of the disciplinary file or the official transcript.
+Use the free [Household School Record Source and Handoff Log](/tools/household-school-record-source-handoff-log/) when you need a dated version that separates finding a source, performing a protected student match, preparing a household handoff and receiving an attributable school result.
 
-## Store current contacts and key dates, not a running archive
+## Start with a safe learner alias and a dated school year
 
-Useful entries: school name and office contact, the current teacher or program contact for each enrolled child, and the handful of dates that actually matter this term — early dismissal days, conference dates, major deadlines. Resist the pull to store every newsletter or every past teacher's contact "just in case" — a current-operations index answers "who do I call today," and last year's teacher's number doesn't help with that.
+Use a code such as `HOUSEHOLD-LEARNER-A` on the shared view. A household member should be able to follow a protected pointer such as `LEARNER-A / enrollment / current school notice` without the dashboard displaying a name, school, classroom, student number or portal account. A nickname alone may not be a reliable match when siblings, twins, name changes or multiple programs are involved.
 
-## Keep the sensitive record categories separate from the shared index
+Give the version a real time boundary: academic year, term or enrollment event, source-map baseline, review date and next household checkpoint. The checkpoint is not a school deadline. Reopen a row after a new term, enrollment or transfer, school or district change, contact or custody-authority change, new evaluation or support plan, health or transport change, activity enrollment, consent choice, access failure or conflicting notice.
 
-Health information, IEP or disability accommodation records, and any identity documents (birth certificate copies schools sometimes require) deserve stronger privacy than a general shared household view. The organizer can note where those records are stored — "IEP binder, filing cabinet" — without reproducing their contents on a screen other household members or a babysitter might see.
+## Treat the school's official record and the household index as different systems
 
-## Do the reset at the end of every school year
+The U.S. Department of Education's [definition of an education record](https://studentprivacy.ed.gov/faq/what-education-record) turns on two facts: the record is directly related to a student, and an educational agency, institution or party acting for it maintains the record. Examples include grades, transcripts, class lists, course schedules, K–12 health records and discipline files. A household note does not become the school's official record merely because it refers to the same event.
 
-June is the natural checkpoint: archive the outgoing teacher's contact, remove the schedule that no longer applies, and clear activity information tied to programs that have ended. A school-records index that never gets this annual reset accumulates three or four years of stale contacts, at which point nobody trusts it enough to use it — which defeats the purpose entirely.
+The Department's [FERPA parent guide](https://studentprivacy.ed.gov/resources/parent-guide-family-educational-rights-and-privacy-act-ferpa) explains rights concerning education records maintained by covered schools. The household index can record `parent access request submitted; school response pending` or `current record inspected; protected evidence SCHOOL-ACCESS-R2`; it cannot create the official record, authenticate the requesting person, force disclosure, decide whether an exception applies or certify that the school complied.
 
-## Build handoff notes for anyone who isn't the usual parent at pickup
+Do not assume every school, early-childhood provider, private program or postsecondary institution has the same coverage, portal, form or procedure. Record the actual institution, current notice and applicable state or local source in the protected process. FamilyBoard supplies organization, not legal interpretation.
 
-Pickup authorization, allergy or medical notes the school already has on file, and after-school activity logistics are worth a concise handoff note for a grandparent, babysitter or co-parent covering pickup — but follow the school's own authorized-pickup procedure rather than assuming a note in a household app substitutes for whatever ID or verification the school itself requires at the door.
+## Separate enrollment, attendance, assessment and support records
 
-## Households with children at multiple schools need separate entries, not one merged note
+An enrollment confirmation does not prove that contact details are current, an attendance message does not amend an absence record, a report card is not a complete transcript, and a meeting notice is not the current learning-support plan. Create one row per purpose and responsible source:
 
-A family with a child in elementary school and another in middle school is effectively running two parallel sets of contacts, calendars and forms — different office numbers, different early-dismissal days, different teacher rosters. Keep each child's school information as its own entry rather than merging them into one household-wide school note; a merged note is exactly how a parent ends up calling the wrong school office or missing one child's half-day while tracking the other's.
+- enrollment or transfer status — current school registrar, district or state source;
+- attendance or leave status — current attendance office and its written procedure;
+- course, schedule or assessment record — current school portal, teacher or records office for the stated purpose;
+- learning-support or special-education record — responsible school team and current procedural notice;
+- school-health record — responsible school-health source and protected current instruction;
+- transport, pickup or activity requirement — the actual school, district, carrier or program source;
+- fee, meal or activity payment — the current billing source and observed receipt, kept outside the shared index.
 
-## Recurring annual forms deserve a reminder, not just a folder
+Never merge siblings into one row. A notice containing information about more than one student may have separate access and privacy consequences. The shared organizer should not reproduce another student's name, conduct, health information, grade or image simply because it appeared in the same email, classroom document or video.
 
-Emergency contact updates, medical authorization forms, and photo-release or field-trip permissions tend to repeat every year with only small changes. Rather than re-reading last year's paper folder to remember what's due, a recurring reminder tied to the start of the school year — "renew emergency contact form," "update medical authorization" — turns an annual scramble into a checklist that's already anticipated.
+## Record access, amendment and disagreement as different outcomes
 
-**Contextual CTA:** Treat school information as a current operations layer, not a permanent dump of every document the school sends.
+Opening a portal is access, not proof that every relevant record is present or accurate. Submitting a request is an action, not an amendment. The Department's [FERPA amendment resource](https://studentprivacy.ed.gov/resources/amending-record) describes a process for seeking amendment of an education record. Record each stage separately: request sent, school acknowledged, record inspected, school decision received, amended version observed or disagreement route preserved.
+
+Do not overwrite the household's earlier observation after a change. Preserve the dated prior version and add the school result. If the school declines to amend a record, do not rewrite the household row as `corrected`; record the observed decision and follow the current school, district, state or qualified advice for the real next step.
+
+For a learner receiving services under IDEA, the official [IDEA access-rights rule](https://sites.ed.gov/idea/regs/b/f/300.613) addresses access to records collected, maintained or used by participating agencies. FamilyBoard must not calculate a universal response date, determine eligibility, interpret an evaluation, rewrite an IEP, decide placement, or turn a family meeting note into prior written notice. Use the current school team and procedural safeguards for every actual decision.
+
+## Keep health, counseling and learning-support content in protected sources
+
+A household may need to know which school-health office, support team or counselor owns a current matter and whether the intended protected record can be reached. It does not need the diagnosis, medication directions, evaluation scores, counseling narrative, accommodation details or service minutes on a household dashboard.
+
+Store `current protected school-health instruction accessible; evidence HEALTH-SOURCE-V2` or `current support-plan version observed; meeting confirmation pending`. Do not copy the underlying content. If health, safety, crisis, disability-support or instructional sources conflict, stop the household workflow and use the current school, qualified healthcare or emergency route. FamilyBoard cannot determine whether a learner is safe, diagnose a condition, recommend treatment or decide educational services.
+
+## Treat directory information, photos and activity consent as source-specific choices
+
+The Department's current [model directory-information notice](https://studentprivacy.ed.gov/resources/model-notice-directory-information) demonstrates that a school identifies what it treats as directory information and describes an opt-out process. Do not assume `directory information` means harmless, public everywhere or consented forever. Preserve the school's current notice, protected learner match, observed household choice, submission action and school result as separate facts.
+
+Photo, video, yearbook, field-trip, sports and activity forms can have different scopes. A signed form for one event or year is not universal authorization. `Form uploaded`, `fee paid` and `permission sent` remain open actions until the responsible school or program records an attributable result. FamilyBoard cannot sign, withdraw, accept or interpret consent.
+
+## Pickup and transport handoffs require the school's actual acceptance
+
+A caregiver needs the minimum current logistics for the assigned day: safe learner alias, which school or program route applies, planned household role, current official pickup or transport process and whom to contact when the plan fails. Keep addresses, schedules, student identity, access codes, authorized-person names and custody documents in the protected source appropriate to the real handoff.
+
+A note or generated sheet cannot authorize pickup, change a bus stop, excuse an absence or prove legal authority. Record `authorized-pickup change submitted; school result pending`, not `grandparent approved`. Close the row only after the responsible school or transport source produces an observed result and the current limited handoff is protected.
+
+## Use event-driven review instead of deleting every record in June
+
+An annual reset is useful for current contacts, schedules and activity forms, but it is not a universal retention rule. Different official records, disputes, support processes, tax or payment evidence, transitions and legal requirements can have different retention needs. FamilyBoard does not decide what a school must retain or what a household may destroy.
+
+At the end of a term, mark each row: still current, superseded with prior version protected, school-source result received, not applicable with a reopen event, or unresolved and carried forward. Remove a public-safe reminder only when doing so does not erase the source, result or history needed for a live matter.
+
+## Keep future affiliate placement outside student decisions
+
+A future clearly labelled affiliate area may compare accordion files, document sleeves, label makers, scanners, backpacks or offline storage after the educational answer. A commission cannot verify identity, enrollment, attendance, grades, support, health, transport, pickup, payment, consent or a school decision; make a backpack protect confidential records; or replace the institution, education agency or qualified professional. Product cards must never interrupt a safety warning, protected-record step, support process or unresolved school result.
+
+**Next step in FamilyBoard:** create two contrasting rows: one current-year enrollment or contact source that the household can safely access, and one attendance, support, health, transport, activity or consent action that still awaits a school result. Record only the safe learner alias, responsible source, protected match, current version, access result, household owner and exact reopen event.
 
 **FAQ:**
-- Q: What's the difference between FERPA-protected school records and a household's own school notes?
-  A: FERPA governs the official education record the school itself maintains — grades, transcripts, health records at the K-12 level, discipline files — and gives parents a legal right to access it. A household's own organizer is a separate, informal index of current contacts and dates; it doesn't replace or duplicate the school's official record.
-- Q: What school information is actually worth keeping in a household organizer?
-  A: The current school year's contacts (office, current teachers) and the handful of dates that matter this term, like early dismissals and conference dates. Avoid accumulating past years' contacts or every form the school has ever sent — that turns a useful current index into clutter nobody trusts.
-- Q: How often should school records be cleaned up at home?
-  A: Once a year, at the end of the school year, works well — archive the outgoing teachers' contacts, remove schedules tied to the year that just ended, and clear activity details for programs that have finished. Without this annual reset, the list accumulates years of stale information.
+- Q: Is a household school-record index an official education record?
+  A: No. It is a private household source and handoff index. The school or other responsible institution maintains the official record and controls its access, amendment, disclosure and decision processes.
+- Q: Can I paste a report card, transcript, IEP, health record or counseling note into the tool?
+  A: No. Keep sensitive content in its protected school or household source. Record only a safe learner alias, current source, version observation, access result and protected evidence pointer.
+- Q: Does opening the school portal prove the record is complete and accurate?
+  A: No. It proves only that the household opened the observed view. Keep the row open when the requested record, current version, explanation or school result is missing or disputed.
+- Q: Can FamilyBoard calculate a FERPA, IDEA, enrollment, attendance or appeal deadline?
+  A: No. The next checkpoint is only a household reminder. Use the current institution, district, state source and qualified advice for every actual procedure and date.
 - Q: Can a note in a household app authorize someone else to pick up a child from school?
-  A: No — schools have their own authorized-pickup procedures, usually requiring ID verification or a form on file with the office. A household handoff note can remind a grandparent or sitter of the logistics, but it doesn't substitute for whatever process the school itself requires.
+  A: No. A handoff note can remind a caregiver which protected process to follow, but only the responsible school and applicable authority can accept a pickup or transport change.
+- Q: Why does a submitted form or paid fee remain open?
+  A: Submission and payment are household actions. Close the row only after the responsible school, district, carrier or program produces an observed result and the current evidence is protected.
+- Q: How often should the index be reviewed?
+  A: Review it at each new term and before a handoff, then reopen affected rows after enrollment, transfer, contact, authority, assessment, support, health, transport, activity, consent, access or source changes. Do not use one annual purge as a universal retention rule.
 
 ---
 
@@ -15754,6 +15803,124 @@ A future clearly labelled affiliate area may compare document sleeves, waterproo
   A: Stop using the organizer and contact the treating or prescribing veterinarian, emergency animal hospital or responsible authority. The tool cannot diagnose, triage or recommend whether to give, repeat, skip or stop anything.
 - Q: Does a closed row prove a pet is registered, healthy or accepted for travel?
   A: No. It closes only this dated household source-and-handoff review. The responsible registry, authority, veterinarian, provider and actual issued records control every external result.
+
+---
+
+## Page 228 — Household School Record Source and Handoff Log
+**Slug:** `/tools/household-school-record-source-handoff-log/`
+**Primary intent:** document school-record sources, protected student matches, household handoffs and observed school results without storing student details
+**Title tag:** `Household School Record Source and Handoff Log`
+**Meta description:** `Create a private school-record index for enrollment, attendance, learning support, health, transport, activities and consent.`
+**Primary keyword concept:** school records organizer
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-24
+**Editorial review date:** 2026-08-24
+**Content version:** 1
+**Suggested internal links:** `/guides/organize-school-records-at-home/`, `/guides/household-account-list/`, `/guides/emergency-information-sheet/`, `/guides/annual-renewal-calendar/`, `/features/household-documents-organizer/`
+
+# Household school record source and handoff log
+
+Enrollment, attendance, assessment, learning-support, school-health, transport, activity, fee and consent records may all concern one learner while supporting different decisions. This free browser tool creates a dated public-safe index for a safe learner alias, record purpose, responsible school source, protected student match, current version observation, access and custody, school status or requirement source, family handoff, observed result, review route, owner role and next checkpoint.
+
+It does not sign in to a school, district, state, health, transport or activity system; read, upload, create, transfer, amend or destroy an official education record; authenticate a parent, guardian, eligible student or authorized recipient; verify enrollment, attendance, grades, credits, support, health, transport, payment, consent or pickup authority; diagnose a condition; interpret an evaluation, IEP, accommodation, counseling or discipline record; calculate a FERPA, IDEA, enrollment, leave, assessment, payment or appeal deadline; or authorize any disclosure, service, activity or handoff. Use the current institution, education agency, teacher, registrar, student-services, special-education, school-health, transport, activity and qualified professional sources.
+
+**Ready to replace `school record current` with a responsible source and observed result? [Jump to the Household School Record Source and Handoff Log](#tool-heading).**
+
+## Create one dated review with a safe learner alias
+
+Use a private review code such as `SCHOOL-RECORDS-2026-A` and a learner alias such as `HOUSEHOLD-LEARNER-A`. Choose the real context: initial current-year source map, enrollment or transfer review, attendance or calendar handoff, official-record access, learning-support meeting, school-health handoff, transport or pickup change, activity or consent review, or conflicting source.
+
+The baseline date marks the source map used at the start. The current review date says when responsible sources and protected evidence were observed. The next checkpoint bounds open household follow-up. It is not a registration, attendance, assessment, meeting, records-access, payment, consent, transport, appeal or legal deadline.
+
+The global map may name a current school office, district or state source, school portal role, teacher or records office, support team, health office, transport provider, activity program and protected evidence IDs. Keep full student, parent, guardian, teacher, caregiver and pickup names; school and classroom names; student IDs; birth dates; addresses; contacts; schedules; grades; attendance; discipline; health; diagnosis; support-plan contents; signatures; credentials; payment and private messages out of the form.
+
+## Each row has twelve school-source and handoff fields
+
+Enter one school-record purpose and responsible-source relationship per line:
+
+`ID | safe learner alias, record purpose and household role | responsible school source and scope | protected student-match evidence plus source checked date YYYY-MM-DD | current record or notice version observation | access and custody observation | school status or requirement source | family handoff or action plus observed result | discrepancy, safety, consent, school or qualified review route | owner role | target or outcome date YYYY-MM-DD | one of the twelve listed statuses`
+
+The source-check date must fall from the baseline through the current review. An open row needs a household target from the current review through the next checkpoint. A closed row needs an outcome date from the baseline through the current review. One dated version supports at most 14 rows.
+
+Use safe statements such as `protected learner record matched; evidence LEARNER-A-ID2; checked 2026-08-24`, `current enrollment notice opened; personal content not copied` and `current support-plan version observed in protected source LEARNER-A-SUPPORT2`. Do not type the actual person, institution, ID, grade, attendance, health, support, custody, authorization, financial or case value.
+
+## Twelve statuses preserve discovery, protected match, handoff and result
+
+1. **Household school purpose recorded—record category pending:** the household knows why information matters but has not classified the responsible record.
+2. **Record category recorded—responsible school source pending:** enrollment, attendance, assessment, support, health, transport, activity, fee or consent purpose is known while the controlling source remains open.
+3. **Responsible school source recorded—protected student match pending:** a school, district, state agency, teacher, support team, health office, carrier or program is identified but the record has not been matched to protected learner evidence.
+4. **Protected student match recorded—current record or notice version pending:** the match pointer exists while the current official record, notice, form, plan or instruction is unresolved.
+5. **Current record or notice version recorded—access and custody pending:** a current version clue exists while the protected source, original, portal view or limited copy has not been opened in this review.
+6. **Access and custody tested—school status or requirement source pending:** the intended record opened, while the enrollment, attendance, assessment, support, health, transport, activity or consent source is not mapped.
+7. **School status or requirement sources mapped—family handoff or action pending:** responsible sources exist while a household handoff, external step and owner remain open.
+8. **Enrollment, attendance, record, support, transport, activity or consent action recorded—school result pending:** a request, submission, meeting, upload, payment or rehearsal is attributable, but the school, agency, carrier, provider or recipient result is not observed.
+9. **Identity, enrollment, learning-support, safety or consent conflict—school or qualified review pending:** sources disagree, a private learner match is unclear, or a safety, support, authority or consent issue exists, and the responsible route is named.
+10. **Source, student match, version, access and handoff reviewed:** the dated row links the responsible source, protected match, current version, actual access, status source and current handoff or reopen rule.
+11. **School-source result received—custody and next-term condition recorded:** the required result was observed and the current record, notice, original or limited handoff is protected with a new-term trigger.
+12. **Not applicable—reason and reopen event recorded:** the record role does not currently apply and the row says which term, school, activity, transport, support, health or consent event reopens it.
+
+The first nine remain open. The final three close only this dated review. A new academic year, enrollment, transfer, institution, authority, contact, assessment, support plan, health instruction, transport route, activity, consent choice, access failure or conflicting notice creates a new version rather than erasing history.
+
+## A responsible source must control the stated school purpose
+
+The tool rejects a reviewed row if it relies only on `family memory`, `another parent said`, `old email` or `internet search`. Name the current school office, district or state source, teacher, records office, support team, school-health office, transport provider or activity program and explain which record role it controls.
+
+Do not stretch one source across every claim. A portal landing page does not prove every record is present. A report card is not necessarily a complete transcript. An enrollment notice does not authorize pickup. A paid activity fee does not prove participation was accepted. A meeting invitation is not the current support plan or school decision. A generated handoff sheet does not excuse an absence or change transport.
+
+## Protected student match is evidence, not a shared identity profile
+
+The household must distinguish the intended learner without exposing the complete identity. Perform the student, institution, academic-year and record comparison in the responsible protected process. Record only a safe pointer, source-check date and what type of match was observed.
+
+`Protected learner and current enrollment source matched; evidence LEARNER-A-ID2` is useful workflow evidence. The tool cannot see the protected record, authenticate a person, confirm legal authority or decide whether the match is correct. Keep the row open when the identity, institution, academic year, record category or receiving source conflicts.
+
+## Official-record access and amendment are separate events
+
+`Portal opened` describes access to an observed view. It does not prove that a requested record is complete, accurate, current or amendable. A records request, correction request or meeting request is an action. The action row must name what was submitted and which school result remains pending.
+
+A completed result row must state that the responsible school or agency produced an observed record, notice, decision or confirmation. It must also record custody of the current version and the event that opens a new academic version. The tool cannot exercise FERPA or IDEA rights, amend a record, resolve a disagreement, determine eligibility or decide placement.
+
+## Health, counseling and learning-support content stays protected
+
+The source map may identify a school-health office, counselor, student-services team or special-education route. It must not contain a diagnosis, medicine direction, evaluation score, counseling narrative, accommodation, service minute, behavior detail, discipline allegation or plan content.
+
+If a current health, safety, crisis, learning-support, authority or consent source conflicts, stop routine household organization and use the current school, healthcare, emergency, education-agency or qualified professional route. The tool cannot diagnose, triage, interpret an evaluation, recommend a service or tell staff or caregivers how to respond to an emergency.
+
+## Pickup, transport, activities and consent close only on acceptance
+
+`Pickup change submitted`, `bus request sent`, `activity fee paid`, `photo form uploaded` and `field-trip permission delivered` are household actions. They remain open until the responsible school, carrier or program returns an observed result. One form's scope does not extend automatically to another learner, event, year, disclosure or activity.
+
+A caregiver handoff should use the least information necessary for the actual assignment. Keep full identities, schedules, addresses, contact lists, custody documents and access instructions in the protected process. A FamilyBoard output cannot authorize pickup, alter transport, excuse attendance, grant consent or prove a caregiver's authority.
+
+## Privacy screening is deliberately conservative
+
+The form rejects common full phone and email patterns, long numeric identifiers and terms associated with student, child, school or pickup names; student IDs; birth dates; addresses; grades and scores; transcripts and report cards; attendance and discipline; IEP, 504, support, counseling and health records; diagnosis and medication; consent signatures; banking; credentials and private messages. It cannot recognize every sensitive value or determine who is authorized.
+
+Entries stay in the current browser and are not sent to FamilyBoard. The result is not automatically encrypted or backed up. Copying, printing, downloading or saving to the FamilyBoard App creates another user-controlled copy, so review its limited audience and every row before sharing it.
+
+## Affiliate products cannot validate a school record or decision
+
+A future clearly labelled affiliate area may compare document sleeves, accordion files, label makers, scanners, backpacks or offline storage after the generated result. A commission cannot validate identity, enrollment, attendance, grades, support, health, transport, pickup, fee, consent, authority or a school decision; protect a confidential record merely by placing it in a product; or replace an institution, education agency or qualified professional. Product placement must remain outside every safety, protected-record, support and unresolved-result step.
+
+**Next step in FamilyBoard:** start with one reviewed enrollment or contact row and one open attendance, support, health, transport, activity or consent row. Confirm the safe learner alias, responsible source, protected match, current version, access result, household owner and exact school result still pending.
+
+**FAQ:**
+- Q: Can I enter a student's full name, ID or school name?
+  A: No. Use those only in the protected institution or household process that needs them. Record a safe learner alias, protected match pointer, source-check date and observation here.
+- Q: Does this tool read a transcript, report card, IEP or health record?
+  A: No. It cannot access or authenticate any school system or document. It records which responsible source and current version the household actually opened.
+- Q: Can the next checkpoint calculate a FERPA, IDEA or school deadline?
+  A: No. It is only a household follow-up date. Use the current school, education agency, procedural notice and qualified advice for actual requirements and dates.
+- Q: Why does a submitted pickup, transport, activity or consent form remain open?
+  A: Submitting, uploading, paying or signing is an action. The row closes only after the responsible school, carrier or program result is observed and its current evidence is protected.
+- Q: Can a generated handoff authorize pickup or excuse an absence?
+  A: No. It can remind a caregiver which official process to follow, but it cannot grant authority, change a school record or prove acceptance.
+- Q: What should I do if identity, health, support or consent sources conflict?
+  A: Stop routine organization and contact the responsible school, education agency, healthcare, emergency or qualified professional source. FamilyBoard cannot resolve the conflict or decide what service or action is appropriate.
+- Q: Does a closed row prove enrollment, grades, support or consent is valid?
+  A: No. It closes only this dated household source-and-handoff review. The responsible institution, agency, current notice and official record control every external result.
 
 ---
 

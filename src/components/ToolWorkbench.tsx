@@ -701,6 +701,232 @@ This output is a household source and handoff index, not proof of pet identity, 
   };
 };
 
+const schoolRecordDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusOrder = zh
+    ? [
+        "已記錄家庭學校用途，等待確認紀錄分類",
+        "已記錄紀錄分類，等待確認負責學校來源",
+        "已記錄負責學校來源，等待受保護學生比對",
+        "已記錄受保護學生比對，等待目前紀錄或通知版本",
+        "已記錄目前紀錄或通知版本，等待存取與保管核對",
+        "已測試存取與保管，等待學校狀態或要求來源",
+        "已映射學校狀態或要求來源，等待家庭交接或行動",
+        "已記錄註冊、出缺席、紀錄、支持、交通、活動或同意行動，等待學校結果",
+        "身分、學籍、學習支持、安全或同意矛盾，等待學校或合格來源審查",
+        "已核對來源、學生比對、版本、存取與交接",
+        "已收到學校來源結果，記錄保管與下學期條件",
+        "不適用，已記錄原因與重新開啟事件",
+      ]
+    : [
+        "Household school purpose recorded—record category pending",
+        "Record category recorded—responsible school source pending",
+        "Responsible school source recorded—protected student match pending",
+        "Protected student match recorded—current record or notice version pending",
+        "Current record or notice version recorded—access and custody pending",
+        "Access and custody tested—school status or requirement source pending",
+        "School status or requirement sources mapped—family handoff or action pending",
+        "Enrollment, attendance, record, support, transport, activity or consent action recorded—school result pending",
+        "Identity, enrollment, learning-support, safety or consent conflict—school or qualified review pending",
+        "Source, student match, version, access and handoff reviewed",
+        "School-source result received—custody and next-term condition recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaultRecords = zh
+    ? `REG-A | 家庭學生 A 本學年註冊與校方聯絡來源；家庭教育紀錄角色 | 目前學校辦公室與所屬主管機關註冊通知；出缺席、交通與活動來源分開 | 受保護學生資料已比對；證據 LEARNER-A-ID2；核對 2026-08-24 | 目前學年註冊與聯絡資料核對通知已開啟；個人內容未複製 | 受保護校方通知可取得；共用索引只保存安全代號 | 校方註冊、出缺席與授權交接要求已映射；學習支持與健康來源分開 | 本次來源與存取已核對；新學年、轉校、聯絡、交通、活動、支持或法定權限改變時重新檢視 | 學校辦公室與所屬主管機關來源已映射；所有已比對來源一致 | 家庭教育紀錄角色 | 2026-08-24 | 已核對來源、學生比對、版本、存取與交接
+SUPPORT-A | 家庭學生 A 目前學習支持文件與會議交接；家庭支持角色 | 目前校內支持團隊與受保護計畫或通知來源；課堂與健康來源分開 | 受保護學生資料與支持來源已比對；證據 LEARNER-A-SUPPORT2；核對 2026-08-24 | 目前計畫或會議通知版本已觀察；共用列只保留版本與安全來源代號 | 受保護目前來源可取得；照顧者只拿到必要會議入口 | 校內支持團隊與程序權利來源已映射；評估、服務與課堂執行留在負責來源 | 家庭會議或紀錄存取交接已記錄；校內支持團隊對目前版本的確認結果仍待取得 | 校內支持團隊、主管機關學生事務單位與合格審查來源已映射 | 家庭支持角色 | 2026-09-08 | 已記錄註冊、出缺席、紀錄、支持、交通、活動或同意行動，等待學校結果`
+    : `REG-A | Household learner A annual enrollment and school-contact source; household education-record role | Current school office and district enrollment notice; attendance, transport and activity sources remain separate | Protected learner record matched; evidence LEARNER-A-ID2; checked 2026-08-24 | Current annual enrollment and contact-review notice opened; personal details not copied | Protected official notice is accessible; shared index retains safe pointers only | School enrollment, attendance and authorized-handoff requirements mapped; support and health routes remain separate | Current source and access reviewed; reopen at a new term, school, contact, transport, activity, support or custody-authority change | Current school office and district route mapped; all compared sources agree | Household education-record role | 2026-08-24 | Source, student match, version, access and handoff reviewed
+SUPPORT-A | Household learner A current learning-support document and meeting handoff; household support role | Current school support team and protected current plan or notice source; classroom and health sources separate | Protected learner and support source matched; evidence LEARNER-A-SUPPORT2; checked 2026-08-24 | Current plan or meeting-notice version observed; shared row keeps only version and safe source pointers | Protected current source accessible; caregiver receives only the necessary meeting route | School support team and procedural-safeguard source mapped; evaluation, services and class implementation remain with responsible sources | Family meeting or record-access handoff recorded; school support-team confirmation of the current version remains pending | School support team, district student-services office and qualified review routes mapped | Household support role | 2026-09-08 | Enrollment, attendance, record, support, transport, activity or consent action recorded—school result pending`;
+
+  return {
+    intro: zh
+      ? "分開記錄註冊／學籍、出缺席、學習評量、支持計畫、校護或健康來源、交通、費用、活動同意與接送交接結果。工具不保存正式學生紀錄，也不替學校授權或作成決定。"
+      : "Separate enrollment, attendance, assessment, learning-support, school-health, transport, fee, activity-consent and pickup-handoff sources. The tool never stores an official student record, grants school authorization or makes an education decision.",
+    fields: [
+      text(
+        "review",
+        zh ? "家庭私人學校紀錄核對代號" : "Private household school-record review reference",
+        zh ? "使用家庭代號，不要輸入學生或學校本名、學號、地址、電話、成績、出缺席、診斷、支持計畫、接送人或登入資料。" : "Use a household code, not a student or school name, ID, address, phone, grade, attendance, diagnosis, support-plan, pickup-person or login detail.",
+        "SCHOOL-RECORDS-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "家庭學校紀錄核對情境" : "Household school-record review context",
+        type: "select",
+        options: zh
+          ? ["第一次本學年來源盤點", "註冊、學籍或轉學來源核對", "聯絡、出缺席或行事曆交接", "學習評量或正式紀錄存取", "學習支持、輔導或特教會議準備", "校護、健康或緊急資訊來源交接", "交通、接送、費用、活動或同意書核對", "身分、學籍、支持、安全或同意矛盾"]
+          : ["First current-year source map", "Enrollment, student-status or transfer source review", "Contact, attendance or calendar handoff", "Assessment or official-record access", "Learning-support, counseling or special-education meeting preparation", "School-health or emergency-information source handoff", "Transport, pickup, fee, activity or consent review", "Identity, enrollment, support, safety or consent conflict"],
+      },
+      { name: "baselineDate", label: zh ? "學校紀錄／來源地圖基準日" : "School-record and source-map baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: zh ? "本次家庭學校紀錄核對日" : "Current household school-record review date", type: "date", value: "2026-08-24" },
+      { name: "nextReview", label: zh ? "下一次來源、交接或校方結果核點" : "Next source, handoff or school-result checkpoint", type: "date", value: "2026-09-08" },
+      text(
+        "basis",
+        zh ? "註冊、學籍、出缺席、評量、支持、健康、交通、活動與同意來源地圖" : "Enrollment, student-status, attendance, assessment, support, health, transport, activity and consent source map",
+        zh ? "使用安全來源或證據代號；學生、家庭、成績、健康、支持與授權內容留在受保護校方或家庭來源。" : "Use safe source or evidence IDs. Keep student, family, grade, health, support and authorization content in the protected school or household source.",
+        "SCHOOL-OFFICE-S1; DISTRICT-NOTICE-V2; PROTECTED-LEARNER-A",
+      ),
+      {
+        name: "records",
+        label: zh ? "有版本的家庭學校紀錄來源與交接狀態列" : "Versioned household school-record source and handoff rows",
+        type: "textarea",
+        help: zh ? "每行：ID｜安全學生代號、紀錄用途與家庭角色｜負責學校來源及範圍｜受保護學生比對與來源核對日 YYYY-MM-DD｜目前紀錄／通知版本觀察｜存取與保管觀察｜學校狀態或要求來源｜家庭交接／行動與實際結果｜差異／安全／同意／學校或合格審查來源｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。最多 14 行。" : "One line: ID | safe learner alias, record purpose and household role | responsible school source and scope | protected student-match evidence plus source checked date YYYY-MM-DD | current record or notice version observation | access and custody observation | school status or requirement source | family handoff/action and observed result | discrepancy, safety, consent, school or qualified review route | owner role | target or outcome date YYYY-MM-DD | one of the twelve listed statuses. Maximum 14 lines.",
+        value: defaultRecords,
+      },
+      text(
+        "storage",
+        zh ? "受保護學籍、評量、支持、健康、同意與核對歷程位置" : "Protected enrollment, assessment, support, health, consent and review-history location",
+        zh ? "只寫資料夾或流程代號，不要貼學生身分、成績、健康、支持計畫、家庭、授權、付款或登入內容。" : "Use a folder or process label. Do not paste student identity, grade, health, support-plan, family, authorization, payment or login content.",
+        zh ? "家庭紀錄／教育／SCHOOL-RECORDS-2026-A／受保護校方來源" : "Household records / education / SCHOOL-RECORDS-2026-A / protected school sources",
+      ),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!baselineDate || !reviewDate || !nextReview)
+        return zh ? "請輸入有效的基準日、本次核對日與下一次核點日期。" : "Enter valid baseline, review and next-checkpoint dates.";
+      if (baselineDate > reviewDate)
+        return zh ? "學校紀錄基準日不能晚於本次核對日。" : "The school-record baseline cannot be later than the current review.";
+      if (nextReview < reviewDate)
+        return zh ? "下一次來源、交接或校方結果核點不能早於本次家庭學校紀錄核對日。" : "The next source, handoff or school-result checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 12 || values.storage.trim().length < 10)
+        return zh ? "請提供安全的校方來源地圖與受保護保管位置代號。" : "Provide a safe school-source map and protected storage-process label.";
+
+      const rows = values.records.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14)
+        return zh ? "請輸入 1 至 14 行家庭學校紀錄來源與交接狀態。" : "Enter 1 to 14 household school-record source and handoff rows.";
+      const recordRows = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = recordRows.filter((row) => row.parts.length !== 12 || row.parts.some((part) => !part));
+      if (malformed.length)
+        return zh ? `家庭學校紀錄第 ${malformed.map((row) => row.line).join("、")} 行必須剛好有 12 個非空白欄位。` : `School-record line ${malformed.map((row) => row.line).join(", ")} must contain exactly 12 non-empty fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toUpperCase());
+      if (new Set(ids).size !== ids.length)
+        return zh ? "每一行家庭學校紀錄都需要唯一 ID。" : "Every household school-record row needs a unique ID.";
+      const invalidStatuses = recordRows.filter((row) => !statusOrder.includes(row.parts[11]));
+      if (invalidStatuses.length)
+        return zh ? `家庭學校紀錄第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用十二種指定狀態之一。` : `School-record line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve exact statuses.`;
+
+      const openRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) < 9);
+      const closedRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) >= 9);
+      const sourceDateOf = (textValue: string) => strictIsoDate(textValue.match(/\b\d{4}-\d{2}-\d{2}\b/)?.[0] ?? "");
+      const invalidSourceDates = recordRows.filter((row) => {
+        const checked = sourceDateOf(row.parts[3]);
+        return !checked || checked < baselineDate || checked > reviewDate;
+      });
+      if (invalidSourceDates.length)
+        return zh ? `家庭學校紀錄第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的來源核對日。` : `School-record line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a source checked date from the baseline through this review.`;
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target < reviewDate || target > nextReview;
+      });
+      if (invalidOpenDates.length)
+        return zh ? `仍開放的家庭學校紀錄第 ${invalidOpenDates.map((row) => row.line).join("、")} 行需要介於本次核對日與下一核點的目標日。` : `Open school-record line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome < baselineDate || outcome > reviewDate;
+      });
+      if (invalidClosedDates.length)
+        return zh ? `已核對、完成或不適用的家庭學校紀錄第 ${invalidClosedDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的結果日。` : `Closed school-record line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an outcome date from the baseline through this review.`;
+
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 12 || row.parts[3].length < 18 || row.parts[4].length < 12 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 12 || row.parts[8].length < 10 || row.parts[9].length < 4);
+      if (missingLayers.length)
+        return zh ? `家庭學校紀錄第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實的用途、負責來源、受保護比對、版本、存取／保管、狀態、交接／結果、審查來源與負責角色。` : `School-record line ${missingLayers.map((row) => row.line).join(", ")} needs a real purpose, responsible source, protected match, version, access/custody, status, handoff/result, review route and owner.`;
+
+      const reviewedWithoutEvidence = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[9]) return false;
+        const evidence = row.parts.slice(2, 9).join(" ");
+        const sourceOk = zh ? /(?:學校|校方|主管機關|教務|學務|輔導|校護|交通|承辦)/.test(row.parts[2]) : /(?:school|district|education agency|registrar|student service|support team|health office|transport|provider)/i.test(row.parts[2]);
+        const matchOk = zh ? /(?:受保護|比對|證據)/.test(row.parts[3]) : /(?:protected|match|evidence)/i.test(row.parts[3]);
+        const versionOk = zh ? /(?:目前|版本|通知|紀錄|表單|計畫)/.test(row.parts[4]) : /(?:current|version|notice|record|form|plan)/i.test(row.parts[4]);
+        const accessOk = zh ? /(?:開啟|存取|可取得|保管|原件)/.test(row.parts[5]) : /(?:opened|access|available|custody|original)/i.test(row.parts[5]);
+        const statusOk = zh ? /(?:註冊|學籍|出缺席|評量|支持|健康|交通|活動|同意|接送)/.test(row.parts[6]) : /(?:enrollment|student status|attendance|assessment|support|health|transport|activity|consent|pickup)/i.test(row.parts[6]);
+        const actionOk = zh ? /(?:核對|保留|重新|改變|交接|行動)/.test(row.parts[7]) : /(?:reviewed|retained|reopen|change|handoff|action)/i.test(row.parts[7]);
+        const routeOk = zh ? /(?:學校|校方|主管機關|教務|學務|輔導|校護|交通|承辦|合格)/.test(row.parts[8]) : /(?:school|district|education agency|registrar|student service|support team|health office|transport|provider|qualified)/i.test(row.parts[8]);
+        const unresolved = zh ? /(?:等待|未知|未解|未核對|矛盾|缺少)/.test(evidence) : /(?:pending|unknown|unresolved|not checked|conflict|missing)/i.test(evidence);
+        return !sourceOk || !matchOk || !versionOk || !accessOk || !statusOk || !actionOk || !routeOk || unresolved;
+      });
+      if (reviewedWithoutEvidence.length)
+        return zh ? `完成核對的第 ${reviewedWithoutEvidence.map((row) => row.line).join("、")} 行必須連結負責學校來源、受保護學生比對、目前版本、實際存取、狀態、交接或重查條件及負責審查來源，且不能仍有未解差異。` : `Completed school-record review line ${reviewedWithoutEvidence.map((row) => row.line).join(", ")} must link a responsible school source, protected student match, current version, actual access, status, handoff or reopen rule and responsible review route with no unresolved gap.`;
+
+      const actionClaimingCompletion = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[7]) return false;
+        return zh ? /(?:已完成|已生效|註冊完成|轉學完成|授權完成|學校確認完成)/.test(row.parts[7]) || !/(?:已記錄|已送出|已提出|已預約|等待|仍待|尚待|待取得)/.test(row.parts[7]) : /(?:confirmed complete|completed|effective|enrollment complete|transfer complete|authorization complete|school confirmed)/i.test(row.parts[7]) || !/(?:recorded|submitted|requested|scheduled|pending|awaiting|remains)/i.test(row.parts[7]);
+      });
+      if (actionClaimingCompletion.length)
+        return zh ? `已交接或行動但等待校方結果的第 ${actionClaimingCompletion.map((row) => row.line).join("、")} 行必須保持開放，不能把送出、預約、付款或家庭轉述寫成完成。` : `Action-recorded line ${actionClaimingCompletion.map((row) => row.line).join(", ")} must remain open and cannot turn a submission, request, appointment, payment or family handoff into completion.`;
+
+      const conflictWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[8]) return false;
+        const combined = [row.parts[4], row.parts[6], row.parts[7], row.parts[8], row.parts[9]].join(" ");
+        const conflict = zh ? /(?:矛盾|不同|差異|錯誤|緊急|安全|同意|授權|支持)/.test(combined) : /(?:conflict|different|discrepancy|error|emergency|safety|consent|authorization|support)/i.test(combined);
+        const route = zh ? /(?:學校|校方|主管機關|教務|學務|輔導|校護|交通|承辦|合格)/.test(combined) : /(?:school|district|education agency|registrar|student service|support team|health office|transport|provider|qualified)/i.test(combined);
+        return !conflict || !route;
+      });
+      if (conflictWithoutRoute.length)
+        return zh ? `矛盾列第 ${conflictWithoutRoute.map((row) => row.line).join("、")} 行必須寫出身分、學籍、學習支持、安全或同意差異，以及負責學校、主管機關、校護、交通或合格審查來源。` : `Conflict line ${conflictWithoutRoute.map((row) => row.line).join(", ")} must name the identity, enrollment, learning-support, safety or consent conflict and the responsible school, district, health, transport or qualified review route.`;
+
+      const completedWithoutResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[10]) return false;
+        const result = [row.parts[7], row.parts[8]].join(" ");
+        const observed = zh ? /(?:學校來源|校方|主管機關|教務|學務|輔導|校護|交通|承辦).*(?:結果|紀錄|通知|確認).*(?:收到|開啟|觀察|記錄)/.test(result) : /(?:(?:school source|school|district|registrar|student service|support team|health office|transport|provider) (?:result|record|notice|confirmation)).*(?:received|opened|observed|recorded)/i.test(result);
+        const custody = zh ? /(?:保管|原件|通知|目前版本|下學期|重新開啟)/.test(result) : /(?:custody|original|notice|current version|next term|reopen)/i.test(result);
+        const unresolved = zh ? /(?:等待|仍待|尚待|未解|未知)/.test(result) : /(?:pending|awaiting|unresolved|unknown)/i.test(result);
+        return !observed || !custody || unresolved;
+      });
+      if (completedWithoutResult.length)
+        return zh ? `完成結果的第 ${completedWithoutResult.map((row) => row.line).join("、")} 行必須記錄已收到或觀察的學校來源結果、目前版本保管與下學期或重開條件。` : `Completed result line ${completedWithoutResult.map((row) => row.line).join(", ")} must record an observed school-source result, current-version custody and the next-term or reopen condition.`;
+
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[11] === statusOrder[11] && !(zh ? /(?:重新開啟|重新檢視|如果|當.*時|新學年|轉校|活動|交通|支持|健康|同意.*改變)/.test([row.parts[7], row.parts[8]].join(" ")) : /(?:reopen|review again|if |when |after |new term|school change|activity|transport|support|health|consent.*change)/i.test([row.parts[7], row.parts[8]].join(" "))));
+      if (notApplicableWithoutTrigger.length)
+        return zh ? `不適用的第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須記錄目前原因，以及新學年、轉校、活動、交通、支持、健康或同意改變時的重開事件。` : `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and the new term, school, activity, transport, support, health or consent change that reopens it.`;
+
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return zh ? "偵測到可能的完整電話、Email、學號、案件、付款或其他長數字識別資料。請改用安全證據代號。" : "A possible full phone, email, student, case, payment or other long numeric identifier was detected. Use a safe evidence pointer.";
+      if (/password|passphrase|passcode|access code|recovery code|verification code|login credential|full address|street address|student name\s*[:=]|child name\s*[:=]|school name\s*[:=]|pickup person\s*[:=]|student id\s*[:=]|date of birth\s*[:=]|grade\s*[:=]|score\s*[:=]|gpa\s*[:=]|transcript content|report card content|attendance detail|discipline record|iep content|504 plan content|support plan content|counseling record|health record|diagnosis\s*[:=]|medication detail|authorization content|consent signature|payment card|bank account|private message|correspondence|完整地址|學生姓名\s*[:：]|兒童姓名\s*[:：]|學校名稱\s*[:：]|接送人姓名\s*[:：]|學號\s*[:：]|出生日期\s*[:：]|成績\s*[:：]|分數\s*[:：]|出缺席明細|獎懲紀錄內容|個別化教育計畫內容|支持計畫內容|輔導紀錄|健康紀錄|診斷\s*[:：]|用藥明細|授權內容|同意書簽名|銀行帳號|信用卡|登入密碼|驗證碼|私人訊息|通信內容/i.test(privacyText))
+        return zh ? "偵測到可能的學生身分、學校、地址、成績、出缺席、學習支持、健康、接送、同意、付款、登入或私人通信內容。請改成安全來源、流程或證據代號。" : "A possible student identity, school, address, grade, attendance, learning-support, health, pickup, consent, payment, credential or private correspondence detail was detected. Replace it with a safe source, process or evidence pointer.";
+
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length })).filter((item) => item.count > 0);
+      if (zh)
+        return `${values.review.trim()}｜家庭學校紀錄來源與交接狀態
+核對情境：${values.context}
+學校紀錄／來源地圖基準：${formatter.format(baselineDate)}
+本次家庭學校紀錄核對：${formatter.format(reviewDate)}
+下一次來源、交接或校方結果核點：${formatter.format(nextReview)}
+仍開放的來源、學生比對、版本、存取、交接或校方結果列：${openRows.length} 筆
+已核對、完成或不適用列：${closedRows.length} 筆
+狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}
+
+註冊、學籍、出缺席、評量、支持、健康、交通、活動與同意來源地圖：${values.basis.trim()}
+
+${lines("有版本的家庭學校紀錄來源與交接證據", recordRows.map((row) => `${row.parts[0]}｜學生／紀錄用途：${row.parts[1]}｜負責學校來源／適用範圍：${row.parts[2]}｜受保護學生比對／來源核對：${row.parts[3]}｜目前紀錄／通知版本：${row.parts[4]}｜存取／保管：${row.parts[5]}｜學校狀態／要求來源：${row.parts[6]}｜家庭交接／行動／實際結果：${row.parts[7]}｜差異／安全／同意／審查來源：${row.parts[8]}｜負責角色：${row.parts[9]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[10]) as Date)}｜狀態：${row.parts[11]}`))}
+
+受保護學籍、評量、支持、健康、同意與核對歷程位置：${values.storage.trim()}
+
+這份輸出只是家庭來源與交接索引，不是學生身分、學籍、出缺席、成績、學習支持、健康、交通、接送、費用、活動、同意、授權或學校決定證明。它不登入校務系統、不讀取、建立、上傳、轉移或更正正式學生紀錄，不產生成績、診斷、輔導、特教、交通或緊急處置判斷，不替任何人授權接送、活動、照片、資料揭露或服務，也不計算註冊、請假、評量、申請、付款或申訴期限。真實行動與結果請使用目前學校、主管機關、教師／行政／輔導／特教／校護／交通承辦、正式通知與合格專業來源。`;
+      return `${values.review.trim()} — household school-record source and handoff status
+Review context: ${values.context}
+School-record/source-map baseline: ${formatter.format(baselineDate)}
+Current household school-record review: ${formatter.format(reviewDate)}
+Next source, handoff or school-result checkpoint: ${formatter.format(nextReview)}
+Open source, student-match, version, access, handoff or school-result rows: ${openRows.length}
+Reviewed, completed or not-applicable rows: ${closedRows.length}
+Status count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}
+
+Enrollment, student-status, attendance, assessment, support, health, transport, activity and consent source map: ${values.basis.trim()}
+
+${lines("Versioned household school-record source and handoff evidence", recordRows.map((row) => `${row.parts[0]} — student/record purpose: ${row.parts[1]} — responsible school source/scope: ${row.parts[2]} — protected student match/source check: ${row.parts[3]} — current record/notice version: ${row.parts[4]} — access/custody: ${row.parts[5]} — school status/requirement source: ${row.parts[6]} — family handoff/action/observed result: ${row.parts[7]} — discrepancy/safety/consent/review route: ${row.parts[8]} — owner: ${row.parts[9]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[10]) as Date)} — status: ${row.parts[11]}`))}
+
+Protected enrollment, assessment, support, health, consent and review-history location: ${values.storage.trim()}
+
+This output is a household source and handoff index, not proof of student identity, enrollment, attendance, grades, learning support, health, transport, pickup, fee, activity, consent, authorization or a school decision. It does not sign in to a school system; read, create, upload, transfer or amend an official student record; make grading, diagnosis, counseling, special-education, transport or emergency decisions; authorize pickup, participation, photography, disclosure or services; or calculate enrollment, absence, assessment, application, payment or appeal deadlines. Use the current school, education agency, teacher, registrar, student-services, support, special-education, school-health, transport and qualified professional sources for every real action and result.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
     intro:
@@ -4683,6 +4909,9 @@ const definitions: Record<string, Definition> = {
   "household-pet-record-source-handoff-log": {
     ...petRecordDefinition("en"),
   },
+  "household-school-record-source-handoff-log": {
+    ...schoolRecordDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -4693,6 +4922,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-pet-record-source-handoff-log": {
     ...petRecordDefinition("zh-TW"),
+  },
+  "household-school-record-source-handoff-log": {
+    ...schoolRecordDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:
