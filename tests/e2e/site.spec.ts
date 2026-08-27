@@ -215,6 +215,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/household-admin-backup-person/",
     "/zh-tw/guides/home-contact-list/",
     "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
+    "/zh-tw/guides/household-supplies-inventory/",
+    "/zh-tw/guides/household-monthly-review/",
+    "/zh-tw/guides/home-maintenance-calendar/",
     "/zh-tw/guides/familyboard-household-meeting-tutorial/",
     "/zh-tw/guides/familyboard-pantry-review-tutorial/",
     "/zh-tw/guides/familyboard-clothing-care-tutorial/",
@@ -763,6 +766,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/home-contact-list/",
       alternate: "/guides/home-contact-list/",
       heading: "家庭聯絡人清單怎麼整理？把來源、用途與複查分開",
+    },
+    {
+      route: "/zh-tw/guides/household-supplies-inventory/",
+      alternate: "/guides/household-supplies-inventory/",
+      heading: "家庭耗材清單怎麼做？先記「必須相容」，再記「放在哪裡」",
+    },
+    {
+      route: "/zh-tw/guides/household-monthly-review/",
+      alternate: "/guides/household-monthly-review/",
+      heading: "家庭每月檢視怎麼做？把「還沒急」的事情提前看一眼",
+    },
+    {
+      route: "/zh-tw/guides/home-maintenance-calendar/",
+      alternate: "/guides/home-maintenance-calendar/",
+      heading: "居家保養行事曆怎麼排？行事曆只回答「何時看」，不假裝回答「一定安全」",
     },
     {
       route: "/zh-tw/features/free-home-management-app/",

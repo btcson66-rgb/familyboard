@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T14:25:58.234Z
+Generated: 2026-08-27T14:37:09.133Z
 
 ## Summary
 
-- Indexable pages: 478
-- Generated HTML routes: 495
+- Indexable pages: 481
+- Generated HTML routes: 498
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 262
+- Pages without a contextual product/tool link: 265
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,8 +20,8 @@ Generated: 2026-08-27T14:25:58.234Z
 - printables: 20
 - product: 68
 - appliances: 30
-- maintenance: 41
-- household-operations: 78
+- maintenance: 42
+- household-operations: 80
 - inventory-warranty: 41
 - records-emergency: 58
 - tools: 121
@@ -184,12 +184,15 @@ Generated: 2026-08-27T14:25:58.234Z
 - /zh-tw/guides/home-contact-list/
 - /zh-tw/guides/home-evacuation-information/
 - /zh-tw/guides/home-improvement-receipts/
+- /zh-tw/guides/home-maintenance-calendar/
 - /zh-tw/guides/home-maintenance-log/
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/guides/home-service-provider-list/
 - /zh-tw/guides/household-admin-backup-person/
 - /zh-tw/guides/household-documents-organizer/
 - /zh-tw/guides/household-medical-information-organization/
+- /zh-tw/guides/household-monthly-review/
+- /zh-tw/guides/household-supplies-inventory/
 - /zh-tw/guides/how-long-to-keep-household-records/
 - /zh-tw/guides/how-to-track-product-warranties/
 - /zh-tw/guides/important-household-documents/

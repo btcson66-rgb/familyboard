@@ -2650,6 +2650,33 @@ const checks = [
     forbid: ['rel="alternate"'],
   },
   {
+    path: "/zh-tw/guides/household-supplies-inventory/",
+    require: [
+      "家庭耗材清單怎麼做",
+      'hreflang="en"',
+      "相容依據",
+      "不會讀取櫥櫃、相機、購物平台或設備",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/household-monthly-review/",
+    require: [
+      "家庭每月檢視怎麼做",
+      'hreflang="en"',
+      "未來 30 至 60 天",
+      "不會讀取銀行、帳單平台、信箱或雲端檔案",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-maintenance-calendar/",
+    require: [
+      "居家保養行事曆怎麼排",
+      'hreflang="en"',
+      "來源精度",
+      "行事曆不是風險評估工具",
+    ],
+  },
+  {
     path: "/zh-tw/guides/purchase-receipt-organizer/",
     require: [
       "網購到貨缺件或損壞怎麼辦？發票、拆封與退換貨紀錄",
