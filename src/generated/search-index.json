@@ -1968,6 +1968,14 @@
     "headings": "Household Subscription Cancellation Handoff Log Use a safe reference Separate a window from an action Keep billing results in the controlling source"
   },
   {
+    "title": "Free Service Appointment Handoff Log | Home Visit Preparation and Follow-Up | FamilyBoard",
+    "description": "Organize service scope, appointment windows, household preparation, arrival observations and follow-up review without storing addresses, phone numbers or full case files.",
+    "route": "/tools/household-service-appointment-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "service appointment handoff log",
+    "headings": "Household Service Appointment Handoff Log Use a safe source map Separate preparation from arrival Keep quotes and reports authoritative"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

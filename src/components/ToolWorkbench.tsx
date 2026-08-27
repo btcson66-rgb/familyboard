@@ -3947,6 +3947,52 @@ const subscriptionCancellationHandoffDefinition = (locale: Locale): Definition =
   };
 };
 
+const serviceAppointmentHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立預約列，等待服務範圍", "已確認來源，等待日期窗口", "已記錄窗口，等待家庭準備", "已安排角色，等待到場觀察", "已觀察服務結果，等待後續複查", "不適用，已記錄原因與重新開案事件"]
+    : ["Appointment row created—service scope pending", "Source checked—date window pending", "Window recorded—household preparation pending", "Role assigned—arrival observation pending", "Service result observed—follow-up review pending", "Not applicable—reason and reopen event recorded"];
+  const defaults = zh
+    ? "APPT-A | 冷氣保養預約 | 2026-08-20 | 業者預約來源代號 | 先確認日期窗口、進場範圍與家庭準備事項 | 家庭服務角色只記觀察到的到場與作業摘要，不貼地址或電話 | 依受控來源複查報價、保固或後續安排，不在此判定品質 | 家庭服務角色 | 已安排角色，等待到場觀察\nAPPT-B | 家電檢修到場 | 2026-08-22 | 維修申請來源代號 | 保留預約窗口與需要準備的設備資訊，完整案件留在受控來源 | 備援角色記錄是否有人接待及觀察到的作業範圍 | 服務後回到來源複查報告與下一步，保留未完成項目 | 備援家庭角色 | 已確認來源，等待日期窗口"
+    : "APPT-A | Air-conditioner service appointment | 2026-08-20 | Provider appointment source code | Confirm the date window, access boundary and household preparation | The household service role records only observed arrival and work-scope notes; do not paste address or phone | Review quote, warranty or follow-up through the controlled source; this log does not judge quality | Household service role | Role assigned—arrival observation pending\nAPPT-B | Appliance repair visit | 2026-08-22 | Repair request source code | Keep the appointment window and equipment preparation note; full case details stay in the controlled source | A backup role records whether someone received the visit and what work scope was observed | Return to the source after service to review the report and open next steps | Backup household role | Source checked—date window pending";
+  return {
+    intro: zh ? "把服務範圍、預約來源、日期窗口、家庭準備、到場觀察與後續複查分開記錄。工具不保存地址、電話或完整案件、不證明業者到場或服務品質，也不取代正式預約與維修文件。" : "Separate the service scope, appointment source, date window, household preparation, arrival observation and follow-up review. This tool stores no address, phone or full case file, does not prove provider arrival or service quality and does not replace official appointment or repair records.",
+    fields: [
+      text("review", zh ? "家庭服務預約複查私人代號" : "Private household-service appointment reference", zh ? "使用家庭代號，不要輸入地址、電話、姓名、帳號或完整案件內容。" : "Use a household code; do not enter addresses, phone numbers, names, account details or a full case file.", "APPT-REVIEW-2026-A"),
+      { name: "context", label: zh ? "服務預約情境" : "Appointment context", type: "select", options: zh ? ["家電或設備檢修", "冷氣、暖氣或通風保養", "水電或居家工程到場", "清潔或定期服務", "服務後報告與後續複查", "其他家庭服務預約"] : ["Appliance or equipment repair", "Heating, cooling or ventilation service", "Plumbing, electrical or home project visit", "Cleaning or recurring service", "Post-service report and follow-up", "Other household service appointment"] },
+      { name: "reviewDate", label: zh ? "本次預約複查日期" : "Current appointment-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次到場或後續複查日期" : "Next visit or follow-up review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "預約、報價與服務報告來源地圖" : "Appointment, quote and service-report source map", zh ? "只填安全來源代號，不要貼地址、電話、姓名或案件全文。" : "Use safe source codes; do not paste addresses, phone numbers, names or a full case file.", "BOOKING-B1; QUOTE-Q1; REPORT-R1"),
+      text("rows", zh ? "服務預約與到場複查狀態列" : "Appointment and arrival-review rows", zh ? "每行 9 欄：ID｜服務範圍｜觀察日期 YYYY-MM-DD｜來源代號｜預約日期或時間窗口｜家庭準備與到場觀察｜服務結果複查或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | service scope | observation date YYYY-MM-DD | source code | appointment date or time window | household preparation and arrival observation | service-result review or next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護預約與服務文件位置" : "Protected appointment and service-document location", zh ? "只寫保管流程或容器代號，不要放地址、電話、報價全文或私人通信。" : "Name a custody process or container, not an address, phone number, full quote or private correspondence.", zh ? "家庭紀錄／服務預約／APPT-REVIEW-2026-A／受保護來源" : "Household records / service appointments / APPT-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次服務預約複查日期。" : "Enter valid current and next appointment-review dates.";
+      if (next < review) return zh ? "下一次到場或後續複查日期不能早於本次複查。" : "The next visit or follow-up review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全預約代號、來源地圖與受保護位置。" : "Provide a safe appointment reference, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行服務預約交接列。" : "Enter 1 to 14 appointment-handoff rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `服務第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Appointment line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行服務預約紀錄都需要唯一 ID。" : "Every appointment row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `服務第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Appointment line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 4);
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `服務第 ${thin.map((row) => row.line).join("、")} 行需要範圍、來源、窗口、準備、觀察、下一步與角色。` : `Appointment line ${thin.map((row) => row.line).join(", ")} needs scope, source, window, preparation, observation, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址或服務識別資料；請改用安全代號。" : "A full contact, address or service identifier was detected; use safe codes.";
+      if (/password|passcode|account number|login|full address|phone number|private message|密碼|帳號|完整地址|電話|私人訊息/i.test(privacy)) return zh ? "偵測到地址、電話、帳號或私人通信資料；請只保留安全來源代號。" : "Address, phone, account or private-message data was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭服務預約與到場複查" : " — household service appointment and arrival review"), (zh ? "預約情境：" : "Appointment context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次到場或後續複查：" : "Next visit or follow-up review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已觀察服務或後續列：" : "Service or follow-up observed rows: ") + closed.length, (zh ? "來源地圖：" : "Source map: ") + values.source.trim(), (zh ? "有版本的預約與到場觀察\n" : "Versioned appointment and arrival observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜窗口：" : " — window: ") + row.parts[4] + (zh ? "｜準備／觀察：" : " — preparation/observation: ") + row.parts[5] + (zh ? "｜下一步：" : " — next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護預約與服務文件位置：" : "Protected appointment and service-document location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭服務預約、準備與觀察，不保存地址或聯絡資料、不證明業者到場或服務品質，也不取代正式文件。" : "This output only organizes household service appointments, preparation and observations. It stores no address or contact data, does not prove provider arrival or service quality and does not replace official records."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -8020,6 +8066,9 @@ const definitions: Record<string, Definition> = {
   "household-subscription-cancellation-handoff-log": {
     ...subscriptionCancellationHandoffDefinition("en"),
   },
+  "household-service-appointment-handoff-log": {
+    ...serviceAppointmentHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -8120,6 +8169,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-subscription-cancellation-handoff-log": {
     ...subscriptionCancellationHandoffDefinition("zh-TW"),
+  },
+  "household-service-appointment-handoff-log": {
+    ...serviceAppointmentHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

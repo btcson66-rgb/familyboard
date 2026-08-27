@@ -236,6 +236,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-subscription-cancellation-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-subscription-cancellation-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-service-appointment-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-service-appointment-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1061,6 +1064,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Use a safe reference",
       "Separate a window from an action",
+    ],
+  },
+  {
+    path: "/tools/household-service-appointment-handoff-log/",
+    require: [
+      "Household Service Appointment Handoff Log",
+      'hreflang="zh-TW"',
+      "Use a safe source map",
+      "Separate preparation from arrival",
     ],
   },
   {
@@ -2120,6 +2132,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-service-appointment-handoff-log/",
+    require: [
+      "家庭服務預約交接工具",
+      'hreflang="en"',
+      "先用安全來源代號",
+      "把準備、到場與完成分開",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2186,6 +2207,16 @@ const checks = [
       'lang="zh-TW"',
       "把條款和帳單來源留在受控位置",
       "提醒不等於取消生效",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/",
+    require: [
+      "FamilyBoard 服務預約怎麼交接",
+      'lang="zh-TW"',
+      "把正式來源畫成地圖",
+      "提醒、到場、結果",
     ],
     forbid: ['rel="alternate"'],
   },

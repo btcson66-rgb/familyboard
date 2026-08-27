@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T08:39:11.432Z
+Generated: 2026-08-27T08:49:55.851Z
 
 ## Summary
 
-- Indexable pages: 433
-- Generated HTML routes: 450
+- Indexable pages: 436
+- Generated HTML routes: 453
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 220
+- Pages without a contextual product/tool link: 223
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 54
+- product: 55
 - appliances: 30
 - maintenance: 37
-- household-operations: 60
+- household-operations: 62
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -92,6 +92,7 @@ Generated: 2026-08-27T08:39:11.432Z
 - /tools/household-recycling-handoff-log/
 - /tools/household-return-handoff-log/
 - /tools/household-school-pickup-handoff-log/
+- /tools/household-service-appointment-handoff-log/
 - /tools/household-share-access-review-log/
 - /tools/household-subscription-cancellation-handoff-log/
 - /tools/household-trip-packing-handoff-log/
@@ -142,6 +143,7 @@ Generated: 2026-08-27T08:39:11.432Z
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-school-pickup-handoff-tutorial/
+- /zh-tw/guides/familyboard-service-appointment-handoff-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
@@ -244,6 +246,7 @@ Generated: 2026-08-27T08:39:11.432Z
 - /zh-tw/tools/household-return-handoff-log/
 - /zh-tw/tools/household-school-pickup-handoff-log/
 - /zh-tw/tools/household-school-record-source-handoff-log/
+- /zh-tw/tools/household-service-appointment-handoff-log/
 - /zh-tw/tools/household-share-access-review-log/
 - /zh-tw/tools/household-storm-readiness-review/
 - /zh-tw/tools/household-subscription-cancellation-handoff-log/
