@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T02:59:39.745Z
+Generated: 2026-08-27T03:19:30.489Z
 
 ## Summary
 
-- Indexable pages: 376
-- Generated HTML routes: 393
+- Indexable pages: 379
+- Generated HTML routes: 396
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 163
+- Pages without a contextual product/tool link: 166
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 35
+- product: 36
 - appliances: 30
 - maintenance: 37
-- household-operations: 26
+- household-operations: 28
 - inventory-warranty: 39
 - records-emergency: 47
 - tools: 121
@@ -76,6 +76,7 @@ Generated: 2026-08-27T02:59:39.745Z
 - /security/
 - /terms/
 - /tools/household-meeting-agenda-action-log/
+- /tools/household-pantry-expiry-review-log/
 - /tools/household-vehicle-document-source-status-log/
 - /tools/rental-security-deposit-move-out-claim-log/
 - /zh-tw/affiliate-disclosure/
@@ -107,6 +108,7 @@ Generated: 2026-08-27T02:59:39.745Z
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
+- /zh-tw/guides/familyboard-pantry-review-tutorial/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
 - /zh-tw/guides/home-care-service-fees-and-billing/
@@ -185,6 +187,7 @@ Generated: 2026-08-27T02:59:39.745Z
 - /zh-tw/tools/household-insurance-policy-source-version-log/
 - /zh-tw/tools/household-medical-information-source-handoff-log/
 - /zh-tw/tools/household-meeting-agenda-action-log/
+- /zh-tw/tools/household-pantry-expiry-review-log/
 - /zh-tw/tools/household-pet-record-source-handoff-log/
 - /zh-tw/tools/household-power-outage-event-log/
 - /zh-tw/tools/household-record-retention-decision-log/

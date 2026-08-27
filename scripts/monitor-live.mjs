@@ -179,6 +179,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-meeting-agenda-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-meeting-agenda-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-meeting-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-pantry-expiry-review-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-pantry-expiry-review-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-pantry-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -833,6 +836,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Short household meetings work best",
       "Decisions and open questions",
+    ],
+  },
+  {
+    path: "/tools/household-pantry-expiry-review-log/",
+    require: [
+      "Pantry and Household Consumables Expiry Review Log",
+      'hreflang="zh-TW"',
+      "Record an observation, not a safety verdict",
+      "Future affiliate placement",
     ],
   },
   {
@@ -1597,6 +1609,25 @@ const checks = [
       'lang="zh-TW"',
       "從一個小目的開始",
       "決定、任務、結果要用不同詞",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/tools/household-pantry-expiry-review-log/",
+    require: [
+      "食品與家庭消耗品日期盤點工具",
+      'hreflang="en"',
+      "先記錄看見的事，不要急著下安全結論",
+      "標示、來源與家庭計畫要分開",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-pantry-review-tutorial/",
+    require: [
+      "FamilyBoard 食品櫃怎麼整理",
+      'lang="zh-TW"',
+      "先選一個可以在十五分鐘內完成的範圍",
+      "把標示日期和家庭計畫分開",
     ],
     forbid: ['rel="alternate"'],
   },

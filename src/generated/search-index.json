@@ -1816,6 +1816,14 @@
     "headings": "Household Meeting Agenda and Action Log Start with one real meeting outcome Record decisions and open questions separately Use roles, not names Keep sensitive material out Future affiliate placement"
   },
   {
+    "title": "Free Pantry Expiry Review Log | Track Labels, Storage and Rotation | FamilyBoard",
+    "description": "Record pantry and household consumable checks with safe item codes, label dates, storage zones and follow-up without storing addresses, payments or private messages.",
+    "route": "/tools/household-pantry-expiry-review-log/",
+    "cluster": "household-operations",
+    "keywords": "pantry expiry review log",
+    "headings": "Pantry and Household Consumables Expiry Review Log Record an observation, not a safety verdict Separate the label from the plan Use rotation as a follow-up task Keep private purchase details out Review by a small zone Future affiliate placement"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

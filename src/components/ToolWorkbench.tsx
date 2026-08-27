@@ -2782,6 +2782,76 @@ const householdMeetingDefinition = (locale: Locale): Definition => {
   };
 };
 
+const pantryExpiryDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立品項代號，等待標示或來源日期",
+        "已核對標示或來源日期，等待存放區域",
+        "已核對存放區域，等待包裝或數量觀察",
+        "已記錄包裝與數量，等待使用或輪替安排",
+        "已安排使用或輪替，等待負責角色複查",
+        "日期、包裝、過敏或家庭安全疑問，等待負責來源確認",
+        "已使用、輪替、丟棄或完成處理並保存結果",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Item reference created—label or source date pending",
+        "Label or source date checked—storage area pending",
+        "Storage area checked—package or quantity observation pending",
+        "Package and quantity recorded—use or rotation plan pending",
+        "Use or rotation plan assigned—owner review pending",
+        "Date, package, allergy or household-safety question—responsible source review pending",
+        "Used, rotated, discarded or otherwise closed—result preserved",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "PANTRY-A | 乾糧與早餐備品代號 | 2026-08-20 | 廚房乾貨櫃 A 區代號；位置細節不公開 | 兩項包裝；數量只作家庭盤點；外觀待實際複查 | 排入本週早餐輪替並於下次複查 | 家庭採買角色 | 2026-09-03 | 已安排使用或輪替，等待負責角色複查\nFRIDGE-A | 冷藏備品代號 | 2026-08-22 | 冰箱上層代號；位置細節留在受保護來源 | 一項包裝；封口狀態待實際複查 | 查閱標示與來源後再安排使用 | 廚房整理角色 | 2026-08-30 | 日期、包裝、過敏或家庭安全疑問，等待負責來源確認"
+    : "PANTRY-A | Dry goods and breakfast supply code | 2026-08-20 | Kitchen dry-storage zone A code; location detail kept private | Two packages; quantity is household context only; appearance needs physical review | Rotate into this week's breakfast plan | Household shopping role | 2026-09-03 | Use or rotation plan assigned—owner review pending\nFRIDGE-A | Chilled supply code | 2026-08-22 | Upper refrigerator zone code; location details stay in protected sources | One package; seal condition needs physical review | Check the label and responsible source before planning use | Kitchen organizer role | 2026-08-30 | Date, package, allergy or household-safety question—responsible source review pending";
+  return {
+    intro: zh
+      ? "把食品或家庭消耗品的標示、來源、存放區域、包裝觀察、使用／輪替安排與下次複查分開記錄。工具不判定可食性、保存期限、過敏風險或應丟棄時間，請以實際標示、原廠與所在地適用的安全來源為準。"
+      : "Separate labels, sources, storage zones, package observations, use or rotation plans and next checks for household food or consumables. This tool does not decide edibility, shelf life, allergy risk or disposal timing; follow the actual label, manufacturer and applicable local safety source.",
+    fields: [
+      text("review", zh ? "盤點紀錄私人代號" : "Private pantry review reference", zh ? "使用家庭代號，不要輸入姓名、地址、帳號或完整購買通信。" : "Use a household code; do not enter names, addresses, accounts or full purchase correspondence.", "PANTRY-2026-A"),
+      { name: "scope", label: zh ? "盤點情境" : "Review context", type: "select", options: zh ? ["每週餐前整理", "每月食品櫃複查", "採買到貨後核對", "旅行前消耗品整理", "冰箱或冷凍庫分區", "其他家庭消耗品"] : ["Weekly meal-prep reset", "Monthly pantry review", "After grocery delivery", "Pre-travel consumables review", "Fridge or freezer zone review", "Other household consumables"] },
+      { name: "reviewDate", label: zh ? "本次盤點日期" : "Current review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次複查日期" : "Next review date", type: "date", value: "2026-09-03" },
+      text("source", zh ? "標示、原廠與採買來源地圖" : "Label, manufacturer and purchase-source map", zh ? "只填安全代號或可重開的來源位置，不要貼標籤全文、收據、地址或付款內容。" : "Use safe codes or reopenable source locations; do not paste full labels, receipts, addresses or payment details.", "LABEL-L1; MANUAL-M1; SHOPPING-S1"),
+      text("rows", zh ? "食品／消耗品盤點列" : "Food or consumable inventory rows", zh ? "每行 9 欄：ID｜品項或類別代號｜標示／來源日期 YYYY-MM-DD｜存放區域代號｜包裝與數量觀察｜使用／輪替安排｜負責角色｜下次結果日期 YYYY-MM-DD｜指定狀態。最多 12 行。" : "Each row uses 9 fields: ID | item or category code | label/source date YYYY-MM-DD | storage-zone code | package and quantity observation | use/rotation plan | owner role | next outcome date YYYY-MM-DD | exact status. Maximum 12 rows.", defaults),
+      text("storage", zh ? "受保護標示、收據與盤點歷程位置" : "Protected label, receipt and review-history location", zh ? "只寫保管流程或容器代號，不要放完整地址、付款或私人通信。" : "Name a custody process or container, not a full address, payment detail or private correspondence.", zh ? "家庭紀錄／食品盤點／PANTRY-2026-A／受保護來源" : "Household records / pantry review / PANTRY-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate);
+      const next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次盤點與下一次複查日期。" : "Enter valid current and next review dates.";
+      if (next < review) return zh ? "下一次複查日期不能早於本次盤點日期。" : "The next review date cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全盤點代號、來源地圖與受保護保管位置。" : "Provide a safe review code, source map and protected storage label.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行食品或消耗品盤點列。" : "Enter 1 to 12 food or consumable rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `盤點第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Inventory line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行盤點都需要唯一 ID。" : "Every inventory row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `盤點第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Inventory line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const parsedDates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (parsedDates.some((date) => !date || date > review)) return zh ? "標示或來源日期必須是有效日期，且不能晚於本次盤點。" : "Each label or source date must be valid and no later than the current review.";
+      const open = parsed.filter((row) => statuses.indexOf(row.parts[8]) < 6);
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 6);
+      const invalidOutcome = parsed.filter((row, index) => { const date = strictIsoDate(row.parts[7]); return !date || (open.includes(row) ? date < review || date > next : date < parsedDates[index]! || date > review); });
+      if (invalidOutcome.length) return zh ? `盤點第 ${invalidOutcome.map((row) => row.line).join("、")} 行的下次結果日期不在允許範圍。` : `Inventory line ${invalidOutcome.map((row) => row.line).join(", ")} has an outcome date outside the permitted range.`;
+      const thin = parsed.filter((row) => row.parts[1].length < 5 || row.parts[3].length < 4 || row.parts[4].length < 10 || row.parts[5].length < 10 || row.parts[6].length < 3);
+      if (thin.length) return zh ? `盤點第 ${thin.map((row) => row.line).join("、")} 行需要品項、存放代號、包裝觀察、安排與負責角色。` : `Inventory line ${thin.map((row) => row.line).join(", ")} needs an item, storage code, package observation, plan and owner role.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、帳號、地址或付款識別資料；請改用安全代號。" : "A full contact, account, address or payment identifier was detected; use safe codes.";
+      if (/password|passcode|full address|street address|account number|card number|bank account|receipt contents|private message|signature|姓名|完整地址|帳號|卡號|銀行帳戶|收據全文|私人訊息|簽名/i.test(privacy)) return zh ? "偵測到敏感資料或全文內容；請只保留安全來源代號。" : "Sensitive data or full private content was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜食品與家庭消耗品盤點" : " — pantry and household consumables review"), (zh ? "盤點情境：" : "Review context: ") + values.scope, (zh ? "本次盤點：" : "Current review: ") + fmt.format(review), (zh ? "下一次複查：" : "Next review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + open.length, (zh ? "已關閉或不適用列：" : "Closed or not-applicable rows: ") + closed.length, (zh ? "標示、原廠與採買來源地圖：" : "Label, manufacturer and purchase-source map: ") + values.source.trim(), (zh ? "有版本的食品／消耗品觀察\n" : "Versioned food or consumable observations\n") + parsed.map((row) => row.parts[0] + (zh ? "｜品項：" : " — item: ") + row.parts[1] + (zh ? "｜標示／來源日：" : " — label/source date: ") + fmt.format(strictIsoDate(row.parts[2]) as Date) + (zh ? "｜存放：" : " — storage: ") + row.parts[3] + (zh ? "｜包裝與數量：" : " — package/quantity: ") + row.parts[4] + (zh ? "｜使用／輪替：" : " — use/rotation: ") + row.parts[5] + (zh ? "｜角色：" : " — owner: ") + row.parts[6] + (zh ? "｜結果日：" : " — outcome date: ") + fmt.format(strictIsoDate(row.parts[7]) as Date) + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護標示、收據與盤點歷程位置：" : "Protected label, receipt and review-history location: ") + values.storage.trim(), zh ? "這份輸出只是家庭盤點與輪替索引，不判定食品是否安全、可食、過敏風險、保存期限或應丟棄時間，也不替代標籤、原廠、所在地主管機關或合格專業來源。" : "This output is a household inventory and rotation index. It does not decide safety, edibility, allergy risk, shelf life or disposal timing, and does not replace the label, manufacturer, local authority or qualified source."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -6798,6 +6868,9 @@ const definitions: Record<string, Definition> = {
   "household-meeting-agenda-action-log": {
     ...householdMeetingDefinition("en"),
   },
+  "household-pantry-expiry-review-log": {
+    ...pantryExpiryDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -6841,6 +6914,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-meeting-agenda-action-log": {
     ...householdMeetingDefinition("zh-TW"),
+  },
+  "household-pantry-expiry-review-log": {
+    ...pantryExpiryDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

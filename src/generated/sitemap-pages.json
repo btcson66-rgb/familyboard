@@ -1920,6 +1920,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-pantry-expiry-review-log/",
+    "alternateRoute": "/zh-tw/tools/household-pantry-expiry-review-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2279,6 +2287,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-pantry-review-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/",
     "alternateRoute": "/tools/home-care-charge-service-payment-discrepancy-log/",
     "indexable": true,
@@ -2568,6 +2583,13 @@
   {
     "route": "/zh-tw/tools/household-meeting-agenda-action-log/",
     "alternateRoute": "/tools/household-meeting-agenda-action-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-pantry-expiry-review-log/",
+    "alternateRoute": "/tools/household-pantry-expiry-review-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
