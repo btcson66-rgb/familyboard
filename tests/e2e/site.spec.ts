@@ -135,6 +135,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/emergency-contact-verification-log/",
     "/tools/household-power-outage-event-log/",
     "/guides/power-outage-home-preparedness/",
+    "/guides/familyboard-power-outage-event-log-tutorial/",
     "/tools/household-water-leak-event-log/",
     "/guides/water-leak-response-home-records/",
     "/tools/household-storm-readiness-review/",
@@ -479,6 +480,18 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭停電事件紀錄" }),
   ).toHaveAttribute("href", "/zh-tw/tools/household-power-outage-event-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "停電紀錄 App 教學" }),
+  ).toHaveAttribute(
+    "href",
+    "/zh-tw/guides/familyboard-power-outage-event-log-tutorial/",
+  );
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "停電復電後紀錄指南" }),
+  ).toHaveAttribute(
+    "href",
+    "/zh-tw/guides/power-outage-recovery-household-records/",
+  );
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭漏水事件紀錄" }),
   ).toHaveAttribute("href", "/zh-tw/tools/household-water-leak-event-log/");
@@ -916,6 +929,23 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await page.goto("/zh-tw/guides/familyboard-school-closure-continuity-tutorial/");
   await expect(page.locator("h1")).toHaveText(
     "FamilyBoard 停課怎麼安排？照顧接送與復課交接 App 教學",
+  );
+  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+
+  await page.goto("/zh-tw/guides/familyboard-power-outage-event-log-tutorial/");
+  await expect(page.locator("h1")).toHaveText(
+    "FamilyBoard 家庭停電紀錄怎麼用？先保留觀察，再複查復電結果",
+  );
+  await expect(
+    page.locator('link[rel="alternate"][hreflang="en"]'),
+  ).toHaveAttribute(
+    "href",
+    "https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/",
+  );
+
+  await page.goto("/zh-tw/guides/power-outage-recovery-household-records/");
+  await expect(page.locator("h1")).toHaveText(
+    "停電復電後怎麼整理家庭紀錄？先分流，再決定哪些要回查",
   );
   await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
 
@@ -2665,6 +2695,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/power-outage-recovery-household-records/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/tools/household-water-leak-event-log/",

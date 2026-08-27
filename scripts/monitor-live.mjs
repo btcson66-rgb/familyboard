@@ -302,6 +302,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-school-closure-continuity-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-school-closure-continuity-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-closure-continuity-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/power-outage-recovery-household-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2877,6 +2880,33 @@ const checks = [
       'lang="zh-TW"',
       "照顧接送與復課交接 App 教學",
       "不代替學校公告",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/guides/familyboard-power-outage-event-log-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Power Outage Record",
+      'hreflang="zh-TW"',
+      "does not monitor the grid",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-power-outage-event-log-tutorial/",
+    require: [
+      "FamilyBoard 家庭停電紀錄怎麼用",
+      'lang="zh-TW"',
+      "復電、設備與來源複查 App 教學",
+      "不會推算台電的正式停電時數",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/power-outage-recovery-household-records/",
+    require: [
+      "停電復電後怎麼整理家庭紀錄",
+      'lang="zh-TW"',
+      "食品、設備與官方來源分開複查",
+      "不可碰觸或移動",
     ],
     forbid: ['rel="alternate"'],
   },

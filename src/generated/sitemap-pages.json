@@ -2416,6 +2416,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-power-outage-event-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-power-outage-event-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2975,6 +2983,13 @@
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-power-outage-event-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-power-outage-event-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {
@@ -3927,6 +3942,13 @@
     "alternateRoute": "/guides/power-outage-home-preparedness/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/power-outage-recovery-household-records/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {

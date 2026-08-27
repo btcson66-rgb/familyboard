@@ -2216,6 +2216,14 @@
     "headings": "Household School Closure Continuity Log Capture the official notice and the smallest impact Five passes for household continuity Distinguish plans, handoffs and real confirmation Privacy and safety boundaries Optional affiliate space stays out of the workflow"
   },
   {
+    "title": "How to Use FamilyBoard for a Power Outage Record | Household App Tutorial",
+    "description": "Learn a careful FamilyBoard workflow for recording a power outage, restoration observation, official source and system follow-up without storing account data or guessing safety.",
+    "route": "/guides/familyboard-power-outage-event-log-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard power outage log tutorial",
+    "headings": "How to Use FamilyBoard for a Power Outage Record 1. Start with a private event code 2. Record the first supportable observation 3. Add system rows from what was actually seen 4. Treat restoration as a handoff, not a finish line 5. Give every open ID one next action 6. Review the export before sharing Affiliate boundary"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

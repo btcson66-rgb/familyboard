@@ -1,29 +1,29 @@
 # Content quality report
 
-Generated: 2026-08-27T18:18:55.547Z
+Generated: 2026-08-27T18:38:42.189Z
 
 ## Summary
 
-- Indexable pages: 511
-- Generated HTML routes: 528
+- Indexable pages: 514
+- Generated HTML routes: 531
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 286
+- Pages without a contextual product/tool link: 288
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 68
+- product: 70
 - appliances: 30
 - maintenance: 45
 - household-operations: 89
 - inventory-warranty: 44
-- records-emergency: 73
+- records-emergency: 74
 - tools: 121
 
 ## Word-count range
@@ -169,6 +169,7 @@ Generated: 2026-08-27T18:18:55.547Z
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
+- /zh-tw/guides/familyboard-power-outage-event-log-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-rental-repair-request-tutorial/
 - /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
@@ -219,6 +220,7 @@ Generated: 2026-08-27T18:18:55.547Z
 - /zh-tw/guides/organize-utility-account-information/
 - /zh-tw/guides/organize-vehicle-documents-at-home/
 - /zh-tw/guides/power-outage-home-preparedness/
+- /zh-tw/guides/power-outage-recovery-household-records/
 - /zh-tw/guides/product-registration-tracker/
 - /zh-tw/guides/purchase-receipt-organizer/
 - /zh-tw/guides/renovation-records/
