@@ -18306,6 +18306,44 @@ Before a visit, the household may need to clear an area, locate a model manual o
 
 Use the provider's written quote, service report and warranty terms for price, scope, coverage and formal next steps. The handoff output only summarizes what the family needs to remember and what remains open. Any future affiliate comparison for tool kits, filters or storage folders belongs outside the workflow with clear disclosure.
 
+## Page 261 — Household Weekly Reset Action Log
+**Slug:** /tools/household-weekly-reset-action-log/
+**Primary intent:** turn a short weekly household review into owned actions and a dated next checkpoint
+**Title tag:** Free Household Weekly Reset Action Log | Tasks, Calendar and Decisions | FamilyBoard
+**Meta description:** Turn a weekly home reset into clear decisions, owners, next actions and source references without storing full bills, credentials or private messages.
+**Primary keyword concept:** household weekly reset action log
+**Cluster:** household-operations
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /guides/household-weekly-reset/, /tools/recurring-chore-planner/, /zh-tw/tools/household-weekly-reset-action-log/
+**FAQ:**
+- Q: Is this a replacement for my calendar or task app?
+  A: No. It creates a household review summary and points back to the controlling task or calendar source.
+- Q: Can I paste a full bill or private conversation into a row?
+  A: No. Use safe source codes and keep sensitive material in its controlled location.
+- Q: What makes a weekly reset different from a to-do list?
+  A: The reset records a decision, an owner and the next checkpoint so unresolved work does not disappear between weeks.
+
+# Household Weekly Reset Action Log
+
+A weekly household reset is useful when it produces a small number of clear decisions rather than another unreviewed list. This free tool separates the review scope, source, current decision, household role, observed action and next checkpoint. It does not replace a calendar, task manager or billing record, and it stores no credentials, full bills or private correspondence.
+
+## Review only what needs a decision
+
+Choose one scope—overdue tasks, next-week services, supplies, documents, subscriptions or roles—then use a safe source code such as `TASK-T1` or `CAL-C1`. A short scope keeps the reset actionable; a full export of every household detail makes it harder to see what changed.
+
+## Connect decisions to owners and evidence
+
+“Keep open,” “reschedule,” “ask the provider” and “split into two actions” are decisions. Assign one household role and record the next action or evidence location. The tool does not decide which family priority is correct; it makes the chosen decision visible and reviewable next week.
+
+## Keep the reset outside affiliate content
+
+Future recommendations for planners, labels or folders can sit beside this page with clear disclosure. They must not interrupt the review form, hide the result or imply that a product guarantees better household outcomes.
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

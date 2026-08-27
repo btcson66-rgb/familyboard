@@ -3993,6 +3993,52 @@ const serviceAppointmentHandoffDefinition = (locale: Locale): Definition => {
   };
 };
 
+const weeklyResetActionDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立複查列，等待範圍", "已確認來源，等待家庭決定", "已指定角色，等待行動", "已觀察行動，等待下次核點", "已完成並保留依據", "不適用，已記錄原因"]
+    : ["Review row created—scope pending", "Source checked—household decision pending", "Role assigned—action pending", "Action observed—next checkpoint pending", "Completed with evidence retained", "Not applicable—reason recorded"];
+  const defaults = zh
+    ? "RESET-A | 本週逾期任務複查 | 2026-08-25 | FamilyBoard 任務來源代號 | 決定保留、改期或拆成下一步 | 家庭協調角色已檢查清單，尚有一項等待回覆 | 下週複查未完成項與正式來源 | 家庭協調角色 | 已指定角色，等待行動\nRESET-B | 下週服務與帳單窗口 | 2026-08-26 | 家庭日曆與帳單來源代號 | 只記需要提早處理的日期，不貼完整帳務 | 備援角色確認誰能處理，未決定前保持開放 | 完成後保留來源版本並排下一次核點 | 備援家庭角色 | 已確認來源，等待家庭決定"
+    : "RESET-A | Overdue task review | 2026-08-25 | FamilyBoard task source code | Decide whether to keep, reschedule or split into a next action | Household coordinator checked the list; one item still awaits a reply | Review open items and the controlling source next week | Household coordinator | Role assigned—action pending\nRESET-B | Next-week service and bill windows | 2026-08-26 | Household calendar and billing source codes | Record only dates that need early action; do not paste full billing data | A backup role confirms who can act; keep open until decided | Retain the source version and schedule the next checkpoint | Backup household role | Source checked—household decision pending";
+  return {
+    intro: zh ? "把每週家庭複查的範圍、來源、決定、角色、行動與下次核點分開。工具不是日曆或帳務系統，不保存完整帳單、密碼或私人通信，也不替家庭決定優先順序。" : "Separate the weekly reset scope, sources, decisions, roles, actions and next checkpoint. This is not a calendar or billing system; it stores no full bills, credentials or private correspondence and does not decide household priorities for you.",
+    fields: [
+      text("review", zh ? "家庭每週複查私人代號" : "Private household weekly-reset reference", zh ? "使用家庭代號，不要輸入姓名、地址、電話、帳號或完整帳務。" : "Use a household code; do not enter names, addresses, phone numbers, account details or full billing data.", "RESET-2026-W35"),
+      { name: "context", label: zh ? "本週複查範圍" : "Weekly reset scope", type: "select", options: zh ? ["逾期任務與責任", "下週行事曆與服務", "用品、維護與文件", "訂閱或帳單窗口", "家庭角色與備援", "其他家庭複查"] : ["Overdue tasks and ownership", "Next-week calendar and services", "Supplies, maintenance and documents", "Subscription or bill windows", "Household roles and backup", "Other household review"] },
+      { name: "reviewDate", label: zh ? "本週複查日期" : "Current weekly-reset date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次複查日期" : "Next checkpoint date", type: "date", value: "2026-09-03" },
+      text("source", zh ? "任務、日曆與受控來源地圖" : "Task, calendar and controlled-source map", zh ? "填來源代號，不要貼完整帳單、帳號或私人訊息。" : "Use source codes; do not paste full bills, account details or private messages.", "TASK-T1; CAL-C1; DOC-D1"),
+      text("rows", zh ? "每週複查行動列" : "Weekly review action rows", zh ? "每行 9 欄：ID｜複查範圍｜觀察日期 YYYY-MM-DD｜來源代號｜本週決定或窗口｜角色與行動觀察｜下一步或證據位置｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | review scope | observed date YYYY-MM-DD | source code | current decision or window | role and action observation | next action or evidence location | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護家庭來源位置" : "Protected household-source location", zh ? "只寫保管流程或容器代號，不要放完整帳務或私人通信。" : "Name a custody process or container, not full billing data or private correspondence.", zh ? "家庭紀錄／每週複查／RESET-2026-W35／受保護來源" : "Household records / weekly reset / RESET-2026-W35 / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本週與下一次複查日期。" : "Enter valid current and next checkpoint dates.";
+      if (next < review) return zh ? "下一次複查日期不能早於本週複查。" : "The next checkpoint cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 10 || values.storage.trim().length < 10) return zh ? "請提供安全代號、來源地圖與受保護位置。" : "Provide a safe reference, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行每週複查列。" : "Enter 1 to 14 weekly-review rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `複查第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Review line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行複查紀錄都需要唯一 ID。" : "Every review row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `複查第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Review line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本週複查。" : "Each observed date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 4);
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[3].length < 5 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `複查第 ${thin.map((row) => row.line).join("、")} 行需要範圍、來源、決定、觀察、下一步與角色。` : `Review line ${thin.map((row) => row.line).join(", ")} needs scope, source, decision, observation, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡或帳務識別資料；請改用安全代號。" : "A full contact or billing identifier was detected; use safe codes.";
+      if (/password|passcode|account number|login|payment card|full bill|private message|密碼|帳號|付款卡|完整帳單|私人訊息/i.test(privacy)) return zh ? "偵測到帳號、密碼、付款或私人通信資料；請只保留安全來源代號。" : "Account, credential, payment or private-message data was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭每週複查行動" : " — household weekly reset actions"), (zh ? "複查範圍：" : "Review scope: ") + values.context, (zh ? "本週複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次核點：" : "Next checkpoint: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已完成或不適用列：" : "Completed or not-applicable rows: ") + closed.length, (zh ? "來源地圖：" : "Source map: ") + values.source.trim(), (zh ? "有版本的複查觀察\n" : "Versioned review observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜決定／窗口：" : " — decision/window: ") + row.parts[4] + (zh ? "｜觀察：" : " — observation: ") + row.parts[5] + (zh ? "｜下一步：" : " — next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護家庭來源位置：" : "Protected household-source location: ") + values.storage.trim(), zh ? "這份輸出只整理每週家庭複查與行動，不保存完整帳務、憑證或私人通信，也不替家庭決定優先順序。" : "This output only organizes weekly household review and actions. It stores no full billing, credentials or private correspondence and does not decide household priorities for you."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -8069,6 +8115,9 @@ const definitions: Record<string, Definition> = {
   "household-service-appointment-handoff-log": {
     ...serviceAppointmentHandoffDefinition("en"),
   },
+  "household-weekly-reset-action-log": {
+    ...weeklyResetActionDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -8172,6 +8221,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-service-appointment-handoff-log": {
     ...serviceAppointmentHandoffDefinition("zh-TW"),
+  },
+  "household-weekly-reset-action-log": {
+    ...weeklyResetActionDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

@@ -1976,6 +1976,14 @@
     "headings": "Household Service Appointment Handoff Log Use a safe source map Separate preparation from arrival Keep quotes and reports authoritative"
   },
   {
+    "title": "Free Household Weekly Reset Action Log | Tasks, Calendar and Decisions | FamilyBoard",
+    "description": "Turn a weekly home reset into clear decisions, owners, next actions and source references without storing full bills, credentials or private messages.",
+    "route": "/tools/household-weekly-reset-action-log/",
+    "cluster": "household-operations",
+    "keywords": "household weekly reset action log",
+    "headings": "Household Weekly Reset Action Log Review only what needs a decision Connect decisions to owners and evidence Keep the reset outside affiliate content"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

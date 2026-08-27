@@ -239,6 +239,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-service-appointment-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-service-appointment-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-weekly-reset-action-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-weekly-reset-action-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-weekly-reset-action-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1073,6 +1076,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Use a safe source map",
       "Separate preparation from arrival",
+    ],
+  },
+  {
+    path: "/tools/household-weekly-reset-action-log/",
+    require: [
+      "Household Weekly Reset Action Log",
+      'hreflang="zh-TW"',
+      "Review only what needs a decision",
+      "Connect decisions to owners and evidence",
     ],
   },
   {
@@ -2141,6 +2153,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-weekly-reset-action-log/",
+    require: [
+      "家庭每週複查行動工具",
+      'hreflang="en"',
+      "先限定本週複查範圍",
+      "把決定和執行分開",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2217,6 +2238,16 @@ const checks = [
       'lang="zh-TW"',
       "把正式來源畫成地圖",
       "提醒、到場、結果",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-weekly-reset-action-tutorial/",
+    require: [
+      "FamilyBoard 每週家庭整理怎麼做",
+      'lang="zh-TW"',
+      "建立安全來源地圖",
+      "把提醒、行動與結果分三層",
     ],
     forbid: ['rel="alternate"'],
   },

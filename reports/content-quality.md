@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T08:49:55.851Z
+Generated: 2026-08-27T09:05:31.769Z
 
 ## Summary
 
-- Indexable pages: 436
-- Generated HTML routes: 453
+- Indexable pages: 439
+- Generated HTML routes: 456
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 223
+- Pages without a contextual product/tool link: 226
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 55
+- product: 56
 - appliances: 30
 - maintenance: 37
-- household-operations: 62
+- household-operations: 64
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -97,6 +97,7 @@ Generated: 2026-08-27T08:49:55.851Z
 - /tools/household-subscription-cancellation-handoff-log/
 - /tools/household-trip-packing-handoff-log/
 - /tools/household-vehicle-document-source-status-log/
+- /tools/household-weekly-reset-action-log/
 - /tools/rental-security-deposit-move-out-claim-log/
 - /zh-tw/affiliate-disclosure/
 - /zh-tw/contact/
@@ -147,6 +148,7 @@ Generated: 2026-08-27T08:49:55.851Z
 - /zh-tw/guides/familyboard-share-access-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
+- /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
 - /zh-tw/guides/home-care-service-fees-and-billing/
@@ -255,6 +257,7 @@ Generated: 2026-08-27T08:49:55.851Z
 - /zh-tw/tools/household-utility-provider-service-handoff-log/
 - /zh-tw/tools/household-vehicle-document-source-status-log/
 - /zh-tw/tools/household-water-leak-event-log/
+- /zh-tw/tools/household-weekly-reset-action-log/
 - /zh-tw/tools/important-household-document-review/
 - /zh-tw/tools/move-in-checklist-generator/
 - /zh-tw/tools/move-out-condition-record-generator/

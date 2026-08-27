@@ -2080,6 +2080,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-weekly-reset-action-log/",
+    "alternateRoute": "/zh-tw/tools/household-weekly-reset-action-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2573,6 +2581,13 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-trip-handoff-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-weekly-reset-action-tutorial/",
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
@@ -3087,6 +3102,13 @@
     "alternateRoute": "/tools/household-water-leak-event-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-weekly-reset-action-log/",
+    "alternateRoute": "/tools/household-weekly-reset-action-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {
