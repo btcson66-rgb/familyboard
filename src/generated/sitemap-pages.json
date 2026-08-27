@@ -1968,6 +1968,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-inventory-photo-capture-log/",
+    "alternateRoute": "/zh-tw/tools/household-inventory-photo-capture-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2355,6 +2363,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-photo-inventory-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-share-access-tutorial/",
     "alternateRoute": "",
     "indexable": true,
@@ -2653,6 +2668,13 @@
     "alternateRoute": "/tools/household-insurance-policy-source-version-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-inventory-photo-capture-log/",
+    "alternateRoute": "/tools/household-inventory-photo-capture-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {

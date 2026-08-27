@@ -1,28 +1,28 @@
 # Content quality report
 
-Generated: 2026-08-27T04:28:52.952Z
+Generated: 2026-08-27T04:44:59.650Z
 
 ## Summary
 
-- Indexable pages: 394
-- Generated HTML routes: 411
+- Indexable pages: 397
+- Generated HTML routes: 414
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 181
+- Pages without a contextual product/tool link: 184
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 41
+- product: 42
 - appliances: 30
 - maintenance: 37
 - household-operations: 38
-- inventory-warranty: 39
+- inventory-warranty: 41
 - records-emergency: 47
 - tools: 121
 
@@ -77,6 +77,7 @@ Generated: 2026-08-27T04:28:52.952Z
 - /terms/
 - /tools/household-bill-source-status-log/
 - /tools/household-clothing-care-repair-log/
+- /tools/household-inventory-photo-capture-log/
 - /tools/household-meal-prep-role-log/
 - /tools/household-meeting-agenda-action-log/
 - /tools/household-pantry-expiry-review-log/
@@ -117,6 +118,7 @@ Generated: 2026-08-27T04:28:52.952Z
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
+- /zh-tw/guides/familyboard-photo-inventory-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
@@ -197,6 +199,7 @@ Generated: 2026-08-27T04:28:52.952Z
 - /zh-tw/tools/household-clothing-care-repair-log/
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-insurance-policy-source-version-log/
+- /zh-tw/tools/household-inventory-photo-capture-log/
 - /zh-tw/tools/household-meal-prep-role-log/
 - /zh-tw/tools/household-medical-information-source-handoff-log/
 - /zh-tw/tools/household-meeting-agenda-action-log/

@@ -43,3 +43,5 @@ Never paste passwords, one-time codes, share URLs, access tokens, account IDs, a
 ## Future affiliate placement
 
 Folders, labels, scanners or privacy screens may eventually be recommended beside this guide, but no product can grant, secure or revoke account access. Any commercial block must stay outside the tool controls and never interrupt a user reviewing a sensitive share.
+
+---

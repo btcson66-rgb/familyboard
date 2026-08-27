@@ -3181,6 +3181,72 @@ const shareAccessDefinition = (locale: Locale): Definition => {
   };
 };
 
+const photoInventoryDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立拍攝列，等待空間或物品範圍",
+        "已確認範圍，等待拍攝時段",
+        "已完成拍攝，等待隱私複查",
+        "已完成隱私複查，等待來源代號",
+        "已記錄來源代號，等待備份或更新",
+        "已確認備份或更新，完成本次複查",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Capture row created—room or item scope pending",
+        "Scope checked—photo session pending",
+        "Photo session completed—privacy review pending",
+        "Privacy review complete—source code pending",
+        "Source code recorded—backup or update pending",
+        "Backup or update confirmed—review closed",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "PHOTO-A | 客廳主要設備範圍 | 2026-08-20 | 2026-09-05 | 家庭財物清冊來源代號 | 已遮住姓名、地址、序號與文件內容 | 已完成一組環境與物品照片；仍待保留代表性角度 | 2026-09-04 前把照片索引放入受保護位置並確認版本 | 已完成隱私複查，等待來源代號\nPHOTO-B | 家電與保固文件範圍 | 2026-08-22 | 2026-09-10 | 家電清冊與保固來源代號 | 只保留外觀與文件位置提示；未拍攝標籤細節 | 尚未建立新照片；現有索引可供交接 | 複查下次購買或維修後是否需要更新照片 | 已確認備份或更新，完成本次複查"
+    : "PHOTO-A | Living-room equipment scope | 2026-08-20 | 2026-09-05 | Household inventory source code | Names, addresses, serials and document text masked | One set of room and item photos completed; representative angles still to review | Place the photo index in protected storage and confirm the version by 2026-09-04 | Privacy review complete—source code pending\nPHOTO-B | Appliance and warranty-document scope | 2026-08-22 | 2026-09-10 | Appliance inventory and warranty source code | Exterior and document-location cue only; label details not photographed | No new photo session yet; current index is available for handoff | Review whether a new photo is needed after purchase or service | Backup or update confirmed—review closed";
+  return {
+    intro: zh
+      ? "把家庭照片盤點的範圍、拍攝日期、隱私檢查、來源代號、備份與更新分開記錄。工具不保存照片、不讀取相簿、不辨識人物或序號，也不估算財物價值或保險理賠。"
+      : "Separate photo-inventory scope, capture dates, privacy checks, source codes, backup and update follow-up. This tool stores no photos, reads no album, identifies no people or serials and does not estimate value or insurance recovery.",
+    fields: [
+      text("review", zh ? "照片盤點複查私人代號" : "Private photo-inventory review reference", zh ? "使用家庭代號，不要輸入姓名、地址、序號或照片內容。" : "Use a household code; do not enter names, addresses, serials or photo content.", "PHOTO-REVIEW-2026-A"),
+      { name: "context", label: zh ? "拍攝盤點情境" : "Photo-inventory context", type: "select", options: zh ? ["房間與大型物品", "家電與設備", "搬家前後", "保固或維修前後", "災損後資料整理", "其他家庭盤點"] : ["Rooms and major items", "Appliances and equipment", "Before or after a move", "Before or after warranty service", "Post-incident documentation", "Other household inventory"] },
+      { name: "captureDate", label: zh ? "本次拍攝或盤點日期" : "Current capture or inventory date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次複查日期" : "Next review date", type: "date", value: "2026-09-10" },
+      text("source", zh ? "照片、清冊與受保護原件來源地圖" : "Photo, inventory and protected-original source map", zh ? "只填安全代號，不要貼照片、雲端分享連結、序號或文件全文。" : "Use safe codes; do not paste photos, sharing links, serials or full documents.", "PHOTO-S1; INVENTORY-I1; BACKUP-B1"),
+      text("rows", zh ? "照片盤點與隱私狀態列" : "Photo-inventory and privacy-status rows", zh ? "每行 9 欄：ID｜空間或物品範圍｜拍攝日期 YYYY-MM-DD｜上次複查日期 YYYY-MM-DD｜來源／用途代號｜隱私檢查｜已觀察狀態｜下一步與核點｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | room or item scope | capture date YYYY-MM-DD | last review date YYYY-MM-DD | source or purpose code | privacy check | observed state | next action and checkpoint | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護照片、清冊與備份位置" : "Protected photo, inventory and backup location", zh ? "只寫保管流程或容器代號，不要放照片、地址、序號或分享憑證。" : "Name a custody process or container, not photos, addresses, serials or sharing credentials.", zh ? "家庭紀錄／照片盤點／PHOTO-REVIEW-2026-A／受保護容器" : "Household records / photo inventory / PHOTO-REVIEW-2026-A / protected container"),
+    ],
+    run: (values) => {
+      const capture = strictIsoDate(values.captureDate), next = strictIsoDate(values.nextReview);
+      if (!capture || !next) return zh ? "請輸入有效的拍攝與下一次複查日期。" : "Enter valid capture and next review dates.";
+      if (next < capture) return zh ? "下一次複查日期不能早於本次拍攝。" : "The next review date cannot be earlier than the current capture.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全盤點代號、來源地圖與受保護位置。" : "Provide a safe inventory code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行照片盤點列。" : "Enter 1 to 14 photo-inventory rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `照片盤點第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Photo-inventory line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行照片盤點紀錄都需要唯一 ID。" : "Every photo-inventory row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `照片盤點第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Photo-inventory line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => ({ capture: strictIsoDate(row.parts[2]), review: strictIsoDate(row.parts[3]) }));
+      if (dates.some((item) => !item.capture || !item.review || item.capture > capture || item.review < item.capture)) return zh ? "每列拍攝與複查日期必須有效，且複查不能早於拍攝。" : "Each capture and review date must be valid, with review no earlier than capture.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const invalidClosed = closed.filter((row) => { const reviewDate = dates[row.line - 1]?.review; return reviewDate ? reviewDate > capture : false; });
+      if (invalidClosed.length) return zh ? `已完成的照片盤點第 ${invalidClosed.map((row) => row.line).join("、")} 行複查日期不能晚於本次盤點。` : `Closed photo-inventory line ${invalidClosed.map((row) => row.line).join(", ")} cannot have a review date later than the current inventory date.`;
+      const thin = parsed.filter((row) => row.parts[1].length < 5 || row.parts[4].length < 6 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 10);
+      if (thin.length) return zh ? `照片盤點第 ${thin.map((row) => row.line).join("、")} 行需要範圍、來源、隱私檢查、觀察與下一步。` : `Photo-inventory line ${thin.map((row) => row.line).join(", ")} needs a scope, source, privacy check, observation and next action.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、序號或分享識別資料；請改用安全代號。" : "A full contact, address, serial or sharing identifier was detected; use safe codes.";
+      if (/password|passcode|share token|access token|share link|full photo|photo contents|serial number|account number|private message|姓名|密碼|分享連結|token|照片內容|完整照片|序號|帳號|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或照片內容；請只保留安全代號。" : "Sensitive data or photo content was detected; keep only safe codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭照片盤點與隱私複查" : " — household photo inventory and privacy review"), (zh ? "盤點情境：" : "Inventory context: ") + values.context, (zh ? "本次拍攝／盤點：" : "Current capture/inventory: ") + fmt.format(capture), (zh ? "下一次複查：" : "Next review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已完成或不適用列：" : "Closed or not-applicable rows: ") + closed.length, (zh ? "照片、清冊與受保護原件來源地圖：" : "Photo, inventory and protected-original source map: ") + values.source.trim(), (zh ? "有版本的照片盤點觀察\n" : "Versioned photo-inventory observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜拍攝日：" : " — capture date: ") + fmt.format(dates[index].capture as Date) + (zh ? "｜複查日：" : " — review date: ") + fmt.format(dates[index].review as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[4] + (zh ? "｜隱私檢查：" : " — privacy check: ") + row.parts[5] + (zh ? "｜觀察：" : " — observation: ") + row.parts[6] + (zh ? "｜下一步：" : " — next action: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護照片、清冊與備份位置：" : "Protected photo, inventory and backup location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭照片盤點與隱私複查，不保存照片、不辨識人物或物品、不估算價值或保險理賠，也不證明備份、所有權、身分、損害或法律結果；請以受保護原件、目前服務與合格專業來源為準。" : "This output only organizes household photo inventory and privacy review. It stores no photos, identifies no people or items, estimates no value or insurance recovery and proves no backup, ownership, identity, damage or legal outcome; use protected originals, the current service and qualified sources."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7215,6 +7281,9 @@ const definitions: Record<string, Definition> = {
   "household-share-access-review-log": {
     ...shareAccessDefinition("en"),
   },
+  "household-inventory-photo-capture-log": {
+    ...photoInventoryDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7276,6 +7345,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-share-access-review-log": {
     ...shareAccessDefinition("zh-TW"),
+  },
+  "household-inventory-photo-capture-log": {
+    ...photoInventoryDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

@@ -1864,6 +1864,14 @@
     "headings": "Household Share Access Review Log Define the smallest useful scope Separate role, container and confirmation Give temporary access an expiry review Keep credentials and private content out Future affiliate placement"
   },
   {
+    "title": "Free Home Inventory Photo Log | Privacy Check and Backup Review | FamilyBoard",
+    "description": "Plan home-inventory photo sessions by room or item, record privacy checks and source codes, and review backup follow-up without uploading photos or serial numbers.",
+    "route": "/tools/household-inventory-photo-capture-log/",
+    "cluster": "inventory-warranty",
+    "keywords": "home inventory photo checklist log",
+    "headings": "Household Inventory Photo Capture Log Choose a small room or item scope Record the capture date and source code Complete a privacy check before sharing Keep an update or backup checkpoint Future affiliate placement"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
