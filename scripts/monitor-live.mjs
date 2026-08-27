@@ -837,7 +837,7 @@ const checks = [
     require: [
       "Home Care Payment, Refund and Collection Notice Log",
       'hreflang="zh-TW"',
-      "Separate payment, refund, collection and adverse notices",
+      "Separate promises, handoffs and actual results",
       "does not authenticate a notice",
     ],
   },
@@ -846,7 +846,7 @@ const checks = [
     require: [
       "Rental Security Deposit Move-Out Claim Log",
       'hreflang="zh-TW"',
-      "Separate the lease, deposit, move-out notice",
+      "Use the log as an evidence index, not a legal claim",
       "does not calculate a deposit balance",
     ],
   },
@@ -883,7 +883,7 @@ const checks = [
       "Household Meeting Agenda and Action Log",
       'hreflang="zh-TW"',
       "Short household meetings work best",
-      "Decisions and open questions",
+      "Record decisions and open questions separately",
     ],
   },
   {
@@ -973,7 +973,7 @@ const checks = [
       "Household Meter Reading Log",
       'hreflang="zh-TW"',
       "Record what was visible from a safe position",
-      "Future affiliate placement",
+      "future affiliate placement",
     ],
   },
   {
@@ -990,8 +990,8 @@ const checks = [
     require: [
       "Household Recycling Handoff Log",
       'hreflang="zh-TW"',
-      "Start with the collection source",
-      "Privacy and future affiliate placement",
+      "Use the current source",
+      "Assign the handoff and recheck after changes",
     ],
   },
   {
@@ -999,8 +999,8 @@ const checks = [
     require: [
       "Household Donation Handoff Log",
       'hreflang="zh-TW"',
-      "Start with the transfer purpose",
-      "Privacy and future affiliate placement",
+      "先寫清楚這列為什麼存在",
+      "來源和物品觀察要分開",
     ],
   },
   {
@@ -1009,7 +1009,7 @@ const checks = [
       "Mail and Package Handoff Log",
       'hreflang="zh-TW"',
       "Define the handoff window",
-      "Privacy and future affiliate placement",
+      "Assign custody and close with a result",
     ],
   },
   {
@@ -2028,7 +2028,7 @@ const checks = [
       "FamilyBoard 家庭垃圾與資源回收怎麼交接",
       'lang="zh-TW"',
       "先選目前適用的公告來源",
-      "把交接結果帶回家庭會議",
+      "用家庭會議修正流程",
     ],
     forbid: ['rel="alternate"'],
   },
@@ -2082,8 +2082,8 @@ const checks = [
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
       'lang="zh-TW"',
-      "先寫清楚這列為什麼存在",
-      "用最少必要資訊做家庭交接",
+      "第一步：建立不含個資的安全 ID",
+      "交接時只給最少必要資訊",
     ],
     forbid: ['rel="alternate"'],
   },
