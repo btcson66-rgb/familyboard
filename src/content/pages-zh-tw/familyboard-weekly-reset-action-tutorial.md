@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 執行每週複查並留下可
 primaryKeyword: "FamilyBoard 每週家庭整理教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-weekly-reset-action-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"
@@ -80,4 +80,3 @@ FamilyBoard 的本機資料仍需要家庭自行備份與保護。清除瀏覽�
 ## 五個收尾問題
 
 完成每週複查前，問自己：本週範圍是否夠小？每列是否有來源代號？決定、行動與結果是否分開？下一步是否只有一個且有角色？下週是否知道回哪裡複查？如果答案都是肯定的，這份紀錄就能在忙亂時提供方向，而不是增加另一層管理負擔。
-

@@ -7,7 +7,7 @@ primaryKeyword: "FamilyBoard 家庭會議教學"
 locale: "zh-TW"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-household-meeting-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

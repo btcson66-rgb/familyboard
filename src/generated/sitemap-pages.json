@@ -2624,6 +2624,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-household-meeting-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-meeting-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-weekly-reset-action-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-weekly-reset-action-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-school-closure-continuity-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-school-closure-continuity-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3089,7 +3113,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-household-meeting-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-household-meeting-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3250,7 +3274,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-school-closure-continuity-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-school-closure-continuity-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
@@ -3320,7 +3344,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-weekly-reset-action-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-weekly-reset-action-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

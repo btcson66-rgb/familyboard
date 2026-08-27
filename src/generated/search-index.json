@@ -2424,6 +2424,30 @@
     "headings": "What to Do Before Giving Away an Old Phone or Tablet with FamilyBoard Identify the exact device first Define what must be retained Map sources without copying secrets Handle accounts and management links on the device Keep erasure and custody separate Check removable and companion items Test a replacement before clearing the source Keep failures open and recommendations optional Seven-question closeout"
   },
   {
+    "title": "FamilyBoard Household Meeting Tutorial | Short Agenda, Roles and Follow-up",
+    "description": "Learn how to run a focused FamilyBoard household meeting: set one purpose, record decisions, assign roles, protect sensitive details and verify the result at the next review.",
+    "route": "/guides/familyboard-household-meeting-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard household meeting tutorial",
+    "headings": "How to Use FamilyBoard for a Short Household Meeting Start with one purpose Give every topic the same path Use safe source references Record decisions and questions separately Assign a durable role and spoken handoff Review before adding new work Protect sharing and recommendations Five-question closeout A practical 15-minute example"
+  },
+  {
+    "title": "FamilyBoard Weekly Reset Tutorial | Five-Minute Household Review",
+    "description": "Use FamilyBoard for a five-minute weekly reset: choose a small scope, review dates and open work, assign roles and leave a safe handoff without copying bills, accounts or private conversations.",
+    "route": "/guides/familyboard-weekly-reset-action-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard weekly reset tutorial",
+    "headings": "How to Use FamilyBoard for a Five-Minute Weekly Reset Choose a small boundary Sort by decision, not anxiety Keep sources and actions distinct Assign an owner and real window Record an observed result Version postponed work and share safely Keep recommendations optional Five-minute closeout A repeatable weekly rhythm"
+  },
+  {
+    "title": "FamilyBoard School Closure Continuity Tutorial | Care, Pickup and Return Handoff",
+    "description": "Learn how to use FamilyBoard during a school closure or schedule change: separate the official notice, household impact, care and pickup handoff, and next confirmation without storing a child’s identity or school login.",
+    "route": "/guides/familyboard-school-closure-continuity-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard school closure planning tutorial",
+    "headings": "How to Use FamilyBoard During a School Closure or Schedule Change Start with a neutral arrangement code Classify the source before planning Separate impact from announcement Assign the adult handoff Track actual result and next notice Stop for urgent concerns Review return-to-school and protect data Seven-question closeout A concrete closure example"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

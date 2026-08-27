@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭用 FamilyBoard 交接停課、遠距或活動改
 primaryKeyword: "FamilyBoard 停課安排教學"
 cluster: "records-emergency"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-school-closure-continuity-tutorial/"
 indexable: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

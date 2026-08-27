@@ -299,6 +299,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-shopping-list-planner/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-shopping-list-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-shopping-list-planner-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-meeting-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-meeting-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-weekly-reset-action-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-weekly-reset-action-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-school-closure-continuity-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-closure-continuity-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-responsibility-coverage-map/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-responsibility-coverage-map/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/</loc>",
@@ -2055,10 +2061,19 @@ const checks = [
     require: [
       "FamilyBoard 家庭會議怎麼開",
       'lang="zh-TW"',
+      'hreflang="en"',
       "從一個小目的開始",
       "決定、任務、結果要用不同詞",
     ],
-    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/guides/familyboard-household-meeting-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Short Household Meeting",
+      'hreflang="zh-TW"',
+      "Give every topic the same path",
+      "does not send invitations",
+    ],
   },
   {
     path: "/zh-tw/tools/household-pantry-expiry-review-log/",
@@ -2553,10 +2568,19 @@ const checks = [
     require: [
       "FamilyBoard 每週家庭整理怎麼做",
       'lang="zh-TW"',
+      'hreflang="en"',
       "建立安全來源地圖",
       "把提醒、行動與結果分三層",
     ],
-    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/guides/familyboard-weekly-reset-action-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Five-Minute Weekly Reset",
+      'hreflang="zh-TW"',
+      "Sort by decision, not anxiety",
+      "does not contact an external service",
+    ],
   },
   {
     path: "/zh-tw/guides/familyboard-monthly-review-action-tutorial/",
@@ -3161,10 +3185,19 @@ const checks = [
     require: [
       "FamilyBoard 停課怎麼安排",
       'lang="zh-TW"',
+      'hreflang="en"',
       "照顧接送與復課交接 App 教學",
       "不代替學校公告",
     ],
-    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/guides/familyboard-school-closure-continuity-tutorial/",
+    require: [
+      "How to Use FamilyBoard During a School Closure or Schedule Change",
+      'hreflang="zh-TW"',
+      "Classify the source before planning",
+      "does not sign in to a school system",
+    ],
   },
   {
     path: "/guides/familyboard-power-outage-event-log-tutorial/",

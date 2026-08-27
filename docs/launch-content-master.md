@@ -22406,6 +22406,213 @@ Is the device and ownership identified? Is retained data listed with a readable 
 
 ---
 
+## Page 329 — How to Use FamilyBoard for a Short Household Meeting
+**Slug:** /guides/familyboard-household-meeting-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-meeting-tutorial/
+**Primary intent:** learn a short, privacy-aware FamilyBoard meeting workflow that turns household decisions into owned follow-up
+**Title tag:** FamilyBoard Household Meeting Tutorial | Short Agenda, Roles and Follow-up
+**Meta description:** Learn how to run a focused FamilyBoard household meeting: set one purpose, record decisions, assign roles, protect sensitive details and verify the result at the next review.
+**Primary keyword concept:** FamilyBoard household meeting tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-meeting-agenda-action-log/`, `/guides/household-weekly-reset/`, `/guides/household-monthly-review/`, `/guides/familyboard-household-handoff-tutorial/`, `/zh-tw/guides/familyboard-household-meeting-tutorial/`
+**FAQ:**
+- Q: Does a household meeting need to be long?
+  A: No. One purpose and a few topics can fit in 15–20 minutes.
+- Q: Should the agenda contain every detail?
+  A: No. Keep sensitive data and private conversations in protected sources.
+- Q: How do we verify a decision?
+  A: Ask the responsible role to describe the result and source at the next review.
+- Q: Can FamilyBoard resolve a disagreement?
+  A: No. It organises shared work, not communication or professional decisions.
+
+**Contextual CTA:** Schedule one 15-minute meeting with three topics, one decision owner and one next check.
+
+# How to Use FamilyBoard for a Short Household Meeting
+
+A useful household meeting answers what is being decided, who owns the next action, which source controls the detail and when the result will be checked. The free [Household Meeting Agenda and Action Log](/tools/household-meeting-agenda-action-log/) is a local-first index for those questions. It is not a family-therapy service, voting authority or replacement for an official bill, school notice, medical instruction or contract.
+
+## Start with one purpose
+
+Choose a weekly sync, a monthly maintenance review or a travel handoff. Limit the agenda to three or four topics. If a topic needs a long explanation, create a separate follow-up instead of turning the meeting into a household database. A narrow agenda makes decisions findable.
+
+## Give every topic the same path
+
+Record the current observation, the decision needed, the role owning the action and the next review date. “The service visit awaits a written result” is an observation; “ask for the missing scope” is an action. A review date is a household window, not an external promise or official deadline.
+
+## Use safe source references
+
+For a school notice, utility bill, repair quote or manual, record a neutral code and protected location. Add the source date and whether it is current. Do not copy a password, address, account identifier, health detail or private message into the meeting export.
+
+## Record decisions and questions separately
+
+“Pause the repair request until access is confirmed” is a decision. “Who will ask the building?” is an open question. Keeping questions open prevents a friendly conversation from being mistaken for external confirmation. Preserve a short version note when the household changes direction.
+
+## Assign a durable role and spoken handoff
+
+Use household coordinator, school-contact role, maintenance role or backup organiser. Before ending, ask the owner to repeat the action, source and date. If the person cannot accept it, assign another role rather than marking the discussion complete. FamilyBoard does not send invitations or enforce attendance.
+
+## Review before adding new work
+
+At the next meeting, check open rows first. Ask what was observed, whether a source changed and whether the action happened. Move postponed work with a reason; do not erase the earlier decision. This small history helps families using different devices or schedules.
+
+## Protect sharing and recommendations
+
+Remove addresses, account details, payment information, medical content, private conversations and full documents before printing. Keep a protected backup because records are local to the browser. Future notebooks or label recommendations belong after the answer, outside the form, with disclosure and an easy skip; no purchase is required.
+
+## Five-question closeout
+
+Is there one purpose? Does each topic have observation, decision, role and date? Are sources protected? Did the owner repeat the handoff? Are unresolved questions still open? If not, record the missing step.
+
+## A practical 15-minute example
+
+Imagine a family preparing for a repair visit. The meeting records the protected quote as `QUOTE-A1`, notes that the access window still needs confirmation, assigns the maintenance role to ask the building and sets a review date. A second topic might be a school pickup change with its own source code and adult role. At the end, the coordinator reads the two next actions aloud. If the building has not replied by the review date, the row remains waiting; the meeting does not invent permission or declare the repair approved. This example shows why a short agenda can support several people without copying their private records into one public note.
+
+---
+
+## Page 330 — How to Use FamilyBoard for a Five-Minute Weekly Reset
+**Slug:** /guides/familyboard-weekly-reset-action-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
+**Primary intent:** learn a focused FamilyBoard weekly household reset that turns open work into dated, owned follow-up
+**Title tag:** FamilyBoard Weekly Reset Tutorial | Five-Minute Household Review
+**Meta description:** Use FamilyBoard for a five-minute weekly reset: choose a small scope, review dates and open work, assign roles and leave a safe handoff without copying bills, accounts or private conversations.
+**Primary keyword concept:** FamilyBoard weekly reset tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-weekly-reset-action-log/`, `/guides/household-weekly-reset/`, `/features/family-task-manager/`, `/guides/familyboard-household-meeting-tutorial/`, `/zh-tw/guides/familyboard-weekly-reset-action-tutorial/`
+**FAQ:**
+- Q: Must a weekly reset list every chore?
+  A: No. Choose a small scope where a decision, owner or date is needed.
+- Q: Does the app prioritise the week?
+  A: No. The household decides using its sources and context.
+- Q: Is a reminder a completed result?
+  A: No. Completion needs dated, observable evidence.
+- Q: Can a summary be shared?
+  A: Yes, after removing personal, account and private details.
+
+**Contextual CTA:** Choose one five-minute scope and review only rows that need a decision, owner or next date.
+
+# How to Use FamilyBoard for a Five-Minute Weekly Reset
+
+Calendars and task lists still leave unowned appointments, one-inbox bills and tasks without a new date. The free [Weekly Reset Action Log](/tools/household-weekly-reset-action-log/) is for a deliberate review of those gaps. It does not contact an external service, read a calendar or decide legal, medical, payment or safety outcomes.
+
+## Choose a small boundary
+
+Pick this week’s appointments, overdue actions, a school handoff, a maintenance window or the next backup check. Write a neutral code and date. Do not import every household task; the goal is to identify rows needing a decision.
+
+## Sort by decision, not anxiety
+
+Review overdue rows, items due soon, waits for a source and rows missing an owner. Separate “we need to ask” from “we have an answer.” A reminder is not an official deadline, payment confirmation or safety assessment. If a row has no useful action, record why it is out of scope.
+
+## Keep sources and actions distinct
+
+Use safe references for a bill, school announcement, quote, subscription terms or protected note. The row says what the household will check and who checks it; never copy credentials, an invoice, an address or private conversation. Record the source date.
+
+## Assign an owner and real window
+
+Choose a bills, school-contact, maintenance or household-coordinator role and a date it can meet. “Someone should handle it” is not a handoff. If the owner cannot accept, leave the row open and nominate another role. The app does not send push notifications or guarantee appointments.
+
+## Record an observed result
+
+Write “provider reply received in protected folder,” “appointment window changed” or “no response, follow-up assigned.” Avoid “resolved,” “safe” or “paid” without source evidence. An honest open status is more useful than an assumed completion.
+
+## Version postponed work and share safely
+
+Preserve the original date and add the reason, new owner and reopening event. Before sending a summary, remove names, addresses, account identifiers, payment information, medical details and private messages. Records are local to the browser; do not assume a phone and laptop share them.
+
+## Keep recommendations optional
+
+Future planners, labels or storage products belong after the answer and outside the form, with disclosure and an easy skip. A purchase cannot be required to complete a free weekly reset.
+
+## Five-minute closeout
+
+Is the scope small? Did you review rows needing decisions? Does every open row have a role and date? Are sources safe? Is the result an observation? If not, leave it open.
+
+## A repeatable weekly rhythm
+
+Use the same order each week: identify the small scope, scan dates and waiting rows, assign one owner, write the next window and review the previous result. A household can rotate the coordinator while keeping the role names stable. If a bill, appointment or school notice changes, create a new source date and explain the change in one sentence. This rhythm avoids turning the reset into a second calendar and gives a returning family member enough context to continue without seeing the full protected document. Keep the review short enough that the family can repeat it consistently rather than postponing it indefinitely.
+
+---
+
+## Page 331 — How to Use FamilyBoard During a School Closure or Schedule Change
+**Slug:** /guides/familyboard-school-closure-continuity-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-school-closure-continuity-tutorial/
+**Primary intent:** learn a privacy-aware FamilyBoard timeline for school closure, remote learning or activity changes with clear adult handoffs
+**Title tag:** FamilyBoard School Closure Continuity Tutorial | Care, Pickup and Return Handoff
+**Meta description:** Learn how to use FamilyBoard during a school closure or schedule change: separate the official notice, household impact, care and pickup handoff, and next confirmation without storing a child’s identity or school login.
+**Primary keyword concept:** FamilyBoard school closure planning tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-school-closure-continuity-log/`, `/guides/family-continuity-plan/`, `/guides/caregiver-handoff-checklist/`, `/tools/household-school-activity-handoff-log/`, `/zh-tw/guides/familyboard-school-closure-continuity-tutorial/`
+**FAQ:**
+- Q: Can a forwarded group message start a timeline?
+  A: Yes, as an unconfirmed lead; wait for the official source.
+- Q: Do I need a child’s name or school password?
+  A: No. Use a neutral arrangement code.
+- Q: Does a care plan prove safety?
+  A: No. The responsible adult and official guidance control actual care and safety.
+- Q: Does this provide attendance or legal advice?
+  A: No. Check the current school, district and qualified sources.
+
+**Contextual CTA:** Create one neutral closure code, link the official notice and assign the next adult confirmation.
+
+# How to Use FamilyBoard During a School Closure or Schedule Change
+
+School announcements, household plans and actual outcomes are three different timelines. The free [School Closure Continuity Log](/tools/household-school-closure-continuity-log/) keeps them separate in a local browser record. It does not sign in to a school system, decide attendance, supervise a child or provide legal, medical or safety advice.
+
+## Start with a neutral arrangement code
+
+Use `SCHOOL-CHANGE-2026-A` and record when the household first heard the information. Avoid names, student numbers, class details, addresses and complete screenshots. Separate protected mappings when more than one child or campus is involved.
+
+## Classify the source before planning
+
+An official school or district notice differs from a parent-group forward, weather alert or family assumption. Record source type, date and scope. A forwarded message is a lead, not confirmation; keep the row waiting until a responsible adult checks the current official source.
+
+## Separate impact from announcement
+
+After confirmation, record care window, pickup change, remote-learning equipment, meals, transport or work adjustment in their own rows. “Adult A plans pickup at 15:00” is a household plan, not proof of release or route availability.
+
+## Assign the adult handoff
+
+Use primary caregiver, backup caregiver, pickup or school-contact roles. Record the expected window and safe confirmation method. A role must accept before the row is ready. Keep phone numbers and private messages protected; FamilyBoard is not emergency dispatch.
+
+## Track actual result and next notice
+
+Record “pickup confirmed by responsible adult,” “activity moved again” or “backup arrangement not accepted.” Keep that result separate from the next official update. When a new notice appears, create a new source version rather than overwriting the original.
+
+## Stop for urgent concerns
+
+If a child is missing, a route is unsafe, a health concern arises or official emergency instructions conflict with the plan, stop using the app workflow and contact the appropriate emergency, school, caregiver or qualified professional channel. Waiting for confirmation is not permission to continue an unsafe arrangement.
+
+## Review return-to-school and protect data
+
+Before normal activities resume, check the latest source, transport and care roles, equipment and next confirmation. Before sharing, remove names, student numbers, logins, addresses, health information and full notices. Future planners, bags or school-supply links must be after the answer, outside the form, disclosed and skippable; products cannot guarantee attendance or safety.
+
+## Seven-question closeout
+
+Is the source dated and classified? Is the scope clear? Are identity and login details protected? Does an adult own the handoff? Are plan and result separate? Were urgent concerns transferred? Is the next official confirmation recorded? If not, keep the timeline open.
+
+## A concrete closure example
+
+Suppose a district posts a closure for one campus while a parent-group message says every campus is closed. Record the group message as a lead, link the official source once confirmed and create separate rows for care, pickup and the next notice. An adult can accept the pickup role without receiving a child’s student number in the shared summary. If the official scope changes, add a new version and leave the earlier observation intact. The timeline is successful when the next adult knows which statement is confirmed and which still needs checking.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

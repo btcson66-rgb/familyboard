@@ -120,6 +120,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-seasonal-reset-tutorial/",
     "/guides/familyboard-device-retirement-tutorial/",
     "/guides/familyboard-shopping-list-planner-tutorial/",
+    "/guides/familyboard-household-meeting-tutorial/",
+    "/guides/familyboard-weekly-reset-action-tutorial/",
+    "/guides/familyboard-school-closure-continuity-tutorial/",
     "/tools/household-seasonal-reset-action-log/",
     "/tools/household-device-retirement-handoff-log/",
     "/tools/household-router-support-review-log/",
@@ -1007,7 +1010,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(page.locator("h1")).toHaveText(
     "FamilyBoard 停課怎麼安排？照顧接送與復課交接 App 教學",
   );
-  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+  await expect(
+    page.locator('link[rel="alternate"][hreflang="en"]'),
+  ).toHaveAttribute(
+    "href",
+    "https://familyboard.win/guides/familyboard-school-closure-continuity-tutorial/",
+  );
 
   await page.goto("/zh-tw/guides/familyboard-power-outage-event-log-tutorial/");
   await expect(page.locator("h1")).toHaveText(
@@ -1264,6 +1272,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-device-retirement-tutorial/",
       alternate: "/guides/familyboard-device-retirement-tutorial/",
       heading: "舊手機送人前要做什麼？FamilyBoard 裝置清除與交接教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-meeting-tutorial/",
+      alternate: "/guides/familyboard-household-meeting-tutorial/",
+      heading: "FamilyBoard 家庭會議怎麼開？",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-weekly-reset-action-tutorial/",
+      alternate: "/guides/familyboard-weekly-reset-action-tutorial/",
+      heading: "FamilyBoard 每週家庭整理怎麼做？5 分鐘複查與分工 App 教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-school-closure-continuity-tutorial/",
+      alternate: "/guides/familyboard-school-closure-continuity-tutorial/",
+      heading: "FamilyBoard 停課怎麼安排？照顧接送與復課交接 App 教學",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -3117,6 +3140,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-device-retirement-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-meeting-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-meeting-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-weekly-reset-action-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-weekly-reset-action-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-school-closure-continuity-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-school-closure-continuity-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",
