@@ -136,6 +136,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-power-outage-event-log/",
     "/guides/power-outage-home-preparedness/",
     "/guides/familyboard-power-outage-event-log-tutorial/",
+    "/guides/familyboard-water-leak-event-log-tutorial/",
     "/tools/household-water-leak-event-log/",
     "/guides/water-leak-response-home-records/",
     "/tools/household-storm-readiness-review/",
@@ -495,6 +496,18 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭漏水事件紀錄" }),
   ).toHaveAttribute("href", "/zh-tw/tools/household-water-leak-event-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "漏水紀錄 App 教學" }),
+  ).toHaveAttribute(
+    "href",
+    "/zh-tw/guides/familyboard-water-leak-event-log-tutorial/",
+  );
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "漏水照片證據指南" }),
+  ).toHaveAttribute(
+    "href",
+    "/zh-tw/guides/water-leak-photo-evidence-records/",
+  );
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭颱風準備複查" }),
   ).toHaveAttribute("href", "/zh-tw/tools/household-storm-readiness-review/");
@@ -946,6 +959,23 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await page.goto("/zh-tw/guides/power-outage-recovery-household-records/");
   await expect(page.locator("h1")).toHaveText(
     "停電復電後怎麼整理家庭紀錄？先分流，再決定哪些要回查",
+  );
+  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+
+  await page.goto("/zh-tw/guides/familyboard-water-leak-event-log-tutorial/");
+  await expect(page.locator("h1")).toHaveText(
+    "FamilyBoard 家庭漏水紀錄怎麼用？先安全觀察，再複查修繕",
+  );
+  await expect(
+    page.locator('link[rel="alternate"][hreflang="en"]'),
+  ).toHaveAttribute(
+    "href",
+    "https://familyboard.win/guides/familyboard-water-leak-event-log-tutorial/",
+  );
+
+  await page.goto("/zh-tw/guides/water-leak-photo-evidence-records/");
+  await expect(page.locator("h1")).toHaveText(
+    "漏水照片怎麼整理才有用？先安全，再建立可回查索引",
   );
   await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
 
@@ -2704,6 +2734,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/power-outage-recovery-household-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-water-leak-event-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-water-leak-event-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/water-leak-photo-evidence-records/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/tools/household-water-leak-event-log/",

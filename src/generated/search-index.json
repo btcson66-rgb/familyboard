@@ -2224,6 +2224,14 @@
     "headings": "How to Use FamilyBoard for a Power Outage Record 1. Start with a private event code 2. Record the first supportable observation 3. Add system rows from what was actually seen 4. Treat restoration as a handoff, not a finish line 5. Give every open ID one next action 6. Review the export before sharing Affiliate boundary"
   },
   {
+    "title": "How to Use FamilyBoard for a Water Leak Record | Household App Tutorial",
+    "description": "Learn how to use FamilyBoard to record a water leak observation, safe photo index, responsible source, repair visit and recovery follow-up without storing addresses or making a safety verdict.",
+    "route": "/guides/familyboard-water-leak-event-log-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard water leak log tutorial",
+    "headings": "How to Use FamilyBoard for a Water Leak Record 1. Stop at the safety boundary 2. Create one neutral event code 3. Record the first thing someone actually saw 4. Index evidence without copying sensitive originals 5. Separate notification, finding, work and recovery 6. Keep the export useful and limited Affiliate boundary"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

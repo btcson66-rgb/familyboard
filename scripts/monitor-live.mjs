@@ -305,6 +305,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/power-outage-recovery-household-records/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-water-leak-event-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-water-leak-event-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/water-leak-photo-evidence-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2907,6 +2910,33 @@ const checks = [
       'lang="zh-TW"',
       "食品、設備與官方來源分開複查",
       "不可碰觸或移動",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/guides/familyboard-water-leak-event-log-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Water Leak Record",
+      'hreflang="zh-TW"',
+      "does not inspect plumbing",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-water-leak-event-log-tutorial/",
+    require: [
+      "FamilyBoard 家庭漏水紀錄怎麼用",
+      'lang="zh-TW"',
+      "先安全觀察，再複查修繕",
+      "不會檢查管線",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/water-leak-photo-evidence-records/",
+    require: [
+      "漏水照片怎麼整理才有用",
+      'lang="zh-TW"',
+      "安全拍攝與證據索引指南",
+      "不要覆寫原始檔",
     ],
     forbid: ['rel="alternate"'],
   },

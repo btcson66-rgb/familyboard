@@ -2424,6 +2424,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-water-leak-event-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-water-leak-event-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3102,6 +3110,13 @@
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-water-leak-event-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-water-leak-event-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {
@@ -4138,6 +4153,13 @@
     "alternateRoute": "/features/warranty-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/water-leak-photo-evidence-records/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {

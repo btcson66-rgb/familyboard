@@ -1,26 +1,26 @@
 # Content quality report
 
-Generated: 2026-08-27T18:38:42.189Z
+Generated: 2026-08-27T19:01:38.654Z
 
 ## Summary
 
-- Indexable pages: 514
-- Generated HTML routes: 531
+- Indexable pages: 517
+- Generated HTML routes: 534
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 288
+- Pages without a contextual product/tool link: 290
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 70
+- product: 72
 - appliances: 30
-- maintenance: 45
+- maintenance: 46
 - household-operations: 89
 - inventory-warranty: 44
 - records-emergency: 74
@@ -186,6 +186,7 @@ Generated: 2026-08-27T18:38:42.189Z
 - /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
+- /zh-tw/guides/familyboard-water-leak-event-log-tutorial/
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
@@ -231,6 +232,7 @@ Generated: 2026-08-27T18:38:42.189Z
 - /zh-tw/guides/storage-unit-inventory/
 - /zh-tw/guides/storm-preparation-home-checklist/
 - /zh-tw/guides/subscription-cancellation-refund-records/
+- /zh-tw/guides/water-leak-photo-evidence-records/
 - /zh-tw/guides/water-leak-response-home-records/
 - /zh-tw/
 - /zh-tw/privacy/
