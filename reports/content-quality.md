@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-27T10:56:31.463Z
+Generated: 2026-08-27T11:16:57.795Z
 
 ## Summary
 
-- Indexable pages: 457
-- Generated HTML routes: 474
+- Indexable pages: 460
+- Generated HTML routes: 477
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 244
+- Pages without a contextual product/tool link: 247
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 62
+- product: 65
 - appliances: 30
 - maintenance: 41
 - household-operations: 72
@@ -57,6 +57,7 @@ Generated: 2026-08-27T10:56:31.463Z
 - /guides/chore-chart-for-adults/
 - /guides/digital-home-inventory-backup/
 - /guides/family-emergency-contacts/
+- /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-offline-backup-restore/
 - /guides/household-admin-day/
 - /guides/household-handoff/
@@ -136,6 +137,7 @@ Generated: 2026-08-27T10:56:31.463Z
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
 - /zh-tw/guides/familyboard-donation-handoff-tutorial/
+- /zh-tw/guides/familyboard-family-display-mode-setup/
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
@@ -148,6 +150,7 @@ Generated: 2026-08-27T10:56:31.463Z
 - /zh-tw/guides/familyboard-meter-reading-tutorial/
 - /zh-tw/guides/familyboard-monthly-review-action-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
+- /zh-tw/guides/familyboard-old-tablet-display-tutorial/
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/

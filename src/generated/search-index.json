@@ -2064,6 +2064,14 @@
     "headings": "居家服務報價比較工具｜範圍、包含項目與後續提問 先比較範圍，再看金額 把家庭限制寫成要問的問題 家庭決定不等於專業判定 聯盟商品放在工作台之外"
   },
   {
+    "title": "FamilyBoard Family Display Mode Setup Guide | Old Tablet, Privacy and Offline Limits",
+    "description": "Learn how to set up FamilyBoard on an old tablet, choose safe display titles, understand refresh limits and maintain a protected local backup.",
+    "route": "/guides/familyboard-family-display-mode-setup/",
+    "cluster": "product",
+    "keywords": "FamilyBoard display mode setup",
+    "headings": "FamilyBoard Family Display Mode Setup Guide Decide which device owns the display Prepare a safe display vocabulary Set up and test the tablet Maintain the local record Troubleshoot the display without guessing Affiliate boundary"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

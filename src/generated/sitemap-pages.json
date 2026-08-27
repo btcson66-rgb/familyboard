@@ -2200,6 +2200,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-family-display-mode-setup/",
+    "alternateRoute": "/zh-tw/guides/familyboard-family-display-mode-setup/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-family-display-mode-setup/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-old-tablet-display-tutorial/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2573,6 +2597,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-family-display-mode-setup/",
+    "alternateRoute": "/guides/familyboard-family-display-mode-setup/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/",
     "alternateRoute": "",
     "indexable": true,
@@ -2652,6 +2683,13 @@
   {
     "route": "/zh-tw/guides/familyboard-offline-backup-restore/",
     "alternateRoute": "/guides/familyboard-offline-backup-restore/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-old-tablet-display-tutorial/",
+    "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

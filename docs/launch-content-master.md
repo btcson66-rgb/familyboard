@@ -19007,6 +19007,160 @@ Future labels, binders or measuring accessories may appear outside the workbench
 
 每份報價是否有日期和版本？範圍是否與另一份真的相同？包含與排除是否照來源記錄？每個差異是否變成有人負責的問題？分享前是否移除了完整身分與付款資料？五題都能回答「是」，才適合進入下一次家庭決定。
 
+## Page 276 — FamilyBoard Family Display Mode Setup Guide
+**Slug:** /guides/familyboard-family-display-mode-setup/
+**Alternate route:** /zh-tw/guides/familyboard-family-display-mode-setup/
+**Primary intent:** set up an old tablet as a low-sensitivity FamilyBoard display without assuming cloud synchronization
+**Title tag:** FamilyBoard Family Display Mode Setup Guide | Old Tablet, Privacy and Offline Limits
+**Meta description:** Learn how to set up FamilyBoard on an old tablet, choose safe display titles, understand refresh limits and maintain a protected local backup.
+**Primary keyword concept:** FamilyBoard display mode setup
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /features/family-display-mode/, /guides/digital-home-inventory-backup/, /zh-tw/guides/familyboard-family-display-mode-setup/
+**FAQ:**
+- Q: Will a phone update a separate tablet automatically?
+  A: No. Each device has its own local browser database; refresh only rereads the current device.
+- Q: Is FamilyBoard a locked kiosk?
+  A: No. Browser, operating-system and physical access controls remain the household's responsibility.
+- Q: What should be displayed publicly?
+  A: Only low-sensitivity titles, owners, dates and statuses that the household has deliberately reviewed.
+
+# FamilyBoard Family Display Mode Setup Guide
+
+An old tablet can make household responsibilities visible without becoming another cloud account. FamilyBoard’s display mode is a deliberately limited view of the local device: current tasks, today’s events and dated maintenance items. It is not a real-time calendar mirror, a kiosk lock or a replacement for private records.
+
+## Decide which device owns the display
+
+Before adding data, choose whether the tablet itself is the household’s display-and-edit device or whether you will periodically transfer a reviewed backup. A phone and a tablet do not share IndexedDB just because they use the same Apple, Google or Microsoft account. A minute refresh can reread another tab in the same browser profile, but it cannot fetch a phone’s database.
+
+## Prepare a safe display vocabulary
+
+Display titles are visible to anyone who can see the screen. “Take bins to curb” is safer than a title that reveals a medical appointment, a visitor’s name or an access code. Keep detailed notes, documents, contacts, warranty information and private instructions in their original protected areas. The display intentionally omits those fields, but a title can still reveal more than expected.
+
+## Set up and test the tablet
+
+Use a browser that still receives security updates and check the hardware, charger and battery before leaving it powered. Open FamilyBoard, create or restore the intended household, review private sections, then open display mode and inspect every visible title. If you install the PWA, understand that an app-like window does not remove navigation or guarantee a locked screen. Configure the operating system’s lock, notifications, brightness and guest rules separately.
+
+## Maintain the local record
+
+Choose a weekly time to complete or reschedule displayed tasks and verify event dates. Export a protected backup on a schedule that fits the household; label the device and date without placing the backup in a public folder. If you transfer data, preserve the source backup first and decide deliberately whether the restore should merge or replace. Avoid alternating full restores between devices, which can create duplicates or discard newer changes.
+
+## Troubleshoot the display without guessing
+
+If a card is empty, check the source feature first: a completed task, an event outside today, or maintenance without a next date may be intentionally absent. If the page opens offline but shows older information, record the device and last known review date before reconnecting. Do not create duplicate tasks on a phone to compensate for a tablet that has a separate database. If the display is visible in an unexpected place, pause the shared view and review titles, browser profile, operating-system notifications and physical access. A short written handoff should name the display device, the person who maintains it, the backup date and the source to consult when something looks missing. These checks keep a harmless empty state from turning into an incorrect assumption about synchronization or completion.
+
+## Affiliate boundary
+
+Future stands, chargers or label products may appear outside the setup workflow with a clear disclosure and an easy skip. They cannot be presented as required for privacy, synchronization, safety or successful FamilyBoard use.
+
+## Page 277 — FamilyBoard Family Display Mode Setup (Traditional Chinese)
+**Slug:** /zh-tw/guides/familyboard-family-display-mode-setup/
+**Alternate route:** /guides/familyboard-family-display-mode-setup/
+**Primary intent:** 教台灣家庭把舊平板設定成低敏感家庭看板，理解本機資料與不跨裝置同步的限制
+**Title tag:** FamilyBoard 家庭看板設定教學｜舊平板、隱私與離線限制
+**Meta description:** 用繁體中文學會設定 FamilyBoard 家庭看板、檢查顯示標題、理解重新整理與備份移轉限制，不把它誤當雲端同步或 kiosk。
+**Primary keyword concept:** FamilyBoard 家庭看板設定
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/features/family-display-mode/, /zh-tw/guides/digital-home-inventory-backup/, /zh-tw/guides/familyboard-old-tablet-display-tutorial/
+**FAQ:**
+- Q: 手機完成工作後，另一台平板會自動更新嗎？
+  A: 不會，每台裝置各有本機資料；重新整理只讀取目前裝置。
+- Q: 家庭看板是鎖定的 kiosk 嗎？
+  A: 不是，螢幕鎖定、通知和實體存取仍由家庭設定。
+- Q: 看板適合顯示哪些內容？
+  A: 只顯示家庭已確認適合公開的低敏感標題、角色、日期和狀態。
+
+# FamilyBoard 家庭看板設定教學：舊平板、隱私與離線限制
+
+舊平板可以讓家人看見今天的責任，又不必新增雲端家庭帳號。FamilyBoard 家庭看板只讀取該裝置的本機資料，顯示任務、今日事件和有日期的保養工作；它不是即時行事曆鏡像、不是 kiosk 鎖定，也不是完整家庭紀錄的替代品。
+
+## 先決定哪台裝置是看板版本
+
+開始前先決定平板是主要編輯裝置，還是只在固定時間還原一份已審閱的備份。手機和平板即使使用同一個 Apple、Google 或 Microsoft 帳號，也不會共用 FamilyBoard 的 IndexedDB。每分鐘重新整理只能重讀同一瀏覽器設定檔，不能把手機資料抓到平板。
+
+## 重新命名會出現在螢幕上的標題
+
+「週四倒垃圾」比「週五回診」更適合放在訪客可能看見的看板。不要在任務或事件標題放姓名、門禁碼、醫療細節、訪客身分或完整地址。詳細備註、文件、聯絡人、保固與私密指示留在原本受保護的分頁；看板少顯示欄位，不代表標題一定沒有線索。
+
+## 設定後逐項檢查顯示內容
+
+使用仍能取得安全更新的瀏覽器，先檢查平板電池、充電器和擺放位置。開啟 FamilyBoard、建立或還原指定家庭，先檢查私密分頁，再切到家庭看板逐項讀出標題。若選擇安裝 PWA，請知道獨立視窗不會移除導覽，也不會自動鎖住螢幕；作業系統鎖定、通知預覽、亮度和訪客規則要另外設定。
+
+## 用固定節奏維護本機資料
+
+每週選一個時間完成或改期看板上的任務，核對事件日期和保養到期日；依家庭需要定期匯出受保護備份，檔名只標示裝置與日期。移轉前先保留來源備份，再決定合併或取代，避免兩台裝置反覆整份還原造成重複或遺失較新的資料。
+
+## 聯盟商品不應改變設定決定
+
+未來支架、充電器或標籤用品只能放在教學之外、清楚揭露聯盟關係並可略過，不能宣稱商品是隱私、同步、安全或成功使用 FamilyBoard 的必要條件。
+
+## Page 278 — FamilyBoard 舊平板家庭看板 App 教學（Traditional Chinese）
+**Slug:** /zh-tw/guides/familyboard-old-tablet-display-tutorial/
+**Primary intent:** teach Taiwan households a repeatable weekly operating routine for a local FamilyBoard display
+**Title tag:** FamilyBoard 舊平板家庭看板怎麼用？每週維護 App 教學
+**Meta description:** 教你用 FamilyBoard 舊平板看板安排每週檢查、標題隱私、備份與裝置差異，清楚知道哪些資料不會同步。
+**Primary keyword concept:** FamilyBoard 舊平板看板教學
+**Cluster:** product
+**Page type:** content
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/guides/familyboard-family-display-mode-setup/, /zh-tw/features/family-display-mode/, /zh-tw/guides/familyboard-offline-backup-restore/
+**FAQ:**
+- Q: 看板每分鐘重新整理會收到手機的資料嗎？
+  A: 不會，它只重新讀取平板自己的本機資料。
+- Q: 怎麼知道標題適合共用？
+  A: 站在訪客視角逐字檢查，刪除姓名、醫療、地址、門禁和私人行程線索。
+- Q: 平板遺失前要做什麼？
+  A: 先依家庭備份流程保存必要資料，並用作業系統與瀏覽器的存取控制保護裝置。
+
+# FamilyBoard 舊平板家庭看板怎麼用？每週維護 App 教學
+
+這篇教學不是要把舊平板變成全天候控制中心，而是建立一個家人看得懂、資料範圍有限的每週流程。看板只顯示該平板本機的任務、今日事件和有日期的保養；手機上的另一份資料不會自動出現。
+
+## 第一步：建立看板專用的家庭命名
+
+先用家人都看得懂、又不暴露地址的家庭名稱。新增任務時，標題只寫可公開的完成結果，例如「回收日把紙箱移到門口」。需要詳細說明的內容放到私密備註，不要把姓名、門鎖、健康或訪客資料塞進看板標題。
+
+## 第二步：在平板建立少量可見工作
+
+看板每類最多顯示有限筆數，請把真正需要快速看到的工作加上日期和負責角色。沒有日期的保養不會出現在即將到期卡片；這不是遺失，而是提醒你回到保養分頁補充或檢視。不要為了填滿畫面建立沒有真實用途的任務。
+
+## 第三步：每週用同一時間核對三張卡片
+
+先看家庭任務：完成的就關閉，延後的要改日期。再看今日事件：確認跨午夜或多日事件是否有正確結束時間。最後看即將到期：核對下一次保養日期和來源。這個順序能讓看板保持可讀，不會把所有歷史資料堆在同一畫面。
+
+## 第四步：把重新整理限制告訴家人
+
+如果有人在手機完成任務，請不要期待牆上平板一分鐘後更新。要更新看板，就在平板本身維護，或按照約定匯入一份已審閱備份。移轉時先留來源備份，並記下本次採用合併或取代，避免家人以為兩台裝置永遠一致。
+
+## 第五步：每週做一次訪客視角檢查
+
+從門口或客廳遠看螢幕，逐字確認標題、角色、日期和狀態是否透露私事。檢查平板通知預覽、瀏覽器分頁、螢幕鎖定與擺放位置；FamilyBoard 不是 kiosk，也不會替作業系統阻止其他人操作。
+
+## 第六步：備份與聯盟推薦保持在流程外
+
+依家庭節奏匯出受保護備份，清楚標記裝置與日期。支架、充電器或標籤用品若未來出現在頁面，應有聯盟揭露且可略過，不能把購買當成同步、隱私或安全的必要步驟。
+
+## 收尾前的五個問題
+
+這台平板是不是大家認定的看板版本？每個可見標題是否適合訪客看到？今天與近期保養是否真的需要顯示？家人是否知道手機資料不會自動同步？最近一次備份和螢幕隱私檢查是否有日期？五題都能回答「是」，看板才是在減少溝通成本，而不是製造錯誤期待。
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.
