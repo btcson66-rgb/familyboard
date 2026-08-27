@@ -1776,6 +1776,14 @@
     "headings": "Home care charge, service and payment discrepancy log Begin with one service period and one currency Twelve columns preserve the full source chain The twelve statuses reveal which evidence layer is still missing Planned, authorized, delivered and billed are different facts Medicare covers qualifying home health services under specific conditions A bill, MSN, EOB, ABN and HHCCN answer different questions Medicaid HCBS rules vary by state, program and delivery system Private-pay home care starts with the current written agreement Expected, billed, paid and adjusted must remain separate The person or household review is a separate evidence layer Close the row only after the actual account result is observed Privacy protects both the person and the integrity of the review Future affiliate items must not influence a payment or rights decision"
   },
   {
+    "title": "Home Care Payment, Refund and Collection Notice Log",
+    "description": "A private browser-only log for separating home-care payment, refund, collection and adverse notices from bills, receipts and appeal routes.",
+    "route": "/tools/home-care-payment-refund-collection-notice-log/",
+    "cluster": "tools",
+    "keywords": "home care payment refund collection notice log",
+    "headings": "Home care payment, refund and collection notice log Classify the document before responding Preserve delivery without copying private text Keep controlling sources separate Record a route, not a guessed deadline Separate promises, handoffs and actual results Use the tool as a source index"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

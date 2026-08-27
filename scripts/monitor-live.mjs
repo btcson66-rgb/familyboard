@@ -164,6 +164,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/home-care-charge-service-payment-discrepancy-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-care-service-fees-and-billing/</loc>",
+      "<loc>https://familyboard.win/tools/home-care-payment-refund-collection-notice-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-care-payment-refund-collection-notice-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-care-refund-and-collection-notices/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -764,6 +767,15 @@ const checks = [
       'hreflang="zh-TW"',
       "A bill, MSN, EOB, ABN and HHCCN answer different questions",
       "Expected, billed, paid and adjusted must remain separate",
+    ],
+  },
+  {
+    path: "/tools/home-care-payment-refund-collection-notice-log/",
+    require: [
+      "Home Care Payment, Refund and Collection Notice Log",
+      'hreflang="zh-TW"',
+      "Separate payment, refund, collection and adverse notices",
+      "does not authenticate a notice",
     ],
   },
   {
@@ -1436,12 +1448,31 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/home-care-payment-refund-collection-notice-log/",
+    require: [
+      "居家服務付款、退款、催收與不利通知紀錄表",
+      'hreflang="en"',
+      "把付款、退費、催收與不利通知拆成來源",
+      "不驗證通知",
+    ],
+  },
+  {
     path: "/zh-tw/guides/home-care-service-fees-and-billing/",
     require: [
       "居家服務費用怎麼核對？長照部分負擔、自費、收據、未遇、退費與申訴指南",
       'lang="zh-TW"',
       "先理解一張帳單背後的七份來源",
       "退費與折抵的追蹤終點是「實際結果」",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/home-care-refund-and-collection-notices/",
+    require: [
+      "居家服務退款與催收通知怎麼看？付款、退費與異議交接指南",
+      'lang="zh-TW"',
+      "先把五種文件分開",
+      "退款不是一個動詞，而是一條證據鏈",
     ],
     forbid: ['rel="alternate"'],
   },

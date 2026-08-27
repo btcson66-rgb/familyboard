@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T01:42:18.425Z
+Generated: 2026-08-27T02:23:29.318Z
 
 ## Summary
 
-- Indexable pages: 361
-- Generated HTML routes: 378
+- Indexable pages: 364
+- Generated HTML routes: 381
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 149
+- Pages without a contextual product/tool link: 151
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,8 +23,8 @@ Generated: 2026-08-27T01:42:18.425Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 43
-- tools: 119
+- records-emergency: 44
+- tools: 121
 
 ## Word-count range
 
@@ -99,6 +99,7 @@ Generated: 2026-08-27T01:42:18.425Z
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
+- /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
 - /zh-tw/guides/home-care-service-fees-and-billing/
 - /zh-tw/guides/home-care-service-interruption-backup-plan/
@@ -153,6 +154,7 @@ Generated: 2026-08-27T01:42:18.425Z
 - /zh-tw/tools/emergency-supply-inventory-audit/
 - /zh-tw/tools/home-care-charge-service-payment-discrepancy-log/
 - /zh-tw/tools/home-care-complaint-response-resolution-log/
+- /zh-tw/tools/home-care-payment-refund-collection-notice-log/
 - /zh-tw/tools/home-care-service-interruption-backup-continuity-log/
 - /zh-tw/tools/home-care-service-plan-change-notice-log/
 - /zh-tw/tools/home-care-visit-scope-service-result-log/

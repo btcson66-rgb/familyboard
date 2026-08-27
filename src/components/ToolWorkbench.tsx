@@ -2583,6 +2583,101 @@ This output is a household home-care service, charge, benefit, payment and actua
   };
 };
 
+const homeCareNoticeDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusOrder = zh ? [
+    "已收到通知訊號，等待安全、服務不中斷與通知分類",
+    "已記錄來源角色，等待通知版本與受保護關係核對",
+    "已記錄類型、版本與送達，等待服務期間及控制來源",
+    "已記錄控制來源，等待要求、回覆路徑與本人參與",
+    "已記錄回覆路徑，等待代表權限與正式指示原文保管",
+    "已保管通知指示，等待付款、退費、催收或不利處分交接",
+    "已記錄家庭回應與交接，等待負責單位受理、回覆或實際帳務結果",
+    "通知、版本、送達、權利或帳務矛盾，等待申訴、異議或審查",
+    "已核對來源、類型、版本、送達、控制來源、路徑與實際結果",
+    "已收到負責結果，記錄付款、退費、催收或不利處分結果、保管與重開",
+    "不適用，已記錄原因與重開事件",
+    "已分流至緊急或安全處理，紀錄等待補齊",
+  ] : [
+    "Notice signal received—safety, continuity and notice class pending",
+    "Issuer or source role recorded—notice version and protected relationship pending",
+    "Class, version and delivery recorded—service period and controlling source pending",
+    "Controlling source recorded—request, response route and person participation pending",
+    "Response route recorded—representative authority and original instructions custody pending",
+    "Notice instructions preserved—payment, refund, collection or adverse-action handoff pending",
+    "Household response and handoff recorded—responsible intake, response or actual account result pending",
+    "Notice, version, delivery, rights or account conflict—complaint, appeal or review pending",
+    "Notice source, class, version, delivery, controlling source, route and actual result reviewed",
+    "Responsible result received—payment, refund, collection or adverse-action result, custody and reopen recorded",
+    "Not applicable—reason and reopen event recorded",
+    "Routed to urgent or safety handling—record awaits completion",
+  ];
+  const defaults = zh
+    ? "NOTICE-A | 付款通知與居家服務帳務交接；不是帳單或收據 | 服務單位帳務、目前契約與長照方案來源；原件受保護 | 受保護本人與服務期間 BATCH-A 已比對；來源核對 2026-08-27 | NOTICE-N4 付款通知版本已開啟；送達 DELIVERY-D2；簡訊不是原件 | CONTRACT-C2、BENEFIT-B2、STATEMENT-S4 與 PAYMENT-P2 分開保管 | 本人詢問角色已記錄；正式指示、期限原文與代表權限留在受保護來源 | RESPONSE-R2 已交接；服務單位受理與實際帳務結果已收到；付款、退費或催收改變時重新開啟 | 家庭通知交接角色 | 2026-08-27 | 已核對來源、類型、版本、送達、控制來源、路徑與實際結果\nOPEN-A | 退款承諾後收到催收通知；兩條路徑分開保存 | 服務單位退款窗口、付款來源、契約與正式通知來源；帳務、申訴與給付分開 | 受保護本人與服務期間 BATCH-B 已比對；來源核對 2026-08-27 | REFUND-N3 與 COLLECTION-N1 類型、版本、送達觀察已保存；原文未合併 | CONTRACT-C2、STATEMENT-S5、PAYMENT-P3 已開啟；責任待負責來源確認 | 已保留正式指示與期限原文；ROUTE-Q2、代表權限與受理方式待確認；不計算期限 | 已提出安全詢問；退款入帳、催收暫停或正式異議結果等待負責來源；未解 GAP-N2；新通知或付款改變時重新開啟 | 家庭通知異議追蹤角色 | 2026-09-12 | 已記錄家庭回應與交接，等待負責單位受理、回覆或實際帳務結果"
+    : "NOTICE-A | Payment notice and home-care account handoff; not a bill or receipt | Provider account, current contract and program sources; original stays protected | Protected person and service period BATCH-A matched; source checked 2026-08-27 | NOTICE-N4 payment notice version opened; delivery DELIVERY-D2; text message is not the original | CONTRACT-C2, BENEFIT-B2, STATEMENT-S4 and PAYMENT-P2 kept separate | Person inquiry role recorded; original instructions, deadline text and representative authority remain protected | RESPONSE-R2 handed off; provider intake and actual account result received; reopen if payment, refund or collection changes | Household notice-handoff role | 2026-08-27 | Notice source, class, version, delivery, controlling source, route and actual result reviewed\nOPEN-A | Collection notice after a refund promise; preserve both paths | Provider refund desk, payment source, contract and formal notice sources; account, complaint and benefit routes stay separate | Protected person and service period BATCH-B matched; source checked 2026-08-27 | REFUND-N3 and COLLECTION-N1 classes, versions and delivery observations preserved; originals not merged | CONTRACT-C2, STATEMENT-S5 and PAYMENT-P3 opened; responsibility remains with responsible source | Original instructions and deadline text preserved; ROUTE-Q2, representative authority and intake method pending; no deadline calculation | Safe question handed off; actual refund posting, collection pause or formal appeal result pending; unresolved GAP-N2; reopen if new notice or payment changes | Household notice-appeal follow-up role | 2026-09-12 | Household response and handoff recorded—responsible intake, response or actual account result pending";
+  return {
+    intro: zh ? "把付款、退費、催收與不利通知拆成來源、類型版本、送達、控制契約／方案、回覆與代表權限、正式指示原文、帳務交接及實際結果；不驗證通知、不計算期限、不代表送件。" : "Separate payment, refund, collection and adverse notices into source, class/version, delivery, controlling contract or program, response and representative authority, original instructions, account handoff and actual result; no authentication, deadline calculation or filing.",
+    fields: [
+      text("review", zh ? "通知私人核對代號" : "Private notice review reference", zh ? "只用安全代號，不要輸入姓名、地址、帳號、案件、付款或通知全文。" : "Use a safe code; do not enter names, addresses, accounts, case, payment or notice text.", "HOME-CARE-NOTICE-2026-A"),
+      { name: "context", label: zh ? "通知情境" : "Notice context", type: "select", options: zh ? ["付款或帳務通知", "退款、折抵或退款承諾", "催收或逾期付款通知", "不利給付、服務終止或減少通知", "錯誤、重複或無法辨識通知", "通知後詢問、申訴或異議", "其他通知交接"] : ["Payment or account notice", "Refund, credit or refund promise", "Collection or overdue-payment notice", "Adverse benefit, termination or reduction notice", "Unclear, duplicate or conflicting notice", "Question, complaint or appeal after notice", "Other notice handoff"] },
+      { name: "baselineDate", label: zh ? "通知／來源版本基準日" : "Notice and source-version baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: zh ? "本次通知核對日" : "Current notice review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次受理、回覆或結果核點" : "Next intake, response or result checkpoint", type: "date", value: "2026-09-12" },
+      text("basis", zh ? "通知、契約、方案、給付、付款與申訴來源地圖" : "Notice, contract, program, benefit, payment and review-source map", zh ? "只放安全來源版本代號；完整通知、帳單、付款及申訴內容留在受保護來源。" : "Use safe source/version IDs; keep complete notice, statement, payment and appeal content protected.", "NOTICE-N1; CONTRACT-C1; BENEFIT-B1; STATEMENT-S1; PAYMENT-P1; ROUTE-Q1"),
+      text("records", zh ? "有版本的通知與交接紀錄列" : "Versioned notice and handoff rows", zh ? "每行 11 欄：ID｜情境｜來源角色｜受保護關係及來源核對日｜通知類型版本送達｜控制來源｜回應、代表權限、正式指示原文與路徑｜付款／退款／催收／不利處分交接、受理、結果、未解與重開｜角色｜目標或結果日期｜指定狀態。最多 14 行，不自行計算期限。" : "11 fields per row: ID | context | issuer/source role | protected relationship and checked date | notice class, version and delivery | controlling source | response, representative authority, original instructions and route | payment, refund, collection or adverse-action handoff, intake, result, unresolved and reopen | owner | target/outcome date | exact status. Maximum 14 rows; do not calculate deadlines.", defaults),
+      text("storage", zh ? "受保護通知、帳務、付款與申訴歷程位置" : "Protected notice, account, payment and review-history location", zh ? "只寫保管流程或容器代號，不要貼通知全文、帳號、卡號、銀行或授權資料。" : "Name a custody process or container, not notice text, account, card, bank or authority data.", zh ? "家庭紀錄／居家服務通知／HOME-CARE-NOTICE-2026-A／受保護程序" : "Household records / home-care notices / HOME-CARE-NOTICE-2026-A / protected process"),
+    ],
+    run: (values) => {
+      const baseline = strictIsoDate(values.baselineDate), review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!baseline || !review || !next) return zh ? "請輸入有效的通知版本基準日、本次核對日與下一核點日期。" : "Enter valid notice-baseline, current-review and next-checkpoint dates.";
+      if (baseline > review) return zh ? "通知版本基準日不能晚於本次核對日。" : "The notice baseline cannot be later than the current review.";
+      if (next < review) return zh ? "下一次核點不能早於本次核對日。" : "The next checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 16 || values.storage.trim().length < 10) return zh ? "請提供安全來源地圖與受保護程序代號。" : "Provide a safe source map and protected-process label.";
+      const rows = values.records.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行通知交接紀錄。" : "Enter 1 to 14 notice-handoff rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (malformed.length) return (zh ? "通知交接第 " : "Notice-handoff line ") + malformed.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 行必須有 11 個非空白欄位。" : " must contain 11 non-empty fields.");
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行通知交接紀錄都需要唯一 ID。" : "Every notice-handoff row needs a unique ID.";
+      const invalid = parsed.filter((row) => !statusOrder.includes(row.parts[10]));
+      if (invalid.length) return (zh ? "通知交接第 " : "Notice-handoff line ") + invalid.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 行狀態不在指定清單。" : " uses a status outside the exact list.");
+      const checked = (v: string) => strictIsoDate(v.match(/\b\d{4}-\d{2}-\d{2}\b/)?.[0] || "");
+      const badSource = parsed.filter((row) => { const d = checked(row.parts[3]); return !d || d < baseline || d > review; });
+      if (badSource.length) return (zh ? "通知交接第 " : "Notice-handoff line ") + badSource.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 行來源核對日須在基準日至本次核對日。" : " needs a source-checked date from baseline through review.");
+      const open = parsed.filter((row) => statusOrder.indexOf(row.parts[10]) < 8 || statusOrder.indexOf(row.parts[10]) === 11);
+      const closed = parsed.filter((row) => statusOrder.indexOf(row.parts[10]) >= 8 && statusOrder.indexOf(row.parts[10]) < 11);
+      const badOpen = open.filter((row) => { const d = strictIsoDate(row.parts[9]); return !d || d < review || d > next; });
+      if (badOpen.length) return (zh ? "仍開放的第 " : "Open line ") + badOpen.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 行目標日須在本次核對日至下一核點。" : " needs a target date from review through next checkpoint.");
+      const badClosed = closed.filter((row) => { const d = strictIsoDate(row.parts[9]); return !d || d < baseline || d > review; });
+      if (badClosed.length) return (zh ? "已核對或完成的第 " : "Reviewed or completed line ") + badClosed.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 結果日須在基準日至本次核對日。" : " needs an outcome date from baseline through review.");
+      const thin = parsed.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 10 || row.parts[3].length < 18 || row.parts[4].length < 14 || row.parts[5].length < 12 || row.parts[6].length < 16 || row.parts[7].length < 28 || row.parts[8].length < 4);
+      if (thin.length) return (zh ? "通知交接第 " : "Notice-handoff line ") + thin.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 行需要完整情境、來源、關係、類型版本送達、控制來源、回應路徑、交接結果與角色。" : " needs context, source, relationship, class/version/delivery, controlling source, response route, handoff result and owner.");
+      const privacy = [values.review, values.basis, values.records, values.storage].join("\n");
+      const noDates = privacy.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(noDates) || /(?:\d[\s().+-]*){7,}/.test(noDates)) return zh ? "偵測到完整聯絡、帳號、案件、通知或付款識別資料；請改用安全代號。" : "A full contact, account, case, notice or payment identifier was detected; use safe codes.";
+      if (/password|passcode|login credential|full address|person name\s*[:=]|provider name\s*[:=]|account number\s*[:=]|member number\s*[:=]|claim number\s*[:=]|card number\s*[:=]|bank account\s*[:=]|notice text|appeal text|complaint text|signature|private message|完整地址|本人姓名\s*[:：]|服務單位名稱\s*[:：]|帳號\s*[:：]|案件編號\s*[:：]|卡號\s*[:：]|銀行帳戶\s*[:：]|通知全文|申訴全文|異議全文|簽名|私人訊息/i.test(privacy)) return zh ? "偵測到本人、服務單位、地址、帳號、通知或申訴全文、簽名或私人通信；請改用安全代號。" : "A personal, provider, address, account, notice or appeal text, signature or private message was detected; use safe codes.";
+      const fmtDate = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const counts = statusOrder.map((s) => ({ s, n: parsed.filter((r) => r.parts[10] === s).length })).filter((x) => x.n);
+      const rowText = parsed.map((r) => r.parts[0] + (zh ? "｜情境：" : " — context: ") + r.parts[1] + (zh ? "｜來源：" : " — source: ") + r.parts[2] + (zh ? "｜受保護關係：" : " — protected relationship: ") + r.parts[3] + (zh ? "｜類型版本送達：" : " — class/version/delivery: ") + r.parts[4] + (zh ? "｜控制來源：" : " — controlling source: ") + r.parts[5] + (zh ? "｜回應權限指示路徑：" : " — response/authority/instructions/route: ") + r.parts[6] + (zh ? "｜交接結果未解重開：" : " — handoff/result/unresolved/reopen: ") + r.parts[7] + (zh ? "｜角色：" : " — owner: ") + r.parts[8] + (zh ? "｜日期：" : " — date: ") + fmtDate.format(strictIsoDate(r.parts[9]) as Date) + (zh ? "｜狀態：" : " — status: ") + r.parts[10]).join("\n");
+      return [
+        values.review.trim() + (zh ? "｜居家服務付款、退款、催收與不利通知交接狀態" : " — home-care payment, refund, collection and adverse-notice handoff status"),
+        (zh ? "通知情境：" : "Notice context: ") + values.context,
+        (zh ? "通知／來源版本基準：" : "Notice and source baseline: ") + fmtDate.format(baseline),
+        (zh ? "本次通知核對：" : "Current notice review: ") + fmtDate.format(review),
+        (zh ? "下一次結果核點：" : "Next result checkpoint: ") + fmtDate.format(next),
+        (zh ? "仍開放列：" : "Open rows: ") + open.length,
+        (zh ? "已核對、完成或不適用列：" : "Reviewed, completed or not-applicable rows: ") + closed.length,
+        (zh ? "狀態統計：" : "Status count: ") + counts.map((x) => x.s + " " + x.n).join(zh ? "、" : " | "),
+        (zh ? "通知、契約、方案、給付、付款與申訴來源地圖：" : "Notice, contract, program, benefit, payment and review-source map: ") + values.basis.trim(),
+        (zh ? "有版本的通知、送達、回應、帳務交接與結果證據\n" : "Versioned notice, delivery, response, account handoff and result evidence\n") + rowText,
+        (zh ? "受保護通知、帳務、付款、退款、催收與申訴歷程位置：" : "Protected notice, account, payment, refund, collection and review-history location: ") + values.storage.trim(),
+        zh ? "這份輸出只是通知來源與交接索引，不驗證通知、不計算或保留期限、不代表授權或送件、不決定債務、退款、給付、權利或不利處分，也不把承諾、送出、改帳或暫停催收寫成實際結果。立即讀取目前通知原文，保留送達與來源，依通知指定程序及所在地緊急、申訴、異議或合格專業來源處理。" : "This output is a notice-source and handoff index. It does not authenticate a notice, calculate or preserve a deadline, establish authority or file anything, decide debt, refund, benefit, rights or adverse action, or treat a promise, submission, account edit or collection pause as an actual result. Read the current notice immediately, preserve delivery and source evidence, and use the specified process and qualified or emergency sources.",
+      ].join("\n\n");
+    },
+  };
+};
+
+
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
     intro:
@@ -6589,6 +6684,9 @@ const definitions: Record<string, Definition> = {
   "home-care-charge-service-payment-discrepancy-log": {
     ...homeCareChargeDefinition("en"),
   },
+  "home-care-payment-refund-collection-notice-log": {
+    ...homeCareNoticeDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -6623,6 +6721,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "home-care-charge-service-payment-discrepancy-log": {
     ...homeCareChargeDefinition("zh-TW"),
+  },
+  "home-care-payment-refund-collection-notice-log": {
+    ...homeCareNoticeDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:
