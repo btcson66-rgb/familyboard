@@ -1896,6 +1896,14 @@
     "headings": "Household Meter Reading Log Record what was visible from a safe position Date and source matter more than a lone number Compare observations without estimating a bill Keep move-in, service and outage contexts separate Handoff and future affiliate placement"
   },
   {
+    "title": "Free Home Accessibility Walkthrough Log | Paths, Barriers and Retests | FamilyBoard",
+    "description": "Record household path observations, barriers, alternate routes and retests with safe codes—without storing names, addresses or health details.",
+    "route": "/tools/household-accessibility-walkthrough-log/",
+    "cluster": "household-operations",
+    "keywords": "home accessibility walkthrough log",
+    "headings": "Home Accessibility Walkthrough Log Start with one path Describe barriers plainly Assign a reversible next step Future affiliate placement"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

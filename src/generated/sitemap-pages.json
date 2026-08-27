@@ -2000,6 +2000,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-accessibility-walkthrough-log/",
+    "alternateRoute": "/zh-tw/tools/household-accessibility-walkthrough-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2331,6 +2339,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/free-home-management-app/",
     "alternateRoute": "/features/free-home-management-app/",
     "indexable": true,
@@ -2650,6 +2665,13 @@
     "alternateRoute": "/tools/house-sitter-instruction-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-accessibility-walkthrough-log/",
+    "alternateRoute": "/tools/household-accessibility-walkthrough-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {

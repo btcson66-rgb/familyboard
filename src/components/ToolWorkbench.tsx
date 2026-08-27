@@ -3443,6 +3443,70 @@ const meterReadingDefinition = (locale: Locale): Definition => {
   };
 };
 
+const accessibilityWalkthroughDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立區域列，等待通行範圍",
+        "已確認範圍，等待觀察來源",
+        "已完成觀察，等待障礙描述",
+        "已記錄障礙，等待替代路徑或協助",
+        "已指定下一步，等待家庭重測",
+        "已完成重測，等待定期複查",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Area row created—path scope pending",
+        "Scope checked—observation source pending",
+        "Observation complete—barrier description pending",
+        "Barrier recorded—alternate path or support pending",
+        "Next action assigned—household retest pending",
+        "Retest complete—routine review pending",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "ACCESS-A | 玄關到浴室主要動線 | 2026-08-20 | 動線走讀來源代號 | 白天可通行；轉彎處需要再看 | 地面有物品，未判定是否符合標準 | 移除可移動物品後由家人重走一次並記錄結果 | 家庭動線角色 | 已記錄障礙，等待替代路徑或協助\nACCESS-B | 臥室到客廳備援路徑 | 2026-08-22 | 家庭走讀紀錄代號 | 夜間照明觀察尚未完成 | 看不清楚轉角，暫不假設路徑可用 | 補做不涉及危險操作的觀察並回填 | 備援家庭角色 | 已完成觀察，等待障礙描述"
+    : "ACCESS-A | Entry to bathroom primary path | 2026-08-20 | Walkthrough source code | Passable in daylight; turning area needs another look | Items on the floor; no standard or safety conclusion made | Remove movable items, have a household member walk it again and record the result | Household access role | Barrier recorded—alternate path or support pending\nACCESS-B | Bedroom to living-room alternate path | 2026-08-22 | Household walkthrough code | Night lighting observation is not complete | Corner visibility is unclear; path availability not assumed | Repeat a non-hazardous observation and record it | Backup household role | Observation complete—barrier description pending";
+  return {
+    intro: zh
+      ? "用家庭走讀記錄區域、觀察日期、來源、通行狀況、障礙或不確定處、替代路徑與重測。工具不診斷、不評估個人能力、不認證建築或法規安全，也不保存姓名、健康資料或住址。"
+      : "Use a household walkthrough to record an area, date, source, access observation, barrier or uncertainty, alternate path and retest. This tool does not diagnose, assess a person's ability or certify building, code or safety compliance, and stores no names, health data or addresses.",
+    fields: [
+      text("review", zh ? "動線走讀複查私人代號" : "Private accessibility-walkthrough reference", zh ? "使用家庭代號，不要輸入姓名、健康細節、住址、門禁或醫療資料。" : "Use a household code; do not enter names, health details, addresses, access codes or medical data.", "ACCESS-REVIEW-2026-A"),
+      { name: "context", label: zh ? "走讀情境" : "Walkthrough context", type: "select", options: zh ? ["日常通行動線", "搬家或家具變動後", "照護交接前的環境觀察", "停電或夜間備援", "訪客或臨時使用", "其他家庭走讀"] : ["Daily movement path", "After a move or furniture change", "Environment check before a care handoff", "Power-outage or night backup", "Guest or temporary use", "Other household walkthrough"] },
+      { name: "reviewDate", label: zh ? "本次走讀日期" : "Current walkthrough date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次重測或複查日期" : "Next retest or review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "走讀與環境觀察來源地圖" : "Walkthrough and environment-observation source map", zh ? "只填安全來源代號，不要貼住址、醫療資料、照片或門禁資訊。" : "Use safe source codes; do not paste addresses, medical details, photos or access information.", "WALK-S1; HOME-OBS-H1; RETEST-R1"),
+      text("rows", zh ? "動線與障礙觀察狀態列" : "Path and barrier-observation rows", zh ? "每行 9 欄：ID｜區域或通行範圍｜觀察日期 YYYY-MM-DD｜來源代號｜通行狀況｜障礙或不確定處｜替代路徑或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | area or path scope | observation date YYYY-MM-DD | source code | access observation | barrier or uncertainty | alternate path or next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護環境觀察與重測位置" : "Protected environment-observation and retest location", zh ? "只寫保管流程或容器代號，不要放住址、健康、照片或門禁資料。" : "Name a custody process or container, not addresses, health details, photos or access data.", zh ? "家庭紀錄／動線走讀／ACCESS-REVIEW-2026-A／受保護來源" : "Household records / access walkthrough / ACCESS-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次走讀日期。" : "Enter valid current and next walkthrough dates.";
+      if (next < review) return zh ? "下一次重測或複查日期不能早於本次走讀。" : "The next retest or review date cannot be earlier than the current walkthrough.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全走讀代號、來源地圖與受保護位置。" : "Provide a safe walkthrough code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行動線走讀列。" : "Enter 1 to 14 walkthrough rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `走讀第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Walkthrough line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行走讀紀錄都需要唯一 ID。" : "Every walkthrough row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `走讀第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Walkthrough line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次走讀。" : "Each observation date must be valid and no later than the current walkthrough.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const thin = parsed.filter((row) => row.parts[1].length < 5 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 8 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `走讀第 ${thin.map((row) => row.line).join("、")} 行需要範圍、來源、通行狀況、障礙、下一步與角色。` : `Walkthrough line ${thin.map((row) => row.line).join(", ")} needs a scope, source, access observation, barrier, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、身分或帳務識別資料；請改用安全代號。" : "A full contact, address, identity or billing identifier was detected; use safe codes.";
+      if (/password|passcode|access code|door code|full address|medical record|diagnosis|medication|private message|姓名|密碼|門禁|完整地址|醫療|診斷|用藥|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或私人通信；請只保留安全來源代號。" : "Sensitive data or private correspondence was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭動線與無障礙走讀複查" : " — household access and accessibility walkthrough review"), (zh ? "走讀情境：" : "Walkthrough context: ") + values.context, (zh ? "本次走讀：" : "Current walkthrough: ") + fmt.format(review), (zh ? "下一次重測或複查：" : "Next retest or review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已完成重測或不適用列：" : "Retested or not-applicable rows: ") + closed.length, (zh ? "走讀與環境觀察來源地圖：" : "Walkthrough and environment-observation source map: ") + values.source.trim(), (zh ? "有版本的動線與障礙觀察\n" : "Versioned path and barrier observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜通行狀況：" : " — access: ") + row.parts[4] + (zh ? "｜障礙／不確定：" : " — barrier/uncertainty: ") + row.parts[5] + (zh ? "｜下一步：" : " — next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護環境觀察與重測位置：" : "Protected environment-observation and retest location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭走讀觀察，不診斷、不評估個人能力、不認證建築或法規安全，也不證明替代路徑適合所有人；請以本人需求、建物管理、合格專業與當下安全來源為準。" : "This output only organizes household walkthrough observations. It does not diagnose, assess a person's ability, certify building or code safety, or prove an alternate path suits everyone; use the person's needs, building management, qualified professionals and current safety sources."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7489,6 +7553,9 @@ const definitions: Record<string, Definition> = {
   "household-meter-reading-review-log": {
     ...meterReadingDefinition("en"),
   },
+  "household-accessibility-walkthrough-log": {
+    ...accessibilityWalkthroughDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7562,6 +7629,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-meter-reading-review-log": {
     ...meterReadingDefinition("zh-TW"),
+  },
+  "household-accessibility-walkthrough-log": {
+    ...accessibilityWalkthroughDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

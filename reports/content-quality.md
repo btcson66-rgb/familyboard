@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T05:37:31.745Z
+Generated: 2026-08-27T05:55:10.188Z
 
 ## Summary
 
-- Indexable pages: 406
-- Generated HTML routes: 423
+- Indexable pages: 409
+- Generated HTML routes: 426
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 193
+- Pages without a contextual product/tool link: 196
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 45
+- product: 46
 - appliances: 30
 - maintenance: 37
-- household-operations: 42
+- household-operations: 44
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -75,6 +75,7 @@ Generated: 2026-08-27T05:37:31.745Z
 - /roadmap/
 - /security/
 - /terms/
+- /tools/household-accessibility-walkthrough-log/
 - /tools/household-bill-source-status-log/
 - /tools/household-clothing-care-repair-log/
 - /tools/household-document-renewal-review-log/
@@ -114,6 +115,7 @@ Generated: 2026-08-27T05:37:31.745Z
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
+- /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
 - /zh-tw/guides/familyboard-bill-review-tutorial/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
@@ -200,6 +202,7 @@ Generated: 2026-08-27T05:37:31.745Z
 - /zh-tw/tools/home-service-provider-verification-log/
 - /zh-tw/tools/home-service-reminder-generator/
 - /zh-tw/tools/house-sitter-instruction-generator/
+- /zh-tw/tools/household-accessibility-walkthrough-log/
 - /zh-tw/tools/household-annual-review-generator/
 - /zh-tw/tools/household-bill-source-status-log/
 - /zh-tw/tools/household-clothing-care-repair-log/
