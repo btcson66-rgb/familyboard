@@ -19498,6 +19498,195 @@ Before sharing a result, remove anything that identifies a person, address or pr
 
 這次轉換是否真的需要複查？每列是否都有來源日期和可觀察描述？每個開放列是否有負責角色與結果日期？暫緩是否寫了理由和重新開案事件？安全疑問是否已交給正確來源？分享前是否刪除個資與完整原件？六題都能回答「是」，這份換季紀錄才適合進入下一個家庭核點。
 
+## Page 285 — Household Device Retirement and Handoff Log
+**Slug:** /tools/household-device-retirement-handoff-log/
+**Alternate route:** /zh-tw/tools/household-device-retirement-handoff-log/
+**Primary intent:** organize account sign-out, backup checks, device wiping and handoff evidence before a household device leaves service
+**Title tag:** Household Device Retirement Handoff Log | Free FamilyBoard Tool
+**Meta description:** Record protected device matches, account sign-out, backup checks, wipe windows and handoff results without putting passwords or serial numbers in the form.
+**Primary keyword concept:** device retirement handoff checklist
+**Cluster:** records-emergency
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /guides/electronics-inventory/, /guides/digital-home-inventory-backup/, /guides/familyboard-browser-storage-maintenance/, /zh-tw/tools/household-device-retirement-handoff-log/
+**FAQ:**
+- Q: Does the log wipe my phone or tablet?
+  A: No. It only records the household's checkpoints; follow the current manufacturer and platform process on the device itself.
+- Q: Can I enter a serial number or password to make the handoff complete?
+  A: No. Use a safe device code and keep credentials, recovery codes and full identifiers in a protected location.
+- Q: Does a recorded factory reset prove that every copy is gone?
+  A: No. The result is an observation to retain with the responsible source, not a forensic guarantee.
+
+**Contextual CTA:** Start with the free device retirement handoff log and keep the actual platform action on the device itself.
+
+# Household Device Retirement and Handoff Log
+
+An old phone, tablet, laptop, streaming box or shared kitchen screen can carry more household access than its size suggests. Before selling, donating, recycling or handing it to another person, a family needs a sequence it can explain: which device is leaving, which account and backup sources were checked, who owns the decision, what the platform process says to do, and what result was observed. This free [device retirement handoff tool](/tools/household-device-retirement-handoff-log/) records those checkpoints without asking you to paste the data you are trying to protect.
+
+## Inventory is not a wipe
+
+An inventory entry answers “what did we own?” It does not sign out an account, erase a phone, revoke a token, remove a memory card or prove that a recipient cannot recover a file. The [electronics inventory guide](/guides/electronics-inventory/) can help identify a device and its household role; this log begins at the decision to retire or transfer it. Keep the two records linked by a safe code, not by a full serial number in a public note.
+
+## Use a private reference and a protected source map
+
+Start with a code such as `DEVICE-RETIRE-2026-A`. Add source codes for the manufacturer instructions, platform account controls, the protected backup and the recycling or recipient route. The form deliberately rejects common full identifiers and sensitive phrases. Do not put a password, recovery code, full address, phone number, account number, serial number or private conversation in a row. A protected source map lets an authorized household role reopen the real instructions without turning the handoff summary into a new copy of the secret.
+
+## The nine fields keep decisions in order
+
+Each row records a device code, source date, current ownership or account observation, backup or transfer check, wipe or handoff plan, responsible role, outcome date and exact status. That order matters. A planned factory reset should not be recorded as complete merely because a backup exists; a recipient should not be treated as authorized merely because someone sent a message; a recycling route should not be treated as verified merely because a box was labelled. The status keeps an unfinished checkpoint visible for the next person.
+
+## Check the data boundary before the action
+
+Before touching the device, decide what the household must retain and where the protected backup can be read. Test a duplicate of an export when the relevant app provides one, and preserve the original while testing. Sign out of accounts, remove device-management relationships and follow the current platform instructions on the device itself. If a memory card, removable drive, browser profile or companion app exists, give it its own row or source code. FamilyBoard cannot see those systems and cannot tell you that a factory reset succeeded.
+
+## Handoff, recycling and repair are different paths
+
+A device handed to a family member may need a documented recipient and a new ownership boundary. A recycler may have its own intake process and receipt. A repair shop may need limited access for a stated period, which is not the same as permanent retirement. Choose the context first and record what the responsible source actually confirmed. If the source is silent about a step, leave it open. Never invent a “secure” or “complete” label to close a row that still depends on a platform, recipient or recycling provider.
+
+## What to do when the sequence is interrupted
+
+If the device is lost, the account password is forgotten, a reset screen shows an error or the recipient changes, pause the handoff and protect the remaining source. Record the visible event code and route the issue to the platform, manufacturer, account owner, recycler or qualified support channel. Do not paste screenshots containing tokens or personal data into this tool. A clear incomplete result is safer than a clean-looking record that hides an unresolved access path.
+
+## Privacy and future affiliate placement
+
+The form runs locally in this browser and does not contact FamilyBoard. It is not an account-recovery service, mobile-device-management console or forensic erasure certificate. Future recommendations for cases, storage media or recycling supplies may appear outside the workflow with a clear affiliate disclosure and an easy skip; no product is required to create a log or complete the household's own process.
+
+## Page 286 — 家庭裝置退役交接工具（Traditional Chinese）
+**Slug:** /zh-tw/tools/household-device-retirement-handoff-log/
+**Alternate route:** /tools/household-device-retirement-handoff-log/
+**Primary intent:** 教台灣家庭在手機、平板、筆電或共用裝置出售捐贈回收前記錄登出、備份、清除與交接核點
+**Title tag:** 舊手機要怎麼清除再送人？免費裝置退役交接工具｜FamilyBoard
+**Meta description:** 用 FamilyBoard 繁中工具整理裝置比對、帳號登出、備份驗證、清除窗口與回收交接，不輸入密碼或完整序號。
+**Primary keyword concept:** 舊手機清除交接工具
+**Cluster:** records-emergency
+**Page type:** tool
+**Language:** zh-TW
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/guides/room-by-room-home-inventory/, /zh-tw/guides/digital-home-inventory-backup/, /zh-tw/guides/familyboard-browser-storage-maintenance/, /zh-tw/guides/familyboard-device-retirement-tutorial/
+**FAQ:**
+- Q: 工具會直接清除手機或平板嗎？
+  A: 不會，只記錄家庭核點；實際操作請依目前製造商與平台說明在裝置上完成。
+- Q: 可以把序號、密碼或復原碼填進去嗎？
+  A: 不要，使用安全裝置代號，憑證與完整識別資料留在受保護位置。
+- Q: 寫「已恢復原廠」就能保證資料全部消失嗎？
+  A: 不能，這只是家庭觀察結果，不是鑑識級清除保證。
+
+**Contextual CTA:** 先開啟免費裝置退役交接工具，再依製造商與平台來源在裝置上完成實際操作。
+
+# 舊手機要怎麼清除再送人？免費裝置退役交接工具
+
+舊手機、平板、筆電、串流盒或廚房共用螢幕，在出售、捐贈、回收、送修或轉交家人前，可能還連著家庭帳號、瀏覽器設定檔、照片、備份、App 和付款權限。這個免費工具把「是哪台裝置、來源是否確認、帳號是否登出、備份是否可讀、清除或交接窗口、結果由誰確認」分開記錄，不要求你把想保護的資料再貼一份進來。
+
+## 財物清冊不等於資料清除
+
+[逐房家庭清冊](/zh-tw/guides/room-by-room-home-inventory/)回答「家裡曾經有什麼」，不會替你登出帳號、撤銷權限、移除記憶卡、清除手機或證明接收者不能復原檔案。本工具從決定退役或轉交開始，用安全代號和清冊連結；不要在公開摘要放完整序號。
+
+## 先建立代號與受保護來源地圖
+
+先用 `DEVICE-RETIRE-2026-A` 這類家庭代號，再建立 MANUAL-1、ACCOUNT-1、BACKUP-1、RECYCLE-1 等來源代號，分別指向製造商說明、平台帳號設定、受保護備份和回收／接收流程。表單會攔截常見完整識別和敏感字詞；密碼、復原碼、完整地址、電話、帳號、序號和私人通信都留在受保護來源。
+
+## 九個欄位讓順序清楚
+
+每列填裝置代號、來源日期、目前所有權／帳號／資料觀察、備份或移轉核對、清除或交接安排、負責角色、結果日期與指定狀態。備份存在不代表帳號已登出；收到訊息不代表接收者已獲授權；貼好回收箱標籤也不代表回收單位已收件。讓尚未完成的核點保持開放，下一個角色才知道要回哪個來源確認。
+
+## 先決定要保留什麼，再碰裝置
+
+使用裝置前先確認家庭需要留下的資料與受保護備份位置。若 App 有匯出功能，在受控副本上測試可讀性，測試期間保留原檔。接著依目前平台說明登出帳號、解除裝置管理關聯、移除記憶卡或外接儲存，並把瀏覽器設定檔、伴隨 App 和家人共用帳號各自視為一個核點。FamilyBoard 看不到這些系統，也不會告訴你恢復原廠是否成功。
+
+## 出售、捐贈、回收和送修不是同一路徑
+
+轉交家人要記下新的所有權邊界；回收要記錄回收流程實際提供的收件或保管來源；送修可能只有一段有限期間的存取，和永久退役不同。選好情境再記錄來源真正回覆的內容。來源沒有說明的步驟先保持開放，不要為了關閉列而自行寫「安全」或「完成」。
+
+## 中斷時保留未完成狀態
+
+如果裝置遺失、忘記帳號密碼、清除畫面報錯、接收者改變或回收來源沒有回覆，先停止交接並保護剩餘來源。記錄可見事件代號，轉交平台、製造商、帳號持有人、回收單位或合格支援管道；不要把含權杖或個資的截圖貼進工具。清楚寫「等待確認」比看起來乾淨卻隱藏存取風險更可靠。
+
+## 隱私與聯盟推薦界線
+
+輸入只在目前瀏覽器運算，不是帳號復原、行動裝置管理或鑑識清除服務。未來若出現手機殼、儲存媒體或回收用品推薦，只能放在操作流程之外，清楚揭露聯盟關係且可略過；不購買商品也能建立和完成家庭自己的交接流程。
+
+## 交接前的六個問題
+
+裝置代號和目前所有權是否確認？需要保留的資料是否有可讀備份？帳號與管理關聯是否依平台說明處理？接收者或回收來源是否真的回覆？結果日期與負責角色是否留下？分享前是否刪除密碼、序號、地址和通信全文？六題都能回答「是」，才適合把裝置交給下一個流程。
+
+## Page 287 — FamilyBoard 舊手機清除與裝置交接 App 教學（Traditional Chinese）
+**Slug:** /zh-tw/guides/familyboard-device-retirement-tutorial/
+**Primary intent:** teach Taiwan households a safe, source-aware device retirement routine without claiming that an app can erase hardware
+**Title tag:** 舊手機送人前要做什麼？FamilyBoard 裝置清除與交接教學
+**Meta description:** 逐步教你在 FamilyBoard 記錄舊手機或平板的備份、登出、清除、接收與回收核點，避免把工具輸出當成資料抹除證明。
+**Primary keyword concept:** 舊手機送人前清除教學
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/household-device-retirement-handoff-log/, /zh-tw/guides/room-by-room-home-inventory/, /zh-tw/guides/digital-home-inventory-backup/
+**FAQ:**
+- Q: 清除前最重要的檢查是什麼？
+  A: 先確認裝置身分、家庭需要保留的資料、可讀的受保護備份和負責的帳號來源，再依平台說明操作。
+- Q: 工具輸出可以當作回收證明嗎？
+  A: 不可以，回收收件、所有權和實際清除結果要以負責來源的回覆為準。
+- Q: 舊裝置裡的 FamilyBoard 紀錄會自動出現在新裝置嗎？
+  A: 不會，各裝置是不同的本機資料；請依已驗證的備份移轉流程處理。
+
+**Contextual CTA:** 先用免費裝置退役交接工具整理核點，再把清除與交接交給正確的裝置和負責來源。
+
+# 舊手機送人前要做什麼？FamilyBoard 裝置清除與交接教學
+
+舊手機或平板準備出售、捐贈、回收、送修或交給家人時，最容易漏掉的不是「按哪個清除按鈕」，而是忘記哪些帳號、備份、記憶卡、瀏覽器設定檔和共用 App 還留在裝置上。這篇教學搭配[家庭裝置退役交接工具](/zh-tw/tools/household-device-retirement-handoff-log/)，把每個核點留在家庭自己的本機紀錄；工具不會操作你的裝置，也不會保證資料已從硬體消失。
+
+## 第一步：先分辨哪台裝置與哪份資料
+
+建立 `DEVICE-RETIRE-2026-A` 這類安全代號，記下裝置類別、家庭用途、目前所有權和複查日期。不要把完整序號、電話、地址、帳號或密碼寫進公開摘要。若家裡有兩台外觀相同的平板，先在裝置和受保護清冊中確認它們的區別；錯把仍在使用的裝置列為退役，後面的清除順序就沒有意義。
+
+## 第二步：列出需要保留的資料邊界
+
+使用[逐房家庭清冊](/zh-tw/guides/room-by-room-home-inventory/)或受保護筆記，分辨哪些資料是家庭要保留、哪些只是裝置暫存、哪些屬於其他帳號持有人。FamilyBoard 的本機資料、照片、瀏覽器書籤、通訊 App、付款 App、記憶卡和雲端同步設定不要混成一個「全部備份」字樣；每類都要有負責來源和保留決定。需要留下的 FamilyBoard 匯出先放到受保護位置，再在副本或受控測試設定檔驗證可讀性。
+
+## 第三步：建立來源地圖而不貼秘密
+
+用 MANUAL-1 指向製造商或平台說明，ACCOUNT-1 指向帳號控制，BACKUP-1 指向受保護匯出，RECYCLE-1 或 RECIPIENT-1 指向回收／接收流程。來源日期要寫實際查閱日。密碼、復原碼、雙因素驗證資料、完整序號、地址和收件者資料留在原本受保護的位置；工具只需要能讓負責角色重新找到它們的代號。
+
+## 第四步：依平台說明處理帳號與管理關聯
+
+在裝置本身逐一檢查家庭帳號、瀏覽器設定檔、裝置管理、尋找裝置、付款 App、串流服務和共用家庭 App。完成登出或解除關聯後，把「已依來源處理」和「仍待回覆」分開寫。不要只看登入畫面消失就假設所有權已轉移，也不要把一則簡訊當成平台正式確認。若平台需要原持有人再次驗證，讓帳號持有人依官方流程完成，不把驗證碼貼進 FamilyBoard。
+
+## 第五步：把清除和交接分成兩個核點
+
+清除是裝置上的操作，交接是把裝置交給另一個人或單位的責任流程。出售、捐贈或轉交家人時，先依目前平台說明處理資料，再由新的所有權人確認接收邊界；送修則記錄服務期間、可存取範圍與取回來源；回收則以回收單位實際收件或保管回覆為準。工具的「已記錄清除或交接行動」只表示家庭留下觀察，不是任何一方的鑑識證明。
+
+## 第六步：別忘了可移除的東西
+
+逐項查核 SIM 卡、記憶卡、外接儲存、轉接器、備用瀏覽器設定檔和仍登入的伴隨 App。這些項目不一定會被恢復原廠流程處理，應在來源地圖中各自留一個代號或記錄「不適用」的理由。若裝置遺失或螢幕故障，先依帳號平台、電信商、製造商或合格支援路徑處理，不要在唯一的家庭清冊中猜測結果。
+
+## 第七步：新裝置與舊裝置不要互相猜測
+
+FamilyBoard 每台瀏覽器都有自己的本機資料。新平板或手機不會因為同一個 Apple、Google 或 Microsoft 帳號就自動出現舊裝置的家庭紀錄。若要移轉，先保留原始匯出，在受控副本還原並確認測試紀錄，再決定合併或取代；驗證新裝置能離線開啟後，才處理舊設定檔。不要反覆還原同一份檔案，否則重複和較新的改動會難以分辨。
+
+## 第八步：中斷時不要把未完成改成完成
+
+如果忘記密碼、清除失敗、接收者改變、回收來源未回覆或新裝置讀不到備份，保持「等待負責來源確認」。記錄可觀察到的錯誤代號和下一個角色，保留原始資料與受保護來源；不要貼含個資、權杖或完整裝置識別的截圖。清楚的未完成狀態能讓下一個人接手，也避免家庭誤以為裝置已安全交出。
+
+## 第九步：分享前檢查聯盟與隱私
+
+列印或交接前刪除密碼、復原碼、序號、地址、電話、帳號、付款和私人通信。未來若頁面推薦手機殼、儲存媒體或回收用品，確認聯盟揭露在操作流程之外且可以跳過；商品不是資料清除、FamilyBoard 移轉或安全判斷的必要條件。這份 App 教學也不取代製造商、平台、回收單位、電信商或合格支援來源。
+
+## 收尾前的七個問題
+
+裝置和目前所有權是否辨識？需要保留的 FamilyBoard 與家庭資料是否有可讀副本？帳號、管理關聯、SIM／記憶卡和伴隨 App 是否逐項處理？清除和交接是否分開記錄？新裝置是否通過受控還原與離線測試？外部來源是否真正回覆而非只收到訊息？分享前是否移除所有秘密與個資？七題都能回答「是」，才適合把裝置送往下一個流程。
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

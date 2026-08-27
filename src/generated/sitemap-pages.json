@@ -2272,6 +2272,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-device-retirement-handoff-log/",
+    "alternateRoute": "/zh-tw/tools/household-device-retirement-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/tools/household-device-retirement-handoff-log/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-device-retirement-tutorial/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2639,6 +2663,13 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-clothing-care-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-device-retirement-tutorial/",
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
@@ -3109,6 +3140,13 @@
   {
     "route": "/zh-tw/tools/household-clothing-care-repair-log/",
     "alternateRoute": "/tools/household-clothing-care-repair-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-device-retirement-handoff-log/",
+    "alternateRoute": "/tools/household-device-retirement-handoff-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

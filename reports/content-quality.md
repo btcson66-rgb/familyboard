@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T12:18:53.205Z
+Generated: 2026-08-27T12:54:25.902Z
 
 ## Summary
 
-- Indexable pages: 466
-- Generated HTML routes: 483
+- Indexable pages: 469
+- Generated HTML routes: 486
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 253
+- Pages without a contextual product/tool link: 255
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-27T12:18:53.205Z
 - maintenance: 41
 - household-operations: 75
 - inventory-warranty: 41
-- records-emergency: 49
+- records-emergency: 52
 - tools: 121
 
 ## Word-count range
@@ -139,6 +139,7 @@ Generated: 2026-08-27T12:18:53.205Z
 - /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-maintenance/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
+- /zh-tw/guides/familyboard-device-retirement-tutorial/
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
 - /zh-tw/guides/familyboard-donation-handoff-tutorial/
 - /zh-tw/guides/familyboard-family-display-mode-setup/
@@ -246,6 +247,7 @@ Generated: 2026-08-27T12:18:53.205Z
 - /zh-tw/tools/household-annual-review-generator/
 - /zh-tw/tools/household-bill-source-status-log/
 - /zh-tw/tools/household-clothing-care-repair-log/
+- /zh-tw/tools/household-device-retirement-handoff-log/
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-document-renewal-review-log/
 - /zh-tw/tools/household-donation-handoff-log/

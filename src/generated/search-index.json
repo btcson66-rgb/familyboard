@@ -2096,6 +2096,22 @@
     "headings": "家庭換季複查怎麼記？免費季節行動紀錄工具 為什麼不能只勾「完成」 先選真正接近的季節轉換 每一列都要有來源和可觀察內容 把需要專業判斷的事留在正確流程 下一次複查要處理開放列 隱私與未來商品推薦界線 交接前的五分鐘"
   },
   {
+    "title": "Household Device Retirement Handoff Log | Free FamilyBoard Tool",
+    "description": "Record protected device matches, account sign-out, backup checks, wipe windows and handoff results without putting passwords or serial numbers in the form.",
+    "route": "/tools/household-device-retirement-handoff-log/",
+    "cluster": "records-emergency",
+    "keywords": "device retirement handoff checklist",
+    "headings": "Household Device Retirement and Handoff Log Inventory is not a wipe Use a private reference and a protected source map The nine fields keep decisions in order Check the data boundary before the action Handoff, recycling and repair are different paths What to do when the sequence is interrupted Privacy and future affiliate placement"
+  },
+  {
+    "title": "舊手機要怎麼清除再送人？免費裝置退役交接工具｜FamilyBoard",
+    "description": "用 FamilyBoard 繁中工具整理裝置比對、帳號登出、備份驗證、清除窗口與回收交接，不輸入密碼或完整序號。",
+    "route": "/zh-tw/tools/household-device-retirement-handoff-log/",
+    "cluster": "records-emergency",
+    "keywords": "舊手機清除交接工具",
+    "headings": "舊手機要怎麼清除再送人？免費裝置退役交接工具 財物清冊不等於資料清除 先建立代號與受保護來源地圖 九個欄位讓順序清楚 先決定要保留什麼，再碰裝置 出售、捐贈、回收和送修不是同一路徑 中斷時保留未完成狀態 隱私與聯盟推薦界線 交接前的六個問題"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

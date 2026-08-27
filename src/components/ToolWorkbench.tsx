@@ -4461,10 +4461,160 @@ const seasonalResetDefinition = (locale: Locale): Definition => {
   };
 };
 
+const deviceRetirementDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已記錄退役範圍，等待裝置來源",
+        "已完成受保護裝置比對，等待帳號登出",
+        "已記錄帳號登出，等待備份或移轉核對",
+        "已核對備份或移轉，等待清除或交接窗口",
+        "已記錄清除或交接行動，等待回收／接收來源",
+        "隱私、所有權或資料保存疑問，等待負責來源確認",
+        "已退役、移交或回收並保存結果與保管",
+        "不適用，已記錄理由與重新開案事件",
+      ]
+    : [
+        "Retirement scope recorded—device source pending",
+        "Protected device match recorded—account sign-out pending",
+        "Account sign-out recorded—backup or transfer review pending",
+        "Backup or transfer reviewed—wipe or handoff window pending",
+        "Wipe or handoff recorded—recipient or recycling source pending",
+        "Privacy, ownership or retention question—responsible source pending",
+        "Retired, transferred or recycled—result and custody preserved",
+        "Not applicable—reason and reopen trigger recorded",
+      ];
+  const defaults = zh
+    ? "DEVICE-A | 廚房共用平板代號 | 2026-08-20 | 家庭共用裝置；帳號與裝置來源待確認 | 已在受保護位置驗證 FamilyBoard 匯出副本；登出與清除窗口待安排 | 由家庭裝置角色依原廠說明處理，完成後交給回收來源 | 家庭裝置管理角色 | 2026-09-03 | 已完成受保護裝置比對，等待帳號登出\nDEVICE-B | 舊手機轉交家人代號 | 2026-08-22 | 轉交前確認照片、帳號與家庭 App 邊界 | 保留家庭需要的資料後，先驗證受保護備份 | 接收者與原持有人共同核對清除與交接結果 | 家庭交接角色 | 2026-09-05 | 隱私、所有權或資料保存疑問，等待負責來源確認"
+    : "DEVICE-A | Shared kitchen tablet code | 2026-08-20 | Shared household device; account and device source pending | FamilyBoard export copy verified in protected storage; sign-out and wipe window pending | Household device role follows the manufacturer process, then hands to the recycling source | Household device custodian | 2026-09-03 | Protected device match recorded—account sign-out pending\nDEVICE-B | Older phone hand-down code | 2026-08-22 | Confirm photos, accounts and household-app boundary before transfer | Retain only what the household needs, then verify a protected backup | Recipient and former owner review wipe and handoff result together | Household handoff role | 2026-09-05 | Privacy, ownership or retention question—responsible source pending";
+  return {
+    intro: zh
+      ? "把裝置退役前的來源比對、帳號登出、備份／移轉、清除窗口、交接角色與結果分開記錄。工具不會操作你的裝置、不登出帳號、不清除資料、不驗證回收商，也不保證資料已經從硬體移除。"
+      : "Separate device-source matching, account sign-out, backup or transfer, wipe window, handoff role and result before retirement. This tool never operates your device, signs out an account, wipes data, verifies a recycler or guarantees that data has been removed from hardware.",
+    fields: [
+      text(
+        "review",
+        zh ? "裝置退役私人代號" : "Private device-retirement reference",
+        zh
+          ? "使用家庭代號，不要輸入姓名、地址、電話、Email、完整序號、帳號或復原碼。"
+          : "Use a household code; do not enter names, addresses, phones, email, full serials, accounts or recovery codes.",
+        "DEVICE-RETIRE-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "裝置退役情境" : "Device-retirement context",
+        type: "select",
+        options: zh
+          ? [
+              "出售前清除與交接",
+              "捐贈或轉交家人",
+              "回收或電子廢棄物交接",
+              "送修前的帳號與資料邊界",
+              "共用平板或串流裝置退役",
+              "家庭裝置汰換與資料保留",
+            ]
+          : [
+              "Wipe and handoff before sale",
+              "Donation or hand-down",
+              "Recycling or e-waste handoff",
+              "Account and data boundary before repair",
+              "Retire a shared tablet or streaming device",
+              "Household replacement and data retention",
+            ],
+      },
+      { name: "baselineDate", label: zh ? "裝置來源地圖基準日" : "Device-source map baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: zh ? "本次退役複查日期" : "Current retirement review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次清除或交接核點" : "Next wipe or handoff checkpoint", type: "date", value: "2026-09-05" },
+      text(
+        "source",
+        zh ? "製造商、帳號與回收來源地圖" : "Manufacturer, account and recycling-source map",
+        zh
+          ? "只填來源代號或可重開位置；完整帳號、序號、收件資料與通信留在受保護來源。"
+          : "Use source codes or reopenable locations; keep full accounts, serials, recipient details and correspondence protected.",
+        "MANUAL-1; ACCOUNT-1; RECYCLE-1",
+      ),
+      text(
+        "rows",
+        zh ? "裝置退役與交接列" : "Device-retirement and handoff rows",
+        zh
+          ? "每行 9 欄：ID｜裝置或類別代號｜來源日期 YYYY-MM-DD｜目前所有權／帳號／資料觀察｜備份或移轉核對｜清除／交接安排｜負責角色｜結果日期 YYYY-MM-DD｜指定狀態。最多 12 行。"
+          : "Each row uses 9 fields: ID | device or category code | source date YYYY-MM-DD | ownership, account or data observation | backup or transfer check | wipe or handoff plan | owner role | outcome date YYYY-MM-DD | exact status. Maximum 12 rows.",
+        defaults,
+      ),
+      text(
+        "storage",
+        zh ? "受保護備份與退役證據位置" : "Protected backup and retirement-evidence location",
+        zh
+          ? "只寫資料夾或容器代號，不要放密碼、復原碼、完整序號、地址或收件資料。"
+          : "Name a folder or container code, not passwords, recovery codes, full serials, addresses or recipient details.",
+        zh ? "家庭紀錄／裝置退役／DEVICE-RETIRE-2026-A／受保護來源" : "Household records / device retirement / DEVICE-RETIRE-2026-A / protected sources",
+      ),
+    ],
+    run: (values) => {
+      const baseline = strictIsoDate(values.baselineDate);
+      const review = strictIsoDate(values.reviewDate);
+      const next = strictIsoDate(values.nextReview);
+      if (!baseline || !review || !next)
+        return zh ? "請輸入有效的來源基準、本次複查與下一次核點日期。" : "Enter valid source-baseline, current-review and next-checkpoint dates.";
+      if (baseline > review)
+        return zh ? "裝置來源基準日不能晚於本次複查。" : "The device-source baseline cannot be later than the current review.";
+      if (next < review)
+        return zh ? "下一次清除或交接核點不能早於本次複查。" : "The next wipe or handoff checkpoint cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10)
+        return zh ? "請提供安全代號、來源地圖與受保護位置。" : "Provide a safe reference, source map and protected location.";
+      const rows = values.rows
+        .split(/\r?\n/)
+        .map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) }))
+        .filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 12)
+        return zh ? "請輸入 1 至 12 行裝置退役或交接列。" : "Enter 1 to 12 device-retirement or handoff rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length)
+        return zh ? `裝置退役第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Device-retirement line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length)
+        return zh ? "每行裝置退役紀錄都需要唯一 ID。" : "Every device-retirement row needs a unique ID.";
+      const sourceDates = rows.map((row) => strictIsoDate(row.parts[2]));
+      if (sourceDates.some((value) => !value || value > review))
+        return zh ? "每列來源日期必須有效，且不能晚於本次複查。" : "Each source date must be valid and no later than the current review.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length)
+        return zh ? `裝置退役第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Device-retirement line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const outcomeDates = rows.map((row) => strictIsoDate(row.parts[7]));
+      if (outcomeDates.some((value) => !value || value < baseline || value > next))
+        return zh ? "每列結果日期必須介於來源基準日與下一次核點之間。" : "Each outcome date must fall between the source baseline and next checkpoint.";
+      const thin = rows.filter((row) => row.parts[1].length < 5 || row.parts[3].length < 12 || row.parts[4].length < 10 || row.parts[5].length < 10 || row.parts[6].length < 3);
+      if (thin.length)
+        return zh ? `裝置退役第 ${thin.map((row) => row.line).join("、")} 行需要裝置、目前觀察、備份／移轉核對、清除或交接安排與角色。` : `Device-retirement line ${thin.map((row) => row.line).join(", ")} needs a device, current observation, backup or transfer check, wipe or handoff plan and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy))
+        return zh ? "偵測到完整聯絡、地址、帳號或裝置識別資料；請改用安全代號。" : "A full contact, address, account or device identifier was detected; use safe codes.";
+      if (/password|passcode|recovery code|full address|street address|account number|card number|bank account|serial number|device password|private message|signature|密碼|通關密語|復原碼|完整地址|帳號|卡號|銀行帳戶|完整序號|裝置密碼|私人訊息|簽名/i.test(privacy))
+        return zh ? "偵測到敏感資料或裝置來源全文；請只保留安全索引。" : "Sensitive data or full device-source content was detected; keep only a safe index.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = rows.filter((row) => statuses.indexOf(row.parts[8]) < 6);
+      const closed = rows.filter((row) => statuses.indexOf(row.parts[8]) >= 6);
+      return [
+        values.review.trim() + (zh ? "｜家庭裝置退役交接" : " — household device retirement handoff"),
+        (zh ? "退役情境：" : "Retirement context: ") + values.context,
+        (zh ? "來源基準：" : "Source baseline: ") + formatter.format(baseline),
+        (zh ? "本次複查：" : "Current review: ") + formatter.format(review),
+        (zh ? "下一次清除或交接核點：" : "Next wipe or handoff checkpoint: ") + formatter.format(next),
+        (zh ? "仍開放列：" : "Open rows: ") + open.length,
+        (zh ? "已退役、移交或不適用列：" : "Retired, transferred or not-applicable rows: ") + closed.length,
+        (zh ? "製造商、帳號與回收來源地圖：" : "Manufacturer, account and recycling-source map: ") + values.source.trim(),
+        (zh ? "有版本的裝置觀察與交接安排\n" : "Versioned device observations and handoff plans\n") + rows.map((row) => row.parts.join(zh ? "｜" : " — ")).join("\n"),
+        (zh ? "受保護備份與退役證據位置：" : "Protected backup and retirement-evidence location: ") + values.storage.trim(),
+        zh ? "這份輸出只是退役與交接索引，不會操作裝置、登出帳號、清除硬體、驗證回收商或保證資料已移除；請依製造商、平台、回收單位與適用的專業流程處理。" : "This output is a retirement and handoff index. It does not operate a device, sign out accounts, wipe hardware, verify a recycler or guarantee data removal; follow the manufacturer, platform, recycler and applicable professional process.",
+      ].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
+  "household-device-retirement-handoff-log": deviceRetirementDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -8684,6 +8834,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-seasonal-reset-action-log": {
     ...seasonalResetDefinition("zh-TW"),
+  },
+  "household-device-retirement-handoff-log": {
+    ...deviceRetirementDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

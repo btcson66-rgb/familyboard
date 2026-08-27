@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { readFile } from "node:fs/promises";
 
-test("public SEO, keyboard and six production tools work", async ({
+test("public SEO, keyboard and seven production tools work", async ({
   page,
 }) => {
   await page.goto("/");
@@ -22,6 +22,7 @@ test("public SEO, keyboard and six production tools work", async ({
     "/tools/recurring-chore-planner/",
     "/tools/emergency-binder-generator/",
     "/tools/household-seasonal-reset-action-log/",
+    "/tools/household-device-retirement-handoff-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -104,6 +105,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-family-display-mode-setup/",
     "/guides/familyboard-browser-storage-maintenance/",
     "/tools/household-seasonal-reset-action-log/",
+    "/tools/household-device-retirement-handoff-log/",
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
@@ -200,6 +202,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-browser-storage-maintenance/",
     "/zh-tw/tools/household-seasonal-reset-action-log/",
     "/zh-tw/guides/familyboard-seasonal-reset-tutorial/",
+    "/zh-tw/tools/household-device-retirement-handoff-log/",
+    "/zh-tw/guides/familyboard-device-retirement-tutorial/",
     "/zh-tw/guides/familyboard-household-meeting-tutorial/",
     "/zh-tw/guides/familyboard-pantry-review-tutorial/",
     "/zh-tw/guides/familyboard-clothing-care-tutorial/",
@@ -1102,6 +1106,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-seasonal-reset-action-log/",
       alternate: "/tools/household-seasonal-reset-action-log/",
       heading: "家庭換季複查怎麼記？免費季節行動紀錄工具",
+    },
+    {
+      route: "/zh-tw/tools/household-device-retirement-handoff-log/",
+      alternate: "/tools/household-device-retirement-handoff-log/",
+      heading: "舊手機要怎麼清除再送人？免費裝置退役交接工具",
     },
   ]) {
     await page.goto(localizedTool.route);
