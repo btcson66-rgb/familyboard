@@ -2622,6 +2622,34 @@ const checks = [
     forbid: ['rel="alternate"'],
   },
   {
+    path: "/zh-tw/guides/household-admin-backup-person/",
+    require: [
+      "家庭行政備援者怎麼安排",
+      'hreflang="en"',
+      "家庭行政備援者的目的",
+      "備援者需要的是在指定期間維持家庭運作的必要地圖",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-contact-list/",
+    require: [
+      "家庭聯絡人清單怎麼整理",
+      'hreflang="en"',
+      "來源存在",
+      "不會打電話",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
+    require: [
+      "FamilyBoard 家庭行政交接怎麼用",
+      'lang="zh-TW"',
+      "建立一個有期限的情境",
+      "輸入先在目前瀏覽器處理",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
     path: "/zh-tw/guides/purchase-receipt-organizer/",
     require: [
       "網購到貨缺件或損壞怎麼辦？發票、拆封與退換貨紀錄",

@@ -70,7 +70,7 @@ test("representative routes have no serious accessibility violations", async ({
   // The representative route matrix intentionally covers the growing public
   // library. Keep a generous ceiling so adding a substantive page does not
   // turn a complete accessibility sweep into a timeout on slower CI runners.
-  test.setTimeout(420_000);
+  test.setTimeout(600_000);
   for (const route of [
     "/",
     "/guides/home-maintenance-schedule/",
@@ -212,6 +212,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-router-support-review-tutorial/",
     "/zh-tw/tools/household-shopping-list-planner/",
     "/zh-tw/guides/familyboard-shopping-list-planner-tutorial/",
+    "/zh-tw/guides/household-admin-backup-person/",
+    "/zh-tw/guides/home-contact-list/",
+    "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
     "/zh-tw/guides/familyboard-household-meeting-tutorial/",
     "/zh-tw/guides/familyboard-pantry-review-tutorial/",
     "/zh-tw/guides/familyboard-clothing-care-tutorial/",
@@ -379,7 +382,7 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
 }) => {
   // Keep the full Traditional Chinese route matrix intact as the library
   // grows; slower CI workers need more than the original v1 ceiling.
-  test.setTimeout(420_000);
+  test.setTimeout(600_000);
   await page.goto("/zh-tw/");
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
@@ -752,6 +755,16 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       heading: "家庭文件索引教學：記住原始文件在哪裡，不把 App 當成檔案庫",
     },
     {
+      route: "/zh-tw/guides/household-admin-backup-person/",
+      alternate: "/guides/household-admin-backup-person/",
+      heading: "家庭行政備援者怎麼安排？讓家人真的接得上手",
+    },
+    {
+      route: "/zh-tw/guides/home-contact-list/",
+      alternate: "/guides/home-contact-list/",
+      heading: "家庭聯絡人清單怎麼整理？把來源、用途與複查分開",
+    },
+    {
       route: "/zh-tw/features/free-home-management-app/",
       alternate: "/features/free-home-management-app/",
       heading: "FamilyBoard 使用教學：先建立一套會持續使用的家庭管理流程",
@@ -777,6 +790,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       page.locator('link[rel="alternate"][hreflang="zh-TW"]'),
     ).toHaveAttribute("href", `https://familyboard.win${localized.route}`);
   }
+
+  await page.goto("/zh-tw/guides/familyboard-household-admin-backup-tutorial/");
+  await expect(page.locator("h1")).toHaveText(
+    "FamilyBoard 家庭行政交接怎麼用？備援角色實作教學",
+  );
+  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
 
   await page.goto("/tools/warranty-expiration-calculator/");
   await expect(

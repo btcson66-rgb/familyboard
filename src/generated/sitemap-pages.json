@@ -1033,7 +1033,7 @@
   },
   {
     "route": "/guides/household-admin-backup-person/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/household-admin-backup-person/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1145,7 +1145,7 @@
   },
   {
     "route": "/guides/home-contact-list/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-contact-list/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -2759,6 +2759,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-household-handoff-tutorial/",
     "alternateRoute": "",
     "indexable": true,
@@ -3032,6 +3039,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/home-contact-list/",
+    "alternateRoute": "/guides/home-contact-list/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/home-dashboard/",
     "alternateRoute": "/features/home-dashboard/",
     "indexable": true,
@@ -3174,6 +3188,13 @@
   {
     "route": "/zh-tw/tools/household-accessibility-walkthrough-log/",
     "alternateRoute": "/tools/household-accessibility-walkthrough-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/household-admin-backup-person/",
+    "alternateRoute": "/guides/household-admin-backup-person/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

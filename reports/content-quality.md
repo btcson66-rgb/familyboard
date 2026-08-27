@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T13:41:19.942Z
+Generated: 2026-08-27T14:25:58.234Z
 
 ## Summary
 
-- Indexable pages: 475
-- Generated HTML routes: 492
+- Indexable pages: 478
+- Generated HTML routes: 495
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 259
+- Pages without a contextual product/tool link: 262
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-27T13:41:19.942Z
 - maintenance: 41
 - household-operations: 78
 - inventory-warranty: 41
-- records-emergency: 55
+- records-emergency: 58
 - tools: 121
 
 ## Word-count range
@@ -147,6 +147,7 @@ Generated: 2026-08-27T13:41:19.942Z
 - /zh-tw/guides/familyboard-family-display-mode-setup/
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
+- /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
@@ -180,11 +181,13 @@ Generated: 2026-08-27T13:41:19.942Z
 - /zh-tw/guides/home-care-service-interruption-backup-plan/
 - /zh-tw/guides/home-care-service-plan-changes/
 - /zh-tw/guides/home-care-service-visit-records/
+- /zh-tw/guides/home-contact-list/
 - /zh-tw/guides/home-evacuation-information/
 - /zh-tw/guides/home-improvement-receipts/
 - /zh-tw/guides/home-maintenance-log/
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/guides/home-service-provider-list/
+- /zh-tw/guides/household-admin-backup-person/
 - /zh-tw/guides/household-documents-organizer/
 - /zh-tw/guides/household-medical-information-organization/
 - /zh-tw/guides/how-long-to-keep-household-records/
