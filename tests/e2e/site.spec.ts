@@ -29,6 +29,7 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-responsibility-coverage-map/",
     "/tools/household-replacement-part-source-check-log/",
     "/tools/household-consumable-change-history-log/",
+    "/tools/household-repair-evidence-timeline-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -118,6 +119,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-responsibility-coverage-map/",
     "/tools/household-replacement-part-source-check-log/",
     "/tools/household-consumable-change-history-log/",
+    "/tools/household-repair-evidence-timeline-log/",
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
@@ -228,6 +230,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/",
     "/zh-tw/tools/household-consumable-change-history-log/",
     "/zh-tw/guides/familyboard-consumable-change-history-tutorial/",
+    "/zh-tw/tools/household-repair-evidence-timeline-log/",
+    "/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/",
     "/zh-tw/guides/household-admin-backup-person/",
     "/zh-tw/guides/home-contact-list/",
     "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
@@ -873,6 +877,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
 
+  await page.goto("/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/");
+  await expect(page.locator("h1")).toHaveText(
+    "FamilyBoard 修繕前後怎麼留證據？家庭維修時間線 App 教學",
+  );
+  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+
   await page.goto("/tools/warranty-expiration-calculator/");
   await expect(
     page.locator('link[rel="alternate"][hreflang="zh-TW"]'),
@@ -1244,6 +1254,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-consumable-change-history-log/",
       alternate: "/tools/household-consumable-change-history-log/",
       heading: "家庭濾網與耗材更換歷程工具",
+    },
+    {
+      route: "/zh-tw/tools/household-repair-evidence-timeline-log/",
+      alternate: "/tools/household-repair-evidence-timeline-log/",
+      heading: "家庭修繕證據時間線工具",
     },
   ]) {
     await page.goto(localizedTool.route);

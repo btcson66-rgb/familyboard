@@ -5112,6 +5112,80 @@ const householdConsumableChangeHistoryDefinition = (locale: Locale): Definition 
   };
 };
 
+const householdRepairEvidenceTimelineDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立證據列，等待問題範圍",
+        "已記錄修繕前觀察，等待負責來源",
+        "已記錄來源回覆，等待工作窗口",
+        "已記錄工作或變更，等待後續觀察",
+        "已記錄後續觀察，等待時間線複查",
+        "時間線已複查並保留證據索引",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Evidence row created—issue scope pending",
+        "Before observation recorded—responsible source pending",
+        "Source response recorded—work window pending",
+        "Work or change recorded—follow-up observation pending",
+        "Follow-up observation recorded—timeline review pending",
+        "Timeline reviewed—evidence pointer preserved",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "REPAIR-A | 浴室天花板區域代號 | 水痕邊界與暫時限制；不判定滲漏原因 | 2026-08-22 | 修繕前影像索引 PHOTO-A1；來源查閱 2026-08-23 | 物業已回覆安排現場查看；實際處理結果待保存 | 2026-08-26 | 家庭維護角色 | 已記錄來源回覆，等待工作窗口\nREPAIR-B | 洗衣機區域代號 | 異常聲音的可觀察範圍；先停止猜測 | 2026-08-18 | 聲音紀錄索引 AUDIO-B1；手冊來源 MANUAL-B1 | 服務來源已提供檢視日期；後續觀察尚未完成 | 2026-08-24 | 家庭服務交接角色 | 已記錄後續觀察，等待時間線複查"
+    : "REPAIR-A | Bathroom ceiling area code | Water-mark boundary and temporary limit; no cause diagnosis | 2026-08-22 | Before-work photo pointer PHOTO-A1; source checked 2026-08-23 | Property source replied with an on-site review window; actual result still needs preservation | 2026-08-26 | Household maintenance role | Source response recorded—work window pending\nREPAIR-B | Washing-machine area code | Observable range of unusual sound; avoid guessing | 2026-08-18 | Sound-record pointer AUDIO-B1; manual source MANUAL-B1 | Service source supplied a review date; follow-up observation is not complete | 2026-08-24 | Household service handoff role | Follow-up observation recorded—timeline review pending";
+  return {
+    intro: zh
+      ? "把居家修繕前的可觀察狀況、證據索引、負責來源回覆、工作或變更日期、後續觀察與交接角色排成一條時間線。工具不會上傳或讀取照片、不判定成因或責任、不驗證施工品質，也不提供拆修或安全指示。"
+      : "Place a home's observable pre-work condition, evidence pointer, responsible-source response, work or change date, follow-up observation and handoff role on one timeline. This tool does not upload or read photos, determine cause or liability, verify workmanship or provide repair or safety instructions.",
+    fields: [
+      text("review", zh ? "修繕證據時間線私人代號" : "Private repair-evidence timeline reference", zh ? "使用家庭代號，不要輸入姓名、地址、電話、完整序號、帳號或付款資料。" : "Use a household code; do not enter names, addresses, phone numbers, full serials, account identifiers or payment data.", "REPAIR-TIMELINE-2026-A"),
+      { name: "context", label: zh ? "修繕證據情境" : "Repair-evidence context", type: "select", options: zh ? ["水痕、潮濕或漏水觀察", "家電或設備異常回報", "服務人員到場前後", "承包商或物業修繕變更", "搬家點交或損壞紀錄", "其他家庭修繕時間線"] : ["Water mark, dampness or leak observation", "Appliance or equipment issue report", "Before and after a service visit", "Contractor or property repair change", "Move-out condition or damage record", "Other household repair timeline"] },
+      { name: "reviewDate", label: zh ? "本次時間線複查日期" : "Current timeline review date", type: "date", value: "2026-08-28" },
+      text("source", zh ? "來源、回覆與證據索引地圖" : "Source, response and evidence-pointer map", zh ? "只填安全代號；完整照片、地址、合約、報價、通信與案件資料留在受保護來源。" : "Use safe codes; keep full photos, addresses, contracts, quotes, correspondence and case details protected.", "PHOTO-A1; SOURCE-A1; WORK-A1"),
+      text("rows", zh ? "修繕證據時間線列" : "Repair-evidence timeline rows", zh ? "每行 9 欄：ID｜設備或區域代號｜問題範圍與暫時限制｜修繕前觀察日 YYYY-MM-DD｜證據索引與來源查閱日｜負責來源／回覆觀察｜工作或後續觀察日 YYYY-MM-DD｜負責角色｜指定狀態。最多 12 行。" : "Each row uses 9 fields: ID | asset or area code | issue scope and temporary boundary | before-work observation date YYYY-MM-DD | evidence pointer and source-checked date | responsible source or response observation | work or follow-up observation date YYYY-MM-DD | owner role | exact status. Maximum 12 rows.", defaults),
+      text("storage", zh ? "受保護照片與修繕文件位置" : "Protected photo and repair-document location", zh ? "只寫資料夾或容器代號，不要貼完整照片、地址、合約、報價、電話或通信。" : "Name a folder or container code, not full photos, addresses, contracts, quotes, phone numbers or correspondence.", zh ? "家庭紀錄／修繕時間線／REPAIR-TIMELINE-2026-A／受保護來源" : "Household records / repair timeline / REPAIR-TIMELINE-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate);
+      if (!review) return zh ? "請輸入有效的本次時間線複查日期。" : "Enter a valid current timeline-review date.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全時間線代號、來源地圖與受保護位置。" : "Provide a safe timeline code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) })).filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行修繕證據時間線列。" : "Enter 1 to 12 repair-evidence timeline rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `時間線第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Timeline line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length) return zh ? "每行修繕時間線都需要唯一 ID。" : "Every repair-timeline row needs a unique ID.";
+      const beforeDates = rows.map((row) => strictIsoDate(row.parts[3]));
+      const outcomeDates = rows.map((row) => strictIsoDate(row.parts[6]));
+      if (beforeDates.some((date) => !date || date > review)) return zh ? "每列修繕前觀察日必須有效，且不能晚於本次複查。" : "Each before-work observation date must be valid and no later than the current review.";
+      if (outcomeDates.some((date, index) => !date || date < (beforeDates[index] ?? review) || date > review)) return zh ? "每列工作或後續觀察日必須介於修繕前觀察日與本次複查之間。" : "Each work or follow-up date must fall between its before-work observation and the current review.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `時間線第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Timeline line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const thin = rows.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 12 || row.parts[4].length < 8 || row.parts[5].length < 12 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `時間線第 ${thin.map((row) => row.line).join("、")} 行需要區域、問題範圍、證據索引、來源回覆與角色。` : `Timeline line ${thin.map((row) => row.line).join(", ")} needs an area, issue scope, evidence pointer, source response and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址或設備識別資料；請改用安全代號。" : "A full contact, address or equipment identifier was detected; use safe codes.";
+      if (/password|passcode|verification code|full address|street address|phone number|account number|card number|bank account|order number|private message|密碼|驗證碼|完整地址|電話|帳號|卡號|銀行帳戶|訂單號|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料；請只保留安全證據索引。" : "Sensitive data was detected; keep only a safe evidence index.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = rows.filter((row) => statuses.indexOf(row.parts[8]) < 5), closed = rows.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const renderedRows = rows.map((row, index) => row.parts[0] + (zh ? "｜設備／區域：" : " — asset/area: ") + row.parts[1] + (zh ? "｜問題範圍：" : " — issue scope: ") + row.parts[2] + (zh ? "｜修繕前：" : " — before work: ") + formatter.format(beforeDates[index] as Date) + (zh ? "｜證據／來源日：" : " — evidence/source date: ") + row.parts[4] + (zh ? "｜來源回覆：" : " — source response: ") + row.parts[5] + (zh ? "｜工作／後續日：" : " — work/follow-up date: ") + formatter.format(outcomeDates[index] as Date) + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n");
+      return [
+        values.review.trim() + (zh ? "｜家庭修繕證據時間線" : " — household repair-evidence timeline"),
+        (zh ? "時間線情境：" : "Timeline context: ") + values.context,
+        (zh ? "本次複查：" : "Current review: ") + formatter.format(review),
+        (zh ? "仍開放列：" : "Open rows: ") + open.length,
+        (zh ? "已複查或不適用列：" : "Reviewed or not-applicable rows: ") + closed.length,
+        (zh ? "來源、回覆與證據索引地圖：" : "Source, response and evidence-pointer map: ") + values.source.trim(),
+        (zh ? "有版本的修繕觀察與回覆\n" : "Versioned repair observations and responses\n") + renderedRows,
+        (zh ? "受保護照片與修繕文件位置：" : "Protected photo and repair-document location: ") + values.storage.trim(),
+        zh ? "這份輸出只整理可觀察證據與時間線，不上傳或讀取照片、不判定成因、責任、施工品質或安全，也不提供拆修指示。請依物業、製造商、服務業者、合約與合格專業來源確認真實結果。" : "This output only organizes observable evidence and a timeline. It does not upload or read photos, determine cause, liability, workmanship or safety, or provide repair instructions. Use property, manufacturer, service, contract and qualified sources for real outcomes.",
+      ].join("\n\n");
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
@@ -5121,6 +5195,7 @@ const definitions: Record<string, Definition> = {
   "household-responsibility-coverage-map": householdResponsibilityCoverageDefinition("en"),
   "household-replacement-part-source-check-log": householdReplacementPartSourceCheckDefinition("en"),
   "household-consumable-change-history-log": householdConsumableChangeHistoryDefinition("en"),
+  "household-repair-evidence-timeline-log": householdRepairEvidenceTimelineDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -9274,6 +9349,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-consumable-change-history-log": {
     ...householdConsumableChangeHistoryDefinition("zh-TW"),
+  },
+  "household-repair-evidence-timeline-log": {
+    ...householdRepairEvidenceTimelineDefinition("zh-TW"),
   },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("zh-TW"),

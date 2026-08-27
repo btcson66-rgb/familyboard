@@ -2176,6 +2176,14 @@
     "headings": "Household Consumable Change History Log Record a history, not a universal rule Keep five events separate Use statuses to preserve the timeline Privacy and safety boundary Optional affiliate space stays outside the answer"
   },
   {
+    "title": "Repair Evidence Timeline Log | Free Home Repair Record",
+    "description": "Organize before-work observations, evidence pointers, service responses, work dates and follow-up for home repairs without uploading photos or diagnosing causes.",
+    "route": "/tools/household-repair-evidence-timeline-log/",
+    "cluster": "records-emergency",
+    "keywords": "home repair evidence log",
+    "headings": "Household Repair Evidence Timeline Log Set a narrow boundary before collecting evidence Read the timeline as five different events Keep uncertainty visible with statuses Privacy and safety boundary Optional affiliate space cannot decide a repair"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

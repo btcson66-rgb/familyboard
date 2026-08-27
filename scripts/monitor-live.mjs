@@ -287,6 +287,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-consumable-change-history-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-consumable-change-history-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-consumable-change-history-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-repair-evidence-timeline-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-repair-evidence-timeline-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2732,6 +2735,32 @@ const checks = [
       'lang="zh-TW"',
       "家庭耗材歷程 App 教學",
       "不會讀取設備、不會判定故障",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/tools/household-repair-evidence-timeline-log/",
+    require: [
+      "Household Repair Evidence Timeline Log",
+      'hreflang="zh-TW"',
+      "does not receive, inspect or store your photo",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-repair-evidence-timeline-log/",
+    require: [
+      "家庭修繕證據時間線工具",
+      'hreflang="en"',
+      "不上傳照片也不判定成因責任",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/",
+    require: [
+      "FamilyBoard 修繕前後怎麼留證據",
+      'lang="zh-TW"',
+      "家庭維修時間線 App 教學",
+      "不會上傳或讀取照片",
     ],
     forbid: ['rel="alternate"'],
   },
