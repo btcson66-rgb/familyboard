@@ -5330,6 +5330,54 @@ const rentalRepairRequestDefinition = (locale: Locale): Definition => {
   };
 };
 
+const householdSchoolClosureContinuityDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立停課列，等待公告來源", "已記錄公告，等待家庭影響", "已記錄家庭安排，等待角色確認", "已記錄交接，等待下一次檢視", "已記錄恢復或結束來源", "停課時間線已複查並保留來源索引", "不適用，已記錄原因與重新開案事件"]
+    : ["Closure row created—notice source pending", "Notice recorded—household impact pending", "Household plan recorded—role confirmation pending", "Handoff recorded—next review pending", "Recovery or end source recorded", "Closure timeline reviewed—source pointer preserved", "Not applicable—reason and reopen event recorded"];
+  const defaults = zh
+    ? "CLOSURE-A | 學校或課後安排代號 | 官方停課公告日期與影響範圍；不輸入兒童姓名 | 2026-08-22 | 校方公告索引 SCHOOL-A1；來源查閱 2026-08-22 | 已確認當日停課；家庭照顧與接送安排待分工 | 2026-08-23 | 家庭照顧交接角色 | 已記錄公告，等待家庭影響\nCLOSURE-B | 臨時遠距或改期代號 | 課程或活動變更；不保存登入資料 | 2026-08-20 | 校方平台通知索引 SCHOOL-B1；家庭行事曆版本 CAL-B1 | 已記錄照顧時段與學習設備檢查；下一次公告尚未確認 | 2026-08-26 | 家庭行程角色 | 已記錄家庭安排，等待角色確認"
+    : "CLOSURE-A | School or after-school arrangement code | Official closure notice date and scope; no child name | 2026-08-22 | School notice pointer SCHOOL-A1; source checked 2026-08-22 | Closure confirmed for the date; household care and transport roles need assignment | 2026-08-23 | Household care handoff role | Notice recorded—household impact pending\nCLOSURE-B | Temporary remote or rescheduled activity code | Class or activity change; no login data | 2026-08-20 | School platform notice pointer SCHOOL-B1; household calendar version CAL-B1 | Care window and learning-device check recorded; next notice not confirmed | 2026-08-26 | Household schedule role | Household plan recorded—role confirmation pending";
+  return {
+    intro: zh
+      ? "把學校、幼兒園、課後照顧或活動停課公告，依公告來源、家庭影響、照顧與接送安排、角色交接及恢復來源排成時間線。工具不保存兒童身分或學校登入資料，也不代替校方公告、照顧專業或緊急指示。"
+      : "Place a school, childcare or activity closure notice on a timeline with its source, household impact, care and transport plan, role handoff and recovery source. This tool does not store child identities or school login data, and does not replace official notices, care professionals or emergency instructions.",
+    fields: [
+      text("review", zh ? "停課連續運作私人代號" : "Private school-closure continuity reference", zh ? "使用家庭代號，不要輸入兒童姓名、學校帳號、地址、電話或健康資料。" : "Use a household code; do not enter child names, school accounts, addresses, phone or health data.", "CLOSURE-CONTINUITY-2026-A"),
+      { name: "context", label: zh ? "停課安排情境" : "School-closure continuity context", type: "select", options: zh ? ["颱風、豪雨或地震停課公告", "學校、幼兒園或課後班臨時停課", "活動、校外教學或比賽改期", "臨時遠距、補課或到校安排", "接送、照顧或家庭工作交接", "其他需要來源複查的停課情境"] : ["Typhoon, heavy-rain or earthquake closure", "Unexpected school, preschool or after-school closure", "Activity, field trip or competition reschedule", "Temporary remote, make-up or on-site arrangement", "Transport, care or household-work handoff", "Other closure needing source review"] },
+      { name: "reviewDate", label: zh ? "本次停課時間線複查日期" : "Current closure-timeline review date", type: "date", value: "2026-08-28" },
+      text("source", zh ? "校方公告、行事曆與家庭安排來源索引地圖" : "School notice, calendar and household-plan source-pointer map", zh ? "只填安全代號；完整公告、學校帳號、兒童資料、地址與通信留在受保護來源。" : "Use safe codes; keep full notices, school accounts, child data, addresses and correspondence protected.", "SCHOOL-A1; CAL-A1; CARE-A1"),
+      text("rows", zh ? "停課連續運作時間線列" : "School-closure continuity rows", zh ? "每行 9 欄：ID｜學校或安排代號｜家庭影響與暫時界線｜公告／事件日 YYYY-MM-DD｜公告、行事曆或來源索引與來源日｜家庭照顧、接送、工作或角色安排觀察｜下一次檢視或恢復日 YYYY-MM-DD｜負責角色｜指定狀態。最多 12 行。" : "Each row uses 9 fields: ID | school or arrangement code | household impact and temporary boundary | notice or event date YYYY-MM-DD | notice, calendar or source pointer with source date | care, transport, work or role-plan observation | next review or recovery date YYYY-MM-DD | owner role | exact status. Maximum 12 rows.", defaults),
+      text("storage", zh ? "受保護公告、行事曆與家庭安排位置" : "Protected notice, calendar and household-plan location", zh ? "只寫資料夾或容器代號，不要貼兒童姓名、學校登入、地址、電話、健康或通信內容。" : "Name a folder or container code, not child names, school logins, addresses, phone, health or correspondence content.", zh ? "家庭紀錄／停課連續運作／CLOSURE-CONTINUITY-2026-A／受保護來源" : "Household records / closure continuity / CLOSURE-CONTINUITY-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate);
+      if (!review) return zh ? "請輸入有效的本次停課時間線複查日期。" : "Enter a valid current closure-timeline review date.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全停課代號、來源地圖與受保護位置。" : "Provide a safe closure code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) })).filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行停課連續運作時間線列。" : "Enter 1 to 12 school-closure continuity rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `時間線第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Timeline line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length) return zh ? "每行停課時間線都需要唯一 ID。" : "Every closure-timeline row needs a unique ID.";
+      const eventDates = rows.map((row) => strictIsoDate(row.parts[3]));
+      const followDates = rows.map((row) => strictIsoDate(row.parts[6]));
+      if (eventDates.some((date) => !date || date > review)) return zh ? "每列公告／事件日必須有效，且不能晚於本次複查。" : "Each notice or event date must be valid and no later than the current review.";
+      if (followDates.some((date, index) => !date || date < (eventDates[index] ?? review) || date > review)) return zh ? "每列下一次檢視或恢復日必須介於事件日與本次複查之間。" : "Each next-review or recovery date must fall between its event date and the current review.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `時間線第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Timeline line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const thin = rows.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 12 || row.parts[4].length < 8 || row.parts[5].length < 12 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `時間線第 ${thin.map((row) => row.line).join("、")} 行需要家庭影響、來源索引、安排觀察與角色。` : `Timeline line ${thin.map((row) => row.line).join(", ")} needs a household impact, source pointer, plan observation and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址或學校識別資料；請改用安全代號。" : "A full contact, address or school identifier was detected; use safe codes.";
+      if (/password|passcode|verification code|full address|street address|phone number|school account|student number|child name|health record|medical|door code|private message|密碼|驗證碼|完整地址|電話|學校帳號|學生證號|兒童姓名|健康資料|醫療|門鎖碼|私人訊息/i.test(privacy)) return zh ? "偵測到兒童、帳號或其他敏感資料；請只保留安全來源索引。" : "Child, account or other sensitive data was detected; keep only a safe source pointer.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = rows.filter((row) => statuses.indexOf(row.parts[8]) < 5), closed = rows.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const renderedRows = rows.map((row, index) => row.parts[0] + (zh ? "｜學校／安排：" : " — school/arrangement: ") + row.parts[1] + (zh ? "｜家庭影響：" : " — household impact: ") + row.parts[2] + (zh ? "｜事件日：" : " — event date: ") + formatter.format(eventDates[index] as Date) + (zh ? "｜來源索引／日期：" : " — source pointer/date: ") + row.parts[4] + (zh ? "｜家庭安排：" : " — household plan: ") + row.parts[5] + (zh ? "｜檢視／恢復日：" : " — review/recovery: ") + formatter.format(followDates[index] as Date) + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n");
+      return [values.review.trim() + (zh ? "｜停課連續運作時間線" : " — school-closure continuity timeline"), (zh ? "停課情境：" : "Closure context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + formatter.format(review), (zh ? "仍開放列：" : "Open rows: ") + open.length, (zh ? "已複查或不適用列：" : "Reviewed or not-applicable rows: ") + closed.length, (zh ? "公告、行事曆與家庭安排來源索引地圖：" : "Notice, calendar and household-plan source-pointer map: ") + values.source.trim(), (zh ? "有版本的停課觀察與家庭安排\n" : "Versioned closure observations and household plans\n") + renderedRows, (zh ? "受保護公告、行事曆與家庭安排位置：" : "Protected notice, calendar and household-plan location: ") + values.storage.trim(), zh ? "這份輸出只整理停課公告與家庭連續運作時間線，不保存兒童身分或學校登入資料，不判定校方義務、照顧品質、出勤、健康或安全，也不提供教育、照顧或緊急建議。請依校方公告、家庭可用角色、主管機關與合格專業來源確認真實安排。" : "This output only organizes closure notices and household continuity timelines. It does not store child identities or school logins, decide school duties, care quality, attendance, health or safety, or provide education, care or emergency advice. Use official notices, available household roles, authorities and qualified sources for real arrangements."].join("\n\n");
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
@@ -5343,6 +5391,7 @@ const definitions: Record<string, Definition> = {
   "household-insurance-claim-timeline-log": householdInsuranceClaimTimelineDefinition("en"),
   "household-building-notice-response-log": householdBuildingNoticeResponseDefinition("en"),
   "rental-repair-request-log": rentalRepairRequestDefinition("en"),
+  "household-school-closure-continuity-log": householdSchoolClosureContinuityDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -9508,6 +9557,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "rental-repair-request-log": {
     ...rentalRepairRequestDefinition("zh-TW"),
+  },
+  "household-school-closure-continuity-log": {
+    ...householdSchoolClosureContinuityDefinition("zh-TW"),
   },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("zh-TW"),

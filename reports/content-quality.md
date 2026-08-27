@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T18:08:47.379Z
+Generated: 2026-08-27T18:18:55.547Z
 
 ## Summary
 
-- Indexable pages: 508
-- Generated HTML routes: 525
+- Indexable pages: 511
+- Generated HTML routes: 528
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 284
+- Pages without a contextual product/tool link: 286
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-27T18:08:47.379Z
 - maintenance: 45
 - household-operations: 89
 - inventory-warranty: 44
-- records-emergency: 70
+- records-emergency: 73
 - tools: 121
 
 ## Word-count range
@@ -176,6 +176,7 @@ Generated: 2026-08-27T18:08:47.379Z
 - /zh-tw/guides/familyboard-router-support-review-tutorial/
 - /zh-tw/guides/familyboard-schedule-conflict-review-tutorial/
 - /zh-tw/guides/familyboard-school-activity-handoff-tutorial/
+- /zh-tw/guides/familyboard-school-closure-continuity-tutorial/
 - /zh-tw/guides/familyboard-school-pickup-handoff-tutorial/
 - /zh-tw/guides/familyboard-seasonal-reset-tutorial/
 - /zh-tw/guides/familyboard-service-appointment-handoff-tutorial/
@@ -303,6 +304,7 @@ Generated: 2026-08-27T18:08:47.379Z
 - /zh-tw/tools/household-router-support-review-log/
 - /zh-tw/tools/household-schedule-conflict-review-log/
 - /zh-tw/tools/household-school-activity-handoff-log/
+- /zh-tw/tools/household-school-closure-continuity-log/
 - /zh-tw/tools/household-school-pickup-handoff-log/
 - /zh-tw/tools/household-school-record-source-handoff-log/
 - /zh-tw/tools/household-seasonal-reset-action-log/

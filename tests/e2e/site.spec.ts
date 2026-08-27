@@ -33,6 +33,7 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-insurance-claim-timeline-log/",
     "/tools/household-building-notice-response-log/",
     "/tools/rental-repair-request-log/",
+    "/tools/household-school-closure-continuity-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -126,6 +127,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-insurance-claim-timeline-log/",
     "/tools/household-building-notice-response-log/",
     "/tools/rental-repair-request-log/",
+    "/tools/household-school-closure-continuity-log/",
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
@@ -240,6 +242,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-insurance-claim-timeline-log/",
     "/zh-tw/tools/household-building-notice-response-log/",
     "/zh-tw/tools/rental-repair-request-log/",
+    "/zh-tw/tools/household-school-closure-continuity-log/",
     "/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/",
     "/zh-tw/guides/household-admin-backup-person/",
     "/zh-tw/guides/home-contact-list/",
@@ -910,6 +913,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
 
+  await page.goto("/zh-tw/guides/familyboard-school-closure-continuity-tutorial/");
+  await expect(page.locator("h1")).toHaveText(
+    "FamilyBoard 停課怎麼安排？照顧接送與復課交接 App 教學",
+  );
+  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+
   await page.goto("/tools/warranty-expiration-calculator/");
   await expect(
     page.locator('link[rel="alternate"][hreflang="zh-TW"]'),
@@ -1301,6 +1310,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/rental-repair-request-log/",
       alternate: "/tools/rental-repair-request-log/",
       heading: "租屋修繕請求紀錄工具",
+    },
+    {
+      route: "/zh-tw/tools/household-school-closure-continuity-log/",
+      alternate: "/tools/household-school-closure-continuity-log/",
+      heading: "停課家庭連續運作時間線工具",
     },
   ]) {
     await page.goto(localizedTool.route);

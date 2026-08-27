@@ -299,6 +299,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/rental-repair-request-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/rental-repair-request-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-rental-repair-request-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-school-closure-continuity-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-school-closure-continuity-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-closure-continuity-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2848,6 +2851,32 @@ const checks = [
       'lang="zh-TW"',
       "通知房東與進屋交接 App 教學",
       "不判斷房東責任",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/tools/household-school-closure-continuity-log/",
+    require: [
+      "Household School Closure Continuity Log",
+      'hreflang="zh-TW"',
+      "does not store child identities or school login data",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-school-closure-continuity-log/",
+    require: [
+      "停課家庭連續運作時間線工具",
+      'hreflang="en"',
+      "不保存兒童身分或學校登入資料",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-school-closure-continuity-tutorial/",
+    require: [
+      "FamilyBoard 停課怎麼安排",
+      'lang="zh-TW"',
+      "照顧接送與復課交接 App 教學",
+      "不代替學校公告",
     ],
     forbid: ['rel="alternate"'],
   },

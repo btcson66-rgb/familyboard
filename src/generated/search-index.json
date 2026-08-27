@@ -2208,6 +2208,14 @@
     "headings": "Rental Repair Request Log Start with an observable, bounded problem A six-stage request workflow Why a tenant request log is different from a repair history Privacy and safety boundaries Optional affiliate space remains separate"
   },
   {
+    "title": "School Closure Continuity Log | Free Family Care Planner",
+    "description": "Record school closure sources, household impact, care and transport arrangements, role handoffs and recovery dates without storing child names or school logins.",
+    "route": "/tools/household-school-closure-continuity-log/",
+    "cluster": "records-emergency",
+    "keywords": "school closure continuity log",
+    "headings": "Household School Closure Continuity Log Capture the official notice and the smallest impact Five passes for household continuity Distinguish plans, handoffs and real confirmation Privacy and safety boundaries Optional affiliate space stays out of the workflow"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

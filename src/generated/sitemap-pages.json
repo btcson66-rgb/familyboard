@@ -2408,6 +2408,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-school-closure-continuity-log/",
+    "alternateRoute": "/zh-tw/tools/household-school-closure-continuity-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3016,6 +3024,13 @@
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-school-closure-continuity-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {
@@ -3646,6 +3661,13 @@
     "alternateRoute": "/tools/household-school-activity-handoff-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-school-closure-continuity-log/",
+    "alternateRoute": "/tools/household-school-closure-continuity-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {
