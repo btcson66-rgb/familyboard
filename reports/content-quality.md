@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T09:57:01.343Z
+Generated: 2026-08-27T10:17:21.162Z
 
 ## Summary
 
-- Indexable pages: 448
-- Generated HTML routes: 465
+- Indexable pages: 451
+- Generated HTML routes: 468
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 235
+- Pages without a contextual product/tool link: 238
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 59
+- product: 60
 - appliances: 30
 - maintenance: 37
-- household-operations: 70
+- household-operations: 72
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -93,6 +93,7 @@ Generated: 2026-08-27T09:57:01.343Z
 - /tools/household-plant-care-handoff-log/
 - /tools/household-recycling-handoff-log/
 - /tools/household-return-handoff-log/
+- /tools/household-schedule-conflict-review-log/
 - /tools/household-school-activity-handoff-log/
 - /tools/household-school-pickup-handoff-log/
 - /tools/household-service-appointment-handoff-log/
@@ -148,6 +149,7 @@ Generated: 2026-08-27T09:57:01.343Z
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
+- /zh-tw/guides/familyboard-schedule-conflict-review-tutorial/
 - /zh-tw/guides/familyboard-school-activity-handoff-tutorial/
 - /zh-tw/guides/familyboard-school-pickup-handoff-tutorial/
 - /zh-tw/guides/familyboard-service-appointment-handoff-tutorial/
@@ -254,6 +256,7 @@ Generated: 2026-08-27T09:57:01.343Z
 - /zh-tw/tools/household-record-retrieval-drill-log/
 - /zh-tw/tools/household-recycling-handoff-log/
 - /zh-tw/tools/household-return-handoff-log/
+- /zh-tw/tools/household-schedule-conflict-review-log/
 - /zh-tw/tools/household-school-activity-handoff-log/
 - /zh-tw/tools/household-school-pickup-handoff-log/
 - /zh-tw/tools/household-school-record-source-handoff-log/

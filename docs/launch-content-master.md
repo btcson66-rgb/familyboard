@@ -18584,6 +18584,148 @@ Future affiliate areas may compare general organizers, labels or document sleeve
 
 建議先用 `ACCESS-A` 這類代號試跑一列，再對照[家庭進出交接教學](/zh-tw/guides/familyboard-home-access-handoff-tutorial/)確認「受控來源、最小範圍、到訪觀察、歸還複查」是否分開。產生輸出後，複製前仍要人工檢查，因為任何文字規則都不可能辨識所有個資或家庭秘密。
 
+## Page 267 — Household Schedule Conflict Review Log
+**Slug:** /tools/household-schedule-conflict-review-log/
+**Primary intent:** resolve household schedule overlaps with source pointers, constraints, owners and observed reschedule results without storing private calendar contents
+**Title tag:** Free Household Schedule Conflict Log | Reschedule Decisions and Owners | FamilyBoard
+**Meta description:** Review overlapping family, school, work and service commitments with safe source codes, constraints, owners and reschedule observations—without storing full calendars or contact data.
+**Primary keyword concept:** household schedule conflict log
+**Cluster:** household-operations
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /features/household-calendar/, /tools/household-weekly-reset-action-log/, /zh-tw/tools/household-schedule-conflict-review-log/
+**FAQ:**
+- Q: Does the tool combine or replace each person’s calendar?
+  A: No. It records only a safe coordination index; the original calendars and invitations remain authoritative.
+- Q: Can it choose which family event has priority?
+  A: No. A household role records the constraints and decision, while the people responsible make the choice.
+- Q: What should I do when two official sources disagree?
+  A: Keep the row open, preserve both source codes and ask the responsible organization or household role to resolve it.
+
+# Household Schedule Conflict Review Log
+
+Family schedules collide in ordinary ways: a school deadline overlaps a work shift, a service window overlaps pickup, or two people need the same car. This free browser tool turns the collision into a dated, public-safe review without copying a full calendar, invitation, address, phone number or private message.
+
+## Keep original calendars in control
+
+Use source codes such as CALENDAR-C1, SCHOOL-S1 and SERVICE-S1 to point to the sources that control the real event. The log is a coordination index; it does not sync calendars, send a cancellation, change a booking or decide a family member’s priority.
+
+## Compare constraints before proposing a change
+
+Record the narrow conflict window, the household constraint and the role that will ask a question or propose a backup. A decision is not an external confirmation. Keep the row open until the responsible calendar, school, provider or household source shows the revised result.
+
+## Do not publish private routines
+
+Never paste full invitations, home addresses, phone numbers, names, recurring absence patterns, medical details or private chat text. A safe event scope such as “pickup and service overlap” gives the household enough context while keeping the original details in a controlled source.
+
+## Affiliate placement stays outside decisions
+
+General paper planners, calendar displays or label products may be shown beside the guide with clear disclosure. They cannot infer a family’s routine, promise that a purchase prevents conflicts or cover the form and result review.
+
+## Page 268 — Household Schedule Conflict Review Log (Traditional Chinese)
+**Slug:** /zh-tw/tools/household-schedule-conflict-review-log/
+**Primary intent:** 讓台灣家庭以安全代號整理學校、工作、服務與接送的行程衝突和改期觀察
+**Title tag:** 家庭行程衝突複查工具｜改期決策、角色與來源紀錄｜FamilyBoard
+**Meta description:** 免費整理家庭行程重疊、時間窗口、限制、負責角色與改期結果；不保存完整行事曆、地址、聯絡或私人訊息。
+**Primary keyword concept:** 家庭行程衝突複查工具
+**Cluster:** household-operations
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/features/household-calendar/, /zh-tw/tools/household-weekly-reset-action-log/, /zh-tw/guides/familyboard-schedule-conflict-review-tutorial/
+**FAQ:**
+- Q: 工具會把每個人的行事曆合併或自動改期嗎？
+  A: 不會。它只整理安全代號與家庭協調索引，原始行事曆和正式邀請仍是依據。
+- Q: 工具會替家庭決定哪個行程比較重要嗎？
+  A: 不會。家庭角色只記錄限制與提案，真正的決定由相關家人和正式來源負責。
+- Q: 兩個正式來源的時間不一致時怎麼辦？
+  A: 保持列為開放，留下兩個安全來源代號，請負責的學校、服務商或家庭角色確認。
+
+# 家庭行程衝突複查工具
+
+這個免費工具把學校、工作、家庭活動、服務預約、接送、共享車輛或休息限制造成的重疊分開整理。它只在瀏覽器檢查日期、九欄完整性、唯一 ID、狀態、時間線與常見敏感資料格式；不保存完整行事曆、邀請、地址、姓名或聯絡資料，不會同步日曆、替你取消預約、選擇家庭優先順序，也不保證外部改期成功。
+
+先用 SCHEDULE-REVIEW-2026-A 建立複查代號，再以 CALENDAR-C1; SCHOOL-S1; SERVICE-S1 這類安全來源指回原始資料。每列寫事件範圍、衝突窗口、家庭限制、負責角色、決定或下一步與指定狀態。原始行事曆、校方通知、服務預約與私人通信留在受保護位置；若來源不一致，維持開放並回到真正負責的管道。
+
+## 讓衝突可接手但不暴露生活模式
+
+可以寫「學校活動與工作重疊—等待備援角色」，不要貼完整邀請、工作地址、電話、姓名、住家無人時間、固定接送路線或醫療細節。決定改期不等於對方已接受改期，家庭角色完成詢問也不等於校方或服務商已更新正式紀錄。把提案、送出、回覆與最終複查分成不同觀察。
+
+## 聯盟商品不應影響決定
+
+未來一般紙本月曆、標籤或看板用品可以在流程外側清楚揭露聯盟關係並保持可略過。商品不能根據家庭行程推測身分、宣稱能防止衝突，也不能遮住表單或要求購買才顯示結果。
+
+## Page 269 — FamilyBoard Schedule Conflict Review Tutorial (Traditional Chinese)
+**Slug:** /zh-tw/guides/familyboard-schedule-conflict-review-tutorial/
+**Primary intent:** teach Taiwan households a source-first method to review overlapping events and reschedule decisions in FamilyBoard
+**Title tag:** FamilyBoard 家庭行程衝突怎麼處理？改期與分工 App 教學
+**Meta description:** 用繁體中文教你把學校、工作、接送與服務預約的重疊拆成限制、角色、提案和正式結果，不保存完整行事曆或私人訊息。
+**Primary keyword concept:** FamilyBoard 行程衝突教學
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/household-schedule-conflict-review-log/, /zh-tw/features/household-calendar/, /zh-tw/tools/household-weekly-reset-action-log/
+**FAQ:**
+- Q: FamilyBoard 會自動讀取我的私人行事曆嗎？
+  A: 不會。你只輸入安全來源代號與家庭必要的衝突摘要。
+- Q: 可以直接把工作或學校邀請全文貼進去嗎？
+  A: 不要。留下窗口、限制和來源入口即可，完整邀請留在原本的受保護系統。
+- Q: 改期提案送出後可以馬上標記完成嗎？
+  A: 不行。要等正式行事曆、校方或服務來源出現可觀察結果。
+
+# FamilyBoard 家庭行程衝突怎麼處理？改期與分工 App 教學
+
+家庭行程衝突不只是一個紅色提醒。學校活動可能撞上工作班表，服務人員的到訪窗口可能撞上接送，兩個人也可能同時需要同一台車或同一個空間。FamilyBoard 的家庭行程衝突複查工具，讓你把衝突範圍、來源、限制、角色、提案與正式結果拆開，避免在家庭群組裡複製整份行事曆。
+
+這篇教學適合台灣家庭的學校、工作、接送、家務、服務預約、旅行和休息安排。它不是日曆同步器、預約平台或優先順序裁判；原始行事曆、校方通知、雇主班表、服務商回覆和家庭共同決定仍是依據。
+
+## 第一步：先判斷什麼是衝突，什麼只是提醒
+
+兩個事件日期接近，不一定互相衝突；要看時間窗口、地點限制、必要角色、共享資源和可否由備援角色接手。可以把「服務預約與接送重疊」寫成事件範圍，卻不要把完整地址、工作地點或接送路線貼進摘要。若只是同一天但時間不重疊，記錄為提醒或不適用，不要為了增加清單而製造衝突。
+
+## 第二步：建立來源地圖，不複製原文
+
+在來源欄使用 CALENDAR-C1、SCHOOL-S1、SERVICE-S1 或 TRANSPORT-T1 等安全代號。它們可以分別指向家庭日曆、校方通知、服務預約和交通安排。完整邀請、姓名、電話、地址、私人訊息與登入資料留在原系統。來源更新時新增版本和觀察日期，保留舊列以便知道衝突是何時出現的。
+
+## 第三步：填九欄衝突列
+
+每列填安全 ID、事件範圍、觀察日期、來源代號、衝突窗口、家庭限制與角色觀察、決定／改期／下一步、負責角色和固定狀態。好的列會說明「等待誰回哪個來源」，例如「家庭排程角色比較接送與服務限制，回到 SERVICE-S1 詢問可行窗口」。不要只寫「撞時間」，也不要在角色欄填姓名或電話。
+
+## 第四步：把提案、送出與結果分三層
+
+家庭提出把服務改到另一個窗口，是提案；透過正式平台或服務商送出，是行動；對方確認新時間，是外部結果。學校活動、工作班表和交通安排也一樣。工具的「已安排角色，等待決定或改期」不能直接改成完成；要等正式來源出現回覆，再新增結果觀察或更新下一個複查日。
+
+## 第五步：讓家庭限制可以被理解
+
+限制可以是接送不可中斷、照顧責任、共享車輛、休息時間、活動用品或服務窗口，但只寫完成協調所需的最小摘要。不要把醫療細節、工作機密、其他孩子資料、固定住址或長期生活模式放進工具。若限制涉及需要專業或雇主判斷的事項，回到相應正式來源，不用家庭工具代替決策。
+
+## 第六步：處理來源不一致與臨時變更
+
+兩個來源顯示不同時間時，保留兩個安全代號，狀態停在開放，指定一個角色詢問真正負責的單位。不要自行選較方便的時間就標記完成。若活動取消、服務改期或接送角色臨時不能處理，保留原觀察，新增改變事件和新負責角色，讓下一位家人看得出時間線。
+
+## 第七步：改期後做低風險複查
+
+改期結果出現後，確認家庭角色知道新的窗口、原本衝突是否已解除、是否仍有共享資源重疊，以及是否需要更新提醒。不要因為家庭群組有人說「應該可以」就推論校方、雇主或服務商已接受。外部結果要回到正式來源查看；工具只保留安全摘要與下一步。
+
+## 第八步：分享前檢查隱私與聯盟界線
+
+複製或列印前，移除姓名、地址、電話、完整邀請、私人聊天、醫療與工作敏感資訊。工具的字詞規則只能擋住一部分常見資料，不能代替人工審閱。未來若推薦紙本月曆、標籤或家庭看板，應在表單外側清楚標示聯盟關係、保持可略過，不宣稱商品可以防止衝突或替家庭做決定。
+
+## 收尾前的五個問題
+
+這真的是時間或資源衝突嗎？來源是否只用安全代號？家庭限制是否是最小必要摘要？提案、正式送出與結果是否分開？分享前是否已移除完整行事曆與聯絡資料？五題都能回答「是」，這份複查才會讓家庭更容易協調，而不是多一份暴露生活模式的日曆副本。
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

@@ -4177,6 +4177,52 @@ const homeAccessHandoffDefinition = (locale: Locale): Definition => {
   };
 };
 
+const scheduleConflictReviewDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立衝突列，等待事件範圍", "已確認來源，等待時間窗口", "已記錄窗口，等待家庭限制", "已安排角色，等待決定或改期", "已觀察決定或改期結果，等待複查", "不適用，已記錄原因"]
+    : ["Conflict row created—event scope pending", "Source checked—time window pending", "Window recorded—household constraints pending", "Role assigned—decision or reschedule pending", "Decision or reschedule observed—review pending", "Not applicable—reason recorded"];
+  const defaults = zh
+    ? "SCHEDULE-A | 學校活動與工作重疊 | 2026-08-25 | CALENDAR-C1; SCHOOL-S1 | 只記需要協調的日期窗口，不貼完整行事曆或地點 | 家庭排程角色比較限制並提出改期或備援方案 | 回到正式來源複查是否完成改期與通知 | 家庭排程角色 | 已安排角色，等待決定或改期\nSCHEDULE-B | 維修預約與接送衝突 | 2026-08-26 | SERVICE-S1; TRANSPORT-T1 | 記錄服務窗口與接送限制，不貼姓名或電話 | 備援角色確認可行方案，未取得結果前保持開放 | 觀察改期或責任交接後再核點 | 備援家庭角色 | 已記錄窗口，等待家庭限制"
+    : "SCHEDULE-A | School activity and work overlap | 2026-08-25 | CALENDAR-C1; SCHOOL-S1 | Record only the coordination window; do not paste a full calendar or location | The household scheduling role compares constraints and proposes a reschedule or backup | Review the official sources for the reschedule and notice result | Household scheduling role | Role assigned—decision or reschedule pending\nSCHEDULE-B | Service visit and pickup conflict | 2026-08-26 | SERVICE-S1; TRANSPORT-T1 | Record the service window and pickup constraint; do not paste names or phone numbers | A backup role confirms a workable plan; keep open until a result is observed | Review after reschedule or responsibility handoff | Backup household role | Window recorded—household constraints pending";
+  return {
+    intro: zh ? "把重疊事件、來源、時間窗口、家庭限制、角色、改期決定與結果複查分開記錄。工具不保存完整行事曆、姓名、地點或聯絡資料，不替家庭決定優先順序，也不保證外部改期成功。" : "Separate overlapping events, sources, time windows, household constraints, roles, reschedule decisions and result reviews. This tool stores no full calendar, names, locations or contact data, does not set priorities for you and does not guarantee an external change.",
+    fields: [
+      text("review", zh ? "家庭行程衝突複查私人代號" : "Private household-schedule review reference", zh ? "使用家庭代號，不要輸入姓名、地址、電話、完整邀請或私人行事曆內容。" : "Use a household code; do not enter names, addresses, phone numbers, full invitations or private calendar contents.", "SCHEDULE-REVIEW-2026-A"),
+      { name: "context", label: zh ? "行程衝突情境" : "Schedule-conflict context", type: "select", options: zh ? ["學校、工作或家庭活動重疊", "服務預約與接送衝突", "多人共享資源或空間重疊", "旅行、假日或改期安排", "照護、家務與休息限制", "其他家庭排程衝突"] : ["School, work or family-event overlap", "Service appointment and pickup conflict", "Shared resource or space overlap", "Travel, holiday or reschedule plan", "Care, chores and rest constraints", "Other household scheduling conflict"] },
+      { name: "reviewDate", label: zh ? "本次排程複查日期" : "Current schedule-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次決定或結果複查日期" : "Next decision or result-review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "行事曆、校方與服務來源地圖" : "Calendar, school and service source map", zh ? "只填安全來源代號，不要貼完整邀請、地址、姓名、電話或私人訊息。" : "Use safe source codes; do not paste full invitations, addresses, names, phone numbers or private messages.", "CALENDAR-C1; SCHOOL-S1; SERVICE-S1"),
+      text("rows", zh ? "行程衝突與改期決策列" : "Schedule-conflict and reschedule rows", zh ? "每行 9 欄：ID｜事件範圍｜觀察日期 YYYY-MM-DD｜來源代號｜衝突窗口｜家庭限制與角色觀察｜決定、改期或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | event scope | observation date YYYY-MM-DD | source code | conflict window | household constraints and role observation | decision, reschedule or next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護行事曆與通知來源位置" : "Protected calendar and notice-source location", zh ? "只寫保管流程或容器代號，不要放完整邀請、地點、聯絡或通信全文。" : "Name a custody process or container, not a full invitation, location, contact or correspondence.", zh ? "家庭紀錄／排程衝突／SCHEDULE-REVIEW-2026-A／受保護來源" : "Household records / schedule review / SCHEDULE-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次排程複查日期。" : "Enter valid current and next schedule-review dates.";
+      if (next < review) return zh ? "下一次決定或結果複查日期不能早於本次複查。" : "The next decision or result review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全排程代號、來源地圖與受保護位置。" : "Provide a safe schedule reference, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行排程衝突列。" : "Enter 1 to 14 schedule-conflict rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? "排程第 " + malformed.map((row) => row.line).join("、") + " 行必須有 9 個非空白欄位。" : "Schedule line " + malformed.map((row) => row.line).join(", ") + " must contain 9 non-empty fields.";
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行排程紀錄都需要唯一 ID。" : "Every schedule row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? "排程第 " + invalidStatus.map((row) => row.line).join("、") + " 行必須使用指定狀態。" : "Schedule line " + invalidStatus.map((row) => row.line).join(", ") + " must use an exact status.";
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 4);
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? "排程第 " + thin.map((row) => row.line).join("、") + " 行需要範圍、來源、窗口、限制、下一步與角色。" : "Schedule line " + thin.map((row) => row.line).join(", ") + " needs scope, source, window, constraints, next action and owner.";
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡或行程識別資料；請改用安全代號。" : "A full contact or schedule identifier was detected; use safe codes.";
+      if (/password|passcode|full invitation|full calendar|home address|phone number|private message|姓名|完整邀請|完整行事曆|地址|電話|私人訊息|醫療|診斷/i.test(privacy)) return zh ? "偵測到完整行程、聯絡或敏感資料；請只保留安全來源代號。" : "Full schedule, contact or sensitive data was detected; keep only safe source codes.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭行程衝突與改期複查" : " — household schedule conflict and reschedule review"), (zh ? "衝突情境：" : "Conflict context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + formatter.format(review), (zh ? "下一次決定或結果複查：" : "Next decision or result review: ") + formatter.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已觀察決定或改期結果列：" : "Decision or reschedule observed rows: ") + closed.length, (zh ? "來源地圖：" : "Source map: ") + values.source.trim(), (zh ? "有版本的衝突觀察\n" : "Versioned conflict observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + formatter.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜窗口：" : " — window: ") + row.parts[4] + (zh ? "｜限制／觀察：" : " — constraints/observation: ") + row.parts[5] + (zh ? "｜決定／下一步：" : " — decision/next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護行事曆與通知來源位置：" : "Protected calendar and notice-source location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭行程衝突、角色與改期觀察，不保存完整行事曆或聯絡資料、不替家庭決定優先順序，也不保證外部改期成功。" : "This output only organizes household schedule conflicts, roles and reschedule observations. It stores no full calendar or contact data, does not set priorities for you and does not guarantee an external change."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -8265,6 +8311,9 @@ const definitions: Record<string, Definition> = {
   "household-home-access-handoff-log": {
     ...homeAccessHandoffDefinition("en"),
   },
+  "household-schedule-conflict-review-log": {
+    ...scheduleConflictReviewDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -8380,6 +8429,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-home-access-handoff-log": {
     ...homeAccessHandoffDefinition("zh-TW"),
+  },
+  "household-schedule-conflict-review-log": {
+    ...scheduleConflictReviewDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:
