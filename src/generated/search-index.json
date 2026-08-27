@@ -2616,6 +2616,30 @@
     "headings": "How to Use FamilyBoard for an Insurance Claim Timeline Create one neutral incident scope Map protected sources and dates Separate five evidence events Use honest status language Keep documents and roles minimal Link damage, repair and claim lines Protect people and stop at hazards Version new facts and keep recommendations outside Eight-question closeout"
   },
   {
+    "title": "FamilyBoard Record Retrieval Drill Tutorial | Test Findability Without Sharing Secrets",
+    "description": "Learn how to run a small FamilyBoard record-retrieval drill: choose one bounded question, map a protected source, record the lookup result and improve the next checkpoint.",
+    "route": "/guides/familyboard-record-retrieval-drill-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "household record retrieval drill tutorial",
+    "headings": "How to Use FamilyBoard for a Record Retrieval Drill Ask one bounded question Map the protected source Define permission before asking someone to look Separate findability from content quality Run a small, repeatable test Record failure as useful evidence Connect retrieval to backup and review rhythms Share and close safely Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Utility Provider Handoff Tutorial | Service, Responsibility and Confirmation",
+    "description": "Learn how to organise a utility-service handoff with FamilyBoard: map the responsible provider, protect account details, separate requests from confirmations and record the next checkpoint.",
+    "route": "/guides/familyboard-utility-provider-handoff-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "household utility provider handoff tutorial",
+    "headings": "How to Use FamilyBoard for a Utility Provider Handoff Define one service and one property boundary Map provider, property and emergency sources Protect account and meter details Separate responsibility from action Record outages without guessing duration Handle moves and plan changes as versions Handoff and review with minimal sharing Keep commercial material outside the answer Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Vehicle Document Source Tutorial | Registration, Insurance and Recall Reviews",
+    "description": "Learn how to review vehicle-document sources with FamilyBoard: match a protected vehicle record, date official sources, separate actions from results and keep identifiers private.",
+    "route": "/guides/familyboard-vehicle-document-source-status-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "vehicle document source status tutorial",
+    "headings": "How to Use FamilyBoard for Vehicle Document Source Status Start with a private vehicle code Build the source map by document type Match the protected vehicle without exposing identifiers Separate status, action and official result Handle recalls and safety questions carefully Version moves, transfers and changes Handoff and export safely Keep recommendations optional Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

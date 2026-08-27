@@ -111,6 +111,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/storage-unit-inventory/</loc>",
       "<loc>https://familyboard.win/tools/household-record-retrieval-drill-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-record-retrieval-drill-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-record-retrieval-drill-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/digital-home-binder/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/digital-home-binder/</loc>",
       "<loc>https://familyboard.win/tools/important-household-document-review/</loc>",
@@ -131,10 +132,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/organize-insurance-documents/</loc>",
       "<loc>https://familyboard.win/tools/household-utility-provider-service-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-utility-provider-service-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-utility-provider-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/organize-utility-account-information/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-utility-account-information/</loc>",
       "<loc>https://familyboard.win/tools/household-vehicle-document-source-status-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-vehicle-document-source-status-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/organize-vehicle-documents-at-home/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/organize-vehicle-documents-at-home/</loc>",
       "<loc>https://familyboard.win/tools/household-pet-record-source-handoff-log/</loc>",
@@ -771,6 +774,14 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-record-retrieval-drill-tutorial/",
+    require: [
+      "FamilyBoard Record Retrieval Drill Tutorial",
+      "one bounded question",
+      "does not inspect files",
+    ],
+  },
+  {
     path: "/tools/household-record-retrieval-drill-log/",
     require: [
       "Household Record Retrieval Drill Log",
@@ -861,6 +872,14 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-utility-provider-handoff-tutorial/",
+    require: [
+      "FamilyBoard Utility Provider Handoff Tutorial",
+      "Separate responsibility from action",
+      "does not identify a provider",
+    ],
+  },
+  {
     path: "/tools/household-utility-provider-service-handoff-log/",
     require: [
       "Household Utility Provider and Service Handoff Log",
@@ -876,6 +895,14 @@ const checks = [
       'hreflang="zh-TW"',
       "Separate portal access, billing state and service state",
       "Treat a move as a sequence of evidence, not one cancellation checkbox",
+    ],
+  },
+  {
+    path: "/guides/familyboard-vehicle-document-source-status-tutorial/",
+    require: [
+      "FamilyBoard Vehicle Document Source Tutorial",
+      "Build the source map by document type",
+      "does not search a vehicle",
     ],
   },
   {

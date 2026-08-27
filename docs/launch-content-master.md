@@ -24054,6 +24054,212 @@ Is the incident bounded? Are policy and evidence sources protected and dated? Ar
 
 ---
 
+---
+
+## Page 353 — How to Use FamilyBoard for a Record Retrieval Drill
+**Slug:** /guides/familyboard-record-retrieval-drill-tutorial/
+**Primary intent:** learn to test whether a household can find a current record and its source without copying sensitive documents into a shared checklist
+**Title tag:** FamilyBoard Record Retrieval Drill Tutorial | Test Findability Without Sharing Secrets
+**Meta description:** Learn how to run a small FamilyBoard record-retrieval drill: choose one bounded question, map a protected source, record the lookup result and improve the next checkpoint.
+**Primary keyword concept:** household record retrieval drill tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-record-retrieval-drill-log/`, `/guides/familyboard-monthly-review-action-tutorial/`, `/guides/familyboard-offline-backup-restore/`, `/guides/digital-home-binder/`
+**FAQ:**
+- Q: Does a retrieval drill open or upload my private documents?
+  A: No. It records a safe pointer and an observed lookup result; the original stays in its protected location.
+- Q: Does finding one file prove the archive is complete?
+  A: No. It proves only that one scoped question was tested at that time.
+- Q: Should I use a real account number as the drill ID?
+  A: No. Use a neutral household code and keep identifiers in the protected source.
+- Q: Can FamilyBoard restore a damaged backup during the drill?
+  A: No. Backup and restore procedures need their own controlled test and source.
+
+**Contextual CTA:** Pick one record question, create a neutral drill code and ask a permitted household role to find the protected source without sharing its contents.
+
+# How to Use FamilyBoard for a Record Retrieval Drill
+
+An archive is only useful when the right person can find the right source at the right time. The free [Record Retrieval Drill Log](/tools/household-record-retrieval-drill-log/) helps a household test that narrow capability without copying documents, credentials or addresses into a new table. It does not inspect files, grant access, certify completeness, restore a backup or replace an emergency, legal, medical or financial process.
+
+## Ask one bounded question
+
+Start with a question such as “Can the backup role find the current appliance manual?” or “Can the household locate the latest insurance source pointer?” Use `RETRIEVAL-2026-A`, not a person’s name, account number, policy number or full path. One question creates an honest test; “find everything” creates a vague task nobody can verify.
+
+## Map the protected source
+
+Use codes such as `SOURCE-M1`, `BACKUP-B1` or `BINDER-P1` to point to the protected digital folder, physical binder or approved service. Record the source version and date checked. A filename remembered from a chat is a lead, not proof that the current item exists. If a source moved, preserve the old observation and create a new pointer rather than silently rewriting history.
+
+## Define permission before asking someone to look
+
+The drill should happen only on a device and in a space the role is allowed to use. FamilyBoard can state “backup role may locate the source,” but it does not grant access to an account, vault or locked cabinet. Never request a password, one-time code or full document in the drill result. If access is unclear, leave the row open and ask the owner of the protected system.
+
+## Separate findability from content quality
+
+“Opened the current folder” is a findability observation. “Document contains the required legal wording” or “policy covers this event” is a specialist conclusion. Record only what the drill participant actually saw, such as a dated file, a readable label or a missing pointer. Content, coverage and validity remain with the issuing provider, authority or qualified professional.
+
+## Run a small, repeatable test
+
+Ask the participant to state the source code, locate the source and name the next review date. Do not make them copy or photograph the record. If offline use matters, first confirm the device can open the local FamilyBoard page, then briefly test the approved local source; offline access on one device is not cross-device synchronization. Record the exact condition so another role can repeat it later.
+
+## Record failure as useful evidence
+
+If the participant cannot find the source, write whether the code, permission, folder label, device or backup was unclear. Assign one improvement action, such as updating the pointer or labelling a binder. Do not mark the archive “complete” because the drill ended. A missing source, unreadable export or expired link should remain open until the responsible role observes a fix.
+
+## Connect retrieval to backup and review rhythms
+
+The monthly review can schedule a retrieval question; the backup guide can define a separate restore test; a handoff page can show which role owns the lookup. Link these workflows with neutral codes instead of duplicating documents. Each test answers a different question: can the source be found, can a copy be restored, and can another person repeat the process?
+
+## Share and close safely
+
+Before exporting or printing, remove names, addresses, identifiers, private messages, credentials and exact storage paths. Keep the result at the level of source code, date, role and observation. Any future binder, label or storage-product recommendation belongs after the workflow, disclosed and skippable. No product guarantees findability, completeness or recovery.
+
+## Eight-question closeout
+
+Is one question in scope? Is the source protected and dated? Was permission clear? Did the participant find the source without copying it? Is findability separate from validity? Are failures assigned an improvement? Is backup evidence kept separate? Did sharing remove secrets and remain optional for any product? If not, keep the drill open.
+
+---
+
+## Page 354 — How to Use FamilyBoard for a Utility Provider Handoff
+**Slug:** /guides/familyboard-utility-provider-handoff-tutorial/
+**Primary intent:** learn to organise utility provider, property responsibility, outage and transfer sources without storing account or meter details in a shared record
+**Title tag:** FamilyBoard Utility Provider Handoff Tutorial | Service, Responsibility and Confirmation
+**Meta description:** Learn how to organise a utility-service handoff with FamilyBoard: map the responsible provider, protect account details, separate requests from confirmations and record the next checkpoint.
+**Primary keyword concept:** household utility provider handoff tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-utility-provider-service-handoff-log/`, `/guides/familyboard-power-outage-event-log-tutorial/`, `/guides/familyboard-household-account-list-tutorial/`, `/guides/familyboard-household-handoff-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard identify the provider for my address?
+  A: No. Confirm the provider and service area from the current bill, property source or official authority.
+- Q: Can I enter an account or meter number in the handoff?
+  A: No. Use a safe reference and keep account, meter, payment and address data protected.
+- Q: Does submitting a transfer request prove that service changed?
+  A: No. A request, provider acknowledgement, effective date and observed service are separate events.
+- Q: Can this guide estimate an outage or bill?
+  A: No. Use the serving provider and official emergency or regulatory sources for current information.
+
+**Contextual CTA:** Create one service code, map the provider and property-responsibility sources, then assign a role to verify the next official response.
+
+# How to Use FamilyBoard for a Utility Provider Handoff
+
+Moving, changing a service plan or responding to an outage can involve a utility, landlord, building manager and household role at once. The free [Utility Provider and Service Handoff Log](/tools/household-utility-provider-service-handoff-log/) keeps the source map and next checkpoint visible without reproducing a bill or account. It does not identify a provider, read a meter, submit a transfer, estimate cost or restoration, report an emergency or provide legal, financial, regulatory or safety advice.
+
+## Define one service and one property boundary
+
+Choose electricity, gas, water, internet or another service and one event such as a move-in transfer, outage follow-up or responsibility question. Use `UTILITY-HANDOFF-2026-A`; never use a full service address, account number, meter number or customer name as the shared ID. A clear boundary prevents a neighbour’s provider, a previous tenant’s bill or a building-wide notice from being mistaken for the household’s current service.
+
+## Map provider, property and emergency sources
+
+Use `PROVIDER-P1` for the current provider source, `PROPERTY-R1` for the protected lease or building responsibility source and `EMERGENCY-E1` for the applicable official emergency route. Record each date checked. A search result, old statement or family memory can locate a source but cannot close a transfer or safety question. If the sources disagree, keep both pointers and assign the responsible role.
+
+## Protect account and meter details
+
+The handoff needs a source code, not the secret. Keep account IDs, meter numbers, full bills, payment tokens, exact addresses, contact details and authentication codes in the provider or household’s protected system. A row may say “current bill in protected folder; provider source PROVIDER-P1.” FamilyBoard cannot sign in, verify a customer, read usage or confirm that a submitted request was accepted.
+
+## Separate responsibility from action
+
+“Landlord responsibility is being checked” is a question. “Household role contacted the provider through the official channel” is an action. “Provider acknowledged a transfer effective on a stated date” is a response. “Service observed after that date” is another observation. Never turn a sent email, a ticket number or a glowing indicator into a completed transfer or paid balance.
+
+## Record outages without guessing duration
+
+For an interruption, note the start observation, affected service and official source checked. Do not estimate when restoration will occur or advise anyone to approach electrical, gas, water or other hazards. Keep emergency instructions in the current provider or authority source. A later return of service is an observed result, not proof that the provider has closed its incident or that equipment is safe.
+
+## Handle moves and plan changes as versions
+
+When a move date, provider, responsibility or plan changes, preserve the earlier observation and create a dated version. Record whether a request was drafted, submitted, acknowledged, effective or cancelled. Keep deposits, refunds, balances and contract questions in the provider or qualified source. One family member’s assumption about who pays cannot replace the agreement or official response.
+
+## Handoff and review with minimal sharing
+
+Use roles such as service-source role, move coordinator, property-contact role and result-review role. Ask the receiver to name the source code, the next official checkpoint and what remains unknown. Share only service category, role, date and safe pointer. Remove bills, addresses, phone numbers and private communications before a printout or export.
+
+## Keep commercial material outside the answer
+
+Storage labels, outage lights or home-management products may eventually appear after the workflow with clear affiliate disclosure and a skip option. No item guarantees service restoration, lower bills or regulatory compliance. The free handoff remains useful without a purchase and must not interrupt tool fields or emergency guidance.
+
+## Eight-question closeout
+
+Is one service and boundary defined? Are provider, property and emergency sources current? Are account and meter details protected? Are question, request, acknowledgement, effective date and observation separate? Are outage claims limited to observed facts? Are moves versioned? Can the receiver name the next checkpoint? Is any recommendation optional and disclosed? If not, keep the handoff open.
+
+---
+
+## Page 355 — How to Use FamilyBoard for Vehicle Document Source Status
+**Slug:** /guides/familyboard-vehicle-document-source-status-tutorial/
+**Primary intent:** learn to organise vehicle registration, insurance, inspection, recall and transfer source status without storing identifying vehicle documents in a shared checklist
+**Title tag:** FamilyBoard Vehicle Document Source Tutorial | Registration, Insurance and Recall Reviews
+**Meta description:** Learn how to review vehicle-document sources with FamilyBoard: match a protected vehicle record, date official sources, separate actions from results and keep identifiers private.
+**Primary keyword concept:** vehicle document source status tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-vehicle-document-source-status-log/`, `/guides/familyboard-insurance-claim-timeline-tutorial/`, `/guides/familyboard-document-renewal-tutorial/`, `/guides/familyboard-household-handoff-tutorial/`
+**FAQ:**
+- Q: Does this tool search a VIN or decide whether a vehicle may be driven?
+  A: No. It records source status; the responsible authority, insurer and qualified service source control those decisions.
+- Q: Should a plate, VIN or full policy number be entered?
+  A: No. Use a neutral vehicle code and keep identifiers in a protected record.
+- Q: Does a renewal reminder prove registration or insurance is current?
+  A: No. Only the current issued source and attributable confirmation can support that observation.
+- Q: Can FamilyBoard interpret a recall or inspection requirement?
+  A: No. Return to the current authority, manufacturer, insurer or qualified source.
+
+**Contextual CTA:** Create one neutral vehicle code, map the current authority sources and record only the next document or status checkpoint.
+
+# How to Use FamilyBoard for Vehicle Document Source Status
+
+Vehicle records often cross several systems: registration, insurance, inspection, recalls, a lender or a transfer service. The free [Vehicle Document Source Status Log](/tools/household-vehicle-document-source-status-log/) gives a household one place to note which source was checked and what remains open without copying a plate, VIN or policy. It does not search a vehicle, renew registration, buy insurance, interpret a recall, contact an authority or decide whether driving is permitted.
+
+## Start with a private vehicle code
+
+Use `VEHICLE-DOCS-2026-A` and a purpose such as annual document review, move or transfer preparation. Do not use a plate, VIN, title number, policy number, address or driver’s name as the shared ID. Match the code to the protected household vehicle record only when the permitted role is allowed to do so. If two vehicles are similar, keep separate codes and sources.
+
+## Build the source map by document type
+
+Use one pointer for the responsible registration authority, one for the current insurer, one for inspection or emissions requirements and one for manufacturer recall information. Add a lender, leasing company or transfer source only when relevant. Record the date and jurisdiction checked. A remembered renewal month or a search snippet is a prompt, not evidence that the current document or requirement is valid.
+
+## Match the protected vehicle without exposing identifiers
+
+The shared row can say “protected vehicle match observed; source VEH-MATCH-1,” while the full identifier remains in the controlled record. Record only that the permitted role compared the right vehicle and document. Do not paste a photograph, title, registration, policy schedule, driver licence or finance contract into the FamilyBoard export. The tool cannot verify the match for you.
+
+## Separate status, action and official result
+
+“Current registration source opened” is a status observation. “Renewal request submitted through the authority” is an action. “Issued document or authority confirmation received” is a result. Insurance payment, inspection pass, recall remedy and ownership transfer are also separate events. A reminder, receipt or appointment does not prove that the official status has changed; leave the row open until the controlling source supports the statement.
+
+## Handle recalls and safety questions carefully
+
+A recall notice may require a manufacturer or authority lookup, but FamilyBoard does not decide applicability, urgency or safe operation. Record the source checked, the protected vehicle match and the next official contact. If the source gives an interim instruction, follow that current instruction and do not use a household checklist to contradict it. Never perform a mechanical or road test to make a record look complete.
+
+## Version moves, transfers and changes
+
+When a household moves jurisdiction, changes insurer, sells or leases a vehicle, or receives a revised notice, keep the previous observation and create a new dated version. Record who owns the next source lookup and where the issued result will be stored. Do not infer that a submitted transfer, paid premium or signed contract has completed until the authority, insurer, lender or qualified source provides the relevant result.
+
+## Handoff and export safely
+
+Use roles such as registration-source role, insurance-source role, recall-review role and document-custody role. Ask the receiver to find the current source pointer and state the next date without requesting credentials. Before sharing, remove names, addresses, plates, VINs, policy and title numbers, payment data and private correspondence. A neutral source map is enough for coordination.
+
+## Keep recommendations optional
+
+Document pouches, label products or vehicle organisers may eventually be compared after the workflow, clearly disclosed and skippable. No product guarantees registration, insurance, recall remedy or legal compliance. The free source-status log remains the primary tool and should not be blocked by commercial material.
+
+## Eight-question closeout
+
+Is the vehicle code neutral? Are registration, insurance, inspection and recall sources separated and dated? Was the protected vehicle match performed by an allowed role? Are status, action and official result distinct? Are recall and driving conclusions left to the correct source? Are changes versioned? Did sharing remove identifiers? Is any recommendation optional and disclosed? If not, keep the row open.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

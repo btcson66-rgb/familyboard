@@ -67,3 +67,5 @@ When a document list changes, an inspection adds an observation or a role change
 ## Eight-question closeout
 
 Is the incident bounded? Are policy and evidence sources protected and dated? Are observation, notice, delivery, inspection and decision separate? Are statuses honest? Are roles limited to coordination? Are damage, repair and claim lines linked without duplication? Were hazards and sensitive data handled safely? Is any recommendation optional and disclosed? If not, keep the timeline open.
+
+---

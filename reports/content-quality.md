@@ -1,11 +1,11 @@
 # Content quality report
 
-Generated: 2026-08-27T23:33:40.019Z
+Generated: 2026-08-27T23:40:51.234Z
 
 ## Summary
 
-- Indexable pages: 569
-- Generated HTML routes: 586
+- Indexable pages: 572
+- Generated HTML routes: 589
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
@@ -23,7 +23,7 @@ Generated: 2026-08-27T23:33:40.019Z
 - maintenance: 48
 - household-operations: 97
 - inventory-warranty: 45
-- records-emergency: 82
+- records-emergency: 85
 - tools: 124
 
 ## Word-count range
