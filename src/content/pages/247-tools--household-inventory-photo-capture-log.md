@@ -43,3 +43,5 @@ After a move, purchase, repair, damage event or major room change, review whethe
 ## Future affiliate placement
 
 Labels, storage media, camera accessories or privacy screens may eventually be recommended beside this guide, but no product can prove ownership, value, coverage or image security. Any commercial block must stay outside the tool controls and never interrupt a privacy review.
+
+---

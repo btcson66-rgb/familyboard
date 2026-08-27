@@ -3247,6 +3247,72 @@ const photoInventoryDefinition = (locale: Locale): Definition => {
   };
 };
 
+const documentRenewalDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立文件列，等待文件用途",
+        "已確認用途，等待目前來源",
+        "已核對來源，等待有效或複查日期",
+        "已記錄日期，等待負責角色",
+        "已指定角色，等待更新或不更新決定",
+        "已記錄決定與來源，等待下一次複查",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Document row created—purpose pending",
+        "Purpose checked—current source pending",
+        "Source checked—valid or review date pending",
+        "Date recorded—owner role pending",
+        "Owner assigned—renew or retain decision pending",
+        "Decision and source recorded—next review pending",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "DOC-A | 租屋與管理文件索引 | 2026-08-20 | 2026-09-05 | 受保護文件來源代號 | 家庭文件角色 | 目前版本可開啟；下次複查日已標記 | 2026-09-04 前核對最新公告與是否需要更新 | 已記錄日期，等待負責角色\nDOC-B | 家電保固與服務文件索引 | 2026-08-22 | 2026-09-10 | 家電來源地圖代號 | 設備管理角色 | 來源與版本提示已保留；原件位於受保護來源 | 下次維修或購買後確認是否有新版 | 已指定角色，等待更新或不更新決定"
+    : "DOC-A | Rental and building-document index | 2026-08-20 | 2026-09-05 | Protected document source code | Household records role | Current version can be opened; next review is marked | Check the latest notice and whether an update is needed by 2026-09-04 | Date recorded—owner role pending\nDOC-B | Appliance warranty and service-document index | 2026-08-22 | 2026-09-10 | Appliance source-map code | Equipment records role | Source and version cue retained; full document not copied | Check for a new version after the next service or purchase | Owner assigned—renew or retain decision pending";
+  return {
+    intro: zh
+      ? "把文件用途、目前來源、有效或複查日期、負責角色、更新決定與下一個核點分開記錄。工具不保存證件、帳號、完整文件或私人通信，也不判定法律效力、到期權利或申請結果。"
+      : "Separate document purpose, current source, valid or review date, owner role, renewal decision and next checkpoint. This tool stores no identity records, account details, full documents or private correspondence and does not decide legal effect, expiry rights or application outcomes.",
+    fields: [
+      text("review", zh ? "文件更新複查私人代號" : "Private document-renewal review reference", zh ? "使用家庭代號，不要輸入姓名、證件、帳號、地址或文件全文。" : "Use a household code; do not enter names, identity details, account data, addresses or full document text.", "DOC-REVIEW-2026-A"),
+      { name: "context", label: zh ? "文件複查情境" : "Document review context", type: "select", options: zh ? ["租屋、管理與居住文件", "家電、保固與服務文件", "保險與續保來源", "車輛或交通文件", "學校、照護或家庭服務", "其他家庭文件"] : ["Rental, building and occupancy records", "Appliance, warranty and service records", "Insurance and renewal sources", "Vehicle or transport records", "School, care or household services", "Other household records"] },
+      { name: "currentReview", label: zh ? "本次來源複查日期" : "Current source-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次更新或複查日期" : "Next renewal or review date", type: "date", value: "2026-09-10" },
+      text("source", zh ? "文件來源與更新路徑地圖" : "Document source and renewal-route map", zh ? "只填安全來源代號，不要貼證件號碼、帳號、完整地址或文件全文。" : "Use safe source codes; do not paste identity numbers, account details, full addresses or document text.", "SOURCE-S1; NOTICE-N1; UPDATE-U1"),
+      text("rows", zh ? "文件更新與複查狀態列" : "Document-renewal and review-status rows", zh ? "每行 9 欄：ID｜文件用途或索引範圍｜來源日期 YYYY-MM-DD｜有效或複查日期 YYYY-MM-DD｜來源代號｜負責角色｜已觀察狀態｜更新決定與下一步｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | document purpose or index scope | source date YYYY-MM-DD | valid or review date YYYY-MM-DD | source code | owner role | observed state | renewal decision and next action | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護原件與更新紀錄位置" : "Protected originals and renewal-record location", zh ? "只寫保管流程或容器代號，不要放證件、帳號、地址或文件內容。" : "Name a custody process or container, not identity details, accounts, addresses or document contents.", zh ? "家庭紀錄／文件更新／DOC-REVIEW-2026-A／受保護來源" : "Household records / document renewal / DOC-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const current = strictIsoDate(values.currentReview), next = strictIsoDate(values.nextReview);
+      if (!current || !next) return zh ? "請輸入有效的本次與下一次複查日期。" : "Enter valid current and next review dates.";
+      if (next < current) return zh ? "下一次複查日期不能早於本次複查。" : "The next review date cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全文件代號、來源地圖與受保護位置。" : "Provide a safe document code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行文件複查列。" : "Enter 1 to 14 document-review rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `文件第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Document line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行文件紀錄都需要唯一 ID。" : "Every document row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `文件第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Document line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => ({ source: strictIsoDate(row.parts[2]), valid: strictIsoDate(row.parts[3]) }));
+      if (dates.some((item) => !item.source || !item.valid || item.source > current || item.valid < item.source)) return zh ? "每列來源與有效或複查日期必須有效，且日期順序不能顛倒。" : "Each source and valid or review date must be valid and in chronological order.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const invalidClosed = closed.filter((row) => { const valid = dates[row.line - 1]?.valid; return valid ? valid > current : false; });
+      if (invalidClosed.length) return zh ? `已完成決定的文件第 ${invalidClosed.map((row) => row.line).join("、")} 行日期不能晚於本次複查。` : `Document lines with a recorded decision cannot have a valid or review date later than the current review.`;
+      const thin = parsed.filter((row) => row.parts[1].length < 5 || row.parts[4].length < 6 || row.parts[5].length < 3 || row.parts[6].length < 10 || row.parts[7].length < 10);
+      if (thin.length) return zh ? `文件第 ${thin.map((row) => row.line).join("、")} 行需要用途、來源、角色、觀察與下一步。` : `Document line ${thin.map((row) => row.line).join(", ")} needs a purpose, source, owner, observation and next action.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、證件或帳務識別資料；請改用安全代號。" : "A full contact, address, identity or billing identifier was detected; use safe codes.";
+      if (/password|passcode|full address|street address|account|passport|identity|document number|private message|姓名|完整地址|帳號|護照|身分證|證件號|私人訊息|文件全文/i.test(privacy)) return zh ? "偵測到敏感資料或文件全文；請只保留安全來源代號。" : "Sensitive data or full document content was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭文件更新與複查" : " — household document renewal and review"), (zh ? "複查情境：" : "Review context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(current), (zh ? "下一次更新或複查：" : "Next renewal or review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已記錄決定或不適用列：" : "Decision-recorded or not-applicable rows: ") + closed.length, (zh ? "文件來源與更新路徑地圖：" : "Document source and renewal-route map: ") + values.source.trim(), (zh ? "有版本的文件複查觀察\n" : "Versioned document-review observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜用途：" : " — purpose: ") + row.parts[1] + (zh ? "｜來源日：" : " — source date: ") + fmt.format(dates[index].source as Date) + (zh ? "｜有效／複查：" : " — valid/review: ") + fmt.format(dates[index].valid as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[4] + (zh ? "｜角色：" : " — owner: ") + row.parts[5] + (zh ? "｜觀察：" : " — observation: ") + row.parts[6] + (zh ? "｜更新決定與下一步：" : " — renewal decision and next action: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護原件與更新紀錄位置：" : "Protected originals and renewal-record location: ") + values.storage.trim(), zh ? "這份輸出只整理文件來源、日期與家庭複查，不判定法律效力、到期權利、續約義務、申請結果或專業適用性；請以文件本身、主管機關、提供者及合格專業來源為準。" : "This output only organizes document sources, dates and household review. It does not decide legal effect, expiry rights, renewal obligations, application outcomes or professional applicability; use the document itself, the responsible authority, provider and qualified sources."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7284,6 +7350,9 @@ const definitions: Record<string, Definition> = {
   "household-inventory-photo-capture-log": {
     ...photoInventoryDefinition("en"),
   },
+  "household-document-renewal-review-log": {
+    ...documentRenewalDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7348,6 +7417,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-inventory-photo-capture-log": {
     ...photoInventoryDefinition("zh-TW"),
+  },
+  "household-document-renewal-review-log": {
+    ...documentRenewalDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

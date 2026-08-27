@@ -1,29 +1,29 @@
 # Content quality report
 
-Generated: 2026-08-27T04:44:59.650Z
+Generated: 2026-08-27T05:06:47.451Z
 
 ## Summary
 
-- Indexable pages: 397
-- Generated HTML routes: 414
+- Indexable pages: 400
+- Generated HTML routes: 417
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 184
+- Pages without a contextual product/tool link: 187
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 42
+- product: 43
 - appliances: 30
 - maintenance: 37
 - household-operations: 38
 - inventory-warranty: 41
-- records-emergency: 47
+- records-emergency: 49
 - tools: 121
 
 ## Word-count range
@@ -77,6 +77,7 @@ Generated: 2026-08-27T04:44:59.650Z
 - /terms/
 - /tools/household-bill-source-status-log/
 - /tools/household-clothing-care-repair-log/
+- /tools/household-document-renewal-review-log/
 - /tools/household-inventory-photo-capture-log/
 - /tools/household-meal-prep-role-log/
 - /tools/household-meeting-agenda-action-log/
@@ -113,6 +114,7 @@ Generated: 2026-08-27T04:44:59.650Z
 - /zh-tw/guides/emergency-supply-inventory/
 - /zh-tw/guides/familyboard-bill-review-tutorial/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
+- /zh-tw/guides/familyboard-document-renewal-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
@@ -198,6 +200,7 @@ Generated: 2026-08-27T04:44:59.650Z
 - /zh-tw/tools/household-bill-source-status-log/
 - /zh-tw/tools/household-clothing-care-repair-log/
 - /zh-tw/tools/household-document-index-generator/
+- /zh-tw/tools/household-document-renewal-review-log/
 - /zh-tw/tools/household-insurance-policy-source-version-log/
 - /zh-tw/tools/household-inventory-photo-capture-log/
 - /zh-tw/tools/household-meal-prep-role-log/

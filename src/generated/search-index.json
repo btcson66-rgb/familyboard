@@ -1872,6 +1872,14 @@
     "headings": "Household Inventory Photo Capture Log Choose a small room or item scope Record the capture date and source code Complete a privacy check before sharing Keep an update or backup checkpoint Future affiliate placement"
   },
   {
+    "title": "Free Household Document Renewal Review Log | Sources and Dates | FamilyBoard",
+    "description": "Track household document purposes, current sources, review dates and renewal decisions with safe codes—without storing identity numbers, accounts or full documents.",
+    "route": "/tools/household-document-renewal-review-log/",
+    "cluster": "records-emergency",
+    "keywords": "household document renewal tracker",
+    "headings": "Household Document Renewal Review Log Start with purpose, not a document number Identify the current source Treat dates as checkpoints Separate update, retain and hold decisions Handoff without exposing originals Future affiliate placement"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
