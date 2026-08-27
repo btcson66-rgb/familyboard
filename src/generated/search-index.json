@@ -2304,6 +2304,30 @@
     "headings": "How to Use FamilyBoard for Household Document Renewal Reviews Choose one purpose and source Describe observation, not a verdict Handoff and retrieval drill Privacy and future recommendations"
   },
   {
+    "title": "FamilyBoard Building Notice Timeline Tutorial | Record Replies and Confirmations",
+    "description": "Use FamilyBoard to record when a building or landlord notice arrived, its smallest household impact, your reply and the confirmation still needed. Keep addresses, access codes and full messages protected.",
+    "route": "/guides/familyboard-building-notice-response-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard building notice response tutorial",
+    "headings": "How to Use FamilyBoard for a Building Notice Response Timeline Capture one notice and one scope Keep reply, permission and result apart Handoff and privacy A small review template for the next notice"
+  },
+  {
+    "title": "FamilyBoard Rental Repair Request Tutorial | Track Notice, Access and Follow-Up",
+    "description": "Learn how to use FamilyBoard to track a rental repair request from observation through landlord confirmation, access planning, work and follow-up. Keep addresses, leases and private messages protected.",
+    "route": "/guides/familyboard-rental-repair-request-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard rental repair request tutorial",
+    "headings": "How to Use FamilyBoard for a Rental Repair Request Timeline Describe what is observable Access and temporary boundaries Follow-up and handoff When the request changes shape"
+  },
+  {
+    "title": "FamilyBoard Repair Evidence Timeline Tutorial | Before, During and After Records",
+    "description": "Use FamilyBoard to organize repair observations, protected photo pointers, provider replies, work dates and follow-up checks. Keep originals private and separate evidence from causation or acceptance.",
+    "route": "/guides/familyboard-repair-evidence-timeline-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard repair evidence timeline tutorial",
+    "headings": "How to Use FamilyBoard for a Repair Evidence Timeline Start before work begins Preserve each transition Handoff and privacy Review the sequence without assigning blame"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

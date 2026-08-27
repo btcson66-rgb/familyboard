@@ -2,12 +2,12 @@
 title: "FamilyBoard 租屋修繕怎麼追蹤？通知房東與進屋交接 App 教學"
 description: "用 FamilyBoard 記錄租屋修繕請求：分開保存問題觀察、通知房東、收到確認、進屋時段、到場工作與後續複查，避免暴露地址與租約資料。"
 route: "/zh-tw/guides/familyboard-rental-repair-request-tutorial/"
+alternateRoute: "/guides/familyboard-rental-repair-request-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣租屋家庭用 FamilyBoard 交接修繕請求與房東回覆，不把工具當成租約、法律或安全判定"
 primaryKeyword: "FamilyBoard 租屋修繕紀錄教學"
 cluster: "records-emergency"
 pageType: "content"
-languageExclusive: true
 indexable: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

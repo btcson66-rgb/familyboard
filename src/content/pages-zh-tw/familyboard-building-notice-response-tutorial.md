@@ -2,12 +2,12 @@
 title: "FamilyBoard 大樓公告怎麼交接？家庭通知回覆時間線 App 教學"
 description: "用 FamilyBoard 整理管委會、房東、物業與服務通知：逐步記錄收到日期、影響範圍、來源、家庭回覆與確認結果，保護地址與門禁隱私。"
 route: "/zh-tw/guides/familyboard-building-notice-response-tutorial/"
+alternateRoute: "/guides/familyboard-building-notice-response-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭用 FamilyBoard 交接大樓、租屋與服務通知，不把工具當成法律、進屋或安全判定"
 primaryKeyword: "FamilyBoard 大樓公告紀錄教學"
 cluster: "records-emergency"
 pageType: "content"
-languageExclusive: true
 indexable: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

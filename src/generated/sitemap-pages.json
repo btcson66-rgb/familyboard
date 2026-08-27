@@ -2504,6 +2504,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-building-notice-response-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-building-notice-response-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-rental-repair-request-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-rental-repair-request-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-repair-evidence-timeline-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2878,7 +2902,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-building-notice-response-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-building-notice-response-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
@@ -3088,14 +3112,14 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-rental-repair-request-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-rental-repair-request-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {
     "route": "/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-repair-evidence-timeline-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"

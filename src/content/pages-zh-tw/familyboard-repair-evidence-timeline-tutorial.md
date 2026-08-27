@@ -2,12 +2,12 @@
 title: "FamilyBoard 修繕前後怎麼留證據？家庭維修時間線 App 教學"
 description: "用 FamilyBoard 建立家庭修繕時間線：整理修繕前觀察、照片索引、物業或服務回覆、工作日期與後續結果，分步保護隱私並清楚交接。"
 route: "/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/"
+alternateRoute: "/guides/familyboard-repair-evidence-timeline-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭用 FamilyBoard 留下修繕事件的可觀察證據、來源回覆與後續交接時間線"
 primaryKeyword: "FamilyBoard 修繕紀錄教學"
 cluster: "records-emergency"
 pageType: "content"
-languageExclusive: true
 indexable: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

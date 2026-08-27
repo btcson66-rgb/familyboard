@@ -299,15 +299,18 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-consumable-change-history-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-repair-evidence-timeline-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-repair-evidence-timeline-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-repair-evidence-timeline-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-insurance-claim-timeline-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-insurance-claim-timeline-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-building-notice-response-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-building-notice-response-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-building-notice-response-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-building-notice-response-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/rental-repair-request-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/rental-repair-request-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-rental-repair-request-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-rental-repair-request-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-school-closure-continuity-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-school-closure-continuity-log/</loc>",
@@ -2865,6 +2868,15 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-repair-evidence-timeline-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Repair Evidence Timeline",
+      'hreflang="zh-TW"',
+      "Preserve each transition",
+      "does not upload or inspect photos",
+    ],
+  },
+  {
     path: "/zh-tw/tools/household-repair-evidence-timeline-log/",
     require: [
       "家庭修繕證據時間線工具",
@@ -2877,10 +2889,10 @@ const checks = [
     require: [
       "FamilyBoard 修繕前後怎麼留證據",
       'lang="zh-TW"',
+      'hreflang="en"',
       "家庭維修時間線 App 教學",
       "不會上傳或讀取照片",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/tools/household-insurance-claim-timeline-log/",
@@ -2917,6 +2929,15 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-building-notice-response-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Building Notice Response Timeline",
+      'hreflang="zh-TW"',
+      "Keep reply, permission and result apart",
+      "does not grant entry",
+    ],
+  },
+  {
     path: "/zh-tw/tools/household-building-notice-response-log/",
     require: [
       "家庭大樓公告回覆時間線工具",
@@ -2929,10 +2950,10 @@ const checks = [
     require: [
       "FamilyBoard 大樓公告怎麼交接",
       'lang="zh-TW"',
+      'hreflang="en"',
       "家庭通知回覆時間線 App 教學",
       "不會判斷公告是否合法",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/tools/rental-repair-request-log/",
@@ -2940,6 +2961,15 @@ const checks = [
       "Rental Repair Request Log",
       'hreflang="zh-TW"',
       "does not decide lease duties, liability, cost or safety",
+    ],
+  },
+  {
+    path: "/guides/familyboard-rental-repair-request-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Rental Repair Request Timeline",
+      'hreflang="zh-TW"',
+      "Describe what is observable",
+      "does not contact a landlord",
     ],
   },
   {
@@ -2955,10 +2985,10 @@ const checks = [
     require: [
       "FamilyBoard 租屋修繕怎麼追蹤",
       'lang="zh-TW"',
+      'hreflang="en"',
       "通知房東與進屋交接 App 教學",
       "不判斷房東責任",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/tools/household-school-closure-continuity-log/",
