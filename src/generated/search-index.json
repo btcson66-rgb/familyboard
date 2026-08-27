@@ -2280,6 +2280,30 @@
     "headings": "How to Use FamilyBoard for Household Meter Reading Reviews Choose the purpose before recording Safety comes before a clearer number Distinguish display, source and comparison Use new rows for new events Handoff and backup Privacy and future product recommendations"
   },
   {
+    "title": "FamilyBoard Document Sharing Tutorial | Scope, Expiry and Revocation Checks",
+    "description": "Learn how to use FamilyBoard to record a household document share, role, expiry date and revocation check. Keep passwords, tokens, links and document contents in the protected service that controls access.",
+    "route": "/guides/familyboard-share-access-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard document sharing permissions tutorial",
+    "headings": "How to Use FamilyBoard for Household Document Sharing Reviews Start with one temporary scope Separate plan, action and confirmation Verify revocation where it happened Practise the handoff Privacy and future commercial panels"
+  },
+  {
+    "title": "FamilyBoard Photo Inventory Tutorial | Capture, Privacy Review and Backup Handoff",
+    "description": "Learn a practical FamilyBoard workflow for a room or appliance photo inventory. Track capture dates, protected locations and privacy checks without uploading photos, serial numbers or addresses.",
+    "route": "/guides/familyboard-photo-inventory-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard photo inventory tutorial",
+    "headings": "How to Use FamilyBoard for a Photo Home Inventory Review Start with a finishable area Make the sequence repeatable Keep evidence layers distinct Backup and handoff checks Privacy and future products"
+  },
+  {
+    "title": "FamilyBoard Document Renewal Tutorial | Source, Version and Review Dates",
+    "description": "Learn how to use FamilyBoard to review household document sources, versions and next check dates. Keep contracts, IDs and private correspondence protected; the app does not decide expiry or legal validity.",
+    "route": "/guides/familyboard-document-renewal-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard document renewal tutorial",
+    "headings": "How to Use FamilyBoard for Household Document Renewal Reviews Choose one purpose and source Describe observation, not a verdict Handoff and retrieval drill Privacy and future recommendations"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -2480,6 +2480,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-share-access-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-share-access-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-photo-inventory-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-photo-inventory-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-document-renewal-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-document-renewal-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2882,7 +2906,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-document-renewal-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-document-renewal-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3036,7 +3060,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-photo-inventory-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-photo-inventory-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3141,7 +3165,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-share-access-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-share-access-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

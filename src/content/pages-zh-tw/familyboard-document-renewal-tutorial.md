@@ -2,12 +2,12 @@
 title: "FamilyBoard 家庭文件要不要更新？來源與複查 App 教學"
 description: "用 FamilyBoard 在台灣家庭情境中整理租屋、家電、保險、車輛與服務文件的來源、版本、複查日期和交接下一步。"
 route: "/zh-tw/guides/familyboard-document-renewal-tutorial/"
+alternateRoute: "/guides/familyboard-document-renewal-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭使用 FamilyBoard 做文件來源與更新複查"
 primaryKeyword: "FamilyBoard 家庭文件更新教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

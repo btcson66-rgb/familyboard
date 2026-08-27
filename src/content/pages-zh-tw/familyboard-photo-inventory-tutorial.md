@@ -2,12 +2,12 @@
 title: "FamilyBoard 家庭財物怎麼拍照盤點？隱私與備份 App 教學"
 description: "用 FamilyBoard 規劃房間與家電照片盤點、隱私檢查、來源代號和備份複查；不保存照片、序號、地址或完整文件。"
 route: "/zh-tw/guides/familyboard-photo-inventory-tutorial/"
+alternateRoute: "/guides/familyboard-photo-inventory-tutorial/"
 primaryIntent: "教台灣家庭使用 FamilyBoard 建立房間、家電與搬家照片盤點的安全索引"
 primaryKeyword: "FamilyBoard 財物拍照盤點教學"
 locale: "zh-TW"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

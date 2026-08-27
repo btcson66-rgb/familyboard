@@ -2,12 +2,12 @@
 title: "FamilyBoard 家庭文件怎麼安全分享？權限、到期與撤回 App 教學"
 description: "用 FamilyBoard 以最小範圍整理家庭文件分享、角色、到期與撤回複查；不保存密碼、token、分享連結或文件全文。"
 route: "/zh-tw/guides/familyboard-share-access-tutorial/"
+alternateRoute: "/guides/familyboard-share-access-tutorial/"
 primaryIntent: "教台灣家庭使用 FamilyBoard 管理文件索引、備份、旅行與照護交接的最小分享範圍"
 primaryKeyword: "FamilyBoard 文件分享權限教學"
 locale: "zh-TW"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

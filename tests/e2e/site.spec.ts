@@ -146,6 +146,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-bill-review-tutorial/",
     "/guides/familyboard-internet-incident-tutorial/",
     "/guides/familyboard-meter-reading-tutorial/",
+    "/guides/familyboard-share-access-tutorial/",
+    "/guides/familyboard-photo-inventory-tutorial/",
+    "/guides/familyboard-document-renewal-tutorial/",
     "/guides/water-leak-response-home-records/",
     "/tools/household-storm-readiness-review/",
     "/guides/storm-preparation-home-checklist/",
@@ -1136,6 +1139,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-meter-reading-tutorial/",
       alternate: "/guides/familyboard-meter-reading-tutorial/",
       heading: "FamilyBoard 水電瓦斯表怎麼記錄？把人工觀察和帳單判定分開",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-share-access-tutorial/",
+      alternate: "/guides/familyboard-share-access-tutorial/",
+      heading: "FamilyBoard 家庭文件怎麼安全分享？",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-photo-inventory-tutorial/",
+      alternate: "/guides/familyboard-photo-inventory-tutorial/",
+      heading: "FamilyBoard 家庭財物怎麼拍照盤點？",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-document-renewal-tutorial/",
+      alternate: "/guides/familyboard-document-renewal-tutorial/",
+      heading: "FamilyBoard 家庭文件要不要更新？先做來源與複查，再決定下一步",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -2881,6 +2899,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-meter-reading-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-share-access-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-share-access-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-photo-inventory-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-photo-inventory-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-document-renewal-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-document-renewal-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

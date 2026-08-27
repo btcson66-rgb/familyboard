@@ -201,12 +201,15 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-bill-review-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-share-access-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-share-access-review-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-share-access-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-share-access-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-inventory-photo-capture-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-inventory-photo-capture-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-photo-inventory-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-photo-inventory-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-document-renewal-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-document-renewal-review-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-document-renewal-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-document-renewal-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-internet-incident-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-internet-incident-review-log/</loc>",
@@ -2147,14 +2150,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-share-access-tutorial/",
+    require: [
+      "How to Use FamilyBoard for Household Document Sharing Reviews",
+      'hreflang="zh-TW"',
+      "Separate plan, action and confirmation",
+      "does not manage permissions",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-share-access-tutorial/",
     require: [
       "FamilyBoard 家庭文件怎麼安全分享",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先選一個真的需要交接的範圍",
       "寄出邀請不等於權限已生效",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-inventory-photo-capture-log/",
@@ -2166,14 +2178,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-photo-inventory-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Photo Home Inventory Review",
+      'hreflang="zh-TW"',
+      "Make the sequence repeatable",
+      "does not open a camera roll",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-photo-inventory-tutorial/",
     require: [
       "FamilyBoard 家庭財物怎麼拍照盤點",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先從客廳或一組家電開始",
       "共享前完成隱私檢查",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-document-renewal-review-log/",
@@ -2185,14 +2206,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-document-renewal-tutorial/",
+    require: [
+      "How to Use FamilyBoard for Household Document Renewal Reviews",
+      'hreflang="zh-TW"',
+      "Describe observation, not a verdict",
+      "does not determine validity",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-document-renewal-tutorial/",
     require: [
       "FamilyBoard 家庭文件要不要更新",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先挑一個小範圍",
       "三區測試與備份",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-internet-incident-review-log/",
