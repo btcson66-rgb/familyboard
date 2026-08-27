@@ -2576,6 +2576,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-service-quote-comparison-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-service-quote-comparison-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-old-tablet-display-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-old-tablet-display-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-browser-storage-cleanup-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2936,7 +2960,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-browser-storage-cleanup-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3118,7 +3142,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-old-tablet-display-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-old-tablet-display-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3230,7 +3254,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-service-quote-comparison-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-service-quote-comparison-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

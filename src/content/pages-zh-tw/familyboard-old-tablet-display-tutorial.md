@@ -2,12 +2,12 @@
 title: "FamilyBoard 舊平板家庭看板怎麼用？每週維護 App 教學"
 description: "教你用 FamilyBoard 舊平板看板安排每週檢查、標題隱私、備份與裝置差異，清楚知道哪些資料不會同步。"
 route: "/zh-tw/guides/familyboard-old-tablet-display-tutorial/"
+alternateRoute: "/guides/familyboard-old-tablet-display-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭建立可重複的本機 FamilyBoard 看板每週操作流程"
 primaryKeyword: "FamilyBoard 舊平板看板教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

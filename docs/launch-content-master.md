@@ -22010,6 +22010,199 @@ Future recommendations for filters, labels or storage products may appear after 
 
 ---
 
+## Page 323 — How to Use FamilyBoard for Service Quote Comparisons
+**Slug:** /guides/familyboard-service-quote-comparison-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-service-quote-comparison-tutorial/
+**Primary intent:** learn to compare household service quotes by scope, inclusions, exclusions and source version without treating a price as a guarantee
+**Title tag:** FamilyBoard Service Quote Comparison Tutorial | Scope, Questions and Decisions
+**Meta description:** Learn how to use FamilyBoard to compare household service quotes by scope, inclusions, exclusions, assumptions and source version. Keep addresses, contracts and payment details protected.
+**Primary keyword concept:** FamilyBoard service quote comparison tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/tools/household-service-quote-comparison-log/`, `/tools/home-service-provider-verification-log/`, `/guides/contractor-records/`, `/tools/home-repair-change-order-log/`, `/zh-tw/guides/familyboard-service-quote-comparison-tutorial/`
+**FAQ:**
+- Q: Is the cheapest quote automatically the best choice?
+  A: No. Compare the described scope, inclusions, exclusions, assumptions, timing and source version before making a household decision.
+- Q: Should I paste a full contract or address into the tool?
+  A: No. Use safe source codes and keep the complete contract, address, signature and payment details in a protected location.
+- Q: Does FamilyBoard select or verify a service provider?
+  A: No. It organizes differences and questions. Provider credentials, formal terms and the final decision belong to the responsible household and official sources.
+- Q: How should I handle a verbal estimate?
+  A: Record it as an incomplete source with its date and a question for written confirmation. Do not convert a range or conversation into a fixed price.
+
+**Contextual CTA:** Compare two real quotes by the same scope, write one unresolved question and assign a role to return to the provider or building source for confirmation.
+
+# How to Use FamilyBoard for Service Quote Comparisons
+
+When a household receives quotes for plumbing, air-conditioning, cleaning, moving or renovation work, the largest number is rarely the whole decision. One provider may include removal and cleanup, another may list materials separately, and a third may assume that the building has already approved access. FamilyBoard's [Service Quote Comparison Log](/tools/household-service-quote-comparison-log/) keeps those differences visible without copying a contract into a shared family note.
+
+This tool is not a provider directory, price estimator, procurement service or workmanship guarantee. It does not verify a licence, judge fairness, amend a contract or select a winner. Use the provider's current written quote, building rules, warranty source and any applicable official guidance as the controlling sources.
+
+## Start with a safe source map
+
+Give each provider and quote a neutral code such as `PROVIDER-A`, `QUOTE-A1` and `BUILDING-B1`. Record the quote date and version, while keeping the full address, phone number, signatures, payment details, contract and private messages in a protected folder. A code is only an index: another authorized role must still be able to find the original source and confirm that it is current.
+
+## Compare the same scope before comparing totals
+
+Write one row for one quote and describe the work boundary in plain language, such as “bathroom exhaust inspection and written recommendation.” Then capture what the source explicitly includes and excludes: labour, materials, removal, disposal, access preparation, return visits, taxes or site inspection. Preserve words such as “estimated,” “optional,” “materials extra,” “subject to inspection” and “not included.” Do not silently fill a blank with an assumption.
+
+## Turn differences into questions
+
+If one quote includes disposal and another does not, create a question: “Does QUOTE-A1 include removal and cleanup?” If building access may require a request, ask “Does BUILDING-B1 require an application before the proposed visit?” Assign a household role and a review date to each question. The role owns the next inquiry; it does not gain authority to change a contract or speak for a provider.
+
+## Keep constraints separate from promises
+
+Household constraints can include a narrow access window, a budget ceiling, a warranty appointment or a building quiet period. Record them as the household's current limits, not as a promise from the provider. A provider's reply belongs to its source version. If a revised quote changes materials, labour, timing or exclusions, add a new version and retain the earlier observation so the household can explain why its decision changed.
+
+## Handle quotes that cannot be ranked
+
+Some providers give a verbal range, some split inspection from repair and some make the final material choice conditional on opening a surface. Mark the comparison as “not directly comparable” and record the missing fact or question. It is safer to delay a ranking than to turn unlike scopes into a false total. A family may choose to ask for a written quote, narrow the job or pause; FamilyBoard records the reason and next check rather than deciding the commercial outcome.
+
+## Record the decision without declaring a winner
+
+The household can decide to clarify, pause, narrow scope, seek another source or proceed through its formal process. Write the decision date and the source versions considered. “Not selected this time because access window is unavailable” is a household decision; it is not evidence that a provider is unqualified or that another quote is objectively better. Keep open questions visible until the responsible source responds.
+
+## Share a comparison safely
+
+Before printing or handing off, remove addresses, phone numbers, names, signatures, payment data, complete contract text and private conversations. Share only the scope, version codes, inclusions, exclusions, open questions and responsible role. Future recommendations for folders, measuring tools or labels may appear after the answer and outside the form with clear affiliate disclosure and an easy skip. They cannot guarantee a price, safety or workmanship.
+
+**Next step:** place two quotes for the same scope into separate versioned rows, identify one material difference and leave the comparison open until its source-controlled answer arrives.
+
+---
+
+## Page 324 — How to Use FamilyBoard on an Old Tablet Display
+**Slug:** /guides/familyboard-old-tablet-display-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-old-tablet-display-tutorial/
+**Primary intent:** learn to operate a low-sensitivity FamilyBoard display on an old tablet with weekly privacy, backup and device-boundary checks
+**Title tag:** FamilyBoard Old Tablet Display Tutorial | Weekly Review, Privacy and Sync Limits
+**Meta description:** Learn how to use an old tablet as a FamilyBoard household display, review visible titles, maintain the local copy and explain why phone data does not sync automatically.
+**Primary keyword concept:** FamilyBoard old tablet display tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/guides/familyboard-family-display-mode-setup/`, `/features/family-display-mode/`, `/guides/familyboard-offline-backup-restore/`, `/features/private-family-organizer/`, `/zh-tw/guides/familyboard-old-tablet-display-tutorial/`
+**FAQ:**
+- Q: Does the display receive changes made on my phone every minute?
+  A: No. The refresh reads the tablet's own local database. A separate phone has a separate browser database unless you deliberately transfer a backup.
+- Q: Which records appear on the display?
+  A: It shows the household name, open tasks, today's events and dated upcoming maintenance. Contacts, documents, warranties and subscriptions are not rendered there, but visible titles can still reveal private details.
+- Q: Is Display mode a locked kiosk?
+  A: No. It is a simplified shared view, not a tamper-proof kiosk. Use the tablet's operating-system lock and placement controls as well.
+- Q: What should I do before replacing or repairing the tablet?
+  A: Export and verify a protected backup, record which device is the source and test the restored copy before clearing the old browser data.
+
+**Contextual CTA:** Put three genuinely useful, non-sensitive tasks on the tablet, then run a visitor-view title check and confirm the last backup date.
+
+# How to Use FamilyBoard on an Old Tablet Display
+
+An old tablet can make a useful family display without becoming a second cloud account or a wall of sensitive information. FamilyBoard's Display mode is deliberately small: it reads the tablet's own local database and shows the household name, today's date, open tasks, today's events and dated upcoming maintenance. It does not turn the device into a security kiosk, a calendar synchronizer or a remote control centre.
+
+## Give the display a clear household identity
+
+Choose a household name that family members understand but that does not reveal a street address. Task and event titles are visible to anyone who can see the screen, so write the public outcome rather than a private explanation: “move recycling bin” is safer than a title that includes a person's medical appointment or a visitor's name. Keep detailed notes in the private app view and remember that Display mode does not rewrite a title for you.
+
+## Add only work that deserves the shared screen
+
+The display shows a limited number of open tasks, today's events and maintenance items with a next-due date. Use dates and owners for the few actions that need a quick glance. A maintenance item without a next-due date will not appear in the upcoming card; that is a prompt to review the source, not a reason to invent a date. Do not create filler tasks simply to make the screen look full.
+
+## Run the same weekly three-card review
+
+At a weekly reset, review tasks first: close genuinely completed work and move postponed work to a real date. Review today's events next, checking start and end times for overnight or multi-day items. Review upcoming maintenance last, returning to the manual or service source before changing a due date. This order keeps the display readable and prevents old history from crowding out the next action.
+
+## Explain the local-device boundary
+
+The “refreshes every minute” label means the tablet reloads its own local IndexedDB data. A phone, laptop and wall tablet do not share that database automatically, even when they use the same browser brand or operating-system account. To update the wall device, edit records on that device or deliberately restore a reviewed backup. Record whether the transfer used merge or replace so another household role does not assume that the screens are permanently identical.
+
+## Check the visitor view, not just the app view
+
+Stand where a guest would stand and read every visible title, owner and date. Remove names, health clues, addresses, access hints and private schedule details from anything that remains on the display. Check browser notifications, open tabs, the tablet's screen lock and its physical placement as well. FamilyBoard's Display mode limits record types but does not prevent someone with device access from opening other tabs or changing records.
+
+## Recover from an empty or stale display
+
+If a card is empty, first check whether the task was completed, whether the event is actually today and whether maintenance has a next-due date. Then check the browser profile and whether the tablet is showing the expected household. Do not rebuild the entire list on a second device just because the wall screen is stale. If the app is offline or the device is being replaced, return to the protected backup and source device instead.
+
+## Prepare for repair, replacement and handoff
+
+Before sending the tablet away, export a protected backup and test a copy in a controlled profile. A display backup is a new copy that needs the same privacy review as the screen. Assign one role to check dates and backups and another to read titles from a visitor's viewpoint. Future recommendations for stands, chargers or labels may appear outside the instructions with clear affiliate disclosure and an easy skip; buying an accessory is never required for synchronization, privacy or recovery.
+
+**Next step:** add three useful non-sensitive items, perform a one-minute visitor-view check and record the tablet's last verified backup date.
+
+---
+
+## Page 325 — How to Clean FamilyBoard Browser Data Safely
+**Slug:** /guides/familyboard-browser-storage-cleanup-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
+**Primary intent:** learn a reversible FamilyBoard browser-data cleanup and device-transfer workflow with export, restore verification and stop conditions
+**Title tag:** FamilyBoard Browser Storage Cleanup Tutorial | Export, Restore and Device Handoff
+**Meta description:** Before clearing browser data, learn how to identify the correct FamilyBoard profile, export and verify a copy, choose merge or replace and document a safe cleanup handoff.
+**Primary keyword concept:** FamilyBoard browser storage cleanup tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/guides/familyboard-browser-storage-maintenance/`, `/guides/familyboard-offline-backup-restore/`, `/features/offline-household-organizer/`, `/tools/household-record-retrieval-drill-log/`, `/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/`
+**FAQ:**
+- Q: Can clearing cookies or site data remove FamilyBoard records?
+  A: It can affect local site data. Identify the correct browser profile, export a backup and verify a copy before clearing anything.
+- Q: Does a successful export mean another device is synchronized?
+  A: No. An export is a point-in-time file. Each browser profile has its own local database until you deliberately restore or transfer a copy.
+- Q: Should I choose merge or replace when moving devices?
+  A: Choose deliberately after checking whether the destination already has newer records. Record the decision and date; do not repeatedly restore the same snapshot without a reason.
+- Q: What if restore verification fails?
+  A: Stop cleanup, preserve the source device and original export, record the safe error reference and seek appropriate technical help. Do not experiment on the only copy.
+
+**Contextual CTA:** Before any cleanup, identify the current profile, export an untouched original and restore a copy in a test profile so the next decision is reversible.
+
+# How to Clean FamilyBoard Browser Data Safely
+
+Clearing a slow browser profile, moving to a new device or removing old site data can be routine for an ordinary website. For a local-first FamilyBoard household, the browser may contain the only working database. The safe sequence is therefore not “clear first and see what remains.” It is identify, export, verify, decide, transfer and only then clean up.
+
+FamilyBoard does not provide cloud recovery or automatic cross-device synchronization. Its records live in the browser's local storage on each device. Browser sync indicators, operating-system backups and available disk space are separate systems and should not be treated as proof that a FamilyBoard household copy exists elsewhere.
+
+## Identify the real source profile
+
+Write a protected note with a neutral household code, device code, browser profile and last review date. Open FamilyBoard in the profile you believe is current and confirm the household name plus one harmless test record. A shared Apple, Google or Microsoft account does not prove that two browser profiles share IndexedDB. If you cannot identify which profile has the latest change, stop before cleanup.
+
+## Export an untouched original
+
+Use FamilyBoard's backup export and give the file a neutral name such as `HOUSEHOLD-BACKUP-2026-08`. Store it where the authorized household role can protect it; do not put names, addresses or passwords in the filename. Keep this original unchanged. Use a copy for every test so troubleshooting cannot damage the last export.
+
+## Verify the copy in a controlled profile
+
+Restore a copy into a test browser profile or temporary device. Confirm that the household name, harmless test record and essential metadata can be read, and check that private records still follow the app's sharing boundaries. A successful restore proves only that this snapshot was readable at that time. It does not include future edits and does not create synchronization.
+
+## Choose merge or replace deliberately
+
+When moving to a new profile, decide whether it should remain empty, merge with records already there or replace them with the reviewed snapshot. Check whether anyone has edited the old or new device since the export. Record the source file date, destination profile and choice. Repeatedly restoring the same snapshot can create duplicates or hide which record is newer; a deliberate version note is safer than guessing.
+
+## Test the new device before clearing the old one
+
+Open the restored app once online and once offline, then confirm the expected local household is present. Let the household role who will actually use the device complete a small retrieval or handoff test. Only after export, restore and handoff evidence exist should you follow the current browser and operating-system instructions to clear the old site data. If the new screen is empty, return to the source device and original export instead of rebuilding records from memory.
+
+## Use stop conditions for warnings and failures
+
+Stop when the source profile is uncertain, the original export was modified or lost, the restore result was not recorded, someone is still editing the old device or a storage warning is unexplained. Record the safe error reference, responsible role and next review date. A browser storage warning is not a diagnosis of corrupted records; preserve the original state and use appropriate technical support when needed.
+
+## Keep cleanup outside commercial pressure
+
+Future recommendations for external drives, labels or storage organizers may appear after the educational answer, outside the form, with clear affiliate disclosure and an easy skip. They cannot restore FamilyBoard data, prove privacy or make a device transfer safe. The useful result is a reversible, documented transition where the household knows which copy is current and why cleanup was allowed.
+
+**Next step:** identify the source profile, preserve one untouched export and verify a copy before making any deletion or browser reset decision.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

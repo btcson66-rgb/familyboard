@@ -274,12 +274,15 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-service-quote-comparison-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-service-quote-comparison-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-service-quote-comparison-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-service-quote-comparison-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-family-display-mode-setup/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-family-display-mode-setup/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-old-tablet-display-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-old-tablet-display-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-browser-storage-maintenance/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-browser-storage-maintenance/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-browser-storage-cleanup-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-seasonal-reset-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-seasonal-reset-action-log/</loc>",
@@ -2630,14 +2633,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-service-quote-comparison-tutorial/",
+    require: [
+      "How to Use FamilyBoard for Service Quote Comparisons",
+      'hreflang="zh-TW"',
+      "Compare the same scope before comparing totals",
+      "not a provider directory",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-service-quote-comparison-tutorial/",
     require: [
       "FamilyBoard 居家服務報價怎麼比較",
       'lang="zh-TW"',
+      'hreflang="en"',
       "逐份寫清楚服務範圍",
       "把差異變成問題",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/guides/familyboard-family-display-mode-setup/",
@@ -2658,14 +2670,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-old-tablet-display-tutorial/",
+    require: [
+      "How to Use FamilyBoard on an Old Tablet Display",
+      'hreflang="zh-TW"',
+      "Explain the local-device boundary",
+      "does not share that database automatically",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-old-tablet-display-tutorial/",
     require: [
       "FamilyBoard 舊平板家庭看板怎麼用",
       'lang="zh-TW"',
+      'hreflang="en"',
       "每週用同一時間核對三張卡片",
       "把重新整理限制告訴家人",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/guides/familyboard-browser-storage-maintenance/",
@@ -2686,14 +2707,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-browser-storage-cleanup-tutorial/",
+    require: [
+      "How to Clean FamilyBoard Browser Data Safely",
+      'hreflang="zh-TW"',
+      "Identify the real source profile",
+      "does not provide cloud recovery",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/",
     require: [
       "FamilyBoard 瀏覽器資料清理前要做什麼",
       'lang="zh-TW"',
+      'hreflang="en"',
       "在副本上做還原演練",
       "驗證新裝置再清理舊資料",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/tools/household-seasonal-reset-action-log/",

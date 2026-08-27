@@ -158,6 +158,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-home-access-handoff-tutorial/",
     "/guides/familyboard-schedule-conflict-review-tutorial/",
     "/guides/familyboard-maintenance-priority-review-tutorial/",
+    "/guides/familyboard-service-quote-comparison-tutorial/",
+    "/guides/familyboard-old-tablet-display-tutorial/",
+    "/guides/familyboard-browser-storage-cleanup-tutorial/",
     "/guides/water-leak-response-home-records/",
     "/tools/household-storm-readiness-review/",
     "/guides/storm-preparation-home-checklist/",
@@ -1228,6 +1231,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/",
       alternate: "/guides/familyboard-maintenance-priority-review-tutorial/",
       heading: "FamilyBoard 居家維護優先順序怎麼排？觀察與交接 App 教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-service-quote-comparison-tutorial/",
+      alternate: "/guides/familyboard-service-quote-comparison-tutorial/",
+      heading: "FamilyBoard 居家服務報價怎麼比較？範圍與提問 App 教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-old-tablet-display-tutorial/",
+      alternate: "/guides/familyboard-old-tablet-display-tutorial/",
+      heading: "FamilyBoard 舊平板家庭看板怎麼用？每週維護 App 教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/",
+      alternate: "/guides/familyboard-browser-storage-cleanup-tutorial/",
+      heading: "FamilyBoard 瀏覽器資料清理前要做什麼？App 操作教學",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -3045,6 +3063,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-service-quote-comparison-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-service-quote-comparison-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-old-tablet-display-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-old-tablet-display-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-browser-storage-cleanup-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

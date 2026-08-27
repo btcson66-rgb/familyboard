@@ -2,12 +2,12 @@
 title: "FamilyBoard 居家服務報價怎麼比較？範圍與提問 App 教學"
 description: "用繁體中文學會在 FamilyBoard 分開記錄報價範圍、包含／排除、家庭限制、來源版本和下一步，不把估價當成保證。"
 route: "/zh-tw/guides/familyboard-service-quote-comparison-tutorial/"
+alternateRoute: "/guides/familyboard-service-quote-comparison-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭如何依範圍與來源比較服務報價，再做家庭決定"
 primaryKeyword: "FamilyBoard 報價比較教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

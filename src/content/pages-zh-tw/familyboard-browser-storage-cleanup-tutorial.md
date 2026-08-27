@@ -2,12 +2,12 @@
 title: "FamilyBoard 瀏覽器資料清理前要做什麼？App 操作教學"
 description: "教你在 FamilyBoard 清理網站資料前做版本辨識、匯出、還原測試與換機交接，避免誤刪唯一的家庭本機紀錄。"
 route: "/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/"
+alternateRoute: "/guides/familyboard-browser-storage-cleanup-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭建立有匯出檢查點的 FamilyBoard 瀏覽器資料清理流程"
 primaryKeyword: "FamilyBoard 瀏覽器資料清理教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

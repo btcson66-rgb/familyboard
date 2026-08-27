@@ -2376,6 +2376,30 @@
     "headings": "How to Use FamilyBoard for Maintenance Priority Reviews Write what was observed, not what you think caused it Separate source instructions from household priorities Use the nine fields for a traceable handoff Preserve changes and service results Make the review safe to share"
   },
   {
+    "title": "FamilyBoard Service Quote Comparison Tutorial | Scope, Questions and Decisions",
+    "description": "Learn how to use FamilyBoard to compare household service quotes by scope, inclusions, exclusions, assumptions and source version. Keep addresses, contracts and payment details protected.",
+    "route": "/guides/familyboard-service-quote-comparison-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard service quote comparison tutorial",
+    "headings": "How to Use FamilyBoard for Service Quote Comparisons Start with a safe source map Compare the same scope before comparing totals Turn differences into questions Keep constraints separate from promises Handle quotes that cannot be ranked Record the decision without declaring a winner Share a comparison safely"
+  },
+  {
+    "title": "FamilyBoard Old Tablet Display Tutorial | Weekly Review, Privacy and Sync Limits",
+    "description": "Learn how to use an old tablet as a FamilyBoard household display, review visible titles, maintain the local copy and explain why phone data does not sync automatically.",
+    "route": "/guides/familyboard-old-tablet-display-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard old tablet display tutorial",
+    "headings": "How to Use FamilyBoard on an Old Tablet Display Give the display a clear household identity Add only work that deserves the shared screen Run the same weekly three-card review Explain the local-device boundary Check the visitor view, not just the app view Recover from an empty or stale display Prepare for repair, replacement and handoff"
+  },
+  {
+    "title": "FamilyBoard Browser Storage Cleanup Tutorial | Export, Restore and Device Handoff",
+    "description": "Before clearing browser data, learn how to identify the correct FamilyBoard profile, export and verify a copy, choose merge or replace and document a safe cleanup handoff.",
+    "route": "/guides/familyboard-browser-storage-cleanup-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard browser storage cleanup tutorial",
+    "headings": "How to Clean FamilyBoard Browser Data Safely Identify the real source profile Export an untouched original Verify the copy in a controlled profile Choose merge or replace deliberately Test the new device before clearing the old one Use stop conditions for warnings and failures Keep cleanup outside commercial pressure"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
