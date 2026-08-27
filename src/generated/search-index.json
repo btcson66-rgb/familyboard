@@ -1920,6 +1920,14 @@
     "headings": "Household Donation Handoff Log Record condition modestly Verify the receiving channel Close only with an observed result"
   },
   {
+    "title": "Free Mail and Package Handoff Log | Travel Coverage, Custody Notes and Return Review | FamilyBoard",
+    "description": "Record household mail and package coverage while away with safe source codes, expected windows, custody notes and return-home follow-up—without storing addresses or tracking numbers.",
+    "route": "/tools/household-mail-package-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "mail and package handoff log",
+    "headings": "Mail and Package Handoff Log Define the handoff window Separate expected time from observed custody Assign custody and close with a result"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -218,6 +218,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-donation-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-donation-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-donation-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-mail-package-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-mail-package-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-mail-package-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -988,6 +991,15 @@ const checks = [
       "Household Donation Handoff Log",
       'hreflang="zh-TW"',
       "Start with the transfer purpose",
+      "Privacy and future affiliate placement",
+    ],
+  },
+  {
+    path: "/tools/household-mail-package-handoff-log/",
+    require: [
+      "Mail and Package Handoff Log",
+      'hreflang="zh-TW"',
+      "Define the handoff window",
       "Privacy and future affiliate placement",
     ],
   },
@@ -1994,12 +2006,31 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-mail-package-handoff-log/",
+    require: [
+      "家庭信件與包裹代收交接工具",
+      'hreflang="en"',
+      "先限定這次代收時段",
+      "預期時段和實際代收要分開",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
       'lang="zh-TW"',
       "先寫清楚這列為什麼存在",
       "用最少必要資訊做家庭交接",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-mail-package-handoff-tutorial/",
+    require: [
+      "FamilyBoard 信件與包裹怎麼交接",
+      'lang="zh-TW"',
+      "限定外出與返家時間",
+      "返家後做短複查",
     ],
     forbid: ['rel="alternate"'],
   },

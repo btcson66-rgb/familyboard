@@ -2024,6 +2024,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-mail-package-handoff-log/",
+    "alternateRoute": "/zh-tw/tools/household-mail-package-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2418,6 +2426,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-mail-package-handoff-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-meal-prep-tutorial/",
     "alternateRoute": "",
     "indexable": true,
@@ -2791,6 +2806,13 @@
   {
     "route": "/zh-tw/tools/household-inventory-photo-capture-log/",
     "alternateRoute": "/tools/household-inventory-photo-capture-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-mail-package-handoff-log/",
+    "alternateRoute": "/tools/household-mail-package-handoff-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

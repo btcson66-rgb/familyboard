@@ -3635,6 +3635,70 @@ const donationHandoffDefinition = (locale: Locale): Definition => {
   };
 };
 
+const mailPackageHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立郵件列，等待項目類型",
+        "已確認項目，等待來源",
+        "已記錄來源，等待預期時段",
+        "已記錄時段，等待代收安排",
+        "已指定代收，等待交接結果",
+        "已完成代收或返家複查，等待下次複查",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Mail row created—item type pending",
+        "Item checked—source pending",
+        "Source recorded—expected window pending",
+        "Window recorded—handoff plan pending",
+        "Handoff owner assigned—result pending",
+        "Handoff or return review complete—next review pending",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "MAIL-A | 一般郵件觀察 | 2026-08-20 | 信箱與家庭觀察來源代號 | 本週外出期間待由代收角色查看，時段只作家庭提醒 | 未讀取信件內容，不記錄寄件人或地址 | 返家後由家庭角色確認是否有需轉交的安全摘要 | 住家交接角色 | 已記錄時段，等待代收安排\nMAIL-B | 預期包裹交接 | 2026-08-22 | 配送通知安全代號 | 管理室通知已出現，實際收件與保管位置待確認 | 不貼追蹤碼、商品內容或收件地址 | 由代收角色依受控管道回填交接結果，未完成前保持開放 | 備援家庭角色 | 已指定代收，等待交接結果"
+    : "MAIL-A | General mail observation | 2026-08-20 | Mailbox and household observation code | A handoff role will check during this week's absence; the window is only a household reminder | No mail content read; sender or address not recorded | A household role will check after return whether a safe summary needs handoff | Home-handoff role | Window recorded—handoff plan pending\nMAIL-B | Expected package handoff | 2026-08-22 | Delivery notice safe code | Building notice appeared; receipt and custody location remain to be checked | Do not paste tracking numbers, item contents or delivery address | Handoff owner will record the result through a controlled channel; keep open until then | Backup household role | Handoff owner assigned—result pending";
+  return {
+    intro: zh
+      ? "用安全代號整理外出期間的信件、通知與包裹代收、暫存、返家複查及未完成交接。工具不讀取信件、不保存追蹤碼、地址、收件人、商品內容或門禁資訊，也不代表郵務、物流或代收服務已完成。"
+      : "Use safe codes to organize mail, notices and package handoffs while away, temporary custody and return-home review. This tool does not read mail or store tracking numbers, addresses, recipients, item contents or access information, and does not prove postal, delivery or custody completion.",
+    fields: [
+      text("review", zh ? "信件包裹交接複查私人代號" : "Private mail-and-package handoff reference", zh ? "使用家庭代號，不要輸入姓名、地址、追蹤碼、帳號、商品內容或信件全文。" : "Use a household code; do not enter names, addresses, tracking numbers, accounts, item contents or full mail text.", "MAIL-REVIEW-2026-A"),
+      { name: "context", label: zh ? "信件包裹交接情境" : "Mail-and-package handoff context", type: "select", options: zh ? ["短期外出代收", "長途旅行留守", "搬家或地址變更交接", "管理室或社區代收", "返家後郵件複查", "其他家庭郵件交接"] : ["Short absence handoff", "Extended travel coverage", "Move or address-change handoff", "Building or community custody", "Return-home mail review", "Other household mail handoff"] },
+      { name: "reviewDate", label: zh ? "本次交接複查日期" : "Current handoff-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次代收或返家複查日期" : "Next custody or return-review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "郵件與代收來源地圖" : "Mail and custody source map", zh ? "只填安全來源代號，不要貼地址、追蹤碼、信件內容或私人對話。" : "Use safe source codes; do not paste addresses, tracking numbers, mail contents or private correspondence.", "TRAVEL-T1; BUILDING-B1; DELIVERY-D1"),
+      text("rows", zh ? "信件包裹交接狀態列" : "Mail-and-package handoff rows", zh ? "每行 9 欄：ID｜郵件或包裹類型｜觀察日期 YYYY-MM-DD｜來源代號｜預期時段或情境｜代收與暫存觀察｜隱私例外或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | mail or package type | observation date YYYY-MM-DD | source code | expected window or context | custody and storage observation | privacy exception or next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護郵件與交接紀錄位置" : "Protected mail and handoff-record location", zh ? "只寫保管流程或容器代號，不要放地址、追蹤碼、收件人或信件內容。" : "Name a custody process or container, not addresses, tracking numbers, recipients or mail content.", zh ? "家庭紀錄／郵件交接／MAIL-REVIEW-2026-A／受保護來源" : "Household records / mail handoff / MAIL-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次郵件交接複查日期。" : "Enter valid current and next mail-handoff review dates.";
+      if (next < review) return zh ? "下一次代收或返家複查日期不能早於本次複查。" : "The next custody or return review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全郵件代號、來源地圖與受保護位置。" : "Provide a safe mail code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行郵件與包裹交接列。" : "Enter 1 to 14 mail and package rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `郵件第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Mail line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行郵件紀錄都需要唯一 ID。" : "Every mail row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `郵件第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Mail line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const thin = parsed.filter((row) => row.parts[1].length < 3 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `郵件第 ${thin.map((row) => row.line).join("、")} 行需要類型、來源、時段、代收觀察、下一步與角色。` : `Mail line ${thin.map((row) => row.line).join(", ")} needs a type, source, window, custody observation, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、追蹤或案件識別資料；請改用安全代號。" : "A full contact, address, tracking or case identifier was detected; use safe codes.";
+      if (/password|passcode|tracking number|tracking code|full address|recipient name|mail content|private message|姓名|密碼|追蹤碼|完整地址|收件人|信件內容|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或信件內容；請只保留安全來源代號。" : "Sensitive data or mail content was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭信件與包裹代收交接複查" : " — household mail and package custody handoff review"), (zh ? "交接情境：" : "Handoff context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次代收或返家複查：" : "Next custody or return review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已完成代收或返家複查列：" : "Completed or return-reviewed rows: ") + closed.length, (zh ? "郵件與代收來源地圖：" : "Mail and custody source map: ") + values.source.trim(), (zh ? "有版本的郵件與包裹交接觀察\n" : "Versioned mail and package handoff observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜類型：" : " — type: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜時段：" : " — window: ") + row.parts[4] + (zh ? "｜代收觀察：" : " — custody: ") + row.parts[5] + (zh ? "｜下一步：" : " — next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護郵件與交接紀錄位置：" : "Protected mail and handoff-record location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭代收與返家複查觀察，不讀取信件、不證明郵務或物流完成、不保存地址、追蹤碼、收件人或商品內容；請以實際郵務、物流、管理室與受控聯絡來源為準。" : "This output only organizes household custody and return-review observations. It does not read mail, prove postal or delivery completion, or store addresses, tracking numbers, recipients or item contents; use actual postal, delivery, building and controlled-contact sources."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7690,6 +7754,9 @@ const definitions: Record<string, Definition> = {
   "household-donation-handoff-log": {
     ...donationHandoffDefinition("en"),
   },
+  "household-mail-package-handoff-log": {
+    ...mailPackageHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7772,6 +7839,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-donation-handoff-log": {
     ...donationHandoffDefinition("zh-TW"),
+  },
+  "household-mail-package-handoff-log": {
+    ...mailPackageHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:
