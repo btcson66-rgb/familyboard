@@ -2400,6 +2400,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/rental-repair-request-log/",
+    "alternateRoute": "/zh-tw/tools/rental-repair-request-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2966,6 +2974,13 @@
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-rental-repair-request-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {
@@ -3953,6 +3968,13 @@
     "alternateRoute": "/guides/renovation-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/rental-repair-request-log/",
+    "alternateRoute": "/tools/rental-repair-request-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {

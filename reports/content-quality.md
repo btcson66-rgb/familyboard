@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T17:58:32.697Z
+Generated: 2026-08-27T18:08:47.379Z
 
 ## Summary
 
-- Indexable pages: 505
-- Generated HTML routes: 522
+- Indexable pages: 508
+- Generated HTML routes: 525
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 282
+- Pages without a contextual product/tool link: 284
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-27T17:58:32.697Z
 - maintenance: 45
 - household-operations: 89
 - inventory-warranty: 44
-- records-emergency: 67
+- records-emergency: 70
 - tools: 121
 
 ## Word-count range
@@ -170,6 +170,7 @@ Generated: 2026-08-27T17:58:32.697Z
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
+- /zh-tw/guides/familyboard-rental-repair-request-tutorial/
 - /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
 - /zh-tw/guides/familyboard-replacement-part-source-check-tutorial/
 - /zh-tw/guides/familyboard-router-support-review-tutorial/
@@ -326,6 +327,7 @@ Generated: 2026-08-27T17:58:32.697Z
 - /zh-tw/tools/purchase-delivery-evidence-log/
 - /zh-tw/tools/receipt-retention-organizer/
 - /zh-tw/tools/recurring-chore-planner/
+- /zh-tw/tools/rental-repair-request-log/
 - /zh-tw/tools/rental-security-deposit-move-out-claim-log/
 - /zh-tw/tools/room-inventory-generator/
 - /zh-tw/tools/storage-unit-access-inventory-log/

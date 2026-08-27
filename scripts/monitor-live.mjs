@@ -296,6 +296,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-building-notice-response-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-building-notice-response-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-building-notice-response-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/rental-repair-request-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/rental-repair-request-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-rental-repair-request-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2819,6 +2822,32 @@ const checks = [
       'lang="zh-TW"',
       "家庭通知回覆時間線 App 教學",
       "不會判斷公告是否合法",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/tools/rental-repair-request-log/",
+    require: [
+      "Rental Repair Request Log",
+      'hreflang="zh-TW"',
+      "does not decide lease duties, liability, cost or safety",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/rental-repair-request-log/",
+    require: [
+      "租屋修繕請求紀錄工具",
+      'hreflang="en"',
+      "不判定租約義務、責任、費用、進屋同意或安全",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-rental-repair-request-tutorial/",
+    require: [
+      "FamilyBoard 租屋修繕怎麼追蹤",
+      'lang="zh-TW"',
+      "通知房東與進屋交接 App 教學",
+      "不判斷房東責任",
     ],
     forbid: ['rel="alternate"'],
   },

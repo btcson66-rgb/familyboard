@@ -32,6 +32,7 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-repair-evidence-timeline-log/",
     "/tools/household-insurance-claim-timeline-log/",
     "/tools/household-building-notice-response-log/",
+    "/tools/rental-repair-request-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -124,6 +125,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-repair-evidence-timeline-log/",
     "/tools/household-insurance-claim-timeline-log/",
     "/tools/household-building-notice-response-log/",
+    "/tools/rental-repair-request-log/",
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
@@ -237,6 +239,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-repair-evidence-timeline-log/",
     "/zh-tw/tools/household-insurance-claim-timeline-log/",
     "/zh-tw/tools/household-building-notice-response-log/",
+    "/zh-tw/tools/rental-repair-request-log/",
     "/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/",
     "/zh-tw/guides/household-admin-backup-person/",
     "/zh-tw/guides/home-contact-list/",
@@ -901,6 +904,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
 
+  await page.goto("/zh-tw/guides/familyboard-rental-repair-request-tutorial/");
+  await expect(page.locator("h1")).toHaveText(
+    "FamilyBoard 租屋修繕怎麼追蹤？通知房東與進屋交接 App 教學",
+  );
+  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+
   await page.goto("/tools/warranty-expiration-calculator/");
   await expect(
     page.locator('link[rel="alternate"][hreflang="zh-TW"]'),
@@ -1287,6 +1296,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-building-notice-response-log/",
       alternate: "/tools/household-building-notice-response-log/",
       heading: "家庭大樓公告回覆時間線工具",
+    },
+    {
+      route: "/zh-tw/tools/rental-repair-request-log/",
+      alternate: "/tools/rental-repair-request-log/",
+      heading: "租屋修繕請求紀錄工具",
     },
   ]) {
     await page.goto(localizedTool.route);

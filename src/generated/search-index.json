@@ -2200,6 +2200,14 @@
     "headings": "Household Building Notice Response Log Separate the notice, the request and the result A five-pass notice workflow Useful for renters, owners and shared homes Privacy, access and safety boundaries Optional affiliate area stays outside the form"
   },
   {
+    "title": "Rental Repair Request Log | Free Tenant Maintenance Tracker",
+    "description": "Record rental repair observations, landlord notices, receipt confirmations, access windows and follow-up dates without storing private lease or address details.",
+    "route": "/tools/rental-repair-request-log/",
+    "cluster": "records-emergency",
+    "keywords": "rental repair request log",
+    "headings": "Rental Repair Request Log Start with an observable, bounded problem A six-stage request workflow Why a tenant request log is different from a repair history Privacy and safety boundaries Optional affiliate space remains separate"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

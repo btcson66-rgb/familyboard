@@ -5282,6 +5282,54 @@ const householdBuildingNoticeResponseDefinition = (locale: Locale): Definition =
   };
 };
 
+const rentalRepairRequestDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立請求列，等待問題範圍", "已記錄通知房東，等待收到確認", "已記錄確認，等待進屋時段", "已記錄到場或工作，等待結果", "已記錄結果，等待租屋後續複查", "請求時間線已複查並保留來源索引", "不適用，已記錄原因與重新開案事件"]
+    : ["Request row created—issue scope pending", "Landlord notified—receipt confirmation pending", "Receipt confirmed—access window pending", "Attendance or work recorded—result pending", "Result recorded—rental follow-up pending", "Request timeline reviewed—source pointer preserved", "Not applicable—reason and reopen event recorded"];
+  const defaults = zh
+    ? "RENT-REPAIR-A | 浴室天花板區域代號 | 可見水痕範圍；不判定成因或責任 | 2026-08-22 | 租屋修繕照片索引 PHOTO-R1；房東通知來源 NOTICE-R1 | 已透過指定管道通知房東；收到確認尚待記錄 | 2026-08-24 | 租屋修繕交接角色 | 已記錄通知房東，等待收到確認\nRENT-REPAIR-B | 冰箱設備代號 | 冷藏區溫度異常的可觀察狀況；不自行拆機 | 2026-08-20 | 設備觀察索引 APPL-R2；租約設備清單 LEASE-R2 | 房東已確認收到並提供檢查時段；實際結果待複查 | 2026-08-26 | 家庭租屋紀錄角色 | 已記錄確認，等待進屋時段"
+    : "RENT-REPAIR-A | Bathroom ceiling area code | Visible water-mark scope; no cause or liability conclusion | 2026-08-22 | Protected rental-repair photo pointer PHOTO-R1; landlord notice source NOTICE-R1 | Landlord notified through the stated channel; receipt confirmation still needs recording | 2026-08-24 | Rental repair handoff role | Landlord notified—receipt confirmation pending\nRENT-REPAIR-B | Refrigerator asset code | Observable cooling issue; do not dismantle the appliance | 2026-08-20 | Appliance observation pointer APPL-R2; rental inventory source LEASE-R2 | Landlord confirmed receipt and offered an inspection window; actual result needs review | 2026-08-26 | Household rental-records role | Receipt confirmed—access window pending";
+  return {
+    intro: zh
+      ? "把租屋修繕請求的問題範圍、通知房東、收到確認、進屋時段、到場或工作與後續複查排成一條來源時間線。工具不判定租約義務、責任、費用或安全，也不代替房東、主管機關與合格專業來源。"
+      : "Place a rental repair request's issue scope, landlord notice, receipt confirmation, access window, attendance or work and follow-up on one source-linked timeline. This tool does not decide lease duties, liability, cost or safety, and does not replace the landlord, authority or qualified professionals.",
+    fields: [
+      text("review", zh ? "租屋修繕請求私人代號" : "Private rental-repair request reference", zh ? "使用家庭代號，不要輸入姓名、完整地址、租約號、門鎖碼、電話或付款資料。" : "Use a household code; do not enter names, full addresses, lease numbers, access codes, phone or payment data.", "RENT-REPAIR-2026-A"),
+      { name: "context", label: zh ? "租屋修繕請求情境" : "Rental-repair request context", type: "select", options: zh ? ["漏水、潮濕或水電問題", "家電或出租設備異常", "門窗、鎖具或公共設施問題", "暖氣、冷氣或通風問題", "入住／搬出點交後的修繕請求", "其他需要房東來源確認的修繕"] : ["Leak, dampness or utility issue", "Appliance or supplied-equipment issue", "Door, window, lock or shared-facility issue", "Heating, cooling or ventilation issue", "Repair request after move-in or move-out inspection", "Other repair needing landlord-source confirmation"] },
+      { name: "reviewDate", label: zh ? "本次租屋請求複查日期" : "Current rental-request review date", type: "date", value: "2026-08-28" },
+      text("source", zh ? "租約、通知、設備與修繕來源索引地圖" : "Lease, notice, asset and repair source-pointer map", zh ? "只填安全代號；完整租約、地址、照片、報價、通信與案件資料留在受保護來源。" : "Use safe codes; keep full leases, addresses, photos, quotes, correspondence and case details protected.", "LEASE-A1; NOTICE-A1; REPAIR-A1"),
+      text("rows", zh ? "租屋修繕請求時間線列" : "Rental-repair request timeline rows", zh ? "每行 9 欄：ID｜區域或設備代號｜問題範圍與暫時界線｜問題觀察／請求日 YYYY-MM-DD｜租約／通知／設備來源索引與來源日｜通知、收到確認、進屋或工作觀察｜結果或後續複查日 YYYY-MM-DD｜負責角色｜指定狀態。最多 12 行。" : "Each row uses 9 fields: ID | area or asset code | issue scope and temporary boundary | issue-observation or request date YYYY-MM-DD | lease, notice or asset pointer with source date | notice, receipt, access or work observation | result or follow-up date YYYY-MM-DD | owner role | exact status. Maximum 12 rows.", defaults),
+      text("storage", zh ? "受保護租約、通知與修繕文件位置" : "Protected lease, notice and repair-document location", zh ? "只寫資料夾或容器代號，不要貼完整租約、地址、門禁碼、估價、電話或通信。" : "Name a folder or container code, not full leases, addresses, access codes, estimates, phone numbers or correspondence.", zh ? "家庭紀錄／租屋修繕／RENT-REPAIR-2026-A／受保護來源" : "Household records / rental repair / RENT-REPAIR-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate);
+      if (!review) return zh ? "請輸入有效的本次租屋請求複查日期。" : "Enter a valid current rental-request review date.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全請求代號、來源地圖與受保護位置。" : "Provide a safe request code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) })).filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行租屋修繕請求時間線列。" : "Enter 1 to 12 rental-repair request timeline rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `時間線第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Timeline line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length) return zh ? "每行租屋修繕請求都需要唯一 ID。" : "Every rental-repair request row needs a unique ID.";
+      const requestDates = rows.map((row) => strictIsoDate(row.parts[3]));
+      const followDates = rows.map((row) => strictIsoDate(row.parts[6]));
+      if (requestDates.some((date) => !date || date > review)) return zh ? "每列問題觀察／請求日必須有效，且不能晚於本次複查。" : "Each issue-observation or request date must be valid and no later than the current review.";
+      if (followDates.some((date, index) => !date || date < (requestDates[index] ?? review) || date > review)) return zh ? "每列結果或後續複查日必須介於請求日與本次複查之間。" : "Each result or follow-up date must fall between its request date and the current review.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `時間線第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Timeline line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const thin = rows.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 12 || row.parts[4].length < 8 || row.parts[5].length < 12 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `時間線第 ${thin.map((row) => row.line).join("、")} 行需要問題範圍、來源索引、通知／確認觀察與角色。` : `Timeline line ${thin.map((row) => row.line).join(", ")} needs an issue scope, source pointer, notice or confirmation observation and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址或租屋識別資料；請改用安全代號。" : "A full contact, address or rental identifier was detected; use safe codes.";
+      if (/password|passcode|verification code|full address|street address|phone number|lease number|account number|card number|bank account|door code|access code|private message|密碼|驗證碼|完整地址|電話|租約號|帳號|卡號|銀行帳戶|門鎖碼|門禁|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料；請只保留安全來源索引。" : "Sensitive data was detected; keep only a safe source pointer.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = rows.filter((row) => statuses.indexOf(row.parts[8]) < 5), closed = rows.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const renderedRows = rows.map((row, index) => row.parts[0] + (zh ? "｜區域／設備：" : " — area/asset: ") + row.parts[1] + (zh ? "｜問題範圍：" : " — issue scope: ") + row.parts[2] + (zh ? "｜請求日：" : " — request date: ") + formatter.format(requestDates[index] as Date) + (zh ? "｜來源索引／日期：" : " — source pointer/date: ") + row.parts[4] + (zh ? "｜通知／確認／工作：" : " — notice/confirmation/work: ") + row.parts[5] + (zh ? "｜結果／複查日：" : " — result/follow-up: ") + formatter.format(followDates[index] as Date) + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n");
+      return [values.review.trim() + (zh ? "｜租屋修繕請求時間線" : " — rental-repair request timeline"), (zh ? "請求情境：" : "Request context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + formatter.format(review), (zh ? "仍開放列：" : "Open rows: ") + open.length, (zh ? "已複查或不適用列：" : "Reviewed or not-applicable rows: ") + closed.length, (zh ? "租約、通知、設備與修繕來源索引地圖：" : "Lease, notice, asset and repair source-pointer map: ") + values.source.trim(), (zh ? "有版本的租屋修繕請求觀察\n" : "Versioned rental-repair request observations\n") + renderedRows, (zh ? "受保護租約、通知與修繕文件位置：" : "Protected lease, notice and repair-document location: ") + values.storage.trim(), zh ? "這份輸出只整理租屋修繕請求與來源時間線，不判定租約義務、責任、費用、進屋同意或安全，也不提供法律、租屋或施工建議。請依目前租約、房東、物業、主管機關與合格專業來源確認結果。" : "This output only organizes rental-repair requests and source timelines. It does not decide lease duties, liability, cost, access consent or safety, or provide legal, rental or repair advice. Use the current lease, landlord, property manager, authority and qualified sources for real outcomes."].join("\n\n");
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
@@ -5294,6 +5342,7 @@ const definitions: Record<string, Definition> = {
   "household-repair-evidence-timeline-log": householdRepairEvidenceTimelineDefinition("en"),
   "household-insurance-claim-timeline-log": householdInsuranceClaimTimelineDefinition("en"),
   "household-building-notice-response-log": householdBuildingNoticeResponseDefinition("en"),
+  "rental-repair-request-log": rentalRepairRequestDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -9456,6 +9505,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-building-notice-response-log": {
     ...householdBuildingNoticeResponseDefinition("zh-TW"),
+  },
+  "rental-repair-request-log": {
+    ...rentalRepairRequestDefinition("zh-TW"),
   },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("zh-TW"),
