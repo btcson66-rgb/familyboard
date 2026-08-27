@@ -70,6 +70,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-water-leak-event-log/</loc>",
       "<loc>https://familyboard.win/tools/household-event-duration-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-event-duration-calculator/</loc>",
+      "<loc>https://familyboard.win/tools/household-event-source-index-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-event-source-index-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/water-leak-response-home-records/</loc>",
       "<loc>https://familyboard.win/tools/household-storm-readiness-review/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-storm-readiness-review/</loc>",
@@ -451,6 +453,14 @@ const checks = [
       "Free Household Event Duration Calculator",
       'hreflang="zh-TW"',
       "not an official duration",
+    ],
+  },
+  {
+    path: "/tools/household-event-source-index-log/",
+    require: [
+      "Household Event Source Index Log",
+      'hreflang="zh-TW"',
+      "authenticate a source",
     ],
   },
   {
@@ -1404,6 +1414,14 @@ const checks = [
       'hreflang="en"',
       "經過時間",
       "不代表官方時數",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-event-source-index-log/",
+    require: [
+      "家庭事件來源索引紀錄",
+      'hreflang="en"',
+      "不驗證來源真偽",
     ],
   },
   {

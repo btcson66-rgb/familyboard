@@ -35,6 +35,7 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/rental-repair-request-log/",
     "/tools/household-school-closure-continuity-log/",
     "/tools/household-event-duration-calculator/",
+    "/tools/household-event-source-index-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -140,6 +141,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-water-leak-event-log-tutorial/",
     "/tools/household-water-leak-event-log/",
     "/tools/household-event-duration-calculator/",
+    "/tools/household-event-source-index-log/",
     "/guides/water-leak-response-home-records/",
     "/tools/household-storm-readiness-review/",
     "/guides/storm-preparation-home-checklist/",
@@ -501,6 +503,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭事件時間計算器" }),
   ).toHaveAttribute("href", "/zh-tw/tools/household-event-duration-calculator/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭事件來源索引" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/household-event-source-index-log/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "漏水紀錄 App 教學" }),
   ).toHaveAttribute(
@@ -1090,6 +1095,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-event-duration-calculator/",
       alternate: "/tools/household-event-duration-calculator/",
       heading: "家庭事件經過時間計算器",
+    },
+    {
+      route: "/zh-tw/tools/household-event-source-index-log/",
+      alternate: "/tools/household-event-source-index-log/",
+      heading: "家庭事件來源索引紀錄",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -1722,6 +1732,26 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await page.getByLabel("第二個觀察或結束時間（HH:MM）").fill("12:30");
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText("經過時間：0 天 3 小時 30 分鐘");
+
+  await page.goto("/tools/household-event-source-index-log/");
+  await page.getByLabel("Safe event code").fill("LEAK-A");
+  await page.getByLabel("Review date").fill("2026-08-20");
+  await page.getByLabel("Responsible source and document role").fill("Building notice / update");
+  await page.getByLabel("Observation or evidence pointer").fill("OBS-1; protected photo set");
+  await page.getByLabel("Next step and owner").fill("Recheck source version | household owner");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("household event source index");
+  await expect(page.locator(".result")).toContainText("authenticate a source");
+
+  await page.goto("/zh-tw/tools/household-event-source-index-log/");
+  await page.getByLabel("事件安全代號").fill("漏水-A");
+  await page.getByLabel("本次核對日期").fill("2026-08-20");
+  await page.getByLabel("負責來源與文件角色").fill("大樓公告／更新");
+  await page.getByLabel("觀察或證據索引").fill("OBS-1；受保護照片組");
+  await page.getByLabel("下一步與負責角色").fill("複查來源版本／家庭管理者");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("家庭事件來源索引");
+  await expect(page.locator(".result")).toContainText("不驗證來源真偽");
 
   await page.goto("/tools/household-storm-readiness-review/");
   await page.getByLabel("Review date", { exact: true }).fill("2026-08-23");
@@ -2785,6 +2815,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/household-event-duration-calculator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-event-source-index-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-event-source-index-log/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/water-leak-response-home-records/",

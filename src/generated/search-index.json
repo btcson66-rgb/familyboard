@@ -2240,6 +2240,14 @@
     "headings": "Free Household Event Duration Calculator Use a safe label and two real observations Read the result as arithmetic, not a verdict Keep it useful for the next person Privacy and sharing Affiliate boundary"
   },
   {
+    "title": "Household Event Source Index Log | Keep Evidence Pointers Reviewable",
+    "description": "Create a private-browser index for a household event's responsible source, observation pointer and next owner. Keep original files protected; no authentication or responsibility verdict.",
+    "route": "/tools/household-event-source-index-log/",
+    "cluster": "tools",
+    "keywords": "household event source index",
+    "headings": "Household Event Source Index Log What to enter Keep four layers separate Version instead of overwriting Privacy and sharing Affiliate boundary"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

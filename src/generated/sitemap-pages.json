@@ -2440,6 +2440,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-event-source-index-log/",
+    "alternateRoute": "/zh-tw/tools/household-event-source-index-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3487,6 +3495,13 @@
   {
     "route": "/zh-tw/tools/household-event-duration-calculator/",
     "alternateRoute": "/tools/household-event-duration-calculator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-event-source-index-log/",
+    "alternateRoute": "/tools/household-event-source-index-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"

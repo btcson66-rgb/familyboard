@@ -5378,6 +5378,34 @@ const householdSchoolClosureContinuityDefinition = (locale: Locale): Definition 
   };
 };
 
+const householdEventSourceIndexDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  return {
+    intro: zh
+      ? "把一次家庭事件的來源、觀察、證據索引與下一步整理成一列可複查的公開安全索引；不複製原始檔，也不驗證來源真偽。"
+      : "Create a public-safe index for one household event's source, observation, evidence pointer and next step. It does not copy originals or authenticate a source.",
+    fields: [
+      text("event", zh ? "事件安全代號" : "Safe event code", zh ? "不要填地址、電話、帳號、案件號或私人訊息。" : "Do not enter an address, phone, account, case number or private message.", zh ? "事件 A" : "EVENT-A"),
+      { name: "reviewDate", label: zh ? "本次核對日期" : "Review date", type: "date" },
+      text("source", zh ? "負責來源與文件角色" : "Responsible source and document role", zh ? "例如：管理公告／原廠手冊／供應商回覆；只寫安全來源代號。" : "For example: building notice, manufacturer manual or provider reply; use a safe source pointer.", zh ? "來源代號／角色" : "SOURCE-CODE / role"),
+      text("evidence", zh ? "觀察或證據索引" : "Observation or evidence pointer", zh ? "寫你實際看到的最小摘要與受保護檔案索引，不要貼原始內容。" : "Write a minimal observed summary and protected file pointer, not the original content.", zh ? "OBS-1；受保護檔案索引" : "OBS-1; protected file pointer"),
+      text("next", zh ? "下一步與負責角色" : "Next step and owner", zh ? "保留一個可觀察的行動，不要把推測寫成結論。" : "Keep one observable action; do not turn a guess into a conclusion.", zh ? "複查來源版本｜家庭管理者" : "Recheck source version | household owner"),
+    ],
+    run: (values) => {
+      if (!values.event.trim() || !values.source.trim() || !values.evidence.trim() || !values.next.trim()) return zh ? "請填寫事件代號、來源、證據索引與下一步。" : "Enter an event code, source, evidence pointer and next step.";
+      const event = values.event.trim();
+      if (/(?:\d[\s().+-]*){7,}/.test(event) || /@|密碼|電話|地址|帳號|案件|password|phone|address|account|case/i.test(event)) return zh ? "事件代號含有可能的個資或案件資料；請改用安全代號。" : "The event code may contain personal or case data; replace it with a safe code.";
+      const review = strictIsoDate(values.reviewDate);
+      if (!review) return zh ? "請輸入有效的核對日期。" : "Enter a valid review date.";
+      if (review.getTime() > new Date().getTime()) return zh ? "核對日期不能在未來。" : "Review date cannot be in the future.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return zh
+        ? `${event}｜家庭事件來源索引\n本次核對：${formatter.format(review)}\n負責來源／文件角色：${values.source.trim()}\n家庭觀察／證據索引：${values.evidence.trim()}\n下一步／負責角色：${values.next.trim()}\n\n這份索引只保留可複查的最小線索，不複製原始文件、不驗證來源真偽、不判定事件原因、責任、安全、損害或理賠。真正需要決定時，請回到負責來源並保存其版本、日期與完整內容。來源、版本、事件範圍或負責角色改變時，建立新版本，不要覆蓋舊結果。`
+        : `${event} — household event source index\nReview date: ${formatter.format(review)}\nResponsible source / document role: ${values.source.trim()}\nHousehold observation / evidence pointer: ${values.evidence.trim()}\nNext step / owner: ${values.next.trim()}\n\nThis index keeps only minimal, reviewable clues. It does not copy originals, authenticate a source, decide cause, responsibility, safety, damage or claims. Return to the responsible source when a decision matters and preserve its version, date and complete content. Create a new version when the source, version, event scope or owner changes; do not overwrite history.`;
+    },
+  };
+};
+
 const householdEventDurationDefinition = (locale: Locale): Definition => {
   const zh = locale === "zh-TW";
   return {
@@ -5421,6 +5449,7 @@ const householdEventDurationDefinition = (locale: Locale): Definition => {
 };
 
 const definitions: Record<string, Definition> = {
+  "household-event-source-index-log": { ...householdEventSourceIndexDefinition("en") },
   "household-event-duration-calculator": { ...householdEventDurationDefinition("en") },
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
@@ -9533,6 +9562,7 @@ const definitions: Record<string, Definition> = {
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
+  "household-event-source-index-log": { ...householdEventSourceIndexDefinition("zh-TW") },
   "household-event-duration-calculator": { ...householdEventDurationDefinition("zh-TW") },
   "household-utility-provider-service-handoff-log":
     definitions["__zh-tw-household-utility-provider-service-handoff-log"],
