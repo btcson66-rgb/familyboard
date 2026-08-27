@@ -18382,6 +18382,44 @@ An unchanged record can remain open for another review; an outdated source shoul
 
 Any future affiliate suggestions for binders, labels or storage should be clearly disclosed and placed outside the form. A product must not be presented as proof that a backup, warranty or household plan is valid.
 
+## Page 263 — Household School Activity Handoff Log
+**Slug:** /tools/household-school-activity-handoff-log/
+**Primary intent:** track school activities, permission deadlines, preparation and submission observations without storing student identifiers
+**Title tag:** Free School Activity Handoff Log | Permission Forms, Deadlines and Preparation | FamilyBoard
+**Meta description:** Organize school notices, permission deadlines, supplies, household roles and submission observations without storing student names, IDs or health information.
+**Primary keyword concept:** school activity handoff log
+**Cluster:** household-operations
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /guides/organize-school-records-at-home/, /tools/household-school-record-source-handoff-log/, /zh-tw/tools/household-school-activity-handoff-log/
+**FAQ:**
+- Q: Does the tool store a child’s name, student number or school address?
+  A: No. Use a household activity code and keep identifying details in the school’s controlled source.
+- Q: Does recording a form prove that the school received it?
+  A: No. Keep submission and participation as observations, then check the school’s official channel.
+- Q: Can it track a field trip, sports day or club registration?
+  A: Yes. Separate the notice source, deadline, preparation, role and later result for each activity.
+
+# Household School Activity Handoff Log
+
+School notices create more than one date: a permission deadline, a meeting window, a supply list and sometimes a later confirmation. This free tool keeps those pieces separate so another household role can help without receiving a child’s full identity or health information.
+
+## Use the school source as authority
+
+Use codes such as `NOTICE-N1`, `FORM-F1` and `RESULT-R1` to point back to the controlled notice or school channel. The handoff log records what the household needs to remember; it is not proof that a form was accepted, a fee was paid or a student attended.
+
+## Separate preparation from participation
+
+Packing a required item, deciding who will submit a form and observing a confirmation are different events. Record each as an action or observation, and leave the school’s official record in control of deadlines, permissions and participation.
+
+## Keep affiliate suggestions outside the workflow
+
+Future recommendations for folders, labels or activity supplies may appear beside the guide with disclosure. They cannot promise school acceptance, reduce a fee or interrupt the form and result workflow.
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T09:20:45.041Z
+Generated: 2026-08-27T09:36:24.812Z
 
 ## Summary
 
-- Indexable pages: 442
-- Generated HTML routes: 459
+- Indexable pages: 445
+- Generated HTML routes: 462
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 229
+- Pages without a contextual product/tool link: 232
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 57
+- product: 58
 - appliances: 30
 - maintenance: 37
-- household-operations: 66
+- household-operations: 68
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -92,6 +92,7 @@ Generated: 2026-08-27T09:20:45.041Z
 - /tools/household-plant-care-handoff-log/
 - /tools/household-recycling-handoff-log/
 - /tools/household-return-handoff-log/
+- /tools/household-school-activity-handoff-log/
 - /tools/household-school-pickup-handoff-log/
 - /tools/household-service-appointment-handoff-log/
 - /tools/household-share-access-review-log/
@@ -145,6 +146,7 @@ Generated: 2026-08-27T09:20:45.041Z
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
+- /zh-tw/guides/familyboard-school-activity-handoff-tutorial/
 - /zh-tw/guides/familyboard-school-pickup-handoff-tutorial/
 - /zh-tw/guides/familyboard-service-appointment-handoff-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
@@ -249,6 +251,7 @@ Generated: 2026-08-27T09:20:45.041Z
 - /zh-tw/tools/household-record-retrieval-drill-log/
 - /zh-tw/tools/household-recycling-handoff-log/
 - /zh-tw/tools/household-return-handoff-log/
+- /zh-tw/tools/household-school-activity-handoff-log/
 - /zh-tw/tools/household-school-pickup-handoff-log/
 - /zh-tw/tools/household-school-record-source-handoff-log/
 - /zh-tw/tools/household-service-appointment-handoff-log/

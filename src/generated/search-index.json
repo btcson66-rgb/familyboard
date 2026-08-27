@@ -1992,6 +1992,14 @@
     "headings": "Household Monthly Review Action Log Review the system, not every detail Keep a next-month checkpoint Keep commercial recommendations outside the review"
   },
   {
+    "title": "Free School Activity Handoff Log | Permission Forms, Deadlines and Preparation | FamilyBoard",
+    "description": "Organize school notices, permission deadlines, supplies, household roles and submission observations without storing student names, IDs or health information.",
+    "route": "/tools/household-school-activity-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "school activity handoff log",
+    "headings": "Household School Activity Handoff Log Use the school source as authority Separate preparation from participation Keep affiliate suggestions outside the workflow"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

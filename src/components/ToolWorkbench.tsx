@@ -4085,6 +4085,52 @@ const monthlyReviewActionDefinition = (locale: Locale): Definition => {
   };
 };
 
+const schoolActivityHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立活動列，等待活動範圍", "已確認校方來源，等待截止日", "已記錄截止日，等待家庭決定", "已安排角色，等待提交或準備", "已觀察提交或參與結果，等待複查", "不適用，已記錄原因"]
+    : ["Activity row created—scope pending", "School source checked—deadline pending", "Deadline recorded—household decision pending", "Role assigned—submission or preparation pending", "Submission or participation observed—review pending", "Not applicable—reason recorded"];
+  const defaults = zh
+    ? "SCHOOL-A | 校外教學同意表 | 2026-08-25 | 校方通知來源代號 | 週五前回到受控來源確認截止日與提交方式 | 家庭學校聯絡角色準備必要資料，未貼學生個資 | 回到校方來源複查是否收到提交確認 | 家庭學校聯絡角色 | 已安排角色，等待提交或準備\nSCHOOL-B | 運動會用品與時間 | 2026-08-26 | 班級通知來源代號 | 只記集合與用品窗口，不複製完整通知 | 備援角色確認家庭是否能配合，結果未定前保持開放 | 活動後複查實際參與與遺漏物品 | 備援家庭角色 | 已記錄截止日，等待家庭決定"
+    : "SCHOOL-A | Field-trip permission form | 2026-08-25 | School notice source code | Return to the controlled source by Friday to confirm the deadline and submission method | Household school-contact role prepares only necessary information; no student identifiers pasted | Review the school source for submission confirmation | Household school-contact role | Role assigned—submission or preparation pending\nSCHOOL-B | Sports-day supplies and timing | 2026-08-26 | Class notice source code | Record only the meeting and supply window; do not copy the full notice | A backup role confirms whether the household can participate; keep open until decided | Review participation and missing supplies after the event | Backup household role | Deadline recorded—household decision pending";
+  return {
+    intro: zh ? "把學校活動範圍、校方通知來源、截止或集合窗口、家庭準備、提交或參與觀察與後續複查分開。工具不保存學生個資、完整通知或健康資料，也不證明學校已收件或孩子已參與。" : "Separate the school-activity scope, school notice source, deadline or meeting window, household preparation, submission or participation observation and follow-up review. This tool stores no student identifiers, full notices or health data and does not prove school receipt or participation.",
+    fields: [
+      text("review", zh ? "家庭學校活動複查私人代號" : "Private household-school activity reference", zh ? "使用家庭代號，不要輸入學生姓名、學號、校址、電話或健康資料。" : "Use a household code; do not enter student names, IDs, school addresses, phone numbers or health data.", "SCHOOL-REVIEW-2026-A"),
+      { name: "context", label: zh ? "學校活動情境" : "School-activity context", type: "select", options: zh ? ["校外教學或同意表", "運動會、園遊會或校慶", "課後活動或社團報名", "用品、服裝或費用準備", "活動後提交與參與複查", "其他家庭學校安排"] : ["Field trip or permission form", "Sports day, fair or school celebration", "After-school activity or club registration", "Supply, clothing or fee preparation", "Post-event submission and participation review", "Other household-school plan"] },
+      { name: "reviewDate", label: zh ? "本次活動複查日期" : "Current activity-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次截止或結果複查日期" : "Next deadline or result-review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "校方通知與提交來源地圖" : "School notice and submission source map", zh ? "只填受控來源代號，不要貼完整通知或學生個資。" : "Use controlled source codes; do not paste a full notice or student identifiers.", "NOTICE-N1; FORM-F1; RESULT-R1"),
+      text("rows", zh ? "學校活動與截止日交接列" : "School-activity and deadline rows", zh ? "每行 9 欄：ID｜活動範圍｜觀察日期 YYYY-MM-DD｜來源代號｜截止日或集合窗口｜家庭角色與準備觀察｜提交／參與結果或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | activity scope | observed date YYYY-MM-DD | source code | deadline or meeting window | household role and preparation observation | submission/participation result or next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護校方通知與家庭來源位置" : "Protected school-notice and household-source location", zh ? "只寫保管流程或容器代號，不要放完整通知、學生資料或通信全文。" : "Name a custody process or container, not a full notice, student data or correspondence.", zh ? "家庭紀錄／學校活動／SCHOOL-REVIEW-2026-A／受保護來源" : "Household records / school activities / SCHOOL-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次學校活動複查日期。" : "Enter valid current and next school-activity review dates.";
+      if (next < review) return zh ? "下一次截止或結果複查日期不能早於本次複查。" : "The next deadline or result review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全活動代號、來源地圖與受保護位置。" : "Provide a safe activity reference, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行學校活動交接列。" : "Enter 1 to 14 school-activity handoff rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `活動第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Activity line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行活動紀錄都需要唯一 ID。" : "Every activity row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `活動第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Activity line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observed date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 4);
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `活動第 ${thin.map((row) => row.line).join("、")} 行需要範圍、來源、窗口、準備、觀察、下一步與角色。` : `Activity line ${thin.map((row) => row.line).join(", ")} needs scope, source, window, preparation, observation, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、學生或活動識別資料；請改用安全代號。" : "A full contact, student or activity identifier was detected; use safe codes.";
+      if (/password|passcode|student id|student number|full address|phone number|medical|health record|private message|密碼|學號|學生姓名|完整地址|電話|健康資料|醫療|私人訊息/i.test(privacy)) return zh ? "偵測到學生、聯絡、健康或私人通信資料；請只保留安全來源代號。" : "Student, contact, health or private-message data was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭學校活動與截止日複查" : " — household school activity and deadline review"), (zh ? "活動情境：" : "Activity context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次截止或結果複查：" : "Next deadline or result review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已觀察提交或參與列：" : "Submission or participation observed rows: ") + closed.length, (zh ? "來源地圖：" : "Source map: ") + values.source.trim(), (zh ? "有版本的活動觀察\n" : "Versioned activity observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜窗口：" : " — window: ") + row.parts[4] + (zh ? "｜準備／觀察：" : " — preparation/observation: ") + row.parts[5] + (zh ? "｜下一步：" : " — next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護校方通知與家庭來源位置：" : "Protected school-notice and household-source location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭學校活動、準備與複查，不保存學生個資或健康資料、不證明校方收件或參與結果，也不取代校方正式通知。" : "This output only organizes household school activities, preparation and review. It stores no student or health data, does not prove school receipt or participation and does not replace the school's official notice."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -8167,6 +8213,9 @@ const definitions: Record<string, Definition> = {
   "household-monthly-review-action-log": {
     ...monthlyReviewActionDefinition("en"),
   },
+  "household-school-activity-handoff-log": {
+    ...schoolActivityHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -8276,6 +8325,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-monthly-review-action-log": {
     ...monthlyReviewActionDefinition("zh-TW"),
+  },
+  "household-school-activity-handoff-log": {
+    ...schoolActivityHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

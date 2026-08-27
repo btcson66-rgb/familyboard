@@ -245,6 +245,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-monthly-review-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-monthly-review-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-monthly-review-action-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-school-activity-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-school-activity-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-activity-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1097,6 +1100,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Review the system, not every detail",
       "Keep a next-month checkpoint",
+    ],
+  },
+  {
+    path: "/tools/household-school-activity-handoff-log/",
+    require: [
+      "Household School Activity Handoff Log",
+      'hreflang="zh-TW"',
+      "Use the school source as authority",
+      "Separate preparation from participation",
     ],
   },
   {
@@ -2183,6 +2195,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-school-activity-handoff-log/",
+    require: [
+      "家庭學校活動交接工具",
+      'hreflang="en"',
+      "用安全活動代號開始",
+      "同意、準備、提交和參與不是同一件事",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2279,6 +2300,16 @@ const checks = [
       'lang="zh-TW"',
       "建立安全來源地圖",
       "核對備份與文件索引",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-school-activity-handoff-tutorial/",
+    require: [
+      "FamilyBoard 學校活動怎麼交接",
+      'lang="zh-TW"',
+      "建立不含學生個資的活動 ID",
+      "區分五個容易混淆的事件",
     ],
     forbid: ['rel="alternate"'],
   },
