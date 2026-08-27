@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 管理外出期間信件包裹
 primaryKeyword: "FamilyBoard 包裹代收教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-mail-package-handoff-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

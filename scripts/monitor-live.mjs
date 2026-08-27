@@ -228,6 +228,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-recycling-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-recycling-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-recycling-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-recycling-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-donation-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-donation-handoff-log/</loc>",
@@ -235,9 +236,11 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-donation-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-mail-package-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-mail-package-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-mail-package-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-mail-package-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-plant-care-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-plant-care-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-plant-care-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-plant-care-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-guest-arrival-prep-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-guest-arrival-prep-log/</loc>",
@@ -2347,14 +2350,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-recycling-handoff-tutorial/",
+    require: [
+      "FamilyBoard Recycling Handoff Tutorial",
+      'hreflang="zh-TW"',
+      "Separate rule, preparation and observation",
+      "does not classify an item",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-recycling-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭垃圾與資源回收怎麼交接",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先選目前適用的公告來源",
       "用家庭會議修正流程",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-donation-handoff-log/",
@@ -2511,24 +2523,42 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-mail-package-handoff-tutorial/",
+    require: [
+      "FamilyBoard Mail and Package Handoff Tutorial",
+      'hreflang="zh-TW"',
+      "Separate notice, collection and return review",
+      "does not read letters",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-mail-package-handoff-tutorial/",
     require: [
       "FamilyBoard 信件與包裹怎麼交接",
       'lang="zh-TW"',
+      'hreflang="en"',
       "限定外出與返家時間",
       "返家後做短複查",
     ],
-    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/guides/familyboard-plant-care-handoff-tutorial/",
+    require: [
+      "FamilyBoard Plant Care Handoff Tutorial",
+      'hreflang="zh-TW"',
+      "Describe actions and observations separately",
+      "does not diagnose disease",
+    ],
   },
   {
     path: "/zh-tw/guides/familyboard-plant-care-handoff-tutorial/",
     require: [
       "FamilyBoard 植物照護怎麼交接",
       'lang="zh-TW"',
+      'hreflang="en"',
       "限定外出與返家日期",
       "返家後做短複查",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/guides/familyboard-guest-arrival-prep-tutorial/",

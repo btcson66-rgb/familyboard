@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 交接垃圾與資源回收準
 primaryKeyword: "FamilyBoard 資源回收教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-recycling-handoff-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

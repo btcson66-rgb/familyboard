@@ -2696,6 +2696,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-mail-package-handoff-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-mail-package-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-plant-care-handoff-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-plant-care-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-recycling-handoff-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-recycling-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3196,7 +3220,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-mail-package-handoff-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-mail-package-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3259,7 +3283,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-plant-care-handoff-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-plant-care-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3273,7 +3297,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-recycling-handoff-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-recycling-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

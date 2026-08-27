@@ -2496,6 +2496,30 @@
     "headings": "How to Use FamilyBoard to Check Replacement-Part Sources Start with one part that causes rework Use a safe device reference Record the controlling source Keep stock, purchase and use separate Use honest statuses and deliberate tasks Minimise data and avoid unsafe experiments Keep affiliate products from changing the answer Eight-question closeout"
   },
   {
+    "title": "FamilyBoard Mail and Package Handoff Tutorial | Collection and Return Review",
+    "description": "Learn how to organise mail and package handoffs with FamilyBoard: set a time window, protect addresses and tracking codes, assign a collector and record the return-home result.",
+    "route": "/guides/familyboard-mail-package-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard mail and package handoff tutorial",
+    "headings": "How to Use FamilyBoard for Mail and Package Handoffs Start with a neutral handoff code Define the start and return windows Keep the location general Link the source without copying its contents Separate notice, collection and return review Assign a collector and a backup Run a low-risk rehearsal Keep affiliate material optional Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Plant Care Handoff Tutorial | Watering, Scope and Return Review",
+    "description": "Learn how to organise a plant-care handoff with FamilyBoard: define plant groups, record the care source, assign a backup and document visible observations without pretending to diagnose disease.",
+    "route": "/guides/familyboard-plant-care-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard plant care handoff tutorial",
+    "headings": "How to Use FamilyBoard for Plant-Care Handoffs Create a non-identifying plant code Set the absence and return dates Link to a care source Describe actions and observations separately Name a primary and backup caretaker Keep weather and special events versioned Run a no-access rehearsal Keep recommendations after the answer Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Recycling Handoff Tutorial | Notices, Sorting and Missed Collection",
+    "description": "Learn how to organise a recycling handoff with FamilyBoard: record the current local notice, separate household observations from rules, assign a role and track a missed collection safely.",
+    "route": "/guides/familyboard-recycling-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard recycling handoff tutorial",
+    "headings": "How to Use FamilyBoard for Recycling Handoffs Start with a safe recycling code Identify the current source Separate rule, preparation and observation Define a small handoff scope Assign a preparation and follow-up role Track a missed collection without guessing Run a local-notice rehearsal Keep supplies and affiliate content secondary Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

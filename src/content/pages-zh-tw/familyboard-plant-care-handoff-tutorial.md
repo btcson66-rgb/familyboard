@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 管理外出期間植物照護
 primaryKeyword: "FamilyBoard 植物照護教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-plant-care-handoff-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

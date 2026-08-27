@@ -23019,6 +23019,213 @@ Is the scope one error-prone part? Is the device a safe reference? Can an author
 
 ---
 
+## Page 338 — How to Use FamilyBoard for Mail and Package Handoffs
+**Slug:** /guides/familyboard-mail-package-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
+**Primary intent:** learn a privacy-aware FamilyBoard workflow for collecting mail and packages during travel, moving or short absences
+**Title tag:** FamilyBoard Mail and Package Handoff Tutorial | Collection and Return Review
+**Meta description:** Learn how to organise mail and package handoffs with FamilyBoard: set a time window, protect addresses and tracking codes, assign a collector and record the return-home result.
+**Primary keyword concept:** FamilyBoard mail and package handoff tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-mail-package-handoff-log/`, `/guides/familyboard-trip-handoff-tutorial/`, `/guides/familyboard-offline-backup-restore/`, `/guides/familyboard-household-admin-backup-tutorial/`, `/zh-tw/guides/familyboard-mail-package-handoff-tutorial/`
+**FAQ:**
+- Q: Can FamilyBoard check tracking status or read a letter?
+  A: No. It stores a household handoff summary; the postal or carrier source remains controlling.
+- Q: Should the shared row contain a full address or tracking code?
+  A: No. Use a safe code and deliver necessary details through a protected channel.
+- Q: Does a delivery notification close the task?
+  A: No. Record the observable collection or return-home check separately.
+- Q: Can a storage product guarantee delivery security?
+  A: No. Recommendations are optional and cannot replace the household’s controlled process.
+
+**Contextual CTA:** Create one mail code, define the absence window and assign a collector plus a return-home check.
+
+# How to Use FamilyBoard for Mail and Package Handoffs
+
+Mail and packages are easy to overlook during a trip, temporary move or apartment handoff. A carrier notification is not the same as a collected parcel, and a collected parcel is not the same as a checked return-home result. The free [Mail and Package Handoff Log](/tools/household-mail-package-handoff-log/) separates the time window, protected source, collector and visible result. It does not read letters, inspect tracking systems, store addresses or guarantee that a carrier, management office or neighbour has accepted a parcel.
+
+## Start with a neutral handoff code
+
+Use `MAIL-REVIEW-2026-A` or another code without a name, address, phone number, tracking number or item description. Choose a purpose such as weekend absence, long trip, moving week or management-office collection. A code lets the backup role find the right row without turning a shared display or exported file into a delivery record.
+
+## Define the start and return windows
+
+Record when the household stops checking and when a collector should review the protected source. Add a separate return-home review date. Short absence, long travel, moving day and a delayed return have different expectations. If dates or the collector change, preserve the old observation and create a new version; do not leave an expired arrangement looking current.
+
+## Keep the location general
+
+Write “designated household container” or “management-office collection” rather than a full address, unit number or access instruction. If a collector needs a key, intercom step or exact location, use the household’s controlled handoff process. FamilyBoard should hold only the work boundary and a source code. A row is not permission to enter a property or retrieve another person’s mail.
+
+## Link the source without copying its contents
+
+Use `CARRIER-C1` for the current carrier account held in a protected system, `BUILDING-B1` for a management notice or `HOUSEHOLD-H1` for an approved family instruction. Record the date checked. A notification, forwarded message or remembered delivery time is a lead until the responsible source or collector confirms what happened.
+
+## Separate notice, collection and return review
+
+“Delivery notice received” is an observation. “Collector accepted the parcel” is a collection result. “Parcel is present and the outer packaging is visibly intact on return” is a household check. Keep letter content, recipient identity, tracking data and claims about damage in their appropriate controlled systems. Do not close the row because a courier app says delivered or because someone said they would look later.
+
+## Assign a collector and a backup
+
+Use a role such as household mail collector, management-office contact or travel backup. Add a trigger for backup takeover, such as a missed window or changed return date. The FamilyBoard date is a household checkpoint, not a carrier deadline, proof of delivery or promise of reimbursement. If an item is missing or misdirected, record the gap and return to the carrier or building process.
+
+## Run a low-risk rehearsal
+
+Before travelling, create a test row with no real address, tracking code or recipient. Ask the backup role to identify the source, collection boundary and return check. If they need private details to understand the row, improve the code and controlled handoff rather than pasting the full message. Label the test clearly so it cannot be mistaken for an active parcel.
+
+## Keep affiliate material optional
+
+Parcel boxes, labels or storage trays may be compared after the workflow is answered, outside the form, clearly disclosed and easy to skip. A product cannot guarantee delivery, protect every letter or replace a carrier, building or household process. The useful output is a dated record of what was observed and what still needs confirmation.
+
+## Eight-question closeout
+
+Is the code neutral? Are start and return windows explicit? Is the location general? Is the source protected and dated? Are notice, collection and return review separate? Are collector and backup triggers clear? Did sharing remove address, tracking and letter data? Is any recommendation optional and disclosed? If not, keep the handoff open.
+
+---
+
+## Page 339 — How to Use FamilyBoard for Plant-Care Handoffs
+**Slug:** /guides/familyboard-plant-care-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
+**Primary intent:** learn to hand off indoor and balcony plant care with a bounded scope, source notes and a cautious return-home observation
+**Title tag:** FamilyBoard Plant Care Handoff Tutorial | Watering, Scope and Return Review
+**Meta description:** Learn how to organise a plant-care handoff with FamilyBoard: define plant groups, record the care source, assign a backup and document visible observations without pretending to diagnose disease.
+**Primary keyword concept:** FamilyBoard plant care handoff tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-plant-care-handoff-log/`, `/guides/familyboard-trip-handoff-tutorial/`, `/guides/familyboard-guest-arrival-prep-tutorial/`, `/tools/household-storm-readiness-review/`, `/zh-tw/guides/familyboard-plant-care-handoff-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard calculate watering or diagnose disease?
+  A: No. It records the household handoff and observations; plant-specific guidance comes from an appropriate source.
+- Q: Should a caretaker receive the full address or access code in the row?
+  A: No. Use a safe code and a separate controlled access process.
+- Q: Is a watering action proof that the plant is healthy?
+  A: No. Record what was done and what was visibly observed without inferring cause or recovery.
+- Q: Can an affiliate pot or lamp guarantee plant survival?
+  A: No. Products are optional and cannot replace current care guidance or observation.
+
+**Contextual CTA:** Group two plants by care scope, assign a backup role and schedule one dated return-home observation.
+
+# How to Use FamilyBoard for Plant-Care Handoffs
+
+“Remember to water the plants” hides several decisions: which plants, what source describes their care, what changes with weather or travel and who checks the result after returning. The free [Plant Care Handoff Log](/tools/household-plant-care-handoff-log/) turns that reminder into a bounded household handoff. It does not diagnose disease, calculate a correct amount of water, control a pump, identify a property or replace horticultural guidance.
+
+## Create a non-identifying plant code
+
+Use `PLANT-TRIP-2026-A` and a group such as “living-room foliage” or “balcony herb pots.” Do not add names, addresses, access details, private messages or a full photo album. A group should be small enough that the caretaker can tell which plants are included without exposing a household map.
+
+## Set the absence and return dates
+
+Separate a weekend away, a long trip, a typhoon preparation and a move. Record when the caretaker should review the source and when the household will inspect visible conditions after returning. If the dates or role change, preserve the previous observation and create a new version. Do not reuse yesterday’s plan for a different season or location.
+
+## Link to a care source
+
+Use `CARE-C1` for a protected care note, `NURSERY-N1` for a current nursery instruction or `WEATHER-W1` only as a lead to be checked through the appropriate official source. Record the check date. The source code is a path to information, not a diagnosis or a guarantee that the plant needs a fixed schedule.
+
+## Describe actions and observations separately
+
+“Checked soil surface,” “moved away from a window” or “watered according to the protected note” are actions. “Leaves visibly drooping” or “pot still damp” is an observation. Do not convert either into “healthy,” “diseased” or “will recover.” For mould, pests, electrical equipment, high places or other safety concerns, pause and use a qualified or appropriate source.
+
+## Name a primary and backup caretaker
+
+Use a role such as plant-care role, travel backup or balcony check role. Define a trigger for backup takeover and the minimum area they may access. Keys and entry instructions belong in the controlled access process, not the shared row. A FamilyBoard date is a household checkpoint, not a horticultural deadline or a weather warning.
+
+## Keep weather and special events versioned
+
+Heavy rain, heat, a cold snap or a building maintenance notice may change the plan. Record the new source and date rather than silently editing the old instruction. If a pot is moved or a plant is temporarily sheltered, note the visible action and the next check. The log should preserve why the plan changed without claiming the cause of later damage.
+
+## Run a no-access rehearsal
+
+Create a test group with imaginary plants and ask the backup to locate the care source, state the access boundary and write a cautious observation. Do not test keys, alarms or electrical watering equipment. Fix unclear role or source wording before the trip; never add private details merely to make the drill easier.
+
+## Keep recommendations after the answer
+
+Pots, trays, labels or shade cloth may be useful, but affiliate information belongs outside the form, after the workflow, clearly disclosed and skippable. A product cannot diagnose a plant, guarantee growth, replace care instructions or make a balcony safe. The result that matters is a dated, observable handoff.
+
+## Eight-question closeout
+
+Is the plant group bounded? Are absence and return dates clear? Is the care source dated? Are actions separate from observations? Are diagnosis and safety questions escalated? Are primary and backup roles explicit? Did sharing remove address and access data? Is any product recommendation optional and disclosed? If not, keep the row open.
+
+---
+
+## Page 340 — How to Use FamilyBoard for Recycling Handoffs
+**Slug:** /guides/familyboard-recycling-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-recycling-handoff-tutorial/
+**Primary intent:** learn to track local recycling notices, temporary storage and missed collection follow-up without turning household habits into official rules
+**Title tag:** FamilyBoard Recycling Handoff Tutorial | Notices, Sorting and Missed Collection
+**Meta description:** Learn how to organise a recycling handoff with FamilyBoard: record the current local notice, separate household observations from rules, assign a role and track a missed collection safely.
+**Primary keyword concept:** FamilyBoard recycling handoff tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-recycling-handoff-log/`, `/guides/familyboard-trip-handoff-tutorial/`, `/guides/familyboard-donation-handoff-tutorial/`, `/tools/household-donation-handoff-log/`, `/zh-tw/guides/familyboard-recycling-handoff-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard decide whether an item is recyclable?
+  A: No. The current local authority, building or collection operator source controls the rule.
+- Q: Should a shared row include the full address or collection route?
+  A: No. Use a safe code and keep locating details in a controlled source.
+- Q: Can a missed pickup be marked complete because a message was sent?
+  A: No. Keep the observation, question and confirmed collection result separate.
+- Q: Can a bin or label product guarantee acceptance?
+  A: No. Recommendations are optional and cannot replace local instructions.
+
+**Contextual CTA:** Create one recycling code, link the current notice and assign a role to check any missed collection.
+
+# How to Use FamilyBoard for Recycling Handoffs
+
+Households often combine a city notice, a building rule, a collection operator’s instruction and a family habit. Those sources can disagree or change during holidays, storms or a move. The free [Recycling Handoff Log](/tools/household-recycling-handoff-log/) helps a household record which source was checked, what is temporarily stored, who is responsible and what actually happened. It does not classify an item, guarantee collection, identify a route or turn a familiar habit into an official rule.
+
+## Start with a safe recycling code
+
+Use `RECYCLE-REVIEW-2026-A` without a full address, building name, resident name, phone number, account number or private message. A general location such as “designated container” is enough for a household role. If a precise location or route is necessary, keep it in the controlled local or building process.
+
+## Identify the current source
+
+Use `CITY-NOTICE-C1` for the local environmental authority, `BUILDING-B1` for a management notice or `OPERATOR-O1` for the current collection operator. Record when the source was checked. A neighbour’s memory, an old poster or last week’s time is a lead, not proof that today’s category, route or holiday arrangement is valid.
+
+## Separate rule, preparation and observation
+
+The notice says what the authority or operator currently publishes. Preparation might be “rinse and hold the container in the designated area.” Observation might be “collection not seen by the expected check.” Do not write “accepted,” “safe” or “recyclable” from appearance alone. For batteries, chemicals, sharp objects, electronics or recalled products, return to the appropriate official or qualified source.
+
+## Define a small handoff scope
+
+Use one row for a holiday collection change, a moving-week temporary container or a missed pickup. Do not combine every household disposal question into a permanent status. A narrow scope helps the backup role know which notice and which visible result to check. If the route or building rule changes, keep the old observation and create a new version.
+
+## Assign a preparation and follow-up role
+
+Use roles such as recycling-preparation, building-contact or missed-collection follow-up. Define when a backup takes over: the primary is away, a notice changes or collection is not observed by the check window. A FamilyBoard date is a household checkpoint, not a municipal deadline or a promise that a truck will arrive.
+
+## Track a missed collection without guessing
+
+Record the date, general area, source code and visible observation. Then create a question for the responsible operator or building channel. “Message sent” is an action; “operator confirmed a revised pickup” is a source-backed result. Keep the row open when there is no attributable answer. Do not advise a neighbour to change a route or dispose of a special item based only on the FamilyBoard note.
+
+## Run a local-notice rehearsal
+
+Use an imaginary holiday notice and ask a backup role to find the source, explain which fact is confirmed and state what remains unknown. Do not use a real address or route. If the exercise exposes conflicting notices, record the conflict and escalation path; do not solve it by copying every message into the shared row.
+
+## Keep supplies and affiliate content secondary
+
+Bins, labels, gloves or storage containers may be compared after the workflow, outside the form, clearly disclosed and easy to skip. A product cannot guarantee acceptance, replace local rules, make hazardous material safe or prove that a collection occurred. The useful output is an honest source and follow-up record.
+
+## Eight-question closeout
+
+Is the code non-identifying? Is the current source dated? Are rule, preparation and observation separate? Is the scope narrow? Are special items escalated? Are primary and backup triggers clear? Is a missed pickup tied to an attributable response? Did sharing remove location data and private messages? If not, leave the handoff open.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

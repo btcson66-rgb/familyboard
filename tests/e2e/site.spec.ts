@@ -129,6 +129,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-guest-arrival-prep-tutorial/",
     "/guides/familyboard-donation-handoff-tutorial/",
     "/guides/familyboard-household-admin-backup-tutorial/",
+    "/guides/familyboard-mail-package-handoff-tutorial/",
+    "/guides/familyboard-plant-care-handoff-tutorial/",
+    "/guides/familyboard-recycling-handoff-tutorial/",
     "/tools/household-seasonal-reset-action-log/",
     "/tools/household-device-retirement-handoff-log/",
     "/tools/household-router-support-review-log/",
@@ -1343,6 +1346,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
       alternate: "/guides/familyboard-household-admin-backup-tutorial/",
       heading: "FamilyBoard 家庭行政交接怎麼用？備援角色實作教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-mail-package-handoff-tutorial/",
+      alternate: "/guides/familyboard-mail-package-handoff-tutorial/",
+      heading: "FamilyBoard 信件與包裹怎麼交接？先限定時段，再記實際結果",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-plant-care-handoff-tutorial/",
+      alternate: "/guides/familyboard-plant-care-handoff-tutorial/",
+      heading: "FamilyBoard 植物照護怎麼交接？先寫範圍，再回填實際結果",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-recycling-handoff-tutorial/",
+      alternate: "/guides/familyboard-recycling-handoff-tutorial/",
+      heading: "FamilyBoard 家庭垃圾與資源回收怎麼交接？先查公告，再記實際結果",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -3250,6 +3268,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-mail-package-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-mail-package-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-plant-care-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-plant-care-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-recycling-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-recycling-handoff-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",
