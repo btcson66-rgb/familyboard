@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T13:10:47.269Z
+Generated: 2026-08-27T13:41:19.942Z
 
 ## Summary
 
-- Indexable pages: 472
-- Generated HTML routes: 489
+- Indexable pages: 475
+- Generated HTML routes: 492
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 257
+- Pages without a contextual product/tool link: 259
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-27T13:10:47.269Z
 - product: 68
 - appliances: 30
 - maintenance: 41
-- household-operations: 75
+- household-operations: 78
 - inventory-warranty: 41
 - records-emergency: 55
 - tools: 121
@@ -33,8 +33,9 @@ Generated: 2026-08-27T13:10:47.269Z
 
 ## Highest similarity pairs
 
-- 289-zh-tw--tools--household-router-support-review-log.md ↔ 290-zh-tw--guides--familyboard-router-support-review-tutorial.md: 0.178
+- 292-zh-tw--tools--household-shopping-list-planner.md ↔ 293-zh-tw--guides--familyboard-shopping-list-planner-tutorial.md: 0.240
 - 227-tools--household-pet-record-source-handoff-log.md ↔ 228-tools--household-school-record-source-handoff-log.md: 0.170
+- 289-zh-tw--tools--household-router-support-review-log.md ↔ 290-zh-tw--guides--familyboard-router-support-review-tutorial.md: 0.159
 
 ## Safety-source warnings
 
@@ -169,6 +170,7 @@ Generated: 2026-08-27T13:10:47.269Z
 - /zh-tw/guides/familyboard-service-appointment-handoff-tutorial/
 - /zh-tw/guides/familyboard-service-quote-comparison-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
+- /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
@@ -282,6 +284,7 @@ Generated: 2026-08-27T13:10:47.269Z
 - /zh-tw/tools/household-service-appointment-handoff-log/
 - /zh-tw/tools/household-service-quote-comparison-log/
 - /zh-tw/tools/household-share-access-review-log/
+- /zh-tw/tools/household-shopping-list-planner/
 - /zh-tw/tools/household-storm-readiness-review/
 - /zh-tw/tools/household-subscription-cancellation-handoff-log/
 - /zh-tw/tools/household-subscription-cost-calculator/

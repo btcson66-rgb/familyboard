@@ -2782,6 +2782,77 @@ const householdMeetingDefinition = (locale: Locale): Definition => {
   };
 };
 
+const householdShoppingDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立採買品項代號，等待用途與來源",
+        "已核對用途與來源，等待數量或單位",
+        "已規劃數量與單位，等待負責角色",
+        "已安排角色與採買窗口，等待採買行動",
+        "已記錄採買或替代行動，等待到貨／使用複查",
+        "品項缺貨、不適用或來源疑問，等待負責來源確認",
+        "已到貨、使用、替代或結束並保存結果",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Item reference created—purpose and source pending",
+        "Purpose and source checked—quantity or unit pending",
+        "Quantity and unit planned—owner role pending",
+        "Owner and shopping window assigned—purchase action pending",
+        "Purchase or substitution action recorded—arrival or use review pending",
+        "Item unavailable, unsuitable or source question—responsible review pending",
+        "Received, used, substituted or closed—result preserved",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "SHOP-A | 早餐乾糧類 | 2 包；以包裝單位記錄 | 本週早餐備品；先核對家中現有數量 | 家庭採買來源 S1；品牌限制留在受保護來源 | 採買角色 | 2026-09-03 | 到貨後核對數量與包裝，不把訂單全文貼入 | 已安排角色與採買窗口，等待採買行動\nSHOP-B | 清潔耗材類 | 1 組；實際規格待核對 | 浴室清潔週期所需；只保留家庭用途 | 原廠／商店來源 S2；相容性以說明書為準 | 家務維護角色 | 2026-09-05 | 先確認現有庫存與適用規格，再決定是否採買 | 已核對用途與來源，等待數量或單位"
+    : "SHOP-A | Breakfast dry-goods category | 2 packages; use the package unit | Supplies for this week's breakfast; check current stock first | Household shopping source S1; brand constraints stay protected | Household shopping role | 2026-09-03 | Check quantity and packaging after arrival; do not paste the order | Owner and shopping window assigned—purchase action pending\nSHOP-B | Cleaning consumables category | 1 set; exact specification pending | Needed for the bathroom-cleaning cycle; keep only the household purpose | Manufacturer or store source S2; use the manual for compatibility | Home-maintenance role | 2026-09-05 | Confirm current stock and applicable specification before buying | Purpose and source checked—quantity or unit pending";
+  return {
+    intro: zh
+      ? "把家庭採買需求、用途、來源、數量單位、負責角色、採買窗口與到貨／使用結果分開記錄。工具不讀取庫存、不比價、不判定營養、過敏、食品安全或商品相容性；請以實際標示、原廠與負責商家或專業來源為準。"
+      : "Separate household shopping needs, purpose, source, quantity, owner, shopping window and arrival or use results. This tool does not scan inventory, compare prices or decide nutrition, allergy, food safety or product compatibility; follow the actual label, manufacturer and responsible seller or qualified source.",
+    fields: [
+      text("review", zh ? "採買清單私人代號" : "Private shopping-list reference", zh ? "使用家庭代號，不要輸入姓名、地址、帳號、付款或完整訂單內容。" : "Use a household code; do not enter names, addresses, accounts, payment data or full orders.", "SHOPPING-2026-A"),
+      { name: "context", label: zh ? "採買情境" : "Shopping context", type: "select", options: zh ? ["每週家庭補貨", "餐前準備與食材採買", "清潔與維護耗材", "旅行或住家交接", "到貨後缺品複查", "其他家庭採買"] : ["Weekly household restock", "Meal preparation shopping", "Cleaning and maintenance supplies", "Travel or home handoff", "After-delivery gap review", "Other household shopping"] },
+      { name: "reviewDate", label: zh ? "本次清單檢視日期" : "Current list review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次到貨／使用複查日期" : "Next arrival or use review date", type: "date", value: "2026-09-03" },
+      text("source", zh ? "庫存、標示與採買來源地圖" : "Stock, label and shopping-source map", zh ? "只填安全代號或可重開的位置，不要貼訂單、地址、付款或完整標示內容。" : "Use safe codes or reopenable locations; do not paste orders, addresses, payment data or full labels.", "STOCK-S1; LABEL-L1; SHOP-S2"),
+      text("rows", zh ? "家庭採買品項列" : "Household shopping rows", zh ? "每行 9 欄：ID｜品項／類別代號｜數量與單位｜家庭用途或需求｜來源／品牌／規格限制｜負責角色｜目標或行動日期 YYYY-MM-DD｜到貨／使用觀察｜指定狀態。最多 16 行。" : "Each row uses 9 fields: ID | item or category code | quantity and unit | household purpose or need | source, brand or specification constraint | owner role | target or action date YYYY-MM-DD | arrival or use observation | exact status. Maximum 16 rows.", defaults),
+      text("storage", zh ? "受保護標示、收據與採買歷程位置" : "Protected labels, receipts and shopping-history location", zh ? "只寫保管流程或容器代號，不要放完整地址、付款或私人通信。" : "Name a custody process or container, not a full address, payment detail or private correspondence.", zh ? "家庭紀錄／採買複查／SHOPPING-2026-A／受保護來源" : "Household records / shopping review / SHOPPING-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate);
+      const next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次清單與下一次複查日期。" : "Enter valid current-list and next-review dates.";
+      if (next < review) return zh ? "下一次複查日期不能早於本次清單檢視。" : "The next review date cannot be earlier than the current list review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 10 || values.storage.trim().length < 10) return zh ? "請提供安全清單代號、來源地圖與受保護位置。" : "Provide a safe list code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 16) return zh ? "請輸入 1 至 16 行家庭採買列。" : "Enter 1 to 16 household shopping rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `採買第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Shopping line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行採買都需要唯一 ID。" : "Every shopping row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `採買第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Shopping line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const actionDates = parsed.map((row) => strictIsoDate(row.parts[6]));
+      if (actionDates.some((date) => !date || date < review || date > next)) return zh ? "每列目標或行動日期必須介於本次清單檢視與下一次複查之間。" : "Each target or action date must fall between the current list review and next review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 6);
+      const invalidClosed = closed.filter((row, index) => actionDates[index]! > review);
+      if (invalidClosed.length) return zh ? `已結束採買第 ${invalidClosed.map((row) => row.line).join("、")} 行的日期不能晚於本次清單檢視。` : `Closed shopping line ${invalidClosed.map((row) => row.line).join(", ")} cannot have a date later than the current list review.`;
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 2 || row.parts[3].length < 8 || row.parts[4].length < 8 || row.parts[5].length < 3 || row.parts[7].length < 10);
+      if (thin.length) return zh ? `採買第 ${thin.map((row) => row.line).join("、")} 行需要品項、數量、用途、來源、角色與實際觀察。` : `Shopping line ${thin.map((row) => row.line).join(", ")} needs an item, quantity, purpose, source, owner and actual observation.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、帳號或付款識別資料；請改用安全代號。" : "A full contact, address, account or payment identifier was detected; use safe codes.";
+      if (/password|passcode|full address|street address|account number|card number|bank account|payment token|medical|diagnosis|allergy|private message|order number|姓名|完整地址|帳號|卡號|銀行帳戶|付款|醫療|診斷|過敏|私人訊息|訂單號碼/i.test(privacy)) return zh ? "偵測到地址、帳號、付款、醫療、過敏或私人通信資料；請只保留安全來源代號。" : "Address, account, payment, medical, allergy or private-message data was detected; keep only safe source codes.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = parsed.length - closed.length;
+      const counts = statuses.map((status) => ({ status, count: parsed.filter((row) => row.parts[8] === status).length })).filter((item) => item.count);
+      return [values.review.trim() + (zh ? "｜家庭採買與補貨清單" : " — household shopping and restock list"), (zh ? "採買情境：" : "Shopping context: ") + values.context, (zh ? "本次檢視：" : "Current review: ") + formatter.format(review), (zh ? "下一次到貨／使用複查：" : "Next arrival or use review: ") + formatter.format(next), (zh ? "仍開放列：" : "Open rows: ") + open, (zh ? "已結束或不適用列：" : "Closed or not-applicable rows: ") + closed.length, (zh ? "庫存、標示與採買來源地圖：" : "Stock, label and shopping-source map: ") + values.source.trim(), (zh ? "狀態統計：" : "Status count: ") + counts.map((item) => item.status + " " + item.count).join(zh ? "、" : " | "), (zh ? "有版本的採買與到貨／使用觀察\n" : "Versioned shopping and arrival/use observations\n") + parsed.map((row) => row.parts[0] + (zh ? "｜品項：" : " — item: ") + row.parts[1] + (zh ? "｜數量：" : " — quantity: ") + row.parts[2] + (zh ? "｜用途：" : " — purpose: ") + row.parts[3] + (zh ? "｜來源／限制：" : " — source/constraint: ") + row.parts[4] + (zh ? "｜角色：" : " — owner: ") + row.parts[5] + (zh ? "｜目標／行動日：" : " — target/action date: ") + formatter.format(actionDates[parsed.indexOf(row)] as Date) + (zh ? "｜觀察：" : " — observation: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護標示、收據與採買歷程位置：" : "Protected labels, receipts and shopping-history location: ") + values.storage.trim(), zh ? "這份輸出只協助家庭整理採買與補貨工作，不讀取庫存、不比價、不判定營養、過敏、食品安全、相容性或到貨結果，也不保存地址、付款或完整訂單；請以實際標示、原廠、負責商家與適用的合格來源為準。" : "This output only coordinates household shopping and restocking. It does not scan inventory, compare prices, decide nutrition, allergy, food safety or compatibility, confirm delivery, or store addresses, payment details or full orders; use the actual label, manufacturer, responsible seller and applicable qualified source."].join("\n\n");
+    },
+  };
+};
+
 const pantryExpiryDefinition = (locale: Locale): Definition => {
   const zh = locale === "zh-TW";
   const statuses = zh
@@ -8779,6 +8850,9 @@ const definitions: Record<string, Definition> = {
   "household-meeting-agenda-action-log": {
     ...householdMeetingDefinition("en"),
   },
+  "household-shopping-list-planner": {
+    ...householdShoppingDefinition("en"),
+  },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("en"),
   },
@@ -8900,6 +8974,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-meeting-agenda-action-log": {
     ...householdMeetingDefinition("zh-TW"),
+  },
+  "household-shopping-list-planner": {
+    ...householdShoppingDefinition("zh-TW"),
   },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("zh-TW"),

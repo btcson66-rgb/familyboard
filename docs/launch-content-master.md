@@ -19885,6 +19885,239 @@ FamilyBoard 的紀錄只需要「管理憑證在受保護保存庫，來源 SUPP
 
 每台設備和角色是否辨識？官方支援與韌體來源是否有日期？能用與受支援是否分開？ISP 所有權與歸還窗口是否確認？憑證是否完全留在受保護位置？汰換比較是否依家庭需求與相容性來源？新舊設備的實際結果是否分開記錄？分享前是否移除所有秘密與個資？八題都能回答「是」，才適合關閉這次路由器複查。
 
+## Page 291 — Household Shopping List Planner
+**Slug:** /tools/household-shopping-list-planner/
+**Primary intent:** build a household shopping and restock list by purpose, source, quantity, owner and observed result without creating a delivery or payment account
+**Title tag:** Household Shopping List Planner | Free Private Restock Tool
+**Meta description:** Create a practical household shopping list with safe item codes, quantities, purposes, sources, owners and arrival checks. The browser tool does not scan inventory, compare prices or store payment data.
+**Primary keyword concept:** household shopping list planner
+**Cluster:** household-operations
+**Page type:** tool
+**Language:** en
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** `/tools/household-pantry-expiry-review-log/`, `/tools/household-meal-prep-role-log/`, `/guides/household-supplies-inventory/`, `/features/free-home-management-app/`
+**FAQ:**
+- Q: Does this tool know what is already in my cupboards?
+  A: No. It formats the safe rows you enter; it cannot inspect a camera, pantry, receipt, delivery account or other inventory source.
+- Q: Can it compare prices or choose a store?
+  A: No. A source or constraint can point to a responsible label, manufacturer or seller, but the tool does not rank prices, place orders or recommend a purchase.
+- Q: Should I enter an allergy, medical or payment detail so the list is more useful?
+  A: No. Keep sensitive dietary, medical, payment, account and address details in the responsible protected process. Use a general purpose or safe source code here.
+- Q: Is an ordered item complete when I check it off?
+  A: No. Keep the row open until the household observes the actual arrival, substitution, use or unresolved shortage. An order, payment or delivery notice is only an action.
+- Q: Can a future affiliate product card replace this list?
+  A: No. A labelled recommendation may sit outside the tool, but it cannot guarantee stock, compatibility, delivery, quality or suitability.
+
+**Contextual CTA:** Start with two safe rows—one routine restock and one maintenance consumable—then assign an owner and record what actually arrived or was used.
+
+# Household Shopping List Planner
+
+“We need to buy it” is not yet a useful household record. A chat message may omit why an item is needed, which source controls the specification, who owns the errand, whether the home already has a suitable substitute or what happened after the purchase. This free browser tool turns a small shopping scope into a dated, private list without becoming a grocery-delivery service, a price-comparison engine or a nutrition database.
+
+Use it alongside, not instead of, the [Pantry Expiry Review Log](/tools/household-pantry-expiry-review-log/) for labelled dates and package observations, the [Meal Preparation and Roles Log](/tools/household-meal-prep-role-log/) for a planned serving task, and the [Household Supplies Inventory guide](/guides/household-supplies-inventory/) for deciding which recurring categories deserve a lighter list.
+
+## Begin with a purpose, not a giant inventory
+
+Choose one bounded context: a weekly restock, meal preparation, cleaning or maintenance consumables, travel handoff, or a review after a delivery gap. A bounded list is easier to inspect than a permanent catalogue of everything a household has ever bought. Use a private reference such as `SHOPPING-2026-A`; do not use a person’s name, address, account number or full order title.
+
+The tool records a household need, not a claim that the item is essential. “Replacement filter category” and “breakfast dry-goods category” explain the work without exposing a receipt or a person’s dietary history. If a need is governed by a medical, allergy, accessibility or professional instruction, keep that instruction in its responsible protected source and use only a safe pointer here.
+
+## Keep inventory, source and purchase result separate
+
+The home may have stock, a label, a manufacturer manual, a preferred seller and a delivery result. Those are different observations:
+
+- current stock is what someone actually sees in the home;
+- a label or manual controls a specification or compatibility question;
+- a seller or household source is where an action may be taken;
+- an arrival, substitution or use note is what the household later observes.
+
+The tool cannot scan shelves, read barcodes, open a delivery account or decide whether a substitute is equivalent. If a product must match an appliance or a written instruction, follow the actual model manual or responsible professional source before buying.
+
+## Use the nine fields in order
+
+Each row is entered as:
+
+`ID | item or category code | quantity and unit | household purpose or need | source, brand or specification constraint | owner role | target or action date YYYY-MM-DD | arrival or use observation | exact status`
+
+The item code can be broad enough to avoid exposing a sensitive purchase. The quantity should state a unit such as `2 packages`, `1 set` or `refill window pending`; it is not a promise that the seller has stock. The purpose says what household work the item supports. The source field points to a label, manual, existing supply list or seller policy without copying the whole document.
+
+Set a target date between the current review and the next review. That date is a household checkpoint, not a delivery promise, expiry date, price lock or legal deadline. A closed row must use a date no later than the current review and describe an observed result. If a purchase is still pending, keep the row open.
+
+## Eight statuses keep action from becoming evidence
+
+1. **Item reference created—purpose and source pending:** the household knows what work is involved but has not mapped the controlling source.
+2. **Purpose and source checked—quantity or unit pending:** the need and source are clear, while the amount remains to be confirmed.
+3. **Quantity and unit planned—owner role pending:** the list is specific, but nobody owns the next action yet.
+4. **Owner and shopping window assigned—purchase action pending:** responsibility and timing are visible, but no action has been observed.
+5. **Purchase or substitution action recorded—arrival or use review pending:** an order, shop visit or substitute decision happened; the household still needs a result.
+6. **Item unavailable, unsuitable or source question—responsible review pending:** the list cannot safely close until the source, specification or alternative is clarified.
+7. **Received, used, substituted or closed—result preserved:** the household recorded what actually happened and what should reopen the row.
+8. **Not applicable—reason and reopen event recorded:** the need ended for a stated reason and a future event can reopen it.
+
+The first six statuses remain open. A checkbox, payment receipt, delivery notification or “probably bought” message does not close a row. A closed row should say what was observed: `two packages received; quantity checked against the household need`, `substitute declined because the manual source was not matched`, or `maintenance consumable used; next source review assigned`.
+
+## Do not turn the list into a payment or health record
+
+Never paste a card number, bank detail, account credential, full order number, delivery address, private message or receipt contents. Do not add diagnoses, medication names, allergy histories or a child’s personal information to make a list “more precise.” Use a safe category and keep the source that requires the detail in its own protected system.
+
+The form screens for common contact, account, payment, address, medical, allergy and private-message patterns, but screening is only a backstop. Review every row before downloading, printing or sharing. The entries stay in the current browser and are not sent to FamilyBoard; the result is not automatically encrypted, backed up or synchronized.
+
+## Future affiliate placement must remain optional
+
+A future clearly labelled affiliate area could compare storage bins, labels, reusable bags, scanners or household organizers after the educational answer. It must remain outside the tool controls, offer a visible skip path and never imply that buying a product is required to complete a list. Commission cannot prove stock, delivery, compatibility, food safety, allergy suitability or maintenance outcome.
+
+**Next step:** create one routine restock row and one specification-sensitive maintenance row. Assign different owners if appropriate, leave any unresolved source question open, and record the actual arrival or use result only after someone observes it.
+
+## Page 292 — 家庭採買清單工具（Traditional Chinese）
+**Slug:** /zh-tw/tools/household-shopping-list-planner/
+**Primary intent:** help Taiwan households create a safe replenishment list by purpose, quantity, source, owner and actual arrival result
+**Title tag:** 家庭採買清單怎麼做？免費補貨與到貨複查工具｜FamilyBoard
+**Meta description:** 用 FamilyBoard 建立家庭補貨清單，分開記錄品項用途、數量單位、標示或原廠來源、負責角色與到貨結果；不讀庫存、不比價、不保存地址或付款資料。
+**Primary keyword concept:** 家庭採買清單、家庭補貨清單
+**Cluster:** household-operations
+**Page type:** tool
+**Language:** zh-TW
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** `/zh-tw/tools/household-pantry-expiry-review-log/`, `/zh-tw/tools/household-meal-prep-role-log/`, `/zh-tw/features/free-home-management-app/`, `/guides/household-supplies-inventory/`
+**FAQ:**
+- Q: 工具會知道家裡還剩多少嗎？
+  A: 不會。它只整理你輸入的安全列，不會讀取櫥櫃、冰箱、相簿、收據或外送帳號。
+- Q: 可以用它比較價格、選商店或自動下單嗎？
+  A: 不可以。來源欄只用來指回標示、說明書、家庭清單或負責商家；工具不比價、不排名、不下單。
+- Q: 為了提醒飲食需求，可以輸入過敏或病歷嗎？
+  A: 不要。過敏、醫療、付款、帳號、地址與完整訂單留在適合的受保護流程，這裡只放一般用途與安全來源代號。
+- Q: 已付款或收到到貨通知可以直接結束嗎？
+  A: 不行。仍要記錄實際到貨、替代、使用或缺貨結果；付款與通知只是行動證據。
+- Q: 未來的聯盟商品推薦會取代清單嗎？
+  A: 不會。商品區只能放在操作流程外並可略過，不能保證有貨、相容、到貨、品質或適用性。
+
+**Contextual CTA:** 先建立一列日常補貨與一列清潔／維護耗材，指定角色，再於到貨或使用後回填實際觀察。
+
+# 家庭採買清單怎麼做？免費補貨與到貨複查工具
+
+「要買衛生紙」或「記得補早餐」可以提醒自己，卻不一定能讓另一位家人接手。真正容易漏掉的是：這項採買支援什麼用途、家中是否已經有可用存量、哪個標示或說明書控制規格、誰負責、何時複查，以及最後到底收到什麼。這項免費瀏覽器工具把小範圍採買整理成有日期的家庭清單，不是購物車、外送平台、比價網站或營養資料庫。
+
+它可以搭配[家庭食品與消耗品期限複查工具](/zh-tw/tools/household-pantry-expiry-review-log/)處理標示與包裝觀察，搭配[家庭餐前準備與分工工具](/zh-tw/tools/household-meal-prep-role-log/)處理餐次角色；若要先決定哪些日用品值得固定補貨，可閱讀英文的[Household Supplies Inventory guide](/guides/household-supplies-inventory/)。
+
+## 先定義採買情境，不要把全家庫存搬進來
+
+一次只處理一個範圍：每週補貨、餐前準備、清潔與維護耗材、旅行或住家交接、到貨後缺品複查。用 `SHOPPING-2026-A` 這類家庭代號，不要用姓名、完整地址、帳號、訂單標題或可辨識住家的文字。
+
+品項可以寫成「早餐乾糧類」「浴室清潔耗材」「冷氣濾網類」等安全類別，並說明家庭用途。若需求受醫療、過敏、無障礙或專業指示影響，完整指示留在負責來源；工具只記安全來源代號，不要把敏感理由寫進共用清單。
+
+## 把庫存、來源與到貨結果分開
+
+家裡「看見還有一包」、標示「指定規格」、原廠手冊「說明相容性」、商家「接受訂單」與「實際收到兩包」是五種不同觀察。工具不讀櫥櫃、不掃條碼、不開外送帳號、不確認商家庫存，也不判斷替代品是否等值。需要配合設備或說明書時，先回到實際型號與負責來源核對。
+
+## 九欄格式讓家人知道下一步
+
+每列格式為：
+
+`ID｜品項／類別代號｜數量與單位｜家庭用途或需求｜來源／品牌／規格限制｜負責角色｜目標或行動日期 YYYY-MM-DD｜到貨／使用觀察｜指定狀態`
+
+目標日只能是家庭核點，不是到貨保證、保存期限、價格保證或法律期限。採買或替代行動發生後仍保持開放，直到有人記錄實際到貨、使用、缺貨或規格疑問。已結束列的日期不能晚於本次清單檢視日，避免把未來計畫寫成已完成。
+
+## 八種狀態把「已買」與「已收到」分開
+
+前六種狀態都保持開放：品項代號等待用途與來源、用途已核對等待數量、數量已規劃等待角色、角色與窗口已安排等待行動、已採買或替代等待到貨／使用、以及缺貨或規格疑問等待負責來源。只有「已到貨／使用／替代並保存結果」或「不適用並記錄重新開案事件」才關閉本列。
+
+`已付款`、`已下單`、`物流通知`、`家人說買了`與 `放進購物車` 都是行動，不是結果。較好的結束寫法是「收到兩包，數量與包裝已對照家庭需求」「替代品未採用，因原廠規格尚未比對」或「耗材已使用，下一次來源複查已指定」。
+
+## 不把清單變成付款、地址或健康資料
+
+不要輸入信用卡、銀行、帳號、完整訂單號、送貨地址、私人訊息、收據全文、病歷、藥物、過敏史或兒少個資。表單會攔截常見電話、Email、長識別碼、付款、地址、醫療與私人通信字樣，但自動攔截不可能理解所有情境。下載、列印或交接前，仍要逐列檢查。
+
+輸入只留在目前瀏覽器，不會上傳 FamilyBoard；結果也不會自動加密、備份或跨裝置同步。清除網站資料前依[繁中隱私權政策](/zh-tw/privacy/)先匯出適當備份，並把收據、標示與完整訂單留在受保護來源。
+
+## 聯盟商品只能在答案之後、而且可略過
+
+未來可以在教學完成後介紹收納箱、標籤、可重複使用購物袋、掃描器或家庭整理用品，但商品不能保證有貨、到貨、相容、食品安全、過敏適用或維護結果。聯盟區要清楚揭露、放在工具控制之外、提供略過路徑，也不能讓不買商品的使用者少一個功能。
+
+**下一步：** 建立一列日常補貨與一列需要核對規格的清潔／維護耗材，為每列指定角色與日期；到貨或使用後再填觀察，未確認的來源不要標記完成。
+
+## Page 293 — FamilyBoard 採買清單與補貨 App 教學（Traditional Chinese）
+**Slug:** /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
+**Primary intent:** teach Taiwan households how to use FamilyBoard to turn scattered shopping reminders into a small, reviewable handoff without storing orders or payment details
+**Title tag:** FamilyBoard 採買清單怎麼用？從缺貨到到貨的家庭補貨教學
+**Meta description:** 逐步教你用 FamilyBoard 建立家庭採買代號、拆分用途與規格、指定負責角色、處理缺貨替代並記錄實際到貨結果，不輸入地址、付款或健康資料。
+**Primary keyword concept:** 家庭補貨教學、採買清單 App
+**Cluster:** household-operations
+**Page type:** content
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** `/zh-tw/tools/household-shopping-list-planner/`, `/zh-tw/tools/household-pantry-expiry-review-log/`, `/zh-tw/tools/household-meal-prep-role-log/`, `/zh-tw/privacy/`
+**FAQ:**
+- Q: FamilyBoard 會自動讀取冰箱或購物 App 嗎？
+  A: 不會。你要自己輸入安全類別與觀察；App 不掃描庫存、不登入商店、不讀取收據。
+- Q: 一個人把清單建立好就算交接完成嗎？
+  A: 不算。另一位負責角色要能從安全來源理解用途、窗口與結果；到貨或替代仍待觀察時要保留開放狀態。
+- Q: 可以把外送地址或訂單截圖貼進去嗎？
+  A: 不可以。地址、訂單、帳號、付款與私人通信留在原本受保護服務；FamilyBoard 只留安全來源代號。
+- Q: 缺貨時 App 會幫我決定替代品嗎？
+  A: 不會。記錄缺貨與等待負責來源，依標示、原廠、家庭需求與商家實際資訊做決定。
+
+**Contextual CTA:** 先用一個小範圍清單完成「建立、指定、觀察、複查」四步，再決定是否要建立下一個版本。
+
+# FamilyBoard 採買清單怎麼用？從缺貨到到貨的家庭補貨教學
+
+採買清單的價值不是把所有商品永久記住，而是讓另一位家人知道「這次為什麼要買、哪個來源控制規格、誰要處理、什麼結果才算看過」。以下用 FamilyBoard 的免費[家庭採買與補貨清單工具](/zh-tw/tools/household-shopping-list-planner/)做一個小範圍演練。它把紀錄留在目前瀏覽器，不會掃描冰箱、不會登入商店、不會比價，也不會保存地址、付款或健康資料。
+
+## 第一步：先選一個小情境
+
+從每週家庭補貨、餐前準備、清潔／維護耗材、旅行交接或到貨缺品複查選一個。不要一開始建立「全家所有採買」；範圍越大，越難知道哪一列真的需要複查。建立 `SHOPPING-2026-A` 這類私人代號，並寫本次清單檢視日與下一次到貨／使用複查日。
+
+## 第二步：每列只描述一個用途
+
+把「早餐乾糧類」「浴室清潔耗材」「冷氣濾網類」分成不同列。數量用一般單位，例如包、組、瓶或待核對，不要把完整訂單內容貼進來。用途寫「支援本週早餐」或「配合維護週期」，不要寫姓名、地址、病歷、過敏史或私人對話。
+
+如果是設備耗材，來源欄使用原廠手冊、標籤或家庭受保護清冊的安全代號。FamilyBoard 不會讀取型號、不會檢查相容性；規格不確定時，讓列保持等待負責來源確認。
+
+## 第三步：指定真正會做下一步的角色
+
+角色可以是家庭採買角色、廚房整理角色、家務維護角色或旅行準備角色，不必輸入姓名。指定目標或行動日期，讓接手者知道何時要再看；這是家庭提醒，不是商家交貨保證，也不是保存期限或官方截止日。
+
+## 第四步：把「已下單」留在開放狀態
+
+採買行動可能是到店、下單、請家人代買或選擇替代。這些都是行動，不是結果。工具的第五種狀態會要求到貨或使用複查；若缺貨、不適用或規格有疑問，使用等待負責來源確認的狀態，不要為了讓清單變綠而猜測替代品。
+
+## 第五步：到貨或使用後留下可觀察文字
+
+結果只記錄家庭真正看到的事，例如「收到兩包，數量與包裝已對照需求」「替代品未採用，原廠規格尚未核對」「耗材已使用，下一次來源複查已排程」。不要寫「品質很好」「一定安全」「以後都買這個」等沒有來源或範圍的宣稱。
+
+## 第六步：處理缺貨與替代，不替家人做決定
+
+缺貨時保留原列，寫明目前來源、缺口、負責角色與下一個核點。替代品是否適用，要依實際標示、原廠說明、設備要求、家庭已知限制與負責商家或專業來源判斷。工具不讀商品頁、不比較價格、不判定營養或過敏，也不會自動選最快或最便宜的選項。
+
+## 第七步：建立下一版本，而不是覆蓋歷史
+
+需求、規格、商家、家庭角色或到貨結果改變時，保留舊列並建立新版本。週期性補貨可以參考[家庭食品與消耗品期限複查工具](/zh-tw/tools/household-pantry-expiry-review-log/)，餐次分工則使用[家庭餐前準備工具](/zh-tw/tools/household-meal-prep-role-log/)。兩種工具各自記錄用途，不要把完整採買訂單複製到每個畫面。
+
+## 第八步：分享前做資料最小化檢查
+
+交接或列印前刪除地址、電話、Email、帳號、付款、訂單、私人訊息、醫療與過敏內容。FamilyBoard 的 App 資料留在目前瀏覽器；依[繁中隱私權政策](/zh-tw/privacy/)先理解清除網站資料與備份責任。共用清單只應讓接手者知道他需要做的家庭工作。
+
+## 第九步：聯盟推薦不應阻礙免費流程
+
+未來若出現收納箱、標籤、購物袋或掃描器推薦，先確認它有明確聯盟揭露、位於操作流程外、可以略過，且不把購買寫成完成條件。商品不能保證到貨、相容、食品安全、過敏適用或家庭決定；清單仍應在不點擊商品時完整可用。
+
+## 收尾前的六個問題
+
+這次清單是否只有一個小範圍？每列用途與來源是否清楚？數量與單位是否真的核對？角色與日期是否有人負責？已下單與已到貨是否分開？分享前是否移除地址、付款、訂單與健康資料？六題都能回答「是」，才適合關閉本次清單版本。
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

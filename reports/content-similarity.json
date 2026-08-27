@@ -1,12 +1,17 @@
 [
   {
-    "a": "289-zh-tw--tools--household-router-support-review-log.md",
-    "b": "290-zh-tw--guides--familyboard-router-support-review-tutorial.md",
-    "score": 0.17777777777777778
+    "a": "292-zh-tw--tools--household-shopping-list-planner.md",
+    "b": "293-zh-tw--guides--familyboard-shopping-list-planner-tutorial.md",
+    "score": 0.24
   },
   {
     "a": "227-tools--household-pet-record-source-handoff-log.md",
     "b": "228-tools--household-school-record-source-handoff-log.md",
     "score": 0.16970310391363022
+  },
+  {
+    "a": "289-zh-tw--tools--household-router-support-review-log.md",
+    "b": "290-zh-tw--guides--familyboard-router-support-review-tutorial.md",
+    "score": 0.1590909090909091
   }
 ]

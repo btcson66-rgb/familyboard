@@ -2128,6 +2128,22 @@
     "headings": "Wi-Fi 路由器支援期限怎麼查？免費家庭網路複查工具 能連線不等於仍受支援 用安全代號，不要公開網路秘密 先畫出製造商、ISP 與設定來源地圖 九欄讓事實、責任與決定分開 先確認所有權，再比較新設備 憑證留在密碼管理位置 汰換後只記錄實際觀察 隱私與未來商品推薦界線"
   },
   {
+    "title": "Household Shopping List Planner | Free Private Restock Tool",
+    "description": "Create a practical household shopping list with safe item codes, quantities, purposes, sources, owners and arrival checks. The browser tool does not scan inventory, compare prices or store payment data.",
+    "route": "/tools/household-shopping-list-planner/",
+    "cluster": "household-operations",
+    "keywords": "household shopping list planner",
+    "headings": "Household Shopping List Planner Begin with a purpose, not a giant inventory Keep inventory, source and purchase result separate Use the nine fields in order Eight statuses keep action from becoming evidence Do not turn the list into a payment or health record Future affiliate placement must remain optional"
+  },
+  {
+    "title": "家庭採買清單怎麼做？免費補貨與到貨複查工具｜FamilyBoard",
+    "description": "用 FamilyBoard 建立家庭補貨清單，分開記錄品項用途、數量單位、標示或原廠來源、負責角色與到貨結果；不讀庫存、不比價、不保存地址或付款資料。",
+    "route": "/zh-tw/tools/household-shopping-list-planner/",
+    "cluster": "household-operations",
+    "keywords": "家庭採買清單、家庭補貨清單",
+    "headings": "家庭採買清單怎麼做？免費補貨與到貨複查工具 先定義採買情境，不要把全家庫存搬進來 把庫存、來源與到貨結果分開 九欄格式讓家人知道下一步 八種狀態把「已買」與「已收到」分開 不把清單變成付款、地址或健康資料 聯盟商品只能在答案之後、而且可略過"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

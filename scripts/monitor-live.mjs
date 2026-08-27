@@ -275,6 +275,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-router-support-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-router-support-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-router-support-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-shopping-list-planner/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-shopping-list-planner/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-shopping-list-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2588,6 +2591,33 @@ const checks = [
       'lang="zh-TW"',
       "把每一步留在本機家庭紀錄",
       "不會掃描 Wi-Fi",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/tools/household-shopping-list-planner/",
+    require: [
+      "Household Shopping List Planner",
+      'hreflang="zh-TW"',
+      "does not scan inventory, compare prices or store payment data",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-shopping-list-planner/",
+    require: [
+      "家庭採買清單怎麼做",
+      'hreflang="en"',
+      "不讀庫存、不比價",
+      "不保存地址或付款資料",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-shopping-list-planner-tutorial/",
+    require: [
+      "FamilyBoard 採買清單怎麼用",
+      'lang="zh-TW"',
+      "從缺貨到到貨",
+      "不會掃描冰箱",
     ],
     forbid: ['rel="alternate"'],
   },

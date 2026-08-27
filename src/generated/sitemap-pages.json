@@ -2320,6 +2320,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-shopping-list-planner/",
+    "alternateRoute": "/zh-tw/tools/household-shopping-list-planner/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/tools/household-shopping-list-planner/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-shopping-list-planner-tutorial/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2896,6 +2920,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-shopping-list-planner-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",
     "alternateRoute": "",
     "indexable": true,
@@ -3430,6 +3461,13 @@
   {
     "route": "/zh-tw/tools/household-share-access-review-log/",
     "alternateRoute": "/tools/household-share-access-review-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-shopping-list-planner/",
+    "alternateRoute": "/tools/household-shopping-list-planner/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
