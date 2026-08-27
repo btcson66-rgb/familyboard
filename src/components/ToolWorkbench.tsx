@@ -3901,6 +3901,52 @@ const householdReturnHandoffDefinition = (locale: Locale): Definition => {
   };
 };
 
+const subscriptionCancellationHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立取消列，等待服務範圍", "已確認來源，等待續費或取消窗口", "已記錄窗口，等待角色或動作", "已安排角色，等待取消觀察", "已觀察取消或結果複查，等待下次核點", "不適用，已記錄原因與重新開案事件"]
+    : ["Cancellation row created—service scope pending", "Source checked—renewal or cancellation window pending", "Window recorded—role or action pending", "Role assigned—cancellation observation pending", "Cancellation or result review observed—next checkpoint pending", "Not applicable—reason and reopen event recorded"];
+  const defaults = zh
+    ? "CANCEL-A | 串流服務取消 | 2026-08-20 | 服務條款與帳單來源代號 | 先確認取消窗口與生效方式，完整帳務資料留在受控來源 | 家庭訂閱角色依來源完成取消動作並回填觀察，不貼帳號或付款資料 | 取消後回到受控來源複查狀態與最後一筆帳務 | 家庭訂閱角色 | 已安排角色，等待取消觀察\nCANCEL-B | 雲端服務續費複查 | 2026-08-22 | 家庭帳單來源代號 | 只記家庭需要留意的日期，不複製完整帳單 | 備援角色確認是否需要詢問提供者，結果未明前保持開放 | 觀察取消或退款結果後更新下一次安排 | 備援家庭角色 | 已確認來源，等待續費或取消窗口"
+    : "CANCEL-A | Streaming service cancellation | 2026-08-20 | Service terms and billing source code | Confirm the cancellation window and effective method; keep full billing data in a controlled source | The household subscription role records the cancellation action and observation; do not paste account or payment data | Return to the controlled source after cancellation to review status and the final billing result | Household subscription role | Role assigned—cancellation observation pending\nCANCEL-B | Cloud service renewal review | 2026-08-22 | Household billing source code | Record only the household date to watch; do not copy a full bill | A backup role confirms whether the provider needs a question; keep open until a result is observed | Update the next plan after cancellation or refund result is observed | Backup household role | Source checked—renewal or cancellation window pending";
+  return {
+    intro: zh ? "把訂閱服務範圍、條款或帳單來源、續費與取消窗口、家庭角色、實際取消觀察和結果複查分開記錄。工具不保存帳號或付款資料、不判定退款權利，也不代替提供者的正式取消流程。" : "Separate the subscription scope, terms or billing source, renewal and cancellation window, household role, observed cancellation and result review. This tool stores no account or payment data, does not decide refund rights and does not replace a provider's official cancellation process.",
+    fields: [
+      text("review", zh ? "家庭訂閱取消複查私人代號" : "Private household-subscription cancellation reference", zh ? "使用家庭代號，不要輸入帳號、密碼、付款卡、完整帳單或私人通信。" : "Use a household code; do not enter account credentials, payment cards, full bills or private messages.", "CANCEL-REVIEW-2026-A"),
+      { name: "context", label: zh ? "訂閱取消情境" : "Cancellation context", type: "select", options: zh ? ["串流或影音服務取消", "雲端或軟體服務取消", "試用期轉正式前複查", "續費窗口複查", "取消後退款結果複查", "其他家庭訂閱安排"] : ["Streaming or media cancellation", "Cloud or software cancellation", "Trial-to-paid review", "Renewal-window review", "Post-cancellation refund review", "Other household subscription plan"] },
+      { name: "reviewDate", label: zh ? "本次訂閱複查日期" : "Current subscription-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次續費或取消複查日期" : "Next renewal or cancellation-review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "服務條款、帳單與取消來源地圖" : "Terms, billing and cancellation source map", zh ? "只填安全來源代號，不要貼帳號、密碼、付款、完整帳單或私人訊息。" : "Use safe source codes; do not paste account, password, payment, full bill or private-message data.", "TERMS-T1; BILLING-B1; CANCEL-C1"),
+      text("rows", zh ? "訂閱取消與結果複查狀態列" : "Cancellation and result-review rows", zh ? "每行 9 欄：ID｜服務範圍｜觀察日期 YYYY-MM-DD｜來源代號｜續費或取消窗口｜角色與取消觀察｜結果複查或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | service scope | observation date YYYY-MM-DD | source code | renewal or cancellation window | role and cancellation observation | result review or next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護帳務與服務來源位置" : "Protected billing and service-source location", zh ? "只寫保管流程或容器代號，不要放帳號、付款、完整帳單或通信全文。" : "Name a custody process or container, not account, payment, full bill or correspondence text.", zh ? "家庭紀錄／訂閱取消／CANCEL-REVIEW-2026-A／受保護來源" : "Household records / subscription cancellation / CANCEL-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次訂閱複查日期。" : "Enter valid current and next subscription-review dates.";
+      if (next < review) return zh ? "下一次續費或取消複查日期不能早於本次複查。" : "The next renewal or cancellation review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全訂閱代號、來源地圖與受保護位置。" : "Provide a safe subscription reference, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行訂閱取消交接列。" : "Enter 1 to 14 cancellation-handoff rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `訂閱第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Cancellation line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行訂閱紀錄都需要唯一 ID。" : "Every cancellation row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `訂閱第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Cancellation line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 4);
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `訂閱第 ${thin.map((row) => row.line).join("、")} 行需要範圍、來源、窗口、觀察、下一步與角色。` : `Cancellation line ${thin.map((row) => row.line).join(", ")} needs scope, source, window, observation, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、帳號或付款識別資料；請改用安全代號。" : "A full contact, account or payment identifier was detected; use safe codes.";
+      if (/password|passcode|account number|login|payment card|full bill|private message|密碼|帳號|付款卡|完整帳單|私人訊息/i.test(privacy)) return zh ? "偵測到帳號、密碼、付款或私人通信資料；請只保留安全來源代號。" : "Account, password, payment or private-message data was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭訂閱取消與結果複查" : " — household subscription cancellation and result review"), (zh ? "取消情境：" : "Cancellation context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次續費或取消複查：" : "Next renewal or cancellation review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已觀察取消或結果列：" : "Cancellation or result-reviewed rows: ") + closed.length, (zh ? "來源地圖：" : "Source map: ") + values.source.trim(), (zh ? "有版本的取消與結果觀察\n" : "Versioned cancellation and result observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜窗口：" : " — window: ") + row.parts[4] + (zh ? "｜觀察：" : " — observation: ") + row.parts[5] + (zh ? "｜下一步：" : " — next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護帳務與服務來源位置：" : "Protected billing and service-source location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭訂閱取消與結果複查觀察，不保存帳號或付款資料、不判定退款權利，也不取代提供者正式流程。" : "This output only organizes household subscription cancellation and result-review observations. It does not store account or payment data, decide refund rights or replace the provider's official process."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7971,6 +8017,9 @@ const definitions: Record<string, Definition> = {
   "household-return-handoff-log": {
     ...householdReturnHandoffDefinition("en"),
   },
+  "household-subscription-cancellation-handoff-log": {
+    ...subscriptionCancellationHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -8068,6 +8117,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-return-handoff-log": {
     ...householdReturnHandoffDefinition("zh-TW"),
+  },
+  "household-subscription-cancellation-handoff-log": {
+    ...subscriptionCancellationHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

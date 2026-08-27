@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T08:23:14.624Z
+Generated: 2026-08-27T08:39:11.432Z
 
 ## Summary
 
-- Indexable pages: 430
-- Generated HTML routes: 447
+- Indexable pages: 433
+- Generated HTML routes: 450
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 217
+- Pages without a contextual product/tool link: 220
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 53
+- product: 54
 - appliances: 30
 - maintenance: 37
-- household-operations: 58
+- household-operations: 60
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -93,6 +93,7 @@ Generated: 2026-08-27T08:23:14.624Z
 - /tools/household-return-handoff-log/
 - /tools/household-school-pickup-handoff-log/
 - /tools/household-share-access-review-log/
+- /tools/household-subscription-cancellation-handoff-log/
 - /tools/household-trip-packing-handoff-log/
 - /tools/household-vehicle-document-source-status-log/
 - /tools/rental-security-deposit-move-out-claim-log/
@@ -142,6 +143,7 @@ Generated: 2026-08-27T08:23:14.624Z
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-school-pickup-handoff-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
+- /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
@@ -244,6 +246,7 @@ Generated: 2026-08-27T08:23:14.624Z
 - /zh-tw/tools/household-school-record-source-handoff-log/
 - /zh-tw/tools/household-share-access-review-log/
 - /zh-tw/tools/household-storm-readiness-review/
+- /zh-tw/tools/household-subscription-cancellation-handoff-log/
 - /zh-tw/tools/household-subscription-cost-calculator/
 - /zh-tw/tools/household-trip-packing-handoff-log/
 - /zh-tw/tools/household-utility-provider-service-handoff-log/

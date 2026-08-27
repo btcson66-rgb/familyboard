@@ -2064,6 +2064,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-subscription-cancellation-handoff-log/",
+    "alternateRoute": "/zh-tw/tools/household-subscription-cancellation-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2542,6 +2550,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-trip-handoff-tutorial/",
     "alternateRoute": "",
     "indexable": true,
@@ -3001,6 +3016,13 @@
     "alternateRoute": "/tools/household-storm-readiness-review/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-subscription-cancellation-handoff-log/",
+    "alternateRoute": "/tools/household-subscription-cancellation-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {

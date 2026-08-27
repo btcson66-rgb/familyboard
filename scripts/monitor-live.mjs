@@ -233,6 +233,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-return-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-return-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-return-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-subscription-cancellation-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-subscription-cancellation-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1049,6 +1052,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Use a safe reference",
       "Separate the policy window from the household action",
+    ],
+  },
+  {
+    path: "/tools/household-subscription-cancellation-handoff-log/",
+    require: [
+      "Household Subscription Cancellation Handoff Log",
+      'hreflang="zh-TW"',
+      "Use a safe reference",
+      "Separate a window from an action",
     ],
   },
   {
@@ -2099,6 +2111,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-subscription-cancellation-handoff-log/",
+    require: [
+      "家庭訂閱取消交接工具",
+      'hreflang="en"',
+      "先使用家庭安全代號",
+      "把提醒、動作與結果分開",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2155,6 +2176,16 @@ const checks = [
       'lang="zh-TW"',
       "把平台政策放在受控來源",
       "寄回不是退款完成",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",
+    require: [
+      "FamilyBoard 訂閱怎麼取消與交接",
+      'lang="zh-TW"',
+      "把條款和帳單來源留在受控位置",
+      "提醒不等於取消生效",
     ],
     forbid: ['rel="alternate"'],
   },

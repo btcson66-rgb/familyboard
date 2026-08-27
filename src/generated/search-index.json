@@ -1960,6 +1960,14 @@
     "headings": "Household Return Handoff Log Use a safe reference Separate the policy window from the household action Keep drop-off and refund results independent Keep affiliate comparisons outside the control"
   },
   {
+    "title": "Free Subscription Cancellation Handoff Log | Renewal Windows and Result Review | FamilyBoard",
+    "description": "Track terms and billing sources, renewal or cancellation windows, household owners and observed cancellation results without storing account credentials or payment details.",
+    "route": "/tools/household-subscription-cancellation-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "subscription cancellation handoff log",
+    "headings": "Household Subscription Cancellation Handoff Log Use a safe reference Separate a window from an action Keep billing results in the controlling source"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
