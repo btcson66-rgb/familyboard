@@ -4610,11 +4610,161 @@ const deviceRetirementDefinition = (locale: Locale): Definition => {
   };
 };
 
+const routerSupportReviewDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已記錄路由器與來源，等待支援期限",
+        "已查核韌體或安全更新，等待家庭決定",
+        "已確認 ISP 設備責任，等待替換或歸還安排",
+        "已記錄汰換觸發條件，等待新設備比較",
+        "已測試新設定，等待舊設備歸還或封存",
+        "安全、存取或相容性疑問，等待負責來源確認",
+        "已完成複查並保存來源與交接結果",
+        "不適用，已記錄理由與重新開案事件",
+      ]
+    : [
+        "Router and source recorded—support window pending",
+        "Firmware or security update checked—household decision pending",
+        "ISP equipment responsibility confirmed—replacement or return pending",
+        "Replacement trigger recorded—new-device comparison pending",
+        "New setup tested—old equipment return or archive pending",
+        "Security, access or compatibility question—responsible source pending",
+        "Review closed—source and handoff result preserved",
+        "Not applicable—reason and reopen trigger recorded",
+      ];
+  const defaults = zh
+    ? "ROUTER-A | 客廳主路由器代號 | 2026-08-20 | 型號與 ISP 提供責任待官方來源確認 | 韌體頁面版本日期待查；不在此記錄 Wi-Fi 密碼 | 若達支援期限，先比較新設備並確認舊設備歸還窗口 | 家庭網路角色 | 2026-09-03 | 已查核韌體或安全更新，等待家庭決定\nMODEM-A | ISP 租用數據機代號 | 2026-08-22 | 停用或升級時可能需要提供者收回 | 已記錄帳務與設備來源代號，歸還標籤待確認 | 由 ISP 官方流程確認收件，不自行丟棄租用設備 | 服務帳務角色 | 2026-09-05 | 已確認 ISP 設備責任，等待替換或歸還安排"
+    : "ROUTER-A | Main living-room router code | 2026-08-20 | Model and ISP ownership pending official source review | Firmware page version date pending; never place the Wi-Fi password here | If support ends, compare a replacement and confirm the old-equipment return window | Household network role | 2026-09-03 | Firmware or security update checked—household decision pending\nMODEM-A | ISP-leased modem code | 2026-08-22 | Provider may require return after cancellation or upgrade | Billing and equipment source codes recorded; return label pending | Follow the ISP's official intake process instead of discarding leased equipment | Service-account role | 2026-09-05 | ISP equipment responsibility confirmed—replacement or return pending";
+  return {
+    intro: zh
+      ? "把家用路由器的型號、製造商支援期限、韌體查核、ISP 設備責任與汰換／歸還決定分開記錄。工具不會掃描網路、不測速、不檢查漏洞、不保存 Wi-Fi 或管理密碼，也不會判定設備安全。"
+      : "Separate a home router's model, manufacturer support window, firmware check, ISP equipment responsibility and replacement or return decision. This tool never scans a network, measures speed, checks vulnerabilities, stores Wi-Fi or admin passwords or declares a device secure.",
+    fields: [
+      text(
+        "review",
+        zh ? "路由器複查私人代號" : "Private router-review reference",
+        zh
+          ? "使用家庭代號，不要輸入完整地址、Wi-Fi 名稱、密碼、管理帳號或完整序號。"
+          : "Use a household code; do not enter a full address, Wi-Fi name, password, admin account or full serial number.",
+        "ROUTER-REVIEW-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "路由器複查情境" : "Router-review context",
+        type: "select",
+        options: zh
+          ? [
+              "例行支援期限複查",
+              "韌體或安全更新查核",
+              "ISP 方案變更或設備歸還",
+              "網路異常後的設備歷程整理",
+              "家庭搬遷或網路責任交接",
+              "路由器汰換前的資料與設定邊界",
+            ]
+          : [
+              "Routine support-window review",
+              "Firmware or security-update check",
+              "ISP plan change or equipment return",
+              "Device history after an internet incident",
+              "Move or household network handoff",
+              "Data and setup boundary before replacement",
+            ],
+      },
+      { name: "baselineDate", label: zh ? "來源基準日" : "Source baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: zh ? "本次複查日期" : "Current review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次支援或歸還核點" : "Next support or return checkpoint", type: "date", value: "2026-09-05" },
+      text(
+        "source",
+        zh ? "製造商、ISP 與設定來源地圖" : "Manufacturer, ISP and setup-source map",
+        zh
+          ? "只填來源代號或可重開位置；密碼、完整帳單、地址和管理入口留在受保護來源。"
+          : "Use source codes or reopenable locations; keep passwords, full bills, addresses and admin portals protected.",
+        "MANUAL-1; ISP-1; SUPPORT-1",
+      ),
+      text(
+        "rows",
+        zh ? "路由器複查列" : "Router-review rows",
+        zh
+          ? "每行 9 欄：ID｜設備或網路角色代號｜來源日期 YYYY-MM-DD｜型號／支援觀察｜韌體或更新核對｜ISP 責任／汰換／歸還安排｜負責角色｜結果日期 YYYY-MM-DD｜指定狀態。最多 12 行。"
+          : "Each row uses 9 fields: ID | device or network-role code | source date YYYY-MM-DD | model or support observation | firmware or update check | ISP responsibility, replacement or return plan | owner role | outcome date YYYY-MM-DD | exact status. Maximum 12 rows.",
+        defaults,
+      ),
+      text(
+        "storage",
+        zh ? "受保護路由器紀錄位置" : "Protected router-record location",
+        zh
+          ? "只寫資料夾或容器代號，不要放 Wi-Fi 密碼、管理密碼、完整序號、帳單或地址。"
+          : "Name a folder or container code, not Wi-Fi passwords, admin passwords, full serials, bills or addresses.",
+        zh ? "家庭紀錄／網路支援／ROUTER-REVIEW-2026-A／受保護來源" : "Household records / network support / ROUTER-REVIEW-2026-A / protected sources",
+      ),
+    ],
+    run: (values) => {
+      const baseline = strictIsoDate(values.baselineDate);
+      const review = strictIsoDate(values.reviewDate);
+      const next = strictIsoDate(values.nextReview);
+      if (!baseline || !review || !next)
+        return zh ? "請輸入有效的來源基準、本次複查與下一次核點日期。" : "Enter valid source-baseline, current-review and next-checkpoint dates.";
+      if (baseline > review)
+        return zh ? "來源基準日不能晚於本次複查。" : "The source baseline cannot be later than the current review.";
+      if (next < review)
+        return zh ? "下一次支援或歸還核點不能早於本次複查。" : "The next support or return checkpoint cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10)
+        return zh ? "請提供安全代號、來源地圖與受保護位置。" : "Provide a safe reference, source map and protected location.";
+      const rows = values.rows
+        .split(/\r?\n/)
+        .map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) }))
+        .filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 12)
+        return zh ? "請輸入 1 至 12 行路由器複查列。" : "Enter 1 to 12 router-review rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length)
+        return zh ? `路由器複查第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Router-review line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length)
+        return zh ? "每行路由器複查紀錄都需要唯一 ID。" : "Every router-review row needs a unique ID.";
+      const sourceDates = rows.map((row) => strictIsoDate(row.parts[2]));
+      if (sourceDates.some((value) => !value || value > review))
+        return zh ? "每列來源日期必須有效，且不能晚於本次複查。" : "Each source date must be valid and no later than the current review.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length)
+        return zh ? `路由器複查第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Router-review line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const outcomeDates = rows.map((row) => strictIsoDate(row.parts[7]));
+      if (outcomeDates.some((value) => !value || value < baseline || value > next))
+        return zh ? "每列結果日期必須介於來源基準日與下一次核點之間。" : "Each outcome date must fall between the source baseline and next checkpoint.";
+      const thin = rows.filter((row) => row.parts[1].length < 4 || row.parts[3].length < 12 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 3);
+      if (thin.length)
+        return zh ? `路由器複查第 ${thin.map((row) => row.line).join("、")} 行需要設備、支援觀察、更新核對、責任或汰換安排與角色。` : `Router-review line ${thin.map((row) => row.line).join(", ")} needs a device, support observation, update check, responsibility or replacement plan and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy))
+        return zh ? "偵測到完整聯絡、地址、帳號或設備識別資料；請改用安全代號。" : "A full contact, address, account or device identifier was detected; use safe codes.";
+      if (/password|passphrase|admin login|wifi password|wireless key|account number|card number|bank account|serial number|full address|private message|密碼|通關密語|管理登入|無線金鑰|帳號|卡號|銀行帳戶|完整序號|完整地址|私人訊息/i.test(privacy))
+        return zh ? "偵測到敏感資料或網路來源全文；請只保留安全索引。" : "Sensitive data or full network-source content was detected; keep only a safe index.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = rows.filter((row) => statuses.indexOf(row.parts[8]) < 6);
+      const closed = rows.filter((row) => statuses.indexOf(row.parts[8]) >= 6);
+      return [
+        values.review.trim() + (zh ? "｜家庭路由器支援複查" : " — household router support review"),
+        (zh ? "複查情境：" : "Review context: ") + values.context,
+        (zh ? "來源基準：" : "Source baseline: ") + formatter.format(baseline),
+        (zh ? "本次複查：" : "Current review: ") + formatter.format(review),
+        (zh ? "下一次支援或歸還核點：" : "Next support or return checkpoint: ") + formatter.format(next),
+        (zh ? "仍開放列：" : "Open rows: ") + open.length,
+        (zh ? "已完成或不適用列：" : "Closed or not-applicable rows: ") + closed.length,
+        (zh ? "製造商、ISP 與設定來源地圖：" : "Manufacturer, ISP and setup-source map: ") + values.source.trim(),
+        (zh ? "有版本的路由器觀察與汰換／歸還安排\n" : "Versioned router observations and replacement or return plans\n") + rows.map((row) => row.parts.join(zh ? "｜" : " — ")).join("\n"),
+        (zh ? "受保護路由器紀錄位置：" : "Protected router-record location: ") + values.storage.trim(),
+        zh ? "這份輸出只是路由器支援與責任索引，不掃描網路、不測速、不檢查漏洞、不保存密碼，也不判定設備安全；請依製造商、ISP 與合格支援來源處理。" : "This output is a router-support and responsibility index. It does not scan a network, measure speed, check vulnerabilities, store passwords or declare a device secure; follow the manufacturer, ISP and qualified support sources.",
+      ].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
   "household-device-retirement-handoff-log": deviceRetirementDefinition("en"),
+  "household-router-support-review-log": routerSupportReviewDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -8837,6 +8987,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-device-retirement-handoff-log": {
     ...deviceRetirementDefinition("zh-TW"),
+  },
+  "household-router-support-review-log": {
+    ...routerSupportReviewDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

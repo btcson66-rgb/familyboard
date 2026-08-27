@@ -272,6 +272,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-device-retirement-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-device-retirement-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-device-retirement-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-router-support-review-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-router-support-review-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-router-support-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2558,6 +2561,33 @@ const checks = [
       'lang="zh-TW"',
       "先分辨哪台裝置與哪份資料",
       "把清除和交接分成兩個核點",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/tools/household-router-support-review-log/",
+    require: [
+      "Household Router Support Review Log",
+      'hreflang="zh-TW"',
+      "without storing Wi-Fi or admin passwords",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-router-support-review-log/",
+    require: [
+      "Wi-Fi 路由器支援期限怎麼查",
+      'hreflang="en"',
+      "不輸入 Wi-Fi 或管理密碼",
+      "不掃描網路、不測速",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-router-support-review-tutorial/",
+    require: [
+      "Wi-Fi 路由器多久要換",
+      'lang="zh-TW"',
+      "把每一步留在本機家庭紀錄",
+      "不會掃描 Wi-Fi",
     ],
     forbid: ['rel="alternate"'],
   },

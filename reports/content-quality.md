@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T12:54:25.902Z
+Generated: 2026-08-27T13:10:47.269Z
 
 ## Summary
 
-- Indexable pages: 469
-- Generated HTML routes: 486
+- Indexable pages: 472
+- Generated HTML routes: 489
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 255
+- Pages without a contextual product/tool link: 257
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-27T12:54:25.902Z
 - maintenance: 41
 - household-operations: 75
 - inventory-warranty: 41
-- records-emergency: 52
+- records-emergency: 55
 - tools: 121
 
 ## Word-count range
@@ -33,6 +33,7 @@ Generated: 2026-08-27T12:54:25.902Z
 
 ## Highest similarity pairs
 
+- 289-zh-tw--tools--household-router-support-review-log.md ↔ 290-zh-tw--guides--familyboard-router-support-review-tutorial.md: 0.178
 - 227-tools--household-pet-record-source-handoff-log.md ↔ 228-tools--household-school-record-source-handoff-log.md: 0.170
 
 ## Safety-source warnings
@@ -160,6 +161,7 @@ Generated: 2026-08-27T12:54:25.902Z
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
+- /zh-tw/guides/familyboard-router-support-review-tutorial/
 - /zh-tw/guides/familyboard-schedule-conflict-review-tutorial/
 - /zh-tw/guides/familyboard-school-activity-handoff-tutorial/
 - /zh-tw/guides/familyboard-school-pickup-handoff-tutorial/
@@ -271,6 +273,7 @@ Generated: 2026-08-27T12:54:25.902Z
 - /zh-tw/tools/household-record-retrieval-drill-log/
 - /zh-tw/tools/household-recycling-handoff-log/
 - /zh-tw/tools/household-return-handoff-log/
+- /zh-tw/tools/household-router-support-review-log/
 - /zh-tw/tools/household-schedule-conflict-review-log/
 - /zh-tw/tools/household-school-activity-handoff-log/
 - /zh-tw/tools/household-school-pickup-handoff-log/

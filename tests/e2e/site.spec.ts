@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { readFile } from "node:fs/promises";
 
-test("public SEO, keyboard and seven production tools work", async ({
+test("public SEO, keyboard and eight production tools work", async ({
   page,
 }) => {
   await page.goto("/");
@@ -23,6 +23,7 @@ test("public SEO, keyboard and seven production tools work", async ({
     "/tools/emergency-binder-generator/",
     "/tools/household-seasonal-reset-action-log/",
     "/tools/household-device-retirement-handoff-log/",
+    "/tools/household-router-support-review-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -106,6 +107,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-browser-storage-maintenance/",
     "/tools/household-seasonal-reset-action-log/",
     "/tools/household-device-retirement-handoff-log/",
+    "/tools/household-router-support-review-log/",
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
@@ -204,6 +206,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-seasonal-reset-tutorial/",
     "/zh-tw/tools/household-device-retirement-handoff-log/",
     "/zh-tw/guides/familyboard-device-retirement-tutorial/",
+    "/zh-tw/tools/household-router-support-review-log/",
+    "/zh-tw/guides/familyboard-router-support-review-tutorial/",
     "/zh-tw/guides/familyboard-household-meeting-tutorial/",
     "/zh-tw/guides/familyboard-pantry-review-tutorial/",
     "/zh-tw/guides/familyboard-clothing-care-tutorial/",
@@ -1111,6 +1115,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-device-retirement-handoff-log/",
       alternate: "/tools/household-device-retirement-handoff-log/",
       heading: "舊手機要怎麼清除再送人？免費裝置退役交接工具",
+    },
+    {
+      route: "/zh-tw/tools/household-router-support-review-log/",
+      alternate: "/tools/household-router-support-review-log/",
+      heading: "Wi-Fi 路由器支援期限怎麼查？免費家庭網路複查工具",
     },
   ]) {
     await page.goto(localizedTool.route);

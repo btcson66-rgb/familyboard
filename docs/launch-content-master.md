@@ -19687,6 +19687,204 @@ FamilyBoard 每台瀏覽器都有自己的本機資料。新平板或手機不�
 
 裝置和目前所有權是否辨識？需要保留的 FamilyBoard 與家庭資料是否有可讀副本？帳號、管理關聯、SIM／記憶卡和伴隨 App 是否逐項處理？清除和交接是否分開記錄？新裝置是否通過受控還原與離線測試？外部來源是否真正回覆而非只收到訊息？分享前是否移除所有秘密與個資？七題都能回答「是」，才適合把裝置送往下一個流程。
 
+## Page 288 — Household Router Support Review Log
+**Slug:** /tools/household-router-support-review-log/
+**Alternate route:** /zh-tw/tools/household-router-support-review-log/
+**Primary intent:** record router support status, firmware checks, ISP equipment responsibility and replacement or return decisions
+**Title tag:** Household Router Support Review Log | Firmware, ISP Ownership and Replacement
+**Meta description:** Record a home router's model, support window, firmware check, ISP equipment responsibility and replacement decision without storing Wi-Fi or admin passwords.
+**Primary keyword concept:** router support review log
+**Cluster:** records-emergency
+**Page type:** tool
+**Language:** en
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** `/guides/wifi-router-maintenance-records/`, `/tools/household-internet-incident-review-log/`, `/tools/household-device-retirement-handoff-log/`, `/zh-tw/tools/household-router-support-review-log/`
+**FAQ:**
+- Q: Can this tool tell me whether my Wi-Fi is secure?
+  A: No. It records what an authoritative manufacturer, ISP or qualified support source says; it does not scan your network, test vulnerabilities or certify security.
+- Q: Should I put the Wi-Fi password or router admin login in a household record?
+  A: No. Keep credentials in a dedicated password manager and record only a safe location or source code.
+- Q: Does an ISP-owned modem belong in the household asset inventory?
+  A: Record it as provider-owned equipment with the return or replacement source. Ownership affects the handoff path, not whether the device appears in a troubleshooting history.
+
+**Contextual CTA:** Open the free router support review log, then verify the actual model and support status with the manufacturer or ISP.
+
+# Household Router Support Review Log
+
+A router can keep forwarding traffic long after its manufacturer stops issuing security updates. An ISP can also own the modem while a household owns a separate router, mesh node or switch. Those facts are easy to forget during an outage, a move or a service-plan change. This free [router support review log](/tools/household-router-support-review-log/) records the source, date, observed support status, equipment responsibility and next decision without asking for the credentials that protect the network.
+
+## Working is not the same as supported
+
+The [Wi-Fi router maintenance guide](/guides/wifi-router-maintenance-records/) explains why a device that still connects phones can nevertheless be outside its update window. Use this log for the review event: which model was checked, which official page or provider response was current, what firmware or end-of-support fact was observed and which household role must decide the next step. Do not turn a green status light into a security conclusion.
+
+## Start with a safe device code
+
+Use a code such as `ROUTER-REVIEW-2026-A` and a separate code for a leased modem or mesh node. A code helps a family connect the review to a protected inventory without publishing a full serial number, street address or wireless network name. The form rejects common passwords, passphrases, account numbers, full serials and long contact strings so a troubleshooting note does not become a new copy of the secret.
+
+## Build a dated source map
+
+Give the manufacturer manual or end-of-support page a source code, the ISP equipment and return policy another, and the protected household configuration record a third. Record the date you actually checked each source. A search result, an old setup card or a neighbour's recommendation can help locate the right page, but it should not be the evidence used to close a support decision. If two sources disagree, leave the row open and name the source that must resolve it.
+
+## Use the nine fields in order
+
+Each row has an ID, a device or network-role code, source date, model or support observation, firmware or update check, ISP responsibility or replacement plan, owner role, outcome date and exact status. That order separates facts from decisions. “Firmware page checked” is not the same as “safe to keep”; “ISP owns the modem” is not the same as “the provider has accepted its return”; “new router powers on” is not the same as “the household has tested the required services.”
+
+## Record ownership before buying anything
+
+Many homes have a provider-supplied modem, a personally purchased router and one or more mesh nodes. Write down which source controls replacement, return shipping, support contact and cancellation equipment. If a service change is planned, record the date window and the provider's actual instructions. Do not throw away leased equipment because a retail listing looks cheaper, and do not assume a new device is compatible with the service tier without checking the provider and manufacturer.
+
+## Keep credentials outside the log
+
+The log can say “admin credential in protected vault, source SUPPORT-1” or “guest network setup documented in protected note.” It must not contain the Wi-Fi password, router admin password, recovery code, account number or full billing statement. If a support representative asks for information, use the provider's official channel and record only the safe reference and outcome. FamilyBoard cannot sign in to the router or ISP portal and cannot verify that a setting was applied.
+
+## Close only an observed result
+
+When a replacement is installed, record the model source, the date, the services the household actually tested and the old equipment's return or storage outcome. A short test is an observation, not a guarantee that every room, device, speed tier or future update will work. If the internet is still unstable, keep the row open and hand the evidence to the ISP, manufacturer or qualified network professional. Do not edit an unresolved outage into a successful replacement story.
+
+## Privacy and future recommendations
+
+The form runs locally in this browser and does not inspect the network. Future recommendations for cables, mounts, mesh hardware or storage may appear outside the workflow with a clear affiliate disclosure and an easy skip. Buying a product is never required to record a support window, ask an ISP a question or keep the free FamilyBoard app usable.
+
+## Before the next router decision
+
+Can another household role find the current model source? Is the support or firmware date recorded rather than guessed? Is ISP ownership clear? Are credentials absent from the record? Is the replacement or return decision tied to an actual source and date? Is an unresolved security or compatibility question assigned to the right provider or professional? If not, leave the status open.
+
+## Page 289 — 家庭路由器支援複查工具（Traditional Chinese）
+**Slug:** /zh-tw/tools/household-router-support-review-log/
+**Alternate route:** /tools/household-router-support-review-log/
+**Primary intent:** 教台灣家庭記錄 Wi-Fi 路由器支援期限、韌體查核、ISP 設備責任與汰換或歸還決定
+**Title tag:** Wi-Fi 路由器支援期限怎麼查？免費家庭網路複查工具｜FamilyBoard
+**Meta description:** 記錄家用路由器型號、製造商支援期限、韌體查核、ISP 設備責任與汰換決定，不輸入 Wi-Fi 或管理密碼。
+**Primary keyword concept:** 路由器支援期限複查工具
+**Cluster:** records-emergency
+**Page type:** tool
+**Language:** zh-TW
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** `/zh-tw/tools/household-internet-incident-review-log/`, `/zh-tw/tools/household-internet-incident-review-log/`, `/zh-tw/tools/household-device-retirement-handoff-log/`, `/zh-tw/guides/familyboard-router-support-review-tutorial/`
+**FAQ:**
+- Q: 路由器還能連線，就代表它仍然安全嗎？
+  A: 不代表，連線功能和製造商是否仍提供韌體與安全更新是兩件事；請以目前官方來源為準。
+- Q: 可以把 Wi-Fi 密碼或管理登入填入工具嗎？
+  A: 不要，密碼和復原資料放在專門的密碼管理工具，只在 FamilyBoard 記錄受保護位置代號。
+- Q: ISP 提供的數據機需要列入家庭紀錄嗎？
+  A: 可以用「提供者所有」代號記下責任與歸還來源，所有權會影響取消、替換和收件流程。
+
+**Contextual CTA:** 先開啟免費路由器支援複查工具，再依製造商或 ISP 官方來源確認實際型號與支援狀態。
+
+# Wi-Fi 路由器支援期限怎麼查？免費家庭網路複查工具
+
+路由器可能還能讓手機上網，卻早已停止韌體或安全更新；ISP 也可能擁有數據機，但家裡另外購買路由器、Mesh 節點或交換器。搬家、斷線、改方案或想汰換設備時，如果只記得「它還能用」，很容易忘記誰負責歸還、哪個官方頁面說了什麼、下一步要由誰決定。這個免費 [路由器支援複查工具](/zh-tw/tools/household-router-support-review-log/)只整理來源、日期、觀察、責任與汰換／歸還核點，不掃描網路、不測速、不檢查漏洞，也不保存任何密碼。
+
+## 能連線不等於仍受支援
+
+[Wi-Fi 路由器維護與紀錄指南](/guides/wifi-router-maintenance-records/)說明為什麼「燈還亮」不能回答「製造商還有沒有更新」。本工具用來記錄複查當下看到的型號、官方支援或終止支援頁面、韌體日期、ISP 回覆與家庭決定。不要把綠色指示燈、鄰居建議或搜尋摘要寫成安全結論；來源沒有確認的部分保持開放。
+
+## 用安全代號，不要公開網路秘密
+
+建立 `ROUTER-REVIEW-2026-A`，另為 ISP 租用數據機或 Mesh 節點建立代號。完整序號、地址、Wi-Fi 名稱、無線金鑰、管理帳號和復原碼不應放在家庭公開摘要。工具會攔截常見密碼、管理登入、帳號號碼、完整序號和長串聯絡資料；來源地圖只要能讓負責角色回到受保護的位置即可。
+
+## 先畫出製造商、ISP 與設定來源地圖
+
+用 MANUAL-1 指向製造商手冊或支援期限頁，ISP-1 指向提供者的設備所有權、取消與歸還規則，SUPPORT-1 指向受保護的家庭設定紀錄。每個來源都填實際查閱日期。舊設定卡可以幫你找入口，但不應取代目前官方頁面；來源互相矛盾時，記錄要回哪個來源確認，不要自行挑一個看似方便的答案。
+
+## 九欄讓事實、責任與決定分開
+
+每列填 ID、設備或網路角色代號、來源日期、型號／支援觀察、韌體或更新核對、ISP 責任／汰換／歸還安排、負責角色、結果日期與指定狀態。這樣可以把「已查到版本日期」和「決定要換機」分開；也能把「ISP 擁有數據機」和「ISP 已確認收件」分開。結果還沒被來源或家庭角色觀察到，就保持等待，不要為了好看寫完成。
+
+## 先確認所有權，再比較新設備
+
+家庭常同時有 ISP 提供的數據機、自購路由器和多個 Mesh 節點。記錄哪個來源負責替換、支援、退租收件與退回標籤；若要換方案，寫下實際窗口和提供者說明。租用設備不能因為零售網站出現便宜型號就直接丟棄，新路由器也不能只看包裝宣稱而假設相容，應回到 ISP 和製造商來源核對。
+
+## 憑證留在密碼管理位置
+
+紀錄可以寫「管理憑證在受保護保存庫，來源 SUPPORT-1」，但不能貼 Wi-Fi 密碼、管理密碼、復原碼、帳號號碼或完整帳單。若 ISP 支援人員要求資料，使用官方管道並只保留安全來源代號與結果。FamilyBoard 不會登入路由器或 ISP 入口，也不會替你確認設定真的套用。
+
+## 汰換後只記錄實際觀察
+
+新設備安裝後，留下型號來源、日期、家庭實際測過的服務，以及舊設備歸還或封存結果。短時間測試只是觀察，不能保證每個房間、每台裝置、每個速率方案或未來更新都正常。仍斷線就維持開放狀態，把來源和事件交給 ISP、製造商或合格網路專業人員，不要把未解決的斷線改寫成成功換機。
+
+## 隱私與未來商品推薦界線
+
+輸入只在目前瀏覽器運算，不會檢查家庭網路。未來若出現網路線、壁掛架、Mesh 設備或收納用品推薦，只能放在流程外並清楚揭露聯盟關係、提供略過選項；不購買商品也能完成支援複查與 FamilyBoard 免費紀錄。
+
+## Page 290 — FamilyBoard 路由器支援期限與汰換 App 教學（Traditional Chinese）
+**Slug:** /zh-tw/guides/familyboard-router-support-review-tutorial/
+**Primary intent:** teach Taiwan households how to review router support and ISP responsibility without storing credentials or claiming network security
+**Title tag:** Wi-Fi 路由器多久要換？FamilyBoard 支援期限與汰換教學
+**Meta description:** 逐步教你用 FamilyBoard 記錄路由器支援期限、韌體來源、ISP 設備責任、汰換比較與歸還結果，不把 App 當成網路安全檢查。
+**Primary keyword concept:** 路由器多久要換教學
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** `/zh-tw/tools/household-router-support-review-log/`, `/zh-tw/tools/household-internet-incident-review-log/`, `/zh-tw/tools/household-internet-incident-review-log/`, `/zh-tw/guides/familyboard-device-retirement-tutorial/`
+**FAQ:**
+- Q: 路由器可以用多久才需要更換？
+  A: 沒有適用所有型號的固定年限；請查目前製造商支援與更新來源，再依 ISP 相容性、設備責任和家庭實際需求決定。
+- Q: FamilyBoard 會幫我掃描 Wi-Fi 漏洞嗎？
+  A: 不會，FamilyBoard 只整理家庭提供的來源與觀察；安全疑問要交給製造商、ISP 或合格網路專業來源。
+- Q: 換 ISP 時舊數據機怎麼處理？
+  A: 先確認它是 ISP 所有還是家庭所有，記錄官方取消、歸還、標籤和收件結果，不要自行猜測或丟棄租用設備。
+
+**Contextual CTA:** 用免費路由器支援複查工具建立來源地圖，再逐步完成型號、韌體、所有權與汰換決定的交接。
+
+# Wi-Fi 路由器多久要換？FamilyBoard 支援期限與汰換教學
+
+路由器「還能上網」是一個功能觀察，不是支援期限、安全更新或 ISP 責任的答案。家裡可能同時有 ISP 租用的數據機、自購路由器、Mesh 節點和延伸設備；換方案、搬家或斷線後，真正困難的是分清楚哪個來源控制哪個決定。這篇教學搭配[家庭路由器支援複查工具](/zh-tw/tools/household-router-support-review-log/)，把每一步留在本機家庭紀錄；App 不會掃描 Wi-Fi、不測速、不保存密碼，也不會宣稱網路安全。
+
+## 第一步：先分辨每台設備與網路角色
+
+建立 `ROUTER-REVIEW-2026-A` 這類家庭代號，為主路由器、ISP 數據機、Mesh 節點和交換器分別建立設備或角色代號。記下目前用途、家庭或 ISP 所有權、安裝位置的安全描述和複查日期，但不要公開完整地址、完整序號、Wi-Fi 名稱或管理帳號。外觀相同的節點先在受保護清冊中確認，否則下一步可能查錯型號。
+
+## 第二步：把「能用」與「受支援」分成兩欄
+
+打開[Wi-Fi 路由器維護與紀錄指南](/guides/wifi-router-maintenance-records/)和製造商目前支援頁，分別記錄「本次看到的連線或指示燈」與「官方說明的韌體／支援狀態」。不要用綠燈、速度感覺或論壇留言推論安全。若官方頁面找不到型號，狀態留在等待來源確認，並指定下一個要聯絡的角色。
+
+## 第三步：建立三張來源地圖
+
+MANUAL-1 指向製造商手冊、支援期限或韌體頁；ISP-1 指向方案、設備所有權、取消與歸還規則；SUPPORT-1 指向家庭受保護的設定與歷程。每張地圖填實際查閱日，讓下一位家人知道要回哪裡查。搜尋摘要、舊紙卡和親友建議可以當入口，不能在沒有目前來源時直接關閉複查列。
+
+## 第四步：永遠不要把憑證搬進 App
+
+FamilyBoard 的紀錄只需要「管理憑證在受保護保存庫，來源 SUPPORT-1」這種索引。Wi-Fi 密碼、路由器管理密碼、復原碼、ISP 帳號、完整帳單、完整序號和門牌地址留在適合的受保護位置。若要請 ISP 支援，透過官方入口處理，工具只記錄查詢日期、來源代號和可觀察回覆，不貼驗證碼或通信全文。
+
+## 第五步：確認 ISP 設備責任
+
+把 ISP 提供的數據機標記為「提供者所有」或「家庭所有」，依目前合約、租用說明或官方回覆確認。搬家、升級、取消或改方案時，記錄是否需要退回、何時收到標籤、由誰寄出、哪個來源確認收件。不要把「盒子已貼標籤」寫成「ISP 已收件」，也不要因為新零售設備相容就自行丟掉租用硬體。
+
+## 第六步：用家庭需求比較汰換，不用廣告宣稱
+
+先寫出真的需要的範圍：覆蓋哪幾個區域、哪些設備必須連線、是否需要特定 ISP 功能、哪個家庭角色負責設定和後續更新。再用製造商與 ISP 來源核對相容性、支援期限、歸還責任和設定方法。FamilyBoard 可以記錄比較問題與決定日期，不會替你排名產品、不會判定頻寬，也不會因為商品推薦出現就把汰換變成必要購買。
+
+## 第七步：新舊設備各自留下結果
+
+新設備完成設定後，記錄實際觀察到的服務、日期與仍待確認的區域；舊設備則記錄歸還、封存或轉交來源。短時間能連線不等於每個房間、每個裝置或未來更新都已驗證。若仍有斷線、管理介面錯誤或相容性疑問，狀態保持開放並交給 ISP、製造商或合格網路專業來源，不要用「已換新」掩蓋未完成的問題。
+
+## 第八步：中斷時保留可交接狀態
+
+忘記管理入口、找不到型號、ISP 沒回覆、歸還標籤遺失或新設定無法驗證時，先保留原始來源和未完成狀態。寫下可觀察的事件代號、下一個負責角色與重新開案日期，不要貼含個資或憑證的截圖。清楚的「等待來源確認」讓家人接手，也比猜測支援已結束或設備已安全更可靠。
+
+## 第九步：複查聯盟推薦與分享邊界
+
+列印或交接前刪除 Wi-Fi 密碼、管理帳號、復原碼、完整序號、地址、帳單和私人通信。未來若頁面出現網路線、壁掛架、Mesh 或收納用品推薦，確認聯盟揭露位於操作流程之外、可完全跳過，且不影響免費工具。這篇教學不取代製造商、ISP、資安通報或合格專業意見。
+
+## 收尾前的八個問題
+
+每台設備和角色是否辨識？官方支援與韌體來源是否有日期？能用與受支援是否分開？ISP 所有權與歸還窗口是否確認？憑證是否完全留在受保護位置？汰換比較是否依家庭需求與相容性來源？新舊設備的實際結果是否分開記錄？分享前是否移除所有秘密與個資？八題都能回答「是」，才適合關閉這次路由器複查。
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

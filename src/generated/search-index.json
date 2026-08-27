@@ -2112,6 +2112,22 @@
     "headings": "舊手機要怎麼清除再送人？免費裝置退役交接工具 財物清冊不等於資料清除 先建立代號與受保護來源地圖 九個欄位讓順序清楚 先決定要保留什麼，再碰裝置 出售、捐贈、回收和送修不是同一路徑 中斷時保留未完成狀態 隱私與聯盟推薦界線 交接前的六個問題"
   },
   {
+    "title": "Household Router Support Review Log | Firmware, ISP Ownership and Replacement",
+    "description": "Record a home router's model, support window, firmware check, ISP equipment responsibility and replacement decision without storing Wi-Fi or admin passwords.",
+    "route": "/tools/household-router-support-review-log/",
+    "cluster": "records-emergency",
+    "keywords": "router support review log",
+    "headings": "Household Router Support Review Log Working is not the same as supported Start with a safe device code Build a dated source map Use the nine fields in order Record ownership before buying anything Keep credentials outside the log Close only an observed result Privacy and future recommendations Before the next router decision"
+  },
+  {
+    "title": "Wi-Fi 路由器支援期限怎麼查？免費家庭網路複查工具｜FamilyBoard",
+    "description": "記錄家用路由器型號、製造商支援期限、韌體查核、ISP 設備責任與汰換決定，不輸入 Wi-Fi 或管理密碼。",
+    "route": "/zh-tw/tools/household-router-support-review-log/",
+    "cluster": "records-emergency",
+    "keywords": "路由器支援期限複查工具",
+    "headings": "Wi-Fi 路由器支援期限怎麼查？免費家庭網路複查工具 能連線不等於仍受支援 用安全代號，不要公開網路秘密 先畫出製造商、ISP 與設定來源地圖 九欄讓事實、責任與決定分開 先確認所有權，再比較新設備 憑證留在密碼管理位置 汰換後只記錄實際觀察 隱私與未來商品推薦界線"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
