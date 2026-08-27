@@ -2352,6 +2352,30 @@
     "headings": "How to Use FamilyBoard for Pantry Date and Rotation Reviews Start with a small section Keep rotation separate from safety Review the section without forcing a decision"
   },
   {
+    "title": "FamilyBoard Home Access Handoff Tutorial | Visitors, Repairs and Return Checks",
+    "description": "Learn how to use FamilyBoard to separate permission, access scope, visitor observations and return checks for repairs, sitters and deliveries. Keep addresses, keys and codes in protected sources.",
+    "route": "/guides/familyboard-home-access-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard home access handoff tutorial",
+    "headings": "How to Use FamilyBoard for Home Access Handoffs Separate permission, scope, observation and result Start with a neutral code and a protected source Keep the scope narrow enough to hand off Use the nine fields as a sequence Handoff without secrets Close the loop conservatively"
+  },
+  {
+    "title": "FamilyBoard Schedule Conflict Review Tutorial | Rescheduling and Family Handoffs",
+    "description": "Use FamilyBoard to separate a household schedule conflict, source, constraint, role, proposal and confirmed result. Keep full school, work and service calendars in their protected systems.",
+    "route": "/guides/familyboard-schedule-conflict-review-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard schedule conflict tutorial",
+    "headings": "How to Use FamilyBoard for Schedule Conflict Reviews Decide whether there is a real conflict Map sources without copying invitations Fill the conflict row for the next decision Keep proposal, submission and result separate Handle constraints and sudden changes Review after a change is confirmed"
+  },
+  {
+    "title": "FamilyBoard Maintenance Priority Review Tutorial | Observations, Sources and Handoffs",
+    "description": "Learn how to use FamilyBoard to review appliance observations, manuals, warranty sources, household constraints and service handoffs without turning a guess into a diagnosis or safety verdict.",
+    "route": "/guides/familyboard-maintenance-priority-review-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard maintenance priority tutorial",
+    "headings": "How to Use FamilyBoard for Maintenance Priority Reviews Write what was observed, not what you think caused it Separate source instructions from household priorities Use the nine fields for a traceable handoff Preserve changes and service results Make the review safe to share"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

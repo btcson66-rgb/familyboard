@@ -2,12 +2,12 @@
 title: "FamilyBoard 家庭進出怎麼交接？訪客、維修與歸還複查教學"
 description: "用繁體中文教你把家庭暫時進出範圍、角色、到訪與鑰匙歸還分開整理，不在共享紀錄保存地址、門禁碼或訪客身分。"
 route: "/zh-tw/guides/familyboard-home-access-handoff-tutorial/"
+alternateRoute: "/guides/familyboard-home-access-handoff-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭使用 FamilyBoard 協調維修、親友照看與物品交付的安全進出交接"
 primaryKeyword: "FamilyBoard 家庭進出交接教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

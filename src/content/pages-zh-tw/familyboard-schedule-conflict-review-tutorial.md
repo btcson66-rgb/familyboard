@@ -2,12 +2,12 @@
 title: "FamilyBoard 家庭行程衝突怎麼處理？改期與分工 App 教學"
 description: "用繁體中文教你把學校、工作、接送與服務預約的重疊拆成限制、角色、提案和正式結果，不保存完整行事曆或私人訊息。"
 route: "/zh-tw/guides/familyboard-schedule-conflict-review-tutorial/"
+alternateRoute: "/guides/familyboard-schedule-conflict-review-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭使用 FamilyBoard 協調學校、工作、接送與服務預約的行程衝突"
 primaryKeyword: "FamilyBoard 行程衝突教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

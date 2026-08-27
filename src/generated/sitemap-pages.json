@@ -2552,6 +2552,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-home-access-handoff-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-access-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-schedule-conflict-review-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-schedule-conflict-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-maintenance-priority-review-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2989,7 +3013,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-home-access-handoff-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-home-access-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3059,7 +3083,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-maintenance-priority-review-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3164,7 +3188,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-schedule-conflict-review-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-schedule-conflict-review-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

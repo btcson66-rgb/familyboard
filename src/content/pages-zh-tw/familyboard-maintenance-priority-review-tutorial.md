@@ -2,12 +2,12 @@
 title: "FamilyBoard 居家維護優先順序怎麼排？觀察與交接 App 教學"
 description: "用繁體中文教你把設備觀察、說明書來源、使用限制、家庭決定與專業詢問分開，不把猜測寫成故障或安全結論。"
 route: "/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/"
+alternateRoute: "/guides/familyboard-maintenance-priority-review-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭使用 FamilyBoard 整理設備異常觀察、來源、限制與後續行動"
 primaryKeyword: "FamilyBoard 居家維護優先教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

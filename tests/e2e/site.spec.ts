@@ -155,6 +155,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-consumable-change-history-tutorial/",
     "/guides/familyboard-clothing-care-tutorial/",
     "/guides/familyboard-pantry-review-tutorial/",
+    "/guides/familyboard-home-access-handoff-tutorial/",
+    "/guides/familyboard-schedule-conflict-review-tutorial/",
+    "/guides/familyboard-maintenance-priority-review-tutorial/",
     "/guides/water-leak-response-home-records/",
     "/tools/household-storm-readiness-review/",
     "/guides/storm-preparation-home-checklist/",
@@ -1210,6 +1213,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-pantry-review-tutorial/",
       alternate: "/guides/familyboard-pantry-review-tutorial/",
       heading: "FamilyBoard 食品櫃怎麼整理？",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-home-access-handoff-tutorial/",
+      alternate: "/guides/familyboard-home-access-handoff-tutorial/",
+      heading: "FamilyBoard 家庭進出怎麼交接？訪客、維修與歸還複查教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-schedule-conflict-review-tutorial/",
+      alternate: "/guides/familyboard-schedule-conflict-review-tutorial/",
+      heading: "FamilyBoard 家庭行程衝突怎麼處理？改期與分工 App 教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/",
+      alternate: "/guides/familyboard-maintenance-priority-review-tutorial/",
+      heading: "FamilyBoard 居家維護優先順序怎麼排？觀察與交接 App 教學",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -3009,6 +3027,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-pantry-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-home-access-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-home-access-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-schedule-conflict-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-schedule-conflict-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-maintenance-priority-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",
