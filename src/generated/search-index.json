@@ -1936,6 +1936,14 @@
     "headings": "Plant Care Handoff Log Use a safe reference Record observations, not diagnoses Separate plans from results"
   },
   {
+    "title": "Free Guest Arrival Preparation Log | Visit Scope, Household Rules and Reset Review | FamilyBoard",
+    "description": "Coordinate family, guest and service visits with safe source codes, preparation notes, arrival observations and reset follow-up—without storing visitor details or access credentials.",
+    "route": "/tools/household-guest-arrival-prep-log/",
+    "cluster": "household-operations",
+    "keywords": "guest arrival preparation log",
+    "headings": "Guest Arrival Preparation Log Use a general scope Separate preparation from arrival results Keep future product content outside the controls"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

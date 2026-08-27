@@ -224,6 +224,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-plant-care-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-plant-care-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-plant-care-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-guest-arrival-prep-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-guest-arrival-prep-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1013,6 +1016,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Use a safe reference",
       "Record observations, not diagnoses",
+    ],
+  },
+  {
+    path: "/tools/household-guest-arrival-prep-log/",
+    require: [
+      "Guest Arrival Preparation Log",
+      'hreflang="zh-TW"',
+      "Use a general scope",
+      "Separate preparation from arrival results",
     ],
   },
   {
@@ -2036,6 +2048,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-guest-arrival-prep-log/",
+    require: [
+      "家庭訪客到訪準備工具",
+      'hreflang="en"',
+      "用安全代號與一般範圍",
+      "到訪後一定要複查",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2062,6 +2083,16 @@ const checks = [
       'lang="zh-TW"',
       "限定外出與返家日期",
       "返家後做短複查",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/",
+    require: [
+      "FamilyBoard 訪客到訪怎麼準備",
+      'lang="zh-TW"',
+      "限定可以使用的範圍",
+      "到訪後做復原複查",
     ],
     forbid: ['rel="alternate"'],
   },
