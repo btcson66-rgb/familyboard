@@ -2368,6 +2368,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-consumable-change-history-log/",
+    "alternateRoute": "/zh-tw/tools/household-consumable-change-history-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2745,6 +2753,13 @@
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-consumable-change-history-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {
@@ -3298,6 +3313,13 @@
     "alternateRoute": "/tools/household-clothing-care-repair-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-consumable-change-history-log/",
+    "alternateRoute": "/tools/household-consumable-change-history-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {

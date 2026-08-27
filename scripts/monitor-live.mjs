@@ -284,6 +284,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-replacement-part-source-check-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-replacement-part-source-check-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-consumable-change-history-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-consumable-change-history-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-consumable-change-history-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2703,6 +2706,32 @@ const checks = [
       'lang="zh-TW"',
       "來源核對 App 教學",
       "不會讀取銘牌、不會搜尋商店",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/tools/household-consumable-change-history-log/",
+    require: [
+      "Household Consumable Change History Log",
+      'hreflang="zh-TW"',
+      "does not turn one event into another",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-consumable-change-history-log/",
+    require: [
+      "家庭濾網與耗材更換歷程工具",
+      'hreflang="en"',
+      "不讀取設備、不判定故障、不決定更換週期",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-consumable-change-history-tutorial/",
+    require: [
+      "FamilyBoard 濾網多久更換怎麼記",
+      'lang="zh-TW"',
+      "家庭耗材歷程 App 教學",
+      "不會讀取設備、不會判定故障",
     ],
     forbid: ['rel="alternate"'],
   },

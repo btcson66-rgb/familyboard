@@ -5038,6 +5038,80 @@ const householdReplacementPartSourceCheckDefinition = (locale: Locale): Definiti
   };
 };
 
+const householdConsumableChangeHistoryDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立更換列，等待設備與歷程來源",
+        "已核對設備與上次更換日，等待目前觀察",
+        "已記錄目前觀察，等待來源週期",
+        "已記錄來源週期，等待更換安排",
+        "已記錄更換，等待後續觀察",
+        "已完成觀察並保留歷程",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Change row created—asset and history source pending",
+        "Asset and last-change date checked—current observation pending",
+        "Current observation recorded—source interval pending",
+        "Source interval recorded—change plan pending",
+        "Change recorded—follow-up observation pending",
+        "Observation complete—history preserved",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "FILTER-A | 客廳冷氣代號／濾網 | 季前更換；記錄拆下時看到的灰塵與外觀，不作故障判定 | 2026-05-02 | 拆下時有明顯灰塵；設備後續狀況待觀察 | MANUAL-A1；家庭保養歷程 H-2026-05 | 家庭維護角色 | 2026-09-15 | 已記錄目前觀察，等待來源週期\nFILTER-B | 廚房抽油煙機代號／濾網 | 例行清潔後更換；只記日期與可見狀況 | 2026-04-18 | 已依家庭流程更換，後續觀察尚未完成 | MANUAL-B1；受保護維護紀錄 H-2026-04 | 家庭清潔角色 | 2026-10-18 | 已記錄更換，等待後續觀察"
+    : "FILTER-A | Living-room AC code / filter | Seasonal change; record visible condition when removed, not a fault diagnosis | 2026-05-02 | Noticeable dust when removed; equipment follow-up remains open | MANUAL-A1; household service history H-2026-05 | Household maintenance role | 2026-09-15 | Current observation recorded—source interval pending\nFILTER-B | Kitchen range-hood code / filter | Routine change after cleaning; record date and visible condition only | 2026-04-18 | Changed under the household process; follow-up observation not complete | MANUAL-B1; protected maintenance history H-2026-04 | Household cleaning role | 2026-10-18 | Change recorded—follow-up observation pending";
+  return {
+    intro: zh
+      ? "把冷氣、空氣清淨機、抽油煙機、吸塵器或其他設備的濾網與耗材更換歷程分開記錄：上次日期、當時看見的狀況、控制來源、實際更換、後續觀察與下一次複查。工具不讀取設備、不判定故障、不決定更換週期，也不提供拆卸或安裝指示。"
+      : "Keep a dated history for filters and consumables in air conditioners, purifiers, range hoods, vacuums and other equipment: last-change date, observed condition, controlling source, actual change, follow-up observation and next review. This tool does not read equipment, diagnose faults, decide an interval or provide removal or installation instructions.",
+    fields: [
+      text("review", zh ? "耗材更換歷程私人代號" : "Private consumable-history reference", zh ? "使用家庭代號，不要輸入姓名、地址、電話、完整序號、帳號或付款資料。" : "Use a household code; do not enter names, addresses, phone numbers, full serials, account identifiers or payment data.", "FILTER-HISTORY-2026-A"),
+      { name: "context", label: zh ? "更換歷程情境" : "Change-history context", type: "select", options: zh ? ["冷氣或暖氣濾網歷程", "空氣清淨機濾網歷程", "抽油煙機或通風濾網歷程", "吸塵器集塵袋或濾材歷程", "水濾芯日期歷程", "其他設備耗材歷程"] : ["Heating or cooling filter history", "Air-purifier filter history", "Range-hood or ventilation filter history", "Vacuum bag or filter history", "Water-filter date history", "Other equipment-consumable history"] },
+      { name: "reviewDate", label: zh ? "本次歷程複查日期" : "Current history review date", type: "date", value: "2026-08-28" },
+      text("source", zh ? "製造商、標示與家庭歷程來源" : "Manufacturer, label and household-history sources", zh ? "只填安全來源代號；完整型號、序號、照片、收據與服務通信留在受保護來源。" : "Use safe source codes; keep full models, serials, photos, receipts and service correspondence protected.", "MANUAL-A1; LABEL-A1; HISTORY-A1"),
+      text("rows", zh ? "耗材更換歷程列" : "Consumable-change history rows", zh ? "每行 9 欄：ID｜設備或區域代號｜耗材類別與更換原因｜上次更換日 YYYY-MM-DD｜本次看到的狀況｜來源／建議週期索引｜負責角色｜下一次複查日 YYYY-MM-DD｜指定狀態。最多 12 行。" : "Each row uses 9 fields: ID | asset or area code | consumable category and change reason | last-change date YYYY-MM-DD | current observed condition | source or interval pointer | owner role | next review date YYYY-MM-DD | exact status. Maximum 12 rows.", defaults),
+      text("storage", zh ? "受保護耗材歷程位置" : "Protected consumable-history location", zh ? "只寫保管容器或歷程代號，不要放完整型號、序號、地址、付款或通信內容。" : "Name a custody container or history code, not full models, serials, addresses, payment or correspondence.", zh ? "家庭紀錄／設備耗材歷程／FILTER-HISTORY-2026-A／受保護來源" : "Household records / consumable history / FILTER-HISTORY-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate);
+      if (!review) return zh ? "請輸入有效的本次歷程複查日期。" : "Enter a valid current history-review date.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全歷程代號、來源地圖與受保護位置。" : "Provide a safe history code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) })).filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行耗材更換歷程列。" : "Enter 1 to 12 consumable-change history rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `歷程第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `History line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length) return zh ? "每行更換歷程都需要唯一 ID。" : "Every change-history row needs a unique ID.";
+      const previousDates = rows.map((row) => strictIsoDate(row.parts[3]));
+      const nextDates = rows.map((row) => strictIsoDate(row.parts[7]));
+      if (previousDates.some((date) => !date || date > review)) return zh ? "每列上次更換日必須有效，且不能晚於本次複查。" : "Each last-change date must be valid and no later than the current review.";
+      if (nextDates.some((date) => !date || date < review)) return zh ? "每列下一次複查日必須有效，且不能早於本次複查。" : "Each next-review date must be valid and no earlier than the current review.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `歷程第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `History line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const thin = rows.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 10 || row.parts[4].length < 10 || row.parts[5].length < 8 || row.parts[6].length < 3);
+      if (thin.length) return zh ? `歷程第 ${thin.map((row) => row.line).join("、")} 行需要設備、耗材用途、可見狀況、來源週期與角色。` : `History line ${thin.map((row) => row.line).join(", ")} needs an asset, consumable purpose, visible condition, source interval and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址或設備識別資料；請改用安全代號。" : "A full contact, address or equipment identifier was detected; use safe codes.";
+      if (/password|passcode|verification code|full address|street address|phone number|account number|card number|bank account|order number|private message|密碼|驗證碼|完整地址|電話|帳號|卡號|銀行帳戶|訂單號|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料；請只保留安全歷程索引。" : "Sensitive data was detected; keep only a safe history index.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = rows.filter((row) => statuses.indexOf(row.parts[8]) < 5), closed = rows.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const renderedRows = rows.map((row, index) => row.parts[0] + (zh ? "｜設備／區域：" : " — asset/area: ") + row.parts[1] + (zh ? "｜耗材與原因：" : " — consumable/reason: ") + row.parts[2] + (zh ? "｜上次更換：" : " — last change: ") + formatter.format(previousDates[index] as Date) + (zh ? "｜本次狀況：" : " — observed condition: ") + row.parts[4] + (zh ? "｜來源／週期：" : " — source/interval: ") + row.parts[5] + (zh ? "｜角色：" : " — owner: ") + row.parts[6] + (zh ? "｜下次複查：" : " — next review: ") + formatter.format(nextDates[index] as Date) + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n");
+      return [
+        values.review.trim() + (zh ? "｜家庭耗材更換歷程" : " — household consumable-change history"),
+        (zh ? "歷程情境：" : "History context: ") + values.context,
+        (zh ? "本次複查：" : "Current review: ") + formatter.format(review),
+        (zh ? "仍開放列：" : "Open rows: ") + open.length,
+        (zh ? "已完成或不適用列：" : "Completed or not-applicable rows: ") + closed.length,
+        (zh ? "製造商、標示與家庭歷程來源：" : "Manufacturer, label and household-history sources: ") + values.source.trim(),
+        (zh ? "有版本的耗材觀察與更換歷程\n" : "Versioned consumable observations and change history\n") + renderedRows,
+        (zh ? "受保護耗材歷程位置：" : "Protected consumable-history location: ") + values.storage.trim(),
+        zh ? "這份輸出只整理日期、觀察與來源，不判定故障、不決定固定更換週期、不提供拆卸或安裝指示，也不證明設備安全。請依實際製造商來源、設備標示與合格專業流程處理真實結果。" : "This output only organizes dates, observations and sources. It does not diagnose faults, decide a fixed replacement interval, provide removal or installation instructions or prove equipment safety. Use current manufacturer sources, equipment labels and qualified processes for real outcomes.",
+      ].join("\n\n");
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
@@ -5046,6 +5120,7 @@ const definitions: Record<string, Definition> = {
   "household-account-list": householdAccountDefinition("en"),
   "household-responsibility-coverage-map": householdResponsibilityCoverageDefinition("en"),
   "household-replacement-part-source-check-log": householdReplacementPartSourceCheckDefinition("en"),
+  "household-consumable-change-history-log": householdConsumableChangeHistoryDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -9196,6 +9271,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-replacement-part-source-check-log": {
     ...householdReplacementPartSourceCheckDefinition("zh-TW"),
+  },
+  "household-consumable-change-history-log": {
+    ...householdConsumableChangeHistoryDefinition("zh-TW"),
   },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("zh-TW"),

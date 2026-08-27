@@ -2168,6 +2168,14 @@
     "headings": "Household Replacement-Part Source Check Log Separate ordinary shopping from device-linked parts The nine-column row format Treat five events as different evidence Seven statuses keep uncertainty visible Privacy and safety boundary Optional affiliate space must not choose the part"
   },
   {
+    "title": "Consumable Change History Log | Free Filter Replacement Record",
+    "description": "Record filter and consumable change dates, visible condition, source intervals, owners and follow-up reviews without diagnosing equipment or prescribing installation steps.",
+    "route": "/tools/household-consumable-change-history-log/",
+    "cluster": "maintenance",
+    "keywords": "filter replacement history tracker",
+    "headings": "Household Consumable Change History Log Record a history, not a universal rule Keep five events separate Use statuses to preserve the timeline Privacy and safety boundary Optional affiliate space stays outside the answer"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
