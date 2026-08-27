@@ -1912,6 +1912,14 @@
     "headings": "Household Recycling Handoff Log Use the current source Keep observations separate from rule questions Assign the handoff and recheck after changes"
   },
   {
+    "title": "Free Household Donation Handoff Log | Item Notes, Receiving Rules and Transfer Follow-Up | FamilyBoard",
+    "description": "Track household items prepared for donation, gifting or exchange with safe source codes, condition notes and a clear handoff result—without storing recipient details.",
+    "route": "/tools/household-donation-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "household donation log",
+    "headings": "Household Donation Handoff Log Record condition modestly Verify the receiving channel Close only with an observed result"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

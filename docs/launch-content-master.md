@@ -17968,6 +17968,8 @@ Lighting, labels, non-slip products or storage aids may eventually appear beside
 - Q: Can this replace the local collection schedule?
   A: No. It is a handoff and follow-up record. Check the latest local notice after a move, building change or holiday schedule.
 
+---
+
 # Household Recycling Handoff Log
 
 Recycling gets complicated when a building notice changes, a pickup is missed or one person's habit is mistaken for the current rule. This free tool records the material being prepared, the source checked, the collection context, the owner and the observed result. It does not decide recyclability or promise collection.
@@ -17983,6 +17985,48 @@ Write what was seen—an emptied container, bundled cardboard or a label awaitin
 ## Assign the handoff and recheck after changes
 
 Give one household role the next step. Keep missed collections, moves, holiday changes and provider updates open until an attributable source or observed handoff closes the row. Future storage or label affiliate content must remain outside the controls and cannot promise acceptance.
+
+---
+
+## Page 253 — Household Donation Handoff Log
+**Slug:** /tools/household-donation-handoff-log/
+**Primary intent:** organize household item donation and transfer handoffs without making appraisal or ownership claims
+**Title tag:** Free Household Donation Handoff Log | Item Notes, Receiving Rules and Transfer Follow-Up | FamilyBoard
+**Meta description:** Track household items prepared for donation, gifting or exchange with safe source codes, condition notes and a clear handoff result—without storing recipient details.
+**Primary keyword concept:** household donation log
+**Cluster:** household-operations
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /tools/household-recycling-handoff-log/, /tools/moving-box-handover-log/, /zh-tw/tools/household-donation-handoff-log/
+**FAQ:**
+- Q: Does this tool estimate an item's value or create a tax receipt?
+  A: No. It records observations and a handoff trail; the recipient and applicable official source control valuation, tax treatment and receipts.
+- Q: Should I enter the recipient's name or address?
+  A: No. Use a safe channel code and keep personal details in the protected communication or recipient record.
+- Q: Is a message proof that the item was accepted?
+  A: No. A message or planned pickup is still open until the actual result is received or observed.
+
+---
+
+# Household Donation Handoff Log
+
+Decluttering often stalls between deciding to give something away and recording that another person or organization actually received it. This free tool separates the purpose, source, condition observation, receiving-channel question and observed handoff. It does not appraise an item, decide ownership or create tax evidence.
+
+## Record condition modestly
+
+Write what was observed—accessories present, packaging closed or condition awaiting review. Do not turn a quick look into a claim that an item works, is safe, complete or worth a specific amount.
+
+## Verify the receiving channel
+
+Organizations and community channels can limit category, quantity, condition or drop-off time. Keep the question open until the current channel answers it; an old page or social post is not confirmation.
+
+## Close only with an observed result
+
+“Pickup requested” is an action, not acceptance. Keep cancelled, refused or redirected items open and create a new dated row when the receiving channel changes. Future boxes, labels or transport affiliate content must remain outside the controls and cannot promise acceptance or value.
 
 # PART III — ESSENTIAL SUPPORTING PAGES
 

@@ -63,7 +63,10 @@ test("public SEO, keyboard and five production tools work", async ({
 test("representative routes have no serious accessibility violations", async ({
   page,
 }) => {
-  test.setTimeout(300_000);
+  // The representative route matrix intentionally covers the growing public
+  // library. Keep a generous ceiling so adding a substantive page does not
+  // turn a complete accessibility sweep into a timeout on slower CI runners.
+  test.setTimeout(420_000);
   for (const route of [
     "/",
     "/guides/home-maintenance-schedule/",
@@ -82,6 +85,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-meter-reading-review-log/",
     "/tools/household-accessibility-walkthrough-log/",
     "/tools/household-recycling-handoff-log/",
+    "/tools/household-donation-handoff-log/",
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
@@ -159,6 +163,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-meter-reading-review-log/",
     "/zh-tw/tools/household-accessibility-walkthrough-log/",
     "/zh-tw/tools/household-recycling-handoff-log/",
+    "/zh-tw/tools/household-donation-handoff-log/",
     "/zh-tw/guides/familyboard-household-meeting-tutorial/",
     "/zh-tw/guides/familyboard-pantry-review-tutorial/",
     "/zh-tw/guides/familyboard-clothing-care-tutorial/",
@@ -172,6 +177,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-meter-reading-tutorial/",
     "/zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/",
     "/zh-tw/guides/familyboard-recycling-handoff-tutorial/",
+    "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -307,7 +313,9 @@ test("representative routes have no serious accessibility violations", async ({
 test("Traditional Chinese pages are indexable, correctly localized and functional", async ({
   page,
 }) => {
-  test.setTimeout(240_000);
+  // Keep the full Traditional Chinese route matrix intact as the library
+  // grows; slower CI workers need more than the original v1 ceiling.
+  test.setTimeout(420_000);
   await page.goto("/zh-tw/");
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(

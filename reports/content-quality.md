@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T06:11:31.016Z
+Generated: 2026-08-27T06:28:59.616Z
 
 ## Summary
 
-- Indexable pages: 412
-- Generated HTML routes: 429
+- Indexable pages: 415
+- Generated HTML routes: 432
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 199
+- Pages without a contextual product/tool link: 202
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 47
+- product: 48
 - appliances: 30
 - maintenance: 37
-- household-operations: 46
+- household-operations: 48
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -79,6 +79,7 @@ Generated: 2026-08-27T06:11:31.016Z
 - /tools/household-bill-source-status-log/
 - /tools/household-clothing-care-repair-log/
 - /tools/household-document-renewal-review-log/
+- /tools/household-donation-handoff-log/
 - /tools/household-internet-incident-review-log/
 - /tools/household-inventory-photo-capture-log/
 - /tools/household-meal-prep-role-log/
@@ -120,6 +121,7 @@ Generated: 2026-08-27T06:11:31.016Z
 - /zh-tw/guides/familyboard-bill-review-tutorial/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
+- /zh-tw/guides/familyboard-donation-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-internet-incident-tutorial/
@@ -210,6 +212,7 @@ Generated: 2026-08-27T06:11:31.016Z
 - /zh-tw/tools/household-clothing-care-repair-log/
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-document-renewal-review-log/
+- /zh-tw/tools/household-donation-handoff-log/
 - /zh-tw/tools/household-insurance-policy-source-version-log/
 - /zh-tw/tools/household-internet-incident-review-log/
 - /zh-tw/tools/household-inventory-photo-capture-log/

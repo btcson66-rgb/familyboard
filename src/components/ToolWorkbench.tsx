@@ -3571,6 +3571,70 @@ const recyclingHandoffDefinition = (locale: Locale): Definition => {
   };
 };
 
+const donationHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立物品列，等待轉贈目的",
+        "已確認目的，等待來源",
+        "已記錄來源，等待物品觀察",
+        "已完成物品觀察，等待收受管道",
+        "已指定管道，等待交接結果",
+        "已完成交接，等待後續複查",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Donation row created—transfer purpose pending",
+        "Purpose checked—source pending",
+        "Source recorded—item observation pending",
+        "Item observation complete—receiving channel pending",
+        "Channel assigned—handoff result pending",
+        "Handoff complete—follow-up review pending",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "GIVE-A | 小家電轉贈 | 2026-08-20 | 家庭物品來源代號 | 外觀與配件待由家庭成員依實際狀況確認，不先保證可用 | 收受單位與檢查要求尚未確認，不做估價或安全判定 | 查詢合適收受管道並約定交接方式，保留實際結果 | 物品整理角色 | 已完成物品觀察，等待收受管道\nGIVE-B | 書籍捐贈批次 | 2026-08-22 | 整理區來源代號 | 已分箱並保留箱件安全代號，內容與收受範圍待確認 | 不假設對方收受所有類型或數量 | 先向收受管道確認目前規則，再記錄交接日期與結果 | 轉贈交接角色 | 已指定管道，等待交接結果"
+    : "GIVE-A | Small appliance transfer | 2026-08-20 | Household item source code | Condition and accessories need a household check; usability is not promised | Receiving organization and inspection requirements are unconfirmed; no value or safety conclusion made | Confirm a suitable receiving channel and agree the handoff method, then preserve the observed result | Item-organization role | Item observation complete—receiving channel pending\nGIVE-B | Book donation batch | 2026-08-22 | Sorting-area source code | Boxed with safe package codes; contents and receiving scope remain to be checked | Do not assume the recipient accepts every type or quantity | Confirm the current recipient rules, then record the handoff date and result | Transfer-handoff role | Channel assigned—handoff result pending";
+  return {
+    intro: zh
+      ? "用安全代號整理家庭物品要捐贈、轉贈、交換或交給指定管道的目的、來源、物品觀察、收受規則與實際交接。工具不估價、不判定所有權、稅務、可用性或安全，不保存姓名、地址、電話、帳號或私人通信。"
+      : "Use safe codes to organize a household item's donation, gift, exchange or transfer purpose, source, condition observation, receiving rules and observed handoff. This tool does not appraise value or decide ownership, tax, usability or safety, and stores no names, addresses, phone numbers, accounts or private correspondence.",
+    fields: [
+      text("review", zh ? "物品轉贈複查私人代號" : "Private donation-handoff review reference", zh ? "使用家庭代號，不要輸入姓名、住址、電話、帳號、估價或收受案件內容。" : "Use a household code; do not enter names, addresses, phone numbers, accounts, valuations or recipient case details.", "GIVE-REVIEW-2026-A"),
+      { name: "context", label: zh ? "轉贈複查情境" : "Donation-review context", type: "select", options: zh ? ["整理與斷捨離", "搬家前物品交接", "捐給公益或社區管道", "親友轉贈或交換", "收受方規則變更", "其他物品交接"] : ["Decluttering and sorting", "Transfer before a move", "Donation to a nonprofit or community channel", "Gift or exchange with someone known", "Recipient-rule change", "Other item handoff"] },
+      { name: "reviewDate", label: zh ? "本次轉贈複查日期" : "Current donation-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次交接或複查日期" : "Next handoff or review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "物品與收受規則來源地圖" : "Item and receiving-rule source map", zh ? "只填安全來源代號，不要貼姓名、地址、電話、估價或私人訊息。" : "Use safe source codes; do not paste names, addresses, phone numbers, valuations or private messages.", "ITEM-S1; RECIPIENT-R1; HANDOFF-H1"),
+      text("rows", zh ? "物品轉贈與交接狀態列" : "Donation and handoff rows", zh ? "每行 9 欄：ID｜物品或批次｜觀察日期 YYYY-MM-DD｜來源代號｜轉贈目的｜物品狀況或包裝觀察｜收受規則疑問或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | item or batch | observation date YYYY-MM-DD | source code | transfer purpose | condition or packaging observation | receiving-rule question or next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護物品與交接紀錄位置" : "Protected item and handoff-record location", zh ? "只寫保管流程或容器代號，不要放姓名、地址、電話、估價或收受方個資。" : "Name a custody process or container, not names, addresses, phone numbers, valuations or recipient personal data.", zh ? "家庭紀錄／物品轉贈／GIVE-REVIEW-2026-A／受保護來源" : "Household records / item transfer / GIVE-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次轉贈複查日期。" : "Enter valid current and next donation-review dates.";
+      if (next < review) return zh ? "下一次交接或複查日期不能早於本次複查。" : "The next handoff or review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全物品代號、來源地圖與受保護位置。" : "Provide a safe item code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行物品轉贈列。" : "Enter 1 to 14 donation rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `轉贈第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Donation line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行物品紀錄都需要唯一 ID。" : "Every donation row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `轉贈第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Donation line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const thin = parsed.filter((row) => row.parts[1].length < 3 || row.parts[3].length < 6 || row.parts[4].length < 5 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `轉贈第 ${thin.map((row) => row.line).join("、")} 行需要物品、來源、目的、狀況、下一步與角色。` : `Donation line ${thin.map((row) => row.line).join(", ")} needs an item, source, purpose, condition, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、身分或案件識別資料；請改用安全代號。" : "A full contact, address, identity or case identifier was detected; use safe codes.";
+      if (/password|passcode|full address|account number|recipient case|private message|姓名|密碼|完整地址|帳號|收受案件|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或私人通信；請只保留安全來源代號。" : "Sensitive data or private correspondence was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭物品捐贈與轉贈交接複查" : " — household donation and item-transfer handoff review"), (zh ? "複查情境：" : "Review context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次交接或複查：" : "Next handoff or review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已完成交接或不適用列：" : "Completed or not-applicable rows: ") + closed.length, (zh ? "物品與收受規則來源地圖：" : "Item and receiving-rule source map: ") + values.source.trim(), (zh ? "有版本的物品觀察與交接\n" : "Versioned item observations and handoffs\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜物品：" : " — item: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜目的：" : " — purpose: ") + row.parts[4] + (zh ? "｜狀況：" : " — condition: ") + row.parts[5] + (zh ? "｜下一步：" : " — next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護物品與交接紀錄位置：" : "Protected item and handoff-record location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭物品轉贈觀察，不估價、不判定所有權、稅務、可用性或安全，也不保證收受方一定接受；請以實際收受管道與適用來源為準。" : "This output only organizes household item-transfer observations. It does not appraise value or decide ownership, tax, usability or safety, and does not guarantee acceptance; use the actual receiving channel and applicable sources."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7623,6 +7687,9 @@ const definitions: Record<string, Definition> = {
   "household-recycling-handoff-log": {
     ...recyclingHandoffDefinition("en"),
   },
+  "household-donation-handoff-log": {
+    ...donationHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7702,6 +7769,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-recycling-handoff-log": {
     ...recyclingHandoffDefinition("zh-TW"),
+  },
+  "household-donation-handoff-log": {
+    ...donationHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

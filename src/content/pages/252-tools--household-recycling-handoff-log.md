@@ -17,7 +17,7 @@ faq:
   - question: "Should I enter my address or a collection account number?"
     answer: "No. Use a household code and a short source code; keep sensitive details in the protected original source."
   - question: "Can this replace the local collection schedule?"
-    answer: "No. It is a handoff and follow-up record. Check the latest local notice after a move, building change or holiday schedule. # Household Recycling Handoff Log Recycling gets complicated when a building notice changes, a pickup is missed or one person's habit is mistaken for the current rule. This free tool records the material being prepared, the source checked, the collection context, the owner and the observed result. It does not decide recyclability or promise collection. ## Use the current source Municipal programs, private providers and buildings can use different streams. Record a safe source code for the current official or building notice and keep the full source protected. ## Keep observations separate from rule questions Write what was seen—an emptied container, bundled cardboard or a label awaiting review. If acceptance is unknown, record the question and next action instead of guessing from a symbol or an old post. ## Assign the handoff and recheck after changes Give one household role the next step. Keep missed collections, moves, holiday changes and provider updates open until an attributable source or observed handoff closes the row. Future storage or label affiliate content must remain outside the controls and cannot promise acceptance."
+    answer: "No. It is a handoff and follow-up record. Check the latest local notice after a move, building change or holiday schedule."
 contentVersion: 1
 ---
 # Household Recycling Handoff Log
