@@ -18726,6 +18726,144 @@ General paper planners, calendar displays or label products may be shown beside 
 
 這真的是時間或資源衝突嗎？來源是否只用安全代號？家庭限制是否是最小必要摘要？提案、正式送出與結果是否分開？分享前是否已移除完整行事曆與聯絡資料？五題都能回答「是」，這份複查才會讓家庭更容易協調，而不是多一份暴露生活模式的日曆副本。
 
+## Page 270 — Household Maintenance Priority Review Log
+**Slug:** /tools/household-maintenance-priority-review-log/
+**Primary intent:** organize maintenance observations, use constraints, owners and source-based follow-up without diagnosing faults or rating safety
+**Title tag:** Free Home Maintenance Priority Review Log | Observations, Owners and Follow-Up | FamilyBoard
+**Meta description:** Turn household maintenance observations into source-linked next steps, use constraints and owner handoffs without storing full warranties, serial numbers or repair instructions.
+**Primary keyword concept:** home maintenance priority review log
+**Cluster:** maintenance
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /tools/home-maintenance-schedule-generator/, /tools/home-repair-punch-list/, /zh-tw/tools/household-maintenance-priority-review-log/
+**FAQ:**
+- Q: Does the tool diagnose the appliance or decide how dangerous it is?
+  A: No. It records observations and points to the manual or qualified source; stop using equipment and seek appropriate help when needed.
+- Q: Can it replace a warranty or service record?
+  A: No. Keep the full warranty, serial and service documents in a controlled source and record only a safe pointer here.
+- Q: What makes one row ready for handoff?
+  A: A clear scope, source, use constraint, owner, next action and observed result, without private or hazardous instructions.
+
+# Household Maintenance Priority Review Log
+
+A dripping appliance, a weak fan or a recurring warning can create uncertainty about what the household should do next. This free browser tool creates a source-linked review trail for observations, use constraints, owners and follow-up without diagnosing the fault or pretending to be a safety inspector.
+
+## Observe before you explain
+
+Describe what was actually seen, heard or reported, then point to a manual, warranty or service source with a safe code. A visible symptom is not a diagnosis. If a source says to stop use or contact a qualified person, follow that source rather than turning the public-safe log into repair instructions.
+
+## Keep priority as a household decision
+
+The tool does not calculate danger or decide whether an appliance must be replaced. A household role can record a decision such as “keep unused until service question answered,” its source and the next checkpoint. The responsible person or qualified provider controls the actual safety and repair decision.
+
+## Affiliate recommendations stay outside maintenance action
+
+General filters, labels or storage products may appear beside the guide with disclosure. They cannot imply that a purchase makes an appliance safe, replace a qualified inspection or cover the stop-use and escalation instructions.
+
+## Page 271 — Household Maintenance Priority Review Log (Traditional Chinese)
+**Slug:** /zh-tw/tools/household-maintenance-priority-review-log/
+**Primary intent:** 讓台灣家庭用來源代號整理居家維護觀察、使用限制、角色與後續複查，不做故障或危險判定
+**Title tag:** 居家維護優先複查工具｜觀察、限制、角色與後續行動｜FamilyBoard
+**Meta description:** 免費整理家電或居家設備的可見異常、說明書與服務來源、使用限制、家庭角色與複查結果；不提供拆修指示或安全保證。
+**Primary keyword concept:** 居家維護優先複查工具
+**Cluster:** maintenance
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/home-maintenance-schedule-generator/, /zh-tw/tools/home-repair-punch-list/, /zh-tw/guides/familyboard-maintenance-priority-review-tutorial/
+**FAQ:**
+- Q: 工具會判斷設備有多危險或是哪裡故障嗎？
+  A: 不會。它只整理觀察與來源；是否停用或找合格人員要依說明書、服務商或適當專業判斷。
+- Q: 可以用它取代保固或維修紀錄嗎？
+  A: 不可以。完整保固、序號與服務文件留在受控來源，工具只保存安全指標。
+- Q: 怎樣的列才適合交接？
+  A: 有清楚範圍、來源、使用限制、角色、下一步與結果觀察，且沒有私人資料或危險拆修指示。
+
+# 居家維護優先複查工具
+
+這個免費工具把設備可見異常、說明書／保固／服務來源、使用限制、家庭決定、負責角色、行動與結果複查分開。它只在瀏覽器檢查日期、九欄完整性、唯一 ID、指定狀態、觀察時間線與常見敏感資料格式；不診斷故障、不評估危險程度、不判斷是否該汰換、不提供拆修步驟，也不保證設備或服務安全。
+
+先用 MAINT-PRIORITY-REVIEW-2026-A 建立複查代號，再以 MANUAL-M1；WARRANTY-W1；SERVICE-S1 這類安全來源指回原始資料。每列寫維護範圍、觀察日、來源、使用限制或家庭窗口、角色與觀察、行動或下一步、負責角色及狀態。完整序號、地址、案件、電話、保固全文與私人通信留在受保護位置。
+
+## 先寫觀察，再寫要問的問題
+
+「冷氣室內機出現滴水」是可見觀察；「可能是排水管堵塞」是尚未證實的推測。工具應記前者，以及回到說明書或服務來源詢問的下一步，不把推測寫成故障原因。若原始來源要求停用、斷電或聯絡合格人員，依原來源處理，不要在家庭摘要自行發明替代操作。
+
+## 家庭優先順序不是專業安全評分
+
+家庭可以依實際需要決定先處理哪一列，例如會影響日常使用、需要安排到訪或必須先保留保固證據；但工具不會把這個決定轉成危險等級，也不替家人判定可以繼續使用。使用限制、負責人與下次複查日要保持可見，讓接手者知道還缺哪一個正式結果。
+
+## 聯盟商品只能放在行動之外
+
+未來濾網、標籤或一般收納用品可以在頁面旁邊清楚揭露聯盟關係並保持可略過。商品不能宣稱讓設備安全、取代檢查、保固或合格服務，也不能遮住停用、升級或正式來源的提醒。
+
+## Page 272 — FamilyBoard Maintenance Priority Review Tutorial (Traditional Chinese)
+**Slug:** /zh-tw/guides/familyboard-maintenance-priority-review-tutorial/
+**Primary intent:** teach Taiwan households a source-first method to organize maintenance observations and next actions in FamilyBoard
+**Title tag:** FamilyBoard 居家維護優先順序怎麼排？觀察與交接 App 教學
+**Meta description:** 用繁體中文教你把設備觀察、說明書來源、使用限制、家庭決定與專業詢問分開，不把猜測寫成故障或安全結論。
+**Primary keyword concept:** FamilyBoard 居家維護優先教學
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/household-maintenance-priority-review-log/, /zh-tw/tools/home-maintenance-schedule-generator/, /zh-tw/guides/home-maintenance-log/
+**FAQ:**
+- Q: FamilyBoard 能告訴我設備是不是危險嗎？
+  A: 不能。它只整理家庭觀察與要回查的來源，不能取代說明書、合格技師或緊急處理。
+- Q: 可以把完整型號、序號和保固文件貼在共享摘要嗎？
+  A: 不要。使用安全代號，完整資料放在家庭自行保護的來源。
+- Q: 看到異常後應該先做什麼？
+  A: 先依說明書或正式來源確認是否需要停用，再記錄家庭角色與下一步，不要自行拆修。
+
+# FamilyBoard 居家維護優先順序怎麼排？觀察與交接 App 教學
+
+家電或居家設備出現滴水、異音、異味、警示或性能變化時，家庭常會同時面對「要不要繼續用」「誰要查說明書」「要不要找服務商」「怎麼保留保固證據」等問題。FamilyBoard 的[居家維護優先複查工具](/zh-tw/tools/household-maintenance-priority-review-log/)把這些節點拆開，讓家庭能交接下一步，又不把猜測寫成故障或安全結論。
+
+本教學適合台灣家庭的冷氣、除濕機、熱水器、洗衣機、冰箱、通風設備與其他住宅設備。它不是檢測器、維修手冊、保固判定器或緊急服務；涉及瓦斯、電氣、冷媒、高處、漏水擴大、焦味、冒煙或人身風險時，先依正式說明與適當專業流程處理。
+
+## 第一步：先記錄實際看到的事
+
+把「冷氣室內機出現滴水」「浴室排風聲音變化」或「冰箱門封看見破損」這類可觀察內容寫入範圍與觀察欄。不要直接寫「排水管堵塞」「馬達快壞了」或「一定可以自行修理」，因為那是尚未由來源支持的解釋。若設備有焦味、冒煙、漏電或其他危險訊號，先停止不安全操作，尋找適當協助，再回頭記錄家庭流程。
+
+## 第二步：建立說明書、保固與服務來源地圖
+
+來源欄使用 MANUAL-M1、WARRANTY-W1、SERVICE-S1 等安全代號，分別指向說明書、保固文件與服務詢問。完整型號、序號、購買證明、地址、電話、案件號與私人訊息留在受保護位置。來源版本若更新，新增代號和日期，不要刪除先前的觀察，讓接手者知道目前依哪一份資料行動。
+
+## 第三步：把使用限制與家庭決定分開
+
+「依來源先停止使用」「只做說明書允許的外部清潔」「等待服務商回覆」是不同的限制或下一步。家庭可以決定先處理影響日常、需要安排到訪或必須保留文件的列，但這是家庭營運決定，不是設備危險評分。負責角色用「家庭維護角色」「服務詢問角色」即可，不必貼姓名。
+
+## 第四步：用九欄列交接
+
+每列填 ID、維護範圍、觀察日期、來源代號、使用限制或窗口、角色與觀察、行動／詢問／下一步、負責角色與狀態。示例可以是「MAINT-A｜冷氣滴水觀察｜2026-08-25｜MANUAL-M1; SERVICE-S1｜依來源先限制使用並等待詢問｜家庭維護角色記錄可見狀況，未貼完整型號｜回到 SERVICE-S1 複查服務回覆｜家庭維護角色｜已安排角色，等待行動或專業詢問」。每列 ID 唯一，觀察日不能晚於複查日，最多十四列。
+
+## 第五步：不要把家庭摘要變成維修教學
+
+工具只整理要觀察什麼、回哪個來源、誰負責與何時複查。不要貼拆機、接線、冷媒、瓦斯、高處或繞過安全裝置的步驟。即使家人曾經處理過類似問題，也不代表這次設備、型號或現場條件相同；專業判斷要留給合格服務或正式說明。
+
+## 第六步：處理重複問題與結果複查
+
+同一設備再次出現異常時，保留原 ID 和觀察，新增版本或新列，回到保固與服務來源確認是否有先前回覆。服務商到訪不等於問題已解決，家庭看到設備重新運轉也不等於根因已排除。等待正式結果時保持開放，完成後記錄可觀察的回覆與下一個複查日。
+
+## 第七步：分享與聯盟推薦界線
+
+複製或列印前移除姓名、地址、電話、完整序號、案件、保固全文與私人聊天。工具的敏感字詞檢查只能攔截部分格式，人工逐行檢查仍必要。未來若推薦濾網、標籤或收納用品，應在工具外側清楚揭露聯盟關係、保持可略過，不能宣稱商品能讓設備安全或取代合格服務。
+
+## 收尾前的六個問題
+
+這一列是否只寫可觀察事實？來源是否是安全代號？使用限制是否來自正式來源或清楚家庭決定？下一步是否有角色？行動與服務結果是否分開？分享前是否移除了設備與家庭敏感資料？六題都能回答「是」，這份紀錄才是在幫家庭做出可追溯的下一步。
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

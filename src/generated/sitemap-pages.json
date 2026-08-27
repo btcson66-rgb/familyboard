@@ -2152,6 +2152,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-maintenance-priority-review-log/",
+    "alternateRoute": "/zh-tw/tools/household-maintenance-priority-review-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/tools/household-maintenance-priority-review-log/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2568,6 +2592,13 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-mail-package-handoff-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/",
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
@@ -3024,6 +3055,13 @@
   {
     "route": "/zh-tw/tools/household-mail-package-handoff-log/",
     "alternateRoute": "/tools/household-mail-package-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-maintenance-priority-review-log/",
+    "alternateRoute": "/tools/household-maintenance-priority-review-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

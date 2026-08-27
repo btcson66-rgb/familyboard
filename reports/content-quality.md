@@ -1,26 +1,26 @@
 # Content quality report
 
-Generated: 2026-08-27T10:17:21.162Z
+Generated: 2026-08-27T10:36:42.756Z
 
 ## Summary
 
-- Indexable pages: 451
-- Generated HTML routes: 468
+- Indexable pages: 454
+- Generated HTML routes: 471
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 238
+- Pages without a contextual product/tool link: 241
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 60
+- product: 61
 - appliances: 30
-- maintenance: 37
+- maintenance: 39
 - household-operations: 72
 - inventory-warranty: 41
 - records-emergency: 49
@@ -85,6 +85,7 @@ Generated: 2026-08-27T10:17:21.162Z
 - /tools/household-internet-incident-review-log/
 - /tools/household-inventory-photo-capture-log/
 - /tools/household-mail-package-handoff-log/
+- /tools/household-maintenance-priority-review-log/
 - /tools/household-meal-prep-role-log/
 - /tools/household-meeting-agenda-action-log/
 - /tools/household-meter-reading-review-log/
@@ -141,6 +142,7 @@ Generated: 2026-08-27T10:17:21.162Z
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
 - /zh-tw/guides/familyboard-internet-incident-tutorial/
 - /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
+- /zh-tw/guides/familyboard-maintenance-priority-review-tutorial/
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
 - /zh-tw/guides/familyboard-meter-reading-tutorial/
 - /zh-tw/guides/familyboard-monthly-review-action-tutorial/
@@ -243,6 +245,7 @@ Generated: 2026-08-27T10:17:21.162Z
 - /zh-tw/tools/household-internet-incident-review-log/
 - /zh-tw/tools/household-inventory-photo-capture-log/
 - /zh-tw/tools/household-mail-package-handoff-log/
+- /zh-tw/tools/household-maintenance-priority-review-log/
 - /zh-tw/tools/household-meal-prep-role-log/
 - /zh-tw/tools/household-medical-information-source-handoff-log/
 - /zh-tw/tools/household-meeting-agenda-action-log/

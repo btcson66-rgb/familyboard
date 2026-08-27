@@ -2032,6 +2032,22 @@
     "headings": "家庭行程衝突複查工具 讓衝突可接手但不暴露生活模式 聯盟商品不應影響決定"
   },
   {
+    "title": "Free Home Maintenance Priority Review Log | Observations, Owners and Follow-Up | FamilyBoard",
+    "description": "Turn household maintenance observations into source-linked next steps, use constraints and owner handoffs without storing full warranties, serial numbers or repair instructions.",
+    "route": "/tools/household-maintenance-priority-review-log/",
+    "cluster": "maintenance",
+    "keywords": "home maintenance priority review log",
+    "headings": "Household Maintenance Priority Review Log Observe before you explain Keep priority as a household decision Affiliate recommendations stay outside maintenance action"
+  },
+  {
+    "title": "居家維護優先複查工具｜觀察、限制、角色與後續行動｜FamilyBoard",
+    "description": "免費整理家電或居家設備的可見異常、說明書與服務來源、使用限制、家庭角色與複查結果；不提供拆修指示或安全保證。",
+    "route": "/zh-tw/tools/household-maintenance-priority-review-log/",
+    "cluster": "maintenance",
+    "keywords": "居家維護優先複查工具",
+    "headings": "居家維護優先複查工具 先寫觀察，再寫要問的問題 家庭優先順序不是專業安全評分 聯盟商品只能放在行動之外"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

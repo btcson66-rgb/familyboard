@@ -4223,6 +4223,52 @@ const scheduleConflictReviewDefinition = (locale: Locale): Definition => {
   };
 };
 
+const maintenancePriorityReviewDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立維護列，等待觀察範圍", "已確認說明書或來源，等待限制", "已記錄限制，等待家庭決定", "已安排角色，等待行動或專業詢問", "已觀察行動或回覆，等待複查", "不適用，已記錄原因"]
+    : ["Maintenance row created—observation scope pending", "Manual or source checked—constraints pending", "Constraints recorded—household decision pending", "Role assigned—action or professional question pending", "Action or response observed—review pending", "Not applicable—reason recorded"];
+  const defaults = zh
+    ? "MAINT-PRIORITY-A | 冷氣滴水觀察 | 2026-08-25 | MANUAL-M1; SERVICE-S1 | 先停止不安全使用並依說明書確認可由使用者觀察的範圍 | 維護角色記錄可見狀況，不自行拆冷媒或電氣部位 | 回到服務來源複查詢問與結果 | 家庭維護角色 | 已安排角色，等待行動或專業詢問\nMAINT-PRIORITY-B | 浴室排風變弱 | 2026-08-26 | MANUAL-M2 | 只記錄清潔與觀察限制，不把猜測寫成故障原因 | 備援角色比較是否需要安排合格服務，結果未明前保持開放 | 複查清潔或服務回覆後更新下一步 | 備援家庭角色 | 已記錄限制，等待家庭決定"
+    : "MAINT-PRIORITY-A | Air-conditioner dripping observation | 2026-08-25 | MANUAL-M1; SERVICE-S1 | Stop unsafe use first and confirm the user-observable scope in the manual | The maintenance role records visible observations; do not open refrigerant or electrical parts | Review the question and result through the service source | Household maintenance role | Role assigned—action or professional question pending\nMAINT-PRIORITY-B | Bathroom exhaust weaker | 2026-08-26 | MANUAL-M2 | Record only cleaning and observation limits; do not state a guessed fault cause | A backup role decides whether to ask a qualified service; keep open until a result | Review the cleaning or service response and update the next action | Backup household role | Constraints recorded—household decision pending";
+  return {
+    intro: zh ? "把居家維護觀察、說明書或服務來源、使用限制、家庭決定、負責角色與複查結果分開記錄。工具不判斷危險程度、故障原因或法規合規，不提供拆修指示，也不保證設備或服務安全。" : "Separate household maintenance observations, manual or service sources, use constraints, household decisions, owners and review results. This tool does not rate danger, diagnose faults, provide repair instructions or guarantee equipment or service safety.",
+    fields: [
+      text("review", zh ? "家庭維護優先複查私人代號" : "Private household-maintenance priority reference", zh ? "使用家庭代號，不要輸入地址、姓名、電話、完整保固或私人通信。" : "Use a household code; do not enter addresses, names, phone numbers, full warranties or private messages.", "MAINT-PRIORITY-REVIEW-2026-A"),
+      { name: "context", label: zh ? "維護優先情境" : "Maintenance-priority context", type: "select", options: zh ? ["可見異常需要先限制使用", "說明書清潔或使用者檢查", "重複問題需要來源複查", "等待合格服務或報價詢問", "維護完成後結果複查", "其他家庭維護決定"] : ["Visible issue needs a use constraint", "Manual cleaning or user check", "Recurring issue needs source review", "Qualified service or quote question", "Post-maintenance result review", "Other household maintenance decision"] },
+      { name: "reviewDate", label: zh ? "本次維護複查日期" : "Current maintenance-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次行動或結果複查日期" : "Next action or result-review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "說明書、保固與服務來源地圖" : "Manual, warranty and service source map", zh ? "只填安全來源代號，不要貼完整序號、案件、地址、電話或私人訊息。" : "Use safe source codes; do not paste full serials, case details, addresses, phone numbers or private messages.", "MANUAL-M1; WARRANTY-W1; SERVICE-S1"),
+      text("rows", zh ? "維護觀察與優先決定列" : "Maintenance observation and priority rows", zh ? "每行 9 欄：ID｜維護範圍｜觀察日期 YYYY-MM-DD｜來源代號｜使用限制或家庭窗口｜角色與觀察｜行動、詢問或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | maintenance scope | observation date YYYY-MM-DD | source code | use constraint or household window | role and observation | action, question or next step | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護維護與服務來源位置" : "Protected maintenance and service-source location", zh ? "只寫保管流程或容器代號，不要放地址、完整保固、序號或通信全文。" : "Name a custody process or container, not an address, full warranty, serial or correspondence.", zh ? "家庭紀錄／維護優先／MAINT-PRIORITY-REVIEW-2026-A／受保護來源" : "Household records / maintenance priority / MAINT-PRIORITY-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次維護複查日期。" : "Enter valid current and next maintenance-review dates.";
+      if (next < review) return zh ? "下一次行動或結果複查日期不能早於本次複查。" : "The next action or result review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全維護代號、來源地圖與受保護位置。" : "Provide a safe maintenance reference, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行維護複查列。" : "Enter 1 to 14 maintenance-review rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? "維護第 " + malformed.map((row) => row.line).join("、") + " 行必須有 9 個非空白欄位。" : "Maintenance line " + malformed.map((row) => row.line).join(", ") + " must contain 9 non-empty fields.";
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行維護紀錄都需要唯一 ID。" : "Every maintenance row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? "維護第 " + invalidStatus.map((row) => row.line).join("、") + " 行必須使用指定狀態。" : "Maintenance line " + invalidStatus.map((row) => row.line).join(", ") + " must use an exact status.";
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 4);
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? "維護第 " + thin.map((row) => row.line).join("、") + " 行需要範圍、來源、限制、觀察、下一步與角色。" : "Maintenance line " + thin.map((row) => row.line).join(", ") + " needs scope, source, constraints, observation, next action and owner.";
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡或設備識別資料；請改用安全代號。" : "A full contact or equipment identifier was detected; use safe codes.";
+      if (/password|passcode|full address|phone number|serial number|case number|private message|密碼|完整地址|電話|完整序號|案件號|私人訊息|診斷|故障原因/i.test(privacy)) return zh ? "偵測到地址、設備識別、診斷或私人通信資料；請只保留安全來源代號。" : "Address, equipment identifier, diagnosis or private-message data was detected; keep only safe source codes.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭維護優先與結果複查" : " — household maintenance priority and result review"), (zh ? "維護情境：" : "Maintenance context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + formatter.format(review), (zh ? "下一次行動或結果複查：" : "Next action or result review: ") + formatter.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已觀察行動或回覆列：" : "Action or response observed rows: ") + closed.length, (zh ? "來源地圖：" : "Source map: ") + values.source.trim(), (zh ? "有版本的維護觀察\n" : "Versioned maintenance observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + formatter.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜限制／窗口：" : " — constraint/window: ") + row.parts[4] + (zh ? "｜角色／觀察：" : " — role/observation: ") + row.parts[5] + (zh ? "｜行動／下一步：" : " — action/next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護維護與服務來源位置：" : "Protected maintenance and service-source location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭維護觀察、限制、角色與複查，不判斷危險程度、故障原因或法規合規，也不提供拆修指示或安全保證。" : "This output only organizes household maintenance observations, constraints, roles and review. It does not rate danger, diagnose faults, provide repair instructions or guarantee safety."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -8314,6 +8360,9 @@ const definitions: Record<string, Definition> = {
   "household-schedule-conflict-review-log": {
     ...scheduleConflictReviewDefinition("en"),
   },
+  "household-maintenance-priority-review-log": {
+    ...maintenancePriorityReviewDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -8432,6 +8481,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-schedule-conflict-review-log": {
     ...scheduleConflictReviewDefinition("zh-TW"),
+  },
+  "household-maintenance-priority-review-log": {
+    ...maintenancePriorityReviewDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

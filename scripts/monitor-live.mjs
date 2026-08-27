@@ -254,6 +254,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-schedule-conflict-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-schedule-conflict-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-schedule-conflict-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-maintenance-priority-review-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-maintenance-priority-review-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1133,6 +1136,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Keep original calendars in control",
       "Compare constraints before proposing a change",
+    ],
+  },
+  {
+    path: "/tools/household-maintenance-priority-review-log/",
+    require: [
+      "Household Maintenance Priority Review Log",
+      'hreflang="zh-TW"',
+      "Observe before you explain",
+      "Keep priority as a household decision",
     ],
   },
   {
@@ -2246,6 +2258,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-maintenance-priority-review-log/",
+    require: [
+      "居家維護優先複查工具",
+      'hreflang="en"',
+      "先寫觀察，再寫要問的問題",
+      "家庭優先順序不是專業安全評分",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2372,6 +2393,16 @@ const checks = [
       'lang="zh-TW"',
       "先判斷什麼是衝突，什麼只是提醒",
       "把提案、送出與結果分三層",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/",
+    require: [
+      "FamilyBoard 居家維護優先順序怎麼排",
+      'lang="zh-TW"',
+      "先記錄實際看到的事",
+      "不要把家庭摘要變成維修教學",
     ],
     forbid: ['rel="alternate"'],
   },
