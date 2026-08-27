@@ -2224,6 +2224,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-browser-storage-maintenance/",
+    "alternateRoute": "/zh-tw/guides/familyboard-browser-storage-maintenance/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-browser-storage-maintenance/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2571,6 +2595,20 @@
   {
     "route": "/zh-tw/guides/familyboard-bill-review-tutorial/",
     "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-browser-storage-maintenance/",
+    "alternateRoute": "/guides/familyboard-browser-storage-maintenance/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

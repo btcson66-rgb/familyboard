@@ -19161,6 +19161,172 @@ Future stands, chargers or label products may appear outside the setup workflow 
 
 這台平板是不是大家認定的看板版本？每個可見標題是否適合訪客看到？今天與近期保養是否真的需要顯示？家人是否知道手機資料不會自動同步？最近一次備份和螢幕隱私檢查是否有日期？五題都能回答「是」，看板才是在減少溝通成本，而不是製造錯誤期待。
 
+## Page 279 — FamilyBoard Browser Storage Maintenance Guide
+**Slug:** /guides/familyboard-browser-storage-maintenance/
+**Alternate route:** /zh-tw/guides/familyboard-browser-storage-maintenance/
+**Primary intent:** maintain FamilyBoard browser storage and clear site data without losing the only household copy
+**Title tag:** FamilyBoard Browser Storage Maintenance | Export, Verify and Clean Up Safely
+**Meta description:** Learn how to check FamilyBoard storage, verify an export, change browser profiles and clean site data without assuming cloud sync or recovery.
+**Primary keyword concept:** FamilyBoard browser storage maintenance
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-offline-backup-restore/, /features/local-first-home-organizer/, /zh-tw/guides/familyboard-browser-storage-maintenance/
+**FAQ:**
+- Q: Can I clear browser data after exporting once?
+  A: Not safely by assumption. First verify the file in a controlled test and preserve the original before clearing the active profile.
+- Q: Does browser storage mean the data is synced elsewhere?
+  A: No. FamilyBoard is local-first; a second browser or device has a separate local copy unless you deliberately transfer a backup.
+- Q: Does a storage warning prove data is corrupted?
+  A: No. It is a prompt to inspect capacity, export status and device health, not a diagnosis.
+
+# FamilyBoard Browser Storage Maintenance
+
+FamilyBoard keeps household records in the browser on the device you use. That local-first boundary is useful for privacy, but it also means browser cleanup deserves the same care as cleaning a paper filing cabinet. Clearing site data, switching profiles, uninstalling a browser or resetting a device can remove the only local copy. A storage warning does not by itself mean the records are damaged, and an export does not become a verified backup until you test it.
+
+## Identify the active local copy
+
+Write a private device label and the date of the last review. Check that the household name and a harmless test record appear in the expected browser profile. Do not infer identity from the operating-system account: two profiles under one computer can hold different FamilyBoard databases. A phone, tablet and desktop are separate stores unless you intentionally transfer a reviewed backup.
+
+## Export before any cleanup
+
+Before clearing cookies, site data or browser profiles, export from the active FamilyBoard instance. Use a neutral file label such as HOUSEHOLD-BACKUP-2026-08 and store it in a protected location with a second copy only when the household’s access rules allow it. Do not place passwords, full addresses or private notes in the filename. Keep the original export unchanged while you test a copy.
+
+## Verify, then decide what to remove
+
+Use a controlled browser profile or test device to validate the copy. Confirm that it opens, the harmless test record is present, the metadata is readable and the intended private sections remain private. A successful validation proves that this file can be read; it does not prove that every future change is included. If validation fails, stop cleanup, preserve the original local data and record the error for the next support step.
+
+## Handle profile and device changes deliberately
+
+When moving to a new browser, choose whether to restore a reviewed snapshot or keep the new profile empty. Preserve the source export and record whether the operation merged or replaced data. Do not repeatedly restore the same full file into multiple profiles, because duplicates and stale records become difficult to distinguish. After a move, open the app offline once and confirm the local copy before retiring the old profile.
+
+## Use a small maintenance record
+
+Keep a private maintenance note with the device label, browser profile, export date, validation date and the action you took. A short record is more useful than a filename that tries to contain every detail. If more than one person can maintain the household board, agree on who may clear site data and where a protected export may be kept. Do not paste the export into a chat, public drive, issue tracker or support request just to make it easier to find. The note should point to the protected location without copying household names, addresses, access codes or private notes.
+
+## Recover from an interrupted change
+
+If the browser closes during export, restore or profile migration, do not immediately repeat the operation over the source data. First preserve the source profile, write down the visible message and check whether a complete export already exists. Test a duplicate of that export in a separate profile. When the test is readable, compare a few deliberately harmless records and the review date before deciding whether to continue. When the test is not readable, keep the original untouched and consult the current browser documentation or a qualified recovery service. FamilyBoard can help organize the household record; it cannot diagnose a failing disk, repair a browser database or guarantee that an interrupted write can be reversed.
+
+## Retire old copies with a review date
+
+An old profile or export should not be deleted just because a new screen looks correct. Set a review date and keep the source copy until the household has completed a normal offline session on the new profile. Confirm that the people who rely on the board can find the expected tasks and documents, while keeping sensitive sections out of any shared display. If the old copy is no longer needed, follow the device's secure deletion guidance and record only that the retirement was completed; never publish the private contents as proof. This staged approach makes cleanup reversible for longer and gives the family a clear checkpoint when several devices are involved.
+
+## What this guide does not promise
+
+FamilyBoard does not provide cloud recovery, automatic cross-device synchronization, forensic storage repair or a guarantee that a browser vendor will preserve site data. Follow current browser and operating-system instructions, keep protected exports, and use appropriate professional recovery help for a failed device. Future storage products or backup drives may be affiliate suggestions outside the workflow, never a requirement or a safety guarantee.
+
+## Page 280 — FamilyBoard 瀏覽器資料維護教學（Traditional Chinese）
+**Slug:** /zh-tw/guides/familyboard-browser-storage-maintenance/
+**Alternate route:** /guides/familyboard-browser-storage-maintenance/
+**Primary intent:** 教台灣家庭清理瀏覽器資料、換設定檔或換裝置前驗證 FamilyBoard 本機匯出
+**Title tag:** FamilyBoard 瀏覽器資料怎麼清理？匯出與驗證教學
+**Meta description:** 用繁體中文學會檢查 FamilyBoard 本機資料、驗證匯出檔、換瀏覽器設定檔與安全清理，不把 local-first 誤當雲端備份。
+**Primary keyword concept:** FamilyBoard 瀏覽器資料清理
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/guides/familyboard-offline-backup-restore/, /zh-tw/features/local-first-home-organizer/, /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
+**FAQ:**
+- Q: 匯出一次後就能清除瀏覽器資料嗎？
+  A: 不要直接假設安全，先在受控環境驗證檔案並保留原始本機資料。
+- Q: local-first 代表資料已經同步到別台裝置嗎？
+  A: 不是，每台瀏覽器和裝置各有本機資料，除非你主動移轉備份。
+- Q: 儲存空間提醒代表資料壞掉嗎？
+  A: 不代表，它只是提醒你查容量、匯出狀態與裝置情況。
+
+# FamilyBoard 瀏覽器資料怎麼清理？匯出與驗證教學
+
+FamilyBoard 把家庭紀錄放在使用裝置的瀏覽器，local-first 有助於降低不必要的上傳，但清除網站資料、換設定檔、解除安裝瀏覽器或重設裝置，都可能刪掉唯一的本機副本。儲存空間提醒不是損壞診斷；匯出檔也要經過還原測試，才知道目前檔案確實可讀。
+
+## 先辨識正在使用的本機版本
+
+用家庭代號、裝置代號和最後檢查日期做受保護筆記。在預定的瀏覽器設定檔開啟 FamilyBoard，確認家庭名稱和一筆不含個資的測試紀錄。不要因為電腦使用同一個 Apple、Google 或 Microsoft 帳號，就以為不同設定檔共用資料；手機、平板和桌機也各自保存不同本機資料，除非你主動移轉。
+
+## 清理前先匯出並保留原檔
+
+要清除 Cookie、網站資料或瀏覽器設定檔前，先從目前的 FamilyBoard 匯出。檔名可用 HOUSEHOLD-BACKUP-2026-08 這類中性代號，放在家庭權限合適的受保護位置；不要在檔名寫姓名、地址、密碼或私密備註。測試時使用副本，原始匯出檔保持不變，避免排查過程把最後一份資料改壞。
+
+## 驗證檔案再決定要刪什麼
+
+在受控的瀏覽器設定檔或測試裝置還原副本，確認檔案能開啟、測試紀錄存在、基本中繼資料可讀，且私密分頁仍按原本規則處理。驗證成功只代表這個檔案當下可讀，不代表之後新增的資料也會自動進入；驗證失敗就先停止清理，保留原本的本機資料和錯誤代號，才不會在唯一副本上反覆嘗試。
+
+## 換設定檔或裝置要明確選擇
+
+搬到新瀏覽器時，先決定要還原一份已審閱快照，還是讓新設定檔從空白開始。記下來源檔案日期，以及這次選擇合併或取代；不要把同一份完整檔案反覆還原到很多設定檔，否則重複和過期資料會難以辨識。換機後先在離線狀態開啟一次 App，確認新裝置真的有本機資料，再處理舊設定檔。
+
+## 儲存空間提醒的正確用法
+
+看到容量或瀏覽器警告時，先記錄當下裝置、設定檔、最近匯出日期和可觀察到的症狀，不要直接說「資料壞了」。依目前瀏覽器與作業系統說明檢查容量；需要專業資料救援時，保留原狀並尋求適當協助。FamilyBoard 不提供雲端復原、跨裝置自動同步或鑑識級修復保證。
+
+## 收尾前的六個問題
+
+目前使用的設定檔是否確認？清理前是否完成匯出？原始檔是否保持不變？副本是否在受控環境通過還原？是否記下合併或取代方式？家人是否知道另一台裝置不會自動同步？六題都能回答「是」，才適合清理或換機。
+
+## Page 281 — FamilyBoard 瀏覽器資料清理 App 教學（Traditional Chinese）
+**Slug:** /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
+**Primary intent:** teach Taiwan households a step-by-step FamilyBoard browser-data cleanup routine with an export checkpoint
+**Title tag:** FamilyBoard 瀏覽器資料清理前要做什麼？App 操作教學
+**Meta description:** 教你在 FamilyBoard 清理網站資料前做版本辨識、匯出、還原測試與換機交接，避免誤刪唯一的家庭本機紀錄。
+**Primary keyword concept:** FamilyBoard 瀏覽器資料清理教學
+**Cluster:** product
+**Page type:** content
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/guides/familyboard-browser-storage-maintenance/, /zh-tw/guides/familyboard-offline-backup-restore/, /zh-tw/features/offline-household-organizer/
+**FAQ:**
+- Q: 清 Cookie 會清掉 FamilyBoard 嗎？
+  A: 可能影響網站資料，清理前一定要先辨識設定檔、匯出並驗證副本。
+- Q: 還原測試通過就能刪掉舊裝置嗎？
+  A: 先保留原始匯出與來源裝置，確認新裝置版本和家庭流程都可讀，再依規則處理舊資料。
+- Q: App 會自動幫我整理重複資料嗎？
+  A: 不會，合併或取代是家庭要明確選擇的移轉決定。
+
+# FamilyBoard 瀏覽器資料清理前要做什麼？App 操作教學
+
+瀏覽器變慢、準備換機或想清除舊網站資料時，最危險的做法是先按「清除」再想資料去哪裡。這套流程把 FamilyBoard 的本機版本、匯出、還原測試、換設定檔和最後清理拆開，每一步都有可觀察的完成條件。
+
+## 第一步：寫下目前版本
+
+在受保護筆記記下家庭代號、裝置、瀏覽器設定檔與最後檢查日期。回到 FamilyBoard 確認家庭名稱和一筆測試紀錄；測試資料不要含姓名、地址或帳務。若你不確定哪個設定檔才是主版本，先不要清理，先找出有最新變更的那一份。
+
+## 第二步：匯出一份原始檔
+
+從主版本匯出，使用中性檔名和合適的受保護位置。不要修改原始檔，也不要把完整檔案丟到公開群組。若家庭規則允許第二份副本，記下它的建立日期與保管角色；備份是快照，不是持續同步。
+
+## 第三步：在副本上做還原演練
+
+用測試瀏覽器設定檔或暫時裝置還原副本，確認測試紀錄、家庭名稱和基本資料可讀。檢查私密分頁沒有因操作變成公開內容。通過演練後，把測試環境、檔案代號和日期記下來；失敗就保留原本本機資料，記錄錯誤，不要在唯一副本上重試。
+
+## 第四步：換機時選合併或取代
+
+新設定檔可以維持空白，也可以還原審閱過的快照。選擇前先確認家人是否已在新舊裝置各自新增資料；若要合併或取代，寫下決定和日期。不要反覆還原同一份檔案，否則你之後很難分辨哪一筆是新的、哪一筆是舊的。
+
+## 第五步：驗證新裝置再清理舊資料
+
+新裝置連線與離線各開啟一次，確認家庭看得到正確的本機版本。只有在匯出、還原和交接都完成後，才依瀏覽器的目前說明清理舊設定檔。清理後若畫面空白，先回到新裝置與原始檔查核，不要立刻重建全部內容。
+
+## 第六步：聯盟商品保持在操作之外
+
+未來外接儲存、硬碟或整理用品若出現在頁面，必須清楚揭露聯盟關係並可略過；商品不能被說成 FamilyBoard 復原、隱私或換機成功的必要條件。
+
+## 收尾前的七個問題
+
+你知道主版本在哪台裝置？原始匯出是否保留？副本是否真的還原成功？新設定檔是否選定合併或取代？離線開啟是否實測？清理動作是否依目前官方瀏覽器說明？家人是否知道資料不會自動同步？七題都能回答「是」，才完成一次可追溯的清理流程。
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

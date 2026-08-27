@@ -2072,6 +2072,14 @@
     "headings": "FamilyBoard Family Display Mode Setup Guide Decide which device owns the display Prepare a safe display vocabulary Set up and test the tablet Maintain the local record Troubleshoot the display without guessing Affiliate boundary"
   },
   {
+    "title": "FamilyBoard Browser Storage Maintenance | Export, Verify and Clean Up Safely",
+    "description": "Learn how to check FamilyBoard storage, verify an export, change browser profiles and clean site data without assuming cloud sync or recovery.",
+    "route": "/guides/familyboard-browser-storage-maintenance/",
+    "cluster": "product",
+    "keywords": "FamilyBoard browser storage maintenance",
+    "headings": "FamilyBoard Browser Storage Maintenance Identify the active local copy Export before any cleanup Verify, then decide what to remove Handle profile and device changes deliberately Use a small maintenance record Recover from an interrupted change Retire old copies with a review date What this guide does not promise"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

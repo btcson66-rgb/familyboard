@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-27T11:16:57.795Z
+Generated: 2026-08-27T11:38:25.601Z
 
 ## Summary
 
-- Indexable pages: 460
-- Generated HTML routes: 477
+- Indexable pages: 463
+- Generated HTML routes: 480
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 247
+- Pages without a contextual product/tool link: 250
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 65
+- product: 68
 - appliances: 30
 - maintenance: 41
 - household-operations: 72
@@ -57,6 +57,7 @@ Generated: 2026-08-27T11:16:57.795Z
 - /guides/chore-chart-for-adults/
 - /guides/digital-home-inventory-backup/
 - /guides/family-emergency-contacts/
+- /guides/familyboard-browser-storage-maintenance/
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-offline-backup-restore/
 - /guides/household-admin-day/
@@ -134,6 +135,8 @@ Generated: 2026-08-27T11:16:57.795Z
 - /zh-tw/guides/emergency-supply-inventory/
 - /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
 - /zh-tw/guides/familyboard-bill-review-tutorial/
+- /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
+- /zh-tw/guides/familyboard-browser-storage-maintenance/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
 - /zh-tw/guides/familyboard-donation-handoff-tutorial/
