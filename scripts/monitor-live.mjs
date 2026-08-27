@@ -2677,6 +2677,33 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/guides/household-account-list/",
+    require: [
+      "家庭帳戶清單怎麼整理",
+      'hreflang="en"',
+      "誰管理",
+      "不會讀取信箱、銀行、購物平台或智慧家庭裝置",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/annual-renewal-calendar/",
+    require: [
+      "家庭年度續期行事曆怎麼做",
+      'hreflang="en"',
+      "檢視日",
+      "不會連線到銀行、保險、政府、會員或服務平台",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/household-management-checklist/",
+    require: [
+      "家庭管理清單怎麼列",
+      'hreflang="en"',
+      "五個責任區",
+      "不會讀取設備、帳戶或文件",
+    ],
+  },
+  {
     path: "/zh-tw/guides/purchase-receipt-organizer/",
     require: [
       "網購到貨缺件或損壞怎麼辦？發票、拆封與退換貨紀錄",

@@ -218,6 +218,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/household-supplies-inventory/",
     "/zh-tw/guides/household-monthly-review/",
     "/zh-tw/guides/home-maintenance-calendar/",
+    "/zh-tw/guides/household-account-list/",
+    "/zh-tw/guides/annual-renewal-calendar/",
+    "/zh-tw/guides/household-management-checklist/",
     "/zh-tw/guides/familyboard-household-meeting-tutorial/",
     "/zh-tw/guides/familyboard-pantry-review-tutorial/",
     "/zh-tw/guides/familyboard-clothing-care-tutorial/",
@@ -781,6 +784,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/home-maintenance-calendar/",
       alternate: "/guides/home-maintenance-calendar/",
       heading: "居家保養行事曆怎麼排？行事曆只回答「何時看」，不假裝回答「一定安全」",
+    },
+    {
+      route: "/zh-tw/guides/household-account-list/",
+      alternate: "/guides/household-account-list/",
+      heading: "家庭帳戶清單怎麼整理？記錄「誰管理」，而不是複製「怎麼登入」",
+    },
+    {
+      route: "/zh-tw/guides/annual-renewal-calendar/",
+      alternate: "/guides/annual-renewal-calendar/",
+      heading: "家庭年度續期行事曆怎麼做？在扣款之前，留一個真正能決定的時間",
+    },
+    {
+      route: "/zh-tw/guides/household-management-checklist/",
+      alternate: "/guides/household-management-checklist/",
+      heading: "家庭管理清單怎麼列？先看五個責任區，再決定要不要建立紀錄",
     },
     {
       route: "/zh-tw/features/free-home-management-app/",

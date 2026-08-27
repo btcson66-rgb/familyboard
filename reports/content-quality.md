@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T14:37:09.133Z
+Generated: 2026-08-27T15:07:11.937Z
 
 ## Summary
 
-- Indexable pages: 481
-- Generated HTML routes: 498
+- Indexable pages: 484
+- Generated HTML routes: 501
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 265
+- Pages without a contextual product/tool link: 268
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-27T14:37:09.133Z
 - product: 68
 - appliances: 30
 - maintenance: 42
-- household-operations: 80
+- household-operations: 83
 - inventory-warranty: 41
 - records-emergency: 58
 - tools: 121
@@ -126,6 +126,7 @@ Generated: 2026-08-27T14:37:09.133Z
 - /zh-tw/features/offline-household-organizer/
 - /zh-tw/features/private-family-organizer/
 - /zh-tw/features/warranty-tracker/
+- /zh-tw/guides/annual-renewal-calendar/
 - /zh-tw/guides/appliance-inventory/
 - /zh-tw/guides/appliance-replacement-planning/
 - /zh-tw/guides/automatic-renewal-charge-dispute-taiwan/
@@ -188,8 +189,10 @@ Generated: 2026-08-27T14:37:09.133Z
 - /zh-tw/guides/home-maintenance-log/
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/guides/home-service-provider-list/
+- /zh-tw/guides/household-account-list/
 - /zh-tw/guides/household-admin-backup-person/
 - /zh-tw/guides/household-documents-organizer/
+- /zh-tw/guides/household-management-checklist/
 - /zh-tw/guides/household-medical-information-organization/
 - /zh-tw/guides/household-monthly-review/
 - /zh-tw/guides/household-supplies-inventory/
