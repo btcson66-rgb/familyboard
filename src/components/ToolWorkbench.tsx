@@ -4312,9 +4312,159 @@ const serviceQuoteComparisonDefinition = (locale: Locale): Definition => {
   };
 };
 
+const seasonalResetDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已記錄季節範圍，等待環境與來源",
+        "已核對環境與來源，等待設備或區域",
+        "已記錄設備或區域，等待狀況觀察",
+        "已記錄狀況，等待季節行動窗口",
+        "已安排行動窗口，等待負責角色複查",
+        "環境、來源或家庭安全疑問，等待負責來源確認",
+        "已完成或暫緩季節行動並保存結果",
+        "不適用，已記錄理由與重新開案事件",
+      ]
+    : [
+        "Seasonal scope recorded—conditions and source pending",
+        "Conditions and source checked—asset or area pending",
+        "Asset or area recorded—condition observation pending",
+        "Condition recorded—seasonal action window pending",
+        "Action window assigned—owner review pending",
+        "Condition, source or household-safety question—responsible source pending",
+        "Seasonal action completed or deferred with result preserved",
+        "Not applicable—reason and reopen trigger recorded",
+      ];
+  const defaults = zh
+    ? "SEASON-A | 冷氣使用前外部區域代號 | 2026-08-20 | 高溫與潮濕季節前；來源 CLIMATE-1 | 觀察排水、濾網與周邊雜物，專業範圍另行處理 | 家庭保養角色 | 2026-09-03 | 已記錄狀況，等待季節行動窗口\nSEASON-B | 颱風季前窗戶與備援用品區域代號 | 2026-08-22 | 當地季節性降雨來源 CLIMATE-2 | 核對可見狀況與家庭備援清單，不自行判定結構安全 | 家庭防災角色 | 2026-09-05 | 環境、來源或家庭安全疑問，等待負責來源確認"
+    : "SEASON-A | Exterior cooling-season area code | 2026-08-20 | Before hot and humid season; source CLIMATE-1 | Observe drainage, filter and nearby obstructions; professional scope stays separate | Household maintenance role | 2026-09-03 | Condition recorded—seasonal action window pending\nSEASON-B | Window and backup-supply zone before storm season | 2026-08-22 | Local seasonal-rain source CLIMATE-2 | Check visible condition and household backup list; do not decide structural safety | Household preparedness role | 2026-09-05 | Condition, source or household-safety question—responsible source pending";
+  return {
+    intro: zh
+      ? "把季節轉換、所在地環境來源、設備或區域、可觀察狀況、行動窗口、負責角色與結果分開記錄。工具不預測天氣、不判定房屋或設備安全、不提供維修指示，也不替家庭決定應做的季節工作。"
+      : "Separate seasonal transitions, local-condition sources, assets or areas, observations, action windows, owners and results. This tool does not forecast weather, decide building or equipment safety, provide repair instructions or choose seasonal work for a household.",
+    fields: [
+      text(
+        "review",
+        zh ? "季節複查私人代號" : "Private seasonal-review reference",
+        zh
+          ? "使用家庭代號，不要輸入姓名、地址、門牌、帳號、完整天氣警報或私人通信。"
+          : "Use a household code; do not enter names, addresses, account details, full alerts or private correspondence.",
+        "SEASONAL-2026-A",
+      ),
+      {
+        name: "season",
+        label: zh ? "季節轉換情境" : "Seasonal transition context",
+        type: "select",
+        options: zh
+          ? [
+              "進入高溫或冷氣使用季",
+              "進入低溫或暖氣使用季",
+              "雨季、颱風或暴雨前後",
+              "換季收納與戶外用品轉換",
+              "返校、長假或家庭作息轉換",
+              "依所在地來源重新檢視",
+            ]
+          : [
+              "Entering hot or cooling season",
+              "Entering cold or heating season",
+              "Before or after rain, storm or wet season",
+              "Seasonal storage and outdoor-gear change",
+              "School, holiday or household-routine transition",
+              "Review triggered by a local source",
+            ],
+      },
+      { name: "baselineDate", label: zh ? "環境來源地圖基準日" : "Condition-source map baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: zh ? "本次季節複查日期" : "Current seasonal review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次季節行動核點" : "Next seasonal action checkpoint", type: "date", value: "2026-09-05" },
+      text(
+        "source",
+        zh ? "所在地、製造商與家庭來源地圖" : "Local, manufacturer and household-source map",
+        zh
+          ? "只填來源代號或可重開的位置；完整警報、地址、設備序號與通信留在受保護來源。"
+          : "Use source codes or reopenable locations; keep full alerts, addresses, serials and correspondence protected.",
+        "CLIMATE-1; MANUAL-1; HOUSE-1",
+      ),
+      text(
+        "rows",
+        zh ? "季節設備／區域複查列" : "Seasonal asset or area review rows",
+        zh
+          ? "每行 8 欄：ID｜設備或區域代號｜來源日期 YYYY-MM-DD｜可觀察狀況或環境觸發｜行動窗口或暫緩安排｜負責角色｜結果日期 YYYY-MM-DD｜指定狀態。最多 12 行。"
+          : "Each row uses 8 fields: ID | asset or area code | source date YYYY-MM-DD | observable condition or local trigger | action window or deferral plan | owner role | outcome date YYYY-MM-DD | exact status. Maximum 12 rows.",
+        defaults,
+      ),
+      text(
+        "storage",
+        zh ? "受保護來源與複查歷程位置" : "Protected source and review-history location",
+        zh
+          ? "只寫資料夾或容器代號，不要放完整地址、警報全文、付款或私人通信。"
+          : "Name a folder or container code, not a full address, alert text, payment or private correspondence.",
+        zh ? "家庭紀錄／季節複查／SEASONAL-2026-A／受保護來源" : "Household records / seasonal review / SEASONAL-2026-A / protected sources",
+      ),
+    ],
+    run: (values) => {
+      const baseline = strictIsoDate(values.baselineDate);
+      const review = strictIsoDate(values.reviewDate);
+      const next = strictIsoDate(values.nextReview);
+      if (!baseline || !review || !next)
+        return zh ? "請輸入有效的來源基準、本次複查與下一次行動日期。" : "Enter valid source-baseline, current-review and next-action dates.";
+      if (baseline > review)
+        return zh ? "來源基準日不能晚於本次複查。" : "The source baseline cannot be later than the current review.";
+      if (next < review)
+        return zh ? "下一次季節行動核點不能早於本次複查。" : "The next seasonal checkpoint cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10)
+        return zh ? "請提供安全代號、來源地圖與受保護歷程位置。" : "Provide a safe reference, source map and protected history location.";
+      const rows = values.rows
+        .split(/\r?\n/)
+        .map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) }))
+        .filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 12)
+        return zh ? "請輸入 1 至 12 行季節設備或區域複查列。" : "Enter 1 to 12 seasonal asset or area rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 8 || row.parts.some((part) => !part));
+      if (malformed.length)
+        return zh ? `季節複查第 ${malformed.map((row) => row.line).join("、")} 行必須有 8 個非空白欄位。` : `Seasonal review line ${malformed.map((row) => row.line).join(", ")} must contain 8 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length)
+        return zh ? "每行季節複查都需要唯一 ID。" : "Every seasonal review row needs a unique ID.";
+      const sourceDates = rows.map((row) => strictIsoDate(row.parts[2]));
+      if (sourceDates.some((value) => !value || value > review))
+        return zh ? "每列來源日期必須有效，且不能晚於本次複查。" : "Each source date must be valid and no later than the current review.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[7]));
+      if (invalidStatus.length)
+        return zh ? `季節複查第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Seasonal review line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const outcomeDates = rows.map((row) => strictIsoDate(row.parts[6]));
+      if (outcomeDates.some((value) => !value || value < baseline || value > next))
+        return zh ? "每列結果日期必須介於來源基準日與下一次行動核點之間。" : "Each outcome date must fall between the source baseline and next checkpoint.";
+      const thin = rows.filter((row) => row.parts[1].length < 5 || row.parts[3].length < 10 || row.parts[4].length < 10 || row.parts[5].length < 3);
+      if (thin.length)
+        return zh ? `季節複查第 ${thin.map((row) => row.line).join("、")} 行需要設備／區域、可觀察狀況、行動安排與負責角色。` : `Seasonal review line ${thin.map((row) => row.line).join(", ")} needs an asset or area, observation, action plan and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy))
+        return zh ? "偵測到完整聯絡、地址、帳號或付款識別資料；請改用安全代號。" : "A full contact, address, account or payment identifier was detected; use safe codes.";
+      if (/password|passcode|full address|street address|account number|card number|bank account|serial number|full alert|private message|signature|密碼|通關密語|完整地址|帳號|卡號|銀行帳戶|完整警報|私人訊息|簽名/i.test(privacy))
+        return zh ? "偵測到敏感資料或來源全文；請只保留安全索引。" : "Sensitive data or full source content was detected; keep only a safe index.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = rows.filter((row) => statuses.indexOf(row.parts[7]) < 6);
+      const closed = rows.filter((row) => statuses.indexOf(row.parts[7]) >= 6);
+      return [
+        values.review.trim() + (zh ? "｜家庭季節複查" : " — household seasonal review"),
+        (zh ? "季節情境：" : "Season: ") + values.season,
+        (zh ? "來源基準：" : "Source baseline: ") + formatter.format(baseline),
+        (zh ? "本次複查：" : "Current review: ") + formatter.format(review),
+        (zh ? "下一次行動核點：" : "Next checkpoint: ") + formatter.format(next),
+        (zh ? "仍開放列：" : "Open rows: ") + open.length,
+        (zh ? "已完成、暫緩或不適用列：" : "Completed, deferred or not-applicable rows: ") + closed.length,
+        (zh ? "來源地圖：" : "Source map: ") + values.source.trim(),
+        (zh ? "有版本的季節觀察與安排\n" : "Versioned seasonal observations and plans\n") + rows.map((row) => row.parts.join(zh ? "｜" : " — ")).join("\n"),
+        (zh ? "受保護來源與複查歷程位置：" : "Protected source and review-history location: ") + values.storage.trim(),
+        zh ? "這份輸出只是季節工作索引，不預測天氣、不判定結構、設備或家庭安全、不提供維修指示，也不替代所在地主管機關、製造商、保險、物業或合格專業來源。" : "This output is a seasonal-work index. It does not forecast weather, decide structural, equipment or household safety, provide repair instructions or replace local authorities, manufacturers, insurers, property rules or qualified professionals.",
+      ].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
+  "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -8531,6 +8681,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-service-quote-comparison-log": {
     ...serviceQuoteComparisonDefinition("zh-TW"),
+  },
+  "household-seasonal-reset-action-log": {
+    ...seasonalResetDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

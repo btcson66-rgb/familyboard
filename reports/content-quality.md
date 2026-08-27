@@ -1,18 +1,18 @@
 # Content quality report
 
-Generated: 2026-08-27T11:38:25.601Z
+Generated: 2026-08-27T12:01:15.180Z
 
 ## Summary
 
-- Indexable pages: 463
-- Generated HTML routes: 480
+- Indexable pages: 466
+- Generated HTML routes: 483
 - Duplicate metadata blockers: 0
-- Broken internal links: 0
+- Broken internal links: 3
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 250
-- Blocking audit findings: 0
+- Pages without a contextual product/tool link: 253
+- Blocking audit findings: 3
 
 ## Indexable pages by cluster
 
@@ -21,7 +21,7 @@ Generated: 2026-08-27T11:38:25.601Z
 - product: 68
 - appliances: 30
 - maintenance: 41
-- household-operations: 72
+- household-operations: 75
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -99,6 +99,7 @@ Generated: 2026-08-27T11:38:25.601Z
 - /tools/household-schedule-conflict-review-log/
 - /tools/household-school-activity-handoff-log/
 - /tools/household-school-pickup-handoff-log/
+- /tools/household-seasonal-reset-action-log/
 - /tools/household-service-appointment-handoff-log/
 - /tools/household-service-quote-comparison-log/
 - /tools/household-share-access-review-log/
@@ -161,6 +162,7 @@ Generated: 2026-08-27T11:38:25.601Z
 - /zh-tw/guides/familyboard-schedule-conflict-review-tutorial/
 - /zh-tw/guides/familyboard-school-activity-handoff-tutorial/
 - /zh-tw/guides/familyboard-school-pickup-handoff-tutorial/
+- /zh-tw/guides/familyboard-seasonal-reset-tutorial/
 - /zh-tw/guides/familyboard-service-appointment-handoff-tutorial/
 - /zh-tw/guides/familyboard-service-quote-comparison-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
@@ -271,6 +273,7 @@ Generated: 2026-08-27T11:38:25.601Z
 - /zh-tw/tools/household-school-activity-handoff-log/
 - /zh-tw/tools/household-school-pickup-handoff-log/
 - /zh-tw/tools/household-school-record-source-handoff-log/
+- /zh-tw/tools/household-seasonal-reset-action-log/
 - /zh-tw/tools/household-service-appointment-handoff-log/
 - /zh-tw/tools/household-service-quote-comparison-log/
 - /zh-tw/tools/household-share-access-review-log/
@@ -301,4 +304,6 @@ Generated: 2026-08-27T11:38:25.601Z
 
 ## Blockers
 
-- None. SEO, sitemap, metadata, placeholder, tool-registration and internal-link gates passed.
+- /zh-tw/guides/familyboard-seasonal-reset-tutorial/ -> /zh-tw/guides/household-monthly-review/
+- /zh-tw/tools/household-seasonal-reset-action-log/ -> /zh-tw/guides/seasonal-home-maintenance-checklist/
+- /zh-tw/tools/household-seasonal-reset-action-log/ -> /zh-tw/guides/household-monthly-review/

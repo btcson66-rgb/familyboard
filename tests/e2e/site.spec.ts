@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { readFile } from "node:fs/promises";
 
-test("public SEO, keyboard and five production tools work", async ({
+test("public SEO, keyboard and six production tools work", async ({
   page,
 }) => {
   await page.goto("/");
@@ -21,6 +21,7 @@ test("public SEO, keyboard and five production tools work", async ({
     "/tools/room-inventory-generator/",
     "/tools/recurring-chore-planner/",
     "/tools/emergency-binder-generator/",
+    "/tools/household-seasonal-reset-action-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -102,6 +103,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-service-quote-comparison-log/",
     "/guides/familyboard-family-display-mode-setup/",
     "/guides/familyboard-browser-storage-maintenance/",
+    "/tools/household-seasonal-reset-action-log/",
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
@@ -196,6 +198,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-service-quote-comparison-log/",
     "/zh-tw/guides/familyboard-family-display-mode-setup/",
     "/zh-tw/guides/familyboard-browser-storage-maintenance/",
+    "/zh-tw/tools/household-seasonal-reset-action-log/",
+    "/zh-tw/guides/familyboard-seasonal-reset-tutorial/",
     "/zh-tw/guides/familyboard-household-meeting-tutorial/",
     "/zh-tw/guides/familyboard-pantry-review-tutorial/",
     "/zh-tw/guides/familyboard-clothing-care-tutorial/",
@@ -1093,6 +1097,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/appliance-maintenance-checklist-generator/",
       alternate: "/tools/appliance-maintenance-checklist-generator/",
       heading: "家電保養清單產生器",
+    },
+    {
+      route: "/zh-tw/tools/household-seasonal-reset-action-log/",
+      alternate: "/tools/household-seasonal-reset-action-log/",
+      heading: "家庭換季複查怎麼記？免費季節行動紀錄工具",
     },
   ]) {
     await page.goto(localizedTool.route);

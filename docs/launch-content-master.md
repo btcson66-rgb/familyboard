@@ -19327,6 +19327,177 @@ FamilyBoard 把家庭紀錄放在使用裝置的瀏覽器，local-first 有助�
 
 你知道主版本在哪台裝置？原始匯出是否保留？副本是否真的還原成功？新設定檔是否選定合併或取代？離線開啟是否實測？清理動作是否依目前官方瀏覽器說明？家人是否知道資料不會自動同步？七題都能回答「是」，才完成一次可追溯的清理流程。
 
+## Page 282 — Household Seasonal Reset Action Log
+**Slug:** /tools/household-seasonal-reset-action-log/
+**Alternate route:** /zh-tw/tools/household-seasonal-reset-action-log/
+**Primary intent:** create a private, source-aware log for seasonal household transitions without treating a generic checklist as a safety inspection
+**Title tag:** Household Seasonal Reset Action Log | Free Local-First FamilyBoard Tool
+**Meta description:** Record seasonal conditions, source dates, household actions, owners and outcomes in a private browser tool without weather forecasts or safety guarantees.
+**Primary keyword concept:** seasonal household reset action log
+**Cluster:** household-operations
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /guides/seasonal-home-maintenance-checklist/, /guides/household-monthly-review/, /features/maintenance-tracker/, /zh-tw/tools/household-seasonal-reset-action-log/
+**FAQ:**
+- Q: Does this tool tell me what seasonal work is required?
+  A: No. It organizes the work and sources your household has chosen; manufacturer, local authority, property and qualified professional guidance control the real action.
+- Q: Can I put my address or a full weather alert in the form?
+  A: No. Use a household code and source code, and keep full addresses, alerts, equipment identifiers and correspondence in a protected location.
+- Q: Is a completed row proof that the home or equipment is safe?
+  A: No. It records a household observation and result, not an inspection, diagnosis or safety certification.
+
+# Household Seasonal Reset Action Log
+
+Seasonal change is a useful trigger for a household review, but a generic list is not a substitute for local information or a qualified inspection. The [seasonal home maintenance checklist](/guides/seasonal-home-maintenance-checklist/) explains how climate and equipment change the work. This free FamilyBoard tool gives the household a place to record what it actually reviewed, which source shaped the decision, who owns the next step and what result was observed.
+
+## Why a seasonal log needs more than a checkbox
+
+“Done” hides important differences. A cooling-season check may have found a clean filter but an unresolved drainage question. A storm-season preparation may have confirmed a supply container while leaving a property-rule question open. The tool keeps those layers separate: the source date, visible condition, action window, owner and outcome date remain traceable instead of becoming one optimistic tick mark. That makes a later monthly review more useful without pretending that the browser knows the condition of a roof, appliance, electrical system or building.
+
+## Start with the transition, not a copied list
+
+Choose the transition that is genuinely approaching: entering a hot or cold season, a wet or storm period, a storage change, a school or holiday routine change, or a review triggered by a local source. Then write a private reference such as `SEASONAL-2026-A`. The reference is a label for the review, not a place to put a street address, a family member's name or a full warning notice. If the household has no reliable source for an item, leave it open rather than inventing an interval.
+
+## Build a source-aware row
+
+Each row uses an asset or area code, a source date, an observable condition or local trigger, an action window or deliberate deferral, an owner role, an outcome date and an exact status. “Exterior area A; drainage observation pending; ask property manager” is more honest than “storm ready.” A source code can point to a manufacturer manual, a local authority update, a building rule or a protected household note. Keep the source text itself outside the tool when it contains an address, account detail, full alert or private message.
+
+## Keep professional boundaries visible
+
+Some seasonal observations are appropriate for a household log; others require an electrician, HVAC technician, roofer, pest professional, property manager or local authority. The tool intentionally does not forecast weather, decide structural or equipment safety, provide repair steps, interpret a warning or certify completion. If a row contains a smell, leak, electrical symptom, gas concern, structural movement or another urgent signal, pause the household workflow and use the responsible emergency or professional route. Preserve the observation code without turning it into a diagnosis.
+
+## Review open work before the next transition
+
+At the next [monthly household review](/guides/household-monthly-review/), filter the rows that are still open. Confirm whether the source is still current, whether the action window still fits the household, and whether the person assigned can actually reach the protected source. A deferred row needs a reason and a new trigger; otherwise it becomes invisible history. A completed row needs an observed result and a date, not a claim that a third party accepted responsibility. If the season changes again, start a new reference and preserve the old one for comparison.
+
+## Privacy and future product recommendations
+
+Your entries run in this browser and are not a cloud recovery service. Do not paste full addresses, phone numbers, account numbers, serial numbers, passwords, payment details, private correspondence or full official notices. Future recommendations for storage bins, labels or weather-related products may appear outside the workflow with a clear affiliate disclosure and an easy skip; no purchase is required to create, review or print a log.
+
+## Five-minute handoff
+
+Before sharing a result, remove anything that identifies a person, address or private source. Tell the next household role the review reference, the rows still open, the protected source location and the next checkpoint. The recipient should be able to reopen the responsible source and understand what is observed versus what still needs a qualified decision. This small handoff is the difference between a useful seasonal record and a checklist that merely looks complete.
+
+## Page 283 — 家庭季節複查行動工具（Traditional Chinese）
+**Slug:** /zh-tw/tools/household-seasonal-reset-action-log/
+**Alternate route:** /tools/household-seasonal-reset-action-log/
+**Primary intent:** 教台灣家庭依所在地與家庭節奏記錄換季觀察、來源、行動窗口、角色與結果
+**Title tag:** 家庭換季複查怎麼記？免費季節行動紀錄工具｜FamilyBoard
+**Meta description:** 用 FamilyBoard 繁中工具記錄換季環境來源、設備或區域觀察、行動窗口與負責角色，不把清單當成安全檢查或天氣預測。
+**Primary keyword concept:** 家庭換季複查工具
+**Cluster:** household-operations
+**Page type:** tool
+**Language:** zh-TW
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/guides/seasonal-home-maintenance-checklist/, /zh-tw/guides/household-monthly-review/, /zh-tw/features/maintenance-tracker/, /zh-tw/guides/familyboard-seasonal-reset-tutorial/
+**FAQ:**
+- Q: 這個工具會告訴我換季一定要做什麼嗎？
+  A: 不會，它只整理家庭選定的工作與來源；實際要以所在地、製造商、物業規約和合格專業意見為準。
+- Q: 可以把完整地址或氣象警報貼進去嗎？
+  A: 不要，使用家庭代號和來源代號，完整地址、警報、設備識別與通信留在受保護位置。
+- Q: 狀態寫完成就代表設備安全嗎？
+  A: 不代表，只表示家庭記錄了觀察和結果，不是檢查、診斷或安全認證。
+
+# 家庭換季複查怎麼記？免費季節行動紀錄工具
+
+換季是重新看一次家庭紀錄的好時機，但通用清單不能取代所在地資訊或合格檢查。[季節居家保養指南](/zh-tw/guides/seasonal-home-maintenance-checklist/)說明氣候和設備差異；這個免費 FamilyBoard 工具則讓家庭記下實際複查的項目、影響決定的來源、下一步負責角色和可觀察結果。
+
+## 為什麼不能只勾「完成」
+
+「完成」可能把不同情況混在一起。冷氣季前也許已看過濾網，卻還有排水疑問；颱風季前也許確認備援用品，卻尚未釐清大樓進出規定。工具把來源日期、可觀察狀況、行動窗口、角色和結果日期分開，讓下次[家庭每月檢視](/zh-tw/guides/household-monthly-review/)看得出哪些已處理、哪些只是暫緩，不把瀏覽器當成屋頂、家電、電氣或建築的檢查員。
+
+## 先選真正接近的季節轉換
+
+從即將發生的轉換開始：進入高溫或低溫季、雨季或颱風前後、戶外用品換季收納、返校或長假作息改變，或收到所在地來源後需要重新檢視。先建立 `SEASONAL-2026-A` 這類私人代號。代號不是地址欄，不要放街道、姓名或完整警報；沒有可靠來源的項目先保持開放，不要自行發明固定週期。
+
+## 每一列都要有來源和可觀察內容
+
+每列填寫設備或區域代號、來源日期、看到的狀況或所在地觸發、行動窗口或暫緩安排、負責角色、結果日期和指定狀態。例如「外部區域 A；排水觀察待確認；詢問物業」比「已做好防颱」更可追溯。來源代號可以指向製造商手冊、主管機關公告、物業規約或家庭受保護筆記；完整地址、帳號、設備序號、警報全文和私人通信不要貼到工具。
+
+## 把需要專業判斷的事留在正確流程
+
+有些觀察適合寫進家庭索引，有些則要交給水電、冷氣、屋頂、病媒、物業或主管機關。工具不預測天氣、不判定結構或設備安全、不提供維修步驟、不解讀警告，也不替第三方認證完成。若出現漏水、瓦斯味、電氣異常、結構移動或其他急迫訊號，先暫停一般家庭流程，使用負責的緊急或專業管道；工具只保留安全觀察代號，不把觀察寫成診斷。
+
+## 下一次複查要處理開放列
+
+在下一次每月檢視時，先看仍開放的列：來源是否仍有效？行動窗口是否符合家庭時間？負責角色能否開啟受保護來源？暫緩必須有理由和重新開案事件，否則會變成沒人再看的歷史；完成也要有日期和實際結果，不能把外部單位尚未回覆寫成已接受。季節再次改變時，另開新的私人代號並保留舊紀錄，方便比較而不覆寫。
+
+## 隱私與未來商品推薦界線
+
+輸入只在目前瀏覽器運算，不是雲端復原服務。不要貼完整地址、電話、帳號、序號、密碼、付款、私人通信或官方通知全文。未來若出現收納箱、標籤或天氣用品推薦，只能放在流程外、有清楚聯盟揭露且可略過；建立、複查和列印這份紀錄都不以購買商品為前提。
+
+## 交接前的五分鐘
+
+分享前先刪除可辨識人的資料、地址和私人來源，只留下複查代號、尚未完成的列、受保護來源位置和下一個核點。接手的人要能重新開啟負責來源，分辨「目前觀察」和「仍待專業決定」。這個小交接讓換季紀錄真的能被使用，而不是只看起來完整。
+
+## Page 284 — FamilyBoard 換季複查 App 教學（Traditional Chinese）
+**Slug:** /zh-tw/guides/familyboard-seasonal-reset-tutorial/
+**Primary intent:** teach Taiwan households a repeatable way to use a local seasonal review log without turning it into a weather or safety promise
+**Title tag:** FamilyBoard 換季複查怎麼做？季節行動 App 教學
+**Meta description:** 逐步教你用 FamilyBoard 記錄換季來源、區域觀察、負責角色、暫緩理由與下一次核點，保留隱私與專業界線。
+**Primary keyword concept:** FamilyBoard 換季複查教學
+**Cluster:** household-operations
+**Page type:** content
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/household-seasonal-reset-action-log/, /zh-tw/guides/seasonal-home-maintenance-checklist/, /zh-tw/guides/household-monthly-review/
+**FAQ:**
+- Q: 換季複查要把所有家電都列進去嗎？
+  A: 不用，只列本次轉換真的會影響的設備、區域或家庭流程；沒有用途的列會降低整份紀錄的可信度。
+- Q: 暫緩一項工作是不是代表忽略它？
+  A: 不是，暫緩要寫理由、負責角色和重新開案事件，讓下一次複查知道何時回來看。
+- Q: 我可以用 App 判斷颱風前房子安全嗎？
+  A: 不可以，App 只整理家庭觀察和來源；天氣、建築、設備與緊急安全要依主管機關和合格專業來源。
+
+# FamilyBoard 換季複查怎麼做？季節行動 App 教學
+
+這篇教學把「換季要不要做什麼」變成一個可交接的家庭流程，而不是把網路清單整份複製進 App。[家庭季節複查行動工具](/zh-tw/tools/household-seasonal-reset-action-log/)只在目前瀏覽器整理代號、來源、觀察、角色和結果；它不讀取天氣、不連線檢查設備，也不會替你判定房子或家人的安全。
+
+## 第一步：說清楚這次是哪個轉換
+
+先選一個小範圍：冷氣開始常用、冬季暖氣開始使用、雨季或颱風前後、戶外用品收納、返校或長假生活節奏改變。不要同時建立「全年所有事情」清單。用 `SEASONAL-2026-A` 這類代號，並記下本次複查日期。完整地址、家庭成員姓名和官方警報全文不需要出現在代號裡。
+
+## 第二步：先畫出來源地圖
+
+建立 CLIMATE-1、MANUAL-1、PROPERTY-1、HOUSE-1 等安全來源代號，分別指向所在地主管機關、製造商手冊、物業規約和家庭受保護筆記。來源日期要反映你實際看到的版本。若來源已過期、找不到或互相矛盾，狀態保持「等待負責來源確認」，不要把推測寫成規則。來源地圖的作用是讓家人知道要回哪裡查，不是把來源全文貼進公開摘要。
+
+## 第三步：一列只寫一個設備或區域
+
+把「外部排水區」、「除濕機代號」、「窗戶與備援用品區」分開。每列寫可觀察的事實，例如「濾網外觀待確認」、「容器數量已點過」、「物業進場窗口待回覆」。避免「安全」「正常」「已防護」這些超過觀察範圍的字。若必須記錄照片或完整手冊，保留在受保護位置，只在工具放照片日期或文件代號。
+
+## 第四步：替每個開放列安排下一個窗口
+
+行動窗口可以是「本週完成觀察」「收到物業回覆後」「下一次月檢前」，但表單的結果日期仍要填實際可重開的日期。指定角色時用「家庭保養角色」「物業聯絡角色」「防災資料整理角色」，不要為了方便把姓名和電話寫進公開輸出。暫緩不是刪除：寫下暫緩原因、目前依據和重新開案事件，下一次複查才有入口。
+
+## 第五步：遇到安全疑問就轉交
+
+漏水、瓦斯味、焦味、電氣異常、結構裂縫、設備過熱或官方警告，都不應由這份工具判讀。保留安全觀察代號，立即依所在地緊急指示、製造商、物業或合格專業管道處理。工具的「等待負責來源確認」不是安全許可，也不是可以繼續使用的證明。
+
+## 第六步：在每月檢視時關閉或延後
+
+到了[家庭每月檢視](/zh-tw/guides/household-monthly-review/)，逐列問三件事：來源是否仍是目前版本？觀察是否有新的結果？負責角色是否真的完成下一步？只有在家庭保存了實際結果和日期後才選「已完成」；如果工作不適用，記錄目前理由與未來什麼變化會重新開案。不要為了讓數字好看而關閉仍未有來源回覆的列。
+
+## 第七步：分享前做隱私和推薦檢查
+
+列印或交接前，移除地址、姓名、門禁、設備序號、帳號、付款、完整警報和私人通信。若未來頁面放置收納用品、標籤或天氣產品推薦，確認聯盟揭露位於教學流程之外，而且家庭可以完全略過；商品不是換季複查、隱私保護或安全判斷的必要條件。
+
+## 收尾前的六個問題
+
+這次轉換是否真的需要複查？每列是否都有來源日期和可觀察描述？每個開放列是否有負責角色與結果日期？暫緩是否寫了理由和重新開案事件？安全疑問是否已交給正確來源？分享前是否刪除個資與完整原件？六題都能回答「是」，這份換季紀錄才適合進入下一個家庭核點。
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.
