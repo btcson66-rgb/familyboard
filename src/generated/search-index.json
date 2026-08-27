@@ -2184,6 +2184,14 @@
     "headings": "Household Repair Evidence Timeline Log Set a narrow boundary before collecting evidence Read the timeline as five different events Keep uncertainty visible with statuses Privacy and safety boundary Optional affiliate space cannot decide a repair"
   },
   {
+    "title": "Insurance Claim Timeline Log | Free Household Incident Record",
+    "description": "Record incident observations, policy pointers, notices, document handoffs and follow-up dates without storing claim numbers or deciding coverage.",
+    "route": "/tools/household-insurance-claim-timeline-log/",
+    "cluster": "records-emergency",
+    "keywords": "insurance claim timeline log",
+    "headings": "Household Insurance Claim Timeline Log Record an incident without turning observation into a conclusion Five passes for a clear claim record How it connects to other FamilyBoard records Privacy, safety and professional boundaries"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

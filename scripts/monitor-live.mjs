@@ -290,6 +290,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-repair-evidence-timeline-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-repair-evidence-timeline-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-insurance-claim-timeline-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-insurance-claim-timeline-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2760,6 +2763,32 @@ const checks = [
       "FamilyBoard 修繕前後怎麼留證據",
       'lang="zh-TW"',
       "家庭維修時間線 App 教學",
+      "不會上傳或讀取照片",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/tools/household-insurance-claim-timeline-log/",
+    require: [
+      "Household Insurance Claim Timeline Log",
+      'hreflang="zh-TW"',
+      "does not decide coverage, liability, claim value or legal deadlines",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-insurance-claim-timeline-log/",
+    require: [
+      "家庭保險理賠事件時間線工具",
+      'hreflang="en"',
+      "不判定承保、責任、理賠金額或法律期限",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/",
+    require: [
+      "FamilyBoard 保險理賠事件怎麼整理",
+      'lang="zh-TW"',
+      "家庭事故時間線 App 教學",
       "不會上傳或讀取照片",
     ],
     forbid: ['rel="alternate"'],

@@ -5186,6 +5186,54 @@ const householdRepairEvidenceTimelineDefinition = (locale: Locale): Definition =
   };
 };
 
+const householdInsuranceClaimTimelineDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立事件列，等待事故範圍", "已記錄事故觀察，等待保單來源", "已記錄通知或回覆，等待文件清單", "已記錄文件交付，等待理賠決定", "已記錄來源決定，等待後續行動", "時間線已複查並保留來源索引", "不適用，已記錄原因與重新開案事件"]
+    : ["Event row created—scope pending", "Incident observation recorded—policy source pending", "Notice or response recorded—document list pending", "Documents delivered—claim decision pending", "Source decision recorded—next action pending", "Timeline reviewed—source pointer preserved", "Not applicable—reason and reopen event recorded"];
+  const defaults = zh
+    ? "CLAIM-A | 家庭財產事件代號 | 可觀察損壞範圍與暫時限制；不判定承保或責任 | 2026-08-21 | 事故觀察索引 INC-A1；保單來源查閱 2026-08-22 | 保險公司已提供通知管道與案件流程入口；不把受理當成核賠 | 2026-08-24 | 家庭保險紀錄角色 | 已記錄通知或回覆，等待文件清單\nCLAIM-B | 水管事件後續代號 | 受影響區域與可見結果；專業檢查結果另存 | 2026-08-20 | 事件照片索引 PHOTO-B1；保單與通知來源 POLICY-B1 | 已交付來源要求的文件索引；正式理賠決定尚未觀察 | 2026-08-26 | 家庭文件交接角色 | 已記錄文件交付，等待理賠決定"
+    : "CLAIM-A | Household property incident code | Observable damage scope and temporary boundary; no coverage or liability conclusion | 2026-08-21 | Incident observation pointer INC-A1; policy source checked 2026-08-22 | Insurer supplied notice channel and claim-process source; do not treat acknowledgement as a settlement | 2026-08-24 | Household insurance-records role | Notice or response recorded—document list pending\nCLAIM-B | Water-related incident follow-up code | Affected area and visible result; qualified inspection remains separate | 2026-08-20 | Incident photo pointer PHOTO-B1; policy and notice source POLICY-B1 | Requested document pointers delivered; formal claim decision not observed | 2026-08-26 | Household records handoff role | Documents delivered—claim decision pending";
+  return {
+    intro: zh
+      ? "把家庭保險事件的可觀察範圍、保單來源、通知與回覆、文件索引、來源決定及後續行動排成版本化時間線。工具不判定承保、責任、理賠金額或法律期限，也不代替保險公司與合格專業意見。"
+      : "Place a household insurance incident's observable scope, policy source, notice or response, document pointers, source decision and next action on a versioned timeline. This tool does not decide coverage, liability, claim value or legal deadlines, and does not replace an insurer or qualified advice.",
+    fields: [
+      text("review", zh ? "保險事件時間線私人代號" : "Private insurance-claim timeline reference", zh ? "使用家庭代號，不要輸入姓名、地址、保單號、理賠號、帳戶或付款資料。" : "Use a household code; do not enter names, addresses, policy or claim numbers, account or payment data.", "CLAIM-TIMELINE-2026-A"),
+      { name: "context", label: zh ? "保險事件時間線情境" : "Insurance-claim timeline context", type: "select", options: zh ? ["水災、漏水或潮濕事件", "火災、煙霧或設備損壞", "風雨、地震或其他自然事件", "竊盜、遺失或財物損壞", "搬家點交或房屋損壞", "其他需要來源複查的保險事件"] : ["Water, leak or dampness incident", "Fire, smoke or equipment damage", "Storm, earthquake or other natural event", "Theft, loss or property damage", "Move-out or property-condition incident", "Other insurance event needing source review"] },
+      { name: "reviewDate", label: zh ? "本次理賠時間線複查日期" : "Current claim-timeline review date", type: "date", value: "2026-08-28" },
+      text("source", zh ? "保單、通知、文件與來源索引地圖" : "Policy, notice, document and source-pointer map", zh ? "只填安全代號；完整保單、理賠號、照片、估價、通信與醫療或財務資料留在受保護來源。" : "Use safe codes; keep full policies, claim numbers, photos, estimates, correspondence and medical or financial data protected.", "POLICY-A1; NOTICE-A1; DOC-A1"),
+      text("rows", zh ? "保險事件時間線列" : "Insurance-claim timeline rows", zh ? "每行 9 欄：ID｜事件或資產代號｜可觀察範圍與暫時界線｜事件觀察日 YYYY-MM-DD｜保單／通知／文件索引與來源日｜通知、回覆或文件觀察｜後續行動或來源決定日 YYYY-MM-DD｜負責角色｜指定狀態。最多 12 行。" : "Each row uses 9 fields: ID | incident or asset code | observable scope and temporary boundary | incident observation date YYYY-MM-DD | policy, notice or document pointer with source date | notice, response or document observation | next action or source-decision date YYYY-MM-DD | owner role | exact status. Maximum 12 rows.", defaults),
+      text("storage", zh ? "受保護保單、理賠與事件文件位置" : "Protected policy, claim and incident-document location", zh ? "只寫資料夾或容器代號，不要貼完整保單、地址、估價、照片、理賠號、電話或通信。" : "Name a folder or container code, not full policies, addresses, estimates, photos, claim numbers, phone numbers or correspondence.", zh ? "家庭紀錄／保險事件／CLAIM-TIMELINE-2026-A／受保護來源" : "Household records / insurance incidents / CLAIM-TIMELINE-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate);
+      if (!review) return zh ? "請輸入有效的本次理賠時間線複查日期。" : "Enter a valid current claim-timeline review date.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全事件代號、來源地圖與受保護位置。" : "Provide a safe incident code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) })).filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行保險事件時間線列。" : "Enter 1 to 12 insurance-claim timeline rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `時間線第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Timeline line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length) return zh ? "每行保險事件時間線都需要唯一 ID。" : "Every insurance-claim timeline row needs a unique ID.";
+      const eventDates = rows.map((row) => strictIsoDate(row.parts[3]));
+      const actionDates = rows.map((row) => strictIsoDate(row.parts[6]));
+      if (eventDates.some((date) => !date || date > review)) return zh ? "每列事件觀察日必須有效，且不能晚於本次複查。" : "Each incident observation date must be valid and no later than the current review.";
+      if (actionDates.some((date, index) => !date || date < (eventDates[index] ?? review) || date > review)) return zh ? "每列後續行動或來源決定日必須介於事件觀察日與本次複查之間。" : "Each next-action or source-decision date must fall between its incident observation and the current review.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `時間線第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Timeline line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const thin = rows.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 12 || row.parts[4].length < 8 || row.parts[5].length < 12 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `時間線第 ${thin.map((row) => row.line).join("、")} 行需要事件範圍、來源索引、通知／文件觀察與角色。` : `Timeline line ${thin.map((row) => row.line).join(", ")} needs an incident scope, source pointer, notice or document observation and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址或保單／理賠識別資料；請改用安全代號。" : "A full contact, address, policy or claim identifier was detected; use safe codes.";
+      if (/password|passcode|verification code|full address|street address|phone number|policy number|claim number|account number|card number|bank account|private message|密碼|驗證碼|完整地址|電話|保單號|理賠號|帳號|卡號|銀行帳戶|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料；請只保留安全來源索引。" : "Sensitive data was detected; keep only a safe source pointer.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = rows.filter((row) => statuses.indexOf(row.parts[8]) < 5), closed = rows.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const renderedRows = rows.map((row, index) => row.parts[0] + (zh ? "｜事件／資產：" : " — incident/asset: ") + row.parts[1] + (zh ? "｜可觀察範圍：" : " — observable scope: ") + row.parts[2] + (zh ? "｜事件日：" : " — incident date: ") + formatter.format(eventDates[index] as Date) + (zh ? "｜來源索引／日期：" : " — source pointer/date: ") + row.parts[4] + (zh ? "｜通知／文件觀察：" : " — notice/document observation: ") + row.parts[5] + (zh ? "｜後續／決定日：" : " — next-action/decision date: ") + formatter.format(actionDates[index] as Date) + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n");
+      return [values.review.trim() + (zh ? "｜家庭保險事件時間線" : " — household insurance-claim timeline"), (zh ? "事件情境：" : "Incident context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + formatter.format(review), (zh ? "仍開放列：" : "Open rows: ") + open.length, (zh ? "已複查或不適用列：" : "Reviewed or not-applicable rows: ") + closed.length, (zh ? "保單、通知、文件與來源索引地圖：" : "Policy, notice, document and source-pointer map: ") + values.source.trim(), (zh ? "有版本的保險事件觀察與回覆\n" : "Versioned insurance incident observations and responses\n") + renderedRows, (zh ? "受保護保單、理賠與事件文件位置：" : "Protected policy, claim and incident-document location: ") + values.storage.trim(), zh ? "這份輸出只整理事件觀察與來源時間線，不判定承保、責任、理賠金額或法律期限，也不提供保險、財務或法律建議。請使用實際保單、保險公司、主管機關與合格專業來源確認結果。" : "This output only organizes incident observations and source timelines. It does not decide coverage, liability, claim value or legal deadlines, or provide insurance, financial or legal advice. Use the actual policy, insurer, regulator and qualified sources for real outcomes."].join("\n\n");
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
@@ -5196,6 +5244,7 @@ const definitions: Record<string, Definition> = {
   "household-replacement-part-source-check-log": householdReplacementPartSourceCheckDefinition("en"),
   "household-consumable-change-history-log": householdConsumableChangeHistoryDefinition("en"),
   "household-repair-evidence-timeline-log": householdRepairEvidenceTimelineDefinition("en"),
+  "household-insurance-claim-timeline-log": householdInsuranceClaimTimelineDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -9352,6 +9401,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-repair-evidence-timeline-log": {
     ...householdRepairEvidenceTimelineDefinition("zh-TW"),
+  },
+  "household-insurance-claim-timeline-log": {
+    ...householdInsuranceClaimTimelineDefinition("zh-TW"),
   },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("zh-TW"),

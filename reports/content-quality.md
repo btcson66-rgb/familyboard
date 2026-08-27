@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T17:18:21.494Z
+Generated: 2026-08-27T17:47:46.257Z
 
 ## Summary
 
-- Indexable pages: 499
-- Generated HTML routes: 516
+- Indexable pages: 502
+- Generated HTML routes: 519
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 278
+- Pages without a contextual product/tool link: 280
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-27T17:18:21.494Z
 - maintenance: 45
 - household-operations: 89
 - inventory-warranty: 44
-- records-emergency: 61
+- records-emergency: 64
 - tools: 121
 
 ## Word-count range
@@ -156,6 +156,7 @@ Generated: 2026-08-27T17:18:21.494Z
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
+- /zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/
 - /zh-tw/guides/familyboard-internet-incident-tutorial/
 - /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
 - /zh-tw/guides/familyboard-maintenance-priority-review-tutorial/
@@ -274,6 +275,7 @@ Generated: 2026-08-27T17:18:21.494Z
 - /zh-tw/tools/household-donation-handoff-log/
 - /zh-tw/tools/household-guest-arrival-prep-log/
 - /zh-tw/tools/household-home-access-handoff-log/
+- /zh-tw/tools/household-insurance-claim-timeline-log/
 - /zh-tw/tools/household-insurance-policy-source-version-log/
 - /zh-tw/tools/household-internet-incident-review-log/
 - /zh-tw/tools/household-inventory-photo-capture-log/

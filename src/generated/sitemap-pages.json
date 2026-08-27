@@ -2384,6 +2384,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-insurance-claim-timeline-log/",
+    "alternateRoute": "/zh-tw/tools/household-insurance-claim-timeline-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2852,6 +2860,13 @@
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {
@@ -3398,6 +3413,13 @@
     "alternateRoute": "/tools/household-home-access-handoff-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-insurance-claim-timeline-log/",
+    "alternateRoute": "/tools/household-insurance-claim-timeline-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {
