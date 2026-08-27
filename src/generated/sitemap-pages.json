@@ -1888,6 +1888,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/rental-security-deposit-move-out-claim-log/",
+    "alternateRoute": "/zh-tw/tools/rental-security-deposit-move-out-claim-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2783,6 +2791,20 @@
     "alternateRoute": "/guides/renovation-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/rental-security-deposit-move-out-claim-log/",
+    "alternateRoute": "/tools/rental-security-deposit-move-out-claim-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/rental-security-deposit-move-out-claims/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {

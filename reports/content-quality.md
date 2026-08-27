@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T02:23:29.318Z
+Generated: 2026-08-27T02:43:00.839Z
 
 ## Summary
 
-- Indexable pages: 364
-- Generated HTML routes: 381
+- Indexable pages: 367
+- Generated HTML routes: 384
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 151
+- Pages without a contextual product/tool link: 154
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-27T02:23:29.318Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 44
+- records-emergency: 47
 - tools: 121
 
 ## Word-count range
@@ -74,6 +74,7 @@ Generated: 2026-08-27T02:23:29.318Z
 - /security/
 - /terms/
 - /tools/household-vehicle-document-source-status-log/
+- /tools/rental-security-deposit-move-out-claim-log/
 - /zh-tw/affiliate-disclosure/
 - /zh-tw/contact/
 - /zh-tw/features/emergency-information-organizer/
@@ -128,6 +129,7 @@ Generated: 2026-08-27T02:23:29.318Z
 - /zh-tw/guides/product-registration-tracker/
 - /zh-tw/guides/purchase-receipt-organizer/
 - /zh-tw/guides/renovation-records/
+- /zh-tw/guides/rental-security-deposit-move-out-claims/
 - /zh-tw/guides/repair-history/
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/guides/service-history/
@@ -193,6 +195,7 @@ Generated: 2026-08-27T02:23:29.318Z
 - /zh-tw/tools/purchase-delivery-evidence-log/
 - /zh-tw/tools/receipt-retention-organizer/
 - /zh-tw/tools/recurring-chore-planner/
+- /zh-tw/tools/rental-security-deposit-move-out-claim-log/
 - /zh-tw/tools/room-inventory-generator/
 - /zh-tw/tools/storage-unit-access-inventory-log/
 - /zh-tw/tools/vacation-shutdown-checklist-generator/

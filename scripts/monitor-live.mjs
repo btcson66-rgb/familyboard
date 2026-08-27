@@ -167,6 +167,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/home-care-payment-refund-collection-notice-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-care-payment-refund-collection-notice-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-care-refund-and-collection-notices/</loc>",
+      "<loc>https://familyboard.win/tools/rental-security-deposit-move-out-claim-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/rental-security-deposit-move-out-claim-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/rental-security-deposit-move-out-claims/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -776,6 +779,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Separate payment, refund, collection and adverse notices",
       "does not authenticate a notice",
+    ],
+  },
+  {
+    path: "/tools/rental-security-deposit-move-out-claim-log/",
+    require: [
+      "Rental Security Deposit Move-Out Claim Log",
+      'hreflang="zh-TW"',
+      "Separate the lease, deposit, move-out notice",
+      "does not calculate a deposit balance",
     ],
   },
   {
@@ -1457,6 +1469,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/rental-security-deposit-move-out-claim-log/",
+    require: [
+      "租屋退租押金與扣款紀錄表",
+      'hreflang="en"',
+      "把租約、押金、退租通知、點交",
+      "不判定房東或房客責任",
+    ],
+  },
+  {
     path: "/zh-tw/guides/home-care-service-fees-and-billing/",
     require: [
       "居家服務費用怎麼核對？長照部分負擔、自費、收據、未遇、退費與申訴指南",
@@ -1473,6 +1494,16 @@ const checks = [
       'lang="zh-TW"',
       "先把五種文件分開",
       "退款不是一個動詞，而是一條證據鏈",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/rental-security-deposit-move-out-claims/",
+    require: [
+      "租屋退租押金被扣怎麼整理",
+      'lang="zh-TW"',
+      "建立安全文件地圖",
+      "把扣款、退款與實際入帳拆成三條線",
     ],
     forbid: ['rel="alternate"'],
   },

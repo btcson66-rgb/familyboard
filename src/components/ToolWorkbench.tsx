@@ -2677,6 +2677,82 @@ const homeCareNoticeDefinition = (locale: Locale): Definition => {
   };
 };
 
+const rentalDepositDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh ? [
+    "已建立退租紀錄代號，等待契約與點交基準",
+    "已核對租期、押金與點交安排",
+    "已記錄退租通知與屋況、鑰匙或物品交接證據",
+    "已分開正常耗損、清潔、修繕與未返還物",
+    "已記錄扣款說明與支持文件，等待出租人或管理方回覆",
+    "已提出安全詢問或書面回應，等待受理",
+    "押金退款或扣款結果等待確認",
+    "點交、扣款或退款有爭議，等待調解、申訴或合格法律諮詢",
+    "已收到押金或扣款結果並保存原始證據",
+    "不適用，已記錄原因與重新開案事件",
+  ] : [
+    "Move-out record reference created—lease and inspection baseline pending",
+    "Lease term, deposit and inspection arrangement checked",
+    "Move-out notice and condition, key or item handoff evidence recorded",
+    "Ordinary wear, cleaning, repair and missing items separated",
+    "Deduction explanation and supporting documents recorded—landlord or manager response pending",
+    "Safe question or written response sent—intake pending",
+    "Deposit refund or deduction result pending confirmation",
+    "Inspection, deduction or refund disputed—mediation, complaint or qualified legal advice pending",
+    "Deposit or deduction result received and original evidence preserved",
+    "Not applicable—reason and reopen event recorded",
+  ];
+  const defaults = zh
+    ? "RENT-A | 租期屆滿正常退租；押金與點交分開 | 租約版本、出租人或管理方來源；原件受保護 | 租約期間與房屋關係 MOVE-A 已核對；來源核對 2026-08-27 | MOVEOUT-M1 退租通知代號；點交 PHOTO-P1 只放受保護位置；鑰匙交接 KEY-K1 | LEASE-L1、DEPOSIT-D1、INSPECT-I1 與扣款說明分開 | 已保留租約指定通知、點交方式與安全回應路徑；不在工具輸入個資 | 已交接屋況與鑰匙結果；押金退款結果等待出租人或管理方確認；若收到扣款或新通知重新開啟 | 家庭租屋紀錄角色 | 2026-08-27 | 已收到押金或扣款結果並保存原始證據"
+    : "RENT-A | Lease-end move-out; deposit and inspection kept separate | Lease version, landlord or manager source; originals protected | Lease term and rental relationship MOVE-A checked; source checked 2026-08-27 | MOVEOUT-M1 move-out notice code; inspection PHOTO-P1 stays protected; key handoff KEY-K1 | LEASE-L1, DEPOSIT-D1, INSPECT-I1 and deduction explanation kept separate | Lease-required notice, inspection method and safe response route preserved; no personal data in tool | Condition and key handoff completed; deposit refund result pending landlord or manager confirmation; reopen for deduction or new notice | Household rental-record role | 2026-08-27 | Deposit or deduction result received and original evidence preserved";
+  return {
+    intro: zh ? "把租約、押金、退租通知、點交、正常耗損、扣款說明、退款結果與爭議路徑分開記錄；不判定房東或房客責任、不計算法定期限或應退金額。" : "Separate the lease, deposit, move-out notice, inspection, ordinary wear, deduction explanation, refund result and dispute route; no liability finding, legal deadline or refund-amount calculation.",
+    fields: [
+      text("review", zh ? "退租紀錄私人代號" : "Private move-out reference", zh ? "只用代號，不要輸入姓名、地址、帳號、租約全文或付款資料。" : "Use a code; do not enter names, addresses, accounts, lease text or payment data.", "RENTAL-2026-A"),
+      { name: "context", label: zh ? "退租情境" : "Move-out context", type: "select", options: zh ? ["租期屆滿退租", "提前終止或搬遷", "點交後押金等待", "收到扣款或損害通知", "押金退款爭議", "調解、申訴或法律諮詢前整理"] : ["Lease-end move-out", "Early termination or relocation", "Deposit pending after inspection", "Deduction or damage notice received", "Deposit refund dispute", "Preparing for mediation, complaint or legal advice"] },
+      { name: "baselineDate", label: zh ? "租約／押金基準日" : "Lease and deposit baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: zh ? "本次退租核對日" : "Current move-out review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次退款或回覆核點" : "Next refund or response checkpoint", type: "date", value: "2026-09-12" },
+      text("basis", zh ? "租約、押金、點交與爭議來源地圖" : "Lease, deposit, inspection and dispute-source map", zh ? "只放版本代號；租約、通知、照片、收據及通信原件留在受保護來源。" : "Use version IDs; keep lease, notices, photos, receipts and correspondence in protected sources.", "LEASE-L1; DEPOSIT-D1; INSPECT-I1; DISPUTE-Q1"),
+      text("records", zh ? "有版本的退租與押金紀錄列" : "Versioned move-out and deposit rows", zh ? "每行 11 欄：ID｜情境｜契約／出租人來源｜租期、押金與點交基準｜退租通知與屋況／鑰匙證據｜耗損、清潔、修繕或物品分類｜扣款說明與支持文件｜詢問、回覆、退款或爭議結果｜角色｜結果日期｜指定狀態。最多 12 行。" : "Each row uses 11 fields: ID | context | lease/landlord source | lease, deposit and inspection baseline | move-out notice and condition/key evidence | wear, cleaning, repair or missing-item classification | deduction explanation and support | question, response, refund or dispute result | owner | outcome date | exact status. Maximum 12 rows.", defaults),
+      text("storage", zh ? "受保護租約、照片、收據與通信位置" : "Protected lease, photo, receipt and correspondence location", zh ? "只寫保管流程或容器代號，不要貼租約、通知、地址、付款或通信全文。" : "Name a custody process or container, not lease, notice, address, payment or correspondence text.", zh ? "家庭紀錄／租屋退租／RENTAL-2026-A／受保護程序" : "Household records / rental move-out / RENTAL-2026-A / protected process"),
+    ],
+    run: (values) => {
+      const baseline = strictIsoDate(values.baselineDate), review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!baseline || !review || !next) return zh ? "請輸入有效的租約基準日、本次核對日與下一核點日期。" : "Enter valid lease-baseline, current-review and next-checkpoint dates.";
+      if (baseline > review) return zh ? "租約基準日不能晚於本次核對日。" : "The lease baseline cannot be later than the current review.";
+      if (next < review) return zh ? "下一核點不能早於本次核對日。" : "The next checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 16 || values.storage.trim().length < 10) return zh ? "請提供安全來源地圖與受保護程序代號。" : "Provide a safe source map and protected-process label.";
+      const rows = values.records.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行退租紀錄。" : "Enter 1 to 12 move-out rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 11 || row.parts.some((part) => !part));
+      if (malformed.length) return (zh ? "退租紀錄第 " : "Move-out line ") + malformed.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 行必須有 11 個非空白欄位。" : " must contain 11 non-empty fields.");
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行退租紀錄都需要唯一 ID。" : "Every move-out row needs a unique ID.";
+      const invalid = parsed.filter((row) => !statuses.includes(row.parts[10]));
+      if (invalid.length) return (zh ? "退租紀錄第 " : "Move-out line ") + invalid.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 行狀態不在指定清單。" : " uses a status outside the exact list.");
+      const checked = (v: string) => strictIsoDate(v.match(/\b\d{4}-\d{2}-\d{2}\b/)?.[0] || "");
+      const badSource = parsed.filter((row) => { const d = checked(row.parts[3]); return !d || d < baseline || d > review; });
+      if (badSource.length) return (zh ? "退租紀錄第 " : "Move-out line ") + badSource.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 行基準核對日須在租約基準日至本次核對日。" : " needs a baseline check date from lease baseline through review.");
+      const open = parsed.filter((row) => statuses.indexOf(row.parts[10]) < 8);
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[10]) >= 8);
+      const badOpen = open.filter((row) => { const d = strictIsoDate(row.parts[9]); return !d || d < review || d > next; });
+      if (badOpen.length) return (zh ? "仍開放的第 " : "Open line ") + badOpen.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 行結果日期須在本次核對日至下一核點。" : " needs an outcome date from review through next checkpoint.");
+      const badClosed = closed.filter((row) => { const d = strictIsoDate(row.parts[9]); return !d || d < baseline || d > review; });
+      if (badClosed.length) return (zh ? "已完成的第 " : "Completed line ") + badClosed.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 行結果日期須在租約基準日至本次核對日。" : " needs an outcome date from baseline through review.");
+      const thin = parsed.filter((row) => row.parts.slice(1, 8).some((part, index) => part.length < [8, 10, 18, 16, 12, 14, 24][index]) || row.parts[7].length < 24 || row.parts[8].length < 4);
+      if (thin.length) return (zh ? "退租紀錄第 " : "Move-out line ") + thin.map((row) => row.line).join(zh ? "、" : ", ") + (zh ? " 行需要完整情境、來源、點交、分類、扣款說明與結果。" : " needs context, sources, inspection, classification, deduction explanation and result.");
+      const privacy = [values.review, values.basis, values.records, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、帳號、案件或付款識別資料；請改用安全代號。" : "A full contact, account, case or payment identifier was detected; use safe codes.";
+      if (/password|passcode|full address|street address|person name\s*[:=]|landlord name\s*[:=]|tenant name\s*[:=]|account number\s*[:=]|card number\s*[:=]|bank account\s*[:=]|lease text|notice text|receipt text|correspondence|signature|完整地址|房東姓名\s*[:：]|房客姓名\s*[:：]|帳號\s*[:：]|卡號\s*[:：]|銀行帳戶\s*[:：]|租約全文|通知全文|收據全文|通信內容|簽名/i.test(privacy)) return zh ? "偵測到姓名、地址、帳號、租約或通信全文、簽名或私人資料；請改用安全代號。" : "A name, address, account, lease or correspondence text, signature or private data was detected; use safe codes.";
+      const fmtDate = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const counts = statuses.map((status) => ({ status, count: parsed.filter((row) => row.parts[10] === status).length })).filter((item) => item.count);
+      const rowText = parsed.map((row) => row.parts[0] + (zh ? "｜情境：" : " — context: ") + row.parts[1] + (zh ? "｜來源：" : " — source: ") + row.parts[2] + (zh ? "｜基準：" : " — baseline: ") + row.parts[3] + (zh ? "｜通知與證據：" : " — notice/evidence: ") + row.parts[4] + (zh ? "｜分類：" : " — classification: ") + row.parts[5] + (zh ? "｜扣款說明：" : " — deduction explanation: ") + row.parts[6] + (zh ? "｜回應與結果：" : " — response/result: ") + row.parts[7] + (zh ? "｜角色：" : " — owner: ") + row.parts[8] + (zh ? "｜日期：" : " — date: ") + fmtDate.format(strictIsoDate(row.parts[9]) as Date) + (zh ? "｜狀態：" : " — status: ") + row.parts[10]).join("\n");
+      return [values.review.trim() + (zh ? "｜租屋退租與押金交接狀態" : " — rental move-out and deposit handoff status"), (zh ? "退租情境：" : "Move-out context: ") + values.context, (zh ? "租約／押金基準：" : "Lease and deposit baseline: ") + fmtDate.format(baseline), (zh ? "本次核對：" : "Current review: ") + fmtDate.format(review), (zh ? "下一次結果核點：" : "Next result checkpoint: ") + fmtDate.format(next), (zh ? "仍開放列：" : "Open rows: ") + open.length, (zh ? "已完成或不適用列：" : "Completed or not-applicable rows: ") + closed.length, (zh ? "狀態統計：" : "Status count: ") + counts.map((item) => item.status + " " + item.count).join(zh ? "、" : " | "), (zh ? "租約、押金、點交與爭議來源地圖：" : "Lease, deposit, inspection and dispute-source map: ") + values.basis.trim(), (zh ? "有版本的退租、屋況、扣款與退款結果證據\n" : "Versioned move-out, condition, deduction and refund-result evidence\n") + rowText, (zh ? "受保護租約、照片、收據與通信位置：" : "Protected lease, photo, receipt and correspondence location: ") + values.storage.trim(), zh ? "這份輸出是租屋退租來源與交接索引，不判定正常耗損、損害、扣款、押金或責任，不計算期限或應退金額，不代表調解、申訴、法律主張或收款結果。以目前簽署租約、正式通知、所在地規則及合格法律或消費者服務來源為準。" : "This output is a rental move-out source and handoff index. It does not decide ordinary wear, damage, deductions, deposit, liability, deadlines or refund amounts, and is not mediation, a complaint, legal claim or payment result. Use the current signed lease, formal notices, local rules and qualified legal or consumer-support sources."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -6687,6 +6763,9 @@ const definitions: Record<string, Definition> = {
   "home-care-payment-refund-collection-notice-log": {
     ...homeCareNoticeDefinition("en"),
   },
+  "rental-security-deposit-move-out-claim-log": {
+    ...rentalDepositDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -6724,6 +6803,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "home-care-payment-refund-collection-notice-log": {
     ...homeCareNoticeDefinition("zh-TW"),
+  },
+  "rental-security-deposit-move-out-claim-log": {
+    ...rentalDepositDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:
