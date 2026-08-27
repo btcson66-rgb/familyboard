@@ -67,3 +67,5 @@ The pantry tool can point to what was observed, the meal log can assign the next
 ## Eight-question closeout
 
 Are only two initial meal slots in scope? Are recipe, shopping and pantry sources dated? Are plan, action and result distinct? Are roles clear without names? Are health and safety questions left to the right source? Are substitutions and cancellations versioned? Is the serving observation honest? Is any recommendation optional and disclosed? If not, keep the meal row open.
+
+---

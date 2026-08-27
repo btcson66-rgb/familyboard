@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭用 FamilyBoard 交接保險事件的觀察與來
 primaryKeyword: "FamilyBoard 保險理賠紀錄教學"
 cluster: "records-emergency"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-insurance-claim-timeline-tutorial/"
 indexable: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

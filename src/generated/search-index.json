@@ -2592,6 +2592,30 @@
     "headings": "How to Use FamilyBoard for Meal Preparation Roles Start with two meal slots Map recipe, shopping and pantry sources separately Distinguish plan, action and serving result Use roles instead of names Treat health and food-safety questions as external Handle substitutions and cancelled meals Review after serving Link pantry, meetings and future recommendations carefully Eight-question closeout"
   },
   {
+    "title": "FamilyBoard Accessibility Walkthrough Tutorial | Observe Routes and Plan Rechecks",
+    "description": "Learn how to use FamilyBoard to record route observations, obstacles, alternate paths and recheck dates while keeping health, address and access details protected.",
+    "route": "/guides/familyboard-accessibility-walkthrough-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard accessibility walkthrough tutorial",
+    "headings": "How to Use FamilyBoard for an Accessibility Walkthrough Choose one route and one time Use observation language Point to the right source Choose only a low-risk next action Let the actual user inform a recheck Version environmental changes Share only the minimum Keep future recommendations outside the workflow Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Household Handoff Tutorial | Tasks, Sources, Roles and Review",
+    "description": "Learn how to plan a FamilyBoard household handoff by scope, source and role, remove sensitive data, test a real lookup and close the handoff cleanly.",
+    "route": "/guides/familyboard-household-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard household handoff tutorial",
+    "headings": "How to Use FamilyBoard for a Household Handoff Set the window and the smallest useful scope Use the task, source and result layers Ask the receiver to find one real item Clean sensitive data before sharing Define role and takeover conditions Close and recover the handoff Link specialist workflows without duplicating them Keep recommendations secondary Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Insurance Claim Timeline Tutorial | Evidence, Notices and Open Decisions",
+    "description": "Learn how to organise a household insurance incident timeline with FamilyBoard while separating observations, policy sources, notices, documents and formal decisions.",
+    "route": "/guides/familyboard-insurance-claim-timeline-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard insurance claim timeline tutorial",
+    "headings": "How to Use FamilyBoard for an Insurance Claim Timeline Create one neutral incident scope Map protected sources and dates Separate five evidence events Use honest status language Keep documents and roles minimal Link damage, repair and claim lines Protect people and stop at hazards Version new facts and keep recommendations outside Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

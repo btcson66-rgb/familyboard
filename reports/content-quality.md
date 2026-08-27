@@ -1,29 +1,29 @@
 # Content quality report
 
-Generated: 2026-08-27T23:22:16.936Z
+Generated: 2026-08-27T23:33:40.019Z
 
 ## Summary
 
-- Indexable pages: 566
-- Generated HTML routes: 583
+- Indexable pages: 569
+- Generated HTML routes: 586
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 294
+- Pages without a contextual product/tool link: 295
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 100
+- product: 102
 - appliances: 30
 - maintenance: 48
 - household-operations: 97
 - inventory-warranty: 45
-- records-emergency: 81
+- records-emergency: 82
 - tools: 124
 
 ## Word-count range
@@ -62,6 +62,7 @@ Generated: 2026-08-27T23:22:16.936Z
 - /guides/family-emergency-contacts/
 - /guides/familyboard-browser-storage-maintenance/
 - /guides/familyboard-family-display-mode-setup/
+- /guides/familyboard-household-handoff-tutorial/
 - /guides/familyboard-offline-backup-restore/
 - /guides/household-admin-day/
 - /guides/household-handoff/

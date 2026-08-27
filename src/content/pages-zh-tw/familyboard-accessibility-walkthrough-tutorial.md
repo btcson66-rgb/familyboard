@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 做居家動線觀察與交接
 primaryKeyword: "FamilyBoard 居家無障礙教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-accessibility-walkthrough-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

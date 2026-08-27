@@ -124,6 +124,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-weekly-reset-action-tutorial/",
     "/guides/familyboard-school-closure-continuity-tutorial/",
     "/guides/familyboard-household-account-list-tutorial/",
+    "/guides/familyboard-accessibility-walkthrough-tutorial/",
+    "/guides/familyboard-household-handoff-tutorial/",
+    "/guides/familyboard-insurance-claim-timeline-tutorial/",
     "/guides/familyboard-household-responsibility-coverage-tutorial/",
     "/guides/familyboard-replacement-part-source-check-tutorial/",
     "/guides/familyboard-guest-arrival-prep-tutorial/",
@@ -1020,7 +1023,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(page.locator("h1")).toHaveText(
     "FamilyBoard 保險理賠事件怎麼整理？家庭事故時間線 App 教學",
   );
-  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+  await expect(
+    page.locator('link[rel="alternate"][hreflang="en"]'),
+  ).toHaveAttribute(
+    "href",
+    "https://familyboard.win/guides/familyboard-insurance-claim-timeline-tutorial/",
+  );
 
   await page.goto("/zh-tw/guides/familyboard-building-notice-response-tutorial/");
   await expect(page.locator("h1")).toHaveText(
@@ -1330,6 +1338,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-household-account-list-tutorial/",
       alternate: "/guides/familyboard-household-account-list-tutorial/",
       heading: "FamilyBoard 家庭帳戶清單怎麼用？服務交接與搬家複查教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/",
+      alternate: "/guides/familyboard-accessibility-walkthrough-tutorial/",
+      heading: "FamilyBoard 居家動線怎麼做無障礙走讀？先記觀察，再安排重測",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-handoff-tutorial/",
+      alternate: "/guides/familyboard-household-handoff-tutorial/",
+      heading: "FamilyBoard 家庭交接怎麼用？",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/",
+      alternate: "/guides/familyboard-insurance-claim-timeline-tutorial/",
+      heading: "FamilyBoard 保險理賠事件怎麼整理？家庭事故時間線 App 教學",
     },
     {
       route: "/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/",
@@ -3394,6 +3417,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-meal-prep-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-accessibility-walkthrough-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-insurance-claim-timeline-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

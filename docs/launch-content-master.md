@@ -23845,6 +23845,215 @@ Are only two initial meal slots in scope? Are recipe, shopping and pantry source
 
 ---
 
+---
+
+## Page 350 — How to Use FamilyBoard for an Accessibility Walkthrough
+**Slug:** /guides/familyboard-accessibility-walkthrough-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
+**Primary intent:** learn to record household route observations and low-risk rechecks without storing health or address data
+**Title tag:** FamilyBoard Accessibility Walkthrough Tutorial | Observe Routes and Plan Rechecks
+**Meta description:** Learn how to use FamilyBoard to record route observations, obstacles, alternate paths and recheck dates while keeping health, address and access details protected.
+**Primary keyword concept:** FamilyBoard accessibility walkthrough tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-accessibility-walkthrough-log/`, `/guides/familyboard-offline-backup-restore/`, `/guides/familyboard-home-access-handoff-tutorial/`, `/zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/`
+**FAQ:**
+- Q: Does a walkthrough replace an accessibility, medical or building assessment?
+  A: No. It records household observations and open questions; qualified or official sources control formal conclusions.
+- Q: Should a diagnosis or full address be recorded?
+  A: No. Use a neutral route code and keep health, care and address details in a protected source.
+- Q: Does one adult walking a route prove it is safe for everyone?
+  A: No. The observation is limited to that person, time and conditions.
+- Q: What should happen after furniture or lighting changes?
+  A: Keep the old observation and create a dated recheck row for the changed conditions.
+
+**Contextual CTA:** Choose one route, record what was observed and schedule a low-risk recheck with a clear source and role.
+
+# How to Use FamilyBoard for an Accessibility Walkthrough
+
+The route from an entrance to a bathroom can change with a rug, a chair, night lighting or a power outage. The free [Accessibility Walkthrough Log](/tools/household-accessibility-walkthrough-log/) helps a household record those observations and the next recheck without pretending to certify a home. It does not diagnose a person, interpret building rules, recommend equipment or guarantee safe passage.
+
+## Choose one route and one time
+
+Start with an actual route such as entrance to bathroom, bedroom to living room or the path to offline information. Use `ACCESS-REVIEW-2026-A`, not a name, diagnosis, full address, gate code or care plan. Record the date and ordinary conditions—daylight, night lighting, furniture state or a recent change—so another person understands what the observation covers.
+
+## Use observation language
+
+Write “floor item seen near the turn” or “night condition not yet checked,” not “compliant” or “unsafe for everyone.” Separate the route, visible obstacle, uncertainty, alternate path, responsible role and status. A single adult’s walk describes that adult at that moment. It does not establish a clinical, legal or universal safety conclusion.
+
+## Point to the right source
+
+Use a protected household note for ordinary observations. Fixed thresholds, stairs, rental responsibilities and common areas may require a landlord, building manager, accessibility specialist or other qualified source. FamilyBoard stores the question and source code; it does not translate a family opinion into a formal assessment. Keep the date of each source check when the answer matters.
+
+## Choose only a low-risk next action
+
+Moving a loose, ordinary object and walking the route again may be appropriate under the household’s own process. A fixed threshold, electrical issue, stair change or construction task is not a casual experiment. Stop and ask the appropriate manager or professional rather than moving, dismantling or modifying something to make a row look complete. The next action should be possible for one named role under safe conditions.
+
+## Let the actual user inform a recheck
+
+If an older adult, child, mobility-aid user or temporary caregiver will use the route, include the person’s needs only in the protected care process and follow any applicable professional guidance. Do not ask someone to enter a risky area for a test. If the person cannot participate, leave the item open with “awaiting appropriate confirmation” instead of generalising another person’s walk.
+
+## Version environmental changes
+
+Furniture, storage, mats, lighting, renovation and outages can change a route. Keep the earlier row as historical observation and create a new dated row with the changed condition. This makes it clear which route was seen when, rather than rewriting an old note as if it described the current room. Link rows with a neutral code, not a photo containing an address or personal detail.
+
+## Share only the minimum
+
+Before a handoff or export, remove names, diagnoses, full addresses, access codes, medical notes and private messages. Share the route code, observed condition, source pointer, role and next date. A family meeting can decide priorities, but building, medical, care and legal questions must return to their competent source. FamilyBoard remains a coordination index, not an emergency or professional service.
+
+## Keep future recommendations outside the workflow
+
+Lighting, storage, labels or slip-resistant products may eventually be compared after the answer, with affiliate disclosure and a skip option. No item can promise compliance or safety. It must never cover the route fields, request health information or replace a qualified assessment. The free log is useful even when no product is purchased.
+
+## Eight-question closeout
+
+Is one route and time in scope? Are observations dated and bounded? Is the source appropriate? Is the next action low-risk? Has the actual user or proper source been considered? Are changes versioned? Did sharing remove health and address data? Is any recommendation optional and disclosed? If not, keep the recheck open.
+
+---
+
+## Page 351 — How to Use FamilyBoard for a Household Handoff
+**Slug:** /guides/familyboard-household-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-handoff-tutorial/
+**Primary intent:** learn to hand off household tasks, sources and outcomes during a temporary role change without oversharing private records
+**Title tag:** FamilyBoard Household Handoff Tutorial | Tasks, Sources, Roles and Review
+**Meta description:** Learn how to plan a FamilyBoard household handoff by scope, source and role, remove sensitive data, test a real lookup and close the handoff cleanly.
+**Primary keyword concept:** FamilyBoard household handoff tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/guides/familyboard-offline-backup-restore/`, `/guides/familyboard-digital-home-binder/`, `/guides/familyboard-home-access-handoff-tutorial/`, `/zh-tw/guides/familyboard-household-handoff-tutorial/`
+**FAQ:**
+- Q: Must I share the entire FamilyBoard space?
+  A: No. Share only the dated categories and source pointers needed for the temporary role.
+- Q: Can a door code or password go in a handoff note?
+  A: No. Use the appropriate protected security tool and keep only a safe category pointer in FamilyBoard.
+- Q: Does clicking Share prove that the handoff worked?
+  A: No. The receiver should find a task, source and result field and repeat the next step.
+- Q: Does FamilyBoard assign responsibility automatically?
+  A: No. The household chooses roles and confirms the real arrangement.
+
+**Contextual CTA:** Pick one temporary handoff window, share three to five categories and ask the receiver to complete one real lookup.
+
+# How to Use FamilyBoard for a Household Handoff
+
+The hard part of a household handoff is rarely a single chore. It is knowing where the source lives, who owns the next action, when to review it and what remains unknown. The free FamilyBoard records can make that boundary visible without dumping a whole family archive on another person. They do not grant access, send emergency alerts, validate documents or replace legal, medical or financial services.
+
+## Set the window and the smallest useful scope
+
+Choose a real reason—one week away, a move, caregiving support or a month-end role change—and give it a start and review date. Begin with three to five categories such as recurring tasks, maintenance, documents, emergency contacts or current billing reminders. Use `HANDOFF-2026-A`, not an address, account number or person’s full name. A bounded handoff can be tested and closed.
+
+## Use the task, source and result layers
+
+“Check the filter” is a task. “Manual code MAINT-M1” is its source pointer. “Filter observed clean and next review dated” is a result. Keep a reminder, an action and an external confirmation separate. The handoff should show what the receiver must do, where to look and what counts as an honest observation; it should not turn a plan into a completed fact.
+
+## Ask the receiver to find one real item
+
+During the handoff, ask the receiver to locate one task, one source code and one result field on an allowed device or in the permitted household space. Record “found,” “needs clarification” or “source pending.” A link forwarded in a message is not proof that the person can execute the work. If offline use is relevant, test the current device while connected, then make a brief network interruption and record that local readback is not cross-device sync.
+
+## Clean sensitive data before sharing
+
+Check names, phone numbers, addresses, card or bank information, passwords, door codes, health notes, children’s details and private conversations. Move originals to a protected location and leave a neutral category or source code in FamilyBoard. The app can identify common sensitive patterns, but an adult must still review the actual export, printout or screen before sharing.
+
+## Define role and takeover conditions
+
+Use role labels such as maintenance role, document role, emergency-information role or backup family role. Add a trigger for a changed date, an absent owner, a provider request or an unresolved source. A role describes who returns to the source; it does not authorise a payment, medical decision, legal signature or physical action. When the situation exceeds the household record, direct the receiver to the proper service.
+
+## Close and recover the handoff
+
+At the review date, record which categories returned to the original owner, which remain delegated and which sharing links or offline copies were removed. Preserve the handoff history but avoid a permanent, ever-growing dump of private information. If responsibilities change again, create a new bounded version instead of silently editing the old one. A dated recovery step prevents a temporary arrangement from becoming invisible standing access.
+
+## Link specialist workflows without duplicating them
+
+Maintenance, emergency, document and trip tools can each hold their own source and result detail. The handoff row should point to them with a safe code rather than copy every field. For an outage, injury, legal notice or insurance event, record the household’s next contact and source while leaving the professional conclusion to the appropriate service.
+
+## Keep recommendations secondary
+
+Binders, label makers or storage products may eventually appear after the workflow, clearly disclosed and skippable. A product cannot guarantee a complete handoff, secure access or professional outcome. Commercial material must stay outside the task controls and must not pressure a family to buy something to use the free app.
+
+## Eight-question closeout
+
+Is the window bounded? Are only needed categories shared? Are task, source and result distinct? Did the receiver complete a real lookup? Were secrets removed? Are role and takeover conditions clear? Were access and copies recovered? Is any recommendation optional and disclosed? If not, keep the handoff open.
+
+---
+
+## Page 352 — How to Use FamilyBoard for an Insurance Claim Timeline
+**Slug:** /guides/familyboard-insurance-claim-timeline-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/
+**Primary intent:** learn to organise an insurance incident timeline by observation, source, notice, documents and decision without treating FamilyBoard as a claims service
+**Title tag:** FamilyBoard Insurance Claim Timeline Tutorial | Evidence, Notices and Open Decisions
+**Meta description:** Learn how to organise a household insurance incident timeline with FamilyBoard while separating observations, policy sources, notices, documents and formal decisions.
+**Primary keyword concept:** FamilyBoard insurance claim timeline tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-insurance-claim-timeline-log/`, `/guides/home-inventory-for-insurance/`, `/guides/organize-insurance-documents/`, `/tools/household-repair-evidence-timeline-log/`, `/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/`
+**FAQ:**
+- Q: Can the timeline determine coverage or a payout?
+  A: No. The current policy, insurer and qualified adviser control those decisions.
+- Q: Should a full policy scan or claim number be copied into the shared timeline?
+  A: No. Use a protected source code and keep addresses, policy numbers and private correspondence protected.
+- Q: Does submitting documents mean a claim is approved?
+  A: No. Notice, document delivery, inspection, formal decision and payment are separate events.
+- Q: Does this guide state Taiwan claim deadlines?
+  A: No. Deadlines depend on the current policy, event and applicable authority; verify them from the controlling source.
+
+**Contextual CTA:** Create one neutral incident code, date the protected policy source and record the first observable event without guessing the outcome.
+
+# How to Use FamilyBoard for an Insurance Claim Timeline
+
+After a leak, storm, fire, theft or damaged appliance, one family member may have photos, another a policy, another a notice and another a repair appointment. The free [Insurance Claim Timeline Log](/tools/household-insurance-claim-timeline-log/) keeps those fragments dated and attributable. It does not file a claim, determine coverage, calculate a deadline, estimate a payout, log into an insurer portal or provide insurance, legal or financial advice.
+
+## Create one neutral incident scope
+
+Use `INCIDENT-2026-A` or another code that contains no name, address, policy number, claim number or phone number. Choose one bounded event—water mark, storm damage or appliance failure—and state what was observed and what remains outside scope. “Wall mark visible; cause awaits inspection” is safer than “covered leak.” One incident per timeline prevents unrelated policies and repairs from becoming one unsupported story.
+
+## Map protected sources and dates
+
+Use `POLICY-P1` for the current policy version, `NOTICE-N1` for insurer or authority correspondence and `DOC-D1` for the protected evidence folder. Record when each source was checked. Keep full scans, addresses, receipts, estimates, photographs and private messages in an access-appropriate location. If versions conflict, retain both pointers and leave the decision open until the controlling source responds.
+
+## Separate five evidence events
+
+Record the incident observation, notification, document delivery, inspection or request, and formal decision as separate rows or statuses. “Insurer received notice” does not mean “claim accepted.” “Documents uploaded” does not mean “payment approved.” A later payment observation is its own event. Every row should name the source date and the household role that can return to it.
+
+## Use honest status language
+
+Start with “incident recorded; scope pending.” After a notice, use “notice observed; awaiting document list.” After delivery, use “documents delivered; decision pending.” A timeline review only confirms that dates, pointers, roles and statuses were checked; it does not certify coverage, liability, repair quality or payment. If nothing applies, record why and what would reopen the row.
+
+## Keep documents and roles minimal
+
+When a provider requests a receipt, estimate or photo, log the protected folder code, delivery date and attributable response. Use roles such as insurance-record role or document-handoff role, not a public name and phone number. A role does not grant authority to sign, settle, pay or make a legal decision. Return to the insurer’s official channel when additional information or consent is required.
+
+## Link damage, repair and claim lines
+
+An inventory row can point to an affected item, a repair-evidence row can record work before and after, and the claim timeline can record notices and decisions. Link them by neutral codes rather than duplicating the original files. A photograph is not a coverage determination, and an invoice is not an insurer decision. Separate lines make the history reviewable without multiplying sensitive copies.
+
+## Protect people and stop at hazards
+
+Before export, check for names, full addresses, phone numbers, policy or claim IDs, payment details, health information, passwords, verification codes and private correspondence. The tool’s pattern warnings are not a substitute for human review. If there is fire, gas, electrical, structural or personal danger, follow emergency and qualified professional instructions first; never approach a hazard to improve a timeline.
+
+## Version new facts and keep recommendations outside
+
+When a document list changes, an inspection adds an observation or a role changes, create a dated version and preserve the earlier record. Ask one unresolved question at each review, such as “Which source still controls the document list?” Binders, scanners or storage media may eventually be compared after the workflow, with affiliate disclosure and a skip option. No product guarantees coverage, recovery or payment.
+
+## Eight-question closeout
+
+Is the incident bounded? Are policy and evidence sources protected and dated? Are observation, notice, delivery, inspection and decision separate? Are statuses honest? Are roles limited to coordination? Are damage, repair and claim lines linked without duplication? Were hazards and sensitive data handled safely? Is any recommendation optional and disclosed? If not, keep the timeline open.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

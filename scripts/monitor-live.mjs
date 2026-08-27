@@ -181,6 +181,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-offline-backup-restore/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-admin-backup-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-admin-backup-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-meeting-agenda-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-meeting-agenda-action-log/</loc>",
@@ -227,6 +228,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-meter-reading-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-accessibility-walkthrough-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-accessibility-walkthrough-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-accessibility-walkthrough-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-recycling-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-recycling-handoff-log/</loc>",
@@ -344,6 +346,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-insurance-claim-timeline-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-insurance-claim-timeline-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-insurance-claim-timeline-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-building-notice-response-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-building-notice-response-log/</loc>",
@@ -2061,14 +2064,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-household-handoff-tutorial/",
+    require: [
+      "FamilyBoard Household Handoff Tutorial",
+      'hreflang="zh-TW"',
+      "Use the task, source and result layers",
+      "does not grant access",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-household-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭交接怎麼用",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先定義這次交接的時間與範圍",
       "接手者要實際做一次查找",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-meeting-agenda-action-log/",
@@ -2361,14 +2373,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-accessibility-walkthrough-tutorial/",
+    require: [
+      "FamilyBoard Accessibility Walkthrough Tutorial",
+      'hreflang="zh-TW"',
+      "Use observation language",
+      "does not diagnose a person",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/",
     require: [
       "FamilyBoard 居家動線怎麼做無障礙走讀",
       'lang="zh-TW"',
+      'hreflang="en"',
       "選一條實際會用到的路",
       "讓實際使用者參與重測",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-recycling-handoff-log/",
@@ -3291,14 +3312,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-insurance-claim-timeline-tutorial/",
+    require: [
+      "FamilyBoard Insurance Claim Timeline Tutorial",
+      'hreflang="zh-TW"',
+      "Separate five evidence events",
+      "does not file a claim",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/",
     require: [
       "FamilyBoard 保險理賠事件怎麼整理",
       'lang="zh-TW"',
+      'hreflang="en"',
       "家庭事故時間線 App 教學",
       "不會上傳或讀取照片",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/tools/household-building-notice-response-log/",
