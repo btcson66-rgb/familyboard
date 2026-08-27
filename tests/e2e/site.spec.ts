@@ -117,6 +117,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-service-quote-comparison-log/",
     "/guides/familyboard-family-display-mode-setup/",
     "/guides/familyboard-browser-storage-maintenance/",
+    "/guides/familyboard-seasonal-reset-tutorial/",
+    "/guides/familyboard-device-retirement-tutorial/",
+    "/guides/familyboard-shopping-list-planner-tutorial/",
     "/tools/household-seasonal-reset-action-log/",
     "/tools/household-device-retirement-handoff-log/",
     "/tools/household-router-support-review-log/",
@@ -1246,6 +1249,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/",
       alternate: "/guides/familyboard-browser-storage-cleanup-tutorial/",
       heading: "FamilyBoard 瀏覽器資料清理前要做什麼？App 操作教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-shopping-list-planner-tutorial/",
+      alternate: "/guides/familyboard-shopping-list-planner-tutorial/",
+      heading: "FamilyBoard 採買清單怎麼用？從缺貨到到貨的家庭補貨教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-seasonal-reset-tutorial/",
+      alternate: "/guides/familyboard-seasonal-reset-tutorial/",
+      heading: "FamilyBoard 換季複查怎麼做？季節行動 App 教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-device-retirement-tutorial/",
+      alternate: "/guides/familyboard-device-retirement-tutorial/",
+      heading: "舊手機送人前要做什麼？FamilyBoard 裝置清除與交接教學",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -3081,6 +3099,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-shopping-list-planner-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-shopping-list-planner-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-seasonal-reset-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-seasonal-reset-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-device-retirement-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-device-retirement-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

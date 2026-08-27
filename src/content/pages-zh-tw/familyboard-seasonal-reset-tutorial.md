@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭用本機季節複查紀錄建立可交接的換�
 primaryKeyword: "FamilyBoard 換季複查教學"
 cluster: "household-operations"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-seasonal-reset-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

@@ -2400,6 +2400,30 @@
     "headings": "How to Clean FamilyBoard Browser Data Safely Identify the real source profile Export an untouched original Verify the copy in a controlled profile Choose merge or replace deliberately Test the new device before clearing the old one Use stop conditions for warnings and failures Keep cleanup outside commercial pressure"
   },
   {
+    "title": "FamilyBoard Shopping List Planner Tutorial | From Shortage to Arrival",
+    "description": "Learn a privacy-aware FamilyBoard workflow for a small household shopping list: define purpose, assign a role, handle substitutions and record the actual arrival without storing orders or payment details.",
+    "route": "/guides/familyboard-shopping-list-planner-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard shopping list planner tutorial",
+    "headings": "How to Use FamilyBoard as a Household Shopping List Planner Begin with one real replenishment situation Give each row one purpose Assign the person who can do the next action Separate action from arrival Handle shortages without guessing Version changes instead of erasing history Minimise data before handoff Keep future recommendations optional Six-question closeout"
+  },
+  {
+    "title": "FamilyBoard Seasonal Reset Tutorial | A Safer Household Changeover Review",
+    "description": "Use FamilyBoard to record a focused seasonal changeover: source versions, observable areas, responsible roles, deferred work and the next review point without treating the app as a weather or safety authority.",
+    "route": "/guides/familyboard-seasonal-reset-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard seasonal reset tutorial",
+    "headings": "How to Use FamilyBoard for a Seasonal Household Reset Name the transition, not the whole year Build a source map before a task list Describe one observable area per row Give open work a real next window Stop when an issue becomes a safety question Review and close by evidence Protect the handoff and keep recommendations optional Preserve differences between device copies Six-question closeout"
+  },
+  {
+    "title": "FamilyBoard Device Retirement Tutorial | Safe Backup, Erase and Handoff Notes",
+    "description": "Learn how to document a phone or tablet retirement with FamilyBoard: identify the device, preserve a readable backup, separate account steps from erasure and record the recipient or recycler handoff.",
+    "route": "/guides/familyboard-device-retirement-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "old phone data erasure handoff tutorial",
+    "headings": "What to Do Before Giving Away an Old Phone or Tablet with FamilyBoard Identify the exact device first Define what must be retained Map sources without copying secrets Handle accounts and management links on the device Keep erasure and custody separate Check removable and companion items Test a replacement before clearing the source Keep failures open and recommendations optional Seven-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

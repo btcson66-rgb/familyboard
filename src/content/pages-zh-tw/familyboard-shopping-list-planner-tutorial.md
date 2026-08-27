@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 把零散採買提醒整理成
 primaryKeyword: "家庭補貨教學"
 cluster: "household-operations"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-shopping-list-planner-tutorial/"
 indexable: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

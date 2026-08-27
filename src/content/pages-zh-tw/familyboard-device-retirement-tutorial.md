@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭用本機裝置退役紀錄建立可交接流程�
 primaryKeyword: "舊手機送人前清除教學"
 cluster: "records-emergency"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-device-retirement-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

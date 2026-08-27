@@ -286,15 +286,18 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-seasonal-reset-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-seasonal-reset-action-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-seasonal-reset-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-seasonal-reset-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-device-retirement-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-device-retirement-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-device-retirement-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-device-retirement-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-router-support-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-router-support-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-router-support-review-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-shopping-list-planner/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-shopping-list-planner/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-shopping-list-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-shopping-list-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-responsibility-coverage-map/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-responsibility-coverage-map/</loc>",
@@ -2716,6 +2719,63 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-shopping-list-planner-tutorial/",
+    require: [
+      "How to Use FamilyBoard as a Household Shopping List Planner",
+      'hreflang="zh-TW"',
+      "Give each row one purpose",
+      "does not scan a refrigerator",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-shopping-list-planner-tutorial/",
+    require: [
+      "FamilyBoard 採買清單怎麼用",
+      'lang="zh-TW"',
+      'hreflang="en"',
+      "每列只描述一個用途",
+      "不會掃描冰箱",
+    ],
+  },
+  {
+    path: "/guides/familyboard-seasonal-reset-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Seasonal Household Reset",
+      'hreflang="zh-TW"',
+      "Build a source map before a task list",
+      "does not fetch weather",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-seasonal-reset-tutorial/",
+    require: [
+      "FamilyBoard 換季複查怎麼做",
+      'lang="zh-TW"',
+      'hreflang="en"',
+      "先畫出來源地圖",
+      "不讀取天氣",
+    ],
+  },
+  {
+    path: "/guides/familyboard-device-retirement-tutorial/",
+    require: [
+      "What to Do Before Giving Away an Old Phone or Tablet with FamilyBoard",
+      'hreflang="zh-TW"',
+      "Keep erasure and custody separate",
+      "does not operate the device",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-device-retirement-tutorial/",
+    require: [
+      "舊手機送人前要做什麼",
+      'lang="zh-TW"',
+      'hreflang="en"',
+      "先分辨哪台裝置與哪份資料",
+      "不會操作你的裝置",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/",
     require: [
       "FamilyBoard 瀏覽器資料清理前要做什麼",
@@ -2748,10 +2808,10 @@ const checks = [
     require: [
       "FamilyBoard 換季複查怎麼做",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先畫出來源地圖",
       "遇到安全疑問就轉交",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/tools/household-device-retirement-handoff-log/",
@@ -2776,10 +2836,10 @@ const checks = [
     require: [
       "舊手機送人前要做什麼",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先分辨哪台裝置與哪份資料",
       "把清除和交接分成兩個核點",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/tools/household-router-support-review-log/",
@@ -2830,10 +2890,10 @@ const checks = [
     require: [
       "FamilyBoard 採買清單怎麼用",
       'lang="zh-TW"',
+      'hreflang="en"',
       "從缺貨到到貨",
       "不會掃描冰箱",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/tools/household-account-list/",

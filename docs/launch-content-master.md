@@ -22203,6 +22203,209 @@ Future recommendations for external drives, labels or storage organizers may app
 
 ---
 
+## Page 326 — How to Use FamilyBoard as a Household Shopping List Planner
+**Slug:** /guides/familyboard-shopping-list-planner-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
+**Primary intent:** learn a repeatable FamilyBoard household restocking workflow that separates purpose, responsibility, shortage and arrival
+**Title tag:** FamilyBoard Shopping List Planner Tutorial | From Shortage to Arrival
+**Meta description:** Learn a privacy-aware FamilyBoard workflow for a small household shopping list: define purpose, assign a role, handle substitutions and record the actual arrival without storing orders or payment details.
+**Primary keyword concept:** FamilyBoard shopping list planner tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/tools/household-shopping-list-planner/`, `/tools/household-pantry-expiry-review-log/`, `/tools/household-meal-prep-role-log/`, `/guides/household-supplies-inventory/`, `/zh-tw/guides/familyboard-shopping-list-planner-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard read my fridge or shopping app?
+  A: No. You enter a safe category and observation yourself; it does not scan inventory, sign in to a store or read receipts.
+- Q: Is a list complete as soon as someone places an order?
+  A: No. Ordering is an action. Keep the item open until the household records an actual arrival or use check.
+- Q: Can I paste a delivery address or order screenshot?
+  A: No. Keep addresses, orders, accounts, payment and private messages in their protected source.
+- Q: Will the tool choose a substitute?
+  A: No. Record the shortage and wait for the responsible source or household role to decide.
+
+**Contextual CTA:** Start with one small restocking situation, assign a role and record the next check before adding another list.
+
+# How to Use FamilyBoard as a Household Shopping List Planner
+
+A useful household shopping list is not a permanent catalogue. It is a small, reviewable handoff: why this item matters now, which source controls its specification, who owns the next action and what evidence will close the row. The free [Household Shopping List Planner](/tools/household-shopping-list-planner/) keeps that boundary visible in the browser. It does not scan a refrigerator, log in to a retailer, compare prices or store an address, payment detail or health profile.
+
+## Begin with one real replenishment situation
+
+Choose one weekly restock, meal-preparation window, cleaning supply, maintenance consumable or travel handoff. Avoid a list called “everything for the household.” Use a neutral code such as `SHOPPING-2026-A`, a review date and a separate expected-arrival or use-check date. Do not put a person’s name, address or order number in the code.
+
+## Give each row one purpose
+
+Write “support this week’s breakfasts” or “replace the filter used in the maintenance cycle,” not a private conversation. Separate breakfast staples, bathroom supplies and an appliance consumable when their sources or decisions differ. Use ordinary units such as pack, bottle, set or confirm-later. If a specification comes from a manual, label or protected index, record a safe source code and review date. FamilyBoard cannot inspect a model number or decide compatibility; leave the row open when uncertain.
+
+## Assign the person who can do the next action
+
+Use a role such as household buyer, kitchen organiser, maintenance role or travel-preparation role. Add a target window so the next person knows when to look. That window is a household reminder, not a retailer delivery promise, expiry date or official deadline.
+
+## Separate action from arrival
+
+An item can be bought, ordered, delegated or replaced. None proves the right quantity arrived or that a substitute is suitable. Keep the row open until someone records an observation such as “two packs arrived and packaging was checked.” If it is missing, damaged or unsuitable, record the gap and next source instead of turning the row green.
+
+## Handle shortages without guessing
+
+Preserve the original request, current shortage and next review point. A substitution may depend on a manufacturer instruction, label, household constraint or seller information. FamilyBoard does not read a product page, select the cheapest option, judge nutrition or decide allergy suitability. Put that decision with the responsible person or professional source.
+
+## Version changes instead of erasing history
+
+When quantity, specification, source, role or outcome changes, create a new version or linked follow-up. Do not overwrite the earlier row. Focused pantry-expiry and meal-preparation tools can hold their own checks; do not copy a private order into every screen.
+
+## Minimise data before handoff
+
+Before printing or sharing, remove addresses, phone numbers, email, account names, order identifiers, payment details, private messages and medical or allergy information. Keep those in the protected source. FamilyBoard stores records in the current browser, so review the [privacy policy](/privacy/) before clearing data or handing over a device.
+
+## Keep future recommendations optional
+
+If a future page recommends labels, storage boxes, bags or scanners, place it after the answer and outside the form. It must be disclosed, skippable and never a condition for completing the free list. A product cannot guarantee arrival, compatibility, food safety or a household decision.
+
+## Six-question closeout
+
+Is the scope small? Does every row have a purpose and source? Are units checked? Is a real role and review window assigned? Are ordering and arrival separate? Did the handoff remove private order and health data? If any answer is no, leave the row open and record the next safe check.
+
+---
+
+## Page 327 — How to Use FamilyBoard for a Seasonal Household Reset
+**Slug:** /guides/familyboard-seasonal-reset-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-seasonal-reset-tutorial/
+**Primary intent:** learn a focused FamilyBoard seasonal household review that preserves source dates, observations, handoffs and stop conditions
+**Title tag:** FamilyBoard Seasonal Reset Tutorial | A Safer Household Changeover Review
+**Meta description:** Use FamilyBoard to record a focused seasonal changeover: source versions, observable areas, responsible roles, deferred work and the next review point without treating the app as a weather or safety authority.
+**Primary keyword concept:** FamilyBoard seasonal reset tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/tools/household-seasonal-reset-action-log/`, `/features/maintenance-tracker/`, `/tools/household-monthly-review-action-log/`, `/guides/seasonal-home-maintenance-checklist/`, `/zh-tw/guides/familyboard-seasonal-reset-tutorial/`
+**FAQ:**
+- Q: Should every appliance be included?
+  A: No. Include only equipment, area or routine genuinely affected by this transition.
+- Q: Does deferring a row mean it was ignored?
+  A: No. Record the reason, role and event that should reopen it.
+- Q: Can FamilyBoard decide whether a home is safe before a typhoon?
+  A: No. Weather, building, equipment and emergency decisions belong to current official or qualified sources.
+
+**Contextual CTA:** Choose one seasonal transition and record its source map before opening a second checklist.
+
+# How to Use FamilyBoard for a Seasonal Household Reset
+
+“Prepare for the season” is too broad to be reliable. A useful reset names the transition, points each decision to a source and records what someone observed. The free [Seasonal Reset Action Log](/tools/household-seasonal-reset-action-log/) keeps that workflow in the current browser. It does not fetch weather, inspect equipment, issue an alert or decide that a home or person is safe.
+
+## Name the transition, not the whole year
+
+Choose one changeover: air-conditioning becoming frequent, heating beginning, rainy season preparation, a typhoon-related review, outdoor equipment storage, returning to school or a holiday routine. Use `SEASONAL-2026-A` and record the review date. A small scope is easier to hand off and less likely to hide unfinished work.
+
+## Build a source map before a task list
+
+Create safe references such as `CLIMATE-1`, `MANUAL-1`, `PROPERTY-1` and `HOUSE-1` for the relevant authority, manufacturer instructions, building notice or protected note. Record when each source was checked. If a source is outdated, missing or contradictory, use a waiting status rather than turning a guess into a rule. Do not reproduce an official notice, address or private message in a shared summary.
+
+## Describe one observable area per row
+
+Separate an exterior drainage area, a dehumidifier reference and a window or backup-supply area when their owners or evidence differ. Write “container count checked” or “property access window awaiting reply,” not “safe,” “normal” or “protected.” A photo or manual belongs in its protected source; the tool cannot connect to equipment or interpret a warning light.
+
+## Give open work a real next window
+
+Assign a household maintenance, property contact or emergency-information role. Use “before the next monthly review” or “after the property reply,” and record the date when the row can reopen. Deferral is not deletion: keep the reason, current source and reopening event.
+
+## Stop when an issue becomes a safety question
+
+Gas smell, burning smell, electrical abnormality, structural cracking, overheating, water intrusion or an official warning should leave the app workflow. Preserve a neutral observation code and follow local emergency instructions, the manufacturer, property manager or qualified professional. Waiting for confirmation is not a safety clearance.
+
+## Review and close by evidence
+
+At the monthly review, ask whether each source is current, whether a new observation exists and whether the role completed the next action. Mark complete only after a dated result. If work is no longer applicable, record why and what change would reopen it.
+
+## Protect the handoff and keep recommendations optional
+
+Before sharing, remove addresses, names, access details, serial numbers, accounts, payment information, full alerts and private messages. Future storage, label or weather-product links belong after the answer, outside the form, with disclosure and an easy skip. A product is never a condition for a seasonal review or safety decision.
+
+## Preserve differences between device copies
+
+If two browsers contain separate local records, note the device code, data date and source references before transfer. Test a controlled copy, compare open rows and deferral reasons, and retain both sources until a role decides. A clean screen is less important than knowing which version was reviewed.
+
+## Six-question closeout
+
+Is this a real transition? Does every row have a dated source and observable wording? Does open work have a role and next window? Are deferrals reversible? Were safety questions handed to the right source? Did sharing remove private details and product pressure? If not, keep the row open.
+
+---
+
+## Page 328 — What to Do Before Giving Away an Old Phone or Tablet with FamilyBoard
+**Slug:** /guides/familyboard-device-retirement-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-device-retirement-tutorial/
+**Primary intent:** learn a reversible FamilyBoard device retirement handoff that separates backup, account, erasure, custody and verification
+**Title tag:** FamilyBoard Device Retirement Tutorial | Safe Backup, Erase and Handoff Notes
+**Meta description:** Learn how to document a phone or tablet retirement with FamilyBoard: identify the device, preserve a readable backup, separate account steps from erasure and record the recipient or recycler handoff.
+**Primary keyword concept:** old phone data erasure handoff tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/tools/household-device-retirement-handoff-log/`, `/guides/room-by-room-home-inventory/`, `/guides/digital-home-inventory-backup/`, `/features/offline-household-organizer/`, `/zh-tw/guides/familyboard-device-retirement-tutorial/`
+**FAQ:**
+- Q: What should be checked before clearing a device?
+  A: Identify it, list data to retain, confirm a readable protected backup and follow current platform instructions.
+- Q: Is a FamilyBoard log proof of secure erasure?
+  A: No. The log records an observation; platform, service, recipient or recycler evidence controls the result.
+- Q: Will records appear automatically on a replacement device?
+  A: No. Each browser has its own local data; transfer through a deliberate, verified backup workflow.
+
+**Contextual CTA:** Identify the exact device and preserve an untouched, readable backup before changing an account or clearing data.
+
+# What to Do Before Giving Away an Old Phone or Tablet with FamilyBoard
+
+Retiring a phone or tablet is more than pressing reset. A household may still need to account for a browser profile, FamilyBoard local data, photos, messages, payment apps, a memory card, device management or an account relationship. The free [Device Retirement Handoff Log](/tools/household-device-retirement-handoff-log/) gives a neutral sequence. It does not operate the device, erase hardware, authenticate an account or certify a recycler.
+
+## Identify the exact device first
+
+Create `DEVICE-RETIRE-2026-A`, record device type, household purpose, current ownership and review date. Keep the full serial number, phone number, address and account identifiers protected. If tablets look alike, confirm the distinction on the device and protected inventory before marking one retired.
+
+## Define what must be retained
+
+Separate FamilyBoard records, photos, browser bookmarks, communication apps, payment apps, memory cards and cloud settings. “Back up everything” is not verifiable. For each category, name the source and retention decision. Export FamilyBoard data to a protected location and verify a copy in a controlled profile; keep the original unchanged.
+
+## Map sources without copying secrets
+
+Use `MANUAL-1` for platform instructions, `ACCOUNT-1` for account controls, `BACKUP-1` for the protected export and `RECYCLE-1` or `RECIPIENT-1` for custody. Never paste passwords, recovery codes, two-factor tokens, complete serial numbers, addresses or recipient details into the shared record.
+
+## Handle accounts and management links on the device
+
+Follow current instructions to review household accounts, browser profiles, device management, find-device services, payment apps, subscriptions and shared apps. Record “handled according to source” separately from “awaiting confirmation.” A sign-out screen is not proof of ownership transfer; let the account owner complete verification without copying a code.
+
+## Keep erasure and custody separate
+
+Erasure is an operation on the device; handoff is the responsibility of giving it to another person or organisation. For sale, donation or family transfer, follow platform instructions and record acceptance. For repair, record service period and permitted access. For recycling, use the recycler’s actual receipt or custody response. The app’s action status is not forensic evidence.
+
+## Check removable and companion items
+
+Review SIM, memory card, external storage, adapters, alternate browser profiles and companion apps. A reset may not cover every item. Give each one a source reference or record why it is not applicable. If a device is lost or its screen fails, use the account platform, carrier, manufacturer, recycler or qualified support route.
+
+## Test a replacement before clearing the source
+
+FamilyBoard records are local to a browser. A shared Apple, Google or Microsoft account does not make two databases identical. Restore a protected export to a controlled copy, confirm a harmless test record and open it offline before touching the old profile. Decide deliberately whether to merge or replace, then clear old data only after evidence exists.
+
+## Keep failures open and recommendations optional
+
+If a password is forgotten, erasure fails, the recipient changes, a recycler has not replied or the replacement cannot read the backup, use a waiting status. Preserve the source device and original export, record a safe error reference and assign the next role. Future case, storage or recycling recommendations must appear after the answer, outside the form, with disclosure and an easy skip.
+
+## Seven-question closeout
+
+Is the device and ownership identified? Is retained data listed with a readable copy? Were accounts, management links, SIM and memory card checked? Are erasure and handoff separate? Did the replacement pass a controlled restore and offline test? Did the responsible source reply? Did the shared record remove secrets and personal details? If any answer is no, stop and keep it open.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.
