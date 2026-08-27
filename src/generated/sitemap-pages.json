@@ -1936,6 +1936,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-meal-prep-role-log/",
+    "alternateRoute": "/zh-tw/tools/household-meal-prep-role-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2295,6 +2303,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-meal-prep-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-offline-backup-restore/",
     "alternateRoute": "/guides/familyboard-offline-backup-restore/",
     "indexable": true,
@@ -2586,6 +2601,13 @@
     "alternateRoute": "/tools/household-insurance-policy-source-version-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-meal-prep-role-log/",
+    "alternateRoute": "/tools/household-meal-prep-role-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {

@@ -2920,6 +2920,70 @@ const clothingCareDefinition = (locale: Locale): Definition => {
   };
 };
 
+const mealPrepDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立餐次代號，等待家庭範圍與來源",
+        "已核對餐次與來源，等待準備角色",
+        "已安排準備角色，等待食材或行動",
+        "已記錄準備行動，等待實際供餐結果",
+        "已完成供餐或結束計畫並記錄結果",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Meal slot created—household scope and source pending",
+        "Meal slot and source checked—prep role pending",
+        "Prep role assigned—ingredient or action pending",
+        "Preparation action recorded—actual serving result pending",
+        "Meal served or plan closed—result recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "MEAL-A | 週一晚餐 | 家庭晚餐計畫代號 | RECIPE-R1；採買來源代號 | 家庭備餐角色 | 2026-08-28 | 供餐後記錄實際結果與需要調整的事項 | 已安排準備角色，等待食材或行動\nMEAL-B | 週三早餐 | 簡單早餐計畫代號 | PANTRY-A；家庭採買來源 | 家庭採買角色 | 2026-08-30 | 先核對現有備品，再記錄是否完成 | 已核對餐次與來源，等待準備角色"
+    : "MEAL-A | Monday dinner | Household dinner plan code | RECIPE-R1; shopping-source code | Household prep role | 2026-08-28 | Record the actual serving result and any adjustment after the meal | Prep role assigned—ingredient or action pending\nMEAL-B | Wednesday breakfast | Simple breakfast plan code | PANTRY-A; household shopping source | Household shopping role | 2026-08-30 | Check current supplies first, then record whether the plan was completed | Meal slot and source checked—prep role pending";
+  return {
+    intro: zh
+      ? "把一週餐次、家庭來源代號、準備角色、行動日期與實際供餐結果分開記錄。工具不是食譜、營養、過敏、醫療或食品安全建議，只協助家庭協調日常準備工作。"
+      : "Separate weekly meal slots, household source codes, prep roles, action dates and actual serving results. This is not a recipe, nutrition, allergy, medical or food-safety adviser; it only coordinates household preparation work.",
+    fields: [
+      text("review", zh ? "餐前計畫私人代號" : "Private meal-plan reference", zh ? "使用家庭代號，不要輸入姓名、地址、付款或健康資料。" : "Use a household code; do not enter names, addresses, payment or health data.", "MEAL-PLAN-2026-A"),
+      { name: "scope", label: zh ? "計畫情境" : "Plan context", type: "select", options: zh ? ["一週家庭餐次", "週末集中準備", "旅行前餐食交接", "採買到貨後安排", "家庭會議後分工", "其他餐前準備"] : ["Weekly household meals", "Weekend batch preparation", "Pre-travel meal handoff", "After-grocery planning", "Post-meeting task assignment", "Other meal preparation"] },
+      { name: "planDate", label: zh ? "計畫建立日期" : "Plan date", type: "date", value: "2026-08-27" },
+      { name: "reviewDate", label: zh ? "實際結果複查日期" : "Result review date", type: "date", value: "2026-09-03" },
+      text("source", zh ? "食譜、採買與家庭來源地圖" : "Recipe, shopping and household-source map", zh ? "只填安全來源代號，不要貼完整食譜通信、訂單、地址或付款內容。" : "Use safe source codes; do not paste full recipe messages, orders, addresses or payment details.", "RECIPE-R1; SHOPPING-S1; PANTRY-A"),
+      text("rows", zh ? "餐次與準備分工列" : "Meal and preparation rows", zh ? "每行 8 欄：ID｜餐次代號｜餐點或家庭計畫代號｜食譜／採買來源代號｜準備角色｜行動日期 YYYY-MM-DD｜供餐或後續觀察｜指定狀態。最多 14 行。" : "Each row uses 8 fields: ID | meal-slot code | meal or household plan code | recipe/shopping source code | prep role | action date YYYY-MM-DD | serving or follow-up observation | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護食譜、採買與家庭計畫位置" : "Protected recipe, shopping and household-plan location", zh ? "只寫保管流程或容器代號，不要放地址、付款、健康或私人通信。" : "Name a custody process or container, not addresses, payment, health or private correspondence.", zh ? "家庭紀錄／餐前計畫／MEAL-PLAN-2026-A／受保護來源" : "Household records / meal planning / MEAL-PLAN-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const plan = strictIsoDate(values.planDate), review = strictIsoDate(values.reviewDate);
+      if (!plan || !review) return zh ? "請輸入有效的計畫建立日與結果複查日。" : "Enter valid plan and result-review dates.";
+      if (review < plan) return zh ? "結果複查日不能早於計畫建立日。" : "The result review date cannot be earlier than the plan date.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全計畫代號、來源地圖與受保護位置。" : "Provide a safe plan code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行餐次準備列。" : "Enter 1 to 14 meal-preparation rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 8 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `餐次第 ${malformed.map((row) => row.line).join("、")} 行必須有 8 個非空白欄位。` : `Meal line ${malformed.map((row) => row.line).join(", ")} must contain 8 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行餐次都需要唯一 ID。" : "Every meal row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[7]));
+      if (invalidStatus.length) return zh ? `餐次第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Meal line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const actionDates = parsed.map((row) => strictIsoDate(row.parts[5]));
+      if (actionDates.some((date) => !date || date < plan)) return zh ? "每列行動日期必須有效，且不能早於計畫建立日。" : "Each action date must be valid and no earlier than the plan date.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[7]) >= 4), open = parsed.filter((row) => statuses.indexOf(row.parts[7]) < 4);
+      const invalidFuture = closed.filter((row, index) => actionDates[index]! > review);
+      if (invalidFuture.length) return zh ? `已完成餐次第 ${invalidFuture.map((row) => row.line).join("、")} 行的行動日期不能晚於結果複查日。` : `Closed meal line ${invalidFuture.map((row) => row.line).join(", ")} cannot have an action date later than the result review.`;
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 8 || row.parts[3].length < 8 || row.parts[4].length < 3 || row.parts[6].length < 10);
+      if (thin.length) return zh ? `餐次第 ${thin.map((row) => row.line).join("、")} 行需要餐次、計畫、來源、角色與實際觀察。` : `Meal line ${thin.map((row) => row.line).join(", ")} needs a slot, plan, source, role and actual observation.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、訂單或付款識別資料；請改用安全代號。" : "A full contact, address, order or payment identifier was detected; use safe codes.";
+      if (/password|passcode|full address|street address|account number|card number|bank account|medical record|diagnosis|medication|allergy history|private message|receipt contents|姓名|完整地址|帳號|卡號|銀行帳戶|病歷|診斷|用藥|過敏紀錄|私人訊息|收據全文/i.test(privacy)) return zh ? "偵測到敏感資料或全文內容；請只保留安全來源代號。" : "Sensitive data or full private content was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭餐前準備與分工" : " — household meal preparation and roles"), (zh ? "計畫情境：" : "Plan context: ") + values.scope, (zh ? "計畫建立：" : "Plan date: ") + fmt.format(plan), (zh ? "結果複查：" : "Result review: ") + fmt.format(review), (zh ? "仍開放列：" : "Open rows: ") + open.length, (zh ? "已完成或不適用列：" : "Closed or not-applicable rows: ") + closed.length, (zh ? "食譜、採買與家庭來源地圖：" : "Recipe, shopping and household-source map: ") + values.source.trim(), (zh ? "有版本的餐次與準備觀察\n" : "Versioned meal and preparation observations\n") + parsed.map((row) => row.parts[0] + (zh ? "｜餐次：" : " — slot: ") + row.parts[1] + (zh ? "｜計畫：" : " — plan: ") + row.parts[2] + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜角色：" : " — owner: ") + row.parts[4] + (zh ? "｜行動日：" : " — action date: ") + fmt.format(strictIsoDate(row.parts[5]) as Date) + (zh ? "｜觀察：" : " — observation: ") + row.parts[6] + (zh ? "｜狀態：" : " — status: ") + row.parts[7]).join("\n"), (zh ? "受保護食譜、採買與家庭計畫位置：" : "Protected recipe, shopping and household-plan location: ") + values.storage.trim(), zh ? "這份輸出只協助家庭分工與結果回填，不是食譜、營養、過敏、醫療或食品安全建議；請依實際來源與適用的專業或官方資訊處理相關問題。" : "This output only coordinates household roles and result notes. It is not a recipe, nutrition, allergy, medical or food-safety recommendation; use the applicable official or qualified source for those questions."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -6942,6 +7006,9 @@ const definitions: Record<string, Definition> = {
   "household-clothing-care-repair-log": {
     ...clothingCareDefinition("en"),
   },
+  "household-meal-prep-role-log": {
+    ...mealPrepDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -6991,6 +7058,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-clothing-care-repair-log": {
     ...clothingCareDefinition("zh-TW"),
+  },
+  "household-meal-prep-role-log": {
+    ...mealPrepDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:
