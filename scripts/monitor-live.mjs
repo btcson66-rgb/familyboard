@@ -173,6 +173,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/subscription-cancellation-refund-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/subscription-cancellation-refund-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/automatic-renewal-charge-dispute-taiwan/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-offline-backup-restore/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-offline-backup-restore/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -809,6 +812,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Separate the six records",
       "A cancellation request is not the same as confirmation",
+    ],
+  },
+  {
+    path: "/guides/familyboard-offline-backup-restore/",
+    require: [
+      "FamilyBoard Offline Backup and Restore Guide",
+      'hreflang="zh-TW"',
+      "Start with a small private household space",
+      "Test restore instead of trusting the filename",
     ],
   },
   {
@@ -1535,6 +1547,25 @@ const checks = [
       'lang="zh-TW"',
       "先建立五個安全代號",
       "付款爭議與消費申訴是不同路徑",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-offline-backup-restore/",
+    require: [
+      "FamilyBoard 離線備份與還原教學",
+      'hreflang="en"',
+      "匯出備份並建立保管代號",
+      "還原測試不能省略",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-handoff-tutorial/",
+    require: [
+      "FamilyBoard 家庭交接怎麼用",
+      'lang="zh-TW"',
+      "先定義這次交接的時間與範圍",
+      "接手者要實際做一次查找",
     ],
     forbid: ['rel="alternate"'],
   },

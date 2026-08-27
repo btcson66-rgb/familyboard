@@ -1904,6 +1904,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-offline-backup-restore/",
+    "alternateRoute": "/zh-tw/guides/familyboard-offline-backup-restore/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2239,6 +2247,20 @@
     "alternateRoute": "/features/free-home-management-app/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-handoff-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-offline-backup-restore/",
+    "alternateRoute": "/guides/familyboard-offline-backup-restore/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {

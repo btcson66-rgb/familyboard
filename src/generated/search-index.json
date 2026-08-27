@@ -1800,6 +1800,14 @@
     "headings": "Subscription Cancellation and Refund Records Separate the six records A cancellation request is not the same as confirmation Refund requests need their own evidence chain Organize a repeated-charge follow-up What the free FamilyBoard workflow does not do Keep commercial recommendations separate Frequently asked questions Source notes"
   },
   {
+    "title": "FamilyBoard Offline Backup and Restore Guide | A Safe Household Workflow",
+    "description": "Learn the FamilyBoard local-first app workflow: prepare a private household space, export a backup, test restore and keep the app useful when offline.",
+    "route": "/guides/familyboard-offline-backup-restore/",
+    "cluster": "product",
+    "keywords": "FamilyBoard offline backup restore",
+    "headings": "FamilyBoard Offline Backup and Restore Guide Start with a small private household space Understand offline use Export a backup with a custody label Test restore instead of trusting the filename Share a handoff without sharing the database What FamilyBoard does not promise Future products and unobtrusive affiliate space"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

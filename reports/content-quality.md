@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-27T02:48:26.090Z
+Generated: 2026-08-27T02:53:22.754Z
 
 ## Summary
 
-- Indexable pages: 370
-- Generated HTML routes: 387
+- Indexable pages: 373
+- Generated HTML routes: 390
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 157
+- Pages without a contextual product/tool link: 160
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 31
+- product: 34
 - appliances: 30
 - maintenance: 37
 - household-operations: 24
@@ -57,6 +57,7 @@ Generated: 2026-08-27T02:48:26.090Z
 - /guides/chore-chart-for-adults/
 - /guides/digital-home-inventory-backup/
 - /guides/family-emergency-contacts/
+- /guides/familyboard-offline-backup-restore/
 - /guides/household-admin-day/
 - /guides/household-handoff/
 - /guides/household-shopping-staples/
@@ -102,6 +103,8 @@ Generated: 2026-08-27T02:48:26.090Z
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
+- /zh-tw/guides/familyboard-household-handoff-tutorial/
+- /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
 - /zh-tw/guides/home-care-service-fees-and-billing/
