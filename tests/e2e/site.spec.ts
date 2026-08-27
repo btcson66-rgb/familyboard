@@ -67,6 +67,7 @@ test("representative routes have no serious accessibility violations", async ({
   for (const route of [
     "/",
     "/guides/home-maintenance-schedule/",
+    "/guides/subscription-cancellation-refund-records/",
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
@@ -127,6 +128,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/pricing/",
     "/zh-tw/",
     "/zh-tw/guides/home-maintenance-schedule/",
+    "/zh-tw/guides/subscription-cancellation-refund-records/",
+    "/zh-tw/guides/automatic-renewal-charge-dispute-taiwan/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",

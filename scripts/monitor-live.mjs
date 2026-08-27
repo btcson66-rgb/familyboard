@@ -170,6 +170,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/rental-security-deposit-move-out-claim-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/rental-security-deposit-move-out-claim-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/rental-security-deposit-move-out-claims/</loc>",
+      "<loc>https://familyboard.win/guides/subscription-cancellation-refund-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/subscription-cancellation-refund-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/automatic-renewal-charge-dispute-taiwan/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -797,6 +800,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Separate six evidence layers",
       "consumer.ftc.gov/online-shopping",
+    ],
+  },
+  {
+    path: "/guides/subscription-cancellation-refund-records/",
+    require: [
+      "Subscription Cancellation and Refund Records",
+      'hreflang="zh-TW"',
+      "Separate the six records",
+      "A cancellation request is not the same as confirmation",
     ],
   },
   {
@@ -1504,6 +1516,25 @@ const checks = [
       'lang="zh-TW"',
       "建立安全文件地圖",
       "把扣款、退款與實際入帳拆成三條線",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/subscription-cancellation-refund-records/",
+    require: [
+      "訂閱取消與退款紀錄怎麼做",
+      'hreflang="en"',
+      "先分開六種紀錄",
+      "退款要分成申請、核准與入帳",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/automatic-renewal-charge-dispute-taiwan/",
+    require: [
+      "台灣自動續約又扣款怎麼整理",
+      'lang="zh-TW"',
+      "先建立五個安全代號",
+      "付款爭議與消費申訴是不同路徑",
     ],
     forbid: ['rel="alternate"'],
   },

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T02:43:00.839Z
+Generated: 2026-08-27T02:48:26.090Z
 
 ## Summary
 
-- Indexable pages: 367
-- Generated HTML routes: 384
+- Indexable pages: 370
+- Generated HTML routes: 387
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 154
+- Pages without a contextual product/tool link: 157
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-27T02:43:00.839Z
 - product: 31
 - appliances: 30
 - maintenance: 37
-- household-operations: 21
+- household-operations: 24
 - inventory-warranty: 39
 - records-emergency: 47
 - tools: 121
@@ -64,6 +64,7 @@ Generated: 2026-08-27T02:43:00.839Z
 - /guides/recurring-household-tasks/
 - /guides/seasonal-home-maintenance-checklist/
 - /guides/service-provider-contact-list/
+- /guides/subscription-cancellation-refund-records/
 - /guides/subscription-renewal-tracker/
 - /guides/valuable-item-inventory/
 - /guides/what-spouse-needs-to-know/
@@ -93,6 +94,7 @@ Generated: 2026-08-27T02:43:00.839Z
 - /zh-tw/features/warranty-tracker/
 - /zh-tw/guides/appliance-inventory/
 - /zh-tw/guides/appliance-replacement-planning/
+- /zh-tw/guides/automatic-renewal-charge-dispute-taiwan/
 - /zh-tw/guides/caregiver-handoff-checklist/
 - /zh-tw/guides/cleaning-schedule/
 - /zh-tw/guides/contractor-records/
@@ -135,6 +137,7 @@ Generated: 2026-08-27T02:43:00.839Z
 - /zh-tw/guides/service-history/
 - /zh-tw/guides/storage-unit-inventory/
 - /zh-tw/guides/storm-preparation-home-checklist/
+- /zh-tw/guides/subscription-cancellation-refund-records/
 - /zh-tw/guides/water-leak-response-home-records/
 - /zh-tw/
 - /zh-tw/privacy/

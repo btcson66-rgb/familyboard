@@ -1792,6 +1792,14 @@
     "headings": "Rental Security Deposit Move-Out Claim Log Use the log as an evidence index, not a legal claim Separate ordinary wear from a claimed charge Track the refund or account result independently What to keep out of the browser tool Affiliate space without interrupting a time-sensitive task Frequently asked questions Source notes"
   },
   {
+    "title": "Subscription Cancellation and Refund Records | Auto-Renewal, Requests and Actual Results",
+    "description": "A practical, private guide to separating subscription terms, cancellation evidence, refund requests and actual account results without storing card details or calculating rights.",
+    "route": "/guides/subscription-cancellation-refund-records/",
+    "cluster": "household-operations",
+    "keywords": "subscription cancellation refund record",
+    "headings": "Subscription Cancellation and Refund Records Separate the six records A cancellation request is not the same as confirmation Refund requests need their own evidence chain Organize a repeated-charge follow-up What the free FamilyBoard workflow does not do Keep commercial recommendations separate Frequently asked questions Source notes"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

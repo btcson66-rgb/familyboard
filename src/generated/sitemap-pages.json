@@ -1896,6 +1896,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/subscription-cancellation-refund-records/",
+    "alternateRoute": "/zh-tw/guides/subscription-cancellation-refund-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2098,6 +2106,13 @@
     "alternateRoute": "/tools/appliance-service-visit-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/automatic-renewal-charge-dispute-taiwan/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {
@@ -2861,6 +2876,13 @@
     "alternateRoute": "/guides/storm-preparation-home-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/subscription-cancellation-refund-records/",
+    "alternateRoute": "/guides/subscription-cancellation-refund-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {
