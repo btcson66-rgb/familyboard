@@ -2622,6 +2622,33 @@ const checks = [
     forbid: ['rel="alternate"'],
   },
   {
+    path: "/tools/household-account-list/",
+    require: [
+      "Household Account List",
+      'hreflang="zh-TW"',
+      "FamilyBoard never asks for passwords, verification codes, full identifiers or payment data",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-account-list/",
+    require: [
+      "家庭帳戶清單工具：整理服務角色、來源與移轉複查",
+      'hreflang="en"',
+      "不輸入密碼、驗證碼、完整帳號、地址或付款資料",
+      "不會替你判斷能否移轉或停用",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-account-list-tutorial/",
+    require: [
+      "FamilyBoard 家庭帳戶清單怎麼用",
+      'lang="zh-TW"',
+      "服務交接與搬家複查教學",
+      "不會讀取密碼",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
     path: "/zh-tw/guides/household-admin-backup-person/",
     require: [
       "家庭行政備援者怎麼安排",

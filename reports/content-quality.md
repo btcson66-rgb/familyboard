@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T15:07:11.937Z
+Generated: 2026-08-27T15:40:50.885Z
 
 ## Summary
 
-- Indexable pages: 484
-- Generated HTML routes: 501
+- Indexable pages: 487
+- Generated HTML routes: 504
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 268
+- Duplicate primary-keyword groups: 5
+- Pages without a contextual product/tool link: 270
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-27T15:07:11.937Z
 - product: 68
 - appliances: 30
 - maintenance: 42
-- household-operations: 83
+- household-operations: 86
 - inventory-warranty: 41
 - records-emergency: 58
 - tools: 121
@@ -44,6 +44,7 @@ Generated: 2026-08-27T15:07:11.937Z
 ## Duplicate primary keywords
 
 - caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
+- household account list: /guides/household-account-list/, /tools/household-account-list/
 - 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
 - 居家服務變更: /zh-tw/guides/home-care-service-plan-changes/, /zh-tw/tools/home-care-service-plan-change-notice-log/
 - 居家服務紀錄: /zh-tw/guides/home-care-service-visit-records/, /zh-tw/tools/home-care-visit-scope-service-result-log/
@@ -148,6 +149,7 @@ Generated: 2026-08-27T15:07:11.937Z
 - /zh-tw/guides/familyboard-family-display-mode-setup/
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
+- /zh-tw/guides/familyboard-household-account-list-tutorial/
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
@@ -257,6 +259,7 @@ Generated: 2026-08-27T15:07:11.937Z
 - /zh-tw/tools/home-service-reminder-generator/
 - /zh-tw/tools/house-sitter-instruction-generator/
 - /zh-tw/tools/household-accessibility-walkthrough-log/
+- /zh-tw/tools/household-account-list/
 - /zh-tw/tools/household-annual-review-generator/
 - /zh-tw/tools/household-bill-source-status-log/
 - /zh-tw/tools/household-clothing-care-repair-log/

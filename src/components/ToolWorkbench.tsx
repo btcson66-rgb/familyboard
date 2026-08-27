@@ -4830,12 +4830,74 @@ const routerSupportReviewDefinition = (locale: Locale): Definition => {
   };
 };
 
+const householdAccountDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立帳戶列，等待服務與管理範圍",
+        "已核對服務與管理範圍，等待負責角色",
+        "已指定負責角色，等待備援或移轉安排",
+        "已記錄備援或移轉安排，等待複查",
+        "已完成複查並保存目前結果",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Account row created—service and management scope pending",
+        "Service and management scope checked—owner role pending",
+        "Owner assigned—backup or transfer plan pending",
+        "Backup or transfer plan recorded—review pending",
+        "Review completed—current result preserved",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "ACC-A | 網路服務代號 | 家庭連線服務；只記管理範圍 | 家庭帳務來源代號；受保護帳戶索引 | 主要管理角色 | 備援家人角色；移轉或停用前先核對官方流程 | 2026-09-10 | 已建立帳戶列，等待服務與管理範圍"
+    : "ACC-A | Internet-service code | Household connectivity service; management scope only | Household billing source code; protected account index | Primary household owner | Backup household role; verify the provider process before transfer or cancellation | 2026-09-10 | Account row created—service and management scope pending";
+  return {
+    intro: zh
+      ? "建立家庭服務帳戶的安全索引：記錄服務用途、管理角色、備援與移轉安排，以及下一次複查日。這不是登入工具，不保存密碼、驗證碼、完整帳號、付款資料或私人通信。"
+      : "Create a safe index for household service accounts: record purpose, management roles, backup and transfer plans, and the next review date. This is not a login tool and stores no passwords, verification codes, full account identifiers, payment data or private correspondence.",
+    fields: [
+      text("review", zh ? "帳戶清單私人代號" : "Private account-list reference", zh ? "使用家庭代號，不要輸入姓名、地址、完整帳號、密碼或付款資料。" : "Use a household code; do not enter names, addresses, full account identifiers, passwords or payment data.", "ACCOUNT-LIST-2026-A"),
+      { name: "context", label: zh ? "清單情境" : "List context", type: "select", options: zh ? ["家庭服務總覽", "搬家或移轉準備", "備援角色交接", "週期性權限複查", "停用前整理", "其他家庭管理"] : ["Household service overview", "Move or transfer preparation", "Backup-role handoff", "Periodic access review", "Pre-cancellation cleanup", "Other household management"] },
+      { name: "reviewDate", label: zh ? "本次建立或複查日期" : "Current build or review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次複查日期" : "Next review date", type: "date", value: "2026-09-10" },
+      text("source", zh ? "服務與官方流程來源地圖" : "Service and official-process source map", zh ? "只填安全來源代號，例如供應商、合約或官方說明索引；不要貼登入頁、帳單全文或私人通信。" : "Use safe source codes such as provider, contract or official-help indexes; do not paste login pages, full bills or private correspondence.", "PROVIDER-P1; CONTRACT-C1; HELP-H1"),
+      text("rows", zh ? "帳戶服務索引列" : "Account-service index rows", zh ? "每行 8 欄：ID｜服務或供應商代號｜家庭用途與管理範圍｜安全來源／保管索引｜主要管理角色｜備援或移轉安排｜下一次複查日 YYYY-MM-DD｜指定狀態。最多 14 行。" : "Each row uses 8 fields: ID | service or provider code | household purpose and management scope | safe source or custody index | primary owner role | backup or transfer plan | next review date YYYY-MM-DD | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護帳戶來源位置" : "Protected account-source location", zh ? "只寫保管流程或容器代號，不要放密碼、驗證碼、完整帳號、地址或付款內容。" : "Name a custody process or container, not passwords, verification codes, full identifiers, addresses or payment details.", zh ? "家庭紀錄／帳戶索引／ACCOUNT-LIST-2026-A／受保護來源" : "Household records / account index / ACCOUNT-LIST-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次複查日期。" : "Enter valid current and next review dates.";
+      if (next < review) return zh ? "下一次複查日期不能早於本次複查。" : "The next review date cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全清單代號、來源地圖與受保護位置。" : "Provide a safe list code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行帳戶服務索引列。" : "Enter 1 to 14 account-service index rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 8 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `帳戶第 ${malformed.map((row) => row.line).join("、")} 行必須有 8 個非空白欄位。` : `Account line ${malformed.map((row) => row.line).join(", ")} must contain 8 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行帳戶紀錄都需要唯一 ID。" : "Every account row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[7]));
+      if (invalidStatus.length) return zh ? `帳戶第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Account line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[6]));
+      if (dates.some((value) => !value || value < review)) return zh ? "每列下一次複查日必須有效，且不能早於本次複查。" : "Each next-review date must be valid and no earlier than the current review.";
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 10 || row.parts[3].length < 8 || row.parts[4].length < 3 || row.parts[5].length < 10);
+      if (thin.length) return zh ? `帳戶第 ${thin.map((row) => row.line).join("、")} 行需要服務、用途、來源、角色與備援或移轉安排。` : `Account line ${thin.map((row) => row.line).join(", ")} needs a service, purpose, source, owner and backup or transfer plan.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、帳號或付款識別資料；請改用安全代號。" : "A full contact, address, account or payment identifier was detected; use safe codes.";
+      if (/password|passcode|verification code|one-time code|full address|street address|account number|customer number|login|card number|bank account|payment amount|private message|密碼|驗證碼|一次性碼|完整地址|帳號|客戶號|登入|卡號|銀行帳戶|付款金額|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或登入內容；請只保留安全來源索引。" : "Sensitive data or login content was detected; keep only a safe source index.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = parsed.filter((row) => statuses.indexOf(row.parts[7]) < 4), closed = parsed.filter((row) => statuses.indexOf(row.parts[7]) >= 4);
+      return [values.review.trim() + (zh ? "｜家庭帳戶服務清單" : " — household account-service list"), (zh ? "清單情境：" : "List context: ") + values.context, (zh ? "本次建立或複查：" : "Current build or review: ") + formatter.format(review), (zh ? "下一次複查：" : "Next review: ") + formatter.format(next), (zh ? "仍開放列：" : "Open rows: ") + open.length, (zh ? "已完成或不適用列：" : "Completed or not-applicable rows: ") + closed.length, (zh ? "服務與官方流程來源地圖：" : "Service and official-process source map: ") + values.source.trim(), (zh ? "有版本的帳戶服務索引\n" : "Versioned account-service index\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜服務：" : " — service: ") + row.parts[1] + (zh ? "｜用途與範圍：" : " — purpose and scope: ") + row.parts[2] + (zh ? "｜來源索引：" : " — source index: ") + row.parts[3] + (zh ? "｜主要角色：" : " — owner: ") + row.parts[4] + (zh ? "｜備援／移轉：" : " — backup/transfer: ") + row.parts[5] + (zh ? "｜複查日：" : " — review date: ") + formatter.format(dates[index] as Date) + (zh ? "｜狀態：" : " — status: ") + row.parts[7]).join("\n"), (zh ? "受保護帳戶來源位置：" : "Protected account-source location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭服務的管理責任、來源索引與複查安排，不提供登入、帳戶恢復、資安、法律、付款或供應商政策建議；實際移轉、停用與驗證請依目前服務商的官方流程處理。" : "This output only organizes household service ownership, source indexes and review plans. It does not provide login, account recovery, security, legal, payment or provider-policy advice; follow the current provider's official process for transfer, cancellation and verification."].join("\n\n");
+    },
+  };
+};
 
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
   "household-device-retirement-handoff-log": deviceRetirementDefinition("en"),
   "household-router-support-review-log": routerSupportReviewDefinition("en"),
+  "household-account-list": householdAccountDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -8977,6 +9039,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-shopping-list-planner": {
     ...householdShoppingDefinition("zh-TW"),
+  },
+  "household-account-list": {
+    ...householdAccountDefinition("zh-TW"),
   },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("zh-TW"),

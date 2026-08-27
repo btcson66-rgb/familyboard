@@ -20118,6 +20118,83 @@ A future clearly labelled affiliate area could compare storage bins, labels, reu
 
 這次清單是否只有一個小範圍？每列用途與來源是否清楚？數量與單位是否真的核對？角色與日期是否有人負責？已下單與已到貨是否分開？分享前是否移除地址、付款、訂單與健康資料？六題都能回答「是」，才適合關閉本次清單版本。
 
+## Page 294 — Household Account List
+**Slug:** /tools/household-account-list/
+**Primary intent:** organize household service ownership, source indexes, backup roles and transfer checkpoints without storing credentials
+**Title tag:** Household Account List | Free Private Service Handoff Tool
+**Meta description:** Build a privacy-first household service account index with safe provider codes, management roles, backup plans and review dates. FamilyBoard never asks for passwords, verification codes, full identifiers or payment data.
+**Primary keyword concept:** household account list
+**Cluster:** household-operations
+**Page type:** tool
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** `/tools/household-bill-source-status-log/`, `/tools/household-share-access-review-log/`, `/guides/household-account-list/`, `/features/free-home-management-app/`
+**FAQ:**
+- Q: Is this a password manager or login assistant?
+  A: No. It is a responsibility and source index. Keep passwords, passkeys, verification codes and recovery material in a dedicated protected service.
+- Q: What should a safe source index look like?
+  A: Use labels such as PROVIDER-P1, CONTRACT-C1 or HELP-H1 that point to a protected process or official document. Do not paste a login URL with personal identifiers, a full bill or a private message.
+- Q: Can the tool transfer or cancel a service?
+  A: No. It records the role, plan and review checkpoint. The current provider's official process controls identity checks, transfer rules, fees and cancellation results.
+- Q: Should I list every account in one permanent file?
+  A: Prefer a bounded review, such as move preparation or backup-role handoff. Keep only the services needed for that scope and create a new version when responsibility or policy changes.
+- Q: Can a future affiliate product be required to use this tool?
+  A: No. Any labelled product area must remain outside the form, be optional and never imply that buying storage or security equipment proves an account is safe.
+
+**Contextual CTA:** Start with two services that would be difficult to hand off, record only safe source indexes, and schedule a review before any transfer or cancellation.
+
+# Household Account List
+
+A household may depend on dozens of services, yet a password or a login screen is not a useful handoff record. A partner may know that “the internet account exists” but not which provider source controls the contract, who owns the next review, whether a backup role is prepared, or what must happen before a move or cancellation. This free browser tool creates a narrow, dated account-service index without becoming a password manager, account-recovery service or provider directory.
+
+Use it when you need to coordinate a real household responsibility: a move, a backup-role handoff, a periodic access review, or a pre-cancellation inventory. Use a private reference such as `ACCOUNT-LIST-2026-A`; do not use a resident’s name, address, account number or email address as the reference.
+
+## What belongs in an account-service index
+
+The useful unit is a service relationship, not a credential. A row can describe an internet service, building notice portal, school communication service, shared subscription or household utility by safe code. It should answer six practical questions: what service is in scope; what household purpose and management boundary it has; which protected source controls the details; which role handles the next action; what backup or transfer plan exists; and when someone will review the row again.
+
+The source field is an index, not a document dump. `PROVIDER-P1` can point to a protected provider record; `CONTRACT-C1` can point to a stored contract; `HELP-H1` can point to the provider’s current help page saved in a protected workflow. The browser tool does not open those sources, confirm their contents or infer that a service is active.
+
+## Use a bounded context
+
+Choose one list context before entering rows. A household service overview may cover only the services needed for a monthly responsibility review. Move or transfer preparation should include services whose address, responsible person or service location may change. Backup-role handoff should focus on what another household role needs to understand without receiving credentials. Pre-cancellation cleanup should record the decision checkpoint and source, not a guess about fees or the final cancellation date.
+
+A bounded list stays reviewable. A permanent catalogue encourages stale rows and unnecessary exposure. When a provider, role or policy changes, preserve the old result as a dated record and start a new version rather than silently replacing history.
+
+## The eight-column row format
+
+Enter each row as:
+
+`ID | service or provider code | household purpose and management scope | safe source or custody index | primary owner role | backup or transfer plan | next review date YYYY-MM-DD | exact status`
+
+The ID, such as `ACC-A`, is unique only within this list. The service code can be `INTERNET-S1` or `BUILDING-PORTAL`; avoid copying an account number or a person’s contact detail. The purpose should explain the household work, for example “home connectivity and support handoff,” not reveal a full address or a private dispute.
+
+The owner is a role such as “primary household owner” or “backup household role,” not necessarily a name. A backup plan should say what the next role will check and which official source controls the action. “Verify provider transfer rules before move” is useful; “use this password” is not allowed here. A date is a review checkpoint, not a promise that a provider will approve a transfer, waive a fee or complete cancellation.
+
+## Keep action separate from confirmation
+
+The first four statuses keep work open: the row is created, the scope is checked, an owner is assigned, or a backup/transfer plan is recorded. Only “review completed—current result preserved” and “not applicable—reason and reopen event recorded” close a row.
+
+This distinction matters during a handoff. A person sending an invitation, opening a provider page or requesting a transfer has taken an action, but the household has not yet observed the result. Leave the row open until the responsible source confirms what happened. If identity checks, fees, service dates or recovery rules are involved, follow the provider’s current official process; FamilyBoard cannot decide those outcomes.
+
+## Privacy boundary: index, never credential
+
+Do not enter passwords, passkeys, one-time codes, recovery phrases, security questions, full account identifiers, payment numbers, addresses, private messages or full bills. Do not add a child’s account details or a sensitive reason for a service. Keep those materials in a dedicated protected process and use a neutral pointer in this tool.
+
+FamilyBoard performs a lightweight pattern check for common email, phone, payment, address, account and login terms. That check is a reminder, not a security guarantee. Review the text yourself before downloading, printing or sharing. Entries remain in the current browser; they are not automatically encrypted, backed up or synchronized by this page. Clear browser data only after you have preserved an appropriate private copy in the responsible system.
+
+## A practical first run
+
+Start with two rows: one service another person would struggle to hand off, and one service likely to change during a move or renewal. Give each row a safe source index, a role, a backup or transfer action and a future date. Keep both rows open until the responsible source has been checked. At the next review, record the observed result and create a new list version if the provider, role or policy changed.
+
+## Optional affiliate space must not change the answer
+
+A future affiliate area could introduce labelled organizers, document sleeves or hardware security products after the educational content. It must remain outside the form, disclose the commercial relationship, offer a visible skip path and never claim that a purchase proves an account is secure, transferable or recoverable. The free index must stay complete for a visitor who ignores every product card.
+
+**Next step:** open the tool, use a neutral list reference, enter two safe rows and schedule the next review. Keep all credentials and full provider records in their existing protected source.
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

@@ -2344,6 +2344,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-account-list/",
+    "alternateRoute": "/zh-tw/tools/household-account-list/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2760,6 +2768,13 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-home-access-handoff-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-account-list-tutorial/",
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
@@ -3202,6 +3217,13 @@
   {
     "route": "/zh-tw/tools/household-accessibility-walkthrough-log/",
     "alternateRoute": "/tools/household-accessibility-walkthrough-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-account-list/",
+    "alternateRoute": "/tools/household-account-list/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

@@ -2144,6 +2144,14 @@
     "headings": "家庭採買清單怎麼做？免費補貨與到貨複查工具 先定義採買情境，不要把全家庫存搬進來 把庫存、來源與到貨結果分開 九欄格式讓家人知道下一步 八種狀態把「已買」與「已收到」分開 不把清單變成付款、地址或健康資料 聯盟商品只能在答案之後、而且可略過"
   },
   {
+    "title": "Household Account List | Free Private Service Handoff Tool",
+    "description": "Build a privacy-first household service account index with safe provider codes, management roles, backup plans and review dates. FamilyBoard never asks for passwords, verification codes, full identifiers or payment data.",
+    "route": "/tools/household-account-list/",
+    "cluster": "household-operations",
+    "keywords": "household account list",
+    "headings": "Household Account List What belongs in an account-service index Use a bounded context The eight-column row format Keep action separate from confirmation Privacy boundary: index, never credential A practical first run Optional affiliate space must not change the answer"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
