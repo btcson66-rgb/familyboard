@@ -19397,7 +19397,7 @@ Before sharing a result, remove anything that identifies a person, address or pr
 **Published date:** 2026-08-27
 **Editorial review date:** 2026-08-27
 **Content version:** 1
-**Suggested internal links:** /zh-tw/guides/seasonal-home-maintenance-checklist/, /zh-tw/guides/household-monthly-review/, /zh-tw/features/maintenance-tracker/, /zh-tw/guides/familyboard-seasonal-reset-tutorial/
+**Suggested internal links:** /zh-tw/features/maintenance-tracker/, /zh-tw/tools/household-monthly-review-action-log/, /zh-tw/features/maintenance-tracker/, /zh-tw/guides/familyboard-seasonal-reset-tutorial/
 **FAQ:**
 - Q: 這個工具會告訴我換季一定要做什麼嗎？
   A: 不會，它只整理家庭選定的工作與來源；實際要以所在地、製造商、物業規約和合格專業意見為準。
@@ -19408,11 +19408,11 @@ Before sharing a result, remove anything that identifies a person, address or pr
 
 # 家庭換季複查怎麼記？免費季節行動紀錄工具
 
-換季是重新看一次家庭紀錄的好時機，但通用清單不能取代所在地資訊或合格檢查。[季節居家保養指南](/zh-tw/guides/seasonal-home-maintenance-checklist/)說明氣候和設備差異；這個免費 FamilyBoard 工具則讓家庭記下實際複查的項目、影響決定的來源、下一步負責角色和可觀察結果。
+換季是重新看一次家庭紀錄的好時機，但通用清單不能取代所在地資訊或合格檢查。[居家保養追蹤功能](/zh-tw/features/maintenance-tracker/)說明如何保留日期與結果；這個免費 FamilyBoard 工具則讓家庭記下實際複查的項目、影響決定的來源、下一步負責角色和可觀察結果。
 
 ## 為什麼不能只勾「完成」
 
-「完成」可能把不同情況混在一起。冷氣季前也許已看過濾網，卻還有排水疑問；颱風季前也許確認備援用品，卻尚未釐清大樓進出規定。工具把來源日期、可觀察狀況、行動窗口、角色和結果日期分開，讓下次[家庭每月檢視](/zh-tw/guides/household-monthly-review/)看得出哪些已處理、哪些只是暫緩，不把瀏覽器當成屋頂、家電、電氣或建築的檢查員。
+「完成」可能把不同情況混在一起。冷氣季前也許已看過濾網，卻還有排水疑問；颱風季前也許確認備援用品，卻尚未釐清大樓進出規定。工具把來源日期、可觀察狀況、行動窗口、角色和結果日期分開，讓下次[家庭每月檢視行動工具](/zh-tw/tools/household-monthly-review-action-log/)看得出哪些已處理、哪些只是暫緩，不把瀏覽器當成屋頂、家電、電氣或建築的檢查員。
 
 ## 先選真正接近的季節轉換
 
@@ -19453,7 +19453,7 @@ Before sharing a result, remove anything that identifies a person, address or pr
 **Published date:** 2026-08-27
 **Editorial review date:** 2026-08-27
 **Content version:** 1
-**Suggested internal links:** /zh-tw/tools/household-seasonal-reset-action-log/, /zh-tw/guides/seasonal-home-maintenance-checklist/, /zh-tw/guides/household-monthly-review/
+**Suggested internal links:** /zh-tw/tools/household-seasonal-reset-action-log/, /zh-tw/features/maintenance-tracker/, /zh-tw/tools/household-monthly-review-action-log/
 **FAQ:**
 - Q: 換季複查要把所有家電都列進去嗎？
   A: 不用，只列本次轉換真的會影響的設備、區域或家庭流程；沒有用途的列會降低整份紀錄的可信度。
@@ -19488,7 +19488,7 @@ Before sharing a result, remove anything that identifies a person, address or pr
 
 ## 第六步：在每月檢視時關閉或延後
 
-到了[家庭每月檢視](/zh-tw/guides/household-monthly-review/)，逐列問三件事：來源是否仍是目前版本？觀察是否有新的結果？負責角色是否真的完成下一步？只有在家庭保存了實際結果和日期後才選「已完成」；如果工作不適用，記錄目前理由與未來什麼變化會重新開案。不要為了讓數字好看而關閉仍未有來源回覆的列。
+到了[家庭每月檢視行動工具](/zh-tw/tools/household-monthly-review-action-log/)，逐列問三件事：來源是否仍是目前版本？觀察是否有新的結果？負責角色是否真的完成下一步？只有在家庭保存了實際結果和日期後才選「已完成」；如果工作不適用，記錄目前理由與未來什麼變化會重新開案。不要為了讓數字好看而關閉仍未有來源回覆的列。
 
 ## 第七步：分享前做隱私和推薦檢查
 

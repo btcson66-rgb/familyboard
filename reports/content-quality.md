@@ -1,18 +1,18 @@
 # Content quality report
 
-Generated: 2026-08-27T12:01:15.180Z
+Generated: 2026-08-27T12:18:53.205Z
 
 ## Summary
 
 - Indexable pages: 466
 - Generated HTML routes: 483
 - Duplicate metadata blockers: 0
-- Broken internal links: 3
+- Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
 - Pages without a contextual product/tool link: 253
-- Blocking audit findings: 3
+- Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
@@ -304,6 +304,4 @@ Generated: 2026-08-27T12:01:15.180Z
 
 ## Blockers
 
-- /zh-tw/guides/familyboard-seasonal-reset-tutorial/ -> /zh-tw/guides/household-monthly-review/
-- /zh-tw/tools/household-seasonal-reset-action-log/ -> /zh-tw/guides/seasonal-home-maintenance-checklist/
-- /zh-tw/tools/household-seasonal-reset-action-log/ -> /zh-tw/guides/household-monthly-review/
+- None. SEO, sitemap, metadata, placeholder, tool-registration and internal-link gates passed.

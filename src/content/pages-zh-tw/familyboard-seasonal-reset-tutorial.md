@@ -14,8 +14,8 @@ publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"
 related:
   - "/zh-tw/tools/household-seasonal-reset-action-log/"
-  - "/zh-tw/guides/seasonal-home-maintenance-checklist/"
-  - "/zh-tw/guides/household-monthly-review/"
+  - "/zh-tw/features/maintenance-tracker/"
+  - "/zh-tw/tools/household-monthly-review-action-log/"
 faq:
   - question: "換季複查要把所有家電都列進去嗎？"
     answer: "不用，只列本次轉換真的會影響的設備、區域或家庭流程；沒有用途的列會降低整份紀錄的可信度。"
@@ -51,7 +51,7 @@ faq:
 
 ## 第六步：在每月檢視時關閉或延後
 
-到了[家庭每月檢視](/zh-tw/guides/household-monthly-review/)，逐列問三件事：來源是否仍是目前版本？觀察是否有新的結果？負責角色是否真的完成下一步？只有在家庭保存了實際結果和日期後才選「已完成」；如果工作不適用，記錄目前理由與未來什麼變化會重新開案。不要為了讓數字好看而關閉仍未有來源回覆的列。
+到了[家庭每月檢視行動工具](/zh-tw/tools/household-monthly-review-action-log/)，逐列問三件事：來源是否仍是目前版本？觀察是否有新的結果？負責角色是否真的完成下一步？只有在家庭保存了實際結果和日期後才選「已完成」；如果工作不適用，記錄目前理由與未來什麼變化會重新開案。不要為了讓數字好看而關閉仍未有來源回覆的列。
 
 ## 第七步：分享前做隱私和推薦檢查
 

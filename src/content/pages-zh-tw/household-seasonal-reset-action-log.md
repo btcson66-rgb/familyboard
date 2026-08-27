@@ -13,8 +13,8 @@ depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"
 related:
-  - "/zh-tw/guides/seasonal-home-maintenance-checklist/"
-  - "/zh-tw/guides/household-monthly-review/"
+  - "/zh-tw/features/maintenance-tracker/"
+  - "/zh-tw/tools/household-monthly-review-action-log/"
   - "/zh-tw/features/maintenance-tracker/"
   - "/zh-tw/guides/familyboard-seasonal-reset-tutorial/"
 faq:
@@ -26,11 +26,11 @@ faq:
     answer: "不代表，只表示家庭記錄了觀察和結果，不是檢查、診斷或安全認證。"
 ---
 
-換季是重新看一次家庭紀錄的好時機，但通用清單不能取代所在地資訊或合格檢查。[季節居家保養指南](/zh-tw/guides/seasonal-home-maintenance-checklist/)說明氣候和設備差異；這個免費 FamilyBoard 工具則讓家庭記下實際複查的項目、影響決定的來源、下一步負責角色和可觀察結果。
+換季是重新看一次家庭紀錄的好時機，但通用清單不能取代所在地資訊或合格檢查。[居家保養追蹤功能](/zh-tw/features/maintenance-tracker/)說明如何保留日期與結果；這個免費 FamilyBoard 工具則讓家庭記下實際複查的項目、影響決定的來源、下一步負責角色和可觀察結果。
 
 ## 為什麼不能只勾「完成」
 
-「完成」可能把不同情況混在一起。冷氣季前也許已看過濾網，卻還有排水疑問；颱風季前也許確認備援用品，卻尚未釐清大樓進出規定。工具把來源日期、可觀察狀況、行動窗口、角色和結果日期分開，讓下次[家庭每月檢視](/zh-tw/guides/household-monthly-review/)看得出哪些已處理、哪些只是暫緩，不把瀏覽器當成屋頂、家電、電氣或建築的檢查員。
+「完成」可能把不同情況混在一起。冷氣季前也許已看過濾網，卻還有排水疑問；颱風季前也許確認備援用品，卻尚未釐清大樓進出規定。工具把來源日期、可觀察狀況、行動窗口、角色和結果日期分開，讓下次[家庭每月檢視行動工具](/zh-tw/tools/household-monthly-review-action-log/)看得出哪些已處理、哪些只是暫緩，不把瀏覽器當成屋頂、家電、電氣或建築的檢查員。
 
 ## 先選真正接近的季節轉換
 
