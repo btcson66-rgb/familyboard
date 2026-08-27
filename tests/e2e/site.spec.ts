@@ -132,6 +132,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-mail-package-handoff-tutorial/",
     "/guides/familyboard-plant-care-handoff-tutorial/",
     "/guides/familyboard-recycling-handoff-tutorial/",
+    "/guides/familyboard-household-return-handoff-tutorial/",
+    "/guides/familyboard-school-pickup-handoff-tutorial/",
+    "/guides/familyboard-service-appointment-handoff-tutorial/",
     "/tools/household-seasonal-reset-action-log/",
     "/tools/household-device-retirement-handoff-log/",
     "/tools/household-router-support-review-log/",
@@ -1361,6 +1364,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-recycling-handoff-tutorial/",
       alternate: "/guides/familyboard-recycling-handoff-tutorial/",
       heading: "FamilyBoard 家庭垃圾與資源回收怎麼交接？先查公告，再記實際結果",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-return-handoff-tutorial/",
+      alternate: "/guides/familyboard-household-return-handoff-tutorial/",
+      heading: "FamilyBoard 網購退貨怎麼交接？先記來源，再複查寄回結果",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-school-pickup-handoff-tutorial/",
+      alternate: "/guides/familyboard-school-pickup-handoff-tutorial/",
+      heading: "FamilyBoard 放學接送怎麼交接？先定義範圍，再回填返家結果",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/",
+      alternate: "/guides/familyboard-service-appointment-handoff-tutorial/",
+      heading: "FamilyBoard 服務預約怎麼交接？家電維修與到場準備 App 教學",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -3286,6 +3304,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-recycling-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-return-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-return-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-school-pickup-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-school-pickup-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-service-appointment-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

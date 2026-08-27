@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 管理退貨期限、寄回角
 primaryKeyword: "FamilyBoard 網購退貨教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-household-return-handoff-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

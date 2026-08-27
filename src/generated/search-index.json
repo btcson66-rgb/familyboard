@@ -2520,6 +2520,30 @@
     "headings": "How to Use FamilyBoard for Recycling Handoffs Start with a safe recycling code Identify the current source Separate rule, preparation and observation Define a small handoff scope Assign a preparation and follow-up role Track a missed collection without guessing Run a local-notice rehearsal Keep supplies and affiliate content secondary Eight-question closeout"
   },
   {
+    "title": "FamilyBoard Household Return Handoff Tutorial | Returns, Dispatch and Refund Review",
+    "description": "Learn how to organise a household return handoff with FamilyBoard: note the policy source, assign packing and dispatch roles, protect order details and review the actual refund or exchange result.",
+    "route": "/guides/familyboard-household-return-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard household return handoff tutorial",
+    "headings": "How to Use FamilyBoard for Household Return Handoffs Start with a neutral return code Check the current policy source Separate eligibility, packing and dispatch Assign packing, dispatch and review roles Keep delivery choices in their own source Preserve a truthful timeline Rehearse without a real order Keep recommendations outside the decision Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard School Pickup Handoff Tutorial | Roles, Sources and Return Review",
+    "description": "Learn how to organise a school pickup handoff with FamilyBoard: define the activity, protect student details, assign a primary and backup role and record an actual return-home observation.",
+    "route": "/guides/familyboard-school-pickup-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard school pickup handoff tutorial",
+    "headings": "How to Use FamilyBoard for School Pickup Handoffs Use a neutral pickup code Link the controlling source Separate plan, confirmation and return observation Define primary and backup roles Handle school and community contexts carefully Record changes without rewriting history Rehearse with imaginary details Keep product suggestions secondary Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Service Appointment Handoff Tutorial | Booking, Access and Result Review",
+    "description": "Learn how to organise a service appointment with FamilyBoard: protect addresses and contact details, assign preparation and backup roles and keep arrival separate from the provider’s final result.",
+    "route": "/guides/familyboard-service-appointment-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard service appointment handoff tutorial",
+    "headings": "How to Use FamilyBoard for Service Appointment Handoffs Create a safe appointment code Date the booking source Separate preparation, access and arrival Assign a primary and backup role Handle common service settings Record what was actually observed Rehearse the handoff safely Put affiliate material after the answer Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

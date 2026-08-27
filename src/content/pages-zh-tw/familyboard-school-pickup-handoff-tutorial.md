@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 管理放學與課後接送交
 primaryKeyword: "FamilyBoard 放學接送教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-school-pickup-handoff-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

@@ -248,15 +248,18 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-school-pickup-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-school-pickup-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-school-pickup-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-pickup-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-return-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-return-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-return-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-return-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-subscription-cancellation-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-subscription-cancellation-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-service-appointment-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-service-appointment-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-service-appointment-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-weekly-reset-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-weekly-reset-action-log/</loc>",
@@ -2580,24 +2583,42 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-school-pickup-handoff-tutorial/",
+    require: [
+      "FamilyBoard School Pickup Handoff Tutorial",
+      'hreflang="zh-TW"',
+      "Separate plan, confirmation and return observation",
+      "does not identify a child",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-school-pickup-handoff-tutorial/",
     require: [
       "FamilyBoard 放學接送怎麼交接",
       'lang="zh-TW"',
+      'hreflang="en"',
       "分開放學、安親與課後活動",
       "返家後做短複查",
     ],
-    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/guides/familyboard-household-return-handoff-tutorial/",
+    require: [
+      "FamilyBoard Household Return Handoff Tutorial",
+      'hreflang="zh-TW"',
+      "Separate eligibility, packing and dispatch",
+      "does not calculate a legal deadline",
+    ],
   },
   {
     path: "/zh-tw/guides/familyboard-household-return-handoff-tutorial/",
     require: [
       "FamilyBoard 網購退貨怎麼交接",
       'lang="zh-TW"',
+      'hreflang="en"',
       "把平台政策放在受控來源",
       "寄回不是退款完成",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",
@@ -2610,14 +2631,23 @@ const checks = [
     forbid: ['rel="alternate"'],
   },
   {
+    path: "/guides/familyboard-service-appointment-handoff-tutorial/",
+    require: [
+      "FamilyBoard Service Appointment Handoff Tutorial",
+      'hreflang="zh-TW"',
+      "Separate preparation, access and arrival",
+      "does not contact a provider",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/",
     require: [
       "FamilyBoard 服務預約怎麼交接",
       'lang="zh-TW"',
+      'hreflang="en"',
       "把正式來源畫成地圖",
       "提醒、到場、結果",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/guides/familyboard-weekly-reset-action-tutorial/",

@@ -7,7 +7,7 @@ primaryKeyword: FamilyBoard 服務預約交接教學
 locale: zh-TW
 cluster: product
 pageType: content
-languageExclusive: true
+alternateRoute: "/guides/familyboard-service-appointment-handoff-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: 2026-08-27
