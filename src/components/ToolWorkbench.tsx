@@ -3855,6 +3855,52 @@ const schoolPickupHandoffDefinition = (locale: Locale): Definition => {
   };
 };
 
+const householdReturnHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立退貨列，等待範圍", "已確認來源，等待退貨期限", "已記錄期限，等待角色或動作", "已安排角色，等待寄回觀察", "已觀察寄回或退款複查，等待下次核點", "不適用，已記錄原因與重新開案事件"]
+    : ["Return row created—scope pending", "Source checked—return window pending", "Window recorded—role or action pending", "Role assigned—drop-off observation pending", "Return or refund review observed—next checkpoint pending", "Not applicable—reason and reopen event recorded"];
+  const defaults = zh
+    ? "RETURN-A | 網購品項退貨 | 2026-08-21 | 平台退貨政策代號 | 先確認申請期限與寄回方式，完整訂單資料留在受控來源 | 家庭退貨角色確認包裝與寄回觀察，不貼地址或付款資料 | 寄回後保留受控憑證入口，等待退款或換貨結果複查 | 家庭退貨角色 | 已安排角色，等待寄回觀察\nRETURN-B | 到貨狀況需要複查 | 2026-08-22 | 購買與配送來源代號 | 只記家庭要處理的時間窗口，不複製完整收據 | 備援角色確認是否需要詢問平台，未取得結果前保持開放 | 退款或換貨結果回到來源後，再更新下一次安排 | 備援家庭角色 | 已確認來源，等待退貨期限"
+    : "RETURN-A | Online purchase return | 2026-08-21 | Platform return-policy code | Confirm the request window and drop-off method; keep full order data in a controlled source | The household return role records packing and drop-off observations; do not paste address or payment data | Keep a controlled receipt entry after drop-off and review the refund or exchange result | Household return role | Role assigned—drop-off observation pending\nRETURN-B | Delivery condition needs review | 2026-08-22 | Purchase and delivery source code | Record only the household action window; do not copy the full receipt | A backup role confirms whether the platform needs a question; keep open until a result is observed | Update the next plan after the refund or exchange result returns to the source | Backup household role | Source checked—return window pending";
+  return {
+    intro: zh ? "把退貨範圍、平台政策來源、可處理期限、家庭角色、寄回觀察與退款或換貨複查分開記錄。工具不保存訂單或付款資料、不判定退款權利，也不取代商家與平台正式流程。" : "Separate the return scope, policy source, action window, household role, drop-off observation and refund or exchange review. This tool stores no order or payment data, does not decide refund rights and does not replace the seller's official process.",
+    fields: [
+      text("review", zh ? "家庭退貨複查私人代號" : "Private household-return review reference", zh ? "使用家庭代號，不要輸入訂單號、姓名、地址、電話、付款或完整收據資料。" : "Use a household code; do not enter order numbers, names, addresses, phone, payment or full receipt data.", "RETURN-REVIEW-2026-A"),
+      { name: "context", label: zh ? "退貨情境" : "Return context", type: "select", options: zh ? ["網購品項退貨", "到貨狀況需要複查", "換貨或補寄安排", "平台要求補充資料", "退款結果複查", "其他家庭退貨安排"] : ["Online purchase return", "Delivery condition review", "Exchange or replacement", "Platform requests more information", "Refund result review", "Other household return plan"] },
+      { name: "reviewDate", label: zh ? "本次退貨複查日期" : "Current return-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次期限或結果複查日期" : "Next window or result-review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "平台政策、購買與寄回來源地圖" : "Platform policy, purchase and drop-off source map", zh ? "只填安全來源代號，不要貼訂單號、地址、電話、付款或私人訊息。" : "Use safe source codes; do not paste order numbers, addresses, phone, payment or private messages.", "PLATFORM-P1; PURCHASE-S1; DROPOFF-D1"),
+      text("rows", zh ? "退貨與結果複查狀態列" : "Return and result-review rows", zh ? "每行 9 欄：ID｜退貨範圍｜觀察日期 YYYY-MM-DD｜來源代號｜退貨期限或動作｜角色與包裝／寄回觀察｜寄回憑證入口或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | return scope | observation date YYYY-MM-DD | source code | return window or action | role and packing/drop-off observation | receipt entry or next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護收據與平台來源位置" : "Protected receipt and platform-source location", zh ? "只寫保管流程或容器代號，不要放訂單、地址、電話、付款或收據全文。" : "Name a custody process or container, not order, address, phone, payment or full receipt text.", zh ? "家庭紀錄／退貨交接／RETURN-REVIEW-2026-A／受保護來源" : "Household records / return handoff / RETURN-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次退貨複查日期。" : "Enter valid current and next return-review dates.";
+      if (next < review) return zh ? "下一次期限或結果複查日期不能早於本次複查。" : "The next return or result review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全退貨代號、來源地圖與受保護位置。" : "Provide a safe return reference, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行退貨交接列。" : "Enter 1 to 14 return-handoff rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `退貨第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Return line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行退貨紀錄都需要唯一 ID。" : "Every return row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `退貨第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Return line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 4);
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `退貨第 ${thin.map((row) => row.line).join("、")} 行需要範圍、來源、期限、觀察、下一步與角色。` : `Return line ${thin.map((row) => row.line).join(", ")} needs scope, source, window, observation, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、訂單或付款識別資料；請改用安全代號。" : "A full contact, address, order or payment identifier was detected; use safe codes.";
+      if (/password|passcode|order number|tracking number|full address|phone number|payment card|private message|訂單號|訂單編號|追蹤碼|完整地址|電話|付款卡|私人訊息/i.test(privacy)) return zh ? "偵測到訂單、地址、付款或私人通信資料；請只保留安全來源代號。" : "Order, address, payment or private-message data was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭退貨與結果複查" : " — household return and result review"), (zh ? "退貨情境：" : "Return context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次期限或結果複查：" : "Next window or result review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已觀察寄回或結果列：" : "Returned or result-reviewed rows: ") + closed.length, (zh ? "來源地圖：" : "Source map: ") + values.source.trim(), (zh ? "有版本的退貨與結果觀察\n" : "Versioned return and result observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜期限／動作：" : " — window/action: ") + row.parts[4] + (zh ? "｜觀察：" : " — observation: ") + row.parts[5] + (zh ? "｜下一步：" : " — next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護收據與平台來源位置：" : "Protected receipt and platform-source location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭退貨、寄回與結果複查觀察，不保存訂單或付款資料、不判定退款權利，也不取代商家與平台正式流程。" : "This output only organizes household return, drop-off and result-review observations. It does not store order or payment data, decide refund rights or replace the seller's official process."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7922,6 +7968,9 @@ const definitions: Record<string, Definition> = {
   "household-school-pickup-handoff-log": {
     ...schoolPickupHandoffDefinition("en"),
   },
+  "household-return-handoff-log": {
+    ...householdReturnHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -8016,6 +8065,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-school-pickup-handoff-log": {
     ...schoolPickupHandoffDefinition("zh-TW"),
+  },
+  "household-return-handoff-log": {
+    ...householdReturnHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

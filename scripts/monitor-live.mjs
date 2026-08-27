@@ -230,6 +230,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-school-pickup-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-school-pickup-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-pickup-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-return-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-return-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-return-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1037,6 +1040,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Use a safe reference",
       "Separate expectations from observed results",
+    ],
+  },
+  {
+    path: "/tools/household-return-handoff-log/",
+    require: [
+      "Household Return Handoff Log",
+      'hreflang="zh-TW"',
+      "Use a safe reference",
+      "Separate the policy window from the household action",
     ],
   },
   {
@@ -2078,6 +2090,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-return-handoff-log/",
+    require: [
+      "家庭退貨交接工具",
+      'hreflang="en"',
+      "先使用家庭安全代號",
+      "把家庭動作和實際結果分開",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2124,6 +2145,16 @@ const checks = [
       'lang="zh-TW"',
       "分開放學、安親與課後活動",
       "返家後做短複查",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-return-handoff-tutorial/",
+    require: [
+      "FamilyBoard 網購退貨怎麼交接",
+      'lang="zh-TW"',
+      "把平台政策放在受控來源",
+      "寄回不是退款完成",
     ],
     forbid: ['rel="alternate"'],
   },

@@ -1952,6 +1952,14 @@
     "headings": "School Pickup Handoff Log Use a safe reference Separate expectations from observed results Keep formal sources in control"
   },
   {
+    "title": "Free Household Return Handoff Log | Return Windows, Drop-Off and Refund Review | FamilyBoard",
+    "description": "Track return-policy sources, action windows, household roles, drop-off observations and refund or exchange follow-up without storing order or payment data.",
+    "route": "/tools/household-return-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "household return handoff log",
+    "headings": "Household Return Handoff Log Use a safe reference Separate the policy window from the household action Keep drop-off and refund results independent Keep affiliate comparisons outside the control"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

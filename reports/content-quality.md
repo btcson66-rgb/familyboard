@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T08:02:34.642Z
+Generated: 2026-08-27T08:23:14.624Z
 
 ## Summary
 
-- Indexable pages: 427
-- Generated HTML routes: 444
+- Indexable pages: 430
+- Generated HTML routes: 447
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 214
+- Pages without a contextual product/tool link: 217
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 52
+- product: 53
 - appliances: 30
 - maintenance: 37
-- household-operations: 56
+- household-operations: 58
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -90,6 +90,7 @@ Generated: 2026-08-27T08:02:34.642Z
 - /tools/household-pantry-expiry-review-log/
 - /tools/household-plant-care-handoff-log/
 - /tools/household-recycling-handoff-log/
+- /tools/household-return-handoff-log/
 - /tools/household-school-pickup-handoff-log/
 - /tools/household-share-access-review-log/
 - /tools/household-trip-packing-handoff-log/
@@ -129,6 +130,7 @@ Generated: 2026-08-27T08:02:34.642Z
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
+- /zh-tw/guides/familyboard-household-return-handoff-tutorial/
 - /zh-tw/guides/familyboard-internet-incident-tutorial/
 - /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
@@ -237,6 +239,7 @@ Generated: 2026-08-27T08:02:34.642Z
 - /zh-tw/tools/household-record-retention-decision-log/
 - /zh-tw/tools/household-record-retrieval-drill-log/
 - /zh-tw/tools/household-recycling-handoff-log/
+- /zh-tw/tools/household-return-handoff-log/
 - /zh-tw/tools/household-school-pickup-handoff-log/
 - /zh-tw/tools/household-school-record-source-handoff-log/
 - /zh-tw/tools/household-share-access-review-log/
