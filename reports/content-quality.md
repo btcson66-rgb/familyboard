@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T07:17:58.230Z
+Generated: 2026-08-27T07:31:58.474Z
 
 ## Summary
 
-- Indexable pages: 418
-- Generated HTML routes: 435
+- Indexable pages: 421
+- Generated HTML routes: 438
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 205
+- Pages without a contextual product/tool link: 208
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 49
+- product: 50
 - appliances: 30
 - maintenance: 37
-- household-operations: 50
+- household-operations: 52
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -87,6 +87,7 @@ Generated: 2026-08-27T07:17:58.230Z
 - /tools/household-meeting-agenda-action-log/
 - /tools/household-meter-reading-review-log/
 - /tools/household-pantry-expiry-review-log/
+- /tools/household-plant-care-handoff-log/
 - /tools/household-recycling-handoff-log/
 - /tools/household-share-access-review-log/
 - /tools/household-trip-packing-handoff-log/
@@ -132,6 +133,7 @@ Generated: 2026-08-27T07:17:58.230Z
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
+- /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
@@ -225,6 +227,7 @@ Generated: 2026-08-27T07:17:58.230Z
 - /zh-tw/tools/household-meter-reading-review-log/
 - /zh-tw/tools/household-pantry-expiry-review-log/
 - /zh-tw/tools/household-pet-record-source-handoff-log/
+- /zh-tw/tools/household-plant-care-handoff-log/
 - /zh-tw/tools/household-power-outage-event-log/
 - /zh-tw/tools/household-record-retention-decision-log/
 - /zh-tw/tools/household-record-retrieval-drill-log/

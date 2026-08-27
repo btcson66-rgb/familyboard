@@ -2032,6 +2032,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-plant-care-handoff-log/",
+    "alternateRoute": "/zh-tw/tools/household-plant-care-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2468,6 +2476,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-plant-care-handoff-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-recycling-handoff-tutorial/",
     "alternateRoute": "",
     "indexable": true,
@@ -2864,6 +2879,13 @@
     "alternateRoute": "/tools/household-pet-record-source-handoff-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-plant-care-handoff-log/",
+    "alternateRoute": "/tools/household-plant-care-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {

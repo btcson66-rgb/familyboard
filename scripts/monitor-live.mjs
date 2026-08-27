@@ -221,6 +221,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-mail-package-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-mail-package-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-mail-package-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-plant-care-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-plant-care-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-plant-care-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1001,6 +1004,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Define the handoff window",
       "Privacy and future affiliate placement",
+    ],
+  },
+  {
+    path: "/tools/household-plant-care-handoff-log/",
+    require: [
+      "Plant Care Handoff Log",
+      'hreflang="zh-TW"',
+      "Use a safe reference",
+      "Record observations, not diagnoses",
     ],
   },
   {
@@ -2015,6 +2027,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-plant-care-handoff-log/",
+    require: [
+      "家庭植物照護交接工具",
+      'hreflang="en"',
+      "先建立安全代號",
+      "把預期、行動和結果分開",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2030,6 +2051,16 @@ const checks = [
       "FamilyBoard 信件與包裹怎麼交接",
       'lang="zh-TW"',
       "限定外出與返家時間",
+      "返家後做短複查",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-plant-care-handoff-tutorial/",
+    require: [
+      "FamilyBoard 植物照護怎麼交接",
+      'lang="zh-TW"',
+      "限定外出與返家日期",
       "返家後做短複查",
     ],
     forbid: ['rel="alternate"'],

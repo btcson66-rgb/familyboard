@@ -3699,6 +3699,70 @@ const mailPackageHandoffDefinition = (locale: Locale): Definition => {
   };
 };
 
+const plantCareHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立植物列，等待照護範圍",
+        "已確認照護範圍，等待來源",
+        "已記錄來源，等待觀察",
+        "已記錄觀察，等待照護安排",
+        "已指定照護角色，等待結果",
+        "已完成照護或返家複查，等待下次複查",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Plant row created—care scope pending",
+        "Care scope checked—source pending",
+        "Source recorded—observation pending",
+        "Observation recorded—care plan pending",
+        "Care owner assigned—result pending",
+        "Care or return review complete—next review pending",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "PLANT-A | 室內植物群 | 2026-08-20 | 家庭植物觀察來源代號 | 外出期間只確認光線與澆水安排，不套用固定頻率 | 盆土與葉片狀況待照護角色依實際觀察回填 | 返家後複查並記錄需要調整的照護安排 | 植物照護角色 | 已記錄觀察，等待照護安排\nPLANT-B | 陽台盆栽 | 2026-08-22 | 陽台照護筆記代號 | 颱風或高溫前先確認移動與遮蔽安排 | 不以單次外觀判定植物健康或病蟲害 | 由家庭角色回填實際照護結果，問題交給園藝專業來源 | 備援家庭角色 | 已指定照護角色，等待結果"
+    : "PLANT-A | Indoor plant group | 2026-08-20 | Household plant-observation code | During the absence, check only light and watering arrangements; do not apply a fixed frequency | Soil and leaf observations will be recorded by the care owner | Review after return and note any care adjustment | Plant-care role | Observation recorded—care plan pending\nPLANT-B | Balcony pots | 2026-08-22 | Balcony-care note code | Check moving and shade plans before a storm or heat | Do not infer plant health or pests from one visual check | A household role records the observed care result; route questions to a gardening source | Backup household role | Care owner assigned—result pending";
+  return {
+    intro: zh
+      ? "把外出期間的植物照護範圍、來源、觀察、澆水或移動安排、負責角色與返家複查分開記錄。工具不診斷植物、不保證存活，也不取代園藝或植物專業建議。"
+      : "Separate plant-care scope, sources, observations, watering or moving plans, owners and return review while away. This tool does not diagnose plants, guarantee survival or replace qualified gardening advice.",
+    fields: [
+      text("review", zh ? "植物照護交接私人代號" : "Private plant-care handoff reference", zh ? "使用家庭代號，不要輸入姓名、地址、門禁或私人通信。" : "Use a household code; do not enter names, addresses, access details or private correspondence.", "PLANT-REVIEW-2026-A"),
+      { name: "context", label: zh ? "照護交接情境" : "Plant-care handoff context", type: "select", options: zh ? ["短期外出代澆水", "長途旅行留守", "颱風或高溫前安排", "搬家或陽台調整", "返家後植物複查", "其他植物照護交接"] : ["Short absence watering", "Extended travel coverage", "Storm or heat preparation", "Move or balcony change", "Return-home plant review", "Other plant-care handoff"] },
+      { name: "reviewDate", label: zh ? "本次照護複查日期" : "Current care-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次照護或返家複查日期" : "Next care or return-review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "植物與照護來源地圖" : "Plant and care source map", zh ? "只填安全來源代號，不要貼住址、電話、門禁或私人訊息。" : "Use safe source codes; do not paste addresses, phone numbers, access details or private messages.", "PLANTS-P1; TRAVEL-T1; GARDEN-G1"),
+      text("rows", zh ? "植物照護交接狀態列" : "Plant-care handoff rows", zh ? "每行 9 欄：ID｜植物或群組代號｜觀察日期 YYYY-MM-DD｜來源代號｜照護範圍或情境｜光線、澆水、移動或遮蔽觀察｜下一步或例外｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | plant or group code | observation date YYYY-MM-DD | source code | care scope or context | light, watering, moving or shade observation | next action or exception | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護植物照片與照護筆記位置" : "Protected plant photos and care-note location", zh ? "只寫保管流程或容器代號，不要放地址、姓名、電話或私人通信。" : "Name a custody process or container, not addresses, names, phone numbers or private correspondence.", zh ? "家庭紀錄／植物照護／PLANT-REVIEW-2026-A／受保護來源" : "Household records / plant care / PLANT-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次植物照護複查日期。" : "Enter valid current and next plant-care review dates.";
+      if (next < review) return zh ? "下一次照護或返家複查日期不能早於本次複查。" : "The next care or return review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全植物代號、來源地圖與受保護位置。" : "Provide a safe plant code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行植物照護交接列。" : "Enter 1 to 14 plant-care rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `植物第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Plant line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行植物紀錄都需要唯一 ID。" : "Every plant row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `植物第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Plant line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const thin = parsed.filter((row) => row.parts[1].length < 3 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `植物第 ${thin.map((row) => row.line).join("、")} 行需要植物、來源、照護範圍、觀察、下一步與角色。` : `Plant line ${thin.map((row) => row.line).join(", ")} needs a plant, source, care scope, observation, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址或案件識別資料；請改用安全代號。" : "A full contact, address or case identifier was detected; use safe codes.";
+      if (/password|passcode|full address|access code|private message|姓名|密碼|完整地址|門禁|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或私人通信；請只保留安全來源代號。" : "Sensitive data or private correspondence was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭植物照護交接複查" : " — household plant-care handoff review"), (zh ? "交接情境：" : "Handoff context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次照護或返家複查：" : "Next care or return review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已完成照護或複查列：" : "Completed or reviewed rows: ") + closed.length, (zh ? "植物與照護來源地圖：" : "Plant and care source map: ") + values.source.trim(), (zh ? "有版本的植物觀察與照護安排\n" : "Versioned plant observations and care plans\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜植物：" : " — plant: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜範圍：" : " — scope: ") + row.parts[4] + (zh ? "｜觀察：" : " — observation: ") + row.parts[5] + (zh ? "｜下一步：" : " — next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護植物照片與照護筆記位置：" : "Protected plant photos and care-note location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭植物照護交接觀察，不診斷植物、不保證存活、不判定病蟲害或安全；請以實際照護紀錄與合格園藝來源為準。" : "This output only organizes household plant-care handoff observations. It does not diagnose plants, guarantee survival or decide pests or safety; use actual care records and qualified gardening sources."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7757,6 +7821,9 @@ const definitions: Record<string, Definition> = {
   "household-mail-package-handoff-log": {
     ...mailPackageHandoffDefinition("en"),
   },
+  "household-plant-care-handoff-log": {
+    ...plantCareHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7842,6 +7909,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-mail-package-handoff-log": {
     ...mailPackageHandoffDefinition("zh-TW"),
+  },
+  "household-plant-care-handoff-log": {
+    ...plantCareHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

@@ -1928,6 +1928,14 @@
     "headings": "Mail and Package Handoff Log Define the handoff window Separate expected time from observed custody Assign custody and close with a result"
   },
   {
+    "title": "Free Plant Care Handoff Log | Watering, Light, Weather and Return Review | FamilyBoard",
+    "description": "Coordinate household plant care while away with safe source codes, observations, owner roles and return review—without diagnosing plants or storing private access details.",
+    "route": "/tools/household-plant-care-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "plant care handoff log",
+    "headings": "Plant Care Handoff Log Use a safe reference Record observations, not diagnoses Separate plans from results"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -18068,6 +18068,46 @@ An expected window is a plan. “Building notice appeared” or “a package was
 
 Give one role the next action and keep planned pickups open until custody or return review is actually observed. Future mail organizers or parcel-bin affiliate content must stay outside controls and cannot promise security or delivery.
 
+---
+
+## Page 255 — Plant Care Handoff Log
+**Slug:** /tools/household-plant-care-handoff-log/
+**Primary intent:** organize household plant care handoffs during travel without plant diagnosis or private access data
+**Title tag:** Free Plant Care Handoff Log | Watering, Light, Weather and Return Review | FamilyBoard
+**Meta description:** Coordinate household plant care while away with safe source codes, observations, owner roles and return review—without diagnosing plants or storing private access details.
+**Primary keyword concept:** plant care handoff log
+**Cluster:** household-operations
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /tools/household-trip-packing-handoff-log/, /tools/household-mail-package-handoff-log/, /zh-tw/tools/household-plant-care-handoff-log/
+**FAQ:**
+- Q: Does this tool tell me how often to water a plant?
+  A: No. It organizes a household handoff and observations; watering needs must come from the plant's care notes and a qualified gardening source.
+- Q: Should I enter my address or access code for the caretaker?
+  A: No. Use safe references and keep necessary access details in a separate controlled process.
+- Q: Does a completed watering row prove that the plant is healthy?
+  A: No. It records an observed action or review, not plant health, survival or pest status.
+
+# Plant Care Handoff Log
+
+Travel and weather changes create a household responsibility that is easy to leave in a text thread: which plants need a look, where the care notes live, who is responsible and what happened after the household returns. This free tool separates the care scope, source, observation, next action, owner and result. It does not diagnose plants or guarantee survival.
+
+## Use a safe reference
+
+Create a code such as `PLANT-REVIEW-A` for the care window. Use broad groups like “indoor plant group” or “balcony pots.” Do not place names, addresses, access codes, phone numbers or private messages in the shared row; keep photos and detailed notes in a protected source.
+
+## Record observations, not diagnoses
+
+“Soil surface looked dry; check the original care note” is an observation and next action. It is not a diagnosis of dehydration. Weather, light and container conditions vary, so route plant-health, pest or toxicity questions to the actual care notes or a qualified source.
+
+## Separate plans from results
+
+“Someone may check on Saturday” is an expectation. “A backup role was asked to look” is an action. Keep the row open until the caretaker records what was actually observed. A future affiliate comparison for watering tools or shade materials must sit outside the controls and cannot promise survival or suitability.
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.
