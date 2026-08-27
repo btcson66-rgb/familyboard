@@ -999,8 +999,8 @@ const checks = [
     require: [
       "Household Donation Handoff Log",
       'hreflang="zh-TW"',
-      "先寫清楚這列為什麼存在",
-      "來源和物品觀察要分開",
+      "Record condition modestly",
+      "Verify the receiving channel",
     ],
   },
   {
