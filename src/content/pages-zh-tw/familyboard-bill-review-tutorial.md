@@ -2,12 +2,12 @@
 title: "FamilyBoard 家庭帳單怎麼追蹤？來源、到期日與回覆 App 教學"
 description: "用 FamilyBoard 把家庭帳單與通知的來源、到期日、負責角色和回覆結果分開管理；不保存帳號、金額或付款資料。"
 route: "/zh-tw/guides/familyboard-bill-review-tutorial/"
+alternateRoute: "/guides/familyboard-bill-review-tutorial/"
 primaryIntent: "教台灣家庭使用 FamilyBoard 管理每月帳單、公用事業通知、網路服務與退款回覆"
 primaryKeyword: "FamilyBoard 帳單追蹤教學"
 locale: "zh-TW"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

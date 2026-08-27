@@ -2,12 +2,12 @@
 title: "FamilyBoard 家庭網路斷線怎麼記錄？暫代與恢復 App 教學"
 description: "用 FamilyBoard 整理家庭寬頻中斷、業者通知、遠距工作或學習影響、暫代方案與恢復後複查，不把帳號或 Wi-Fi 密碼放進共享紀錄。"
 route: "/zh-tw/guides/familyboard-internet-incident-tutorial/"
+alternateRoute: "/guides/familyboard-internet-incident-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭使用 FamilyBoard 追蹤網路中斷與恢復交接"
 primaryKeyword: "FamilyBoard 網路中斷教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

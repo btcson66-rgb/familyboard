@@ -2,12 +2,12 @@
 title: "FamilyBoard 水電瓦斯表怎麼記錄？搬家與帳單前後 App 教學"
 description: "用 FamilyBoard 在台灣家庭情境中記錄水電瓦斯表的人工讀數、查看日期、來源代號與顯示狀況，不計算帳單或保存表號。"
 route: "/zh-tw/guides/familyboard-meter-reading-tutorial/"
+alternateRoute: "/guides/familyboard-meter-reading-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭使用 FamilyBoard 做表計人工讀數交接與複查"
 primaryKeyword: "FamilyBoard 水電表讀數教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

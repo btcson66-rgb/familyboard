@@ -143,6 +143,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-event-duration-calculator/",
     "/tools/household-event-source-index-log/",
     "/guides/familyboard-event-source-index-tutorial/",
+    "/guides/familyboard-bill-review-tutorial/",
+    "/guides/familyboard-internet-incident-tutorial/",
+    "/guides/familyboard-meter-reading-tutorial/",
     "/guides/water-leak-response-home-records/",
     "/tools/household-storm-readiness-review/",
     "/guides/storm-preparation-home-checklist/",
@@ -1118,6 +1121,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-event-source-index-tutorial/",
       alternate: "/guides/familyboard-event-source-index-tutorial/",
       heading: "FamilyBoard 家庭事件來源索引怎麼用？公告、照片與交接的實作教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-bill-review-tutorial/",
+      alternate: "/guides/familyboard-bill-review-tutorial/",
+      heading: "FamilyBoard 家庭帳單怎麼追蹤？",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-internet-incident-tutorial/",
+      alternate: "/guides/familyboard-internet-incident-tutorial/",
+      heading: "FamilyBoard 家庭網路斷線怎麼記錄？先交接影響，再複查恢復",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-meter-reading-tutorial/",
+      alternate: "/guides/familyboard-meter-reading-tutorial/",
+      heading: "FamilyBoard 水電瓦斯表怎麼記錄？把人工觀察和帳單判定分開",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -2845,6 +2863,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-event-source-index-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-bill-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-bill-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-internet-incident-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-internet-incident-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-meter-reading-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-meter-reading-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

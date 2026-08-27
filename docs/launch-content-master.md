@@ -21103,6 +21103,209 @@ Before sharing an index, remove anything that identifies an unintended person, a
 
 ---
 
+## Page 308 — How to Use FamilyBoard for Household Bill Source Reviews
+**Slug:** /guides/familyboard-bill-review-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-bill-review-tutorial/
+**Primary intent:** learn a source-first household bill review workflow without turning FamilyBoard into a banking or payment service
+**Title tag:** How to Track Household Bills in FamilyBoard | Source, Due Date and Handoff Tutorial
+**Meta description:** Learn a practical FamilyBoard workflow for household bills, utility notices and service replies. Record source pointers, review dates and owners without storing account numbers, payment data or full statements.
+**Primary keyword concept:** FamilyBoard household bill tracking tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/tools/household-bill-source-status-log/`, `/guides/recurring-bills-tracker/`, `/guides/organize-household-subscriptions/`, `/zh-tw/guides/familyboard-bill-review-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard read my bills or sign into a provider?
+  A: No. It stores the household index you enter in the browser. Keep the original statement and provider account in their protected source.
+- Q: Should I enter an account number, amount or card details?
+  A: No. Use a neutral service code, dates, a source pointer, a household role and one next action. Keep identifiers and payment details out of shared rows.
+- Q: Does a due date prove that a payment is complete?
+  A: No. A due date is an observation from a document. Completion requires confirmation from the responsible payment or service source.
+- Q: Can a family vote resolve a billing dispute?
+  A: No. The tool can record what needs to be asked and who will ask it, but a provider, contract or qualified financial/legal source controls the answer.
+- Q: Can an affiliate product change the bill status?
+  A: No. Any future recommendation must be outside the form, clearly disclosed and optional; it cannot verify an account or close an open issue.
+
+**Contextual CTA:** Start with two recent statements whose sources are easy to confuse. Build the smallest safe index, then ask another authorized household role to repeat the review.
+
+# How to Use FamilyBoard for Household Bill Source Reviews
+
+Household bill problems are often handoff problems rather than arithmetic problems. One person saw an internet statement, another received a utility notice, and a third remembers sending a reply. Later, nobody can tell which document supplied the due date, whether a provider confirmed the response or who owns the next check. FamilyBoard provides a narrow, source-first workflow for those gaps. It records a safe service code, document or notice date, due or review date, source pointer, household role, observed status, next action and an open/closed state.
+
+This workflow is not a banking app, payment processor or financial adviser. FamilyBoard does not read an inbox, sign in to a provider, calculate a balance, compare plans or decide a contractual obligation. Keep the complete statement, account identity, payment record and correspondence in the protected system that controls them.
+
+## Start with two recent sources
+
+Choose two documents that represent the household's real work, such as an internet statement and a water or electricity notice. Do not import an entire year before testing the handoff. A small sample reveals whether the next person can find the source, understand which date was observed, identify the owner and continue an unresolved item.
+
+Open the [Household Bill Source Status Log](/tools/household-bill-source-status-log/) and use a neutral code such as `BILL-REVIEW-A`. A code should connect related household rows without exposing an address, account number, telephone number, case reference, password or person's name. If the service or source changes, create a new code or version instead of silently rewriting history.
+
+## Keep each field honest
+
+The tool's columns serve different questions. A service code identifies the row. A statement or notice date says what the source displayed. A due or review date says when the household should look again. A source pointer leads an authorized person back to the protected statement, portal or reply. The role names the person responsible for the next check, not necessarily the person whose name appears on the bill. The observed status should describe what was seen—such as “provider reply not yet confirmed”—rather than claim “paid” when no responsible source has confirmed it.
+
+Use a pointer like `ISP-APRIL-2` or `UTILITY-NOTICE-B` and a minimal observation. Do not paste the statement, payment receipt, full address, customer ID, bank information, card number, exact balance or private message into a shared row. A pointer is useful only when the authorized reviewer knows where the protected original lives and when it was last checked.
+
+## Separate due dates, actions and confirmation
+
+Three events are easy to collapse: a document publishes a due date, a household member takes an action, and the service source confirms a result. A calendar reminder or a family message proves only that someone remembered or attempted something. Keep the source date and action date separate, then leave the row open until the controlling source confirms the result. If a provider portal shows “submitted” but no receipt or response is available, record that limited observation and assign the next check rather than upgrading it to completed.
+
+When a bill looks wrong, do not use the tool to calculate a dispute or infer a refund. Preserve the source pointer, state the question in neutral terms and route it to the provider, contract owner or qualified professional. A household meeting can decide who will ask and when to review, but it cannot replace a provider response or legal/financial advice.
+
+## Review recurring services without mixing them
+
+Water, electricity, gas, internet, building fees, memberships and refunds may all appear in the same month, but they have different issuers, notice channels and response paths. Keep separate codes so the next person knows which source to open. The [Recurring Bills Tracker](/guides/recurring-bills-tracker/) can show the repeating rhythm; the source-status tool keeps one document's observed state and next owner. A list of recurring services should not become a duplicate of protected statements.
+
+## Handoff, travel and closure
+
+For a trip or temporary role change, share only the service codes, relevant dates and the path to the protected source. Do not hand over a complete account database or payment credentials. On return, reduce the temporary sharing scope and review rows that still await a provider, payment or refund confirmation. If a person says “I handled it,” ask which source confirmed the result and record that pointer; do not overwrite an open row with a memory.
+
+Do not delete an old row just because a service was cancelled or a notice was replaced. Record why it stopped applying and the condition that would reopen it. A dated history helps a later household member understand what was known at the time without recovering every private document.
+
+## Privacy and future commercial panels
+
+FamilyBoard's browser tool does not transmit these fields to the FamilyBoard service. A download or printout is still a new copy, so remove identifiers before sharing and store it with the same care as the original. Future suggestions for folders, scanners or bill organisers may appear after the educational answer in a separate, skippable panel with a clear affiliate disclosure. A paid link cannot authenticate a provider, decide a dispute, submit a payment or change the tool's status.
+
+**Next step:** index two recent household sources, ask a second authorized role to locate each protected original, and leave one clearly owned follow-up for anything that is not confirmed.
+
+---
+
+## Page 309 — How to Use FamilyBoard for a Household Internet Incident Review
+**Slug:** /guides/familyboard-internet-incident-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-internet-incident-tutorial/
+**Primary intent:** learn a local-first workflow for recording a household internet interruption, temporary workarounds and recovery checks without storing credentials
+**Title tag:** FamilyBoard Internet Outage Log Tutorial | Record Impact, Workarounds and Recovery
+**Meta description:** Use FamilyBoard to record a home internet interruption, provider source, affected household work and recovery checks. Keep Wi-Fi passwords and account credentials out of shared records.
+**Primary keyword concept:** FamilyBoard internet outage log tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/tools/household-internet-incident-review-log/`, `/guides/familyboard-offline-backup-restore/`, `/guides/wifi-router-maintenance-records/`, `/zh-tw/guides/familyboard-internet-incident-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard monitor my router or detect an outage automatically?
+  A: No. It records observations and source pointers that a household member enters; it does not inspect a network, provider account or password.
+- Q: Can I put the Wi-Fi password in the handoff summary?
+  A: No. Keep credentials in the appropriate protected setting. The shared row needs only a safe code, impact, temporary process and next check.
+- Q: Does a provider status page prove every household device is working?
+  A: No. It is one source observation. Record which devices or services the household actually rechecked after the notice.
+- Q: Should I delete the incident after service returns?
+  A: No. Keep the dated interruption and add recovery observations. Open a new row when a different incident or maintenance event begins.
+
+**Contextual CTA:** Record one recent interruption with a neutral code, then test whether another household role can repeat the recovery checklist without seeing a password.
+
+# How to Use FamilyBoard for a Household Internet Incident Review
+
+Remote work, school, care coordination and household backups can all depend on one connection. During an interruption, families commonly restart a router, ask in a group chat whether anyone else is offline and then lose track of what was affected. FamilyBoard gives that moment a small handoff record: a safe incident code, the service or household scope, observation and review dates, a source pointer, actual impact, a temporary path, a responsible role and a status.
+
+It is not a network monitor, speed-test service, provider support desk or security scanner. It does not log in, inspect router settings, store Wi-Fi credentials, contact an ISP or declare that an outage is resolved. Use the provider's official channel for service facts and use qualified support for equipment or safety questions.
+
+## Define a narrow incident
+
+Open the [Household Internet Incident Review Log](/tools/household-internet-incident-review-log/) and start with a neutral code such as `NET-REVIEW-A`. Describe the scope as “primary home connection,” “work laptop” or “study tablet,” not an address, customer number, phone number or account identity. Choose a scope that can be rechecked. A household-wide incident and one device's configuration problem should not share a row simply because they occurred on the same day.
+
+## Record sources and observations separately
+
+The provider status page, a maintenance notice or a support reply is one source. A family member seeing that a laptop cannot reach a work service is another observation. Keep both pointers. If the provider reports an area as normal while several household devices remain offline, record the difference instead of choosing the more convenient explanation. A social post, old message or search snippet can help locate the official source, but it is not automatically the latest service answer.
+
+The incident form should contain no password, network key, router login, full address, account number or private conversation. Use a pointer such as `ISP-STATUS-1` or `HOME-OBS-3`, a date and a minimal fact. An authorized person should be able to find the protected notice or support case without the shared row becoming a copy of it.
+
+## Make temporary workarounds reversible
+
+If essential work needs a temporary route, record the process and the time to recheck—not the hotspot password or a private contact list. A household might use an already approved offline file, a permitted mobile connection or a paper contact process. The tool does not decide whether a workaround is appropriate for an employer, school, care provider or emergency situation; ask the responsible organisation when that context matters.
+
+Give the temporary action one owner and one check. “Confirm work laptop sync after connection returns | household admin” is observable. “Fix internet” is not. If a workaround creates costs, contractual questions or safety concerns, leave the item open and route it to the provider, employer, school or qualified professional.
+
+## Recovery is a set of checks, not one light
+
+A provider notice saying service is restored starts a household review; it does not prove every function works. Recheck the affected devices and services that matter to the household, then record what was actually tested and what remains open. A router indicator, one successful website or a speed result cannot stand in for a work laptop, learning platform, backup or care contact. If only one device reconnects, keep the incident open for the others.
+
+FamilyBoard is local-first. A device that already has the app shell and records may still show local information while the wider internet is unavailable, but that does not create synchronisation with another device or make an external service reachable. Practise a controlled backup and restore using the [offline backup guide](/guides/familyboard-offline-backup-restore/) before an incident, then verify which copy a household role can actually open.
+
+## Keep history and practise the handoff
+
+When the provider changes its notice, the scope expands, the temporary plan changes or a new person takes ownership, add a dated version or a new row. Do not replace the original observation with the final status; the sequence explains what the household knew. After recovery, record the provider check date, the devices tested and any external service still awaiting confirmation.
+
+Once a month, ask someone who did not create the row to locate the protected source using only the safe code and pointer, describe the temporary path and name the recovery checks. If they see a credential or cannot find the source, reduce the shared data and repair the protected-location pointer before sharing again.
+
+## Privacy and future product content
+
+Router labels, backup SIMs, cables and UPS devices may be useful future comparison topics, but no product guarantees connectivity, security, emergency communications or data recovery. Any affiliate panel must sit outside the form, identify the commercial relationship and remain skippable. It cannot request credentials, close an incident or replace an ISP or emergency source.
+
+**Next step:** document one recent interruption, keep the provider source and household impact as separate pointers, and ask another authorized role to repeat the recovery check without seeing any credential.
+
+---
+
+## Page 310 — How to Use FamilyBoard for Household Meter Reading Reviews
+**Slug:** /guides/familyboard-meter-reading-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-meter-reading-tutorial/
+**Primary intent:** learn to record a safe, manual household meter observation for move-in, billing review or maintenance handoff without making a billing or safety judgment
+**Title tag:** FamilyBoard Meter Reading Tutorial | Record Water, Electricity and Gas Observations Safely
+**Meta description:** Learn how to record a manual household meter observation in FamilyBoard for move-in, billing or maintenance handoff. Keep meter IDs and account details protected; do not treat the note as an official bill.
+**Primary keyword concept:** FamilyBoard meter reading tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/tools/household-meter-reading-review-log/`, `/tools/household-bill-source-status-log/`, `/guides/organize-utility-account-information/`, `/zh-tw/guides/familyboard-meter-reading-tutorial/`
+**FAQ:**
+- Q: What is a meter reading row for?
+  A: It records what a household member safely observed, when they observed it and where the protected source lives. It is not an official utility reading or bill calculation.
+- Q: Does FamilyBoard subtract readings or calculate a charge?
+  A: No. Rates, billing periods, estimates and meter changes belong to the responsible provider and its statement.
+- Q: Can I open a locked meter box or move an appliance to take a photo?
+  A: No. Stop when the display cannot be read safely. Record the uncertainty and ask the provider or an appropriate professional.
+- Q: Should an installation or move-out reading overwrite the old one?
+  A: No. Use a new dated row so the household can distinguish move-in, service and later observations.
+
+**Contextual CTA:** Make one safe, manual observation from an accessible position, then verify that the next person can distinguish it from the provider's official billing record.
+
+# How to Use FamilyBoard for Household Meter Reading Reviews
+
+During a move, before a utility statement, or around a maintenance visit, a household may need to remember what a display appeared to show. That memory can be useful, but it is not the same as a provider's official reading, billing period or safety assessment. FamilyBoard's meter-review workflow keeps the observation narrow: a safe code, service type, observation date, displayed text, protected source pointer, display condition, comparison note, next check and status.
+
+The tool does not read a meter automatically, subtract values, apply rates, identify an account, verify a bill or instruct anyone to open equipment. It does not replace the utility, landlord, building manager or qualified professional controlling the official result.
+
+## Choose the purpose before recording
+
+Open the [Household Meter Reading Review Log](/tools/household-meter-reading-review-log/) and use a code such as `METER-REVIEW-A`. Select a purpose—move-in, move-out, routine observation, before/after a statement, outage context or maintenance handoff—so a later reader understands why the row exists. Do not enter a meter number, customer ID, account holder, full address, statement amount or payment detail. Keep those identifiers in the provider's protected source.
+
+## Safety comes before a clearer number
+
+Read only from a position where you can stand safely. Do not climb, move a heavy appliance, unlock a cabinet, remove a cover, touch wiring or approach gas and hot equipment to improve a photograph. If glare, damage or distance makes the display uncertain, write that it was not confirmed and assign a source or professional follow-up. A neat number is not worth creating a new hazard, and FamilyBoard never asks a household member to reproduce a risky condition.
+
+## Distinguish display, source and comparison
+
+The displayed text is the household's manual observation. A source pointer may lead to a protected photograph, move-in report, provider notice or service record. A comparison note can say “appears different from the 2026-08-01 observation” without declaring that a bill is wrong or a device is failing. Preserve the two dates and their conditions. Estimates, rollover digits, a replaced meter, unclear transcription and different billing periods can all change what a later reviewer sees.
+
+If the utility statement and a household observation disagree, keep both pointers and send the question to the responsible provider. The tool does not calculate a consumption charge, infer a leak, decide a contract or certify an installation. The [Household Bill Source Status Log](/tools/household-bill-source-status-log/) can track the separate statement review, while this row preserves what was manually visible.
+
+## Use new rows for new events
+
+Move-in, move-out, a service visit, a display change and an outage context have different purposes. Create a new dated row when the meter is replaced, the display format changes, the property changes hands or a new service event begins. Do not overwrite the move-in observation with the latest number; the sequence may be the only way to explain which period a later question concerns.
+
+## Handoff and backup
+
+The next household role usually needs only the service type, observation date, source pointer, display condition and next check. A family meeting can ask the handoff person to state which provider source they would contact and which uncertainty remains. If they need to see a customer name, account number or full address, move that information back to the protected source rather than expanding the shared row. A browser download or printout is a new copy and should receive the same privacy review as the original.
+
+## Privacy and future product recommendations
+
+Labels, flashlights or energy-monitoring products may become useful educational comparisons, but a product cannot guarantee a reading, bill, installation or safety. Any future affiliate panel belongs after the answer, outside the form, with a clear disclosure and an easy skip. It must not ask for meter IDs, account credentials or photographs of protected equipment, and it cannot replace the provider or an appropriate professional.
+
+**Next step:** record one safe observation, retain the source and condition beside it, and ask another authorized household role to explain why it is not an official billing conclusion.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

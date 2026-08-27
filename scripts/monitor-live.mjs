@@ -197,6 +197,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-trip-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-bill-source-status-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-bill-source-status-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-bill-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-bill-review-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-share-access-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-share-access-review-log/</loc>",
@@ -209,9 +210,11 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-document-renewal-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-internet-incident-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-internet-incident-review-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-internet-incident-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-internet-incident-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-meter-reading-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-meter-reading-review-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-meter-reading-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-meter-reading-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-accessibility-walkthrough-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-accessibility-walkthrough-log/</loc>",
@@ -464,6 +467,33 @@ const checks = [
       "Household Event Source Index Log",
       'hreflang="zh-TW"',
       "authenticate a source",
+    ],
+  },
+  {
+    path: "/guides/familyboard-bill-review-tutorial/",
+    require: [
+      "How to Use FamilyBoard for Household Bill Source Reviews",
+      'hreflang="zh-TW"',
+      "Separate due dates, actions and confirmation",
+      "does not read an inbox",
+    ],
+  },
+  {
+    path: "/guides/familyboard-internet-incident-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Household Internet Incident Review",
+      'hreflang="zh-TW"',
+      "Recovery is a set of checks, not one light",
+      "does not log in",
+    ],
+  },
+  {
+    path: "/guides/familyboard-meter-reading-tutorial/",
+    require: [
+      "How to Use FamilyBoard for Household Meter Reading Reviews",
+      'hreflang="zh-TW"',
+      "Safety comes before a clearer number",
+      "does not read a meter automatically",
     ],
   },
   {
@@ -2102,10 +2132,10 @@ const checks = [
     require: [
       "FamilyBoard 家庭帳單怎麼追蹤",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先從兩張近期文件開始",
       "到期日、付款行動與確認結果不同",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-share-access-review-log/",
@@ -2178,10 +2208,10 @@ const checks = [
     require: [
       "FamilyBoard 家庭網路斷線怎麼記錄",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先建立小範圍與安全代號",
       "恢復後不要只看一個指示燈",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-meter-reading-review-log/",
@@ -2197,10 +2227,10 @@ const checks = [
     require: [
       "FamilyBoard 水電瓦斯表怎麼記錄",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先選一個情境與安全代號",
       "人工抄錄時先顧安全",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-accessibility-walkthrough-log/",

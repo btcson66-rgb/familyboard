@@ -2256,6 +2256,30 @@
     "headings": "How to Use FamilyBoard for a Household Event Source Index Step 1: Name the event without exposing the household Step 2: Record the date you actually checked Step 3: Describe the source's role Step 4: Link a protected pointer to a minimal observation Step 5: Give the next person one observable action Use the right FamilyBoard tool Version changes are evidence, not clutter Privacy, sharing and affiliate boundaries"
   },
   {
+    "title": "How to Track Household Bills in FamilyBoard | Source, Due Date and Handoff Tutorial",
+    "description": "Learn a practical FamilyBoard workflow for household bills, utility notices and service replies. Record source pointers, review dates and owners without storing account numbers, payment data or full statements.",
+    "route": "/guides/familyboard-bill-review-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard household bill tracking tutorial",
+    "headings": "How to Use FamilyBoard for Household Bill Source Reviews Start with two recent sources Keep each field honest Separate due dates, actions and confirmation Review recurring services without mixing them Handoff, travel and closure Privacy and future commercial panels"
+  },
+  {
+    "title": "FamilyBoard Internet Outage Log Tutorial | Record Impact, Workarounds and Recovery",
+    "description": "Use FamilyBoard to record a home internet interruption, provider source, affected household work and recovery checks. Keep Wi-Fi passwords and account credentials out of shared records.",
+    "route": "/guides/familyboard-internet-incident-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard internet outage log tutorial",
+    "headings": "How to Use FamilyBoard for a Household Internet Incident Review Define a narrow incident Record sources and observations separately Make temporary workarounds reversible Recovery is a set of checks, not one light Keep history and practise the handoff Privacy and future product content"
+  },
+  {
+    "title": "FamilyBoard Meter Reading Tutorial | Record Water, Electricity and Gas Observations Safely",
+    "description": "Learn how to record a manual household meter observation in FamilyBoard for move-in, billing or maintenance handoff. Keep meter IDs and account details protected; do not treat the note as an official bill.",
+    "route": "/guides/familyboard-meter-reading-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard meter reading tutorial",
+    "headings": "How to Use FamilyBoard for Household Meter Reading Reviews Choose the purpose before recording Safety comes before a clearer number Distinguish display, source and comparison Use new rows for new events Handoff and backup Privacy and future product recommendations"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

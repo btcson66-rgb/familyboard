@@ -2456,6 +2456,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-bill-review-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-bill-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-internet-incident-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-internet-incident-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-meter-reading-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-meter-reading-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2809,7 +2833,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-bill-review-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-bill-review-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -2949,7 +2973,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-internet-incident-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-internet-incident-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -2977,7 +3001,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-meter-reading-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-meter-reading-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
