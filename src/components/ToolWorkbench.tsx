@@ -3313,6 +3313,72 @@ const documentRenewalDefinition = (locale: Locale): Definition => {
   };
 };
 
+const internetIncidentDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立中斷列，等待影響範圍",
+        "已確認範圍，等待服務狀態來源",
+        "已核對服務來源，等待家庭影響觀察",
+        "已記錄影響，等待暫代方案",
+        "已觀察暫代方案，等待恢復確認",
+        "已確認恢復，等待後續來源複查",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Incident row created—impact scope pending",
+        "Scope checked—service-status source pending",
+        "Service source checked—household impact pending",
+        "Impact recorded—household workaround pending",
+        "Workaround observed—restoration confirmation pending",
+        "Restoration confirmed—follow-up source pending",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "NET-A | 家庭主要網路服務 | 2026-08-20 | 2026-08-20 | 業者狀態頁來源代號 | 家庭裝置無法連線；敏感資料另行保管 | 暫用行動網路處理必要聯絡；恢復結果待核對 | 網路交接角色 | 已核對服務來源，等待家庭影響觀察\nNET-B | 遠距工作與學習連線 | 2026-08-22 | 2026-08-23 | 官方通知來源代號 | 部分時段可用；外部服務狀態另行確認 | 恢復後重新開啟必要裝置並記錄結果 | 備援家庭角色 | 已觀察暫代方案，等待恢復確認"
+    : "NET-A | Primary household internet service | 2026-08-20 | 2026-08-20 | Provider status-page source code | Household devices could not connect; no account or credential recorded | Used mobile data for essential contact; restoration result pending | Household connectivity role | Service source checked—household impact pending\nNET-B | Remote work and learning connection | 2026-08-22 | 2026-08-23 | Official notice source code | Available only in some periods; external service status checked separately | Reopen essential devices after restoration and record result | Backup household role | Workaround observed—restoration confirmation pending";
+  return {
+    intro: zh
+      ? "把家庭網路中斷的範圍、官方狀態來源、實際影響、暫代方案與恢復後複查分開記錄。工具不保存客戶編號、帳號、密碼、Wi-Fi 憑證或完整通信內容，也不診斷線路或保證服務恢復。"
+      : "Separate an internet incident's scope, provider status source, observed impact, household workaround and post-restoration review. This tool stores no customer IDs, accounts, passwords, Wi-Fi credentials or full correspondence and does not diagnose a line or guarantee restoration.",
+    fields: [
+      text("review", zh ? "網路中斷複查私人代號" : "Private connectivity-incident reference", zh ? "使用家庭代號，不要輸入客戶編號、帳號、電話、地址或密碼。" : "Use a household code; do not enter customer IDs, accounts, phone numbers, addresses or passwords.", "NET-REVIEW-2026-A"),
+      { name: "context", label: zh ? "網路複查情境" : "Connectivity review context", type: "select", options: zh ? ["家庭寬頻中斷", "遠距工作或學習", "照護或緊急聯絡備援", "搬家開通或移機", "業者維修或區域通知", "其他家庭連線"] : ["Household broadband outage", "Remote work or learning", "Care or emergency-contact backup", "Move-in activation or relocation", "Provider maintenance or area notice", "Other household connectivity"] },
+      { name: "reviewDate", label: zh ? "本次複查日期" : "Current review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次複查日期" : "Next review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "業者狀態與官方通知來源地圖" : "Provider-status and official-notice source map", zh ? "只填安全來源代號，不要貼客戶編號、登入資訊或私人通信。" : "Use safe source codes; do not paste customer IDs, login details or private correspondence.", "STATUS-S1; NOTICE-N1; RESTORE-R1"),
+      text("rows", zh ? "網路中斷與恢復狀態列" : "Connectivity-incident and restoration rows", zh ? "每行 9 欄：ID｜服務或家庭範圍｜觀察日期 YYYY-MM-DD｜複查日期 YYYY-MM-DD｜來源代號｜實際影響觀察｜暫代方案或恢復後下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | service or household scope | observed date YYYY-MM-DD | review date YYYY-MM-DD | source code | observed impact | workaround or post-restoration next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護通知與交接紀錄位置" : "Protected notices and handoff-record location", zh ? "只寫保管流程或容器代號，不要放客戶資料、密碼、Wi-Fi 憑證或私人通信。" : "Name a custody process or container, not customer data, passwords, Wi-Fi credentials or private correspondence.", zh ? "家庭紀錄／連線中斷／NET-REVIEW-2026-A／受保護來源" : "Household records / connectivity incident / NET-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次複查日期。" : "Enter valid current and next review dates.";
+      if (next < review) return zh ? "下一次複查日期不能早於本次複查。" : "The next review date cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全中斷代號、來源地圖與受保護位置。" : "Provide a safe incident code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行網路中斷列。" : "Enter 1 to 14 connectivity-incident rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `中斷第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Incident line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行中斷紀錄都需要唯一 ID。" : "Every incident row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `中斷第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Incident line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => ({ observed: strictIsoDate(row.parts[2]), review: strictIsoDate(row.parts[3]) }));
+      if (dates.some((item) => !item.observed || !item.review || item.observed > review || item.review < item.observed)) return zh ? "每列觀察與複查日期必須有效，且複查不能早於觀察。" : "Each observed and review date must be valid, with review no earlier than observation.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const invalidClosed = closed.filter((row) => { const rowReview = dates[row.line - 1]?.review; return rowReview ? rowReview > review : false; });
+      if (invalidClosed.length) return zh ? `已完成的中斷第 ${invalidClosed.map((row) => row.line).join("、")} 行複查日期不能晚於本次複查。` : `Closed incident lines cannot have a review date later than the current review.`;
+      const thin = parsed.filter((row) => row.parts[1].length < 5 || row.parts[4].length < 6 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `中斷第 ${thin.map((row) => row.line).join("、")} 行需要範圍、來源、影響、下一步與角色。` : `Incident line ${thin.map((row) => row.line).join(", ")} needs a scope, source, impact, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、客戶或帳務識別資料；請改用安全代號。" : "A full contact, address, customer or billing identifier was detected; use safe codes.";
+      if (/password|passcode|wifi password|wi-fi password|network key|account number|customer number|full address|private message|姓名|密碼|Wi-Fi 密碼|網路密碼|客戶編號|帳號|完整地址|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或私人通信；請只保留安全來源代號。" : "Sensitive data or private correspondence was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭網路中斷與恢復複查" : " — household connectivity incident and restoration review"), (zh ? "複查情境：" : "Review context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次複查：" : "Next review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已恢復或不適用列：" : "Restored or not-applicable rows: ") + closed.length, (zh ? "業者狀態與官方通知來源地圖：" : "Provider-status and official-notice source map: ") + values.source.trim(), (zh ? "有版本的中斷影響與恢復觀察\n" : "Versioned incident-impact and restoration observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index].observed as Date) + (zh ? "｜複查日：" : " — review: ") + fmt.format(dates[index].review as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[4] + (zh ? "｜影響：" : " — impact: ") + row.parts[5] + (zh ? "｜暫代／下一步：" : " — workaround/next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護通知與交接紀錄位置：" : "Protected notices and handoff-record location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭網路中斷與恢復觀察，不診斷線路、不保證服務恢復、不計算賠償、費用、契約、緊急或法律結果；請以目前業者、官方通知與適當專業來源為準。" : "This output only organizes household connectivity incidents and restoration observations. It does not diagnose a line, guarantee restoration or decide compensation, fees, contracts, emergency or legal outcomes; use the current provider, official notice and appropriate professional source."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7353,6 +7419,9 @@ const definitions: Record<string, Definition> = {
   "household-document-renewal-review-log": {
     ...documentRenewalDefinition("en"),
   },
+  "household-internet-incident-review-log": {
+    ...internetIncidentDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7420,6 +7489,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-document-renewal-review-log": {
     ...documentRenewalDefinition("zh-TW"),
+  },
+  "household-internet-incident-review-log": {
+    ...internetIncidentDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

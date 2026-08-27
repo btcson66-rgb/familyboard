@@ -1880,6 +1880,14 @@
     "headings": "Household Document Renewal Review Log Start with purpose, not a document number Identify the current source Treat dates as checkpoints Separate update, retain and hold decisions Handoff without exposing originals Future affiliate placement"
   },
   {
+    "title": "Free Household Internet Outage Log | Impact, Workaround and Recovery Review | FamilyBoard",
+    "description": "Record household internet outage scope, provider status sources, workarounds and recovery checks with safe codes—without storing account numbers or Wi-Fi credentials.",
+    "route": "/tools/household-internet-incident-review-log/",
+    "cluster": "household-operations",
+    "keywords": "household internet outage log",
+    "headings": "Household Internet Outage Log Define the affected scope Check a responsible status source Describe impact without diagnosing Record a temporary workaround Confirm recovery in layers Future affiliate placement"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

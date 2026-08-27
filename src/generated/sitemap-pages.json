@@ -1984,6 +1984,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-internet-incident-review-log/",
+    "alternateRoute": "/zh-tw/tools/household-internet-incident-review-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2357,6 +2365,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-internet-incident-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-meal-prep-tutorial/",
     "alternateRoute": "",
     "indexable": true,
@@ -2690,6 +2705,13 @@
     "alternateRoute": "/tools/household-insurance-policy-source-version-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-internet-incident-review-log/",
+    "alternateRoute": "/tools/household-internet-incident-review-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {
