@@ -1824,6 +1824,14 @@
     "headings": "Pantry and Household Consumables Expiry Review Log Record an observation, not a safety verdict Separate the label from the plan Use rotation as a follow-up task Keep private purchase details out Review by a small zone Future affiliate placement"
   },
   {
+    "title": "Free Clothing Care and Repair Log | Labels, Storage and Follow-Up | FamilyBoard",
+    "description": "Record clothing care and repair checks with safe item codes, label sources, storage zones and owners without storing names, addresses or private orders.",
+    "route": "/tools/household-clothing-care-repair-log/",
+    "cluster": "household-operations",
+    "keywords": "clothing care and repair log",
+    "headings": "Clothing Care and Repair Review Log Capture the source before choosing a treatment Separate condition from repair outcome Use groups where individual records add no value Keep personal and purchase data protected Future affiliate placement"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

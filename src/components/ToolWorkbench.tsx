@@ -2852,6 +2852,74 @@ const pantryExpiryDefinition = (locale: Locale): Definition => {
   };
 };
 
+const clothingCareDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立衣物代號，等待洗標或來源",
+        "已核對洗標或原廠來源，等待存放區域",
+        "已核對存放區域，等待狀況觀察",
+        "已記錄狀況，等待清潔、修補或收納安排",
+        "已安排照護或修補，等待負責角色複查",
+        "洗標、材質、修補或家庭安全疑問，等待負責來源確認",
+        "已完成清潔、修補、輪替或收納並保存結果",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Garment reference created—care label or source pending",
+        "Care label or manufacturer source checked—storage zone pending",
+        "Storage zone checked—condition observation pending",
+        "Condition recorded—care, repair or storage plan pending",
+        "Care or repair plan assigned—owner review pending",
+        "Care label, material, repair or household-safety question—responsible source review pending",
+        "Cleaned, repaired, rotated or stored—result preserved",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "CLOTH-A | 換季外套代號 | 2026-08-20 | 衣櫃上層 A 區代號 | 外觀與拉鍊待實際複查 | 依洗標安排清潔後收納 | 家庭衣物整理角色 | 2026-09-03 | 已安排照護或修補，等待負責角色複查\nCLOTH-B | 日常衣物組代號 | 2026-08-22 | 臥室抽屜 B 區代號 | 尺寸與布料狀況待實際複查 | 先核對洗標，再決定輪替或修補 | 家庭衣物整理角色 | 2026-08-30 | 洗標、材質、修補或家庭安全疑問，等待負責來源確認"
+    : "CLOTH-A | Seasonal coat code | 2026-08-20 | Wardrobe upper zone A code | Appearance and zipper need physical review | Follow the care label before storing after cleaning | Household clothing organizer role | 2026-09-03 | Care or repair plan assigned—owner review pending\nCLOTH-B | Everyday clothing group code | 2026-08-22 | Bedroom drawer B code | Size and fabric condition need physical review | Check the care label before deciding rotation or repair | Household clothing organizer role | 2026-08-30 | Care label, material, repair or household-safety question—responsible source review pending";
+  return {
+    intro: zh
+      ? "用安全代號分開洗標、原廠來源、存放區域、實際狀況、清潔或修補安排與下次複查。工具不解讀洗標符號、不保證材質處理方式，也不判定衣物、化學品或家人安全。"
+      : "Separate care labels, manufacturer sources, storage zones, observed condition and cleaning or repair follow-up with safe codes. This tool does not interpret care symbols, guarantee a material treatment or decide clothing, chemical or household safety.",
+    fields: [
+      text("review", zh ? "衣物紀錄私人代號" : "Private clothing review reference", zh ? "使用家庭代號，不要輸入姓名、地址、訂單或私人通信。" : "Use a household code; do not enter names, addresses, orders or private correspondence.", "CLOTHING-2026-A"),
+      { name: "scope", label: zh ? "整理情境" : "Review context", type: "select", options: zh ? ["換季衣物整理", "洗滌後狀況複查", "送修或修改交接", "搬家衣物分區", "旅行前衣物準備", "其他衣物整理"] : ["Seasonal wardrobe review", "Post-wash condition review", "Repair or alteration handoff", "Moving clothing zones", "Pre-travel clothing preparation", "Other clothing review"] },
+      { name: "reviewDate", label: zh ? "本次複查日期" : "Current review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次複查日期" : "Next review date", type: "date", value: "2026-09-03" },
+      text("source", zh ? "洗標、原廠與送修來源地圖" : "Care-label, manufacturer and repair-source map", zh ? "只填安全代號或可重開的來源位置，不要貼衣物照片、訂單、地址或通信全文。" : "Use safe codes or reopenable source locations; do not paste clothing photos, orders, addresses or full correspondence.", "LABEL-C1; MANUAL-C2; REPAIR-R1"),
+      text("rows", zh ? "衣物照護與修補盤點列" : "Clothing care and repair rows", zh ? "每行 9 欄：ID｜衣物或分類代號｜洗標／來源日期 YYYY-MM-DD｜存放區域代號｜狀況觀察｜清潔／修補／輪替安排｜負責角色｜下次結果日期 YYYY-MM-DD｜指定狀態。最多 12 行。" : "Each row uses 9 fields: ID | garment or category code | care-label/source date YYYY-MM-DD | storage-zone code | condition observation | cleaning/repair/rotation plan | owner role | next outcome date YYYY-MM-DD | exact status. Maximum 12 rows.", defaults),
+      text("storage", zh ? "受保護洗標、照片與送修歷程位置" : "Protected labels, photos and repair-history location", zh ? "只寫保管流程或容器代號，不要放照片、地址、付款或私人通信。" : "Name a custody process or container, not photos, addresses, payment or private correspondence.", zh ? "家庭紀錄／衣物照護／CLOTHING-2026-A／受保護來源" : "Household records / clothing care / CLOTHING-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次複查日期。" : "Enter valid current and next review dates.";
+      if (next < review) return zh ? "下一次複查日期不能早於本次複查。" : "The next review date cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全紀錄代號、來源地圖與受保護位置。" : "Provide a safe review code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行衣物照護或修補列。" : "Enter 1 to 12 clothing care or repair rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `衣物第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Clothing line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行衣物紀錄都需要唯一 ID。" : "Every clothing row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `衣物第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Clothing line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const sourceDates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (sourceDates.some((date) => !date || date > review)) return zh ? "洗標或來源日期必須有效，且不能晚於本次複查。" : "Each care-label or source date must be valid and no later than the current review.";
+      const open = parsed.filter((row) => statuses.indexOf(row.parts[8]) < 6), closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 6);
+      const invalidOutcome = parsed.filter((row, index) => { const date = strictIsoDate(row.parts[7]); return !date || (open.includes(row) ? date < review || date > next : date < sourceDates[index]! || date > review); });
+      if (invalidOutcome.length) return zh ? `衣物第 ${invalidOutcome.map((row) => row.line).join("、")} 行的結果日期不在允許範圍。` : `Clothing line ${invalidOutcome.map((row) => row.line).join(", ")} has an outcome date outside the permitted range.`;
+      const thin = parsed.filter((row) => row.parts[1].length < 5 || row.parts[3].length < 4 || row.parts[4].length < 10 || row.parts[5].length < 10 || row.parts[6].length < 3);
+      if (thin.length) return zh ? `衣物第 ${thin.map((row) => row.line).join("、")} 行需要衣物、存放代號、狀況、安排與負責角色。` : `Clothing line ${thin.map((row) => row.line).join(", ")} needs a garment, storage code, condition, plan and owner role.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、訂單或付款識別資料；請改用安全代號。" : "A full contact, address, order or payment identifier was detected; use safe codes.";
+      if (/password|passcode|full address|street address|account number|card number|bank account|receipt contents|private message|signature|姓名|完整地址|帳號|卡號|銀行帳戶|收據全文|私人訊息|簽名/i.test(privacy)) return zh ? "偵測到敏感資料或全文內容；請只保留安全來源代號。" : "Sensitive data or full private content was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜衣物照護與修補複查" : " — clothing care and repair review"), (zh ? "整理情境：" : "Review context: ") + values.scope, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次複查：" : "Next review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + open.length, (zh ? "已關閉或不適用列：" : "Closed or not-applicable rows: ") + closed.length, (zh ? "洗標、原廠與送修來源地圖：" : "Care-label, manufacturer and repair-source map: ") + values.source.trim(), (zh ? "有版本的衣物狀況與安排\n" : "Versioned clothing condition and plans\n") + parsed.map((row) => row.parts[0] + (zh ? "｜衣物：" : " — garment: ") + row.parts[1] + (zh ? "｜洗標／來源日：" : " — care/source date: ") + fmt.format(strictIsoDate(row.parts[2]) as Date) + (zh ? "｜存放：" : " — storage: ") + row.parts[3] + (zh ? "｜狀況：" : " — condition: ") + row.parts[4] + (zh ? "｜安排：" : " — plan: ") + row.parts[5] + (zh ? "｜角色：" : " — owner: ") + row.parts[6] + (zh ? "｜結果日：" : " — outcome date: ") + fmt.format(strictIsoDate(row.parts[7]) as Date) + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護洗標、照片與送修歷程位置：" : "Protected labels, photos and repair-history location: ") + values.storage.trim(), zh ? "這份輸出只是衣物照護與修補索引，不解讀洗標符號、不保證清潔或材質處理結果，也不判定化學品、過敏或家庭安全；請以實際洗標、原廠、送修業者與適用的合格來源為準。" : "This output is a clothing-care and repair index. It does not interpret care symbols, guarantee cleaning or material treatment, or decide chemical, allergy or household safety; use the actual label, manufacturer, repair provider and applicable qualified source."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -6871,6 +6939,9 @@ const definitions: Record<string, Definition> = {
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("en"),
   },
+  "household-clothing-care-repair-log": {
+    ...clothingCareDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -6917,6 +6988,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("zh-TW"),
+  },
+  "household-clothing-care-repair-log": {
+    ...clothingCareDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

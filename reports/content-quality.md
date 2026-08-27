@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T03:19:30.489Z
+Generated: 2026-08-27T03:33:53.647Z
 
 ## Summary
 
-- Indexable pages: 379
-- Generated HTML routes: 396
+- Indexable pages: 382
+- Generated HTML routes: 399
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 166
+- Pages without a contextual product/tool link: 169
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 36
+- product: 37
 - appliances: 30
 - maintenance: 37
-- household-operations: 28
+- household-operations: 30
 - inventory-warranty: 39
 - records-emergency: 47
 - tools: 121
@@ -75,6 +75,7 @@ Generated: 2026-08-27T03:19:30.489Z
 - /roadmap/
 - /security/
 - /terms/
+- /tools/household-clothing-care-repair-log/
 - /tools/household-meeting-agenda-action-log/
 - /tools/household-pantry-expiry-review-log/
 - /tools/household-vehicle-document-source-status-log/
@@ -105,6 +106,7 @@ Generated: 2026-08-27T03:19:30.489Z
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
+- /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
@@ -183,6 +185,7 @@ Generated: 2026-08-27T03:19:30.489Z
 - /zh-tw/tools/home-service-reminder-generator/
 - /zh-tw/tools/house-sitter-instruction-generator/
 - /zh-tw/tools/household-annual-review-generator/
+- /zh-tw/tools/household-clothing-care-repair-log/
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-insurance-policy-source-version-log/
 - /zh-tw/tools/household-medical-information-source-handoff-log/
