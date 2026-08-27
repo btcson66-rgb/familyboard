@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 管理訂閱續費窗口、取
 primaryKeyword: "FamilyBoard 訂閱取消教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-subscription-cancellation-handoff-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

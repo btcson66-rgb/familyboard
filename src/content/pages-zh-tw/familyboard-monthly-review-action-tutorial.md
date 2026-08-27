@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 執行每月系統檢視與改
 primaryKeyword: "FamilyBoard 每月家庭檢視教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-monthly-review-action-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"
@@ -90,4 +90,3 @@ faq:
 ## 五個月末問題
 
 本月是否只檢視一個清楚範圍？來源是否仍找得到？保留與更新決定是否分開？改善行動是否有角色和下月日期？摘要是否只含最小必要資訊？若五題都能回答，下一位家人就能沿著時間線接手，而不是重新猜測家庭系統怎麼運作。
-

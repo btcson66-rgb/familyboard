@@ -2744,6 +2744,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-subscription-cancellation-handoff-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-school-activity-handoff-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-school-activity-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-monthly-review-action-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-monthly-review-action-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3272,7 +3296,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-monthly-review-action-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-monthly-review-action-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3363,7 +3387,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-school-activity-handoff-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-school-activity-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3419,7 +3443,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-subscription-cancellation-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

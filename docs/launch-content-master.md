@@ -23433,6 +23433,209 @@ Is the appointment scope bounded? Are booking and quote sources dated? Are prepa
 
 ---
 
+## Page 344 — How to Use FamilyBoard for Subscription Cancellation Handoffs
+**Slug:** /guides/familyboard-subscription-cancellation-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
+**Primary intent:** learn to hand off a household subscription cancellation while separating reminders, provider action and confirmed billing results
+**Title tag:** FamilyBoard Subscription Cancellation Handoff Tutorial | Renewal, Cancellation and Result Review
+**Meta description:** Learn how to organise a subscription cancellation handoff with FamilyBoard: protect account details, check the current provider terms, assign a role and verify the actual cancellation or refund result.
+**Primary keyword concept:** FamilyBoard subscription cancellation handoff tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-subscription-cancellation-handoff-log/`, `/guides/familyboard-household-return-handoff-tutorial/`, `/guides/familyboard-monthly-review-action-tutorial/`, `/guides/subscription-cancellation-refund-records/`, `/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/`
+**FAQ:**
+- Q: Can FamilyBoard calculate a provider’s renewal deadline or stop a charge?
+  A: No. The provider’s current terms and protected account source control the deadline and outcome.
+- Q: Should an email, password or payment card be stored in the shared row?
+  A: No. Use a neutral code and keep credentials and billing data in the provider’s controlled environment.
+- Q: Does pressing Cancel prove cancellation is effective?
+  A: No. The household must record the provider’s attributable confirmation or later billing observation separately.
+- Q: Can a cancellation reminder guarantee a refund?
+  A: No. Recommendations and reminders cannot replace provider policy or a billing record.
+
+**Contextual CTA:** Create one neutral cancellation code, date the current terms source and assign an action role plus a result-review role.
+
+# How to Use FamilyBoard for Subscription Cancellation Handoffs
+
+A trial notice, a settings screen and a final billing result are three different events. The free [Subscription Cancellation Handoff Log](/tools/household-subscription-cancellation-handoff-log/) helps a household keep them separate while a family member is away or a service is being reviewed. It does not sign in, cancel an account, calculate a deadline, contact a provider or promise that a refund will occur.
+
+## Start with a non-identifying code
+
+Use `CANCEL-REVIEW-2026-A` and a small scope such as one streaming service, cloud plan or online course. Do not enter an email address, username, password, card token, invoice number or full support conversation. A neutral code lets a backup role find the task without granting account access.
+
+## Date the provider source
+
+Use `TERMS-T1` for the current terms, `BILLING-B1` for a protected billing view and `RESULT-R1` for the confirmation or later statement location. Record the check date. A search result, old email or remembered trial length is a lead only; the provider’s current source controls. If the terms change, keep the old observation and create a new version.
+
+## Separate reminder, action and effect
+
+“Renewal notice received” is an observation. “Authorised role submitted cancellation” is an action. “Provider confirms cancellation effective” is a result. A reminder, button click or screenshot does not prove the effect. Keep a final charge, credit, refund or access change as its own review row and leave it open until the protected source shows what happened.
+
+## Assign action and backup roles
+
+Use a cancellation role, billing-review role and backup role. Define a takeover trigger for an absent owner, changed renewal date or provider request for more information. The shared row can say “return to BILLING-B1” without revealing where the account is or how to log in. Never treat a FamilyBoard date as a legal, contractual or payment deadline.
+
+## Keep service cycles distinct
+
+Monthly, annual, introductory and bundled plans may follow different cycles and time zones. Do not apply the experience of one service to another. If cancellation ends access later, record the effective date only from the provider source. Separate cancellation from a final invoice, prorated amount or refund; the tool does not calculate any of them.
+
+## Rehearse with an imaginary plan
+
+Create a test row for “practice subscription” and ask a backup to locate the terms source, identify the action role and state the result-review step. Do not open an account or paste a real invoice. Fix unclear wording before the real review window.
+
+## Keep affiliate material secondary
+
+Alternative services or password-manager products may be compared after the workflow, outside the form, clearly disclosed and skippable. No product can stop a charge or guarantee a refund. The useful output is a dated record of the source checked, the action observed and the result still pending.
+
+## Eight-question closeout
+
+Is the code neutral? Is the provider source current and dated? Are reminder, action and effect separate? Are cancellation and billing results distinct? Are primary and backup roles clear? Did sharing remove credentials and payment data? Is the result source-backed? Is any recommendation optional and disclosed? If not, keep the row open.
+
+---
+
+## Page 345 — How to Use FamilyBoard for School Activity Handoffs
+**Slug:** /guides/familyboard-school-activity-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-school-activity-handoff-tutorial/
+**Primary intent:** learn to hand off school activity notices, consent forms and preparation without exposing a student’s identity or mistaking submission for acceptance
+**Title tag:** FamilyBoard School Activity Handoff Tutorial | Forms, Supplies and Confirmation
+**Meta description:** Learn how to organise a school activity handoff with FamilyBoard: protect student details, link the current school notice, assign preparation and record submission and school confirmation separately.
+**Primary keyword concept:** FamilyBoard school activity handoff tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-school-activity-handoff-log/`, `/guides/familyboard-school-pickup-handoff-tutorial/`, `/guides/organize-school-records-at-home/`, `/guides/familyboard-school-closure-continuity-tutorial/`, `/zh-tw/guides/familyboard-school-activity-handoff-tutorial/`
+**FAQ:**
+- Q: Can FamilyBoard submit a school form or confirm a child’s participation?
+  A: No. The school’s protected system controls submission, receipt and participation.
+- Q: Should a student name, class, health note or school address be in the shared row?
+  A: No. Use a neutral activity code and keep identifying or sensitive details in the school or family’s controlled source.
+- Q: Does completing a form prove the school received it?
+  A: No. Preparation, submission, school receipt and actual participation are separate observations.
+- Q: Can a bag, card or travel product guarantee a successful activity?
+  A: No. Product suggestions are optional and cannot replace school instructions.
+
+**Contextual CTA:** Create one neutral activity code, date the notice and assign form, supplies, transport and receipt-review roles.
+
+# How to Use FamilyBoard for School Activity Handoffs
+
+Field trips, sports days, clubs and school celebrations create a chain of small household tasks. The free [School Activity Handoff Log](/tools/household-school-activity-handoff-log/) keeps the current notice, family preparation and later receipt check visible without copying a student’s identity into a shared screen. It does not submit a consent form, access a school portal, decide attendance or assess safety.
+
+## Define one activity scope
+
+Use `SCHOOL-ACTIVITY-2026-A` for one event such as a trip, sports day or after-school club. Do not use a student name, class, student number, school address, medical detail or teacher’s private contact. A small scope prevents several events with different deadlines from becoming one misleading “school task.”
+
+## Build a source map
+
+Use `NOTICE-N1` for the school announcement, `FORM-F1` for the protected consent form and `RESULT-R1` for a school receipt or family confirmation source. Record the check date and preserve older versions when the notice changes. A family message or remembered deadline can prompt a check but is not the controlling instruction.
+
+## Separate decision, preparation and receipt
+
+“Family is reviewing participation” is a household decision point. “Required item is prepared” is an action. “Form was submitted” is a submission observation. “School system or staff confirms receipt” is a separate result. Do not mark completion because a form was opened, a signature was discussed or a bag was packed.
+
+## Assign roles with a backup
+
+Use form role, supplies role, transport role and receipt-review role. Add a backup trigger for a changed deadline, absent caregiver or revised school notice. The shared row should point to the protected source rather than list a phone number, student identity or complete instruction. If a provider requests additional information, return to its official channel.
+
+## Handle Taiwan school contexts
+
+校外教學、運動會、園遊會、校慶、社團與安親安排可能有不同表單、費用與回覆方式。FamilyBoard only records which source and family action need review; it does not interpret consent, attendance or health requirements. Keep school-specific rules in the school source and use a new dated row when the notice is revised.
+
+## Rehearse without a real student record
+
+Create an imaginary activity and ask a backup role to locate the notice, name the preparation boundary and state how receipt will be checked. Do not upload a real form or copy a health note. Improve the role and source wording while all details are fictional.
+
+## Handle deadline changes and missing receipts
+
+If the school moves a deadline, changes the meeting point or publishes a revised consent form, keep the original observation and record the new source date. “Form saved locally” is not the same as “form submitted,” and “submitted” is not the same as “school received.” If a receipt is missing, leave the status open, assign the receipt-review role and return to the school’s official channel. Do not fill the gap with a family assumption or a copied screenshot that contains a student identifier. After the activity, record whether the family’s planned preparation was actually observed, whether a follow-up document remains, and which source should be checked next. This gives the next caregiver a useful timeline without turning the FamilyBoard row into a student record.
+
+## Review the handoff after the event
+
+Use a short post-event check to close only the household work that is observable: supplies returned, a receipt stored in the protected location, or a transport handoff noted by the responsible role. Participation, attendance, health outcomes and school assessment belong to the institution’s records, not to a household summary. If the event was cancelled or the student did not participate, preserve the notice and record that the family needs no further action only when the appropriate source supports it. A dated closeout prevents next month’s review from reopening an old activity by mistake.
+
+## Keep recommendations outside the form
+
+Bags, labels or rain gear may be compared after the answer, outside the form, with a clear affiliate disclosure and an easy skip. No product guarantees acceptance, attendance or safe travel. The free workflow is a privacy-aware handoff and an honest receipt status.
+
+## Eight-question closeout
+
+Is the activity scope singular? Is the notice current and dated? Are decision, preparation, submission and receipt separate? Are form, supplies, transport and backup roles clear? Did sharing remove student details? Are school rules left in their source? Is participation never inferred? Is any recommendation optional and disclosed? If not, keep the row open.
+
+---
+
+## Page 346 — How to Use FamilyBoard for a Monthly Household Review
+**Slug:** /guides/familyboard-monthly-review-action-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-monthly-review-action-tutorial/
+**Primary intent:** learn a monthly FamilyBoard review that checks sources, backups and next actions without copying every household record
+**Title tag:** FamilyBoard Monthly Household Review Tutorial | Maintenance, Backup and Next Actions
+**Meta description:** Learn how to run a monthly FamilyBoard review: choose one system question, verify protected sources, assign an improvement action and test whether the next checkpoint is clear.
+**Primary keyword concept:** FamilyBoard monthly household review tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-monthly-review-action-log/`, `/guides/household-monthly-review/`, `/guides/familyboard-weekly-reset-action-tutorial/`, `/guides/familyboard-offline-backup-restore/`, `/zh-tw/guides/familyboard-monthly-review-action-tutorial/`
+**FAQ:**
+- Q: Does a monthly review need every household document?
+  A: No. Choose one bounded question and record only the source, responsible role and next checkpoint.
+- Q: Does finding a backup file prove that restore works?
+  A: No. A restore test and its result need their own protected process and observation.
+- Q: Can FamilyBoard decide whether a warranty, bill or safety task is valid?
+  A: No. It records a review prompt; the appropriate provider or qualified source controls the conclusion.
+- Q: Can an organisation product replace a household review?
+  A: No. Products are optional and cannot guarantee completeness or recovery.
+
+**Contextual CTA:** Choose one monthly question, map its source and assign one improvement action plus a dated next review.
+
+# How to Use FamilyBoard for a Monthly Household Review
+
+A monthly review is not a giant checklist. It is a short test of whether one part of the household’s memory system still points to the right source, role and next action. The free [Monthly Review Action Log](/tools/household-monthly-review-action-log/) keeps that checkpoint small. It does not audit every record, certify a warranty, verify a payment, restore a backup or provide legal, medical, safety or financial advice.
+
+## Choose one system question
+
+Start with one question such as “Can the backup role find the current maintenance source?”, “Is the next renewal owner still correct?” or “Can the household locate the latest export?” Use `MONTHLY-REVIEW-2026-A`; never use an address, account, policy number or person’s name as the ID. One question creates a review that can actually finish.
+
+## Map the protected source
+
+Use `MAINT-M1`, `DOC-D1`, `BACKUP-B1` or another neutral code for the source to check. Record the date and version. A code is not permission to open a file, and an old folder path is not proof that the current source exists. If a source moves, preserve the prior observation and create a new checkpoint.
+
+## Separate finding, action and improvement
+
+“Source found” is a finding. “Backup role updated the pointer” is an action. “Next month the role will rehearse a restore” is an improvement. Do not collapse these into “review complete.” If a document is missing or an owner is unclear, record the gap and assign a follow-up rather than copying the document into FamilyBoard.
+
+## Keep weekly and monthly rhythms distinct
+
+The weekly reset handles open near-term work; the monthly review tests slower-changing systems such as source maps, backup discoverability, warranty ownership or renewal roles. Link the two when needed, but do not duplicate every weekly task. A narrow monthly row is easier to hand off and easier to revisit.
+
+## Run a five-minute handoff test
+
+Ask a backup role to locate the source code, explain what is known, state what remains unknown and name the next review date. Do not request credentials or open sensitive records during a casual rehearsal. If the backup cannot identify the boundary, improve the source map and role wording.
+
+## Treat backup and restore as different evidence
+
+“Export file exists” and “restore test succeeded” are not the same. FamilyBoard can point to each protected process, but it cannot inspect a file, guarantee completeness or replace an established backup procedure. Record the observable test result and keep unresolved integrity questions open.
+
+## Keep affiliate material optional
+
+Binders, labels or storage media may be compared after the workflow, outside the form, clearly disclosed and skippable. No product guarantees a complete archive or successful recovery. The value is a dated, bounded review that gives the next person a clear place to start.
+
+## Eight-question closeout
+
+Is there one bounded question? Is the source current and dated? Are finding, action and improvement separate? Are weekly and monthly scopes distinct? Can a backup role repeat the lookup? Is restore evidence kept separate from file existence? Did sharing remove sensitive records? Is any recommendation optional and disclosed? If not, keep the review open.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

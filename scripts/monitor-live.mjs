@@ -261,6 +261,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-service-appointment-handoff-log/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-service-appointment-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-subscription-cancellation-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-school-activity-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-activity-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-monthly-review-action-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-monthly-review-action-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-weekly-reset-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-weekly-reset-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-weekly-reset-action-tutorial/</loc>",
@@ -2657,6 +2663,63 @@ const checks = [
       'hreflang="en"',
       "建立安全來源地圖",
       "把提醒、行動與結果分三層",
+    ],
+  },
+  {
+    path: "/guides/familyboard-subscription-cancellation-handoff-tutorial/",
+    require: [
+      "FamilyBoard Subscription Cancellation Handoff Tutorial",
+      'hreflang="zh-TW"',
+      "Separate reminder, action and effect",
+      "does not sign in",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",
+    require: [
+      "FamilyBoard 訂閱怎麼取消與交接",
+      'lang="zh-TW"',
+      'hreflang="en"',
+      "把條款和帳單來源留在受控位置",
+      "提醒不等於取消生效",
+    ],
+  },
+  {
+    path: "/guides/familyboard-school-activity-handoff-tutorial/",
+    require: [
+      "FamilyBoard School Activity Handoff Tutorial",
+      'hreflang="zh-TW"',
+      "Separate decision, preparation and receipt",
+      "does not submit a consent form",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-school-activity-handoff-tutorial/",
+    require: [
+      "FamilyBoard 學校活動怎麼交接",
+      'lang="zh-TW"',
+      'hreflang="en"',
+      "建立通知、表單和結果來源",
+      "填完同意表就算學校收到了嗎",
+    ],
+  },
+  {
+    path: "/guides/familyboard-monthly-review-action-tutorial/",
+    require: [
+      "FamilyBoard Monthly Household Review Tutorial",
+      'hreflang="zh-TW"',
+      "Separate finding, action and improvement",
+      "does not audit every record",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-monthly-review-action-tutorial/",
+    require: [
+      "FamilyBoard 每月家庭檢視怎麼做",
+      'lang="zh-TW"',
+      'hreflang="en"',
+      "建立安全來源地圖",
+      "備份找得到就代表一定可以完整還原嗎",
     ],
   },
   {

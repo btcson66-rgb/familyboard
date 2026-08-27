@@ -2544,6 +2544,30 @@
     "headings": "How to Use FamilyBoard for Service Appointment Handoffs Create a safe appointment code Date the booking source Separate preparation, access and arrival Assign a primary and backup role Handle common service settings Record what was actually observed Rehearse the handoff safely Put affiliate material after the answer Eight-question closeout"
   },
   {
+    "title": "FamilyBoard Subscription Cancellation Handoff Tutorial | Renewal, Cancellation and Result Review",
+    "description": "Learn how to organise a subscription cancellation handoff with FamilyBoard: protect account details, check the current provider terms, assign a role and verify the actual cancellation or refund result.",
+    "route": "/guides/familyboard-subscription-cancellation-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard subscription cancellation handoff tutorial",
+    "headings": "How to Use FamilyBoard for Subscription Cancellation Handoffs Start with a non-identifying code Date the provider source Separate reminder, action and effect Assign action and backup roles Keep service cycles distinct Rehearse with an imaginary plan Keep affiliate material secondary Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard School Activity Handoff Tutorial | Forms, Supplies and Confirmation",
+    "description": "Learn how to organise a school activity handoff with FamilyBoard: protect student details, link the current school notice, assign preparation and record submission and school confirmation separately.",
+    "route": "/guides/familyboard-school-activity-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard school activity handoff tutorial",
+    "headings": "How to Use FamilyBoard for School Activity Handoffs Define one activity scope Build a source map Separate decision, preparation and receipt Assign roles with a backup Handle Taiwan school contexts Rehearse without a real student record Handle deadline changes and missing receipts Review the handoff after the event Keep recommendations outside the form Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Monthly Household Review Tutorial | Maintenance, Backup and Next Actions",
+    "description": "Learn how to run a monthly FamilyBoard review: choose one system question, verify protected sources, assign an improvement action and test whether the next checkpoint is clear.",
+    "route": "/guides/familyboard-monthly-review-action-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard monthly household review tutorial",
+    "headings": "How to Use FamilyBoard for a Monthly Household Review Choose one system question Map the protected source Separate finding, action and improvement Keep weekly and monthly rhythms distinct Run a five-minute handoff test Treat backup and restore as different evidence Keep affiliate material optional Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

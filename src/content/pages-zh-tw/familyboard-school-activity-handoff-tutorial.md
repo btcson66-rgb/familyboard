@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 管理學校活動通知、同
 primaryKeyword: "FamilyBoard 學校活動交接教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-school-activity-handoff-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"
@@ -88,4 +88,3 @@ faq:
 ## 收尾前的六個問題
 
 活動範圍是否明確？來源是否只用安全代號？通知、提交、收件與參與是否分開？每個下一步是否有角色？延期或部分完成是否留下時間線？摘要是否移除了學生與健康個資？如果六題都是肯定的，FamilyBoard 就能讓學校活動在家庭成員換手時保持清楚，而不是製造另一份敏感名冊。
-
