@@ -2248,6 +2248,14 @@
     "headings": "Household Event Source Index Log What to enter Keep four layers separate Version instead of overwriting Privacy and sharing Affiliate boundary"
   },
   {
+    "title": "How to Use FamilyBoard for a Household Event Source Index | Practical Tutorial",
+    "description": "Learn a practical FamilyBoard workflow for recording a household event source, check date, evidence pointer and next owner. Keep originals protected and separate observation from official findings.",
+    "route": "/guides/familyboard-event-source-index-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard event source index tutorial",
+    "headings": "How to Use FamilyBoard for a Household Event Source Index Step 1: Name the event without exposing the household Step 2: Record the date you actually checked Step 3: Describe the source's role Step 4: Link a protected pointer to a minimal observation Step 5: Give the next person one observable action Use the right FamilyBoard tool Version changes are evidence, not clutter Privacy, sharing and affiliate boundaries"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

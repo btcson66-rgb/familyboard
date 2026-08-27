@@ -142,6 +142,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-water-leak-event-log/",
     "/tools/household-event-duration-calculator/",
     "/tools/household-event-source-index-log/",
+    "/guides/familyboard-event-source-index-tutorial/",
     "/guides/water-leak-response-home-records/",
     "/tools/household-storm-readiness-review/",
     "/guides/storm-preparation-home-checklist/",
@@ -506,6 +507,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭事件來源索引" }),
   ).toHaveAttribute("href", "/zh-tw/tools/household-event-source-index-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "事件來源索引 App 教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-event-source-index-tutorial/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭公告來源查核指南" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/household-event-source-check-taiwan/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "漏水紀錄 App 教學" }),
   ).toHaveAttribute(
@@ -895,6 +902,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     ).toHaveAttribute("href", `https://familyboard.win${localized.route}`);
   }
 
+  await page.goto("/zh-tw/guides/household-event-source-check-taiwan/");
+  await expect(page.locator("h1")).toHaveText(
+    "家庭公告與來源怎麼查？台灣家庭事件紀錄的版本核對指南",
+  );
+  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+
   await page.goto("/zh-tw/guides/familyboard-household-admin-backup-tutorial/");
   await expect(page.locator("h1")).toHaveText(
     "FamilyBoard 家庭行政交接怎麼用？備援角色實作教學",
@@ -1100,6 +1113,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-event-source-index-log/",
       alternate: "/tools/household-event-source-index-log/",
       heading: "家庭事件來源索引紀錄",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-event-source-index-tutorial/",
+      alternate: "/guides/familyboard-event-source-index-tutorial/",
+      heading: "FamilyBoard 家庭事件來源索引怎麼用？公告、照片與交接的實作教學",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -2821,6 +2839,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/household-event-source-index-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-event-source-index-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-event-source-index-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/water-leak-response-home-records/",

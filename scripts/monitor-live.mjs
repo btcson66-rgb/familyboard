@@ -311,6 +311,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/power-outage-recovery-household-records/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-water-leak-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-water-leak-event-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-event-source-index-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-event-source-index-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/water-leak-photo-evidence-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
@@ -2965,6 +2968,30 @@ const checks = [
       'lang="zh-TW"',
       "先安全觀察，再複查修繕",
       "不會檢查管線",
+    ],
+  },
+  {
+    path: "/guides/familyboard-event-source-index-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Household Event Source Index",
+      'hreflang="zh-TW"',
+      "does not copy documents",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-event-source-index-tutorial/",
+    require: [
+      "FamilyBoard 家庭事件來源索引怎麼用",
+      'lang="zh-TW"',
+      "不複製公告",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/household-event-source-check-taiwan/",
+    require: [
+      "家庭公告與來源怎麼查",
+      'lang="zh-TW"',
+      "轉傳、截圖與搜尋結果",
     ],
   },
   {

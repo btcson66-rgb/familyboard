@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T19:26:30.943Z
+Generated: 2026-08-27T19:40:20.478Z
 
 ## Summary
 
-- Indexable pages: 521
-- Generated HTML routes: 538
+- Indexable pages: 524
+- Generated HTML routes: 541
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 292
+- Pages without a contextual product/tool link: 294
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-27T19:26:30.943Z
 - product: 72
 - appliances: 30
 - maintenance: 46
-- household-operations: 90
+- household-operations: 93
 - inventory-warranty: 44
 - records-emergency: 74
 - tools: 124
@@ -148,6 +148,7 @@ Generated: 2026-08-27T19:26:30.943Z
 - /zh-tw/guides/familyboard-device-retirement-tutorial/
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
 - /zh-tw/guides/familyboard-donation-handoff-tutorial/
+- /zh-tw/guides/familyboard-event-source-index-tutorial/
 - /zh-tw/guides/familyboard-family-display-mode-setup/
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
@@ -204,6 +205,7 @@ Generated: 2026-08-27T19:26:30.943Z
 - /zh-tw/guides/household-account-list/
 - /zh-tw/guides/household-admin-backup-person/
 - /zh-tw/guides/household-documents-organizer/
+- /zh-tw/guides/household-event-source-check-taiwan/
 - /zh-tw/guides/household-management-checklist/
 - /zh-tw/guides/household-medical-information-organization/
 - /zh-tw/guides/household-monthly-review/
