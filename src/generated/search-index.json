@@ -1808,6 +1808,14 @@
     "headings": "FamilyBoard Offline Backup and Restore Guide Start with a small private household space Understand offline use Export a backup with a custody label Test restore instead of trusting the filename Share a handoff without sharing the database What FamilyBoard does not promise Future products and unobtrusive affiliate space"
   },
   {
+    "title": "Free Household Meeting Agenda and Action Log | FamilyBoard",
+    "description": "Create a practical family meeting agenda, record decisions and assign follow-up checkpoints without storing names, passwords or sensitive household details.",
+    "route": "/tools/household-meeting-agenda-action-log/",
+    "cluster": "household-operations",
+    "keywords": "household meeting agenda action log",
+    "headings": "Household Meeting Agenda and Action Log Start with one real meeting outcome Record decisions and open questions separately Use roles, not names Keep sensitive material out Future affiliate placement"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

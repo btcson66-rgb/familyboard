@@ -2753,6 +2753,35 @@ const rentalDepositDefinition = (locale: Locale): Definition => {
   };
 };
 
+const householdMeetingDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  return {
+    intro: zh ? "用一個安全代號整理家庭會議的主題、決定、負責人與下一次複查；不把醫療、付款、密碼或私人通信放進共享輸出。" : "Create a clear household meeting agenda with decisions, owners and follow-up checkpoints using safe references; keep medical, payment, password and private-message details out of the shared output.",
+    fields: [
+      text("review", zh ? "會議紀錄私人代號" : "Private meeting reference", zh ? "使用家庭自訂代號，不要輸入姓名、地址、帳號或完整通信。" : "Use a household code; do not enter names, addresses, accounts or full correspondence.", "MEETING-2026-A"),
+      { name: "meetingType", label: zh ? "會議類型" : "Meeting type", type: "select", options: zh ? ["每週家庭同步", "每月家務與帳務檢查", "搬家或旅行交接", "維修或採購決策", "緊急事件後複查", "其他家庭會議"] : ["Weekly household sync", "Monthly home and bill review", "Move or travel handoff", "Repair or purchase decision", "Post-incident review", "Other household meeting"] },
+      { name: "meetingDate", label: zh ? "會議日期" : "Meeting date", type: "date", value: "2026-08-27" },
+      text("participants", zh ? "家庭角色（不要填姓名）" : "Household roles (not names)", zh ? "用角色，例如主要管理者、備援家人、接手者。" : "Use roles such as household organizer, backup person or handoff recipient.", "主要管理者；備援家人"),
+      text("agenda", zh ? "討論主題（每行一項）" : "Agenda topics (one per line)", zh ? "只寫主題與安全來源代號，不要貼病歷、付款、密碼或私人通信內容。" : "Use topics and safe source codes; do not paste medical, payment, password or private-message content.", "本週維修排程\n家庭文件查找演練\n下次備份核點"),
+      text("decisions", zh ? "決定與未決事項" : "Decisions and open questions", zh ? "把已決定、待確認與不適用分開，不要把猜測寫成外部結果。" : "Separate decided, pending and not-applicable items; do not turn assumptions into external results.", "已決定：週六複查濾網；待確認：備份測試位置"),
+      text("followup", zh ? "負責角色與下一核點" : "Owners and next checkpoints", zh ? "用角色、日期與任務代號，不要輸入完整行程或聯絡資料。" : "Use roles, dates and task codes; do not enter detailed schedules or contact details.", "主要管理者 | 2026-09-03 | BACKUP-CHECK-A"),
+      text("omitted", zh ? "刻意不放入的敏感資料類別" : "Sensitive categories intentionally omitted", zh ? "記錄類別即可，不要貼資料內容。" : "List categories only, never the data itself.", zh ? "密碼、完整地址、醫療與付款資料" : "Passwords, full address, medical and payment details"),
+    ],
+    run: (values) => {
+      const meetingDate = strictIsoDate(values.meetingDate);
+      if (!meetingDate) return zh ? "請輸入有效的會議日期。" : "Enter a valid meeting date.";
+      if (values.review.trim().length < 4 || values.participants.trim().length < 4) return zh ? "請提供安全的會議代號與家庭角色。" : "Provide a safe meeting reference and household roles.";
+      const agenda = values.agenda.split(/\r?\n/).map((item) => item.trim()).filter(Boolean);
+      if (!agenda.length || agenda.length > 12) return zh ? "請輸入 1 至 12 個會議主題。" : "Enter 1 to 12 agenda topics.";
+      if (values.decisions.trim().length < 12 || values.followup.trim().length < 12) return zh ? "請補充決定／未決事項與下一核點。" : "Add decisions/open questions and next checkpoints.";
+      const privacy = [values.review, values.participants, values.agenda, values.decisions, values.followup].join("\n");
+      if (/password|passcode|full address|street address|account number|card number|bank account|medical record|diagnosis|medication|private message|correspondence|密碼|完整地址|帳號|卡號|銀行帳戶|病歷|診斷|用藥|私人訊息|通信內容/i.test(privacy)) return zh ? "偵測到敏感資料類別或內容；請只保留安全代號與類別。" : "Sensitive data or categories were detected; keep only safe references and category labels.";
+      const fmtDate = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭會議議程與追蹤" : " — household meeting agenda and follow-up"), (zh ? "會議類型：" : "Meeting type: ") + values.meetingType, (zh ? "會議日期：" : "Meeting date: ") + fmtDate.format(meetingDate), (zh ? "家庭角色：" : "Household roles: ") + values.participants.trim(), (zh ? "議程：\n" : "Agenda:\n") + agenda.map((item, index) => `${index + 1}. ${item}`).join("\n"), (zh ? "決定與未決：" : "Decisions and open questions: ") + values.decisions.trim(), (zh ? "負責角色與下一核點：" : "Owners and next checkpoints: ") + values.followup.trim(), (zh ? "刻意排除的資料類別：" : "Categories intentionally omitted: ") + values.omitted.trim(), zh ? "這份輸出只整理家庭會議工作，不代表外部專業、醫療、法律、財務或緊急決定；請由家庭與適用的負責來源確認實際結果。" : "This output organizes household meeting work only; it is not a professional, medical, legal, financial or emergency decision. Confirm actual results with the household and responsible source."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -6766,6 +6795,9 @@ const definitions: Record<string, Definition> = {
   "rental-security-deposit-move-out-claim-log": {
     ...rentalDepositDefinition("en"),
   },
+  "household-meeting-agenda-action-log": {
+    ...householdMeetingDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -6806,6 +6838,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "rental-security-deposit-move-out-claim-log": {
     ...rentalDepositDefinition("zh-TW"),
+  },
+  "household-meeting-agenda-action-log": {
+    ...householdMeetingDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

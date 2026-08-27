@@ -176,6 +176,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-offline-backup-restore/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-offline-backup-restore/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-meeting-agenda-action-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-meeting-agenda-action-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-meeting-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -821,6 +824,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Start with a small private household space",
       "Test restore instead of trusting the filename",
+    ],
+  },
+  {
+    path: "/tools/household-meeting-agenda-action-log/",
+    require: [
+      "Household Meeting Agenda and Action Log",
+      'hreflang="zh-TW"',
+      "Short household meetings work best",
+      "Decisions and open questions",
     ],
   },
   {
@@ -1566,6 +1578,25 @@ const checks = [
       'lang="zh-TW"',
       "先定義這次交接的時間與範圍",
       "接手者要實際做一次查找",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/tools/household-meeting-agenda-action-log/",
+    require: [
+      "家庭會議議程與待辦紀錄工具",
+      'hreflang="en"',
+      "家庭會議先有範圍，再有議程",
+      "已決定與仍待確認要分開",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-meeting-tutorial/",
+    require: [
+      "FamilyBoard 家庭會議怎麼開",
+      'lang="zh-TW"',
+      "從一個小目的開始",
+      "決定、任務、結果要用不同詞",
     ],
     forbid: ['rel="alternate"'],
   },

@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T02:53:22.754Z
+Generated: 2026-08-27T02:59:39.745Z
 
 ## Summary
 
-- Indexable pages: 373
-- Generated HTML routes: 390
+- Indexable pages: 376
+- Generated HTML routes: 393
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 160
+- Pages without a contextual product/tool link: 163
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 34
+- product: 35
 - appliances: 30
 - maintenance: 37
-- household-operations: 24
+- household-operations: 26
 - inventory-warranty: 39
 - records-emergency: 47
 - tools: 121
@@ -75,6 +75,7 @@ Generated: 2026-08-27T02:53:22.754Z
 - /roadmap/
 - /security/
 - /terms/
+- /tools/household-meeting-agenda-action-log/
 - /tools/household-vehicle-document-source-status-log/
 - /tools/rental-security-deposit-move-out-claim-log/
 - /zh-tw/affiliate-disclosure/
@@ -104,6 +105,7 @@ Generated: 2026-08-27T02:53:22.754Z
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
+- /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
@@ -182,6 +184,7 @@ Generated: 2026-08-27T02:53:22.754Z
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-insurance-policy-source-version-log/
 - /zh-tw/tools/household-medical-information-source-handoff-log/
+- /zh-tw/tools/household-meeting-agenda-action-log/
 - /zh-tw/tools/household-pet-record-source-handoff-log/
 - /zh-tw/tools/household-power-outage-event-log/
 - /zh-tw/tools/household-record-retention-decision-log/
