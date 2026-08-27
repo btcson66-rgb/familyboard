@@ -34,6 +34,7 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-building-notice-response-log/",
     "/tools/rental-repair-request-log/",
     "/tools/household-school-closure-continuity-log/",
+    "/tools/household-event-duration-calculator/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -138,6 +139,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-power-outage-event-log-tutorial/",
     "/guides/familyboard-water-leak-event-log-tutorial/",
     "/tools/household-water-leak-event-log/",
+    "/tools/household-event-duration-calculator/",
     "/guides/water-leak-response-home-records/",
     "/tools/household-storm-readiness-review/",
     "/guides/storm-preparation-home-checklist/",
@@ -496,6 +498,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭漏水事件紀錄" }),
   ).toHaveAttribute("href", "/zh-tw/tools/household-water-leak-event-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家庭事件時間計算器" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/household-event-duration-calculator/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "漏水紀錄 App 教學" }),
   ).toHaveAttribute(
@@ -1080,6 +1085,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-water-leak-event-log/",
       alternate: "/tools/household-water-leak-event-log/",
       heading: "家庭漏水事件紀錄表",
+    },
+    {
+      route: "/zh-tw/tools/household-event-duration-calculator/",
+      alternate: "/tools/household-event-duration-calculator/",
+      heading: "家庭事件經過時間計算器",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -1692,6 +1702,26 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await page.getByLabel("第一次觀察時間（24 小時 HH:MM）").fill("24:10");
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText("24 小時 HH:MM 時間");
+
+  await page.goto("/tools/household-event-duration-calculator/");
+  await page.getByLabel("Safe event label").fill("OUTAGE-A");
+  await page.getByLabel("First observed date").fill("2026-08-20");
+  await page.getByLabel("First observed time (HH:MM)").fill("09:00");
+  await page.getByLabel("Second observation or end date").fill("2026-08-20");
+  await page.getByLabel("Second observation or end time (HH:MM)").fill("12:30");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText(
+    "Elapsed time: 0 days, 3 hours, 30 minutes",
+  );
+
+  await page.goto("/zh-tw/tools/household-event-duration-calculator/");
+  await page.getByLabel("事件安全代稱").fill("停電-A");
+  await page.getByLabel("第一次觀察日期").fill("2026-08-20");
+  await page.getByLabel("第一次觀察時間（HH:MM）").fill("09:00");
+  await page.getByLabel("第二個觀察或結束日期").fill("2026-08-20");
+  await page.getByLabel("第二個觀察或結束時間（HH:MM）").fill("12:30");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("經過時間：0 天 3 小時 30 分鐘");
 
   await page.goto("/tools/household-storm-readiness-review/");
   await page.getByLabel("Review date", { exact: true }).fill("2026-08-23");
@@ -2749,6 +2779,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/household-water-leak-event-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-event-duration-calculator/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-event-duration-calculator/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/water-leak-response-home-records/",

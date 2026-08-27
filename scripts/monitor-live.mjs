@@ -68,6 +68,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/</loc>",
       "<loc>https://familyboard.win/tools/household-water-leak-event-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-water-leak-event-log/</loc>",
+      "<loc>https://familyboard.win/tools/household-event-duration-calculator/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-event-duration-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/water-leak-response-home-records/</loc>",
       "<loc>https://familyboard.win/tools/household-storm-readiness-review/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-storm-readiness-review/</loc>",
@@ -441,6 +443,14 @@ const checks = [
       'hreflang="zh-TW"',
       "Four statuses describe workflow, not severity",
       "does not inspect pipes",
+    ],
+  },
+  {
+    path: "/tools/household-event-duration-calculator/",
+    require: [
+      "Free Household Event Duration Calculator",
+      'hreflang="zh-TW"',
+      "not an official duration",
     ],
   },
   {
@@ -1385,6 +1395,15 @@ const checks = [
       'hreflang="en"',
       "四個狀態只管理工作",
       "不會讀取水表",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-event-duration-calculator/",
+    require: [
+      "家庭事件經過時間計算器",
+      'hreflang="en"',
+      "經過時間",
+      "不代表官方時數",
     ],
   },
   {

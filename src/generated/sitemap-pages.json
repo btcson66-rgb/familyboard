@@ -2432,6 +2432,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-event-duration-calculator/",
+    "alternateRoute": "/zh-tw/tools/household-event-duration-calculator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3474,6 +3482,13 @@
     "alternateRoute": "/tools/household-donation-handoff-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-event-duration-calculator/",
+    "alternateRoute": "/tools/household-event-duration-calculator/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {

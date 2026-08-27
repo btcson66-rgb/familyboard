@@ -5378,7 +5378,50 @@ const householdSchoolClosureContinuityDefinition = (locale: Locale): Definition 
   };
 };
 
+const householdEventDurationDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  return {
+    intro: zh
+      ? "計算兩個已觀察日期時間之間的經過時間，協助家庭整理停電、漏水、服務或交接紀錄；結果不是官方事件時數或責任判定。"
+      : "Calculate elapsed time between two observed date-times for a household outage, leak, service or handoff record. The result is arithmetic, not an official duration or responsibility finding.",
+    fields: [
+      text(
+        "label",
+        zh ? "事件安全代稱" : "Safe event label",
+        zh ? "使用家庭代號，不要填完整地址、電話、帳號或案件編號。" : "Use a household code, not a full address, phone number, account or case number.",
+        zh ? "事件 A" : "Event A",
+      ),
+      { name: "startDate", label: zh ? "第一次觀察日期" : "First observed date", type: "date" },
+      text("startTime", zh ? "第一次觀察時間（HH:MM）" : "First observed time (HH:MM)", zh ? "使用 24 小時制；只填實際觀察時間。" : "Use 24-hour time and enter the time actually observed.", "09:00"),
+      { name: "endDate", label: zh ? "第二個觀察或結束日期" : "Second observation or end date", type: "date" },
+      text("endTime", zh ? "第二個觀察或結束時間（HH:MM）" : "Second observation or end time (HH:MM)", zh ? "這只是第二個時間點，不代表官方結束。" : "This is a second time point, not an official end time.", "10:30"),
+    ],
+    run: (values) => {
+      const start = localDateTime(values.startDate, values.startTime);
+      const end = localDateTime(values.endDate, values.endTime);
+      if (!values.label.trim()) return zh ? "請填寫事件安全代稱。" : "Enter a safe event label.";
+      const privacy = values.label.trim();
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy) || /密碼|驗證碼|完整地址|電號|帳號|案件編號|password|passcode|full address|account number|case number/i.test(privacy))
+        return zh ? "事件代稱含有可能的聯絡、地址、帳號或案件資料；請改用安全代號。" : "The event label may contain contact, address, account or case data; replace it with a safe code.";
+      if (!start || !end) return zh ? "請輸入兩個真實日期與 24 小時制 HH:MM 時間。" : "Enter two real dates and valid 24-hour HH:MM times.";
+      const now = new Date();
+      if (start.getTime() > now.getTime() || end.getTime() > now.getTime()) return zh ? "觀察時間不能晚於現在；只計算已發生的時間點。" : "Observation times cannot be in the future; calculate only times that have occurred.";
+      if (end.getTime() < start.getTime()) return zh ? "第二個時間點不能早於第一次觀察。" : "The second time point cannot be earlier than the first observation.";
+      const totalMinutes = Math.round((end.getTime() - start.getTime()) / 60000);
+      const days = Math.floor(totalMinutes / 1440);
+      const hours = Math.floor((totalMinutes % 1440) / 60);
+      const minutes = totalMinutes % 60;
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long", timeStyle: "short" });
+      const duration = zh ? `${days} 天 ${hours} 小時 ${minutes} 分鐘` : `${days} days, ${hours} hours, ${minutes} minutes`;
+      return zh
+        ? `${values.label.trim()}｜家庭事件經過時間\n第一次觀察：${formatter.format(start)}\n第二個觀察／結束時間：${formatter.format(end)}\n經過時間：${duration}\n\n這是兩個家庭觀察時間點的算術結果，不是台電、供水單位、管理室、廠商、保險或其他官方來源的事件起訖，也不判定責任、安全、損害或理賠。請把原始來源與每個觀察保存在受保護紀錄中。`
+        : `${values.label.trim()} — household event elapsed time\nFirst observed: ${formatter.format(start)}\nSecond observation / end: ${formatter.format(end)}\nElapsed time: ${duration}\n\nThis is arithmetic between two household observation points, not an official start or end from a utility, building, provider, insurer or other authority. It does not decide responsibility, safety, damage or claims. Keep original sources and observations in a protected record.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
+  "household-event-duration-calculator": { ...householdEventDurationDefinition("en") },
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
   "household-device-retirement-handoff-log": deviceRetirementDefinition("en"),
@@ -9490,6 +9533,7 @@ const definitions: Record<string, Definition> = {
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
+  "household-event-duration-calculator": { ...householdEventDurationDefinition("zh-TW") },
   "household-utility-provider-service-handoff-log":
     definitions["__zh-tw-household-utility-provider-service-handoff-log"],
   "household-vehicle-document-source-status-log": {

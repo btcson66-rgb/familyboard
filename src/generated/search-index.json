@@ -2232,6 +2232,14 @@
     "headings": "How to Use FamilyBoard for a Water Leak Record 1. Stop at the safety boundary 2. Create one neutral event code 3. Record the first thing someone actually saw 4. Index evidence without copying sensitive originals 5. Separate notification, finding, work and recovery 6. Keep the export useful and limited Affiliate boundary"
   },
   {
+    "title": "Free Household Event Duration Calculator | Compare Two Observed Times",
+    "description": "Calculate days, hours and minutes between two observed household timestamps for outage, leak, service or handoff records. Private browser tool; not an official duration or safety verdict.",
+    "route": "/tools/household-event-duration-calculator/",
+    "cluster": "tools",
+    "keywords": "household event duration calculator",
+    "headings": "Free Household Event Duration Calculator Use a safe label and two real observations Read the result as arithmetic, not a verdict Keep it useful for the next person Privacy and sharing Affiliate boundary"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
