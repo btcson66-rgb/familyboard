@@ -2392,6 +2392,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-building-notice-response-log/",
+    "alternateRoute": "/zh-tw/tools/household-building-notice-response-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2762,6 +2770,13 @@
     "alternateRoute": "/guides/familyboard-browser-storage-maintenance/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-building-notice-response-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {
@@ -3329,6 +3344,13 @@
     "alternateRoute": "/tools/household-bill-source-status-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-building-notice-response-log/",
+    "alternateRoute": "/tools/household-building-notice-response-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {

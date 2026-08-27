@@ -2192,6 +2192,14 @@
     "headings": "Household Insurance Claim Timeline Log Record an incident without turning observation into a conclusion Five passes for a clear claim record How it connects to other FamilyBoard records Privacy, safety and professional boundaries"
   },
   {
+    "title": "Building Notice Response Log | Free Household Notice Tracker",
+    "description": "Organize building, landlord and property-service notices by received date, impact scope, response, household action and source confirmation without storing private access details.",
+    "route": "/tools/household-building-notice-response-log/",
+    "cluster": "records-emergency",
+    "keywords": "building notice response log",
+    "headings": "Household Building Notice Response Log Separate the notice, the request and the result A five-pass notice workflow Useful for renters, owners and shared homes Privacy, access and safety boundaries Optional affiliate area stays outside the form"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

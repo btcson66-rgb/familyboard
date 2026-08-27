@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T17:47:46.257Z
+Generated: 2026-08-27T17:58:32.697Z
 
 ## Summary
 
-- Indexable pages: 502
-- Generated HTML routes: 519
+- Indexable pages: 505
+- Generated HTML routes: 522
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 280
+- Pages without a contextual product/tool link: 282
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-27T17:47:46.257Z
 - maintenance: 45
 - household-operations: 89
 - inventory-warranty: 44
-- records-emergency: 64
+- records-emergency: 67
 - tools: 121
 
 ## Word-count range
@@ -142,6 +142,7 @@ Generated: 2026-08-27T17:47:46.257Z
 - /zh-tw/guides/familyboard-bill-review-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-maintenance/
+- /zh-tw/guides/familyboard-building-notice-response-tutorial/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-consumable-change-history-tutorial/
 - /zh-tw/guides/familyboard-device-retirement-tutorial/
@@ -267,6 +268,7 @@ Generated: 2026-08-27T17:47:46.257Z
 - /zh-tw/tools/household-account-list/
 - /zh-tw/tools/household-annual-review-generator/
 - /zh-tw/tools/household-bill-source-status-log/
+- /zh-tw/tools/household-building-notice-response-log/
 - /zh-tw/tools/household-clothing-care-repair-log/
 - /zh-tw/tools/household-consumable-change-history-log/
 - /zh-tw/tools/household-device-retirement-handoff-log/

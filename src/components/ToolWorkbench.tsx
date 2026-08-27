@@ -5234,6 +5234,54 @@ const householdInsuranceClaimTimelineDefinition = (locale: Locale): Definition =
   };
 };
 
+const householdBuildingNoticeResponseDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立通知列，等待來源核對", "已記錄收到通知，等待影響範圍", "已記錄要求與回覆，等待家庭決定", "已記錄家庭行動，等待來源確認", "已記錄確認結果，等待後續複查", "通知時間線已複查並保留來源索引", "不適用，已記錄原因與重新開案事件"]
+    : ["Notice row created—source check pending", "Notice received—impact scope pending", "Request and response recorded—household decision pending", "Household action recorded—source confirmation pending", "Confirmation recorded—follow-up review pending", "Notice timeline reviewed—source pointer preserved", "Not applicable—reason and reopen event recorded"];
+  const defaults = zh
+    ? "NOTICE-A | 大樓公共區域代號 | 管委會公告的施工或進出要求；不自行解讀法律效果 | 2026-08-22 | 公告索引 BUILDING-A1；發布來源查閱 2026-08-23 | 已記錄公告要求與聯絡入口；適用範圍仍待管委會確認 | 2026-08-25 | 家庭房屋紀錄角色 | 已記錄要求與回覆，等待家庭決定\nNOTICE-B | 租屋設備檢查代號 | 房東通知的檢查時段；不輸入完整地址或門鎖資訊 | 2026-08-20 | 通知索引 RENT-B1；租約來源版本 LEASE-B1 | 已回覆可行時段；實際到場與後續結果尚未觀察 | 2026-08-24 | 家庭交接角色 | 已記錄家庭行動，等待來源確認"
+    : "NOTICE-A | Building common-area code | Property-manager notice about work or access; no legal conclusion | 2026-08-22 | Notice pointer BUILDING-A1; source checked 2026-08-23 | Notice request and contact route recorded; scope still needs property-manager confirmation | 2026-08-25 | Household property-records role | Request and response recorded—household decision pending\nNOTICE-B | Rental-equipment inspection code | Landlord notice with an inspection window; no full address or access code | 2026-08-20 | Notice pointer RENT-B1; lease source version LEASE-B1 | Feasible time replied; attendance and follow-up result not observed | 2026-08-24 | Household handoff role | Household action recorded—source confirmation pending";
+  return {
+    intro: zh
+      ? "把管委會、房東、物業或服務來源的家庭通知，依收到日、影響範圍、要求、回覆、家庭行動與確認結果排成可交接時間線。工具不判定法律義務、不代替契約或主管機關，也不提供門禁或安全指示。"
+      : "Place a household notice from a property manager, landlord or service source on a handoff timeline with the received date, impact scope, request, response, household action and confirmation. This tool does not decide legal duties, replace an agreement or authority, or provide access or safety instructions.",
+    fields: [
+      text("review", zh ? "家庭通知時間線私人代號" : "Private household-notice timeline reference", zh ? "使用家庭代號，不要輸入姓名、完整地址、門鎖碼、租約號、電話或帳務資料。" : "Use a household code; do not enter names, full addresses, access codes, lease numbers, phone or billing data.", "NOTICE-TIMELINE-2026-A"),
+      { name: "context", label: zh ? "家庭通知時間線情境" : "Household-notice timeline context", type: "select", options: zh ? ["管委會或大樓公共區域公告", "房東或物業進屋／設備檢查通知", "修繕、停水停電或施工通知", "垃圾、停車、噪音或公共設施通知", "搬入搬出點交與物品通知", "其他需要來源複查的家庭通知"] : ["Property-manager or building common-area notice", "Landlord or property access or inspection notice", "Repair, utility interruption or construction notice", "Waste, parking, noise or shared-facility notice", "Move-in, move-out or handoff notice", "Other household notice needing source review"] },
+      { name: "reviewDate", label: zh ? "本次通知時間線複查日期" : "Current notice-timeline review date", type: "date", value: "2026-08-28" },
+      text("source", zh ? "公告、契約與回覆來源索引地圖" : "Notice, agreement and response source-pointer map", zh ? "只填安全代號；完整公告、租約、地址、門禁資訊、通信與付款資料留在受保護來源。" : "Use safe codes; keep full notices, agreements, addresses, access details, correspondence and payment data protected.", "NOTICE-A1; AGREEMENT-A1; RESPONSE-A1"),
+      text("rows", zh ? "家庭通知時間線列" : "Household-notice timeline rows", zh ? "每行 9 欄：ID｜通知或地點代號｜影響範圍與暫時界線｜收到通知日 YYYY-MM-DD｜公告／契約／來源索引與來源日｜要求、回覆或家庭行動觀察｜確認或後續複查日 YYYY-MM-DD｜負責角色｜指定狀態。最多 12 行。" : "Each row uses 9 fields: ID | notice or location code | impact scope and temporary boundary | notice-received date YYYY-MM-DD | notice, agreement or source pointer with source date | request, response or household-action observation | confirmation or follow-up date YYYY-MM-DD | owner role | exact status. Maximum 12 rows.", defaults),
+      text("storage", zh ? "受保護公告、契約與通信位置" : "Protected notice, agreement and correspondence location", zh ? "只寫資料夾或容器代號，不要貼完整公告、地址、門禁碼、租約、電話或通信。" : "Name a folder or container code, not full notices, addresses, access codes, agreements, phone numbers or correspondence.", zh ? "家庭紀錄／通知時間線／NOTICE-TIMELINE-2026-A／受保護來源" : "Household records / notice timeline / NOTICE-TIMELINE-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate);
+      if (!review) return zh ? "請輸入有效的本次通知時間線複查日期。" : "Enter a valid current notice-timeline review date.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全通知代號、來源地圖與受保護位置。" : "Provide a safe notice code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) })).filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行家庭通知時間線列。" : "Enter 1 to 12 household-notice timeline rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `時間線第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Timeline line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length) return zh ? "每行家庭通知時間線都需要唯一 ID。" : "Every household-notice timeline row needs a unique ID.";
+      const noticeDates = rows.map((row) => strictIsoDate(row.parts[3]));
+      const followDates = rows.map((row) => strictIsoDate(row.parts[6]));
+      if (noticeDates.some((date) => !date || date > review)) return zh ? "每列收到通知日必須有效，且不能晚於本次複查。" : "Each notice-received date must be valid and no later than the current review.";
+      if (followDates.some((date, index) => !date || date < (noticeDates[index] ?? review) || date > review)) return zh ? "每列確認或後續複查日必須介於收到通知日與本次複查之間。" : "Each confirmation or follow-up date must fall between its notice-received date and the current review.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `時間線第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Timeline line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const thin = rows.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 12 || row.parts[4].length < 8 || row.parts[5].length < 12 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `時間線第 ${thin.map((row) => row.line).join("、")} 行需要影響範圍、來源索引、要求／回覆觀察與角色。` : `Timeline line ${thin.map((row) => row.line).join(", ")} needs an impact scope, source pointer, request or response observation and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址或通知識別資料；請改用安全代號。" : "A full contact, address or notice identifier was detected; use safe codes.";
+      if (/password|passcode|verification code|full address|street address|phone number|lease number|account number|card number|bank account|door code|access code|private message|密碼|驗證碼|完整地址|電話|租約號|帳號|卡號|銀行帳戶|門鎖碼|門禁|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料；請只保留安全來源索引。" : "Sensitive data was detected; keep only a safe source pointer.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = rows.filter((row) => statuses.indexOf(row.parts[8]) < 5), closed = rows.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const renderedRows = rows.map((row, index) => row.parts[0] + (zh ? "｜通知／地點：" : " — notice/location: ") + row.parts[1] + (zh ? "｜影響範圍：" : " — impact scope: ") + row.parts[2] + (zh ? "｜收到日：" : " — received: ") + formatter.format(noticeDates[index] as Date) + (zh ? "｜來源索引／日期：" : " — source pointer/date: ") + row.parts[4] + (zh ? "｜要求／回覆／行動：" : " — request/response/action: ") + row.parts[5] + (zh ? "｜確認／複查日：" : " — confirmation/follow-up: ") + formatter.format(followDates[index] as Date) + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n");
+      return [values.review.trim() + (zh ? "｜家庭通知時間線" : " — household-notice timeline"), (zh ? "通知情境：" : "Notice context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + formatter.format(review), (zh ? "仍開放列：" : "Open rows: ") + open.length, (zh ? "已複查或不適用列：" : "Reviewed or not-applicable rows: ") + closed.length, (zh ? "公告、契約與回覆來源索引地圖：" : "Notice, agreement and response source-pointer map: ") + values.source.trim(), (zh ? "有版本的家庭通知觀察與行動\n" : "Versioned household-notice observations and actions\n") + renderedRows, (zh ? "受保護公告、契約與通信位置：" : "Protected notice, agreement and correspondence location: ") + values.storage.trim(), zh ? "這份輸出只整理通知與來源時間線，不判定法律義務、租約效果、管委會權限、進屋同意或安全結果，也不提供法律、租屋或安全建議。請依目前公告、契約、主管機關、物業與合格專業來源確認真實結果。" : "This output only organizes notice and source timelines. It does not decide legal duties, lease effects, property-manager authority, access consent or safety outcomes, or provide legal, rental or safety advice. Use current notices, agreements, authorities, property managers and qualified sources for real outcomes."].join("\n\n");
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
@@ -5245,6 +5293,7 @@ const definitions: Record<string, Definition> = {
   "household-consumable-change-history-log": householdConsumableChangeHistoryDefinition("en"),
   "household-repair-evidence-timeline-log": householdRepairEvidenceTimelineDefinition("en"),
   "household-insurance-claim-timeline-log": householdInsuranceClaimTimelineDefinition("en"),
+  "household-building-notice-response-log": householdBuildingNoticeResponseDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -9404,6 +9453,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-insurance-claim-timeline-log": {
     ...householdInsuranceClaimTimelineDefinition("zh-TW"),
+  },
+  "household-building-notice-response-log": {
+    ...householdBuildingNoticeResponseDefinition("zh-TW"),
   },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("zh-TW"),

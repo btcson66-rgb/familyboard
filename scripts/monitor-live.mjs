@@ -293,6 +293,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-insurance-claim-timeline-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-insurance-claim-timeline-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-building-notice-response-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-building-notice-response-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-building-notice-response-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2790,6 +2793,32 @@ const checks = [
       'lang="zh-TW"',
       "家庭事故時間線 App 教學",
       "不會上傳或讀取照片",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/tools/household-building-notice-response-log/",
+    require: [
+      "Household Building Notice Response Log",
+      'hreflang="zh-TW"',
+      "does not decide legal duties, lease effects, property-manager authority",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-building-notice-response-log/",
+    require: [
+      "家庭大樓公告回覆時間線工具",
+      'hreflang="en"',
+      "不判定法律義務、租約效果、管委會權限",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-building-notice-response-tutorial/",
+    require: [
+      "FamilyBoard 大樓公告怎麼交接",
+      'lang="zh-TW"',
+      "家庭通知回覆時間線 App 教學",
+      "不會判斷公告是否合法",
     ],
     forbid: ['rel="alternate"'],
   },
