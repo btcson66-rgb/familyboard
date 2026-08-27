@@ -1856,6 +1856,14 @@
     "headings": "Household Bill Source and Status Log Record the source before the action Keep financial facts in the responsible source Separate status from confirmation Future affiliate placement"
   },
   {
+    "title": "Free Household File Sharing Permission Log | Review and Revoke Access | FamilyBoard",
+    "description": "Review shared household document scope, owner roles, expiry dates and revocation follow-up with safe codes instead of passwords, tokens or private files.",
+    "route": "/tools/household-share-access-review-log/",
+    "cluster": "household-operations",
+    "keywords": "household file sharing permission checklist",
+    "headings": "Household Share Access Review Log Define the smallest useful scope Separate role, container and confirmation Give temporary access an expiry review Keep credentials and private content out Future affiliate placement"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

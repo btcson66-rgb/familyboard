@@ -3115,6 +3115,72 @@ const billReviewDefinition = (locale: Locale): Definition => {
   };
 };
 
+const shareAccessDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立分享列，等待文件或資料範圍",
+        "已確認文件範圍，等待分享角色",
+        "已指定分享角色，等待到期日",
+        "已記錄到期日，等待對方確認",
+        "已觀察使用狀態，等待撤回",
+        "已撤回分享並記錄結果",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Share row created—document or data scope pending",
+        "Document scope checked—sharing role pending",
+        "Sharing role assigned—expiry date pending",
+        "Expiry date recorded—recipient confirmation pending",
+        "Usage observed—revocation pending",
+        "Share revoked—result recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "SHARE-A | 家庭文件索引範圍 | 2026-08-20 | 2026-09-05 | 備援家人角色 | 受保護分享容器代號 | 已確認只分享索引與下一步；未分享原件 | 2026-09-04 前確認角色仍需要此範圍 | 已記錄到期日，等待對方確認\nSHARE-B | 旅行交接摘要範圍 | 2026-08-22 | 2026-08-30 | 旅行交接角色 | 暫時分享容器代號 | 返家後等待撤回；未分享地址或訂位 | 返家複查時撤回暫時分享並記錄結果 | 已觀察使用狀態，等待撤回"
+    : "SHARE-A | Household document index scope | 2026-08-20 | 2026-09-05 | Backup household role | Protected sharing container code | Only the index and next action shared; originals not shared | Confirm the role still needs this scope by 2026-09-04 | Expiry date recorded—recipient confirmation pending\nSHARE-B | Travel handoff summary scope | 2026-08-22 | 2026-08-30 | Travel handoff role | Temporary sharing container code | Revocation pending after return; address and booking details not shared | Revoke the temporary share at the return review and record the result | Usage observed—revocation pending";
+  return {
+    intro: zh
+      ? "把家庭文件或資料的分享範圍、來源、角色、到期日、確認與撤回分開記錄。工具不保存密碼、登入憑證、分享 token、完整文件或私人通信，也不代表任何權限已經真的生效。"
+      : "Separate shared document or data scope, source, owner role, expiry, confirmation and revocation. This tool stores no passwords, login credentials, share tokens, full documents or private correspondence and does not prove that access is active.",
+    fields: [
+      text("review", zh ? "權限複查私人代號" : "Private access-review reference", zh ? "使用家庭代號，不要輸入姓名、帳號、密碼、分享連結或文件全文。" : "Use a household code; do not enter names, account IDs, passwords, share links or full document text.", "SHARE-REVIEW-2026-A"),
+      { name: "shareContext", label: zh ? "分享複查情境" : "Sharing review context", type: "select", options: zh ? ["家庭文件索引", "備份或還原交接", "旅行或住家交接", "照護或學校資料索引", "暫時協作範圍", "其他家庭分享"] : ["Household document index", "Backup or restore handoff", "Travel or home handoff", "Care or school record index", "Temporary collaboration scope", "Other household sharing"] },
+      { name: "reviewDate", label: zh ? "本次複查日期" : "Current review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次複查日期" : "Next review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "文件來源與分享容器地圖" : "Document source and sharing-container map", zh ? "只填安全代號，不要貼分享網址、token、帳號或文件全文。" : "Use safe codes; do not paste share URLs, tokens, account IDs or full documents.", "INDEX-S1; SHARE-C1; REVOKE-R1"),
+      text("rows", zh ? "分享範圍與權限狀態列" : "Shared scope and access-status rows", zh ? "每行 9 欄：ID｜文件或資料範圍｜來源日期 YYYY-MM-DD｜到期日期 YYYY-MM-DD｜分享角色｜分享容器代號｜已觀察確認｜下一步與核點｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | document or data scope | source date YYYY-MM-DD | expiry date YYYY-MM-DD | sharing role | container code | observed confirmation | next action and checkpoint | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護原件與撤回紀錄位置" : "Protected originals and revocation-record location", zh ? "只寫保管流程或容器代號，不要放密碼、token、帳號或文件內容。" : "Name a custody process or container, not passwords, tokens, account IDs or document content.", zh ? "家庭紀錄／權限複查／SHARE-REVIEW-2026-A／受保護容器" : "Household records / access review / SHARE-REVIEW-2026-A / protected container"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次複查日期。" : "Enter valid current and next review dates.";
+      if (next < review) return zh ? "下一次複查日期不能早於本次複查。" : "The next review date cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全權限代號、來源地圖與受保護位置。" : "Provide a safe access code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行分享或權限列。" : "Enter 1 to 14 sharing or access rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `分享第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Share line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行分享紀錄都需要唯一 ID。" : "Every sharing row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `分享第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Share line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => ({ source: strictIsoDate(row.parts[2]), expiry: strictIsoDate(row.parts[3]) }));
+      if (dates.some((item) => !item.source || !item.expiry || item.source > review || item.expiry < item.source)) return zh ? "每列來源與到期日期必須有效，且到期日不能早於來源日期。" : "Each source and expiry date must be valid, with expiry no earlier than the source date.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const invalidClosed = closed.filter((row) => { const expiry = dates[row.line - 1]?.expiry; return expiry ? expiry > review : false; });
+      if (invalidClosed.length) return zh ? `已撤回或不適用的分享第 ${invalidClosed.map((row) => row.line).join("、")} 行到期日不能晚於本次複查。` : `Revoked or not-applicable share line ${invalidClosed.map((row) => row.line).join(", ")} cannot have an expiry later than the current review.`;
+      const thin = parsed.filter((row) => row.parts[1].length < 5 || row.parts[4].length < 3 || row.parts[5].length < 6 || row.parts[6].length < 12 || row.parts[7].length < 10);
+      if (thin.length) return zh ? `分享第 ${thin.map((row) => row.line).join("、")} 行需要範圍、角色、容器、確認與下一步。` : `Share line ${thin.map((row) => row.line).join(", ")} needs a scope, role, container, confirmation and next action.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、帳號或分享識別資料；請改用安全代號。" : "A full contact, address, account or sharing identifier was detected; use safe codes.";
+      if (/password|passcode|login credential|share token|access token|full document|share link|account number|private message|姓名|密碼|登入憑證|分享連結|token|帳號|文件全文|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或文件全文；請只保留安全代號。" : "Sensitive data or full document content was detected; keep only safe codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭文件分享權限複查" : " — household document-sharing access review"), (zh ? "複查情境：" : "Review context: ") + values.shareContext, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次複查：" : "Next review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已撤回或不適用列：" : "Revoked or not-applicable rows: ") + closed.length, (zh ? "文件來源與分享容器地圖：" : "Document source and sharing-container map: ") + values.source.trim(), (zh ? "有版本的分享範圍觀察\n" : "Versioned shared-scope observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜來源日：" : " — source date: ") + fmt.format(dates[index].source as Date) + (zh ? "｜到期日：" : " — expiry: ") + fmt.format(dates[index].expiry as Date) + (zh ? "｜角色：" : " — role: ") + row.parts[4] + (zh ? "｜容器：" : " — container: ") + row.parts[5] + (zh ? "｜確認：" : " — confirmation: ") + row.parts[6] + (zh ? "｜下一步：" : " — next action: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護原件與撤回紀錄位置：" : "Protected originals and revocation-record location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭分享範圍與權限複查，不證明權限已生效，不判定資料安全、合約、法律、照護或學校結果；請以目前使用的服務與管理來源為準。" : "This output only organizes household sharing scope and access review. It does not prove access is active or decide data security, contract, legal, care or school outcomes; use the current service and administrator source."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7146,6 +7212,9 @@ const definitions: Record<string, Definition> = {
   "household-bill-source-status-log": {
     ...billReviewDefinition("en"),
   },
+  "household-share-access-review-log": {
+    ...shareAccessDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7204,6 +7273,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-bill-source-status-log": {
     ...billReviewDefinition("zh-TW"),
+  },
+  "household-share-access-review-log": {
+    ...shareAccessDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

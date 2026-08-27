@@ -39,3 +39,5 @@ Do not paste balances, account numbers, card details, bank information, addresse
 ## Future affiliate placement
 
 Folders, scanners or budgeting notebooks may eventually be recommended beside this guide, but a product cannot decide a debt, fee, deadline or payment outcome. Any commercial block must remain outside the status workflow and never interrupt a user handling a notice or dispute.
+
+---

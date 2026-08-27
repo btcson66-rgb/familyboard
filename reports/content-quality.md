@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T04:13:57.908Z
+Generated: 2026-08-27T04:28:52.952Z
 
 ## Summary
 
-- Indexable pages: 391
-- Generated HTML routes: 408
+- Indexable pages: 394
+- Generated HTML routes: 411
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 178
+- Pages without a contextual product/tool link: 181
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 40
+- product: 41
 - appliances: 30
 - maintenance: 37
-- household-operations: 36
+- household-operations: 38
 - inventory-warranty: 39
 - records-emergency: 47
 - tools: 121
@@ -80,6 +80,7 @@ Generated: 2026-08-27T04:13:57.908Z
 - /tools/household-meal-prep-role-log/
 - /tools/household-meeting-agenda-action-log/
 - /tools/household-pantry-expiry-review-log/
+- /tools/household-share-access-review-log/
 - /tools/household-trip-packing-handoff-log/
 - /tools/household-vehicle-document-source-status-log/
 - /tools/rental-security-deposit-move-out-claim-log/
@@ -116,6 +117,7 @@ Generated: 2026-08-27T04:13:57.908Z
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
+- /zh-tw/guides/familyboard-share-access-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
@@ -204,6 +206,7 @@ Generated: 2026-08-27T04:13:57.908Z
 - /zh-tw/tools/household-record-retention-decision-log/
 - /zh-tw/tools/household-record-retrieval-drill-log/
 - /zh-tw/tools/household-school-record-source-handoff-log/
+- /zh-tw/tools/household-share-access-review-log/
 - /zh-tw/tools/household-storm-readiness-review/
 - /zh-tw/tools/household-subscription-cost-calculator/
 - /zh-tw/tools/household-trip-packing-handoff-log/
