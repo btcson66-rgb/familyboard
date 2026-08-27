@@ -195,9 +195,11 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-clothing-care-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-meal-prep-role-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-meal-prep-role-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-meal-prep-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-meal-prep-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-trip-packing-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-trip-packing-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-trip-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-trip-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-bill-source-status-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-bill-source-status-log/</loc>",
@@ -311,6 +313,7 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-router-support-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-router-support-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-router-support-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-router-support-review-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-shopping-list-planner/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-shopping-list-planner/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-shopping-list-planner-tutorial/</loc>",
@@ -2161,14 +2164,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-meal-prep-tutorial/",
+    require: [
+      "FamilyBoard Meal Prep Tutorial",
+      'hreflang="zh-TW"',
+      "Distinguish plan, action and serving result",
+      "does not generate recipes",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-meal-prep-tutorial/",
     require: [
       "FamilyBoard 一週備餐怎麼分工",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先選兩個可以完成的餐次",
       "計畫不是行動，行動也不是結果",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-trip-packing-handoff-log/",
@@ -2180,14 +2192,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-trip-handoff-tutorial/",
+    require: [
+      "FamilyBoard Trip Handoff Tutorial",
+      'hreflang="zh-TW"',
+      "Separate plan, action and return result",
+      "does not verify travel documents",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-trip-handoff-tutorial/",
     require: [
       "FamilyBoard 旅行交接怎麼做",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先選一個清楚的旅行窗口",
       "來源和家庭任務要分開",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-bill-source-status-log/",
@@ -3032,14 +3053,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-router-support-review-tutorial/",
+    require: [
+      "FamilyBoard Router Support Review Tutorial",
+      'hreflang="zh-TW"',
+      "Record observation and support separately",
+      "does not scan a network",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-router-support-review-tutorial/",
     require: [
       "Wi-Fi 路由器多久要換",
       'lang="zh-TW"',
+      'hreflang="en"',
       "把每一步留在本機家庭紀錄",
       "不會掃描 Wi-Fi",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/tools/household-shopping-list-planner/",

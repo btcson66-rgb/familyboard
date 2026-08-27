@@ -23636,6 +23636,215 @@ Is there one bounded question? Is the source current and dated? Are finding, act
 
 ---
 
+---
+
+## Page 347 — How to Use FamilyBoard for a Router Support Review
+**Slug:** /guides/familyboard-router-support-review-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-router-support-review-tutorial/
+**Primary intent:** learn to review router support, firmware sources and ISP equipment responsibility without storing network credentials
+**Title tag:** FamilyBoard Router Support Review Tutorial | Firmware, ISP Responsibility and Replacement
+**Meta description:** Learn how to review a router's current support source, firmware status and ISP equipment responsibility with FamilyBoard while keeping passwords and account details protected.
+**Primary keyword concept:** FamilyBoard router support review tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-router-support-review-log/`, `/tools/household-internet-incident-review-log/`, `/guides/wifi-router-maintenance-records/`, `/guides/familyboard-device-retirement-tutorial/`, `/zh-tw/guides/familyboard-router-support-review-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard scan my Wi-Fi or test for vulnerabilities?
+  A: No. It records dated sources and household observations; security questions belong with the manufacturer, ISP or a qualified network professional.
+- Q: Should I store a Wi-Fi password or router serial number in a shared row?
+  A: No. Use a neutral equipment code and keep credentials, full serial numbers and account details in a protected location.
+- Q: Does a working connection prove that a router is supported?
+  A: No. Current manufacturer support and firmware sources are separate evidence from a momentary connection test.
+- Q: Who decides whether an ISP modem must be returned?
+  A: The current ISP agreement or official support response controls ownership and return requirements.
+
+**Contextual CTA:** Open the free router support review log, create one neutral device code and date the manufacturer and ISP sources before deciding what to do next.
+
+# How to Use FamilyBoard for a Router Support Review
+
+A router can continue forwarding traffic after its manufacturer stops publishing updates. At the same time, an ISP may own the modem while the household owns a separate router, mesh node or switch. The free [Router Support Review Log](/tools/household-router-support-review-log/) helps a family keep those questions separate. It does not scan a network, log into a device, test security, measure speed or decide that a replacement is necessary.
+
+## Define the equipment boundary
+
+Begin with one bounded review such as “main router support check” or “ISP modem return after a plan change.” Use `ROUTER-REVIEW-2026-A`, not a person’s name, full address, Wi-Fi name or account number. If several devices look alike, assign a private role code to the main router, modem, mesh node and switch before checking a source. A clear boundary prevents a firmware note for one device from being applied to another.
+
+## Record observation and support separately
+
+Write down what the household actually observed—an indicator light, a connection interruption or a model label—and separately record what the manufacturer says about support and firmware. A green light is not proof of security support. A speed test is not proof of a current update. Put the source URL or protected reference, the date checked and the model context in the review row so another family member can repeat the lookup.
+
+## Build a three-source map
+
+Use `MANUAL-M1` for the manufacturer manual or support page, `ISP-I1` for ownership, plan, cancellation and return rules, and `HOME-H1` for the protected household settings history. Search snippets and old setup cards can help locate a source, but they should not close a review when the current official page says something different. When two sources conflict, leave the status open and assign the role that must resolve it.
+
+## Keep credentials out of the shared record
+
+The log needs a pointer, not the secret. Store Wi-Fi keys, router administrator passwords, recovery codes, ISP logins, full bills and complete serial numbers in the appropriate protected vault. A row can say “management credential in protected vault; source HOME-H1.” FamilyBoard never enters the router or ISP portal for you. If a support agent requests verification, use the official channel and record only the date, safe source code and observable response.
+
+## Confirm ISP ownership before replacing anything
+
+Mark whether each device is provider-owned, household-owned or still unknown. Check the current agreement or an official ISP response before a move, upgrade or cancellation. Record when a return label was requested, when equipment was sent and when the provider confirmed receipt as separate events. A box with a label is not the same as a received return, and a new retail device is not automatically compatible with every plan.
+
+## Compare a replacement against a real household need
+
+List the rooms and device roles that matter, the ISP features that must remain available and who can maintain the equipment. Then return to manufacturer and ISP sources for compatibility, support period, update method and return responsibility. FamilyBoard can preserve the questions and decision date; it does not rank products, interpret advertising, promise coverage or turn an affiliate link into a recommendation that must be followed.
+
+## Close the old and new records independently
+
+After a change, record the new model source, installation date and services the household actually checked. Record the old device’s return, storage or transfer result in its own row. A short connection test does not cover every room, device, future update or service tier. If the problem continues, keep it open and give the event source to the ISP, manufacturer or qualified professional instead of rewriting an unresolved outage as a successful upgrade.
+
+## Rehearse a safe handoff and share minimally
+
+Create an imaginary router row and ask a backup role to locate the support source, explain the ownership boundary and name the next review date. Do not open a management screen or exchange a password during the rehearsal. Before printing or sharing, remove credentials, full serials, addresses, billing data and private support messages. Any future cable, wall-mount or mesh-product recommendation belongs after the answer, disclosed and skippable, outside the tool controls.
+
+## Eight-question closeout
+
+Is every device role identified? Are “works now” and “supported” separate? Are manufacturer and ISP sources dated? Is ownership confirmed? Are credentials protected? Is replacement tied to a household need? Are new, return and unresolved results separate? Is any recommendation optional and disclosed? If not, leave the review open.
+
+---
+
+## Page 348 — How to Use FamilyBoard for a Trip Handoff
+**Slug:** /guides/familyboard-trip-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-trip-handoff-tutorial/
+**Primary intent:** learn to hand off packing, home coverage and return checks without exposing travel documents or reservation data
+**Title tag:** FamilyBoard Trip Handoff Tutorial | Packing, Home Coverage and Return Checks
+**Meta description:** Learn how to organise a household trip handoff with FamilyBoard: set a travel window, assign roles, protect documents and record what happened after returning home.
+**Primary keyword concept:** FamilyBoard trip handoff tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-trip-packing-handoff-log/`, `/guides/vacation-home-shutdown-checklist/`, `/guides/house-sitter-information/`, `/tools/household-meeting-agenda-action-log/`, `/zh-tw/guides/familyboard-trip-handoff-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard check passports, visas, bookings or travel rules?
+  A: No. Use the current carrier, authority, accommodation and service sources for those requirements.
+- Q: Can I paste a reservation number or home address into the handoff?
+  A: No. Use a neutral trip code and keep documents, reservations, payment details and access information protected.
+- Q: Does assigning a house sitter mean the handoff is complete?
+  A: No. The receiver must confirm the scope, and the household should record the actual result after returning.
+- Q: Do I need to publish the entire itinerary?
+  A: No. Share only the household tasks, roles, dates and source pointers needed for the handoff.
+
+**Contextual CTA:** Choose one departure and return window, create two safe handoff rows and ask the receiver to repeat the source and next checkpoint.
+
+# How to Use FamilyBoard for a Trip Handoff
+
+Travel coordination fails when a family member knows that “someone is handling it” but cannot tell which task, date or source that means. The free [Trip Packing and Handoff Log](/tools/household-trip-packing-handoff-log/) turns packing, home coverage and return checks into a small dated handoff. It does not verify travel documents, bookings, insurance, transport, accommodation, pet health or home safety, and it never contacts a sitter or provider.
+
+## Set one travel window
+
+Enter a departure and return date and keep this review limited to that trip. A weekend away may need mail collection and a plant check; a long trip may intersect a service appointment, delivery or bill cycle. Keep separate trips in separate versions so a completed task from last month does not look like a current instruction. Use `TRIP-HANDOFF-2026-A` rather than a destination, address or booking code.
+
+## Start with two real rows
+
+Begin with “packing and personal preparation” and “home coverage handoff.” Add a pet, plant, parcel or scheduled service row only when it is genuinely needed. Two rows are enough to test whether the receiver can find the source, understand the role and name the check date. A small first pass is easier to review than a shared copy of the full itinerary.
+
+## Use safe source codes
+
+Create `TRAVEL-T1` for the protected travel source and `HOME-H1` for the household handoff source. A carrier, government, accommodation, insurer or pet-service source may have different requirements; do not blend them into a single remembered instruction. Record the date checked and keep old versions when the departure window changes. The log points to the source; it does not reproduce a passport, reservation, address or payment record.
+
+## Separate plan, action and return result
+
+“Backup person assigned” is a plan. “Backup person confirms the task and source” is an action. “Mail collected and noted after return” is an observed result. A packed bag, a message sent or a checkbox pressed does not prove that the handoff occurred. Give each stage its own status and review date so a family member can see what is still unknown.
+
+## Assign roles without publishing names
+
+Use labels such as travel-preparation role, home-coverage role, pet-care role, plant-care role and return-review role. Add a backup trigger for an absent caregiver, a changed return date or a revised service instruction. The shared row can say “return to HOME-H1” without listing a phone number, gate code or private itinerary. The person with account authority should use the provider’s controlled channel when a change is needed.
+
+## Rehearse before departure
+
+Make an imaginary row and ask the receiver to locate the source, describe the access boundary and state the result-review step. Do not open a lock, handle a tool, test gas or electrical equipment or exchange credentials during a rehearsal. If the receiver cannot repeat the scope, shorten the task and improve its source pointer instead of adding sensitive detail.
+
+## Record the return without assuming success
+
+On the return date, review each row individually. Record what was actually observed, which task did not happen, whether a delivery or service needs a follow-up and who owns that next step. A home that looks fine is not a professional safety inspection. Pet health, plant disease, electrical, gas, leak and security questions belong with the relevant qualified or official source. Preserve an “not applicable” result with its reason rather than deleting the row.
+
+## Keep itineraries and recommendations out of the tool
+
+Share only the minimum task, role, safe code and date. Keep passports, visas, tickets, reservation numbers, addresses, payment records, door codes and private messages in protected locations. Any future packing cube, label or travel accessory recommendation belongs after the workflow, with a clear affiliate disclosure and a skip option. No product can guarantee a safe trip or a completed handoff.
+
+## Eight-question closeout
+
+Is the travel window singular? Are the two first tasks clear? Are current sources dated? Are plan, action and result separate? Are backup triggers defined? Did sharing remove documents, addresses and access secrets? Are return observations honest and bounded? Is any product suggestion optional and disclosed? If not, keep the trip open.
+
+---
+
+## Page 349 — How to Use FamilyBoard for Meal Preparation Roles
+**Slug:** /guides/familyboard-meal-prep-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-meal-prep-tutorial/
+**Primary intent:** learn to coordinate weekly meal preparation, shopping sources and serving follow-up without storing health or order data
+**Title tag:** FamilyBoard Meal Prep Tutorial | Plan Roles, Sources and Serving Follow-Up
+**Meta description:** Learn how to organise weekly meal-prep roles with FamilyBoard: start with two meal slots, link the right source, assign preparation and record what actually happened.
+**Primary keyword concept:** FamilyBoard meal prep tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-meal-prep-role-log/`, `/tools/household-pantry-expiry-review-log/`, `/guides/pantry-restock-system/`, `/tools/household-meeting-agenda-action-log/`, `/zh-tw/guides/familyboard-meal-prep-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard create recipes or calculate nutrition?
+  A: No. It records household tasks and source pointers; use the current recipe, label or qualified source that applies.
+- Q: Should I paste a grocery order or allergy note into a shared row?
+  A: No. Keep orders, addresses, payment information and health details in their protected source.
+- Q: Does assigning a preparation role prove that food was served?
+  A: No. A plan, action and serving result are separate observations.
+- Q: Do I need a whole-month meal plan?
+  A: No. Start with two meal slots, test the handoff and expand only when the family can complete and review it.
+
+**Contextual CTA:** Pick two upcoming meal slots, create a safe source code and assign one preparation role plus a serving-result review date.
+
+# How to Use FamilyBoard for Meal Preparation Roles
+
+Meal coordination breaks down when “someone bought it,” “someone will cook” and “we served it” are treated as one fact. The free [Meal Preparation and Role Log](/tools/household-meal-prep-role-log/) keeps a meal slot, the source to reopen, the preparation role and the later result separate. It does not generate recipes, calculate nutrition, interpret allergens, set portions, inspect food or replace a product label or qualified guidance.
+
+## Start with two meal slots
+
+Choose two meals in the coming week, a weekend batch-prep session or one meal affected by travel. Use `MEAL-PLAN-2026-A` and keep the scope small enough to finish. A first test should reveal whether each person knows which source to check, what action is theirs and when someone will record what really happened. Expand to a full week only after those two rows have completed a cycle.
+
+## Map recipe, shopping and pantry sources separately
+
+Use `RECIPE-R1` for the protected recipe or menu source, `SHOP-S1` for a shopping record and `PANTRY-P1` for a dated pantry observation. These are different references, even when they concern the same meal. Record the source date and version. A remembered ingredient, an old order or a search result is a prompt to verify, not evidence that a product’s ingredients, storage or suitability remain unchanged.
+
+## Distinguish plan, action and serving result
+
+“Monday dinner planned” is a plan. “Preparation role checked the source and gathered items” is an action. “Meal served; household observed the planned task was completed” is a later result. A filled calendar, a purchased ingredient or a message from a family member does not prove that serving occurred. Keep the result open when the source or observation is missing rather than filling it with an assumption.
+
+## Use roles instead of names
+
+Choose labels such as preparation role, shopping role, pantry-review role, backup family role or travel-handoff role. Add the action date and one short observable note. Roles remain useful when people’s schedules change, while names, phone numbers, addresses and private conversations stay in the appropriate protected place. If a child or guest is helping, share only the row needed for that task.
+
+## Treat health and food-safety questions as external
+
+FamilyBoard can record “ask the current label source” or “return to the clinician’s protected instruction,” but it cannot decide an allergy, nutritional requirement, serving size, storage period or food-safety risk. Do not copy a health note, prescription, full order or medical conversation into a shared result. When a household sees a concern, pause the workflow and use the current official, manufacturer or qualified professional source.
+
+## Handle substitutions and cancelled meals
+
+If a meal, ingredient or shopping source changes, preserve the original observation and make a dated update. Record whether the substitution was merely proposed, actually purchased or later served; do not collapse those events. If a meal is cancelled, note the reason and the condition for reopening it. Keeping the closed row makes next week’s review understandable without copying the entire shopping history.
+
+## Review after serving
+
+After the meal window, record only what the household observed: prepared, delayed, cancelled, served or still waiting for a source. Add the next action and owner when something remains open. “Everyone was safe” or “this product is suitable” is not a conclusion the tool can make. A brief, dated result gives the next preparation role a reliable starting point without turning the app into a medical or nutrition record.
+
+## Link pantry, meetings and future recommendations carefully
+
+The pantry tool can point to what was observed, the meal log can assign the next action and the household meeting can settle priorities. Link them with safe codes instead of repeating full text. Labels, meal-planning notebooks or storage products may eventually appear after the answer, clearly disclosed and skippable. No commercial item can guarantee nutrition, allergy safety or a successful meal, and it must never interrupt the free tool controls.
+
+## Eight-question closeout
+
+Are only two initial meal slots in scope? Are recipe, shopping and pantry sources dated? Are plan, action and result distinct? Are roles clear without names? Are health and safety questions left to the right source? Are substitutions and cancellations versioned? Is the serving observation honest? Is any recommendation optional and disclosed? If not, keep the meal row open.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

@@ -7,7 +7,7 @@ primaryKeyword: "FamilyBoard 備餐分工教學"
 locale: "zh-TW"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-meal-prep-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

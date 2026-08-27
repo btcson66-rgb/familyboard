@@ -63,3 +63,5 @@ Binders, labels or storage media may be compared after the workflow, outside the
 ## Eight-question closeout
 
 Is there one bounded question? Is the source current and dated? Are finding, action and improvement separate? Are weekly and monthly scopes distinct? Can a backup role repeat the lookup? Is restore evidence kept separate from file existence? Did sharing remove sensitive records? Is any recommendation optional and disclosed? If not, keep the review open.
+
+---

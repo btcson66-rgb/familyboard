@@ -2568,6 +2568,30 @@
     "headings": "How to Use FamilyBoard for a Monthly Household Review Choose one system question Map the protected source Separate finding, action and improvement Keep weekly and monthly rhythms distinct Run a five-minute handoff test Treat backup and restore as different evidence Keep affiliate material optional Eight-question closeout"
   },
   {
+    "title": "FamilyBoard Router Support Review Tutorial | Firmware, ISP Responsibility and Replacement",
+    "description": "Learn how to review a router's current support source, firmware status and ISP equipment responsibility with FamilyBoard while keeping passwords and account details protected.",
+    "route": "/guides/familyboard-router-support-review-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard router support review tutorial",
+    "headings": "How to Use FamilyBoard for a Router Support Review Define the equipment boundary Record observation and support separately Build a three-source map Keep credentials out of the shared record Confirm ISP ownership before replacing anything Compare a replacement against a real household need Close the old and new records independently Rehearse a safe handoff and share minimally Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Trip Handoff Tutorial | Packing, Home Coverage and Return Checks",
+    "description": "Learn how to organise a household trip handoff with FamilyBoard: set a travel window, assign roles, protect documents and record what happened after returning home.",
+    "route": "/guides/familyboard-trip-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard trip handoff tutorial",
+    "headings": "How to Use FamilyBoard for a Trip Handoff Set one travel window Start with two real rows Use safe source codes Separate plan, action and return result Assign roles without publishing names Rehearse before departure Record the return without assuming success Keep itineraries and recommendations out of the tool Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Meal Prep Tutorial | Plan Roles, Sources and Serving Follow-Up",
+    "description": "Learn how to organise weekly meal-prep roles with FamilyBoard: start with two meal slots, link the right source, assign preparation and record what actually happened.",
+    "route": "/guides/familyboard-meal-prep-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard meal prep tutorial",
+    "headings": "How to Use FamilyBoard for Meal Preparation Roles Start with two meal slots Map recipe, shopping and pantry sources separately Distinguish plan, action and serving result Use roles instead of names Treat health and food-safety questions as external Handle substitutions and cancelled meals Review after serving Link pantry, meetings and future recommendations carefully Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -138,6 +138,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-subscription-cancellation-handoff-tutorial/",
     "/guides/familyboard-school-activity-handoff-tutorial/",
     "/guides/familyboard-monthly-review-action-tutorial/",
+    "/guides/familyboard-router-support-review-tutorial/",
+    "/guides/familyboard-trip-handoff-tutorial/",
+    "/guides/familyboard-meal-prep-tutorial/",
     "/tools/household-seasonal-reset-action-log/",
     "/tools/household-device-retirement-handoff-log/",
     "/tools/household-router-support-review-log/",
@@ -1397,6 +1400,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-monthly-review-action-tutorial/",
       alternate: "/guides/familyboard-monthly-review-action-tutorial/",
       heading: "FamilyBoard 每月家庭檢視怎麼做？維護、備份與續期 App 教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-router-support-review-tutorial/",
+      alternate: "/guides/familyboard-router-support-review-tutorial/",
+      heading: "Wi-Fi 路由器多久要換？FamilyBoard 支援期限與汰換教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-trip-handoff-tutorial/",
+      alternate: "/guides/familyboard-trip-handoff-tutorial/",
+      heading: "FamilyBoard 旅行交接怎麼做？",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-meal-prep-tutorial/",
+      alternate: "/guides/familyboard-meal-prep-tutorial/",
+      heading: "FamilyBoard 一週備餐怎麼分工？",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -3358,6 +3376,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-monthly-review-action-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-router-support-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-router-support-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-trip-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-trip-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-meal-prep-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-meal-prep-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭檢查路由器支援與 ISP 責任，不保存�
 primaryKeyword: "路由器多久要換教學"
 cluster: "records-emergency"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-router-support-review-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"
