@@ -4039,6 +4039,52 @@ const weeklyResetActionDefinition = (locale: Locale): Definition => {
   };
 };
 
+const monthlyReviewActionDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立月檢列，等待範圍", "已核對來源，等待保留或更新決定", "已指定角色，等待改善行動", "已記錄改善，等待下月複查", "已完成檢視並保留依據", "不適用，已記錄原因"]
+    : ["Monthly row created—scope pending", "Sources checked—keep or update decision pending", "Role assigned—improvement action pending", "Improvement recorded—next-month review pending", "Review completed with evidence retained", "Not applicable—reason recorded"];
+  const defaults = zh
+    ? "MONTH-A | 維護與保固日期檢視 | 2026-08-26 | FamilyBoard 維護與保固來源代號 | 核對下一個 30 天窗口與手冊版本 | 家庭維護角色已比對日期，發現一個來源需要更新 | 更新受控來源後建立下一個任務 | 家庭維護角色 | 已指定角色，等待改善行動\nMONTH-B | 備份與文件索引複查 | 2026-08-27 | 家庭備份與文件來源代號 | 確認最近備份可找到且索引仍指向受控位置 | 備援角色完成尋找演練，未複製文件內容 | 下月複查備份日期與索引版本 | 備援家庭角色 | 已記錄改善，等待下月複查"
+    : "MONTH-A | Maintenance and warranty dates | 2026-08-26 | FamilyBoard maintenance and warranty source codes | Check the next 30-day window and manual version | Household maintenance role compared dates and found one source to update | Update the controlled source and create the next task | Household maintenance role | Role assigned—improvement action pending\nMONTH-B | Backup and document index review | 2026-08-27 | Household backup and document source codes | Confirm the latest backup is findable and the index still points to controlled storage | Backup role completed a retrieval drill without copying document contents | Review backup date and index version next month | Backup household role | Improvement recorded—next-month review pending";
+  return {
+    intro: zh ? "把每月家庭檢視的範圍、受控來源、保留或更新決定、角色、改善行動與下月核點分開。工具不保存完整文件、帳務或憑證，也不替家庭判定保固、法律或安全結果。" : "Separate the monthly review scope, controlled sources, keep-or-update decision, role, improvement action and next-month checkpoint. This tool stores no full documents, billing data or credentials and does not decide warranty, legal or safety outcomes for a household.",
+    fields: [
+      text("review", zh ? "家庭每月檢視私人代號" : "Private household monthly-review reference", zh ? "使用家庭代號，不要輸入姓名、地址、電話、帳號或完整文件。" : "Use a household code; do not enter names, addresses, phone numbers, account details or full documents.", "MONTH-2026-08"),
+      { name: "context", label: zh ? "本月檢視範圍" : "Monthly review scope", type: "select", options: zh ? ["維護、保固與服務紀錄", "續期、訂閱與家庭帳單窗口", "備份、文件索引與資料品質", "用品、設備與替換計畫", "角色、權限與交接準備", "其他月度家庭檢視"] : ["Maintenance, warranties and service history", "Renewals, subscriptions and bill windows", "Backups, document indexes and data quality", "Supplies, equipment and replacement planning", "Roles, permissions and handoff readiness", "Other monthly household review"] },
+      { name: "reviewDate", label: zh ? "本月檢視日期" : "Current monthly-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下月複查日期" : "Next-month checkpoint date", type: "date", value: "2026-09-27" },
+      text("source", zh ? "維護、文件與備份來源地圖" : "Maintenance, document and backup source map", zh ? "只填來源代號，不要貼完整文件或帳務內容。" : "Use source codes; do not paste full documents or billing content.", "MAINT-M1; DOC-D1; BACKUP-B1"),
+      text("rows", zh ? "每月檢視與改善列" : "Monthly review and improvement rows", zh ? "每行 9 欄：ID｜檢視範圍｜觀察日期 YYYY-MM-DD｜來源代號｜保留或更新決定｜角色與核對觀察｜改善行動或依據位置｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | review scope | observed date YYYY-MM-DD | source code | keep-or-update decision | role and verification observation | improvement action or evidence location | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護家庭來源位置" : "Protected household-source location", zh ? "只寫保管流程或容器代號，不要放完整文件、帳務或私人通信。" : "Name a custody process or container, not full documents, billing data or private correspondence.", zh ? "家庭紀錄／每月檢視／MONTH-2026-08／受保護來源" : "Household records / monthly review / MONTH-2026-08 / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本月與下月複查日期。" : "Enter valid current and next-month checkpoint dates.";
+      if (next < review) return zh ? "下月複查日期不能早於本月檢視。" : "The next-month checkpoint cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 10 || values.storage.trim().length < 10) return zh ? "請提供安全代號、來源地圖與受保護位置。" : "Provide a safe reference, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行每月檢視列。" : "Enter 1 to 14 monthly-review rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `檢視第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Review line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行檢視紀錄都需要唯一 ID。" : "Every monthly-review row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `檢視第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Review line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本月檢視。" : "Each observed date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 4);
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[3].length < 5 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `檢視第 ${thin.map((row) => row.line).join("、")} 行需要範圍、來源、決定、觀察、改善行動與角色。` : `Review line ${thin.map((row) => row.line).join(", ")} needs scope, source, decision, observation, improvement action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡或帳務識別資料；請改用安全代號。" : "A full contact or billing identifier was detected; use safe codes.";
+      if (/password|passcode|account number|login|payment card|full bill|private message|密碼|帳號|付款卡|完整帳單|私人訊息/i.test(privacy)) return zh ? "偵測到帳號、密碼、付款或私人通信資料；請只保留安全來源代號。" : "Account, credential, payment or private-message data was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭每月檢視行動" : " — household monthly review actions"), (zh ? "檢視範圍：" : "Review scope: ") + values.context, (zh ? "本月檢視：" : "Current review: ") + fmt.format(review), (zh ? "下月複查：" : "Next-month checkpoint: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已完成或不適用列：" : "Completed or not-applicable rows: ") + closed.length, (zh ? "來源地圖：" : "Source map: ") + values.source.trim(), (zh ? "有版本的檢視觀察\n" : "Versioned review observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜決定：" : " — decision: ") + row.parts[4] + (zh ? "｜觀察：" : " — observation: ") + row.parts[5] + (zh ? "｜改善／依據：" : " — improvement/evidence: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護家庭來源位置：" : "Protected household-source location: ") + values.storage.trim(), zh ? "這份輸出只整理每月家庭檢視與改善，不保存完整文件或帳務、不替家庭判定專業結果。" : "This output only organizes monthly household review and improvement. It stores no full documents or billing data and does not decide professional outcomes for you."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -8118,6 +8164,9 @@ const definitions: Record<string, Definition> = {
   "household-weekly-reset-action-log": {
     ...weeklyResetActionDefinition("en"),
   },
+  "household-monthly-review-action-log": {
+    ...monthlyReviewActionDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -8224,6 +8273,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-weekly-reset-action-log": {
     ...weeklyResetActionDefinition("zh-TW"),
+  },
+  "household-monthly-review-action-log": {
+    ...monthlyReviewActionDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

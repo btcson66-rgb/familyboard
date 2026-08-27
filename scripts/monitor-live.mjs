@@ -242,6 +242,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-weekly-reset-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-weekly-reset-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-weekly-reset-action-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-monthly-review-action-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-monthly-review-action-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-monthly-review-action-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1085,6 +1088,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Review only what needs a decision",
       "Connect decisions to owners and evidence",
+    ],
+  },
+  {
+    path: "/tools/household-monthly-review-action-log/",
+    require: [
+      "Household Monthly Review Action Log",
+      'hreflang="zh-TW"',
+      "Review the system, not every detail",
+      "Keep a next-month checkpoint",
     ],
   },
   {
@@ -2162,6 +2174,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-monthly-review-action-log/",
+    require: [
+      "家庭每月檢視行動工具",
+      'hreflang="en"',
+      "先選一個月度範圍",
+      "每月檢視不是逐項抄錄",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2248,6 +2269,16 @@ const checks = [
       'lang="zh-TW"',
       "建立安全來源地圖",
       "把提醒、行動與結果分三層",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-monthly-review-action-tutorial/",
+    require: [
+      "FamilyBoard 每月家庭檢視怎麼做",
+      'lang="zh-TW"',
+      "建立安全來源地圖",
+      "核對備份與文件索引",
     ],
     forbid: ['rel="alternate"'],
   },

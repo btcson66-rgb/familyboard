@@ -1984,6 +1984,14 @@
     "headings": "Household Weekly Reset Action Log Review only what needs a decision Connect decisions to owners and evidence Keep the reset outside affiliate content"
   },
   {
+    "title": "Free Household Monthly Review Log | Maintenance, Renewals and Records | FamilyBoard",
+    "description": "Run a monthly household review for maintenance, warranties, renewals, backups and records with clear owners and next checkpoints—without storing full documents or credentials.",
+    "route": "/tools/household-monthly-review-action-log/",
+    "cluster": "household-operations",
+    "keywords": "household monthly review log",
+    "headings": "Household Monthly Review Action Log Review the system, not every detail Keep a next-month checkpoint Keep commercial recommendations outside the review"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

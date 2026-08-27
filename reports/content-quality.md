@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T09:05:31.769Z
+Generated: 2026-08-27T09:20:45.041Z
 
 ## Summary
 
-- Indexable pages: 439
-- Generated HTML routes: 456
+- Indexable pages: 442
+- Generated HTML routes: 459
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 226
+- Pages without a contextual product/tool link: 229
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 56
+- product: 57
 - appliances: 30
 - maintenance: 37
-- household-operations: 64
+- household-operations: 66
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -87,6 +87,7 @@ Generated: 2026-08-27T09:05:31.769Z
 - /tools/household-meal-prep-role-log/
 - /tools/household-meeting-agenda-action-log/
 - /tools/household-meter-reading-review-log/
+- /tools/household-monthly-review-action-log/
 - /tools/household-pantry-expiry-review-log/
 - /tools/household-plant-care-handoff-log/
 - /tools/household-recycling-handoff-log/
@@ -138,6 +139,7 @@ Generated: 2026-08-27T09:05:31.769Z
 - /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
 - /zh-tw/guides/familyboard-meter-reading-tutorial/
+- /zh-tw/guides/familyboard-monthly-review-action-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
@@ -238,6 +240,7 @@ Generated: 2026-08-27T09:05:31.769Z
 - /zh-tw/tools/household-medical-information-source-handoff-log/
 - /zh-tw/tools/household-meeting-agenda-action-log/
 - /zh-tw/tools/household-meter-reading-review-log/
+- /zh-tw/tools/household-monthly-review-action-log/
 - /zh-tw/tools/household-pantry-expiry-review-log/
 - /zh-tw/tools/household-pet-record-source-handoff-log/
 - /zh-tw/tools/household-plant-care-handoff-log/
