@@ -18420,6 +18420,170 @@ Packing a required item, deciding who will submit a form and observing a confirm
 
 Future recommendations for folders, labels or activity supplies may appear beside the guide with disclosure. They cannot promise school acceptance, reduce a fee or interrupt the form and result workflow.
 
+## Page 264 — Household Home Access Handoff Log
+**Slug:** /tools/household-home-access-handoff-log/
+**Primary intent:** coordinate temporary household access, visit boundaries and return observations without storing addresses, keys or visitor identity
+**Title tag:** Free Home Access Handoff Log | Visit Scope, Roles and Return Review | FamilyBoard
+**Meta description:** Organize temporary home-access windows, permitted scope, household roles and arrival or return observations without storing addresses, keys, access codes or visitor identity.
+**Primary keyword concept:** home access handoff log
+**Cluster:** household-operations
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /tools/household-guest-arrival-prep-log/, /tools/household-share-access-review-log/, /zh-tw/tools/household-home-access-handoff-log/
+**FAQ:**
+- Q: Does this tool give a visitor permission to enter?
+  A: No. It records a household workflow after the responsible person has arranged permission through the appropriate channel.
+- Q: Can I store an address, key code or lockbox number?
+  A: No. Use a safe source code and keep the sensitive detail in a controlled household process.
+- Q: Can it prove a contractor arrived or left safely?
+  A: No. It records your observation and points back to the responsible source; it is not a security or service guarantee.
+
+# Household Home Access Handoff Log
+
+A repair visit, pet-care handoff or short family check-in can involve a permitted room, a narrow time window, preparation before arrival and a reset after departure. This free browser tool keeps those decisions separate so the next household role can act without copying an address, key, access code or visitor identity into a shared note.
+
+## Permission comes before the log
+
+Use a code such as `APPOINTMENT-A1`, `HOUSEHOLD-H1` or `RESULT-R1` to point to the responsible appointment, household plan or official channel. The tool is an index of what your household observed; it does not issue permission, verify identity, manage a lock or replace a building, landlord, service-provider or family process.
+
+## Record least-privilege scope
+
+Describe only the area and task that need attention: for example, “utility inspection—equipment area only.” Keep the window and boundary readable to the assigned role, but never paste the street address, unit number, key location, keypad code, alarm code, full name or private conversation. If the scope changes, create a new row and preserve the earlier observation.
+
+## Separate arrival, return and reset
+
+Preparation is not arrival evidence. Arrival is not proof that work was completed. Return of a key or item is not proof that every permission was revoked. Record each observation, the next review and the protected source that controls the real detail. If something is missing, unexpected or unsafe, pause and use the appropriate responsible channel rather than improvising an access decision in the public-safe log.
+
+## Keep affiliate suggestions outside access decisions
+
+Future affiliate areas may compare general organizers, labels or document sleeves beside this guide with clear disclosure. They must not reveal a household access pattern, recommend a lock for a particular person, imply security certification or make a product necessary to complete a handoff.
+
+## Page 265 — Household Home Access Handoff Tutorial (Traditional Chinese)
+**Slug:** /zh-tw/guides/familyboard-home-access-handoff-tutorial/
+**Primary intent:** teach Taiwan households how to coordinate temporary home access with a public-safe, local-first workflow
+**Title tag:** FamilyBoard 家庭進出交接教學｜訪客、維修與歸還複查
+**Meta description:** 用繁體中文教你把維修到訪、親友照看、進出範圍與鑰匙歸還分開整理；不在共享紀錄保存地址、門禁碼或訪客身分。
+**Primary keyword concept:** 家庭進出交接教學
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/household-home-access-handoff-log/, /zh-tw/tools/household-guest-arrival-prep-log/, /zh-tw/tools/household-share-access-review-log/
+**FAQ:**
+- Q: 家庭進出交接表可以直接當作門禁授權嗎？
+  A: 不可以。授權仍要由屋主、管理室、房東、服務商或家庭負責人依正式流程處理。
+- Q: 為什麼不能把地址、鑰匙位置或門禁碼寫進去？
+  A: 這些資料一旦被複製到共享紀錄，會擴大暴露面；工具只需要安全代號與受控來源位置。
+- Q: 觀察到到訪就代表服務完成了嗎？
+  A: 不代表。到訪、工作結果、物品歸還與權限重設是不同事件，要分開回到負責來源複查。
+
+# FamilyBoard 家庭進出交接教學：把範圍、角色與歸還觀察分開
+
+家裡請水電、冷氣、清潔、寵物照護或親友短暫代收時，真正容易出錯的通常不是「有沒有傳訊息」，而是大家對進入哪裡、什麼時段、誰負責、什麼算完成有不同理解。這篇教學示範如何用 FamilyBoard 的免費[家庭進出與歸還複查工具](/zh-tw/tools/household-home-access-handoff-log/)整理公開可分享的流程，同時把地址、鑰匙、門禁與身分留在適當的受保護位置。
+
+## 先分清楚四種不同的事情
+
+第一是「是否允許進入」：這是屋主、房東、管理室、服務商或家庭負責人的授權問題，不是工具可以判斷的結果。第二是「允許的範圍與窗口」：例如只處理機電設備區、只在已約定的白天時段到訪。第三是「實際觀察」：家人看到準備完成、有人到訪、物品交付或物品歸還。第四是「後續複查」：回到正式來源確認工作結果、門禁權限或備份紀錄是否已更新。把四者寫在同一段話，最容易讓未來接手的人誤以為前一件事已經證明後一件事。
+
+## 在台灣家庭情境先確認負責來源
+
+公寓大樓可能有管理室、社區公告或預約登記；租屋可能還有房東或代管窗口；到府維修通常由品牌、平台或你選定的業者提供預約資料；親友照看則由家庭內部負責人確認。你可以在工具的來源地圖寫 `MANAGEMENT-M1`、`LANDLORD-L1`、`SERVICE-S1`、`HOUSEHOLD-H1` 這類安全代號，但不要把管理室電話、完整門牌、姓名、案件號或私人聊天全文複製進去。代號只是一個索引，仍要回到受控原件確認內容與目前版本。
+
+## 建立一列最小但可接手的紀錄
+
+先給這次複查一個私人代號，例如 `ACCESS-REVIEW-2026-A`。選擇情境後填寫本次日期與下一次到訪、歸還或結果複查日期。每列可以包含：安全 ID、進出範圍、觀察日期、來源代號、窗口或界線、家庭角色與準備／觀察、到訪／歸還／下一步、負責角色，以及指定狀態。範圍要能讓接手者理解任務，但不要寫「某某師傅到我家」這種可直接辨識的人身資訊；改成「洗衣區排水檢查—設備區僅限」並把完整預約留在原來源。
+
+## 不要把鑰匙與密碼當成備註
+
+鑰匙、門卡、電子鎖密碼、警報器密碼、管理室登記資料與一次性驗證碼，都不應出現在家庭共享表、截圖或公開工具輸出。若流程真的需要交付鑰匙，紀錄「由家庭接待角色依受控流程交付，完成後觀察歸還」，並在受保護的家庭流程保存必要細節。進出窗口也要避免寫出「家中無人」的長時間模式；使用必要且較窄的工作窗口，並讓真正需要知道的人取得原件。
+
+## 用狀態讓缺口停在正確位置
+
+「已建立進出列，等待範圍」代表還不能安排角色；「已確認受控來源，等待進出窗口」代表已找到原件但時間未核對；「已記錄窗口，等待角色」代表不能把責任推給群組；「已安排角色，等待到訪或歸還觀察」代表還沒有結果；「已觀察進出或歸還，等待後續複查」代表仍要回到服務或家庭來源；最後才是本次複查完成。若授權、身分、範圍或安全狀況出現疑問，停在開放狀態並交給負責人，不要用「看起來沒問題」關閉紀錄。
+
+## 到訪不等於服務完成
+
+家人看見有人到訪，只能支持「到訪被觀察」；不能自動支持工作已完成、沒有造成損害、所有物品已歸還，或門禁權限已撤回。服務結果要以業者或正式來源的可歸屬紀錄為準；家庭自己的整理則記錄下一步與複查日期。若是親友照看寵物或植物，也要把照看交接與實際狀況分開，避免把一次回報擴大成健康或安全保證。
+
+## 完成後做一次低風險重設複查
+
+到訪或交付結束後，只檢查你有權且安全檢查的項目：物品是否回到受控位置、家庭角色是否收到結果、是否需要回到管理室／房東／服務商確認、是否要撤下臨時分享。不要為了「測試」而嘗試猜密碼、反覆開鎖或進入不在授權範圍的空間。若發現遺失、破損、未授權進出或其他安全疑慮，保留安全代號與觀察時間，立即使用適當的正式通報或緊急流程。
+
+## 讓未來商品推薦不干擾真正工作
+
+家庭可能會需要標籤、文件袋、鑰匙收納或一般整理用品。未來 FamilyBoard 可以在教學旁邊放置清楚標示的聯盟商品區，但推薦只能是一般用品資訊，不能根據家庭進出模式推測身分，也不能暗示某個商品提供保全、法律或服務保證。工具表單、到訪觀察與緊急處理區應保持乾淨；購買不是完成交接的必要條件。
+
+## Page 266 — Household Home Access Handoff Log (Traditional Chinese Tool)
+**Slug:** /zh-tw/tools/household-home-access-handoff-log/
+**Primary intent:** record safe household access scope, roles and return observations in Traditional Chinese without storing access secrets
+**Title tag:** 家庭進出與歸還複查工具｜FamilyBoard 免費安全交接紀錄
+**Meta description:** 免費整理家庭維修到訪、親友照看與物品歸還的範圍、來源、角色與複查日期；不保存地址、鑰匙、門禁碼或訪客身分。
+**Primary keyword concept:** 家庭進出交接紀錄工具
+**Cluster:** household-operations
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/guides/familyboard-home-access-handoff-tutorial/, /zh-tw/tools/household-guest-arrival-prep-log/, /tools/household-home-access-handoff-log/
+**FAQ:**
+- Q: 這個工具會替我管理門鎖或發送授權嗎？
+  A: 不會。它只在瀏覽器整理安全代號、範圍、角色與觀察。
+- Q: 可以把訪客姓名寫在狀態列嗎？
+  A: 不建議。使用家庭角色或安全代號，完整身分留在適當的受保護來源。
+- Q: 什麼時候要新增一列？
+  A: 進出範圍、窗口、負責人、來源版本或結果改變時新增一列，保留原觀察以便追溯。
+
+這個免費工具把「誰可以進入」與「家庭看到了什麼」分開。輸入安全複查代號、家庭進出情境、本次與下一次日期、來源地圖，以及每列九欄的範圍、窗口、角色、觀察與狀態。工具只在本機檢查日期、欄位、唯一 ID、狀態與常見敏感資料格式；它不連線查證、不發送授權、不保存地址或門禁秘密，也不保證服務或安全結果。
+
+建議先用 `ACCESS-A` 這類代號試跑一列，再對照[家庭進出交接教學](/zh-tw/guides/familyboard-home-access-handoff-tutorial/)確認「受控來源、最小範圍、到訪觀察、歸還複查」是否分開。產生輸出後，複製前仍要人工檢查，因為任何文字規則都不可能辨識所有個資或家庭秘密。
+
+## 先確認誰負責授權
+
+公寓大樓的管理室、租屋房東或代管、到府服務商，以及家庭內部的屋主或主要照顧者，可能各自掌握不同部分。工具不會替你判斷誰有權授權，也不會把家庭角色升級成法律代理人。開始前先回到正式來源，確認這次進出是否被允許、需要哪些申請、誰可以接收結果，以及發生疑問時要向誰詢問。若來源互相矛盾，保持開放狀態，不能用家庭備註自行裁定。
+
+## 只留下最小必要範圍
+
+範圍欄要能讓接手者知道任務邊界，例如「浴室通風設備檢查—設備區僅限」或「玄關物品交付—不進入其他房間」。不要寫完整門牌、樓層、房號、可辨識的家具配置或住家長時間無人模式。窗口也只記必要的工作時段；若原件有更精確資訊，請透過受保護管道交付給確實需要的人。
+
+## 角色只代表下一步
+
+「家庭接待角色」可以負責整理工作區、確認到訪觀察或回到來源複查；「備援家庭角色」可以在主要角色無法處理時接手；「結果複查角色」可以把正式回覆放回受控紀錄。角色名稱不必是姓名，也不代表持有鑰匙、知道密碼、可以簽署合約或能代表其他人作出決定。若正式流程要求身分核對或書面授權，依原流程完成。
+
+## 到訪與歸還要各自觀察
+
+一列可以描述到訪前的準備，另一列描述實際到訪，再用下一列記錄物品或臨時權限的歸還。每次觀察都要有日期、來源代號、負責角色與下一步。看到有人到訪，不表示設備已修好；看到一件物品歸還，也不表示所有進出權限都已撤回。把結果留給服務商、管理室、房東或家庭受控來源確認。
+
+## 發生異常時不要自行擴大權限
+
+如果到訪者超出範圍、來源版本不一致、有人要求提供額外密碼，或家人對授權有疑問，先停下流程。不要在工具中貼出更多秘密，也不要用猜測補齊缺口。保留安全 ID、觀察日期與必要摘要，然後使用正式客服、管理室、房東、服務商或緊急管道。工具的「等待複查」狀態就是為了讓不確定性可見。
+
+## 結束後清理分享面
+
+進出完成後，確認家庭角色已收到正式結果，移除不再需要的臨時分享，並把原始預約、地址、聯絡與授權文件放回受保護位置。不要把截圖長期留在公開群組、共用雲端或裝置鎖定畫面。若需要保存歷史，保存安全代號、版本和觀察，不要重新複製整份通信。
+
+## 這個工具的實際限制
+
+日期與欄位檢查只能找出格式問題；常見敏感字詞攔截也不能理解每個家庭的秘密。工具不連線查證來源，不知道代號是否指向正確文件，也不會感知現場安全狀況。產生結果前後都要人工逐行閱讀，並由有權負責的人決定是否採用。FamilyBoard 的價值是讓家庭工作有清楚的時間線與責任，而不是替任何外部系統提供證明。
+
+## 聯盟推薦必須可略過
+
+一般標籤、文件袋、收納盒或鑰匙整理用品可以在頁面外側另行介紹，並清楚標示聯盟關係。推薦不應依據家庭的進出時間推測居住者，不應宣稱通過保全或法律認證，不應要求購買才能看到工具輸出，也不能遮住授權、異常或緊急處理資訊。主要流程永遠是確認正式來源、限制範圍、完成交接並記錄可觀察結果。
+
+# 家庭進出與歸還複查工具
+
+這個免費工具把「誰可以進入」與「家庭看到了什麼」分開。輸入安全複查代號、家庭進出情境、本次與下一次日期、來源地圖，以及每列九欄的範圍、窗口、角色、觀察與狀態。工具只在本機檢查日期、欄位、唯一 ID、狀態與常見敏感資料格式；它不連線查證、不發送授權、不保存地址或門禁秘密，也不保證服務或安全結果。
+
+建議先用 `ACCESS-A` 這類代號試跑一列，再對照[家庭進出交接教學](/zh-tw/guides/familyboard-home-access-handoff-tutorial/)確認「受控來源、最小範圍、到訪觀察、歸還複查」是否分開。產生輸出後，複製前仍要人工檢查，因為任何文字規則都不可能辨識所有個資或家庭秘密。
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

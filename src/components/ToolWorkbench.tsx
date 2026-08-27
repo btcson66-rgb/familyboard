@@ -4131,6 +4131,52 @@ const schoolActivityHandoffDefinition = (locale: Locale): Definition => {
   };
 };
 
+const homeAccessHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立進出列，等待範圍", "已確認受控來源，等待進出窗口", "已記錄窗口，等待角色", "已安排角色，等待到訪或歸還觀察", "已觀察進出或歸還，等待後續複查", "不適用，已記錄原因"]
+    : ["Access row created—scope pending", "Controlled source checked—access window pending", "Window recorded—role pending", "Role assigned—arrival or return observation pending", "Arrival or return observed—follow-up review pending", "Not applicable—reason recorded"];
+  const defaults = zh
+    ? "ACCESS-A | 維修人員進出範圍 | 2026-08-25 | APPOINTMENT-SOURCE-A | 只記預約窗口與允許範圍，不貼地址或門禁資料 | 家庭接待角色依受控流程確認到訪，完成後觀察是否歸還 | 回到來源複查服務結果與進出紀錄 | 家庭接待角色 | 已安排角色，等待到訪或歸還觀察\nACCESS-B | 親友短期代收 | 2026-08-26 | HOUSEHOLD-PLAN-B | 先確認日期與可進入範圍，完整聯絡資料留在受控來源 | 備援角色確認交付與歸還，不記錄鑰匙或密碼 | 觀察物品與權限是否依約收回 | 備援家庭角色 | 已記錄窗口，等待角色"
+    : "ACCESS-A | Repair visit scope | 2026-08-25 | APPOINTMENT-SOURCE-A | Record only the visit window and permitted scope; do not paste address or access data | Household host follows the controlled process and observes arrival and return | Review service outcome and access record at the source | Household host role | Role assigned—arrival or return observation pending\nACCESS-B | Short family check-in | 2026-08-26 | HOUSEHOLD-PLAN-B | Confirm the date and permitted area; keep full contact data in a controlled source | A backup role observes handoff and return without recording keys or codes | Review whether the item and access authority were returned as agreed | Backup household role | Window recorded—role pending";
+  return {
+    intro: zh ? "把暫時進出範圍、受控來源、時間窗口、家庭角色、到訪與歸還觀察分開記錄。工具不保存地址、鑰匙、門禁碼或訪客身分，不授予進入權限，也不證明安全或服務結果。" : "Separate temporary access scope, controlled source, time window, household role and arrival or return observations. This tool stores no address, keys, access codes or visitor identity, grants no permission and does not prove safety or service results.",
+    fields: [
+      text("review", zh ? "家庭進出複查私人代號" : "Private household-access review reference", zh ? "使用家庭代號，不要輸入地址、姓名、電話、鑰匙、門禁碼或密碼。" : "Use a household code; do not enter addresses, names, phone numbers, keys, access codes or passwords.", "ACCESS-REVIEW-2026-A"),
+      { name: "context", label: zh ? "家庭進出情境" : "Home-access context", type: "select", options: zh ? ["維修或服務到訪", "親友短期代收或照看", "寵物或植物照護", "搬入搬出或物品交付", "進出後歸還與重設複查", "其他家庭進出安排"] : ["Repair or service visit", "Short family check-in or collection", "Pet or plant care", "Move-in, move-out or item handoff", "Post-access return and reset review", "Other household access plan"] },
+      { name: "reviewDate", label: zh ? "本次進出複查日期" : "Current access-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次到訪或歸還複查日期" : "Next arrival or return-review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "預約、家庭計畫與結果來源地圖" : "Appointment, household-plan and result source map", zh ? "只填安全來源代號，不要貼地址、電話、姓名、門禁或私人訊息。" : "Use safe source codes; do not paste addresses, phone, names, access data or private messages.", "APPOINTMENT-A1; HOUSEHOLD-H1; RESULT-R1"),
+      text("rows", zh ? "家庭進出與歸還觀察列" : "Home-access and return-observation rows", zh ? "每行 9 欄：ID｜進出範圍｜觀察日期 YYYY-MM-DD｜來源代號｜進出窗口或界線｜角色與準備／觀察｜到訪、歸還或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | access scope | observation date YYYY-MM-DD | source code | access window or boundary | role and preparation/observation | arrival, return or next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護家庭與服務來源位置" : "Protected household and service-source location", zh ? "只寫保管流程或容器代號，不要放地址、鑰匙、門禁碼或通信全文。" : "Name a custody process or container, not an address, key, access code or full correspondence.", zh ? "家庭紀錄／進出交接／ACCESS-REVIEW-2026-A／受保護來源" : "Household records / access handoff / ACCESS-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次進出複查日期。" : "Enter valid current and next access-review dates.";
+      if (next < review) return zh ? "下一次到訪或歸還複查日期不能早於本次複查。" : "The next arrival or return review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全進出代號、來源地圖與受保護位置。" : "Provide a safe access reference, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行家庭進出交接列。" : "Enter 1 to 14 home-access handoff rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `進出第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Access line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行進出紀錄都需要唯一 ID。" : "Every access row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `進出第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Access line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 4);
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `進出第 ${thin.map((row) => row.line).join("、")} 行需要範圍、來源、窗口、觀察、下一步與角色。` : `Access line ${thin.map((row) => row.line).join(", ")} needs scope, source, window, observation, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡或進出識別資料；請改用安全代號。" : "A full contact or access identifier was detected; use safe codes.";
+      if (/password|passcode|access code|key code|lockbox|full address|phone number|visitor name|private message|密碼|門禁|鑰匙|完整地址|電話|訪客姓名|私人訊息/i.test(privacy)) return zh ? "偵測到地址、鑰匙、門禁或私人通信資料；請只保留安全來源代號。" : "Address, key, access-code or private-message data was detected; keep only safe source codes.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭進出與歸還複查" : " — household access and return review"), (zh ? "進出情境：" : "Access context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + formatter.format(review), (zh ? "下一次到訪或歸還複查：" : "Next arrival or return review: ") + formatter.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已觀察進出或歸還列：" : "Arrival or return observed rows: ") + closed.length, (zh ? "來源地圖：" : "Source map: ") + values.source.trim(), (zh ? "有版本的進出觀察\n" : "Versioned access observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + formatter.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜窗口／界線：" : " — window/boundary: ") + row.parts[4] + (zh ? "｜角色／觀察：" : " — role/observation: ") + row.parts[5] + (zh ? "｜到訪／歸還／下一步：" : " — arrival/return/next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護家庭與服務來源位置：" : "Protected household and service-source location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭進出範圍、角色與觀察，不保存地址、鑰匙、門禁碼或訪客身分，不授予進入權限，也不證明安全或服務結果。" : "This output only organizes access scope, roles and observations. It stores no address, keys, access codes or visitor identity, grants no permission and does not prove safety or service results."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -8216,6 +8262,9 @@ const definitions: Record<string, Definition> = {
   "household-school-activity-handoff-log": {
     ...schoolActivityHandoffDefinition("en"),
   },
+  "household-home-access-handoff-log": {
+    ...homeAccessHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -8328,6 +8377,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-school-activity-handoff-log": {
     ...schoolActivityHandoffDefinition("zh-TW"),
+  },
+  "household-home-access-handoff-log": {
+    ...homeAccessHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

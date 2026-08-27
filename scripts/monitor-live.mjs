@@ -248,6 +248,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-school-activity-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-school-activity-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-activity-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-home-access-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-home-access-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-access-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1109,6 +1112,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Use the school source as authority",
       "Separate preparation from participation",
+    ],
+  },
+  {
+    path: "/tools/household-home-access-handoff-log/",
+    require: [
+      "Household Home Access Handoff Log",
+      'hreflang="zh-TW"',
+      "Permission comes before the log",
+      "Separate arrival, return and reset",
     ],
   },
   {
@@ -2204,6 +2216,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-home-access-handoff-log/",
+    require: [
+      "家庭進出與歸還複查工具",
+      'hreflang="en"',
+      "用安全代號建立複查",
+      "授權與觀察不是同一件事",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2310,6 +2331,16 @@ const checks = [
       'lang="zh-TW"',
       "建立不含學生個資的活動 ID",
       "區分五個容易混淆的事件",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-access-handoff-tutorial/",
+    require: [
+      "FamilyBoard 家庭進出怎麼交接",
+      'lang="zh-TW"',
+      "先分清楚授權、範圍、觀察與結果",
+      "不要把到訪當成服務完成",
     ],
     forbid: ['rel="alternate"'],
   },

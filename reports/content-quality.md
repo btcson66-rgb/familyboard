@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T09:36:24.812Z
+Generated: 2026-08-27T09:57:01.343Z
 
 ## Summary
 
-- Indexable pages: 445
-- Generated HTML routes: 462
+- Indexable pages: 448
+- Generated HTML routes: 465
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 232
+- Pages without a contextual product/tool link: 235
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 58
+- product: 59
 - appliances: 30
 - maintenance: 37
-- household-operations: 68
+- household-operations: 70
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -81,6 +81,7 @@ Generated: 2026-08-27T09:36:24.812Z
 - /tools/household-document-renewal-review-log/
 - /tools/household-donation-handoff-log/
 - /tools/household-guest-arrival-prep-log/
+- /tools/household-home-access-handoff-log/
 - /tools/household-internet-incident-review-log/
 - /tools/household-inventory-photo-capture-log/
 - /tools/household-mail-package-handoff-log/
@@ -133,6 +134,7 @@ Generated: 2026-08-27T09:36:24.812Z
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
 - /zh-tw/guides/familyboard-donation-handoff-tutorial/
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
+- /zh-tw/guides/familyboard-home-access-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
@@ -234,6 +236,7 @@ Generated: 2026-08-27T09:36:24.812Z
 - /zh-tw/tools/household-document-renewal-review-log/
 - /zh-tw/tools/household-donation-handoff-log/
 - /zh-tw/tools/household-guest-arrival-prep-log/
+- /zh-tw/tools/household-home-access-handoff-log/
 - /zh-tw/tools/household-insurance-policy-source-version-log/
 - /zh-tw/tools/household-internet-incident-review-log/
 - /zh-tw/tools/household-inventory-photo-capture-log/

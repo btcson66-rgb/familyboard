@@ -2000,6 +2000,22 @@
     "headings": "Household School Activity Handoff Log Use the school source as authority Separate preparation from participation Keep affiliate suggestions outside the workflow"
   },
   {
+    "title": "Free Home Access Handoff Log | Visit Scope, Roles and Return Review | FamilyBoard",
+    "description": "Organize temporary home-access windows, permitted scope, household roles and arrival or return observations without storing addresses, keys, access codes or visitor identity.",
+    "route": "/tools/household-home-access-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "home access handoff log",
+    "headings": "Household Home Access Handoff Log Permission comes before the log Record least-privilege scope Separate arrival, return and reset Keep affiliate suggestions outside access decisions"
+  },
+  {
+    "title": "家庭進出與歸還複查工具｜FamilyBoard 免費安全交接紀錄",
+    "description": "免費整理家庭維修到訪、親友照看與物品歸還的範圍、來源、角色與複查日期；不保存地址、鑰匙、門禁碼或訪客身分。",
+    "route": "/zh-tw/tools/household-home-access-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "家庭進出交接紀錄工具",
+    "headings": "家庭進出與歸還複查工具"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
