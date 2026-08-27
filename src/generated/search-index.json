@@ -1944,6 +1944,14 @@
     "headings": "Guest Arrival Preparation Log Use a general scope Separate preparation from arrival results Keep future product content outside the controls"
   },
   {
+    "title": "Free School Pickup Handoff Log | After-School Roles, Windows and Return Review | FamilyBoard",
+    "description": "Coordinate school pickup and after-care handoffs with safe source codes, expected windows, owner roles and observed return results—without storing student or guardian data.",
+    "route": "/tools/household-school-pickup-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "school pickup handoff log",
+    "headings": "School Pickup Handoff Log Use a safe reference Separate expectations from observed results Keep formal sources in control"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

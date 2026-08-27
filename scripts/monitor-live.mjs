@@ -227,6 +227,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-guest-arrival-prep-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-guest-arrival-prep-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-school-pickup-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-school-pickup-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-pickup-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1025,6 +1028,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Use a general scope",
       "Separate preparation from arrival results",
+    ],
+  },
+  {
+    path: "/tools/household-school-pickup-handoff-log/",
+    require: [
+      "School Pickup Handoff Log",
+      'hreflang="zh-TW"',
+      "Use a safe reference",
+      "Separate expectations from observed results",
     ],
   },
   {
@@ -2057,6 +2069,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-school-pickup-handoff-log/",
+    require: [
+      "家庭接送交接工具",
+      'hreflang="en"',
+      "先使用家庭安全代號",
+      "預期時段不是完成證明",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2093,6 +2114,16 @@ const checks = [
       'lang="zh-TW"',
       "限定可以使用的範圍",
       "到訪後做復原複查",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-school-pickup-handoff-tutorial/",
+    require: [
+      "FamilyBoard 放學接送怎麼交接",
+      'lang="zh-TW"',
+      "分開放學、安親與課後活動",
+      "返家後做短複查",
     ],
     forbid: ['rel="alternate"'],
   },

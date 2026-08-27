@@ -3809,6 +3809,52 @@ const guestArrivalPrepDefinition = (locale: Locale): Definition => {
   };
 };
 
+const schoolPickupHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已建立接送列，等待範圍", "已確認範圍，等待來源", "已記錄來源，等待時段或角色", "已安排角色，等待實際接送觀察", "已完成接送或返家複查，等待下次核點", "不適用，已記錄原因與重新開案事件"]
+    : ["Pickup row created—scope pending", "Scope checked—source pending", "Source recorded—window or role pending", "Role assigned—actual pickup observation pending", "Pickup or return review complete—next checkpoint pending", "Not applicable—reason and reopen event recorded"];
+  const defaults = zh
+    ? "PICKUP-A | 放學後家庭接送 | 2026-08-20 | 家庭行程與校方通知代號 | 先確認放學時段與接送角色，個人資料留在受控來源 | 由主要接送角色依家庭安排回報是否完成，不貼校址或班級 | 若臨時改由備援角色接手，回填變更與下一步 | 家庭接送角色 | 已安排角色，等待實際接送觀察\nPICKUP-B | 安親或課後活動結束 | 2026-08-22 | 課後活動通知代號 | 只記家庭需要留意的時間窗口，不複製聯絡資料 | 由備援家庭角色確認返家交接，未完成前保持開放 | 返家後複查是否需要更新下一次安排 | 備援家庭角色 | 已確認範圍，等待來源"
+    : "PICKUP-A | After-school household pickup | 2026-08-20 | Household schedule and school-notice code | Confirm the pickup window and role; keep student details in a controlled source | The primary pickup role records whether the plan was observed; do not paste school address or class | If a backup role takes over, record the change and next action | Household pickup role | Role assigned—actual pickup observation pending\nPICKUP-B | After-care or activity end | 2026-08-22 | After-school activity notice code | Record only the household time window; do not copy contact data | A backup household role confirms the return handoff; keep open until observed | Review after return and update the next plan if needed | Backup household role | Scope checked—source pending";
+  return {
+    intro: zh ? "把家庭接送、放學或課後活動的範圍、來源、預期時段、負責角色與實際返家交接分開記錄。工具不保存學生或監護人個資、不證明校方或接送服務完成，也不取代學校正式通知。" : "Separate the household pickup scope, source, expected window, owner role and observed return handoff for school or after-care routines. This tool stores no student or guardian data, does not prove school or transport completion and does not replace official notices.",
+    fields: [
+      text("review", zh ? "家庭接送複查私人代號" : "Private household-pickup review reference", zh ? "使用家庭代號，不要輸入學生、監護人、學校地址、電話、班級或接送識別資料。" : "Use a household code; do not enter student or guardian details, school addresses, phone numbers, classes or pickup identifiers.", "PICKUP-REVIEW-2026-A"),
+      { name: "context", label: zh ? "接送情境" : "Pickup context", type: "select", options: zh ? ["一般放學接送", "安親或課後活動", "臨時改由備援角色接手", "雨天或天候變化", "返家後接送複查", "其他家庭接送安排"] : ["Regular after-school pickup", "After-care or activity", "Backup role takes over", "Rain or weather change", "Return-home pickup review", "Other household pickup plan"] },
+      { name: "reviewDate", label: zh ? "本次接送複查日期" : "Current pickup-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次接送或返家複查日期" : "Next pickup or return-review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "校方通知、家庭行程與角色來源地圖" : "School notice, household schedule and role source map", zh ? "只填安全來源代號，不要貼學生姓名、班級、校址、電話或私人訊息。" : "Use safe source codes; do not paste student names, classes, school addresses, phone numbers or private messages.", "SCHOOL-S1; SCHEDULE-H1; BACKUP-B1"),
+      text("rows", zh ? "接送與返家交接狀態列" : "Pickup and return-handoff rows", zh ? "每行 9 欄：ID｜接送範圍｜觀察日期 YYYY-MM-DD｜來源代號｜預期時段或情境｜角色與接送觀察｜返家交接或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | pickup scope | observation date YYYY-MM-DD | source code | expected window or context | role and pickup observation | return handoff or next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護校方通知與家庭聯絡位置" : "Protected school-notice and household-contact location", zh ? "只寫保管流程或容器代號，不要放學生、監護人、校址、電話或通知全文。" : "Name a custody process or container, not student, guardian, school, phone or notice text.", zh ? "家庭紀錄／接送交接／PICKUP-REVIEW-2026-A／受保護來源" : "Household records / pickup handoff / PICKUP-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次接送複查日期。" : "Enter valid current and next pickup-review dates.";
+      if (next < review) return zh ? "下一次接送或返家複查日期不能早於本次複查。" : "The next pickup or return review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全接送代號、來源地圖與受保護位置。" : "Provide a safe pickup reference, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行接送交接列。" : "Enter 1 to 14 pickup-handoff rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `接送第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Pickup line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行接送紀錄都需要唯一 ID。" : "Every pickup row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `接送第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Pickup line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 4);
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `接送第 ${thin.map((row) => row.line).join("、")} 行需要範圍、來源、時段、觀察、下一步與角色。` : `Pickup line ${thin.map((row) => row.line).join(", ")} needs scope, source, window, observation, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址或接送識別資料；請改用安全代號。" : "A full contact, address or pickup identifier was detected; use safe codes.";
+      if (/password|passcode|student name|guardian name|full address|school address|private message|學生姓名|監護人姓名|完整地址|校址|私人訊息/i.test(privacy)) return zh ? "偵測到學生、監護人、地址或私人通信資料；請只保留安全來源代號。" : "Student, guardian, address or private-message data was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭接送與返家交接複查" : " — household pickup and return-handoff review"), (zh ? "接送情境：" : "Pickup context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次接送或返家複查：" : "Next pickup or return review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已完成接送或複查列：" : "Completed or reviewed rows: ") + closed.length, (zh ? "來源地圖：" : "Source map: ") + values.source.trim(), (zh ? "有版本的接送與返家觀察\n" : "Versioned pickup and return observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜範圍：" : " — scope: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜時段：" : " — window: ") + row.parts[4] + (zh ? "｜觀察：" : " — observation: ") + row.parts[5] + (zh ? "｜下一步：" : " — next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護校方通知與家庭聯絡位置：" : "Protected school-notice and household-contact location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭接送與返家交接觀察，不保存學生或監護人個資、不證明學校或接送服務完成，也不取代校方正式通知與家庭受控聯絡流程。" : "This output only organizes household pickup and return-handoff observations. It does not store student or guardian data, prove school or transport completion or replace official notices and controlled household contacts."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7873,6 +7919,9 @@ const definitions: Record<string, Definition> = {
   "household-guest-arrival-prep-log": {
     ...guestArrivalPrepDefinition("en"),
   },
+  "household-school-pickup-handoff-log": {
+    ...schoolPickupHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7964,6 +8013,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-guest-arrival-prep-log": {
     ...guestArrivalPrepDefinition("zh-TW"),
+  },
+  "household-school-pickup-handoff-log": {
+    ...schoolPickupHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:
