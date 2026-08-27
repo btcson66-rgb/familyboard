@@ -2,12 +2,12 @@
 title: "FamilyBoard 換季衣物怎麼整理？洗標、送修與收納的 App 教學"
 description: "用 FamilyBoard 把換季衣物、洗標來源、送修交接與收納複查拆成可完成的小流程；不解讀洗標，也不提供材質安全保證。"
 route: "/zh-tw/guides/familyboard-clothing-care-tutorial/"
+alternateRoute: "/guides/familyboard-clothing-care-tutorial/"
 primaryIntent: "教台灣家庭使用 FamilyBoard 管理換季衣物照護、送修交接、輪替與收納複查"
 primaryKeyword: "FamilyBoard 衣物整理教學"
 locale: "zh-TW"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

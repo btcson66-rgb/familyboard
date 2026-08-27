@@ -21656,6 +21656,175 @@ During a handoff, read each entry with its source role and date attached. A hous
 
 ---
 
+## Page 317 — How to Use FamilyBoard for Consumable Change History
+**Slug:** /guides/familyboard-consumable-change-history-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-consumable-change-history-tutorial/
+**Primary intent:** learn a source-linked household filter and consumable history workflow without guessing a universal replacement interval or opening equipment unsafely
+**Title tag:** FamilyBoard Consumable Change History Tutorial | Filters, Dates and Review Notes
+**Meta description:** Learn how to record household filter and consumable changes in FamilyBoard with dates, source pointers, observed condition and follow-up checks. Do not treat the app as a fixed maintenance schedule or repair guide.
+**Primary keyword concept:** FamilyBoard filter replacement history tutorial
+**Cluster:** maintenance
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/tools/household-consumable-change-history-log/`, `/guides/hvac-filter-tracker/`, `/tools/household-replacement-part-source-check-log/`, `/tools/household-monthly-review-action-log/`, `/zh-tw/guides/familyboard-consumable-change-history-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard tell me the correct replacement interval?
+  A: No. Use the current manufacturer guidance, label or qualified service source for an applicable interval; FamilyBoard records what your household checked.
+- Q: What if I only remember the month of a change?
+  A: Keep the date approximate and the row open until a protected receipt or service record can support a more precise observation. Do not invent a day.
+- Q: Can I open a device to inspect a filter?
+  A: Do not use this tutorial as disassembly guidance. Stop when electrical, refrigerant, gas, height or other hazards are involved.
+- Q: Should the old history be deleted after a new change?
+  A: No. Add a dated version so the household can see which source and condition belonged to each change.
+
+**Contextual CTA:** Record one change you can verify, then assign a follow-up that returns to the product label, manual or service source.
+
+# How to Use FamilyBoard for Consumable Change History
+
+The useful question for a filter or consumable is rarely “what month should everyone replace it?” It is “when did this household last observe a change, which source supported that choice, what condition was visible and who will check it next?” FamilyBoard keeps those details in a small history: a neutral device code, prior and current dates, source pointer, observed condition, next review, owner and status.
+
+It is not a maintenance scheduler with a universal interval, a diagnostic tool or an installation guide. It does not read equipment, identify a model, decide a failure or tell a person to open a hazardous enclosure. The current label, manual, manufacturer, service provider or qualified professional controls the applicable instruction.
+
+## Start with one real change
+
+Open the [Household Consumable Change History Log](/tools/household-consumable-change-history-log/) and choose one air-conditioner filter, purifier filter, hood filter or other household consumable. Use `FILTER-REVIEW-A`, not a full serial number, address or account. Record the date you actually changed or observed it separately from the date you reviewed the record. If the date is only “early spring,” keep that uncertainty visible until a protected receipt or service note supports more detail.
+
+Describe what was seen without converting it into a diagnosis: “filter replaced; dust visible on removed piece” or “model-specific source still to verify.” A pointer such as `MANUAL-4` or `SERVICE-APRIL` should lead an authorized person to the protected original. Do not paste the entire manual, receipt, photo, serial number or service conversation into the shared row.
+
+## Keep source, observation and interval apart
+
+A manufacturer may publish a recommended interval, while a household observes heavy dust, low use or a different environment. The source's guidance and the household's condition are separate layers. Record both and let the responsible source determine what applies. FamilyBoard can create a future review task, but a date in the app is not a warranty, safety certificate or promise that a device will work.
+
+If a replacement part source is unclear, use the [Replacement-Part Source Check Log](/tools/household-replacement-part-source-check-log/) to record what still needs confirmation. Do not guess compatibility or recommend a brand from a memory. If the work involves electricity, gas, refrigerant, height or a sealed enclosure, stop and use the appropriate professional channel.
+
+## Preserve history and practise handoff
+
+When the device changes, the source interval changes, a service visit occurs or a new person owns the next check, add a version rather than overwriting the old row. Ask another authorized role to locate the protected source using the safe code and state what remains unconfirmed. A downloaded history is a new copy and needs its own privacy review.
+
+Future recommendations for labels, storage or maintenance supplies may appear outside the form after the educational answer, with clear affiliate disclosure and an easy skip. They cannot decide an interval, diagnose equipment or certify an installation.
+
+**Next step:** record one verified consumable change, link its protected source and assign one dated review owned by a household role.
+
+## A practical monthly review
+
+At a monthly household review, compare the last recorded change with the current source rather than assuming the calendar is correct. Confirm the device code, the protected manual or service pointer, the condition that was actually observed and the person who owns the next check. If the product has moved, the household environment has changed or the manufacturer has updated its guidance, create a new version and explain what changed. If the item cannot be reached safely, mark the observation as incomplete and route it to an appropriate service source. A useful history makes uncertainty visible: “date approximate,” “source interval not yet confirmed” and “replacement observed but follow-up open” are better records than an invented exact date or a green status that no one can substantiate.
+
+---
+
+## Page 318 — How to Use FamilyBoard for Seasonal Clothing Care and Repair Handoffs
+**Slug:** /guides/familyboard-clothing-care-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-clothing-care-tutorial/
+**Primary intent:** learn a small, privacy-aware clothing rotation and repair handoff workflow without interpreting care labels or exposing personal details
+**Title tag:** FamilyBoard Clothing Care Tutorial | Seasonal Storage, Care Labels and Repair Handoff
+**Meta description:** Use FamilyBoard to organize a small seasonal clothing rotation, care-label source, repair handoff and storage review. Keep photos, sizes and personal details protected; the app does not interpret fabric safety.
+**Primary keyword concept:** FamilyBoard clothing organization tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/tools/household-clothing-care-repair-log/`, `/guides/household-monthly-review/`, `/guides/familyboard-pantry-review-tutorial/`, `/tools/household-meeting-agenda-action-log/`, `/zh-tw/guides/familyboard-clothing-care-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard tell me how to wash a garment?
+  A: No. Read the garment's current care label or ask the appropriate professional; the app only records the source and next action.
+- Q: Should I put family sizes or faces in a shared row?
+  A: No. Use a neutral garment or storage code and keep photos and personal information protected.
+- Q: Does a repair date mean the item is ready to wear?
+  A: No. Record the appointment or handoff separately from the actual result and household follow-up.
+- Q: Should old seasonal rows be deleted?
+  A: No. Add a new date or version so the household can distinguish prior observations from this season's condition.
+
+**Contextual CTA:** Choose one drawer or storage box, index three items and test whether another household role can find the protected care or repair source.
+
+# How to Use FamilyBoard for Seasonal Clothing Care and Repair Handoffs
+
+Seasonal clothing work becomes hard to hand off when one person knows which box contains winter coats, another has a repair receipt and no one remembers whether a care label was checked. FamilyBoard can hold a small index of the clothing or storage scope, care-label source, observation date, repair handoff, storage pointer, next review and owner. The garments and photographs remain in the protected place chosen by the household.
+
+This is not a laundry instruction service, fabric-safety assessment or wardrobe inventory requirement. It does not interpret a care symbol, guarantee a cleaning method, identify a material or decide whether an item is safe to wear. Use the garment label, manufacturer, cleaner, tailor or other qualified source for those questions.
+
+## Begin with a drawer or box
+
+Open the [Household Clothing Care and Repair Log](/tools/household-clothing-care-repair-log/) and select a scope that fits a short session: one drawer, one seasonal box or a repair-to-collect area. Use codes such as `CLOSET-BOX-A` or `COAT-3`; avoid names, body measurements, school details, addresses and full purchase records. Three to twelve items are enough to test the process before expanding it.
+
+Record when the label or protected source was checked, not just when the garment was purchased. A pointer like `CARE-LABEL-2`, `TAILOR-RECEIPT-A` or `BOX-LOCATION-C` should help an authorized person find the original. The shared row needs only the smallest observation: “label checked; handoff source still open” or “repair collected; storage location to review.” Do not paste a label photo, face, barcode or private message.
+
+## Separate rotation, repair and result
+
+Moving an item to seasonal storage is a household action. Sending it to a cleaner or tailor is a handoff. A returned garment and an observed condition are later results. Keep the dates and sources distinct so “sent for repair” does not become “repaired.” If the item is damaged, valuable or associated with a claim, preserve the protected original and ask the responsible service or policy source what it needs.
+
+At the next seasonal review, ask another household role to locate the box or care source with only the safe code. If they need a personal photo or size list in the shared page, narrow the index. A downloaded worksheet is another copy and needs the same privacy review.
+
+Future recommendations for garment bags, labels or storage products may appear outside the form after the answer, with clear disclosure and an easy skip. They cannot interpret a label, promise fabric safety or replace a cleaner or tailor.
+
+**Next step:** index one small clothing scope, record one protected care source and assign a dated repair or rotation check.
+
+## A handoff that survives a season change
+
+Before storing the box, ask the next household role to repeat three actions: find the protected care source, identify which items are waiting for repair or cleaning, and state when the box will be reviewed again. Keep the storage pointer separate from the garment condition. A box moved to another room, a tailor receipt replaced or a family member taking over are all reasons to add a dated note. If an item is donated, discarded or retained for sentimental reasons, record the household action without inferring value or fabric safety. This keeps the history useful without turning a personal wardrobe into a public inventory. The test is whether a person who did not pack the box can continue the work without receiving faces, sizes, purchase details or private conversations.
+
+---
+
+## Page 319 — How to Use FamilyBoard for Pantry Date and Rotation Reviews
+**Slug:** /guides/familyboard-pantry-review-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-pantry-review-tutorial/
+**Primary intent:** learn a small, source-aware pantry rotation workflow without treating FamilyBoard as a food-safety or expiry decision system
+**Title tag:** FamilyBoard Pantry Review Tutorial | Date Checks, Rotation and Household Handoffs
+**Meta description:** Learn how to use FamilyBoard for a small pantry or fridge review: record label observations, protected sources, rotation actions and next checks without making food-safety, allergy or expiry decisions.
+**Primary keyword concept:** FamilyBoard pantry organization tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-28
+**Editorial review date:** 2026-08-28
+**Content version:** 1
+**Suggested internal links:** `/tools/household-pantry-expiry-review-log/`, `/guides/household-monthly-review/`, `/guides/familyboard-household-meeting-tutorial/`, `/tools/emergency-supply-inventory-audit/`, `/zh-tw/guides/familyboard-pantry-review-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard decide whether food is safe to eat?
+  A: No. It records what a household observed on a label or package. Follow the applicable food-safety authority, manufacturer and household health guidance.
+- Q: Should I copy a full shopping order or payment record?
+  A: No. Use a neutral item or shelf code and keep orders, addresses and payment details protected.
+- Q: Does a date in the app automatically mean an item should be discarded?
+  A: No. A review date prompts another look; it is not a safety or discard decision.
+- Q: Can I review the whole kitchen at once?
+  A: Start with one shelf, drawer or fridge section so the observation and follow-up can actually be completed.
+
+**Contextual CTA:** Review one small pantry section, record three neutral item codes and leave any uncertain package for the responsible source to resolve.
+
+# How to Use FamilyBoard for Pantry Date and Rotation Reviews
+
+A pantry review is more useful when it answers what a household actually saw, rather than pretending an app can decide every food question. FamilyBoard can organize a small shelf or fridge section with neutral item codes, label or source dates, package observations, rotation action, next review, owner and status. It does not inspect food, calculate shelf life, assess allergies or declare an item safe or unsafe.
+
+Use the current package label, manufacturer, official food-safety guidance and qualified health advice for decisions that affect eating, storage or a medical condition. The FamilyBoard row is a handoff aid, not a substitute for those sources.
+
+## Start with a small section
+
+Open the [Household Pantry Expiry Review Log](/tools/household-pantry-expiry-review-log/) and choose one shelf, drawer, fridge bin or emergency-supply box. Use codes such as `PANTRY-SHELF-A` and `ITEM-3`; do not enter a full order, address, payment record, dietary diagnosis or person's name. Three to twelve items are enough for a first review.
+
+Record the date you checked the label separately from the date printed on the package. A source pointer may lead to a protected photo or household note, while the shared observation can say “label partly obscured; source check open” or “package moved to front for earlier review.” Do not rewrite a printed date as an expiry verdict, and do not paste a complete photograph when a short pointer is enough.
+
+## Keep rotation separate from safety
+
+Moving an item forward, grouping similar supplies or adding a shopping reminder are household actions. They do not prove an item is safe, appropriate for an allergy, or still within a required storage condition. If packaging is damaged, a label is unclear or a health question matters, leave the row open and return to the manufacturer, official guidance or qualified professional. A family vote cannot replace that source.
+
+At the next check, ask another role to locate the protected label source and explain which uncertainty remains. Keep old observations when a package is replaced or a shelf changes; create a new version so the household can see the sequence. Downloads and printouts are new copies and need privacy review.
+
+Future recommendations for containers, labels or pantry organisers may appear after the answer, outside the form, with clear disclosure and an easy skip. They cannot decide food safety, allergy risk or discard timing.
+
+**Next step:** review one small section, record three safe pointers and assign one dated follow-up for anything the household cannot confidently observe.
+
+## Review the section without forcing a decision
+
+During the next check, read each row with its label date, household observation and protected source pointer. If a package is partly hidden, damaged or associated with a health question, preserve that uncertainty and route it to the manufacturer, official guidance or an appropriate professional. Do not use the number of days since purchase as a substitute for the printed source. A rotation action can be completed while the safety question remains open. When a shelf, emergency box or household role changes, create a new version instead of deleting the earlier observation. This gives the next reviewer a clear starting point and prevents an organiser, label or affiliate product from quietly becoming a food-safety verdict.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

@@ -2,12 +2,12 @@
 title: "FamilyBoard 濾網多久更換怎麼記？家庭耗材歷程 App 教學"
 description: "用 FamilyBoard 建立冷氣、空氣清淨機與其他耗材的更換歷程：從上次日期、可見狀況到來源週期與後續複查，分步保留未確認事項。"
 route: "/zh-tw/guides/familyboard-consumable-change-history-tutorial/"
+alternateRoute: "/guides/familyboard-consumable-change-history-tutorial/"
 locale: "zh-TW"
 primaryIntent: "教台灣家庭用 FamilyBoard 記錄濾網與耗材更換歷程，分開觀察、來源與後續複查"
 primaryKeyword: "FamilyBoard 濾網更換紀錄教學"
 cluster: "maintenance"
 pageType: "content"
-languageExclusive: true
 indexable: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

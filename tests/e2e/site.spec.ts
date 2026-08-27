@@ -152,6 +152,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-building-notice-response-tutorial/",
     "/guides/familyboard-rental-repair-request-tutorial/",
     "/guides/familyboard-repair-evidence-timeline-tutorial/",
+    "/guides/familyboard-consumable-change-history-tutorial/",
+    "/guides/familyboard-clothing-care-tutorial/",
+    "/guides/familyboard-pantry-review-tutorial/",
     "/guides/water-leak-response-home-records/",
     "/tools/household-storm-readiness-review/",
     "/guides/storm-preparation-home-checklist/",
@@ -945,7 +948,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(page.locator("h1")).toHaveText(
     "FamilyBoard 濾網多久更換怎麼記？家庭耗材歷程 App 教學",
   );
-  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+  await expect(
+    page.locator('link[rel="alternate"][hreflang="en"]'),
+  ).toHaveAttribute(
+    "href",
+    "https://familyboard.win/guides/familyboard-consumable-change-history-tutorial/",
+  );
 
   await page.goto("/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/");
   await expect(page.locator("h1")).toHaveText(
@@ -1187,6 +1195,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/",
       alternate: "/guides/familyboard-repair-evidence-timeline-tutorial/",
       heading: "FamilyBoard 修繕前後怎麼留證據？家庭維修時間線 App 教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-consumable-change-history-tutorial/",
+      alternate: "/guides/familyboard-consumable-change-history-tutorial/",
+      heading: "FamilyBoard 濾網多久更換怎麼記？家庭耗材歷程 App 教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-clothing-care-tutorial/",
+      alternate: "/guides/familyboard-clothing-care-tutorial/",
+      heading: "FamilyBoard 換季衣物怎麼整理？",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-pantry-review-tutorial/",
+      alternate: "/guides/familyboard-pantry-review-tutorial/",
+      heading: "FamilyBoard 食品櫃怎麼整理？",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -2968,6 +2991,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-consumable-change-history-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-consumable-change-history-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-clothing-care-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-clothing-care-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-pantry-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-pantry-review-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

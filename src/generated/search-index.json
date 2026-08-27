@@ -2328,6 +2328,30 @@
     "headings": "How to Use FamilyBoard for a Repair Evidence Timeline Start before work begins Preserve each transition Handoff and privacy Review the sequence without assigning blame"
   },
   {
+    "title": "FamilyBoard Consumable Change History Tutorial | Filters, Dates and Review Notes",
+    "description": "Learn how to record household filter and consumable changes in FamilyBoard with dates, source pointers, observed condition and follow-up checks. Do not treat the app as a fixed maintenance schedule or repair guide.",
+    "route": "/guides/familyboard-consumable-change-history-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard filter replacement history tutorial",
+    "headings": "How to Use FamilyBoard for Consumable Change History Start with one real change Keep source, observation and interval apart Preserve history and practise handoff A practical monthly review"
+  },
+  {
+    "title": "FamilyBoard Clothing Care Tutorial | Seasonal Storage, Care Labels and Repair Handoff",
+    "description": "Use FamilyBoard to organize a small seasonal clothing rotation, care-label source, repair handoff and storage review. Keep photos, sizes and personal details protected; the app does not interpret fabric safety.",
+    "route": "/guides/familyboard-clothing-care-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard clothing organization tutorial",
+    "headings": "How to Use FamilyBoard for Seasonal Clothing Care and Repair Handoffs Begin with a drawer or box Separate rotation, repair and result A handoff that survives a season change"
+  },
+  {
+    "title": "FamilyBoard Pantry Review Tutorial | Date Checks, Rotation and Household Handoffs",
+    "description": "Learn how to use FamilyBoard for a small pantry or fridge review: record label observations, protected sources, rotation actions and next checks without making food-safety, allergy or expiry decisions.",
+    "route": "/guides/familyboard-pantry-review-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard pantry organization tutorial",
+    "headings": "How to Use FamilyBoard for Pantry Date and Rotation Reviews Start with a small section Keep rotation separate from safety Review the section without forcing a decision"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -185,9 +185,11 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-meeting-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-pantry-expiry-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-pantry-expiry-review-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-pantry-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-pantry-review-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-clothing-care-repair-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-clothing-care-repair-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-clothing-care-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-clothing-care-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-meal-prep-role-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-meal-prep-role-log/</loc>",
@@ -296,6 +298,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-consumable-change-history-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-consumable-change-history-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-consumable-change-history-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-consumable-change-history-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-repair-evidence-timeline-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-repair-evidence-timeline-log/</loc>",
@@ -2058,14 +2061,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-pantry-review-tutorial/",
+    require: [
+      "How to Use FamilyBoard for Pantry Date and Rotation Reviews",
+      'hreflang="zh-TW"',
+      "Keep rotation separate from safety",
+      "does not inspect food",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-pantry-review-tutorial/",
     require: [
       "FamilyBoard 食品櫃怎麼整理",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先選一個可以在十五分鐘內完成的範圍",
       "把標示日期和家庭計畫分開",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-clothing-care-repair-log/",
@@ -2077,14 +2089,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-clothing-care-tutorial/",
+    require: [
+      "How to Use FamilyBoard for Seasonal Clothing Care and Repair Handoffs",
+      'hreflang="zh-TW"',
+      "A handoff that survives a season change",
+      "does not interpret a care symbol",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-clothing-care-tutorial/",
     require: [
       "FamilyBoard 換季衣物怎麼整理",
       'lang="zh-TW"',
+      'hreflang="en"',
       "先選一個十五分鐘能完成的範圍",
       "觀察與計畫不能混在一起",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/tools/household-meal-prep-role-log/",
@@ -2842,6 +2863,15 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-consumable-change-history-tutorial/",
+    require: [
+      "How to Use FamilyBoard for Consumable Change History",
+      'hreflang="zh-TW"',
+      "Keep source, observation and interval apart",
+      "does not read equipment",
+    ],
+  },
+  {
     path: "/zh-tw/tools/household-consumable-change-history-log/",
     require: [
       "家庭濾網與耗材更換歷程工具",
@@ -2854,10 +2884,10 @@ const checks = [
     require: [
       "FamilyBoard 濾網多久更換怎麼記",
       'lang="zh-TW"',
+      'hreflang="en"',
       "家庭耗材歷程 App 教學",
       "不會讀取設備、不會判定故障",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/tools/household-repair-evidence-timeline-log/",

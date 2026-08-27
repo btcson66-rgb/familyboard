@@ -2,12 +2,12 @@
 title: "FamilyBoard 食品櫃怎麼整理？用 App 做日期盤點與輪替複查教學"
 description: "學會用 FamilyBoard 以小分區記錄食品與家庭消耗品的來源、標示、包裝觀察與下一步；不把 App 當成食品安全判定工具。"
 route: "/zh-tw/guides/familyboard-pantry-review-tutorial/"
+alternateRoute: "/guides/familyboard-pantry-review-tutorial/"
 primaryIntent: "教台灣家庭使用 FamilyBoard 建立食品櫃、冰箱與消耗品的每週或每月複查流程"
 primaryKeyword: "FamilyBoard 食品櫃整理教學"
 locale: "zh-TW"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"
