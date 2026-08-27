@@ -1952,6 +1952,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-bill-source-status-log/",
+    "alternateRoute": "/zh-tw/tools/household-bill-source-status-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2290,6 +2298,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-bill-review-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-clothing-care-tutorial/",
     "alternateRoute": "",
     "indexable": true,
@@ -2567,6 +2582,13 @@
     "alternateRoute": "/tools/household-annual-review-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-bill-source-status-log/",
+    "alternateRoute": "/tools/household-bill-source-status-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {

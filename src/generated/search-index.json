@@ -1848,6 +1848,14 @@
     "headings": "Household Trip Packing and Handoff Log Keep the travel window explicit Separate a source from a household task Record handoff and return evidence separately Future affiliate placement"
   },
   {
+    "title": "Free Household Bill Organizer | Source, Due Date and Follow-Up Log | FamilyBoard",
+    "description": "Record household bill and notice sources, due dates, owners and confirmation steps with safe codes instead of account numbers, amounts or payment data.",
+    "route": "/tools/household-bill-source-status-log/",
+    "cluster": "household-operations",
+    "keywords": "household bill organizer log",
+    "headings": "Household Bill Source and Status Log Record the source before the action Keep financial facts in the responsible source Separate status from confirmation Future affiliate placement"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -3046,6 +3046,75 @@ const tripHandoffDefinition = (locale: Locale): Definition => {
   };
 };
 
+const billReviewDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立帳單列，等待帳單或通知來源",
+        "已核對帳單或通知來源，等待到期或複查日",
+        "已記錄到期或複查日，等待負責角色",
+        "已指定負責角色，等待付款或回覆狀態",
+        "已觀察狀態，等待確認或爭議後續",
+        "已確認付款或回覆結果並記錄保管位置",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Bill row created—statement or notice source pending",
+        "Statement or notice source checked—due or review date pending",
+        "Due or review date recorded—owner role pending",
+        "Owner assigned—payment or response status pending",
+        "Status observed—confirmation or dispute follow-up pending",
+        "Payment or response result confirmed—record custody noted",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "BILL-A | 網路服務 | 2026-08-20 | 2026-09-05 | 供應商帳單來源代號 | 家庭帳務角色 | 已看到本期通知；付款結果尚待確認 | 2026-09-04 前核對回覆並保留來源 | 已指定負責角色，等待付款或回覆狀態\nBILL-B | 公用事業 | 2026-08-22 | 2026-09-10 | 公用事業通知來源代號 | 備援家人角色 | 到期日已記錄；詳細資料留在受保護來源 | 2026-09-09 前查看最新通知 | 已記錄到期或複查日，等待負責角色"
+    : "BILL-A | Internet service | 2026-08-20 | 2026-09-05 | Provider statement source code | Household billing role | Current notice observed; payment result remains unconfirmed | Check the response and preserve the source by 2026-09-04 | Owner assigned—payment or response status pending\nBILL-B | Utility service | 2026-08-22 | 2026-09-10 | Utility notice source code | Backup household role | Due date recorded; no account or amount stored | Check the current notice by 2026-09-09 | Due or review date recorded—owner role pending";
+  return {
+    intro: zh
+      ? "把帳單或通知來源、日期、負責角色、已觀察狀態與下一步分開記錄。工具不保存帳號、金額、付款憑證或私人通信，也不判定債務、費用、權利、期限或法律結果。"
+      : "Separate bill or notice sources, dates, owner roles, observed status and next actions. This tool stores no account numbers, amounts, payment evidence or private correspondence and does not decide debt, fees, rights, deadlines or legal outcomes.",
+    fields: [
+      text("review", zh ? "帳單複查私人代號" : "Private bill review reference", zh ? "使用家庭代號，不要輸入姓名、地址、帳號、金額或付款資料。" : "Use a household code; do not enter names, addresses, account numbers, amounts or payment data.", "BILL-REVIEW-2026-A"),
+      { name: "billType", label: zh ? "帳單複查情境" : "Bill review context", type: "select", options: zh ? ["每月帳單複查", "公用事業通知", "網路或通訊服務", "租屋或管理費通知", "退款或爭議回覆", "其他家庭帳務"] : ["Monthly bill review", "Utility notice", "Internet or communications service", "Rental or building notice", "Refund or dispute response", "Other household billing"] },
+      { name: "reviewDate", label: zh ? "本次複查日期" : "Current review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次複查日期" : "Next review date", type: "date", value: "2026-09-10" },
+      text("source", zh ? "帳單、通知與回覆來源地圖" : "Bill, notice and response-source map", zh ? "只填安全來源代號，不要貼帳單全文、帳號、金額、地址或付款內容。" : "Use safe source codes; do not paste full bills, account numbers, amounts, addresses or payment details.", "STATEMENT-S1; NOTICE-N1; RESPONSE-R1"),
+      text("rows", zh ? "帳單來源與狀態列" : "Bill source and status rows", zh ? "每行 9 欄：ID｜帳單或服務代號｜帳單／通知日期 YYYY-MM-DD｜到期或複查日期 YYYY-MM-DD｜來源代號｜負責角色｜已觀察狀態或確認｜下一步與核點｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | bill or service code | statement/notice date YYYY-MM-DD | due or review date YYYY-MM-DD | source code | owner role | observed status or confirmation | next action and checkpoint | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護帳單、通知與付款回覆位置" : "Protected bill, notice and payment-response location", zh ? "只寫保管流程或容器代號，不要放帳號、金額、地址、付款或私人通信。" : "Name a custody process or container, not account, amount, address, payment or private correspondence.", zh ? "家庭紀錄／帳單複查／BILL-REVIEW-2026-A／受保護來源" : "Household records / bill review / BILL-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次複查日期。" : "Enter valid current and next review dates.";
+      if (next < review) return zh ? "下一次複查日期不能早於本次複查。" : "The next review date cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全帳單代號、來源地圖與受保護位置。" : "Provide a safe bill code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行帳單或通知列。" : "Enter 1 to 14 bill or notice rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `帳單第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Bill line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行帳單紀錄都需要唯一 ID。" : "Every bill row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `帳單第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Bill line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => ({ source: strictIsoDate(row.parts[2]), due: strictIsoDate(row.parts[3]) }));
+      if (dates.some((item) => !item.source || !item.due || item.source > review || item.due < item.source)) return zh ? "每列帳單與到期日期必須有效，且到期日不能早於來源日期。" : "Each statement and due date must be valid, with the due date no earlier than the source date.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 5), open = parsed.filter((row) => statuses.indexOf(row.parts[8]) < 5);
+      const invalidClosed = closed.filter((row) => {
+        const due = dates[row.line - 1]?.due;
+        return due ? due > review : false;
+      });
+      if (invalidClosed.length) return zh ? `已確認的帳單第 ${invalidClosed.map((row) => row.line).join("、")} 行到期或複查日不能晚於本次複查。` : `Confirmed bill line ${invalidClosed.map((row) => row.line).join(", ")} cannot have a due or review date later than the current review.`;
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[4].length < 6 || row.parts[5].length < 3 || row.parts[6].length < 10 || row.parts[7].length < 10);
+      if (thin.length) return zh ? `帳單第 ${thin.map((row) => row.line).join("、")} 行需要服務、來源、角色、狀態與下一步。` : `Bill line ${thin.map((row) => row.line).join(", ")} needs a service, source, owner, status and next action.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、帳號、案件或付款識別資料；請改用安全代號。" : "A full contact, address, account, case or payment identifier was detected; use safe codes.";
+      if (/password|passcode|full address|street address|account number|customer number|meter number|card number|bank account|routing number|payment amount|bill amount|invoice amount|receipt contents|private message|姓名|完整地址|帳號|客戶號|電表號|卡號|銀行帳戶|付款金額|帳單金額|發票金額|收據全文|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或帳單全文；請只保留安全來源代號。" : "Sensitive data or full bill content was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭帳單來源與狀態複查" : " — household bill source and status review"), (zh ? "複查情境：" : "Review context: ") + values.billType, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次複查：" : "Next review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + open.length, (zh ? "已確認或不適用列：" : "Confirmed or not-applicable rows: ") + closed.length, (zh ? "帳單、通知與回覆來源地圖：" : "Bill, notice and response-source map: ") + values.source.trim(), (zh ? "有版本的帳單與通知觀察\n" : "Versioned bill and notice observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜服務：" : " — service: ") + row.parts[1] + (zh ? "｜來源日：" : " — source date: ") + fmt.format(dates[index].source as Date) + (zh ? "｜到期／複查：" : " — due/review: ") + fmt.format(dates[index].due as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[4] + (zh ? "｜角色：" : " — owner: ") + row.parts[5] + (zh ? "｜觀察：" : " — observation: ") + row.parts[6] + (zh ? "｜下一步：" : " — next action: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護帳單、通知與付款回覆位置：" : "Protected bill, notice and payment-response location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭帳單來源與工作狀態，不判定債務、費用、付款義務、退款、權利、期限或法律結果；請以目前帳單、通知、服務來源及適用的合格專業資訊為準。" : "This output only organizes household bill sources and work status. It does not decide debt, fees, payment obligations, refunds, rights, deadlines or legal outcomes; use the current bill, notice, provider and applicable qualified source."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7074,6 +7143,9 @@ const definitions: Record<string, Definition> = {
   "household-trip-packing-handoff-log": {
     ...tripHandoffDefinition("en"),
   },
+  "household-bill-source-status-log": {
+    ...billReviewDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7129,6 +7201,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-trip-packing-handoff-log": {
     ...tripHandoffDefinition("zh-TW"),
+  },
+  "household-bill-source-status-log": {
+    ...billReviewDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:
