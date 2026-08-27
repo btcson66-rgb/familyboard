@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T05:22:37.760Z
+Generated: 2026-08-27T05:37:31.745Z
 
 ## Summary
 
-- Indexable pages: 403
-- Generated HTML routes: 420
+- Indexable pages: 406
+- Generated HTML routes: 423
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 190
+- Pages without a contextual product/tool link: 193
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 44
+- product: 45
 - appliances: 30
 - maintenance: 37
-- household-operations: 40
+- household-operations: 42
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -82,6 +82,7 @@ Generated: 2026-08-27T05:22:37.760Z
 - /tools/household-inventory-photo-capture-log/
 - /tools/household-meal-prep-role-log/
 - /tools/household-meeting-agenda-action-log/
+- /tools/household-meter-reading-review-log/
 - /tools/household-pantry-expiry-review-log/
 - /tools/household-share-access-review-log/
 - /tools/household-trip-packing-handoff-log/
@@ -120,6 +121,7 @@ Generated: 2026-08-27T05:22:37.760Z
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-internet-incident-tutorial/
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
+- /zh-tw/guides/familyboard-meter-reading-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
@@ -209,6 +211,7 @@ Generated: 2026-08-27T05:22:37.760Z
 - /zh-tw/tools/household-meal-prep-role-log/
 - /zh-tw/tools/household-medical-information-source-handoff-log/
 - /zh-tw/tools/household-meeting-agenda-action-log/
+- /zh-tw/tools/household-meter-reading-review-log/
 - /zh-tw/tools/household-pantry-expiry-review-log/
 - /zh-tw/tools/household-pet-record-source-handoff-log/
 - /zh-tw/tools/household-power-outage-event-log/

@@ -1888,6 +1888,14 @@
     "headings": "Household Internet Outage Log Define the affected scope Check a responsible status source Describe impact without diagnosing Record a temporary workaround Confirm recovery in layers Future affiliate placement"
   },
   {
+    "title": "Free Household Meter Reading Log | Manual Utility Observation | FamilyBoard",
+    "description": "Record manual water, electricity or gas display readings, dates and source notes with safe codes—without storing meter IDs, account data or bill amounts.",
+    "route": "/tools/household-meter-reading-review-log/",
+    "cluster": "household-operations",
+    "keywords": "household meter reading log",
+    "headings": "Household Meter Reading Log Record what was visible from a safe position Date and source matter more than a lone number Compare observations without estimating a bill Keep move-in, service and outage contexts separate Handoff and future affiliate placement"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

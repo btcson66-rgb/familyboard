@@ -1992,6 +1992,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-meter-reading-review-log/",
+    "alternateRoute": "/zh-tw/tools/household-meter-reading-review-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2379,6 +2387,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-meter-reading-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-offline-backup-restore/",
     "alternateRoute": "/guides/familyboard-offline-backup-restore/",
     "indexable": true,
@@ -2745,6 +2760,13 @@
   {
     "route": "/zh-tw/tools/household-meeting-agenda-action-log/",
     "alternateRoute": "/tools/household-meeting-agenda-action-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-meter-reading-review-log/",
+    "alternateRoute": "/tools/household-meter-reading-review-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

@@ -3379,6 +3379,70 @@ const internetIncidentDefinition = (locale: Locale): Definition => {
   };
 };
 
+const meterReadingDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立讀數列，等待服務類型",
+        "已確認服務類型，等待人工讀數",
+        "已記錄人工讀數，等待來源日期",
+        "已核對來源日期，等待顯示狀況",
+        "已記錄顯示狀況，等待家庭比較觀察",
+        "已完成比較觀察，等待下次讀數",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Reading row created—service type pending",
+        "Service type checked—manual reading pending",
+        "Manual reading recorded—source date pending",
+        "Source date checked—display condition pending",
+        "Display condition recorded—household comparison pending",
+        "Comparison observation complete—next reading pending",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "METER-A | 電力服務 | 2026-08-20 | 01234 | 住家表計觀察來源代號 | 顯示清楚；由家人站在安全位置抄錄 | 與上次人工觀察的差異留待家庭自行核對 | 下次帳單或搬家核點前重新查看並保留來源 | 已記錄人工讀數，等待來源日期\nMETER-B | 自來水服務 | 2026-08-22 | 5678 | 水務通知來源代號 | 顯示可讀；未移動設備或開啟箱體 | 本次只保留人工觀察，不推算費用或用量 | 2026-09-05 前依相同角度再次查看 | 已記錄顯示狀況，等待家庭比較觀察"
+    : "METER-A | Electricity service | 2026-08-20 | 01234 | Household meter-observation source code | Display clear; read from a safe position | Difference from the prior manual observation remains for household review | Recheck before the next bill or move checkpoint and preserve the source | Manual reading recorded—source date pending\nMETER-B | Water service | 2026-08-22 | 5678 | Water notice source code | Display readable; no equipment moved or box opened | Manual observation only; no cost or usage estimate | Recheck from the same safe angle by 2026-09-05 | Display condition recorded—household comparison pending";
+  return {
+    intro: zh
+      ? "記錄家人依安全位置人工看到的水、電、瓦斯或其他服務表計讀數、日期、來源與顯示狀況。工具不讀取表計、不保存表號或帳戶、不計算費用或用量，也不判定設備、帳單或安全結果。"
+      : "Record a household member's manual observation of a water, electricity, gas or other service display, its date, source and condition from a safe position. This tool reads no meter, stores no meter or account identifiers, estimates no cost or usage and does not decide equipment, billing or safety outcomes.",
+    fields: [
+      text("review", zh ? "表計讀數複查私人代號" : "Private meter-reading review reference", zh ? "使用家庭代號，不要輸入表號、客戶編號、帳號、地址或帳單金額。" : "Use a household code; do not enter meter IDs, customer numbers, account data, addresses or bill amounts.", "METER-REVIEW-2026-A"),
+      { name: "context", label: zh ? "表計觀察情境" : "Meter-observation context", type: "select", options: zh ? ["搬入或搬出讀數", "每月家庭觀察", "帳單前後核對", "停水停電或服務事件", "設備維修前後", "其他表計觀察"] : ["Move-in or move-out reading", "Monthly household observation", "Before or after a bill", "Outage or service incident", "Before or after equipment service", "Other meter observation"] },
+      { name: "reviewDate", label: zh ? "本次讀數複查日期" : "Current reading-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次讀數日期" : "Next reading date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "表計、通知與人工觀察來源地圖" : "Meter, notice and manual-observation source map", zh ? "只填安全來源代號，不要貼表號、帳戶、地址或帳單全文。" : "Use safe source codes; do not paste meter IDs, accounts, addresses or full bills.", "READING-S1; NOTICE-N1; PHOTO-PTR-P1"),
+      text("rows", zh ? "表計讀數與顯示狀態列" : "Meter-reading and display-status rows", zh ? "每行 9 欄：ID｜服務類型｜人工觀察日期 YYYY-MM-DD｜看到的讀數文字｜來源代號｜顯示與抄錄狀況｜與前次觀察的比較備註｜下一步與核點｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | service type | manual-observation date YYYY-MM-DD | displayed reading text | source code | display and transcription condition | comparison note to prior observation | next action and checkpoint | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護通知與讀數紀錄位置" : "Protected notices and reading-record location", zh ? "只寫保管流程或容器代號，不要放表號、帳戶、地址或帳單資料。" : "Name a custody process or container, not meter IDs, accounts, addresses or bill data.", zh ? "家庭紀錄／表計觀察／METER-REVIEW-2026-A／受保護來源" : "Household records / meter observation / METER-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次讀數日期。" : "Enter valid current and next reading dates.";
+      if (next < review) return zh ? "下一次讀數日期不能早於本次複查。" : "The next reading date cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全讀數代號、來源地圖與受保護位置。" : "Provide a safe reading code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行表計讀數列。" : "Enter 1 to 14 meter-reading rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `讀數第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Reading line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行讀數紀錄都需要唯一 ID。" : "Every reading row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `讀數第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Reading line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列人工觀察日期必須有效，且不能晚於本次複查。" : "Each manual-observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const thin = parsed.filter((row) => row.parts[1].length < 3 || row.parts[3].length < 1 || row.parts[4].length < 6 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 10);
+      if (thin.length) return zh ? `讀數第 ${thin.map((row) => row.line).join("、")} 行需要服務、讀數、來源、顯示狀況、比較與下一步。` : `Reading line ${thin.map((row) => row.line).join(", ")} needs a service, reading, source, display condition, comparison and next action.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、表號、客戶或帳務識別資料；請改用安全代號。" : "A full contact, address, meter, customer or billing identifier was detected; use safe codes.";
+      if (/password|passcode|meter number|meter id|customer number|account number|full address|bill amount|private message|姓名|密碼|表號|表計號碼|客戶編號|帳號|完整地址|帳單金額|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或帳單內容；請只保留安全來源代號。" : "Sensitive data or bill content was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭表計讀數與顯示複查" : " — household meter reading and display review"), (zh ? "觀察情境：" : "Observation context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次讀數：" : "Next reading: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已完成比較或不適用列：" : "Comparison-complete or not-applicable rows: ") + closed.length, (zh ? "表計、通知與人工觀察來源地圖：" : "Meter, notice and manual-observation source map: ") + values.source.trim(), (zh ? "有版本的讀數觀察\n" : "Versioned reading observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜服務：" : " — service: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜讀數：" : " — reading: ") + row.parts[3] + (zh ? "｜來源：" : " — source: ") + row.parts[4] + (zh ? "｜顯示狀況：" : " — display: ") + row.parts[5] + (zh ? "｜比較：" : " — comparison: ") + row.parts[6] + (zh ? "｜下一步：" : " — next: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護通知與讀數紀錄位置：" : "Protected notices and reading-record location: ") + values.storage.trim(), zh ? "這份輸出只整理人工表計觀察，不讀取表計、不計費、不推算用量、不判定帳單、設備、契約、賠償或安全結果；請以目前服務提供者、通知與適當專業來源為準。" : "This output only organizes manual meter observations. It does not read a meter, calculate bills, estimate usage or decide billing, equipment, contract, compensation or safety outcomes; use the current provider, notice and appropriate professional source."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7422,6 +7486,9 @@ const definitions: Record<string, Definition> = {
   "household-internet-incident-review-log": {
     ...internetIncidentDefinition("en"),
   },
+  "household-meter-reading-review-log": {
+    ...meterReadingDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7492,6 +7559,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-internet-incident-review-log": {
     ...internetIncidentDefinition("zh-TW"),
+  },
+  "household-meter-reading-review-log": {
+    ...meterReadingDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:
