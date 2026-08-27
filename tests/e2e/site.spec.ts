@@ -123,6 +123,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-household-meeting-tutorial/",
     "/guides/familyboard-weekly-reset-action-tutorial/",
     "/guides/familyboard-school-closure-continuity-tutorial/",
+    "/guides/familyboard-household-account-list-tutorial/",
+    "/guides/familyboard-household-responsibility-coverage-tutorial/",
+    "/guides/familyboard-replacement-part-source-check-tutorial/",
     "/tools/household-seasonal-reset-action-log/",
     "/tools/household-device-retirement-handoff-log/",
     "/tools/household-router-support-review-log/",
@@ -942,19 +945,34 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(page.locator("h1")).toHaveText(
     "FamilyBoard 家庭帳戶清單怎麼用？服務交接與搬家複查教學",
   );
-  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+  await expect(
+    page.locator('link[rel="alternate"][hreflang="en"]'),
+  ).toHaveAttribute(
+    "href",
+    "https://familyboard.win/guides/familyboard-household-account-list-tutorial/",
+  );
 
   await page.goto("/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/");
   await expect(page.locator("h1")).toHaveText(
     "FamilyBoard 家庭責任分工地圖怎麼用？主要角色、備援與複查教學",
   );
-  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+  await expect(
+    page.locator('link[rel="alternate"][hreflang="en"]'),
+  ).toHaveAttribute(
+    "href",
+    "https://familyboard.win/guides/familyboard-household-responsibility-coverage-tutorial/",
+  );
 
   await page.goto("/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/");
   await expect(page.locator("h1")).toHaveText(
     "FamilyBoard 設備耗材與替換零件怎麼整理？來源核對 App 教學",
   );
-  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+  await expect(
+    page.locator('link[rel="alternate"][hreflang="en"]'),
+  ).toHaveAttribute(
+    "href",
+    "https://familyboard.win/guides/familyboard-replacement-part-source-check-tutorial/",
+  );
 
   await page.goto("/zh-tw/guides/familyboard-consumable-change-history-tutorial/");
   await expect(page.locator("h1")).toHaveText(
@@ -1287,6 +1305,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-school-closure-continuity-tutorial/",
       alternate: "/guides/familyboard-school-closure-continuity-tutorial/",
       heading: "FamilyBoard 停課怎麼安排？照顧接送與復課交接 App 教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-account-list-tutorial/",
+      alternate: "/guides/familyboard-household-account-list-tutorial/",
+      heading: "FamilyBoard 家庭帳戶清單怎麼用？服務交接與搬家複查教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/",
+      alternate: "/guides/familyboard-household-responsibility-coverage-tutorial/",
+      heading: "FamilyBoard 家庭責任分工地圖怎麼用？主要角色、備援與複查教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/",
+      alternate: "/guides/familyboard-replacement-part-source-check-tutorial/",
+      heading: "FamilyBoard 設備耗材與替換零件怎麼整理？來源核對 App 教學",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -3158,6 +3191,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-school-closure-continuity-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-account-list-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-account-list-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-responsibility-coverage-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-replacement-part-source-check-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 盤點固定責任、演練備
 primaryKeyword: "家庭責任分工表教學"
 cluster: "household-operations"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-household-responsibility-coverage-tutorial/"
 indexable: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

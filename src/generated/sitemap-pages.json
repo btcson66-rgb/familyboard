@@ -2648,6 +2648,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-household-account-list-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-account-list-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-responsibility-coverage-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-replacement-part-source-check-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3092,7 +3116,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-household-account-list-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-household-account-list-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3120,7 +3144,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-household-responsibility-coverage-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
@@ -3246,7 +3270,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-replacement-part-source-check-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"

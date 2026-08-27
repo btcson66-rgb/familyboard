@@ -22613,6 +22613,205 @@ Suppose a district posts a closure for one campus while a parent-group message s
 
 ---
 
+## Page 332 — How to Use FamilyBoard as a Household Account List
+**Slug:** /guides/familyboard-household-account-list-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-account-list-tutorial/
+**Primary intent:** learn a safe FamilyBoard household service-account index for handoff, moving preparation and versioned review
+**Title tag:** FamilyBoard Household Account List Tutorial | Safe Service Handoff and Move Review
+**Meta description:** Learn how to build a privacy-aware FamilyBoard index for household service accounts, role handoffs and a move review without entering passwords, verification codes, full account numbers or payment data.
+**Primary keyword concept:** FamilyBoard household account list tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-account-list/`, `/tools/household-bill-source-status-log/`, `/tools/household-share-access-review-log/`, `/guides/organize-utility-account-information/`, `/zh-tw/guides/familyboard-household-account-list-tutorial/`
+**FAQ:**
+- Q: Does FamilyBoard read my password or login state?
+  A: No. Enter only a safe reference, role, plan and review date.
+- Q: Should I paste a full account number?
+  A: No. Keep full account, address, payment and private communication protected.
+- Q: Can a transfer request be marked complete immediately?
+  A: No. Wait for the provider or responsible source to confirm the result.
+- Q: Should one list be edited forever after a move?
+  A: Keep the old observation and create a new version when the location, role or rules change.
+
+**Contextual CTA:** Create two service rows, assign a role and keep them open until the controlling provider source confirms the result.
+
+# How to Use FamilyBoard as a Household Account List
+
+The difficult part of a service handoff is knowing which source controls the current terms, which role owns the next action and what evidence counts as a result. The free [Household Account List](/tools/household-account-list/) provides a safe index. It does not read passwords, sign in to providers, transfer or cancel services, or store addresses, payment details or private messages.
+
+## Choose one reason for the list
+
+Start with a service overview, moving preparation, a backup-role handoff, an access review or planned cancellation review. Do not import every service the household ever used. Use `ACCOUNT-LIST-2026-A`, never a name, address, email or customer number. A move list includes only services whose location, contract or role may change.
+
+## Describe the work, not the secret
+
+Give each row one service and purpose: connectivity support, building-notice backup or shared-subscription renewal. Use `INTERNET-S1` or `BUILDING-PORTAL`; keep the full invoice, contract, login URL and private background protected. The purpose helps a backup role return to the row without exposing a sensitive reason.
+
+## Build a dated source map
+
+Use `PROVIDER-P1`, `CONTRACT-C1` or `HELP-H1` for a current provider page, protected contract index or official help source. Record when it was checked. A source code is not a login shortcut and does not prove a service or permission is valid. Identity checks, fees, transfer conditions, equipment return and cancellation results belong to the provider’s current process.
+
+## Assign primary and backup roles
+
+Use household accounts role, billing role or backup family role. Explain when the backup takes over and which protected source it uses. A FamilyBoard date is a household checkpoint, not a provider deadline, refund promise or legal cut-off. Keep passwords, recovery phrases, verification codes and security answers in their protected service.
+
+## Keep requests open until a result exists
+
+Creating a row, checking scope, assigning a role, sending an invitation or submitting a move request are actions. Only a dated observation from the responsible source should close the row. “Request submitted” is not “service transferred.” If the result is unclear, record what is missing and the next role instead of guessing.
+
+## Version moves and minimise the handoff
+
+When location, provider rules, primary role or backup arrangement changes, preserve the old observation and create a new version. For cancellation, record official source and response but do not decide contract obligation, refund, equipment return or retention rules. Before sharing, remove names, addresses, account numbers, card data, bills, messages and recovery content. FamilyBoard remains local to the browser; export an appropriate protected copy before clearing data.
+
+## Rehearse the handoff with a safe test row
+
+Before a real move or cancellation, duplicate one low-risk service row and ask the backup role to locate its source code, explain the next action and record an observation date. The rehearsal should expose a missing provider link, an unclear ownership boundary or a stale review date without exposing a password. Delete or label the test row clearly after the exercise so it cannot be mistaken for a live request. If the backup cannot complete the lookup, keep the live row open, update the source map and choose a responsible role before changing any account setting.
+
+## Keep affiliate information optional
+
+Folders, labels or hardware recommendations belong after the answer and outside the form, with clear disclosure and an easy skip. Products cannot guarantee account safety, transfer success or provider results.
+
+## Six-question closeout
+
+Is the scope clear? Does each row have a neutral purpose? Can an authorised role find the current source? Are roles explicit? Are requests separate from confirmed results? Did sharing remove account and payment data? If not, keep the version open.
+
+---
+
+## Page 333 — How to Use FamilyBoard for a Responsibility Coverage Map
+**Slug:** /guides/familyboard-household-responsibility-coverage-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
+**Primary intent:** learn a versioned FamilyBoard responsibility map that makes household handoffs possible without exposing personal or account data
+**Title tag:** FamilyBoard Responsibility Coverage Map Tutorial | Roles, Backup and Review
+**Meta description:** Learn how to map household responsibilities in FamilyBoard: define a small scope, record safe sources, assign primary and backup roles, practise a handoff and create the next review task.
+**Primary keyword concept:** FamilyBoard responsibility coverage map tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-responsibility-coverage-map/`, `/tools/household-account-list/`, `/tools/household-weekly-reset-action-log/`, `/features/family-task-manager/`, `/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/`
+**FAQ:**
+- Q: How is a coverage map different from a chore rota?
+  A: It adds the controlling source, backup trigger and review version.
+- Q: Should I put a person’s name in the app?
+  A: Use role labels first and keep contact and sensitive data protected.
+- Q: Is agreeing to help enough to close a backup row?
+  A: No. Close only after the source, scope and observed result are checked and dated.
+- Q: Will FamilyBoard notify the backup person?
+  A: No. It can hold a task date but does not send messages automatically.
+
+**Contextual CTA:** Map two responsibilities, run one backup handoff and create a dated FamilyBoard task for the next review.
+
+# How to Use FamilyBoard for a Responsibility Coverage Map
+
+The risk in household operations appears when the usual person is away and nobody knows the current source, smallest useful scope or event that triggers a backup. The free [Responsibility Coverage Map](/tools/household-responsibility-coverage-map/) turns two or three real responsibilities into a reviewable handoff. It does not schedule people, notify family members, sign in to a provider or decide legal, care or safety responsibility.
+
+## Choose a consequence-based scope
+
+Begin with a holiday backup, a move or role change, or a monthly review. Ask which two jobs would block the household if the usual person were absent. Use `RESPONSIBILITY-MAP-2026-A`, not a name, address or contact detail. A broad “make the home work” row cannot have a reliable source or completion condition.
+
+## Define one responsibility per row
+
+Write connectivity support, recycling notice handoff, appliance source review or school transport coordination. Add a cycle or reopening event: monthly review, new official notice, location change or primary-role absence. Do not paste a contract, notice or care instruction. Keep sensitive background in the responsible protected source.
+
+## Create the source map
+
+Use `SOURCE-NET-A`, `SOURCE-BUILDING-B` or `SOURCE-CARE-C1` for the current official notice, manual, schedule or protected note, and record its review date. The map helps an authorised backup find the answer but does not authenticate it. The backup must confirm the current version and result in the source system.
+
+## Name roles and triggers
+
+Use network role, residence role or household administration role. Describe when the backup takes over: the primary cannot respond, a notice changes, the location moves or the review date arrives. “Everyone knows” is not a trigger. A visible reopening event prevents an old role from becoming a permanent assumption.
+
+## Separate observation and review dates
+
+The last-observed date records when the family actually checked a source or workflow. The next-review date is a household checkpoint, not a provider, school, agency or government promise. If an external source has its own deadline, preserve that rule there and create a separate dated task.
+
+## Keep statuses honest and run a drill
+
+Rows may wait for scope, source, primary role or backup arrangement. Sending a message or opening a page is not a result. Close only after an authorised role records a dated observation. Let the backup find the safe source, explain what should not be opened and state the next action without receiving the whole family folder. Record the drill without names, accounts, addresses, passwords or private messages.
+
+## Turn review into a task and protect recommendations
+
+The map answers who covers a workflow; a task answers the next action and date. The app does not extend coverage or create recurring tasks automatically. Future binders, labels or accessibility products belong after the answer and outside the form, disclosed and skippable; no product proves coverage or authority.
+
+## Seven-question closeout
+
+Is the scope small? Does every row have a source and reopening event? Are roles explicit? Are dates real? Did the backup complete a minimum-information drill? Is the next task dated? Did sharing remove sensitive details? If not, leave the map open.
+
+---
+
+## Page 334 — How to Use FamilyBoard to Check Replacement-Part Sources
+**Slug:** /guides/familyboard-replacement-part-source-check-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-replacement-part-source-check-tutorial/
+**Primary intent:** learn a FamilyBoard replacement-part source workflow that avoids guessing compatibility from a product title or appearance
+**Title tag:** FamilyBoard Replacement Part Source Check Tutorial | Compatibility Evidence
+**Meta description:** Learn how to organise filters, bags, bulbs, batteries and other replacement parts in FamilyBoard using safe device references, source evidence, stock checks and separate purchase, arrival and use results.
+**Primary keyword concept:** replacement part compatibility check tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-replacement-part-source-check-log/`, `/guides/household-supplies-inventory/`, `/tools/household-shopping-list-planner/`, `/tools/appliance-manual-source-check-log/`, `/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/`
+**FAQ:**
+- Q: What if I know only the product name?
+  A: Keep the row open and return to the rating plate, manual or service source; do not guess.
+- Q: Can arrival mark the part complete?
+  A: No. Ordering, arrival, visual similarity and suitability are separate events.
+- Q: Does the app decide whether a filter or bulb is safe?
+  A: No. Electrical, gas, water, height and other safety work belongs to qualified sources.
+- Q: Do I need affiliate products before a source record?
+  A: No. Confirm the device and source first; products are optional.
+
+**Contextual CTA:** Choose one part often bought incorrectly, record its controlling source and create a task for the unresolved check.
+
+# How to Use FamilyBoard to Check Replacement-Part Sources
+
+Filters, vacuum bags, bulbs, batteries and water cartridges can look interchangeable while depending on model, connector, rating, region or revision. A retailer title saying “fits many” does not prove it fits your device. The free [Replacement Part Source Check Log](/tools/household-replacement-part-source-check-log/) separates the device, source, observation and next review. It does not read a rating plate, search a shop, compare prices or provide installation instructions.
+
+## Start with one part that causes rework
+
+Choose a first source map, stock review, correction after a wrong purchase or maintenance preparation. Start with the item that caused a second trip because of size, connector, part number or revision. General supplies belong in a shopping list; a device-specific filter, bag, bulb, battery or cartridge belongs in a source check. For gas, electrical, refrigerant, drinking-water or high-place work, record only the evidence gap and use the appropriate professional source.
+
+## Use a safe device reference
+
+Create `PART-SOURCE-MAP-2026-A` and a neutral code such as `AC-LIVING-A` or `VACUUM-B`. Keep the full model, serial, address and order number protected. If only a product name is known, create a task for the responsible role to consult the rating plate, manufacturer manual or service record. A similar photograph is not model evidence.
+
+## Record the controlling source
+
+Use `MANUAL-A1`, `LABEL-A1` or `SERVICE-A1` for a protected manual, label image or service record. Write what the source actually establishes: “manufacturer list includes this model; item not yet used” or “connector awaiting confirmation.” Model, part number, dimension, voltage, rating, connector, material and region may be separate facts. Do not compress uncertainty into “OK.”
+
+## Keep stock, purchase and use separate
+
+Record the physical count and protected storage reference, such as “two packs; container C2.” If the package has not been seen, write “count pending arrival,” not the order quantity. A shopping list answers what to buy; a source log answers why the part may apply and what remains unproven. Receiving a parcel must not skip compatibility review.
+
+## Use honest statuses and deliberate tasks
+
+Rows can move from created, device and source identified, evidence recorded, stock located and replacement arranged to a dated result or reasoned not-applicable state. Ordering, delivery or visual similarity is not proof of suitability. If package, device and source disagree, return to the manufacturer, seller, service provider or qualified professional. Create a dated FamilyBoard task for the next check; a manual revision or substituted part number deserves a new version.
+
+## Minimise data and avoid unsafe experiments
+
+Before sharing, remove names, phone numbers, email, addresses, serials, orders, payment data and private messages. FamilyBoard is local to the browser and is not automatic sync, encryption or backup; export an appropriate protected copy before clearing data. Do not dismantle, energise or install equipment merely to fill a row. Follow current manufacturer and professional guidance for hazardous work.
+
+## Keep affiliate products from changing the answer
+
+Filters, storage boxes, labels or general supplies may be recommended only after the answer and outside the form, with disclosure and an easy skip. A product cannot guarantee compatibility, safety, warranty or a substitute.
+
+## Eight-question closeout
+
+Is the scope one error-prone part? Is the device a safe reference? Can an authorised role find the source? Are known and unknown facts separate? Are purchase, arrival, use and installation distinct? Is the next task dated? Were hazardous questions handed to the right source? Did sharing remove personal and order data? If not, keep the row open.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

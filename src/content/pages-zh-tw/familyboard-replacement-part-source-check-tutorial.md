@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 整理設備耗材與替換零
 primaryKeyword: "設備耗材相容性檢查教學"
 cluster: "inventory-warranty"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-replacement-part-source-check-tutorial/"
 indexable: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

@@ -305,11 +305,15 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-weekly-reset-action-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-school-closure-continuity-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-closure-continuity-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-account-list-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-account-list-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-responsibility-coverage-map/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-responsibility-coverage-map/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-responsibility-coverage-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-replacement-part-source-check-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-replacement-part-source-check-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-replacement-part-source-check-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-consumable-change-history-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-consumable-change-history-log/</loc>",
@@ -2937,14 +2941,32 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-household-account-list-tutorial/",
+    require: [
+      "How to Use FamilyBoard as a Household Account List",
+      'hreflang="zh-TW"',
+      "Build a dated source map",
+      "does not read passwords",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-household-account-list-tutorial/",
     require: [
       "FamilyBoard 家庭帳戶清單怎麼用",
       'lang="zh-TW"',
+      'hreflang="en"',
       "服務交接與搬家複查教學",
       "不會讀取密碼",
     ],
-    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/guides/familyboard-household-responsibility-coverage-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Responsibility Coverage Map",
+      'hreflang="zh-TW"',
+      "Create the source map",
+      "does not schedule people",
+    ],
   },
   {
     path: "/tools/household-responsibility-coverage-map/",
@@ -2967,10 +2989,19 @@ const checks = [
     require: [
       "FamilyBoard 家庭責任分工地圖怎麼用",
       'lang="zh-TW"',
+      'hreflang="en"',
       "主要角色、備援與複查教學",
       "不會排班、不會通知家人",
     ],
-    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/guides/familyboard-replacement-part-source-check-tutorial/",
+    require: [
+      "How to Use FamilyBoard to Check Replacement-Part Sources",
+      'hreflang="zh-TW"',
+      "Record the controlling source and observation",
+      "does not read a rating plate",
+    ],
   },
   {
     path: "/tools/household-replacement-part-source-check-log/",
@@ -2993,10 +3024,10 @@ const checks = [
     require: [
       "FamilyBoard 設備耗材與替換零件怎麼整理",
       'lang="zh-TW"',
+      'hreflang="en"',
       "來源核對 App 教學",
       "不會讀取銘牌、不會搜尋商店",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/tools/household-consumable-change-history-log/",

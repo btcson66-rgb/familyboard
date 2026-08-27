@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 建立服務帳戶安全索引
 primaryKeyword: "家庭帳戶清單教學"
 cluster: "household-operations"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-household-account-list-tutorial/"
 indexable: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

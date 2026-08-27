@@ -2448,6 +2448,30 @@
     "headings": "How to Use FamilyBoard During a School Closure or Schedule Change Start with a neutral arrangement code Classify the source before planning Separate impact from announcement Assign the adult handoff Track actual result and next notice Stop for urgent concerns Review return-to-school and protect data Seven-question closeout A concrete closure example"
   },
   {
+    "title": "FamilyBoard Household Account List Tutorial | Safe Service Handoff and Move Review",
+    "description": "Learn how to build a privacy-aware FamilyBoard index for household service accounts, role handoffs and a move review without entering passwords, verification codes, full account numbers or payment data.",
+    "route": "/guides/familyboard-household-account-list-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard household account list tutorial",
+    "headings": "How to Use FamilyBoard as a Household Account List Choose one reason for the list Describe the work, not the secret Build a dated source map Assign primary and backup roles Keep requests open until a result exists Version moves and minimise the handoff Rehearse the handoff with a safe test row Keep affiliate information optional Six-question closeout"
+  },
+  {
+    "title": "FamilyBoard Responsibility Coverage Map Tutorial | Roles, Backup and Review",
+    "description": "Learn how to map household responsibilities in FamilyBoard: define a small scope, record safe sources, assign primary and backup roles, practise a handoff and create the next review task.",
+    "route": "/guides/familyboard-household-responsibility-coverage-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard responsibility coverage map tutorial",
+    "headings": "How to Use FamilyBoard for a Responsibility Coverage Map Choose a consequence-based scope Define one responsibility per row Create the source map Name roles and triggers Separate observation and review dates Keep statuses honest and run a drill Turn review into a task and protect recommendations Seven-question closeout"
+  },
+  {
+    "title": "FamilyBoard Replacement Part Source Check Tutorial | Compatibility Evidence",
+    "description": "Learn how to organise filters, bags, bulbs, batteries and other replacement parts in FamilyBoard using safe device references, source evidence, stock checks and separate purchase, arrival and use results.",
+    "route": "/guides/familyboard-replacement-part-source-check-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "replacement part compatibility check tutorial",
+    "headings": "How to Use FamilyBoard to Check Replacement-Part Sources Start with one part that causes rework Use a safe device reference Record the controlling source Keep stock, purchase and use separate Use honest statuses and deliberate tasks Minimise data and avoid unsafe experiments Keep affiliate products from changing the answer Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
