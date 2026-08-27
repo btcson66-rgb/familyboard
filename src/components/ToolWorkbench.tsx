@@ -4269,8 +4269,52 @@ const maintenancePriorityReviewDefinition = (locale: Locale): Definition => {
   };
 };
 
+const serviceQuoteComparisonDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["已記錄詢價範圍，等待書面報價", "已取得報價版本，等待內容核對", "已記錄差異，等待家庭提問", "已送出問題，等待提供者回覆", "已記錄家庭決定與後續", "未選用，已記錄原因"]
+    : ["Scope recorded—written quote pending", "Quote version received—comparison pending", "Differences recorded—household questions pending", "Questions sent—provider response pending", "Household decision and follow-up recorded", "Not selected—reason recorded"];
+  const defaults = zh
+    ? "QUOTE-COMP-A | 廚房漏水檢查與書面範圍 | QUOTE-1; PROVIDER-1 | 2026-08-25 | 服務範圍、包含項目與排除項目待核對 | 報價版本 Q-1 已收到，材料假設仍待確認 | 送出差異問題並保留回覆版本 | 家庭專案角色 | 已取得報價版本，等待內容核對\nQUOTE-COMP-B | 公共區域設備檢查 | QUOTE-2; BUILDING-1 | 2026-08-26 | 需先確認管理規約與進場窗口 | 尚未比較價格，先記錄權責來源 | 回到 BUILDING-1 確認可委託範圍 | 家庭聯絡角色 | 已記錄差異，等待家庭提問"
+    : "QUOTE-COMP-A | Kitchen leak inspection and written scope | QUOTE-1; PROVIDER-1 | 2026-08-25 | Scope, inclusions and exclusions need comparison | Quote version Q-1 received; material assumptions still need confirmation | Send difference questions and preserve the response version | Household project role | Quote version received—comparison pending\nQUOTE-COMP-B | Common-area equipment inspection | QUOTE-2; BUILDING-1 | 2026-08-26 | Confirm building rules and access window first | No price comparison yet; responsibility source comes first | Return to BUILDING-1 to confirm permissible scope | Household liaison role | Differences recorded—household questions pending";
+  return {
+    intro: zh ? "把不同服務提供者的書面範圍、版本、包含與排除、家庭限制、提問與決定放在同一份可追溯摘要。工具不搜尋業者、不驗證資格、不比較誰最便宜、不替家庭簽約或判定報價合理性。" : "Keep written service scopes, versions, inclusions, exclusions, household constraints, questions and decisions in one traceable summary. This tool does not search providers, verify credentials, rank prices, sign a contract or decide whether a quote is reasonable.",
+    fields: [
+      text("household", zh ? "家庭服務詢價私人代號" : "Private household quote-review reference", zh ? "使用家庭代號，不要輸入地址、姓名、電話、付款資料或完整案件內容。" : "Use a household code; do not enter addresses, names, phone numbers, payment details or full case content.", "QUOTE-REVIEW-2026-A"),
+      { name: "context", label: zh ? "詢價比較情境" : "Quote-comparison context", type: "select", options: zh ? ["一般維護範圍詢價", "多家書面報價核對", "公共區域或管理規約先確認", "保固或服務範圍提問", "改變範圍後重新詢價", "其他家庭委託決定"] : ["Routine maintenance scope quote", "Compare multiple written quotes", "Building or permission scope first", "Warranty or service-scope question", "Re-quote after scope change", "Other household engagement decision"] },
+      { name: "reviewDate", label: zh ? "本次報價複查日期" : "Current quote-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次提問或決定日期" : "Next question or decision date", type: "date", value: "2026-09-03" },
+      text("sources", zh ? "提供者與規約來源地圖" : "Provider and rule source map", zh ? "只填來源代號，例如 PROVIDER-1、QUOTE-1、BUILDING-1；完整聯絡資料留在受保護位置。" : "Use source codes such as PROVIDER-1, QUOTE-1 or BUILDING-1; keep full contact details protected.", "PROVIDER-1; QUOTE-1; BUILDING-1"),
+      text("rows", zh ? "書面報價比較列" : "Written quote-comparison rows", zh ? "每行 9 欄：ID｜服務範圍｜來源代號｜報價日期 YYYY-MM-DD｜包含／排除摘要｜家庭限制或提問｜下一步｜負責角色｜指定狀態。最多 12 行。" : "Each row uses 9 fields: ID | service scope | source codes | quote date YYYY-MM-DD | inclusions/exclusions summary | household constraint or question | next step | owner role | exact status. Maximum 12 rows.", defaults),
+      text("storage", zh ? "受保護報價與通信位置" : "Protected quote and correspondence location", zh ? "只寫資料夾或容器代號，不要放地址、電話、付款資料或通信全文。" : "Use a folder or container label, not an address, phone, payment detail or full correspondence.", zh ? "家庭紀錄／服務詢價／QUOTE-REVIEW-2026-A／受保護來源" : "Household records / service quotes / QUOTE-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次報價複查日期。" : "Enter valid current and next quote-review dates.";
+      if (next < review) return zh ? "下一次提問或決定日期不能早於本次複查。" : "The next question or decision date cannot be earlier than the current review.";
+      if (values.household.trim().length < 4 || values.sources.trim().length < 10 || values.storage.trim().length < 10) return zh ? "請提供安全代號、來源地圖與受保護位置。" : "Provide a safe reference, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) })).filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行書面報價比較列。" : "Enter 1 to 12 quote-comparison rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? "第 " + malformed.map((row) => row.line).join("、") + " 行必須有 9 個非空白欄位。" : "Line " + malformed.map((row) => row.line).join(", ") + " must contain 9 non-empty fields.";
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length) return zh ? "每行報價比較都需要唯一 ID。" : "Every quote-comparison row needs a unique ID.";
+      if (rows.some((row) => !strictIsoDate(row.parts[3]) || strictIsoDate(row.parts[3])! > review)) return zh ? "每列報價日期必須有效，且不能晚於本次複查。" : "Each quote date must be valid and no later than the current review.";
+      const invalid = rows.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalid.length) return zh ? "第 " + invalid.map((row) => row.line).join("、") + " 行必須使用指定狀態。" : "Line " + invalid.map((row) => row.line).join(", ") + " must use an exact status.";
+      const thin = rows.filter((row) => row.parts[1].length < 5 || row.parts[2].length < 5 || row.parts[4].length < 10 || row.parts[5].length < 8 || row.parts[6].length < 8 || row.parts[7].length < 3);
+      if (thin.length) return zh ? "第 " + thin.map((row) => row.line).join("、") + " 行需要範圍、來源、包含／排除、提問、下一步與角色。" : "Line " + thin.map((row) => row.line).join(", ") + " needs scope, source, inclusions/exclusions, question, next step and owner.";
+      const privacy = [values.household, values.sources, values.rows, values.storage].join("\n");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy) || /password|passcode|full address|phone number|payment card|bank account|serial number|case number|私人訊息|完整地址|電話|付款卡|銀行帳號|完整序號|案件號|通信內容/i.test(privacy)) return zh ? "偵測到聯絡、付款、設備識別或私人通信資料；請改用安全代號。" : "A contact, payment, equipment identifier or private correspondence detail was detected; use safe codes.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const note = zh ? "這份輸出只整理書面範圍、來源、差異、家庭提問與決定，不驗證資格、不判定價格合理性、不替家庭簽約，也不保證服務結果。" : "This output only organizes written scope, sources, differences, household questions and decisions. It does not verify credentials, judge price reasonableness, sign for you or guarantee a service result.";
+      return [values.household.trim() + (zh ? "｜家庭服務報價比較" : " — household service quote comparison"), (zh ? "詢價情境：" : "Quote context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + formatter.format(review), (zh ? "下一次提問或決定：" : "Next question or decision: ") + formatter.format(next), (zh ? "比較列：" : "Comparison rows: ") + rows.length, (zh ? "來源地圖：" : "Source map: ") + values.sources.trim(), (zh ? "有版本的報價觀察\n" : "Versioned quote observations\n") + rows.map((row) => row.parts.join(zh ? "｜" : " — ")).join("\n"), (zh ? "受保護報價與通信位置：" : "Protected quote and correspondence location: ") + values.storage.trim(), note].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
+  "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -8484,6 +8528,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-maintenance-priority-review-log": {
     ...maintenancePriorityReviewDefinition("zh-TW"),
+  },
+  "household-service-quote-comparison-log": {
+    ...serviceQuoteComparisonDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

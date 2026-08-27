@@ -257,6 +257,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-maintenance-priority-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-maintenance-priority-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-service-quote-comparison-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-service-quote-comparison-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-service-quote-comparison-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -1145,6 +1148,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Observe before you explain",
       "Keep priority as a household decision",
+    ],
+  },
+  {
+    path: "/tools/household-service-quote-comparison-log/",
+    require: [
+      "Household Service Quote Comparison Log",
+      'hreflang="zh-TW"',
+      "Compare scope before totals",
+      "Treat household constraints as questions",
     ],
   },
   {
@@ -2267,6 +2279,15 @@ const checks = [
     ],
   },
   {
+    path: "/zh-tw/tools/household-service-quote-comparison-log/",
+    require: [
+      "居家服務報價比較工具",
+      'hreflang="en"',
+      "先比較範圍，再看金額",
+      "把家庭限制寫成要問的問題",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
@@ -2403,6 +2424,16 @@ const checks = [
       'lang="zh-TW"',
       "先記錄實際看到的事",
       "不要把家庭摘要變成維修教學",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-service-quote-comparison-tutorial/",
+    require: [
+      "FamilyBoard 居家服務報價怎麼比較",
+      'lang="zh-TW"',
+      "逐份寫清楚服務範圍",
+      "把差異變成問題",
     ],
     forbid: ['rel="alternate"'],
   },

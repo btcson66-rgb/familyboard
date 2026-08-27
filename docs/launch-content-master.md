@@ -18864,6 +18864,149 @@ General filters, labels or storage products may appear beside the guide with dis
 
 這一列是否只寫可觀察事實？來源是否是安全代號？使用限制是否來自正式來源或清楚家庭決定？下一步是否有角色？行動與服務結果是否分開？分享前是否移除了設備與家庭敏感資料？六題都能回答「是」，這份紀錄才是在幫家庭做出可追溯的下一步。
 
+## Page 273 — Household Service Quote Comparison Log
+**Slug:** /tools/household-service-quote-comparison-log/
+**Primary intent:** compare written household service scopes, assumptions and open questions before a family commits
+**Title tag:** Household Service Quote Comparison Log | Compare Scope, Inclusions and Follow-Up
+**Meta description:** A free, private-first log for comparing dated service quotes, inclusions, exclusions, household constraints and unanswered questions without ranking providers or giving price advice.
+**Primary keyword concept:** service quote comparison log
+**Cluster:** maintenance
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /tools/home-service-provider-verification-log/, /tools/home-repair-change-order-log/, /zh-tw/tools/household-service-quote-comparison-log/
+**FAQ:**
+- Q: Does this tool tell me which provider is cheapest or best?
+  A: No. It records the evidence and differences you supply; it does not search, verify credentials, rank providers or judge price reasonableness.
+- Q: Can it approve a repair or sign a contract?
+  A: No. Keep approval, permissions, written terms and payment decisions in the responsible household or building process.
+- Q: What belongs in a comparison row?
+  A: A dated scope, source codes, inclusion/exclusion summary, household constraint or question, next step, owner and exact status.
+
+# Household Service Quote Comparison Log
+
+When a home repair or service visit produces several estimates, the confusing part is rarely the arithmetic alone. One quote may include inspection but exclude materials; another may assume building approval; a third may describe a different scope. This private-first log keeps those differences visible before a household commits.
+
+Use short source codes such as PROVIDER-1, QUOTE-1 and BUILDING-1. Keep the complete address, phone number, account information, signatures, payment details and full correspondence in your protected source. Record the quote date and version, what the provider says is included, what is explicitly excluded, and which assumption still needs a written question.
+
+## Compare scope before totals
+
+Two totals are not comparable if they describe different work. Write the physical or administrative scope in plain language, then point to the dated quote that supports it. If the scope is still an estimate, say so. Do not turn “allowance,” “optional,” “pending inspection” or “not included” into a promise that the final bill will stay unchanged.
+
+## Treat household constraints as questions
+
+Access windows, building rules, warranty conditions, preferred dates and a family budget are constraints, not proof that a provider can meet them. Put the constraint beside the question to send, the role responsible for asking, and the date to review the answer. A provider’s reply should be stored as a new source version rather than silently overwriting the earlier quote.
+
+## Decide without pretending certainty
+
+The household may select a quote, request clarification, pause the project or record that a provider was not selected. Those are household decisions. This tool does not verify licenses or insurance, recommend a contractor, calculate a fair price, approve regulated work, or guarantee workmanship, timing, access or a refund. Use the responsible official, building, warranty and service processes for real decisions.
+
+## Affiliate boundary
+
+Future labels, binders or measuring accessories may appear outside the workbench with a clear affiliate disclosure and an easy way to ignore them. They must not be presented as required to compare quotes, improve safety or obtain service.
+
+## Page 274 — Household Service Quote Comparison Log (Traditional Chinese)
+**Slug:** /zh-tw/tools/household-service-quote-comparison-log/
+**Alternate route:** /tools/household-service-quote-comparison-log/
+**Primary intent:** 讓台灣家庭在委託前整理書面服務範圍、包含／排除、來源版本與尚待詢問的差異
+**Title tag:** 居家服務報價比較工具｜範圍、包含項目與後續提問｜FamilyBoard
+**Meta description:** 免費整理不同服務報價的日期、來源、包含與排除、家庭限制、提問和決定；不搜尋業者、不判定價格合理、不替你簽約。
+**Primary keyword concept:** 居家服務報價比較工具
+**Cluster:** maintenance
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/home-service-provider-verification-log/, /zh-tw/tools/home-repair-change-order-log/, /zh-tw/guides/familyboard-service-quote-comparison-tutorial/
+**FAQ:**
+- Q: 工具會告訴我哪一家最便宜或最好嗎？
+  A: 不會，只整理你輸入的來源和差異，不搜尋、驗證或排名業者。
+- Q: 可以用它直接同意施工或付款嗎？
+  A: 不可以，正式同意、權限、契約與付款仍要回到家庭、管委會、保固或服務流程。
+- Q: 比較列要寫什麼？
+  A: 日期、範圍、來源代號、包含／排除、家庭限制或提問、下一步、角色與狀態。
+
+# 居家服務報價比較工具｜範圍、包含項目與後續提問
+
+同一項居家維護收到兩三份報價時，最容易混淆的不是總額，而是每份文件其實描述不同範圍。有的只含檢查，有的把材料列成預估，有的還要先取得大樓進場同意。這個工具把日期、版本、來源、包含與排除、家庭限制、尚待提問和決定放在一起，協助家庭在委託前看清楚差異。
+
+## 先比較範圍，再看金額
+
+使用 PROVIDER-1、QUOTE-1、BUILDING-1 等安全代號，完整地址、電話、簽名、付款資料和通信全文留在受保護來源。每列先寫「廚房漏水檢查」或「公共區域設備檢視」這種範圍，再寫報價日期與版本。文件若寫的是預估、選配、材料另計、現場確認或不包含清運，就照原意記錄，不要自行補成固定價格。
+
+## 把家庭限制寫成要問的問題
+
+可進場時段、管委會規約、保固條件、希望日期與家庭預算都是限制，不代表業者已經答應。把限制旁邊放上要問的問題、負責角色和複查日期；收到回覆後新增來源版本，避免直接覆蓋舊報價。不同文件互相矛盾時，保留差異並指定下一個詢問來源。
+
+## 家庭決定不等於專業判定
+
+家庭可以選擇先釐清、暫停、改變範圍或記錄未選用原因，但工具不驗證執照與保險、不推薦業者、不判定價格合理、不核准受規範工程，也不保證工期、進場、施工品質或退款。正式權限、保固和服務結果要回到負責機構與書面流程。
+
+## 聯盟商品放在工作台之外
+
+未來標籤、資料夾或量測用品只能在工具外側清楚揭露聯盟關係並可略過，不能說成比較報價、取得服務或確保安全的必要條件。
+
+## Page 275 — FamilyBoard Service Quote Comparison Tutorial (Traditional Chinese)
+**Slug:** /zh-tw/guides/familyboard-service-quote-comparison-tutorial/
+**Primary intent:** teach Taiwan households how to compare service quotes by scope and source before making a household decision
+**Title tag:** FamilyBoard 居家服務報價怎麼比較？範圍與提問 App 教學
+**Meta description:** 用繁體中文學會在 FamilyBoard 分開記錄報價範圍、包含／排除、家庭限制、來源版本和下一步，不把估價當成保證。
+**Primary keyword concept:** FamilyBoard 報價比較教學
+**Cluster:** product
+**Page type:** content
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-27
+**Editorial review date:** 2026-08-27
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/household-service-quote-comparison-log/, /zh-tw/tools/home-service-provider-verification-log/, /zh-tw/guides/contractor-records/
+**FAQ:**
+- Q: 報價總額不同就代表高的那份比較差嗎？
+  A: 不一定，先核對範圍、包含、排除、假設與版本，不能只比總額。
+- Q: 可以把完整地址和合約貼進工具嗎？
+  A: 不要，使用安全代號，完整文件留在家庭自行保護的來源。
+- Q: FamilyBoard 會替我選業者嗎？
+  A: 不會，它整理差異和待問問題，正式決定仍由家庭和負責機構處理。
+
+# FamilyBoard 居家服務報價怎麼比較？範圍與提問 App 教學
+
+收到多份水電、冷氣、清潔、搬運或其他居家服務報價時，先不要急著選最低或最高的數字。FamilyBoard 的[居家服務報價比較工具](/zh-tw/tools/household-service-quote-comparison-log/)讓你把每份文件的範圍、版本、包含／排除、家庭限制、提問和決定分開，方便下次複查與交接。
+
+## 第一步：建立安全來源代號
+
+先為提供者、報價和大樓或保固規則建立 PROVIDER-1、QUOTE-1、BUILDING-1 等代號。完整地址、電話、簽名、付款資料、案件內容和通信全文留在受保護資料夾，不要貼到共享摘要。
+
+## 第二步：逐份寫清楚服務範圍
+
+每一列只描述一份報價的範圍，例如「浴室排風檢查與書面建議」。接著填寫報價日期、來源代號、包含項目與排除項目。文件若寫預估、選配、材料另計、現場確認或不含清運，就照原意記錄，不要自行補成固定價格。
+
+## 第三步：把差異變成問題
+
+看到兩份文件使用不同材料、工時或進場條件時，寫成要問的問題：「QUOTE-1 是否包含拆除與清運？」或「BUILDING-1 是否要求先申請公共區域進場？」指定家庭角色和日期，讓問題有人送出，也有人回頭確認答案。
+
+## 第四步：不要把限制當成承諾
+
+家庭可配合的時段、保固窗口、管委會要求、預算上限和成員偏好都只是限制。除非正式來源明確回覆，不能寫成提供者已答應。收到新版本時新增來源與日期，保留舊觀察，讓變更有跡可循。
+
+## 第五步：記錄家庭決定與未決事項
+
+家庭可以選擇先釐清、暫停、縮小範圍、改找其他來源或暫不選用。這是家庭營運決定，不是工具對業者資格、價格、公平性或施工品質的判定。每個開放問題都要有下一步、角色和複查日期；沒有正式回覆就保持等待。
+
+## 第六步：分享前做隱私檢查
+
+複製或列印前刪除地址、電話、姓名、付款、簽名、完整合約與私人訊息。未來若頁面出現資料夾、標籤或量測用品推薦，先看清楚聯盟揭露並可直接略過；商品不是比較報價或確保施工安全的必要條件。
+
+## 收尾前的五個問題
+
+每份報價是否有日期和版本？範圍是否與另一份真的相同？包含與排除是否照來源記錄？每個差異是否變成有人負責的問題？分享前是否移除了完整身分與付款資料？五題都能回答「是」，才適合進入下一次家庭決定。
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.
