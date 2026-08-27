@@ -126,6 +126,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-household-account-list-tutorial/",
     "/guides/familyboard-household-responsibility-coverage-tutorial/",
     "/guides/familyboard-replacement-part-source-check-tutorial/",
+    "/guides/familyboard-guest-arrival-prep-tutorial/",
+    "/guides/familyboard-donation-handoff-tutorial/",
+    "/guides/familyboard-household-admin-backup-tutorial/",
     "/tools/household-seasonal-reset-action-log/",
     "/tools/household-device-retirement-handoff-log/",
     "/tools/household-router-support-review-log/",
@@ -939,7 +942,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(page.locator("h1")).toHaveText(
     "FamilyBoard 家庭行政交接怎麼用？備援角色實作教學",
   );
-  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+  await expect(
+    page.locator('link[rel="alternate"][hreflang="en"]'),
+  ).toHaveAttribute(
+    "href",
+    "https://familyboard.win/guides/familyboard-household-admin-backup-tutorial/",
+  );
 
   await page.goto("/zh-tw/guides/familyboard-household-account-list-tutorial/");
   await expect(page.locator("h1")).toHaveText(
@@ -1320,6 +1328,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/",
       alternate: "/guides/familyboard-replacement-part-source-check-tutorial/",
       heading: "FamilyBoard 設備耗材與替換零件怎麼整理？來源核對 App 教學",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/",
+      alternate: "/guides/familyboard-guest-arrival-prep-tutorial/",
+      heading: "FamilyBoard 訪客到訪怎麼準備？把範圍、準備與復原分開",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
+      alternate: "/guides/familyboard-donation-handoff-tutorial/",
+      heading: "FamilyBoard 家庭物品捐贈轉贈怎麼交接？先記狀況，再確認收受結果",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
+      alternate: "/guides/familyboard-household-admin-backup-tutorial/",
+      heading: "FamilyBoard 家庭行政交接怎麼用？備援角色實作教學",
     },
     {
       route: "/zh-tw/tools/household-storm-readiness-review/",
@@ -3209,6 +3232,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-guest-arrival-prep-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-donation-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-donation-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-admin-backup-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

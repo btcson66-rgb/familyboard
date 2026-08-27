@@ -2648,6 +2648,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-guest-arrival-prep-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-donation-handoff-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-admin-backup-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/guides/familyboard-household-account-list-tutorial/",
     "alternateRoute": "/zh-tw/guides/familyboard-household-account-list-tutorial/",
     "indexable": true,
@@ -3081,7 +3105,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-donation-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3102,7 +3126,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-guest-arrival-prep-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
@@ -3123,7 +3147,7 @@
   },
   {
     "route": "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/guides/familyboard-household-admin-backup-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"

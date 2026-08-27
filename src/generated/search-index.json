@@ -2448,6 +2448,30 @@
     "headings": "How to Use FamilyBoard During a School Closure or Schedule Change Start with a neutral arrangement code Classify the source before planning Separate impact from announcement Assign the adult handoff Track actual result and next notice Stop for urgent concerns Review return-to-school and protect data Seven-question closeout A concrete closure example"
   },
   {
+    "title": "FamilyBoard Guest Arrival Preparation Tutorial | Shared Areas and Recovery",
+    "description": "Learn how to prepare for a guest, gathering or home service visit with FamilyBoard: define a safe scope, protect access details, assign preparation work and record an observable recovery result.",
+    "route": "/guides/familyboard-guest-arrival-prep-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard guest arrival preparation tutorial",
+    "headings": "How to Use FamilyBoard for Guest Arrival Preparation Start with a neutral visit code Limit the physical scope Map the controlling source Separate preparation from arrival and recovery Assign a host and a recovery role Handle Taiwan apartment and community rules carefully Run a no-person rehearsal Keep recommendations outside the workflow Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Donation Handoff Tutorial | Condition, Channel and Result",
+    "description": "Learn how to organise a donation, giveaway or household exchange with FamilyBoard: record observable condition, check the receiving channel, separate pickup from acceptance and protect recipient information.",
+    "route": "/guides/familyboard-donation-handoff-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard donation handoff tutorial",
+    "headings": "How to Use FamilyBoard for a Donation or Giveaway Handoff Create an item or batch code Choose the handoff purpose Record visible facts, not conclusions Verify the receiving channel before packing Separate action, acceptance and return Split batches when the result differs Share only the minimum handoff summary Keep affiliate recommendations clearly optional Nine-question closeout"
+  },
+  {
+    "title": "FamilyBoard Household Admin Backup Tutorial | Roles, Sources and a Safe Drill",
+    "description": "Learn how to create a time-bounded FamilyBoard household administration backup: choose a small scope, map protected sources, test retrieval and close the handoff without sharing credentials or assuming legal authority.",
+    "route": "/guides/familyboard-household-admin-backup-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard household administration backup tutorial",
+    "headings": "How to Use FamilyBoard for an Administrative Backup Handoff Set a time-bounded scenario Choose only three to five real responsibilities Map sources without copying secrets Define primary, backup and stop boundaries Run a retrieval drill before the absence Keep states and dates honest Close and revoke the temporary arrangement Keep affiliate products from changing the answer Ten-question closeout"
+  },
+  {
     "title": "FamilyBoard Household Account List Tutorial | Safe Service Handoff and Move Review",
     "description": "Learn how to build a privacy-aware FamilyBoard index for household service accounts, role handoffs and a move review without entering passwords, verification codes, full account numbers or payment data.",
     "route": "/guides/familyboard-household-account-list-tutorial/",

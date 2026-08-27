@@ -179,6 +179,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/automatic-renewal-charge-dispute-taiwan/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-offline-backup-restore/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-offline-backup-restore/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-admin-backup-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-admin-backup-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-meeting-agenda-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-meeting-agenda-action-log/</loc>",
@@ -229,6 +231,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-recycling-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-donation-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-donation-handoff-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-donation-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-donation-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-mail-package-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-mail-package-handoff-log/</loc>",
@@ -238,6 +241,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-plant-care-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-guest-arrival-prep-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-guest-arrival-prep-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-guest-arrival-prep-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-school-pickup-handoff-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-school-pickup-handoff-log/</loc>",
@@ -2488,14 +2492,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-donation-handoff-tutorial/",
+    require: [
+      "FamilyBoard Donation Handoff Tutorial",
+      'hreflang="zh-TW"',
+      "Record visible facts, not conclusions",
+      "does not appraise an item",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     require: [
       "FamilyBoard 家庭物品捐贈轉贈怎麼交接",
       'lang="zh-TW"',
+      'hreflang="en"',
       "第一步：建立不含個資的安全 ID",
       "交接時只給最少必要資訊",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/guides/familyboard-mail-package-handoff-tutorial/",
@@ -2518,14 +2531,23 @@ const checks = [
     forbid: ['rel="alternate"'],
   },
   {
+    path: "/guides/familyboard-guest-arrival-prep-tutorial/",
+    require: [
+      "FamilyBoard Guest Arrival Preparation Tutorial",
+      'hreflang="zh-TW"',
+      "Limit the physical scope",
+      "does not identify visitors",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/",
     require: [
       "FamilyBoard 訪客到訪怎麼準備",
       'lang="zh-TW"',
+      'hreflang="en"',
       "限定可以使用的範圍",
       "到訪後做復原複查",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/guides/familyboard-school-pickup-handoff-tutorial/",
@@ -3327,14 +3349,23 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-household-admin-backup-tutorial/",
+    require: [
+      "FamilyBoard Household Admin Backup Tutorial",
+      'hreflang="zh-TW"',
+      "Run a retrieval drill before the absence",
+      "does not authenticate a helper",
+    ],
+  },
+  {
     path: "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
     require: [
       "FamilyBoard 家庭行政交接怎麼用",
       'lang="zh-TW"',
+      'hreflang="en"',
       "建立一個有期限的情境",
       "輸入先在目前瀏覽器處理",
     ],
-    forbid: ['rel="alternate"'],
   },
   {
     path: "/zh-tw/guides/household-supplies-inventory/",

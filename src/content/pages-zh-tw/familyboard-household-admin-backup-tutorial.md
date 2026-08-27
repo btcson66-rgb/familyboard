@@ -2,7 +2,7 @@
 title: "FamilyBoard 家庭行政交接怎麼用？備援角色實作教學｜繁體中文"
 description: "用 FamilyBoard 在瀏覽器內建立家庭行政備援摘要：限定期間、整理來源代號、分配角色、測試查找並安全移交，不複製完整帳務或私人通信。"
 route: "/zh-tw/guides/familyboard-household-admin-backup-tutorial/"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-household-admin-backup-tutorial/"
 locale: "zh-TW"
 primaryIntent: "用 FamilyBoard 建立家庭行政備援角色與可測試的交接摘要"
 primaryKeyword: "家庭行政備援交接教學"

@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 管理物品捐贈與轉贈交
 primaryKeyword: "FamilyBoard 物品捐贈教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-donation-handoff-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"

@@ -7,7 +7,7 @@ primaryIntent: "教台灣家庭使用 FamilyBoard 管理訪客或服務到訪準
 primaryKeyword: "FamilyBoard 訪客準備教學"
 cluster: "product"
 pageType: "content"
-languageExclusive: true
+alternateRoute: "/guides/familyboard-guest-arrival-prep-tutorial/"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-27"
