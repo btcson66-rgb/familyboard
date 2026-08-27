@@ -2160,6 +2160,14 @@
     "headings": "Household Responsibility Coverage Map Start with work that has a real consequence The nine-column row format Make the backup trigger observable Six statuses protect the difference between planning and proof Privacy boundary: map roles, not people A practical first run Optional affiliate space must remain outside the workflow"
   },
   {
+    "title": "Replacement-Part Source Check Log | Free Household Compatibility Record",
+    "description": "Record device-linked filters, bulbs, batteries and spare parts with source evidence, compatibility observations, quantities and review dates. FamilyBoard does not identify models or guarantee fit.",
+    "route": "/tools/household-replacement-part-source-check-log/",
+    "cluster": "inventory-warranty",
+    "keywords": "replacement part compatibility checklist",
+    "headings": "Household Replacement-Part Source Check Log Separate ordinary shopping from device-linked parts The nine-column row format Treat five events as different evidence Seven statuses keep uncertainty visible Privacy and safety boundary Optional affiliate space must not choose the part"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

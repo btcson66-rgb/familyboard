@@ -27,6 +27,7 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-shopping-list-planner/",
     "/tools/household-account-list/",
     "/tools/household-responsibility-coverage-map/",
+    "/tools/household-replacement-part-source-check-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -114,6 +115,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-shopping-list-planner/",
     "/tools/household-account-list/",
     "/tools/household-responsibility-coverage-map/",
+    "/tools/household-replacement-part-source-check-log/",
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
@@ -220,6 +222,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-household-account-list-tutorial/",
     "/zh-tw/tools/household-responsibility-coverage-map/",
     "/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/",
+    "/zh-tw/tools/household-replacement-part-source-check-log/",
+    "/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/",
     "/zh-tw/guides/household-admin-backup-person/",
     "/zh-tw/guides/home-contact-list/",
     "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
@@ -853,6 +857,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
 
+  await page.goto("/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/");
+  await expect(page.locator("h1")).toHaveText(
+    "FamilyBoard 設備耗材與替換零件怎麼整理？來源核對 App 教學",
+  );
+  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+
   await page.goto("/tools/warranty-expiration-calculator/");
   await expect(
     page.locator('link[rel="alternate"][hreflang="zh-TW"]'),
@@ -1214,6 +1224,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-responsibility-coverage-map/",
       alternate: "/tools/household-responsibility-coverage-map/",
       heading: "家庭責任分工地圖工具",
+    },
+    {
+      route: "/zh-tw/tools/household-replacement-part-source-check-log/",
+      alternate: "/tools/household-replacement-part-source-check-log/",
+      heading: "家庭替換零件來源核對工具",
     },
   ]) {
     await page.goto(localizedTool.route);

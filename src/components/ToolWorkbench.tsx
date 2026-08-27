@@ -4966,6 +4966,78 @@ const householdResponsibilityCoverageDefinition = (locale: Locale): Definition =
   };
 };
 
+const householdReplacementPartSourceCheckDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立零件列，等待設備與來源",
+        "已核對設備與來源，等待相容性依據",
+        "已記錄相容性依據，等待數量與存放",
+        "已記錄數量與存放，等待更換安排",
+        "已記錄更換安排，等待使用或安裝結果",
+        "已完成複查並保存目前結果",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Part row created—asset and source pending",
+        "Asset and source checked—compatibility basis pending",
+        "Compatibility basis recorded—quantity and storage pending",
+        "Quantity and storage recorded—replacement plan pending",
+        "Replacement plan recorded—use or installation result pending",
+        "Review completed—current result preserved",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "PART-A | 客廳冷氣代號／濾網類 | 依實際設備型號核對的濾網；只記用途與適用範圍 | MANUAL-A1；受保護銘牌與原廠說明書索引 | 尺寸與料號仍待原廠來源核對，不把相似外觀當成相容 | 1 組；放在家庭耗材容器 C1 | 家庭維護角色 | 2026-09-10 | 已核對設備與來源，等待相容性依據\nPART-B | 吸塵器代號／集塵袋類 | 服務特定設備的集塵袋；更換前保留型號證據 | MANUAL-B1；受保護設備清冊索引 | 原廠清單已列出適用範圍；實物尚未使用 | 2 包；存放位置索引 C2 | 家庭採買角色 | 2026-09-17 | 已記錄相容性依據，等待數量與存放"
+    : "PART-A | Living-room AC code / filter | Filter tied to the actual equipment model; scope only | MANUAL-A1; protected nameplate and manufacturer-manual index | Size and part number still need the manufacturer source; similar appearance is not compatibility | One pack; household-supplies container C1 | Household maintenance role | 2026-09-10 | Asset and source checked—compatibility basis pending\nPART-B | Vacuum code / dust bag | Bag serving a specific device; preserve model evidence before replacement | MANUAL-B1; protected equipment index | Manufacturer list names the applicable range; physical use not yet observed | Two packs; storage pointer C2 | Household shopping role | 2026-09-17 | Compatibility basis recorded—quantity and storage pending";
+  return {
+    intro: zh
+      ? "把必須配合實際設備的濾網、燈泡、電池、集塵袋或替換零件整理成來源核對紀錄：設備代號、用途、相容性依據、數量、受保護存放位置、負責角色與下次複查。工具不辨識型號、不推薦品牌、不保證相容、不提供安裝或安全指示。"
+      : "Organize filters, bulbs, batteries, dust bags and replacement parts that must match a real device: asset code, purpose, compatibility basis, quantity, protected storage pointer, owner and next review. This tool does not identify models, recommend brands, guarantee compatibility or provide installation or safety instructions.",
+    fields: [
+      text("review", zh ? "替換零件來源地圖私人代號" : "Private replacement-part map reference", zh ? "使用家庭代號，不要輸入姓名、地址、電話、完整序號、帳號或付款資料。" : "Use a household code; do not enter names, addresses, phone numbers, full serials, account identifiers or payment data.", "PART-SOURCE-MAP-2026-A"),
+      { name: "context", label: zh ? "零件複查情境" : "Part-review context", type: "select", options: zh ? ["設備耗材首次建檔", "例行耗材庫存複查", "買錯規格後重新核對", "設備保養或維修前準備", "設備汰換與舊零件封存", "其他家庭維護"] : ["First equipment-supply record", "Routine spare-part review", "Recheck after a wrong-size purchase", "Maintenance or service preparation", "Equipment replacement and old-part archive", "Other household maintenance"] },
+      { name: "reviewDate", label: zh ? "本次複查日期" : "Current review date", type: "date", value: "2026-08-29" },
+      text("source", zh ? "製造商、標示與家庭來源地圖" : "Manufacturer, label and household-source map", zh ? "只填安全來源代號；完整型號、序號、收據與私人訂單留在受保護來源。" : "Use safe source codes; keep full models, serials, receipts and private orders in protected sources.", "MANUAL-A1; LABEL-A1; RECEIPT-A1"),
+      text("rows", zh ? "設備零件來源核對列" : "Equipment-part source-check rows", zh ? "每行 9 欄：ID｜設備或零件代號｜零件用途與適用範圍｜控制來源／型號證據｜相容性觀察與核對依據｜數量與受保護存放索引｜負責角色｜下一次複查日 YYYY-MM-DD｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | asset or part code | part purpose and fit scope | controlling source or model evidence | compatibility observation and basis | quantity and protected storage pointer | owner role | next review date YYYY-MM-DD | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護零件原件與歷程位置" : "Protected part-source and history location", zh ? "只寫保管容器或流程代號，不要放完整型號、序號、地址、付款或訂單內容。" : "Name a custody container or process code, not full models, serials, addresses, payment or order details.", zh ? "家庭紀錄／設備耗材／PART-SOURCE-MAP-2026-A／受保護來源" : "Household records / equipment supplies / PART-SOURCE-MAP-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate);
+      if (!review) return zh ? "請輸入有效的本次複查日期。" : "Enter a valid current review date.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全地圖代號、來源地圖與受保護位置。" : "Provide a safe map code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) })).filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行設備零件來源核對列。" : "Enter 1 to 14 equipment-part source-check rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `零件第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Part line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length) return zh ? "每行零件紀錄都需要唯一 ID。" : "Every part row needs a unique ID.";
+      const dates = rows.map((row) => strictIsoDate(row.parts[7]));
+      if (dates.some((date) => !date || date < review)) return zh ? "每列下一次複查日必須有效，且不能早於本次複查。" : "Each next-review date must be valid and no earlier than the current review.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `零件第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Part line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const thin = rows.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 10 || row.parts[3].length < 8 || row.parts[4].length < 10 || row.parts[5].length < 8 || row.parts[6].length < 3);
+      if (thin.length) return zh ? `零件第 ${thin.map((row) => row.line).join("、")} 行需要設備、用途、來源、相容性觀察、數量／存放與角色。` : `Part line ${thin.map((row) => row.line).join(", ")} needs an asset, purpose, source, compatibility observation, quantity/storage and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址或設備識別資料；請改用安全代號。" : "A full contact, address or device identifier was detected; use safe codes.";
+      if (/password|passcode|verification code|full address|street address|phone number|account number|card number|bank account|order number|private message|密碼|驗證碼|完整地址|電話|帳號|卡號|銀行帳戶|訂單號|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料；請只保留安全來源索引。" : "Sensitive data was detected; keep only a safe source index.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = rows.filter((row) => statuses.indexOf(row.parts[8]) < 5), closed = rows.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const renderedRows = rows.map((row, index) => row.parts[0] + (zh ? "｜設備／零件：" : " — asset/part: ") + row.parts[1] + (zh ? "｜用途與範圍：" : " — purpose/scope: ") + row.parts[2] + (zh ? "｜來源／型號證據：" : " — source/model evidence: ") + row.parts[3] + (zh ? "｜相容性觀察：" : " — compatibility observation: ") + row.parts[4] + (zh ? "｜數量／存放：" : " — quantity/storage: ") + row.parts[5] + (zh ? "｜角色：" : " — owner: ") + row.parts[6] + (zh ? "｜下次複查：" : " — next review: ") + formatter.format(dates[index] as Date) + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n");
+      return [
+        values.review.trim() + (zh ? "｜家庭設備零件來源核對" : " — household replacement-part source check"),
+        (zh ? "複查情境：" : "Review context: ") + values.context,
+        (zh ? "本次複查：" : "Current review: ") + formatter.format(review),
+        (zh ? "仍開放列：" : "Open rows: ") + open.length,
+        (zh ? "已完成或不適用列：" : "Completed or not-applicable rows: ") + closed.length,
+        (zh ? "製造商、標示與家庭來源地圖：" : "Manufacturer, label and household-source map: ") + values.source.trim(),
+        (zh ? "有版本的設備零件與相容性觀察\n" : "Versioned equipment-part and compatibility observations\n") + renderedRows,
+        (zh ? "受保護零件原件與歷程位置：" : "Protected part-source and history location: ") + values.storage.trim(),
+        zh ? "這份輸出只整理零件來源與家庭複查，不辨識型號、不保證相容、不推薦品牌、不提供安裝或電氣、瓦斯、飲水安全指示，也不證明零件已正確安裝或設備安全。請依實際標示、製造商、負責商家與合格專業來源確認真實結果。" : "This output only organizes part sources and household review. It does not identify models, guarantee compatibility, recommend brands, provide installation or electrical, gas or drinking-water safety instructions, or prove that a part was installed correctly or that equipment is safe. Use the actual label, manufacturer, responsible seller and qualified source for real outcomes.",
+      ].join("\n\n");
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
@@ -4973,6 +5045,7 @@ const definitions: Record<string, Definition> = {
   "household-router-support-review-log": routerSupportReviewDefinition("en"),
   "household-account-list": householdAccountDefinition("en"),
   "household-responsibility-coverage-map": householdResponsibilityCoverageDefinition("en"),
+  "household-replacement-part-source-check-log": householdReplacementPartSourceCheckDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -9120,6 +9193,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-responsibility-coverage-map": {
     ...householdResponsibilityCoverageDefinition("zh-TW"),
+  },
+  "household-replacement-part-source-check-log": {
+    ...householdReplacementPartSourceCheckDefinition("zh-TW"),
   },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("zh-TW"),

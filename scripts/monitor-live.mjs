@@ -281,6 +281,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-responsibility-coverage-map/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-responsibility-coverage-map/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-replacement-part-source-check-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-replacement-part-source-check-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2674,6 +2677,32 @@ const checks = [
       'lang="zh-TW"',
       "主要角色、備援與複查教學",
       "不會排班、不會通知家人",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/tools/household-replacement-part-source-check-log/",
+    require: [
+      "Household Replacement-Part Source Check Log",
+      'hreflang="zh-TW"',
+      "FamilyBoard does not identify models or guarantee fit",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-replacement-part-source-check-log/",
+    require: [
+      "家庭替換零件來源核對工具",
+      'hreflang="en"',
+      "不辨識型號、不推薦品牌、不保證相容",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-replacement-part-source-check-tutorial/",
+    require: [
+      "FamilyBoard 設備耗材與替換零件怎麼整理",
+      'lang="zh-TW"',
+      "來源核對 App 教學",
+      "不會讀取銘牌、不會搜尋商店",
     ],
     forbid: ['rel="alternate"'],
   },
