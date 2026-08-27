@@ -1872,6 +1872,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/home-care-charge-service-payment-discrepancy-log/",
+    "alternateRoute": "/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2203,6 +2211,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/",
+    "alternateRoute": "/tools/home-care-charge-service-payment-discrepancy-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/home-care-complaint-response-resolution-log/",
     "alternateRoute": "/tools/home-care-complaint-response-resolution-log/",
     "indexable": true,
@@ -2211,6 +2226,13 @@
   },
   {
     "route": "/zh-tw/guides/home-care-service-complaint-resolution/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-care-service-fees-and-billing/",
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",

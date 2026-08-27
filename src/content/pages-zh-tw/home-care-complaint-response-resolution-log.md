@@ -14,6 +14,7 @@ lastReviewedAt: "2026-08-27"
 nextStep: "先產生預設版本，逐項核對一列已取得回覆且實際改善的事件，以及一列已有回覆但仍待後續服務結果的事件；不要把案件結案或單位回函自動寫成問題已改善。"
 related:
   - "/zh-tw/guides/home-care-service-complaint-resolution/"
+  - "/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/"
   - "/zh-tw/tools/home-care-service-interruption-backup-continuity-log/"
   - "/zh-tw/guides/home-care-service-visit-records/"
   - "/zh-tw/tools/home-care-service-plan-change-notice-log/"
@@ -148,6 +149,8 @@ contentVersion: 1
 [居家服務臨時中斷與備援銜接紀錄表](/zh-tw/tools/home-care-service-interruption-backup-continuity-log/)處理安全、中斷確認、合格備援、實際替代／恢復與未補缺口；[居家照護服務到離場、範圍與結果紀錄表](/zh-tw/tools/home-care-visit-scope-service-result-log/)處理單次服務事件的正式到離場、授權範圍、例外與單位結果。
 
 [居家服務方案變更與通知紀錄表](/zh-tw/tools/home-care-service-plan-change-notice-log/)處理計畫、契約、授權或固定服務改變時的前後版本、通知、本人參與、銜接與第一次新版服務。本頁則處理家庭如何把不滿或權利疑慮送進正確程序，追蹤受理、調查、回覆、改善與實際結果。
+
+若同一事件還有逐項帳單、長照給付、部分負擔、自費、付款、退費或折抵差異，另用[居家服務費用、帳單與付款差異紀錄表](/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/)追蹤實際帳務結果。申訴回函不能取代更正帳單或退款入帳，帳務更正也不能取代申訴調查與服務改善。
 
 同一事件可以在四張表各有安全代號，但不要把完整申訴複製四次。每張表只回答自己的問題，全部指向同一個受保護來源容器。
 

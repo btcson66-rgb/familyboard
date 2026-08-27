@@ -15,6 +15,7 @@ related:
   - "/tools/home-care-visit-scope-service-result-log/"
   - "/tools/home-care-service-interruption-backup-continuity-log/"
   - "/tools/home-care-complaint-response-resolution-log/"
+  - "/tools/home-care-charge-service-payment-discrepancy-log/"
   - "/tools/caregiver-handoff-source-authorization-log/"
   - "/guides/caregiver-handoff-checklist/"
   - "/guides/household-medical-information-organization/"

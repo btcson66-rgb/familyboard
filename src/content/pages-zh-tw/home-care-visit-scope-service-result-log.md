@@ -14,6 +14,7 @@ lastReviewedAt: "2026-08-26"
 nextStep: "先產生預設版本，逐一核對一列已有服務單位結果的到訪，並讓另一列例外保持開放，直到真正收到負責回覆。"
 related:
   - "/zh-tw/guides/home-care-service-visit-records/"
+  - "/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/"
   - "/zh-tw/guides/caregiver-handoff-checklist/"
   - "/zh-tw/tools/caregiver-handoff-source-authorization-log/"
   - "/zh-tw/guides/household-medical-information-organization/"
@@ -105,6 +106,8 @@ contentVersion: 1
 當重新評估、照顧計畫或自費範圍改變時，不要把舊列直接改成新內容。建立新版本，分開記錄：變更來源、目前契約或附件版本、何時由負責程序確認，以及下一次到訪使用哪個版本。這樣才能避免用新版解釋舊到訪，或用舊契約推定新服務。
 
 需要追蹤變更前後版本、正式通知、家庭回應、服務銜接與第一次新版服務時，改用[居家服務方案變更與通知紀錄表](/zh-tw/tools/home-care-service-plan-change-notice-log/)。本頁只處理單次到訪的正式證據、服務範圍觀察、例外與負責結果，兩種紀錄不要合併。
+
+若例外進一步產生部分負擔、自費、逐項帳單、付款、退費或折抵差異，另用[居家服務費用、帳單與付款差異紀錄表](/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/)比對控制版本、實際服務、費用與最後帳務結果；到訪紀錄本身不裁定應付金額。
 
 工具不保存契約全文、簽名、費用、帳號、計畫內容或任何服務對象個資。它也不解釋契約、判斷違約、估算給付或提供法律意見。
 

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-26T16:45:26.305Z
+Generated: 2026-08-27T01:42:18.425Z
 
 ## Summary
 
-- Indexable pages: 358
-- Generated HTML routes: 375
+- Indexable pages: 361
+- Generated HTML routes: 378
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 147
+- Pages without a contextual product/tool link: 149
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,13 +23,13 @@ Generated: 2026-08-26T16:45:26.305Z
 - maintenance: 37
 - household-operations: 21
 - inventory-warranty: 39
-- records-emergency: 42
-- tools: 117
+- records-emergency: 43
+- tools: 119
 
 ## Word-count range
 
 - Lowest: https://familyboard.win/search/ (19 words)
-- Highest: https://familyboard.win/zh-tw/guides/home-care-service-complaint-resolution/ (5635 words)
+- Highest: https://familyboard.win/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/ (5785 words)
 
 ## Highest similarity pairs
 
@@ -100,6 +100,7 @@ Generated: 2026-08-26T16:45:26.305Z
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
 - /zh-tw/guides/home-care-service-complaint-resolution/
+- /zh-tw/guides/home-care-service-fees-and-billing/
 - /zh-tw/guides/home-care-service-interruption-backup-plan/
 - /zh-tw/guides/home-care-service-plan-changes/
 - /zh-tw/guides/home-care-service-visit-records/
@@ -150,6 +151,7 @@ Generated: 2026-08-26T16:45:26.305Z
 - /zh-tw/tools/emergency-contact-sheet-generator/
 - /zh-tw/tools/emergency-contact-verification-log/
 - /zh-tw/tools/emergency-supply-inventory-audit/
+- /zh-tw/tools/home-care-charge-service-payment-discrepancy-log/
 - /zh-tw/tools/home-care-complaint-response-resolution-log/
 - /zh-tw/tools/home-care-service-interruption-backup-continuity-log/
 - /zh-tw/tools/home-care-service-plan-change-notice-log/

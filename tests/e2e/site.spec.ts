@@ -117,6 +117,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/home-care-service-plan-change-notice-log/",
     "/tools/home-care-service-interruption-backup-continuity-log/",
     "/tools/home-care-complaint-response-resolution-log/",
+    "/tools/home-care-charge-service-payment-discrepancy-log/",
     "/guides/caregiver-handoff-checklist/",
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
@@ -186,6 +187,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/home-care-service-interruption-backup-plan/",
     "/zh-tw/tools/home-care-complaint-response-resolution-log/",
     "/zh-tw/guides/home-care-service-complaint-resolution/",
+    "/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/",
+    "/zh-tw/guides/home-care-service-fees-and-billing/",
     "/zh-tw/guides/caregiver-handoff-checklist/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
@@ -2038,6 +2041,38 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(page.locator(".result")).toContainText(
     "不能早於本次核對日",
   );
+
+  await page.goto("/tools/home-care-charge-service-payment-discrepancy-log/");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("Open source, version, service, charge, benefit, payment or review rows: 1");
+  await expect(page.locator(".result")).toContainText("Reviewed, completed or not-applicable rows: 1");
+  await expect(page.locator(".result")).toContainText("Source, version, actual service, charge, benefit, household responsibility and actual account result reviewed 1");
+  await expect(page.locator(".result")).toContainText("Entered expected household responsibility total (arithmetic only): USD 200.00");
+  await expect(page.locator(".result")).toContainText("Entered billed total (arithmetic only): USD 240.00");
+  await expect(page.locator(".result")).toContainText("Entered paid total (arithmetic only): USD 120.00");
+  await expect(page.locator(".result")).toContainText("Entered observed refund or credit total (arithmetic only): USD 0.00");
+  await expect(page.locator(".result")).toContainText("Billed minus expected difference (arithmetic only, not an amount owed or refundable): USD 40.00");
+  await page.getByLabel("Next correction, benefit or actual-account checkpoint").fill("2026-08-26");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("cannot be earlier than the current review");
+  await page.goto("/tools/home-care-charge-service-payment-discrepancy-log/");
+  await page.getByLabel("Protected service, contract, fee, statement, receipt, payment, benefit and dispute-history location").fill("patient name: example; card number: 4111111111111111");
+  await page.getByRole("button", { name: "Generate result" }).click();
+  await expect(page.locator(".result")).toContainText("possible full phone, email, account, member, case, statement, receipt, benefit, payment-instrument or other long numeric identifier");
+
+  await page.goto("/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("仍開放的來源、版本、服務、費用、給付、付款或審查列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對、完成或不適用列：1 筆");
+  await expect(page.locator(".result")).toContainText("已核對來源、版本、實際服務、費用、給付、家庭責任與實際帳務結果 1 筆");
+  await expect(page.locator(".result")).toContainText("輸入列預期家庭責任合計（僅算術）：TWD 2,000.00");
+  await expect(page.locator(".result")).toContainText("輸入列帳單金額合計（僅算術）：TWD 2,400.00");
+  await expect(page.locator(".result")).toContainText("輸入列已付款合計（僅算術）：TWD 1,200.00");
+  await expect(page.locator(".result")).toContainText("輸入列已觀察退費或折抵合計（僅算術）：TWD 0.00");
+  await expect(page.locator(".result")).toContainText("帳單減預期差額（僅算術，不代表應付或可退）：TWD 400.00");
+  await page.getByLabel("下一次更正、給付或實際帳務結果核點").fill("2026-08-26");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("不能早於本次核對日");
 
   await page.goto("/zh-tw/tools/vacation-shutdown-checklist-generator/");
   await page.getByLabel("離家日期").fill("2026-09-01");

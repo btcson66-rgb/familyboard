@@ -2320,6 +2320,269 @@ This output is a household home-care concern-source, intake, response, correctio
   };
 };
 
+const homeCareChargeDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusOrder = zh
+    ? [
+        "已收到居家服務費用或帳單訊號，等待安全、服務不中斷與來源分類",
+        "已記錄安全與服務不中斷來源，等待負責服務、契約、方案或付款來源",
+        "已記錄負責來源，等待受保護本人、服務期間與帳務關係比對",
+        "已記錄本人、服務期間與帳務關係，等待目前計畫、授權、契約、費率或通知版本",
+        "已記錄目前控制版本，等待實際服務證據與取消、未遇或調整類別",
+        "已記錄實際服務證據，等待逐項費用、帳單或對帳單及給付狀態",
+        "已記錄費用與給付狀態，等待本人或家庭核對及付款責任來源",
+        "已記錄核對與付款責任來源，等待服務單位更正、給付結果、付款、退費或折抵及實際帳務結果",
+        "服務、版本、費用、給付、付款或權利矛盾，等待負責審查",
+        "已核對來源、版本、實際服務、費用、給付、家庭責任與實際帳務結果",
+        "已收到負責帳務結果，記錄更正、付款、退費或折抵、保管與重新開啟條件",
+        "不適用，已記錄原因與重新開啟事件",
+      ]
+    : [
+        "Home-care charge or statement signal received—safety, continuity and source classification pending",
+        "Safety and service-continuity source recorded—responsible service, contract, program or payment source pending",
+        "Responsible sources recorded—protected person, service period and account relationship pending",
+        "Person, service period and account relationship recorded—current plan, authorization, contract, fee or notice version pending",
+        "Current controlling versions recorded—actual service evidence and cancellation, no-show or adjustment category pending",
+        "Actual service evidence recorded—itemized charge, bill or statement and benefit status pending",
+        "Charge and benefit status recorded—person or household review and payment-responsibility source pending",
+        "Review and responsibility source recorded—provider correction, benefit result, payment, refund or credit and actual account result pending",
+        "Service, version, charge, benefit, payment or rights conflict—responsible review pending",
+        "Source, version, actual service, charge, benefit, household responsibility and actual account result reviewed",
+        "Responsible account result received—correction, payment, refund or credit, custody and reopen condition recorded",
+        "Not applicable—reason and reopen event recorded",
+      ];
+
+  const defaultRecords = zh
+    ? `CHARGE-A | 被照顧者 A 的目前居家服務帳務版本；本次實際結果核對 | 目前服務單位、A 單位照顧計畫、契約、地方長照給付與家庭付款來源；各來源分開 | 受保護本人、服務期間 BATCH-A 與帳務關係已比對；核對 2026-08-27 | 照顧計畫 PLAN-C3、契約 FEE-C2、核定／部分負擔來源 BENEFIT-B2 與通知 N4 已開啟 | 實際服務證據 VISIT-E5 已由負責來源觀察；沒有用家庭行事曆取代；調整類別 NONE | 逐項費用 STATEMENT-B4、服務單位來源與給付狀態 BENEFIT-PAID 已核對；沒有輸入案件或帳號 | 本人或家庭已核對服務與費用；預期付款責任來源已取得；無異議；完整內容留在受保護來源 | EXP=1200; BILLED=1200; PAID=1200; ADJUSTED=0; 服務單位帳務結果已收到；給付結果已觀察；實際帳務結果已核對；未解 NONE；服務、費率或付款狀態改變時重新開啟 | 家庭帳務來源核對角色 | 2026-08-27 | 已核對來源、版本、實際服務、費用、給付、家庭責任與實際帳務結果
+GAP-A | 被照顧者 A 的臨時取消後帳單差異；等待負責更正與實際帳務結果 | 目前服務單位帳務、契約、A 單位與地方長照給付來源；服務申訴與付款爭議分開 | 受保護本人、服務期間 BATCH-B 與帳務關係已比對；核對 2026-08-27 | 照顧計畫 PLAN-C3、契約 FEE-C2、部分負擔來源 BENEFIT-B2 與帳單版本 B5 已開啟 | 中斷／未提供證據 GAP-B 與服務單位確認已觀察；取消或未遇責任仍由契約來源核對 | 逐項費用 STATEMENT-B5 已觀察；服務單位費用來源與給付狀態 BENEFIT-REVIEW 已分開 | 本人或家庭已核對；預期付款責任仍待契約與給付來源；問題 Q2 已提出；申訴或外部審查路徑已保留 | EXP=800; BILLED=1200; PAID=0; ADJUSTED=0; 服務單位更正待負責來源；給付結果待確認；實際帳務結果未解；申訴、異議或外部審查路徑已保留 | 家庭費用差異追蹤角色 | 2026-09-12 | 已記錄核對與付款責任來源，等待服務單位更正、給付結果、付款、退費或折抵及實際帳務結果`
+    : `CHARGE-A | Care person A current home-care account version; actual result review | Current agency, care-plan, contract, program-benefit and household payment sources remain separate | Protected person, service period BATCH-A and account relationship matched; checked 2026-08-27 | Care plan PLAN-C3, contract FEE-C2, benefit or cost-sharing source BENEFIT-B2 and notice N4 opened | Actual service evidence VISIT-E5 observed from responsible source; household calendar is not substituted; adjustment category NONE | Itemized statement STATEMENT-B4, provider source and benefit status BENEFIT-PAID reviewed; no case or account data entered | Person or household reviewed service and charge; expected payment-responsibility source obtained; no dispute; full content stays protected | EXP=120; BILLED=120; PAID=120; ADJUSTED=0; responsible provider account result received; benefit result observed; actual account result reviewed; unresolved NONE; reopen if service, rate or payment status changes | Household account-source review role | 2026-08-27 | Source, version, actual service, charge, benefit, household responsibility and actual account result reviewed
+GAP-A | Care person A temporary-cancellation statement difference; responsible correction and account result pending | Current agency billing, contract, program-benefit and household sources; service complaint and payment dispute remain separate | Protected person, service period BATCH-B and account relationship matched; checked 2026-08-27 | Care plan PLAN-C3, contract FEE-C2, benefit source BENEFIT-B2 and statement version B5 opened | Interruption or unprovided-service evidence GAP-B and responsible agency confirmation observed; cancellation or no-show responsibility stays with contract source | Itemized statement STATEMENT-B5 observed; provider charge source and benefit status BENEFIT-REVIEW remain separate | Person or household reviewed; expected payment responsibility remains with contract and benefit source; question Q2 raised; complaint or external review route preserved | EXP=80; BILLED=120; PAID=0; ADJUSTED=0; provider correction pending from responsible source; benefit result pending; actual account result unresolved; complaint, appeal or external review route preserved | Household charge-difference follow-up role | 2026-09-12 | Review and responsibility source recorded—provider correction, benefit result, payment, refund or credit and actual account result pending`;
+
+  return {
+    intro: zh
+      ? "用安全代號與四個金額標記分開居家服務來源、目前版本、實際服務、逐項費用、給付狀態、家庭付款責任、服務單位更正、付款、退費或折抵及實際帳務結果。只做輸入值算術，不判斷應付、給付、退費或法律責任。"
+      : "Separate home-care sources, current versions, actual service, itemized charges, benefit status, household payment responsibility, provider correction, payment, refund or credit and actual account result with safe codes and four amount markers. Arithmetic uses only the values entered and does not decide coverage, liability, refund or legal responsibility.",
+    fields: [
+      text(
+        "review",
+        zh ? "居家服務費用私人核對代號" : "Private home-care charge review reference",
+        zh ? "只用安全家庭代號；不要輸入姓名、地址、健康照護、工作人員、帳號、案件、帳單、付款工具或登入資料。" : "Use a safe household code. Do not enter names, addresses, health or care content, worker details, account, case, bill, payment-instrument or login data.",
+        "HOME-CARE-CHARGE-2026-A",
+      ),
+      {
+        name: "context",
+        label: zh ? "居家服務費用與付款情境" : "Home-care charge and payment context",
+        type: "select",
+        options: zh
+          ? ["長照給付與部分負擔核對", "自費居家服務契約與帳單核對", "已提供服務與逐項費用差異", "取消、未遇、中斷或補服務費用", "計畫、授權、給付或帳單版本改變", "付款、退費、折抵或餘額結果", "服務單位更正、申訴、異議或外部審查", "其他幣別或多付款來源核對"]
+          : ["Medicare home health charge or notice review", "Medicaid HCBS benefit or cost-sharing review", "Private-pay home-care contract and statement review", "Delivered service and itemized-charge difference", "Cancellation, no-show, interruption or replacement charge", "Plan, authorization, benefit or statement-version change", "Payment, refund, credit or balance result", "Provider correction, complaint, appeal or external review"],
+      },
+      {
+        name: "currency",
+        label: zh ? "本版本金額幣別（不做匯率換算）" : "Currency for this version (no conversion)",
+        type: "select",
+        options: zh ? ["TWD", "USD", "其他幣別—請在工具外核對"] : ["USD", "TWD", "Other currency—verify outside this tool"],
+      },
+      { name: "baselineDate", label: zh ? "服務、契約或費率版本基準日" : "Service, contract or fee-version baseline date", type: "date", value: "2026-08-20" },
+      { name: "reviewDate", label: zh ? "本次服務、費用與付款核對日" : "Current service, charge and payment review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次更正、給付或實際帳務結果核點" : "Next correction, benefit or actual-account checkpoint", type: "date", value: "2026-09-12" },
+      text(
+        "basis",
+        zh ? "服務、照顧計畫、契約、費率、給付、帳單、付款與爭議來源地圖" : "Service, plan, contract, fee, benefit, statement, payment and dispute-source map",
+        zh ? "只放安全來源與版本代號；完整服務、給付、帳單、收據、付款與爭議內容留在負責受保護來源。" : "Use safe source and version IDs only. Keep complete service, benefit, statement, receipt, payment and dispute content in responsible protected sources.",
+        "SERVICE-S1; PLAN-P1; CONTRACT-C1; FEE-F1; BENEFIT-B1; STATEMENT-T1; PAYMENT-P2; REVIEW-R1",
+      ),
+      {
+        name: "records",
+        label: zh ? "有版本的服務、費用、給付、付款與實際帳務結果列" : "Versioned service, charge, benefit, payment and actual-account rows",
+        type: "textarea",
+        help: zh ? "每行：ID｜安全本人代號與費用情境｜負責服務單位、方案、契約、給付或付款來源｜受保護本人、服務期間與帳務關係比對及來源核對日 YYYY-MM-DD｜目前照顧計畫、授權、契約、費率或通知版本｜實際服務證據及取消、未遇或調整類別｜逐項費用、帳單或對帳單、服務單位來源與給付狀態｜本人或家庭核對、預期付款責任來源、問題及申訴／異議路徑｜EXP=數字; BILLED=數字; PAID=數字; ADJUSTED=數字；服務單位更正、給付、付款、退費／折抵、實際帳務結果、未解與重開｜負責角色｜目標或結果日期 YYYY-MM-DD｜十二種指定狀態之一。每列幣別相同，最多 14 行。" : "One line: ID | safe person alias and charge context | responsible provider, program, contract, benefit or payment source | protected person, service-period and account-relationship match plus source checked date YYYY-MM-DD | current plan, authorization, contract, fee or notice version | actual service evidence plus cancellation, no-show or adjustment category | itemized charge, bill or statement, provider source and benefit status | person or household review, expected payment-responsibility source, question and complaint or appeal route | EXP=number; BILLED=number; PAID=number; ADJUSTED=number; provider correction, benefit, payment, refund or credit, actual account result, unresolved item and reopen rule | owner role | target or outcome date YYYY-MM-DD | one of the twelve exact statuses. Use one currency per version. Maximum 14 lines.",
+        value: defaultRecords,
+      },
+      text(
+        "storage",
+        zh ? "受保護服務、契約、費率、帳單、收據、付款、給付與爭議歷程位置" : "Protected service, contract, fee, statement, receipt, payment, benefit and dispute-history location",
+        zh ? "只寫保管流程或容器代號；不要貼本人、照護、帳號、卡號、銀行、案件、帳單、收據、付款或爭議全文。" : "Name a custody process or container, not identity, care, account, card, bank, case, statement, receipt, payment or dispute content.",
+        zh ? "家庭紀錄／居家服務費用／HOME-CARE-CHARGE-2026-A／受保護程序" : "Household records / home-care charges / HOME-CARE-CHARGE-2026-A / protected process",
+      ),
+    ],
+    run: (values) => {
+      const baselineDate = strictIsoDate(values.baselineDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextReview = strictIsoDate(values.nextReview);
+      if (!baselineDate || !reviewDate || !nextReview)
+        return zh ? "請輸入有效的版本基準日、本次核對日與下一核點日期。" : "Enter valid version-baseline, current-review and next-checkpoint dates.";
+      if (baselineDate > reviewDate)
+        return zh ? "服務、契約或費率版本基準日不能晚於本次核對日。" : "The service, contract or fee-version baseline cannot be later than the current review.";
+      if (nextReview < reviewDate)
+        return zh ? "下一次更正、給付或實際帳務結果核點不能早於本次核對日。" : "The next correction, benefit or actual-account checkpoint cannot be earlier than the current review.";
+      if (values.basis.trim().length < 16 || values.storage.trim().length < 10)
+        return zh ? "請提供安全的服務費用來源地圖與受保護程序位置代號。" : "Provide a safe service-charge source map and protected-process label.";
+
+      const rows = values.records.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14)
+        return zh ? "請輸入 1 至 14 行服務、費用、給付、付款與帳務結果。" : "Enter 1 to 14 service, charge, benefit, payment and account-result rows.";
+      const recordRows = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = recordRows.filter((row) => row.parts.length !== 12 || row.parts.some((part) => !part));
+      if (malformed.length)
+        return zh ? `費用核對第 ${malformed.map((row) => row.line).join("、")} 行必須剛好有 12 個非空白欄位。` : `Charge-review line ${malformed.map((row) => row.line).join(", ")} must contain exactly 12 non-empty fields.`;
+      const ids = recordRows.map((row) => row.parts[0].toUpperCase());
+      if (new Set(ids).size !== ids.length)
+        return zh ? "每一行費用核對紀錄都需要唯一 ID。" : "Every charge-review row needs a unique ID.";
+      const invalidStatuses = recordRows.filter((row) => !statusOrder.includes(row.parts[11]));
+      if (invalidStatuses.length)
+        return zh ? `費用核對第 ${invalidStatuses.map((row) => row.line).join("、")} 行必須使用十二種指定狀態之一。` : `Charge-review line ${invalidStatuses.map((row) => row.line).join(", ")} must use one of the twelve exact statuses.`;
+
+      const openRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) < 9);
+      const closedRows = recordRows.filter((row) => statusOrder.indexOf(row.parts[11]) >= 9);
+      const checkedDateOf = (textValue: string) => strictIsoDate(textValue.match(/\b\d{4}-\d{2}-\d{2}\b/)?.[0] ?? "");
+      const invalidSourceDates = recordRows.filter((row) => {
+        const checked = checkedDateOf(row.parts[3]);
+        return !checked || checked < baselineDate || checked > reviewDate;
+      });
+      if (invalidSourceDates.length)
+        return zh ? `費用核對第 ${invalidSourceDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的受保護來源核對日。` : `Charge-review line ${invalidSourceDates.map((row) => row.line).join(", ")} needs a protected-source checked date from the baseline through this review.`;
+      const invalidOpenDates = openRows.filter((row) => {
+        const target = strictIsoDate(row.parts[10]);
+        return !target || target < reviewDate || target > nextReview;
+      });
+      if (invalidOpenDates.length)
+        return zh ? `仍開放的費用核對第 ${invalidOpenDates.map((row) => row.line).join("、")} 行需要介於本次核對日與下一核點的目標日。` : `Open charge-review line ${invalidOpenDates.map((row) => row.line).join(", ")} needs a target date from this review through the next checkpoint.`;
+      const invalidClosedDates = closedRows.filter((row) => {
+        const outcome = strictIsoDate(row.parts[10]);
+        return !outcome || outcome < baselineDate || outcome > reviewDate;
+      });
+      if (invalidClosedDates.length)
+        return zh ? `已核對、完成或不適用的費用核對第 ${invalidClosedDates.map((row) => row.line).join("、")} 行需要介於基準日與本次核對日的結果日。` : `Closed charge-review line ${invalidClosedDates.map((row) => row.line).join(", ")} needs an outcome date from the baseline through this review.`;
+
+      const missingLayers = recordRows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 12 || row.parts[3].length < 18 || row.parts[4].length < 14 || row.parts[5].length < 14 || row.parts[6].length < 14 || row.parts[7].length < 12 || row.parts[8].length < 35 || row.parts[9].length < 4);
+      if (missingLayers.length)
+        return zh ? `費用核對第 ${missingLayers.map((row) => row.line).join("、")} 行需要真實的費用情境、負責來源、本人／期間／帳務比對、控制版本、實際服務、逐項費用／給付、家庭核對／責任來源、四個金額與負責結果及負責角色。` : `Charge-review line ${missingLayers.map((row) => row.line).join(", ")} needs a real charge context, responsible sources, person/period/account match, controlling versions, actual service, itemized charge/benefit, household review/responsibility source, four amounts and responsible result, and owner role.`;
+
+      const amountLabels = ["EXP", "BILLED", "PAID", "ADJUSTED"];
+      const amountRows = recordRows.map((row) => {
+        const matches = Array.from(row.parts[8].matchAll(/\b(EXP|BILLED|PAID|ADJUSTED)=([0-9]+(?:\.[0-9]{1,2})?)\b/g));
+        const amounts = new Map(matches.map((match) => [match[1], Number(match[2])]));
+        return { ...row, matches, amounts };
+      });
+      const invalidAmounts = amountRows.filter((row) => row.matches.length !== 4 || amountLabels.some((label) => !row.amounts.has(label)) || Array.from(row.amounts.values()).some((value) => !Number.isFinite(value) || value < 0 || value > 999999.99));
+      if (invalidAmounts.length)
+        return zh ? `費用核對第 ${invalidAmounts.map((row) => row.line).join("、")} 行必須各有一個 EXP、BILLED、PAID、ADJUSTED 非負金額，最多兩位小數且不超過 999999.99。` : `Charge-review line ${invalidAmounts.map((row) => row.line).join(", ")} must contain exactly one non-negative EXP, BILLED, PAID and ADJUSTED amount with no more than two decimals and no value above 999999.99.`;
+
+      const reviewedWithoutEvidence = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[9]) return false;
+        const versions = zh ? /(?:計畫|授權|契約|費率|給付|通知)/.test(row.parts[4]) : /(?:plan|authorization|contract|fee|benefit|notice)/i.test(row.parts[4]);
+        const service = zh ? /(?:實際服務|未提供|中斷|取消|未遇).*(?:證據|觀察|確認)/.test(row.parts[5]) : /(?:actual service|unprovided|interruption|cancellation|no-show).*(?:evidence|observed|confirmed)/i.test(row.parts[5]);
+        const charge = zh ? /(?:逐項|費用|帳單|對帳單).*(?:服務單位|給付|來源|狀態)/.test(row.parts[6]) : /(?:itemized|charge|bill|statement).*(?:provider|benefit|source|status)/i.test(row.parts[6]);
+        const review = zh ? /(?:本人|家庭).*(?:核對|付款責任|問題|異議)/.test(row.parts[7]) : /(?:person|household).*(?:review|payment responsibility|question|dispute)/i.test(row.parts[7]);
+        const result = zh ? /(?:服務單位|負責).*(?:結果|更正).*(?:收到|觀察|核對)/.test(row.parts[8]) && /(?:實際帳務結果).*(?:觀察|核對|收到)/.test(row.parts[8]) : /(?:provider|responsible).*(?:result|correction).*(?:received|observed|reviewed)/i.test(row.parts[8]) && /actual account result.*(?:observed|reviewed|received)/i.test(row.parts[8]);
+        const pending = zh ? /(?:等待|仍待|尚待|未知|未解(?!\s*NONE))/.test(row.parts.slice(4, 9).join(" ")) : /(?:pending|awaiting|unknown|unresolved(?!\s*NONE))/i.test(row.parts.slice(4, 9).join(" "));
+        return !versions || !service || !charge || !review || !result || pending;
+      });
+      if (reviewedWithoutEvidence.length)
+        return zh ? `已核對的第 ${reviewedWithoutEvidence.map((row) => row.line).join("、")} 行必須有目前版本、實際服務、逐項費用與給付、本人／家庭核對、負責帳務結果及實際帳務結果，而且不能藏有仍待確認內容。` : `Reviewed line ${reviewedWithoutEvidence.map((row) => row.line).join(", ")} must include current versions, actual service, itemized charge and benefit status, person or household review, a responsible account result and actual account result with no hidden pending item.`;
+
+      const resultPendingWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[7]) return false;
+        const review = zh ? /(?:本人|家庭).*(?:核對|付款責任|問題)/.test(row.parts[7]) : /(?:person|household).*(?:review|payment responsibility|question)/i.test(row.parts[7]);
+        const pending = zh ? /(?:更正|給付結果|帳務結果).*(?:等待|待|未解|確認)/.test(row.parts[8]) : /(?:correction|benefit result|account result).*(?:pending|awaiting|unresolved)/i.test(row.parts[8]);
+        const route = zh ? /(?:服務單位|契約|給付|申訴|異議|外部審查)/.test(row.parts[7] + row.parts[8]) : /(?:provider|contract|benefit|complaint|appeal|external review)/i.test(row.parts[7] + row.parts[8]);
+        return !review || !pending || !route;
+      });
+      if (resultPendingWithoutRoute.length)
+        return zh ? `等待帳務結果的第 ${resultPendingWithoutRoute.map((row) => row.line).join("、")} 行必須記錄本人或家庭核對與付款責任來源，把更正、給付或帳務結果保持待確認，並保留負責申訴、異議或審查路徑。` : `Account-result-pending line ${resultPendingWithoutRoute.map((row) => row.line).join(", ")} must record person or household review and payment-responsibility source, keep correction, benefit or account result pending, and preserve a responsible complaint, appeal or review route.`;
+
+      const conflictWithoutRoute = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[8]) return false;
+        const combined = row.parts.slice(4, 9).join(" ");
+        const conflict = zh ? /(?:服務|版本|費用|給付|付款|權利|矛盾|差異)/.test(combined) : /(?:service|version|charge|benefit|payment|rights|conflict|difference)/i.test(combined);
+        const route = zh ? /(?:服務單位|契約|方案|給付|主管機關|申訴|異議|審查)/.test(combined) : /(?:provider|contract|program|benefit|authority|complaint|appeal|review)/i.test(combined);
+        return !conflict || !route;
+      });
+      if (conflictWithoutRoute.length)
+        return zh ? `矛盾列第 ${conflictWithoutRoute.map((row) => row.line).join("、")} 行必須指出服務、版本、費用、給付、付款或權利差異，以及負責服務單位、契約、方案、主管機關、申訴、異議或審查路徑。` : `Conflict line ${conflictWithoutRoute.map((row) => row.line).join(", ")} must name the service, version, charge, benefit, payment or rights conflict and a responsible provider, contract, program, authority, complaint, appeal or review route.`;
+
+      const completedWithoutResult = recordRows.filter((row) => {
+        if (row.parts[11] !== statusOrder[10]) return false;
+        const result = row.parts[8];
+        const accountable = zh ? /(?:負責|服務單位|方案|給付).*(?:帳務結果|更正|付款|退費|折抵).*(?:收到|觀察|記錄)/.test(result) : /(?:responsible|provider|program|benefit).*(?:account result|correction|payment|refund|credit).*(?:received|observed|recorded)/i.test(result);
+        const custodyReopen = zh ? /(?:保管|重新開啟)/.test(result) : /(?:custody|reopen)/i.test(result);
+        const pending = zh ? /(?:等待|仍待|尚待|未知|未解(?!\s*NONE))/.test(result) : /(?:pending|awaiting|unknown|unresolved(?!\s*NONE))/i.test(result);
+        return !accountable || !custodyReopen || pending;
+      });
+      if (completedWithoutResult.length)
+        return zh ? `完成帳務結果的第 ${completedWithoutResult.map((row) => row.line).join("、")} 行必須記錄已收到或觀察的負責更正、付款、退費或折抵結果、受保護保管及重新開啟條件。` : `Completed account-result line ${completedWithoutResult.map((row) => row.line).join(", ")} must record an observed responsible correction, payment, refund or credit result, protected custody and reopen condition.`;
+
+      const notApplicableWithoutTrigger = recordRows.filter((row) => row.parts[11] === statusOrder[11] && !(zh ? /(?:重新開啟|重新檢視|如果|當.*時|服務|費率|帳單|給付|付款.*改變)/.test(row.parts[8]) : /(?:reopen|review again|if |when |service|fee|statement|benefit|payment.*change)/i.test(row.parts[8])));
+      if (notApplicableWithoutTrigger.length)
+        return zh ? `不適用的第 ${notApplicableWithoutTrigger.map((row) => row.line).join("、")} 行必須記錄目前原因，以及服務、費率、帳單、給付或付款改變時的重開事件。` : `Not-applicable line ${notApplicableWithoutTrigger.map((row) => row.line).join(", ")} must state the current reason and the service, fee, statement, benefit or payment change that reopens it.`;
+
+      const privacyText = [values.review, values.basis, values.records, values.storage].join("\n");
+      const withoutDates = privacyText.replace(/\b\d{4}-\d{2}-\d{2}\b/g, "").replace(/\b(?:EXP|BILLED|PAID|ADJUSTED)=[0-9]+(?:\.[0-9]{1,2})?\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(withoutDates) || /(?:\d[\s().+-]*){7,}/.test(withoutDates))
+        return zh ? "偵測到可能的完整電話、Email、帳號、會員、案件、帳單、收據、給付、付款工具或其他長數字識別資料。請改用安全服務、帳單、付款與結果代號。" : "A possible full phone, email, account, member, case, statement, receipt, benefit, payment-instrument or other long numeric identifier was detected. Use safe service, statement, payment and result pointers.";
+      if (/password|passphrase|passcode|access code|door code|alarm code|security code|recovery code|verification code|login credential|full address|street address|care-recipient name\s*[:=]|patient name\s*[:=]|person name\s*[:=]|provider name\s*[:=]|agency name\s*[:=]|worker name\s*[:=]|employee name\s*[:=]|date of birth\s*[:=]|diagnosis\s*[:=]|condition\s*[:=]|symptom\s*[:=]|allerg(?:y|ies)\s*[:=]|medication name\s*[:=]|drug name\s*[:=]|medicine name\s*[:=]|dose\s*[:=]|dosage\s*[:=]|feeding|swallowing|transfer step|lifting step|mobility detail|toileting|bathing|wound|device instruction|behavior(?:al)? detail|mental health|care note|treatment plan|exact time|arrival time\s*[:=]|departure time\s*[:=]|exact location|precise location|GPS|account number\s*[:=]|member number\s*[:=]|claim number\s*[:=]|invoice number\s*[:=]|receipt number\s*[:=]|card number\s*[:=]|bank account\s*[:=]|routing number\s*[:=]|tax number\s*[:=]|allegation\s*[:=]|evidence text\s*[:=]|complaint text\s*[:=]|appeal text\s*[:=]|signature|signed form|private message|correspondence|完整地址|被照顧者姓名\s*[:：]|病人姓名\s*[:：]|本人姓名\s*[:：]|服務單位名稱\s*[:：]|工作人員姓名\s*[:：]|居服員姓名\s*[:：]|出生日期\s*[:：]|診斷\s*[:：]|病況\s*[:：]|症狀\s*[:：]|過敏\s*[:：]|藥名\s*[:：]|用藥名稱\s*[:：]|劑量\s*[:：]|餵食|吞嚥|移位步驟|攙扶步驟|行動細節|如廁|沐浴|傷口|管路|輔具指示|行為處理|心理健康內容|照護紀錄內容|精確時間|到場時間\s*[:：]|離場時間\s*[:：]|精確位置|詳細地點|GPS|帳號\s*[:：]|會員號\s*[:：]|案件編號\s*[:：]|帳單編號\s*[:：]|收據編號\s*[:：]|卡號\s*[:：]|銀行帳戶\s*[:：]|匯款帳號\s*[:：]|稅籍編號\s*[:：]|指控內容|證據全文|申訴全文|異議全文|簽名|門鎖密碼|保全密碼|登入密碼|驗證碼|私人訊息|通信內容/i.test(privacyText))
+        return zh ? "偵測到可能的本人、服務單位、地址、健康照護、工作人員、精確時間位置、帳號／案件／帳單／收據／卡片／銀行、指控證據、申訴異議、簽名、登入或私人通信內容。請改成安全服務、版本、帳單、付款與結果代號。" : "A possible identity, provider, address, health or care, worker, exact time or location, account/case/statement/receipt/card/bank, allegation or evidence, complaint or appeal, signature, credential or private correspondence detail was detected. Use safe service, version, statement, payment and result pointers.";
+
+      const totals = amountRows.reduce((sum, row) => {
+        amountLabels.forEach((label) => { sum[label] += row.amounts.get(label) ?? 0; });
+        return sum;
+      }, { EXP: 0, BILLED: 0, PAID: 0, ADJUSTED: 0 } as Record<string, number>);
+      const formatAmount = (value: number) => `${values.currency} ${new Intl.NumberFormat(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value)}`;
+      const statusCounts = statusOrder.map((status) => ({ status, count: recordRows.filter((row) => row.parts[11] === status).length })).filter((item) => item.count > 0);
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+
+      if (zh)
+        return `${values.review.trim()}｜居家服務、費用、給付、付款與實際帳務狀態
+費用與付款情境：${values.context}
+本版本幣別：${values.currency}（不做匯率換算）
+服務、契約或費率版本基準：${formatter.format(baselineDate)}
+本次服務、費用與付款核對：${formatter.format(reviewDate)}
+下一次更正、給付或實際帳務結果核點：${formatter.format(nextReview)}
+仍開放的來源、版本、服務、費用、給付、付款或審查列：${openRows.length} 筆
+已核對、完成或不適用列：${closedRows.length} 筆
+狀態統計：${statusCounts.map((item) => `${item.status} ${item.count} 筆`).join("、")}
+
+輸入列預期家庭責任合計（僅算術）：${formatAmount(totals.EXP)}
+輸入列帳單金額合計（僅算術）：${formatAmount(totals.BILLED)}
+輸入列已付款合計（僅算術）：${formatAmount(totals.PAID)}
+輸入列已觀察退費或折抵合計（僅算術）：${formatAmount(totals.ADJUSTED)}
+帳單減預期差額（僅算術，不代表應付或可退）：${formatAmount(totals.BILLED - totals.EXP)}
+
+服務、照顧計畫、契約、費率、給付、帳單、付款與爭議來源地圖：${values.basis.trim()}
+
+${lines("有版本的服務、費用、給付、付款與實際帳務結果證據", recordRows.map((row) => `${row.parts[0]}｜本人／費用情境：${row.parts[1]}｜負責來源：${row.parts[2]}｜受保護本人／期間／帳務關係：${row.parts[3]}｜目前控制版本：${row.parts[4]}｜實際服務／調整類別：${row.parts[5]}｜逐項費用／帳單／給付狀態：${row.parts[6]}｜本人或家庭核對／付款責任／問題與路徑：${row.parts[7]}｜金額／更正／給付／付款／退費折抵／實際帳務結果：${row.parts[8]}｜負責角色：${row.parts[9]}｜目標／結果日期：${formatter.format(strictIsoDate(row.parts[10]) as Date)}｜狀態：${row.parts[11]}`))}
+
+受保護服務、契約、費率、帳單、收據、付款、給付與爭議歷程位置：${values.storage.trim()}
+
+這份輸出只是家庭居家服務、費用、給付、付款與實際帳務結果索引。所有金額都是對輸入值做同幣別算術，不是正式帳單、收據、會計、稅務、給付、請款、保險、付款、退款、法律或財務建議。它不判斷服務是否提供、費用是否有效、誰應付款、給付是否成立、是否可退費或折抵；不提交請款、申訴或異議；不計算正式期限、匯率、稅或損害。先用目前照顧計畫、契約、核定或給付來源、實際服務證據、服務單位逐項帳單、收據、付款結果與官方程序核對。`;
+      return `${values.review.trim()} — home-care service, charge, benefit, payment and actual-account status
+Charge and payment context: ${values.context}
+Currency for this version: ${values.currency} (no conversion)
+Service, contract or fee-version baseline: ${formatter.format(baselineDate)}
+Current service, charge and payment review: ${formatter.format(reviewDate)}
+Next correction, benefit or actual-account checkpoint: ${formatter.format(nextReview)}
+Open source, version, service, charge, benefit, payment or review rows: ${openRows.length}
+Reviewed, completed or not-applicable rows: ${closedRows.length}
+Status count: ${statusCounts.map((item) => `${item.status} ${item.count}`).join("; ")}
+
+Entered expected household responsibility total (arithmetic only): ${formatAmount(totals.EXP)}
+Entered billed total (arithmetic only): ${formatAmount(totals.BILLED)}
+Entered paid total (arithmetic only): ${formatAmount(totals.PAID)}
+Entered observed refund or credit total (arithmetic only): ${formatAmount(totals.ADJUSTED)}
+Billed minus expected difference (arithmetic only, not an amount owed or refundable): ${formatAmount(totals.BILLED - totals.EXP)}
+
+Service, plan, contract, fee, benefit, statement, payment and dispute-source map: ${values.basis.trim()}
+
+${lines("Versioned service, charge, benefit, payment and actual-account evidence", recordRows.map((row) => `${row.parts[0]} — person/charge context: ${row.parts[1]} — responsible sources: ${row.parts[2]} — protected person/period/account relationship: ${row.parts[3]} — current controlling versions: ${row.parts[4]} — actual service/adjustment category: ${row.parts[5]} — itemized charge/statement/benefit status: ${row.parts[6]} — person or household review/payment responsibility/question and route: ${row.parts[7]} — amounts/correction/benefit/payment/refund or credit/actual account result: ${row.parts[8]} — owner: ${row.parts[9]} — target/outcome date: ${formatter.format(strictIsoDate(row.parts[10]) as Date)} — status: ${row.parts[11]}`))}
+
+Protected service, contract, fee, statement, receipt, payment, benefit and dispute-history location: ${values.storage.trim()}
+
+This output is a household home-care service, charge, benefit, payment and actual-account source index. Every amount is same-currency arithmetic on values entered, not an official bill, receipt, accounting, tax, benefit, claim, insurance, payment, refund, legal or financial determination. It does not decide whether service occurred, a charge is valid, who owes it, coverage exists, or a refund or credit is due; submit a claim, complaint or appeal; or calculate an official deadline, exchange rate, tax or damages. Verify the current care plan, contract, authorization or benefit source, actual service evidence, itemized provider statement, receipt, payment result and official process.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
     intro:
@@ -6323,6 +6586,9 @@ const definitions: Record<string, Definition> = {
   "home-care-complaint-response-resolution-log": {
     ...homeCareComplaintDefinition("en"),
   },
+  "home-care-charge-service-payment-discrepancy-log": {
+    ...homeCareChargeDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -6354,6 +6620,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "home-care-complaint-response-resolution-log": {
     ...homeCareComplaintDefinition("zh-TW"),
+  },
+  "home-care-charge-service-payment-discrepancy-log": {
+    ...homeCareChargeDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

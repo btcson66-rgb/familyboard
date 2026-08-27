@@ -1768,6 +1768,14 @@
     "headings": "Home care complaint, response and resolution log Start with safety and the correct route, not a narrative An inquiry, complaint, appeal and regulator report are different records Each row preserves twelve evidence layers Twelve statuses keep intake, response and improvement separate Complaint received, response issued and service improved are three claims Person participation is not the same as family dissatisfaction Certified Medicare home health agencies have specific complaint duties Medicaid grievance and appeal paths depend on delivery system and current rules Safety, abuse, neglect and retaliation cannot wait for an ordinary queue Investigation scope and household evidence must not be confused A closed case may still need household follow-up Link interruption, visit and change records without duplicating private content Privacy is part of complaint integrity Affiliate products must remain outside rights and outcome decisions"
   },
   {
+    "title": "Home Care Charge, Service and Payment Discrepancy Log",
+    "description": "Compare home-care services, itemized charges, benefit status, payments, corrections and refunds without storing account numbers or private care details.",
+    "route": "/tools/home-care-charge-service-payment-discrepancy-log/",
+    "cluster": "tools",
+    "keywords": "home care billing discrepancy log",
+    "headings": "Home care charge, service and payment discrepancy log Begin with one service period and one currency Twelve columns preserve the full source chain The twelve statuses reveal which evidence layer is still missing Planned, authorized, delivered and billed are different facts Medicare covers qualifying home health services under specific conditions A bill, MSN, EOB, ABN and HHCCN answer different questions Medicaid HCBS rules vary by state, program and delivery system Private-pay home care starts with the current written agreement Expected, billed, paid and adjusted must remain separate The person or household review is a separate evidence layer Close the row only after the actual account result is observed Privacy protects both the person and the integrity of the review Future affiliate items must not influence a payment or rights decision"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

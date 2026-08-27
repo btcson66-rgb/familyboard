@@ -15,6 +15,7 @@ related:
   - "/tools/home-care-service-interruption-backup-continuity-log/"
   - "/tools/home-care-visit-scope-service-result-log/"
   - "/tools/home-care-service-plan-change-notice-log/"
+  - "/tools/home-care-charge-service-payment-discrepancy-log/"
   - "/tools/caregiver-handoff-source-authorization-log/"
   - "/privacy/"
 faq:
@@ -150,6 +151,8 @@ If the same service problem recurs, create a new version linked to the earlier r
 Use the [Home Care Service Interruption, Backup and Continuity Log](/tools/home-care-service-interruption-backup-continuity-log/) for immediate safety, responsible interruption confirmation, qualified backup, actual replacement or resumption and remaining service gap. Use the [Home Care Visit Scope and Service Result Log](/tools/home-care-visit-scope-service-result-log/) for a particular service event's formal arrival/departure source, authorized scope, exception and provider result.
 
 Use the [Home Care Service Plan Change and Notice Log](/tools/home-care-service-plan-change-notice-log/) when a responsible source changes the plan, authorization, contract or recurring service and provides a notice, transition or appeal path. Use this complaint log to preserve dissatisfaction, intake, investigation, response, correction and later improvement.
+
+If the concern also includes an itemized charge, benefit status, household payment, correction, refund or credit question, use the [Home Care Charge, Service and Payment Discrepancy Log](/tools/home-care-charge-service-payment-discrepancy-log/) for that separate account-result chain. A complaint response does not prove a refund occurred, and a corrected bill does not prove service improved.
 
 One concern can link all three records by safe event codes. Do not paste the complaint narrative into each tool. Each record should answer its own question and point to the same protected source container.
 

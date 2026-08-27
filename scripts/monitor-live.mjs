@@ -161,6 +161,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/home-care-complaint-response-resolution-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-care-complaint-response-resolution-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-care-service-complaint-resolution/</loc>",
+      "<loc>https://familyboard.win/tools/home-care-charge-service-payment-discrepancy-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-care-service-fees-and-billing/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -752,6 +755,15 @@ const checks = [
       'hreflang="zh-TW"',
       "An inquiry, complaint, appeal and regulator report are different records",
       "Complaint received, response issued and service improved are three claims",
+    ],
+  },
+  {
+    path: "/tools/home-care-charge-service-payment-discrepancy-log/",
+    require: [
+      "Home Care Charge, Service and Payment Discrepancy Log",
+      'hreflang="zh-TW"',
+      "A bill, MSN, EOB, ABN and HHCCN answer different questions",
+      "Expected, billed, paid and adjusted must remain separate",
     ],
   },
   {
@@ -1411,6 +1423,25 @@ const checks = [
       'lang="zh-TW"',
       "第二步先回答：你遇到的是哪一種問題？",
       "何時使用地方主管機關陳情、申訴或調處",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/",
+    require: [
+      "居家服務費用、帳單與付款差異紀錄表",
+      'hreflang="en"',
+      "十二種狀態顯示目前缺哪一層",
+      "更正、折抵、退費與實際收到是四個結果",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-care-service-fees-and-billing/",
+    require: [
+      "居家服務費用怎麼核對？長照部分負擔、自費、收據、未遇、退費與申訴指南",
+      'lang="zh-TW"',
+      "先理解一張帳單背後的七份來源",
+      "退費與折抵的追蹤終點是「實際結果」",
     ],
     forbid: ['rel="alternate"'],
   },

@@ -14,6 +14,7 @@ lastReviewedAt: "2026-08-26"
 nextStep: "先產生預設版本，逐一核對一列已完成的方案變更與一列仍待銜接的服務異動；不要因收到通知就提前關閉第二列。"
 related:
   - "/zh-tw/guides/home-care-service-plan-changes/"
+  - "/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/"
   - "/zh-tw/tools/home-care-complaint-response-resolution-log/"
   - "/zh-tw/guides/home-care-service-complaint-resolution/"
   - "/zh-tw/tools/home-care-visit-scope-service-result-log/"
