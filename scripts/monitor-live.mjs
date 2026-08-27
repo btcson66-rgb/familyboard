@@ -278,6 +278,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-shopping-list-planner/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-shopping-list-planner/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-shopping-list-planner-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-responsibility-coverage-map/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-responsibility-coverage-map/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -2645,6 +2648,32 @@ const checks = [
       'lang="zh-TW"',
       "服務交接與搬家複查教學",
       "不會讀取密碼",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/tools/household-responsibility-coverage-map/",
+    require: [
+      "Household Responsibility Coverage Map",
+      'hreflang="zh-TW"',
+      "FamilyBoard does not schedule people, send reminders or decide legal responsibility",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-responsibility-coverage-map/",
+    require: [
+      "家庭責任分工地圖工具",
+      'hreflang="en"',
+      "不排班、不傳送通知、不判定租約或照護責任",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/",
+    require: [
+      "FamilyBoard 家庭責任分工地圖怎麼用",
+      'lang="zh-TW"',
+      "主要角色、備援與複查教學",
+      "不會排班、不會通知家人",
     ],
     forbid: ['rel="alternate"'],
   },

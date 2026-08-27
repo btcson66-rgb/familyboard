@@ -2352,6 +2352,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-responsibility-coverage-map/",
+    "alternateRoute": "/zh-tw/tools/household-responsibility-coverage-map/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2799,6 +2807,13 @@
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {
@@ -3471,6 +3486,13 @@
     "alternateRoute": "/tools/household-recycling-handoff-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-responsibility-coverage-map/",
+    "alternateRoute": "/tools/household-responsibility-coverage-map/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-28",
     "locale": "zh-TW"
   },
   {

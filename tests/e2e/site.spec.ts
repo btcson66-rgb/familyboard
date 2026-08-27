@@ -26,6 +26,7 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-router-support-review-log/",
     "/tools/household-shopping-list-planner/",
     "/tools/household-account-list/",
+    "/tools/household-responsibility-coverage-map/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -112,6 +113,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-router-support-review-log/",
     "/tools/household-shopping-list-planner/",
     "/tools/household-account-list/",
+    "/tools/household-responsibility-coverage-map/",
     "/tools/appliance-age-calculator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/home-emergency-drill-record-generator/",
@@ -216,6 +218,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-account-list/",
     "/zh-tw/guides/familyboard-shopping-list-planner-tutorial/",
     "/zh-tw/guides/familyboard-household-account-list-tutorial/",
+    "/zh-tw/tools/household-responsibility-coverage-map/",
+    "/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/",
     "/zh-tw/guides/household-admin-backup-person/",
     "/zh-tw/guides/home-contact-list/",
     "/zh-tw/guides/familyboard-household-admin-backup-tutorial/",
@@ -843,6 +847,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
 
+  await page.goto("/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/");
+  await expect(page.locator("h1")).toHaveText(
+    "FamilyBoard 家庭責任分工地圖怎麼用？主要角色、備援與複查教學",
+  );
+  await expect(page.locator('link[rel="alternate"]')).toHaveCount(0);
+
   await page.goto("/tools/warranty-expiration-calculator/");
   await expect(
     page.locator('link[rel="alternate"][hreflang="zh-TW"]'),
@@ -1199,6 +1209,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-account-list/",
       alternate: "/tools/household-account-list/",
       heading: "家庭帳戶清單工具",
+    },
+    {
+      route: "/zh-tw/tools/household-responsibility-coverage-map/",
+      alternate: "/tools/household-responsibility-coverage-map/",
+      heading: "家庭責任分工地圖工具",
     },
   ]) {
     await page.goto(localizedTool.route);

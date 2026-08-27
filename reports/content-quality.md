@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T15:40:50.885Z
+Generated: 2026-08-27T16:16:13.620Z
 
 ## Summary
 
-- Indexable pages: 487
-- Generated HTML routes: 504
+- Indexable pages: 490
+- Generated HTML routes: 507
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 270
+- Pages without a contextual product/tool link: 272
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-27T15:40:50.885Z
 - product: 68
 - appliances: 30
 - maintenance: 42
-- household-operations: 86
+- household-operations: 89
 - inventory-warranty: 41
 - records-emergency: 58
 - tools: 121
@@ -153,6 +153,7 @@ Generated: 2026-08-27T15:40:50.885Z
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
+- /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
 - /zh-tw/guides/familyboard-internet-incident-tutorial/
 - /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
@@ -286,6 +287,7 @@ Generated: 2026-08-27T15:40:50.885Z
 - /zh-tw/tools/household-record-retention-decision-log/
 - /zh-tw/tools/household-record-retrieval-drill-log/
 - /zh-tw/tools/household-recycling-handoff-log/
+- /zh-tw/tools/household-responsibility-coverage-map/
 - /zh-tw/tools/household-return-handoff-log/
 - /zh-tw/tools/household-router-support-review-log/
 - /zh-tw/tools/household-schedule-conflict-review-log/

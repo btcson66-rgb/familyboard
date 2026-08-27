@@ -2152,6 +2152,14 @@
     "headings": "Household Account List What belongs in an account-service index Use a bounded context The eight-column row format Keep action separate from confirmation Privacy boundary: index, never credential A practical first run Optional affiliate space must not change the answer"
   },
   {
+    "title": "Household Responsibility Coverage Map | Free Role and Handoff Planner",
+    "description": "Map recurring household work to a primary role, backup trigger, controlling source and review date. FamilyBoard does not schedule people, send reminders or decide legal responsibility.",
+    "route": "/tools/household-responsibility-coverage-map/",
+    "cluster": "household-operations",
+    "keywords": "household responsibility chart",
+    "headings": "Household Responsibility Coverage Map Start with work that has a real consequence The nine-column row format Make the backup trigger observable Six statuses protect the difference between planning and proof Privacy boundary: map roles, not people A practical first run Optional affiliate space must remain outside the workflow"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

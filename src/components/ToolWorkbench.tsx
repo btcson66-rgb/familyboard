@@ -4892,12 +4892,87 @@ const householdAccountDefinition = (locale: Locale): Definition => {
   };
 };
 
+const householdResponsibilityCoverageDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立責任列，等待範圍與來源",
+        "已核對範圍與來源，等待主要角色",
+        "已指定主要角色，等待備援安排",
+        "已記錄備援與交接觸發，等待複查",
+        "已完成複查並保存目前結果",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Responsibility row created—scope and source pending",
+        "Scope and source checked—primary owner pending",
+        "Primary owner assigned—backup plan pending",
+        "Backup and handoff trigger recorded—review pending",
+        "Review completed—current result preserved",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "RESP-A | 網路與家庭連線維持 | 每月確認服務、設備與中斷時的處理範圍 | SOURCE-NET-A；官方供應商流程索引 | 家庭網路管理角色 | 主要角色無法處理時，由備援角色依受保護來源查核；方案或住址改變時重開 | 2026-08-27 | 2026-09-27 | 已記錄備援與交接觸發，等待複查\nRESP-B | 垃圾回收與公共區域交接 | 依社區公告與家庭排程確認，僅記工作範圍 | SOURCE-BUILDING-B；受保護社區公告位置 | 家庭居住管理角色 | 公告或居住角色改變時，由備援角色重新核對官方時間與規則 | 2026-08-26 | 2026-09-26 | 已指定主要角色，等待備援安排"
+    : "RESP-A | Home connectivity and support | Monthly check of service, equipment and outage-response scope | SOURCE-NET-A; provider process index | Household network role | If the primary role is unavailable, the backup checks the protected source; reopen when plan or service location changes | 2026-08-27 | 2026-09-27 | Backup and handoff trigger recorded—review pending\nRESP-B | Recycling and shared-area handoff | Check against the building notice and household schedule; scope only | SOURCE-BUILDING-B; protected building-notice location | Household home-operations role | A backup role rechecks the current official time and rule when the notice or resident role changes | 2026-08-26 | 2026-09-26 | Primary owner assigned—backup plan pending";
+  return {
+    intro: zh
+      ? "把家庭裡容易被遺忘的固定責任整理成可交接的覆蓋地圖：每列只處理一項工作，連結範圍、控制來源、主要角色、備援觸發與下一次複查。工具不會替你排班、通知、判定責任歸屬，也不保存姓名、聯絡方式或敏感背景。"
+      : "Turn easily forgotten recurring household work into a handoff-ready coverage map: one responsibility per row, linked to its scope, controlling source, primary role, backup trigger and next review. This tool does not schedule people, send reminders, decide legal responsibility or store names, contact details or sensitive context.",
+    fields: [
+      text("review", zh ? "責任覆蓋地圖私人代號" : "Private responsibility-map reference", zh ? "使用家庭代號，不要輸入姓名、地址、電話、帳號或私人爭議內容。" : "Use a household code; do not enter names, addresses, phone numbers, account identifiers or private disputes.", "RESPONSIBILITY-MAP-2026-A"),
+      { name: "context", label: zh ? "盤點情境" : "Map context", type: "select", options: zh ? ["第一次家庭責任盤點", "主要角色休假或備援交接", "搬家或家庭角色變動", "每月營運複查", "照護、學校或服務責任整理", "其他家庭管理"] : ["First household responsibility map", "Primary-role leave or backup handoff", "Move or household-role change", "Monthly operations review", "Care, school or service responsibility review", "Other household management"] },
+      { name: "reviewDate", label: zh ? "本次盤點日期" : "Current map date", type: "date", value: "2026-08-28" },
+      text("source", zh ? "責任控制來源地圖" : "Responsibility-source map", zh ? "只填官方公告、合約、家庭排程或受保護流程的安全代號；不要貼完整文件或私人訊息。" : "Use safe codes for official notices, contracts, household schedules or protected processes; do not paste full documents or private messages.", "SOURCE-NET-A; SOURCE-BUILDING-B; SOURCE-CARE-C1"),
+      text("rows", zh ? "家庭責任覆蓋列" : "Household responsibility rows", zh ? "每行 9 欄：ID｜責任與工作範圍｜週期或完成條件｜控制來源代號｜主要角色｜備援角色與交接觸發｜上次觀察日 YYYY-MM-DD｜下一次複查日 YYYY-MM-DD｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | responsibility and work scope | cadence or completion condition | controlling source code | primary owner role | backup role and handoff trigger | last observed date YYYY-MM-DD | next review date YYYY-MM-DD | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護責任來源位置" : "Protected responsibility-source location", zh ? "只寫保管容器或流程代號，不要放姓名、地址、電話、密碼或完整聯絡資料。" : "Name a custody container or process code, not names, addresses, phone numbers, passwords or full contact details.", zh ? "家庭紀錄／責任地圖／RESPONSIBILITY-MAP-2026-A／受保護來源" : "Household records / responsibility map / RESPONSIBILITY-MAP-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate);
+      if (!review) return zh ? "請輸入有效的本次盤點日期。" : "Enter a valid current map date.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全地圖代號、來源地圖與受保護位置。" : "Provide a safe map code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((raw, index) => ({ line: index + 1, parts: raw.trim().split("|").map((part) => part.trim()) })).filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行家庭責任覆蓋列。" : "Enter 1 to 14 household responsibility rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `責任第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Responsibility line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toUpperCase())).size !== rows.length) return zh ? "每行責任紀錄都需要唯一 ID。" : "Every responsibility row needs a unique ID.";
+      const observed = rows.map((row) => strictIsoDate(row.parts[6]));
+      const next = rows.map((row) => strictIsoDate(row.parts[7]));
+      if (observed.some((date) => !date || date > review)) return zh ? "每列上次觀察日必須有效，且不能晚於本次盤點。" : "Each last-observed date must be valid and no later than the current map date.";
+      if (next.some((date, index) => !date || date < (observed[index] as Date))) return zh ? "每列下一次複查日必須有效，且不能早於上次觀察日。" : "Each next-review date must be valid and no earlier than its last-observed date.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `責任第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Responsibility line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const thin = rows.filter((row) => row.parts[1].length < 8 || row.parts[2].length < 6 || row.parts[3].length < 6 || row.parts[4].length < 3 || row.parts[5].length < 10);
+      if (thin.length) return zh ? `責任第 ${thin.map((row) => row.line).join("、")} 行需要工作範圍、週期、來源、主要角色與備援觸發。` : `Responsibility line ${thin.map((row) => row.line).join(", ")} needs a scope, cadence, source, primary role and backup trigger.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址或帳號識別資料；請改用安全代號。" : "A full contact, address or account identifier was detected; use safe codes.";
+      if (/password|passcode|verification code|full address|street address|phone number|account number|card number|bank account|private message|密碼|驗證碼|完整地址|電話|帳號|卡號|銀行帳戶|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料；請只保留安全來源索引。" : "Sensitive data was detected; keep only a safe source index.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const open = rows.filter((row) => statuses.indexOf(row.parts[8]) < 4), closed = rows.filter((row) => statuses.indexOf(row.parts[8]) >= 4);
+      const renderedRows = rows
+        .map((row, index) => row.parts[0] + (zh ? "｜責任：" : " — responsibility: ") + row.parts[1] + (zh ? "｜週期／條件：" : " — cadence/condition: ") + row.parts[2] + (zh ? "｜控制來源：" : " — source: ") + row.parts[3] + (zh ? "｜主要角色：" : " — primary role: ") + row.parts[4] + (zh ? "｜備援／觸發：" : " — backup/trigger: ") + row.parts[5] + (zh ? "｜上次觀察：" : " — last observed: ") + formatter.format(observed[index] as Date) + (zh ? "｜下次複查：" : " — next review: ") + formatter.format(next[index] as Date) + (zh ? "｜狀態：" : " — status: ") + row.parts[8])
+        .join("\n");
+      return [
+        values.review.trim() + (zh ? "｜家庭責任覆蓋地圖" : " — household responsibility coverage map"),
+        (zh ? "盤點情境：" : "Map context: ") + values.context,
+        (zh ? "本次盤點：" : "Current map: ") + formatter.format(review),
+        (zh ? "仍開放列：" : "Open rows: ") + open.length,
+        (zh ? "已完成或不適用列：" : "Completed or not-applicable rows: ") + closed.length,
+        (zh ? "責任控制來源地圖：" : "Responsibility-source map: ") + values.source.trim(),
+        (zh ? "有版本的家庭責任與備援安排\n" : "Versioned household responsibilities and backup plans\n") + renderedRows,
+        (zh ? "受保護責任來源位置：" : "Protected responsibility-source location: ") + values.storage.trim(),
+        zh ? "這份輸出只整理家庭工作的範圍、來源、角色與備援觸發，不排班、不通知、不判定法律責任，也不證明某人已完成工作。請依目前官方來源、合約、家庭共識與合格專業意見處理真實結果。" : "This output only organizes household work scope, sources, roles and backup triggers. It does not schedule people, send reminders, decide legal responsibility or prove that someone completed a task. Use current official sources, contracts, household agreements and qualified advice for real outcomes.",
+      ].join("\n\n");
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
   "household-seasonal-reset-action-log": seasonalResetDefinition("en"),
   "household-device-retirement-handoff-log": deviceRetirementDefinition("en"),
   "household-router-support-review-log": routerSupportReviewDefinition("en"),
   "household-account-list": householdAccountDefinition("en"),
+  "household-responsibility-coverage-map": householdResponsibilityCoverageDefinition("en"),
   "home-maintenance-schedule-generator": {
     intro:
       "Create a starter schedule tied to the systems you actually have. Verify every interval against the model manual and local conditions.",
@@ -9042,6 +9117,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-account-list": {
     ...householdAccountDefinition("zh-TW"),
+  },
+  "household-responsibility-coverage-map": {
+    ...householdResponsibilityCoverageDefinition("zh-TW"),
   },
   "household-pantry-expiry-review-log": {
     ...pantryExpiryDefinition("zh-TW"),
