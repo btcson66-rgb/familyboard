@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T03:43:11.553Z
+Generated: 2026-08-27T03:57:17.604Z
 
 ## Summary
 
-- Indexable pages: 385
-- Generated HTML routes: 402
+- Indexable pages: 388
+- Generated HTML routes: 405
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 172
+- Pages without a contextual product/tool link: 175
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 38
+- product: 39
 - appliances: 30
 - maintenance: 37
-- household-operations: 32
+- household-operations: 34
 - inventory-warranty: 39
 - records-emergency: 47
 - tools: 121
@@ -79,6 +79,7 @@ Generated: 2026-08-27T03:43:11.553Z
 - /tools/household-meal-prep-role-log/
 - /tools/household-meeting-agenda-action-log/
 - /tools/household-pantry-expiry-review-log/
+- /tools/household-trip-packing-handoff-log/
 - /tools/household-vehicle-document-source-status-log/
 - /tools/rental-security-deposit-move-out-claim-log/
 - /zh-tw/affiliate-disclosure/
@@ -113,6 +114,7 @@ Generated: 2026-08-27T03:43:11.553Z
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
+- /zh-tw/guides/familyboard-trip-handoff-tutorial/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
 - /zh-tw/guides/home-care-service-fees-and-billing/
@@ -201,6 +203,7 @@ Generated: 2026-08-27T03:43:11.553Z
 - /zh-tw/tools/household-school-record-source-handoff-log/
 - /zh-tw/tools/household-storm-readiness-review/
 - /zh-tw/tools/household-subscription-cost-calculator/
+- /zh-tw/tools/household-trip-packing-handoff-log/
 - /zh-tw/tools/household-utility-provider-service-handoff-log/
 - /zh-tw/tools/household-vehicle-document-source-status-log/
 - /zh-tw/tools/household-water-leak-event-log/

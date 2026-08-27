@@ -1944,6 +1944,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-trip-packing-handoff-log/",
+    "alternateRoute": "/zh-tw/tools/household-trip-packing-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2324,6 +2332,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-trip-handoff-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/",
     "alternateRoute": "/tools/home-care-charge-service-payment-discrepancy-log/",
     "indexable": true,
@@ -2692,6 +2707,13 @@
     "alternateRoute": "/features/household-subscription-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-trip-packing-handoff-log/",
+    "alternateRoute": "/tools/household-trip-packing-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {

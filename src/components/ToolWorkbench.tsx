@@ -2984,6 +2984,68 @@ const mealPrepDefinition = (locale: Locale): Definition => {
   };
 };
 
+const tripHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立旅行列，等待來源與範圍",
+        "已核對來源與範圍，等待負責角色",
+        "已安排角色，等待出發前行動",
+        "已記錄交接或出發行動，等待返家複查",
+        "已完成交接或返家複查並保存結果",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Trip row created—source and scope pending",
+        "Source and scope checked—owner role pending",
+        "Owner assigned—pre-departure action pending",
+        "Handoff or departure action recorded—return review pending",
+        "Handoff or return review completed—result preserved",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "TRIP-A | 行李與日用品 | 家庭旅行必需品分類代號 | 旅行計畫與家中備品來源代號 | 旅行準備角色 | 2026-09-01 | 出發前確認分類；返家後記錄遺漏或調整 | 已安排角色，等待出發前行動\nTRIP-B | 住家交接 | 旅行期間住家、寵物或植物交接範圍代號 | 住家交接與聯絡來源代號 | 備援家人角色 | 2026-09-02 | 交接後保留實際回覆；返家時複查 | 已核對來源與範圍，等待負責角色"
+    : "TRIP-A | Packing and daily supplies | Household travel essentials category code | Trip plan and household-supply source code | Travel-prep role | 2026-09-01 | Confirm the category before departure; note gaps or changes after return | Owner assigned—pre-departure action pending\nTRIP-B | Home handoff | Home, pet or plant handoff scope code for the travel window | Home-handoff and contact-source code | Backup household role | 2026-09-02 | Preserve the actual handoff response; review again on return | Source and scope checked—owner role pending";
+  return {
+    intro: zh
+      ? "把旅行準備、住家交接、來源代號、負責角色、出發前行動與返家複查分開記錄。工具不是旅行社、移民、保險、醫療或緊急服務，也不保存證件號碼、訂位或付款資料。"
+      : "Separate travel preparation, home handoff, source codes, owners, pre-departure actions and return review. This is not a travel agency, immigration, insurance, medical or emergency service and does not store document numbers, reservations or payment data.",
+    fields: [
+      text("review", zh ? "旅行紀錄私人代號" : "Private trip review reference", zh ? "使用家庭代號，不要輸入姓名、證件號碼、地址、訂位或付款資料。" : "Use a household code; do not enter names, document numbers, addresses, reservations or payment details.", "TRIP-2026-A"),
+      { name: "tripType", label: zh ? "旅行情境" : "Trip context", type: "select", options: zh ? ["短途家庭旅行", "長途或跨境旅行", "住家留守交接", "寵物或植物照顧交接", "返家複查", "其他旅行準備"] : ["Short family trip", "Long-distance or international trip", "Home coverage handoff", "Pet or plant care handoff", "Return-home review", "Other travel preparation"] },
+      { name: "departureDate", label: zh ? "出發日期" : "Departure date", type: "date", value: "2026-09-01" },
+      { name: "returnDate", label: zh ? "返家或結束日期" : "Return or end date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "旅行、住家與交接來源地圖" : "Trip, home and handoff source map", zh ? "只填安全代號，不要貼訂位、證件、地址、付款或私人通信全文。" : "Use safe codes; do not paste reservations, documents, addresses, payment or private correspondence.", "TRIP-PLAN-T1; HOME-HANDOFF-H1; SUPPLY-S1"),
+      text("rows", zh ? "旅行準備與交接列" : "Travel preparation and handoff rows", zh ? "每行 8 欄：ID｜分類代號｜行李、文件或交接任務｜旅行／住家來源代號｜負責角色｜出發前或返家複查日期 YYYY-MM-DD｜交接或返家觀察｜指定狀態。最多 14 行。" : "Each row uses 8 fields: ID | category code | packing, document or handoff task | trip/home source code | owner role | pre-departure or return-review date YYYY-MM-DD | handoff or return observation | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護旅行、交接與原件位置" : "Protected trip, handoff and original-source location", zh ? "只寫保管流程或容器代號，不要放證件、地址、訂位、付款或私人通信。" : "Name a custody process or container, not documents, addresses, reservations, payment or private correspondence.", zh ? "家庭紀錄／旅行交接／TRIP-2026-A／受保護來源" : "Household records / travel handoff / TRIP-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const departure = strictIsoDate(values.departureDate), returned = strictIsoDate(values.returnDate);
+      if (!departure || !returned) return zh ? "請輸入有效的出發與返家日期。" : "Enter valid departure and return dates.";
+      if (returned < departure) return zh ? "返家或結束日期不能早於出發日。" : "The return or end date cannot be earlier than departure.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全旅行代號、來源地圖與受保護位置。" : "Provide a safe trip code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行旅行準備或交接列。" : "Enter 1 to 14 travel-preparation or handoff rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 8 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `旅行第 ${malformed.map((row) => row.line).join("、")} 行必須有 8 個非空白欄位。` : `Trip line ${malformed.map((row) => row.line).join(", ")} must contain 8 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行旅行紀錄都需要唯一 ID。" : "Every trip row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[7]));
+      if (invalidStatus.length) return zh ? `旅行第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Trip line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[5]));
+      if (dates.some((date) => !date || date < departure || date > returned)) return zh ? "每列日期必須在出發日與返家日之間。" : "Each row date must fall between departure and return.";
+      const open = parsed.filter((row) => statuses.indexOf(row.parts[7]) < 4), closed = parsed.filter((row) => statuses.indexOf(row.parts[7]) >= 4);
+      const thin = parsed.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 8 || row.parts[3].length < 8 || row.parts[4].length < 3 || row.parts[6].length < 10);
+      if (thin.length) return zh ? `旅行第 ${thin.map((row) => row.line).join("、")} 行需要分類、任務、來源、角色與實際觀察。` : `Trip line ${thin.map((row) => row.line).join(", ")} needs a category, task, source, owner and actual observation.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、證件、訂位或付款識別資料；請改用安全代號。" : "A full contact, address, document, reservation or payment identifier was detected; use safe codes.";
+      if (/password|passcode|full address|street address|passport number|identity number|credit card|bank account|reservation number|ticket number|private message|姓名|完整地址|護照號碼|身分證號|信用卡|銀行帳戶|訂位編號|票號|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或全文內容；請只保留安全來源代號。" : "Sensitive data or full private content was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭旅行準備與交接" : " — household travel preparation and handoff"), (zh ? "旅行情境：" : "Trip context: ") + values.tripType, (zh ? "出發：" : "Departure: ") + fmt.format(departure), (zh ? "返家或結束：" : "Return or end: ") + fmt.format(returned), (zh ? "仍開放列：" : "Open rows: ") + open.length, (zh ? "已完成或不適用列：" : "Closed or not-applicable rows: ") + closed.length, (zh ? "旅行、住家與交接來源地圖：" : "Trip, home and handoff source map: ") + values.source.trim(), (zh ? "有版本的旅行準備與交接觀察\n" : "Versioned travel-preparation and handoff observations\n") + parsed.map((row) => row.parts[0] + (zh ? "｜分類：" : " — category: ") + row.parts[1] + (zh ? "｜任務：" : " — task: ") + row.parts[2] + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜角色：" : " — owner: ") + row.parts[4] + (zh ? "｜日期：" : " — date: ") + fmt.format(strictIsoDate(row.parts[5]) as Date) + (zh ? "｜觀察：" : " — observation: ") + row.parts[6] + (zh ? "｜狀態：" : " — status: ") + row.parts[7]).join("\n"), (zh ? "受保護旅行、交接與原件位置：" : "Protected trip, handoff and original-source location: ") + values.storage.trim(), zh ? "這份輸出只協助家庭旅行準備與交接，不是旅行、移民、保險、醫療或緊急服務，也不判定證件、訂位、交通、住宿或安全結果；請使用目前負責來源。" : "This output only coordinates household travel preparation and handoff. It is not travel, immigration, insurance, medical or emergency service and does not decide document, reservation, transport, lodging or safety outcomes; use the current responsible source."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7009,6 +7071,9 @@ const definitions: Record<string, Definition> = {
   "household-meal-prep-role-log": {
     ...mealPrepDefinition("en"),
   },
+  "household-trip-packing-handoff-log": {
+    ...tripHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7061,6 +7126,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-meal-prep-role-log": {
     ...mealPrepDefinition("zh-TW"),
+  },
+  "household-trip-packing-handoff-log": {
+    ...tripHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

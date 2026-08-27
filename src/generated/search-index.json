@@ -1840,6 +1840,14 @@
     "headings": "Household Meal Preparation and Role Log Plan a meal slot, not an entire lifestyle Keep sources separate from assumptions Distinguish plan, action and result Use roles instead of names Future affiliate placement"
   },
   {
+    "title": "Free Trip Packing and Home Handoff Log | FamilyBoard",
+    "description": "Organize travel packing, home coverage and return checks with safe references, owners and dates without storing document numbers, addresses or payment details.",
+    "route": "/tools/household-trip-packing-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "trip packing and home handoff log",
+    "headings": "Household Trip Packing and Handoff Log Keep the travel window explicit Separate a source from a household task Record handoff and return evidence separately Future affiliate placement"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
