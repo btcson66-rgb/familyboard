@@ -2008,6 +2008,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-recycling-handoff-log/",
+    "alternateRoute": "/zh-tw/tools/household-recycling-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -2430,6 +2438,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-recycling-handoff-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-share-access-tutorial/",
     "alternateRoute": "",
     "indexable": true,
@@ -2826,6 +2841,13 @@
     "alternateRoute": "/tools/household-record-retrieval-drill-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-recycling-handoff-log/",
+    "alternateRoute": "/tools/household-recycling-handoff-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-27",
     "locale": "zh-TW"
   },
   {

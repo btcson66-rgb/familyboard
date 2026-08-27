@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-27T05:55:10.188Z
+Generated: 2026-08-27T06:11:31.016Z
 
 ## Summary
 
-- Indexable pages: 409
-- Generated HTML routes: 426
+- Indexable pages: 412
+- Generated HTML routes: 429
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 4
-- Pages without a contextual product/tool link: 196
+- Pages without a contextual product/tool link: 199
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 46
+- product: 47
 - appliances: 30
 - maintenance: 37
-- household-operations: 44
+- household-operations: 46
 - inventory-warranty: 41
 - records-emergency: 49
 - tools: 121
@@ -85,6 +85,7 @@ Generated: 2026-08-27T05:55:10.188Z
 - /tools/household-meeting-agenda-action-log/
 - /tools/household-meter-reading-review-log/
 - /tools/household-pantry-expiry-review-log/
+- /tools/household-recycling-handoff-log/
 - /tools/household-share-access-review-log/
 - /tools/household-trip-packing-handoff-log/
 - /tools/household-vehicle-document-source-status-log/
@@ -127,6 +128,7 @@ Generated: 2026-08-27T05:55:10.188Z
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
+- /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
@@ -220,6 +222,7 @@ Generated: 2026-08-27T05:55:10.188Z
 - /zh-tw/tools/household-power-outage-event-log/
 - /zh-tw/tools/household-record-retention-decision-log/
 - /zh-tw/tools/household-record-retrieval-drill-log/
+- /zh-tw/tools/household-recycling-handoff-log/
 - /zh-tw/tools/household-school-record-source-handoff-log/
 - /zh-tw/tools/household-share-access-review-log/
 - /zh-tw/tools/household-storm-readiness-review/

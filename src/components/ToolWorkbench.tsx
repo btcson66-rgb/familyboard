@@ -3507,6 +3507,70 @@ const accessibilityWalkthroughDefinition = (locale: Locale): Definition => {
   };
 };
 
+const recyclingHandoffDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立回收列，等待項目類型",
+        "已確認項目類型，等待來源",
+        "已記錄來源，等待收取情境",
+        "已記錄收取情境，等待分類觀察",
+        "已記錄分類觀察，等待交接或下一步",
+        "已完成收取或交接，等待下次複查",
+        "不適用，已記錄原因與重新開案事件",
+      ]
+    : [
+        "Recycling row created—item stream pending",
+        "Item stream checked—source pending",
+        "Source recorded—collection context pending",
+        "Collection context recorded—sorting observation pending",
+        "Sorting observation recorded—handoff or next action pending",
+        "Collection or handoff complete—next review pending",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? "RECYCLE-A | 紙類與紙箱 | 2026-08-20 | 市府清運公告代號 | 本週定點收運前已綁妥並放在家庭暫存區 | 當地細節仍以最新公告為準，未自行判定可回收性 | 由家庭清運角色依公告確認時間與交接結果 | 家庭清運角色 | 已記錄分類觀察，等待交接或下一步\nRECYCLE-B | 塑膠容器觀察 | 2026-08-22 | 社區管理通知代號 | 包裝已倒空並待查看標示，尚未交付 | 來源未說明本區收受範圍，保持未確認 | 查閱管理單位最新說明後再安排分類或交接 | 備援家庭角色 | 已記錄來源，等待收取情境"
+    : "RECYCLE-A | Paper and cardboard | 2026-08-20 | Municipal collection notice code | Bundled for this week's collection and kept in the household holding area | Local details remain subject to the current notice; recyclability not assumed | Household collection role will confirm time and handoff result against the notice | Household collection role | Sorting observation recorded—handoff or next action pending\nRECYCLE-B | Plastic container observation | 2026-08-22 | Building management notice code | Container emptied and label review pending before handoff | Source does not state this area's accepted streams; keep unconfirmed | Check the current building guidance before sorting or handing off | Backup household role | Source recorded—collection context pending";
+  return {
+    intro: zh
+      ? "用安全代號整理家庭垃圾與資源回收的項目類型、公告來源、收取情境、實際分類觀察與交接結果。地方政府、社區與業者規則可能不同；工具不判定可回收性、不保證清運、不提供環境或法律結論，也不保存地址、帳號或私人通信。"
+      : "Use safe codes to organize household waste and recycling streams, notice sources, collection context, sorting observations and handoff results. Local rules differ by municipality, building and provider; this tool does not decide recyclability, guarantee collection or provide environmental or legal conclusions, and stores no addresses, accounts or private correspondence.",
+    fields: [
+      text("review", zh ? "回收交接複查私人代號" : "Private recycling-handoff review reference", zh ? "使用家庭代號，不要輸入完整地址、住戶姓名、帳號、電話或清運案件內容。" : "Use a household code; do not enter full addresses, resident names, accounts, phone numbers or collection case details.", "RECYCLE-REVIEW-2026-A"),
+      { name: "context", label: zh ? "回收複查情境" : "Recycling-review context", type: "select", options: zh ? ["固定收運前準備", "社區公告變更後", "搬家或大掃除交接", "錯過收運或待確認", "旅行期間代收代交", "其他家庭回收複查"] : ["Before a scheduled collection", "After a building notice change", "Move or deep-clean handoff", "Missed collection or clarification", "Handoff while traveling", "Other household recycling review"] },
+      { name: "reviewDate", label: zh ? "本次回收複查日期" : "Current recycling-review date", type: "date", value: "2026-08-27" },
+      { name: "nextReview", label: zh ? "下一次公告或交接複查日期" : "Next notice or handoff review date", type: "date", value: "2026-09-05" },
+      text("source", zh ? "公告與家庭觀察來源地圖" : "Notice and household-observation source map", zh ? "只填安全來源代號，不要貼地址、帳號、照片原件或私人通信。" : "Use safe source codes; do not paste addresses, accounts, original photos or private correspondence.", "CITY-NOTICE-C1; BUILDING-NOTICE-B1; OBS-REC-R1"),
+      text("rows", zh ? "垃圾與回收項目狀態列" : "Waste and recycling stream rows", zh ? "每行 9 欄：ID｜項目或回收類型｜觀察日期 YYYY-MM-DD｜來源代號｜收取情境｜分類或包裝觀察｜未確認規則或下一步｜負責角色｜指定狀態。最多 14 行。" : "Each row uses 9 fields: ID | item or stream | observation date YYYY-MM-DD | source code | collection context | sorting or packaging observation | unconfirmed rule or next action | owner role | exact status. Maximum 14 rows.", defaults),
+      text("storage", zh ? "受保護公告與交接紀錄位置" : "Protected notice and handoff-record location", zh ? "只寫保管流程或容器代號，不要放地址、電話、帳號或完整公告截圖。" : "Name a custody process or container, not addresses, phone numbers, accounts or full notice screenshots.", zh ? "家庭紀錄／垃圾回收／RECYCLE-REVIEW-2026-A／受保護來源" : "Household records / waste and recycling / RECYCLE-REVIEW-2026-A / protected sources"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下一次回收複查日期。" : "Enter valid current and next recycling-review dates.";
+      if (next < review) return zh ? "下一次公告或交接複查日期不能早於本次複查。" : "The next notice or handoff review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.source.trim().length < 12 || values.storage.trim().length < 10) return zh ? "請提供安全回收代號、來源地圖與受保護位置。" : "Provide a safe recycling code, source map and protected location.";
+      const rows = values.rows.split(/\r?\n/).map((row) => row.trim()).filter(Boolean);
+      if (!rows.length || rows.length > 14) return zh ? "請輸入 1 至 14 行垃圾與回收項目列。" : "Enter 1 to 14 waste and recycling rows.";
+      const parsed = rows.map((row, index) => ({ line: index + 1, parts: row.split("|").map((part) => part.trim()) }));
+      const malformed = parsed.filter((row) => row.parts.length !== 9 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `回收第 ${malformed.map((row) => row.line).join("、")} 行必須有 9 個非空白欄位。` : `Recycling line ${malformed.map((row) => row.line).join(", ")} must contain 9 non-empty fields.`;
+      if (new Set(parsed.map((row) => row.parts[0].toUpperCase())).size !== parsed.length) return zh ? "每行回收紀錄都需要唯一 ID。" : "Every recycling row needs a unique ID.";
+      const invalidStatus = parsed.filter((row) => !statuses.includes(row.parts[8]));
+      if (invalidStatus.length) return zh ? `回收第 ${invalidStatus.map((row) => row.line).join("、")} 行必須使用指定狀態。` : `Recycling line ${invalidStatus.map((row) => row.line).join(", ")} must use an exact status.`;
+      const dates = parsed.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((date) => !date || date > review)) return zh ? "每列觀察日期必須有效，且不能晚於本次複查。" : "Each observation date must be valid and no later than the current review.";
+      const closed = parsed.filter((row) => statuses.indexOf(row.parts[8]) >= 5);
+      const thin = parsed.filter((row) => row.parts[1].length < 3 || row.parts[3].length < 6 || row.parts[4].length < 8 || row.parts[5].length < 10 || row.parts[6].length < 10 || row.parts[7].length < 3);
+      if (thin.length) return zh ? `回收第 ${thin.map((row) => row.line).join("、")} 行需要項目、來源、收取情境、分類觀察、下一步與角色。` : `Recycling line ${thin.map((row) => row.line).join(", ")} needs an item, source, collection context, sorting observation, next action and owner.`;
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy)) return zh ? "偵測到完整聯絡、地址、身分或案件識別資料；請改用安全代號。" : "A full contact, address, identity or case identifier was detected; use safe codes.";
+      if (/password|passcode|full address|account number|collection case|private message|姓名|密碼|完整地址|帳號|清運案件|私人訊息/i.test(privacy)) return zh ? "偵測到敏感資料或私人通信；請只保留安全來源代號。" : "Sensitive data or private correspondence was detected; keep only safe source codes.";
+      const fmt = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return [values.review.trim() + (zh ? "｜家庭垃圾與資源回收交接複查" : " — household waste and recycling handoff review"), (zh ? "複查情境：" : "Review context: ") + values.context, (zh ? "本次複查：" : "Current review: ") + fmt.format(review), (zh ? "下一次公告或交接複查：" : "Next notice or handoff review: ") + fmt.format(next), (zh ? "仍開放列：" : "Open rows: ") + (parsed.length - closed.length), (zh ? "已完成收取或不適用列：" : "Completed or not-applicable rows: ") + closed.length, (zh ? "公告與家庭觀察來源地圖：" : "Notice and household-observation source map: ") + values.source.trim(), (zh ? "有版本的垃圾與回收觀察\n" : "Versioned waste and recycling observations\n") + parsed.map((row, index) => row.parts[0] + (zh ? "｜項目：" : " — item: ") + row.parts[1] + (zh ? "｜觀察日：" : " — observed: ") + fmt.format(dates[index] as Date) + (zh ? "｜來源：" : " — source: ") + row.parts[3] + (zh ? "｜收取情境：" : " — collection context: ") + row.parts[4] + (zh ? "｜分類觀察：" : " — sorting observation: ") + row.parts[5] + (zh ? "｜下一步：" : " — next: ") + row.parts[6] + (zh ? "｜角色：" : " — owner: ") + row.parts[7] + (zh ? "｜狀態：" : " — status: ") + row.parts[8]).join("\n"), (zh ? "受保護公告與交接紀錄位置：" : "Protected notice and handoff-record location: ") + values.storage.trim(), zh ? "這份輸出只整理家庭垃圾與回收觀察，不判定可回收性、不保證收運、不提供環境或法律結論；請以所在地最新官方、社區與業者來源為準。" : "This output only organizes household waste and recycling observations. It does not decide recyclability, guarantee collection or provide environmental or legal conclusions; use the current official, building and provider sources for your area."].join("\n\n");
+    },
+  };
+};
+
 
 const definitions: Record<string, Definition> = {
   "home-maintenance-schedule-generator": {
@@ -7556,6 +7620,9 @@ const definitions: Record<string, Definition> = {
   "household-accessibility-walkthrough-log": {
     ...accessibilityWalkthroughDefinition("en"),
   },
+  "household-recycling-handoff-log": {
+    ...recyclingHandoffDefinition("en"),
+  },
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
@@ -7632,6 +7699,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-accessibility-walkthrough-log": {
     ...accessibilityWalkthroughDefinition("zh-TW"),
+  },
+  "household-recycling-handoff-log": {
+    ...recyclingHandoffDefinition("zh-TW"),
   },
   "home-inventory-checklist-generator": {
     intro:

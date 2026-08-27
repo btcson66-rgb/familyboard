@@ -1904,6 +1904,14 @@
     "headings": "Home Accessibility Walkthrough Log Start with one path Describe barriers plainly Assign a reversible next step Future affiliate placement"
   },
   {
+    "title": "Free Household Recycling Handoff Log | Collection Sources, Sorting Notes and Follow-Up | FamilyBoard",
+    "description": "Record household recycling streams, local notice sources, collection context, sorting observations and handoff follow-up without storing addresses or account details.",
+    "route": "/tools/household-recycling-handoff-log/",
+    "cluster": "household-operations",
+    "keywords": "household recycling log",
+    "headings": "Household Recycling Handoff Log Use the current source Keep observations separate from rule questions Assign the handoff and recheck after changes"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

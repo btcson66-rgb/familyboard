@@ -212,6 +212,9 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-accessibility-walkthrough-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-accessibility-walkthrough-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-recycling-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-recycling-handoff-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-recycling-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
@@ -965,6 +968,15 @@ const checks = [
       'hreflang="zh-TW"',
       "Start with one path",
       "Future affiliate placement",
+    ],
+  },
+  {
+    path: "/tools/household-recycling-handoff-log/",
+    require: [
+      "Household Recycling Handoff Log",
+      'hreflang="zh-TW"',
+      "Start with the collection source",
+      "Privacy and future affiliate placement",
     ],
   },
   {
@@ -1938,6 +1950,25 @@ const checks = [
       'lang="zh-TW"',
       "選一條實際會用到的路",
       "讓實際使用者參與重測",
+    ],
+    forbid: ['rel="alternate"'],
+  },
+  {
+    path: "/zh-tw/tools/household-recycling-handoff-log/",
+    require: [
+      "家庭垃圾與資源回收交接工具",
+      'hreflang="en"',
+      "先找目前適用的來源",
+      "把「項目」和「規則問題」分開",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-recycling-handoff-tutorial/",
+    require: [
+      "FamilyBoard 家庭垃圾與資源回收怎麼交接",
+      'lang="zh-TW"',
+      "先選目前適用的公告來源",
+      "把交接結果帶回家庭會議",
     ],
     forbid: ['rel="alternate"'],
   },
