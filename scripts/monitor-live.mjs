@@ -40,6 +40,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-schedule/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/free-home-management-app/</loc>",
+      "<loc>https://familyboard.win/features/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/</loc>",
+      "<loc>https://familyboard.win/checklists/printable-monthly-home-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/checklists/printable-monthly-home-checklist/</loc>",
+      "<loc>https://familyboard.win/checklists/printable-seasonal-home-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/checklists/printable-seasonal-home-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/</loc>",
@@ -5571,6 +5577,30 @@ const checks = [
       "把總額變成公平的家庭檢視",
       'hreflang="en"',
     ],
+  },
+  {
+    path: "/features/",
+    require: ["Household Management Features", "One household dashboard", 'hreflang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/features/",
+    require: ["FamilyBoard 功能總覽", "今日總覽", '<html lang="zh-TW">', 'hreflang="en"'],
+  },
+  {
+    path: "/checklists/printable-monthly-home-checklist/",
+    require: ["Printable Monthly Home Checklist", "Home condition", 'hreflang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/checklists/printable-monthly-home-checklist/",
+    require: ["可列印每月家庭檢查表", "居家狀況", '<html lang="zh-TW">', 'hreflang="en"'],
+  },
+  {
+    path: "/checklists/printable-seasonal-home-checklist/",
+    require: ["Printable Seasonal Home Checklist", "Systems entering heavy use", 'hreflang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/checklists/printable-seasonal-home-checklist/",
+    require: ["可列印季節家庭檢查表", "即將進入高負載", '<html lang="zh-TW">', 'hreflang="en"'],
   },
   {
     path: "/features/home-record-keeper/",

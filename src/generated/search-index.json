@@ -3056,6 +3056,22 @@
     "headings": "可列印家庭交接表：讓責任換手，而不是把一堆資料丟給下一個人 範圍、期限與未來 30 天 責任、問題與聯絡來源 納入、排除與小測試 和 FamilyBoard App 搭配"
   },
   {
+    "title": "可列印每月家庭檢查表｜用 30 分鐘整理下個月的家務",
+    "description": "下載或列印一張適合台灣家庭的每月檢查表，檢查居家狀況、保養、續訂、文件與交接，不把每個月變成大掃除。",
+    "route": "/zh-tw/checklists/printable-monthly-home-checklist/",
+    "cluster": "printables",
+    "keywords": "每月家庭檢查表",
+    "headings": "可列印每月家庭檢查表：30 分鐘整理下個月真正要注意的事"
+  },
+  {
+    "title": "可列印季節家庭檢查表｜春夏秋冬依住家情境調整",
+    "description": "用一張可重複列印的季節家庭檢查表，依台灣氣候、設備負載、戶外環境與家庭行程調整春夏秋冬的準備與收尾。",
+    "route": "/zh-tw/checklists/printable-seasonal-home-checklist/",
+    "cluster": "printables",
+    "keywords": "季節家庭檢查表",
+    "headings": "可列印季節家庭檢查表：讓季節提醒配合住家與設備"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

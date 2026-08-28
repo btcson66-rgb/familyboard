@@ -9,7 +9,7 @@
   },
   {
     "route": "/features/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
     "locale": "en",
@@ -1497,7 +1497,7 @@
   },
   {
     "route": "/checklists/printable-monthly-home-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/checklists/printable-monthly-home-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1505,7 +1505,7 @@
   },
   {
     "route": "/checklists/printable-seasonal-home-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/checklists/printable-seasonal-home-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3184,6 +3184,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/zh-tw/features/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/checklists/printable-monthly-home-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/checklists/printable-seasonal-home-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -4285,6 +4309,13 @@
     "alternateRoute": "/guides/familyboard-weekly-reset-action-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/features/",
+    "alternateRoute": "/features/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -5501,6 +5532,20 @@
   {
     "route": "/zh-tw/templates/printable-household-handoff-sheet/",
     "alternateRoute": "/templates/printable-household-handoff-sheet/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/checklists/printable-monthly-home-checklist/",
+    "alternateRoute": "/checklists/printable-monthly-home-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/checklists/printable-seasonal-home-checklist/",
+    "alternateRoute": "/checklists/printable-seasonal-home-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

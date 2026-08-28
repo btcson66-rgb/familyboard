@@ -30011,6 +30011,97 @@ FamilyBoard v1 的方向很簡單：讓家庭更容易找到、理解與交接�
 
 **下一步：** 選一位接手角色、一個到期日和三項低風險工作，完成查找測試後再決定是否擴充範圍。
 
+## Page 398 — FamilyBoard 功能總覽：把家庭管理分成看得懂、接得起來的工作
+
+**Slug:** `/zh-tw/features/`
+**Alternate route:** `/features/`
+**Primary intent:** 比較家庭管理 App 功能，找到適合自己家庭的開始方式
+**Title tag:** FamilyBoard 功能總覽｜資產、保養、保固、任務與家庭交接
+**Meta description:** 用台灣家庭真正會遇到的情境，逐一了解 FamilyBoard 的今日總覽、資產、保養、保固、訂閱、任務、緊急資訊、文件、交接與顯示模式。
+**Primary keyword concept:** 家庭管理 App 功能
+**Cluster:** product
+**Page type:** content
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先從今日總覽或家庭資產清冊開始，建立一個本週確實會回來查看的家庭工作區。
+**Suggested internal links:** `/zh-tw/features/home-dashboard/`, `/zh-tw/features/home-inventory-tracker/`, `/zh-tw/features/maintenance-tracker/`, `/zh-tw/features/household-handoff/`, `/zh-tw/features/private-family-organizer/`
+**FAQ:**
+- FamilyBoard 和一般家庭行事曆不同在哪裡？行事曆處理時間；FamilyBoard 也保存資產、保養、保固、文件、訂閱與責任脈絡。
+- 一定要一次填完所有資料嗎？不用，先建立少量真正會回來查看的資產與任務，再逐步補齊。
+- 會同步到家人的手機嗎？不會，資料留在目前瀏覽器的本機儲存；交接請使用選擇欄位的摘要與備份。
+- 需要付費或原生 App 嗎？核心功能可免費在瀏覽器使用，也能將 PWA 加到手機主畫面。
+
+# FamilyBoard 功能總覽：把家庭管理分成看得懂、接得起來的工作
+
+家庭管理不只有行事曆事件，還包含設備說明書位置、維修歷史、保固期限、訂閱續約與臨時交接。這頁逐一解釋今日總覽、資產、文件、保養、保固、訂閱、任務、行事曆、緊急資訊、交接、顯示模式與設定的實際用途，以及它們不會替使用者做的判斷。資產、保養、保固與文件以 ID 互相連結，能從一台設備看到完整故事；敏感聯絡人、序號、私人備註與付款資訊則不會因為列印交接而自動公開。內容也明確說明 local-first、本機備份、無跨裝置同步與專業安全邊界，避免把功能名稱誤讀成雲端保證。新家庭可先建三至五項重要資產、一項有期限任務與一份備份，再依一週使用結果補充資料。
+
+---
+
+## Page 399 — 可列印每月家庭檢查表：30 分鐘整理下個月真正要注意的事
+
+**Slug:** `/zh-tw/checklists/printable-monthly-home-checklist/`
+**Alternate route:** `/checklists/printable-monthly-home-checklist/`
+**Primary intent:** 尋找可列印的每月家庭整理與維護檢查表
+**Title tag:** 可列印每月家庭檢查表｜用 30 分鐘整理下個月的家務
+**Meta description:** 下載或列印一張適合台灣家庭的每月檢查表，檢查居家狀況、保養、續訂、文件與交接，不把每個月變成大掃除。
+**Primary keyword concept:** 每月家庭檢查表
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 放在家庭管理區，每月選固定時段完成，需要持續追蹤的結果再轉成 App 任務。
+**Suggested internal links:** `/zh-tw/guides/household-monthly-review/`, `/zh-tw/guides/monthly-home-maintenance-checklist/`, `/zh-tw/features/home-dashboard/`, `/zh-tw/tools/household-annual-review-generator/`
+**FAQ:**
+- 一定要月底做嗎？不用，固定且家人能參與的時段比月底更重要。
+- 能當成完整居家安全檢查嗎？不能，它是行政與維護起點，不取代官方或專業檢查。
+- 每格都要打勾嗎？不適用就寫原因，需要後續就寫負責人與日期。
+- 如何與 App 連結？只把持續追蹤的結果轉成任務、保養或資產備註。
+
+# 可列印每月家庭檢查表：30 分鐘整理下個月真正要注意的事
+
+這張表把每月檢查限制在約 30 分鐘，分成居家狀況、保養與服務、未來 45 天行政、聯絡與交接、下個月三件事。它鼓勵記錄漏水、異味、設備錯誤與上月未完成維修等「有變化」的線索，而不是為了完整而拆機或攀高。保養要留下日期與簡短結果，續訂要留決策時間，紙本不應抄寫卡號或敏感資訊。每個家庭可刪除不適用的車庫、庭院或設備欄位；原廠手冊、租約、所在地規則與專業人員建議優先於表格。最後只挑三項可執行工作，寫上負責人、下一步和日期，再把需要長期追蹤的內容放入 FamilyBoard。
+
+---
+
+## Page 400 — 可列印季節家庭檢查表：讓季節提醒配合住家與設備
+
+**Slug:** `/zh-tw/checklists/printable-seasonal-home-checklist/`
+**Alternate route:** `/checklists/printable-seasonal-home-checklist/`
+**Primary intent:** 尋找可列印且能依氣候調整的季節居家維護表
+**Title tag:** 可列印季節家庭檢查表｜春夏秋冬依住家情境調整
+**Meta description:** 用一張可重複列印的季節家庭檢查表，依台灣氣候、設備負載、戶外環境與家庭行程調整春夏秋冬的準備與收尾。
+**Primary keyword concept:** 季節家庭檢查表
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 每季開始前記下進入高負載的設備，結束後記錄異常，再把持續事項轉成 App 任務。
+**Suggested internal links:** `/zh-tw/guides/seasonal-home-maintenance-checklist/`, `/zh-tw/guides/spring-home-maintenance-checklist/`, `/zh-tw/guides/fall-home-maintenance-checklist/`, `/zh-tw/tools/home-maintenance-schedule-generator/`
+**FAQ:**
+- 台灣家庭要照春夏秋冬固定四份清單嗎？不用，依地區天氣、住宅型態與設備實際負載調整。
+- 能取代原廠保養週期嗎？不能，表格只提醒查看可靠來源與安排工作。
+- 哪些項目不適合自己做？瓦斯、電氣、結構、屋頂、高處與消防等疑慮應交由合格人員。
+- 如何變成長期提醒？進入高負載前建任務，完成後在資產或保養紀錄留下結果。
+
+# 可列印季節家庭檢查表：讓季節提醒配合住家與設備
+
+季節表不是把國外月份翻譯成中文，而是讓家庭依梅雨、颱風、高溫、濕氣、寒流、長假或設備使用習慣重寫重點。開始前填寫即將進入高負載的系統、依據的手冊或官方要求、預約與負責人；結束後記錄異音、異味、漏水、錯誤和收納結果。外部環境只檢查安全可及的排水、窗框、陽台與管理事項，不把網路文章當成法規，也不在紙上替設備發明固定週期。家庭運作段落可納入雨具、用品、旅行交接與下季續約，但低敏感度分享仍要排除付款、序號與私人備註。最後更新資產、保養歷史、服務商參照與備份，下一季依實際資料調整，而不是複製一張與住家無關的模板。
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

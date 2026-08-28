@@ -128,6 +128,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/templates/printable-home-inventory-template/",
     "/templates/printable-household-handoff-sheet/",
     "/zh-tw/templates/printable-household-handoff-sheet/",
+    "/features/",
+    "/zh-tw/features/",
+    "/checklists/printable-monthly-home-checklist/",
+    "/zh-tw/checklists/printable-monthly-home-checklist/",
+    "/checklists/printable-seasonal-home-checklist/",
+    "/zh-tw/checklists/printable-seasonal-home-checklist/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -697,6 +703,12 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/room-by-room-home-inventory/",
     "/zh-tw/guides/cleaning-schedule/",
     "/zh-tw/features/household-handoff/",
+    "/features/",
+    "/zh-tw/features/",
+    "/checklists/printable-monthly-home-checklist/",
+    "/zh-tw/checklists/printable-monthly-home-checklist/",
+    "/checklists/printable-seasonal-home-checklist/",
+    "/zh-tw/checklists/printable-seasonal-home-checklist/",
     "/guides/family-emergency-contacts/",
     "/zh-tw/guides/family-emergency-contacts/",
     "/guides/what-spouse-needs-to-know/",
@@ -990,8 +1002,32 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "可列印家庭交接表" }),
   ).toHaveAttribute("href", "/zh-tw/templates/printable-household-handoff-sheet/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "功能總覽" }),
+  ).toHaveAttribute("href", "/zh-tw/features/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "可列印每月家庭檢查表" }),
+  ).toHaveAttribute("href", "/zh-tw/checklists/printable-monthly-home-checklist/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "可列印季節家庭檢查表" }),
+  ).toHaveAttribute("href", "/zh-tw/checklists/printable-seasonal-home-checklist/");
 
   for (const localized of [
+    {
+      route: "/zh-tw/features/",
+      alternate: "/features/",
+      heading: "FamilyBoard 功能總覽：把家庭管理分成看得懂、接得起來的工作",
+    },
+    {
+      route: "/zh-tw/checklists/printable-monthly-home-checklist/",
+      alternate: "/checklists/printable-monthly-home-checklist/",
+      heading: "可列印每月家庭檢查表：30 分鐘整理下個月真正要注意的事",
+    },
+    {
+      route: "/zh-tw/checklists/printable-seasonal-home-checklist/",
+      alternate: "/checklists/printable-seasonal-home-checklist/",
+      heading: "可列印季節家庭檢查表：讓季節提醒配合住家與設備",
+    },
     {
       route: "/zh-tw/privacy/",
       alternate: "/privacy/",
