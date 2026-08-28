@@ -5716,9 +5716,69 @@ const householdTimeWindowOverlapDefinition = (locale: Locale): Definition => {
   };
 };
 
+const householdDateOffsetDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const formatDate = (value: Date) =>
+    new Intl.DateTimeFormat(zh ? "zh-TW" : "en", { dateStyle: "long" }).format(value);
+  return {
+    intro: zh
+      ? "從一個已確認的日期加上或減去天數，產生下一次家庭複查日期。工具只做日期算術，不讀取行事曆、不發提醒，也不判定正式期限。"
+      : "Add or subtract days from a confirmed date to plan a household follow-up. This tool performs date arithmetic only; it does not read a calendar, send reminders or decide an official deadline.",
+    fields: [
+      text(
+        "review",
+        zh ? "日期複查代號" : "Private date-review code",
+        zh ? "使用中性代號，不要輸入姓名、地址、電話、帳號或完整通知內容。" : "Use a neutral code, not a name, address, phone, account or full notice.",
+        "DATE-REVIEW-2026-A",
+      ),
+      text(
+        "label",
+        zh ? "日期用途" : "Date purpose",
+        zh ? "例如濾網複查、保固前檢視或回家後檢查。" : "For example, filter review, warranty check or post-trip reset.",
+        zh ? "濾網複查" : "Filter review",
+      ),
+      { name: "anchor", label: zh ? "基準日期" : "Anchor date", type: "date", value: "2026-08-29" },
+      {
+        name: "offset",
+        label: zh ? "相隔天數（可用負數）" : "Days to add (negative is allowed)",
+        help: zh ? "輸入整數，範圍為 -3650 到 3650。" : "Enter a whole number from -3650 to 3650.",
+        type: "number",
+        value: "7",
+      },
+      text(
+        "source",
+        zh ? "受保護來源指標與下一步" : "Protected source pointer and next check",
+        zh ? "填來源代號與要查的動作，不要貼完整通知或私人訊息。" : "Enter a source code and checkable action, not a full notice or private message.",
+        "MANUAL-C1 | Confirm the next review date with the responsible role",
+      ),
+    ],
+    run: (values) => {
+      const privacy = [values.review, values.label, values.source].join("\n");
+      if (!values.review.trim()) return zh ? "請輸入日期複查代號。" : "Enter a private date-review code.";
+      if (!values.label.trim()) return zh ? "請輸入日期用途。" : "Enter the date purpose.";
+      if (!values.source.trim()) return zh ? "請填寫受保護來源指標與下一步。" : "Enter a protected source pointer and next check.";
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy) || /password|passcode|account number|full address|access code|密碼|驗證碼|帳號|完整地址|門禁碼|身分證/i.test(privacy))
+        return zh ? "偵測到可能的聯絡、帳號、地址或憑證資料；請改用安全代號。" : "A possible contact, account, address or credential was detected; replace it with a safe code.";
+      const anchor = strictIsoDate(values.anchor);
+      if (!anchor) return zh ? "請輸入有效的基準日期。" : "Enter a valid anchor date.";
+      const offset = Number(values.offset);
+      if (!Number.isInteger(offset) || offset < -3650 || offset > 3650) return zh ? "相隔天數必須是 -3650 到 3650 的整數。" : "Days must be a whole number from -3650 to 3650.";
+      const target = new Date(anchor);
+      target.setDate(target.getDate() + offset);
+      const direction = offset === 0 ? (zh ? "同一天" : "the same day") : offset > 0 ? (zh ? `基準日後 ${offset} 天` : `${offset} day${offset === 1 ? "" : "s"} after the anchor`) : (zh ? `基準日前 ${Math.abs(offset)} 天` : `${Math.abs(offset)} day${Math.abs(offset) === 1 ? "" : "s"} before the anchor`);
+      return zh
+        ? `${values.review.trim()}｜家庭日期偏移規劃\n用途：${values.label.trim()}\n基準日期：${formatDate(anchor)}\n偏移：${direction}\n規劃日期：${formatDate(target)}\n\n來源指標與下一步：${values.source.trim()}\n\n這是本機日期算術，不是正式期限、行事曆同步、提醒、預約或法律計算。請由負責角色回到目前手冊、學校、業者、雇主或其他正式來源確認日期規則；不要把完整通知、地址、電話或帳號貼入共享紀錄。`
+        : `${values.review.trim()} — household date offset plan\nPurpose: ${values.label.trim()}\nAnchor date: ${formatDate(anchor)}\nOffset: ${direction}\nPlanned date: ${formatDate(target)}\n\nSource pointer and next check: ${values.source.trim()}\n\nThis is local date arithmetic, not an official deadline, calendar sync, reminder, booking or legal calculation. Have the responsible role confirm the date rule in the current manual, school, provider, employer or other controlling source; do not paste a full notice, address, phone number or account into a shared record.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "household-time-window-overlap-checker": {
     ...householdTimeWindowOverlapDefinition("en"),
+  },
+  "household-date-offset-planner": {
+    ...householdDateOffsetDefinition("en"),
   },
   "household-backup-recovery-checker": {
     ...householdBackupRecoveryDefinition("en"),
@@ -9843,6 +9903,9 @@ const definitions: Record<string, Definition> = {
 const zhTwDefinitions: Record<string, Definition> = {
   "household-time-window-overlap-checker": {
     ...householdTimeWindowOverlapDefinition("zh-TW"),
+  },
+  "household-date-offset-planner": {
+    ...householdDateOffsetDefinition("zh-TW"),
   },
   "household-backup-recovery-checker": {
     ...householdBackupRecoveryDefinition("zh-TW"),

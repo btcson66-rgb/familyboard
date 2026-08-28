@@ -577,6 +577,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-utility-bill-difference-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-time-window-overlap-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-time-window-overlap-checker/</loc>",
+      "<loc>https://familyboard.win/tools/household-date-offset-planner/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-date-offset-planner/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
@@ -5734,6 +5736,22 @@ const checks = [
     require: [
       "家庭時間窗口重疊檢查工具",
       "填入兩個窗口的四個時間點",
+      'lang="zh-TW"',
+    ],
+  },
+  {
+    path: "/tools/household-date-offset-planner/",
+    require: [
+      "Household Date Offset Planner",
+      "Add or subtract days",
+      "does not read a calendar",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-date-offset-planner/",
+    require: [
+      "家庭日期偏移規劃器",
+      "輸入整數",
       'lang="zh-TW"',
     ],
   },

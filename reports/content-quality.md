@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T09:43:27.879Z
+Generated: 2026-08-28T09:52:10.930Z
 
 ## Summary
 
-- Indexable pages: 737
-- Generated HTML routes: 743
+- Indexable pages: 739
+- Generated HTML routes: 745
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 412
+- Pages without a contextual product/tool link: 413
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -24,7 +24,7 @@ Generated: 2026-08-28T09:43:27.879Z
 - maintenance: 82
 - household-operations: 139
 - records-emergency: 97
-- tools: 132
+- tools: 134
 
 ## Word-count range
 
@@ -37,6 +37,7 @@ Generated: 2026-08-28T09:43:27.879Z
 - 292-zh-tw--tools--household-shopping-list-planner.md ↔ 293-zh-tw--guides--familyboard-shopping-list-planner-tutorial.md: 0.240
 - 227-tools--household-pet-record-source-handoff-log.md ↔ 228-tools--household-school-record-source-handoff-log.md: 0.170
 - 289-zh-tw--tools--household-router-support-review-log.md ↔ 290-zh-tw--guides--familyboard-router-support-review-tutorial.md: 0.159
+- 381-zh-tw--tools--household-time-window-overlap-checker.md ↔ 385-zh-tw--tools--household-date-offset-planner.md: 0.159
 
 ## Safety-source warnings
 
@@ -397,6 +398,7 @@ Generated: 2026-08-28T09:43:27.879Z
 - /zh-tw/tools/household-building-notice-response-log/
 - /zh-tw/tools/household-clothing-care-repair-log/
 - /zh-tw/tools/household-consumable-change-history-log/
+- /zh-tw/tools/household-date-offset-planner/
 - /zh-tw/tools/household-decision-register/
 - /zh-tw/tools/household-device-retirement-handoff-log/
 - /zh-tw/tools/household-document-index-generator/

@@ -29122,6 +29122,124 @@ Save the neutral code, both entered windows, the protected source pointer and on
 
 保存家庭代號、兩個輸入窗口、受保護來源指標和一個有日期的下一步，再由負責角色確認正式排程，把實際回覆另行記下。這樣既保留容易重做的算術，也把真正的決定權留在控制家庭承諾的來源。
 
+## Page 384 — Household Date Offset Planner
+**Slug:** /tools/household-date-offset-planner/
+**Alternate route:** /zh-tw/tools/household-date-offset-planner/
+**Primary intent:** calculate a follow-up date from a confirmed household date without confusing planning arithmetic with an official deadline
+**Title tag:** Household Date Offset Planner | Free FamilyBoard Date Calculator
+**Meta description:** Add or subtract days from a household date to plan a review, handoff or follow-up while keeping the controlling source and privacy boundary visible.
+**Primary keyword concept:** household date offset calculator
+**Cluster:** tools
+**Page type:** tool
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-event-duration-calculator/, /tools/household-schedule-conflict-review-log/, /guides/home-maintenance-reminders/, /zh-tw/tools/household-date-offset-planner/
+**FAQ:**
+- Q: What does this planner calculate?
+  A: It adds or subtracts a whole number of calendar days from one date in the current browser, then shows the resulting planning date. It does not decide an official due date.
+- Q: Can it read my calendar or create a reminder?
+  A: No. It only uses the values you enter, stays in the current browser and returns text for you to review or save; calendar ownership and reminders remain elsewhere.
+- Q: Can I use it for a legal, medical or warranty deadline?
+  A: Use it as a planning prompt only. Confirm the date convention, time zone, business-day rule and written terms with the authority that controls the deadline.
+- Q: What should I put in the source field?
+  A: Use a neutral pointer such as MANUAL-C1 and a next action. Keep full notices, addresses, phone numbers, account details and private messages in their protected source.
+
+# Household Date Offset Planner: turn a confirmed date into a review plan
+
+Household work often starts with a date that someone has already confirmed: a filter was changed, a service visit happened, a trip ends, or a provider says to check back in fourteen days. Adding or subtracting days is easy to describe and surprisingly easy to lose in a message thread. FamilyBoard's free [Household Date Offset Planner](/tools/household-date-offset-planner/) performs that small calculation in the current browser and returns a date you can hand to the responsible person. It is a planning aid, not a calendar, reminder service or authority on deadlines.
+
+## Enter a bounded purpose
+
+Start with a neutral code such as `DATE-REVIEW-2026-A` and a short purpose like “filter review,” “warranty check” or “post-trip reset.” The code lets another household member recognise which calculation is being discussed without revealing the family member, address or provider. Do not paste a full email, booking, account number, gate code or private conversation into the form. A small label is enough to explain why the date matters.
+
+## Choose the anchor date carefully
+
+The anchor is the date you have actually confirmed in a controlling source. It might be the completion date written in a maintenance record, the date printed in a notice or the date a responsible person observed a handoff. Check that the date uses the intended local calendar before entering it. If the source describes a time zone, business-day convention or “after receipt” rule, keep that rule in the source pointer and ask the responsible role to interpret it; this planner only adds calendar days.
+
+## Add or subtract whole calendar days
+
+Enter an integer from -3,650 to 3,650. A positive number moves forward, a negative number moves backward and zero keeps the same date. The result uses calendar-day arithmetic, so a calculation can cross a month, year or leap day without you manually counting. The result is formatted for the selected language and is easy to copy into a dated household task. It does not convert business days, estimate travel time or change the date because a weekend or holiday appears.
+
+## Treat the result as a prompt, not proof
+
+“Seven days after the service visit” can be a useful review prompt, but it does not prove that a manufacturer requires a seven-day check or that an appointment is available on that date. Write the output as “planned review date” and preserve the anchor date beside it. If the original source later changes, run a new calculation with a new review code rather than overwriting the older observation. This keeps the arithmetic reproducible and makes a handoff honest.
+
+## Pair it with the right FamilyBoard record
+
+Use a maintenance task when the planned date has an owner and a real follow-up action. Use the [Household Event Duration Calculator](/tools/household-event-duration-calculator/) when the question is how much time elapsed between two observations rather than when the next check should occur. For several constraints, alternative dates and an external reply, use the [Household Schedule Conflict Review Log](/tools/household-schedule-conflict-review-log/). The offset planner stays deliberately narrow so one date calculation does not pretend to be a workflow engine.
+
+## Privacy and affiliate boundaries
+
+The calculation runs in the current browser and does not read or upload household records. Keep the source notice, warranty terms, school message or provider booking in the system that controls it. If future date-planning products or paper calendars are recommended around the result, they must be clearly labelled as affiliate content, placed outside the answer and easy to skip. No product can change a deadline, grant permission or guarantee that a household action is accepted.
+
+## A useful closeout
+
+Save the neutral code, the exact anchor date, the signed offset, the planned date, a protected source pointer and one person responsible for confirmation. When that person checks the source, record the observed answer separately. This five-line handoff prevents a copied number from becoming an unverified promise while still giving the family a concrete date to discuss.
+
+## Page 385 — 家庭日期偏移規劃器
+**Slug:** /zh-tw/tools/household-date-offset-planner/
+**Alternate route:** /tools/household-date-offset-planner/
+**Primary intent:** 從已確認的家庭日期加減天數，產生可複查的規劃日，不把日期算術誤當正式期限
+**Title tag:** 家庭日期偏移規劃器｜免費加減天數與複查日期工具｜FamilyBoard
+**Meta description:** 從家庭已確認日期加上或減去天數，規劃保養、交接或回訪日期，同時保留正式來源與隱私界線。
+**Primary keyword concept:** 家庭日期偏移計算器
+**Cluster:** tools
+**Page type:** tool
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/household-event-duration-calculator/, /zh-tw/tools/household-schedule-conflict-review-log/, /zh-tw/guides/home-maintenance-reminders/, /tools/household-date-offset-planner/
+**FAQ:**
+- Q: 這個工具到底計算什麼？
+  A: 它在目前瀏覽器把一個日期加上或減去整數天，再顯示規劃日期；它不判定正式到期日。
+- Q: 工具會讀行事曆或建立提醒嗎？
+  A: 不會。工具只處理你輸入的資料並回傳文字，行事曆的控制權和提醒仍留在原本系統。
+- Q: 可以拿來判斷法律、醫療或保固期限嗎？
+  A: 只能當規劃提示。日期慣例、時區、工作日規則與書面條款，必須向控制期限的正式來源確認。
+- Q: 來源欄應該填什麼？
+  A: 使用 `MANUAL-C1` 這類中性指標和下一步；完整通知、地址、電話、帳號及私人訊息留在受保護來源。
+
+# 家庭日期偏移規劃器：從確認日期整理下一次複查
+
+家庭常從一個已經確認的日期開始工作：濾網剛換好、師傅剛離開、旅行預計結束，或業者請你十四天後再回覆。加減天數看似簡單，卻很容易散落在聊天訊息裡。FamilyBoard 的免費[家庭日期偏移規劃器](/zh-tw/tools/household-date-offset-planner/)只在目前瀏覽器完成這個小算術，再產生可以交給負責角色確認的日期。它是規劃輔助，不是行事曆、提醒服務，也不是正式期限裁判。
+
+## 先輸入窄範圍用途
+
+先使用 `DATE-REVIEW-2026-A` 這類中性代號，再寫「濾網複查」「保固前檢視」或「旅行回家整理」等短用途。這能讓另一位家人知道這次計算在處理什麼，又不會暴露家人姓名、住址或業者。不要貼完整 Email、預約、帳號、門禁碼或私人對話；短標籤已足夠說明日期用途。
+
+## 基準日期要回到正式來源
+
+基準日必須是來源真的確認過的日期，例如保養紀錄的完成日、通知上印出的日期，或負責角色觀察到交接完成的日期。輸入前先確認來源採用哪個地區日期。若來源還有時區、工作日或「收到後開始計算」等規則，把規則留在來源指標，請負責角色解讀；本工具只會加減日曆天數。
+
+## 使用正負整數加減日數
+
+可輸入 -3,650 到 3,650 的整數。正數往未來移動，負數往過去移動，零則保留同一天。跨月、跨年或閏日會由日曆算術處理，不必手動數日期。結果會依語言格式顯示，也能複製到有日期的家庭任務；工具不會轉換工作日、不會估算交通時間，也不會因週末或假日自行改日。
+
+## 把規劃日當成提示，不是證明
+
+「服務後七天」可以成為複查提示，卻不能證明製造商真的規定七天，也不能證明該天一定有預約。請把輸出標成「規劃複查日」，並把基準日一起保存。若正式來源後來改日期，就用新的代號重新計算，不要覆蓋舊觀察；這樣家人才能重做算術，也能知道每個日期依哪個版本而來。
+
+## 搭配正確的 FamilyBoard 紀錄
+
+規劃日有負責人和具體行動時，請建立家庭任務。若問題是兩次觀察相隔多久，改用[家庭事件經過時間計算器](/zh-tw/tools/household-event-duration-calculator/)。若同時有多項限制、替代日期和外部回覆，使用[家庭行程衝突複查工具](/zh-tw/tools/household-schedule-conflict-review-log/)。日期偏移規劃器刻意保持小範圍，避免一個數字被誤認為完整流程引擎。
+
+## 隱私與 affiliate 界線
+
+計算在目前瀏覽器完成，不會讀取或上傳家庭紀錄。通知、保固條款、學校訊息或業者預約，仍應留在真正控制它的系統。未來若在結果周邊推薦日期用品或紙本月曆，必須清楚揭露 affiliate 關係、放在答案之外並可略過；商品不能改變期限、授予權限或保證家庭行動被接受。
+
+## 用五項資料收尾
+
+保存中性代號、精確基準日、正負偏移、規劃日、受保護來源指標和一位負責確認的人。確認後另記實際回覆，不要把「算出日期」直接寫成「已核准」。這個小小交接能讓家庭有可討論的日期，又不會讓複製來的數字變成未查證的承諾。
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

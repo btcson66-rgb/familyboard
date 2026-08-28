@@ -2960,6 +2960,22 @@
     "headings": "How to Use FamilyBoard's Time-Window Overlap Checker Without Copying a Calendar Start with one bounded question Enter dates and endpoints exactly as observed Read the three possible results Separate arithmetic from the household decision Escalate to a fuller record when needed Privacy, accessibility and affiliate boundaries A repeatable closeout"
   },
   {
+    "title": "Household Date Offset Planner | Free FamilyBoard Date Calculator",
+    "description": "Add or subtract days from a household date to plan a review, handoff or follow-up while keeping the controlling source and privacy boundary visible.",
+    "route": "/tools/household-date-offset-planner/",
+    "cluster": "tools",
+    "keywords": "household date offset calculator",
+    "headings": "Household Date Offset Planner: turn a confirmed date into a review plan Enter a bounded purpose Choose the anchor date carefully Add or subtract whole calendar days Treat the result as a prompt, not proof Pair it with the right FamilyBoard record Privacy and affiliate boundaries A useful closeout"
+  },
+  {
+    "title": "家庭日期偏移規劃器｜免費加減天數與複查日期工具｜FamilyBoard",
+    "description": "從家庭已確認日期加上或減去天數，規劃保養、交接或回訪日期，同時保留正式來源與隱私界線。",
+    "route": "/zh-tw/tools/household-date-offset-planner/",
+    "cluster": "tools",
+    "keywords": "家庭日期偏移計算器",
+    "headings": "家庭日期偏移規劃器：從確認日期整理下一次複查 先輸入窄範圍用途 基準日期要回到正式來源 使用正負整數加減日數 把規劃日當成提示，不是證明 搭配正確的 FamilyBoard 紀錄 隱私與 affiliate 界線 用五項資料收尾"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

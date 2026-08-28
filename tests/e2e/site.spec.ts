@@ -40,6 +40,7 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-backup-recovery-checker/",
     "/tools/household-utility-bill-anomaly-log/",
     "/tools/household-time-window-overlap-checker/",
+    "/tools/household-date-offset-planner/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -106,6 +107,8 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-utility-bill-difference-tutorial/",
     "/guides/familyboard-time-window-overlap-checker-tutorial/",
     "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
+    "/tools/household-date-offset-planner/",
+    "/zh-tw/tools/household-date-offset-planner/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -682,6 +685,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-utility-bill-difference-tutorial/",
     "/zh-tw/guides/familyboard-utility-bill-difference-tutorial/",
     "/tools/household-time-window-overlap-checker/",
+    "/tools/household-date-offset-planner/",
     "/zh-tw/tools/household-time-window-overlap-checker/",
     "/guides/familyboard-time-window-overlap-checker-tutorial/",
     "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
@@ -1041,7 +1045,7 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     {
       route: "/zh-tw/features/household-handoff/",
       alternate: "/features/household-handoff/",
-      heading: "家庭交接清單教學：讓別人接得住，也不要一次看見所有資料",
+      heading: "家庭交接功能：從自己的紀錄產生摘要，不必另養一張過期清單",
     },
     {
       route: "/zh-tw/features/home-inventory-tracker/",
@@ -1660,7 +1664,7 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     {
       route: "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
       alternate: "/guides/familyboard-time-window-overlap-checker-tutorial/",
-      heading: "FamilyBoard 時間窗口重疊檢查教學",
+      heading: "FamilyBoard 時間窗口重疊檢查教學：不貼整份行事曆也能看懂結果",
     },
     {
       route: "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",
@@ -2001,6 +2005,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-time-window-overlap-checker/",
       alternate: "/tools/household-time-window-overlap-checker/",
       heading: "家庭時間窗口重疊檢查工具",
+    },
+    {
+      route: "/zh-tw/tools/household-date-offset-planner/",
+      alternate: "/tools/household-date-offset-planner/",
+      heading: "家庭日期偏移規劃器",
     },
   ]) {
     await page.goto(localizedTool.route);
