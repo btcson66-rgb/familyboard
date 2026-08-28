@@ -3,7 +3,6 @@ import { describe, expect, it } from "vitest";
 import { createRedirectStub } from "../src/lib/redirect-stub";
 
 const consolidations = [
-  ["/guides/chore-chart-for-adults/", "/guides/family-chore-system/"],
 ] as const;
 
 const master = fs.readFileSync("docs/launch-content-master.md", "utf8");
@@ -43,9 +42,7 @@ describe("consolidated-route redirect stub", () => {
   );
 
   it("does not leave redirect sources in suggested internal links", () => {
-    const sourceRoutes = new Set<string>(
-      consolidations.map(([source]) => source),
-    );
+    const sourceRoutes = new Set<string>();
     const linkedSources = [
       ...master.matchAll(/^\*\*Suggested internal links:\*\*\s*([^\n]+)$/gm),
     ].flatMap((match) =>

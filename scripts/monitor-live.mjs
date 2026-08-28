@@ -569,6 +569,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/recurring-household-tasks/</loc>",
       "<loc>https://familyboard.win/guides/subscription-renewal-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/subscription-renewal-tracker/</loc>",
+      "<loc>https://familyboard.win/guides/chore-chart-for-adults/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/chore-chart-for-adults/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/family-task-manager/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-dashboard/</loc>",
@@ -5659,6 +5661,23 @@ const checks = [
       "訂閱續約追蹤",
       "年度續約要提早四到六週浮現",
       "取消備註要能幫助下一位接手",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/guides/chore-chart-for-adults/",
+    require: [
+      "Chore Chart for Adults",
+      "Adult chore charts work best when they look like shared operations",
+      "Include admin work",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/chore-chart-for-adults/",
+    require: [
+      "成人家務分工表",
+      "不要把家庭變成打分數的教室",
+      "把行政與追蹤也算進家務",
       'hreflang="en"',
     ],
   },

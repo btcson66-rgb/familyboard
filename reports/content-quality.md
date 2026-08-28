@@ -1,11 +1,11 @@
 # Content quality report
 
-Generated: 2026-08-28T08:50:55.706Z
+Generated: 2026-08-28T09:01:52.909Z
 
 ## Summary
 
-- Indexable pages: 725
-- Generated HTML routes: 733
+- Indexable pages: 729
+- Generated HTML routes: 735
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
@@ -22,7 +22,7 @@ Generated: 2026-08-28T08:50:55.706Z
 - inventory-warranty: 60
 - appliances: 56
 - maintenance: 82
-- household-operations: 135
+- household-operations: 139
 - records-emergency: 97
 - tools: 128
 
@@ -60,7 +60,6 @@ Generated: 2026-08-28T08:50:55.706Z
 - /contact/
 - /disclaimer/
 - /editorial-policy/
-- /guides/chore-chart-for-adults/
 - /guides/digital-home-inventory-backup/
 - /guides/familyboard-browser-storage-maintenance/
 - /guides/familyboard-family-display-mode-setup/
@@ -70,7 +69,6 @@ Generated: 2026-08-28T08:50:55.706Z
 - /guides/seasonal-home-maintenance-checklist/
 - /guides/solar-panel-maintenance-records/
 - /guides/subscription-cancellation-refund-records/
-- /guides/subscription-renewal-tracker/
 - /guides/valuable-item-inventory/
 - /
 - /pricing/
@@ -143,6 +141,7 @@ Generated: 2026-08-28T08:50:55.706Z
 - /zh-tw/guides/carbon-monoxide-alarm-records/
 - /zh-tw/guides/caregiver-handoff-checklist/
 - /zh-tw/guides/ceiling-fan-maintenance-checklist/
+- /zh-tw/guides/chore-chart-for-adults/
 - /zh-tw/guides/cleaning-schedule/
 - /zh-tw/guides/coffee-maker-maintenance-guide/
 - /zh-tw/guides/computer-electronics-inventory/
@@ -332,6 +331,7 @@ Generated: 2026-08-28T08:50:55.706Z
 - /zh-tw/guides/storage-unit-inventory/
 - /zh-tw/guides/storm-preparation-home-checklist/
 - /zh-tw/guides/subscription-cancellation-refund-records/
+- /zh-tw/guides/subscription-renewal-tracker/
 - /zh-tw/guides/summer-home-maintenance-checklist/
 - /zh-tw/guides/travel-household-handoff/
 - /zh-tw/guides/ups-battery-backup-records/

@@ -1120,6 +1120,14 @@
     "headings": "A chore system needs four things to work: a task, an owner, a frequency and a definition of done Write tasks at the level of detail the household actually needs Match rotation to what actually benefits from it Pick the right recurrence for each task, not one default Admin work is a chore too, even without a visible result Keep age and ability in the task, not as a separate system Skip the point system unless your household actually wants one Use a shared display for visibility, not supervision Start small and prove the system before expanding it"
   },
   {
+    "title": "Chore Chart for Adults: Use Ownership and Rotation Without Making Home Feel Like Work",
+    "description": "Build an adult household chore chart using responsibilities, rotation, frequency and hidden admin work instead of childish reward systems.",
+    "route": "/guides/chore-chart-for-adults/",
+    "cluster": "household-operations",
+    "keywords": "chore chart for adults",
+    "headings": "Adult chore charts work best when they look like shared operations, not classroom behavior charts Map recurring work by frequency Include admin work Rotate only where rotation helps Review the system when life changes"
+  },
+  {
     "title": "Household Weekly Reset: A 20-Minute Review of Tasks, Calendar and Home Needs",
     "description": "Use a short weekly household reset to review upcoming events, chores, supplies, maintenance and unresolved home tasks.",
     "route": "/guides/household-weekly-reset/",

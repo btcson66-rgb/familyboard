@@ -1121,11 +1121,11 @@
   },
   {
     "route": "/guides/chore-chart-for-adults/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "alternateRoute": "/zh-tw/guides/chore-chart-for-adults/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/guides/family-chore-system/"
+    "redirectTo": ""
   },
   {
     "route": "/guides/household-weekly-reset/",
@@ -3331,6 +3331,13 @@
   {
     "route": "/zh-tw/guides/ceiling-fan-maintenance-checklist/",
     "alternateRoute": "/guides/ceiling-fan-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/chore-chart-for-adults/",
+    "alternateRoute": "/guides/chore-chart-for-adults/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
