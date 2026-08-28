@@ -4088,6 +4088,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-maintenance-event-cost-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-maintenance-event-cost-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-calendar-timezone-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-calendar-timezone-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-contact-sensitivity-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-contact-sensitivity-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4786,6 +4810,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-calendar-timezone-tutorial/",
+    "alternateRoute": "/guides/familyboard-calendar-timezone-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-calendar-tutorial/",
     "alternateRoute": "/guides/familyboard-calendar-tutorial/",
     "indexable": true,
@@ -4818,6 +4849,13 @@
     "alternateRoute": "/guides/familyboard-consumable-change-history-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-contact-sensitivity-tutorial/",
+    "alternateRoute": "/guides/familyboard-contact-sensitivity-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -5278,6 +5316,13 @@
   {
     "route": "/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/",
     "alternateRoute": "/guides/familyboard-maintenance-delegation-map-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-maintenance-event-cost-tutorial/",
+    "alternateRoute": "/guides/familyboard-maintenance-event-cost-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

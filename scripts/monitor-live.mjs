@@ -824,6 +824,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-task-completion-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-member-archive-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-member-archive-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-maintenance-event-cost-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-event-cost-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-calendar-timezone-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-calendar-timezone-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-contact-sensitivity-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-contact-sensitivity-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1609,6 +1615,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-member-archive-tutorial/",
     require: ["封存家庭成員教學", "保留歷史"],
+  },
+  {
+    path: "/guides/familyboard-maintenance-event-cost-tutorial/",
+    require: ["Maintenance Event Cost Tutorial", "observed cost"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-maintenance-event-cost-tutorial/",
+    require: ["保養事件費用教學", "觀察費用"],
+  },
+  {
+    path: "/guides/familyboard-calendar-timezone-tutorial/",
+    require: ["Calendar Timezone Tutorial", "browser-local"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-calendar-timezone-tutorial/",
+    require: ["行事曆時區教學", "本機時間"],
+  },
+  {
+    path: "/guides/familyboard-contact-sensitivity-tutorial/",
+    require: ["Contact Sensitivity Tutorial", "sensitive flag"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-contact-sensitivity-tutorial/",
+    require: ["聯絡人敏感度教學", "敏感標記"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",

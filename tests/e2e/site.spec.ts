@@ -308,6 +308,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-task-completion-tutorial/",
     "/guides/familyboard-member-archive-tutorial/",
     "/zh-tw/guides/familyboard-member-archive-tutorial/",
+    "/guides/familyboard-maintenance-event-cost-tutorial/",
+    "/zh-tw/guides/familyboard-maintenance-event-cost-tutorial/",
+    "/guides/familyboard-calendar-timezone-tutorial/",
+    "/zh-tw/guides/familyboard-calendar-timezone-tutorial/",
+    "/guides/familyboard-contact-sensitivity-tutorial/",
+    "/zh-tw/guides/familyboard-contact-sensitivity-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2060,6 +2066,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-member-archive-tutorial/",
       alternate: "/guides/familyboard-member-archive-tutorial/",
       heading: "FamilyBoard 封存家庭成員教學：變更責任但保留歷史",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-maintenance-event-cost-tutorial/",
+      alternate: "/guides/familyboard-maintenance-event-cost-tutorial/",
+      heading: "FamilyBoard 保養事件費用教學：分開記錄工作、金額與證據",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-calendar-timezone-tutorial/",
+      alternate: "/guides/familyboard-calendar-timezone-tutorial/",
+      heading: "FamilyBoard 行事曆時區教學：讓事件日期可追溯、不誤當預約承諾",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-contact-sensitivity-tutorial/",
+      alternate: "/guides/familyboard-contact-sensitivity-tutorial/",
+      heading: "FamilyBoard 聯絡人敏感度教學：分享角色，保護詳細資料",
     },
   ]) {
     await page.goto(localized.route);

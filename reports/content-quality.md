@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-28T22:05:47.629Z
+Generated: 2026-08-28T22:16:34.492Z
 
 ## Summary
 
-- Indexable pages: 959
-- Generated HTML routes: 965
+- Indexable pages: 965
+- Generated HTML routes: 971
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 550
+- Pages without a contextual product/tool link: 556
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 31
 - printables: 39
-- product: 166
+- product: 170
 - inventory-warranty: 82
 - appliances: 66
-- maintenance: 89
+- maintenance: 91
 - household-operations: 201
 - records-emergency: 133
 - tools: 152
@@ -72,9 +72,12 @@ Generated: 2026-08-28T22:05:47.629Z
 - /guides/familyboard-app-first-run-restore-tutorial/
 - /guides/familyboard-attachment-metadata-tutorial/
 - /guides/familyboard-browser-storage-maintenance/
+- /guides/familyboard-calendar-timezone-tutorial/
+- /guides/familyboard-contact-sensitivity-tutorial/
 - /guides/familyboard-encrypted-backup-password-tutorial/
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-household-handoff-tutorial/
+- /guides/familyboard-maintenance-event-cost-tutorial/
 - /guides/familyboard-master-csv-edit-import-tutorial/
 - /guides/familyboard-member-archive-tutorial/
 - /guides/familyboard-offline-backup-restore/
@@ -212,12 +215,14 @@ Generated: 2026-08-28T22:05:47.629Z
 - /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-maintenance/
 - /zh-tw/guides/familyboard-building-notice-response-tutorial/
+- /zh-tw/guides/familyboard-calendar-timezone-tutorial/
 - /zh-tw/guides/familyboard-calendar-tutorial/
 - /zh-tw/guides/familyboard-caregiver-handoff-source-authorization-tutorial/
 - /zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/
 - /zh-tw/guides/familyboard-clothing-care-repair-log-tutorial/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-consumable-change-history-tutorial/
+- /zh-tw/guides/familyboard-contact-sensitivity-tutorial/
 - /zh-tw/guides/familyboard-date-offset-planner-tutorial/
 - /zh-tw/guides/familyboard-device-retirement-tutorial/
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
@@ -283,6 +288,7 @@ Generated: 2026-08-28T22:05:47.629Z
 - /zh-tw/guides/familyboard-mail-package-handoff-log-tutorial/
 - /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
 - /zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/
+- /zh-tw/guides/familyboard-maintenance-event-cost-tutorial/
 - /zh-tw/guides/familyboard-maintenance-history-review/
 - /zh-tw/guides/familyboard-maintenance-priority-review-tutorial/
 - /zh-tw/guides/familyboard-maintenance-tracker-tutorial/

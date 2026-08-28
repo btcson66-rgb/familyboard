@@ -3952,6 +3952,30 @@
     "headings": "FamilyBoard Member Archive Tutorial: Change Responsibility Without Erasing History Start with a role-change review Reassign open work before archiving Preserve useful history Check external access separately Review handoff and display boundaries"
   },
   {
+    "title": "FamilyBoard Maintenance Event Cost Tutorial | Record Work and Evidence Separately",
+    "description": "Learn how to record a FamilyBoard maintenance event, link it to an asset, preserve the observed cost and keep provider claims separate from household observations.",
+    "route": "/guides/familyboard-maintenance-event-cost-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard maintenance event cost",
+    "headings": "FamilyBoard Maintenance Event Cost Tutorial: Record Work and Evidence Separately Link the event to the right asset and task Separate quote, scope, invoice and payment Write the observed result carefully Keep unresolved follow-up visible Review cost and history together"
+  },
+  {
+    "title": "FamilyBoard Calendar Timezone Tutorial | Keep Event Dates Traceable",
+    "description": "Learn how FamilyBoard calendar events use browser-local time, how to record a source timezone, and why a calendar entry is not an appointment confirmation.",
+    "route": "/guides/familyboard-calendar-timezone-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard calendar timezone",
+    "headings": "FamilyBoard Calendar Timezone Tutorial: Keep Event Dates Traceable Copy the source before choosing a local time Enter explicit start and end values Mark plans and observations separately Compare devices without assuming sync Handle travel and daylight changes carefully"
+  },
+  {
+    "title": "FamilyBoard Contact Sensitivity Tutorial | Share the Role, Protect the Details",
+    "description": "Learn how FamilyBoard contact records use the sensitive flag, what handoffs exclude, and how to keep a useful source pointer without copying private details.",
+    "route": "/guides/familyboard-contact-sensitivity-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard contact sensitivity",
+    "headings": "FamilyBoard Contact Sensitivity Tutorial: Share the Role, Protect the Details Decide what the next role actually needs Use the sensitive flag deliberately Keep notes factual and minimal Verify consent and current availability Build a bounded handoff"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

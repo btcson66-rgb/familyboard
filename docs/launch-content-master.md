@@ -36605,6 +36605,171 @@ Future affiliate panels for label makers, planners or password managers may appe
 
 ---
 
+## Page 511 — FamilyBoard Maintenance Event Cost Tutorial
+**Slug:** /guides/familyboard-maintenance-event-cost-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-maintenance-event-cost-tutorial/
+**Primary intent:** record a completed maintenance event, observed cost and follow-up without treating an invoice as proof of quality or safety
+**Title tag:** FamilyBoard Maintenance Event Cost Tutorial | Record Work and Evidence Separately
+**Meta description:** Learn how to record a FamilyBoard maintenance event, link it to an asset, preserve the observed cost and keep provider claims separate from household observations.
+**Primary keyword concept:** FamilyBoard maintenance event cost
+**Cluster:** maintenance
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /features/maintenance-tracker/, /guides/familyboard-maintenance-history-review/, /guides/familyboard-home-repair-cost-log-tutorial/, /tools/appliance-service-visit-log/
+**FAQ:**
+- Q: Does a maintenance event prove the work was completed safely?
+  A: No. It records the household’s observed result and source pointers; qualified providers and official documents control safety and compliance.
+- Q: Should I record an estimated or paid amount as the same cost?
+  A: No. Keep quotes, approved scope, invoice and payment observations as separate facts with dates and sources.
+- Q: Can I attach a full invoice to a shared task?
+  A: Keep the original in its protected source and use a neutral pointer in FamilyBoard; share only the minimum needed.
+- Q: Does saving an event create a cloud backup?
+  A: No. It stays in the current browser until you deliberately export a backup.
+
+# FamilyBoard Maintenance Event Cost Tutorial: Record Work and Evidence Separately
+
+The maintenance history is most useful after a household can answer four different questions: what equipment or area was involved, what the provider or family member said they would do, what was actually observed, and what amount or follow-up remains open. FamilyBoard’s maintenance event captures a dated result linked to a maintenance task, including an observed cost when one is available. It does not certify workmanship, decide whether a repair was necessary, prove a bill was paid or replace a qualified inspection. Keep the event factual and let the controlling source answer technical or financial questions.
+
+## Link the event to the right asset and task
+
+Start with one maintenance task and one asset or household area. Use a neutral code such as `HVAC-MAINT-2026-A` and verify the model or location from a protected source before writing the event. If the provider serviced several items, create separate links or explain the bounded scope rather than attaching every result to the first asset in the list. A wrong link can make a later warranty or replacement decision look more certain than the evidence allows.
+
+## Separate quote, scope, invoice and payment
+
+A quoted amount is not an approved scope, and an invoice is not proof that the household paid it. Record the source type, date and currency or unit exactly as observed. If the provider changed the parts, labour or timing, preserve the earlier quote and add a new event or note. “Invoice received,” “payment submitted” and “payment settled” are different statuses. Use the relevant bank, provider or receipt source for the final result; FamilyBoard should only point to it.
+
+## Write the observed result carefully
+
+After the visit, record what the household could safely see: the provider stated the filter was replaced, the display returned, a leak was still observed or a follow-up was requested. Do not open panels, bypass guards, climb, handle gas or electricity, or run an unusual test just to make the event complete. If the provider gave a safety or compliance conclusion, attribute it to that source and keep the original report protected. A quiet appliance or a signed screen is not automatically proof of safe operation.
+
+## Keep unresolved follow-up visible
+
+Leave the event open when a receipt, part number, callback, warranty question or inspection is pending. Create a task for the next owner and link the event rather than editing the original result. If a symptom returns, use the callback or repair timeline with a new date. Do not rewrite the first event as though the issue had never occurred; preserving the sequence helps a later provider understand what changed.
+
+## Review cost and history together
+
+At a monthly review, compare event costs with the protected invoice, approved scope and asset history. Look for missing units, duplicate visits, unexplained changes and dates that conflict with the provider record. A high or low amount is an observation, not evidence of overcharging or a legal claim. Escalate a dispute through the seller, provider, insurer or qualified adviser and keep the question in a separate handoff.
+
+FamilyBoard stores the event in the current browser and does not silently archive it on a server. Export a backup when the maintenance history matters, and protect the file outside the browser. Future affiliate panels for labels, folders or maintenance tools may appear outside the record with clear disclosure and an easy skip. They cannot certify workmanship, lower a bill or replace the source document.
+
+**Contextual CTA:** Link one maintenance event to the correct asset, record the observed result and cost source separately, and leave every unresolved follow-up open.
+
+---
+
+## Page 512 — FamilyBoard Calendar Timezone Tutorial
+**Slug:** /guides/familyboard-calendar-timezone-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-calendar-timezone-tutorial/
+**Primary intent:** record FamilyBoard calendar events with clear local-time and source context when households cross devices, regions or dates
+**Title tag:** FamilyBoard Calendar Timezone Tutorial | Keep Event Dates Traceable
+**Meta description:** Learn how FamilyBoard calendar events use browser-local time, how to record a source timezone, and why a calendar entry is not an appointment confirmation.
+**Primary keyword concept:** FamilyBoard calendar timezone
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-calendar-tutorial/, /guides/familyboard-time-window-overlap-checker-tutorial/, /guides/familyboard-date-offset-planner-tutorial/, /app/
+**FAQ:**
+- Q: Does FamilyBoard convert an event to the provider’s timezone?
+  A: No. The app uses the browser’s local date and time fields; preserve the source timezone and confirm the controlling schedule separately.
+- Q: Does creating an event reserve an appointment?
+  A: No. It records a household plan or observation; the provider’s acknowledgement is a separate result.
+- Q: What should I do when an event crosses midnight?
+  A: Enter an explicit start and end date, keep the source wording and review which local day the household should act.
+- Q: Will a phone and wall tablet stay synchronized?
+  A: No. Each browser stores its own local data unless the household deliberately transfers a reviewed backup.
+
+# FamilyBoard Calendar Timezone Tutorial: Keep Event Dates Traceable
+
+FamilyBoard calendar events are simple household records with a title, start and optional end time. They help a family remember a service window, school activity, travel handoff or review appointment, but they are not a connected calendar service. The values are interpreted through the browser in use, and the app does not invite attendees, convert a provider’s timezone or confirm that an appointment exists. When a household uses devices in different places, record the source context so a date on screen is not mistaken for a universal commitment.
+
+## Copy the source before choosing a local time
+
+Read the provider notice, official page or message that controls the schedule. Note its date, displayed timezone and whether the time is fixed, approximate or a range. Use a neutral title such as “SERVICE-1 review window” and keep full addresses, phone numbers and invitation text in the protected source. If the source says “9:00 AM Pacific,” retain that wording in a safe note or pointer; do not silently rewrite it as Taipei time or assume the browser made the conversion for you.
+
+## Enter explicit start and end values
+
+Use the event form’s date and time inputs and set an end only when the source or household plan supports one. An end earlier than the start is an invalid input, not evidence that the event lasted a negative duration. For an overnight activity, use the next calendar date explicitly and record why it crosses midnight. If the source gives “morning” or “between two and four,” preserve the range in the title or notes rather than inventing a precise minute.
+
+## Mark plans and observations separately
+
+Creating an event means the household recorded a plan or source observation. It does not mean a provider accepted the appointment, a person attended, a payment was made or a safety check passed. After the window, add a factual review note or follow-up task: “provider confirmed,” “rescheduled by source,” “arrival not observed” or “question sent.” Keep the original event date and create a new dated version when the source changes.
+
+## Compare devices without assuming sync
+
+The phone, laptop and wall tablet each keep their own FamilyBoard browser data. If someone adds an event on the phone, do not expect the tablet to refresh from a server. Update the device that owns the household record, or transfer a deliberately reviewed backup and document whether the restore merged or replaced data. A matching title on two screens is not proof that their records are the same version.
+
+## Handle travel and daylight changes carefully
+
+For travel, remote meetings or daylight-saving changes, retain the source timezone, the browser-local display and the date the household chose for action. If a date is ambiguous, leave a question open for the organiser or provider. The date-offset and time-window tools can perform transparent arithmetic, but they do not decide which timezone, business-day convention or “received” moment controls a contract. Never turn a calculated local time into a provider guarantee.
+
+At review, check the event title, source pointer, local date, displayed timezone assumption, owner and next action. Remove stale notices, but keep a changed version when the original plan explains why a handoff failed. Future affiliate panels for clocks, planners or display stands may appear outside the event form with clear disclosure and an easy skip. They cannot convert timezones, reserve appointments or create sync.
+
+**Contextual CTA:** Copy the source timezone, enter explicit local dates, label the event as a plan or observation, and create a separate follow-up for confirmation.
+
+---
+
+## Page 513 — FamilyBoard Contact Sensitivity Tutorial
+**Slug:** /guides/familyboard-contact-sensitivity-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-contact-sensitivity-tutorial/
+**Primary intent:** store a useful FamilyBoard contact record while controlling sensitive fields in handoffs and household views
+**Title tag:** FamilyBoard Contact Sensitivity Tutorial | Share the Role, Protect the Details
+**Meta description:** Learn how FamilyBoard contact records use the sensitive flag, what handoffs exclude, and how to keep a useful source pointer without copying private details.
+**Primary keyword concept:** FamilyBoard contact sensitivity
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-emergency-contact-verification-tutorial/, /features/household-handoff/, /guides/familyboard-shared-display-privacy-tutorial/, /privacy/
+**FAQ:**
+- Q: What does marking a contact sensitive do?
+  A: It helps exclude the contact from shareable handoff summaries; anyone who can open the local browser may still read it.
+- Q: Does sensitive hide a contact from the FamilyBoard app owner?
+  A: No. It is a sharing boundary, not encryption or an access-control system.
+- Q: Can I put a full address or door code in contact notes?
+  A: No. Keep secrets and unnecessary identity details in the appropriate protected source and use a neutral pointer.
+- Q: Does a contact record prove the person is available now?
+  A: No. Verify role, consent, number and availability through the current source before relying on it.
+
+# FamilyBoard Contact Sensitivity Tutorial: Share the Role, Protect the Details
+
+FamilyBoard contact records can hold a name, category, phone, email, notes and a sensitive flag. This structure helps a household find the right role—such as a trusted neighbour, service provider or emergency contact—without turning the app into a phone directory or secret vault. The sensitive flag affects what a handoff summary includes; it does not encrypt the record, lock the browser or verify that a person still agrees to be contacted. Store the minimum useful detail and return to the current source before acting.
+
+## Decide what the next role actually needs
+
+Before creating a contact, name the task that requires it. A house sitter may need a service-provider role and a safe channel hint; they may not need a person’s medical detail, full address or private correspondence. Use a neutral code such as `CONTACT-LOCAL-1` and write where the authoritative record lives. A role, source pointer and review date are often enough for a handoff, while a full number or email should remain in the protected contact system.
+
+## Use the sensitive flag deliberately
+
+Mark a contact sensitive when its name, channel or notes should not appear in a shareable handoff. The app’s handoff filter can exclude sensitive contacts from the summary, but a person who can open the browser profile may still see the full record. Do not treat the flag as a permission grant or a substitute for an operating-system lock. Review the display too: FamilyBoard’s shared view does not show contact records, but task and event titles can still reveal a relationship.
+
+## Keep notes factual and minimal
+
+A safe note might say “use the current building notice; owner confirms the channel” or “provider role verified on review date.” Do not paste passwords, door codes, complete addresses, diagnoses, medication directions, identity numbers or private conversations. If a caller needs a detail, point to the protected source using a code and assign a task to the authorised role. The app should help someone find the next responsible channel, not duplicate every detail in several records.
+
+## Verify consent and current availability
+
+Contact information changes. Record when the role, consent scope and preferred channel were checked, and leave availability pending if the source is old. “Number saved” is not “person available,” and “message sent” is not “response received.” Create separate tasks for confirmation, escalation or consent renewal. If a provider or neighbour asks for removal, preserve the request and follow the source system’s deletion or access process; changing one local row may not retract copies elsewhere.
+
+## Build a bounded handoff
+
+Select a handoff profile for a defined purpose and review its preview before sharing. Include only the contact role and safe pointer needed for the selected window. If a sensitive contact is excluded, ensure the receiver has another authorised way to reach help; hiding a row without planning a channel can create a safety gap. After the handoff ends, recover printouts and downloads and review whether the contact should remain active, be updated or be archived.
+
+FamilyBoard is local-first and does not silently update contacts across devices. Export a protected backup when the record matters, and inspect any copy before sharing. Future affiliate panels for address books, privacy screens or password managers may appear outside the contact form with clear disclosure and an easy skip. They cannot verify consent, revoke an external copy or make an outdated number current.
+
+**Contextual CTA:** Give one contact a neutral role code, mark its sharing sensitivity, verify the current source and preview the smallest handoff that can actually work.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.
