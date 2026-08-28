@@ -118,12 +118,24 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/",
     "/guides/familyboard-cleaning-schedule-generator-tutorial/",
     "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/",
+    "/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+    "/zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+    "/guides/familyboard-pet-record-source-handoff-tutorial/",
+    "/zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/",
+    "/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
+    "/zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
     "/guides/familyboard-utility-bill-anomaly-log-tutorial/",
     "/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/",
     "/guides/familyboard-maintenance-delegation-map-tutorial/",
     "/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/",
     "/guides/familyboard-record-retention-decision-log-tutorial/",
     "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/",
+    "/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+    "/zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+    "/guides/familyboard-pet-record-source-handoff-tutorial/",
+    "/zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/",
+    "/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
+    "/zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
     "/guides/familyboard-utility-bill-anomaly-log-tutorial/",
     "/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/",
     "/guides/familyboard-maintenance-delegation-map-tutorial/",
@@ -927,6 +939,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "文件保存決策教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "修繕結案清單教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "寵物紀錄交接教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "居家動線複查教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭財物清冊教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/room-by-room-home-inventory/");
@@ -2061,6 +2082,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/",
       alternate: "/guides/familyboard-record-retention-decision-log-tutorial/",
       heading: "家庭文件保存決策紀錄教學：不要用一個年限取代來源查核",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+      alternate: "/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+      heading: "家庭修繕結案清單教學：把缺少的文件留在看得見的位置",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/",
+      alternate: "/guides/familyboard-pet-record-source-handoff-tutorial/",
+      heading: "寵物紀錄來源交接教學：不複製敏感資料也能找到正確版本",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
+      alternate: "/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
+      heading: "居家無障礙動線複查教學：先記觀察，再和實際使用者重測",
     },
     {
       route: "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/",

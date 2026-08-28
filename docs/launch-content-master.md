@@ -31022,6 +31022,184 @@ Use the checkpoint to learn, not to force a disposal. A household may decide to 
 - Q: What is the difference between archive and disposal?
   A: Archive changes controlled storage or active use; disposal records an observed removal or destruction method.
 
+## Page 425 — Home Repair Close-Out Tutorial: Keep Missing Evidence Visible
+
+**Slug:** `/guides/familyboard-home-repair-closeout-checklist-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/`
+**Primary intent:** reconcile a repair close-out package without certifying completion or payment
+**Title tag:** Home Repair Close-Out Checklist Tutorial | FamilyBoard
+**Meta description:** Learn how to reconcile repair scope, changes, invoices, permits, warranties and unresolved gaps without treating a private checklist as acceptance or legal proof.
+**Primary keyword concept:** home repair closeout checklist tutorial
+**Cluster:** tools
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Build one close-out manifest and leave every missing source open with a dated request.
+**Suggested internal links:** `/tools/home-repair-closeout-checklist/`, `/tools/home-repair-punch-list/`, `/tools/home-repair-change-order-log/`, `/guides/renovation-records/`
+
+# Home Repair Close-Out Tutorial: Keep Missing Evidence Visible
+
+A room can look finished while the evidence for its work is still scattered between a contractor message, paper envelope, vendor portal and one person's memory. The free [Home Repair Close-Out Checklist](/tools/home-repair-closeout-checklist/) turns that last review into a private manifest. It helps a household list the agreed scope, approved changes, punch-list history, invoices, payment evidence, permits, inspection records, installed products, manuals, warranty terms and unresolved gaps. It does not certify the work or create acceptance.
+
+## Freeze the controlling project version
+
+Start with a safe project code such as `REPAIR-CLOSE-2026-A`, not a full address or customer number. Point to the controlling agreement and approved changes, for example `CONTRACT-C1 + CHG-1 + SCOPE-R1`. Add the close-out review date and the next household review date. Those are internal checkpoints, not final-payment, permit, inspection, complaint, lien, tax or warranty deadlines. Obtain external dates from the contract, authority or qualified professional.
+
+## Give every expected source its own row
+
+Use one row for each exact record: “final invoice showing approved CHG-1 and credit memo CM-2” is useful; “final documents” is not. Record the package category, responsible issuer, evidence date or `MISSING`, protected file or request pointer, next evidence action, owner role, target date and status. A requested row stays open until the source is actually received and reviewed. A missing permit question is not safe to close merely because the project looks complete.
+
+## Separate received, filed and unresolved
+
+Received means the household saw a dated source but may still need to index it. Filed means a protected location and source date are linked; it does not say the document is correct or legally sufficient. Not applicable needs a dated decision and responsible-source pointer. Unresolved gap preserves a missing item at archive and names the last request, known limitation and next responsible source. These states prevent a blank row from quietly becoming a false completion signal.
+
+## Compare invoices with payment evidence
+
+An invoice reports charges. A receipt, bank record or other controlled financial evidence may support payment. Credits, refunds, reimbursements and disputed amounts need their own attributable source. Do not use the close-out tool to authorise withholding, release a lien, decide tax treatment or calculate a contractual deadline. If a contractor or authority controls the result, record the question and contact path instead of guessing.
+
+## Use a safe handoff and version review
+
+Ask a second household role to locate the source pointers and explain which gaps remain. Keep full addresses, access codes, signatures, private messages and payment details in protected storage. If the scope changes after close-out, create a new manifest version instead of overwriting the old one. The checklist remains useful without buying a folder or product; any future recommendation must be outside the workbench, optional and clearly disclosed.
+
+## A five-minute close-out rehearsal
+
+Pick one category, such as the final product schedule. Ask where the controlling scope is, which version was installed, who issued the manual, where the protected copy lives and what remains missing. Then ask a backup role to repeat the path. If the answer is only “the contractor has it,” record a dated request and keep the row open. This rehearsal catches the difference between a document that exists somewhere and evidence the household can retrieve when a warranty, repair or sale later depends on it.
+
+**FAQ:**
+- Q: Does a completed manifest prove the repair was legally accepted?
+  A: No. It is a private evidence list and cannot inspect work, certify acceptance or replace the contract or authority.
+- Q: What should I do when a final document is missing?
+  A: Keep it open with `MISSING`, a dated request pointer and a next responsible source.
+- Q: Is an invoice proof of payment?
+  A: No. Payment evidence is a separate source and may need its own row.
+- Q: Can I mark a permit not applicable myself?
+  A: Only record that conclusion when the responsible authority or qualified source supports it; otherwise keep it open.
+
+## Page 426 — Pet Record Handoff Tutorial: Point to Care Sources Without Copying Sensitive Details
+
+**Slug:** `/guides/familyboard-pet-record-source-handoff-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/`
+**Primary intent:** organize pet registry, veterinary, boarding and travel source handoffs without storing medical or identity details
+**Title tag:** Pet Record Source Handoff Tutorial | FamilyBoard
+**Meta description:** Learn how to index pet care sources, verify access and hand off current evidence without copying microchip numbers, diagnoses or medication doses.
+**Primary keyword concept:** pet records organizer tutorial
+**Cluster:** tools
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Map one pet record purpose to its responsible source, protected pointer and next checkpoint.
+**Suggested internal links:** `/tools/household-pet-record-source-handoff-log/`, `/guides/organize-pet-records/`, `/tools/pet-sitter-instruction-generator/`, `/features/emergency-information-organizer/`
+
+# Pet Record Handoff Tutorial: Point to Care Sources Without Copying Sensitive Details
+
+A microchip card, vaccination certificate, veterinary instruction, labelled medicine, boarding form and travel certificate can all describe one animal while serving different decisions. The free [Household Pet Record Source and Handoff Log](/tools/household-pet-record-source-handoff-log/) creates a dated index: a safe pet alias, record purpose, responsible source, protected match pointer, version observation, custody, handoff action, observed result and next checkpoint. It is an index, not a second medical record.
+
+## Start with a safe alias and a real purpose
+
+Use `HOUSEHOLD-PET-A` and `PET-RECORDS-2026-A` rather than an owner's name, address, full microchip number or contact profile. Choose one purpose such as checking registry access, handing a current certificate to a sitter, preparing boarding documents or mapping a travel source. The checkpoint is a household reminder to review access; it is not a vaccine due date, medication time, travel deadline or health-certificate validity period.
+
+## Point to the responsible source
+
+Record whether the controlling source is a veterinarian, registry, shelter, local animal or public-health authority, boarding provider, destination authority or protected household folder. Use a pointer such as `VET-SCAN-02`, `REGISTRY-R1` or `BOARDING-FORM-3`. Keep full pet and owner names, contact details, addresses, chip numbers, certificates, diagnoses, test values, prescriptions, doses, payments and signatures in the source that controls them.
+
+## Distinguish access from authentication
+
+“The sitter can find the protected instruction” is an access observation. It is not proof that a vaccination is current, a registry is active, a pet is healthy or a provider will accept the form. Record the source version and date that an authorised person actually opened. If two sources disagree, keep the discrepancy open and name the veterinarian, registry or authority route; do not resolve it by copying more sensitive content into the index.
+
+## Make handoff instructions safe
+
+The tool can record that a sitter received a protected pointer, knows who to call and has a documented escalation route. It must not create a medication dose, diagnosis, feeding prescription or emergency treatment plan. Keep the veterinarian-issued instruction and labelled container as the source. For an unexpected reaction, suspected poisoning, injury or urgent change, contact the treating veterinarian, emergency animal hospital or responsible authority rather than relying on an organizer status.
+
+## Review travel and boarding separately
+
+Boarding acceptance, airline rules, destination requirements, vaccines and health certificates come from different sources and can change. Create separate rows for each purpose and record the source checked date. Booking, uploading or paying is an action; close the row only after the provider or authority result is observed. Ask a backup caregiver to repeat the source pointers without needing the owner's private phone or account details.
+
+## Test an ordinary handoff before the trip
+
+Give the backup caregiver only the safe alias, protected source pointers and escalation route. Ask them to locate the current instruction, identify which source controls a boarding question and explain what they would do if the provider rejects an outdated form. Do not solve the rehearsal by forwarding a full medical record or pasting a chip number into a shared chat. A small, dated source map is easier to update when a clinic, airline or destination changes its requirements.
+
+**FAQ:**
+- Q: Can I enter a complete microchip number or owner profile?
+  A: No. Use a safe alias and protected match pointer; keep identifiers in the responsible source.
+- Q: Does the log verify a vaccination or diagnosis?
+  A: No. It records which authorised source and version were observed.
+- Q: Can it write medication instructions for a sitter?
+  A: No. Use the veterinarian-issued instruction and contact the veterinarian with questions.
+- Q: Does a closed row prove travel eligibility?
+  A: No. The actual destination, authority, veterinarian and provider results control eligibility.
+
+## Page 427 — Home Accessibility Walkthrough Tutorial: Observe, Retest and Keep Uncertainty Open
+
+**Slug:** `/guides/familyboard-home-accessibility-walkthrough-log-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/`
+**Primary intent:** record household path observations, barriers, alternate routes and retests without making medical or building-safety claims
+**Title tag:** Home Accessibility Walkthrough Tutorial | FamilyBoard
+**Meta description:** Learn how to document household path observations, barriers, alternate routes and retests with safe codes without claiming a home is accessible or medically suitable.
+**Primary keyword concept:** home accessibility walkthrough tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Walk one real path, record one observation and schedule a retest with the people who use it.
+**Suggested internal links:** `/tools/household-accessibility-walkthrough-log/`, `/guides/accessibility-at-home/`, `/tools/household-responsibility-coverage-map/`, `/features/private-family-organizer/`
+
+# Home Accessibility Walkthrough Tutorial: Observe, Retest and Keep Uncertainty Open
+
+A path that looks clear in a photograph may be difficult at night, after furniture moves or when the person who uses it is tired. The free [Home Accessibility Walkthrough Log](/tools/household-accessibility-walkthrough-log/) records a route, observed barriers, uncertainty, an alternate route, a responsible next step and a retest date. It does not certify a home, assess a diagnosis or replace a building inspection, occupational-therapy assessment or emergency plan.
+
+## Choose one real path and a safe code
+
+Start with entry to bathroom, bedroom to living room, bed to exit or another route that someone actually uses. Use `PATH-CHECK-2026-A`, not a person's name, diagnosis, address, access code or private care detail. A narrow route makes a repeatable observation possible. Note the time, lighting and furniture state when those conditions affect what was seen.
+
+## Describe observations, not conclusions
+
+Write “loose box beside the doorway,” “lighting not checked after sunset,” “turning area partly blocked” or “alternate route not yet walked.” Avoid declaring a route compliant, safe for everyone, medically suitable or accessible for a specific person unless the responsible qualified source says so. The log captures what the household observed and what remains unknown; it is not a score.
+
+## Assign a reversible next step
+
+For a movable object, ask the household to move it through the agreed process and retest. For a fixed feature, ask building management or a qualified professional about the relevant requirement. Do not improvise lifting, transfer, evacuation, construction, electrical or fall-prevention instructions. A due date is a review point. A completed observation does not prove that every user can use the route safely.
+
+## Retest with the actual users
+
+An alternate path can work for one person and fail for another. Invite the people who will use it, respect their consent and stop if the test is uncomfortable or unsafe. Record whether the same barrier appeared, whether conditions changed and who should answer the unresolved question. Keep health information in its protected care source rather than putting a diagnosis into a public-safe log.
+
+## Handoff, version and privacy
+
+Ask a backup household role to locate the route code, observation, next action and retest date without a private conversation. If furniture, lighting or household needs change, create a new version instead of erasing the earlier observation. FamilyBoard stores the note in the current browser; export a backup after meaningful changes. Future lighting, labels or storage recommendations must stay outside the form, remain optional and disclose any affiliate relationship.
+
+## Compare conditions, not people
+
+The same path may change because a chair moved, a light failed, a wet floor appeared or a person was carrying something. Write the condition that can be observed and changed, rather than ranking one person's ability. If a question is about a building requirement or a person's care plan, point to the responsible authority or professional source. The walkthrough can make a question visible and assign a retest; it cannot answer that specialist question for you.
+
+## A repeatable walkthrough note
+
+Write the route code, the date and the conditions first. Then record one barrier, one uncertainty and one reversible next step. For example, “PATH-CHECK-2026-A; entrance to bathroom; evening light off; storage box narrows turn; ask household to move it; retest Friday.” This is more useful than a general label such as “not accessible” because another person can observe the same place and say whether the condition changed. If the route remains difficult, keep the question open and seek the appropriate care, building or professional source instead of increasing the certainty of the wording.
+
+**FAQ:**
+- Q: Does this log certify that a home is accessible or safe?
+  A: No. It records observations and follow-up; responsible people, authorities or qualified professionals decide requirements.
+- Q: Should I enter a diagnosis or mobility detail?
+  A: No. Use a safe code and keep health and care information in its protected source.
+- Q: Can an alternate route work for everyone?
+  A: Not necessarily. Retest with the actual users and keep unresolved observations open.
+- Q: Can the tool provide transfer or evacuation instructions?
+  A: No. Do not use it to improvise lifting, transfer, construction or emergency procedures.
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

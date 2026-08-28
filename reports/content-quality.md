@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T13:39:02.554Z
+Generated: 2026-08-28T13:52:52.089Z
 
 ## Summary
 
-- Indexable pages: 787
-- Generated HTML routes: 793
+- Indexable pages: 793
+- Generated HTML routes: 799
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 452
+- Pages without a contextual product/tool link: 455
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,9 +22,9 @@ Generated: 2026-08-28T13:39:02.554Z
 - inventory-warranty: 60
 - appliances: 56
 - maintenance: 82
-- household-operations: 139
+- household-operations: 141
 - records-emergency: 97
-- tools: 148
+- tools: 152
 
 ## Word-count range
 
@@ -205,8 +205,10 @@ Generated: 2026-08-28T13:39:02.554Z
 - /zh-tw/guides/familyboard-free-home-management-app-tutorial/
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
+- /zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/
 - /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
 - /zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/
+- /zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/
 - /zh-tw/guides/familyboard-household-account-list-tutorial/
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-decision-register-tutorial/
@@ -229,6 +231,7 @@ Generated: 2026-08-28T13:39:02.554Z
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-old-tablet-display-tutorial/
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
+- /zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-power-outage-event-log-tutorial/

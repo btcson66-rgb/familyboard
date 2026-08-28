@@ -3264,6 +3264,30 @@
     "headings": "Record Retention Decision Tutorial: Replace Magic Numbers with Source-Led Reviews Start with a scope and a safe pointer Record the trigger and screen for holds Distinguish candidate, archive and completed action Revisit the source instead of trusting a preset A review conversation before disposal"
   },
   {
+    "title": "Home Repair Close-Out Checklist Tutorial | FamilyBoard",
+    "description": "Learn how to reconcile repair scope, changes, invoices, permits, warranties and unresolved gaps without treating a private checklist as acceptance or legal proof.",
+    "route": "/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+    "cluster": "tools",
+    "keywords": "home repair closeout checklist tutorial",
+    "headings": "Home Repair Close-Out Tutorial: Keep Missing Evidence Visible Freeze the controlling project version Give every expected source its own row Separate received, filed and unresolved Compare invoices with payment evidence Use a safe handoff and version review A five-minute close-out rehearsal"
+  },
+  {
+    "title": "Pet Record Source Handoff Tutorial | FamilyBoard",
+    "description": "Learn how to index pet care sources, verify access and hand off current evidence without copying microchip numbers, diagnoses or medication doses.",
+    "route": "/guides/familyboard-pet-record-source-handoff-tutorial/",
+    "cluster": "tools",
+    "keywords": "pet records organizer tutorial",
+    "headings": "Pet Record Handoff Tutorial: Point to Care Sources Without Copying Sensitive Details Start with a safe alias and a real purpose Point to the responsible source Distinguish access from authentication Make handoff instructions safe Review travel and boarding separately Test an ordinary handoff before the trip"
+  },
+  {
+    "title": "Home Accessibility Walkthrough Tutorial | FamilyBoard",
+    "description": "Learn how to document household path observations, barriers, alternate routes and retests with safe codes without claiming a home is accessible or medically suitable.",
+    "route": "/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "home accessibility walkthrough tutorial",
+    "headings": "Home Accessibility Walkthrough Tutorial: Observe, Retest and Keep Uncertainty Open Choose one real path and a safe code Describe observations, not conclusions Assign a reversible next step Retest with the actual users Handoff, version and privacy Compare conditions, not people A repeatable walkthrough note"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

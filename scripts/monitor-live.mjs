@@ -652,6 +652,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-record-retention-decision-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-repair-closeout-checklist-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-pet-record-source-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-accessibility-walkthrough-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -5981,6 +5987,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/",
     require: ["家庭文件保存決策紀錄教學", "觸發事件", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+    require: ["Home Repair Close-Out Tutorial", "unresolved gaps"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+    require: ["家庭修繕結案清單教學", "未解缺口", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-pet-record-source-handoff-tutorial/",
+    require: ["Pet Record Handoff Tutorial", "protected match"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/",
+    require: ["寵物紀錄來源交接教學", "安全別名", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
+    require: ["Home Accessibility Walkthrough Tutorial", "Retest"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
+    require: ["居家無障礙動線複查教學", "實際使用者", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",
