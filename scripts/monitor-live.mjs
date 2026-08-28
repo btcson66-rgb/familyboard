@@ -113,6 +113,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/travel-household-handoff/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/house-sitter-information/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/pet-sitter-information/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/household-replacement-reserve/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/emergency-binder/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/family-continuity-plan/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1489,6 +1492,33 @@ const checks = [
       'hreflang="en"',
       "餵食寫量和時間",
       "藥物與治療只能照原始來源",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/household-replacement-reserve/",
+    require: [
+      "家庭設備汰換準備金",
+      'hreflang="en"',
+      "準備金是清單，不是假裝預測故障",
+      "不提供財務建議",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/emergency-binder/",
+    require: [
+      "家庭緊急資料夾",
+      'hreflang="en"',
+      "按角色整理聯絡人",
+      "敏感文件只記存放位置",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/family-continuity-plan/",
+    require: [
+      "家庭持續運作計畫",
+      'hreflang="en"',
+      "先找出只有一個人知道的事情",
+      "備援者需要脈絡，不是永久接班",
     ],
   },
   {

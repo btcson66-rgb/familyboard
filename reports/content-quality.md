@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T07:01:35.021Z
+Generated: 2026-08-28T07:09:59.063Z
 
 ## Summary
 
-- Indexable pages: 683
-- Generated HTML routes: 702
+- Indexable pages: 686
+- Generated HTML routes: 705
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 385
+- Duplicate primary-keyword groups: 8
+- Pages without a contextual product/tool link: 388
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,8 +21,8 @@ Generated: 2026-08-28T07:01:35.021Z
 - product: 120
 - appliances: 56
 - maintenance: 81
-- household-operations: 112
-- inventory-warranty: 55
+- household-operations: 114
+- inventory-warranty: 56
 - records-emergency: 92
 - tools: 126
 
@@ -46,6 +46,7 @@ Generated: 2026-08-28T07:01:35.021Z
 - caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
 - household account list: /guides/household-account-list/, /tools/household-account-list/
 - 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
+- 家庭緊急資料夾: /zh-tw/guides/emergency-binder/, /zh-tw/tools/emergency-binder-generator/
 - 家庭決策紀錄工具: /zh-tw/guides/familyboard-household-decision-register-tutorial/, /zh-tw/tools/household-decision-register/
 - 家庭文件查找演練: /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/, /zh-tw/tools/household-record-retrieval-drill-log/
 - 居家服務變更: /zh-tw/guides/home-care-service-plan-changes/, /zh-tw/tools/home-care-service-plan-change-notice-log/
@@ -157,9 +158,11 @@ Generated: 2026-08-28T07:01:35.021Z
 - /zh-tw/guides/dishwasher-maintenance-checklist/
 - /zh-tw/guides/dryer-maintenance-checklist/
 - /zh-tw/guides/electronics-inventory/
+- /zh-tw/guides/emergency-binder/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
 - /zh-tw/guides/fall-home-maintenance-checklist/
+- /zh-tw/guides/family-continuity-plan/
 - /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
 - /zh-tw/guides/familyboard-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-bill-review-tutorial/
@@ -267,6 +270,7 @@ Generated: 2026-08-28T07:01:35.021Z
 - /zh-tw/guides/household-management-checklist/
 - /zh-tw/guides/household-medical-information-organization/
 - /zh-tw/guides/household-monthly-review/
+- /zh-tw/guides/household-replacement-reserve/
 - /zh-tw/guides/household-supplies-inventory/
 - /zh-tw/guides/how-long-to-keep-household-records/
 - /zh-tw/guides/how-to-track-product-warranties/

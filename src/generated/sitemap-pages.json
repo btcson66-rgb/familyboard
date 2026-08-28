@@ -825,7 +825,7 @@
   },
   {
     "route": "/guides/household-replacement-reserve/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/household-replacement-reserve/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -969,7 +969,7 @@
   },
   {
     "route": "/guides/emergency-binder/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/emergency-binder/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1065,7 +1065,7 @@
   },
   {
     "route": "/guides/family-continuity-plan/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/family-continuity-plan/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3433,6 +3433,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/emergency-binder/",
+    "alternateRoute": "/guides/emergency-binder/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/emergency-contact-sheet-generator/",
     "alternateRoute": "/tools/emergency-contact-sheet-generator/",
     "indexable": true,
@@ -3477,6 +3484,13 @@
   {
     "route": "/zh-tw/guides/fall-home-maintenance-checklist/",
     "alternateRoute": "/guides/fall-home-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/family-continuity-plan/",
+    "alternateRoute": "/guides/family-continuity-plan/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -4683,6 +4697,13 @@
     "alternateRoute": "/tools/household-replacement-part-source-check-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/household-replacement-reserve/",
+    "alternateRoute": "/guides/household-replacement-reserve/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
