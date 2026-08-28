@@ -119,6 +119,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/utility-shutoff-information/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/divide-household-responsibilities/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/family-chore-system/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/household-weekly-reset/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/recurring-bills-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/pantry-restock-system/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1549,6 +1552,33 @@ const checks = [
       'hreflang="en"',
       "先寫觸發條件，再選週期",
       "定義完成，不只定義動作",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/household-weekly-reset/",
+    require: [
+      "家庭每週重整",
+      'hreflang="en"',
+      "第一段：只看未來七天",
+      "處理每一件逾期任務",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/recurring-bills-tracker/",
+    require: [
+      "家庭固定帳單追蹤",
+      'hreflang="en"',
+      "按錯過後果分級",
+      "自動扣款解決忘記，不解決價格",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/pantry-restock-system/",
+    require: [
+      "家庭食品補貨系統",
+      'hreflang="en"',
+      "用「最後一包已開封」觸發",
+      "把特殊飲食需求獨立標記",
     ],
   },
   {

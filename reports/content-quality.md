@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T07:17:48.154Z
+Generated: 2026-08-28T07:23:23.258Z
 
 ## Summary
 
-- Indexable pages: 689
-- Generated HTML routes: 708
+- Indexable pages: 692
+- Generated HTML routes: 711
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 391
+- Pages without a contextual product/tool link: 394
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-28T07:17:48.154Z
 - product: 120
 - appliances: 56
 - maintenance: 81
-- household-operations: 116
+- household-operations: 119
 - inventory-warranty: 56
 - records-emergency: 93
 - tools: 126
@@ -274,6 +274,7 @@ Generated: 2026-08-28T07:17:48.154Z
 - /zh-tw/guides/household-monthly-review/
 - /zh-tw/guides/household-replacement-reserve/
 - /zh-tw/guides/household-supplies-inventory/
+- /zh-tw/guides/household-weekly-reset/
 - /zh-tw/guides/how-long-to-keep-household-records/
 - /zh-tw/guides/how-to-track-product-warranties/
 - /zh-tw/guides/humidifier-maintenance-guide/
@@ -293,6 +294,7 @@ Generated: 2026-08-28T07:17:48.154Z
 - /zh-tw/guides/organize-utility-account-information/
 - /zh-tw/guides/organize-vehicle-documents-at-home/
 - /zh-tw/guides/oven-maintenance-checklist/
+- /zh-tw/guides/pantry-restock-system/
 - /zh-tw/guides/pet-sitter-information/
 - /zh-tw/guides/photo-home-inventory/
 - /zh-tw/guides/power-outage-home-preparedness/
@@ -302,6 +304,7 @@ Generated: 2026-08-28T07:17:48.154Z
 - /zh-tw/guides/purchase-receipt-organizer/
 - /zh-tw/guides/quarterly-home-maintenance-checklist/
 - /zh-tw/guides/range-hood-maintenance-checklist/
+- /zh-tw/guides/recurring-bills-tracker/
 - /zh-tw/guides/refrigerator-maintenance-checklist/
 - /zh-tw/guides/renovation-records/
 - /zh-tw/guides/rental-home-maintenance-log/

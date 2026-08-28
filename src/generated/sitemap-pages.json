@@ -1129,7 +1129,7 @@
   },
   {
     "route": "/guides/household-weekly-reset/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/household-weekly-reset/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1169,7 +1169,7 @@
   },
   {
     "route": "/guides/recurring-bills-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/recurring-bills-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1217,7 +1217,7 @@
   },
   {
     "route": "/guides/pantry-restock-system/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/pantry-restock-system/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -4882,6 +4882,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/household-weekly-reset/",
+    "alternateRoute": "/guides/household-weekly-reset/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/how-long-to-keep-household-records/",
     "alternateRoute": "/guides/how-long-to-keep-household-records/",
     "indexable": true,
@@ -5057,6 +5064,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/pantry-restock-system/",
+    "alternateRoute": "/guides/pantry-restock-system/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/pet-sitter-information/",
     "alternateRoute": "/guides/pet-sitter-information/",
     "indexable": true,
@@ -5159,6 +5173,13 @@
     "alternateRoute": "/tools/receipt-retention-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/recurring-bills-tracker/",
+    "alternateRoute": "/guides/recurring-bills-tracker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
