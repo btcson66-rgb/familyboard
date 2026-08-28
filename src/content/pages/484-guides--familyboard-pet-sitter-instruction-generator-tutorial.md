@@ -54,3 +54,6 @@ At the end of the window, collect paper copies, revoke temporary access in the c
 ## Optional pet products do not control care
 
 Future feeders, cameras, trackers or pet-service products may appear in optional space outside the instruction form. They cannot guarantee feeding, supervision, emergency response or animal health and must never be required to create a handoff. The free sheet should remain clear when every product card is skipped.
+
+
+---

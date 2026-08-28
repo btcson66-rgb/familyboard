@@ -256,6 +256,10 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/",
     "/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
     "/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+    "/guides/familyboard-home-repair-cost-log-tutorial/",
+    "/zh-tw/guides/familyboard-home-repair-cost-log-tutorial/",
+    "/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+    "/zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1878,6 +1882,16 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
       alternate: "/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
       heading: "FamilyBoard 寵物照顧指示產生器教學：讓短期交接更清楚",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-home-repair-cost-log-tutorial/",
+      alternate: "/guides/familyboard-home-repair-cost-log-tutorial/",
+      heading: "FamilyBoard 居家修繕費用紀錄教學：先比範圍再決定支出",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+      alternate: "/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+      heading: "FamilyBoard 到府照護服務範圍與結果教學：分開記錄服務與觀察",
     },
   ]) {
     await page.goto(localized.route);
@@ -4527,6 +4541,18 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-home-repair-cost-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-home-repair-cost-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-seasonal-reset-tutorial/",

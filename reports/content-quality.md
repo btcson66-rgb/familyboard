@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T19:15:06.706Z
+Generated: 2026-08-28T19:27:57.737Z
 
 ## Summary
 
-- Indexable pages: 907
-- Generated HTML routes: 913
+- Indexable pages: 911
+- Generated HTML routes: 917
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 512
+- Pages without a contextual product/tool link: 514
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,11 +19,11 @@ Generated: 2026-08-28T19:15:06.706Z
 - support: 31
 - printables: 39
 - product: 136
-- inventory-warranty: 80
+- inventory-warranty: 82
 - appliances: 66
 - maintenance: 87
 - household-operations: 187
-- records-emergency: 129
+- records-emergency: 131
 - tools: 152
 
 ## Word-count range
@@ -225,6 +225,7 @@ Generated: 2026-08-28T19:15:06.706Z
 - /zh-tw/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/
 - /zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/
 - /zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/
+- /zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/
 - /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
 - /zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/
 - /zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/
@@ -233,6 +234,7 @@ Generated: 2026-08-28T19:15:06.706Z
 - /zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/
 - /zh-tw/guides/familyboard-home-repair-change-order-tutorial/
 - /zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/
+- /zh-tw/guides/familyboard-home-repair-cost-log-tutorial/
 - /zh-tw/guides/familyboard-home-service-provider-verification-tutorial/
 - /zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/
 - /zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/

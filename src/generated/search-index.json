@@ -3744,6 +3744,22 @@
     "headings": "How to Use FamilyBoard's Pet-Sitter Instruction Generator Define the visit window and pet scope Separate routine from professional instruction Use minimum necessary access Point to current pet records Define check-ins and exceptions Review the return and privacy boundary Optional pet products do not control care"
   },
   {
+    "title": "FamilyBoard Home Repair Cost Log Tutorial | Compare Scope Before Spending",
+    "description": "Learn how to use FamilyBoard's Home Repair Cost Log to separate estimates, approved work, invoices and observed results without storing payment credentials or promising a contractor outcome.",
+    "route": "/guides/familyboard-home-repair-cost-log-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "home repair cost log tutorial",
+    "headings": "How to Use FamilyBoard's Home Repair Cost Log Define one repair and a safe reference Capture the estimate as a proposal Separate approval, change and payment Record the observed result Compare without inventing value Close with a source and next review Optional products stay outside the spend decision Rehearse the handoff before work starts"
+  },
+  {
+    "title": "FamilyBoard Home-Care Visit Scope Tutorial | Record Service and Result Separately",
+    "description": "Learn how to use FamilyBoard's Home-Care Visit Scope and Service Result Log to separate authorised tasks, provider notes, observed results and unresolved concerns without exposing medical details.",
+    "route": "/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "home care visit scope service result log tutorial",
+    "headings": "How to Use FamilyBoard's Home-Care Visit Scope and Service Result Log Set the visit window and safe role Record the authorised scope first Keep provider report and observation distinct Log changes and refusal safely Define an escalation route Close only on an observed result Keep service recommendations optional Review the record with the right boundary"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

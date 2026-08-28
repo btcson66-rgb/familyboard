@@ -3880,6 +3880,22 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-home-repair-cost-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-repair-cost-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4746,6 +4762,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/",
     "alternateRoute": "/guides/familyboard-home-dashboard-weekly-review-tutorial/",
     "indexable": true,
@@ -4797,6 +4820,13 @@
   {
     "route": "/zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/",
     "alternateRoute": "/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-home-repair-cost-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-repair-cost-log-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

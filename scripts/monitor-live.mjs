@@ -772,6 +772,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-pet-sitter-instruction-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-repair-cost-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-repair-cost-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-care-visit-scope-service-result-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -918,6 +922,22 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
     require: ["寵物照顧指示產生器教學", "獸醫", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-repair-cost-log-tutorial/",
+    require: ["Home Repair Cost", "estimate"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-repair-cost-log-tutorial/",
+    require: ["居家修繕費用紀錄教學", "估價", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+    require: ["Home-Care Visit Scope", "care plan"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+    require: ["到府照護服務範圍與結果教學", "照護計畫", 'lang="zh-TW"'],
   },
   {
     path: "/ads.txt",

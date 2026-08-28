@@ -35041,6 +35041,138 @@ Future feeders, cameras, trackers or pet-service products may appear in optional
 
 ---
 
+---
+
+## Page 485 — FamilyBoard Home Repair Cost Log Tutorial
+**Slug:** /guides/familyboard-home-repair-cost-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-home-repair-cost-log-tutorial/
+**Primary intent:** learn to record a household repair estimate, approved scope, payment observation and unresolved cost question without presenting a quote as a guarantee
+**Title tag:** FamilyBoard Home Repair Cost Log Tutorial | Compare Scope Before Spending
+**Meta description:** Learn how to use FamilyBoard's Home Repair Cost Log to separate estimates, approved work, invoices and observed results without storing payment credentials or promising a contractor outcome.
+**Primary keyword concept:** home repair cost log tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/home-repair-cost-log/, /guides/contractor-records/, /guides/familyboard-home-repair-change-order-tutorial/, /tools/household-service-quote-comparison-log/
+**FAQ:**
+- Q: Does the log tell me which contractor to hire?
+  A: No. It records the household's sources and decisions; selection and contract checks remain with the authorised person.
+- Q: Should card numbers or bank details be entered?
+  A: No. Keep payment credentials and complete financial records in the responsible protected system.
+- Q: Is an estimate the final price?
+  A: No. Preserve the estimate, approved scope, change and invoice as separate events.
+- Q: Does a lower number mean better value?
+  A: No. Scope, exclusions, source quality and observed result must be considered by the household.
+
+# How to Use FamilyBoard's Home Repair Cost Log
+
+Repair spending becomes hard to explain when an early estimate, a changed scope, a payment and the final condition are collapsed into one number. FamilyBoard's free [Home Repair Cost Log](/tools/home-repair-cost-log/) creates a dated local record that separates those events. It is not a contractor directory, price guarantee, accounting system or financial advice.
+
+## Define one repair and a safe reference
+
+Start with `REPAIR-COST-2026-A` and a narrow scope such as “bathroom exhaust fan replacement.” Keep the property address, invoice number and payment account in their protected sources. A safe reference lets a second household role find the right folder without turning a working note into a financial identity record.
+
+## Capture the estimate as a proposal
+
+Record the date, quoted scope, assumptions, exclusions, tax or travel note and the source pointer. An estimate is a provider proposal at a particular time, not an approved job or final price. If two estimates use different scope, do not compare totals alone; list what each one includes and what remains unknown.
+
+## Separate approval, change and payment
+
+Keep the household approval, a contractor change request, a deposit or payment observation and the invoice in different events. A change order may alter labour, materials, timing or warranty language. Record who approved it through the protected process, but do not paste a signature, card number or banking detail into the local log.
+
+## Record the observed result
+
+After work, note what the household could safely observe: the date, visible completion, remaining defect, supplied document or follow-up request. Do not diagnose electrical, structural, gas or mould conditions from a checklist. If a qualified professional must inspect the work, point to that source and leave the result open until the responsible role reports back.
+
+## Compare without inventing value
+
+The cheapest estimate may omit disposal, access, permits, testing or a return visit. The most expensive may include a different specification. Use the log to ask a precise question about scope and evidence rather than declaring a winner. Preserve declined proposals so the household understands why the selected work changed later.
+
+## Close with a source and next review
+
+Close a repair only when the approved scope, actual charge and observed result are linked to their controlling sources. “Waiting for invoice” or “needs inspection” is a valid open state. Export a backup before clearing browser data; FamilyBoard is local-first and does not silently archive the record on a server.
+
+## Optional products stay outside the spend decision
+
+Future contractor marketplaces, financing or tool products may appear in optional space with disclosure. They cannot guarantee workmanship, savings, availability or suitability and must never be required to record a free repair cost. Keep recommendations separate from the evidence used to approve work.
+
+## Rehearse the handoff before work starts
+
+Ask a second role to find the estimate, state the approved scope and identify the next unresolved question without opening payment credentials. If the person cannot tell whether a line is a proposal, a change or an observed result, leave the repair open and correct the source pointer. This small rehearsal catches missing exclusions before a contractor arrives and keeps the record useful when the original organiser is unavailable.
+
+**Contextual CTA:** Record one repair proposal with scope, exclusions and the next question; keep approval, payment and observed result as separate dated events.
+
+---
+
+## Page 486 — FamilyBoard Home-Care Visit Scope and Result Tutorial
+**Slug:** /guides/familyboard-home-care-visit-scope-service-result-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/
+**Primary intent:** learn to document a time-bounded home-care visit's authorised scope, source, observed service result and escalation question without replacing a care plan
+**Title tag:** FamilyBoard Home-Care Visit Scope Tutorial | Record Service and Result Separately
+**Meta description:** Learn how to use FamilyBoard's Home-Care Visit Scope and Service Result Log to separate authorised tasks, provider notes, observed results and unresolved concerns without exposing medical details.
+**Primary keyword concept:** home care visit scope service result log tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/home-care-visit-scope-service-result-log/, /guides/familyboard-home-care-service-plan-change-notice-tutorial/, /guides/familyboard-home-care-complaint-response-resolution-tutorial/, /tools/household-medical-information-source-handoff-log/
+**FAQ:**
+- Q: Does the log create or replace a care plan?
+  A: No. The responsible professional or authorised service plan controls care decisions.
+- Q: Should diagnoses, medication doses or full identities be entered?
+  A: No. Use the minimum safe reference and keep sensitive details in the protected care process.
+- Q: Does a completed visit prove that care was adequate?
+  A: No. It records a reported or observed result, not a clinical assessment.
+- Q: What if the agreed scope changes during a visit?
+  A: Preserve the original scope, record the change and identify who authorised the next step.
+
+# How to Use FamilyBoard's Home-Care Visit Scope and Service Result Log
+
+A home-care visit can be reported as “done” even when the authorised scope, provider note and household observation do not match. FamilyBoard's free [Home-Care Visit Scope and Service Result Log](/tools/home-care-visit-scope-service-result-log/) helps keep those layers separate. It is a coordination aid, not a care plan, clinical record, provider rating or substitute for emergency or professional instructions.
+
+## Set the visit window and safe role
+
+Use `CARE-VISIT-2026-A`, the planned date or window and role labels such as “authorised household contact” and “service provider.” State the minimum service scope in plain language. Avoid full names, diagnosis, address, access codes and medication details when a protected source pointer is enough.
+
+## Record the authorised scope first
+
+Write what the current service plan or agreement authorises, its source version and the question the visit should answer. “Assist with agreed mobility routine” is different from “change treatment.” Do not expand a scope because a provider message sounds urgent; ask the responsible role to confirm any change through the controlling process.
+
+## Keep provider report and observation distinct
+
+Record the provider's date, channel and short report separately from what the household actually observed afterwards. “Provider reports task completed” does not automatically mean “household observed the intended result.” Preserve the original wording in the protected system and use a neutral summary here.
+
+## Log changes and refusal safely
+
+If a visit is shortened, a task is refused or an unexpected condition appears, keep the planned scope and add a new event. Record who was contacted and what question remains. Never ask a family member or provider to improvise a medical, safeguarding or emergency decision from the log. Follow current local emergency and professional instructions first when someone may be at risk.
+
+## Define an escalation route
+
+Name the authorised role or formal service channel that receives an exception, plus the next review date. A response deadline belongs to that external process; FamilyBoard does not promise a callback. Use a minimum data pointer such as `CARE-SOURCE-1` and keep full contact or health information protected.
+
+## Close only on an observed result
+
+Close the visit when the household records the actual result, unresolved concern and next responsible action. “Waiting for supervisor” or “scope needs review” should remain open. Export a local backup before clearing browser storage, and inspect any copy before sharing it. The app has no server account that silently archives sensitive records.
+
+## Keep service recommendations optional
+
+Future home-care services, monitoring devices or scheduling products may appear outside the log with clear disclosure. They cannot guarantee care quality, availability, safety or reimbursement and must never be required to document a free visit. The scope and result record should remain useful when every recommendation is skipped.
+
+## Review the record with the right boundary
+
+Before sharing a visit summary, ask whether each sentence is an authorised scope, a provider statement, a household observation or an open question. Remove duplicated health details and keep the full care plan in its controlling source. If a new suggestion arrives, record that it was received and who must decide; do not silently convert it into consent. A dated boundary review helps the next role act safely without treating a coordination log as clinical authority.
+
+**Contextual CTA:** Record one visit's authorised scope, provider report and household observation as separate events, then leave any unresolved care question with its responsible escalation route.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.
