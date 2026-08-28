@@ -2905,7 +2905,7 @@
   },
   {
     "route": "/guides/familyboard-repair-punch-list-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-repair-punch-list-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -2913,7 +2913,7 @@
   },
   {
     "route": "/guides/familyboard-product-recall-action-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-product-recall-action-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -2921,7 +2921,7 @@
   },
   {
     "route": "/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -3484,6 +3484,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-household-account-list-tutorial/",
     "alternateRoute": "/guides/familyboard-household-account-list-tutorial/",
     "indexable": true,
@@ -3645,6 +3652,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-product-recall-action-tutorial/",
+    "alternateRoute": "/guides/familyboard-product-recall-action-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/",
     "alternateRoute": "/guides/familyboard-record-retrieval-drill-tutorial/",
     "indexable": true,
@@ -3670,6 +3684,13 @@
     "alternateRoute": "/guides/familyboard-repair-evidence-timeline-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-repair-punch-list-tutorial/",
+    "alternateRoute": "/guides/familyboard-repair-punch-list-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

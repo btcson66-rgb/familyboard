@@ -24791,6 +24791,7 @@ Any future affiliate recommendation for binders, labels or backup supplies belon
 
 ## Page 358 — How to Use FamilyBoard for a Home Repair Punch List
 **Slug:** `/guides/familyboard-repair-punch-list-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-repair-punch-list-tutorial/`
 **Primary intent:** turn a home walkthrough into dated, observable repair items linked to scope, evidence, owners and rechecks
 **Title tag:** How to Build a Home Repair Punch List | FamilyBoard Tutorial
 **Meta description:** Build a reliable home repair punch list with observable items, scope references, recheck evidence and privacy-safe owner actions—without treating it as an inspection certificate.
@@ -24869,6 +24870,7 @@ Future affiliate suggestions for measuring tools, lights or document storage mus
 
 ## Page 359 — How to Use FamilyBoard for a Product Recall Action
 **Slug:** `/guides/familyboard-product-recall-action-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-product-recall-action-tutorial/`
 **Primary intent:** track an official product-recall notice, exact identity comparison, immediate action, remedy and close-out evidence
 **Title tag:** How to Track a Product Recall Safely | FamilyBoard Tutorial
 **Meta description:** Learn a careful product recall workflow: preserve the official notice, compare the exact unit privately, follow immediate instructions and track the remedy to dated close-out.
@@ -24949,6 +24951,7 @@ Future affiliate placements for label makers, storage or shipping supplies must 
 
 ## Page 360 — How to Use FamilyBoard's Home Maintenance Schedule Generator
 **Slug:** `/guides/familyboard-home-maintenance-schedule-generator-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/`
 **Primary intent:** turn a home-specific asset list into a reviewable maintenance schedule without inventing manufacturer intervals
 **Title tag:** How to Use a Home Maintenance Schedule Generator | FamilyBoard
 **Meta description:** Build a home-specific maintenance schedule in FamilyBoard, verify every interval against the real manual, and keep review dates separate from automatic reminders.

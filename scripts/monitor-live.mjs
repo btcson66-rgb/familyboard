@@ -61,6 +61,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-record-retrieval-drill-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-utility-provider-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-repair-punch-list-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-product-recall-action-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-maintenance-schedule-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -77,6 +80,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-utility-provider-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-repair-punch-list-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-product-recall-action-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -745,6 +751,54 @@ const checks = [
       "水電、瓦斯與網路服務怎麼交接",
       "先選一項服務和一個房屋範圍",
       "不會自動找供應商、讀電表",
+    ],
+  },
+  {
+    path: "/guides/familyboard-repair-punch-list-tutorial/",
+    require: [
+      "How to build a home repair punch list that survives the final walkthrough",
+      "Freeze the controlling scope first",
+      "not a professional inspection",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-repair-punch-list-tutorial/",
+    require: [
+      "裝修驗收缺失清單怎麼做",
+      "先固定目前有效的工程範圍",
+      "不把清單當成驗收證明",
+    ],
+  },
+  {
+    path: "/guides/familyboard-product-recall-action-tutorial/",
+    require: [
+      "How to track a product recall without losing the safety instruction",
+      "Treat messages as leads and notices as sources",
+      "does not search live databases",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-product-recall-action-tutorial/",
+    require: [
+      "產品召回通知怎麼處理",
+      "把轉傳訊息當線索，不當最後來源",
+      "不會搜尋即時資料庫",
+    ],
+  },
+  {
+    path: "/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
+    require: [
+      "How to use a home maintenance schedule generator without trusting a made-up interval",
+      "Start with an asset inventory, not a blog checklist",
+      "not a manufacturer database",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
+    require: [
+      "家庭保養排程怎麼建立",
+      "先盤點實際設備，不要抄網路清單",
+      "不是原廠資料庫",
     ],
   },
   {

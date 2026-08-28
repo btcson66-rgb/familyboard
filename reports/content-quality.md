@@ -1,26 +1,26 @@
 # Content quality report
 
-Generated: 2026-08-28T02:30:38.417Z
+Generated: 2026-08-28T02:41:03.956Z
 
 ## Summary
 
-- Indexable pages: 608
-- Generated HTML routes: 625
+- Indexable pages: 611
+- Generated HTML routes: 628
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 6
-- Pages without a contextual product/tool link: 312
+- Pages without a contextual product/tool link: 315
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 119
+- product: 120
 - appliances: 30
-- maintenance: 52
+- maintenance: 54
 - household-operations: 107
 - inventory-warranty: 46
 - records-emergency: 89
@@ -161,6 +161,7 @@ Generated: 2026-08-28T02:30:38.417Z
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
 - /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
+- /zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/
 - /zh-tw/guides/familyboard-household-account-list-tutorial/
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
@@ -184,10 +185,12 @@ Generated: 2026-08-28T02:30:38.417Z
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-power-outage-event-log-tutorial/
 - /zh-tw/guides/familyboard-private-family-organizer-tutorial/
+- /zh-tw/guides/familyboard-product-recall-action-tutorial/
 - /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-rental-repair-request-tutorial/
 - /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
+- /zh-tw/guides/familyboard-repair-punch-list-tutorial/
 - /zh-tw/guides/familyboard-replacement-part-source-check-tutorial/
 - /zh-tw/guides/familyboard-router-support-review-tutorial/
 - /zh-tw/guides/familyboard-schedule-conflict-review-tutorial/
