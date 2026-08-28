@@ -326,6 +326,14 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-repair-change-order-tutorial/",
     "/guides/familyboard-repair-punch-list-review-tutorial/",
     "/zh-tw/guides/familyboard-repair-punch-list-review-tutorial/",
+    "/guides/familyboard-record-retrieval-drill-tutorial/",
+    "/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/",
+    "/guides/familyboard-record-retrieval-practice-tutorial/",
+    "/zh-tw/guides/familyboard-record-retrieval-practice-tutorial/",
+    "/guides/familyboard-record-retention-decision-tutorial/",
+    "/zh-tw/guides/familyboard-record-retention-decision-tutorial/",
+    "/guides/familyboard-appliance-manual-source-tutorial/",
+    "/zh-tw/guides/familyboard-appliance-manual-source-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2123,6 +2131,26 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-repair-punch-list-review-tutorial/",
       alternate: "/guides/familyboard-repair-punch-list-review-tutorial/",
       heading: "FamilyBoard 修繕收尾複查教學：確認回查，不要過早結案",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/",
+      alternate: "/guides/familyboard-record-retrieval-drill-tutorial/",
+      heading: "FamilyBoard 紀錄找回演練教學：再次找到正確來源",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-record-retrieval-practice-tutorial/",
+      alternate: "/guides/familyboard-record-retrieval-practice-tutorial/",
+      heading: "FamilyBoard 紀錄找回練習教學：讓家庭交接可以重做",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-record-retention-decision-tutorial/",
+      alternate: "/guides/familyboard-record-retention-decision-tutorial/",
+      heading: "FamilyBoard 紀錄保存決策教學：決定留下什麼以及原因",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-appliance-manual-source-tutorial/",
+      alternate: "/guides/familyboard-appliance-manual-source-tutorial/",
+      heading: "FamilyBoard 家電手冊來源教學：先對正確型號與版本",
     },
   ]) {
     await page.goto(localized.route);

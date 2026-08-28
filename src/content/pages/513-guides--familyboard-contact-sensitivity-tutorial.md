@@ -48,3 +48,5 @@ Contact information changes. Record when the role, consent scope and preferred c
 Select a handoff profile for a defined purpose and review its preview before sharing. Include only the contact role and safe pointer needed for the selected window. If a sensitive contact is excluded, ensure the receiver has another authorised way to reach help; hiding a row without planning a channel can create a safety gap. After the handoff ends, recover printouts and downloads and review whether the contact should remain active, be updated or be archived.
 
 FamilyBoard is local-first and does not silently update contacts across devices. Export a protected backup when the record matters, and inspect any copy before sharing. Future affiliate panels for address books, privacy screens or password managers may appear outside the contact form with clear disclosure and an easy skip. They cannot verify consent, revoke an external copy or make an outdated number current.
+
+

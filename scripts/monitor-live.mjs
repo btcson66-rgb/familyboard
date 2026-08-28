@@ -842,6 +842,14 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-repair-change-order-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-repair-punch-list-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-repair-punch-list-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-record-retrieval-drill-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-record-retrieval-practice-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-retrieval-practice-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-record-retention-decision-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-retention-decision-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-appliance-manual-source-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-manual-source-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1277,6 +1285,22 @@ const checks = [
     ],
   },
   {
+    path: "/guides/familyboard-record-retrieval-practice-tutorial/",
+    require: [
+      "FamilyBoard Record Retrieval Practice",
+      "Make Handoffs Repeatable",
+      "not proof of availability or legal retention",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-record-retrieval-practice-tutorial/",
+    require: [
+      "FamilyBoard 紀錄找回練習教學",
+      "讓家庭交接可以重做",
+      "不要把完整文件、地址和私人對話放入廣泛摘要",
+    ],
+  },
+  {
     path: "/guides/familyboard-utility-provider-handoff-tutorial/",
     require: [
       "How to Use FamilyBoard for a Utility Provider Handoff",
@@ -1699,6 +1723,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-repair-punch-list-review-tutorial/",
     require: ["修繕收尾複查教學", "收尾複查"],
+  },
+  {
+    path: "/guides/familyboard-record-retrieval-drill-tutorial/",
+    require: ["Record Retrieval Drill Tutorial", "protected source"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/",
+    require: ["紀錄找回演練教學", "受保護來源"],
+  },
+  {
+    path: "/guides/familyboard-record-retention-decision-tutorial/",
+    require: ["Record Retention Tutorial", "controlling source"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-record-retention-decision-tutorial/",
+    require: ["紀錄保存決策教學", "外部要求"],
+  },
+  {
+    path: "/guides/familyboard-appliance-manual-source-tutorial/",
+    require: ["Appliance Manual Tutorial", "exact model"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-appliance-manual-source-tutorial/",
+    require: ["家電手冊來源教學", "正確型號"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T22:55:25.846Z
+Generated: 2026-08-28T23:14:36.480Z
 
 ## Summary
 
-- Indexable pages: 977
-- Generated HTML routes: 983
+- Indexable pages: 983
+- Generated HTML routes: 989
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 568
+- Duplicate primary-keyword groups: 12
+- Pages without a contextual product/tool link: 574
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,10 +20,10 @@ Generated: 2026-08-28T22:55:25.846Z
 - printables: 39
 - product: 172
 - inventory-warranty: 82
-- appliances: 68
+- appliances: 70
 - maintenance: 97
-- household-operations: 201
-- records-emergency: 135
+- household-operations: 200
+- records-emergency: 140
 - tools: 152
 
 ## Word-count range
@@ -55,7 +55,6 @@ Generated: 2026-08-28T22:55:25.846Z
 - 家庭緊急資料夾: /zh-tw/guides/emergency-binder/, /zh-tw/tools/emergency-binder-generator/
 - 家庭決策紀錄工具: /zh-tw/guides/familyboard-household-decision-register-tutorial/, /zh-tw/tools/household-decision-register/
 - 家庭家務負荷計算器教學: /zh-tw/guides/familyboard-household-task-load-calculator-tutorial/, /zh-tw/guides/familyboard-task-load-calculator-tutorial/
-- 家庭文件查找演練: /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/, /zh-tw/tools/household-record-retrieval-drill-log/
 - 居家服務變更: /zh-tw/guides/home-care-service-plan-changes/, /zh-tw/tools/home-care-service-plan-change-notice-log/
 - 居家服務紀錄: /zh-tw/guides/home-care-service-visit-records/, /zh-tw/tools/home-care-visit-scope-service-result-log/
 - 免費家庭管理工具: /zh-tw/, /zh-tw/tools/
@@ -70,6 +69,7 @@ Generated: 2026-08-28T22:55:25.846Z
 - /editorial-policy/
 - /guides/digital-home-inventory-backup/
 - /guides/familyboard-app-first-run-restore-tutorial/
+- /guides/familyboard-appliance-manual-source-tutorial/
 - /guides/familyboard-attachment-metadata-tutorial/
 - /guides/familyboard-browser-storage-maintenance/
 - /guides/familyboard-calendar-timezone-tutorial/
@@ -85,6 +85,8 @@ Generated: 2026-08-28T22:55:25.846Z
 - /guides/familyboard-offline-backup-restore/
 - /guides/familyboard-product-recall-action-log-tutorial/
 - /guides/familyboard-pwa-update-tutorial/
+- /guides/familyboard-record-retention-decision-tutorial/
+- /guides/familyboard-record-retrieval-practice-tutorial/
 - /guides/familyboard-repair-change-order-tutorial/
 - /guides/familyboard-repair-punch-list-review-tutorial/
 - /guides/familyboard-reset-local-household-tutorial/
@@ -211,6 +213,7 @@ Generated: 2026-08-28T22:55:25.846Z
 - /zh-tw/guides/familyboard-appliance-age-calculator-tutorial/
 - /zh-tw/guides/familyboard-appliance-maintenance-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/
+- /zh-tw/guides/familyboard-appliance-manual-source-tutorial/
 - /zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/
 - /zh-tw/guides/familyboard-appliance-repair-callback-tutorial/
 - /zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/
@@ -330,7 +333,9 @@ Generated: 2026-08-28T22:55:25.846Z
 - /zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/
 - /zh-tw/guides/familyboard-record-linking-tutorial/
 - /zh-tw/guides/familyboard-record-retention-decision-log-tutorial/
+- /zh-tw/guides/familyboard-record-retention-decision-tutorial/
 - /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/
+- /zh-tw/guides/familyboard-record-retrieval-practice-tutorial/
 - /zh-tw/guides/familyboard-recurring-chore-planner-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/

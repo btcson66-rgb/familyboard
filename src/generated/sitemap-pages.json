@@ -4160,6 +4160,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-record-retrieval-practice-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-record-retrieval-practice-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-record-retention-decision-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-record-retention-decision-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-appliance-manual-source-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-appliance-manual-source-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4790,6 +4814,13 @@
   {
     "route": "/zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/",
     "alternateRoute": "/guides/familyboard-appliance-manual-source-check-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-appliance-manual-source-tutorial/",
+    "alternateRoute": "/guides/familyboard-appliance-manual-source-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5621,8 +5652,22 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-record-retention-decision-tutorial/",
+    "alternateRoute": "/guides/familyboard-record-retention-decision-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/",
     "alternateRoute": "/guides/familyboard-record-retrieval-drill-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-record-retrieval-practice-tutorial/",
+    "alternateRoute": "/guides/familyboard-record-retrieval-practice-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

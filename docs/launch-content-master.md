@@ -37084,6 +37084,161 @@ At the final review, read each row aloud in the same order as the walkthrough an
 
 **Contextual CTA:** Record one observable gap per row, assign the next owner and leave the item open until the source-backed result is actually visible.
 
+---
+
+## Page 520 — FamilyBoard Record Retrieval Practice Tutorial
+**Slug:** /guides/familyboard-record-retrieval-practice-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-record-retrieval-practice-tutorial/
+**Primary intent:** practice a repeatable household record retrieval path and improve the index when another person cannot find the source
+**Title tag:** FamilyBoard Record Retrieval Practice | Make Handoffs Repeatable
+**Meta description:** Learn how to practice a repeatable FamilyBoard record retrieval path, test source pointers, protect private details and assign fixes when handoffs fail.
+**Primary keyword concept:** FamilyBoard record retrieval practice
+**Cluster:** records-emergency
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-record-retrieval-drill-log/, /guides/familyboard-household-document-index-generator-tutorial/, /guides/familyboard-emergency-drill-tutorial/, /privacy/
+**FAQ:**
+- Q: Does a successful drill prove that a file is safely backed up?
+  A: No. It shows one person found one source under stated conditions; storage, access and backup risks still need separate review.
+- Q: Should the drill sheet contain the complete document?
+  A: No. Use a neutral ID and protected source pointer; keep full documents in their controlled location.
+- Q: What if a record cannot be found?
+  A: Record the exact missing ID, last known source and an owner for retrieval or replacement instead of guessing.
+- Q: Does FamilyBoard sync the result to every device?
+  A: No. Local browser data remains device-specific unless the household deliberately transfers a reviewed backup.
+
+# FamilyBoard Record Retrieval Practice: Make Handoffs Repeatable
+
+A household can have a document and still be unable to find it when a provider, school, insurer or family member needs an answer. FamilyBoard’s record retrieval drill log lets you practice the path from a neutral ID to the protected source, record what was actually found and assign a correction when the path breaks. It does not create a backup, verify a cloud provider or expose the underlying document. The drill is a coordination test, not proof of availability or legal retention.
+
+## Choose a bounded retrieval question
+
+Pick one realistic question: “Where is the current appliance warranty?”, “Which source has the latest emergency plan?” or “Can the next household coordinator find the lease amendment?” Define the reader, the allowed time and the source version before starting. Do not test by opening a sensitive file in a public place. A neutral ID such as `WARRANTY-FRIDGE-1` should lead to a protected folder, record system or paper index without putting an address, account number or full serial in the drill sheet.
+
+## Record the path, not just the result
+
+The tool can capture the ID requested, starting index, search steps, source found, version or date, evidence pointer, access limitation and status. Write what the participant actually did: “opened household index v3, followed WARRANTY-FRIDGE-1, found scan dated 2025-09-01.” “Everyone knows where it is” is not repeatable. If the source requires another person’s permission, record that dependency and stop rather than bypassing access controls.
+
+Use statuses such as `Found current source`, `Found but stale`, `Source unavailable`, `Permission needed` and `Not tested`. A found file is not automatically the latest version or an authentic document. Compare the source date and issuer, then leave a separate action for replacement, review or permission. Never rename or overwrite an original just to make the drill pass.
+
+## Turn failures into small corrections
+
+For every failed path, assign one owner and next date: update the index, restore a reviewed backup, ask the custodian for access, or mark the record as intentionally retired. Keep the failure history so another drill can show whether the correction worked. If the household uses paper, note the cabinet or binder location without publishing a full address or key code. If it uses a browser, remember that clearing site data can remove local records; export a protected backup before any destructive maintenance.
+
+At the end, ask the receiver to repeat the drill without coaching. This tests whether the index and labels make sense to someone who did not create them. Preview any handoff and include only the pointer and action needed for its audience. Future affiliate panels for binders, labels or scanners may appear outside the drill with clear disclosure and an easy skip; they cannot create redundancy or guarantee retrieval.
+
+**Contextual CTA:** Pick one neutral record ID, test the path to its protected source and assign every retrieval gap to a named role.
+
+Before closing the practice, write down the test conditions: which device was used, whether the participant had normal permissions, how long the lookup took and which index version was followed. These details make the next run comparable. If a handoff succeeds only after verbal hints, count it as a partial result and revise the label or pointer before claiming that the household path is repeatable.
+
+---
+
+## Page 521 — FamilyBoard Record Retention Decision Tutorial
+**Slug:** /guides/familyboard-record-retention-decision-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-record-retention-decision-tutorial/
+**Primary intent:** document why a household record is retained, replaced, archived or scheduled for review without inventing legal deadlines
+**Title tag:** FamilyBoard Record Retention Tutorial | Decide What to Keep and Why
+**Meta description:** Learn how to use FamilyBoard’s record retention decision log to separate household usefulness from legal requirements, set review dates and protect originals.
+**Primary keyword concept:** FamilyBoard record retention decision
+**Cluster:** records-emergency
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-record-retention-decision-log/, /guides/familyboard-household-document-index-generator-tutorial/, /guides/familyboard-printout-download-retention-tutorial/, /privacy/
+**FAQ:**
+- Q: Does FamilyBoard decide the legal retention period?
+  A: No. Laws, contracts, insurers and authorities may set requirements; the tool only records the household’s decision and source.
+- Q: Should I delete an old copy as soon as a new one arrives?
+  A: Not automatically. Check whether the old version proves history, payment, consent or a prior condition before archiving it.
+- Q: Is an archive the same as a secure backup?
+  A: No. Archive status is an index decision; protect the original and backup through the system that controls the file.
+- Q: Can a retention date prove a dispute deadline?
+  A: No. It is a review reminder unless the controlling source explicitly says otherwise.
+
+# FamilyBoard Record Retention Tutorial: Decide What to Keep and Why
+
+Households keep too much because deletion feels risky, and too little because a new PDF looks like it replaces every older fact. FamilyBoard’s record retention decision log helps you state why a receipt, warranty, notice, consent record or repair report is retained, replaced, archived or due for review. It does not set a legal deadline, provide legal advice or guarantee that a deleted copy can be recovered. The controlling law, contract, insurer or authority remains the source for required retention.
+
+## Name the record and controlling source
+
+Use a neutral ID such as `INSURANCE-POLICY-2026-1` and point to the protected original. Record issuer, version date, household purpose and any source that controls the period. “Keep forever” is not a reason; “needed to compare a warranty claim until the provider closes it” is more useful. Keep full policy numbers, addresses, signatures and private correspondence in the protected location, not in a broad FamilyBoard handoff.
+
+## Separate usefulness from obligation
+
+Ask two different questions: does the household still need this record to understand history or take an action, and does an external source require or recommend keeping it? A paid invoice may be useful for warranty history even when a newer receipt exists. A superseded emergency notice may explain a past decision but should not be presented as current guidance. Record both answers and cite the source checked; do not invent a universal number of years.
+
+Choose statuses such as `Retain—active use`, `Retain—history`, `Replace after verification`, `Archive—source protected` and `Review needed`. A status is not permission to destroy the original. Before removing a local copy, confirm that a readable protected original exists, the household can retrieve it and no open dispute, claim or handoff depends on the old version. If not, leave the item open and assign the missing check.
+
+## Schedule a review that can be repeated
+
+Set a household review date when the source or purpose may change. At review, compare version, issuer, dates, outstanding claims and audience. Keep the decision history when a record is replaced so another family member can see why. If a paper copy is discarded, follow a safe disposal process appropriate to the sensitivity; a FamilyBoard label does not shred or revoke a distributed copy.
+
+Export a protected backup when the decision history matters, and preview any handoff for unnecessary personal details. Future affiliate panels for scanners, folders or shredders may appear outside the decision log with clear disclosure and an easy skip; they cannot choose a legal deadline or recover an erased original.
+
+**Contextual CTA:** Give one record a neutral ID, separate household usefulness from external requirements and assign a review date supported by a real source.
+
+Review decisions should also name the safe next action. That may be asking an insurer for its written requirement, confirming a warranty closure, moving a paper copy to controlled disposal or scheduling another retrieval test. Keep the reason and source together so a different household coordinator can challenge or update the decision without guessing what the original reviewer meant.
+
+Use a short review note that says what changed since the previous decision, which evidence was rechecked and whether the protected original is still readable. If the household cannot answer those questions, leave the status at review needed and assign a person to investigate. A dated, explainable pause is safer than an undocumented deletion that later looks accidental.
+
+---
+
+## Page 522 — FamilyBoard Appliance Manual Source Tutorial
+**Slug:** /guides/familyboard-appliance-manual-source-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-appliance-manual-source-tutorial/
+**Primary intent:** verify the correct appliance manual source and model match before using instructions or sharing a handoff
+**Title tag:** FamilyBoard Appliance Manual Tutorial | Match the Right Model and Source
+**Meta description:** Learn how to use FamilyBoard’s appliance manual source log to record model matching, official versions, safety limits and replacement-source follow-up.
+**Primary keyword concept:** FamilyBoard appliance manual source
+**Cluster:** appliances
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/appliance-manual-source-check-log/, /guides/familyboard-product-recall-action-log-tutorial/, /guides/familyboard-appliance-service-visit-tutorial/, /privacy/
+**FAQ:**
+- Q: Is a manual for the same brand safe to use for every model?
+  A: No. Match the exact model and revision; the manufacturer’s current source controls.
+- Q: Does a manual replace a technician or emergency instruction?
+  A: No. It provides product information, not a diagnosis, repair authorization or live safety decision.
+- Q: Should I upload a manual to a public handoff?
+  A: Keep the source protected and share the minimum model and pointer needed by the receiver.
+- Q: Does a source check prove the appliance is safe?
+  A: No. It verifies a document match, not the condition, installation or operation of the appliance.
+
+# FamilyBoard Appliance Manual Tutorial: Match the Right Model and Source
+
+An appliance manual is only helpful when it belongs to the exact unit and remains current. FamilyBoard’s free manual source check log records the asset ID, model evidence, source issuer, version or review date, safety note and next action. It does not certify installation, diagnose a fault or replace a qualified technician. The manufacturer, regulator and current emergency guidance control what to do when a manual and a real-world warning differ.
+
+## Start with the asset identity
+
+Use the protected inventory record to confirm brand, full model and—when necessary—revision or serial range. Create a neutral ID such as `KITCHEN-AP-02` and store the complete serial or address only in the protected source. A photograph of a similar front panel, a product family name or a retailer title is not enough to match instructions. If the label is hidden, damaged or unreadable, record the limitation and assign a safe retrieval action.
+
+## Prefer the manufacturer’s current source
+
+Record whether the manual came from the manufacturer site, an official service portal, a supplied paper copy or a regulator notice. Save the source URL or protected file pointer, publication or update date and language or region. A third-party PDF can be useful as a lead but may be outdated, incomplete or for another voltage. When sources disagree, preserve both versions and ask the manufacturer or qualified service role which controls; do not silently select the easiest instruction.
+
+## Record limits, not DIY permission
+
+The log can note that a manual warns against removing a cover, operating with a damaged cord or using a particular part. It cannot turn a diagram into permission to handle gas, electricity, refrigerant, structural components or moving machinery. If an odor, smoke, exposed conductor, leak or injury appears, stop and follow local emergency and professional guidance. A manual source check proves only that a document was matched, not that the appliance is safe.
+
+Review the source after a recall, model change, service visit, relocation or manufacturer update. In a handoff, share the neutral asset ID, language and source pointer rather than a full serial, address or account. Export a protected backup when the history matters. Future affiliate panels for label makers, replacement filters or manuals may appear outside the log with clear disclosure and an easy skip; they cannot validate compatibility or replace official instructions.
+
+**Contextual CTA:** Match one appliance to its exact manual source, record the safety boundary and assign any model or version gap to a responsible role.
+
+For a shared handoff, distinguish a source that is merely reachable from one that has been checked recently. Record who performed the match and what evidence they used, then set a review trigger for a recall, move or service event. This creates a useful audit trail without placing a full serial number, address or private account detail in a broadly shared row.
+
+If the model label is uncertain, capture the uncertainty as an action rather than selecting a close match. Ask the owner to photograph the protected label or consult the manufacturer through its official route. Once the exact source is confirmed, update the index and preserve the earlier failed match so future reviewers understand why an older PDF must not be reused.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.
