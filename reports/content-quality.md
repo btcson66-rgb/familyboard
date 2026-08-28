@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T18:45:39.072Z
+Generated: 2026-08-28T19:02:22.588Z
 
 ## Summary
 
-- Indexable pages: 895
-- Generated HTML routes: 901
+- Indexable pages: 901
+- Generated HTML routes: 907
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 506
+- Pages without a contextual product/tool link: 509
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,10 +19,10 @@ Generated: 2026-08-28T18:45:39.072Z
 - support: 31
 - printables: 39
 - product: 136
-- inventory-warranty: 74
+- inventory-warranty: 76
 - appliances: 66
 - maintenance: 87
-- household-operations: 183
+- household-operations: 187
 - records-emergency: 127
 - tools: 152
 
@@ -246,8 +246,10 @@ Generated: 2026-08-28T18:45:39.072Z
 - /zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-household-members-responsibilities-tutorial/
+- /zh-tw/guides/familyboard-household-responsibility-coverage-map-tutorial/
 - /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
+- /zh-tw/guides/familyboard-household-shopping-list-planner-tutorial/
 - /zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/
 - /zh-tw/guides/familyboard-household-task-load-calculator-tutorial/
 - /zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/
@@ -290,6 +292,7 @@ Generated: 2026-08-28T18:45:39.072Z
 - /zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/
 - /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
 - /zh-tw/guides/familyboard-repair-punch-list-tutorial/
+- /zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/
 - /zh-tw/guides/familyboard-replacement-part-source-check-tutorial/
 - /zh-tw/guides/familyboard-room-inventory-generator-tutorial/
 - /zh-tw/guides/familyboard-router-support-review-tutorial/

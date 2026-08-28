@@ -34670,6 +34670,192 @@ Planners, labels or household services may eventually appear in a clearly marked
 
 **Contextual CTA:** Enter five recurring tasks with neutral role codes, review what invisible work is missing and convert one agreed next step into an owned FamilyBoard task.
 
+## Page 479 — Household Shopping List Planner Tutorial
+**Slug:** /guides/familyboard-household-shopping-list-planner-tutorial/
+**Primary intent:** use a household shopping list planner to connect a safe item purpose, source, quantity, owner and arrival observation without creating a delivery account
+**Title tag:** FamilyBoard Shopping List Planner Tutorial | Turn Restock Notes Into Clear Handoffs
+**Meta description:** Learn how to use FamilyBoard's Household Shopping List Planner for bounded restock, maintenance supplies, owners and arrival checks without storing payment or medical details.
+**Primary keyword concept:** household shopping list planner tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-shopping-list-planner/, /guides/household-supplies-inventory/, /tools/household-pantry-expiry-review-log/, /features/free-home-management-app/
+**FAQ:**
+- Q: Does the planner know what is already in the pantry?
+  A: No. It formats the safe rows you enter and does not scan shelves or receipts.
+- Q: Does it compare prices or place orders?
+  A: No. Seller, price and payment decisions remain outside the tool.
+- Q: Should allergy or payment details be pasted into a row?
+  A: No. Keep sensitive instructions and identifiers in their responsible protected process.
+- Q: Is an item complete when it is checked off?
+  A: No. Record what actually arrived, was substituted, used or remains missing.
+
+# How to Use FamilyBoard's Household Shopping List Planner
+
+“We need to buy it” is not yet a useful household handoff. A chat message can omit why the item matters, which source controls its specification, who owns the errand, whether a safe substitute already exists or what happened after delivery. FamilyBoard's free [Household Shopping List Planner](/tools/household-shopping-list-planner/) turns a bounded restock question into a dated private list. It is not a delivery service, price-comparison engine, nutrition database or payment account.
+
+## Begin with one purpose
+
+Choose a narrow context such as weekly restock, meal preparation, cleaning supplies, maintenance consumables or a travel handoff. Use `SHOPPING-2026-A`, not a name, address, order number or full receipt title. A bounded list is easier to inspect than a permanent catalogue of everything a household has ever bought.
+
+## Separate need, stock and source
+
+“Need replacement filter,” “one unopened package seen” and “manual source checked” are three different observations. The planner cannot scan shelves, read barcodes, open a delivery account or decide whether a substitute is equivalent. If an item must match a device, follow the actual model manual or responsible professional source before buying. If a dietary, medical or accessibility instruction controls the purchase, point to its protected source and use a general purpose label here.
+
+## Use each field for one decision
+
+Enter a safe item code, purpose, quantity, source pointer, owner and next check. Keep the specification concise enough for another role to understand the action, but do not copy an account number, address, private dietary history or payment detail. A source pointer can be `MANUAL-A1` or `PANTRY-RULE-2`; it should lead an authorised person to the current controlling source.
+
+## Treat ordering and arrival as separate events
+
+An owner choosing a seller is an action. A payment confirmation is a financial record. A delivery notice is a provider statement. The package actually arriving, a safe substitution being accepted or a shortage remaining is a later household observation. Keep those states separate so a check mark does not falsely imply that the right quantity, model or condition was received.
+
+## Close the loop with a real observation
+
+After arrival or use, record the date, what was observed and any follow-up. “Two units arrived; one reserved for maintenance” is clearer than “done.” If an item was unavailable, assign the next source and leave the row open. Review the list after a delivery gap, appliance change, move or new official instruction instead of silently reusing an old quantity.
+
+## Keep the list small and private
+
+The browser record is a local coordination aid, not inventory proof or automatic backup. Export before clearing browser data and inspect the file before sharing. Use role labels when a printed copy might travel. Future product cards may appear outside the form, but they cannot guarantee stock, compatibility, quality, delivery or suitability and must never be required to create the free list.
+
+## Review substitutions without rewriting history
+
+When a seller offers a different size, brand or package, record the proposal and the source that can approve it. A substitution may be harmless for a general supply and unacceptable for a device, allergy or written care instruction. Keep the original requested row, the decision date and the observed result so a later shortage or return can be understood.
+
+## Review substitutions without rewriting history
+
+When a seller offers a different size, brand or package, record the proposal and the source that can approve it. A substitution may be harmless for a general supply and unacceptable for a device, allergy or written care instruction. Keep the original requested row, decision date and observed result so a later shortage or return can be understood. Ask another role to find the protected source with the safe code before accepting an exception.
+
+**Contextual CTA:** Start with one routine restock and one maintenance consumable, assign owners and record what actually arrived or was used.
+
+## Page 480 — Household Responsibility Coverage Map Tutorial
+**Slug:** /guides/familyboard-household-responsibility-coverage-map-tutorial/
+**Primary intent:** use a responsibility coverage map to document work scope, controlling source, primary role, backup trigger and review date without assigning legal responsibility
+**Title tag:** FamilyBoard Responsibility Coverage Map Tutorial | Make Handoffs Resilient
+**Meta description:** Learn how to use FamilyBoard's Household Responsibility Coverage Map to expose single-person dependencies, define backup triggers and connect work to the controlling source.
+**Primary keyword concept:** household responsibility chart tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-responsibility-coverage-map/, /features/family-task-manager/, /guides/divide-household-responsibilities/, /tools/household-weekly-reset-action-log/
+**FAQ:**
+- Q: Is the map a chore scheduler?
+  A: No. It documents scope, sources and backup triggers; use Tasks or Calendar for due events.
+- Q: Should I use names and phone numbers?
+  A: Prefer role labels and keep contact details in the appropriate protected source.
+- Q: Does a primary role prove legal responsibility?
+  A: No. Agreements, authorities and qualified advice control those questions.
+- Q: What makes a backup trigger useful?
+  A: It names an observable change that tells the backup role when to check the source.
+
+# How to Use FamilyBoard's Household Responsibility Coverage Map
+
+Households rarely fail because nobody cares. They fail because a recurring responsibility lives in one person's memory, its source is somewhere else and nobody knows what to do when that person is unavailable. FamilyBoard's free [Household Responsibility Coverage Map](/tools/household-responsibility-coverage-map/) creates a dated map of work scope, controlling source, primary role, backup trigger and next review. It is not a chore scheduler, staff roster, permission system or legal allocation.
+
+## Choose responsibilities with a real consequence
+
+Do not begin with every tiny action. Start with work where a missed handoff could cause an interruption, overlooked notice, safety question or avoidable administrative delay: checking a utility source, preparing a building handoff, reviewing a service appointment or finding a current care or school record. A narrow scope lets the household test whether coverage actually works.
+
+## Write one responsibility per row
+
+Use the row structure `ID | work scope | cadence or condition | controlling source code | primary role | backup role and trigger | last observed date | next review date | status`. “Review the official utility notice when it changes” is clearer than “utilities.” The cadence is a household review rhythm or source event, not a promise that an outside provider will meet a deadline.
+
+## Make the source and trigger observable
+
+A code such as `SOURCE-NET-A` should lead an authorised role to the current provider process, contract or official notice. A trigger such as “primary role unavailable for seven days” or “official notice replaced” tells the backup when to act. Do not write a password hint, full URL, address or private message into the map.
+
+## Test coverage with a backup role
+
+Ask the backup role to explain the scope, find the protected source and name the first safe action without asking the primary person for hidden context. If the backup cannot tell what “done” means, split preparation, action and outcome into separate steps. A row is covered when another role can start the correct next check, not when a name has been typed into a table.
+
+## Review after changes and close carefully
+
+Moves, role changes, provider notices, school terms and service interruptions are natural review triggers. Preserve the earlier observation, update the current source pointer and record why the trigger changed. Mark a row complete only when the intended observation occurred; a promise to look later is still open work. Create a FamilyBoard task for the next dated action rather than pretending the map itself sends reminders.
+
+## Future affiliate space and boundaries
+
+Planners, labels or coordination services may appear in optional space outside the map. They cannot decide legal responsibility, guarantee availability, replace a care plan or make a purchase necessary to complete coverage. The free map must remain useful without a click.
+
+## Check coverage during a real interruption
+
+Use a low-risk rehearsal such as a planned trip or a temporary unavailable role. Ask the backup to find the source and explain the first action, then record which pointer or boundary failed. Do not simulate a dangerous event or expose credentials. The rehearsal is evidence about findability and scope, not proof that every household situation is covered.
+
+## Check coverage during a real interruption
+
+Use a low-risk rehearsal such as a planned trip or a temporarily unavailable role. Ask the backup to find the source and explain the first action, then record which pointer or boundary failed. Do not simulate a dangerous event or expose credentials. The rehearsal is evidence about findability and scope, not proof that every household situation is covered. If a role cannot start safely, leave the gap open and schedule a review.
+
+**Contextual CTA:** Map two responsibilities that would stall if one person were away, add a controlling source and test the backup trigger.
+
+## Page 481 — Replacement-Part Source Check Log Tutorial
+**Slug:** /guides/familyboard-replacement-part-source-check-log-tutorial/
+**Primary intent:** use a replacement-part source check log to connect a device, compatibility evidence, protected spare and open question without guaranteeing fit
+**Title tag:** FamilyBoard Replacement-Part Source Check Tutorial | Verify Before You Buy
+**Meta description:** Learn how to use FamilyBoard's Replacement-Part Source Check Log to record device-linked parts, model evidence, compatibility observations and protected storage.
+**Primary keyword concept:** replacement part compatibility checklist tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-replacement-part-source-check-log/, /tools/household-shopping-list-planner/, /tools/appliance-manual-source-check-log/, /guides/appliance-replacement-planning/
+**FAQ:**
+- Q: Does the log tell me which part to buy?
+  A: No. Confirm model, dimensions, ratings and written instructions in the controlling source.
+- Q: Is a retailer listing compatibility proof?
+  A: Not automatically. Keep manufacturer or responsible service evidence separate and dated.
+- Q: Should I enter a serial number or receipt?
+  A: No. Use a neutral asset code and protected source pointer.
+- Q: Does “received” mean the part is safe to install?
+  A: No. Receipt, fit and installation safety are separate observations.
+
+# How to Use FamilyBoard's Replacement-Part Source Check Log
+
+“Replacement filter,” “bulb” and “battery” look simple until a household owns two devices with different sizes, ratings or instructions. A similar package can still be wrong, and a retailer title can omit a suffix that matters. FamilyBoard's free [Replacement-Part Source Check Log](/tools/household-replacement-part-source-check-log/) keeps a dated link between the real device, the part's purpose, the source that controls compatibility and the question that remains open. It does not identify models, compare prices, validate a part or certify installation safety.
+
+## Separate ordinary shopping from device-linked parts
+
+General detergent belongs in a shopping list. A filter, cartridge, dust bag, bulb, battery pack or other item that must match a device deserves a source check. Start with one scope such as a living-room air-conditioner filter or printer supply. Use `PART-SOURCE-MAP-2026-A`, not a resident name, full serial, address or order number.
+
+## Record evidence, not a guess
+
+Use a row like `PART-A | device code | filter purpose | protected manual source | model range observed; physical fit open | quantity and protected storage | owner role | review date | source pending`. The source can be a manual, nameplate record, service document or household file kept elsewhere. “Fits” is not enough when dimensions, voltage, connector, material, rating or regional instruction matters.
+
+## Treat five events separately
+
+Model evidence, compatibility decision, purchase action, package arrival and installation observation are different events. A seller page may support a purchase search but does not replace the manufacturer's source. A package that arrived is not evidence that the part is correct. Installation questions involving electricity, gas, drinking water or other hazards belong to the manual and qualified professional.
+
+## Test the source before buying
+
+Ask a second role to find the current model evidence and explain which detail supports the compatibility question. If they cannot, leave the row open and improve the pointer. Do not solve uncertainty by copying the full serial, receipt or manual into a shared list. Keep the original protected and write only the minimum observation needed for the next decision.
+
+## Close with a cautious outcome
+
+After purchase, record what arrived, whether the package was reserved for the intended device and what remains unverified. Do not mark a part safe or installed merely because the quantity is correct. If the model changes, a recall appears or a service source disagrees, create a new version and preserve the earlier observation. Link a separate FamilyBoard task for any qualified inspection.
+
+## Future affiliate space and boundaries
+
+Replacement products may eventually appear in an optional disclosed area. They cannot rank compatibility, prove authenticity, prescribe installation or make a purchase the completion condition. The source-check log must remain useful even when no commercial link is shown.
+
+## Keep a decision trail for returns
+
+If the part is rejected, returned or held for a technician, record that outcome separately from the original compatibility observation. Preserve the model source and the reason for the decision in protected storage. This prevents a future shopper from treating an old “source checked” row as permission to install a different or recalled part.
+
+## Keep a decision trail for returns
+
+If the part is rejected, returned or held for a technician, record that outcome separately from the original compatibility observation. Preserve the model source and reason in protected storage. This prevents a future shopper from treating an old “source checked” row as permission to install a different or recalled part. When the model, region or written instruction changes, create a new version instead of overwriting history.
+
+**Contextual CTA:** Start with one part your household has previously bought incorrectly, link it to neutral device evidence and leave unresolved fit questions visible.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

@@ -3696,6 +3696,30 @@
     "headings": "How to Use FamilyBoard's Household Task Load Calculator Start with one planning question Enter one recurring task per line Understand the approximation Discuss invisible work with evidence Turn the conversation into a handoff Include setup and follow-up honestly Future affiliate space and boundaries"
   },
   {
+    "title": "FamilyBoard Shopping List Planner Tutorial | Turn Restock Notes Into Clear Handoffs",
+    "description": "Learn how to use FamilyBoard's Household Shopping List Planner for bounded restock, maintenance supplies, owners and arrival checks without storing payment or medical details.",
+    "route": "/guides/familyboard-household-shopping-list-planner-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "household shopping list planner tutorial",
+    "headings": "How to Use FamilyBoard's Household Shopping List Planner Begin with one purpose Separate need, stock and source Use each field for one decision Treat ordering and arrival as separate events Close the loop with a real observation Keep the list small and private Review substitutions without rewriting history Review substitutions without rewriting history"
+  },
+  {
+    "title": "FamilyBoard Responsibility Coverage Map Tutorial | Make Handoffs Resilient",
+    "description": "Learn how to use FamilyBoard's Household Responsibility Coverage Map to expose single-person dependencies, define backup triggers and connect work to the controlling source.",
+    "route": "/guides/familyboard-household-responsibility-coverage-map-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "household responsibility chart tutorial",
+    "headings": "How to Use FamilyBoard's Household Responsibility Coverage Map Choose responsibilities with a real consequence Write one responsibility per row Make the source and trigger observable Test coverage with a backup role Review after changes and close carefully Future affiliate space and boundaries Check coverage during a real interruption Check coverage during a real interruption"
+  },
+  {
+    "title": "FamilyBoard Replacement-Part Source Check Tutorial | Verify Before You Buy",
+    "description": "Learn how to use FamilyBoard's Replacement-Part Source Check Log to record device-linked parts, model evidence, compatibility observations and protected storage.",
+    "route": "/guides/familyboard-replacement-part-source-check-log-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "replacement part compatibility checklist tutorial",
+    "headings": "How to Use FamilyBoard's Replacement-Part Source Check Log Separate ordinary shopping from device-linked parts Record evidence, not a guess Treat five events separately Test the source before buying Close with a cautious outcome Future affiliate space and boundaries Keep a decision trail for returns Keep a decision trail for returns"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

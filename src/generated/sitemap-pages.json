@@ -3832,6 +3832,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-household-shopping-list-planner-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-shopping-list-planner-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-responsibility-coverage-map-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-responsibility-coverage-map-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-replacement-part-source-check-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4845,6 +4869,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-household-responsibility-coverage-map-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-responsibility-coverage-map-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/",
     "alternateRoute": "/guides/familyboard-household-responsibility-coverage-tutorial/",
     "indexable": true,
@@ -4856,6 +4887,13 @@
     "alternateRoute": "/guides/familyboard-household-return-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-shopping-list-planner-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-shopping-list-planner-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -5148,6 +5186,13 @@
   {
     "route": "/zh-tw/guides/familyboard-repair-punch-list-tutorial/",
     "alternateRoute": "/guides/familyboard-repair-punch-list-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-replacement-part-source-check-log-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

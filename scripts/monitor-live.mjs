@@ -760,6 +760,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-task-load-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-shopping-list-planner-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-shopping-list-planner-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-responsibility-coverage-map-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-responsibility-coverage-map-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-replacement-part-source-check-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -858,6 +864,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/",
     require: ["家庭家務負荷計算器教學", "隱形工作", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-household-shopping-list-planner-tutorial/",
+    require: ["Household Shopping List Planner", "arrival"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-shopping-list-planner-tutorial/",
+    require: ["家庭採買清單規劃器教學", "到貨", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-household-responsibility-coverage-map-tutorial/",
+    require: ["Responsibility Coverage Map", "backup trigger"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-responsibility-coverage-map-tutorial/",
+    require: ["家庭責任覆蓋地圖教學", "備援", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-replacement-part-source-check-log-tutorial/",
+    require: ["Replacement-Part Source Check Log", "compatibility"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/",
+    require: ["替換零件來源查核紀錄教學", "相容", 'lang="zh-TW"'],
   },
   {
     path: "/ads.txt",
