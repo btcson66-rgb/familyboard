@@ -89,6 +89,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/smoke-alarm-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/fire-extinguisher-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/carbon-monoxide-alarm-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/humidifier-maintenance-guide/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/ceiling-fan-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/bathroom-exhaust-fan-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1249,6 +1252,33 @@ const checks = [
       'hreflang="en"',
       "警報響起先離開",
       "一氧化碳無色、無味",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/humidifier-maintenance-guide/",
+    require: [
+      "加濕器使用與保養紀錄",
+      'hreflang="en"',
+      "濕度、水箱與燙傷界線分開處理",
+      "不要讓室內相對濕度超過 50%",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/ceiling-fan-maintenance-checklist/",
+    require: [
+      "吊扇保養清單",
+      'hreflang="en"',
+      "葉片、固定件、異音與高處工作要分開",
+      "先讓人離開下方",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/bathroom-exhaust-fan-maintenance-checklist/",
+    require: [
+      "浴室排風扇保養清單",
+      'hreflang="en"',
+      "把潮濕觀察和風管維修分開",
+      "異味、冒煙與漏水要升級",
     ],
   },
   {

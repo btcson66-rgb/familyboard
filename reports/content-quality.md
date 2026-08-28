@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T06:09:19.144Z
+Generated: 2026-08-28T06:15:57.163Z
 
 ## Summary
 
-- Indexable pages: 659
-- Generated HTML routes: 678
+- Indexable pages: 662
+- Generated HTML routes: 681
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 361
+- Pages without a contextual product/tool link: 364
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,8 +19,8 @@ Generated: 2026-08-28T06:09:19.144Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 47
-- maintenance: 77
+- appliances: 48
+- maintenance: 79
 - household-operations: 109
 - inventory-warranty: 47
 - records-emergency: 92
@@ -139,8 +139,10 @@ Generated: 2026-08-28T06:09:19.144Z
 - /zh-tw/guides/appliance-inventory/
 - /zh-tw/guides/appliance-replacement-planning/
 - /zh-tw/guides/automatic-renewal-charge-dispute-taiwan/
+- /zh-tw/guides/bathroom-exhaust-fan-maintenance-checklist/
 - /zh-tw/guides/carbon-monoxide-alarm-records/
 - /zh-tw/guides/caregiver-handoff-checklist/
+- /zh-tw/guides/ceiling-fan-maintenance-checklist/
 - /zh-tw/guides/cleaning-schedule/
 - /zh-tw/guides/computer-electronics-inventory/
 - /zh-tw/guides/condo-maintenance-checklist/
@@ -259,6 +261,7 @@ Generated: 2026-08-28T06:09:19.144Z
 - /zh-tw/guides/household-supplies-inventory/
 - /zh-tw/guides/how-long-to-keep-household-records/
 - /zh-tw/guides/how-to-track-product-warranties/
+- /zh-tw/guides/humidifier-maintenance-guide/
 - /zh-tw/guides/hvac-filter-tracker/
 - /zh-tw/guides/important-household-documents/
 - /zh-tw/guides/maintenance-priorities/

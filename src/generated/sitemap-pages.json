@@ -585,7 +585,7 @@
   },
   {
     "route": "/guides/humidifier-maintenance-guide/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/humidifier-maintenance-guide/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -593,7 +593,7 @@
   },
   {
     "route": "/guides/ceiling-fan-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/ceiling-fan-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -601,7 +601,7 @@
   },
   {
     "route": "/guides/bathroom-exhaust-fan-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/bathroom-exhaust-fan-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3279,6 +3279,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/bathroom-exhaust-fan-maintenance-checklist/",
+    "alternateRoute": "/guides/bathroom-exhaust-fan-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/carbon-monoxide-alarm-records/",
     "alternateRoute": "/guides/carbon-monoxide-alarm-records/",
     "indexable": true,
@@ -3297,6 +3304,13 @@
     "alternateRoute": "/tools/caregiver-handoff-source-authorization-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-26",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/ceiling-fan-maintenance-checklist/",
+    "alternateRoute": "/guides/ceiling-fan-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -4781,6 +4795,13 @@
     "alternateRoute": "/guides/how-to-track-product-warranties/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/humidifier-maintenance-guide/",
+    "alternateRoute": "/guides/humidifier-maintenance-guide/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
