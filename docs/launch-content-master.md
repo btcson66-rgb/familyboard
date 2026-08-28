@@ -35746,6 +35746,193 @@ Finish with a short audit record that another responsible role can replay: trigg
 
 ---
 
+## Page 496 — FamilyBoard Guest Service Visit Reset Tutorial
+**Slug:** /guides/familyboard-guest-service-visit-reset-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-guest-service-visit-reset-tutorial/
+**Primary intent:** learn to verify household reset actions after a guest or service visit without storing visitor identity or access secrets
+**Title tag:** FamilyBoard Guest Service Visit Reset Tutorial | Verify the Household Handoff
+**Meta description:** Learn how to use FamilyBoard to review a guest or service visit scope, record preparation and verify the household reset without storing visitor details or door codes.
+**Primary keyword concept:** service visit reset checklist
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-guest-arrival-prep-log/, /guides/house-sitter-information/, /tools/household-home-access-handoff-log/, /privacy/
+**FAQ:**
+- Q: Should I store a visitor's name or phone number in the shared row?
+  A: No. Use a neutral visit code and keep identity in a controlled contact source.
+- Q: Can the tool contain a door code or key location?
+  A: No. Access details belong in a separate controlled process.
+- Q: Does a cleared work area prove a service visit was safe or successful?
+  A: No. It records preparation and household observations, not service quality or safety certification.
+- Q: Is an arrival plan the same as an invitation?
+  A: No. The responsible household role and actual authorised communication control access.
+
+# How to Review a Guest or Service Visit Reset with FamilyBoard
+
+Family visits, gatherings and repair appointments create small tasks that vanish into a chat: clear a work area, protect papers, state which rooms are in scope and check what was restored afterward. FamilyBoard's free [Guest Arrival Preparation Log](/tools/household-guest-arrival-prep-log/) turns that sequence into a private, reviewable reset handoff without storing a visitor's identity or access credentials.
+
+## Define the visit scope first
+
+Create a neutral code such as `VISIT-PREP-A` and describe the smallest area or purpose: “common living area,” “kitchen work zone” or “water-heater inspection scope.” Record the planned date window and the household role responsible for preparation. Do not put names, addresses, phone numbers, case text, door codes or key locations into the shared row. A narrow scope prevents a routine visit from exposing the whole home.
+
+## Separate contact authority from the preparation note
+
+The log can point to a controlled contact source, but it should not become a guest list or access register. Record only that an authorised channel was used and which question remains open. A message sent, a calendar entry or an appointment request is not proof that a person is authorised to enter. For a service provider, keep the provider and property source in the protected workflow that controls the visit.
+
+## Prepare only observable, low-risk actions
+
+Write actions another role can verify: move a fragile item away from the work area, cover a protected document folder, unlock an agreed interior door through the authorised process, or mark the room that is out of scope. Do not ask the tool to decide whether a contractor is qualified or whether an area is safe. Hazardous work, keys, alarms, utilities and personal records remain with the responsible source and professional instructions.
+
+## Record arrival and work boundaries separately
+
+“Visit planned” is a plan. “Work area cleared” is a preparation event. “Common area checked after arrival” is a household observation. If the visit changes rooms or timing, create a new version rather than silently broadening the first row. Keep an unresolved access or scope question visible so the next household role knows who must confirm it.
+
+## Check the reset after departure
+
+At the end, record what the household actually observed: a shared area was returned, a covered folder was found, a tool or package remained, or a follow-up is still needed. Do not write “everything safe” unless the appropriate source has made that determination. If a service result belongs in a contractor or repair record, link a safe pointer and leave the preparation log focused on household reset.
+
+## Handle interruptions honestly
+
+If the visitor is late, the work expands, a key is missing or an appointment is cancelled, record the visible event and the authorised next channel. Do not paste a screenshot containing personal data or access secrets into FamilyBoard. An incomplete status is safer than a tidy row that hides an open permission, safety or service question.
+
+## Keep future recommendations optional
+
+Storage bins, protective mats and cleaning supplies may eventually appear outside the form with a clear affiliate disclosure. They must be easy to skip and cannot promise service quality, protect every item or replace a controlled access process. The free preparation log should remain useful with household actions and safe source pointers alone.
+
+**Contextual CTA:** Review one completed visit, compare its scope with two observable reset actions and leave any access or service question with the authorised source.
+
+---
+
+## Page 497 — FamilyBoard Subscription Cancellation Result Review Tutorial
+**Slug:** /guides/familyboard-subscription-cancellation-result-review-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/
+**Primary intent:** learn to verify a subscription cancellation result against provider confirmation and later billing evidence
+**Title tag:** FamilyBoard Subscription Cancellation Result Tutorial | Verify the End Date
+**Meta description:** Learn how to review a household subscription cancellation against provider confirmation and later billing evidence without storing credentials or card details.
+**Primary keyword concept:** subscription cancellation result review
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-subscription-cancellation-handoff-log/, /guides/annual-renewal-calendar/, /tools/household-bill-source-status-log/, /privacy/
+**FAQ:**
+- Q: Should a cancellation handoff contain a password or card number?
+  A: No. Keep credentials and billing details in the provider's controlled source and use a safe reference here.
+- Q: Does submitting a cancellation prove that charges have stopped?
+  A: No. Check the provider confirmation and later billing source separately.
+- Q: Can this workflow cover trials and annual plans?
+  A: Yes. Keep trial ending, renewal window, cancellation action and result as distinct dated observations.
+- Q: Does the tool decide whether a refund is owed?
+  A: No. Terms, provider records and applicable advice control refund or dispute questions.
+
+# How to Review a Household Subscription Cancellation Result
+
+Renewal reminders, trial endings and cancellation confirmations often live in different provider screens. FamilyBoard's free [subscription cancellation handoff log](/tools/household-subscription-cancellation-handoff-log/) separates the service scope, controlling source, renewal window, household owner, cancellation action and result review. It stores no account credentials or payment data and does not decide refund rights.
+
+## Choose a bounded service scope
+
+Start with one service and a safe reference such as `CANCEL-REVIEW-A`. Write “streaming trial review,” “annual software renewal” or another narrow scope, not an email address, account number, card, full bill or private message. If several services renew in the same week, use separate rows so a confirmation cannot be attached to the wrong provider.
+
+## Record the source before the deadline
+
+Point to the provider terms, account page, invoice or official help source using a protected code, and record when it was checked. A calendar reminder or search result can locate the source but cannot establish the actual window. Preserve the displayed timezone, renewal date or trial end as an observation; if the provider is unclear, leave the date open and assign a question to the service source.
+
+## Separate window, request and confirmation
+
+A renewal or trial-ending date is a source-based window. Opening settings, submitting a cancellation request and seeing a confirmation are three different events. Record each date and the household role that performed it. “Cancellation button clicked” is not the same as “provider confirms end date,” and a confirmation screen is not the same as a later billing observation.
+
+## Hand off the next action clearly
+
+Assign one next action such as “reopen provider confirmation,” “check the next statement” or “ask support about the displayed end date.” Keep the question and owner visible without copying the provider conversation. A new household role should be able to find the source pointer and understand what remains open without receiving credentials or payment details.
+
+## Check billing results in the controlling source
+
+After the expected end date, check the provider account and billing record through the authorised process. Record only a safe observation such as “next statement still pending” or “provider shows access ended.” A charge, refund, trial conversion or disputed amount may require the provider's terms, formal support or qualified financial advice. FamilyBoard cannot stop a charge or decide entitlement.
+
+## Preserve changes and interruptions
+
+If the service changes plan, owner, payment source, renewal date or provider, create a new version and keep the earlier observation. If the password is forgotten, the provider page errors or the cancellation channel changes, record the interruption and escalate through the official route. Never mark a cancellation complete just to make the handoff look tidy.
+
+## Keep affiliate content separate
+
+Future panels for planners, folders or household budgeting supplies may appear beside the article with a clear disclosure and easy skip. They cannot cancel a service, guarantee a refund, rank a provider or make a purchase necessary. The free handoff log should work with the provider sources the household already controls.
+
+## Make the result review easy to replay
+
+At closeout, record the safe service code, source checked, cancellation request date, displayed end date, later billing checkpoint and the role that performed each check. Do not overwrite a failed or delayed attempt; add a new observation and keep the discrepancy visible. A useful note says “provider confirmation located; next statement not yet issued,” while “cancelled successfully” hides which source and date support the claim. If the provider's terms or account screen changes, create a new version and preserve the earlier result so a future reviewer can distinguish a changed policy from a missed cancellation step.
+
+**Contextual CTA:** Compare one cancellation request with the provider's displayed end date and a later billing observation, then keep any discrepancy open.
+
+---
+
+## Page 498 — FamilyBoard Weekly Household Decision Review Tutorial
+**Slug:** /guides/familyboard-weekly-household-decision-review-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/
+**Primary intent:** learn to review weekly household decisions for source quality, ownership and a testable next checkpoint
+**Title tag:** FamilyBoard Weekly Decision Review Tutorial | Check Owners and Sources
+**Meta description:** Learn how to audit a weekly household review for bounded scope, source pointers, testable decisions, owners and next checkpoints without copying private records.
+**Primary keyword concept:** weekly household decision review
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-weekly-reset-action-log/, /guides/annual-home-review/, /tools/household-monthly-review-action-log/, /privacy/
+**FAQ:**
+- Q: Is a weekly reset a replacement for a calendar or task app?
+  A: No. It records the review decision and points back to the controlling task or calendar source.
+- Q: Should I paste a full bill or private chat into the reset?
+  A: No. Use safe source codes and keep sensitive material in its controlled location.
+- Q: What makes a reset different from another to-do list?
+  A: It records why a decision was made, who owns the next action and when the household will review it again.
+- Q: Does an assigned owner prove the work is complete?
+  A: No. Assignment and later observation are separate events.
+
+# How to Review Weekly Household Decisions in FamilyBoard
+
+A weekly review helps only when it produces a small number of clear decisions instead of another list that no one opens. FamilyBoard's free [Weekly Reset Action Log](/tools/household-weekly-reset-action-log/) lets a household review the scope, source, current decision, responsible role, observed action and next checkpoint. It does not replace a calendar, task manager or billing record, and it stores no credentials, full bills or private conversations.
+
+## Choose a bounded review scope
+
+Pick one focus such as overdue tasks, next-week appointments, supplies, documents, subscriptions or role coverage. Use a safe source code like `TASK-T1` or `CAL-C1`. A short scope makes a review possible in one sitting; an export of every household detail hides what actually changed. If two topics need different owners, create separate reset rows rather than one vague “home admin” item.
+
+## Bring the controlling source, not a copy
+
+Point to the calendar, task, provider notice or protected document using a safe index. Record the date and the small fact checked. Do not paste a whole invoice, account identifier, private chat or medical detail to make the row look complete. If the source cannot answer the question, record that gap and assign the next lookup to the correct role or provider.
+
+## Write a decision that can be tested
+
+“Keep open,” “reschedule,” “ask the provider,” “split into two actions” and “wait for confirmation” are useful decisions. “Handle it soon” is not. Include the reason in plain language and keep uncertainty visible. The tool does not decide which family priority is morally or financially correct; it makes the chosen decision reviewable next week.
+
+## Assign one owner and one next action
+
+Give each row one responsible role and one concrete action, such as “confirm the appointment window” or “compare the source version.” A group label can hide that no one accepted the work. Record an acceptance request and a later result separately. If nobody can take the action, keep an explicit coverage gap instead of assigning a fictional owner.
+
+## Close with an observation, not a hope
+
+At the next checkpoint, record what was actually seen: provider response received, task moved, supply purchased and observed, or question still open. A reminder sent, message read or calendar event created is not proof that work happened. Preserve the earlier decision so another reviewer can understand why the plan changed rather than making the timeline appear effortless.
+
+## Connect weekly and monthly reviews
+
+Use the weekly reset for near-term choices and the [monthly review action log](/tools/household-monthly-review-action-log/) for patterns that need a longer view. A new source, role, due date or household boundary should create a new version. Do not overwrite a prior review simply because the answer changed; the history explains which assumption required attention.
+
+## Keep planning products optional
+
+Future planners, labels or folders may appear beside the article with a clear affiliate disclosure and easy skip. They cannot guarantee better household outcomes, choose a priority or replace the calendar, task source or provider. The free reset remains useful with a pen-and-paper decision, a safe pointer and one honest next action.
+
+**Contextual CTA:** Audit one weekly decision for its source, owner and testable next action, then schedule a checkpoint that will capture the next real observation.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T20:28:53.069Z
+Generated: 2026-08-28T20:58:44.385Z
 
 ## Summary
 
-- Indexable pages: 929
-- Generated HTML routes: 935
+- Indexable pages: 935
+- Generated HTML routes: 941
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 523
+- Pages without a contextual product/tool link: 526
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,7 +22,7 @@ Generated: 2026-08-28T20:28:53.069Z
 - inventory-warranty: 82
 - appliances: 66
 - maintenance: 89
-- household-operations: 195
+- household-operations: 201
 - records-emergency: 133
 - tools: 152
 
@@ -219,6 +219,7 @@ Generated: 2026-08-28T20:28:53.069Z
 - /zh-tw/guides/familyboard-family-display-mode-setup/
 - /zh-tw/guides/familyboard-free-home-management-app-tutorial/
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
+- /zh-tw/guides/familyboard-guest-service-visit-reset-tutorial/
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
 - /zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/
 - /zh-tw/guides/familyboard-home-care-billing-discrepancy-tutorial/
@@ -322,6 +323,7 @@ Generated: 2026-08-28T20:28:53.069Z
 - /zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/
 - /zh-tw/guides/familyboard-storm-readiness-review-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
+- /zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/
 - /zh-tw/guides/familyboard-subscription-renewal-review/
 - /zh-tw/guides/familyboard-task-load-calculator-tutorial/
 - /zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/
@@ -337,6 +339,7 @@ Generated: 2026-08-28T20:28:53.069Z
 - /zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/
 - /zh-tw/guides/familyboard-warranty-tracker-tutorial/
 - /zh-tw/guides/familyboard-water-leak-event-log-tutorial/
+- /zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
 - /zh-tw/guides/fire-extinguisher-records/
 - /zh-tw/guides/first-time-homeowner-maintenance-guide/

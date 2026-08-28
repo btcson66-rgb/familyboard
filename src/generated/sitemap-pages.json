@@ -3968,6 +3968,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-guest-service-visit-reset-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-guest-service-visit-reset-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-weekly-household-decision-review-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4792,6 +4816,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-guest-service-visit-reset-tutorial/",
+    "alternateRoute": "/guides/familyboard-guest-service-visit-reset-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-home-access-handoff-tutorial/",
     "alternateRoute": "/guides/familyboard-home-access-handoff-tutorial/",
     "indexable": true,
@@ -5074,6 +5105,13 @@
   {
     "route": "/zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/",
     "alternateRoute": "/guides/familyboard-household-time-window-overlap-checker-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/",
+    "alternateRoute": "/guides/familyboard-weekly-household-decision-review-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5510,6 +5548,13 @@
     "alternateRoute": "/guides/familyboard-subscription-cancellation-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+    "alternateRoute": "/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

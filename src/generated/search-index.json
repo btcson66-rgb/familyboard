@@ -3832,6 +3832,30 @@
     "headings": "How to Audit FamilyBoard After a Household Role Changes Name the trigger without over-sharing Map duties to the next action Review real access separately Ask for acceptance, then verify the result Close old copies and stale assumptions Escalate formal questions to their source Keep future products optional Leave an evidence trail without exposing identities"
   },
   {
+    "title": "FamilyBoard Guest Service Visit Reset Tutorial | Verify the Household Handoff",
+    "description": "Learn how to use FamilyBoard to review a guest or service visit scope, record preparation and verify the household reset without storing visitor details or door codes.",
+    "route": "/guides/familyboard-guest-service-visit-reset-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "service visit reset checklist",
+    "headings": "How to Review a Guest or Service Visit Reset with FamilyBoard Define the visit scope first Separate contact authority from the preparation note Prepare only observable, low-risk actions Record arrival and work boundaries separately Check the reset after departure Handle interruptions honestly Keep future recommendations optional"
+  },
+  {
+    "title": "FamilyBoard Subscription Cancellation Result Tutorial | Verify the End Date",
+    "description": "Learn how to review a household subscription cancellation against provider confirmation and later billing evidence without storing credentials or card details.",
+    "route": "/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "subscription cancellation result review",
+    "headings": "How to Review a Household Subscription Cancellation Result Choose a bounded service scope Record the source before the deadline Separate window, request and confirmation Hand off the next action clearly Check billing results in the controlling source Preserve changes and interruptions Keep affiliate content separate Make the result review easy to replay"
+  },
+  {
+    "title": "FamilyBoard Weekly Decision Review Tutorial | Check Owners and Sources",
+    "description": "Learn how to audit a weekly household review for bounded scope, source pointers, testable decisions, owners and next checkpoints without copying private records.",
+    "route": "/guides/familyboard-weekly-household-decision-review-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "weekly household decision review",
+    "headings": "How to Review Weekly Household Decisions in FamilyBoard Choose a bounded review scope Bring the controlling source, not a copy Write a decision that can be tested Assign one owner and one next action Close with an observation, not a hope Connect weekly and monthly reviews Keep planning products optional"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

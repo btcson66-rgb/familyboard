@@ -278,6 +278,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-printout-download-retention-tutorial/",
     "/guides/familyboard-household-role-change-audit-tutorial/",
     "/zh-tw/guides/familyboard-household-role-change-audit-tutorial/",
+    "/guides/familyboard-guest-service-visit-reset-tutorial/",
+    "/zh-tw/guides/familyboard-guest-service-visit-reset-tutorial/",
+    "/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+    "/zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+    "/guides/familyboard-weekly-household-decision-review-tutorial/",
+    "/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1955,6 +1961,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-household-role-change-audit-tutorial/",
       alternate: "/guides/familyboard-household-role-change-audit-tutorial/",
       heading: "FamilyBoard 家庭角色變更稽核教學：更新下一個真正負責的人",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-guest-service-visit-reset-tutorial/",
+      alternate: "/guides/familyboard-guest-service-visit-reset-tutorial/",
+      heading: "FamilyBoard 訪客服務復原教學：把範圍、準備與離開後觀察分開",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+      alternate: "/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+      heading: "FamilyBoard 訂閱取消結果教學：把請求、結束日與帳單觀察分開",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/",
+      alternate: "/guides/familyboard-weekly-household-decision-review-tutorial/",
+      heading: "FamilyBoard 每週家庭決策複查教學：把檢視變成可交接的證據",
     },
   ]) {
     await page.goto(localized.route);
@@ -4670,6 +4691,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-household-role-change-audit-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-guest-service-visit-reset-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-guest-service-visit-reset-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-weekly-household-decision-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-seasonal-reset-tutorial/",

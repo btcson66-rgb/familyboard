@@ -794,6 +794,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-printout-download-retention-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-role-change-audit-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-role-change-audit-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-guest-service-visit-reset-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-guest-service-visit-reset-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-subscription-cancellation-result-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-weekly-household-decision-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1459,6 +1465,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-household-role-change-audit-tutorial/",
     require: ["家庭角色變更稽核教學", "負責角色"],
+  },
+  {
+    path: "/guides/familyboard-guest-service-visit-reset-tutorial/",
+    require: ["How to Review a Guest or Service Visit Reset", "household reset"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-guest-service-visit-reset-tutorial/",
+    require: ["訪客服務復原教學", "復原觀察"],
+  },
+  {
+    path: "/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+    require: ["Subscription Cancellation Result", "billing observation"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/",
+    require: ["訂閱取消結果教學", "帳單觀察"],
+  },
+  {
+    path: "/guides/familyboard-weekly-household-decision-review-tutorial/",
+    require: ["How to Review Weekly Household Decisions", "decision reviewable"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/",
+    require: ["每週家庭決策複查教學", "可測試"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",
