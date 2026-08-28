@@ -33144,6 +33144,207 @@ Is the callback linked to a preserved earlier visit? Is the recurrence observabl
 
 ---
 
+---
+
+## Page 455 — How to Use FamilyBoard's Appliance Purchase and Installation Record
+**Slug:** /guides/familyboard-appliance-purchase-installation-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/
+**Primary intent:** learn to keep purchase, delivery, installation and first-observation evidence separate without treating a receipt as a safety or warranty decision
+**Title tag:** FamilyBoard Appliance Purchase and Installation Tutorial | Evidence from Order to First Use
+**Meta description:** Learn how to use FamilyBoard to organise an appliance purchase and installation record: protect order details, separate delivery from installation and document the first safe observation.
+**Primary keyword concept:** FamilyBoard appliance purchase installation tutorial
+**Cluster:** appliances
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/appliance-purchase-installation-record/, /guides/appliance-inventory/, /guides/how-to-track-product-warranties/, /tools/appliance-manual-source-check-log/
+**FAQ:**
+- Q: Does a purchase record prove an appliance is installed safely?
+  A: No. Delivery, installation and a safe professional result are separate sources.
+- Q: Should an order number or full address go into a shared row?
+  A: No. Use a neutral asset code and keep identifying details protected.
+- Q: Does a receipt establish the warranty start date?
+  A: No. Record what the current written terms define and leave uncertainty open.
+- Q: Can the tool tell me whether I may install an appliance myself?
+  A: No. Follow the manufacturer, building, utility and qualified professional instructions.
+
+**Contextual CTA:** Create one neutral asset code, link protected purchase evidence and record delivery, installation and first observation as separate checkpoints.
+
+# How to Use FamilyBoard's Appliance Purchase and Installation Record
+
+An appliance purchase creates a trail that is easy to compress into one sentence: “bought and installed.” That shortcut hides the order, seller, delivery condition, installer scope, model match, warranty terms and first safe observation. The free [Appliance Purchase and Installation Record](/tools/appliance-purchase-installation-record/) keeps those facts separate for a later warranty, service or household handoff. It does not verify a seller, inspect a delivery, authorise installation, calculate a legal warranty date or certify that equipment is safe.
+
+## Begin with a neutral asset code
+
+Use `PURCHASE-INSTALL-2026-A`, not a name, address, order number, serial number, payment reference or account. Keep the complete receipt and model evidence in the protected household inventory. The shared record can point to `ASSET-M1` and state “kitchen appliance purchase,” so a permitted role can return to the original without exposing identifying data in a printout.
+
+## Record the purchase source and terms
+
+Save the seller, manufacturer, model family, region and purchase-date source as protected pointers. Note which document states delivery, installation, return, service or warranty conditions. A product page, checkout screen and issued invoice can differ; retain their dates and do not let a remembered price or marketing label replace the controlling document. If the purchase source is incomplete, mark the model or term as pending rather than filling it with a guess.
+
+## Keep delivery condition separate
+
+Delivery is an observation at a particular time: packaging, visible damage, missing parts or a handoff signature. It is not proof that the appliance matches the order, works correctly or was installed. Record who observed the condition and where photos or carrier notes are protected. Do not move a heavy appliance, remove packaging near a hazard or connect power merely to create a first-use record.
+
+## Define installation scope and authority
+
+Write what the installer was asked to do, who authorised it and which source controls the requirements. Electricity, gas, water, ventilation, anchoring and building rules may require qualified work or approval. An appointment, estimate or paid deposit is not the same as completed installation. Keep the installer’s report and invoice in the protected source, using the FamilyBoard row only for a safe pointer, date and open question.
+
+## Match the installed asset before closing
+
+Compare the protected model evidence with the delivered item and installation record. If model, region, capacity or accessory differs, preserve the discrepancy and ask the seller or installer which source controls. Do not silently change the inventory label or treat a serial photograph as something to paste into a shared checklist. A mismatch is a useful open status that can prevent a later manual or warranty record from attaching to the wrong asset.
+
+## Make the first observation safe and modest
+
+Record only a safe observation such as “display lit after authorised connection” or “installer left a follow-up question.” Do not bypass guards, open panels, run gas or water tests, climb, lift, or use the appliance in an unusual way to make the row complete. If the manual or installer requires a qualified check, leave the result pending. A receipt, “installed” label or first power-on does not prove performance, compliance or warranty eligibility.
+
+## Link manuals, warranty and service without duplication
+
+Use the [Appliance Manual Source Check Log](/tools/appliance-manual-source-check-log/) for model and document versions, and the warranty guide for terms and claim evidence. Link with neutral codes rather than copying full receipts, serials or contracts into each page. If a problem appears, create a service or callback event instead of rewriting the purchase record. Separate links make the history auditable and reduce uncontrolled copies of sensitive documents.
+
+## Export and review the commercial boundary
+
+Before sharing, remove addresses, order and payment data, serial numbers, private messages and installer contact details. FamilyBoard is local-first and browser storage is not automatic backup; export and test retrieval before clearing data. A future product recommendation may appear only outside the record, with clear affiliate disclosure and a skip option. No storage product, appliance listing or accessory guarantees safe installation, compatibility, warranty coverage or performance.
+
+## Eight-question closeout
+
+Is the asset code neutral? Are purchase terms, delivery, installation and first observation separate? Are seller and installer sources protected and dated? Was installation authority left to the right source? Was the delivered model matched without exposing identifiers? Was the first observation safe and limited? Are manual, warranty and service links non-duplicative? Were private details removed and recommendations kept optional? If not, keep the record open.
+
+---
+
+## Page 456 — How to Use FamilyBoard's Home Handoff Summary Generator
+**Slug:** /guides/familyboard-home-handoff-summary-generator-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/
+**Primary intent:** learn to generate a short household handoff summary from bounded tasks, sources, roles and open questions without copying a private archive
+**Title tag:** FamilyBoard Home Handoff Summary Tutorial | Give the Next Person a Safe Starting Point
+**Meta description:** Learn how to use FamilyBoard's Home Handoff Summary Generator to prepare a concise, source-linked handoff with roles, dates, open questions and minimum necessary detail.
+**Primary keyword concept:** FamilyBoard home handoff summary tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/home-handoff-summary-generator/, /guides/household-handoff/, /guides/familyboard-household-admin-backup-tutorial/, /tools/household-share-access-review-log/
+**FAQ:**
+- Q: Does a handoff summary give the receiver access to every household account?
+  A: No. It points to authorised sources and does not grant access.
+- Q: Should I copy passwords, full addresses or private documents into the summary?
+  A: No. Use a neutral source pointer and keep originals protected.
+- Q: Does a generated summary prove each task is complete?
+  A: No. It records the stated status; the receiver must verify the current source.
+- Q: Can the summary replace emergency, medical or legal instructions?
+  A: No. Those instructions remain with the current responsible source.
+
+**Contextual CTA:** Choose one receiver and one time window, generate the smallest useful summary and ask the receiver to find each authorised source.
+
+# How to Use FamilyBoard's Home Handoff Summary Generator
+
+A handoff fails when it tries to transfer an entire household in one message. The next person needs a bounded time window, a few responsibilities, the source for each item, what was observed and what remains open—not a dump of passwords, private conversations or every historical note. The free [Home Handoff Summary Generator](/tools/home-handoff-summary-generator/) creates that starting point. It does not grant account access, synchronise devices, certify completion, make decisions or replace emergency, medical, legal or financial instructions.
+
+## Choose one receiver and one window
+
+Start with a purpose such as a weekend trip, caregiver change, move-out week or temporary illness. Use `HANDOFF-2026-A` and name the receiver by role, not a public name or phone number. A short window makes it possible to verify what changed. “Run the home forever” is not a handoff scope; “check mail, review the leak source and confirm the pet-care pointer from Friday to Sunday” is.
+
+## Use roles and safe pointers
+
+Each line should contain a responsibility, an authorised role, a review date, a protected source code and a status. `UTILITY-P1` or `PET-CARE-2` is enough for the summary; account numbers, keys, access codes, health details and full addresses stay in the controlling system. The summary can say who may ask the source owner, but it cannot grant permission or make a person responsible for a decision they are not authorised to make.
+
+## Separate plan, action and observed result
+
+“Check the building notice” is a plan. “Backup role opened the current notice on Tuesday” is an action and observation. “Manager confirmed the repair window” is a source-backed result. Do not convert a reminder, sent message or green checkbox into proof that a provider replied or a task succeeded. If the receiver cannot verify the source, keep the row open and record the missing permission, pointer or date.
+
+## Keep the summary deliberately small
+
+Include only what the receiver needs for the selected window: next action, source pointer, role, due date, stop condition and open question. A shorter summary is easier to print, translate and review. Link to a longer protected record only when the receiver is authorised. Removing detail is not hiding a problem; it prevents a temporary handoff from becoming a second uncontrolled archive.
+
+## Test retrieval, not memory
+
+Ask the receiver to locate one source and explain the next safe step without asking for a password or copying the original document. Record whether the pointer, permission, device, language or source version caused friction. A successful lookup proves only that one scoped path worked at that time. Use the [Share Access Review Log](/tools/household-share-access-review-log/) for the access question and keep its result separate from the task outcome.
+
+## Mark hazards and escalation boundaries
+
+Write when the receiver must stop and contact the source owner, provider, building manager, emergency service or qualified professional. Do not use a summary to instruct someone to open electrical equipment, enter a hazard, change medication, sign a contract or make a legal decision. If an urgent event occurs, follow current local instructions first and update the handoff only after people are safe.
+
+## Close the window and recover copies
+
+At the end date, ask what was completed, what source changed and which paper or screen copies should be collected. Preserve an unresolved item rather than quietly deleting it. FamilyBoard is local-first and browser storage is not automatic backup; export and test retrieval before clearing data. Any future label, binder or productivity product must remain outside the summary controls, clearly disclosed and optional.
+
+## Eight-question closeout
+
+Is the receiver and window clear? Are roles and permissions distinct? Are source pointers safe? Are plans, actions and results separate? Is the summary the minimum useful size? Did the receiver perform a real lookup? Are hazards and escalation sources explicit? Were expired copies recovered and recommendations kept optional? If not, leave the handoff open.
+
+---
+
+## Page 457 — How to Use FamilyBoard's House-Sitter Instruction Generator
+**Slug:** /guides/familyboard-house-sitter-instruction-generator-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/
+**Primary intent:** learn to prepare a time-bounded house-sitter instruction sheet with source pointers, boundaries and check-ins without exposing keys or promising care results
+**Title tag:** FamilyBoard House-Sitter Instruction Tutorial | Prepare a Clear, Privacy-Safe Visit
+**Meta description:** Learn how to use FamilyBoard's House-Sitter Instruction Generator for a bounded visit: record routines, source pointers, access limits, exceptions and a return check without sharing secrets.
+**Primary keyword concept:** FamilyBoard house sitter instruction tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/house-sitter-instruction-generator/, /guides/house-sitter-information/, /guides/familyboard-home-handoff-summary-generator-tutorial/, /tools/household-home-access-handoff-log/
+**FAQ:**
+- Q: Does the instruction sheet give a sitter permission to enter every room or account?
+  A: No. It records the limits the household has explicitly authorised.
+- Q: Should I put an alarm code, key location or full address in the public app record?
+  A: No. Keep access secrets in the protected handoff channel.
+- Q: Does a completed check-in prove the home or pet is safe?
+  A: No. It records an observed message or result, not a safety certification.
+- Q: Can the generator replace veterinary, emergency or building instructions?
+  A: No. Use the current responsible professional or authority source.
+
+**Contextual CTA:** Define one visit window, prepare minimum instructions and ask the sitter to acknowledge the safe source and escalation route before arrival.
+
+# How to Use FamilyBoard's House-Sitter Instruction Generator
+
+A house-sitter sheet should answer what to do during a particular visit and what to do when the expected plan changes. It should not become a public map of the home, a key register or a substitute for veterinary, emergency or building instructions. The free [House-Sitter Instruction Generator](/tools/house-sitter-instruction-generator/) helps prepare a short, role-owned handoff with routines, source pointers, boundaries and a return check. It does not hold keys, verify a sitter, grant access, contact services or certify a home or pet.
+
+## Set a visit window and role
+
+Use `SITTER-2026-A`, a start and end time, and a role such as “authorised house sitter.” State whether the visit covers plants, mail, a pet routine, a visible appliance check or a simple arrival observation. Do not publish a full address, names, travel dates or the fact that the home is empty. One visit code prevents an old sheet from being mistaken for current permission.
+
+## Separate routine from exception
+
+Write the ordinary action and the condition that changes it: “check the protected plant-care pointer once daily” and “if the source is unavailable, contact the household role.” A routine is not a medical, veterinary, electrical or security instruction. Keep dosage, alarm codes, entry credentials and specialist plans in the responsible protected source. The sheet should direct the sitter to ask, pause or escalate rather than improvise.
+
+## Use minimum necessary access
+
+Describe the area and action at the smallest useful level, such as “front entry and kitchen counter for the package check.” Do not list every room, key location, camera, account or lock. A role label does not grant permission. Confirm access through the household’s protected channel, and record only that the authorised source was acknowledged. If access is unclear, the correct status is waiting for the owner, not “sitter approved.”
+
+## Link current sources and dates
+
+Use pointers such as `PET-CARE-1`, `PLANT-CARE-1` or `BUILDING-B1`, plus the date checked. A forwarded message or old printed sheet can be a lead but not the current instruction. If a pet routine, building rule, appliance warning or travel plan changes, create a new version and withdraw older copies. Never ask a sitter to decide which conflicting source is safest.
+
+## Define check-in and escalation
+
+Record how the sitter reports “arrived,” “routine observed,” “unexpected condition” and “left.” A check-in proves a message or observation at a time; it does not prove that a pet ate, a pipe is sound or a door is secure. State who receives an exception and when to stop. For injury, fire, gas, electrical danger, a missing person or an animal emergency, follow current local emergency and professional instructions before updating FamilyBoard.
+
+## Review privacy after the visit
+
+Collect outdated paper sheets, revoke temporary access through the controlling system and remove photos or messages that reveal more than necessary. Ask the household role to confirm which source was used and what remains open. FamilyBoard is local-first and browser storage is not automatic backup; export and test retrieval before clearing data. A future lockbox, camera or pet product may be shown outside the workflow with disclosure and a skip option, never as a guarantee.
+
+## Handoff and return safely
+
+Ask the sitter to repeat the visit window, minimum access, source pointer and escalation route without requesting secrets. On return, compare the expected routine with the observed result and record exceptions as new events. Do not rewrite the instruction sheet to hide a missed check. Version the next visit if the people, pet, building, season or access arrangement changes.
+
+## Eight-question closeout
+
+Is the visit window bounded? Are routine and exception separate? Is access limited and authorised elsewhere? Are current sources dated? Can the sitter report an exception without sharing secrets? Are escalation instructions controlled by the right professional or authority? Were copies recovered? Is any product recommendation outside the controls and optional? If not, keep the instruction sheet open.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

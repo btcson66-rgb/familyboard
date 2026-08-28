@@ -708,6 +708,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-service-visit-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-appliance-repair-callback-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-repair-callback-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-appliance-purchase-installation-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-handoff-summary-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-house-sitter-instruction-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -6281,6 +6287,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-appliance-repair-callback-tutorial/",
     require: ["家電維修回訪紀錄教學", "症狀重現", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-appliance-purchase-installation-tutorial/",
+    require: ["Appliance Purchase and Installation Tutorial", "delivery condition"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/",
+    require: ["家電購買與安裝紀錄教學", "到貨狀況", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-handoff-summary-generator-tutorial/",
+    require: ["Home Handoff Summary Tutorial", "bounded time window"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/",
+    require: ["家庭交接摘要產生器教學", "最小摘要", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-house-sitter-instruction-generator-tutorial/",
+    require: ["House-Sitter Instruction Tutorial", "minimum necessary access"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/",
+    require: ["看家照護指示產生器教學", "最小必要的進入範圍", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

@@ -172,6 +172,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-appliance-service-visit-tutorial/",
     "/guides/familyboard-appliance-repair-callback-tutorial/",
     "/zh-tw/guides/familyboard-appliance-repair-callback-tutorial/",
+    "/guides/familyboard-appliance-purchase-installation-tutorial/",
+    "/zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/",
+    "/guides/familyboard-home-handoff-summary-generator-tutorial/",
+    "/zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/",
+    "/guides/familyboard-house-sitter-instruction-generator-tutorial/",
+    "/zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1093,7 +1099,7 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     page.locator(".site-footer").getByRole("link", { name: "家電維修後復發紀錄" }),
   ).toHaveAttribute("href", "/zh-tw/tools/appliance-repair-callback-log/");
   await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電購買與安裝紀錄" }),
+    page.locator(".site-footer").getByRole("link", { name: "家電購買與安裝紀錄", exact: true }),
   ).toHaveAttribute("href", "/zh-tw/tools/appliance-purchase-installation-record/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "購買與到貨證據紀錄" }),
@@ -1632,6 +1638,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-appliance-repair-callback-tutorial/",
       alternate: "/guides/familyboard-appliance-repair-callback-tutorial/",
       heading: "FamilyBoard 家電維修回訪紀錄教學：症狀重現也不先猜責任",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/",
+      alternate: "/guides/familyboard-appliance-purchase-installation-tutorial/",
+      heading: "FamilyBoard 家電購買與安裝紀錄教學：把訂單、到貨與首次觀察分開",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/",
+      alternate: "/guides/familyboard-home-handoff-summary-generator-tutorial/",
+      heading: "FamilyBoard 家庭交接摘要產生器教學：給下一個人安全的起點",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/",
+      alternate: "/guides/familyboard-house-sitter-instruction-generator-tutorial/",
+      heading: "FamilyBoard 看家照護指示產生器教學：準備清楚又保護隱私的短期交接",
     },
   ]) {
     await page.goto(localized.route);

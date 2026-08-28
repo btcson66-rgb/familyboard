@@ -3504,6 +3504,30 @@
     "headings": "How to Use FamilyBoard's Appliance Repair Callback Log Open a new callback, not a rewritten old visit Record when and how the recurrence was noticed Bridge the earlier provider statement Separate callback request, acknowledgement and result Keep warranty and safety decisions with the right source Version parts, remedies and changed conditions Handoff and export with minimum data Eight-question closeout"
   },
   {
+    "title": "FamilyBoard Appliance Purchase and Installation Tutorial | Evidence from Order to First Use",
+    "description": "Learn how to use FamilyBoard to organise an appliance purchase and installation record: protect order details, separate delivery from installation and document the first safe observation.",
+    "route": "/guides/familyboard-appliance-purchase-installation-tutorial/",
+    "cluster": "appliances",
+    "keywords": "FamilyBoard appliance purchase installation tutorial",
+    "headings": "How to Use FamilyBoard's Appliance Purchase and Installation Record Begin with a neutral asset code Record the purchase source and terms Keep delivery condition separate Define installation scope and authority Match the installed asset before closing Make the first observation safe and modest Link manuals, warranty and service without duplication Export and review the commercial boundary Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Home Handoff Summary Tutorial | Give the Next Person a Safe Starting Point",
+    "description": "Learn how to use FamilyBoard's Home Handoff Summary Generator to prepare a concise, source-linked handoff with roles, dates, open questions and minimum necessary detail.",
+    "route": "/guides/familyboard-home-handoff-summary-generator-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard home handoff summary tutorial",
+    "headings": "How to Use FamilyBoard's Home Handoff Summary Generator Choose one receiver and one window Use roles and safe pointers Separate plan, action and observed result Keep the summary deliberately small Test retrieval, not memory Mark hazards and escalation boundaries Close the window and recover copies Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard House-Sitter Instruction Tutorial | Prepare a Clear, Privacy-Safe Visit",
+    "description": "Learn how to use FamilyBoard's House-Sitter Instruction Generator for a bounded visit: record routines, source pointers, access limits, exceptions and a return check without sharing secrets.",
+    "route": "/guides/familyboard-house-sitter-instruction-generator-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard house sitter instruction tutorial",
+    "headings": "How to Use FamilyBoard's House-Sitter Instruction Generator Set a visit window and role Separate routine from exception Use minimum necessary access Link current sources and dates Define check-in and escalation Review privacy after the visit Handoff and return safely Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

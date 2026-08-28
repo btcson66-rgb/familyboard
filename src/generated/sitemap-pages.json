@@ -3640,6 +3640,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-appliance-purchase-installation-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-home-handoff-summary-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-house-sitter-instruction-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4254,6 +4278,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/",
+    "alternateRoute": "/guides/familyboard-appliance-purchase-installation-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-appliance-repair-callback-tutorial/",
     "alternateRoute": "/guides/familyboard-appliance-repair-callback-tutorial/",
     "indexable": true,
@@ -4492,6 +4523,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-handoff-summary-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-home-inventory-checklist-generator-tutorial/",
     "alternateRoute": "/guides/familyboard-home-inventory-checklist-generator-tutorial/",
     "indexable": true,
@@ -4536,6 +4574,13 @@
   {
     "route": "/zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/",
     "alternateRoute": "/guides/familyboard-home-service-reminder-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-house-sitter-instruction-generator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

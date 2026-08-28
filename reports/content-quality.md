@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T16:21:29.033Z
+Generated: 2026-08-28T16:36:41.216Z
 
 ## Summary
 
-- Indexable pages: 847
-- Generated HTML routes: 853
+- Indexable pages: 853
+- Generated HTML routes: 859
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 482
+- Pages without a contextual product/tool link: 485
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,9 +20,9 @@ Generated: 2026-08-28T16:21:29.033Z
 - printables: 39
 - product: 134
 - inventory-warranty: 70
-- appliances: 62
+- appliances: 64
 - maintenance: 86
-- household-operations: 151
+- household-operations: 155
 - records-emergency: 122
 - tools: 152
 
@@ -184,6 +184,7 @@ Generated: 2026-08-28T16:21:29.033Z
 - /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
 - /zh-tw/guides/familyboard-appliance-age-calculator-tutorial/
 - /zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/
+- /zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/
 - /zh-tw/guides/familyboard-appliance-repair-callback-tutorial/
 - /zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/
 - /zh-tw/guides/familyboard-appliance-service-visit-tutorial/
@@ -220,6 +221,7 @@ Generated: 2026-08-28T16:21:29.033Z
 - /zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/
 - /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
 - /zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/
+- /zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/
 - /zh-tw/guides/familyboard-home-inventory-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/
 - /zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/
@@ -227,6 +229,7 @@ Generated: 2026-08-28T16:21:29.033Z
 - /zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/
 - /zh-tw/guides/familyboard-home-service-provider-verification-tutorial/
 - /zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/
+- /zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/
 - /zh-tw/guides/familyboard-household-account-list-tutorial/
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-annual-review-generator-tutorial/

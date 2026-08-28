@@ -58,3 +58,5 @@ Ask a permitted role to restate the recurrence, earlier source code and next che
 ## Eight-question closeout
 
 Is the callback linked to a preserved earlier visit? Is the recurrence observable and safely obtained? Are provider statements attributable? Are request, acknowledgement, visit and result separate? Were warranty and safety decisions left to their sources? Were changed parts and conditions versioned? Can the receiver find the protected evidence without secrets? Were sensitive fields removed and any recommendation kept skippable? If not, keep the callback open.
+
+---
