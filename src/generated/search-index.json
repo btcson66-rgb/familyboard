@@ -3600,6 +3600,30 @@
     "headings": "How to Use FamilyBoard's Plant Care Handoff Log Bound the care window and plant group Point to the real care source Record observations instead of diagnoses Separate planned action from completed review Keep access and privacy outside the shared row Design a backup for weather and absence changes Review the handoff when returning home Eight-question closeout"
   },
   {
+    "title": "FamilyBoard Household Meeting Agenda Tutorial | Turn Talk Into Owned Follow-up",
+    "description": "Learn how to use FamilyBoard's Household Meeting Agenda and Action Log to prepare a focused agenda, separate decisions from open questions and assign follow-up checkpoints with safe references.",
+    "route": "/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard household meeting agenda action log tutorial",
+    "headings": "How to Use FamilyBoard's Household Meeting Agenda and Action Log Start with one real meeting outcome Give topics a source and a scope Separate decisions, questions and actions Use roles and checkpoints instead of names Close only after an observable follow-up Privacy, exports and future commercial content Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Pantry Expiry Review Tutorial | Track Labels and Rotation Safely",
+    "description": "Learn how to use FamilyBoard's Pantry Expiry Review Log to record label dates, storage zones, package observations and rotation tasks without copying receipts or treating a date as a safety verdict.",
+    "route": "/guides/familyboard-pantry-expiry-review-log-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard pantry expiry review log tutorial",
+    "headings": "How to Use FamilyBoard's Pantry and Household Consumables Expiry Review Log Begin with one shelf or zone Record facts without a verdict Keep label, manufacturer and meal plan separate Turn rotation into an owned follow-up Preserve a dated version when conditions change Privacy, local storage and future products Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Trip Packing and Home Handoff Tutorial | Plan the Edges of a Trip",
+    "description": "Learn how to use FamilyBoard's Trip Packing and Home Handoff Log to separate travel requirements, household coverage, handoff evidence and return checks without copying document numbers or reservations.",
+    "route": "/guides/familyboard-trip-packing-handoff-log-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard trip packing and home handoff tutorial",
+    "headings": "How to Use FamilyBoard's Household Trip Packing and Handoff Log Define departure, return and a small scope Separate official sources from household tasks Build packing and coverage rows with safe IDs Record plan, handoff and return evidence separately Handle pets, plants, deliveries and services conservatively Return home and preserve changed plans Privacy, local storage and optional commercial content Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

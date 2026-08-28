@@ -732,6 +732,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-mail-package-handoff-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-plant-care-handoff-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-meeting-agenda-action-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-pantry-expiry-review-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-pantry-expiry-review-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-trip-packing-handoff-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -6401,6 +6407,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/",
     require: ["植物照護交接教學", "觀察", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
+    require: ["Household Meeting Agenda and Action Log", "open questions"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
+    require: ["家庭會議議程與行動紀錄教學", "待確認問題", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-pantry-expiry-review-log-tutorial/",
+    require: ["Pantry and Household Consumables Expiry Review Log", "safety verdict"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-pantry-expiry-review-log-tutorial/",
+    require: ["食品櫃日期複查教學", "安全結論", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-trip-packing-handoff-log-tutorial/",
+    require: ["Household Trip Packing and Handoff Log", "return checks"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/",
+    require: ["旅行打包與住家交接教學", "返家複查", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T17:32:30.340Z
+Generated: 2026-08-28T17:48:10.973Z
 
 ## Summary
 
-- Indexable pages: 871
-- Generated HTML routes: 877
+- Indexable pages: 877
+- Generated HTML routes: 883
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 11
-- Pages without a contextual product/tool link: 494
+- Pages without a contextual product/tool link: 497
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,7 +22,7 @@ Generated: 2026-08-28T17:32:30.340Z
 - inventory-warranty: 72
 - appliances: 64
 - maintenance: 86
-- household-operations: 165
+- household-operations: 171
 - records-emergency: 128
 - tools: 152
 
@@ -239,6 +239,7 @@ Generated: 2026-08-28T17:32:30.340Z
 - /zh-tw/guides/familyboard-household-decision-register-tutorial/
 - /zh-tw/guides/familyboard-household-document-index-generator-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
+- /zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-household-members-responsibilities-tutorial/
 - /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
@@ -261,6 +262,7 @@ Generated: 2026-08-28T17:32:30.340Z
 - /zh-tw/guides/familyboard-moving-box-handover-log-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-old-tablet-display-tutorial/
+- /zh-tw/guides/familyboard-pantry-expiry-review-log-tutorial/
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
 - /zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
@@ -298,6 +300,7 @@ Generated: 2026-08-28T17:32:30.340Z
 - /zh-tw/guides/familyboard-task-load-calculator-tutorial/
 - /zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
+- /zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/
 - /zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/
 - /zh-tw/guides/familyboard-utility-bill-difference-tutorial/
 - /zh-tw/guides/familyboard-utility-provider-handoff-tutorial/

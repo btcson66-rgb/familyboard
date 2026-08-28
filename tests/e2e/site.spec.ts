@@ -51,6 +51,9 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-school-record-source-handoff-log/",
     "/tools/household-mail-package-handoff-log/",
     "/tools/household-plant-care-handoff-log/",
+    "/tools/household-meeting-agenda-action-log/",
+    "/tools/household-pantry-expiry-review-log/",
+    "/tools/household-trip-packing-handoff-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -205,6 +208,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-mail-package-handoff-log-tutorial/",
     "/guides/familyboard-plant-care-handoff-log-tutorial/",
     "/zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/",
+    "/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
+    "/zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
+    "/guides/familyboard-pantry-expiry-review-log-tutorial/",
+    "/zh-tw/guides/familyboard-pantry-expiry-review-log-tutorial/",
+    "/guides/familyboard-trip-packing-handoff-log-tutorial/",
+    "/zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1725,6 +1734,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/",
       alternate: "/guides/familyboard-plant-care-handoff-log-tutorial/",
       heading: "FamilyBoard 植物照護交接教學：出門時記錄觀察與責任，不自行診斷",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
+      alternate: "/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
+      heading: "FamilyBoard 家庭會議議程與行動紀錄教學：把討論變成有人負責的下一步",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-pantry-expiry-review-log-tutorial/",
+      alternate: "/guides/familyboard-pantry-expiry-review-log-tutorial/",
+      heading: "FamilyBoard 食品櫃日期複查教學：記錄標示與輪替，不把日期當成安全結論",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/",
+      alternate: "/guides/familyboard-trip-packing-handoff-log-tutorial/",
+      heading: "FamilyBoard 旅行打包與住家交接教學：把出發前後的責任分開記錄",
     },
   ]) {
     await page.goto(localized.route);

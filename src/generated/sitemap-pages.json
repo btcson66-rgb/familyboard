@@ -3736,6 +3736,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-pantry-expiry-review-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-pantry-expiry-review-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-trip-packing-handoff-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4714,6 +4738,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-household-meeting-tutorial/",
     "alternateRoute": "/guides/familyboard-household-meeting-tutorial/",
     "indexable": true,
@@ -4865,6 +4896,13 @@
     "alternateRoute": "/guides/familyboard-old-tablet-display-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-pantry-expiry-review-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-pantry-expiry-review-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -5124,6 +5162,13 @@
     "alternateRoute": "/guides/familyboard-trip-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-trip-packing-handoff-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

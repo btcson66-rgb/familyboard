@@ -33932,6 +33932,193 @@ At return, compare the safe group and dated observations with the protected phot
 
 Is the window short and clear? Is the group broad enough to avoid exposure? Does the pointer lead to current notes? Are observations separated from diagnoses? Are planned and completed visits distinct? Is each next action owned? Were access details protected? Did uncertain questions go to the real care source? If not, keep the handoff open.
 
+---
+
+## Page 467 — How to Use FamilyBoard's Household Meeting Agenda and Action Log
+**Slug:** /guides/familyboard-household-meeting-agenda-action-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/
+**Primary intent:** run a focused family meeting with decisions, open questions, owners and checkpoints without storing private messages
+**Title tag:** FamilyBoard Household Meeting Agenda Tutorial | Turn Talk Into Owned Follow-up
+**Meta description:** Learn how to use FamilyBoard's Household Meeting Agenda and Action Log to prepare a focused agenda, separate decisions from open questions and assign follow-up checkpoints with safe references.
+**Primary keyword concept:** FamilyBoard household meeting agenda action log tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-meeting-agenda-action-log/, /guides/familyboard-household-annual-review-generator-tutorial/, /guides/familyboard-household-members-responsibilities-tutorial/, /guides/familyboard-household-decision-register-tutorial/
+**FAQ:**
+- Q: Does the tool assign a person automatically?
+  A: No. It formats roles and checkpoints that the household confirms together.
+- Q: Can I paste private messages into the agenda?
+  A: No. Use safe references and keep full messages in protected storage.
+- Q: Does a meeting decision become professional or legal advice?
+  A: No. It is a household planning note, not a professional determination.
+- Q: How should an unresolved topic be handled?
+  A: Keep it open with an owner, source and next checkpoint rather than recording a guess as a decision.
+
+**Contextual CTA:** Prepare one small meeting, separate decisions from open questions and leave every follow-up with a named household role.
+
+# How to Use FamilyBoard's Household Meeting Agenda and Action Log
+
+A short family meeting is useful only when everyone can see what was discussed, what was actually decided and what still needs checking. The free [Household Meeting Agenda and Action Log](/tools/household-meeting-agenda-action-log/) turns a bounded conversation into topics, decisions, open questions, owners and checkpoints without storing names, passwords, payment data, health details or private correspondence. It does not decide family responsibilities, give professional advice or guarantee that a task will happen.
+
+## Start with one real meeting outcome
+
+Choose a small purpose such as a weekly reset, monthly home review, travel handoff, repair choice or follow-up after an incident. Keep the agenda to twelve topics or fewer. Each topic should be something the household can discuss, verify or assign—not a full document, argument transcript or sensitive story. A clear outcome makes it easier to know when the meeting is complete.
+
+## Give topics a source and a scope
+
+Use safe references such as `FILTER-SOURCE-A`, `TRIP-HANDOFF-B` or `REPAIR-QUOTE-C`. The source tells the family where the original information lives; the scope says which room, service or task is being discussed. Do not paste account numbers, addresses, medical content or private messages. When a topic depends on an external provider, note that the provider remains the controlling source.
+
+## Separate decisions, questions and actions
+
+Write the sentence the household actually agreed to, then create a separate open question for anything that still needs confirmation. “Review the filter Saturday” is an action; “filter reviewed” is a later result. “Ask the contractor whether the quote includes disposal” is a question, not a decision. This separation preserves uncertainty and prevents a confident meeting note from becoming false evidence.
+
+## Use roles and checkpoints instead of names
+
+Assign labels such as household organizer, backup person, partner, renter or handoff recipient. Add a task code and a next checkpoint date that the household can change. A role is a coordination label, not legal authority or a permanent identity. If the person or scope changes, open a new action or meeting version so the history still shows who owned the earlier step.
+
+## Close only after an observable follow-up
+
+The meeting can close when its agenda was reviewed, but each action stays open until the owner reports an observable result or explains why it is not applicable. A forwarded message, calendar entry or verbal promise is not the result itself. Link to a protected source by safe ID when evidence is needed. If a topic becomes medical, financial, legal or safety-critical, send it to the appropriate qualified source rather than deciding it in the household log.
+
+## Privacy, exports and future commercial content
+
+This is a browser-local agenda and handoff index, not a secure vault. Export before clearing data and review the audience before printing or sharing. Keep passwords, door codes, full receipts, health information and private conversations protected. Future notebooks, folders or scanner recommendations must remain outside urgent or sensitive decisions, carry a clear affiliate disclosure and never replace a professional source.
+
+## Eight-question closeout
+
+Is the meeting purpose small? Are topics scoped and linked to safe sources? Are decisions separate from questions and actions? Does each open action have a role and checkpoint? Are results based on observation rather than promises? Did sensitive material stay protected? Were professional questions routed out? Can another household member understand what remains open? If not, keep the agenda open.
+
+---
+
+## Page 468 — How to Use FamilyBoard's Pantry and Household Consumables Expiry Review Log
+**Slug:** /guides/familyboard-pantry-expiry-review-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-pantry-expiry-review-log-tutorial/
+**Primary intent:** review pantry labels, storage zones, package observations and rotation follow-up without making food-safety decisions
+**Title tag:** FamilyBoard Pantry Expiry Review Tutorial | Track Labels and Rotation Safely
+**Meta description:** Learn how to use FamilyBoard's Pantry Expiry Review Log to record label dates, storage zones, package observations and rotation tasks without copying receipts or treating a date as a safety verdict.
+**Primary keyword concept:** FamilyBoard pantry expiry review log tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-pantry-expiry-review-log/, /guides/deep-cleaning-tracker/, /guides/household-supplies-inventory/, /guides/familyboard-shopping-list-planner-tutorial/
+**FAQ:**
+- Q: Does the log decide whether food is safe to eat?
+  A: No. Use the actual label, manufacturer and applicable local safety source.
+- Q: Should I enter receipts, addresses or allergy histories?
+  A: No. Use safe source codes and keep purchase and health details protected.
+- Q: Is a printed date a guarantee?
+  A: No. The tool does not interpret dates, storage conditions, package integrity or allergy risk.
+- Q: What is a useful first review scope?
+  A: Start with one shelf, drawer or refrigerator zone and a small number of rows.
+
+**Contextual CTA:** Review one storage zone, record observable label and package facts, then assign a rotation follow-up without making a safety verdict.
+
+# How to Use FamilyBoard's Pantry and Household Consumables Expiry Review Log
+
+Pantry reviews become manageable when a household can see which source was checked, where an item belongs and who will look again. The free [Pantry and Household Consumables Expiry Review Log](/tools/household-pantry-expiry-review-log/) records safe item codes, label observations, storage zones, owners and follow-up. It does not decide whether food is safe, edible, suitable for a person or ready to discard, and it does not replace the label, manufacturer or local safety guidance.
+
+## Begin with one shelf or zone
+
+Use `PANTRY-REVIEW-2026-A` and choose a narrow zone such as one shelf, drawer, refrigerator basket or dry-goods cabinet. A small physical scope makes it possible to inspect the package, record what was actually seen and complete a rotation task. If the household has a large inventory, create another dated review rather than an unmaintained master list.
+
+## Record facts without a verdict
+
+Use an item or category code, the visible label or source date, a storage-zone code, a package or quantity observation and a planned next step. “Label date visible” and “package seal appears damaged” are observations. They are not a decision about safety, freshness, allergy risk or disposal. If a label is unclear, leave the row open and identify the responsible source.
+
+## Keep label, manufacturer and meal plan separate
+
+A printed date, a manufacturer instruction and a family meal plan answer different questions. Link them with safe references rather than merging them into one conclusion. A generic online list cannot decide the storage or use of a particular product. When a household member has an allergy, health concern or other question, keep those details protected and route the decision to the appropriate source.
+
+## Turn rotation into an owned follow-up
+
+Rotation may mean placing an item in a clearly labelled zone, asking the shopping role to check it, or adding a planned meal to the household calendar. Record the owner and next date. Keep the row open until the action is observed. A completed rotation task does not prove the item was safe or consumed; it only shows that the household completed its chosen organization step.
+
+## Preserve a dated version when conditions change
+
+Moving an item to a different zone, replacing packaging, discovering damage or changing the household meal plan creates a new observation. Do not overwrite the earlier review. A new date and safe code show what was known at each point and make it easier for another household member to understand why a row remains open.
+
+## Privacy, local storage and future products
+
+The tool is a browser-local household index. Export before clearing data and keep receipts, delivery addresses, payment details, loyalty numbers, private messages and medical or allergy histories in protected storage. Future labels, bins or notebook recommendations must be optional, clearly disclosed and outside the safety controls; no product can interpret a date or guarantee food safety.
+
+## Eight-question closeout
+
+Is the review limited to one physical zone? Are item and source codes safe? Are label and package observations separate from a safety verdict? Are manufacturer and family plans kept distinct? Does every rotation task have an owner and date? Are damaged or unclear items still open? Did health and purchase details stay protected? Was the actual label or responsible source consulted? If not, keep the review open.
+
+---
+
+## Page 469 — How to Use FamilyBoard's Household Trip Packing and Handoff Log
+**Slug:** /guides/familyboard-trip-packing-handoff-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/
+**Primary intent:** coordinate packing, home coverage and return checks with safe references, roles and dates without storing travel documents or booking details
+**Title tag:** FamilyBoard Trip Packing and Home Handoff Tutorial | Plan the Edges of a Trip
+**Meta description:** Learn how to use FamilyBoard's Trip Packing and Home Handoff Log to separate travel requirements, household coverage, handoff evidence and return checks without copying document numbers or reservations.
+**Primary keyword concept:** FamilyBoard trip packing and home handoff tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-trip-packing-handoff-log/, /guides/travel-household-handoff/, /guides/familyboard-house-sitter-instruction-generator-tutorial/, /guides/familyboard-household-return-handoff-tutorial/
+**FAQ:**
+- Q: Does this replace a passport, airline or official travel checklist?
+  A: No. Use current carrier, authority and provider sources for actual requirements.
+- Q: Can I enter document numbers or reservation details?
+  A: No. Use safe source codes and protect documents, addresses, bookings and payment details.
+- Q: Does assigning a role prove the home is covered?
+  A: No. Record the actual handoff and observed result separately.
+- Q: What should happen when plans change?
+  A: Create a new dated version or open action and preserve the earlier expectation.
+
+**Contextual CTA:** Set a clear travel window, separate official requirements from household tasks and record the real handoff and return review.
+
+# How to Use FamilyBoard's Household Trip Packing and Handoff Log
+
+Travel preparation is more than a packing list. Someone may need to cover the home, pets, plants, deliveries or a service visit, while the returning household needs a short way to check what happened. The free [Household Trip Packing and Handoff Log](/tools/household-trip-packing-handoff-log/) connects a travel window, safe source references, household roles, handoff observations and return checks without storing passport numbers, reservations, addresses or payment details. It does not verify travel documents, bookings, insurance, transport, lodging or emergencies.
+
+## Define departure, return and a small scope
+
+Use `TRIP-HANDOFF-2026-A`, a departure date and a planned return date. Choose one bounded scope: packing categories, home coverage, pet or plant care, deliveries, a service appointment or a return inspection. A short dated version is easier to verify than a permanent travel database. If the trip extends, create a new version and keep the original expectation visible.
+
+## Separate official sources from household tasks
+
+A carrier, embassy, authority, insurer or accommodation provider controls an external requirement. A household role controls a preparation or coverage task. Record both as separate safe references. A calendar entry or forwarded message can point to an action, but it cannot prove that a document is valid, a booking is confirmed or a home is covered.
+
+## Build packing and coverage rows with safe IDs
+
+Use category codes such as `PACK-DOCS-A`, `HOME-COVER-B` or `RETURN-CHECK-C`. Describe what must be checked without typing a document number, reservation code, address, key, alarm code or full contact list. Keep complete documents and private booking details in the protected source. One row should have one owner and one next checkpoint so a missed action is visible.
+
+## Record plan, handoff and return evidence separately
+
+“Backup role assigned” is a plan. “Handoff response preserved” is an observed step. “Return review completed” is a later outcome. Keep them in separate rows or statuses. A packed bag, calendar event or sent message is not confirmation that the responsible source or household role accepted the task. If the result is missing, leave it open and name the next contact.
+
+## Handle pets, plants, deliveries and services conservatively
+
+The log can point to protected instructions and record that a caretaker, building desk or service provider was contacted. It must not invent pet treatment, plant diagnosis, delivery security, repair quality or emergency procedures. When a health, safety, legal or financial question appears, use the current qualified or official source first and record only the household follow-up state.
+
+## Return home and preserve changed plans
+
+On return, compare safe categories and handoff observations with the protected originals. Mark what was observed, what remains unknown and who owns the next action. If a flight, sitter, service visit or home condition changed, add a new dated event rather than rewriting the original plan. This preserves a truthful timeline for the next trip.
+
+## Privacy, local storage and optional commercial content
+
+The tool runs in the browser and creates a household coordination index. Export before clearing data; protect passports, IDs, addresses, booking details, access credentials and payment records. Future packing cubes, labels or travel organizers must be optional, disclosed and outside official-requirement controls; no product can guarantee a trip or home-safety result.
+
+## Eight-question closeout
+
+Are departure and return dates clear? Are official requirements separate from household tasks? Are packing and coverage rows scoped with safe IDs? Does each handoff have an owner and observed result? Are pets, plants, deliveries and services linked to real sources? Were changed plans kept as new versions? Did travel documents and access details remain protected? Was return review recorded? If not, keep the handoff open.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.
