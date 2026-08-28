@@ -162,6 +162,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/dryer-maintenance-checklist/",
     "/guides/dishwasher-maintenance-checklist/",
     "/guides/oven-maintenance-checklist/",
+    "/guides/home-maintenance-delegation/",
+    "/guides/range-hood-maintenance-checklist/",
+    "/guides/air-conditioner-maintenance-checklist/",
     "/guides/familyboard-utility-provider-handoff-tutorial/",
     "/guides/familyboard-vehicle-document-source-status-tutorial/",
     "/guides/familyboard-record-retrieval-drill-tutorial/",
@@ -440,6 +443,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/dryer-maintenance-checklist/",
     "/zh-tw/guides/dishwasher-maintenance-checklist/",
     "/zh-tw/guides/oven-maintenance-checklist/",
+    "/zh-tw/guides/home-maintenance-delegation/",
+    "/zh-tw/guides/range-hood-maintenance-checklist/",
+    "/zh-tw/guides/air-conditioner-maintenance-checklist/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3660,6 +3666,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     "https://familyboard.win/zh-tw/guides/oven-maintenance-checklist/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/home-maintenance-delegation/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/range-hood-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/air-conditioner-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/",
   );
   expect(sitemap).toContain(
@@ -3859,6 +3874,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/oven-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/home-maintenance-delegation/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/range-hood-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/air-conditioner-maintenance-checklist/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

@@ -73,6 +73,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/dryer-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/dishwasher-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/oven-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-delegation/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/range-hood-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/air-conditioner-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -139,6 +142,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/dryer-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/dishwasher-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/oven-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/home-maintenance-delegation/</loc>",
+      "<loc>https://familyboard.win/guides/range-hood-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/air-conditioner-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -1087,6 +1093,30 @@ const checks = [
       "烤箱保養清單怎麼做",
       "自清潔不是越常用越好",
       "瓦斯警訊更不能等待",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-maintenance-delegation/",
+    require: [
+      "家庭維護工作怎麼分工",
+      "分配下一步",
+      "瓦斯、電氣箱、屋頂、結構與高處工作",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/range-hood-maintenance-checklist/",
+    require: [
+      "抽油煙機保養清單怎麼做",
+      "金屬油網和活性碳濾網不是同一件事",
+      "油網和活性碳濾網不是同一件事",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/air-conditioner-maintenance-checklist/",
+    require: [
+      "冷氣保養清單怎麼做",
+      "濾網、排水與冷媒問題要分清楚",
+      "先停止運轉並記下開始時間",
     ],
   },
   {

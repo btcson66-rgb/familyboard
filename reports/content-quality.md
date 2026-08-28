@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T04:38:49.509Z
+Generated: 2026-08-28T04:49:15.693Z
 
 ## Summary
 
-- Indexable pages: 640
-- Generated HTML routes: 657
+- Indexable pages: 643
+- Generated HTML routes: 660
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 343
+- Pages without a contextual product/tool link: 346
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,8 +19,8 @@ Generated: 2026-08-28T04:38:49.509Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 36
-- maintenance: 75
+- appliances: 38
+- maintenance: 76
 - household-operations: 109
 - inventory-warranty: 46
 - records-emergency: 89
@@ -130,6 +130,7 @@ Generated: 2026-08-28T04:38:49.509Z
 - /zh-tw/features/offline-household-organizer/
 - /zh-tw/features/private-family-organizer/
 - /zh-tw/features/warranty-tracker/
+- /zh-tw/guides/air-conditioner-maintenance-checklist/
 - /zh-tw/guides/annual-home-review/
 - /zh-tw/guides/annual-renewal-calendar/
 - /zh-tw/guides/apartment-maintenance-checklist/
@@ -232,6 +233,7 @@ Generated: 2026-08-28T04:38:49.509Z
 - /zh-tw/guides/home-maintenance-binder/
 - /zh-tw/guides/home-maintenance-budget/
 - /zh-tw/guides/home-maintenance-calendar/
+- /zh-tw/guides/home-maintenance-delegation/
 - /zh-tw/guides/home-maintenance-log/
 - /zh-tw/guides/home-maintenance-records/
 - /zh-tw/guides/home-maintenance-reminders/
@@ -268,6 +270,7 @@ Generated: 2026-08-28T04:38:49.509Z
 - /zh-tw/guides/product-registration-tracker/
 - /zh-tw/guides/purchase-receipt-organizer/
 - /zh-tw/guides/quarterly-home-maintenance-checklist/
+- /zh-tw/guides/range-hood-maintenance-checklist/
 - /zh-tw/guides/refrigerator-maintenance-checklist/
 - /zh-tw/guides/renovation-records/
 - /zh-tw/guides/rental-home-maintenance-log/

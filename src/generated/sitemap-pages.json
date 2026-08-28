@@ -441,7 +441,7 @@
   },
   {
     "route": "/guides/home-maintenance-delegation/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-maintenance-delegation/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -505,7 +505,7 @@
   },
   {
     "route": "/guides/range-hood-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/range-hood-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -513,7 +513,7 @@
   },
   {
     "route": "/guides/air-conditioner-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/air-conditioner-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3135,6 +3135,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/air-conditioner-maintenance-checklist/",
+    "alternateRoute": "/guides/air-conditioner-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/annual-home-review/",
     "alternateRoute": "/guides/annual-home-review/",
     "indexable": true,
@@ -4066,6 +4073,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/home-maintenance-delegation/",
+    "alternateRoute": "/guides/home-maintenance-delegation/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/home-maintenance-log/",
     "alternateRoute": "/guides/home-maintenance-log/",
     "indexable": true,
@@ -4887,6 +4901,13 @@
   {
     "route": "/zh-tw/guides/quarterly-home-maintenance-checklist/",
     "alternateRoute": "/guides/quarterly-home-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/range-hood-maintenance-checklist/",
+    "alternateRoute": "/guides/range-hood-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
