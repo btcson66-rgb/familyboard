@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T06:23:36.343Z
+Generated: 2026-08-28T06:32:53.420Z
 
 ## Summary
 
-- Indexable pages: 665
-- Generated HTML routes: 684
+- Indexable pages: 668
+- Generated HTML routes: 687
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 367
+- Pages without a contextual product/tool link: 370
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,7 +19,7 @@ Generated: 2026-08-28T06:23:36.343Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 49
+- appliances: 52
 - maintenance: 81
 - household-operations: 109
 - inventory-warranty: 47
@@ -144,6 +144,7 @@ Generated: 2026-08-28T06:23:36.343Z
 - /zh-tw/guides/caregiver-handoff-checklist/
 - /zh-tw/guides/ceiling-fan-maintenance-checklist/
 - /zh-tw/guides/cleaning-schedule/
+- /zh-tw/guides/coffee-maker-maintenance-guide/
 - /zh-tw/guides/computer-electronics-inventory/
 - /zh-tw/guides/condo-maintenance-checklist/
 - /zh-tw/guides/contractor-records/
@@ -290,6 +291,7 @@ Generated: 2026-08-28T06:23:36.343Z
 - /zh-tw/guides/rental-home-maintenance-log/
 - /zh-tw/guides/rental-security-deposit-move-out-claims/
 - /zh-tw/guides/repair-history/
+- /zh-tw/guides/robot-vacuum-maintenance-guide/
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/guides/seasonal-home-maintenance-checklist/
 - /zh-tw/guides/service-history/
@@ -302,6 +304,7 @@ Generated: 2026-08-28T06:23:36.343Z
 - /zh-tw/guides/summer-home-maintenance-checklist/
 - /zh-tw/guides/ups-battery-backup-records/
 - /zh-tw/guides/washing-machine-maintenance-checklist/
+- /zh-tw/guides/water-filter-replacement-guide/
 - /zh-tw/guides/water-heater-maintenance-records/
 - /zh-tw/guides/water-leak-photo-evidence-records/
 - /zh-tw/guides/water-leak-response-home-records/

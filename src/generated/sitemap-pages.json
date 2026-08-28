@@ -561,7 +561,7 @@
   },
   {
     "route": "/guides/water-filter-replacement-guide/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/water-filter-replacement-guide/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -617,7 +617,7 @@
   },
   {
     "route": "/guides/coffee-maker-maintenance-guide/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/coffee-maker-maintenance-guide/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -625,7 +625,7 @@
   },
   {
     "route": "/guides/robot-vacuum-maintenance-guide/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/robot-vacuum-maintenance-guide/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3328,6 +3328,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/coffee-maker-maintenance-guide/",
+    "alternateRoute": "/guides/coffee-maker-maintenance-guide/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/computer-electronics-inventory/",
     "alternateRoute": "/guides/computer-electronics-inventory/",
     "indexable": true,
@@ -5106,6 +5113,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/robot-vacuum-maintenance-guide/",
+    "alternateRoute": "/guides/robot-vacuum-maintenance-guide/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/room-by-room-home-inventory/",
     "alternateRoute": "/guides/room-by-room-home-inventory/",
     "indexable": true,
@@ -5248,6 +5262,13 @@
   {
     "route": "/zh-tw/guides/washing-machine-maintenance-checklist/",
     "alternateRoute": "/guides/washing-machine-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/water-filter-replacement-guide/",
+    "alternateRoute": "/guides/water-filter-replacement-guide/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

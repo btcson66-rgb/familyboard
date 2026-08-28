@@ -95,6 +95,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/water-softener-maintenance-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/ups-battery-backup-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/wifi-router-maintenance-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/water-filter-replacement-guide/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/coffee-maker-maintenance-guide/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/robot-vacuum-maintenance-guide/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1309,6 +1312,33 @@ const checks = [
       'hreflang="en"',
       "更新韌體，但不要把密碼交給文章",
       "不要把 Wi‑Fi 密碼貼進家庭文章",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/water-filter-replacement-guide/",
+    require: [
+      "家用濾水器更換紀錄",
+      'hreflang="en"',
+      "型號、流量與水質來源不要混成一句話",
+      "規格相似不代表相容",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/coffee-maker-maintenance-guide/",
+    require: [
+      "咖啡機清潔保養紀錄",
+      'hreflang="en"',
+      "水箱、除垢與奶泡系統分開追蹤",
+      "日常清潔和除垢是兩條時間線",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/robot-vacuum-maintenance-guide/",
+    require: [
+      "掃地機器人保養紀錄",
+      'hreflang="en"',
+      "集塵、濾網、滾刷和地圖資料分開",
+      "卡住、過熱與異味要升級",
     ],
   },
   {
