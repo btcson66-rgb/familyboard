@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T06:03:31.620Z
+Generated: 2026-08-28T06:09:19.144Z
 
 ## Summary
 
-- Indexable pages: 656
-- Generated HTML routes: 675
+- Indexable pages: 659
+- Generated HTML routes: 678
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 358
+- Pages without a contextual product/tool link: 361
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-28T06:03:31.620Z
 - maintenance: 77
 - household-operations: 109
 - inventory-warranty: 47
-- records-emergency: 89
+- records-emergency: 92
 - tools: 126
 
 ## Word-count range
@@ -139,6 +139,7 @@ Generated: 2026-08-28T06:03:31.620Z
 - /zh-tw/guides/appliance-inventory/
 - /zh-tw/guides/appliance-replacement-planning/
 - /zh-tw/guides/automatic-renewal-charge-dispute-taiwan/
+- /zh-tw/guides/carbon-monoxide-alarm-records/
 - /zh-tw/guides/caregiver-handoff-checklist/
 - /zh-tw/guides/cleaning-schedule/
 - /zh-tw/guides/computer-electronics-inventory/
@@ -222,6 +223,7 @@ Generated: 2026-08-28T06:03:31.620Z
 - /zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/
 - /zh-tw/guides/familyboard-water-leak-event-log-tutorial/
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
+- /zh-tw/guides/fire-extinguisher-records/
 - /zh-tw/guides/first-time-homeowner-maintenance-guide/
 - /zh-tw/guides/freezer-maintenance-checklist/
 - /zh-tw/guides/furnace-maintenance-records/
@@ -288,6 +290,7 @@ Generated: 2026-08-28T06:03:31.620Z
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/guides/seasonal-home-maintenance-checklist/
 - /zh-tw/guides/service-history/
+- /zh-tw/guides/smoke-alarm-records/
 - /zh-tw/guides/solar-panel-maintenance-records/
 - /zh-tw/guides/spring-home-maintenance-checklist/
 - /zh-tw/guides/storage-unit-inventory/

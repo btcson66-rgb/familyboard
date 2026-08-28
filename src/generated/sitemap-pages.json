@@ -665,7 +665,7 @@
   },
   {
     "route": "/guides/smoke-alarm-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/smoke-alarm-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -673,7 +673,7 @@
   },
   {
     "route": "/guides/carbon-monoxide-alarm-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/carbon-monoxide-alarm-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -681,7 +681,7 @@
   },
   {
     "route": "/guides/fire-extinguisher-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/fire-extinguisher-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3279,6 +3279,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/carbon-monoxide-alarm-records/",
+    "alternateRoute": "/guides/carbon-monoxide-alarm-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/caregiver-handoff-checklist/",
     "alternateRoute": "/guides/caregiver-handoff-checklist/",
     "indexable": true,
@@ -3934,6 +3941,13 @@
     "alternateRoute": "/guides/familyboard-weekly-reset-action-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/fire-extinguisher-records/",
+    "alternateRoute": "/guides/fire-extinguisher-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -5103,6 +5117,13 @@
     "alternateRoute": "/guides/service-history/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/smoke-alarm-records/",
+    "alternateRoute": "/guides/smoke-alarm-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

@@ -86,6 +86,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/dehumidifier-maintenance-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/air-purifier-filter-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/solar-panel-maintenance-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/smoke-alarm-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/fire-extinguisher-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/carbon-monoxide-alarm-records/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1219,6 +1222,33 @@ const checks = [
       'hreflang="en"',
       "發電趨勢和高處電氣風險分開",
       "颱風前後先確保人身與區域安全",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/smoke-alarm-records/",
+    require: [
+      "煙霧警報器紀錄",
+      'hreflang="en"',
+      "每月測試、電池與汰換",
+      "不要讓警報失效",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/fire-extinguisher-records/",
+    require: [
+      "家用滅火器紀錄",
+      'hreflang="en"',
+      "先知道類別與位置",
+      "滅火器永遠排在撤離之後",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/carbon-monoxide-alarm-records/",
+    require: [
+      "一氧化碳警報器紀錄",
+      'hreflang="en"',
+      "警報響起先離開",
+      "一氧化碳無色、無味",
     ],
   },
   {
