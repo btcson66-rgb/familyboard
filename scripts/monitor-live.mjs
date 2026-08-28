@@ -590,6 +590,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/features/local-first-home-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/no-account-family-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/household-operations-system/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-purchase-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
     ],
     forbid: [
       "<loc>https://familyboard.win/app/</loc>",
@@ -5496,6 +5499,33 @@ const checks = [
       "家庭營運系統是什麼",
       "先從一個真的會斷線的流程開始",
       "為交接與中斷設計最小視圖",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-purchase-records/",
+    require: [
+      "買房文件怎麼整理",
+      "先把交屋文件分成房屋層級",
+      "驗屋問題要和日後修繕留下關係",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/",
+    require: [
+      "保固到期日計算器怎麼用",
+      "先找條款寫的起算事件",
+      "理解月底收斂規則",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/",
+    require: [
+      "家庭訂閱費用計算器教學",
+      "先從最近的正式帳單建立清單",
+      "把總額變成公平的家庭檢視",
       'hreflang="en"',
     ],
   },

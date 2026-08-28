@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T08:15:34.502Z
+Generated: 2026-08-28T08:23:54.715Z
 
 ## Summary
 
-- Indexable pages: 712
-- Generated HTML routes: 725
+- Indexable pages: 715
+- Generated HTML routes: 728
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 404
+- Pages without a contextual product/tool link: 407
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,8 +21,8 @@ Generated: 2026-08-28T08:15:34.502Z
 - product: 126
 - appliances: 56
 - maintenance: 82
-- household-operations: 130
-- inventory-warranty: 56
+- household-operations: 131
+- inventory-warranty: 58
 - records-emergency: 93
 - tools: 128
 
@@ -196,6 +196,7 @@ Generated: 2026-08-28T08:15:34.502Z
 - /zh-tw/guides/familyboard-household-members-responsibilities-tutorial/
 - /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
+- /zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/
 - /zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/
 - /zh-tw/guides/familyboard-internet-incident-tutorial/
 - /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
@@ -234,6 +235,7 @@ Generated: 2026-08-28T08:15:34.502Z
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
 - /zh-tw/guides/familyboard-utility-provider-handoff-tutorial/
 - /zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/
+- /zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/
 - /zh-tw/guides/familyboard-water-leak-event-log-tutorial/
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
 - /zh-tw/guides/fire-extinguisher-records/
@@ -264,6 +266,7 @@ Generated: 2026-08-28T08:15:34.502Z
 - /zh-tw/guides/home-maintenance-records/
 - /zh-tw/guides/home-maintenance-reminders/
 - /zh-tw/guides/home-maintenance-schedule/
+- /zh-tw/guides/home-purchase-records/
 - /zh-tw/guides/home-repair-history/
 - /zh-tw/guides/home-service-provider-list/
 - /zh-tw/guides/house-sitter-information/

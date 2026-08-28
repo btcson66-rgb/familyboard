@@ -80,6 +80,9 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/features/local-first-home-organizer/",
     "/zh-tw/features/no-account-family-organizer/",
     "/zh-tw/features/household-operations-system/",
+    "/zh-tw/guides/home-purchase-records/",
+    "/zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/",
+    "/zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -118,6 +121,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/features/local-first-home-organizer/",
     "/zh-tw/features/no-account-family-organizer/",
     "/zh-tw/features/household-operations-system/",
+    "/zh-tw/guides/home-purchase-records/",
+    "/zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/",
+    "/zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/",
     "/tools/household-meeting-agenda-action-log/",
     "/tools/household-pantry-expiry-review-log/",
     "/tools/household-clothing-care-repair-log/",

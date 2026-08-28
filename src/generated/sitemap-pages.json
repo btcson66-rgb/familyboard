@@ -833,7 +833,7 @@
   },
   {
     "route": "/guides/home-purchase-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-purchase-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -2929,7 +2929,7 @@
   },
   {
     "route": "/guides/familyboard-warranty-expiration-calculator-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -2937,7 +2937,7 @@
   },
   {
     "route": "/guides/familyboard-household-subscription-cost-calculator-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -3756,6 +3756,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-subscription-cost-calculator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/",
     "alternateRoute": "/guides/familyboard-insurance-claim-timeline-tutorial/",
     "indexable": true,
@@ -4017,6 +4024,13 @@
   {
     "route": "/zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/",
     "alternateRoute": "/guides/familyboard-vehicle-document-source-status-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/",
+    "alternateRoute": "/guides/familyboard-warranty-expiration-calculator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -4320,6 +4334,13 @@
     "alternateRoute": "/guides/home-maintenance-schedule/",
     "indexable": true,
     "lastReviewedAt": "2026-08-20",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-purchase-records/",
+    "alternateRoute": "/guides/home-purchase-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
