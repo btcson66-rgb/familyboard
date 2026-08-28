@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T07:53:07.317Z
+Generated: 2026-08-28T07:58:07.632Z
 
 ## Summary
 
-- Indexable pages: 700
+- Indexable pages: 703
 - Generated HTML routes: 719
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 401
+- Pages without a contextual product/tool link: 398
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-28T07:53:07.317Z
 - product: 120
 - appliances: 56
 - maintenance: 82
-- household-operations: 124
+- household-operations: 127
 - inventory-warranty: 56
 - records-emergency: 93
 - tools: 128
@@ -67,13 +67,10 @@ Generated: 2026-08-28T07:53:07.317Z
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-household-handoff-tutorial/
 - /guides/familyboard-offline-backup-restore/
-- /guides/household-admin-day/
 - /guides/household-handoff/
-- /guides/household-shopping-staples/
 - /guides/
 - /guides/recurring-household-tasks/
 - /guides/seasonal-home-maintenance-checklist/
-- /guides/service-provider-contact-list/
 - /guides/solar-panel-maintenance-records/
 - /guides/subscription-cancellation-refund-records/
 - /guides/subscription-renewal-tracker/

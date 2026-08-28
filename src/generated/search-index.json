@@ -1072,6 +1072,14 @@
     "headings": "Monthly is the right cadence for household work that's important but not urgent The monthly run-through Seasonal maintenance often surfaces here first Why 30 to 60 days, specifically Keep the financial review bounded Reconciling maintenance history prevents a specific failure mode Back up like the browser might not be there tomorrow What \"done\" looks like for a monthly review"
   },
   {
+    "title": "Household Admin Day: Batch the Calls, Renewals and Paperwork You Keep Postponing",
+    "description": "Use a recurring household admin session for service calls, renewals, documents, scheduling and the invisible work that does not fit daily chores.",
+    "route": "/guides/household-admin-day/",
+    "cluster": "household-operations",
+    "keywords": "household admin day",
+    "headings": "Household admin day: give invisible work a small, visible container Build the queue from real friction Prepare context before the session Time-box decisions and waiting Review what can be closed Privacy and affiliate boundaries"
+  },
+  {
     "title": "How to Organize Household Subscriptions Before They Become Invisible Expenses",
     "description": "Create a household subscription list with owner, cost, billing frequency, renewal date and cancellation notes.",
     "route": "/guides/organize-household-subscriptions/",
@@ -1110,6 +1118,22 @@
     "cluster": "household-operations",
     "keywords": "home contact list",
     "headings": "A home contact list is useful because it's curated, not because it's complete Organize by role, not alphabetically Add the reason, not just the name Mark anything sensitive, and mean it Review outdated entries on purpose Print a limited version, not the whole list Aim for a list that fits on one page Paper vs. private app: keep the roles separate Digital contacts already exist — this list isn't a replacement for them"
+  },
+  {
+    "title": "Household Service Provider Contact List: Plumber, HVAC, Electrician and More",
+    "description": "Keep household service-provider contacts linked to the systems and prior work they know, with factual private notes and history.",
+    "route": "/guides/service-provider-contact-list/",
+    "cluster": "household-operations",
+    "keywords": "home service provider contact list",
+    "headings": "A service provider contact list is more useful when the relationship has context Start with the system, not the name Keep availability and scope claims current Preserve the last service event and result Make the list useful during handoff Privacy and affiliate boundaries"
+  },
+  {
+    "title": "Household Shopping Staples: Create a Restock List That Does Not Become a Full Inventory System",
+    "description": "Organize recurring household staples, preferred sizes and restock points without counting every item in the house.",
+    "route": "/guides/household-shopping-staples/",
+    "cluster": "household-operations",
+    "keywords": "household staples list",
+    "headings": "Household shopping staples: remember repeat purchases without building a warehouse ledger Keep the list intentionally small Choose an observable restock trigger Separate consumables, maintenance and subscriptions Review after real use Privacy and affiliate boundaries"
   },
   {
     "title": "Pantry Restock System: Keep Everyday Food Staples Visible Without Tracking Every Can",

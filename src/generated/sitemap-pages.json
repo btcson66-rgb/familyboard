@@ -1146,10 +1146,10 @@
   {
     "route": "/guides/household-admin-day/",
     "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/guides/household-weekly-reset/"
+    "redirectTo": ""
   },
   {
     "route": "/guides/organize-household-subscriptions/",
@@ -1202,18 +1202,18 @@
   {
     "route": "/guides/service-provider-contact-list/",
     "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/guides/home-service-provider-list/"
+    "redirectTo": ""
   },
   {
     "route": "/guides/household-shopping-staples/",
     "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/guides/household-supplies-inventory/"
+    "redirectTo": ""
   },
   {
     "route": "/guides/pantry-restock-system/",

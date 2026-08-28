@@ -578,6 +578,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/organize-household-subscriptions/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/household-documents-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/contact/</loc>",
+      "<loc>https://familyboard.win/guides/household-admin-day/</loc>",
+      "<loc>https://familyboard.win/guides/service-provider-contact-list/</loc>",
+      "<loc>https://familyboard.win/guides/household-shopping-staples/</loc>",
     ],
     forbid: [
       "<loc>https://familyboard.win/app/</loc>",
@@ -5383,6 +5386,30 @@ const checks = [
       'hreflang="en"',
       "CSV 家庭資料總表可以取代 JSON 備份嗎",
       "/zh-tw/app/",
+    ],
+  },
+  {
+    path: "/guides/household-admin-day/",
+    require: [
+      "Household Admin Day",
+      "Build the queue from real friction",
+      "Time-box decisions and waiting",
+    ],
+  },
+  {
+    path: "/guides/service-provider-contact-list/",
+    require: [
+      "Household Service Provider Contact List",
+      "Start with the system, not the name",
+      "Make the list useful during handoff",
+    ],
+  },
+  {
+    path: "/guides/household-shopping-staples/",
+    require: [
+      "Household Shopping Staples",
+      "Keep the list intentionally small",
+      "Choose an observable restock trigger",
     ],
   },
 ];

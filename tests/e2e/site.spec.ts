@@ -67,6 +67,13 @@ test("public SEO, keyboard and eight production tools work", async ({
   expect(sitemap).toContain(
     "<loc>https://familyboard.win/features/offline-household-organizer/</loc>",
   );
+  for (const route of [
+    "/guides/household-admin-day/",
+    "/guides/service-provider-contact-list/",
+    "/guides/household-shopping-staples/",
+  ]) {
+    expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
+  }
   await page.goto("/app/");
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
     "content",
@@ -90,6 +97,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/home-maintenance-schedule/",
     "/guides/subscription-cancellation-refund-records/",
     "/guides/familyboard-offline-backup-restore/",
+    "/guides/household-admin-day/",
+    "/guides/service-provider-contact-list/",
+    "/guides/household-shopping-staples/",
     "/tools/household-meeting-agenda-action-log/",
     "/tools/household-pantry-expiry-review-log/",
     "/tools/household-clothing-care-repair-log/",
