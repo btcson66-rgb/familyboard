@@ -156,6 +156,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/home-maintenance-binder/",
     "/guides/home-maintenance-budget/",
     "/guides/home-maintenance-reminders/",
+    "/guides/home-maintenance-after-vacation/",
+    "/guides/move-in-maintenance-checklist/",
+    "/guides/annual-home-review/",
     "/guides/familyboard-utility-provider-handoff-tutorial/",
     "/guides/familyboard-vehicle-document-source-status-tutorial/",
     "/guides/familyboard-record-retrieval-drill-tutorial/",
@@ -428,6 +431,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/home-maintenance-binder/",
     "/zh-tw/guides/home-maintenance-budget/",
     "/zh-tw/guides/home-maintenance-reminders/",
+    "/zh-tw/guides/home-maintenance-after-vacation/",
+    "/zh-tw/guides/move-in-maintenance-checklist/",
+    "/zh-tw/guides/annual-home-review/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3630,6 +3636,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     "https://familyboard.win/zh-tw/guides/home-maintenance-reminders/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/home-maintenance-after-vacation/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/move-in-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/annual-home-review/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/",
   );
   expect(sitemap).toContain(
@@ -3811,6 +3826,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/home-maintenance-reminders/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/home-maintenance-after-vacation/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/move-in-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/annual-home-review/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

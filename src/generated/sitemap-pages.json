@@ -329,7 +329,7 @@
   },
   {
     "route": "/guides/home-maintenance-after-vacation/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-maintenance-after-vacation/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -337,7 +337,7 @@
   },
   {
     "route": "/guides/move-in-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/move-in-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -353,7 +353,7 @@
   },
   {
     "route": "/guides/annual-home-review/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/annual-home-review/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3135,6 +3135,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/annual-home-review/",
+    "alternateRoute": "/guides/annual-home-review/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/annual-renewal-calendar/",
     "alternateRoute": "/guides/annual-renewal-calendar/",
     "indexable": true,
@@ -4010,6 +4017,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/home-maintenance-after-vacation/",
+    "alternateRoute": "/guides/home-maintenance-after-vacation/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/home-maintenance-binder/",
     "alternateRoute": "/guides/home-maintenance-binder/",
     "indexable": true,
@@ -4686,6 +4700,13 @@
     "alternateRoute": "/tools/move-in-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/move-in-maintenance-checklist/",
+    "alternateRoute": "/guides/move-in-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

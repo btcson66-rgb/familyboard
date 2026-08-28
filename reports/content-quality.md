@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T04:16:18.748Z
+Generated: 2026-08-28T04:26:50.275Z
 
 ## Summary
 
-- Indexable pages: 634
-- Generated HTML routes: 651
+- Indexable pages: 637
+- Generated HTML routes: 654
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 337
+- Pages without a contextual product/tool link: 340
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,7 +20,7 @@ Generated: 2026-08-28T04:16:18.748Z
 - printables: 20
 - product: 120
 - appliances: 33
-- maintenance: 72
+- maintenance: 75
 - household-operations: 109
 - inventory-warranty: 46
 - records-emergency: 89
@@ -130,6 +130,7 @@ Generated: 2026-08-28T04:16:18.748Z
 - /zh-tw/features/offline-household-organizer/
 - /zh-tw/features/private-family-organizer/
 - /zh-tw/features/warranty-tracker/
+- /zh-tw/guides/annual-home-review/
 - /zh-tw/guides/annual-renewal-calendar/
 - /zh-tw/guides/apartment-maintenance-checklist/
 - /zh-tw/guides/appliance-inventory/
@@ -225,6 +226,7 @@ Generated: 2026-08-28T04:16:18.748Z
 - /zh-tw/guides/home-contact-list/
 - /zh-tw/guides/home-evacuation-information/
 - /zh-tw/guides/home-improvement-receipts/
+- /zh-tw/guides/home-maintenance-after-vacation/
 - /zh-tw/guides/home-maintenance-binder/
 - /zh-tw/guides/home-maintenance-budget/
 - /zh-tw/guides/home-maintenance-calendar/
@@ -247,6 +249,7 @@ Generated: 2026-08-28T04:16:18.748Z
 - /zh-tw/guides/important-household-documents/
 - /zh-tw/guides/maintenance-priorities/
 - /zh-tw/guides/monthly-home-maintenance-checklist/
+- /zh-tw/guides/move-in-maintenance-checklist/
 - /zh-tw/guides/move-out-home-records/
 - /zh-tw/guides/moving-inventory/
 - /zh-tw/guides/organize-appliance-manuals/

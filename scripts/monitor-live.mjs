@@ -67,6 +67,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-binder/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-budget/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-reminders/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-after-vacation/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/move-in-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/annual-home-review/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -127,6 +130,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/home-maintenance-binder/</loc>",
       "<loc>https://familyboard.win/guides/home-maintenance-budget/</loc>",
       "<loc>https://familyboard.win/guides/home-maintenance-reminders/</loc>",
+      "<loc>https://familyboard.win/guides/home-maintenance-after-vacation/</loc>",
+      "<loc>https://familyboard.win/guides/move-in-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/annual-home-review/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -1027,6 +1033,30 @@ const checks = [
       "居家維護提醒怎麼設定",
       "提醒不是完成證據",
       "不會發送推播、電子郵件或簡訊",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-maintenance-after-vacation/",
+    require: [
+      "旅行返家後要檢查什麼",
+      "五到十分鐘的短版回家檢查",
+      "不是完整驗屋、設備診斷或安全認證",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/move-in-maintenance-checklist/",
+    require: [
+      "搬入新家維護清單怎麼做",
+      "第一週先認識住家",
+      "不是專業檢查、結構評估或法律意見",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/annual-home-review/",
+    require: [
+      "年度家庭總整理怎麼做",
+      "把一年資料變成下一年的少量決策",
+      "不是投資、債務或稅務建議",
     ],
   },
   {
