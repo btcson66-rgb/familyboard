@@ -34304,6 +34304,196 @@ Packing organizers, labels or offline folders may eventually be offered in a cle
 
 **Contextual CTA:** Generate the list for the actual days away, complete protected handoff instructions, and run a separate return check before closing temporary tasks.
 
+## Page 473 — Important Household Document Review Tutorial
+**Slug:** /guides/familyboard-important-household-document-review-tutorial/
+**Primary intent:** use the document review tool to find missing sources, stale versions and owned follow-up without copying document contents
+**Title tag:** FamilyBoard Important Document Review Tutorial | Find Missing Household Sources
+**Meta description:** Learn how to use FamilyBoard's Important Household Document Review tool to review source locations, versions, owners and next checks without storing document text or account numbers.
+**Primary keyword concept:** important household document review tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/important-household-document-review/, /guides/digital-home-binder/, /guides/how-long-to-keep-household-records/, /guides/familyboard-document-renewal-tutorial/
+**FAQ:**
+- Q: Does the review store or read my documents?
+  A: No. It records safe source pointers and follow-up; it does not open your files.
+- Q: Can it decide which records I must keep?
+  A: No. Retention, tax, legal and provider rules come from the applicable source.
+- Q: Should I paste a lease, policy or account number?
+  A: No. Use a neutral document code and keep originals protected.
+- Q: Does a reviewed row prove a document is current?
+  A: No. It records that someone checked a source and what remains to confirm.
+
+# How to Use FamilyBoard's Important Household Document Review
+
+Important papers are easy to lose between an inbox, a drawer and a provider portal. FamilyBoard's free [Important Household Document Review](/tools/important-household-document-review/) creates a small index of source location, version, owner and next review without reading or uploading your files. It is a retrieval aid, not a legal archive, tax adviser or document vault.
+
+## Define one review purpose
+
+Start with a narrow purpose such as a rental notice, appliance warranty, insurance packet, utility agreement or annual service document. Use `DOC-REVIEW-2026-A`, not a policy number, address or person's name. A bounded review makes it possible to finish the source check and identify a real next action rather than creating an unmaintained catalogue.
+
+## Point to the exact source version
+
+Record where the original lives, when it was checked and which version the household should reopen. “Insurance folder” is vague if several folders exist; a protected version label is safer and more useful. The tool does not read your drive, email or portal, so the reviewer must open the real source separately and record only the minimum result.
+
+## Separate presence from validity
+
+“A file exists” is not the same as “the provider confirms it is current,” and a current-looking date is not a legal conclusion. Keep source found, version checked, owner and question as separate fields. If a lease, policy, notice or certificate needs professional interpretation, leave the row open and send the question to the responsible qualified source.
+
+## Give every gap an owner and date
+
+When a source is missing, assign a household role to find it and a date to check again. A role label such as document keeper or renewal coordinator avoids unnecessary personal details. Close the row only after the source was actually located or the accountable provider explained the next step. Do not mark a document “complete” because someone promised to look later.
+
+## Keep retention decisions sourced
+
+The tool can remind a family to ask how long a record should be kept, but it cannot invent a universal period. Tax, insurance, lease, warranty and government records may have different rules by jurisdiction and situation. Link to a safe reference and preserve the actual advice in protected storage. When uncertain, keep the row open rather than deleting a document to make the list smaller.
+
+## Make retrieval testable
+
+Ask a second household role to locate one source using the safe code. If they cannot find it, improve the pointer, permission path or version label. This small retrieval drill is more meaningful than a large count of “reviewed” rows. Export the local index before clearing browser storage, and verify the export opens before treating it as a backup.
+
+## Record the decision, not private paperwork
+
+A useful review row explains why the household needs the source, what was checked and what still needs an answer. It does not need a copied paragraph from a lease, a full policy number or a screenshot of an account page. Write a neutral code, a protected location pointer and a short observation such as “renewal date confirmed in provider portal.” If another person must act, state the next question in plain language. This keeps the local index small enough to audit and reduces the chance that a shared screen or exported file exposes more than the household intended.
+
+## Recheck after a change
+
+Household documents change when a provider renews a policy, a landlord issues a notice or a service contract is replaced. Keep the old source history when it explains a past decision, but mark which version is current and who confirmed it. A monthly or event-triggered review can focus on rows with an upcoming date, an unresolved gap or a source that another role could not retrieve. That review cadence is a workflow choice, not legal advice; use the applicable official or professional source for any deadline.
+
+## Future affiliate space and boundaries
+
+Folders, labels or scanners may eventually appear in a clearly separated optional block. They cannot decide retention, prove authenticity, protect a legal deadline or replace the original provider or government source. Commercial links must never interrupt a time-sensitive notice, renewal, insurance or legal question.
+
+**Contextual CTA:** Review one document purpose, point to the exact protected source, assign every gap and ask another role to retrieve it before closing the review.
+
+## Page 474 — Appliance Maintenance Checklist Generator Tutorial
+**Slug:** /guides/familyboard-appliance-maintenance-checklist-generator-tutorial/
+**Primary intent:** generate a practical appliance maintenance checklist while keeping model-specific instructions and safety decisions in the real manual
+**Title tag:** FamilyBoard Appliance Maintenance Checklist Tutorial | Build a Source-Aware Plan
+**Meta description:** Learn how to use FamilyBoard's Appliance Maintenance Checklist Generator to organize filters, cleaning, service sources and follow-up without guessing safety steps.
+**Primary keyword concept:** appliance maintenance checklist generator tutorial
+**Cluster:** appliances
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/appliance-maintenance-checklist-generator/, /guides/appliance-lifespan-planning/, /guides/familyboard-appliance-manual-source-check-tutorial/, /guides/familyboard-maintenance-tracker-tutorial/
+**FAQ:**
+- Q: Does the generator know my appliance's exact maintenance schedule?
+  A: No. Use the actual model manual and qualified service source.
+- Q: Can I use a generic safety instruction for every appliance?
+  A: No. Settings, parts and hazards differ; the checklist is only a tracking prompt.
+- Q: Does a checked task certify the appliance?
+  A: No. It records a household action or observation, not a safety inspection.
+- Q: Should I paste a serial number or service account?
+  A: No. Use a safe equipment code and keep identifiers protected.
+
+# How to Use FamilyBoard's Appliance Maintenance Checklist Generator
+
+“Clean it regularly” is not a useful handoff when every appliance has a different manual, filter and service path. FamilyBoard's free [Appliance Maintenance Checklist Generator](/tools/appliance-maintenance-checklist-generator/) turns an appliance category into a short list of source checks, observations and follow-up. It does not diagnose faults, invent intervals or certify safe operation.
+
+## Begin with one appliance and its source
+
+Choose a category and use a neutral code such as `APPL-MAINT-2026-A`. Locate the actual manual, manufacturer page or service record before selecting a task. Do not paste a serial number, address, account, warranty credential or private message. A source pointer lets the next reviewer reopen the correct model information without exposing identifiers.
+
+## Read the manual before acting
+
+The generated checklist can prompt a filter review, visible cleaning, exterior observation or service follow-up, but it cannot tell you which panel to open or whether power must be isolated. Model, installation and local conditions matter. If the manual says a task requires a qualified technician, leave it to that source and record only the request and result.
+
+## Separate task, observation and outcome
+
+“Check the filter” is a task. “Filter surface appeared loaded” is an observation. “Service source confirmed replacement” is an outcome. Keep them separate so a family member does not treat a tick mark as proof that the appliance is repaired or safe. Add a date and role for each step, and leave uncertain results open.
+
+## Use intervals as prompts, not promises
+
+The tool can help a household remember a source-defined interval, but it cannot calculate a universal schedule for every climate, usage level or model. When a manual, provider or safety notice changes, create a new version rather than silently rewriting the old one. If an appliance is leaking, overheating, sparking or producing an unusual smell, stop and use the appropriate qualified or emergency source.
+
+## Close with evidence that can be reopened
+
+Record a protected manual version, service reference or dated photo location instead of copying the whole document. Ask another role to locate the source and understand the next action. An export from the browser is not a repair certificate or cloud backup; verify it before clearing local data.
+
+## Plan around access and interruptions
+
+Maintenance often happens when the appliance is noisy, hot, wet or difficult to reach. Add a preparation step for power, water, ventilation, protective equipment or a second person only when the real source calls for it. Separate “prepare,” “perform” and “observe” so a household member can pause safely without losing the next checkpoint. The generator is valuable because it makes those states visible; it is not permission to bypass a manual, warning label or professional service instruction.
+
+## Keep a small history
+
+After a task, retain the date and result that will help the next decision. A repeated clog, unusual noise or missed interval deserves a separate follow-up rather than a hidden note in a generic task. Link the event to a neutral appliance code and the protected manual or service source. Over time, this history can show which questions to ask a technician and which supplies to keep available, while avoiding an unverified diagnosis. Review old rows when the appliance moves, changes owner or receives a major repair.
+
+## Future affiliate space and boundaries
+
+Filters, brushes or service products may eventually appear in an optional recommendation area. They cannot guarantee compatibility, maintenance quality or safety. Commercial content must stay outside appliance controls and never replace the model manual, recall notice or qualified technician.
+
+**Contextual CTA:** Generate one source-aware appliance checklist, verify the manual first, and close only the actions whose real result can be observed.
+
+## Page 475 — Receipt Retention Organizer Tutorial
+**Slug:** /guides/familyboard-receipt-retention-organizer-tutorial/
+**Primary intent:** organize receipt source pointers, retention questions and retrieval ownership without copying payment or identity details
+**Title tag:** FamilyBoard Receipt Retention Organizer Tutorial | Keep Proof Findable
+**Meta description:** Learn how to use FamilyBoard's Receipt Retention Organizer to track protected receipt sources, retention questions and retrieval owners without storing card or address data.
+**Primary keyword concept:** receipt retention organizer tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/receipt-retention-organizer/, /guides/purchase-receipt-organizer/, /guides/how-to-track-product-warranties/, /guides/familyboard-record-retention-decision-log-tutorial/
+**FAQ:**
+- Q: Does the organizer store my receipt image or card details?
+  A: No. It records a safe pointer to protected evidence.
+- Q: Can it tell me how long every receipt must be kept?
+  A: No. Retention depends on the purpose, jurisdiction and responsible source.
+- Q: Does a receipt prove warranty coverage automatically?
+  A: No. The manufacturer, seller and applicable terms control.
+- Q: Can I paste a delivery address or order number?
+  A: No. Use a neutral purchase code and keep identifiers protected.
+
+# How to Use FamilyBoard's Receipt Retention Organizer
+
+Receipts matter when a warranty, return, insurance record or household reimbursement question appears months later. FamilyBoard's free [Receipt Retention Organizer](/tools/receipt-retention-organizer/) keeps the source pointer, purpose, owner and next review visible without storing receipt images, card numbers, addresses or orders. It is an index, not a tax system or proof of entitlement.
+
+## Give the receipt a safe purpose code
+
+Start with one purpose—warranty, return window, insurance evidence, rental expense or household purchase history—and use `RECEIPT-2026-A`. Avoid merchant account numbers, full names and delivery addresses. A purpose code helps the household decide why the source matters and prevents every purchase from becoming a permanent record without a reason.
+
+## Point to protected evidence
+
+Record where the original image, email or paper copy is kept and which version was checked. Do not upload or paste it into the organizer. The tool cannot confirm that a seller received a return, that a warranty applies or that a reimbursement will be accepted. Those answers belong to the actual seller, provider, insurer or governing source.
+
+## Separate purchase facts from conclusions
+
+“Receipt located” is a source fact. “Return requested” is an action. “Seller confirmed refund” is a later result. Keep these states separate, with dates and an owner. A receipt date does not prove current warranty coverage, payment settlement or product condition. Leave questions open until the responsible source answers them.
+
+## Choose retention by purpose
+
+Instead of inventing one household rule, record the question: which provider, insurer, tax source, lease or local process says this evidence is needed, and until when? If no responsible source has answered, keep the pointer and mark the retention decision open. Never delete an original merely because the organizer row looks complete.
+
+## Test retrieval before you need it
+
+Ask a second role to locate the protected receipt using the code and purpose. If they cannot, improve the source location or permission path. Export and reopen the local index before clearing browser storage. A successful export button is not evidence until the file can be read and the protected original can still be found.
+
+## Distinguish purchase proof from payment data
+
+The receipt purpose determines what the household may need to retrieve, but it does not justify copying card numbers, full addresses or account credentials. Record a neutral item code, purchase date if confirmed, seller or service name when appropriate, and the protected source location. If a claim needs an invoice, serial number or delivery record, note that requirement as a question for the responsible provider. The organizer can show that a source should exist and who will find it; it cannot authenticate a document or decide whether a claim will be accepted.
+
+## Review before the deadline
+
+Use a short review queue for receipts tied to an upcoming return window, warranty expiry, reimbursement or tax task. Ask whether the original is readable, whether the model or order reference matches the asset, and whether the applicable official policy has changed. Keep unresolved answers open and assign a role plus date. Once the purpose ends, follow the relevant retention and secure-disposal guidance instead of keeping every receipt forever. A smaller, well-sourced index is safer than a crowded archive that no one can search.
+
+## Future affiliate space and boundaries
+
+Receipt folders, scanners or labels may eventually be offered as optional recommendations. They cannot create a return right, prove a warranty, decide a tax period or replace seller and insurer records. Commercial content must remain separate from urgent return, warranty, payment or legal decisions.
+
+**Contextual CTA:** Organize one receipt by purpose, link only to protected evidence, assign the next owner and run a retrieval check before closing it.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T18:02:54.109Z
+Generated: 2026-08-28T18:20:25.132Z
 
 ## Summary
 
-- Indexable pages: 883
-- Generated HTML routes: 889
+- Indexable pages: 889
+- Generated HTML routes: 895
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 11
-- Pages without a contextual product/tool link: 500
+- Pages without a contextual product/tool link: 503
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,10 +19,10 @@ Generated: 2026-08-28T18:02:54.109Z
 - support: 31
 - printables: 39
 - product: 134
-- inventory-warranty: 72
-- appliances: 64
+- inventory-warranty: 74
+- appliances: 66
 - maintenance: 86
-- household-operations: 177
+- household-operations: 179
 - records-emergency: 128
 - tools: 152
 
@@ -185,6 +185,7 @@ Generated: 2026-08-28T18:02:54.109Z
 - /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
 - /zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/
 - /zh-tw/guides/familyboard-appliance-age-calculator-tutorial/
+- /zh-tw/guides/familyboard-appliance-maintenance-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/
 - /zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/
 - /zh-tw/guides/familyboard-appliance-repair-callback-tutorial/
@@ -245,6 +246,7 @@ Generated: 2026-08-28T18:02:54.109Z
 - /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/
+- /zh-tw/guides/familyboard-important-household-document-review-tutorial/
 - /zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/
 - /zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/
 - /zh-tw/guides/familyboard-internet-incident-tutorial/
@@ -273,6 +275,7 @@ Generated: 2026-08-28T18:02:54.109Z
 - /zh-tw/guides/familyboard-power-outage-event-log-tutorial/
 - /zh-tw/guides/familyboard-private-family-organizer-tutorial/
 - /zh-tw/guides/familyboard-product-recall-action-tutorial/
+- /zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/
 - /zh-tw/guides/familyboard-record-linking-tutorial/
 - /zh-tw/guides/familyboard-record-retention-decision-log-tutorial/
 - /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/

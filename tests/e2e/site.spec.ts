@@ -57,6 +57,9 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/move-in-checklist-generator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/vacation-shutdown-checklist-generator/",
+    "/tools/important-household-document-review/",
+    "/tools/appliance-maintenance-checklist-generator/",
+    "/tools/receipt-retention-organizer/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -223,6 +226,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-move-out-condition-report-generator-tutorial/",
     "/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
     "/zh-tw/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
+    "/guides/familyboard-important-household-document-review-tutorial/",
+    "/zh-tw/guides/familyboard-important-household-document-review-tutorial/",
+    "/guides/familyboard-appliance-maintenance-checklist-generator-tutorial/",
+    "/zh-tw/guides/familyboard-appliance-maintenance-checklist-generator-tutorial/",
+    "/guides/familyboard-receipt-retention-organizer-tutorial/",
+    "/zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -362,6 +371,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/move-in-checklist-generator/",
     "/tools/move-out-condition-record-generator/",
     "/tools/vacation-shutdown-checklist-generator/",
+    "/tools/important-household-document-review/",
+    "/tools/appliance-maintenance-checklist-generator/",
+    "/tools/receipt-retention-organizer/",
     "/tools/household-bill-source-status-log/",
     "/tools/household-share-access-review-log/",
     "/tools/household-inventory-photo-capture-log/",
@@ -586,6 +598,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/move-in-checklist-generator/",
     "/zh-tw/tools/move-out-condition-record-generator/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
+    "/zh-tw/tools/important-household-document-review/",
+    "/zh-tw/tools/appliance-maintenance-checklist-generator/",
+    "/zh-tw/tools/receipt-retention-organizer/",
     "/zh-tw/tools/household-bill-source-status-log/",
     "/zh-tw/tools/household-share-access-review-log/",
     "/zh-tw/tools/household-inventory-photo-capture-log/",
@@ -1779,6 +1794,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
       alternate: "/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
       heading: "FamilyBoard 假期離家清單產生器教學：把住家交接和返家複查分開",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-important-household-document-review-tutorial/",
+      alternate: "/guides/familyboard-important-household-document-review-tutorial/",
+      heading: "FamilyBoard 重要家庭文件複查教學：找出缺件、版本與下一步",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-appliance-maintenance-checklist-generator-tutorial/",
+      alternate: "/guides/familyboard-appliance-maintenance-checklist-generator-tutorial/",
+      heading: "FamilyBoard 家電保養檢查表產生器教學：先找手冊，再安排複查",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/",
+      alternate: "/guides/familyboard-receipt-retention-organizer-tutorial/",
+      heading: "FamilyBoard 收據留存整理器教學：讓保固與退貨證明找得到",
     },
   ]) {
     await page.goto(localized.route);

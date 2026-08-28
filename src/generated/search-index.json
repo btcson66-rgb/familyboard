@@ -3648,6 +3648,30 @@
     "headings": "How to Use FamilyBoard's Vacation Shutdown Checklist Generator Enter an honest travel window Complete the six core checks Turn care prompts into a real handoff Avoid generic equipment advice Close the trip with return checks Keep the local record useful Future affiliate space and boundaries"
   },
   {
+    "title": "FamilyBoard Important Document Review Tutorial | Find Missing Household Sources",
+    "description": "Learn how to use FamilyBoard's Important Household Document Review tool to review source locations, versions, owners and next checks without storing document text or account numbers.",
+    "route": "/guides/familyboard-important-household-document-review-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "important household document review tutorial",
+    "headings": "How to Use FamilyBoard's Important Household Document Review Define one review purpose Point to the exact source version Separate presence from validity Give every gap an owner and date Keep retention decisions sourced Make retrieval testable Record the decision, not private paperwork Recheck after a change Future affiliate space and boundaries"
+  },
+  {
+    "title": "FamilyBoard Appliance Maintenance Checklist Tutorial | Build a Source-Aware Plan",
+    "description": "Learn how to use FamilyBoard's Appliance Maintenance Checklist Generator to organize filters, cleaning, service sources and follow-up without guessing safety steps.",
+    "route": "/guides/familyboard-appliance-maintenance-checklist-generator-tutorial/",
+    "cluster": "appliances",
+    "keywords": "appliance maintenance checklist generator tutorial",
+    "headings": "How to Use FamilyBoard's Appliance Maintenance Checklist Generator Begin with one appliance and its source Read the manual before acting Separate task, observation and outcome Use intervals as prompts, not promises Close with evidence that can be reopened Plan around access and interruptions Keep a small history Future affiliate space and boundaries"
+  },
+  {
+    "title": "FamilyBoard Receipt Retention Organizer Tutorial | Keep Proof Findable",
+    "description": "Learn how to use FamilyBoard's Receipt Retention Organizer to track protected receipt sources, retention questions and retrieval owners without storing card or address data.",
+    "route": "/guides/familyboard-receipt-retention-organizer-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "receipt retention organizer tutorial",
+    "headings": "How to Use FamilyBoard's Receipt Retention Organizer Give the receipt a safe purpose code Point to protected evidence Separate purchase facts from conclusions Choose retention by purpose Test retrieval before you need it Distinguish purchase proof from payment data Review before the deadline Future affiliate space and boundaries"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
