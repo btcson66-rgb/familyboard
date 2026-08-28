@@ -3880,6 +3880,30 @@
     "headings": "FamilyBoard Attachment Metadata Is an Index, Not an Upload Record a safe pointer Link metadata to the right household record Review before sharing or exporting A practical attachment check What the app does not promise"
   },
   {
+    "title": "FamilyBoard Encrypted Backup Password Tutorial | Protect a JSON Export",
+    "description": "Learn how FamilyBoard encrypted exports work, how to choose a recoverable password process, and how to validate the file without exposing household records.",
+    "route": "/guides/familyboard-encrypted-backup-password-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard encrypted backup password",
+    "headings": "How to Use a FamilyBoard Encrypted Backup Safely Choose a password process before exporting Export and separate the two items Test decryption without changing the household Plan for rotation and failure What encryption does not cover"
+  },
+  {
+    "title": "FamilyBoard Master CSV Edit and Import Tutorial | Preview Before Updating",
+    "description": "Learn how to export, edit and preview FamilyBoard’s UTF-8 master CSV, choose merge or append behavior, and keep a JSON safety snapshot before import.",
+    "route": "/guides/familyboard-master-csv-edit-import-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard master CSV edit import",
+    "headings": "How to Edit and Import the FamilyBoard Master CSV Export the current table first Preserve IDs and inspect the columns Choose merge or append deliberately Read the preview before applying Verify after import"
+  },
+  {
+    "title": "FamilyBoard First-Run Restore Tutorial | Open an Existing Household Safely",
+    "description": "Learn how to restore a FamilyBoard JSON backup during first-run onboarding, validate an encrypted file, and avoid creating a blank household before recovery.",
+    "route": "/guides/familyboard-app-first-run-restore-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard first-run restore",
+    "headings": "Restore an Existing FamilyBoard Household on First Run Prepare the right file Use onboarding validation boundaries Check the restored local state Protect the next recovery point"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

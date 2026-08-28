@@ -806,6 +806,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-storage-health-warning-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-attachment-metadata-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-attachment-metadata-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-encrypted-backup-password-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-encrypted-backup-password-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-master-csv-edit-import-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-master-csv-edit-import-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-app-first-run-restore-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-app-first-run-restore-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1519,6 +1525,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-attachment-metadata-tutorial/",
     require: ["附件中繼資料教學", "位置參照"],
+  },
+  {
+    path: "/guides/familyboard-encrypted-backup-password-tutorial/",
+    require: ["Encrypted Backup Password", "AES-256-GCM"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-encrypted-backup-password-tutorial/",
+    require: ["加密備份密碼教學", "復原金鑰"],
+  },
+  {
+    path: "/guides/familyboard-master-csv-edit-import-tutorial/",
+    require: ["Edit and Import the FamilyBoard Master CSV", "five-megabyte"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-master-csv-edit-import-tutorial/",
+    require: ["家庭總表 CSV 編輯匯入教學", "穩定 ID"],
+  },
+  {
+    path: "/guides/familyboard-app-first-run-restore-tutorial/",
+    require: ["Restore an Existing FamilyBoard Household on First Run", "onboarding"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-app-first-run-restore-tutorial/",
+    require: ["首次啟動復原教學", "乾淨瀏覽器"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",

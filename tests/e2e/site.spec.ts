@@ -290,6 +290,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-storage-health-warning-tutorial/",
     "/guides/familyboard-attachment-metadata-tutorial/",
     "/zh-tw/guides/familyboard-attachment-metadata-tutorial/",
+    "/guides/familyboard-encrypted-backup-password-tutorial/",
+    "/zh-tw/guides/familyboard-encrypted-backup-password-tutorial/",
+    "/guides/familyboard-master-csv-edit-import-tutorial/",
+    "/zh-tw/guides/familyboard-master-csv-edit-import-tutorial/",
+    "/guides/familyboard-app-first-run-restore-tutorial/",
+    "/zh-tw/guides/familyboard-app-first-run-restore-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1997,6 +2003,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-attachment-metadata-tutorial/",
       alternate: "/guides/familyboard-attachment-metadata-tutorial/",
       heading: "FamilyBoard 附件中繼資料教學：只記索引，不上傳檔案",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-encrypted-backup-password-tutorial/",
+      alternate: "/guides/familyboard-encrypted-backup-password-tutorial/",
+      heading: "FamilyBoard 加密備份密碼教學：保護 JSON 匯出檔並保留復原能力",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-master-csv-edit-import-tutorial/",
+      alternate: "/guides/familyboard-master-csv-edit-import-tutorial/",
+      heading: "FamilyBoard 家庭總表 CSV 編輯匯入教學：先預覽，再更新資料",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-app-first-run-restore-tutorial/",
+      alternate: "/guides/familyboard-app-first-run-restore-tutorial/",
+      heading: "FamilyBoard 首次啟動復原教學：在新瀏覽器開啟既有家庭",
     },
   ]) {
     await page.goto(localized.route);
@@ -4748,6 +4769,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-attachment-metadata-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-encrypted-backup-password-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-encrypted-backup-password-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-master-csv-edit-import-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-master-csv-edit-import-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-app-first-run-restore-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-app-first-run-restore-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-seasonal-reset-tutorial/",

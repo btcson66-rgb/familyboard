@@ -36113,6 +36113,167 @@ Future affiliate panels may suggest folders, labels or scanning accessories near
 
 ---
 
+## Page 502 — FamilyBoard Encrypted Backup Password Tutorial
+**Slug:** /guides/familyboard-encrypted-backup-password-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-encrypted-backup-password-tutorial/
+**Primary intent:** create and recover an encrypted FamilyBoard backup without losing the password
+**Title tag:** FamilyBoard Encrypted Backup Password Tutorial | Protect a JSON Export
+**Meta description:** Learn how FamilyBoard encrypted exports work, how to choose a recoverable password process, and how to validate the file without exposing household records.
+**Primary keyword concept:** FamilyBoard encrypted backup password
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-offline-backup-restore/, /guides/familyboard-restore-merge-replace-tutorial/, /guides/familyboard-privacy-safe-household-records/, /privacy/
+**FAQ:**
+- Q: Can FamilyBoard recover a forgotten encrypted-backup password?
+  A: No. The password is required to decrypt the authenticated file and is never sent to FamilyBoard.
+- Q: Is an encrypted export the same as a cloud backup?
+  A: No. It is a protected local download; you still need a durable storage location and a second recovery copy.
+- Q: Should I email the password with the file?
+  A: No. Use a separate controlled channel and do not place the password in household records or the file name.
+- Q: Can I validate an encrypted backup without restoring it?
+  A: Yes. Enter the password and use the validate-only picker to check its export time, schema and record count without writing data.
+
+# How to Use a FamilyBoard Encrypted Backup Safely
+
+An encrypted FamilyBoard export protects the contents of a JSON recovery file when the download is stored or moved outside the browser. In the app, encryption uses PBKDF2-SHA-256 and AES-256-GCM in the browser. The password is the recovery key: FamilyBoard does not upload it, keep a copy or reset it. A good workflow therefore treats password choice, file storage and a test decryption as three separate jobs. Encryption reduces exposure of the file; it does not create cloud sync or guarantee that the original browser survives.
+
+## Choose a password process before exporting
+
+Use a long, unique passphrase that your authorised household recovery role can retrieve from a password manager or another controlled method. Do not reuse a provider password, put a card number in it or write it into the FamilyBoard notes. The app rejects passwords shorter than ten characters, but a minimum is not a recommendation for a weak phrase. Decide who may access the recovery key, how that person is replaced and where the emergency instructions live before clicking Export encrypted.
+
+## Export and separate the two items
+
+In Export backup, enter the password twice in your own process, then choose Export encrypted. FamilyBoard downloads a file with an `.encrypted.json`-style name and records the successful export time. Move the file to a durable, access-controlled location and keep the password in a separate system. A file name should not reveal the password, household address or a sensitive record category. If the download is interrupted, export again and treat the newest completed file as the candidate, rather than assuming a partial download is usable.
+
+## Test decryption without changing the household
+
+Open Restore backup and enter the same password. Use Validate backup without restoring first. A valid file reports its export time, schema version and record count; no local table is cleared or updated. If the password is wrong, do not keep guessing inside a shared screen. Retrieve it through the agreed controlled process, check that you selected the intended file and try validation again. Never edit the encrypted bytes with a text editor or rename a file to imply that it has been tested.
+
+## Plan for rotation and failure
+
+When a recovery role changes, export a new encrypted file with a new password and retire the old copy according to your household retention decision. Keep an earlier file only when its scope and access are still understood. If the password is lost, the file cannot be decrypted by FamilyBoard; the practical response is to locate another valid export or an unencrypted backup, not to weaken the encryption. Keep a plain JSON copy only where its readable contents are acceptable and its access is controlled.
+
+## What encryption does not cover
+
+The browser still stores the live household locally, and a person who can open the app may be able to read records there. Encryption does not protect a screenshot, a copied note, a location reference or the original attachment file. Review sensitive names and pointers before sharing a backup. Future affiliate panels for password managers or storage media may appear with disclosure and an easy skip; buying a product cannot recover a forgotten password or replace the free validation workflow.
+
+**Contextual CTA:** Choose a controlled password process, export one encrypted file, and validate it before treating it as a recovery copy.
+
+---
+
+## Page 503 — FamilyBoard Master CSV Edit Import Tutorial
+**Slug:** /guides/familyboard-master-csv-edit-import-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-master-csv-edit-import-tutorial/
+**Primary intent:** edit a FamilyBoard master CSV safely and preview stable-ID updates before importing
+**Title tag:** FamilyBoard Master CSV Edit and Import Tutorial | Preview Before Updating
+**Meta description:** Learn how to export, edit and preview FamilyBoard’s UTF-8 master CSV, choose merge or append behavior, and keep a JSON safety snapshot before import.
+**Primary keyword concept:** FamilyBoard master CSV edit import
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-master-csv-edit-import/, /guides/familyboard-attachment-metadata-tutorial/, /guides/familyboard-restore-merge-replace-tutorial/, /app/
+**FAQ:**
+- Q: Is the master CSV a complete backup?
+  A: No. It is for review and bulk editing; a JSON export is the complete disaster-recovery backup.
+- Q: What does merge use to find a row?
+  A: Merge uses the stable record ID, so changing that ID can create a new record or fail validation.
+- Q: Does FamilyBoard import a CSV immediately after choosing it?
+  A: No. The file is parsed and previewed first; rows with validation errors must be fixed before import.
+- Q: Why does the app download a safety snapshot?
+  A: It gives you a JSON copy of the current household before any approved CSV changes are written.
+
+# How to Edit and Import the FamilyBoard Master CSV
+
+FamilyBoard’s master table is a UTF-8 CSV view of household records for spreadsheet review and controlled bulk editing. It is not a replacement for the complete JSON backup: some app state and recovery metadata are represented more fully in JSON. The safe sequence is export, edit a copy, preview, fix every validation error, download the pre-import safety snapshot and only then apply the import. This keeps a spreadsheet convenient without pretending it is a database editor.
+
+## Export the current table first
+
+Choose Export master CSV in the Household master table card. Keep the original export untouched and make a working copy in your spreadsheet application. The app also offers an empty template for planning new rows, but an empty template does not contain your household and should not be treated as a backup. Export a JSON file before a large edit so the recovery boundary is clear.
+
+## Preserve IDs and inspect the columns
+
+Each row has a record type, stable ID and fields appropriate to that collection. Merge finds existing rows by stable ID; do not sort a column into the ID, rename headers, remove required fields or paste formulas that export as unexpected values. Attachment rows contain metadata such as name, MIME type, size and location reference, not the underlying file. Keep credentials, signed URLs and full private documents out of the CSV. Use the preview’s warnings to notice skipped household descriptors or values that need a controlled source check.
+
+## Choose merge or append deliberately
+
+Merge updates matching IDs and adds valid new rows. It is suitable when you edited a known export and want those changes applied to the same household records. Append creates copies with new IDs, which can be useful when intentionally importing a separate set but can also create duplicates. Neither mode decides which value is newer. If two people edited separate exports, preserve both originals and resolve the conflict before importing.
+
+## Read the preview before applying
+
+Select Import master CSV for preview. FamilyBoard enforces a five-megabyte safety limit, parses the UTF-8 rows and shows new, updated and skipped counts. Warnings are not proof that a row is safe, and any validation error must be fixed before the apply button is enabled. Check dates, linked asset IDs, record types, empty required names and accidental private text. The app downloads a JSON safety snapshot immediately before a successful import; store it outside the browser and verify the download.
+
+## Verify after import
+
+After the success message, inspect a few updated rows in the relevant views, then export JSON again if the change matters. Record which CSV version was used, who reviewed the preview and whether merge or append was chosen. If a row is wrong, stop editing, keep the pre-import snapshot and original CSV, and restore deliberately. Future affiliate panels for spreadsheet software or folders may be optional and disclosed; they cannot validate household meaning or replace the JSON recovery copy.
+
+Treat the preview as a change review rather than a formality. Compare the household name, expected row count and the specific fields you intended to change. If the file came from another device, note that its export date may be older than the current browser. Keep the original CSV, the edited copy and the safety snapshot together long enough to explain the result, then apply the household retention decision to temporary copies.
+
+**Contextual CTA:** Export a master CSV and a JSON backup, edit only a working copy, preview the rows, then document the import mode before applying it.
+
+---
+
+## Page 504 — FamilyBoard First-Run Restore Tutorial
+**Slug:** /guides/familyboard-app-first-run-restore-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-app-first-run-restore-tutorial/
+**Primary intent:** restore an existing household during FamilyBoard onboarding without creating a blank duplicate
+**Title tag:** FamilyBoard First-Run Restore Tutorial | Open an Existing Household Safely
+**Meta description:** Learn how to restore a FamilyBoard JSON backup during first-run onboarding, validate an encrypted file, and avoid creating a blank household before recovery.
+**Primary keyword concept:** FamilyBoard first-run restore
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-offline-backup-restore/, /guides/familyboard-encrypted-backup-password-tutorial/, /guides/familyboard-restore-merge-replace-tutorial/, /app/
+**FAQ:**
+- Q: Do I need to create a blank household before restoring?
+  A: No. The onboarding screen offers Restore an existing household so you can validate and restore the file first.
+- Q: What happens if onboarding restore fails?
+  A: FamilyBoard reports the error and leaves data unchanged; check the file format or password through the controlled source.
+- Q: Does first-run restore support encrypted JSON?
+  A: Yes. Enter the password for the encrypted file; the app decrypts it in the browser before validation and replace restore.
+- Q: Is the first-run restore a cloud migration?
+  A: No. It restores a local database in the browser and does not create an account or sync data to a server.
+
+# Restore an Existing FamilyBoard Household on First Run
+
+When opening FamilyBoard in a new browser, you do not have to create a blank household and copy records by hand. The onboarding screen includes Restore an existing household. It accepts a FamilyBoard JSON backup, validates the package before writing and uses replace restore for the empty first-run database. This is a local device setup step, not account creation or cloud migration. Keep the original backup available until you have checked the restored household.
+
+## Prepare the right file
+
+Find the most recent complete JSON export from the controlled backup location. Confirm its household name, export date and expected scope before selecting it. Plain JSON is readable; an encrypted export needs the password used at export time. Do not use a master CSV for onboarding recovery because CSV is a review and bulk-edit format, not the complete disaster-recovery package. If you are unsure which file is complete, preserve the candidates and decide before opening the new browser.
+
+## Use onboarding validation boundaries
+
+On the first-run screen, choose the password field only when the selected file is encrypted, then choose the backup file. FamilyBoard parses plain JSON or decrypts the authenticated package in the browser. Validation happens before records are written. A wrong password, malformed file or unsupported schema should show an error while leaving the current onboarding state untouched. Do not repeatedly create new blank households to test files; fix the source or password through the controlled process.
+
+## Check the restored local state
+
+After a successful restore, review the household name, member roles, a recent task, a calendar event, a maintenance row, a document pointer and attachment metadata. Confirm that sensitive locations still point to the authorised source and that the browser is the intended device. The app does not upload these records or notify other family members. If the backup is old, record what must be re-entered from a newer source rather than silently assuming the restore is current.
+
+Do not begin a second large edit until the first-run review is complete. If the new browser and the source device both contain changes, preserve both JSON exports and write down which one is the comparison baseline. A successful onboarding message proves that the package was accepted; it does not prove that every field matches a newer source or that the device is protected from later browser cleanup.
+
+Keep the first restored session focused on inspection, not on adding a second household or changing every old date at once.
+
+## Protect the next recovery point
+
+Export a fresh JSON backup after you finish the first-run review and store it outside the browser. If the device may be shared, keep the browser profile protected and follow the household’s local privacy rules. Browser data can still be cleared, a profile can be removed and a device can fail; successful onboarding is not proof of durability. Future optional affiliate panels for storage or password managers may appear with clear disclosure, but they cannot create sync or recover a missing file.
+
+**Contextual CTA:** On a clean browser, identify one complete JSON backup, restore it through onboarding, review representative records and export the next recovery point.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

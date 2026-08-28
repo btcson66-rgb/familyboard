@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T21:19:33.848Z
+Generated: 2026-08-28T21:35:31.450Z
 
 ## Summary
 
-- Indexable pages: 941
-- Generated HTML routes: 947
+- Indexable pages: 947
+- Generated HTML routes: 953
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 532
+- Pages without a contextual product/tool link: 538
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 31
 - printables: 39
-- product: 148
+- product: 154
 - inventory-warranty: 82
 - appliances: 66
 - maintenance: 89
@@ -69,10 +69,13 @@ Generated: 2026-08-28T21:19:33.848Z
 - /disclaimer/
 - /editorial-policy/
 - /guides/digital-home-inventory-backup/
+- /guides/familyboard-app-first-run-restore-tutorial/
 - /guides/familyboard-attachment-metadata-tutorial/
 - /guides/familyboard-browser-storage-maintenance/
+- /guides/familyboard-encrypted-backup-password-tutorial/
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-household-handoff-tutorial/
+- /guides/familyboard-master-csv-edit-import-tutorial/
 - /guides/familyboard-offline-backup-restore/
 - /guides/familyboard-restore-merge-replace-tutorial/
 - /guides/familyboard-storage-health-warning-tutorial/
@@ -189,6 +192,7 @@ Generated: 2026-08-28T21:19:33.848Z
 - /zh-tw/guides/family-emergency-contacts/
 - /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
 - /zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/
+- /zh-tw/guides/familyboard-app-first-run-restore-tutorial/
 - /zh-tw/guides/familyboard-appliance-age-calculator-tutorial/
 - /zh-tw/guides/familyboard-appliance-maintenance-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/
@@ -218,6 +222,7 @@ Generated: 2026-08-28T21:19:33.848Z
 - /zh-tw/guides/familyboard-emergency-contact-verification-tutorial/
 - /zh-tw/guides/familyboard-emergency-information-privacy-tutorial/
 - /zh-tw/guides/familyboard-emergency-supply-inventory-audit-tutorial/
+- /zh-tw/guides/familyboard-encrypted-backup-password-tutorial/
 - /zh-tw/guides/familyboard-event-duration-calculator-tutorial/
 - /zh-tw/guides/familyboard-event-source-index-tutorial/
 - /zh-tw/guides/familyboard-family-display-mode-setup/
@@ -276,6 +281,7 @@ Generated: 2026-08-28T21:19:33.848Z
 - /zh-tw/guides/familyboard-maintenance-priority-review-tutorial/
 - /zh-tw/guides/familyboard-maintenance-tracker-tutorial/
 - /zh-tw/guides/familyboard-master-csv-edit-import/
+- /zh-tw/guides/familyboard-master-csv-edit-import-tutorial/
 - /zh-tw/guides/familyboard-meal-prep-role-log-tutorial/
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
 - /zh-tw/guides/familyboard-medical-information-source-handoff-tutorial/

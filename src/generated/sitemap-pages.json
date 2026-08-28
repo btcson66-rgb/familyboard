@@ -4016,6 +4016,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-encrypted-backup-password-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-encrypted-backup-password-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-master-csv-edit-import-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-master-csv-edit-import-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-app-first-run-restore-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-app-first-run-restore-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4623,6 +4647,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-app-first-run-restore-tutorial/",
+    "alternateRoute": "/guides/familyboard-app-first-run-restore-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/free-home-management-app/",
     "alternateRoute": "/features/free-home-management-app/",
     "indexable": true,
@@ -4807,6 +4838,13 @@
   {
     "route": "/zh-tw/guides/familyboard-emergency-supply-inventory-audit-tutorial/",
     "alternateRoute": "/guides/familyboard-emergency-supply-inventory-audit-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-encrypted-backup-password-tutorial/",
+    "alternateRoute": "/guides/familyboard-encrypted-backup-password-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5213,6 +5251,13 @@
   {
     "route": "/zh-tw/guides/familyboard-maintenance-tracker-tutorial/",
     "alternateRoute": "/guides/familyboard-maintenance-tracker-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-master-csv-edit-import-tutorial/",
+    "alternateRoute": "/guides/familyboard-master-csv-edit-import-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
