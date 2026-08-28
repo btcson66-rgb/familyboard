@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T06:39:13.870Z
+Generated: 2026-08-28T06:44:45.426Z
 
 ## Summary
 
-- Indexable pages: 671
-- Generated HTML routes: 690
+- Indexable pages: 674
+- Generated HTML routes: 693
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 373
+- Pages without a contextual product/tool link: 376
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,10 +19,10 @@ Generated: 2026-08-28T06:39:13.870Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 54
+- appliances: 56
 - maintenance: 81
 - household-operations: 109
-- inventory-warranty: 48
+- inventory-warranty: 49
 - records-emergency: 92
 - tools: 126
 
@@ -133,6 +133,7 @@ Generated: 2026-08-28T06:39:13.870Z
 - /zh-tw/features/warranty-tracker/
 - /zh-tw/guides/air-conditioner-maintenance-checklist/
 - /zh-tw/guides/air-purifier-filter-log/
+- /zh-tw/guides/air-purifier-maintenance-guide/
 - /zh-tw/guides/annual-home-review/
 - /zh-tw/guides/annual-renewal-calendar/
 - /zh-tw/guides/apartment-maintenance-checklist/
@@ -148,6 +149,7 @@ Generated: 2026-08-28T06:39:13.870Z
 - /zh-tw/guides/computer-electronics-inventory/
 - /zh-tw/guides/condo-maintenance-checklist/
 - /zh-tw/guides/contractor-records/
+- /zh-tw/guides/dehumidifier-maintenance-guide/
 - /zh-tw/guides/dehumidifier-maintenance-records/
 - /zh-tw/guides/digital-home-binder/
 - /zh-tw/guides/digital-home-inventory-backup/
@@ -242,6 +244,7 @@ Generated: 2026-08-28T06:39:13.870Z
 - /zh-tw/guides/home-contact-list/
 - /zh-tw/guides/home-evacuation-information/
 - /zh-tw/guides/home-improvement-receipts/
+- /zh-tw/guides/home-inventory-checklist/
 - /zh-tw/guides/home-inventory-for-insurance/
 - /zh-tw/guides/home-maintenance-after-vacation/
 - /zh-tw/guides/home-maintenance-binder/

@@ -101,6 +101,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/garbage-disposal-maintenance-guide/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/vacuum-cleaner-maintenance-guide/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-inventory-for-insurance/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/air-purifier-maintenance-guide/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/dehumidifier-maintenance-guide/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-inventory-checklist/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1369,6 +1372,33 @@ const checks = [
       'hreflang="en"',
       "Triple-I",
       "備份必須離開住家",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/air-purifier-maintenance-guide/",
+    require: [
+      "空氣清淨機保養指南",
+      'hreflang="en"',
+      "CADR 與面積是選擇線索",
+      "臭氧與健康界線",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/dehumidifier-maintenance-guide/",
+    require: [
+      "除濕機保養指南",
+      'hreflang="en"',
+      "濕度讀值只是局部觀察",
+      "水箱與滿水保護",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-inventory-checklist/",
+    require: [
+      "家庭財物清冊檢查表",
+      'hreflang="en"',
+      "兩分鐘測試",
+      "真正能完成的清冊",
     ],
   },
   {

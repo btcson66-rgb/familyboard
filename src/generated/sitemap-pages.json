@@ -569,7 +569,7 @@
   },
   {
     "route": "/guides/air-purifier-maintenance-guide/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/air-purifier-maintenance-guide/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -577,7 +577,7 @@
   },
   {
     "route": "/guides/dehumidifier-maintenance-guide/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/dehumidifier-maintenance-guide/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -689,7 +689,7 @@
   },
   {
     "route": "/guides/home-inventory-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-inventory-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3181,6 +3181,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/air-purifier-maintenance-guide/",
+    "alternateRoute": "/guides/air-purifier-maintenance-guide/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/annual-home-review/",
     "alternateRoute": "/guides/annual-home-review/",
     "indexable": true,
@@ -3360,6 +3367,13 @@
     "alternateRoute": "/guides/contractor-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/dehumidifier-maintenance-guide/",
+    "alternateRoute": "/guides/dehumidifier-maintenance-guide/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -4144,6 +4158,13 @@
     "alternateRoute": "/tools/home-inventory-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-inventory-checklist/",
+    "alternateRoute": "/guides/home-inventory-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
