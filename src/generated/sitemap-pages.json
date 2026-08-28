@@ -3568,6 +3568,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-emergency-supply-inventory-audit-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-emergency-supply-inventory-audit-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-home-service-provider-verification-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-service-provider-verification-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-home-repair-change-order-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-repair-change-order-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4287,6 +4311,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-emergency-supply-inventory-audit-tutorial/",
+    "alternateRoute": "/guides/familyboard-emergency-supply-inventory-audit-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-event-duration-calculator-tutorial/",
     "alternateRoute": "/guides/familyboard-event-duration-calculator-tutorial/",
     "indexable": true,
@@ -4399,8 +4430,22 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-home-repair-change-order-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-repair-change-order-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/",
     "alternateRoute": "/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-home-service-provider-verification-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-service-provider-verification-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

@@ -3432,6 +3432,30 @@
     "headings": "FamilyBoard Maintenance Tracker Tutorial: Record the Work and the Source, Not a False Guarantee Begin with the source and safe scope Separate ownership, completion and result Use recurrence without hiding exceptions Use a repeatable maintenance review loop"
   },
   {
+    "title": "FamilyBoard Emergency Supply Inventory Audit Tutorial | Verify Supplies and Gaps",
+    "description": "Learn how to use FamilyBoard's free emergency supply inventory audit to record item condition, source, expiry observations and a responsible next action without claiming readiness.",
+    "route": "/guides/familyboard-emergency-supply-inventory-audit-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard emergency supply inventory audit tutorial",
+    "headings": "FamilyBoard Emergency Supply Inventory Audit Tutorial: Verify the Item, Source and Next Action Define the scenario before opening the list Record an observation, not an assumption Separate the supply owner from the person who checks it Review condition and expiry carefully Turn every gap into a safe next action"
+  },
+  {
+    "title": "FamilyBoard Home Service Provider Verification Tutorial | Source and Scope Checks",
+    "description": "Learn how to use FamilyBoard's free provider verification log to record source, service scope, date and follow-up while avoiding unsupported endorsements or unsafe work advice.",
+    "route": "/guides/familyboard-home-service-provider-verification-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard home service provider verification tutorial",
+    "headings": "FamilyBoard Home Service Provider Verification Tutorial: Check the Source Before You Share a Contact Start with the job boundary Capture an attributable source Separate identity, scope and result Make the follow-up repeatable"
+  },
+  {
+    "title": "FamilyBoard Home Repair Change Order Tutorial | Track Scope and Approval Evidence",
+    "description": "Learn how to use FamilyBoard's free repair change order log to compare original scope, new request, source approval and actual result without unsafe DIY or legal conclusions.",
+    "route": "/guides/familyboard-home-repair-change-order-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard home repair change order tutorial",
+    "headings": "FamilyBoard Home Repair Change Order Tutorial: Preserve the Original Scope Before You Accept a Change Freeze the original request first Describe the change in comparable fields Separate request, approval and completion Track money and time without inventing a balance Close the loop with an observable result"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

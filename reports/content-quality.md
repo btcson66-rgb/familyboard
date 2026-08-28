@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T15:21:32.027Z
+Generated: 2026-08-28T15:36:39.019Z
 
 ## Summary
 
-- Indexable pages: 829
-- Generated HTML routes: 835
+- Indexable pages: 835
+- Generated HTML routes: 841
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 473
+- Pages without a contextual product/tool link: 476
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,9 +21,9 @@ Generated: 2026-08-28T15:21:32.027Z
 - product: 135
 - inventory-warranty: 70
 - appliances: 56
-- maintenance: 84
-- household-operations: 149
-- records-emergency: 113
+- maintenance: 86
+- household-operations: 151
+- records-emergency: 115
 - tools: 152
 
 ## Word-count range
@@ -201,6 +201,7 @@ Generated: 2026-08-28T15:21:32.027Z
 - /zh-tw/guides/familyboard-emergency-binder-generator-tutorial/
 - /zh-tw/guides/familyboard-emergency-contact-verification-tutorial/
 - /zh-tw/guides/familyboard-emergency-information-privacy-tutorial/
+- /zh-tw/guides/familyboard-emergency-supply-inventory-audit-tutorial/
 - /zh-tw/guides/familyboard-event-duration-calculator-tutorial/
 - /zh-tw/guides/familyboard-event-source-index-tutorial/
 - /zh-tw/guides/familyboard-family-display-mode-setup/
@@ -217,7 +218,9 @@ Generated: 2026-08-28T15:21:32.027Z
 - /zh-tw/guides/familyboard-home-inventory-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/
 - /zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/
+- /zh-tw/guides/familyboard-home-repair-change-order-tutorial/
 - /zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/
+- /zh-tw/guides/familyboard-home-service-provider-verification-tutorial/
 - /zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/
 - /zh-tw/guides/familyboard-household-account-list-tutorial/
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/

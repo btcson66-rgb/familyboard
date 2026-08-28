@@ -32585,6 +32585,186 @@ After a professional visit, preserve the attributable report and add a later hou
 - Q: Can I put hazardous instructions in a shared card?
   A: No. Keep detailed instructions in the responsible protected source and follow qualified guidance.
 
+## Page 446 — FamilyBoard Emergency Supply Inventory Audit Tutorial: Verify the Item, Source and Next Action
+
+**Slug:** `/guides/familyboard-emergency-supply-inventory-audit-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-emergency-supply-inventory-audit-tutorial/`
+**Primary intent:** teach a household to audit emergency supplies by item, source, condition and next action without presenting a checklist as a safety guarantee
+**Title tag:** FamilyBoard Emergency Supply Inventory Audit Tutorial | Verify Supplies and Gaps
+**Meta description:** Learn how to use FamilyBoard's free emergency supply inventory audit to record item condition, source, expiry observations and a responsible next action without claiming readiness.
+**Primary keyword concept:** FamilyBoard emergency supply inventory audit tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Audit one supply bin, link the responsible source and record one unresolved gap with an owner.
+**Suggested internal links:** `/tools/emergency-supply-inventory-audit/`, `/guides/emergency-supply-inventory/`, `/guides/familyboard-emergency-binder-generator-tutorial/`, `/guides/familyboard-household-handoff-tutorial/`
+
+# FamilyBoard Emergency Supply Inventory Audit Tutorial: Verify the Item, Source and Next Action
+
+The FamilyBoard Emergency Supply Inventory Audit is a small browser tool for turning a supply check into a reviewable record. It can list an item, quantity or condition observation, source pointer, review date, status and next owner. It does not inspect a kit, certify that a household is safe, know local hazards, replace emergency services or guarantee that an item will work when needed. This tutorial shows how to keep the audit useful and honest.
+
+## Define the scenario before opening the list
+
+Start with one bounded scenario: a short power outage, a storm season, a medication handoff or a move to a new home. Do not combine every possible emergency into one score. Name the container with a neutral code such as `KIT-A-2026` and record the date of the audit. A narrow scope makes it possible to tell whether a gap belongs to water, lighting, communication, documents or another category.
+
+## Record an observation, not an assumption
+
+Enter one item per row and describe what was actually observed: `headlamp | KIT-A-2026 | battery compartment checked | manual M-2 | review 2026-09-01`. “Present” is different from “tested,” “charged,” “within date” or “suitable for every person.” If a package is sealed, record that it was visually checked rather than claiming the contents work. If the source is missing, use a pending status and assign the person who can find it.
+
+The tool cannot determine whether a quantity is enough for your household, whether a replacement is compatible or whether a medical item is appropriate. Use the current official, manufacturer, clinician or emergency-management source for those decisions. Keep protected prescriptions, addresses, access codes and personal health details outside a shareable audit.
+
+## Separate the supply owner from the person who checks it
+
+An owner is responsible for finding the source, setting the next review and closing the gap. The checker records what was visible on a particular date. They may be the same person, but writing both roles prevents a green-looking list from hiding an unanswered question. If a supplier, building manager or caregiver must respond, use a status such as waiting for external confirmation and record the expected follow-up date.
+
+## Review condition and expiry carefully
+
+An entered expiry date is a prompt to read the label or responsible instructions. It is not a legal or safety determination. Record `label unreadable`, `date needs source check` or `seal damaged` rather than inventing a date. For batteries, water, food, first-aid items and protective equipment, follow the relevant official handling and replacement guidance. The audit is an index to the source; it is not a substitute for that guidance.
+
+## Turn every gap into a safe next action
+
+Write a next action that another role can repeat: “find the current battery specification,” “ask the building about the shared shutoff,” or “confirm the caregiver's approved storage instruction.” Avoid “make the family ready,” which cannot be checked. When the action involves electricity, gas, medical treatment, structural danger or evacuation, stop experimenting and follow qualified or emergency instructions. The tool should capture the handoff, not direct hazardous work.
+
+Before sharing a summary, remove full addresses, names, medication details, alarm codes and private notes. FamilyBoard is local-first; browser storage is not automatic backup. Export a copy before clearing site data and ask an authorised second role to retrieve one non-sensitive row. A successful retrieval test is evidence about the record, not proof that the supplies are adequate.
+
+**Contextual CTA:** Open Emergency Supply Inventory Audit, inspect one bounded kit, record the source pointer and assign one unresolved gap to a real owner.
+
+**FAQ:**
+- Q: Does the audit prove that our household is prepared?
+  A: No. It records observations and gaps; readiness depends on current sources, circumstances and people.
+- Q: Can the tool decide how much water or medicine we need?
+  A: No. Use the responsible official or clinical guidance for quantities and suitability.
+- Q: Is an expiry date in the tool an official safety ruling?
+  A: No. It is an entered review signal that must be checked against the label and source.
+- Q: Can I store full addresses and medical details in a shared audit?
+  A: No. Use minimum safe notes and keep sensitive originals in the system that controls them.
+
+## Page 447 — FamilyBoard Home Service Provider Verification Tutorial: Check the Source Before You Share a Contact
+
+**Slug:** `/guides/familyboard-home-service-provider-verification-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-service-provider-verification-tutorial/`
+**Primary intent:** teach households to record provider identity, source, scope and follow-up without endorsing a provider or making a safety claim
+**Title tag:** FamilyBoard Home Service Provider Verification Tutorial | Source and Scope Checks
+**Meta description:** Learn how to use FamilyBoard's free provider verification log to record source, service scope, date and follow-up while avoiding unsupported endorsements or unsafe work advice.
+**Primary keyword concept:** FamilyBoard home service provider verification tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Verify one provider against an attributable source, record the scope checked and leave any licence or availability question pending.
+**Suggested internal links:** `/tools/home-service-provider-verification-log/`, `/guides/service-provider-contact-list/`, `/guides/familyboard-service-appointment-handoff-tutorial/`, `/guides/familyboard-home-care-service-plan-change-notice-tutorial/`
+
+# FamilyBoard Home Service Provider Verification Tutorial: Check the Source Before You Share a Contact
+
+The FamilyBoard Home Service Provider Verification Log helps a household remember where a provider detail came from, what service scope was checked, when it was reviewed and what follow-up remains. It is a record-keeping tool, not a directory, endorsement, licence validator or emergency dispatch service. Use it to make a contact traceable without turning a neighbour's suggestion or an old invoice into a guarantee.
+
+## Start with the job boundary
+
+Describe one request such as “ask about annual boiler service,” “confirm the building's approved electrician process” or “request a written quote for a leak inspection.” Avoid broad labels such as “trusted plumber.” The scope determines which source matters and what a provider has actually agreed to do. Use a neutral record code like `PROVIDER-2026-04` when a summary may be shared.
+
+## Capture an attributable source
+
+Record whether the detail came from a dated invoice, official registry, building notice, written quote, service report or a household observation. Include a safe pointer and source date, not copied passwords, payment details or a complete private conversation. “Found online” is not an attributable source. If the source cannot be opened or its version is unclear, mark verification pending and assign retrieval to a role.
+
+The log cannot confirm a licence, insurance, availability, price, workmanship or legal compliance. Those questions belong to the responsible authority, contract or provider. Never infer that a provider is safe because a card is marked verified; the status means only that the household recorded a particular source check.
+
+## Separate identity, scope and result
+
+Keep three facts apart: who the contact claims to be, what service scope was requested and what result was observed. A phone number copied from an old invoice may identify a past transaction but not current availability. A quote may describe a proposed scope but not completed work. A paid invoice shows a transaction, not necessarily a successful or safe outcome. Link each fact to its own source pointer and date.
+
+## Make the follow-up repeatable
+
+Write the next step so another authorised role can do it: “ask the building manager whether this provider is on the current approved list,” “request a written scope,” or “record the service report after the visit.” Use a waiting status when the answer depends on an external party. Do not tell a household member to perform gas, electrical, structural, high-access or hazardous work based on a log entry; route those questions to qualified professionals and current official instructions.
+
+After a visit, record arrival, agreed scope, documents received and the household's observable result separately. “Technician attended” is not “fault repaired.” If the result is disputed, preserve the original quote, report and messages in the protected system and use a new follow-up record rather than rewriting the old verification.
+
+Before sharing, remove personal phone numbers, access instructions, full addresses, account identifiers and private notes unless the recipient genuinely needs them. FamilyBoard stores the record in the current browser and does not automatically sync or back it up. Export before clearing data and test retrieval with a safe code. Future affiliate listings must be clearly labelled, optional and outside the verification result; a product or sponsored placement cannot certify a provider.
+
+**Contextual CTA:** Open Home Service Provider Verification Log, check one contact against a dated source, define the requested scope and assign the next unanswered question.
+
+**FAQ:**
+- Q: Does a verified entry endorse the provider?
+  A: No. It records the source and scope that your household checked on a date.
+- Q: Can the log validate a licence or insurance policy?
+  A: No. Ask the responsible authority or provider and retain its attributable response.
+- Q: Does a paid invoice prove the work was successful?
+  A: No. Payment and observed outcome are separate records.
+- Q: Can I publish a provider's full contact details in a shared card?
+  A: Only when necessary and authorised; use a minimum safe pointer by default.
+
+## Page 448 — FamilyBoard Home Repair Change Order Tutorial: Preserve the Original Scope Before You Accept a Change
+
+**Slug:** `/guides/familyboard-home-repair-change-order-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-repair-change-order-tutorial/`
+**Primary intent:** teach households to record repair scope changes, source approval and cost observations without approving work or giving construction advice
+**Title tag:** FamilyBoard Home Repair Change Order Tutorial | Track Scope and Approval Evidence
+**Meta description:** Learn how to use FamilyBoard's free repair change order log to compare original scope, new request, source approval and actual result without unsafe DIY or legal conclusions.
+**Primary keyword concept:** FamilyBoard home repair change order tutorial
+**Cluster:** maintenance
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Link one proposed change to the original scope, responsible approver and written cost or schedule source before work proceeds.
+**Suggested internal links:** `/tools/home-repair-change-order-log/`, `/tools/home-repair-punch-list/`, `/guides/home-repair-history/`, `/guides/familyboard-repair-punch-list-tutorial/`
+
+# FamilyBoard Home Repair Change Order Tutorial: Preserve the Original Scope Before You Accept a Change
+
+The FamilyBoard Home Repair Change Order Log is designed for one practical problem: a repair starts with one scope and a provider later proposes something different. The log can connect the original request, proposed change, source or approval, estimated cost, schedule observation and actual result. It does not approve work, interpret a contract, diagnose a fault, verify a quote or provide construction safety advice. This tutorial keeps the record useful without turning a note into consent.
+
+## Freeze the original request first
+
+Create a neutral job code such as `REPAIR-2026-07` and record the original scope before entering a change. Include the date, observable problem, source pointer and who requested the work. “Repair bathroom” is too broad; “inspect the reported leak at the sink cabinet and provide a written scope” is reviewable. Preserve the original wording even if it later proves incomplete.
+
+## Describe the change in comparable fields
+
+For every proposed change, record what is added, removed or substituted, why it was proposed, who supplied the explanation and which document supports it. Compare scope, materials or parts, labour, access, price basis, schedule and expected result. A message saying “extra work needed” is a prompt to request detail, not enough evidence to accept an amount or deadline. If the provider cannot give a written explanation, mark the approval question pending.
+
+## Separate request, approval and completion
+
+The person who notices a change may not have authority to approve it. Record the responsible household role, landlord, building manager, insurer or other decision source. A signed quote, email approval or building instruction is evidence of an action; it is not proof that the work is compliant or safe. Keep approval status separate from completion status, and keep a later observation separate from both.
+
+Do not use this log to direct electrical, gas, structural, roofing, mould, water-damage or high-access work. Ask the qualified provider for current instructions and follow emergency guidance when there is immediate danger. FamilyBoard can preserve the question and the source pointer; it cannot make a hazardous task suitable for DIY.
+
+## Track money and time without inventing a balance
+
+Record the currency, estimate or invoice identifier and the source date. Keep taxes, deposits, refunds, disputed items and unpaid amounts as separate observations. “Quote received” is not “amount owed,” and “payment sent” is not “repair completed.” If the currency or scope differs between documents, pause reconciliation and ask the responsible issuer rather than adding numbers that look precise.
+
+For schedule changes, record the provider's stated window and the household's follow-up date. A requested appointment is not attendance; attendance is not completion; completion is not a warranty. Link the service report, photos or receipt through safe pointers and preserve the original versions when the scope changes again.
+
+## Close the loop with an observable result
+
+After work, record what was delivered, what remains open and what was actually observed on a date. Use phrases such as “invoice received; cabinet dry at 2026-09-04 check; source report still pending.” Do not infer hidden conditions or promise that a repair will last. If a dispute arises, create a new follow-up and retain the original request, change explanation and approval evidence in the protected system.
+
+Before sharing a change summary, remove full addresses, access codes, account details, private messages and personal identifiers. The browser-based tool is local-first and not automatic backup; export and test retrieval before clearing data. Affiliate products may appear only in clearly labelled educational space outside the workbench and cannot recommend a contractor, approve a change or certify a result.
+
+**Contextual CTA:** Open Home Repair Change Order Log, copy the original scope into a protected pointer, then record one proposed change and its written approval source as pending or accepted by the responsible role.
+
+**FAQ:**
+- Q: Does logging a change order approve the extra work?
+  A: No. Approval must come from the responsible person or contract process.
+- Q: Does a paid invoice prove the repair is complete?
+  A: No. Payment, completion and later observation are separate facts.
+- Q: Can the tool tell me whether a repair is safe or legally required?
+  A: No. Use qualified professionals, current instructions and the responsible authority.
+- Q: Should I overwrite the original scope after a change?
+  A: No. Preserve the original and link a new change record so the decision trail stays reviewable.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

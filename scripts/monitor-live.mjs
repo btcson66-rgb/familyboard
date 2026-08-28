@@ -694,6 +694,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-warranty-tracker-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-maintenance-tracker-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-tracker-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-emergency-supply-inventory-audit-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-supply-inventory-audit-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-service-provider-verification-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-service-provider-verification-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-repair-change-order-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-repair-change-order-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -6191,6 +6197,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-maintenance-tracker-tutorial/",
     require: ["維護追蹤器 App 教學", "有邊界的工作", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-emergency-supply-inventory-audit-tutorial/",
+    require: ["Emergency Supply Inventory Audit Tutorial", "bounded scenario"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-emergency-supply-inventory-audit-tutorial/",
+    require: ["緊急物資盤點稽核教學", "限定範圍", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-service-provider-verification-tutorial/",
+    require: ["Home Service Provider Verification Tutorial", "attributable source"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-service-provider-verification-tutorial/",
+    require: ["居家服務商查核教學", "可歸屬的來源", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-repair-change-order-tutorial/",
+    require: ["Home Repair Change Order Tutorial", "original scope"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-repair-change-order-tutorial/",
+    require: ["居家修繕變更單教學", "原始範圍", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",
