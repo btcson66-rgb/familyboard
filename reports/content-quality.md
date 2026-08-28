@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T09:01:52.909Z
+Generated: 2026-08-28T09:09:55.211Z
 
 ## Summary
 
-- Indexable pages: 729
-- Generated HTML routes: 735
+- Indexable pages: 731
+- Generated HTML routes: 737
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 408
+- Pages without a contextual product/tool link: 409
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 126
+- product: 128
 - inventory-warranty: 60
 - appliances: 56
 - maintenance: 82
@@ -211,6 +211,7 @@ Generated: 2026-08-28T09:01:52.909Z
 - /zh-tw/guides/familyboard-power-outage-event-log-tutorial/
 - /zh-tw/guides/familyboard-private-family-organizer-tutorial/
 - /zh-tw/guides/familyboard-product-recall-action-tutorial/
+- /zh-tw/guides/familyboard-record-linking-tutorial/
 - /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-rental-repair-request-tutorial/

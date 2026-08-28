@@ -2920,6 +2920,14 @@
     "headings": "Household Utility Bill Difference Log: turn a surprising amount into a checkable question Start with a safe label Enter received amounts, not guesses Keep the source pointer separate Read increases and decreases as prompts A practical household review rhythm Privacy and affiliate boundaries Minimum useful record"
   },
   {
+    "title": "How to Link FamilyBoard Household Records by Asset | Free App Tutorial",
+    "description": "Link a household asset to its maintenance, warranty and document references so the next decision starts with context, without copying passwords or private files into FamilyBoard.",
+    "route": "/guides/familyboard-record-linking-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard link household records",
+    "headings": "Link the story of one household asset before you need to make a decision Start with one stable asset Add the records that answer different questions Record events without overwriting history Use a small review exercise"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

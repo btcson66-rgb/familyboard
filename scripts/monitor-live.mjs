@@ -571,6 +571,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/subscription-renewal-tracker/</loc>",
       "<loc>https://familyboard.win/guides/chore-chart-for-adults/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/chore-chart-for-adults/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-record-linking-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-linking-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/family-task-manager/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-dashboard/</loc>",
@@ -5679,6 +5681,22 @@ const checks = [
       "不要把家庭變成打分數的教室",
       "把行政與追蹤也算進家務",
       'hreflang="en"',
+    ],
+  },
+  {
+    path: "/guides/familyboard-record-linking-tutorial/",
+    require: [
+      "Link the story of one household asset",
+      "Record events without overwriting history",
+      "How to Link FamilyBoard Household Records by Asset",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-record-linking-tutorial/",
+    require: [
+      "FamilyBoard 家庭紀錄怎麼關聯",
+      "用事件保留歷史",
+      "hreflang=\"en\"",
     ],
   },
 ];

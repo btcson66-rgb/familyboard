@@ -3016,6 +3016,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-record-linking-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-record-linking-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3891,6 +3899,13 @@
   {
     "route": "/zh-tw/guides/familyboard-product-recall-action-tutorial/",
     "alternateRoute": "/guides/familyboard-product-recall-action-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-record-linking-tutorial/",
+    "alternateRoute": "/guides/familyboard-record-linking-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
