@@ -766,6 +766,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-responsibility-coverage-map-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-replacement-part-source-check-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-purchase-delivery-evidence-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-warranty-claim-evidence-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-pet-sitter-instruction-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -888,6 +894,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/",
     require: ["替換零件來源查核紀錄教學", "相容", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-purchase-delivery-evidence-tutorial/",
+    require: ["Purchase Delivery Evidence", "received"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/",
+    require: ["購買到貨證據教學", "實際收到", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+    require: ["Warranty Claim Evidence", "traceable"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+    require: ["保固索賠證據紀錄教學", "可追溯", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+    require: ["Pet-Sitter Instruction", "veterinary"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+    require: ["寵物照顧指示產生器教學", "獸醫", 'lang="zh-TW"'],
   },
   {
     path: "/ads.txt",

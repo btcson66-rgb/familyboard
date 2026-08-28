@@ -250,6 +250,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-household-responsibility-coverage-map-tutorial/",
     "/guides/familyboard-replacement-part-source-check-log-tutorial/",
     "/zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/",
+    "/guides/familyboard-purchase-delivery-evidence-tutorial/",
+    "/zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/",
+    "/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+    "/zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+    "/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+    "/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1857,6 +1863,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/",
       alternate: "/guides/familyboard-replacement-part-source-check-log-tutorial/",
       heading: "FamilyBoard 替換零件來源查核紀錄教學：先確認相容，再開購物頁",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/",
+      alternate: "/guides/familyboard-purchase-delivery-evidence-tutorial/",
+      heading: "FamilyBoard 購買到貨證據教學：記錄實際收到的內容",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+      alternate: "/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+      heading: "FamilyBoard 保固索賠證據紀錄教學：建立可追溯時間線",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+      alternate: "/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+      heading: "FamilyBoard 寵物照顧指示產生器教學：讓短期交接更清楚",
     },
   ]) {
     await page.goto(localized.route);
@@ -4488,6 +4509,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-shopping-list-planner-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-purchase-delivery-evidence-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-seasonal-reset-tutorial/",

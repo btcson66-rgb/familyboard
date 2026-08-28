@@ -34856,6 +34856,191 @@ If the part is rejected, returned or held for a technician, record that outcome 
 
 **Contextual CTA:** Start with one part your household has previously bought incorrectly, link it to neutral device evidence and leave unresolved fit questions visible.
 
+---
+
+## Page 482 — FamilyBoard Purchase Delivery Evidence Tutorial
+**Slug:** /guides/familyboard-purchase-delivery-evidence-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/
+**Primary intent:** learn to separate a household purchase promise, delivery statement and received-item observation in a private evidence log
+**Title tag:** FamilyBoard Purchase Delivery Evidence Tutorial | Record What Actually Arrived
+**Meta description:** Learn how to use FamilyBoard's Purchase Delivery Evidence Log to connect a safe purchase code, expected items, seller statement and arrival observation without storing payment details.
+**Primary keyword concept:** purchase delivery evidence log tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/purchase-delivery-evidence-log/, /guides/purchase-receipt-organizer/, /guides/familyboard-household-shopping-list-planner-tutorial/, /tools/household-return-handoff-log/
+**FAQ:**
+- Q: Does the log prove that a seller delivered the correct item?
+  A: No. It keeps the seller statement and household observation separate so a discrepancy remains visible.
+- Q: Should payment cards or order passwords be entered?
+  A: No. Keep payment and account credentials in their responsible protected system.
+- Q: Can a checked row be deleted after delivery?
+  A: Keep the original expectation and record the received result or exception as a dated observation.
+- Q: Does the tool resolve a return or warranty dispute?
+  A: No. It prepares an evidence trail for the household's authorised process and does not give legal or seller advice.
+
+# How to Use FamilyBoard's Purchase Delivery Evidence Log
+
+“Ordered” and “received” are different facts. A household may have a checkout confirmation, a carrier message, a package at the door and an item that does not match the expected model or quantity. FamilyBoard's free [Purchase Delivery Evidence Log](/tools/purchase-delivery-evidence-log/) gives those events separate fields so a later return, warranty or household handoff starts with a legible timeline. It is not a marketplace, payment vault, seller verification service or proof that a dispute will succeed.
+
+## Start with a safe purchase code
+
+Use `DELIVERY-2026-A` and a short purpose such as “replacement filter” or “moving box labels.” Do not paste a full order number, address, card detail or account email when a neutral code is enough. The code lets a household connect a receipt or protected seller record without turning the local note into a copy of the account.
+
+## Record the expectation before the parcel arrives
+
+Write the expected item, quantity, model evidence and source pointer before opening the package. A pointer such as `MANUAL-A1` or `RECEIPT-APR` should lead an authorised person to the current source. If the purchase is a substitute, record why it was considered and which source can approve fit; do not treat a product page's marketing language as compatibility evidence.
+
+## Keep provider statements separate
+
+Log the seller or carrier statement with its date and channel, but do not rewrite it as a household observation. “Carrier says delivered” is not the same as “authorised role found one sealed box.” A provider can correct its record, and a household can discover a shortage later. Separate rows prevent a status badge from hiding the time between those facts.
+
+## Inspect only what the household can safely verify
+
+Record package condition, visible label, count, model marking and the person who observed them. Do not ask a household member to open a dangerous appliance, test an electrical part or make a specialist judgement. For a device-linked part, preserve a photo or protected document reference according to the household's policy and leave fit unknown until the responsible source confirms it.
+
+## Handle substitutions and shortages honestly
+
+If a seller sends a different size, colour, model or quantity, retain the original expectation and add the proposed substitution as a new event. A general supply may be acceptable while a safety, accessibility or equipment requirement is not. Record who approved the exception through the protected process, or leave the row open with the next question. Never mark “complete” merely because a box arrived.
+
+## Close the evidence loop
+
+After the decision, record whether the item was accepted, quarantined, returned, installed or still missing, plus the next owner and review date. Link to the household return handoff or warranty evidence process without copying its private identifiers. FamilyBoard is local-first and browser storage is not automatic backup; export a backup before clearing data and inspect the file before sharing it.
+
+## Optional products stay outside the decision
+
+Future packaging, scanning or returns products may appear in optional space outside the log. They cannot guarantee delivery, authenticity, compatibility, refund or suitability and must never be required to record an arrival. Keep the free evidence trail useful even when no product is clicked.
+
+**Contextual CTA:** Log one recent delivery with its expectation, provider statement and actual observation; leave any model or quantity mismatch visible for the authorised next step.
+
+---
+
+## Page 483 — FamilyBoard Warranty Claim Evidence Log Tutorial
+**Slug:** /guides/familyboard-warranty-claim-evidence-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/
+**Primary intent:** learn to assemble a dated warranty claim evidence trail from purchase, model, service and communication records without promising coverage
+**Title tag:** FamilyBoard Warranty Claim Evidence Tutorial | Build a Traceable Record
+**Meta description:** Learn how to use FamilyBoard's Warranty Claim Evidence Log to connect model proof, purchase evidence, observed fault, service contact and next review without giving legal or warranty advice.
+**Primary keyword concept:** warranty claim evidence log tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/warranty-claim-evidence-log/, /guides/how-to-track-product-warranties/, /guides/familyboard-repair-evidence-timeline-tutorial/, /tools/household-repair-evidence-timeline-log/
+**FAQ:**
+- Q: Does the log decide whether a warranty claim is covered?
+  A: No. The provider's current terms and authorised process decide coverage.
+- Q: Should a serial number be published in a shared household note?
+  A: Use a safe reference and keep full identifiers in the protected source unless the authorised process requires them.
+- Q: Can I alter an old service note when a claim changes?
+  A: Preserve the original observation and add a dated update so the history remains traceable.
+- Q: Does a photo prove the cause of a failure?
+  A: No. It records what was visible at a time; diagnosis belongs to the responsible technician or provider.
+
+# How to Use FamilyBoard's Warranty Claim Evidence Log
+
+A warranty conversation becomes difficult when a household remembers the symptom but cannot find the model source, purchase date, service visit or promise made by a provider. FamilyBoard's free [Warranty Claim Evidence Log](/tools/warranty-claim-evidence-log/) helps assemble a neutral timeline: what was bought, what was observed, who was contacted and what remains unanswered. It does not interpret terms, predict approval, preserve original files automatically or replace consumer, legal or technical advice.
+
+## Create one claim reference and scope
+
+Start with `CLAIM-2026-A` and define one device or transaction. Record a safe model label and the type of question, such as “display fault after installation.” Avoid putting a full serial number, address, account login or payment detail in the working row. Keep the complete identifier in the protected invoice, registration or service system and point to it with a neutral code.
+
+## Gather evidence in time order
+
+Add the purchase or installation observation first, then the first symptom, photos or readings, service appointment, provider response and next review. Each entry needs a date, observer role, source pointer and a plain description of what was actually seen. “Stops after ten minutes” is an observation; “manufacturing defect” is a diagnosis that the log must not invent.
+
+## Separate terms from household facts
+
+A warranty document may state conditions, exclusions and time windows. Store a pointer to the current version and record which clause the authorised role is asking about. Do not convert a remembered sales promise into a guaranteed entitlement. If versions conflict, preserve both references and ask the provider or qualified adviser which current process controls.
+
+## Track contact without rewriting replies
+
+Record the channel, date, role contacted and a short paraphrase of the response. Keep the original email, ticket or call record in its protected system. Distinguish “request submitted,” “provider acknowledged,” “appointment offered” and “resolution observed.” A response deadline is an external statement, not a FamilyBoard reminder or promise of a result.
+
+## Preserve failed and incomplete attempts
+
+If a photo was too dark, a model label was unreadable or a service visit found no fault, keep that result and add the next action. Deleting an inconvenient attempt makes the later timeline less credible. Use the repair evidence timeline when several visits are related, and use a return or recall process when the issue is not a warranty repair question.
+
+## Close only on a verifiable outcome
+
+Close the claim when the household records an observed repair, replacement, refund or decision and links the controlling source. “Waiting for provider” is an honest open state. Export and test a local backup before clearing browser data; FamilyBoard has no server account that silently archives the log. Share only the minimum evidence requested by the authorised recipient.
+
+## Product recommendations remain optional
+
+Future extended-warranty, storage or diagnostic products may be displayed outside the evidence form with clear disclosure. They cannot guarantee coverage, improve a claim by themselves or require payment to keep the free timeline. A useful record must remain available when every recommendation is skipped.
+
+**Contextual CTA:** Build a neutral timeline for one unresolved device issue, linking the current terms, visible symptom and provider response without guessing the final decision.
+
+---
+
+## Page 484 — FamilyBoard Pet-Sitter Instruction Generator Tutorial
+**Slug:** /guides/familyboard-pet-sitter-instruction-generator-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/
+**Primary intent:** learn to prepare a bounded pet-sitter handoff with routine, source, access and escalation limits without exposing keys or replacing veterinary care
+**Title tag:** FamilyBoard Pet-Sitter Instruction Tutorial | Make Care Handoffs Clear
+**Meta description:** Learn how to use FamilyBoard's Pet-Sitter Instruction Generator for a time-bounded visit, safe routine notes, protected veterinary sources, exception triggers and return checks.
+**Primary keyword concept:** pet sitter instruction generator tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/pet-sitter-instruction-generator/, /guides/pet-sitter-information/, /guides/familyboard-house-sitter-instruction-generator-tutorial/, /tools/household-pet-record-source-handoff-log/
+**FAQ:**
+- Q: Does the generator replace a veterinarian's instructions?
+  A: No. It points the sitter to the current protected veterinary source and escalation route.
+- Q: Should medication dose, microchip number or alarm code be copied into the sheet?
+  A: Keep sensitive details in the responsible protected channel and use a safe pointer here.
+- Q: Does a check-in prove that the pet is healthy?
+  A: No. It records a message or observation at a time, not a diagnosis or safety certification.
+- Q: Can the sitter change the routine when a pet refuses food?
+  A: The sheet should name who decides and when to escalate; the sitter should not improvise clinical care.
+
+# How to Use FamilyBoard's Pet-Sitter Instruction Generator
+
+A pet-sitting handoff needs more than feeding times. It must say which routine is current, what the sitter may access, what counts as an exception and who controls veterinary or emergency decisions. FamilyBoard's free [Pet-Sitter Instruction Generator](/tools/pet-sitter-instruction-generator/) creates a private, time-bounded sheet for those boundaries. It does not verify a sitter, hold keys, diagnose an animal, dispense medication or guarantee that a pet will be safe.
+
+## Define the visit window and pet scope
+
+Use `PET-SIT-2026-A`, a start and end time and a role such as “authorised pet sitter.” Name the pet by a safe household label and state whether the visit covers feeding, water, litter, a walk, a visual observation or mail. Do not publish a full address, travel dates, access code or a detailed absence plan. A bounded sheet is easier to withdraw when the visit changes.
+
+## Separate routine from professional instruction
+
+Describe the ordinary observation—“check the protected feeding pointer morning and evening”—and the exception—“if the pet refuses food, contact the authorised role.” Keep dose, treatment plan, emergency clinic details and specialist thresholds in the responsible protected source. The handoff should tell a sitter when to pause and ask, not invite a guess based on an old message or internet article.
+
+## Use minimum necessary access
+
+Record the smallest area and action needed, such as “entryway and food station.” Do not list every room, key location, camera, account or neighbour's contact information. A role label does not grant entry. Confirm access through the household's protected process and record only that the current authorised source was acknowledged. If access is unclear, leave the status waiting rather than approved.
+
+## Point to current pet records
+
+Use safe pointers such as `PET-CARE-1`, `VET-2026-02` or `FOOD-RULE-A`, with the date checked. If a food, medication, behaviour or building rule changes, create a new version and withdraw old copies. A forwarded chat can be a lead but is not automatically the controlling instruction. Ask the sitter to repeat the pointer and escalation route without asking them to copy secrets into the sheet.
+
+## Define check-ins and exceptions
+
+Provide statuses for arrived, routine observed, unusual condition, contacted owner and left. A message proves only that a report was made at a time; it does not prove appetite, hydration, injury status or a secure door. For breathing difficulty, injury, poisoning, escape, fire or another urgent concern, follow current local emergency and veterinary instructions first, then record the event when safe.
+
+## Review the return and privacy boundary
+
+At the end of the window, collect paper copies, revoke temporary access in the controlling system and record what was observed or unresolved. FamilyBoard is local-first and browser storage is not automatic backup; export a copy before clearing data and inspect it before sharing. Keep photos, location details and veterinary identifiers in the protected process unless the authorised recipient needs them.
+
+## Optional pet products do not control care
+
+Future feeders, cameras, trackers or pet-service products may appear in optional space outside the instruction form. They cannot guarantee feeding, supervision, emergency response or animal health and must never be required to create a handoff. The free sheet should remain clear when every product card is skipped.
+
+**Contextual CTA:** Prepare one bounded pet-sitting window, link the current routine and veterinary source, and ask the sitter to acknowledge the exception route before arrival.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

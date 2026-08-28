@@ -3856,6 +3856,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-purchase-delivery-evidence-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -5079,6 +5103,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-photo-inventory-tutorial/",
     "alternateRoute": "/guides/familyboard-photo-inventory-tutorial/",
     "indexable": true,
@@ -5116,6 +5147,13 @@
   {
     "route": "/zh-tw/guides/familyboard-product-recall-action-tutorial/",
     "alternateRoute": "/guides/familyboard-product-recall-action-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/",
+    "alternateRoute": "/guides/familyboard-purchase-delivery-evidence-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5382,6 +5420,13 @@
   {
     "route": "/zh-tw/guides/familyboard-warranty-checklist-generator-tutorial/",
     "alternateRoute": "/guides/familyboard-warranty-checklist-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-warranty-claim-evidence-log-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

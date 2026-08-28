@@ -3720,6 +3720,30 @@
     "headings": "How to Use FamilyBoard's Replacement-Part Source Check Log Separate ordinary shopping from device-linked parts Record evidence, not a guess Treat five events separately Test the source before buying Close with a cautious outcome Future affiliate space and boundaries Keep a decision trail for returns Keep a decision trail for returns"
   },
   {
+    "title": "FamilyBoard Purchase Delivery Evidence Tutorial | Record What Actually Arrived",
+    "description": "Learn how to use FamilyBoard's Purchase Delivery Evidence Log to connect a safe purchase code, expected items, seller statement and arrival observation without storing payment details.",
+    "route": "/guides/familyboard-purchase-delivery-evidence-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "purchase delivery evidence log tutorial",
+    "headings": "How to Use FamilyBoard's Purchase Delivery Evidence Log Start with a safe purchase code Record the expectation before the parcel arrives Keep provider statements separate Inspect only what the household can safely verify Handle substitutions and shortages honestly Close the evidence loop Optional products stay outside the decision"
+  },
+  {
+    "title": "FamilyBoard Warranty Claim Evidence Tutorial | Build a Traceable Record",
+    "description": "Learn how to use FamilyBoard's Warranty Claim Evidence Log to connect model proof, purchase evidence, observed fault, service contact and next review without giving legal or warranty advice.",
+    "route": "/guides/familyboard-warranty-claim-evidence-log-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "warranty claim evidence log tutorial",
+    "headings": "How to Use FamilyBoard's Warranty Claim Evidence Log Create one claim reference and scope Gather evidence in time order Separate terms from household facts Track contact without rewriting replies Preserve failed and incomplete attempts Close only on a verifiable outcome Product recommendations remain optional"
+  },
+  {
+    "title": "FamilyBoard Pet-Sitter Instruction Tutorial | Make Care Handoffs Clear",
+    "description": "Learn how to use FamilyBoard's Pet-Sitter Instruction Generator for a time-bounded visit, safe routine notes, protected veterinary sources, exception triggers and return checks.",
+    "route": "/guides/familyboard-pet-sitter-instruction-generator-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "pet sitter instruction generator tutorial",
+    "headings": "How to Use FamilyBoard's Pet-Sitter Instruction Generator Define the visit window and pet scope Separate routine from professional instruction Use minimum necessary access Point to current pet records Define check-ins and exceptions Review the return and privacy boundary Optional pet products do not control care"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
