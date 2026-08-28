@@ -112,6 +112,8 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-record-retrieval-drill-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-record-retrieval-drill-log/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-record-retrieval-drill-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-decision-register/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-decision-register/</loc>",
       "<loc>https://familyboard.win/guides/digital-home-binder/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/digital-home-binder/</loc>",
       "<loc>https://familyboard.win/tools/important-household-document-review/</loc>",
@@ -779,6 +781,24 @@ const checks = [
       "FamilyBoard Record Retrieval Drill Tutorial",
       "one bounded question",
       "does not inspect files",
+    ],
+  },
+  {
+    path: "/tools/household-decision-register/",
+    require: [
+      "Household Decision Register",
+      'hreflang="zh-TW"',
+      "Eight fields keep a decision honest",
+      "does not vote for a family",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-decision-register/",
+    require: [
+      "家庭決定登錄工具",
+      'hreflang="en"',
+      "八欄讓問題不會跳級",
+      "不替家庭投票",
     ],
   },
   {

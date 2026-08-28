@@ -5448,7 +5448,70 @@ const householdEventDurationDefinition = (locale: Locale): Definition => {
   };
 };
 
+const decisionRegisterDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? [
+        "已建立決定列，等待問題範圍",
+        "來源已核對，等待家庭限制",
+        "限制與選項已記錄，等待角色回覆",
+        "家庭決定已記錄，等待實際行動",
+        "行動已觀察，等待結果複查",
+        "已複查來源、決定、行動與結果",
+        "不適用，已記錄原因與重新開啟事件",
+      ]
+    : [
+        "Decision row created—question scope pending",
+        "Source checked—household constraints pending",
+        "Constraints and options recorded—role response pending",
+        "Household decision recorded—action pending",
+        "Action observed—result review pending",
+        "Source, decision, action and result reviewed",
+        "Not applicable—reason and reopen event recorded",
+      ];
+  const defaults = zh
+    ? `DECISION-A | 本月是否更新家庭濾網流程 | 2026-08-29 | MANUAL-M1; HOME-H1 | 依目前型號說明與家庭時間安排比較，不複製完整文件 | 家庭維護角色已看過來源；耗材料號仍留在受保護紀錄 | 家庭維護角色 | ${statuses[2]}`
+    : `DECISION-A | Should the household update its filter routine? | 2026-08-29 | MANUAL-M1; HOME-H1 | Compare the current model manual with household time constraints; do not copy the full document | Maintenance role checked the sources; exact part details remain protected | Household maintenance role | ${statuses[2]}`;
+  return {
+    intro: zh
+      ? "把一個家庭問題、目前來源、限制、選項、角色與實際結果分開記錄。工具不替家庭投票，不保存完整文件、帳務、健康或憑證資料。"
+      : "Separate one household question, current source, constraints, options, role and observed result. This tool does not vote for the household or store full documents, billing, health or credential data.",
+    fields: [
+      text("review", zh ? "家庭決定登錄私人代號" : "Private household-decision register reference", zh ? "使用安全代號，不要輸入姓名、地址、帳號、案件或付款資料。" : "Use a safe code, not a name, address, account, case or payment detail.", "DECISION-REGISTER-2026-A"),
+      { name: "reviewDate", label: zh ? "本次檢視日期" : "Review date", type: "date", value: "2026-08-29" },
+      text("source", zh ? "家庭來源地圖" : "Household source map", zh ? "只填來源代號與保管位置，不貼原始文件。" : "Use source codes and a protected location; do not paste original documents.", "SOURCE-S1; PROTECTED-P1"),
+      { name: "rows", label: zh ? "決定列（每行 8 欄，以 | 分隔）" : "Decision rows (8 fields per line, separated by |)", type: "textarea", help: zh ? `最多 12 行；狀態必須使用：${statuses.join("／")}。` : `Up to 12 lines; status must be one of: ${statuses.join(" / ")}.`, value: defaults },
+      text("storage", zh ? "受保護原件與決定紀錄位置" : "Protected originals and decision-record location", zh ? "填保管位置或安全代號，不要貼密碼、完整通信或健康資料。" : "Name a protected location or safe code; do not paste passwords, full correspondence or health data.", "Encrypted household folder / binder index"),
+    ],
+    run: (values) => {
+      const reviewDate = strictIsoDate(values.reviewDate);
+      if (!values.review.trim()) return zh ? "請填寫家庭決定登錄安全代號。" : "Enter a private household-decision register code.";
+      const privacy = [values.review, values.source, values.rows, values.storage].join("\n");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy) || /password|passphrase|passcode|verification code|account number|card number|full address|密碼|驗證碼|帳號|卡號|完整地址|身分證|病歷|保單號/i.test(privacy))
+        return zh ? "偵測到可能的聯絡、帳號、付款、地址、憑證或健康資料；請改用安全來源代號。" : "A possible contact, account, payment, address, credential or health detail was detected; replace it with a safe source code.";
+      if (!reviewDate) return zh ? "請輸入有效的檢視日期。" : "Enter a valid review date.";
+      const rows = values.rows.split(/\r?\n/).map((line) => line.trim()).filter(Boolean).map((line, index) => ({ line: index + 1, parts: line.split("|").map((part) => part.trim()) }));
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行決定列。" : "Enter 1 to 12 decision rows.";
+      const invalid = rows.filter((row) => row.parts.length !== 8);
+      if (invalid.length) return zh ? `第 ${invalid.map((row) => row.line).join("、")} 行需要 8 欄：ID｜問題｜日期｜來源｜限制／選項｜觀察｜角色｜狀態。` : `Line ${invalid.map((row) => row.line).join(", ")} needs 8 fields: ID | question | date | source | constraints/options | observation | role | status.`;
+      const dates = rows.map((row) => strictIsoDate(row.parts[2]));
+      if (dates.some((dateValue) => !dateValue)) return zh ? "每行日期都必須使用 YYYY-MM-DD。" : "Every row date must use YYYY-MM-DD.";
+      const duplicate = rows.map((row) => row.parts[0].toLocaleLowerCase()).filter((id, index, all) => all.indexOf(id) !== index);
+      if (duplicate.length) return zh ? `決定列 ID 不可重複：${duplicate.join("、")}` : `Decision row IDs must be unique: ${duplicate.join(", ")}`;
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[7]));
+      if (invalidStatus.length) return zh ? `第 ${invalidStatus.map((row) => row.line).join("、")} 行的狀態不在允許清單。` : `Line ${invalidStatus.map((row) => row.line).join(", ")} uses a status outside the allowed list.`;
+      const open = rows.filter((row) => ![statuses[5], statuses[6]].includes(row.parts[7])).length;
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const rendered = rows.map((row, index) => zh ? `${row.parts[0]}｜問題：${row.parts[1]}｜日期：${formatter.format(dates[index] as Date)}｜來源：${row.parts[3]}｜限制／選項：${row.parts[4]}｜觀察：${row.parts[5]}｜角色：${row.parts[6]}｜狀態：${row.parts[7]}` : `${row.parts[0]} — question: ${row.parts[1]} — date: ${formatter.format(dates[index] as Date)} — source: ${row.parts[3]} — constraints/options: ${row.parts[4]} — observation: ${row.parts[5]} — role: ${row.parts[6]} — status: ${row.parts[7]}`).join("\n");
+      return zh
+        ? `${values.review.trim()}｜家庭決定登錄\n本次檢視：${formatter.format(reviewDate)}\n仍開放列：${open}\n\n來源地圖：${values.source.trim()}\n\n有版本的家庭問題與決定\n${rendered}\n\n受保護原件位置：${values.storage.trim()}\n\n這份輸出只整理家庭決定流程，不替你投票、排名商品、判定法律／醫療／財務結果，也不保存完整文件或秘密。請以目前官方、原廠與合格專業來源確認真正結果。`
+        : `${values.review.trim()} — household decision register\nReview date: ${formatter.format(reviewDate)}\nOpen rows: ${open}\n\nSource map: ${values.source.trim()}\n\nVersioned household questions and decisions\n${rendered}\n\nProtected originals: ${values.storage.trim()}\n\nThis output organizes a household decision process. It does not vote, rank products, decide legal/medical/financial outcomes or store full documents or secrets. Use current official, manufacturer and qualified sources for real results.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
+  "household-decision-register": { ...decisionRegisterDefinition("en") },
   "household-event-source-index-log": { ...householdEventSourceIndexDefinition("en") },
   "household-event-duration-calculator": { ...householdEventDurationDefinition("en") },
   "household-service-quote-comparison-log": serviceQuoteComparisonDefinition("en"),
@@ -9562,6 +9625,7 @@ const definitions: Record<string, Definition> = {
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
+  "household-decision-register": { ...decisionRegisterDefinition("zh-TW") },
   "household-event-source-index-log": { ...householdEventSourceIndexDefinition("zh-TW") },
   "household-event-duration-calculator": { ...householdEventDurationDefinition("zh-TW") },
   "household-utility-provider-service-handoff-log":

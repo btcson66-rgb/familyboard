@@ -2640,6 +2640,14 @@
     "headings": "How to Use FamilyBoard for Vehicle Document Source Status Start with a private vehicle code Build the source map by document type Match the protected vehicle without exposing identifiers Separate status, action and official result Handle recalls and safety questions carefully Version moves, transfers and changes Handoff and export safely Keep recommendations optional Eight-question closeout"
   },
   {
+    "title": "Household Decision Register | Free Private Family Decision Log | FamilyBoard",
+    "description": "Record a household question, current source, constraints, decision role and observed result in a free local browser tool without storing account, health or payment details.",
+    "route": "/tools/household-decision-register/",
+    "cluster": "household-operations",
+    "keywords": "household decision log",
+    "headings": "Household Decision Register Eight fields keep a decision honest Use a neutral code and protected source Record constraints, not pressure Review the action and result separately Use it in meetings and handoffs Privacy check before exporting Optional recommendations stay outside the form Before closing a row"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-27T23:40:51.234Z
+Generated: 2026-08-27T23:57:08.153Z
 
 ## Summary
 
-- Indexable pages: 572
-- Generated HTML routes: 589
+- Indexable pages: 574
+- Generated HTML routes: 591
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 295
+- Pages without a contextual product/tool link: 296
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-27T23:40:51.234Z
 - product: 102
 - appliances: 30
 - maintenance: 48
-- household-operations: 97
+- household-operations: 99
 - inventory-warranty: 45
 - records-emergency: 85
 - tools: 124
@@ -280,6 +280,7 @@ Generated: 2026-08-27T23:40:51.234Z
 - /zh-tw/tools/household-building-notice-response-log/
 - /zh-tw/tools/household-clothing-care-repair-log/
 - /zh-tw/tools/household-consumable-change-history-log/
+- /zh-tw/tools/household-decision-register/
 - /zh-tw/tools/household-device-retirement-handoff-log/
 - /zh-tw/tools/household-document-index-generator/
 - /zh-tw/tools/household-document-renewal-review-log/

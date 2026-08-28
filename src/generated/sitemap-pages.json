@@ -2840,6 +2840,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-decision-register/",
+    "alternateRoute": "/zh-tw/tools/household-decision-register/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3847,6 +3855,13 @@
     "alternateRoute": "/tools/household-consumable-change-history-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-decision-register/",
+    "alternateRoute": "/tools/household-decision-register/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

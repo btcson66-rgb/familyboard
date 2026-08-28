@@ -66,3 +66,5 @@ Document pouches, label products or vehicle organisers may eventually be compare
 ## Eight-question closeout
 
 Is the vehicle code neutral? Are registration, insurance, inspection and recall sources separated and dated? Was the protected vehicle match performed by an allowed role? Are status, action and official result distinct? Are recall and driving conclusions left to the correct source? Are changes versioned? Did sharing remove identifiers? Is any recommendation optional and disclosed? If not, keep the row open.
+
+---

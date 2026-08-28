@@ -36,6 +36,7 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-school-closure-continuity-log/",
     "/tools/household-event-duration-calculator/",
     "/tools/household-event-source-index-log/",
+    "/tools/household-decision-register/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -295,6 +296,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-consumable-change-history-tutorial/",
     "/zh-tw/tools/household-repair-evidence-timeline-log/",
     "/zh-tw/tools/household-insurance-claim-timeline-log/",
+    "/zh-tw/tools/household-decision-register/",
     "/zh-tw/tools/household-building-notice-response-log/",
     "/zh-tw/tools/rental-repair-request-log/",
     "/zh-tw/tools/household-school-closure-continuity-log/",
@@ -1721,6 +1723,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-insurance-claim-timeline-log/",
       alternate: "/tools/household-insurance-claim-timeline-log/",
       heading: "家庭保險理賠事件時間線工具",
+    },
+    {
+      route: "/zh-tw/tools/household-decision-register/",
+      alternate: "/tools/household-decision-register/",
+      heading: "家庭決定登錄工具",
     },
     {
       route: "/zh-tw/tools/household-building-notice-response-log/",
@@ -3438,6 +3445,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-decision-register/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-decision-register/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-record-retrieval-drill-tutorial/",
