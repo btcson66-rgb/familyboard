@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T05:11:54.204Z
+Generated: 2026-08-28T05:35:46.082Z
 
 ## Summary
 
-- Indexable pages: 645
-- Generated HTML routes: 662
+- Indexable pages: 647
+- Generated HTML routes: 664
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 347
+- Pages without a contextual product/tool link: 349
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,7 +19,7 @@ Generated: 2026-08-28T05:11:54.204Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 38
+- appliances: 40
 - maintenance: 76
 - household-operations: 109
 - inventory-warranty: 46
@@ -250,8 +250,10 @@ Generated: 2026-08-28T05:11:54.204Z
 - /zh-tw/guides/household-supplies-inventory/
 - /zh-tw/guides/how-long-to-keep-household-records/
 - /zh-tw/guides/how-to-track-product-warranties/
+- /zh-tw/guides/hvac-filter-tracker/
 - /zh-tw/guides/important-household-documents/
 - /zh-tw/guides/maintenance-priorities/
+- /zh-tw/guides/microwave-maintenance-checklist/
 - /zh-tw/guides/monthly-home-maintenance-checklist/
 - /zh-tw/guides/move-in-maintenance-checklist/
 - /zh-tw/guides/move-out-home-records/

@@ -497,7 +497,7 @@
   },
   {
     "route": "/guides/microwave-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/microwave-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -521,7 +521,7 @@
   },
   {
     "route": "/guides/hvac-filter-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/hvac-filter-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -4704,6 +4704,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/hvac-filter-tracker/",
+    "alternateRoute": "/guides/hvac-filter-tracker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/important-household-document-review/",
     "alternateRoute": "/tools/important-household-document-review/",
     "indexable": true,
@@ -4729,6 +4736,13 @@
     "alternateRoute": "/features/maintenance-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/microwave-maintenance-checklist/",
+    "alternateRoute": "/guides/microwave-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

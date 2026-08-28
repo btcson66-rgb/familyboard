@@ -76,6 +76,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-delegation/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/range-hood-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/air-conditioner-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/microwave-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/hvac-filter-tracker/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1119,6 +1121,24 @@ const checks = [
       "冷氣保養清單怎麼做",
       "濾網、排水與冷媒問題要分清楚",
       "先停止運轉並記下開始時間",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/microwave-maintenance-checklist/",
+    require: [
+      "微波爐保養清單",
+      'hreflang="en"',
+      "波導罩不是裝飾片",
+      "門扣與互鎖是安全部件",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/hvac-filter-tracker/",
+    require: [
+      "冷氣濾網更換紀錄",
+      'hreflang="en"',
+      "尺寸、厚度與 MERV 是三件事",
+      "每月查看不等於每月更換",
     ],
   },
   {
