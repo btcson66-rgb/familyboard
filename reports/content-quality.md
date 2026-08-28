@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T08:10:34.698Z
+Generated: 2026-08-28T08:15:34.502Z
 
 ## Summary
 
-- Indexable pages: 709
-- Generated HTML routes: 722
+- Indexable pages: 712
+- Generated HTML routes: 725
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 401
+- Pages without a contextual product/tool link: 404
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 123
+- product: 126
 - appliances: 56
 - maintenance: 82
 - household-operations: 130
@@ -124,8 +124,11 @@ Generated: 2026-08-28T08:10:34.698Z
 - /zh-tw/features/household-calendar/
 - /zh-tw/features/household-documents-organizer/
 - /zh-tw/features/household-handoff/
+- /zh-tw/features/household-operations-system/
 - /zh-tw/features/household-subscription-tracker/
+- /zh-tw/features/local-first-home-organizer/
 - /zh-tw/features/maintenance-tracker/
+- /zh-tw/features/no-account-family-organizer/
 - /zh-tw/features/offline-household-organizer/
 - /zh-tw/features/private-family-organizer/
 - /zh-tw/features/warranty-tracker/

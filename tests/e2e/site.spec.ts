@@ -77,6 +77,9 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/features/local-first-home-organizer/",
     "/features/no-account-family-organizer/",
     "/features/household-operations-system/",
+    "/zh-tw/features/local-first-home-organizer/",
+    "/zh-tw/features/no-account-family-organizer/",
+    "/zh-tw/features/household-operations-system/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -112,6 +115,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/features/local-first-home-organizer/",
     "/features/no-account-family-organizer/",
     "/features/household-operations-system/",
+    "/zh-tw/features/local-first-home-organizer/",
+    "/zh-tw/features/no-account-family-organizer/",
+    "/zh-tw/features/household-operations-system/",
     "/tools/household-meeting-agenda-action-log/",
     "/tools/household-pantry-expiry-review-log/",
     "/tools/household-clothing-care-repair-log/",

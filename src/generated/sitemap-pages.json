@@ -105,7 +105,7 @@
   },
   {
     "route": "/features/local-first-home-organizer/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/local-first-home-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -129,7 +129,7 @@
   },
   {
     "route": "/features/no-account-family-organizer/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/no-account-family-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -145,7 +145,7 @@
   },
   {
     "route": "/features/household-operations-system/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/features/household-operations-system/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -4680,6 +4680,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/features/household-operations-system/",
+    "alternateRoute": "/features/household-operations-system/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/household-pantry-expiry-review-log/",
     "alternateRoute": "/tools/household-pantry-expiry-review-log/",
     "indexable": true,
@@ -4974,6 +4981,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/features/local-first-home-organizer/",
+    "alternateRoute": "/features/local-first-home-organizer/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/maintenance-priorities/",
     "alternateRoute": "/guides/maintenance-priorities/",
     "indexable": true,
@@ -5053,6 +5067,13 @@
   {
     "route": "/zh-tw/guides/new-home-setup-checklist/",
     "alternateRoute": "/guides/new-home-setup-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/features/no-account-family-organizer/",
+    "alternateRoute": "/features/no-account-family-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

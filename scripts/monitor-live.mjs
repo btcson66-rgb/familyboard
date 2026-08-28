@@ -587,6 +587,9 @@ const checks = [
       "<loc>https://familyboard.win/features/local-first-home-organizer/</loc>",
       "<loc>https://familyboard.win/features/no-account-family-organizer/</loc>",
       "<loc>https://familyboard.win/features/household-operations-system/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/local-first-home-organizer/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/no-account-family-organizer/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/household-operations-system/</loc>",
     ],
     forbid: [
       "<loc>https://familyboard.win/app/</loc>",
@@ -5467,6 +5470,33 @@ const checks = [
       "Household Operations System",
       "The basic building blocks",
       "Connect a real household loop",
+    ],
+  },
+  {
+    path: "/zh-tw/features/local-first-home-organizer/",
+    require: [
+      "Local-first 家庭管理 App",
+      "第一次使用先建立小而可驗證的本機副本",
+      "local-first 不等於不需要備份",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/zh-tw/features/no-account-family-organizer/",
+    require: [
+      "不用註冊帳號的家庭管理 App",
+      "第一次開啟的五分鐘流程",
+      "沒有帳號，資料責任更清楚",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/zh-tw/features/household-operations-system/",
+    require: [
+      "家庭營運系統是什麼",
+      "先從一個真的會斷線的流程開始",
+      "為交接與中斷設計最小視圖",
+      'hreflang="en"',
     ],
   },
 ];
