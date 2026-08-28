@@ -30102,6 +30102,97 @@ FamilyBoard v1 的方向很簡單：讓家庭更容易找到、理解與交接�
 
 季節表不是把國外月份翻譯成中文，而是讓家庭依梅雨、颱風、高溫、濕氣、寒流、長假或設備使用習慣重寫重點。開始前填寫即將進入高負載的系統、依據的手冊或官方要求、預約與負責人；結束後記錄異音、異味、漏水、錯誤和收納結果。外部環境只檢查安全可及的排水、窗框、陽台與管理事項，不把網路文章當成法規，也不在紙上替設備發明固定週期。家庭運作段落可納入雨具、用品、旅行交接與下季續約，但低敏感度分享仍要排除付款、序號與私人備註。最後更新資產、保養歷史、服務商參照與備份，下一季依實際資料調整，而不是複製一張與住家無關的模板。
 
+## Page 401 — 可列印家電清冊：把報修時會被問的資料放在找得到的位置
+
+**Slug:** `/zh-tw/templates/printable-appliance-inventory/`
+**Alternate route:** `/templates/printable-appliance-inventory/`
+**Primary intent:** 尋找可列印的家電型號與維修資料清冊
+**Title tag:** 可列印家電清冊｜記錄型號、序號、保固與維修位置
+**Meta description:** 用一張適合台灣家庭的家電清冊，整理廚房、洗衣、冷氣與其他設備的型號、序號、購買資訊、保固和說明書位置。
+**Primary keyword concept:** 家電清冊
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先填寫最常需要報修或找說明書的三項設備，再把有重複保養的項目移到 FamilyBoard App。
+**Suggested internal links:** `/zh-tw/guides/appliance-inventory/`, `/zh-tw/guides/serial-number-tracker/`, `/zh-tw/guides/how-to-track-product-warranties/`, `/zh-tw/features/home-inventory-tracker/`
+**FAQ:**
+- 家電清冊要把所有小家電都列進去嗎？不用，先記錄日後可能報修、申請保固、購買耗材或需要交接的設備。
+- 序號和型號從哪裡確認？依設備標籤、原廠 App、說明書或購買文件交叉確認，不要猜測。
+- 安裝日和購買日不同怎麼寫？分開記錄並標明來源，不能把一個日期當成所有條款的起算日。
+- 什麼時候改用 App？當設備有重複保養、維修歷史、保固複查或多人交接需求時。
+
+# 可列印家電清冊：把報修時會被問的資料放在找得到的位置
+
+家電清冊不是家中物品的完整盤點，而是讓家人、房東、管理員或服務人員快速找到設備身分的工作表。內容涵蓋位置、設備名稱、品牌、型號、序號、購買／安裝日期、保固與說明書／收據位置，並另留最後保養、報修、服務商、耗材和下一步欄位。頁面說明如何區分購買日、到貨日與安裝日，如何保留來源而不把住址、帳號、付款資料抄到公開紙本，也提醒公共設備與高風險工作不能因為列入清冊就自行拆修。對有重複保養或交接需求的設備，可將資料建立成 FamilyBoard 資產，連結保養、文件與任務；App 仍是本機資料，重大更新後應匯出並測試備份。
+
+---
+
+## Page 402 — 可列印保固追蹤表：先保留證據，再把複查安排在來得及的時間
+
+**Slug:** `/zh-tw/templates/printable-warranty-tracker/`
+**Alternate route:** `/templates/printable-warranty-tracker/`
+**Primary intent:** 尋找可列印的家庭用品保固追蹤表
+**Title tag:** 可列印保固追蹤表｜購買日期、條款來源與到期前複查
+**Meta description:** 列印一張保固追蹤表，整理家電與家庭用品的購買證明、型號、起算事件、保固期限、條款位置與到期前複查。
+**Primary keyword concept:** 保固追蹤表
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先確認起算事件與書面條款，再用日期計算器估算複查日，最後把需要行動的項目交給負責人。
+**Suggested internal links:** `/zh-tw/guides/how-to-track-product-warranties/`, `/zh-tw/tools/warranty-expiration-calculator/`, `/zh-tw/features/warranty-tracker/`, `/zh-tw/guides/purchase-receipt-organizer/`
+**FAQ:**
+- 保固起算日可以直接填購買日嗎？不一定，必須查看購買、交貨、安裝、註冊或條款指定的事件。
+- 估計到期日能當正式期限嗎？不能，正式範圍與例外以現行書面條款為準。
+- 為什麼要提前複查？要留下找收據、聯絡服務商和等待回覆的時間。
+- 完整收據或序號能貼在公開表格嗎？不建議，只記安全的查找位置和必要摘要。
+
+# 可列印保固追蹤表：先保留證據，再把複查安排在來得及的時間
+
+保固追蹤表將物品、型號、購買／起始來源、保固期限、估計到期日、收據位置、條款來源與複查日期分開整理。頁面特別說明保固可能從購買、交貨、安裝、啟用或註冊起算，日期計算器只能做算術，不能讀條款或判定正式涵蓋；若日期不確定，應清楚標記估計並保留原始文件。提前複查能留出找證明、描述問題、確認服務管道與等待回覆的時間，但不代表必須製造報修。內容也提醒不要在紙本留下完整地址、訂單、付款、帳號或序號照片，並將條款版本與家庭負責人一起記錄。FamilyBoard 保固分頁可連結資產與文件，但沒有跨裝置同步；未來商品推薦若出現，必須與保固判斷分開並清楚揭露。
+
+---
+
+## Page 403 — 可列印居家修繕紀錄表：把「修過了」寫成下一個人看得懂的歷程
+
+**Slug:** `/zh-tw/templates/printable-repair-log/`
+**Alternate route:** `/templates/printable-repair-log/`
+**Primary intent:** 尋找可列印的家電與居家修繕歷程表
+**Title tag:** 可列印居家修繕紀錄表｜症狀、服務、費用與後續結果
+**Meta description:** 列印一張家庭修繕紀錄表，分開記錄觀察到的症狀、服務商、實際工作、費用、結果、照片與後續複查。
+**Primary keyword concept:** 居家修繕紀錄表
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先記錄實際看到的症狀，再把報價、服務結果和複查責任寫成可交接的下一步。
+**Suggested internal links:** `/zh-tw/guides/repair-history/`, `/zh-tw/guides/home-repair-history/`, `/zh-tw/tools/home-repair-cost-log/`, `/zh-tw/features/free-home-management-app/`
+**FAQ:**
+- 修繕紀錄要先寫自己的猜測嗎？先寫日期、位置與客觀現象，再分開記錄服務商診斷。
+- 費用欄要包含哪些金額？依收據分開列檢查費、工資、零件、運費、稅、折扣與付款狀態。
+- 同一設備一直修不好怎麼辦？保留每次症狀、處置、結果與復發日期，再依正式流程決定下一步。
+- 能把修繕表分享給所有人嗎？分享前移除住址、門禁、帳號、付款和不必要的個人資料。
+
+# 可列印居家修繕紀錄表：把「修過了」寫成下一個人看得懂的歷程
+
+這張表把症狀、服務商工作、費用、結果、照片／發票參照與後續複查分開，避免一句「已修好」掩蓋仍未解決的問題。頁面教使用者先寫可觀察的聲音、氣味、錯誤、位置和日期，再記錄服務商的診斷與實際更換／調整，不把猜測當成原因；估價與最終收據也不能混為一談。對漏電、焦味、瓦斯、快速漏水、裸露電線或結構問題，表格只保存時間線，不提供自行拆修指示，應依房東、管理單位、原廠或合格專業流程處理。多次維修要新增列而非覆蓋舊結果，並指定回訪、零件、退款或保固確認的負責人和日期。FamilyBoard 可將資產、保養與任務連結，但資料留在目前瀏覽器；分享前需移除門禁、帳號與付款資訊，未來推薦商品也必須位於主要紀錄之外並揭露 affiliate 關係。
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

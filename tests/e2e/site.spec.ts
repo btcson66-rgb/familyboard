@@ -134,6 +134,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/checklists/printable-monthly-home-checklist/",
     "/checklists/printable-seasonal-home-checklist/",
     "/zh-tw/checklists/printable-seasonal-home-checklist/",
+    "/templates/printable-appliance-inventory/",
+    "/zh-tw/templates/printable-appliance-inventory/",
+    "/templates/printable-warranty-tracker/",
+    "/zh-tw/templates/printable-warranty-tracker/",
+    "/templates/printable-repair-log/",
+    "/zh-tw/templates/printable-repair-log/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -709,6 +715,12 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/checklists/printable-monthly-home-checklist/",
     "/checklists/printable-seasonal-home-checklist/",
     "/zh-tw/checklists/printable-seasonal-home-checklist/",
+    "/templates/printable-appliance-inventory/",
+    "/zh-tw/templates/printable-appliance-inventory/",
+    "/templates/printable-warranty-tracker/",
+    "/zh-tw/templates/printable-warranty-tracker/",
+    "/templates/printable-repair-log/",
+    "/zh-tw/templates/printable-repair-log/",
     "/guides/family-emergency-contacts/",
     "/zh-tw/guides/family-emergency-contacts/",
     "/guides/what-spouse-needs-to-know/",
@@ -1011,6 +1023,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "可列印季節家庭檢查表" }),
   ).toHaveAttribute("href", "/zh-tw/checklists/printable-seasonal-home-checklist/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "可列印家電清冊" }),
+  ).toHaveAttribute("href", "/zh-tw/templates/printable-appliance-inventory/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "可列印保固追蹤表" }),
+  ).toHaveAttribute("href", "/zh-tw/templates/printable-warranty-tracker/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "可列印居家修繕紀錄表" }),
+  ).toHaveAttribute("href", "/zh-tw/templates/printable-repair-log/");
 
   for (const localized of [
     {
@@ -1027,6 +1048,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/checklists/printable-seasonal-home-checklist/",
       alternate: "/checklists/printable-seasonal-home-checklist/",
       heading: "可列印季節家庭檢查表：讓季節提醒配合住家與設備",
+    },
+    {
+      route: "/zh-tw/templates/printable-appliance-inventory/",
+      alternate: "/templates/printable-appliance-inventory/",
+      heading: "可列印家電清冊：把報修時會被問的資料放在找得到的位置",
+    },
+    {
+      route: "/zh-tw/templates/printable-warranty-tracker/",
+      alternate: "/templates/printable-warranty-tracker/",
+      heading: "可列印保固追蹤表：先保留證據，再把複查安排在來得及的時間",
+    },
+    {
+      route: "/zh-tw/templates/printable-repair-log/",
+      alternate: "/templates/printable-repair-log/",
+      heading: "可列印居家修繕紀錄表：把「修過了」寫成下一個人看得懂的歷程",
     },
     {
       route: "/zh-tw/privacy/",

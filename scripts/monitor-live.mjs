@@ -46,6 +46,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/checklists/printable-monthly-home-checklist/</loc>",
       "<loc>https://familyboard.win/checklists/printable-seasonal-home-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/checklists/printable-seasonal-home-checklist/</loc>",
+      "<loc>https://familyboard.win/templates/printable-appliance-inventory/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-appliance-inventory/</loc>",
+      "<loc>https://familyboard.win/templates/printable-warranty-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-warranty-tracker/</loc>",
+      "<loc>https://familyboard.win/templates/printable-repair-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-repair-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/</loc>",
@@ -5601,6 +5607,30 @@ const checks = [
   {
     path: "/zh-tw/checklists/printable-seasonal-home-checklist/",
     require: ["可列印季節家庭檢查表", "即將進入高負載", '<html lang="zh-TW">', 'hreflang="en"'],
+  },
+  {
+    path: "/templates/printable-appliance-inventory/",
+    require: ["Printable Appliance Inventory", "Maintenance/service box", 'hreflang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/templates/printable-appliance-inventory/",
+    require: ["可列印家電清冊", "建立設備身分", '<html lang="zh-TW">', 'hreflang="en"'],
+  },
+  {
+    path: "/templates/printable-warranty-tracker/",
+    require: ["Printable Warranty Tracker", "Before relying on the date", 'hreflang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/templates/printable-warranty-tracker/",
+    require: ["可列印保固追蹤表", "起算事件", '<html lang="zh-TW">', 'hreflang="en"'],
+  },
+  {
+    path: "/templates/printable-repair-log/",
+    require: ["Printable Repair Log", "Record symptom before diagnosis", 'hreflang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/templates/printable-repair-log/",
+    require: ["可列印居家修繕紀錄表", "記錄症狀", '<html lang="zh-TW">', 'hreflang="en"'],
   },
   {
     path: "/features/home-record-keeper/",

@@ -3072,6 +3072,30 @@
     "headings": "可列印季節家庭檢查表：讓季節提醒配合住家與設備"
   },
   {
+    "title": "可列印家電清冊｜記錄型號、序號、保固與維修位置",
+    "description": "用一張適合台灣家庭的家電清冊，整理廚房、洗衣、冷氣與其他設備的型號、序號、購買資訊、保固和說明書位置。",
+    "route": "/zh-tw/templates/printable-appliance-inventory/",
+    "cluster": "printables",
+    "keywords": "家電清冊",
+    "headings": "可列印家電清冊：把報修時會被問的資料放在找得到的位置"
+  },
+  {
+    "title": "可列印保固追蹤表｜購買日期、條款來源與到期前複查",
+    "description": "列印一張保固追蹤表，整理家電與家庭用品的購買證明、型號、起算事件、保固期限、條款位置與到期前複查。",
+    "route": "/zh-tw/templates/printable-warranty-tracker/",
+    "cluster": "printables",
+    "keywords": "保固追蹤表",
+    "headings": "可列印保固追蹤表：先保留證據，再把複查安排在來得及的時間"
+  },
+  {
+    "title": "可列印居家修繕紀錄表｜症狀、服務、費用與後續結果",
+    "description": "列印一張家庭修繕紀錄表，分開記錄觀察到的症狀、服務商、實際工作、費用、結果、照片與後續複查。",
+    "route": "/zh-tw/templates/printable-repair-log/",
+    "cluster": "printables",
+    "keywords": "居家修繕紀錄表",
+    "headings": "可列印居家修繕紀錄表：把「修過了」寫成下一個人看得懂的歷程"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

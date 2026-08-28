@@ -1,23 +1,23 @@
 # Content quality report
 
-Generated: 2026-08-28T11:34:02.249Z
+Generated: 2026-08-28T11:46:00.398Z
 
 ## Summary
 
-- Indexable pages: 754
-- Generated HTML routes: 760
+- Indexable pages: 757
+- Generated HTML routes: 763
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 425
+- Duplicate primary-keyword groups: 9
+- Pages without a contextual product/tool link: 428
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 24
-- printables: 25
+- printables: 28
 - product: 135
 - inventory-warranty: 60
 - appliances: 56
@@ -48,6 +48,7 @@ Generated: 2026-08-28T11:34:02.249Z
 
 - caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
 - household account list: /guides/household-account-list/, /tools/household-account-list/
+- 家電清冊: /zh-tw/guides/appliance-inventory/, /zh-tw/templates/printable-appliance-inventory/
 - 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
 - 家庭緊急資料夾: /zh-tw/guides/emergency-binder/, /zh-tw/tools/emergency-binder-generator/
 - 家庭決策紀錄工具: /zh-tw/guides/familyboard-household-decision-register-tutorial/, /zh-tw/tools/household-decision-register/
@@ -367,8 +368,11 @@ Generated: 2026-08-28T11:34:02.249Z
 - /zh-tw/
 - /zh-tw/privacy/
 - /zh-tw/security/
+- /zh-tw/templates/printable-appliance-inventory/
 - /zh-tw/templates/printable-home-inventory-template/
 - /zh-tw/templates/printable-household-handoff-sheet/
+- /zh-tw/templates/printable-repair-log/
+- /zh-tw/templates/printable-warranty-tracker/
 - /zh-tw/terms/
 - /zh-tw/tools/annual-subscription-cost-calculator/
 - /zh-tw/tools/appliance-age-calculator/

@@ -1521,7 +1521,7 @@
   },
   {
     "route": "/templates/printable-appliance-inventory/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-appliance-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1529,7 +1529,7 @@
   },
   {
     "route": "/templates/printable-warranty-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-warranty-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1537,7 +1537,7 @@
   },
   {
     "route": "/templates/printable-repair-log/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-repair-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3201,6 +3201,30 @@
   },
   {
     "route": "/zh-tw/checklists/printable-seasonal-home-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-appliance-inventory/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-warranty-tracker/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-repair-log/",
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
@@ -5516,6 +5540,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/templates/printable-appliance-inventory/",
+    "alternateRoute": "/templates/printable-appliance-inventory/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/templates/printable-home-inventory-template/",
     "alternateRoute": "/templates/printable-home-inventory-template/",
     "indexable": true,
@@ -5544,8 +5575,22 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/templates/printable-repair-log/",
+    "alternateRoute": "/templates/printable-repair-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/checklists/printable-seasonal-home-checklist/",
     "alternateRoute": "/checklists/printable-seasonal-home-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/templates/printable-warranty-tracker/",
+    "alternateRoute": "/templates/printable-warranty-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
