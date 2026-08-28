@@ -856,6 +856,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-decision-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-decision-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-admin-escalation-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-admin-escalation-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-purchase-comparison-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-purchase-comparison-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-privacy-review-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-privacy-review-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1352,6 +1358,54 @@ const checks = [
       "FamilyBoard 家庭決策紀錄教學",
       "讓選擇有來源也能重開",
       "不要為了結束會議把不確定內容改寫成「已確認」",
+    ],
+  },
+  {
+    path: "/guides/familyboard-household-admin-escalation-tutorial/",
+    require: [
+      "FamilyBoard Household Admin Escalation",
+      "Route the Right Question",
+      "does not declare an emergency",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-admin-escalation-tutorial/",
+    require: [
+      "FamilyBoard 家庭行政升級教學",
+      "把問題交給正確來源",
+      "不能把「尚未回覆」當作同意",
+    ],
+  },
+  {
+    path: "/guides/familyboard-purchase-comparison-tutorial/",
+    require: [
+      "FamilyBoard Purchase Comparison",
+      "Decide With Context",
+      "does not rank products",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-purchase-comparison-tutorial/",
+    require: [
+      "FamilyBoard 家庭採買比較教學",
+      "先定義需求再看價格",
+      "相容性和安全性要以製造商或適當專業來源為準",
+    ],
+  },
+  {
+    path: "/guides/familyboard-privacy-review-handoff-tutorial/",
+    require: [
+      "FamilyBoard Privacy Review Handoff",
+      "Share Less, Explain More",
+      "does not encrypt a file",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-privacy-review-handoff-tutorial/",
+    require: [
+      "FamilyBoard 交接隱私複查教學",
+      "少分享但保留可行動脈絡",
+      "不會加密檔案、不會撤回已存在的副本",
     ],
   },
   {

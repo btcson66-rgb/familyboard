@@ -37394,6 +37394,157 @@ During a weekly or monthly review, filter for decisions whose source date, owner
 
 **Contextual CTA:** Log one household question, separate its evidence from preference and assign a named owner plus a trigger that can reopen it.
 
+## Page 526 — FamilyBoard Household Admin Escalation Tutorial
+**Slug:** /guides/familyboard-household-admin-escalation-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-admin-escalation-tutorial/
+**Primary intent:** route a household administrative issue to the right owner when a source, permission or deadline cannot be resolved in the current role
+**Title tag:** FamilyBoard Household Admin Escalation | Route the Right Question
+**Meta description:** Learn how to record a FamilyBoard household admin escalation, preserve the source checked, limit disclosure and assign a responsible next step.
+**Primary keyword concept:** FamilyBoard household admin escalation
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-household-admin-day/, /tools/household-share-access-review-log/, /guides/familyboard-household-decision-log-tutorial/, /privacy/
+**FAQ:**
+- Q: Does escalation mean the issue is already urgent or dangerous?
+  A: No. It records that the current role cannot safely resolve a question and names the route for review.
+- Q: Should an escalation row contain a full account or private message?
+  A: No. Use a neutral ID and protected source pointer, sharing only the context the responsible role needs.
+- Q: Can FamilyBoard contact a provider or authority for me?
+  A: No. It organizes the question and owner; the responsible person must use the official channel.
+- Q: Is a missed internal date proof of a legal deadline?
+  A: No. Confirm any legal, contract or notice requirement with its controlling source.
+
+# FamilyBoard Household Admin Escalation: Route the Right Question
+
+Household administration stalls when a person notices a problem but cannot decide who should resolve it. FamilyBoard’s free escalation tutorial helps turn “someone should check this” into a neutral issue, a controlling source, a responsible role and a next date. It does not declare an emergency, contact a provider, give legal advice or decide who has authority. The point is to make the boundary visible before someone guesses or shares more private information than necessary.
+
+## Describe the boundary, not a conclusion
+
+Start with one issue such as an unclear utility transfer, a warranty source that changed, a permission request or a notice with an unknown response owner. Use a neutral ID and describe what was observed, when it was seen and which source was checked. “Provider has failed” is a conclusion; “invoice portal shows two different due dates” is an observation that a responsible person can verify. Keep account numbers, addresses and private messages in the protected system.
+
+## Choose the escalation route
+
+Name the role that can answer the question: household records owner, service provider, insurer, landlord, school office, care coordinator or qualified professional. Record the official contact or document pointer without placing credentials in the row. If authority is unclear, route the question to the role that controls the source rather than forwarding it broadly. A search result, review comment or forwarded screenshot can be a lead, not proof of current authority.
+
+## Set a next action and safety limit
+
+Every open escalation needs one action and a date or trigger: request a written correction, compare a contract version, ask for an access decision or stop an unsafe activity until qualified guidance arrives. Mark what the household should not do, such as bypassing a lock, sharing a password or treating an unverified instruction as current. States like `Owner assigned`, `Source requested`, `Waiting for authority`, `Safety pause` and `Closed with evidence` keep progress separate from assumptions.
+
+## Close or reopen with evidence
+
+When the owner responds, record the attributable source, response date and observed result. Do not rewrite a provider statement as a guarantee or turn a missed reply into a confirmed answer. If the source changes, reopen the issue with a new version and keep the old history. Share only the minimum summary required for a handoff, then review printed or downloaded copies. Future affiliate panels for call notebooks, document folders or privacy screens may appear outside the workflow with disclosure and an easy skip; a product cannot resolve authority or urgency.
+
+**Contextual CTA:** Give one unresolved household question a neutral ID, route it to the source owner and set a dated next action with a clear safety limit.
+
+During a weekly administration review, filter for escalations whose date has passed and check whether the owner actually received the question, whether the official source changed and whether a new safety limitation appeared. “Notified” is not the same as “received,” and a forwarded conversation is not a controlling answer. Keep the observation, the attempted route and the attributable response separate. When responsibility changes, ask the new owner to confirm the source version, minimum information needed and protected place for the response. A dated, explainable open state is safer than an invented resolution.
+
+## Page 527 — FamilyBoard Purchase Comparison Tutorial
+**Slug:** /guides/familyboard-purchase-comparison-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-purchase-comparison-tutorial/
+**Primary intent:** compare a household purchase using requirements, source dates, total cost context and a reversible decision record
+**Title tag:** FamilyBoard Purchase Comparison Tutorial | Decide With Context
+**Meta description:** Learn how to use FamilyBoard to compare household purchases, record requirements and sources, separate estimates from final costs and revisit the choice.
+**Primary keyword concept:** FamilyBoard purchase comparison
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/household-shopping-staples/, /tools/household-decision-log/, /guides/familyboard-household-decision-log-tutorial/, /affiliate-disclosure/
+**FAQ:**
+- Q: Does FamilyBoard recommend the cheapest product?
+  A: No. It records the household’s requirements and evidence; the decision remains yours.
+- Q: Is a retailer price the final cost?
+  A: Not necessarily. Delivery, installation, tax, accessories, service terms and timing can change the total.
+- Q: Can an affiliate link prove a product is compatible?
+  A: No. Compatibility and safety require the manufacturer or responsible professional source.
+- Q: Should I copy a credit-card number into a comparison?
+  A: No. Keep payment and account details in the protected service and record only a neutral purchase reference.
+
+# FamilyBoard Purchase Comparison: Decide With Context
+
+Household shopping becomes confusing when a quick price, an old review and a remembered requirement are treated as equal evidence. FamilyBoard’s purchase comparison tutorial helps a household state what the item must do, record which sources were checked and preserve why one option was chosen. It does not rank products, guarantee savings, verify safety or provide financial advice. Manufacturer specifications, current terms and the household’s own constraints remain the controlling inputs.
+
+## Define the job before the item
+
+Write one purchase question: replace a failed filter, choose a freezer for a measured space or buy a label maker for a specific handoff workflow. Record constraints such as dimensions, voltage, accessibility, local service, expected use and a decision date. A brand name alone is not a requirement. Keep addresses, payment details and account identifiers out of the shared comparison; use a neutral item ID and protected source pointer.
+
+## Compare attributable sources
+
+For each option, note the manufacturer page or manual version, retailer price date, delivery or installation terms and any relevant household observation. A review can describe one person’s experience but cannot prove current availability or suitability. Separate an estimate from a paid invoice and a feature claim from a measured household need. If sources conflict, keep both links and assign a question to the owner instead of choosing the most convenient statement.
+
+## Include total-cost and reversibility context
+
+Record visible price alongside delivery, installation, accessories, consumables, warranty route, return window and recurring costs when they matter. Do not invent a lifetime cost when usage or service assumptions are unknown. Note whether the decision can be reversed, what a return would require and which existing record must be retained for a claim. A cheaper option that cannot fit the space or be serviced locally may not meet the original job even if its headline price is lower.
+
+## Review after the real result
+
+Once purchased, add the actual model, source version and observed fit as a separate event. If the product is returned, recalled, replaced or transferred, preserve the reason and update the protected inventory pointer. Future affiliate panels may show clearly labeled products outside the comparison with disclosure, an easy skip and no impact on tool use. A commission cannot verify compatibility, create a warranty or turn a household preference into an objective recommendation.
+
+**Contextual CTA:** Define the job, compare dated sources and total-cost context, then record why the chosen option still fits the household’s real constraint.
+
+Use a small real-world check before closing the comparison: measure the space again, test the door or control reach, confirm the service route and ask the person who will use the item to name any limitation. Record the conditions and date; a single successful setup does not prove permanent compatibility. After purchase, keep the invoice, packaging and official response pointer when a delivery, accessory or manual differs. A comparison record provides context, but it never replaces a return policy, warranty document, recall notice or qualified safety review.
+
+For a shared purchasing decision, ask the eventual user to describe the job in their own words and note any accessibility or maintenance constraint. Keep rejected options and the reason they failed; this prevents a later reviewer from repeating the same search. When the source date, household space or service region changes, reopen the comparison instead of silently carrying forward an old price. The result should explain what was known, what remained uncertain and who can answer the next question.
+
+## Page 528 — FamilyBoard Privacy Review Handoff Tutorial
+**Slug:** /guides/familyboard-privacy-review-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-privacy-review-handoff-tutorial/
+**Primary intent:** review a FamilyBoard handoff for unnecessary personal information before sharing or printing it
+**Title tag:** FamilyBoard Privacy Review Handoff | Share Less, Explain More
+**Meta description:** Learn how to review a FamilyBoard handoff for unnecessary personal details, confirm audience and expiry, and record what must stay protected.
+**Primary keyword concept:** FamilyBoard privacy review handoff
+**Cluster:** records-emergency
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-shared-display-privacy-tutorial/, /tools/household-share-access-review-log/, /guides/familyboard-handoff-acceptance-tutorial/, /privacy/
+**FAQ:**
+- Q: Does a privacy review encrypt or revoke an existing copy?
+  A: No. It helps decide what to include before sharing; the responsible service controls copies and access.
+- Q: Is removing a name enough to anonymize a handoff?
+  A: No. Addresses, dates, combinations of facts and source pointers can still identify a person or home.
+- Q: Can a printed handoff expire automatically?
+  A: No. Set an audience and review or return plan; printing does not create automatic deletion.
+- Q: Can FamilyBoard decide what a caregiver or provider is legally allowed to see?
+  A: No. Confirm authority and required scope with the responsible person or organization.
+
+# FamilyBoard Privacy Review Handoff: Share Less, Explain More
+
+A handoff can contain more personal information than the receiver needs. FamilyBoard’s privacy review tutorial gives a household a pause point before a screen, export, printout or message is shared. It helps identify the audience, purpose, minimum useful fields, expiry and return route. It does not encrypt a file, revoke an existing copy, determine legal authority or promise anonymity. The service or system that controls the source remains responsible for access.
+
+## Name the audience and window
+
+Write who needs the handoff and for how long: a sitter during a weekend, a contractor for one repair visit or a family coordinator reviewing a document index. A broad label like “household” hides different permissions. Add a neutral handoff ID, review date and return or disposal plan. If the window is unknown, keep the record at draft and ask the responsible role rather than sharing first and cleaning up later.
+
+## Remove unnecessary detail, not useful context
+
+Review every field and ask whether it supports the stated action. Replace full addresses, account numbers, serials, health details and private conversation with a role, neutral ID or protected pointer where possible. Remember that combinations of dates, rooms and events can identify a home even when a name is removed. Keep the source version and safety limitation if they are needed to prevent an unsafe assumption; privacy is not achieved by deleting the only context that makes the instruction usable.
+
+## Check copies and the recipient’s route
+
+Before sharing, inspect the preview, confirm the receiver’s authority and record how the protected source can be reached without placing a password in the handoff. If a printout or download is made, note its audience, storage, return and disposal plan. Ask the recipient to explain what they will do and what they cannot access. A successful preview does not clean up an earlier message, screenshot or duplicate file; those copies need their own responsible process.
+
+## Reopen when the purpose changes
+
+Review the handoff after a service visit, move, caregiver change, new source version or end of the agreed window. Keep the history of what was withheld and why, so the next reviewer can avoid repeating an old disclosure. Future affiliate panels for privacy screens, document shredders or secure folders may appear outside the review with clear disclosure and an easy skip. A product cannot grant authority, revoke a copy or decide the minimum lawful scope.
+
+**Contextual CTA:** Name the audience and sharing window, remove fields that do not support the action and record how every copy will be reviewed or returned.
+
+Review the medium as well as the words. A shared screen can expose browser tabs or notifications; a printout can be copied; a download can be mistaken for a current source; and a message attachment can be forwarded to a larger group. Inspect filenames, previews and document properties for addresses, account numbers or dates that the audience does not need. If a copy was shared by mistake, notify the source owner and follow that service’s withdrawal or deletion process. FamilyBoard cannot remotely erase a screenshot or revoke a file that left its boundary.
+
+Minimum disclosure still needs enough context to prevent a wrong action. Keep a neutral ID, source version, responsible role, effective window and escalation route, while withholding unrelated names, addresses and private conversations. If a receiver needs the full original to proceed, use the source owner’s controlled permission process rather than widening the handoff. After the task ends, record whether the copy was returned, destroyed or intentionally retained and why. This history lets the next reviewer repeat the privacy check without guessing what happened to earlier copies.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

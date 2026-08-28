@@ -340,6 +340,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/",
     "/guides/familyboard-household-decision-log-tutorial/",
     "/zh-tw/guides/familyboard-household-decision-log-tutorial/",
+    "/guides/familyboard-household-admin-escalation-tutorial/",
+    "/zh-tw/guides/familyboard-household-admin-escalation-tutorial/",
+    "/guides/familyboard-purchase-comparison-tutorial/",
+    "/zh-tw/guides/familyboard-purchase-comparison-tutorial/",
+    "/guides/familyboard-privacy-review-handoff-tutorial/",
+    "/zh-tw/guides/familyboard-privacy-review-handoff-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2172,6 +2178,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-household-decision-log-tutorial/",
       alternate: "/guides/familyboard-household-decision-log-tutorial/",
       heading: "FamilyBoard 家庭決策紀錄教學：讓選擇有來源也能重開",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-admin-escalation-tutorial/",
+      alternate: "/guides/familyboard-household-admin-escalation-tutorial/",
+      heading: "FamilyBoard 家庭行政升級教學：把問題交給正確來源",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-purchase-comparison-tutorial/",
+      alternate: "/guides/familyboard-purchase-comparison-tutorial/",
+      heading: "FamilyBoard 家庭採買比較教學：先定義需求再看價格",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-privacy-review-handoff-tutorial/",
+      alternate: "/guides/familyboard-privacy-review-handoff-tutorial/",
+      heading: "FamilyBoard 交接隱私複查教學：少分享但保留可行動脈絡",
     },
   ]) {
     await page.goto(localized.route);

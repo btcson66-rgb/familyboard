@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T23:27:35.181Z
+Generated: 2026-08-28T23:34:09.140Z
 
 ## Summary
 
-- Indexable pages: 989
-- Generated HTML routes: 995
+- Indexable pages: 995
+- Generated HTML routes: 1001
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 12
-- Pages without a contextual product/tool link: 580
+- Pages without a contextual product/tool link: 586
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,8 +22,8 @@ Generated: 2026-08-28T23:27:35.181Z
 - inventory-warranty: 82
 - appliances: 70
 - maintenance: 97
-- household-operations: 204
-- records-emergency: 140
+- household-operations: 208
+- records-emergency: 142
 - tools: 152
 
 ## Word-count range
@@ -79,6 +79,7 @@ Generated: 2026-08-28T23:27:35.181Z
 - /guides/familyboard-encrypted-backup-password-tutorial/
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-handoff-acceptance-tutorial/
+- /guides/familyboard-household-admin-escalation-tutorial/
 - /guides/familyboard-household-decision-log-tutorial/
 - /guides/familyboard-household-handoff-tutorial/
 - /guides/familyboard-maintenance-event-cost-tutorial/
@@ -86,7 +87,9 @@ Generated: 2026-08-28T23:27:35.181Z
 - /guides/familyboard-member-archive-tutorial/
 - /guides/familyboard-move-out-condition-tutorial/
 - /guides/familyboard-offline-backup-restore/
+- /guides/familyboard-privacy-review-handoff-tutorial/
 - /guides/familyboard-product-recall-action-log-tutorial/
+- /guides/familyboard-purchase-comparison-tutorial/
 - /guides/familyboard-pwa-update-tutorial/
 - /guides/familyboard-record-retention-decision-tutorial/
 - /guides/familyboard-record-retrieval-practice-tutorial/
@@ -277,6 +280,7 @@ Generated: 2026-08-28T23:27:35.181Z
 - /zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/
 - /zh-tw/guides/familyboard-household-account-list-tutorial/
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
+- /zh-tw/guides/familyboard-household-admin-escalation-tutorial/
 - /zh-tw/guides/familyboard-household-annual-review-generator-tutorial/
 - /zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-household-bill-source-status-tutorial/
@@ -331,9 +335,11 @@ Generated: 2026-08-28T23:27:35.181Z
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-power-outage-event-log-tutorial/
 - /zh-tw/guides/familyboard-printout-download-retention-tutorial/
+- /zh-tw/guides/familyboard-privacy-review-handoff-tutorial/
 - /zh-tw/guides/familyboard-private-family-organizer-tutorial/
 - /zh-tw/guides/familyboard-product-recall-action-log-tutorial/
 - /zh-tw/guides/familyboard-product-recall-action-tutorial/
+- /zh-tw/guides/familyboard-purchase-comparison-tutorial/
 - /zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/
 - /zh-tw/guides/familyboard-pwa-update-tutorial/
 - /zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/

@@ -4072,6 +4072,30 @@
     "headings": "FamilyBoard Household Decision Log: Make Decisions Traceable Start with one decision question Separate evidence, preference and assumption Assign ownership and a reopening trigger Share a useful summary"
   },
   {
+    "title": "FamilyBoard Household Admin Escalation | Route the Right Question",
+    "description": "Learn how to record a FamilyBoard household admin escalation, preserve the source checked, limit disclosure and assign a responsible next step.",
+    "route": "/guides/familyboard-household-admin-escalation-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard household admin escalation",
+    "headings": "FamilyBoard Household Admin Escalation: Route the Right Question Describe the boundary, not a conclusion Choose the escalation route Set a next action and safety limit Close or reopen with evidence"
+  },
+  {
+    "title": "FamilyBoard Purchase Comparison Tutorial | Decide With Context",
+    "description": "Learn how to use FamilyBoard to compare household purchases, record requirements and sources, separate estimates from final costs and revisit the choice.",
+    "route": "/guides/familyboard-purchase-comparison-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard purchase comparison",
+    "headings": "FamilyBoard Purchase Comparison: Decide With Context Define the job before the item Compare attributable sources Include total-cost and reversibility context Review after the real result"
+  },
+  {
+    "title": "FamilyBoard Privacy Review Handoff | Share Less, Explain More",
+    "description": "Learn how to review a FamilyBoard handoff for unnecessary personal details, confirm audience and expiry, and record what must stay protected.",
+    "route": "/guides/familyboard-privacy-review-handoff-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard privacy review handoff",
+    "headings": "FamilyBoard Privacy Review Handoff: Share Less, Explain More Name the audience and window Remove unnecessary detail, not useful context Check copies and the recipient’s route Reopen when the purpose changes"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
