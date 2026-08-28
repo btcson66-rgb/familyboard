@@ -70,6 +70,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-after-vacation/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/move-in-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/annual-home-review/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/dryer-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/dishwasher-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/oven-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -133,6 +136,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/home-maintenance-after-vacation/</loc>",
       "<loc>https://familyboard.win/guides/move-in-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/annual-home-review/</loc>",
+      "<loc>https://familyboard.win/guides/dryer-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/dishwasher-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/oven-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -1057,6 +1063,30 @@ const checks = [
       "年度家庭總整理怎麼做",
       "把一年資料變成下一年的少量決策",
       "不是投資、債務或稅務建議",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/dryer-maintenance-checklist/",
+    require: [
+      "烘衣機保養清單怎麼做",
+      "每次使用後清理濾網",
+      "不是消防、電氣或機械安全認證",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/dishwasher-maintenance-checklist/",
+    require: [
+      "洗碗機保養清單怎麼做",
+      "先清濾網",
+      "FamilyBoard 用來保存型號、來源和歷史",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/oven-maintenance-checklist/",
+    require: [
+      "烤箱保養清單怎麼做",
+      "自清潔不是越常用越好",
+      "瓦斯警訊更不能等待",
     ],
   },
   {

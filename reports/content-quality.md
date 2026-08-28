@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T04:26:50.275Z
+Generated: 2026-08-28T04:38:49.509Z
 
 ## Summary
 
-- Indexable pages: 637
-- Generated HTML routes: 654
+- Indexable pages: 640
+- Generated HTML routes: 657
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 340
+- Pages without a contextual product/tool link: 343
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,7 +19,7 @@ Generated: 2026-08-28T04:26:50.275Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 33
+- appliances: 36
 - maintenance: 75
 - household-operations: 109
 - inventory-warranty: 46
@@ -142,6 +142,8 @@ Generated: 2026-08-28T04:26:50.275Z
 - /zh-tw/guides/contractor-records/
 - /zh-tw/guides/digital-home-binder/
 - /zh-tw/guides/digital-home-inventory-backup/
+- /zh-tw/guides/dishwasher-maintenance-checklist/
+- /zh-tw/guides/dryer-maintenance-checklist/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
 - /zh-tw/guides/fall-home-maintenance-checklist/
@@ -259,6 +261,7 @@ Generated: 2026-08-28T04:26:50.275Z
 - /zh-tw/guides/organize-school-records-at-home/
 - /zh-tw/guides/organize-utility-account-information/
 - /zh-tw/guides/organize-vehicle-documents-at-home/
+- /zh-tw/guides/oven-maintenance-checklist/
 - /zh-tw/guides/power-outage-home-preparedness/
 - /zh-tw/guides/power-outage-recovery-household-records/
 - /zh-tw/guides/preventive-home-maintenance/

@@ -473,7 +473,7 @@
   },
   {
     "route": "/guides/dryer-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/dryer-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -481,7 +481,7 @@
   },
   {
     "route": "/guides/dishwasher-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/dishwasher-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -489,7 +489,7 @@
   },
   {
     "route": "/guides/oven-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/oven-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3296,6 +3296,20 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/dishwasher-maintenance-checklist/",
+    "alternateRoute": "/guides/dishwasher-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/dryer-maintenance-checklist/",
+    "alternateRoute": "/guides/dryer-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/emergency-binder-generator/",
     "alternateRoute": "/tools/emergency-binder-generator/",
     "indexable": true,
@@ -4791,6 +4805,13 @@
     "alternateRoute": "/guides/organize-vehicle-documents-at-home/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/oven-maintenance-checklist/",
+    "alternateRoute": "/guides/oven-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
