@@ -42,6 +42,9 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-time-window-overlap-checker/",
     "/tools/household-date-offset-planner/",
     "/tools/household-task-load-calculator/",
+    "/tools/annual-subscription-cost-calculator/",
+    "/tools/storage-unit-access-inventory-log/",
+    "/tools/moving-box-handover-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -178,6 +181,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/",
     "/guides/familyboard-house-sitter-instruction-generator-tutorial/",
     "/zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/",
+    "/guides/familyboard-annual-subscription-cost-calculator-tutorial/",
+    "/zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/",
+    "/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
+    "/zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
+    "/guides/familyboard-moving-box-handover-log-tutorial/",
+    "/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1653,6 +1662,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/",
       alternate: "/guides/familyboard-house-sitter-instruction-generator-tutorial/",
       heading: "FamilyBoard 看家照護指示產生器教學：準備清楚又保護隱私的短期交接",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/",
+      alternate: "/guides/familyboard-annual-subscription-cost-calculator-tutorial/",
+      heading: "FamilyBoard 單一訂閱年費計算器教學：先把扣款週期換成可比較的數字",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
+      alternate: "/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
+      heading: "FamilyBoard 迷你倉進出與物品清冊教學：把「放在倉庫」拆成找得到的事件",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/",
+      alternate: "/guides/familyboard-moving-box-handover-log-tutorial/",
+      heading: "FamilyBoard 搬家箱件交接紀錄教學：不要把整個搬家壓成「已送達」",
     },
   ]) {
     await page.goto(localized.route);

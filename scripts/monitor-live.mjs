@@ -714,6 +714,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-house-sitter-instruction-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-annual-subscription-cost-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-storage-unit-access-inventory-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-moving-box-handover-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -6311,6 +6317,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/",
     require: ["看家照護指示產生器教學", "最小必要的進入範圍", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-annual-subscription-cost-calculator-tutorial/",
+    require: ["Annual Subscription Cost Calculator", "monthly equivalent"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/",
+    require: ["單一訂閱年費計算器教學", "扣款週期", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
+    require: ["Storage Unit Access Inventory Log", "protected evidence pointer"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
+    require: ["迷你倉進出與物品清冊教學", "受保護證據指標", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-moving-box-handover-log-tutorial/",
+    require: ["Moving Box Handover Log", "box reconciliation"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/",
+    require: ["搬家箱件交接紀錄教學", "十個欄位", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

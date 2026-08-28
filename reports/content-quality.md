@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T16:36:41.216Z
+Generated: 2026-08-28T16:56:46.959Z
 
 ## Summary
 
-- Indexable pages: 853
-- Generated HTML routes: 859
+- Indexable pages: 859
+- Generated HTML routes: 865
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 485
+- Pages without a contextual product/tool link: 488
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,7 +22,7 @@ Generated: 2026-08-28T16:36:41.216Z
 - inventory-warranty: 70
 - appliances: 64
 - maintenance: 86
-- household-operations: 155
+- household-operations: 161
 - records-emergency: 122
 - tools: 152
 
@@ -182,6 +182,7 @@ Generated: 2026-08-28T16:36:41.216Z
 - /zh-tw/guides/family-continuity-plan/
 - /zh-tw/guides/family-emergency-contacts/
 - /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
+- /zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/
 - /zh-tw/guides/familyboard-appliance-age-calculator-tutorial/
 - /zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/
 - /zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/
@@ -252,6 +253,7 @@ Generated: 2026-08-28T16:36:41.216Z
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
 - /zh-tw/guides/familyboard-meter-reading-tutorial/
 - /zh-tw/guides/familyboard-monthly-review-action-tutorial/
+- /zh-tw/guides/familyboard-moving-box-handover-log-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-old-tablet-display-tutorial/
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
@@ -282,6 +284,7 @@ Generated: 2026-08-28T16:36:41.216Z
 - /zh-tw/guides/familyboard-service-quote-comparison-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
 - /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
+- /zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/
 - /zh-tw/guides/familyboard-storm-readiness-review-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
 - /zh-tw/guides/familyboard-subscription-renewal-review/

@@ -3664,6 +3664,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-annual-subscription-cost-calculator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-moving-box-handover-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4264,6 +4288,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/",
+    "alternateRoute": "/guides/familyboard-annual-subscription-cost-calculator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/free-home-management-app/",
     "alternateRoute": "/features/free-home-management-app/",
     "indexable": true,
@@ -4740,6 +4771,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-moving-box-handover-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-offline-backup-restore/",
     "alternateRoute": "/guides/familyboard-offline-backup-restore/",
     "indexable": true,
@@ -4947,6 +4985,13 @@
     "alternateRoute": "/guides/familyboard-shopping-list-planner-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

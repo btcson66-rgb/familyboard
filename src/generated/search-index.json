@@ -3528,6 +3528,30 @@
     "headings": "How to Use FamilyBoard's House-Sitter Instruction Generator Set a visit window and role Separate routine from exception Use minimum necessary access Link current sources and dates Define check-in and escalation Review privacy after the visit Handoff and return safely Eight-question closeout"
   },
   {
+    "title": "FamilyBoard Annual Subscription Cost Calculator Tutorial | Compare Recurring Prices",
+    "description": "Learn how to use FamilyBoard's Annual Subscription Cost Calculator to convert weekly, monthly, quarterly or annual pricing into a comparable planning amount without making a cancellation or savings claim.",
+    "route": "/guides/familyboard-annual-subscription-cost-calculator-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard annual subscription cost calculator tutorial",
+    "headings": "How to Use FamilyBoard's Annual Subscription Cost Calculator Start with one source-backed price Choose the billing frequency exactly Read the three outputs as planning numbers Keep one-plan and whole-household questions separate Turn arithmetic into a review checkpoint Privacy and local limits Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Storage Unit Access Inventory Tutorial | Track Visits and Contents Safely",
+    "description": "Learn how to use FamilyBoard's Storage Unit Access Inventory Log to record zones, visits, relocations, removals, visible condition and next checks while keeping facility identifiers protected.",
+    "route": "/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard storage unit access inventory tutorial",
+    "headings": "How to Use FamilyBoard's Storage Unit Access Inventory Log Start with a private storage reference Choose the storage context honestly Set dates before describing contents Organise rows by zone and event Separate physical observation from assumption Limit access and plan a safe handoff Keep facility and insurance decisions with their sources Privacy and local-first limits Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Moving Box Handover Log Tutorial | Track Custody and Reconciliation",
+    "description": "Learn how to use FamilyBoard's Moving Box Handover Log to connect packing, loading, custody, destination handover, condition notices and reconciliation while keeping contracts and identifiers protected.",
+    "route": "/guides/familyboard-moving-box-handover-log-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard moving box handover log tutorial",
+    "headings": "How to Use FamilyBoard's Moving Box Handover Log Start with the move context and safe ID Keep the four dates chronological Build ten-field event rows Treat statuses as a timeline Preserve official evidence beside the index Reconcile without rewriting history Privacy, access and optional commercial content Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

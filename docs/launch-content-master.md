@@ -33345,6 +33345,201 @@ Is the visit window bounded? Are routine and exception separate? Is access limit
 
 ---
 
+## Page 458 — How to Use FamilyBoard's Annual Subscription Cost Calculator
+**Slug:** /guides/familyboard-annual-subscription-cost-calculator-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/
+**Primary intent:** learn to compare one recurring subscription price across billing frequencies without treating an estimate as a provider promise
+**Title tag:** FamilyBoard Annual Subscription Cost Calculator Tutorial | Compare Recurring Prices
+**Meta description:** Learn how to use FamilyBoard's Annual Subscription Cost Calculator to convert weekly, monthly, quarterly or annual pricing into a comparable planning amount without making a cancellation or savings claim.
+**Primary keyword concept:** FamilyBoard annual subscription cost calculator tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/annual-subscription-cost-calculator/, /tools/household-subscription-cost-calculator/, /guides/organize-household-subscriptions/, /guides/subscription-renewal-tracker/
+**FAQ:**
+- Q: Does the calculator know the price a provider will charge next year?
+  A: No. It applies the price and frequency you enter and shows a planning comparison before any provider price change.
+- Q: Should I enter a discounted introductory price as the permanent cost?
+  A: No. Record the price source and treat promotional and standard prices as separate scenarios.
+- Q: Does the result tell me which subscription to cancel?
+  A: No. It supplies comparable arithmetic; the household must review use, terms, renewal timing and the responsible account source.
+- Q: Does the calculator send the amount or subscription name to FamilyBoard?
+  A: No. The calculation runs in the browser and does not read the private App or contact a provider.
+
+**Contextual CTA:** Compare one verified recurring price, note the calculation date and then review the next renewal with the household subscription tracker.
+
+# How to Use FamilyBoard's Annual Subscription Cost Calculator
+
+A recurring charge can look harmless when the billing unit is small. A weekly price and a monthly price cannot be compared by looking at the next debit alone, and an annual plan can hide a large renewal in one line. The free [Annual Subscription Cost Calculator](/tools/annual-subscription-cost-calculator/) answers one narrow question: what does the price entered represent over twelve months and per month? It does not decide value, cancel a plan, inspect a bank statement or promise a future provider price.
+
+## Start with one source-backed price
+
+Use one subscription, plan or household service at a time. Confirm the amount from the current provider page, invoice or account source, then record the date you checked it outside the calculator result. Do not paste an account number, payment credential, full invoice or private message into a public note. If a promotion and a standard renewal price are both visible, run two clearly labelled scenarios rather than blending them into one invented average.
+
+## Choose the billing frequency exactly
+
+The calculator has four choices: Weekly, Monthly, Quarterly and Annual. It multiplies the entered amount by 52, 12, 4 or 1 respectively, then divides the annualized result by 12 for a monthly equivalent. “Every four weeks” is not automatically the same as a calendar month; if the provider uses a different cycle, keep the source wording and do not force it into a category that changes the meaning. Currency symbols are presentation, not a currency conversion.
+
+## Read the three outputs as planning numbers
+
+The result shows a monthly equivalent, an annualized cost and a five-year planning total before price changes. The five-year line is arithmetic, not a forecast. Use it to ask a better household question—“Is this recurring commitment still intentional?”—not to claim that a provider will charge the same amount for five years. Add the calculation date and the source pointer to your private subscription review so another person can reproduce the inputs.
+
+## Keep one-plan and whole-household questions separate
+
+This page is for one recurring price. If the household needs to total streaming, storage, memberships and other services together, use the [Household Subscription Cost Calculator](/tools/household-subscription-cost-calculator/) and enter one verified line per service. Combining the outputs from both calculators without labels can double-count a plan. The private App subscription area can hold ownership, renewal context and follow-up; neither calculator can see or change those records.
+
+## Turn arithmetic into a review checkpoint
+
+After comparing the amount, check the next billing or renewal date in the provider source. Ask who owns the account, which household members use it and what evidence would show that a cancellation or plan change actually took effect. Do not treat a “cancel” intention as a completed cancellation, and do not infer a refund or pro-rated credit from this tool. Keep provider terms and confirmation in their protected source.
+
+## Privacy and local limits
+
+The calculation runs in the browser. It does not upload the amount, contact the provider, read bank data or change a subscription. FamilyBoard's public pages may use ordinary site analytics, while the private `/app/` remains local-first and ad-free. Future product or affiliate recommendations must stay outside the calculation fields, be clearly disclosed and remain optional.
+
+## Eight-question closeout
+
+Was the amount copied from a current source? Is the billing frequency exact? Are promotion and standard prices separated? Is the currency still the source currency? Is the calculation date recorded? Is the five-year line labelled as planning arithmetic? Is the next renewal checked in the controlling account source? Did the household avoid treating arithmetic as a cancellation, refund or savings guarantee? If not, keep the review open.
+
+---
+
+## Page 459 — How to Use FamilyBoard's Storage Unit Access Inventory Log
+**Slug:** /guides/familyboard-storage-unit-access-inventory-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/
+**Primary intent:** learn to track storage-unit zones, visits, relocation, removal and visible condition without exposing access credentials or deciding a facility dispute
+**Title tag:** FamilyBoard Storage Unit Access Inventory Tutorial | Track Visits and Contents Safely
+**Meta description:** Learn how to use FamilyBoard's Storage Unit Access Inventory Log to record zones, visits, relocations, removals, visible condition and next checks while keeping facility identifiers protected.
+**Primary keyword concept:** FamilyBoard storage unit access inventory tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/storage-unit-access-inventory-log/, /guides/storage-unit-inventory/, /tools/household-share-access-review-log/, /guides/familyboard-home-access-handoff-tutorial/
+**FAQ:**
+- Q: Does the inventory verify a storage facility or prove who is responsible for a loss?
+  A: No. It preserves household observations and source pointers; the facility, contract and insurer control those decisions.
+- Q: Should I enter a unit number, gate code or complete address?
+  A: No. Use a neutral storage reference and keep access identifiers in the protected facility or household system.
+- Q: Does a visit record prove every box is present?
+  A: No. It records the zones or items actually checked and leaves unverified areas open.
+- Q: Can this log replace the facility agreement or move-out notice?
+  A: No. Preserve those originals and follow the current facility process for access, notice and disputes.
+
+**Contextual CTA:** Give each storage event a safe ID, record what was actually observed and schedule the next visit without publishing the location or access method.
+
+# How to Use FamilyBoard's Storage Unit Access Inventory Log
+
+A storage space can be out of sight for months, so “it is in the unit” is rarely enough for a household handoff. The free [Storage Unit Access Inventory Log](/tools/storage-unit-access-inventory-log/) records zones, placements, real visits, relocations, removals, visible conditions, notices and the next review. It does not verify a facility, inspect your property, replace a contract or decide insurance, liability or deadlines.
+
+## Start with a private storage reference
+
+Use `STORE-2026-A` or another stable household code. Do not place the facility name, full address, unit number, account number, lock identifier or gate code in the shared row. A neutral reference lets an authorised person discuss the same storage project while complete identifiers stay in the facility account or protected household record. Use a new version when the space, custodian or access arrangement changes.
+
+## Choose the storage context honestly
+
+The tool distinguishes commercial self-service storage, a building or community locker, a portable container, a shared private space and another contract-controlled space. The choice explains why a visit, notice or handoff may be needed; it does not confirm which rules apply. For a rental or managed facility, keep the signed agreement and current notices as the controlling sources.
+
+## Set dates before describing contents
+
+Enter the baseline date, the last physical visit if one occurred, the current inventory review date and the next review checkpoint. A future “last visit” is not an observation. If no one has seen the unit, leave that date blank and use a status that shows the gap. Date the next visit according to the household's actual responsibility, not an invented universal inspection interval.
+
+## Organise rows by zone and event
+
+Use the tool's row format for a safe ID, zone or item group, an attributable placement/visit/relocation/removal/condition fact, the custodian or source role, event date, protected evidence pointer, next gap or closure reason, owner role, target or outcome date and status. A statement such as “Zone B was visible during the visit; sealed box count still pending” is stronger than “all good.” Do not copy a full box list or valuable-item description into a shared view.
+
+## Separate physical observation from assumption
+
+A photograph can show a visible seal or position, but it cannot prove contents, ownership, insurance coverage or a facility's internal record. Record what the visiting role actually saw and link to the protected photo or receipt. If a box was moved, create a new dated event instead of editing the old placement. If an item is missing, leave the notice and response steps open.
+
+## Limit access and plan a safe handoff
+
+Use [Share Access Review](/tools/household-share-access-review-log/) when deciding who may receive a pointer. The inventory should say that an authorised role performed a visit, not reveal keys, codes, camera details or the location. For a temporary helper, use the [Home Access Handoff tutorial](/guides/familyboard-home-access-handoff-tutorial/) and confirm access through the controlling channel. A log entry never grants access by itself.
+
+## Keep facility and insurance decisions with their sources
+
+If there is a damage, late-payment, removal or move-out issue, preserve the facility agreement, notice, receipt and insurer correspondence in their original protected locations. FamilyBoard cannot interpret a clause, calculate a notice period, file a claim, contact a facility or decide liability. Record the household's observed next step and owner without turning it into legal or financial advice.
+
+## Privacy and local-first limits
+
+The tool runs in the browser as a private index. Export before clearing browser data, and avoid putting addresses, credentials, payment data or valuable contents in a shared copy. Future storage products or affiliate recommendations must sit outside the evidence fields, be clearly disclosed and remain optional; a product link cannot certify security or protect property.
+
+## Eight-question closeout
+
+Is the storage reference neutral? Is the context accurate? Are visit and review dates real? Does every row identify an observed fact, role and protected pointer? Are unvisited zones still open? Are access secrets kept elsewhere? Were facility and insurance decisions left to their sources? Is the next review owned and dated? If not, leave the inventory open.
+
+---
+
+## Page 460 — How to Use FamilyBoard's Moving Box Handover Log
+**Slug:** /guides/familyboard-moving-box-handover-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-moving-box-handover-log-tutorial/
+**Primary intent:** learn to preserve packing, custody, destination handover and box reconciliation evidence without deciding mover liability or claim rights
+**Title tag:** FamilyBoard Moving Box Handover Log Tutorial | Track Custody and Reconciliation
+**Meta description:** Learn how to use FamilyBoard's Moving Box Handover Log to connect packing, loading, custody, destination handover, condition notices and reconciliation while keeping contracts and identifiers protected.
+**Primary keyword concept:** FamilyBoard moving box handover log tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/moving-box-handover-log/, /tools/purchase-delivery-evidence-log/, /guides/moving-inventory/, /guides/moving-house-organizer/
+**FAQ:**
+- Q: Does the log prove a mover caused a loss or damage?
+  A: No. It preserves attributable observations and sources; contracts, insurers and responsible authorities decide claims and liability.
+- Q: Can I put the full address, tracking number or contract in a shared row?
+  A: No. Use safe pointers and keep complete identifiers in protected originals.
+- Q: Should I mark a box complete when it reaches the destination?
+  A: Not necessarily. Destination handover and individual box reconciliation are separate statuses.
+- Q: Does the tool replace a mover inventory or delivery receipt?
+  A: No. Preserve official documents and use this log as a private household index beside them.
+
+**Contextual CTA:** Give each event a stable ID, connect it to the controlling source and leave missing, condition or notice gaps visible until the responsible process responds.
+
+# How to Use FamilyBoard's Moving Box Handover Log
+
+Moving day creates several handoffs that are easy to compress into “delivered.” A box can be packed, loaded, held by a custodian, handed over, visibly changed, reported and finally reconciled at different times. The free [Moving Box Handover Log](/tools/moving-box-handover-log/) keeps those events separate. It does not amend a mover contract, verify a carrier, determine fault, calculate a claim deadline or certify the contents of a box.
+
+## Start with the move context and safe ID
+
+Use a code such as `MOVE-2026-A`, not a name, full address, shipment number, vehicle plate, contract number or account. Choose the context that matches the move: professional interstate or local, self-move, portable storage transfer, or a family and mixed handoff. The context explains the workflow; it does not decide which legal or insurance rules apply.
+
+## Keep the four dates chronological
+
+Enter the planned or actual loading date, optional destination handover date, current inventory review date and next box reconciliation checkpoint. The current review cannot be in the future; loading cannot be later than review; a destination handover cannot precede loading or follow the current review; and the next checkpoint cannot be earlier than the review. If the household has not received the move, leave handover blank and use an open status.
+
+## Build ten-field event rows
+
+Each row follows `ID | box or item group | attributable fact | custodian or source role | event date | protected evidence pointer | next gap or closure reason | owner role | target or outcome date | status`. Use unique two-to-twenty-character IDs such as `BOX-14`. The fact should describe what a source or person observed, not what you assume happened. A protected pointer can name a folder label or photo code without exposing its address or contents.
+
+## Treat statuses as a timeline
+
+The tool distinguishes packing, loading or custody, destination handover, missing box, visible condition issue, notice awaiting response, reconciliation, completed loss or damage process, and limited archive or external handoff. A destination count does not close every box. Keep a missing or condition row open while the notice, response or inspection is pending. Only use a completed outcome status when the outcome source and date are actually available.
+
+## Preserve official evidence beside the index
+
+Enter safe references to the estimate, contract, mover inventory, custody record, handover, notice and outcome sources. Do not paste signatures, full addresses, bill-of-lading numbers, private messages or valuable-item details. The log is useful because it points to originals and makes gaps visible; copying everything into a shared row increases exposure and still would not prove contents or liability.
+
+## Reconcile without rewriting history
+
+At the destination, compare box IDs and visible conditions with the controlling inventory and receipt. Record a new observation when a later response arrives; do not edit the packing row to make an earlier uncertainty disappear. If a claim, complaint or insurance process is needed, follow the current contract and responsible source. FamilyBoard does not submit notices, choose valuation, negotiate settlement or tell a household to waive a right.
+
+## Privacy, access and optional commercial content
+
+The log runs in the browser and is a private household index. Keep originals and access credentials in the protected system, limit shared views to the minimum useful scope and export before clearing browser data. Any future moving-supply recommendation must sit outside the evidence controls, carry a clear affiliate disclosure and remain skippable; it must never imply a mover endorsement or claim result.
+
+## Eight-question closeout
+
+Is the move ID safe? Are loading, handover, review and next-checkpoint dates ordered? Does every row have ten fields and a unique ID? Is each fact attributable? Are missing and condition gaps still visible? Are official documents preserved separately? Did anyone avoid deciding liability or deadlines from this index? Were complete addresses, credentials and valuable contents kept protected? If not, leave the handover open.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.
