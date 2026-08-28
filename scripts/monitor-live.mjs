@@ -122,6 +122,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/household-weekly-reset/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/recurring-bills-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/pantry-restock-system/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/deep-cleaning-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/guest-preparation-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/vacation-home-shutdown-checklist/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1579,6 +1582,33 @@ const checks = [
       'hreflang="en"',
       "用「最後一包已開封」觸發",
       "把特殊飲食需求獨立標記",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/deep-cleaning-tracker/",
+    require: [
+      "深度清潔追蹤表",
+      'hreflang="en"',
+      "依區域分組",
+      "記錄上次完成日",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/guest-preparation-checklist/",
+    require: [
+      "過夜客人到訪準備",
+      'hreflang="en"',
+      "先確認客人實際會用到什麼",
+      "不必把整間家變成旅館",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/vacation-home-shutdown-checklist/",
+    require: [
+      "旅行前住宅關閉檢查",
+      'hreflang="en"',
+      "先確認水與可能的慢漏",
+      "處理會持續抵達的郵件、包裹與垃圾",
     ],
   },
   {

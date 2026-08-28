@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T07:23:23.258Z
+Generated: 2026-08-28T07:28:25.464Z
 
 ## Summary
 
-- Indexable pages: 692
-- Generated HTML routes: 711
+- Indexable pages: 695
+- Generated HTML routes: 714
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 394
+- Pages without a contextual product/tool link: 397
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,8 +20,8 @@ Generated: 2026-08-28T07:23:23.258Z
 - printables: 20
 - product: 120
 - appliances: 56
-- maintenance: 81
-- household-operations: 119
+- maintenance: 82
+- household-operations: 121
 - inventory-warranty: 56
 - records-emergency: 93
 - tools: 126
@@ -151,6 +151,7 @@ Generated: 2026-08-28T07:23:23.258Z
 - /zh-tw/guides/computer-electronics-inventory/
 - /zh-tw/guides/condo-maintenance-checklist/
 - /zh-tw/guides/contractor-records/
+- /zh-tw/guides/deep-cleaning-tracker/
 - /zh-tw/guides/dehumidifier-maintenance-guide/
 - /zh-tw/guides/dehumidifier-maintenance-records/
 - /zh-tw/guides/digital-home-binder/
@@ -241,6 +242,7 @@ Generated: 2026-08-28T07:23:23.258Z
 - /zh-tw/guides/furnace-maintenance-records/
 - /zh-tw/guides/furniture-inventory/
 - /zh-tw/guides/garbage-disposal-maintenance-guide/
+- /zh-tw/guides/guest-preparation-checklist/
 - /zh-tw/guides/heat-pump-maintenance-records/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
@@ -325,6 +327,7 @@ Generated: 2026-08-28T07:23:23.258Z
 - /zh-tw/guides/travel-household-handoff/
 - /zh-tw/guides/ups-battery-backup-records/
 - /zh-tw/guides/utility-shutoff-information/
+- /zh-tw/guides/vacation-home-shutdown-checklist/
 - /zh-tw/guides/vacuum-cleaner-maintenance-guide/
 - /zh-tw/guides/valuable-item-inventory/
 - /zh-tw/guides/warranty-expiration/

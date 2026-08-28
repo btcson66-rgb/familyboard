@@ -1241,7 +1241,7 @@
   },
   {
     "route": "/guides/deep-cleaning-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/deep-cleaning-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1249,7 +1249,7 @@
   },
   {
     "route": "/guides/guest-preparation-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/guest-preparation-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1257,7 +1257,7 @@
   },
   {
     "route": "/guides/vacation-home-shutdown-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/vacation-home-shutdown-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3377,6 +3377,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/deep-cleaning-tracker/",
+    "alternateRoute": "/guides/deep-cleaning-tracker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/dehumidifier-maintenance-guide/",
     "alternateRoute": "/guides/dehumidifier-maintenance-guide/",
     "indexable": true,
@@ -4058,6 +4065,13 @@
   {
     "route": "/zh-tw/guides/garbage-disposal-maintenance-guide/",
     "alternateRoute": "/guides/garbage-disposal-maintenance-guide/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/guest-preparation-checklist/",
+    "alternateRoute": "/guides/guest-preparation-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5367,6 +5381,13 @@
   {
     "route": "/zh-tw/guides/utility-shutoff-information/",
     "alternateRoute": "/guides/utility-shutoff-information/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/vacation-home-shutdown-checklist/",
+    "alternateRoute": "/guides/vacation-home-shutdown-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
