@@ -2881,7 +2881,7 @@
   },
   {
     "route": "/guides/familyboard-vehicle-document-source-status-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -3761,6 +3761,13 @@
     "alternateRoute": "/guides/familyboard-trip-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/",
+    "alternateRoute": "/guides/familyboard-vehicle-document-source-status-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

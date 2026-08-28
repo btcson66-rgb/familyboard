@@ -24574,6 +24574,7 @@ Is one service and boundary defined? Are provider, property and emergency source
 
 ## Page 355 — How to Use FamilyBoard for Vehicle Document Source Status
 **Slug:** /guides/familyboard-vehicle-document-source-status-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/
 **Primary intent:** learn to organise vehicle registration, insurance, inspection, recall and transfer source status without storing identifying vehicle documents in a shared checklist
 **Title tag:** FamilyBoard Vehicle Document Source Tutorial | Registration, Insurance and Recall Reviews
 **Meta description:** Learn how to review vehicle-document sources with FamilyBoard: match a protected vehicle record, date official sources, separate actions from results and keep identifiers private.
