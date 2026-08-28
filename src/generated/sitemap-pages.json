@@ -1033,11 +1033,11 @@
   },
   {
     "route": "/guides/household-handoff/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "alternateRoute": "/zh-tw/guides/household-handoff/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/guides/household-admin-backup-person/"
+    "redirectTo": ""
   },
   {
     "route": "/guides/travel-household-handoff/",
@@ -4592,7 +4592,14 @@
     "route": "/zh-tw/features/household-handoff/",
     "alternateRoute": "/features/household-handoff/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-22",
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/household-handoff/",
+    "alternateRoute": "/guides/household-handoff/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

@@ -595,6 +595,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/features/home-record-keeper/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-record-keeper/</loc>",
+      "<loc>https://familyboard.win/guides/household-handoff/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/household-handoff/</loc>",
+      "<loc>https://familyboard.win/features/household-handoff/</loc>",
     ],
     forbid: [
       "<loc>https://familyboard.win/app/</loc>",
@@ -5545,6 +5548,40 @@ const checks = [
       "家庭歷史紀錄 App",
       "一筆有用的紀錄包含四個部分",
       "從今天開始，不必先補完十年資料",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/guides/household-handoff/",
+    require: [
+      "Household Handoff Guide",
+      "Build the handoff from current obligations",
+      "Test before the high-pressure moment",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/household-handoff/",
+    require: [
+      "家庭交接指南",
+      "先決定對象、目的與有效期限",
+      "用實際演練驗證",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/features/household-handoff/",
+    require: [
+      "Household Handoff",
+      "The default view, with no profile created",
+      "What's always excluded, no matter what",
+    ],
+  },
+  {
+    path: "/zh-tw/features/household-handoff/",
+    require: [
+      "家庭交接功能",
+      "沒有設定檔時的保守預設",
+      "無論怎麼選都會排除的內容",
       'hreflang="en"',
     ],
   },

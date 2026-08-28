@@ -7,7 +7,6 @@ const consolidations = [
   ["/guides/recurring-household-tasks/", "/guides/family-chore-system/"],
   ["/guides/subscription-renewal-tracker/", "/guides/organize-household-subscriptions/"],
   ["/guides/what-spouse-needs-to-know/", "/guides/household-admin-backup-person/"],
-  ["/guides/household-handoff/", "/guides/household-admin-backup-person/"],
   ["/guides/family-emergency-contacts/", "/guides/emergency-information-sheet/"],
 ] as const;
 

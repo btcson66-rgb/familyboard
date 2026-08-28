@@ -85,6 +85,10 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/",
     "/features/home-record-keeper/",
     "/zh-tw/features/home-record-keeper/",
+    "/guides/household-handoff/",
+    "/zh-tw/guides/household-handoff/",
+    "/features/household-handoff/",
+    "/zh-tw/features/household-handoff/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -128,6 +132,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/",
     "/features/home-record-keeper/",
     "/zh-tw/features/home-record-keeper/",
+    "/guides/household-handoff/",
+    "/zh-tw/guides/household-handoff/",
+    "/features/household-handoff/",
     "/tools/household-meeting-agenda-action-log/",
     "/tools/household-pantry-expiry-review-log/",
     "/tools/household-clothing-care-repair-log/",

@@ -1024,6 +1024,14 @@
     "headings": "Build a caregiver handoff that another person can accept without exposing a care file Begin with a safe alias, care window and stated purpose Record the care recipient's participation and preference separately A caregiver title, permitted disclosure and personal-representative authority are different Link to the current plan or instruction; do not copy it into the index Organize daily logistics without turning them into clinical instructions Test access and custody from the receiving side Treat discharge, agency changes and respite as source changes Briefing, caregiver acceptance and an observed handoff result are three events Include caregiver capacity and respite routes without promising service Reopen the handoff when a meaningful event changes Keep recommendations outside the critical workflow"
   },
   {
+    "title": "Household Handoff Guide: Transfer the Invisible Work of Running a Home",
+    "description": "Build a household handoff covering recurring responsibilities, upcoming deadlines, service contacts, assets and emergency information.",
+    "route": "/guides/household-handoff/",
+    "cluster": "records-emergency",
+    "keywords": "household handoff",
+    "headings": "A household handoff is the operational version of “here is what you need to know” Build the handoff from current obligations Include why, not only what Protect private information Make it reusable"
+  },
+  {
     "title": "Travel Household Handoff: What Someone at Home Needs While You Are Away",
     "description": "Create a travel handoff for pets, deliveries, household tasks, appointments, service providers and emergency contacts without oversharing.",
     "route": "/guides/travel-household-handoff/",

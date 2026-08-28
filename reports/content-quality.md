@@ -1,11 +1,11 @@
 # Content quality report
 
-Generated: 2026-08-28T08:29:39.521Z
+Generated: 2026-08-28T08:38:27.221Z
 
 ## Summary
 
-- Indexable pages: 717
-- Generated HTML routes: 729
+- Indexable pages: 719
+- Generated HTML routes: 730
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
@@ -23,7 +23,7 @@ Generated: 2026-08-28T08:29:39.521Z
 - appliances: 56
 - maintenance: 82
 - household-operations: 131
-- records-emergency: 93
+- records-emergency: 95
 - tools: 128
 
 ## Word-count range
@@ -67,7 +67,6 @@ Generated: 2026-08-28T08:29:39.521Z
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-household-handoff-tutorial/
 - /guides/familyboard-offline-backup-restore/
-- /guides/household-handoff/
 - /guides/
 - /guides/recurring-household-tasks/
 - /guides/seasonal-home-maintenance-checklist/
@@ -276,6 +275,7 @@ Generated: 2026-08-28T08:29:39.521Z
 - /zh-tw/guides/household-admin-day/
 - /zh-tw/guides/household-documents-organizer/
 - /zh-tw/guides/household-event-source-check-taiwan/
+- /zh-tw/guides/household-handoff/
 - /zh-tw/guides/household-management-checklist/
 - /zh-tw/guides/household-medical-information-organization/
 - /zh-tw/guides/household-monthly-review/
