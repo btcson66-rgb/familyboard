@@ -3336,6 +3336,30 @@
     "headings": "Recurring Chore Planner Tutorial: Build a Routine That Can Bend Without Losing Ownership Describe a repeatable scope Choose a rhythm that can change Use roles and backups, not surveillance Keep effort separate from completion Review load and privacy Re-negotiate when conditions change"
   },
   {
+    "title": "Home Inventory Checklist Generator Tutorial | FamilyBoard",
+    "description": "Learn how to use FamilyBoard's home inventory checklist generator to capture rooms, items and evidence without copying unnecessary personal or financial details.",
+    "route": "/guides/familyboard-home-inventory-checklist-generator-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "home inventory checklist generator tutorial",
+    "headings": "Home Inventory Checklist Generator Tutorial: Start With What You Can Verify Choose one room and one purpose Capture evidence without over-collecting Separate identity from value Review and hand off Make the next capture deliberate"
+  },
+  {
+    "title": "Room Inventory Generator Tutorial | FamilyBoard",
+    "description": "Learn how to build a focused room inventory with FamilyBoard, record safe item labels and keep missing evidence visible before expanding to other rooms.",
+    "route": "/guides/familyboard-room-inventory-generator-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "room inventory generator tutorial",
+    "headings": "Room Inventory Generator Tutorial: Make One Space Reviewable Before Mapping the Whole Home Define the room boundary Use labels that survive a handoff Record gaps rather than filling them Rehearse a small retrieval"
+  },
+  {
+    "title": "Warranty Checklist Generator Tutorial | FamilyBoard",
+    "description": "Learn how to use FamilyBoard's warranty checklist generator to organise purchase evidence, product identity and source checks before a repair or claim.",
+    "route": "/guides/familyboard-warranty-checklist-generator-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "warranty checklist generator tutorial",
+    "headings": "Warranty Checklist Generator Tutorial: Preserve Purchase Evidence Before You Need It Start with the product source Distinguish dates and events Prepare a claim without promising the outcome Handoff and privacy"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T14:19:54.352Z
+Generated: 2026-08-28T14:34:59.173Z
 
 ## Summary
 
-- Indexable pages: 805
-- Generated HTML routes: 811
+- Indexable pages: 811
+- Generated HTML routes: 817
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 461
+- Pages without a contextual product/tool link: 464
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,7 +19,7 @@ Generated: 2026-08-28T14:19:54.352Z
 - support: 31
 - printables: 39
 - product: 135
-- inventory-warranty: 62
+- inventory-warranty: 68
 - appliances: 56
 - maintenance: 82
 - household-operations: 147
@@ -208,6 +208,7 @@ Generated: 2026-08-28T14:19:54.352Z
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
 - /zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/
 - /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
+- /zh-tw/guides/familyboard-home-inventory-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/
 - /zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/
 - /zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/
@@ -251,6 +252,7 @@ Generated: 2026-08-28T14:19:54.352Z
 - /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
 - /zh-tw/guides/familyboard-repair-punch-list-tutorial/
 - /zh-tw/guides/familyboard-replacement-part-source-check-tutorial/
+- /zh-tw/guides/familyboard-room-inventory-generator-tutorial/
 - /zh-tw/guides/familyboard-router-support-review-tutorial/
 - /zh-tw/guides/familyboard-schedule-conflict-review-tutorial/
 - /zh-tw/guides/familyboard-school-activity-handoff-tutorial/
@@ -270,6 +272,7 @@ Generated: 2026-08-28T14:19:54.352Z
 - /zh-tw/guides/familyboard-utility-bill-difference-tutorial/
 - /zh-tw/guides/familyboard-utility-provider-handoff-tutorial/
 - /zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/
+- /zh-tw/guides/familyboard-warranty-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/
 - /zh-tw/guides/familyboard-water-leak-event-log-tutorial/
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/

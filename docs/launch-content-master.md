@@ -31566,6 +31566,180 @@ Ask each role to describe the smallest acceptable result and the signal that a t
 - Q: Can a product be required to use the planner?
   A: No. The free routine must work without any purchase or affiliate click.
 
+## Page 434 — Home Inventory Checklist Generator Tutorial: Start With What You Can Verify
+
+**Slug:** `/guides/familyboard-home-inventory-checklist-generator-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-inventory-checklist-generator-tutorial/`
+**Primary intent:** use the free home inventory checklist generator to create a bounded room-by-room capture plan with safe identifiers, evidence notes and review triggers
+**Title tag:** Home Inventory Checklist Generator Tutorial | FamilyBoard
+**Meta description:** Learn how to use FamilyBoard's home inventory checklist generator to capture rooms, items and evidence without copying unnecessary personal or financial details.
+**Primary keyword concept:** home inventory checklist generator tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Generate one room checklist and verify three items before expanding the scope.
+**Suggested internal links:** `/tools/home-inventory-checklist-generator/`, `/tools/room-inventory-generator/`, `/guides/room-by-room-home-inventory/`, `/features/home-inventory-tracker/`
+
+# Home Inventory Checklist Generator Tutorial: Start With What You Can Verify
+
+A useful home inventory begins with an item you can identify and a source you can revisit. The free [Home Inventory Checklist Generator](/tools/home-inventory-checklist-generator/) creates a room-by-room starter list for item category, safe label, model or serial evidence, purchase-source pointer and review note. It is not an appraisal, insurance declaration or replacement-value calculator.
+
+## Choose one room and one purpose
+
+Start with a room that supports a real decision, such as a warranty claim, move, insurance conversation or repair visit. Use `INVENTORY-ROOM-2026-A` rather than a full address or resident name. A bounded purpose prevents the checklist from turning into an endless catalogue of private belongings.
+
+## Capture evidence without over-collecting
+
+For each item, record what another person needs to recognise it: a safe item code, category, model observation and protected source pointer. A label photo may support a model or serial check, but do not copy payment numbers, account credentials, private correspondence or unnecessary personal details. If a field cannot be observed, mark it pending instead of guessing.
+
+## Separate identity from value
+
+The checklist can help locate a receipt, warranty or service source. It cannot decide current value, coverage, depreciation, ownership or a claim amount. Keep those questions with the insurer, seller, contract or qualified professional. Preserve the source date and version when a document changes, and create a new inventory version instead of silently rewriting history.
+
+## Review and hand off
+
+Ask a backup role to locate three safe pointers and explain what remains missing. Records stay in the current browser profile and are not automatically synchronized, encrypted or backed up. Export before clearing browser data and inspect the checklist before printing or sharing. Optional affiliate storage or scanning products must sit outside the checklist and cannot be required to complete it.
+
+## Make the next capture deliberate
+
+At the end of a room pass, write why the next item belongs in scope and which source would confirm it. A missing model label, a moved appliance or a receipt that cannot be found is a useful open question. Schedule the smallest follow-up rather than adding every possible item to an unreviewed master list. This keeps a home inventory useful for a future claim or handoff without turning it into a surveillance record.
+
+If the inventory is for an insurance conversation, ask the insurer what evidence and format it accepts before collecting more. If it is for a move, focus on condition, custody and delivery rather than replacement value. If it is for a repair, capture the model and symptom source that the technician actually needs. Keeping the purpose visible prevents one checklist from quietly becoming a declaration about every possession in the household.
+
+When an item is shared, rented or borrowed, record the custody context only when it matters to the stated purpose. Do not infer ownership from where an object sits. A dated source pointer and a clear “not verified” note are safer than a confident category that someone later treats as an insurance or legal fact.
+
+**FAQ:**
+- Q: Does this checklist calculate my home's insurance value?
+  A: No. It records observations and pointers; insurers and qualified professionals control valuation and coverage.
+- Q: Should I enter every serial number immediately?
+  A: Start with the scope you can verify and keep unobserved identifiers open.
+- Q: Can I share the full inventory with a contractor?
+  A: Only share the minimum fields needed for the job after removing unrelated personal details.
+- Q: Is a photo enough to prove ownership?
+  A: No. It may help identify an item; ownership and claim evidence depend on the responsible source.
+
+## Page 435 — Room Inventory Generator Tutorial: Make One Space Reviewable Before Mapping the Whole Home
+
+**Slug:** `/guides/familyboard-room-inventory-generator-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-room-inventory-generator-tutorial/`
+**Primary intent:** use the room inventory generator to create a focused room list with locations, item labels, evidence pointers and follow-up without exposing a full household profile
+**Title tag:** Room Inventory Generator Tutorial | FamilyBoard
+**Meta description:** Learn how to build a focused room inventory with FamilyBoard, record safe item labels and keep missing evidence visible before expanding to other rooms.
+**Primary keyword concept:** room inventory generator tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Generate a list for one room, then ask another role to find two items without opening unrelated records.
+**Suggested internal links:** `/tools/room-inventory-generator/`, `/tools/home-inventory-checklist-generator/`, `/guides/room-by-room-home-inventory/`, `/tools/household-inventory-photo-capture-log/`
+
+# Room Inventory Generator Tutorial: Make One Space Reviewable Before Mapping the Whole Home
+
+Whole-home inventories often fail because the first list is too large to review. The free [Room Inventory Generator](/tools/room-inventory-generator/) creates a focused room list with a safe room code, item label, location note, evidence pointer and next review. It does not assess value, ownership, accessibility or insurance coverage.
+
+## Define the room boundary
+
+Choose one physical room or storage zone and one reason to map it: a move, repair, warranty, safety review or backup. Use `ROOM-KITCHEN-2026-A` instead of an address. If a hallway, balcony or shared storage area serves two purposes, state the boundary clearly so another person knows what was included.
+
+## Use labels that survive a handoff
+
+An item code such as `ITEM-K-03` and a location note such as “upper cabinet, left side” are easier to transfer than a private nickname. Add a model or serial observation only when a protected source needs it. Keep passwords, payment details, full receipts, photographs of people and unrelated personal notes out of the room list.
+
+## Record gaps rather than filling them
+
+“Label not visible,” “receipt source pending” and “location changed” are useful results. They tell the next role what to check. A generated row, a photograph or an assumed purchase date is not proof of ownership, value or coverage. Preserve the observation date and create a new version when the room changes.
+
+## Rehearse a small retrieval
+
+Ask another household role to find two listed items and the source pointers without opening unrelated records. If they cannot, keep the issue open and assign the smallest fix, such as a clearer location note or a protected source index. Export before clearing browser data; the tool is local-first and not an automatic backup.
+
+Repeat the rehearsal after furniture moves, a repair visit or a change in who manages the room. The goal is not to test memory; it is to see whether the label, location and source pointer still describe the same observable item. Preserve the old observation when it no longer matches, then create a new room version with a date and responsible role.
+
+For a move or claim, also record the condition observation separately from the item identity. “Scratched front panel observed on 2026-08-29” answers a different question from “model label matched.” Keeping those observations separate makes the checklist easier to explain and prevents a location change from looking like a new purchase.
+
+Use a short review note such as “location observed, purchase source pending” rather than an unsupported conclusion. When a room contains shared or borrowed items, record the custody context only if the stated purpose requires it and keep the person's identity out of the public-safe list.
+
+At the end of the pass, summarise which corners were observed, which items were deliberately out of scope and which source should be checked next. This makes the room record auditable without pretending that an empty row means “nothing exists.” A dated boundary note also helps a new household role continue the work instead of starting over.
+
+**FAQ:**
+- Q: Should I inventory the entire home at once?
+  A: No. Start with one room and a real decision so the list remains reviewable.
+- Q: Does a room list prove that an item belongs to me?
+  A: No. It records a household observation; ownership and claims use responsible evidence.
+- Q: Can I add a person's private belongings?
+  A: Only the minimum necessary for the stated purpose, with consent and protected handling.
+- Q: Can storage products be required?
+  A: No. Any future affiliate recommendation must be labelled, optional and outside the free form.
+
+## Page 436 — Warranty Checklist Generator Tutorial: Preserve Purchase Evidence Before You Need It
+
+**Slug:** `/guides/familyboard-warranty-checklist-generator-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-warranty-checklist-generator-tutorial/`
+**Primary intent:** use the warranty checklist generator to capture purchase, model, source and follow-up evidence without claiming coverage or promising a successful claim
+**Title tag:** Warranty Checklist Generator Tutorial | FamilyBoard
+**Meta description:** Learn how to use FamilyBoard's warranty checklist generator to organise purchase evidence, product identity and source checks before a repair or claim.
+**Primary keyword concept:** warranty checklist generator tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Create one checklist from a real purchase source and leave any unverified coverage question open.
+**Suggested internal links:** `/tools/warranty-checklist-generator/`, `/tools/warranty-claim-evidence-log/`, `/guides/warranty-expiration/`, `/features/warranty-tracker/`
+
+# Warranty Checklist Generator Tutorial: Preserve Purchase Evidence Before You Need It
+
+Warranty questions become difficult when the product identity, purchase source and current terms are scattered. The free [Warranty Checklist Generator](/tools/warranty-checklist-generator/) creates a starter checklist for item code, model observation, purchase source, warranty document pointer, service contact and next review. It does not decide coverage, expiration or claim value.
+
+## Start with the product source
+
+Use `WARRANTY-ITEM-2026-A` and point to the protected receipt, order record or issued warranty. Record the model as observed and keep serial details in the responsible protected source when sharing the checklist could expose them. Do not treat a retailer page, a memory or a product photo as the complete warranty terms.
+
+## Distinguish dates and events
+
+Purchase date, delivery date, installation date, registration date, failure date and claim date may answer different questions. Record which event the source actually states. The checklist can prompt a review; it cannot calculate a legally binding expiration or override exclusions, jurisdiction, proof requirements or the issuer's current process.
+
+## Prepare a claim without promising the outcome
+
+Keep the request, response, inspection, parts, receipts and outcome in the warranty claim log. Sending a message or obtaining a case number is an action, not approval. If the issuer asks for information, record the request and the protected source used. Preserve contradictions and unresolved coverage questions until the issuer or qualified adviser answers.
+
+## Handoff and privacy
+
+Ask a backup role to find the product source and explain what is still missing, without sharing passwords, payment numbers or full private correspondence. Records remain in the current browser and are not automatically encrypted or backed up. Future folders or scanners may be optional affiliate content outside the checklist and must never be required to make a claim.
+
+Before contacting a seller or manufacturer, compare the product label, purchase source and warranty document pointer. If they disagree, record the contradiction and ask the issuer which source controls. Do not resolve it by editing the checklist to match the most convenient date. A dated question is stronger evidence than a confident but unsupported conclusion.
+
+Before contacting a seller or manufacturer, compare the product label, purchase source and warranty document pointer. If they disagree, record the contradiction and ask the issuer which source controls. Do not resolve it by editing the checklist to match the most convenient date. A dated question is stronger evidence than a confident but unsupported conclusion.
+
+If the product was gifted, moved between homes or bought through a marketplace, do not infer coverage from the story. Ask the issuing source what proof it accepts, preserve the response in protected storage and put only a safe pointer and observed date in the checklist. The checklist should prepare a clear question and a retrievable source, not promise that a claim will be approved.
+
+After the issuer replies, record the response date and the next action in the claim log. If no response arrives, retain the attempt and keep the coverage question open rather than deleting the checklist row.
+
+**FAQ:**
+- Q: Does the checklist prove that my product is covered?
+  A: No. The issuer's current terms and observed claim result control coverage.
+- Q: Which date determines expiration?
+  A: Use the date and event defined by the responsible warranty source; do not guess.
+- Q: Is a case number an approved claim?
+  A: No. It records an action; keep the issuer's response and outcome separately.
+- Q: Should I paste the full receipt into the checklist?
+  A: No. Use a protected source pointer and minimise shared details.
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

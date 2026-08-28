@@ -670,6 +670,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-recurring-chore-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-recurring-chore-planner-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-inventory-checklist-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-inventory-checklist-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-room-inventory-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-room-inventory-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-warranty-checklist-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-warranty-checklist-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -6071,6 +6077,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-recurring-chore-planner-tutorial/",
     require: ["週期家事規劃器教學", "可觀察的工作", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-inventory-checklist-generator-tutorial/",
+    require: ["Home Inventory Checklist Generator Tutorial", "bounded purpose"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-inventory-checklist-generator-tutorial/",
+    require: ["家庭財物清冊產生器教學", "房間和一個用途", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-room-inventory-generator-tutorial/",
+    require: ["Room Inventory Generator Tutorial", "focused room"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-room-inventory-generator-tutorial/",
+    require: ["房間物品清冊產生器教學", "房間邊界", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-warranty-checklist-generator-tutorial/",
+    require: ["Warranty Checklist Generator Tutorial", "purchase source"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-warranty-checklist-generator-tutorial/",
+    require: ["保固資料檢查表產生器教學", "購買來源", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",
