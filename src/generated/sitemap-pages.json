@@ -137,11 +137,11 @@
   },
   {
     "route": "/features/home-record-keeper/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "alternateRoute": "/zh-tw/features/home-record-keeper/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/features/free-home-management-app/"
+    "redirectTo": ""
   },
   {
     "route": "/features/household-operations-system/",
@@ -4339,6 +4339,13 @@
   {
     "route": "/zh-tw/guides/home-purchase-records/",
     "alternateRoute": "/guides/home-purchase-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/features/home-record-keeper/",
+    "alternateRoute": "/features/home-record-keeper/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

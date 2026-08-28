@@ -593,6 +593,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/home-purchase-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/features/home-record-keeper/</loc>",
+      "<loc>https://familyboard.win/zh-tw/features/home-record-keeper/</loc>",
     ],
     forbid: [
       "<loc>https://familyboard.win/app/</loc>",
@@ -5526,6 +5528,23 @@ const checks = [
       "家庭訂閱費用計算器教學",
       "先從最近的正式帳單建立清單",
       "把總額變成公平的家庭檢視",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/features/home-record-keeper/",
+    require: [
+      "Home Record Keeper",
+      "Record events around the home",
+      "Start from now",
+    ],
+  },
+  {
+    path: "/zh-tw/features/home-record-keeper/",
+    require: [
+      "家庭歷史紀錄 App",
+      "一筆有用的紀錄包含四個部分",
+      "從今天開始，不必先補完十年資料",
       'hreflang="en"',
     ],
   },

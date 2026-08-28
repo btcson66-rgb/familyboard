@@ -17,7 +17,7 @@ faq:
   - question: "Should I enter an address or tracking number?"
     answer: "No. Use safe household and source codes and keep delivery identifiers in the protected original source."
   - question: "Can I paste the contents of a letter into the log?"
-    answer: "No. Record only the minimum handoff category and next action; keep private correspondence protected. # Mail and Package Handoff Log Mail and packages create a real household responsibility when someone is away. This free tool records the handoff window, source, custody owner and return review without reading correspondence or storing addresses, tracking numbers or item contents. ## Define the handoff window Choose a short absence, extended trip, move or return-home review. The window explains why a row exists and when it expires; it is not a delivery promise. ## Separate expected time from observed custody An expected window is a plan. “Building notice appeared” or “a package was placed in the approved holding area” is an observation. Keep the two separate so a prediction cannot become proof of delivery. ## Assign custody and close with a result Give one role the next action and keep planned pickups open until custody or return review is actually observed. Future mail organizers or parcel-bin affiliate content must stay outside controls and cannot promise security or delivery."
+    answer: "No. Record only the minimum handoff category and next action; keep private correspondence protected."
 contentVersion: 1
 ---
 # Mail and Package Handoff Log

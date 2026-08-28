@@ -136,6 +136,14 @@
     "headings": "Sometimes the best onboarding form is no form at all First-run onboarding should take minutes No account changes the support model No account means backups matter The product can earn trust before asking for anything A no-account first day, step by step The honest trade-off of no signup Privacy, display and future monetisation"
   },
   {
+    "title": "Home Record Keeper for Repairs, Maintenance, Purchases and Household History | FamilyBoard",
+    "description": "Build a practical history of repairs, maintenance, purchases, warranties and service providers for your home.",
+    "route": "/features/home-record-keeper/",
+    "cluster": "inventory-warranty",
+    "keywords": "home record keeper",
+    "headings": "A home has a history, but most of it disappears into receipts and memory Record events around the home History reduces repeated detective work Keep facts separate from guesses Start from now"
+  },
+  {
     "title": "What Is a Household Operations System? A Practical Alternative to Scattered Home Notes | FamilyBoard",
     "description": "A household operations system connects home assets, maintenance, recurring responsibilities, records and handoff information instead of treating them as separate lists.",
     "route": "/features/household-operations-system/",

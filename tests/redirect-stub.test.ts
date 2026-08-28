@@ -3,7 +3,6 @@ import { describe, expect, it } from "vitest";
 import { createRedirectStub } from "../src/lib/redirect-stub";
 
 const consolidations = [
-  ["/features/home-record-keeper/", "/features/free-home-management-app/"],
   ["/guides/chore-chart-for-adults/", "/guides/family-chore-system/"],
   ["/guides/recurring-household-tasks/", "/guides/family-chore-system/"],
   ["/guides/subscription-renewal-tracker/", "/guides/organize-household-subscriptions/"],

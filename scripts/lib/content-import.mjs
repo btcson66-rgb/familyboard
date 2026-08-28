@@ -47,7 +47,8 @@ export function parseFaq(block) {
   for (const line of lines.slice(start + 1)) {
     if (
       /^---\s*$/.test(line) ||
-      /^\*\*(?:Contextual CTA|CTA|Depth|Redirects to):\*\*/i.test(line)
+      /^\*\*(?:Contextual CTA|CTA|Depth|Redirects to):\*\*/i.test(line) ||
+      /^#\s+/.test(line)
     ) {
       break;
     }
