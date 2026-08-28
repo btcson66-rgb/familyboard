@@ -92,6 +92,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/humidifier-maintenance-guide/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/ceiling-fan-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/bathroom-exhaust-fan-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/water-softener-maintenance-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/ups-battery-backup-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/wifi-router-maintenance-records/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1279,6 +1282,33 @@ const checks = [
       'hreflang="en"',
       "把潮濕觀察和風管維修分開",
       "異味、冒煙與漏水要升級",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/water-softener-maintenance-records/",
+    require: [
+      "軟水設備保養紀錄",
+      'hreflang="en"',
+      "把鹽桶、水質與管線責任分開",
+      "水質感受不是檢驗結果",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/ups-battery-backup-records/",
+    require: [
+      "UPS 不斷電系統電池紀錄",
+      'hreflang="en"',
+      "先記保護誰，再記停電結果",
+      "不要用家庭紀錄做負載計算",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/wifi-router-maintenance-records/",
+    require: [
+      "Wi‑Fi 路由器維護紀錄",
+      'hreflang="en"',
+      "更新韌體，但不要把密碼交給文章",
+      "不要把 Wi‑Fi 密碼貼進家庭文章",
     ],
   },
   {

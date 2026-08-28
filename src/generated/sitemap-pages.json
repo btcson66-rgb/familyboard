@@ -553,7 +553,7 @@
   },
   {
     "route": "/guides/water-softener-maintenance-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/water-softener-maintenance-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -649,7 +649,7 @@
   },
   {
     "route": "/guides/wifi-router-maintenance-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/wifi-router-maintenance-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -657,7 +657,7 @@
   },
   {
     "route": "/guides/ups-battery-backup-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/ups-battery-backup-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -5204,6 +5204,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/ups-battery-backup-records/",
+    "alternateRoute": "/guides/ups-battery-backup-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "alternateRoute": "/tools/vacation-shutdown-checklist-generator/",
     "indexable": true,
@@ -5264,6 +5271,20 @@
     "alternateRoute": "/guides/water-leak-response-home-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/water-softener-maintenance-records/",
+    "alternateRoute": "/guides/water-softener-maintenance-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/wifi-router-maintenance-records/",
+    "alternateRoute": "/guides/wifi-router-maintenance-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

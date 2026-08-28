@@ -462,6 +462,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/humidifier-maintenance-guide/",
     "/zh-tw/guides/ceiling-fan-maintenance-checklist/",
     "/zh-tw/guides/bathroom-exhaust-fan-maintenance-checklist/",
+    "/zh-tw/guides/water-softener-maintenance-records/",
+    "/zh-tw/guides/ups-battery-backup-records/",
+    "/zh-tw/guides/wifi-router-maintenance-records/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -4147,6 +4150,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/bathroom-exhaust-fan-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/water-softener-maintenance-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/ups-battery-backup-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/wifi-router-maintenance-records/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T06:15:57.163Z
+Generated: 2026-08-28T06:23:36.343Z
 
 ## Summary
 
-- Indexable pages: 662
-- Generated HTML routes: 681
+- Indexable pages: 665
+- Generated HTML routes: 684
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 364
+- Pages without a contextual product/tool link: 367
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,8 +19,8 @@ Generated: 2026-08-28T06:15:57.163Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 48
-- maintenance: 79
+- appliances: 49
+- maintenance: 81
 - household-operations: 109
 - inventory-warranty: 47
 - records-emergency: 92
@@ -300,10 +300,13 @@ Generated: 2026-08-28T06:15:57.163Z
 - /zh-tw/guides/storm-preparation-home-checklist/
 - /zh-tw/guides/subscription-cancellation-refund-records/
 - /zh-tw/guides/summer-home-maintenance-checklist/
+- /zh-tw/guides/ups-battery-backup-records/
 - /zh-tw/guides/washing-machine-maintenance-checklist/
 - /zh-tw/guides/water-heater-maintenance-records/
 - /zh-tw/guides/water-leak-photo-evidence-records/
 - /zh-tw/guides/water-leak-response-home-records/
+- /zh-tw/guides/water-softener-maintenance-records/
+- /zh-tw/guides/wifi-router-maintenance-records/
 - /zh-tw/guides/winter-home-maintenance-checklist/
 - /zh-tw/
 - /zh-tw/privacy/
