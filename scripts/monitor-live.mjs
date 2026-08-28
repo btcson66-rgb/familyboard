@@ -78,6 +78,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/air-conditioner-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/microwave-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/hvac-filter-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/computer-electronics-inventory/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/furniture-inventory/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1139,6 +1141,24 @@ const checks = [
       'hreflang="en"',
       "尺寸、厚度與 MERV 是三件事",
       "每月查看不等於每月更換",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/computer-electronics-inventory/",
+    require: [
+      "家庭 3C 財物清冊",
+      'hreflang="en"',
+      "序號與照片要互相對得上",
+      "密碼、恢復碼與 Wi-Fi 設定不要混進清冊",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/furniture-inventory/",
+    require: [
+      "家具清冊",
+      'hreflang="en"',
+      "寬深高要連同動線一起量",
+      "租屋、搬家與轉售要用不同事件",
     ],
   },
   {

@@ -521,6 +521,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/caregiver-handoff-checklist/",
     "/zh-tw/guides/purchase-receipt-organizer/",
     "/zh-tw/guides/appliance-inventory/",
+    "/zh-tw/guides/computer-electronics-inventory/",
+    "/zh-tw/guides/furniture-inventory/",
     "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/house-sitter-instruction-generator/",
     "/zh-tw/tools/pet-sitter-instruction-generator/",
@@ -4085,6 +4087,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/appliance-inventory/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/computer-electronics-inventory/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/furniture-inventory/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/microwave-maintenance-checklist/",

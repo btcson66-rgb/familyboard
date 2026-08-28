@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T05:35:46.082Z
+Generated: 2026-08-28T05:41:29.460Z
 
 ## Summary
 
-- Indexable pages: 647
-- Generated HTML routes: 664
+- Indexable pages: 649
+- Generated HTML routes: 666
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 349
+- Pages without a contextual product/tool link: 351
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,10 +19,10 @@ Generated: 2026-08-28T05:35:46.082Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 40
+- appliances: 41
 - maintenance: 76
 - household-operations: 109
-- inventory-warranty: 46
+- inventory-warranty: 47
 - records-emergency: 89
 - tools: 126
 
@@ -139,6 +139,7 @@ Generated: 2026-08-28T05:35:46.082Z
 - /zh-tw/guides/automatic-renewal-charge-dispute-taiwan/
 - /zh-tw/guides/caregiver-handoff-checklist/
 - /zh-tw/guides/cleaning-schedule/
+- /zh-tw/guides/computer-electronics-inventory/
 - /zh-tw/guides/condo-maintenance-checklist/
 - /zh-tw/guides/contractor-records/
 - /zh-tw/guides/digital-home-binder/
@@ -220,6 +221,7 @@ Generated: 2026-08-28T05:35:46.082Z
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
 - /zh-tw/guides/first-time-homeowner-maintenance-guide/
 - /zh-tw/guides/freezer-maintenance-checklist/
+- /zh-tw/guides/furniture-inventory/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
 - /zh-tw/guides/home-care-service-fees-and-billing/

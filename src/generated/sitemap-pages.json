@@ -641,7 +641,7 @@
   },
   {
     "route": "/guides/computer-electronics-inventory/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/computer-electronics-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -737,7 +737,7 @@
   },
   {
     "route": "/guides/furniture-inventory/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/furniture-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3276,6 +3276,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/computer-electronics-inventory/",
+    "alternateRoute": "/guides/computer-electronics-inventory/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/condo-maintenance-checklist/",
     "alternateRoute": "/guides/condo-maintenance-checklist/",
     "indexable": true,
@@ -3901,6 +3908,13 @@
   {
     "route": "/zh-tw/guides/freezer-maintenance-checklist/",
     "alternateRoute": "/guides/freezer-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/furniture-inventory/",
+    "alternateRoute": "/guides/furniture-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
