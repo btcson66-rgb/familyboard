@@ -376,6 +376,14 @@
     "headings": "How to use FamilyBoard Emergency information without oversharing Separate outside contacts from household members Use the minimum useful fields Mark sensitive information and review the display boundary Verify routes instead of trusting memory Keep local data and exports protected"
   },
   {
+    "title": "Household Backup Recovery Checker | Free FamilyBoard Tool",
+    "description": "Check a FamilyBoard household backup's export date, recovery test, scope, protected storage and next drill date in a free local browser tool.",
+    "route": "/tools/household-backup-recovery-checker/",
+    "cluster": "product",
+    "keywords": "household backup recovery checklist tool",
+    "headings": "Household Backup Recovery Checker What the checker validates What it cannot prove A practical five-minute drill Protect exports and plan the next test"
+  },
+  {
     "title": "Home Service Provider List | Verify Sources, Scope and Prior Work",
     "description": "Build a useful home service provider list with dated registry checks, written scope, prior-work evidence and owner-led follow-up—without treating a listing as an endorsement.",
     "route": "/guides/home-service-provider-list/",

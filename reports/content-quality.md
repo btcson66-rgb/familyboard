@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T01:18:13.575Z
+Generated: 2026-08-28T01:31:54.297Z
 
 ## Summary
 
-- Indexable pages: 598
-- Generated HTML routes: 615
+- Indexable pages: 600
+- Generated HTML routes: 617
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 305
+- Pages without a contextual product/tool link: 306
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 115
+- product: 117
 - appliances: 30
 - maintenance: 52
 - household-operations: 104
@@ -285,6 +285,7 @@ Generated: 2026-08-28T01:18:13.575Z
 - /zh-tw/tools/household-accessibility-walkthrough-log/
 - /zh-tw/tools/household-account-list/
 - /zh-tw/tools/household-annual-review-generator/
+- /zh-tw/tools/household-backup-recovery-checker/
 - /zh-tw/tools/household-bill-source-status-log/
 - /zh-tw/tools/household-building-notice-response-log/
 - /zh-tw/tools/household-clothing-care-repair-log/

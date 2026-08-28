@@ -55,6 +55,7 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-household-members-responsibilities-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-documents-source-review-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-emergency-information-privacy-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/</loc>",
@@ -64,6 +65,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-members-responsibilities-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-documents-source-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/</loc>",
@@ -635,6 +637,22 @@ const checks = [
       "FamilyBoard 緊急資訊怎麼整理又不外洩",
       "先分清楚家庭成員與外部聯絡人",
       "沒有伺服器副本，也沒有自動跨裝置同步",
+    ],
+  },
+  {
+    path: "/tools/household-backup-recovery-checker/",
+    require: [
+      "Household Backup Recovery Checker",
+      "What the checker validates",
+      "It never reads your files",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-backup-recovery-checker/",
+    require: [
+      "家庭備份與還原準備檢查器",
+      "工具會檢查什麼",
+      "不會查看 IndexedDB",
     ],
   },
   {

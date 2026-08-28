@@ -408,6 +408,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-backup-recovery-checker/",
+    "alternateRoute": "/zh-tw/tools/household-backup-recovery-checker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/guides/home-service-provider-list/",
     "alternateRoute": "/zh-tw/guides/home-service-provider-list/",
     "indexable": true,
@@ -4003,6 +4011,13 @@
     "alternateRoute": "/tools/household-annual-review-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-backup-recovery-checker/",
+    "alternateRoute": "/tools/household-backup-recovery-checker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

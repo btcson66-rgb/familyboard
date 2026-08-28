@@ -5510,7 +5510,55 @@ const decisionRegisterDefinition = (locale: Locale): Definition => {
   };
 };
 
+const householdBackupRecoveryDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statusLabels = zh
+    ? ["尚未建立備份", "已匯出，等待受保護保存", "已保存，等待找回測試", "已找回，等待內容核對", "已核對範圍與版本，等待下次測試", "備份與找回演練完成"]
+    : ["Backup not created", "Exported—protected storage pending", "Stored—retrieval test pending", "Retrieved—scope check pending", "Scope and version checked—next test pending", "Backup and recovery drill complete"];
+  return {
+    intro: zh
+      ? "用一個小型檢查表確認 FamilyBoard 備份是否真的找得到、版本是否能辨認，以及下一次找回測試由誰負責。工具不會讀取或還原你的檔案。"
+      : "Use a small readiness checklist to confirm that a FamilyBoard backup can actually be found, identified and tested. This tool never opens or restores your files.",
+    fields: [
+      text("review", zh ? "家庭備份檢查代號" : "Household backup review code", zh ? "使用中性代號，不要輸入姓名、地址、帳號或檔案密碼。" : "Use a neutral code; do not enter names, addresses, accounts or backup passwords.", "BACKUP-REVIEW-2026-A"),
+      { name: "backupDate", label: zh ? "最近匯出備份日" : "Latest backup export date", type: "date", value: "2026-08-24" },
+      { name: "retrievalDate", label: zh ? "最近找回或還原測試日" : "Latest retrieval or restore test date", type: "date", value: "2026-08-25" },
+      { name: "reviewDate", label: zh ? "本次檢視日" : "Current review date", type: "date", value: "2026-08-28" },
+      { name: "nextTest", label: zh ? "下一次找回測試日" : "Next retrieval test date", type: "date", value: "2026-09-28" },
+      text("storage", zh ? "受保護備份位置" : "Protected backup location", zh ? "寫資料夾或保管流程代號，不要貼完整路徑、密碼或公開連結。" : "Use a folder or custody code; do not paste a full path, password or public link.", zh ? "家庭備份／受保護儲存／BACKUP-2026-A" : "Household backups / protected storage / BACKUP-2026-A"),
+      { name: "scope", label: zh ? "本次備份範圍與找回觀察" : "Backup scope and retrieval observations", type: "textarea", help: zh ? "每行：範圍｜備份版本或來源代號｜找回時實際看到的結果｜仍缺少的核對或下一步。至少一行。" : "One line per scope: scope | backup version or source code | observed retrieval result | remaining check or next action. At least one line.", value: zh ? "設備、維護、文件與聯絡索引｜BACKUP-2026-A｜測試副本可開啟並辨認日期；完整原件仍在受保護來源｜核對最新變更與下一次人工測試" : "Assets, maintenance, documents and contact index | BACKUP-2026-A | Test copy opened and date identified; originals remain in protected sources | Check latest changes and schedule the next manual test" },
+      { name: "status", label: zh ? "目前狀態" : "Current status", type: "select", options: statusLabels },
+    ],
+    run: (values) => {
+      const backupDate = strictIsoDate(values.backupDate);
+      const retrievalDate = strictIsoDate(values.retrievalDate);
+      const reviewDate = strictIsoDate(values.reviewDate);
+      const nextTest = strictIsoDate(values.nextTest);
+      if (!values.review.trim()) return zh ? "請輸入家庭備份檢查代號。" : "Enter a household backup review code.";
+      if (!backupDate || !retrievalDate || !reviewDate || !nextTest) return zh ? "所有日期都必須使用 YYYY-MM-DD。" : "All dates must use YYYY-MM-DD.";
+      const today = new Date();
+      if (reviewDate.getTime() > today.getTime()) return zh ? "本次檢視日不能晚於今天。" : "The current review date cannot be in the future.";
+      if (backupDate.getTime() > reviewDate.getTime() || retrievalDate.getTime() > reviewDate.getTime()) return zh ? "備份與找回測試日不能晚於本次檢視日。" : "Backup and retrieval dates cannot be after the current review date.";
+      if (retrievalDate.getTime() < backupDate.getTime()) return zh ? "找回測試日不能早於最近備份日。" : "The retrieval test cannot be earlier than the latest backup export.";
+      if (nextTest.getTime() < reviewDate.getTime()) return zh ? "下一次找回測試日不能早於本次檢視日。" : "The next retrieval test cannot be before the current review date.";
+      if (values.storage.trim().length < 6) return zh ? "請填入受保護備份位置或保管流程代號。" : "Enter a protected backup location or custody code.";
+      const rows = values.scope.split("\n").map((raw, index) => ({ line: index + 1, parts: raw.split("|").map((part) => part.trim()) })).filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.some((row) => row.parts.length !== 4 || row.parts.some((part) => !part))) return zh ? "每行必須完整填寫四欄：範圍、版本代號、找回觀察、下一步。" : "Each line must contain four fields: scope, version code, retrieval observation and next action.";
+      const privacy = [values.review, values.storage, values.scope].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/password|passcode|recovery code|full address|private key|seed phrase|account number|card number|bank account|密碼|驗證碼|復原碼|完整地址|私鑰|助記詞|帳號|卡號|銀行帳戶|身分證|私人通信/i.test(privacy)) return zh ? "偵測到憑證、地址、金融或私人資料；請改用安全代號並把原件留在受保護系統。" : "A credential, address, financial or private detail was detected; use a safe code and keep the original in a protected system.";
+      const formatter = new Intl.DateTimeFormat(zh ? "zh-TW" : "en", { dateStyle: "long" });
+      const observed = rows.map((row) => `- ${row.parts[0]}: ${row.parts[2]} (version ${row.parts[1]}); next: ${row.parts[3]}`).join("\n");
+      return zh
+        ? `${values.review.trim()}｜FamilyBoard 備份與找回準備檢查\n最近匯出：${formatter.format(backupDate)}\n最近找回測試：${formatter.format(retrievalDate)}\n本次檢視：${formatter.format(reviewDate)}\n下一次測試：${formatter.format(nextTest)}\n狀態：${values.status}\n受保護位置：${values.storage.trim()}\n\n範圍觀察\n${observed}\n\n這份輸出只是家庭準備索引。工具不開啟、還原、驗證、加密、上傳、刪除或分享任何備份，不證明資料完整、可用、合法或安全，也不提供雲端同步。請在適當的受保護系統保存原件，並由授權角色實際測試。`
+        : `${values.review.trim()} — FamilyBoard backup and recovery readiness\nLatest export: ${formatter.format(backupDate)}\nLatest retrieval test: ${formatter.format(retrievalDate)}\nCurrent review: ${formatter.format(reviewDate)}\nNext test: ${formatter.format(nextTest)}\nStatus: ${values.status}\nProtected location: ${values.storage.trim()}\n\nScope observations\n${observed}\n\nThis output is a household readiness index. It does not open, restore, validate, encrypt, upload, delete or share a backup, prove completeness or safety, or provide cloud sync. Keep originals in an appropriate protected system and have an authorised role perform the real test.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
+  "household-backup-recovery-checker": {
+    ...householdBackupRecoveryDefinition("en"),
+  },
   "household-decision-register": { ...decisionRegisterDefinition("en") },
   "household-event-source-index-log": { ...householdEventSourceIndexDefinition("en") },
   "household-event-duration-calculator": { ...householdEventDurationDefinition("en") },
@@ -9625,6 +9673,9 @@ const definitions: Record<string, Definition> = {
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
+  "household-backup-recovery-checker": {
+    ...householdBackupRecoveryDefinition("zh-TW"),
+  },
   "household-decision-register": { ...decisionRegisterDefinition("zh-TW") },
   "household-event-source-index-log": { ...householdEventSourceIndexDefinition("zh-TW") },
   "household-event-duration-calculator": { ...householdEventDurationDefinition("zh-TW") },
