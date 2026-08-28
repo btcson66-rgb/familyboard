@@ -106,10 +106,10 @@
   {
     "route": "/features/local-first-home-organizer/",
     "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/features/private-family-organizer/"
+    "redirectTo": ""
   },
   {
     "route": "/features/private-family-organizer/",
@@ -130,10 +130,10 @@
   {
     "route": "/features/no-account-family-organizer/",
     "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/features/private-family-organizer/"
+    "redirectTo": ""
   },
   {
     "route": "/features/home-record-keeper/",
@@ -146,10 +146,10 @@
   {
     "route": "/features/household-operations-system/",
     "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/features/free-home-management-app/"
+    "redirectTo": ""
   },
   {
     "route": "/features/free-home-management-app/",

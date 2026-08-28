@@ -584,6 +584,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/household-admin-day/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/service-provider-contact-list/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/household-shopping-staples/</loc>",
+      "<loc>https://familyboard.win/features/local-first-home-organizer/</loc>",
+      "<loc>https://familyboard.win/features/no-account-family-organizer/</loc>",
+      "<loc>https://familyboard.win/features/household-operations-system/</loc>",
     ],
     forbid: [
       "<loc>https://familyboard.win/app/</loc>",
@@ -5440,6 +5443,30 @@ const checks = [
       "先從一次臨時採買找出真正需求",
       "讓補貨觸發可以被任何家人看見",
       'hreflang="en"',
+    ],
+  },
+  {
+    path: "/features/local-first-home-organizer/",
+    require: [
+      "Local-First Home Organizer",
+      "What “local-first” means here",
+      "A practical first session",
+    ],
+  },
+  {
+    path: "/features/no-account-family-organizer/",
+    require: [
+      "No-Account Family Organizer",
+      "First-run onboarding should take minutes",
+      "A no-account first day, step by step",
+    ],
+  },
+  {
+    path: "/features/household-operations-system/",
+    require: [
+      "Household Operations System",
+      "The basic building blocks",
+      "Connect a real household loop",
     ],
   },
 ];

@@ -104,6 +104,14 @@
     "headings": "A simplified, low-sensitivity view built for a shared screen Exactly three things appear on it \"Refreshes every minute\" is a real, specific number Why it's honest to call this \"low-sensitivity,\" not \"safe for anyone\" Turning a spare tablet into a display A worked example"
   },
   {
+    "title": "Local-First Home Organizer — Keep Household Data on Your Device | FamilyBoard",
+    "description": "A home organizer designed to store core household records locally first, work offline and let users control their own backups.",
+    "route": "/features/local-first-home-organizer/",
+    "cluster": "product",
+    "keywords": "local-first home organizer",
+    "headings": "Your household database does not have to begin in someone else's cloud What “local-first” means here Local-first is not the same as invincible storage Privacy and portability should reinforce each other Portability works today A practical first session Decide what belongs in the first local copy What this design does not promise"
+  },
+  {
     "title": "Private Family Organizer — Local-First, Offline and No Account Required | FamilyBoard",
     "description": "A household organizer that stores records in your browser, works offline, needs no account, and gives you password-protected backups you control.",
     "route": "/features/private-family-organizer/",
@@ -118,6 +126,22 @@
     "cluster": "product",
     "keywords": "offline household organizer",
     "headings": "An offline household organizer should survive a real network test Finish one connected load before relying on it What continues to work without a connection Run a five-minute offline acceptance test Offline cache and household data are different stores Backups remain essential Updates need one connected window"
+  },
+  {
+    "title": "No-Account Family Organizer — Start Managing Your Home Without Signing Up | FamilyBoard",
+    "description": "Start a household dashboard without an account or email. Store core records locally and create your own backup.",
+    "route": "/features/no-account-family-organizer/",
+    "cluster": "product",
+    "keywords": "family organizer without account",
+    "headings": "Sometimes the best onboarding form is no form at all First-run onboarding should take minutes No account changes the support model No account means backups matter The product can earn trust before asking for anything A no-account first day, step by step The honest trade-off of no signup Privacy, display and future monetisation"
+  },
+  {
+    "title": "What Is a Household Operations System? A Practical Alternative to Scattered Home Notes | FamilyBoard",
+    "description": "A household operations system connects home assets, maintenance, recurring responsibilities, records and handoff information instead of treating them as separate lists.",
+    "route": "/features/household-operations-system/",
+    "cluster": "product",
+    "keywords": "household operations system",
+    "headings": "Household operations are the repeatable systems behind everyday home life The basic building blocks Why this is different from a family planner Keep the system lightweight enough to survive Connect a real household loop Distinguish state from history Design for handoff and interruption App boundaries and future affiliate space"
   },
   {
     "title": "Free Home Management App — Every Feature, No Account, No Paywall | FamilyBoard",
