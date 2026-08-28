@@ -4048,6 +4048,30 @@
     "headings": "FamilyBoard Appliance Manual Tutorial: Match the Right Model and Source Start with the asset identity Prefer the manufacturer’s current source Record limits, not DIY permission"
   },
   {
+    "title": "FamilyBoard Handoff Acceptance Tutorial | Test a Real Handoff",
+    "description": "Learn how to run a FamilyBoard handoff acceptance check, record what the receiver could use, protect private details and assign fixes when the summary fails.",
+    "route": "/guides/familyboard-handoff-acceptance-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard handoff acceptance",
+    "headings": "FamilyBoard Handoff Acceptance Tutorial: Test a Real Handoff Define the receiver and purpose Let the receiver work without coaching Record scope, evidence and result separately Correct the smallest failure"
+  },
+  {
+    "title": "FamilyBoard Backup Restore Rehearsal | Practice Safely",
+    "description": "Learn how to rehearse FamilyBoard backup validation and restore decisions, compare versions, protect originals and record what still needs review.",
+    "route": "/guides/familyboard-backup-restore-rehearsal-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard backup restore rehearsal",
+    "headings": "FamilyBoard Backup Restore Rehearsal: Practice Safely Separate validation from restore Compare before accepting changes Include the human handoff Close the rehearsal safely"
+  },
+  {
+    "title": "FamilyBoard Household Decision Log | Make Decisions Traceable",
+    "description": "Learn how to use FamilyBoard to record household decisions, separate facts from assumptions, assign owners and reopen a choice when the source changes.",
+    "route": "/guides/familyboard-household-decision-log-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard household decision log",
+    "headings": "FamilyBoard Household Decision Log: Make Decisions Traceable Start with one decision question Separate evidence, preference and assumption Assign ownership and a reopening trigger Share a useful summary"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

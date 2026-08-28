@@ -1,28 +1,28 @@
 # Content quality report
 
-Generated: 2026-08-28T23:14:36.480Z
+Generated: 2026-08-28T23:27:35.181Z
 
 ## Summary
 
-- Indexable pages: 983
-- Generated HTML routes: 989
+- Indexable pages: 989
+- Generated HTML routes: 995
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 12
-- Pages without a contextual product/tool link: 574
+- Pages without a contextual product/tool link: 580
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 31
 - printables: 39
-- product: 172
+- product: 174
 - inventory-warranty: 82
 - appliances: 70
 - maintenance: 97
-- household-operations: 200
+- household-operations: 204
 - records-emergency: 140
 - tools: 152
 
@@ -71,12 +71,15 @@ Generated: 2026-08-28T23:14:36.480Z
 - /guides/familyboard-app-first-run-restore-tutorial/
 - /guides/familyboard-appliance-manual-source-tutorial/
 - /guides/familyboard-attachment-metadata-tutorial/
+- /guides/familyboard-backup-restore-rehearsal-tutorial/
 - /guides/familyboard-browser-storage-maintenance/
 - /guides/familyboard-calendar-timezone-tutorial/
 - /guides/familyboard-contact-sensitivity-tutorial/
 - /guides/familyboard-emergency-drill-tutorial/
 - /guides/familyboard-encrypted-backup-password-tutorial/
 - /guides/familyboard-family-display-mode-setup/
+- /guides/familyboard-handoff-acceptance-tutorial/
+- /guides/familyboard-household-decision-log-tutorial/
 - /guides/familyboard-household-handoff-tutorial/
 - /guides/familyboard-maintenance-event-cost-tutorial/
 - /guides/familyboard-master-csv-edit-import-tutorial/
@@ -220,6 +223,7 @@ Generated: 2026-08-28T23:14:36.480Z
 - /zh-tw/guides/familyboard-appliance-service-visit-tutorial/
 - /zh-tw/guides/familyboard-attachment-metadata-tutorial/
 - /zh-tw/guides/familyboard-backup-recovery-checker-tutorial/
+- /zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/
 - /zh-tw/guides/familyboard-bill-review-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-maintenance/
@@ -250,6 +254,7 @@ Generated: 2026-08-28T23:14:36.480Z
 - /zh-tw/guides/familyboard-free-home-management-app-tutorial/
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
 - /zh-tw/guides/familyboard-guest-service-visit-reset-tutorial/
+- /zh-tw/guides/familyboard-handoff-acceptance-tutorial/
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
 - /zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/
 - /zh-tw/guides/familyboard-home-care-billing-discrepancy-tutorial/
@@ -275,6 +280,7 @@ Generated: 2026-08-28T23:14:36.480Z
 - /zh-tw/guides/familyboard-household-annual-review-generator-tutorial/
 - /zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-household-bill-source-status-tutorial/
+- /zh-tw/guides/familyboard-household-decision-log-tutorial/
 - /zh-tw/guides/familyboard-household-decision-register-tutorial/
 - /zh-tw/guides/familyboard-household-document-index-generator-tutorial/
 - /zh-tw/guides/familyboard-household-document-redaction-tutorial/

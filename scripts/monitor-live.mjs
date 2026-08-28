@@ -850,6 +850,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-retention-decision-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-appliance-manual-source-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-manual-source-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-handoff-acceptance-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-handoff-acceptance-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-backup-restore-rehearsal-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-decision-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-decision-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1298,6 +1304,54 @@ const checks = [
       "FamilyBoard 紀錄找回練習教學",
       "讓家庭交接可以重做",
       "不要把完整文件、地址和私人對話放入廣泛摘要",
+    ],
+  },
+  {
+    path: "/guides/familyboard-handoff-acceptance-tutorial/",
+    require: [
+      "FamilyBoard Handoff Acceptance",
+      "Test a Real Handoff",
+      "does not grant permissions",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-handoff-acceptance-tutorial/",
+    require: [
+      "FamilyBoard 交接接受度教學",
+      "讓接手者真的能使用",
+      "不要把受保護文件複製進共用列",
+    ],
+  },
+  {
+    path: "/guides/familyboard-backup-restore-rehearsal-tutorial/",
+    require: [
+      "FamilyBoard Backup Restore Rehearsal",
+      "Practice Safely",
+      "never experiment by deleting",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/",
+    require: [
+      "FamilyBoard 備份還原演練教學",
+      "先在隔離資料中安全練習",
+      "不能為了騰出空間清除真實使用者 IndexedDB",
+    ],
+  },
+  {
+    path: "/guides/familyboard-household-decision-log-tutorial/",
+    require: [
+      "FamilyBoard Household Decision Log",
+      "Make Decisions Traceable",
+      "does not mediate a dispute",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-decision-log-tutorial/",
+    require: [
+      "FamilyBoard 家庭決策紀錄教學",
+      "讓選擇有來源也能重開",
+      "不要為了結束會議把不確定內容改寫成「已確認」",
     ],
   },
   {

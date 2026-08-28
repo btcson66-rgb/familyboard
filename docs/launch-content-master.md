@@ -37239,6 +37239,161 @@ For a shared handoff, distinguish a source that is merely reachable from one tha
 
 If the model label is uncertain, capture the uncertainty as an action rather than selecting a close match. Ask the owner to photograph the protected label or consult the manufacturer through its official route. Once the exact source is confirmed, update the index and preserve the earlier failed match so future reviewers understand why an older PDF must not be reused.
 
+## Page 523 — FamilyBoard Handoff Acceptance Tutorial
+**Slug:** /guides/familyboard-handoff-acceptance-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-handoff-acceptance-tutorial/
+**Primary intent:** test whether the intended household receiver can use a limited handoff without coaching or unnecessary private details
+**Title tag:** FamilyBoard Handoff Acceptance Tutorial | Test a Real Handoff
+**Meta description:** Learn how to run a FamilyBoard handoff acceptance check, record what the receiver could use, protect private details and assign fixes when the summary fails.
+**Primary keyword concept:** FamilyBoard handoff acceptance
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-share-access-tutorial/, /tools/household-share-access-review-log/, /guides/familyboard-record-retrieval-practice-tutorial/, /privacy/
+**FAQ:**
+- Q: Does acceptance prove that the receiver has permanent access?
+  A: No. It records one observed handoff under stated conditions; permissions, devices and source versions can change.
+- Q: Should the receiver receive every household record?
+  A: No. Define the purpose and minimum useful scope before sharing, then keep unrelated details protected.
+- Q: What if the receiver asks for a password?
+  A: Do not put credentials in the handoff. Use the responsible secure channel and record only that an access dependency remains.
+- Q: Does FamilyBoard send the handoff to another device automatically?
+  A: No. Local browser data is device-specific unless the household deliberately exports and transfers a reviewed copy.
+
+# FamilyBoard Handoff Acceptance Tutorial: Test a Real Handoff
+
+A handoff can look complete to the person who wrote it and still fail for the person who must use it. FamilyBoard’s free handoff acceptance check helps a household observe whether an intended receiver can understand the purpose, locate the protected source and take the next safe action. It records an observed result, not a promise that access will remain available. It does not grant permissions, send messages, prove identity or certify that a household is prepared for an emergency.
+
+## Define the receiver and purpose
+
+Write one audience and one reason: a partner reviewing a warranty, a sitter following a limited arrival plan, or a backup coordinator checking the current utility contact. Give the handoff a neutral ID and a time window. A vague audience such as “everyone” encourages unnecessary disclosure. Keep addresses, account numbers, medical details, passwords and private conversations in the system that controls them. The handoff should point to what matters, not copy the whole household archive.
+
+## Let the receiver work without coaching
+
+Ask the intended receiver to open the summary and explain what they believe the next action is. Observe whether the labels, dates and source pointers make sense. Do not correct them halfway through; record the exact question or missing context. If a source requires another person’s approval, stop at that boundary and record the dependency instead of bypassing it. A receiver who reaches the right result only after the creator supplies hidden context has not yet accepted a repeatable handoff.
+
+## Record scope, evidence and result separately
+
+The acceptance record can include purpose, receiver role, minimum fields shown, source version checked, access condition, observed action, unanswered question and next owner. Use states such as `Accepted—next action clear`, `Accepted—follow-up pending`, `Receiver needs context`, `Permission needed` and `Not tested`. “They said it is fine” is not an observed outcome. Note what was actually opened or understood, while keeping the protected document itself out of the shared row.
+
+## Correct the smallest failure
+
+Assign one fix and a date: rename a confusing label, add a source version, narrow an unnecessary field, or route an access request to its owner. Retest with the same receiver or a comparable role after the correction. Keep the earlier failure so the history shows why the handoff changed. If a printed copy or download was used, record its return or disposal plan. Export a protected backup before changing local browser data; FamilyBoard cannot recover a cleared browser automatically.
+
+Future affiliate panels for privacy screens, label makers or document folders may appear outside the workflow with clear disclosure and an easy skip. A recommendation cannot grant access, validate consent or make a handoff safe by itself.
+
+For a useful comparison, repeat the check after a small change such as a new receiver, a revised source label or a different device. Keep the purpose constant and note what changed. If the receiver can complete the action but cannot explain the source date or the return route for a download, record the result as partial. This makes the acceptance log a learning loop rather than a one-time checkbox and helps the household decide which labels or protected permissions deserve attention first.
+
+**Contextual CTA:** Choose one receiver, share only the minimum useful pointer and observe whether the next action is clear without coaching.
+
+## Page 524 — FamilyBoard Backup Restore Rehearsal Tutorial
+**Slug:** /guides/familyboard-backup-restore-rehearsal-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/
+**Primary intent:** rehearse a safe FamilyBoard backup restore path without confusing validation, merge and replacement
+**Title tag:** FamilyBoard Backup Restore Rehearsal | Practice Safely
+**Meta description:** Learn how to rehearse FamilyBoard backup validation and restore decisions, compare versions, protect originals and record what still needs review.
+**Primary keyword concept:** FamilyBoard backup restore rehearsal
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-offline-backup-restore/, /tools/backup-recovery-checker/, /guides/familyboard-record-retrieval-practice-tutorial/, /privacy/
+**FAQ:**
+- Q: Does validating a backup change the household data?
+  A: Validation is a check; restore, merge and replacement are separate decisions that need an explicit plan.
+- Q: Is a successful restore proof that every attachment or external file is present?
+  A: No. FamilyBoard stores metadata references and local records; inspect the real protected sources separately.
+- Q: Should I rehearse over my only live household data?
+  A: No. Use an isolated test browser or approved copy and never clear real user IndexedDB to make room.
+- Q: Can FamilyBoard restore data to every family member’s device?
+  A: No. A reviewed export must be deliberately transferred and checked on each target device.
+
+# FamilyBoard Backup Restore Rehearsal: Practice Safely
+
+A backup is useful only when a household understands how it would validate, restore and review it. FamilyBoard’s backup restore rehearsal tutorial gives the household a repeatable checklist for those decisions. It does not claim that a file is complete, repair an operating system, restore third-party documents or sync devices. Use an isolated browser profile or test storage; never experiment by deleting or clearing a real household’s IndexedDB.
+
+## Separate validation from restore
+
+Start by naming the backup ID, export date, schema version and protected storage pointer. Run a validation-only check when possible and record whether the file is readable and structurally accepted. A valid package can still contain an old household state. Restore is a separate action with a declared mode: replace an empty test profile, merge into a controlled copy or stop for manual review. Do not call a validation result a successful recovery.
+
+## Compare before accepting changes
+
+After a test restore, compare household identity, members, tasks, maintenance events, calendar entries and document references against the expected checkpoint. Record counts and a few neutral IDs rather than copying private contents. If a row is newer in the target, mark the conflict and ask the responsible owner whether merge or replacement is appropriate. Keep the original export untouched so the rehearsal can be repeated and audited.
+
+## Include the human handoff
+
+Ask another coordinator to repeat the key checks: identify the restored version, find one protected source pointer and explain what remains external to FamilyBoard. Note any missing permission, attachment, device setting or offline assumption. A browser restore cannot recreate a file that was never exported, and it cannot grant access to an insurer, provider or cloud drive. Assign each gap to a role and date instead of guessing that the backup solved it.
+
+## Close the rehearsal safely
+
+Record the test profile, device, browser version, export date, observed result and cleanup plan. Remove only the isolated test data after preserving the rehearsal note; do not touch the live browser store. Store the reviewed export durably and schedule another rehearsal after a schema change, device move or major household update. Future affiliate panels for external drives or encrypted storage may appear outside the checklist with disclosure and an easy skip; they cannot guarantee recovery.
+
+At closeout, have the second reader describe which records were restored, which references remain outside FamilyBoard and where the untouched export is stored. Compare that explanation with the rehearsal note and record every mismatch. If a test profile used a different schema or browser, schedule a second run before relying on the result. A small, dated rehearsal with known limits is more trustworthy than a broad claim that every future device will restore identically.
+
+Keep a short inventory of what the rehearsal intentionally did not test, such as third-party attachments, another family member's account or a cloud provider's own recovery process. Those exclusions are useful planning information, not evidence of failure. Set a reminder tied to a real event and repeat the same comparison after the next meaningful export. If the result changes, preserve both notes and ask the owner to decide which state is authoritative.
+
+**Contextual CTA:** Validate one protected export in isolated storage, document the restore mode and assign every conflict before touching live data.
+
+## Page 525 — FamilyBoard Household Decision Log Tutorial
+**Slug:** /guides/familyboard-household-decision-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-decision-log-tutorial/
+**Primary intent:** record a household decision with its question, evidence, owner, review trigger and unresolved disagreement
+**Title tag:** FamilyBoard Household Decision Log | Make Decisions Traceable
+**Meta description:** Learn how to use FamilyBoard to record household decisions, separate facts from assumptions, assign owners and reopen a choice when the source changes.
+**Primary keyword concept:** FamilyBoard household decision log
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-household-meeting-tutorial/, /tools/household-decision-log/, /guides/familyboard-monthly-review-action-tutorial/, /privacy/
+**FAQ:**
+- Q: Does a decision log make an opinion a verified fact?
+  A: No. Record the source and label assumptions, observations and open questions separately.
+- Q: Should every family member see every decision?
+  A: No. Match the handoff to the purpose and share only the minimum context needed by the role.
+- Q: What happens when people disagree?
+  A: Keep the disagreement visible, name the missing evidence or decision owner and set a review trigger.
+- Q: Is a decision entry a contract or legal advice?
+  A: No. Formal agreements, professional advice and authority remain in their controlling systems.
+
+# FamilyBoard Household Decision Log: Make Decisions Traceable
+
+Families make decisions about repairs, schedules, purchases, care routines and documents, then forget why the choice was made. A short FamilyBoard decision log preserves the question, evidence, owner and next review trigger without pretending that a preference is an objective answer. It does not mediate a dispute, sign a contract, give legal or medical advice or determine what is safe. Its value is a clear, revisable record that another household member can understand.
+
+## Start with one decision question
+
+Write a bounded question such as “Which repair scope is approved for this visit?” or “When should we review the annual insurance source?” Add a neutral decision ID, date and affected area. Avoid combining unrelated issues into one row; a repair price, a schedule choice and a privacy concern may have different owners and sources. Keep account numbers, medical details, signatures and private messages in their protected systems.
+
+## Separate evidence, preference and assumption
+
+For each option, record the source checked, observable facts, household preference and unresolved assumption in different fields. A provider estimate is evidence of a proposed price, not proof of final cost. A family preference is a valid preference, not a regulation. When sources conflict, preserve both references and mark the conflict for the role that can decide. Never rewrite an uncertain statement as “confirmed” just to close the meeting.
+
+## Assign ownership and a reopening trigger
+
+Name the role that can take the next action and a date or event that reopens the decision: a new quote, a recall notice, a move, a care-plan change or a missed deadline. Use states such as `Open question`, `Decision recorded—monitor`, `Action in progress`, `Reopen on source change` and `Closed with evidence`. A closed row still needs its controlling source pointer and a way to challenge an outdated assumption.
+
+## Share a useful summary
+
+Before a meeting or handoff, preview the audience and show only the question, decision, next action and source pointer they need. Ask the receiver to repeat the next step, then record acceptance or confusion separately from the decision itself. Keep the history when the decision changes so a future coordinator can see the reason, not just the latest answer. Export a protected backup when the log matters; local browser data is not an archive.
+
+Future affiliate panels for notebooks, meeting boards or document organizers may appear outside the log with clear disclosure and an easy skip. Purchasing an item cannot resolve disagreement, verify a source or make an assumption true.
+
+When the decision is revisited, do not overwrite the earlier reasoning. Add the new source, observation and role that reopened it, then explain whether the option stayed the same for a new reason or changed. This history helps a busy household coordinator distinguish an intentional change from a forgotten task. It also gives a professional or provider a focused question without exposing the complete private archive or turning an informal note into a formal agreement.
+
+During a weekly or monthly review, filter for decisions whose source date, owner or trigger has passed. Reopen only the rows that need evidence; do not rewrite every historical preference. A decision that is still valid should say why it was checked and what would change it. This keeps the log useful for everyday coordination while respecting that formal contracts, regulations and professional advice belong in their controlling records.
+
+**Contextual CTA:** Log one household question, separate its evidence from preference and assign a named owner plus a trigger that can reopen it.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

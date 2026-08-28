@@ -334,6 +334,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-record-retention-decision-tutorial/",
     "/guides/familyboard-appliance-manual-source-tutorial/",
     "/zh-tw/guides/familyboard-appliance-manual-source-tutorial/",
+    "/guides/familyboard-handoff-acceptance-tutorial/",
+    "/zh-tw/guides/familyboard-handoff-acceptance-tutorial/",
+    "/guides/familyboard-backup-restore-rehearsal-tutorial/",
+    "/zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/",
+    "/guides/familyboard-household-decision-log-tutorial/",
+    "/zh-tw/guides/familyboard-household-decision-log-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2151,6 +2157,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-appliance-manual-source-tutorial/",
       alternate: "/guides/familyboard-appliance-manual-source-tutorial/",
       heading: "FamilyBoard 家電手冊來源教學：先對正確型號與版本",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-handoff-acceptance-tutorial/",
+      alternate: "/guides/familyboard-handoff-acceptance-tutorial/",
+      heading: "FamilyBoard 交接接受度教學：讓接手者真的能使用",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/",
+      alternate: "/guides/familyboard-backup-restore-rehearsal-tutorial/",
+      heading: "FamilyBoard 備份還原演練教學：先在隔離資料中安全練習",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-decision-log-tutorial/",
+      alternate: "/guides/familyboard-household-decision-log-tutorial/",
+      heading: "FamilyBoard 家庭決策紀錄教學：讓選擇有來源也能重開",
     },
   ]) {
     await page.goto(localized.route);

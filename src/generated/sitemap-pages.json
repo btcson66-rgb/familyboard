@@ -4184,6 +4184,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-handoff-acceptance-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-handoff-acceptance-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-backup-restore-rehearsal-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-decision-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-decision-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4861,6 +4885,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/",
+    "alternateRoute": "/guides/familyboard-backup-restore-rehearsal-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-bill-review-tutorial/",
     "alternateRoute": "/guides/familyboard-bill-review-tutorial/",
     "indexable": true,
@@ -5064,6 +5095,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-handoff-acceptance-tutorial/",
+    "alternateRoute": "/guides/familyboard-handoff-acceptance-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-home-access-handoff-tutorial/",
     "alternateRoute": "/guides/familyboard-home-access-handoff-tutorial/",
     "indexable": true,
@@ -5234,6 +5272,13 @@
   {
     "route": "/zh-tw/guides/familyboard-household-bill-source-status-tutorial/",
     "alternateRoute": "/guides/familyboard-household-bill-source-status-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-decision-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-decision-log-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
