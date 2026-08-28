@@ -1,29 +1,29 @@
 # Content quality report
 
-Generated: 2026-08-28T18:20:25.132Z
+Generated: 2026-08-28T18:45:39.072Z
 
 ## Summary
 
-- Indexable pages: 889
-- Generated HTML routes: 895
+- Indexable pages: 895
+- Generated HTML routes: 901
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 11
-- Pages without a contextual product/tool link: 503
+- Duplicate primary-keyword groups: 13
+- Pages without a contextual product/tool link: 506
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 31
 - printables: 39
-- product: 134
+- product: 136
 - inventory-warranty: 74
 - appliances: 66
-- maintenance: 86
-- household-operations: 179
-- records-emergency: 128
+- maintenance: 87
+- household-operations: 183
+- records-emergency: 127
 - tools: 152
 
 ## Word-count range
@@ -47,12 +47,14 @@ Generated: 2026-08-28T18:20:25.132Z
 ## Duplicate primary keywords
 
 - caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
+- household task load calculator tutorial: /guides/familyboard-household-task-load-calculator-tutorial/, /guides/familyboard-task-load-calculator-tutorial/
 - familyboard plant care handoff tutorial: /guides/familyboard-plant-care-handoff-log-tutorial/, /guides/familyboard-plant-care-handoff-tutorial/
 - household account list: /guides/household-account-list/, /tools/household-account-list/
 - 家電清冊: /zh-tw/guides/appliance-inventory/, /zh-tw/templates/printable-appliance-inventory/
 - 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
 - 家庭緊急資料夾: /zh-tw/guides/emergency-binder/, /zh-tw/tools/emergency-binder-generator/
 - 家庭決策紀錄工具: /zh-tw/guides/familyboard-household-decision-register-tutorial/, /zh-tw/tools/household-decision-register/
+- 家庭家務負荷計算器教學: /zh-tw/guides/familyboard-household-task-load-calculator-tutorial/, /zh-tw/guides/familyboard-task-load-calculator-tutorial/
 - 家庭文件查找演練: /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/, /zh-tw/tools/household-record-retrieval-drill-log/
 - 居家服務變更: /zh-tw/guides/home-care-service-plan-changes/, /zh-tw/tools/home-care-service-plan-change-notice-log/
 - 居家服務紀錄: /zh-tw/guides/home-care-service-visit-records/, /zh-tw/tools/home-care-visit-scope-service-result-log/
@@ -237,6 +239,7 @@ Generated: 2026-08-28T18:20:25.132Z
 - /zh-tw/guides/familyboard-household-account-list-tutorial/
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-annual-review-generator-tutorial/
+- /zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-household-decision-register-tutorial/
 - /zh-tw/guides/familyboard-household-document-index-generator-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
@@ -246,6 +249,8 @@ Generated: 2026-08-28T18:20:25.132Z
 - /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/
+- /zh-tw/guides/familyboard-household-task-load-calculator-tutorial/
+- /zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/
 - /zh-tw/guides/familyboard-important-household-document-review-tutorial/
 - /zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/
 - /zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/

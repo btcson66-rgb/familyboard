@@ -754,6 +754,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-maintenance-checklist-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-receipt-retention-organizer-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-backup-recovery-checker-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-time-window-overlap-checker-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-task-load-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -828,6 +834,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/",
     require: ["收據留存整理器教學", "受保護證據", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-household-backup-recovery-checker-tutorial/",
+    require: ["Household Backup Recovery Checker", "retrieval test"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/",
+    require: ["家庭備份復原檢查器教學", "取回測試", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-household-time-window-overlap-checker-tutorial/",
+    require: ["Household Time-Window Overlap Checker", "human buffer"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/",
+    require: ["家庭時間窗口重疊檢查器教學", "移動緩衝", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-household-task-load-calculator-tutorial/",
+    require: ["Household Task Load Calculator", "approximate weekly"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/",
+    require: ["家庭家務負荷計算器教學", "隱形工作", 'lang="zh-TW"'],
   },
   {
     path: "/ads.txt",
@@ -6168,7 +6198,7 @@ const checks = [
   },
   {
     path: "/zh-tw/guides/familyboard-household-document-index-generator-tutorial/",
-    require: ["家庭文件索引產生器教學", "控制來源", 'lang="zh-TW"'],
+    require: ["家庭文件索引產生器教學", "受保護來源", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-emergency-binder-generator-tutorial/",
@@ -6192,7 +6222,7 @@ const checks = [
   },
   {
     path: "/zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/",
-    require: ["居家服務提醒產生器教學", "家庭複查點", 'lang="zh-TW"'],
+    require: ["居家服務提醒產生器教學", "複查點", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-recurring-chore-planner-tutorial/",
@@ -6328,7 +6358,7 @@ const checks = [
   },
   {
     path: "/zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
-    require: ["緊急聯絡表產生器教學", "最小資料", 'lang="zh-TW"'],
+    require: ["緊急聯絡表產生器教學", "最少資料", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-home-emergency-drill-record-tutorial/",

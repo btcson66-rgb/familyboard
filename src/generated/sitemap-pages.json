@@ -3808,6 +3808,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-household-backup-recovery-checker-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-time-window-overlap-checker-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-task-load-calculator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4772,6 +4796,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-backup-recovery-checker-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-household-decision-register-tutorial/",
     "alternateRoute": "/guides/familyboard-household-decision-register-tutorial/",
     "indexable": true,
@@ -4830,6 +4861,20 @@
   {
     "route": "/zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/",
     "alternateRoute": "/guides/familyboard-household-subscription-cost-calculator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-task-load-calculator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-time-window-overlap-checker-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

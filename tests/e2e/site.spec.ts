@@ -60,6 +60,9 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/important-household-document-review/",
     "/tools/appliance-maintenance-checklist-generator/",
     "/tools/receipt-retention-organizer/",
+    "/tools/household-backup-recovery-checker/",
+    "/tools/household-time-window-overlap-checker/",
+    "/tools/household-task-load-calculator/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -232,6 +235,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-appliance-maintenance-checklist-generator-tutorial/",
     "/guides/familyboard-receipt-retention-organizer-tutorial/",
     "/zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/",
+    "/guides/familyboard-household-backup-recovery-checker-tutorial/",
+    "/zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/",
+    "/guides/familyboard-household-time-window-overlap-checker-tutorial/",
+    "/zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/",
+    "/guides/familyboard-household-task-load-calculator-tutorial/",
+    "/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1809,6 +1818,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/",
       alternate: "/guides/familyboard-receipt-retention-organizer-tutorial/",
       heading: "FamilyBoard 收據留存整理器教學：讓保固與退貨證明找得到",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/",
+      alternate: "/guides/familyboard-household-backup-recovery-checker-tutorial/",
+      heading: "FamilyBoard 家庭備份復原檢查器教學：不要只看匯出日期",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/",
+      alternate: "/guides/familyboard-household-time-window-overlap-checker-tutorial/",
+      heading: "FamilyBoard 家庭時間窗口重疊檢查器教學：先算端點，再問正式來源",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/",
+      alternate: "/guides/familyboard-household-task-load-calculator-tutorial/",
+      heading: "FamilyBoard 家庭家務負荷計算器教學：讓隱形工作可以被討論",
     },
   ]) {
     await page.goto(localized.route);

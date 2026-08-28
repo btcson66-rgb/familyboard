@@ -34494,6 +34494,182 @@ Receipt folders, scanners or labels may eventually be offered as optional recomm
 
 **Contextual CTA:** Organize one receipt by purpose, link only to protected evidence, assign the next owner and run a retrieval check before closing it.
 
+## Page 476 — Household Backup Recovery Checker Tutorial
+**Slug:** /guides/familyboard-household-backup-recovery-checker-tutorial/
+**Primary intent:** use a household backup recovery checker to verify scope, dates and a tested retrieval path without exposing backup credentials
+**Title tag:** FamilyBoard Backup Recovery Checker Tutorial | Test Whether Your Backup Is Findable
+**Meta description:** Learn how to use FamilyBoard's Household Backup Recovery Checker to record backup scope, export dates, retrieval observations and the next drill without uploading files.
+**Primary keyword concept:** household backup recovery checker tutorial
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-backup-recovery-checker/, /guides/familyboard-offline-backup-restore/, /guides/familyboard-browser-storage-maintenance/, /features/private-family-organizer/
+**FAQ:**
+- Q: Does the checker open or restore my backup?
+  A: No. It records the retrieval observation you perform in protected storage.
+- Q: Is a recent export proof of recovery?
+  A: No. The copy still needs a scope and retrieval test.
+- Q: Should I paste a password or full path?
+  A: No. Use a neutral custody code and keep credentials protected.
+- Q: Does it provide cloud sync?
+  A: No. FamilyBoard remains local-first and the checker is a planning aid.
+
+# How to Use FamilyBoard's Household Backup Recovery Checker
+
+A household can look healthy in the browser while its only backup is an unlabeled download nobody has opened. FamilyBoard's free [Household Backup Recovery Checker](/tools/household-backup-recovery-checker/) creates a small readiness index for export date, observed scope, last retrieval test and next drill. It never reads a file, uploads a backup or proves that a restore will succeed.
+
+## Begin with one neutral review code
+
+Use `BACKUP-REVIEW-2026-A`, not a person's name, account number or filename. Define the question first: can the household recover maintenance history, documents metadata or the whole local dataset after a browser reset? A bounded scope makes a test finishable and prevents a recent but incomplete export from looking like a disaster-recovery plan.
+
+## Record the export and test dates separately
+
+The export date says when a copy was created. The retrieval-test date says when an authorised person actually found and inspected the intended copy. Enter both from real observations. A test dated before the export, a future review date or an empty scope is a signal to correct the record, not a reason to invent a pass result.
+
+## Describe scope without secrets
+
+Write a line such as `assets and maintenance | BACKUP-2026-A | copy opened and version identified | compare the latest repair`. Keep encryption passwords, full paths, recovery keys and personal identifiers in the protected storage system. The checker needs enough context for the next role to understand what was tested, not the material that grants access.
+
+## Perform the real retrieval outside the form
+
+Use the protected drive, physical custody process or other source that holds the backup. Locate the exact copy, confirm that it opens, identify its version and compare one expected scope item. If the copy is missing, incomplete or unreadable, leave the row open and assign a next action. A green-looking date in the browser cannot substitute for this observation.
+
+## Schedule the next drill after change
+
+Run another check after meaningful household edits, a device migration, a storage change or a long period without a restore rehearsal. Choose a role and date that fit the household's capacity. Exporting after every click is unnecessary, but a durable backup should be created at a deliberate checkpoint and tested before clearing browser data or retiring a device.
+
+## Keep the boundary honest
+
+The checker does not encrypt, sync, restore, certify completeness or guarantee availability. Browser storage can be cleared and a protected copy can still fail. Keep official recovery instructions and credentials in the system designed for them. Future storage or backup products may be shown in optional affiliate space, but buying one cannot prove that this household's copy is recoverable.
+
+## Compare a known item after recovery
+
+Choose one ordinary record that should be present, such as a maintenance event or a document pointer, and compare it with the protected backup copy. This is a narrow observation, not a full forensic audit. Note what matched, what was absent and which version was examined. If the household cannot explain the difference, leave the recovery row open and ask the responsible source before declaring the backup ready.
+
+**Contextual CTA:** Enter one neutral review code, record one real backup scope and retrieval observation, then schedule the next drill with an accountable role.
+
+## Page 477 — Household Time-Window Overlap Checker Tutorial
+**Slug:** /guides/familyboard-household-time-window-overlap-checker-tutorial/
+**Primary intent:** use a household time-window overlap checker to compare two concrete windows without copying a calendar or deciding who must reschedule
+**Title tag:** FamilyBoard Time-Window Overlap Checker Tutorial | Compare Schedules Safely
+**Meta description:** Learn how to use FamilyBoard's Household Time-Window Overlap Checker to compare two local time windows, distinguish overlap from a boundary and assign the next source check.
+**Primary keyword concept:** household time-window overlap checker tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-time-window-overlap-checker/, /guides/familyboard-calendar-tutorial/, /guides/familyboard-household-schedule-conflict-review-tutorial/, /features/household-calendar/
+**FAQ:**
+- Q: Does the checker read or change my calendar?
+  A: No. It compares four values entered in the current browser.
+- Q: Is an end time equal to the next start an overlap?
+  A: No. It is a boundary that still needs travel or handoff review.
+- Q: Can the result choose which appointment wins?
+  A: No. Priority and rescheduling remain human decisions in the controlling source.
+- Q: Should I paste a full invitation or address?
+  A: No. Use short labels and a protected source pointer.
+
+# How to Use FamilyBoard's Household Time-Window Overlap Checker
+
+Two household events may look close on a calendar while their actual windows do not overlap. A school pickup, repair visit, work shift or shared car each has a start and end that can be compared quickly. FamilyBoard's free [Household Time-Window Overlap Checker](/tools/household-time-window-overlap-checker/) performs that narrow local arithmetic. It does not read calendars, contact providers, send a reschedule request or choose a priority.
+
+## Define a bounded comparison
+
+Use `WINDOW-REVIEW-2026-A` and short labels such as “school pickup” and “utility visit.” Do not paste a full invitation, address, phone number, gate code, account detail or private message. The labels should let a household role recognise the question without turning the tool into a copy of the calendar that actually controls attendance.
+
+## Enter the four real endpoints
+
+For each window, enter a date, start time and end time. The tool requires the end to be later than the start and compares values in the current browser's local time convention. It reports overlap when one window starts before the other ends and the other starts before the first ends. Exact touching is reported as a boundary, not a fabricated conflict.
+
+## Add the human buffer
+
+An arithmetic non-overlap does not prove that both commitments are possible. Travel, parking, setup, school release rules, building access and a provider's arrival range can consume the gap. Treat the result as a question: which official calendar or booking source must be checked, and who will confirm it? Record a safe pointer such as `CALENDAR-C1`, not the invitation text.
+
+## Keep authority in the source
+
+The checker cannot tell a family who has permission to change a shift, cancel a service or release a child. If windows conflict, assign the responsible role to consult the employer, school, household agreement or provider. Preserve the original request and the response date in the controlling system. The local result only explains why a follow-up was opened.
+
+## Test a handoff
+
+Ask a backup role to read the two labels, state whether the arithmetic says overlap or boundary and name the next source to verify. If they need a full address or private conversation, reduce the label or improve the protected pointer. Repeat after a date, time zone, provider window or household role changes.
+
+## Record the buffer decision
+
+Write down why the household considers a gap usable or unsafe: walking time, parking, setup, school release or provider arrival range. The checker cannot know those conditions. A short source pointer and a named decision role make the result reviewable when the schedule changes. Keep the original windows so another person can distinguish a changed appointment from a changed assumption.
+
+If a window crosses midnight, daylight-saving change or a provider's arrival range, keep that uncertainty explicit and ask the controlling source to confirm the interpretation.
+
+## Future affiliate space and boundaries
+
+Calendars, planners or travel accessories may eventually appear as optional recommendations. They cannot resolve authority, guarantee travel time, alter a provider booking or replace the official schedule. Commercial content must remain outside the comparison controls and never obscure an urgent handoff question.
+
+**Contextual CTA:** Compare two real windows, record whether the result is overlap or boundary, add a human travel buffer and assign one role to confirm the controlling source.
+
+## Page 478 — Household Task Load Calculator Tutorial
+**Slug:** /guides/familyboard-household-task-load-calculator-tutorial/
+**Primary intent:** use a household task load calculator to estimate recurring minutes for a discussion without turning the result into a fairness score
+**Title tag:** FamilyBoard Task Load Calculator Tutorial | Discuss Capacity Without Scoring People
+**Meta description:** Learn how to use FamilyBoard's Household Task Load Calculator to estimate recurring weekly minutes, expose missing work and plan a conversation without judging household members.
+**Primary keyword concept:** household task load calculator tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-task-load-calculator/, /guides/familyboard-recurring-chore-planner-tutorial/, /guides/divide-household-responsibilities/, /features/family-task-manager/
+**FAQ:**
+- Q: What does the calculator estimate?
+  A: It converts entered frequency and minutes into an approximate weekly total by neutral role code.
+- Q: Does it decide who should do a task?
+  A: No. Use the result to start a conversation and assign a real owner separately.
+- Q: Is monthly conversion a timesheet?
+  A: No. It is a transparent planning approximation.
+- Q: Can I enter health or private details?
+  A: No. Use broad labels and neutral codes; keep sensitive details protected.
+
+# How to Use FamilyBoard's Household Task Load Calculator
+
+Households often see the final action and miss preparation, waiting and follow-up. “Take out recycling” may include checking a local rule, sorting, moving a bin and returning it. FamilyBoard's free [Household Task Load Calculator](/tools/household-task-load-calculator/) turns only the entered frequency and minutes into an approximate weekly total. It does not observe the home, measure effort or declare a fair split.
+
+## Start with one planning question
+
+Use `LOAD-REVIEW-2026-A` and choose a bounded situation such as a weekly reset, new school term, move or changed work schedule. A narrow scope is easier to correct than a grand total that silently mixes every responsibility. Keep names, health details, addresses, employment information and private messages outside the calculator.
+
+## Enter one recurring task per line
+
+Use the format `task | role code | frequency | minutes per occurrence`. For example, `Trash and recycling | ROLE-A | weekly | 20` and `Filter condition review | ROLE-B | monthly | 15`. A role code is a planning label, not an identity or permission check. Keep preparation and follow-up separate when their owner or frequency differs, and leave `UNASSIGNED` visible when nobody owns the next action.
+
+## Understand the approximation
+
+The calculator applies a simple frequency factor and groups the result by role code. Monthly work is spread across a year using twelve occurrences over fifty-two weeks, so the result is transparent but not a timesheet. Holidays, illness, travel, seasonal peaks and interruptions can change real effort. Use the number to ask what was omitted, not to argue that one person owes an exact number of minutes.
+
+## Discuss invisible work with evidence
+
+After reviewing the total, ask which tasks include searching, arranging, monitoring, cleaning up or remembering. Add a separate row only when the work is genuinely recurring and can be described without sensitive context. Compare the list with the household calendar and actual handoff history. If a task is irregular or event-driven, keep it outside the recurring estimate and discuss it as a separate responsibility.
+
+## Turn the conversation into a handoff
+
+The calculator groups labels; it does not assign a person. After the discussion, create a FamilyBoard task with one accountable role, a next checkpoint and a safe source pointer. Revisit the estimate when a schedule, appliance, care arrangement or school term changes. Preserve the original review so later changes can be understood rather than rewriting history to make totals look tidy.
+
+## Include setup and follow-up honestly
+
+Before accepting a total, ask whether each row includes finding supplies, arranging access, monitoring a deadline and putting materials away. If those steps recur, record them as separate rows with their own role and frequency. If the work is rare or triggered by an event, keep it outside the weekly estimate and create a one-time task instead. This prevents a neat number from hiding the work that actually causes household friction.
+
+## Future affiliate space and boundaries
+
+Planners, labels or household services may eventually appear in a clearly marked optional block. They cannot measure unpaid work objectively, decide fairness, replace a family conversation or justify a legal or care conclusion. Commercial content must never turn an approximate planning number into a performance score.
+
+**Contextual CTA:** Enter five recurring tasks with neutral role codes, review what invisible work is missing and convert one agreed next step into an owned FamilyBoard task.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

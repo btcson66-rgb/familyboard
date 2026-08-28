@@ -3672,6 +3672,30 @@
     "headings": "How to Use FamilyBoard's Receipt Retention Organizer Give the receipt a safe purpose code Point to protected evidence Separate purchase facts from conclusions Choose retention by purpose Test retrieval before you need it Distinguish purchase proof from payment data Review before the deadline Future affiliate space and boundaries"
   },
   {
+    "title": "FamilyBoard Backup Recovery Checker Tutorial | Test Whether Your Backup Is Findable",
+    "description": "Learn how to use FamilyBoard's Household Backup Recovery Checker to record backup scope, export dates, retrieval observations and the next drill without uploading files.",
+    "route": "/guides/familyboard-household-backup-recovery-checker-tutorial/",
+    "cluster": "product",
+    "keywords": "household backup recovery checker tutorial",
+    "headings": "How to Use FamilyBoard's Household Backup Recovery Checker Begin with one neutral review code Record the export and test dates separately Describe scope without secrets Perform the real retrieval outside the form Schedule the next drill after change Keep the boundary honest Compare a known item after recovery"
+  },
+  {
+    "title": "FamilyBoard Time-Window Overlap Checker Tutorial | Compare Schedules Safely",
+    "description": "Learn how to use FamilyBoard's Household Time-Window Overlap Checker to compare two local time windows, distinguish overlap from a boundary and assign the next source check.",
+    "route": "/guides/familyboard-household-time-window-overlap-checker-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "household time-window overlap checker tutorial",
+    "headings": "How to Use FamilyBoard's Household Time-Window Overlap Checker Define a bounded comparison Enter the four real endpoints Add the human buffer Keep authority in the source Test a handoff Record the buffer decision Future affiliate space and boundaries"
+  },
+  {
+    "title": "FamilyBoard Task Load Calculator Tutorial | Discuss Capacity Without Scoring People",
+    "description": "Learn how to use FamilyBoard's Household Task Load Calculator to estimate recurring weekly minutes, expose missing work and plan a conversation without judging household members.",
+    "route": "/guides/familyboard-household-task-load-calculator-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "household task load calculator tutorial",
+    "headings": "How to Use FamilyBoard's Household Task Load Calculator Start with one planning question Enter one recurring task per line Understand the approximation Discuss invisible work with evidence Turn the conversation into a handoff Include setup and follow-up honestly Future affiliate space and boundaries"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
