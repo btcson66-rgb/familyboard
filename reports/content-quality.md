@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T02:21:24.687Z
+Generated: 2026-08-28T02:30:38.417Z
 
 ## Summary
 
-- Indexable pages: 607
-- Generated HTML routes: 624
+- Indexable pages: 608
+- Generated HTML routes: 625
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 6
-- Pages without a contextual product/tool link: 311
+- Pages without a contextual product/tool link: 312
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-28T02:21:24.687Z
 - maintenance: 52
 - household-operations: 107
 - inventory-warranty: 46
-- records-emergency: 88
+- records-emergency: 89
 - tools: 124
 
 ## Word-count range
@@ -202,6 +202,7 @@ Generated: 2026-08-28T02:21:24.687Z
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
 - /zh-tw/guides/familyboard-subscription-renewal-review/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
+- /zh-tw/guides/familyboard-utility-provider-handoff-tutorial/
 - /zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/
 - /zh-tw/guides/familyboard-water-leak-event-log-tutorial/
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/

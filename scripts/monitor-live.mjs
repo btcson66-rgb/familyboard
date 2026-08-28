@@ -60,6 +60,7 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-emergency-contact-verification-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-record-retrieval-drill-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-utility-provider-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -75,6 +76,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-contact-verification-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-utility-provider-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -727,6 +729,22 @@ const checks = [
       "家庭文件查找與交接演練怎麼做",
       "先選一個小範圍和明確收件人",
       "不要複製密碼、完整地址或私密原件",
+    ],
+  },
+  {
+    path: "/guides/familyboard-utility-provider-handoff-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Utility Provider Handoff",
+      "Define one service and one property boundary",
+      "does not identify a provider",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-utility-provider-handoff-tutorial/",
+    require: [
+      "水電、瓦斯與網路服務怎麼交接",
+      "先選一項服務和一個房屋範圍",
+      "不會自動找供應商、讀電表",
     ],
   },
   {

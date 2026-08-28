@@ -24507,6 +24507,7 @@ Is one question in scope? Is the source protected and dated? Was permission clea
 
 ## Page 354 — How to Use FamilyBoard for a Utility Provider Handoff
 **Slug:** /guides/familyboard-utility-provider-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-utility-provider-handoff-tutorial/
 **Primary intent:** learn to organise utility provider, property responsibility, outage and transfer sources without storing account or meter details in a shared record
 **Title tag:** FamilyBoard Utility Provider Handoff Tutorial | Service, Responsibility and Confirmation
 **Meta description:** Learn how to organise a utility-service handoff with FamilyBoard: map the responsible provider, protect account details, separate requests from confirmations and record the next checkpoint.
