@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T20:03:23.076Z
+Generated: 2026-08-28T20:10:53.265Z
 
 ## Summary
 
-- Indexable pages: 917
-- Generated HTML routes: 923
+- Indexable pages: 923
+- Generated HTML routes: 929
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 517
+- Pages without a contextual product/tool link: 520
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,7 +22,7 @@ Generated: 2026-08-28T20:03:23.076Z
 - inventory-warranty: 82
 - appliances: 66
 - maintenance: 89
-- household-operations: 187
+- household-operations: 193
 - records-emergency: 133
 - tools: 152
 
@@ -201,6 +201,7 @@ Generated: 2026-08-28T20:03:23.076Z
 - /zh-tw/guides/familyboard-calendar-tutorial/
 - /zh-tw/guides/familyboard-caregiver-handoff-source-authorization-tutorial/
 - /zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/
+- /zh-tw/guides/familyboard-clothing-care-repair-log-tutorial/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-consumable-change-history-tutorial/
 - /zh-tw/guides/familyboard-date-offset-planner-tutorial/
@@ -242,6 +243,7 @@ Generated: 2026-08-28T20:03:23.076Z
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-annual-review-generator-tutorial/
 - /zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/
+- /zh-tw/guides/familyboard-household-bill-source-status-tutorial/
 - /zh-tw/guides/familyboard-household-decision-register-tutorial/
 - /zh-tw/guides/familyboard-household-document-index-generator-tutorial/
 - /zh-tw/guides/familyboard-household-document-redaction-tutorial/
@@ -267,6 +269,7 @@ Generated: 2026-08-28T20:03:23.076Z
 - /zh-tw/guides/familyboard-maintenance-priority-review-tutorial/
 - /zh-tw/guides/familyboard-maintenance-tracker-tutorial/
 - /zh-tw/guides/familyboard-master-csv-edit-import/
+- /zh-tw/guides/familyboard-meal-prep-role-log-tutorial/
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
 - /zh-tw/guides/familyboard-medical-information-source-handoff-tutorial/
 - /zh-tw/guides/familyboard-meter-reading-tutorial/

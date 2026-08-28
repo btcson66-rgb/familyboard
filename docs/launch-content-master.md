@@ -35360,6 +35360,201 @@ Set a review date for the next responsible role and write what evidence should b
 
 ---
 
+## Page 490 — FamilyBoard Clothing Care and Repair Log Tutorial
+**Slug:** /guides/familyboard-clothing-care-repair-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-clothing-care-repair-log-tutorial/
+**Primary intent:** learn to use the clothing care and repair log for source-led wardrobe handoffs, seasonal storage and repair follow-up
+**Title tag:** FamilyBoard Clothing Care and Repair Log Tutorial | From Label to Follow-Up
+**Meta description:** Learn how to turn one wardrobe shelf or seasonal bin into a useful clothing care and repair timeline with safe codes, source checks, roles and dated follow-up.
+**Primary keyword concept:** clothing care and repair log tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-clothing-care-repair-log/, /guides/familyboard-purchase-delivery-evidence-tutorial/, /guides/seasonal-home-maintenance-checklist/, /privacy/
+**FAQ:**
+- Q: Does FamilyBoard interpret a garment's care symbols?
+  A: No. It records which label or manufacturer source was checked; follow that source for the item.
+- Q: Should I paste a clothing receipt or a person's name into the log?
+  A: No. Use a safe item code and keep receipts, names and orders in their protected source.
+- Q: Does marking a repair as planned mean the garment is ready?
+  A: No. A plan, provider response and observed result are separate events.
+- Q: Do I need to catalogue every garment at once?
+  A: No. Start with one shelf, drawer or seasonal bin and review the process before expanding.
+
+# How to Use FamilyBoard's Clothing Care and Repair Log
+
+Clothing records are useful when they answer a small practical question: which item is this, which source did we check, where is it, who owns the next action and what actually happened? FamilyBoard's free [Clothing Care and Repair Log](/tools/household-clothing-care-repair-log/) creates that local timeline without asking for names, addresses, orders or private messages. It does not interpret laundry symbols, select a treatment or certify a repair.
+
+## Start with one physical zone
+
+Choose one drawer, wardrobe shelf, seasonal storage box or repair pick-up area. Give the zone a date and a scope such as “winter coats, top shelf.” Twelve rows are enough for a first rehearsal. A small zone lets another household role find the same items and test whether the storage code, source pointer and next review date make sense.
+
+## Capture the label or manufacturer source
+
+Use a neutral code such as `CLOTH-A-07`, record when the label or manufacturer page was checked and point to the protected source. The log should say that a source was reviewed, not copy its full instructions. If the label, product document and household habit disagree, keep all three as distinct references and ask the responsible source before choosing water temperature, solvent, drying or ironing.
+
+## Separate condition, plan and result
+
+“Loose button observed” is a condition. “Send to repair provider” is a plan. “Provider returned the item and the household checked the result” is a later event. Keep those states separate so a moved garment is not mistaken for a repaired one. If a result is still unknown, leave the row open with a responsible role and a dated checkpoint.
+
+## Use a group only when it stays findable
+
+Everyday socks may share a category code, while a uniform with a deadline, a coat with a special label or an item already with a provider may need its own row. Grouping saves time only when the next person can identify the physical items without guessing. If a group becomes ambiguous, split it at the next review rather than rewriting the older observation.
+
+## Assign roles without publishing identities
+
+Use labels such as clothing organiser, laundry role, repair handoff role or backup household role. Add the next action and date, not a full name or contact detail. When someone changes role, create a new dated assignment so the history remains understandable. The log is a coordination index, not a directory or a quality guarantee.
+
+## Create a new seasonal version
+
+At the next change of season, make a new review date and record the actual condition and storage zone again. Do not turn last season's “stored” note into this season's “checked” result. A new version can keep the `CLOTH-A` family code while showing which facts were observed now, which repair result arrived and which source still needs checking.
+
+## Share only the minimum useful handoff
+
+Before printing or exporting, remove photos, names, addresses, orders, payment details and private conversations. A handoff may need only a safe item code, storage zone, source pointer, role and next date. Keep labels, receipts and repair tickets in their protected location; clearing browser storage does not remove a copy already downloaded or printed.
+
+## Keep commercial recommendations outside the workflow
+
+Future laundry bags, storage boxes, label makers or repair services may appear in an optional recommendation block. They cannot guarantee fabric care, repair quality or safety and must never interrupt the tool controls or replace the actual label and qualified provider source.
+
+**Contextual CTA:** Log three items from one drawer or seasonal bin, record the source actually checked, then assign the next care or repair review to a household role.
+
+---
+
+## Page 491 — FamilyBoard Meal Preparation Role Log Tutorial
+**Slug:** /guides/familyboard-meal-prep-role-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-meal-prep-role-log-tutorial/
+**Primary intent:** learn to coordinate a small set of household meal slots with source references, preparation roles and actual results
+**Title tag:** FamilyBoard Meal Prep Role Log Tutorial | Plan, Prepare and Review
+**Meta description:** Learn how to use FamilyBoard's meal preparation role log for two real meal slots, with source codes, role handoffs, dated actions and an honest result review.
+**Primary keyword concept:** household meal prep planner tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-meal-prep-role-log/, /tools/household-pantry-expiry-review-log/, /guides/familyboard-household-meeting-agenda-action-log-tutorial/, /privacy/
+**FAQ:**
+- Q: Does the log create recipes or nutrition advice?
+  A: No. It records household plans and sources; follow the applicable label, recipe or qualified source.
+- Q: Can I paste a full grocery order into a meal row?
+  A: No. Use a safe source code and keep order, address and payment details protected.
+- Q: Does assigning a preparation role prove the meal was served?
+  A: No. A plan, an action and the observed result are different states.
+- Q: Should I plan every meal before testing the tool?
+  A: No. Start with two real meal slots and expand only after the handoff works.
+
+# How to Use FamilyBoard's Meal Preparation Role Log
+
+Meal planning fails at handoff when everyone assumes someone else checked the source, bought the ingredient or recorded what happened. FamilyBoard's free [Meal Preparation Role Log](/tools/household-meal-prep-role-log/) keeps a small index of meal slots, source codes, preparation roles, dates and actual results. It is not a recipe engine, nutrition calculator, allergy adviser or food-safety authority.
+
+## Rehearse with two real meal slots
+
+Pick two meals that will actually happen this week, a weekend batch-prep session or two meals affected by a trip. Use codes such as `MEAL-2026-01` and `MEAL-2026-02`. Two rows are enough to test whether another role can reopen the correct source, see the next action and later record what was observed.
+
+## Keep the sources distinct
+
+A recipe version, a shopping list, a pantry observation and a product label answer different questions. Record safe pointers to each rather than copying their full text. The tool cannot decide a serving size, ingredient, allergen, storage method or medical suitability. When a source changes, record its date or version so the household knows which instruction was used.
+
+## Make plan, action and result visible
+
+“Monday dinner” is a slot. “Preparation role checks the source” is an action. “Meal served and result noted” is an observation. A filled date or assigned role is not proof that preparation happened. If a meal is cancelled, record the cancellation and the condition for reopening it instead of silently carrying a stale plan into the next week.
+
+## Assign roles by task
+
+Use preparation role, shopping role, pantry role, cleanup role or travel handoff role. Give each role one next action and date. A role label is more durable than a name when the household changes, but it does not grant professional authority or access to protected records. Keep health, allergy and private schedule details in their responsible source.
+
+## Review the result after serving
+
+Return to the row after the meal and record what actually happened: prepared, delayed, cancelled, source changed or result still unknown. Do not replace the original plan with a polished story. The difference between “ingredient source checked” and “meal served” helps the next weekly review find the real gap rather than repeating an assumption.
+
+## Use the log for travel and batch preparation
+
+For batch preparation, split each meal slot into a separate row with its own source and role. For travel, include only the meals and handoff actions the backup person truly needs. A temporary handoff should have an end date and a return review, so a wider sharing scope does not remain open after the trip.
+
+## Connect without copying private sources
+
+The pantry expiry log can say what was observed, while this log says which meal action comes next; a household meeting can decide priority. Link the records with safe codes instead of duplicating orders, addresses, payment data, health information or private conversations. FamilyBoard does not contact a store or upload a source.
+
+## Keep recommendations optional and honest
+
+Future meal notebooks, labels or storage products may appear beside the guide with clear disclosure. A commercial item cannot provide nutrition, allergy or food-safety advice and must never interrupt the planner controls or be required to use the free workflow.
+
+**Contextual CTA:** Add two real meal slots, assign one preparation role and source code to each, then return after serving to record the first observed result.
+
+---
+
+## Page 492 — FamilyBoard Household Bill Source and Status Tutorial
+**Slug:** /guides/familyboard-household-bill-source-status-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-bill-source-status-tutorial/
+**Primary intent:** learn to track household bill and notice sources, dates, owner roles and confirmations without storing payment details
+**Title tag:** FamilyBoard Household Bill Organizer Tutorial | Source Before Status
+**Meta description:** Learn how to use FamilyBoard's household bill source log to separate a current notice, due date, owner action and provider confirmation without copying account or payment data.
+**Primary keyword concept:** household bill organizer tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-bill-source-status-log/, /guides/recurring-bills-tracker/, /guides/organize-household-subscriptions/, /privacy/
+**FAQ:**
+- Q: Does the log calculate an amount or decide whether a bill is valid?
+  A: No. It points back to the current bill and responsible provider or qualified source.
+- Q: Can I enter an account number, balance or card detail?
+  A: No. Use a safe service code and keep financial details in their protected source.
+- Q: Does recording a due date prove payment?
+  A: No. Payment or provider response needs its own confirmation source.
+- Q: Should every household bill be entered on the first day?
+  A: No. Start with two current notices and test the handoff before expanding.
+
+# How to Use FamilyBoard's Household Bill Source and Status Log
+
+A bill is easy to misunderstand when its notice is in one inbox, its due date is on paper and its response is in a private message. FamilyBoard's free [Household Bill Source and Status Log](/tools/household-bill-source-status-log/) creates a dated coordination index for safe service codes, source checks, owner roles and next actions. It does not calculate a bill, validate a debt, store payment data or decide a legal deadline.
+
+## Begin with two current notices
+
+Choose two real items, such as a utility notice and an internet statement. Use neutral codes like `BILL-2026-03-A`, record when each source was checked and set the next review date. Two rows expose missing ownership or unclear sources quickly; importing every historic bill can bury the action that matters this week.
+
+## Record the source before the status
+
+Point to the current provider, building, landlord, government or other controlling source and record its date or version. “Source checked” is an observation. “Payment planned” is an action. “Provider confirmation preserved” is a result. Never let a calendar reminder or a copied promise stand in for the source that controls the actual amount or obligation.
+
+## Protect account and payment details
+
+Do not paste account numbers, balances, card data, bank information, full addresses, complete statements or private messages. A safe service code lets a household role find the protected source without turning a shared log into a financial dossier. A FamilyBoard export can still contain the coordination record, so inspect the scope before sharing it.
+
+## Assign one owner and one next action
+
+Use labels such as bill review role, backup household role, notice organiser or service handoff role. Add one next action and date for each open row. If the role changes, create a new dated event instead of erasing who was expected to act. The log coordinates a household; it does not grant banking access or authority to dispute a charge.
+
+## Keep disputes and refunds open
+
+If an amount, service, contract, refund or deadline is unclear, record the question and the responsible source. Do not turn “message sent,” “refund promised” or “dispute opened” into a completed result. Follow the current provider process, official notice and qualified financial or legal advice that applies to the situation.
+
+## Run a weekly or monthly review
+
+Start with rows waiting for a source, owner, payment confirmation or provider reply. Then check the next due or review dates. Separate utilities, internet, building fees, rent and refunds when their source and escalation path differ. A short review is more reliable than one giant recurring checklist no one opens.
+
+## Prepare a temporary handoff safely
+
+For travel, share only the safe service code, due date, owner role and response path that the backup person needs. Set an end date, recover old printouts or downloads and review the rows when the primary role returns. Do not share a login, full account number or payment evidence merely to make a handoff convenient.
+
+## Keep commercial tools outside the decision
+
+Future folders, scanners or budgeting notebooks may appear as optional recommendations with disclosure. They cannot decide a debt, fee, deadline, payment outcome or legal right and must never interrupt the bill workflow or replace the current provider source.
+
+**Contextual CTA:** Add two current notices with safe source codes, assign one next action to each, then record the first real provider confirmation separately from the due date.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

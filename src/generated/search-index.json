@@ -3784,6 +3784,30 @@
     "headings": "How to Use FamilyBoard for a Rental Home Maintenance Handoff Start with a safe property reference Describe the observed condition Use the formal request channel Define an access window safely Separate response from result Preserve evidence without over-sharing Keep legal and product boundaries visible Close the loop with a dated review"
   },
   {
+    "title": "FamilyBoard Clothing Care and Repair Log Tutorial | From Label to Follow-Up",
+    "description": "Learn how to turn one wardrobe shelf or seasonal bin into a useful clothing care and repair timeline with safe codes, source checks, roles and dated follow-up.",
+    "route": "/guides/familyboard-clothing-care-repair-log-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "clothing care and repair log tutorial",
+    "headings": "How to Use FamilyBoard's Clothing Care and Repair Log Start with one physical zone Capture the label or manufacturer source Separate condition, plan and result Use a group only when it stays findable Assign roles without publishing identities Create a new seasonal version Share only the minimum useful handoff Keep commercial recommendations outside the workflow"
+  },
+  {
+    "title": "FamilyBoard Meal Prep Role Log Tutorial | Plan, Prepare and Review",
+    "description": "Learn how to use FamilyBoard's meal preparation role log for two real meal slots, with source codes, role handoffs, dated actions and an honest result review.",
+    "route": "/guides/familyboard-meal-prep-role-log-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "household meal prep planner tutorial",
+    "headings": "How to Use FamilyBoard's Meal Preparation Role Log Rehearse with two real meal slots Keep the sources distinct Make plan, action and result visible Assign roles by task Review the result after serving Use the log for travel and batch preparation Connect without copying private sources Keep recommendations optional and honest"
+  },
+  {
+    "title": "FamilyBoard Household Bill Organizer Tutorial | Source Before Status",
+    "description": "Learn how to use FamilyBoard's household bill source log to separate a current notice, due date, owner action and provider confirmation without copying account or payment data.",
+    "route": "/guides/familyboard-household-bill-source-status-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "household bill organizer tutorial",
+    "headings": "How to Use FamilyBoard's Household Bill Source and Status Log Begin with two current notices Record the source before the status Protect account and payment details Assign one owner and one next action Keep disputes and refunds open Run a weekly or monthly review Prepare a temporary handoff safely Keep commercial tools outside the decision"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

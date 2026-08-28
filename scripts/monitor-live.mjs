@@ -782,6 +782,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-document-redaction-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-rental-home-maintenance-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-clothing-care-repair-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-clothing-care-repair-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-meal-prep-role-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-meal-prep-role-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-bill-source-status-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-bill-source-status-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1399,6 +1405,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
     require: ["租屋維修交接教學", "租約"],
+  },
+  {
+    path: "/guides/familyboard-clothing-care-repair-log-tutorial/",
+    require: ["Clothing Care and Repair Log", "label"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-clothing-care-repair-log-tutorial/",
+    require: ["衣物洗標與修補紀錄教學", "洗標"],
+  },
+  {
+    path: "/guides/familyboard-meal-prep-role-log-tutorial/",
+    require: ["Meal Preparation Role Log", "meal slots"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-meal-prep-role-log-tutorial/",
+    require: ["家庭備餐分工教學", "餐次"],
+  },
+  {
+    path: "/guides/familyboard-household-bill-source-status-tutorial/",
+    require: ["Household Bill Source and Status Log", "payment data"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-bill-source-status-tutorial/",
+    require: ["家庭帳單來源追蹤教學", "帳號"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",

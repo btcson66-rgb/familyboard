@@ -3920,6 +3920,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-clothing-care-repair-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-clothing-care-repair-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-meal-prep-role-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-meal-prep-role-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-bill-source-status-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-bill-source-status-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4618,6 +4642,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-clothing-care-repair-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-clothing-care-repair-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-clothing-care-tutorial/",
     "alternateRoute": "/guides/familyboard-clothing-care-tutorial/",
     "indexable": true,
@@ -4905,6 +4936,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-household-bill-source-status-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-bill-source-status-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-household-decision-register-tutorial/",
     "alternateRoute": "/guides/familyboard-household-decision-register-tutorial/",
     "indexable": true,
@@ -5075,6 +5113,13 @@
   {
     "route": "/zh-tw/guides/familyboard-master-csv-edit-import/",
     "alternateRoute": "/guides/familyboard-master-csv-edit-import/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-meal-prep-role-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-meal-prep-role-log-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

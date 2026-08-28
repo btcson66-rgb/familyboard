@@ -266,6 +266,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-household-document-redaction-tutorial/",
     "/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
     "/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+    "/guides/familyboard-clothing-care-repair-log-tutorial/",
+    "/zh-tw/guides/familyboard-clothing-care-repair-log-tutorial/",
+    "/guides/familyboard-meal-prep-role-log-tutorial/",
+    "/zh-tw/guides/familyboard-meal-prep-role-log-tutorial/",
+    "/guides/familyboard-household-bill-source-status-tutorial/",
+    "/zh-tw/guides/familyboard-household-bill-source-status-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1913,6 +1919,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
       alternate: "/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
       heading: "FamilyBoard 租屋維修交接教學：保留清楚的修繕時間線",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-clothing-care-repair-log-tutorial/",
+      alternate: "/guides/familyboard-clothing-care-repair-log-tutorial/",
+      heading: "FamilyBoard 衣物洗標與修補紀錄教學：從來源到換季複查",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-meal-prep-role-log-tutorial/",
+      alternate: "/guides/familyboard-meal-prep-role-log-tutorial/",
+      heading: "FamilyBoard 家庭備餐分工教學：從餐次計畫到供餐後結果",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-bill-source-status-tutorial/",
+      alternate: "/guides/familyboard-household-bill-source-status-tutorial/",
+      heading: "FamilyBoard 家庭帳單來源追蹤教學：先核對來源，再記錄狀態",
     },
   ]) {
     await page.goto(localized.route);
@@ -4592,6 +4613,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-clothing-care-repair-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-clothing-care-repair-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-meal-prep-role-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-meal-prep-role-log-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-bill-source-status-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-bill-source-status-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-seasonal-reset-tutorial/",
