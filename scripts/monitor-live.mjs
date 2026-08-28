@@ -61,6 +61,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/winter-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/preventive-home-maintenance/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/maintenance-priorities/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/refrigerator-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/freezer-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/washing-machine-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -115,6 +118,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/winter-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/preventive-home-maintenance/</loc>",
       "<loc>https://familyboard.win/guides/maintenance-priorities/</loc>",
+      "<loc>https://familyboard.win/guides/refrigerator-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/freezer-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/washing-machine-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -967,6 +973,30 @@ const checks = [
       "居家維護優先順序怎麼排",
       "先分四個層級",
       "不是安全認證，也不是自動替家庭決定",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/refrigerator-maintenance-checklist/",
+    require: [
+      "冰箱保養清單怎麼做",
+      "每月查看冷藏與冷凍實際溫度",
+      "不是冷媒、電氣或壓縮機維修指令",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/freezer-maintenance-checklist/",
+    require: [
+      "冷凍庫保養清單怎麼做",
+      "事先記錄停電時的流程",
+      "不是食物安全判定或電氣維修指令",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/washing-machine-maintenance-checklist/",
+    require: [
+      "洗衣機保養清單怎麼做",
+      "前開門膠圈要留下乾燥習慣",
+      "不是拆機、電氣或水管施工指令",
     ],
   },
   {

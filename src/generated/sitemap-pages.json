@@ -449,7 +449,7 @@
   },
   {
     "route": "/guides/refrigerator-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/refrigerator-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -457,7 +457,7 @@
   },
   {
     "route": "/guides/freezer-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/freezer-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -465,7 +465,7 @@
   },
   {
     "route": "/guides/washing-machine-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/washing-machine-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3863,6 +3863,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/freezer-maintenance-checklist/",
+    "alternateRoute": "/guides/freezer-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/",
     "alternateRoute": "/tools/home-care-charge-service-payment-discrepancy-log/",
     "indexable": true,
@@ -4836,6 +4843,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/refrigerator-maintenance-checklist/",
+    "alternateRoute": "/guides/refrigerator-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/renovation-records/",
     "alternateRoute": "/guides/renovation-records/",
     "indexable": true,
@@ -4994,6 +5008,13 @@
     "alternateRoute": "/features/warranty-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/washing-machine-maintenance-checklist/",
+    "alternateRoute": "/guides/washing-machine-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

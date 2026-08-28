@@ -150,6 +150,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/winter-home-maintenance-checklist/",
     "/guides/preventive-home-maintenance/",
     "/guides/maintenance-priorities/",
+    "/guides/refrigerator-maintenance-checklist/",
+    "/guides/freezer-maintenance-checklist/",
+    "/guides/washing-machine-maintenance-checklist/",
     "/guides/familyboard-utility-provider-handoff-tutorial/",
     "/guides/familyboard-vehicle-document-source-status-tutorial/",
     "/guides/familyboard-record-retrieval-drill-tutorial/",
@@ -416,6 +419,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/winter-home-maintenance-checklist/",
     "/zh-tw/guides/preventive-home-maintenance/",
     "/zh-tw/guides/maintenance-priorities/",
+    "/zh-tw/guides/refrigerator-maintenance-checklist/",
+    "/zh-tw/guides/freezer-maintenance-checklist/",
+    "/zh-tw/guides/washing-machine-maintenance-checklist/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3600,6 +3606,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     "https://familyboard.win/zh-tw/guides/maintenance-priorities/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/refrigerator-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/freezer-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/washing-machine-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/",
   );
   expect(sitemap).toContain(
@@ -3763,6 +3778,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/maintenance-priorities/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/refrigerator-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/freezer-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/washing-machine-maintenance-checklist/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

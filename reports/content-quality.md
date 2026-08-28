@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T03:54:03.514Z
+Generated: 2026-08-28T04:04:16.794Z
 
 ## Summary
 
-- Indexable pages: 628
-- Generated HTML routes: 645
+- Indexable pages: 631
+- Generated HTML routes: 648
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 331
+- Pages without a contextual product/tool link: 334
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,7 +19,7 @@ Generated: 2026-08-28T03:54:03.514Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 30
+- appliances: 33
 - maintenance: 69
 - household-operations: 109
 - inventory-warranty: 46
@@ -215,6 +215,7 @@ Generated: 2026-08-28T03:54:03.514Z
 - /zh-tw/guides/familyboard-water-leak-event-log-tutorial/
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
 - /zh-tw/guides/first-time-homeowner-maintenance-guide/
+- /zh-tw/guides/freezer-maintenance-checklist/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
 - /zh-tw/guides/home-care-service-fees-and-billing/
@@ -258,6 +259,7 @@ Generated: 2026-08-28T03:54:03.514Z
 - /zh-tw/guides/product-registration-tracker/
 - /zh-tw/guides/purchase-receipt-organizer/
 - /zh-tw/guides/quarterly-home-maintenance-checklist/
+- /zh-tw/guides/refrigerator-maintenance-checklist/
 - /zh-tw/guides/renovation-records/
 - /zh-tw/guides/rental-home-maintenance-log/
 - /zh-tw/guides/rental-security-deposit-move-out-claims/
@@ -270,6 +272,7 @@ Generated: 2026-08-28T03:54:03.514Z
 - /zh-tw/guides/storm-preparation-home-checklist/
 - /zh-tw/guides/subscription-cancellation-refund-records/
 - /zh-tw/guides/summer-home-maintenance-checklist/
+- /zh-tw/guides/washing-machine-maintenance-checklist/
 - /zh-tw/guides/water-leak-photo-evidence-records/
 - /zh-tw/guides/water-leak-response-home-records/
 - /zh-tw/guides/winter-home-maintenance-checklist/
