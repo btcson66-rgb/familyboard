@@ -55,6 +55,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/first-time-homeowner-maintenance-guide/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/apartment-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/condo-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/rental-home-maintenance-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-repair-history/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -103,6 +106,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/first-time-homeowner-maintenance-guide/</loc>",
       "<loc>https://familyboard.win/guides/apartment-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/condo-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/rental-home-maintenance-log/</loc>",
+      "<loc>https://familyboard.win/guides/home-maintenance-records/</loc>",
+      "<loc>https://familyboard.win/guides/home-repair-history/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -906,6 +912,30 @@ const checks = [
     require: [
       "大樓公寓維護清單怎麼分",
       "先把兩個範圍建成兩個來源群組",
+      "不是建築鑑定、施工或法律意見",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/rental-home-maintenance-log/",
+    require: [
+      "租屋維護紀錄怎麼寫",
+      "一筆問題至少留下七個欄位",
+      "不是法律意見，也不替租約判定責任",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-maintenance-records/",
+    require: [
+      "居家維護紀錄要留什麼",
+      "五個欄位先寫對",
+      "抽屜裡有一疊發票",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-repair-history/",
+    require: [
+      "居家修繕歷史怎麼整理",
+      "先寫症狀，再放專業判斷",
       "不是建築鑑定、施工或法律意見",
     ],
   },

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T03:30:24.179Z
+Generated: 2026-08-28T03:40:47.205Z
 
 ## Summary
 
-- Indexable pages: 622
-- Generated HTML routes: 639
+- Indexable pages: 625
+- Generated HTML routes: 642
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 325
+- Pages without a contextual product/tool link: 328
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,7 +20,7 @@ Generated: 2026-08-28T03:30:24.179Z
 - printables: 20
 - product: 120
 - appliances: 30
-- maintenance: 63
+- maintenance: 66
 - household-operations: 109
 - inventory-warranty: 46
 - records-emergency: 89
@@ -226,7 +226,9 @@ Generated: 2026-08-28T03:30:24.179Z
 - /zh-tw/guides/home-improvement-receipts/
 - /zh-tw/guides/home-maintenance-calendar/
 - /zh-tw/guides/home-maintenance-log/
+- /zh-tw/guides/home-maintenance-records/
 - /zh-tw/guides/home-maintenance-schedule/
+- /zh-tw/guides/home-repair-history/
 - /zh-tw/guides/home-service-provider-list/
 - /zh-tw/guides/household-account-list/
 - /zh-tw/guides/household-admin-backup-person/
@@ -255,6 +257,7 @@ Generated: 2026-08-28T03:30:24.179Z
 - /zh-tw/guides/purchase-receipt-organizer/
 - /zh-tw/guides/quarterly-home-maintenance-checklist/
 - /zh-tw/guides/renovation-records/
+- /zh-tw/guides/rental-home-maintenance-log/
 - /zh-tw/guides/rental-security-deposit-move-out-claims/
 - /zh-tw/guides/repair-history/
 - /zh-tw/guides/room-by-room-home-inventory/

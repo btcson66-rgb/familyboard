@@ -144,6 +144,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/first-time-homeowner-maintenance-guide/",
     "/guides/apartment-maintenance-checklist/",
     "/guides/condo-maintenance-checklist/",
+    "/guides/rental-home-maintenance-log/",
+    "/guides/home-maintenance-records/",
+    "/guides/home-repair-history/",
     "/guides/familyboard-utility-provider-handoff-tutorial/",
     "/guides/familyboard-vehicle-document-source-status-tutorial/",
     "/guides/familyboard-record-retrieval-drill-tutorial/",
@@ -404,6 +407,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/first-time-homeowner-maintenance-guide/",
     "/zh-tw/guides/apartment-maintenance-checklist/",
     "/zh-tw/guides/condo-maintenance-checklist/",
+    "/zh-tw/guides/rental-home-maintenance-log/",
+    "/zh-tw/guides/home-maintenance-records/",
+    "/zh-tw/guides/home-repair-history/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3570,6 +3576,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     "https://familyboard.win/zh-tw/guides/condo-maintenance-checklist/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/rental-home-maintenance-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/home-maintenance-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/home-repair-history/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/",
   );
   expect(sitemap).toContain(
@@ -3715,6 +3730,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/condo-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/rental-home-maintenance-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/home-maintenance-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/home-repair-history/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

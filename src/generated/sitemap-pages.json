@@ -249,7 +249,7 @@
   },
   {
     "route": "/guides/rental-home-maintenance-log/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/rental-home-maintenance-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -257,7 +257,7 @@
   },
   {
     "route": "/guides/home-maintenance-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-maintenance-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -265,7 +265,7 @@
   },
   {
     "route": "/guides/home-repair-history/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-repair-history/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -4024,6 +4024,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/home-maintenance-records/",
+    "alternateRoute": "/guides/home-maintenance-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/home-maintenance-schedule-generator/",
     "alternateRoute": "/tools/home-maintenance-schedule-generator/",
     "indexable": true,
@@ -4056,6 +4063,13 @@
     "alternateRoute": "/tools/home-repair-cost-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-repair-history/",
+    "alternateRoute": "/guides/home-repair-history/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -4812,6 +4826,13 @@
     "alternateRoute": "/guides/renovation-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/rental-home-maintenance-log/",
+    "alternateRoute": "/guides/rental-home-maintenance-log/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
