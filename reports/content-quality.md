@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T03:08:10.661Z
+Generated: 2026-08-28T03:19:10.672Z
 
 ## Summary
 
-- Indexable pages: 616
-- Generated HTML routes: 633
+- Indexable pages: 619
+- Generated HTML routes: 636
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 319
+- Pages without a contextual product/tool link: 322
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,7 +20,7 @@ Generated: 2026-08-28T03:08:10.661Z
 - printables: 20
 - product: 120
 - appliances: 30
-- maintenance: 57
+- maintenance: 60
 - household-operations: 109
 - inventory-warranty: 46
 - records-emergency: 89
@@ -141,6 +141,7 @@ Generated: 2026-08-28T03:08:10.661Z
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
+- /zh-tw/guides/fall-home-maintenance-checklist/
 - /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
 - /zh-tw/guides/familyboard-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-bill-review-tutorial/
@@ -256,9 +257,11 @@ Generated: 2026-08-28T03:08:10.661Z
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/guides/seasonal-home-maintenance-checklist/
 - /zh-tw/guides/service-history/
+- /zh-tw/guides/spring-home-maintenance-checklist/
 - /zh-tw/guides/storage-unit-inventory/
 - /zh-tw/guides/storm-preparation-home-checklist/
 - /zh-tw/guides/subscription-cancellation-refund-records/
+- /zh-tw/guides/summer-home-maintenance-checklist/
 - /zh-tw/guides/water-leak-photo-evidence-records/
 - /zh-tw/guides/water-leak-response-home-records/
 - /zh-tw/

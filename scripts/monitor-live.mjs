@@ -49,6 +49,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/monthly-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/quarterly-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/seasonal-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/spring-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/summer-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/fall-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -91,6 +94,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/monthly-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/quarterly-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/seasonal-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/spring-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/summer-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/fall-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -847,6 +853,30 @@ const checks = [
       "季節居家維護清單怎麼排",
       "梅雨、颱風、酷暑",
       "不是施工或安全指令",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/spring-home-maintenance-checklist/",
+    require: [
+      "春季居家維護清單怎麼做",
+      "梅雨前先看水會往哪裡走",
+      "不是驗屋、施工或防水保證",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/summer-home-maintenance-checklist/",
+    require: [
+      "夏季居家維護清單怎麼排",
+      "建立冷氣與除濕的使用基準",
+      "不是電氣檢查",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/fall-home-maintenance-checklist/",
+    require: [
+      "秋季居家維護清單怎麼做",
+      "颱風或豪雨後先留下可重現的觀察",
+      "不是颱風預測、結構鑑定或暖氣施工指令",
     ],
   },
   {
