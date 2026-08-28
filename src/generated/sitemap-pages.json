@@ -529,7 +529,7 @@
   },
   {
     "route": "/guides/furnace-maintenance-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/furnace-maintenance-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -537,7 +537,7 @@
   },
   {
     "route": "/guides/heat-pump-maintenance-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/heat-pump-maintenance-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -545,7 +545,7 @@
   },
   {
     "route": "/guides/water-heater-maintenance-records/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/water-heater-maintenance-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3913,8 +3913,22 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/furnace-maintenance-records/",
+    "alternateRoute": "/guides/furnace-maintenance-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/furniture-inventory/",
     "alternateRoute": "/guides/furniture-inventory/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/heat-pump-maintenance-records/",
+    "alternateRoute": "/guides/heat-pump-maintenance-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5140,6 +5154,13 @@
   {
     "route": "/zh-tw/guides/washing-machine-maintenance-checklist/",
     "alternateRoute": "/guides/washing-machine-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/water-heater-maintenance-records/",
+    "alternateRoute": "/guides/water-heater-maintenance-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

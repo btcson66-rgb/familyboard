@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T05:41:29.460Z
+Generated: 2026-08-28T05:52:19.266Z
 
 ## Summary
 
-- Indexable pages: 649
-- Generated HTML routes: 666
+- Indexable pages: 652
+- Generated HTML routes: 669
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 351
+- Pages without a contextual product/tool link: 354
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,7 +19,7 @@ Generated: 2026-08-28T05:41:29.460Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 41
+- appliances: 44
 - maintenance: 76
 - household-operations: 109
 - inventory-warranty: 47
@@ -221,7 +221,9 @@ Generated: 2026-08-28T05:41:29.460Z
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
 - /zh-tw/guides/first-time-homeowner-maintenance-guide/
 - /zh-tw/guides/freezer-maintenance-checklist/
+- /zh-tw/guides/furnace-maintenance-records/
 - /zh-tw/guides/furniture-inventory/
+- /zh-tw/guides/heat-pump-maintenance-records/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
 - /zh-tw/guides/home-care-service-fees-and-billing/
@@ -289,6 +291,7 @@ Generated: 2026-08-28T05:41:29.460Z
 - /zh-tw/guides/subscription-cancellation-refund-records/
 - /zh-tw/guides/summer-home-maintenance-checklist/
 - /zh-tw/guides/washing-machine-maintenance-checklist/
+- /zh-tw/guides/water-heater-maintenance-records/
 - /zh-tw/guides/water-leak-photo-evidence-records/
 - /zh-tw/guides/water-leak-response-home-records/
 - /zh-tw/guides/winter-home-maintenance-checklist/

@@ -80,6 +80,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/hvac-filter-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/computer-electronics-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/furniture-inventory/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/furnace-maintenance-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/heat-pump-maintenance-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/water-heater-maintenance-records/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1159,6 +1162,33 @@ const checks = [
       'hreflang="en"',
       "寬深高要連同動線一起量",
       "租屋、搬家與轉售要用不同事件",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/furnace-maintenance-records/",
+    require: [
+      "燃氣暖爐維護紀錄",
+      'hreflang="en"',
+      "一氧化碳警報是緊急事件",
+      "把症狀寫成觀察，不寫成診斷",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/heat-pump-maintenance-records/",
+    require: [
+      "熱泵維護紀錄",
+      'hreflang="en"',
+      "除霜循環要記錄開始、結束和環境",
+      "沒有燃燒，不代表沒有安全界線",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/water-heater-maintenance-records/",
+    require: [
+      "熱水器維護紀錄",
+      'hreflang="en"',
+      "把「查看」和「拆修」分清楚",
+      "漏水與汰換規劃是兩條時間線",
     ],
   },
   {
