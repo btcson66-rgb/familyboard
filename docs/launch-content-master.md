@@ -36770,6 +36770,161 @@ FamilyBoard is local-first and does not silently update contacts across devices.
 
 ---
 
+---
+
+## Page 514 — FamilyBoard Move-Out Condition Tutorial
+**Slug:** /guides/familyboard-move-out-condition-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-move-out-condition-tutorial/
+**Primary intent:** create a factual move-out walkthrough record with rooms, keys, meters and unresolved actions
+**Title tag:** FamilyBoard Move-Out Condition Tutorial | Record a Fair Walkthrough
+**Meta description:** Learn how to use FamilyBoard’s move-out condition generator to record observations, evidence references, keys, meters and follow-up without making legal or deposit claims.
+**Primary keyword concept:** FamilyBoard move-out condition report
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/move-out-condition-record-generator/, /guides/familyboard-move-in-checklist-tutorial/, /guides/familyboard-household-document-redaction-tutorial/, /privacy/
+**FAQ:**
+- Q: Is the generated record a signed move-out inspection form?
+  A: No. It is a private unsigned working record. The lease, required form and local process determine what counts as an official inspection or agreement.
+- Q: Should I label a condition as tenant damage?
+  A: Record what was observed and link the starting evidence. Cause, responsibility, normal wear and permitted charges need the controlling agreement, evidence and qualified advice.
+- Q: Can I put a lockbox PIN in the keys table?
+  A: No. Record the item and return status, then point to the protected credential process without copying the PIN.
+- Q: Does the report calculate a deposit refund?
+  A: No. It organizes observations and next actions; deposit rules, deductions and deadlines vary by lease and jurisdiction.
+
+# FamilyBoard Move-Out Condition Tutorial: Record a Fair Walkthrough
+
+A move-out walkthrough becomes useful when another person can understand what was seen, when it was seen, which original file supports it and what still needs an answer. FamilyBoard’s free move-out condition generator creates a private working record for rooms, keys or access items, and meters or services. It runs in the browser and does not send entries to FamilyBoard’s server. It is not a signed inspection, lease addendum, invoice, deposit statement or legal notice. Use the official process required by the lease and local rules for those outcomes.
+
+## Prepare the starting evidence first
+
+Before opening the generator, collect the version used for comparison: a signed move-in inventory, dated photos, an amendment, a repair record or an agreed checklist. Give it a retrievable label such as `2025-09-01 check-in photos, original export`. “Old photos” is too vague when several folders exist. Keep originals unchanged and use a short pointer in FamilyBoard rather than pasting a private address, email thread or identity document.
+
+Record the premises with a neutral label, the actual inspection date and whether the stage is a self-check, joint walkthrough or follow-up. A pre-handover observation by one person should not silently become a finding accepted by everyone. List participants by role when that is enough. Names in the participant field provide context; they are not signatures, identity verification or proof of authority.
+
+## Write observations instead of verdicts
+
+Each condition row combines an area, observed condition, evidence reference, next action and status. Describe what a person could see or what occurred during a safe agreed check: “dark mark about four centimetres wide below the bedroom window” is more retrievable than “tenant damage.” “Cabinet dry during the joint check” is narrower than “plumbing perfect.” Cause, responsibility, normal wear, repair scope and cost may require the starting record, contract language, a professional diagnosis or a formal process. The generator deliberately does not infer them.
+
+Choose `Open` when work or documentation remains, `Ready to confirm` when the next review has enough material, `Disputed` when accounts differ and `Confirmed` only when the participants actually confirmed the row through their process. These are workflow labels, not legal conclusions. A Disputed row does not decide who is right; it prevents an unresolved issue from looking settled. Give every Open or Disputed row an owner and next date.
+
+## Count keys and readings without exposing secrets
+
+Use one row per key, card, remote, parking device or other physical access item. Enter a count, return status and evidence reference. Never type a lockbox PIN, alarm code, smart-lock password or other credential. Say that a credential was changed through a protected process, then keep the secret in that channel.
+
+For meters or services, record the observed reading, unit and evidence reference exactly as shown. If a meter was inaccessible or centrally managed, record that limitation and the source needed next. A reading is not a final bill, and an observation is not proof that a service account was transferred.
+
+Review the status counts before ending the walkthrough. Preserve disagreement, export a protected copy beside the original photos and complete any official signature or notice separately. Future affiliate panels for folders, labels or inspection supplies may appear outside the form with clear disclosure and an easy skip; they cannot decide liability, calculate a deposit or replace the lease process.
+
+**Contextual CTA:** Run one calm walkthrough, link each observation to its original evidence and assign every unresolved row before the official handover.
+
+---
+
+## Page 515 — FamilyBoard Emergency Drill Tutorial
+**Slug:** /guides/familyboard-emergency-drill-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-emergency-drill-tutorial/
+**Primary intent:** document a safe household emergency exercise and turn observed gaps into owned follow-up
+**Title tag:** FamilyBoard Emergency Drill Tutorial | Practice, Observe and Improve
+**Meta description:** Learn how to record a calm household emergency drill in FamilyBoard, preserve the source plan, protect sensitive details and assign follow-up without claiming safety certification.
+**Primary keyword concept:** FamilyBoard emergency drill record
+**Cluster:** records-emergency
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/home-emergency-drill-record-generator/, /guides/home-evacuation-information/, /guides/familyboard-emergency-contact-verification-tutorial/, /privacy/
+**FAQ:**
+- Q: Does a completed drill prove that our home is safe?
+  A: No. It records one exercise under stated conditions. Authorities, building procedures and qualified professionals control real emergency decisions.
+- Q: Should the drill be a surprise?
+  A: Not by default. Announce a bounded, low-risk exercise and stop if anyone feels unsafe or conditions change.
+- Q: Does a fast time mean the plan passed?
+  A: No. Duration is one observation; route, ability, scenario, building rules and unresolved gaps matter too.
+- Q: Can the drill record hold medical details?
+  A: Keep diagnoses, medication instructions and full care records in protected sources. Use roles and pointers in the exercise record.
+
+# FamilyBoard Emergency Drill Tutorial: Practice, Observe and Improve
+
+An emergency plan can look complete while depending on a blocked route, a contact nobody has verified or a support role nobody accepted. A calm, announced household exercise can expose those gaps before a real event. FamilyBoard’s free emergency drill generator records the source plan, participants, phase observations, communication checks, support roles, status counts and follow-up. It is not a fire-code inspection, evacuation order, medical plan, safety certificate or real-time emergency instruction. Local authorities, emergency services, building management and current conditions remain in charge.
+
+## Choose one scenario and source
+
+Start with the guidance that applies to the household: a local emergency-management page, fire department material, building evacuation plan, school or care plan. Save its title, review date and version pointer. Fire, earthquake, flood, storm and hazardous-material scenarios do not share identical actions. Do not copy a generic fire route into an earthquake exercise just because the form says “evacuation.” If local guidance has changed, update the household plan before relying on an old note.
+
+Define the exercise boundary before starting. A safe walk-through may discuss exits, the meeting reference and a backup contact without creating smoke, locking a door, disconnecting power, using an elevator contrary to building rules or carrying someone without a safe agreed method. Stop and mark the exercise as stopped for safety if a participant feels unsafe, accessibility equipment cannot be used, a route is unsuitable or the building asks you to stop. An honest stopped record is more useful than a forced pass.
+
+## Record roles and observations
+
+List participants as names or roles only as needed. The record does not verify identity, training, consent or attendance. Include caregiver, child, older adult, disability or pet-support roles when relevant, but keep diagnoses, medication doses and full care plans in their protected sources. Each observation includes a phase, planned check, observed result, improvement and owner, and status. Write “backup contact not reached during announced test” rather than “communication failed forever.” A result describes this exercise, not every future event.
+
+Use statuses such as `Observed as planned`, `Needs correction`, `Not tested` and `Stopped for safety` consistently. A duration can help compare the same bounded exercise later, but it is not a universal safety score. Route condition, weather, dwelling layout, participant abilities, simulated steps and official requirements all affect the number. Assign a concrete owner and follow-up date for every gap. Keep the original exercise date; create a new record after a correction instead of rewriting history.
+
+## Review communication and reunion safely
+
+Test the agreed communication method without publishing precise routines or private numbers. Record whether the role was understood, the source was current and the message was acknowledged under the exercise boundary. A delivered message is not proof that a person will answer during a real emergency. If contacts changed, use the protected contact source and the verification workflow rather than copying a directory into the drill record.
+
+After the exercise, review open rows with the household and the authoritative plan. Export a protected backup when the history matters. Future affiliate panels for flashlights, signage or planners may sit outside the drill form with clear disclosure and an easy skip; they cannot certify safety, contact emergency services or choose a route during a live hazard.
+
+**Contextual CTA:** Announce one low-risk scenario, record what actually happened and assign every safety improvement to a named role.
+
+---
+
+## Page 516 — FamilyBoard Product Recall Action Log Tutorial
+**Slug:** /guides/familyboard-product-recall-action-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-product-recall-action-log-tutorial/
+**Primary intent:** record a product recall notice, identify affected household assets and track source-backed actions without claiming a remedy
+**Title tag:** FamilyBoard Product Recall Tutorial | Track Notices and Safe Next Actions
+**Meta description:** Learn how to use FamilyBoard’s product recall action log to preserve the official notice, match model details, assign actions and keep remedy claims separate.
+**Primary keyword concept:** FamilyBoard product recall action log
+**Cluster:** appliances
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/product-recall-action-log/, /guides/familyboard-appliance-manual-source-check-tutorial/, /guides/familyboard-maintenance-event-cost-tutorial/, /privacy/
+**FAQ:**
+- Q: Does a saved recall row prove that my appliance is affected?
+  A: No. Match the exact model, serial range and notice source; the manufacturer or regulator controls the official determination.
+- Q: Can the log tell me to keep using or discard a product?
+  A: No. Follow the current notice, regulator and manufacturer instructions for immediate safety decisions.
+- Q: Is a submitted registration or callback proof that a remedy was completed?
+  A: No. Record the submission as an observation and wait for the official confirmation, replacement or refund source.
+- Q: Should I paste a full receipt or serial number into a shared handoff?
+  A: Keep sensitive originals in their protected source and use a neutral asset ID or redacted pointer for the handoff.
+
+# FamilyBoard Product Recall Tutorial: Track Notices and Safe Next Actions
+
+A recall notice is easy to lose among receipts, email threads and household messages. FamilyBoard’s product recall action log gives the household one dated place to record the official notice, the asset being checked, the match evidence, immediate action, contact attempt and unresolved follow-up. It does not decide whether a product is affected, tell anyone to ignore a warning, or guarantee a repair, replacement, refund or safe outcome. The regulator, manufacturer and current official notice remain the authorities.
+
+## Capture the notice before interpreting it
+
+Start with the source that controls the recall: a regulator database, manufacturer notice, retailer communication or official service bulletin. Record its title, URL or protected file pointer, publication or update date and any notice number. Save the original version where the household can retrieve it. A social post, search snippet or forwarded summary may be a lead, but it is not enough to establish the affected model range or required action.
+
+Use a neutral asset ID such as `KITCHEN-AP-02` and link it to the household’s protected inventory record. Compare the exact brand, model, serial range, purchase channel and location with the official notice. A product family name or similar photograph is not a match. If the serial label is inaccessible, damaged or different from the receipt, record the limitation and assign a verification action rather than choosing “affected” by guesswork.
+
+## Separate status, hazard information and household action
+
+The log can preserve what the notice says and what the household did. Keep those facts in separate fields. “Notice says stop using when symptom X occurs” is different from “household unplugged item on August 29,” and neither is the same as “manufacturer confirmed remedy.” Never paraphrase an urgent safety instruction so aggressively that its conditions disappear. For an immediate hazard, follow the current official notice and local emergency guidance before updating a web record.
+
+Choose a status such as `Needs match`, `Affected—action pending`, `Contacted`, `Remedy confirmed` or `Not affected by source`. Use the source pointer and date for each status. `Contacted` means an attempt was made; it does not mean a provider answered. `Remedy confirmed` requires the official confirmation or completion record, not a family assumption that a package was shipped.
+
+## Track every action with an owner
+
+Record who will isolate the product, check another serial label, contact the manufacturer, arrange a service visit or verify a refund. Use a real next date and leave the row open when the source has not answered. Preserve failed callbacks, contradictory notices and changed model information as dated events. Do not rewrite the first observation to make the timeline look clean; the sequence helps the household or provider see what was known at each point.
+
+Keep receipts, invoices, serial photos and correspondence in their protected sources. In a handoff, use the asset ID and a redacted pointer instead of copying a full serial number, address or account detail. Export a protected backup when the recall history matters. Future affiliate panels for replacement filters, storage labels or safety supplies may appear outside the record with clear disclosure and an easy skip; they cannot decide a recall match, substitute for an official remedy or promise a refund.
+
+**Contextual CTA:** Save the official notice, match one asset’s exact identifiers, assign the next action and leave the remedy open until its source confirms completion.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

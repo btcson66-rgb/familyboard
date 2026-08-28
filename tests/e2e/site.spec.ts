@@ -314,6 +314,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-calendar-timezone-tutorial/",
     "/guides/familyboard-contact-sensitivity-tutorial/",
     "/zh-tw/guides/familyboard-contact-sensitivity-tutorial/",
+    "/guides/familyboard-move-out-condition-tutorial/",
+    "/zh-tw/guides/familyboard-move-out-condition-tutorial/",
+    "/guides/familyboard-emergency-drill-tutorial/",
+    "/zh-tw/guides/familyboard-emergency-drill-tutorial/",
+    "/guides/familyboard-product-recall-action-log-tutorial/",
+    "/zh-tw/guides/familyboard-product-recall-action-log-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2081,6 +2087,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-contact-sensitivity-tutorial/",
       alternate: "/guides/familyboard-contact-sensitivity-tutorial/",
       heading: "FamilyBoard 聯絡人敏感度教學：分享角色，保護詳細資料",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-move-out-condition-tutorial/",
+      alternate: "/guides/familyboard-move-out-condition-tutorial/",
+      heading: "FamilyBoard 搬遷點交教學：留下可核對的房況、鑰匙與表數紀錄",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-emergency-drill-tutorial/",
+      alternate: "/guides/familyboard-emergency-drill-tutorial/",
+      heading: "FamilyBoard 緊急演練教學：記錄實際觀察，把缺口交給負責人",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-product-recall-action-log-tutorial/",
+      alternate: "/guides/familyboard-product-recall-action-log-tutorial/",
+      heading: "FamilyBoard 產品召回行動紀錄教學：保存通知，追蹤安全下一步",
     },
   ]) {
     await page.goto(localized.route);

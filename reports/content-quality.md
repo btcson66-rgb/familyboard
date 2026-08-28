@@ -1,29 +1,29 @@
 # Content quality report
 
-Generated: 2026-08-28T22:16:34.492Z
+Generated: 2026-08-28T22:36:36.902Z
 
 ## Summary
 
-- Indexable pages: 965
-- Generated HTML routes: 971
+- Indexable pages: 971
+- Generated HTML routes: 977
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 556
+- Pages without a contextual product/tool link: 562
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 31
 - printables: 39
-- product: 170
+- product: 172
 - inventory-warranty: 82
-- appliances: 66
+- appliances: 68
 - maintenance: 91
 - household-operations: 201
-- records-emergency: 133
+- records-emergency: 135
 - tools: 152
 
 ## Word-count range
@@ -74,13 +74,16 @@ Generated: 2026-08-28T22:16:34.492Z
 - /guides/familyboard-browser-storage-maintenance/
 - /guides/familyboard-calendar-timezone-tutorial/
 - /guides/familyboard-contact-sensitivity-tutorial/
+- /guides/familyboard-emergency-drill-tutorial/
 - /guides/familyboard-encrypted-backup-password-tutorial/
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-household-handoff-tutorial/
 - /guides/familyboard-maintenance-event-cost-tutorial/
 - /guides/familyboard-master-csv-edit-import-tutorial/
 - /guides/familyboard-member-archive-tutorial/
+- /guides/familyboard-move-out-condition-tutorial/
 - /guides/familyboard-offline-backup-restore/
+- /guides/familyboard-product-recall-action-log-tutorial/
 - /guides/familyboard-pwa-update-tutorial/
 - /guides/familyboard-reset-local-household-tutorial/
 - /guides/familyboard-restore-merge-replace-tutorial/
@@ -231,6 +234,7 @@ Generated: 2026-08-28T22:16:34.492Z
 - /zh-tw/guides/familyboard-emergency-binder-generator-tutorial/
 - /zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/
 - /zh-tw/guides/familyboard-emergency-contact-verification-tutorial/
+- /zh-tw/guides/familyboard-emergency-drill-tutorial/
 - /zh-tw/guides/familyboard-emergency-information-privacy-tutorial/
 - /zh-tw/guides/familyboard-emergency-supply-inventory-audit-tutorial/
 - /zh-tw/guides/familyboard-encrypted-backup-password-tutorial/
@@ -302,6 +306,7 @@ Generated: 2026-08-28T22:16:34.492Z
 - /zh-tw/guides/familyboard-monthly-review-action-tutorial/
 - /zh-tw/guides/familyboard-move-in-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-move-out-condition-report-generator-tutorial/
+- /zh-tw/guides/familyboard-move-out-condition-tutorial/
 - /zh-tw/guides/familyboard-moving-box-handover-log-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-old-tablet-display-tutorial/
@@ -315,6 +320,7 @@ Generated: 2026-08-28T22:16:34.492Z
 - /zh-tw/guides/familyboard-power-outage-event-log-tutorial/
 - /zh-tw/guides/familyboard-printout-download-retention-tutorial/
 - /zh-tw/guides/familyboard-private-family-organizer-tutorial/
+- /zh-tw/guides/familyboard-product-recall-action-log-tutorial/
 - /zh-tw/guides/familyboard-product-recall-action-tutorial/
 - /zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/
 - /zh-tw/guides/familyboard-pwa-update-tutorial/

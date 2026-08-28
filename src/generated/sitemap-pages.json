@@ -4112,6 +4112,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-move-out-condition-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-move-out-condition-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-emergency-drill-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-emergency-drill-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-product-recall-action-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-product-recall-action-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4915,6 +4939,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-emergency-drill-tutorial/",
+    "alternateRoute": "/guides/familyboard-emergency-drill-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/",
     "alternateRoute": "/guides/familyboard-emergency-information-privacy-tutorial/",
     "indexable": true,
@@ -5419,6 +5450,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-move-out-condition-tutorial/",
+    "alternateRoute": "/guides/familyboard-move-out-condition-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/",
     "alternateRoute": "/guides/familyboard-moving-box-handover-log-tutorial/",
     "indexable": true,
@@ -5505,6 +5543,13 @@
   {
     "route": "/zh-tw/guides/familyboard-private-family-organizer-tutorial/",
     "alternateRoute": "/guides/familyboard-private-family-organizer-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-product-recall-action-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-product-recall-action-log-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

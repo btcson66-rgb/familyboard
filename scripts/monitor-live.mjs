@@ -830,6 +830,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-calendar-timezone-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-contact-sensitivity-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-contact-sensitivity-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-move-out-condition-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-move-out-condition-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-emergency-drill-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-drill-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-product-recall-action-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-product-recall-action-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1639,6 +1645,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-contact-sensitivity-tutorial/",
     require: ["聯絡人敏感度教學", "敏感標記"],
+  },
+  {
+    path: "/guides/familyboard-move-out-condition-tutorial/",
+    require: ["Move-Out Condition Tutorial", "evidence reference"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-move-out-condition-tutorial/",
+    require: ["搬遷點交教學", "證據指標"],
+  },
+  {
+    path: "/guides/familyboard-emergency-drill-tutorial/",
+    require: ["Emergency Drill Tutorial", "Stopped for safety"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-emergency-drill-tutorial/",
+    require: ["緊急演練教學", "為安全停止"],
+  },
+  {
+    path: "/guides/familyboard-product-recall-action-log-tutorial/",
+    require: ["Product Recall Tutorial", "official notice"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-product-recall-action-log-tutorial/",
+    require: ["產品召回行動紀錄教學", "正式產品召回通知"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",
