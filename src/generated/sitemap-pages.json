@@ -3592,6 +3592,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-home-emergency-drill-record-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-storm-readiness-review-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-storm-readiness-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4297,6 +4321,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-emergency-contact-verification-tutorial/",
     "alternateRoute": "/guides/familyboard-emergency-contact-verification-tutorial/",
     "indexable": true,
@@ -4404,6 +4435,13 @@
   {
     "route": "/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/",
     "alternateRoute": "/guides/familyboard-home-dashboard-weekly-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-emergency-drill-record-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -4657,7 +4695,7 @@
     "route": "/zh-tw/guides/familyboard-power-outage-event-log-tutorial/",
     "alternateRoute": "/guides/familyboard-power-outage-event-log-tutorial/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-28",
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -4819,6 +4857,13 @@
     "alternateRoute": "/guides/familyboard-shopping-list-planner-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-storm-readiness-review-tutorial/",
+    "alternateRoute": "/guides/familyboard-storm-readiness-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

@@ -3456,6 +3456,30 @@
     "headings": "FamilyBoard Home Repair Change Order Tutorial: Preserve the Original Scope Before You Accept a Change Freeze the original request first Describe the change in comparable fields Separate request, approval and completion Track money and time without inventing a balance Close the loop with an observable result"
   },
   {
+    "title": "FamilyBoard Emergency Contact Sheet Generator Tutorial | Safe, Reviewable Contacts",
+    "description": "Learn how to use FamilyBoard's free emergency contact sheet generator to record roles, source dates and a retrieval path without publishing private contact details or promising response.",
+    "route": "/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard emergency contact sheet generator tutorial",
+    "headings": "FamilyBoard Emergency Contact Sheet Generator Tutorial: Make the Handoff Findable Without Publishing Private Data Define the audience and the event Choose minimum data and a protected source Verify before you share Separate a contact from a response promise Test the handoff and keep versions"
+  },
+  {
+    "title": "FamilyBoard Home Emergency Drill Record Tutorial | Safe Handoff Practice",
+    "description": "Learn how to use FamilyBoard's free home emergency drill record to document a bounded practice, source, role and observed gap without creating danger or claiming preparedness.",
+    "route": "/guides/familyboard-home-emergency-drill-record-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard home emergency drill record tutorial",
+    "headings": "FamilyBoard Home Emergency Drill Record Tutorial: Test the Handoff, Not Your Courage Choose a small, reversible scenario Write the expected step and the observation separately Keep emergency and professional guidance in control Turn a gap into a safe follow-up"
+  },
+  {
+    "title": "FamilyBoard Storm Readiness Review Tutorial | Local Sources and Clear Gaps",
+    "description": "Learn how to use FamilyBoard's free storm readiness review to connect local guidance, household supplies and responsibilities without a universal safety score or forecast claim.",
+    "route": "/guides/familyboard-storm-readiness-review-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard storm readiness review tutorial",
+    "headings": "FamilyBoard Storm Readiness Review Tutorial: Use Local Sources and Visible Gaps, Not a Universal Score Select one current local source Choose a review question you can observe Separate preparation from hazardous work Keep gaps and assumptions visible Run a handoff rehearsal"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

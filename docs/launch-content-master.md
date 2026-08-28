@@ -32765,6 +32765,184 @@ Before sharing a change summary, remove full addresses, access codes, account de
 - Q: Should I overwrite the original scope after a change?
   A: No. Preserve the original and link a new change record so the decision trail stays reviewable.
 
+## Page 449 — FamilyBoard Emergency Contact Sheet Generator Tutorial: Make the Handoff Findable Without Publishing Private Data
+
+**Slug:** `/guides/familyboard-emergency-contact-sheet-generator-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/`
+**Primary intent:** teach a household to generate a minimal emergency contact sheet with source and review dates without exposing private data or replacing emergency services
+**Title tag:** FamilyBoard Emergency Contact Sheet Generator Tutorial | Safe, Reviewable Contacts
+**Meta description:** Learn how to use FamilyBoard's free emergency contact sheet generator to record roles, source dates and a retrieval path without publishing private contact details or promising response.
+**Primary keyword concept:** FamilyBoard emergency contact sheet generator tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Generate one minimum-data contact sheet, link the protected source and test retrieval with an authorised role.
+**Suggested internal links:** `/tools/emergency-contact-sheet-generator/`, `/guides/family-emergency-contacts/`, `/guides/familyboard-emergency-contact-verification-tutorial/`, `/guides/familyboard-household-handoff-tutorial/`
+
+# FamilyBoard Emergency Contact Sheet Generator Tutorial: Make the Handoff Findable Without Publishing Private Data
+
+FamilyBoard's Emergency Contact Sheet Generator turns a small set of household roles and source pointers into a printable or shareable reference. It can make the next call easier to find, but it does not dispatch help, verify a phone number, know who is available now or replace local emergency services. Use it to create a deliberate retrieval path, not a public directory.
+
+## Define the audience and the event
+
+Start by naming who will use the sheet and in which situation: a caregiver handoff, a short trip, a building interruption or a family meeting. Use a neutral sheet code such as `CONTACTS-2026-A` and a review date. A sheet for a babysitter may need a different minimum set from one for a building manager. Do not publish every contact simply because the generator can display it.
+
+## Choose minimum data and a protected source
+
+Record a role, a safe label, the source date and the next action. For example: `building manager | source BUILDING-3 | ask about current water shutoff process`. Keep full phone numbers, addresses, access codes, medical details and private messages in the protected system that controls them. The visible sheet should point to the original, not copy every sensitive field.
+
+## Verify before you share
+
+The tool cannot call a number or prove that a person still holds a role. Before sharing, compare the entry with the current official notice, provider record or agreed household source. Record whether the contact was checked, when it was checked and what remains unknown. “Checked last year” is not current availability. If two sources conflict, keep both pointers and assign someone to resolve the conflict.
+
+## Separate a contact from a response promise
+
+A contact sheet says where to start; it does not promise that a person will answer, attend, pay or make a decision. For immediate danger, use the appropriate emergency number and local instructions. For care, school, landlord or service issues, preserve the responsible organisation's process. Use the sheet to hand over a role and source, not to invent a response time.
+
+## Test the handoff and keep versions
+
+Ask an authorised second role to find one non-sensitive contact using only the sheet code, role and source pointer. If they need a full address or private conversation to understand the next step, reduce the data or improve the pointer. When a role, number, building or care arrangement changes, create a new version and retain the prior review rather than silently editing history.
+
+FamilyBoard is local-first and browser storage is not automatic backup. Export before clearing site data and verify that the intended person can retrieve the protected source. Future affiliate products may appear only outside the generator with clear disclosure; a printable binder or phone service cannot verify a contact or guarantee help.
+
+Run a version review after the handoff. Ask who maintains the source, when the contact should be retired and what to do if the named role is unavailable. If the sheet is printed, decide where it can be stored, who may photograph it and how an outdated copy will be collected. This keeps a convenient reference from becoming a second uncontrolled address book. The generator is most useful when it shows the smallest safe pointer that lets the right person reach the authoritative record.
+
+**Contextual CTA:** Open Emergency Contact Sheet Generator, create a minimum-data sheet for one scenario, link its protected source and run a retrieval test with an authorised role.
+
+**FAQ:**
+- Q: Does the generated sheet verify that a contact will answer?
+  A: No. It formats the information you enter; availability belongs to the responsible source.
+- Q: Should I put full addresses and medical details on the sheet?
+  A: No. Use the minimum needed and keep sensitive originals protected.
+- Q: Is an old phone number safe to share?
+  A: Verify it against a current attributable source and record the review date first.
+- Q: Can the sheet replace an emergency number?
+  A: No. Follow local emergency instructions for immediate danger.
+
+## Page 450 — FamilyBoard Home Emergency Drill Record Tutorial: Test the Handoff, Not Your Courage
+
+**Slug:** `/guides/familyboard-home-emergency-drill-record-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/`
+**Primary intent:** teach households to record a safe emergency drill scenario, observed handoff and follow-up without simulating danger or claiming readiness
+**Title tag:** FamilyBoard Home Emergency Drill Record Tutorial | Safe Handoff Practice
+**Meta description:** Learn how to use FamilyBoard's free home emergency drill record to document a bounded practice, source, role and observed gap without creating danger or claiming preparedness.
+**Primary keyword concept:** FamilyBoard home emergency drill record tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Choose one low-risk drill scenario, record the source and have an authorised role repeat the handoff.
+**Suggested internal links:** `/tools/home-emergency-drill-record-generator/`, `/guides/emergency-binder/`, `/guides/familyboard-emergency-contact-sheet-generator-tutorial/`, `/guides/familyboard-household-handoff-tutorial/`
+
+# FamilyBoard Home Emergency Drill Record Tutorial: Test the Handoff, Not Your Courage
+
+The FamilyBoard Home Emergency Drill Record keeps a rehearsal bounded: the scenario, source, role, observed step, unresolved gap and next review date. It is not an evacuation order, emergency training certification or proof that a household is ready. Never create smoke, fire, flooding, live electrical tests or medical simulations. Use an announced, low-risk walk-through that checks whether people can find the right source and repeat a safe handoff.
+
+## Choose a small, reversible scenario
+
+Use a code such as `DRILL-2026-A` and choose one question: who reads the building notice, where is the contact sheet, or how does a caregiver find the protected document source? State what will not be simulated. A short tabletop conversation or route walk-through is safer than pretending a real hazard exists. Record the date, participants by neutral role and the source that defines the intended process.
+
+## Write the expected step and the observation separately
+
+“Role A finds source BUILDING-3 and tells Role B the next safe call” is an expected step. “Role B found the sheet but could not identify the current version” is an observation. Do not convert a successful rehearsal into a promise that people will respond under stress. If a participant is unavailable, record that limitation rather than filling the gap with an assumption.
+
+## Keep emergency and professional guidance in control
+
+The tool cannot tell you how to evacuate, provide medical treatment, operate a generator or assess a building. Use the current local authority, utility, building, clinician or emergency source. If a real hazard appears during a rehearsal, stop immediately and use the proper emergency route. The record should preserve the time and source after safety is restored, not direct dangerous action.
+
+## Turn a gap into a safe follow-up
+
+Write one repeatable next step: update the source pointer, ask an authorised role to confirm the contact route, or schedule another tabletop review. “Improve readiness” is not checkable. Keep the original drill record and create a new version when roles, address, care needs or official instructions change. A completed status means the practice was recorded, not that every risk was solved.
+
+Before sharing, remove names, addresses, medical details, access codes and private messages from the visible summary. FamilyBoard is local-first and browser storage is not automatic backup; export and test retrieval before clearing data. Future affiliate products must remain outside the drill record and cannot certify training, equipment or safety.
+
+Add a short debrief while observations are fresh: what the participant expected to find, which source version they opened, what was unclear and who owns the change. Keep “not tested” visible so a later reader does not mistake a tabletop conversation for an inspection. If language, mobility, age or device access affected the rehearsal, record that context and adapt the next low-risk scenario. A drill is successful when it exposes a safer next question, not when it produces a perfect score.
+
+Keep the record neutral when a participant misses a step. The purpose is to improve the route to the source, not to grade a person. A useful follow-up might be to move a protected pointer, clarify a role label or schedule a second short rehearsal. Do not add live hazards simply to make a scenario feel realistic. When the responsible authority changes its process, close the old practice as historical and create a new record that names the new source version. This gives the household a clear explanation for why the next drill may look different.
+
+**Contextual CTA:** Open Home Emergency Drill Record Generator, run one announced low-risk scenario, record the observed gap and assign a safe follow-up owner.
+
+**FAQ:**
+- Q: Does a completed drill prove the household is prepared?
+  A: No. It records one practice and its gaps under one scenario.
+- Q: Can I simulate fire, flooding or live electrical work?
+  A: No. Use low-risk tabletop practice and follow real emergency guidance.
+- Q: Does the tool replace official evacuation or medical instructions?
+  A: No. The responsible local or professional source remains in control.
+- Q: Should I hide a participant's missed step?
+  A: No. Record the limitation and assign a safe, repeatable follow-up.
+
+## Page 451 — FamilyBoard Storm Readiness Review Tutorial: Use Local Sources and Visible Gaps, Not a Universal Score
+
+**Slug:** `/guides/familyboard-storm-readiness-review-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-storm-readiness-review-tutorial/`
+**Primary intent:** teach households to review storm-related sources, supplies and responsibilities without claiming universal readiness or giving weather forecasts
+**Title tag:** FamilyBoard Storm Readiness Review Tutorial | Local Sources and Clear Gaps
+**Meta description:** Learn how to use FamilyBoard's free storm readiness review to connect local guidance, household supplies and responsibilities without a universal safety score or forecast claim.
+**Primary keyword concept:** FamilyBoard storm readiness review tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Choose one local official source, review one household gap and assign a safe follow-up owner.
+**Suggested internal links:** `/tools/household-storm-readiness-review/`, `/guides/storm-preparation-home-checklist/`, `/guides/familyboard-emergency-supply-inventory-audit-tutorial/`, `/guides/familyboard-household-handoff-tutorial/`
+
+# FamilyBoard Storm Readiness Review Tutorial: Use Local Sources and Visible Gaps, Not a Universal Score
+
+The FamilyBoard Storm Readiness Review helps a household connect a local source, a bounded preparation question, an observed gap and a safe next owner. It is not a weather forecast, evacuation order, structural inspection or universal readiness score. Conditions differ by location, building, mobility, care needs and official instructions. The value is a clear review trail that can change when the responsible source changes.
+
+## Select one current local source
+
+Start with the government, utility, building or emergency-management source that actually controls your situation. Record its title, date and safe pointer. Do not copy a forecast or warning into a permanent checklist and assume it remains current. If sources disagree, preserve both versions, note the conflict and assign someone to confirm the controlling instruction.
+
+## Choose a review question you can observe
+
+Use a question such as “who checks the building notice,” “where is the protected document source,” “which role confirms a safe transport plan” or “was the supply bin's seal observed intact.” Avoid “are we storm-proof?” A review question should have a visible answer, an owner and a date. The tool cannot decide whether a roof, generator, medication plan or evacuation route is safe.
+
+## Separate preparation from hazardous work
+
+Preparation may include reading an official notice, charging an approved device according to its manual, confirming a contact route or moving records to a protected place. It does not include climbing, opening electrical equipment, entering floodwater, changing gas equipment or giving medical instructions. Record the need for qualified help and follow emergency guidance when conditions are unsafe.
+
+## Keep gaps and assumptions visible
+
+Use statuses such as source pending, owner pending, observed, not applicable for this scenario or follow-up required. “No storm today” is not evidence that a plan works. A completed review means the household recorded its chosen check; it does not certify a building or guarantee an outcome. When household members, address, season or official guidance changes, create a new review version.
+
+## Run a handoff rehearsal
+
+Ask an authorised second role to find the source, name the gap and repeat the next safe step using only the review code. Remove full addresses, medical details, access codes and private messages from anything displayed on a shared screen. FamilyBoard is local-first and browser storage is not automatic backup; export and test retrieval before clearing data. Affiliate products, if ever shown, must be optional, disclosed and outside the review result.
+
+After the review, preserve the source version, check date, observed gap, owner and next review date together. Ask a second authorised role to repeat the path and state when to stop household preparation and seek qualified or emergency help. This makes the review actionable without pretending that a product, forecast screenshot or old checklist controls the current situation.
+
+Use the review to decide what information should remain private. A public display might show only the source code, owner role and next date, while a protected note holds the full address or care detail. If a warning is replaced, record who confirmed the replacement and when. An unresolved source conflict is a valid outcome; it is safer to keep the conflict visible than to choose the most reassuring version. Revisit the review after a move, a new resident, a mobility change or a new official alert, and preserve earlier observations for comparison.
+
+**Contextual CTA:** Open Storm Readiness Review, attach one current local source, record one observable gap and assign a safe follow-up owner.
+
+**FAQ:**
+- Q: Does the review prove that our home is storm-ready?
+  A: No. It records a bounded check against a source; conditions and official advice can change.
+- Q: Can it provide a forecast or evacuation order?
+  A: No. Use the responsible local authority and current emergency notices.
+- Q: Can the tool tell me whether a roof or generator is safe?
+  A: No. Use qualified inspection and manufacturer guidance.
+- Q: Should I hide an unresolved gap to make the score look better?
+  A: No. Keep the gap visible, assign an owner and record the next review date.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

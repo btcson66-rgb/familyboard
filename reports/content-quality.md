@@ -1,29 +1,29 @@
 # Content quality report
 
-Generated: 2026-08-28T15:36:39.019Z
+Generated: 2026-08-28T16:10:32.665Z
 
 ## Summary
 
-- Indexable pages: 835
-- Generated HTML routes: 841
+- Indexable pages: 841
+- Generated HTML routes: 847
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 476
+- Pages without a contextual product/tool link: 479
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 31
 - printables: 39
-- product: 135
+- product: 134
 - inventory-warranty: 70
 - appliances: 56
 - maintenance: 86
 - household-operations: 151
-- records-emergency: 115
+- records-emergency: 122
 - tools: 152
 
 ## Word-count range
@@ -199,6 +199,7 @@ Generated: 2026-08-28T15:36:39.019Z
 - /zh-tw/guides/familyboard-documents-source-review-tutorial/
 - /zh-tw/guides/familyboard-donation-handoff-tutorial/
 - /zh-tw/guides/familyboard-emergency-binder-generator-tutorial/
+- /zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/
 - /zh-tw/guides/familyboard-emergency-contact-verification-tutorial/
 - /zh-tw/guides/familyboard-emergency-information-privacy-tutorial/
 - /zh-tw/guides/familyboard-emergency-supply-inventory-audit-tutorial/
@@ -215,6 +216,7 @@ Generated: 2026-08-28T15:36:39.019Z
 - /zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/
 - /zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/
 - /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
+- /zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/
 - /zh-tw/guides/familyboard-home-inventory-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/
 - /zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/
@@ -274,6 +276,7 @@ Generated: 2026-08-28T15:36:39.019Z
 - /zh-tw/guides/familyboard-service-quote-comparison-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
 - /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
+- /zh-tw/guides/familyboard-storm-readiness-review-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
 - /zh-tw/guides/familyboard-subscription-renewal-review/
 - /zh-tw/guides/familyboard-task-load-calculator-tutorial/

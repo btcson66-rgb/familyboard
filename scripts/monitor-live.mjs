@@ -571,8 +571,8 @@ const checks = [
       "<loc>https://familyboard.win/tools/household-school-closure-continuity-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-school-closure-continuity-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-closure-continuity-tutorial/</loc>",
-      "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
-      "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-emergency-drill-record-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/power-outage-recovery-household-records/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-water-leak-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-water-leak-event-log-tutorial/</loc>",
@@ -700,6 +700,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-service-provider-verification-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-home-repair-change-order-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-repair-change-order-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-emergency-contact-sheet-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-storm-readiness-review-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -4930,10 +4936,10 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-power-outage-event-log-tutorial/",
     require: [
-      "FamilyBoard 家庭停電紀錄怎麼用",
+      "FamilyBoard 停電事件紀錄 App 教學",
       'lang="zh-TW"',
-      "復電、設備與來源複查 App 教學",
-      "不會推算台電的正式停電時數",
+      "保存時間線與來源",
+      "不診斷電路",
     ],
   },
   {
@@ -6221,6 +6227,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-home-repair-change-order-tutorial/",
     require: ["居家修繕變更單教學", "原始範圍", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
+    require: ["Emergency Contact Sheet Generator Tutorial", "minimum-data"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
+    require: ["緊急聯絡表產生器教學", "最小資料", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-emergency-drill-record-tutorial/",
+    require: ["Home Emergency Drill Record Tutorial", "low-risk scenario"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/",
+    require: ["居家緊急演練紀錄教學", "低風險桌上演練", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-storm-readiness-review-tutorial/",
+    require: ["Storm Readiness Review Tutorial", "current local source"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-storm-readiness-review-tutorial/",
+    require: ["風暴準備複查教學", "在地來源", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

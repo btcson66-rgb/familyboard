@@ -160,6 +160,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-home-service-provider-verification-tutorial/",
     "/guides/familyboard-home-repair-change-order-tutorial/",
     "/zh-tw/guides/familyboard-home-repair-change-order-tutorial/",
+    "/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
+    "/zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
+    "/guides/familyboard-home-emergency-drill-record-tutorial/",
+    "/zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/",
+    "/guides/familyboard-storm-readiness-review-tutorial/",
+    "/zh-tw/guides/familyboard-storm-readiness-review-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1746,7 +1752,7 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
 
   await page.goto("/zh-tw/guides/familyboard-power-outage-event-log-tutorial/");
   await expect(page.locator("h1")).toHaveText(
-    "FamilyBoard 家庭停電紀錄怎麼用？先保留觀察，再複查復電結果",
+    "FamilyBoard 停電事件紀錄 App 教學：保存時間線與來源，不猜測原因",
   );
   await expect(
     page.locator('link[rel="alternate"][hreflang="en"]'),
@@ -2244,6 +2250,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-home-repair-change-order-tutorial/",
       alternate: "/guides/familyboard-home-repair-change-order-tutorial/",
       heading: "FamilyBoard 居家修繕變更單教學：保留原範圍，再核對變更與核准",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
+      alternate: "/guides/familyboard-emergency-contact-sheet-generator-tutorial/",
+      heading: "FamilyBoard 緊急聯絡表產生器教學：讓交接找得到，但不公開私密資料",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/",
+      alternate: "/guides/familyboard-home-emergency-drill-record-tutorial/",
+      heading: "FamilyBoard 居家緊急演練紀錄教學：測試交接，不測試勇氣",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-storm-readiness-review-tutorial/",
+      alternate: "/guides/familyboard-storm-readiness-review-tutorial/",
+      heading: "FamilyBoard 風暴準備複查教學：使用在地來源與可見缺口，不做通用分數",
     },
     {
       route: "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/",
