@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T17:48:10.973Z
+Generated: 2026-08-28T18:02:54.109Z
 
 ## Summary
 
-- Indexable pages: 877
-- Generated HTML routes: 883
+- Indexable pages: 883
+- Generated HTML routes: 889
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 11
-- Pages without a contextual product/tool link: 497
+- Pages without a contextual product/tool link: 500
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,7 +22,7 @@ Generated: 2026-08-28T17:48:10.973Z
 - inventory-warranty: 72
 - appliances: 64
 - maintenance: 86
-- household-operations: 171
+- household-operations: 177
 - records-emergency: 128
 - tools: 152
 
@@ -259,6 +259,8 @@ Generated: 2026-08-28T17:48:10.973Z
 - /zh-tw/guides/familyboard-medical-information-source-handoff-tutorial/
 - /zh-tw/guides/familyboard-meter-reading-tutorial/
 - /zh-tw/guides/familyboard-monthly-review-action-tutorial/
+- /zh-tw/guides/familyboard-move-in-checklist-generator-tutorial/
+- /zh-tw/guides/familyboard-move-out-condition-report-generator-tutorial/
 - /zh-tw/guides/familyboard-moving-box-handover-log-tutorial/
 - /zh-tw/guides/familyboard-offline-backup-restore/
 - /zh-tw/guides/familyboard-old-tablet-display-tutorial/
@@ -304,6 +306,7 @@ Generated: 2026-08-28T17:48:10.973Z
 - /zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/
 - /zh-tw/guides/familyboard-utility-bill-difference-tutorial/
 - /zh-tw/guides/familyboard-utility-provider-handoff-tutorial/
+- /zh-tw/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/
 - /zh-tw/guides/familyboard-warranty-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/

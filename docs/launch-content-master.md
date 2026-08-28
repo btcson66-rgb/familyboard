@@ -1068,6 +1068,7 @@ A household restores a reviewed backup onto an old 8-inch tablet, then opens Dis
 **Primary keyword concept:** local-first home organizer
 **Cluster:** product
 **Page type:** content
+**Depth:** verified
 **Indexable:** yes
 **Depth:** verified
 **Published date:** 2026-08-29
@@ -1255,6 +1256,7 @@ FamilyBoard's service worker can keep the last cached App available while offlin
 **Primary keyword concept:** family organizer without account
 **Cluster:** product
 **Page type:** content
+**Depth:** verified
 **Indexable:** yes
 **Depth:** verified
 **Published date:** 2026-08-29
@@ -1324,6 +1326,7 @@ No-account does not mean every field belongs on a wall tablet. Display mode has 
 **Primary keyword concept:** home record keeper
 **Cluster:** inventory-warranty
 **Page type:** content
+**Depth:** verified
 **Indexable:** yes
 **Depth:** verified
 **Published date:** 2026-08-29
@@ -34118,6 +34121,188 @@ The tool runs in the browser and creates a household coordination index. Export 
 ## Eight-question closeout
 
 Are departure and return dates clear? Are official requirements separate from household tasks? Are packing and coverage rows scoped with safe IDs? Does each handoff have an owner and observed result? Are pets, plants, deliveries and services linked to real sources? Were changed plans kept as new versions? Did travel documents and access details remain protected? Was return review recorded? If not, keep the handoff open.
+
+## Page 470 — Move-In Checklist Generator Tutorial
+**Slug:** /guides/familyboard-move-in-checklist-generator-tutorial/
+**Primary intent:** use the move-in checklist generator to capture first-day evidence, setup ownership and lasting household records
+**Title tag:** FamilyBoard Move-In Checklist Generator Tutorial | Record the First Day Clearly
+**Meta description:** Learn how to use FamilyBoard's Move-In Checklist Generator for utilities, condition evidence, systems, inventory and follow-up without storing addresses or lease secrets.
+**Primary keyword concept:** move-in checklist generator tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/move-in-checklist-generator/, /guides/new-home-setup-checklist/, /guides/first-time-homeowner-maintenance-guide/, /guides/familyboard-home-inventory-checklist-generator-tutorial/
+**FAQ:**
+- Q: Does the checklist replace a lease, inspection form or local tenant guidance?
+  A: No. It is a private planning aid; the actual lease, inspection process and local rules control.
+- Q: What should I record on the first day?
+  A: Record the source references, visible condition, utilities and systems you actually checked, then assign the next action.
+- Q: Can I put the full address or contract into the tool?
+  A: No. Use a neutral home code and keep the address and contract in protected storage.
+- Q: Does checking a line prove the home is safe or compliant?
+  A: No. A checked line records a household observation, not a professional inspection or legal conclusion.
+
+# How to Use FamilyBoard's Move-In Checklist Generator
+
+Moving into a home creates a narrow evidence window. Boxes arrive, furniture hides marks and the first utility bill appears before anyone has decided who owns the records. FamilyBoard's free [Move-In Checklist Generator](/tools/move-in-checklist-generator/) turns that window into three practical phases: before arrival, first day and first month. It is a household planning aid, not a lease, inspection certificate or legal guide.
+
+## Start with a neutral home code
+
+Choose House, Apartment, Condo or Rental home, then add only the setup needs that change the work—such as pets, parking access, a water filter or a storage unit. Use `HOME-MOVE-2026-A`, not a full address, landlord name or contract number. A neutral code lets the family link photos and protected documents without copying secrets into a shared checklist.
+
+## Work the Before Arrival phase
+
+Before keys or boxes arrive, identify the utility and access sources that actually apply. Record a safe pointer for the lease or closing packet, the utility contact location, the handover appointment and an emergency information source. The generated line is a prompt to open the real source; it does not verify service activation, deposits, insurance or a landlord's promise. Assign each line to a household role and add a date.
+
+## Make the First Day observable
+
+On the first day, walk one area at a time. Record visible condition with a protected photo or video reference, identify major systems and note which utilities were actually observed. “Bedroom wall: mark visible near lower corner, photo set A-03” is useful; “room perfect” is not. Keep original files in controlled storage and do not paste the address, key code or full lease into the checklist. If an issue needs a formal inspection or repair request, keep that process separate.
+
+## Treat renter and owner reasons differently
+
+The same day-one observation can serve different purposes. A renter may need a dated condition record for the lease process; an owner may want a baseline for future maintenance. The generator does not decide what counts as normal wear, a defect or a deposit claim. Compare your record with the actual agreement and local process, and ask the responsible party when a condition is disputed.
+
+## Use the First Month phase to avoid record drift
+
+After the first week, keep only records that will still help: utility contacts, major equipment, warranties, recurring tasks and a first backup export. Do not turn every unpacking decision into a permanent task. If a setup need was “pets,” create the smallest useful follow-up and link it to a protected care source. A generated checklist is complete when the real observation or source is recorded, not when every line is forced into a green status.
+
+## Verify sources before closing
+
+Before closing a line, ask what was actually observed, which source supports it and who owns the next step. A photo can show a mark but cannot prove its cause. A meter reading can show a number but cannot settle a bill. A utility contact can point to an account but cannot prove activation. Leave uncertain items open and write the question that the lease, provider, inspector or qualified service source must answer.
+
+## Share the smallest useful handoff
+
+If another household member helps, share the phase, role and safe reference—not the full address, access code, payment details or contract. Confirm that the receiver can locate the protected source and understands which items remain open. The app runs locally in the browser; export before clearing storage, and inspect an export before relying on it as a backup.
+
+## Future affiliate space and boundaries
+
+Moving folders, labels or scanners may eventually appear in a clearly marked optional area beside this guide. A product cannot prove a condition, protect a deposit, activate utilities or replace a lease and local advice. Commercial suggestions must stay outside urgent inspection, repair, legal or safety decisions and must never require a purchase to use the checklist.
+
+**Contextual CTA:** Generate a three-phase checklist for one home, complete the first-day observation window, and convert only durable sources and responsibilities into standing records.
+
+## Page 471 — Move-Out Condition Report Generator Tutorial
+**Slug:** /guides/familyboard-move-out-condition-report-generator-tutorial/
+**Primary intent:** create a neutral move-out walkthrough record with observations, evidence, access items and unresolved follow-up
+**Title tag:** FamilyBoard Move-Out Condition Report Tutorial | Record Rooms and Handover Evidence
+**Meta description:** Learn how to use FamilyBoard's Move-Out Condition Report Generator to separate observations, evidence, keys, readings and unresolved actions without making legal claims.
+**Primary keyword concept:** move-out condition report generator tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/move-out-condition-record-generator/, /guides/move-out-home-records/, /guides/familyboard-record-retrieval-drill-tutorial/, /guides/familyboard-rental-security-deposit-move-out-tutorial/
+**FAQ:**
+- Q: Is this an official inspection or deposit claim form?
+  A: No. It is a working record; the lease, signed forms and local procedure control.
+- Q: What makes an observation useful?
+  A: State what was visible, when it was seen, who observed it and which protected evidence source can be reopened.
+- Q: Should I enter key codes or a full address?
+  A: No. Use a neutral premises label and record only counts or safe references for access items.
+- Q: Does “confirmed” prove legal agreement?
+  A: No. Statuses describe workflow and do not create a signature, waiver or liability finding.
+
+# How to Use FamilyBoard's Move-Out Condition Report Generator
+
+A move-out walkthrough often fails because “fine,” “damaged” and “we discussed it” collapse several different claims. FamilyBoard's free [Move-Out Condition Report Generator](/tools/move-out-condition-record-generator/) creates a dated working record for rooms, evidence references, access items, readings and unresolved actions. It helps a household prepare for a clearer handover while leaving legal effect to the actual lease, signed process and local rules.
+
+## Set the stage and comparison source
+
+Choose a neutral premises label such as `RENTAL-MOVE-OUT-A`, select the walkthrough stage and enter the date you actually inspected. Point to the source used for comparison: a check-in inventory, dated photo set, amendment or repair record. “Original photos” is less useful than a protected version code. Do not paste an address, lease text, account number or private message into the tool.
+
+## Describe what the observer could see
+
+Each condition row should identify an area, observable condition, protected evidence reference, next action and status. Prefer “dark mark at the lower-right wall, visible during joint walkthrough” to “tenant damage.” A photo can establish location and appearance; it cannot decide cause, normal wear, repair cost or responsibility. Keep wide context images and close details together in protected storage, preserving original files rather than relying on compressed chat screenshots.
+
+## Keep disagreement visible
+
+Use Open when work or evidence is still missing, Ready to confirm when the next shared review has enough context, Disputed when a material difference remains, and Confirmed only when the intended participants actually confirmed the row in their process. These labels are workflow states, not legal findings. A clean status count is useful for planning, but never force a disputed row to Confirmed to make the report look finished.
+
+## Record keys and readings without exposing credentials
+
+Access rows can record an item, a whole-number count, a return or recipient status and a protected evidence reference. Record “two remotes returned” rather than an alarm PIN or smart-lock code. Meter rows can record the service, observed reading or status, unit and evidence reference. If a meter was inaccessible, record that limitation and the source needed next; do not guess a final bill or settlement.
+
+## Separate the working record from the official handover
+
+The generator output is unsigned and local. Compare it with the lease, required inspection form, provider record and any jointly accepted evidence. If a landlord, manager, tenant or contractor needs a formal response, send the proper channel and record a safe pointer to the response. A tool status cannot waive a notice period, establish a deposit deduction or determine a legal claim.
+
+## Close only observable actions
+
+An action such as “remove remaining shelf items” closes when the responsible person reports the result and the relevant process accepts it. “Manager to compare image 019” remains open until that comparison is actually made. Keep a next owner and date for unresolved rows. If the handover date changes, add a new dated event instead of rewriting the original walkthrough.
+
+## Protect the handoff
+
+Share only the rows the receiver needs. Full addresses, identity documents, access credentials, payment records and private correspondence belong in protected custody. The browser workbench is an index, not a secure vault; export and verify the file before clearing storage. If a dispute involves safety, housing law or money, use the appropriate qualified or official source rather than expanding the household note.
+
+## Future affiliate space and boundaries
+
+Document folders, labels or scanning products may eventually appear beside this tutorial as optional recommendations. They cannot certify condition, decide a deposit, replace a signature or guarantee evidence. Commercial content must remain visually separate from the report controls and never interrupt an urgent housing, safety or legal route.
+
+**Contextual CTA:** Generate one neutral walkthrough, attach protected evidence references, and keep every unresolved or disputed row open until the actual handover process answers it.
+
+## Page 472 — Vacation Shutdown Checklist Generator Tutorial
+**Slug:** /guides/familyboard-vacation-shutdown-checklist-generator-tutorial/
+**Primary intent:** adapt a pre-travel home shutdown checklist to trip length, care responsibilities and return checks
+**Title tag:** FamilyBoard Vacation Shutdown Checklist Tutorial | Prepare Home Handoffs Safely
+**Meta description:** Learn how to use FamilyBoard's Vacation Shutdown Checklist Generator for pets, plants, deliveries, waste, equipment settings and return follow-up without exposing access details.
+**Primary keyword concept:** vacation shutdown checklist generator tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/vacation-shutdown-checklist-generator/, /guides/vacation-home-shutdown-checklist/, /guides/travel-household-handoff/, /guides/familyboard-trip-packing-handoff-log-tutorial/
+**FAQ:**
+- Q: Does the generator tell me what temperature or utility setting to use?
+  A: No. Check the actual equipment manual, climate conditions and qualified guidance.
+- Q: Is a handoff line a complete sitter instruction?
+  A: No. It is a prompt; use protected care instructions and confirm the receiver understands them.
+- Q: Can I put alarm codes or addresses in the checklist?
+  A: No. Use safe references and keep credentials and full addresses protected.
+- Q: Does the checklist replace official travel or emergency information?
+  A: No. Use current carrier, authority, provider and local emergency sources.
+
+# How to Use FamilyBoard's Vacation Shutdown Checklist Generator
+
+The right pre-travel checklist depends on how long the household is away and what still needs care. FamilyBoard's free [Vacation Shutdown Checklist Generator](/tools/vacation-shutdown-checklist-generator/) builds a six-item departure list and adds a handoff prompt for each care responsibility you enter. It is a local planning aid, not an emergency plan, equipment manual or travel authority.
+
+## Enter an honest travel window
+
+Use the actual number of days away and a short responsibility such as `CAT-CARE-A`, `PLANTS-B` or `PACKAGE-C`. The days field is a cue for the amount of handoff detail, not a promise that a home is covered. A three-day neighbor check and a three-week sitter arrangement need different protected instructions and escalation paths.
+
+## Complete the six core checks
+
+The generated list prompts you to review doors and windows using your own household security process, check current weather and official alerts, assign mail/package/pet/plant responsibilities, clear time-sensitive food and waste, review equipment settings against actual manuals, and keep utility and emergency contacts available offline. These are prompts to perform real checks; ticking a line does not prove a lock is secure, a service is available or an appliance is safe.
+
+## Turn care prompts into a real handoff
+
+“Handoff details for Cat” is intentionally incomplete. In protected care instructions, include the routine, supplies, contact route and what counts as an escalation. The receiver should confirm they can find the instructions and know whom to contact. Do not place medication details, alarm codes, addresses or private schedules in a shared checklist. If care is medical, urgent or safety-sensitive, follow the qualified or official source first.
+
+## Avoid generic equipment advice
+
+The generator does not choose a thermostat number or tell you to shut off a utility. Climate, building type, season and equipment differ; a generic setting can create damage. Use the manual for the actual appliance and ask the responsible service source when uncertain. Record a safe reference to what was checked, not a copied serial number or access credential.
+
+## Close the trip with return checks
+
+When you return, inspect the home and record what was actually observed: a package received, a plant check reported, a service appointment changed or an unresolved issue. A calendar event, forwarded message or assigned role is not proof of an outcome. Keep changed plans as a new dated version so the next trip can learn from what really happened.
+
+## Keep the local record useful
+
+Start with only the responsibilities that apply to this trip. Export and verify the file before clearing browser storage. Share the smallest useful list, using neutral codes and protected source pointers. A future household member should be able to see what remains open without receiving the full itinerary, address, key information, reservation or payment record.
+
+## Future affiliate space and boundaries
+
+Packing organizers, labels or offline folders may eventually be offered in a clearly marked optional block. They cannot guarantee travel, care, delivery, equipment or home safety. Commercial links must stay outside the checklist controls and never replace current official instructions, an emergency channel or qualified care guidance.
+
+**Contextual CTA:** Generate the list for the actual days away, complete protected handoff instructions, and run a separate return check before closing temporary tasks.
 
 # FINAL HANDOFF TO CODEX — START WORK
 

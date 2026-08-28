@@ -54,6 +54,9 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-meeting-agenda-action-log/",
     "/tools/household-pantry-expiry-review-log/",
     "/tools/household-trip-packing-handoff-log/",
+    "/tools/move-in-checklist-generator/",
+    "/tools/move-out-condition-record-generator/",
+    "/tools/vacation-shutdown-checklist-generator/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -214,6 +217,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-pantry-expiry-review-log-tutorial/",
     "/guides/familyboard-trip-packing-handoff-log-tutorial/",
     "/zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/",
+    "/guides/familyboard-move-in-checklist-generator-tutorial/",
+    "/zh-tw/guides/familyboard-move-in-checklist-generator-tutorial/",
+    "/guides/familyboard-move-out-condition-report-generator-tutorial/",
+    "/zh-tw/guides/familyboard-move-out-condition-report-generator-tutorial/",
+    "/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
+    "/zh-tw/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -350,6 +359,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-clothing-care-repair-log/",
     "/tools/household-meal-prep-role-log/",
     "/tools/household-trip-packing-handoff-log/",
+    "/tools/move-in-checklist-generator/",
+    "/tools/move-out-condition-record-generator/",
+    "/tools/vacation-shutdown-checklist-generator/",
     "/tools/household-bill-source-status-log/",
     "/tools/household-share-access-review-log/",
     "/tools/household-inventory-photo-capture-log/",
@@ -571,6 +583,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-clothing-care-repair-log/",
     "/zh-tw/tools/household-meal-prep-role-log/",
     "/zh-tw/tools/household-trip-packing-handoff-log/",
+    "/zh-tw/tools/move-in-checklist-generator/",
+    "/zh-tw/tools/move-out-condition-record-generator/",
+    "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     "/zh-tw/tools/household-bill-source-status-log/",
     "/zh-tw/tools/household-share-access-review-log/",
     "/zh-tw/tools/household-inventory-photo-capture-log/",
@@ -1749,6 +1764,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/",
       alternate: "/guides/familyboard-trip-packing-handoff-log-tutorial/",
       heading: "FamilyBoard 旅行打包與住家交接教學：把出發前後的責任分開記錄",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-move-in-checklist-generator-tutorial/",
+      alternate: "/guides/familyboard-move-in-checklist-generator-tutorial/",
+      heading: "FamilyBoard 搬入清單產生器教學：把第一天觀察留下來",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-move-out-condition-report-generator-tutorial/",
+      alternate: "/guides/familyboard-move-out-condition-report-generator-tutorial/",
+      heading: "FamilyBoard 搬出屋況報告產生器教學：分開記錄房間、鑰匙與交接證據",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
+      alternate: "/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
+      heading: "FamilyBoard 假期離家清單產生器教學：把住家交接和返家複查分開",
     },
   ]) {
     await page.goto(localized.route);

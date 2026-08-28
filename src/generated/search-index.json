@@ -3624,6 +3624,30 @@
     "headings": "How to Use FamilyBoard's Household Trip Packing and Handoff Log Define departure, return and a small scope Separate official sources from household tasks Build packing and coverage rows with safe IDs Record plan, handoff and return evidence separately Handle pets, plants, deliveries and services conservatively Return home and preserve changed plans Privacy, local storage and optional commercial content Eight-question closeout"
   },
   {
+    "title": "FamilyBoard Move-In Checklist Generator Tutorial | Record the First Day Clearly",
+    "description": "Learn how to use FamilyBoard's Move-In Checklist Generator for utilities, condition evidence, systems, inventory and follow-up without storing addresses or lease secrets.",
+    "route": "/guides/familyboard-move-in-checklist-generator-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "move-in checklist generator tutorial",
+    "headings": "How to Use FamilyBoard's Move-In Checklist Generator Start with a neutral home code Work the Before Arrival phase Make the First Day observable Treat renter and owner reasons differently Use the First Month phase to avoid record drift Verify sources before closing Share the smallest useful handoff Future affiliate space and boundaries"
+  },
+  {
+    "title": "FamilyBoard Move-Out Condition Report Tutorial | Record Rooms and Handover Evidence",
+    "description": "Learn how to use FamilyBoard's Move-Out Condition Report Generator to separate observations, evidence, keys, readings and unresolved actions without making legal claims.",
+    "route": "/guides/familyboard-move-out-condition-report-generator-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "move-out condition report generator tutorial",
+    "headings": "How to Use FamilyBoard's Move-Out Condition Report Generator Set the stage and comparison source Describe what the observer could see Keep disagreement visible Record keys and readings without exposing credentials Separate the working record from the official handover Close only observable actions Protect the handoff Future affiliate space and boundaries"
+  },
+  {
+    "title": "FamilyBoard Vacation Shutdown Checklist Tutorial | Prepare Home Handoffs Safely",
+    "description": "Learn how to use FamilyBoard's Vacation Shutdown Checklist Generator for pets, plants, deliveries, waste, equipment settings and return follow-up without exposing access details.",
+    "route": "/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "vacation shutdown checklist generator tutorial",
+    "headings": "How to Use FamilyBoard's Vacation Shutdown Checklist Generator Enter an honest travel window Complete the six core checks Turn care prompts into a real handoff Avoid generic equipment advice Close the trip with return checks Keep the local record useful Future affiliate space and boundaries"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

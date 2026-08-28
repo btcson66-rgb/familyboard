@@ -3760,6 +3760,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-move-in-checklist-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-move-in-checklist-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-move-out-condition-report-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-move-out-condition-report-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4878,6 +4902,20 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-move-in-checklist-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-move-in-checklist-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-move-out-condition-report-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-move-out-condition-report-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/",
     "alternateRoute": "/guides/familyboard-moving-box-handover-log-tutorial/",
     "indexable": true,
@@ -5188,6 +5226,13 @@
   {
     "route": "/zh-tw/guides/familyboard-utility-provider-handoff-tutorial/",
     "alternateRoute": "/guides/familyboard-utility-provider-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

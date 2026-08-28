@@ -252,6 +252,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/home-service-reminder-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/receipt-retention-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-annual-review-generator/</loc>",
+      "<loc>https://familyboard.win/tools/move-in-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/move-in-checklist-generator/</loc>",
       "<loc>https://familyboard.win/tools/move-out-condition-record-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/move-out-condition-record-generator/</loc>",
@@ -582,6 +583,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/water-leak-photo-evidence-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/purchase-receipt-organizer/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-inventory/</loc>",
+      "<loc>https://familyboard.win/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/vacation-shutdown-checklist-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/house-sitter-instruction-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/pet-sitter-instruction-generator/</loc>",
@@ -738,6 +740,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-pantry-expiry-review-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-trip-packing-handoff-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-move-in-checklist-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-move-in-checklist-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-move-out-condition-report-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-move-out-condition-report-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1880,6 +1888,15 @@ const checks = [
       'hreflang="en"',
       "填入「已收到」的兩期金額",
       "用差額提示，而不是製造警報",
+    ],
+  },
+  {
+    path: "/tools/move-in-checklist-generator/",
+    require: [
+      "Move-In Checklist Generator",
+      'hreflang="zh-TW"',
+      "Before Arrival",
+      "First Month",
     ],
   },
   {
@@ -5212,6 +5229,15 @@ const checks = [
     ],
   },
   {
+    path: "/tools/vacation-shutdown-checklist-generator/",
+    require: [
+      "Vacation Home Shutdown Checklist Generator",
+      'hreflang="zh-TW"',
+      "six-item shutdown list",
+      "Handoff details",
+    ],
+  },
+  {
     path: "/zh-tw/tools/vacation-shutdown-checklist-generator/",
     require: [
       "旅行前住家檢查清單",
@@ -6431,6 +6457,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/",
     require: ["旅行打包與住家交接教學", "返家複查", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-move-in-checklist-generator-tutorial/",
+    require: ["Move-In Checklist Generator", "First Day"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-move-in-checklist-generator-tutorial/",
+    require: ["搬入清單產生器教學", "第一天", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-move-out-condition-report-generator-tutorial/",
+    require: ["Move-Out Condition Report Generator", "Disputed"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-move-out-condition-report-generator-tutorial/",
+    require: ["搬出屋況報告產生器教學", "有爭議", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
+    require: ["Vacation Shutdown Checklist Generator", "return checks"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/",
+    require: ["假期離家清單產生器教學", "返家複查", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",
