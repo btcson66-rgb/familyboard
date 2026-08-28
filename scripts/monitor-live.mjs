@@ -720,6 +720,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-moving-box-handover-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-medical-information-source-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-medical-information-source-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-caregiver-handoff-source-authorization-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-caregiver-handoff-source-authorization-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-insurance-policy-source-version-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -6341,6 +6347,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/",
     require: ["搬家箱件交接紀錄教學", "十個欄位", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-medical-information-source-handoff-tutorial/",
+    require: ["Medical Information Source and Handoff Log", "protected person match"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-medical-information-source-handoff-tutorial/",
+    require: ["家庭醫療資訊來源交接教學", "受保護本人比對", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-caregiver-handoff-source-authorization-tutorial/",
+    require: ["Caregiver Handoff Source and Authorization Log", "minimum scope"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-caregiver-handoff-source-authorization-tutorial/",
+    require: ["照護者交接與授權教學", "最少範圍", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-insurance-policy-source-version-tutorial/",
+    require: ["Insurance Policy Source and Version Log", "issued document"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/",
+    require: ["家庭保單來源與版本教學", "文件組", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

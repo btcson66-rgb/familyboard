@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T16:56:46.959Z
+Generated: 2026-08-28T17:11:31.699Z
 
 ## Summary
 
-- Indexable pages: 859
-- Generated HTML routes: 865
+- Indexable pages: 865
+- Generated HTML routes: 871
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 488
+- Pages without a contextual product/tool link: 491
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,11 +19,11 @@ Generated: 2026-08-28T16:56:46.959Z
 - support: 31
 - printables: 39
 - product: 134
-- inventory-warranty: 70
+- inventory-warranty: 72
 - appliances: 64
 - maintenance: 86
 - household-operations: 161
-- records-emergency: 122
+- records-emergency: 126
 - tools: 152
 
 ## Word-count range
@@ -195,6 +195,7 @@ Generated: 2026-08-28T16:56:46.959Z
 - /zh-tw/guides/familyboard-browser-storage-maintenance/
 - /zh-tw/guides/familyboard-building-notice-response-tutorial/
 - /zh-tw/guides/familyboard-calendar-tutorial/
+- /zh-tw/guides/familyboard-caregiver-handoff-source-authorization-tutorial/
 - /zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-consumable-change-history-tutorial/
@@ -243,6 +244,7 @@ Generated: 2026-08-28T16:56:46.959Z
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/
 - /zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/
+- /zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/
 - /zh-tw/guides/familyboard-internet-incident-tutorial/
 - /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
 - /zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/
@@ -251,6 +253,7 @@ Generated: 2026-08-28T16:56:46.959Z
 - /zh-tw/guides/familyboard-maintenance-tracker-tutorial/
 - /zh-tw/guides/familyboard-master-csv-edit-import/
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
+- /zh-tw/guides/familyboard-medical-information-source-handoff-tutorial/
 - /zh-tw/guides/familyboard-meter-reading-tutorial/
 - /zh-tw/guides/familyboard-monthly-review-action-tutorial/
 - /zh-tw/guides/familyboard-moving-box-handover-log-tutorial/

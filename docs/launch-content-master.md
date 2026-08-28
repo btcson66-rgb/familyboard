@@ -33540,6 +33540,205 @@ Is the move ID safe? Are loading, handover, review and next-checkpoint dates ord
 
 ---
 
+## Page 461 — How to Use FamilyBoard's Household Medical Information Source and Handoff Log
+**Slug:** /guides/familyboard-medical-information-source-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-medical-information-source-handoff-tutorial/
+**Primary intent:** learn to map medical-record, medication-list, referral and care-handoff sources without storing clinical content or making health decisions
+**Title tag:** FamilyBoard Medical Information Source Handoff Tutorial | Keep Health Records Findable
+**Meta description:** Learn how to use FamilyBoard's Household Medical Information Source and Handoff Log to track source owners, versions, access observations and next actions without copying diagnoses or treatment details.
+**Primary keyword concept:** FamilyBoard medical information source handoff tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-medical-information-source-handoff-log/, /guides/household-medical-information-organization/, /guides/familyboard-share-access-tutorial/, /guides/familyboard-record-retrieval-drill-tutorial/
+**FAQ:**
+- Q: Does this log store or interpret diagnoses, test results or medication instructions?
+  A: No. It stores safe source pointers and observations; clinical content and decisions stay with the responsible health source.
+- Q: Does a source map authorise a family member to access a patient portal?
+  A: No. Permission, identity verification and consent are controlled by the provider, patient and applicable process.
+- Q: Can the tool request a correction or transfer of records?
+  A: No. It can record that a request or action was made; the provider's actual response remains a separate result.
+- Q: Is a successful lookup medical advice?
+  A: No. Finding a current source does not diagnose, interpret or recommend treatment.
+
+**Contextual CTA:** Map one protected source, version and responsible role, then leave clinical questions to the provider or qualified professional.
+
+# How to Use FamilyBoard's Household Medical Information Source and Handoff Log
+
+Families often say “the records are online” without knowing which portal, clinic, pharmacy or care role owns the current version. The free [Household Medical Information Source and Handoff Log](/tools/household-medical-information-source-handoff-log/) creates a dated map of sources, access observations and handoff actions without copying diagnoses, test values or treatment instructions. It does not sign in to a portal, interpret a result, reconcile medicines, authorise a caregiver or replace urgent medical help.
+
+## Begin with purpose, not a diagnosis
+
+Use a neutral code such as `MEDICAL-SOURCES-2026-A` and choose one bounded context: a provider-record lookup, a correction or transfer, a current medication-list source, a discharge transition, or a referral and coverage source. Write the household role and purpose, not a person's name, birth date, record number or condition. A purpose says what must be found; it does not state what a clinician should decide.
+
+## Build a source map with safe pointers
+
+The source-map field can reference a provider records office, patient portal, pharmacy, official plan or protected person-match evidence with codes such as `PORTAL-V2` or `PROVIDER-RECORDS-S1`. Keep portal credentials, consent documents, addresses, diagnoses, doses and test results in the responsible protected system. A public URL can identify an official process, but it should not include a private session link or a person's identifier.
+
+## Use the twelve-field row to preserve layers
+
+Each row contains an ID, safe person alias and purpose, responsible source and scope, protected person-match evidence plus checked date, current version observation, access/custody observation, clinical or official status source, household handoff or action, conflict or qualified review route, owner role, target or outcome date and status. The long format is deliberate: it prevents “portal opened” from being mistaken for “the right person's current record was confirmed.”
+
+## Treat access as an observation, not permission
+
+Record what an authorised role actually saw: a current document title, a dated list version or a provider's response route. Do not infer that a family relationship grants portal access. The patient, provider and applicable consent process control identity and permission. If a recipient cannot open the protected source, leave the row waiting for access rather than copying the clinical content into the shared field.
+
+## Keep medical, pharmacy and coverage sources separate
+
+A prescription list, a clinic note, a test report and an insurer status page answer different questions. Link them by safe IDs and dates, but do not merge them into a generated “health summary.” If two sources conflict, choose the conflict status and name the provider, pharmacist, health plan or qualified review route that must resolve it. FamilyBoard cannot decide which source is clinically correct.
+
+## Record actions and results separately
+
+If someone submits a records request, asks for a correction, schedules a transfer or briefs a caregiver, record that action and its date. Do not mark the result complete until the responsible source actually responds. For urgent symptoms, medication reactions, injury or danger, contact local emergency services or qualified health professionals first; this log is not an emergency channel.
+
+## Privacy, backup and local-first limits
+
+The tool runs in the browser and creates an index rather than a medical repository. Export before clearing browser data, protect the original records and limit each handoff to the minimum necessary scope. Do not place private health content in analytics events or future affiliate placements. Any product link must remain outside the medical workflow, be clearly disclosed and never imply clinical safety or suitability.
+
+## Eight-question closeout
+
+Is the purpose neutral and bounded? Are the responsible sources named without private identifiers? Is the protected person match recorded separately? Is the current version dated? Is access observation distinct from permission? Are pharmacy, clinical and coverage sources separate? Are actions still open until the responsible result arrives? Did the household avoid copying or interpreting clinical content? If not, leave the handoff open.
+
+---
+
+## Page 462 — How to Use FamilyBoard's Caregiver Handoff Source and Authorization Log
+**Slug:** /guides/familyboard-caregiver-handoff-source-authorization-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-caregiver-handoff-source-authorization-tutorial/
+**Primary intent:** learn to document caregiver source, recipient authority, minimum scope, access and acceptance without granting permission or generating care instructions
+**Title tag:** FamilyBoard Caregiver Handoff Tutorial | Track Sources, Scope and Acceptance
+**Meta description:** Learn how to use FamilyBoard's Caregiver Handoff Source and Authorization Log to separate care sources, recipient authority, access, custody and acceptance while keeping sensitive instructions protected.
+**Primary keyword concept:** FamilyBoard caregiver handoff authorization tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/caregiver-handoff-source-authorization-log/, /guides/caregiver-handoff-checklist/, /guides/household-medical-information-organization/, /guides/familyboard-home-handoff-summary-generator-tutorial/
+**FAQ:**
+- Q: Does the log appoint a caregiver or create legal authority?
+  A: No. It records a source and observed process; the person, provider, agency and applicable authority process control permission.
+- Q: Should detailed routines, doses or transfer steps go in a shared row?
+  A: No. Keep care instructions and sensitive identity details in the responsible protected source.
+- Q: Does a caregiver briefing prove the person received safe care?
+  A: No. It records a briefing or acceptance observation, not care quality or a clinical result.
+- Q: Can the tool replace a discharge plan or agency instruction?
+  A: No. Use the current plan and qualified source for real care decisions and emergencies.
+
+**Contextual CTA:** Define the recipient's minimum scope, point to the current protected source and record acceptance without turning the handoff into a permission grant.
+
+# How to Use FamilyBoard's Caregiver Handoff Source and Authorization Log
+
+A caregiver handoff fails when a household confuses “I sent a message” with “the authorised person found the current source and knows the boundary.” The free [Caregiver Handoff Source and Authorization Log](/tools/caregiver-handoff-source-authorization-log/) keeps purpose, care context, source version, recipient authority, access, custody and acceptance as separate layers. It does not appoint a representative, create a care plan, interpret discharge instructions, reconcile medication, authorise entry or assess care quality.
+
+## Choose one care context and a safe code
+
+Start with `CAREGIVER-HANDOFF-2026-A` and select a bounded context such as a first handoff, temporary respite, discharge transition, agency change or appointment transport. Use a safe person alias and household role; never put a name, diagnosis, address, medication, detailed schedule or authority document in the shared row. A new context or person change deserves a new version rather than an edited history.
+
+## Map the responsible source before the recipient
+
+List safe pointers for the provider, care plan, agency coordinator, case manager, household logistics and emergency escalation source. The source map answers “where is the current instruction?” It does not answer “what should the caregiver do?” Keep the exact plan, consent, identity proof and contact credentials in the protected system controlled by the responsible person or organisation.
+
+## Define minimum scope and participation
+
+The row includes recipient authority, minimum information scope and the care person's participation source. Write “current routine pointer and provider escalation route” rather than copying feeding, lifting, medication or behaviour instructions. If the person receiving care must participate or consent, record the protected source that handles that process; a FamilyBoard row cannot substitute for capacity, consent or legal authority.
+
+## Separate access, custody and return
+
+Record whether the intended recipient could open the necessary protected source, where the current version is held and how a temporary copy will be returned or withdrawn. Access observed is not permission granted, and a role label is not an access credential. If a link or paper sheet is outdated, leave the status waiting and recover old copies through the controlling process.
+
+## Use status to show what is still missing
+
+The tool moves from purpose and care context through source, person match, version, authority, access, care and escalation mapping, briefing or acceptance, review, result and not-applicable. A row can be source-mapped while acceptance is pending. Do not select a reviewed or completed status when the recipient has not actually found the source or when a provider result is still outstanding.
+
+## Record briefing and acceptance as actions
+
+Write the date and responsible role for a briefing, then record what the recipient observed without copying sensitive instructions. Acceptance means the person acknowledged the scope and knows where to ask questions; it does not prove a care task was performed safely. Any change in routine, provider, authority, season or service should reopen the appropriate row.
+
+## Escalation stays with qualified sources
+
+A conflict in identity, version, authority, instruction or safety belongs in the conflict status with a provider, agency, case manager or other qualified route. For immediate danger, injury, medical symptoms or safeguarding concerns, follow local emergency and professional instructions before updating the household index. FamilyBoard does not provide treatment, lifting, feeding, medication or emergency directions.
+
+## Privacy, exports and optional commercial content
+
+The log is a local browser index. Export before clearing data, protect original plans and restrict every copy to the minimum useful audience. Do not put access codes, private messages or detailed care content into analytics or affiliate panels. Future products may be mentioned only outside the care controls, with disclosure and a skip option; no product placement is a care endorsement.
+
+## Eight-question closeout
+
+Is the care context bounded? Is the responsible source current and dated? Is authority distinct from a role label? Is minimum scope explicit? Were access and return observed? Is briefing separate from acceptance and care result? Are conflicts routed to a qualified source? Were detailed instructions and identity data kept protected? If not, keep the handoff open.
+
+---
+
+## Page 463 — How to Use FamilyBoard's Insurance Policy Source and Version Log
+**Slug:** /guides/familyboard-insurance-policy-source-version-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/
+**Primary intent:** learn to map issued insurance documents, forms, endorsements, access and status sources without interpreting coverage or calculating a claim deadline
+**Title tag:** FamilyBoard Insurance Policy Source Version Tutorial | Find the Current Document Set
+**Meta description:** Learn how to use FamilyBoard's Insurance Policy Source and Version Log to connect issued documents, endorsements, access observations and status routes while leaving coverage decisions to the insurer and qualified advice.
+**Primary keyword concept:** FamilyBoard insurance policy source version tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-insurance-policy-source-version-log/, /guides/organize-insurance-documents/, /guides/home-inventory-for-insurance/, /guides/familyboard-insurance-claim-timeline-tutorial/
+**FAQ:**
+- Q: Does this log confirm that a policy is valid or that an item is covered?
+  A: No. It maps documents and sources; only the issued policy, insurer and qualified advice address coverage.
+- Q: Should I enter a policy number, premium or deductible in a shared row?
+  A: No. Use a safe purpose code and protected source pointer; keep complete identifiers and financial details private.
+- Q: Does a newer document automatically replace every older endorsement?
+  A: No. Record the document relationship and ask the insurer or qualified adviser to resolve the current set.
+- Q: Can the log calculate a claim or complaint deadline?
+  A: No. Check the current contract, notice and applicable official or qualified source for any deadline.
+
+**Contextual CTA:** Preserve the issued set, form relationships and current status route as evidence pointers without turning a household index into coverage advice.
+
+# How to Use FamilyBoard's Insurance Policy Source and Version Log
+
+Insurance paperwork is often split across declarations, policy forms, certificates, endorsements, renewal notices and a portal. A filename that says “current” does not prove the set is complete. The free [Insurance Policy Source and Version Log](/tools/household-insurance-policy-source-version-log/) maps issued sources, document relationships, access observations and status routes while leaving coverage, liability and deadlines to the insurer, regulator, contract and qualified advice. It is a source index, not an insurance determination.
+
+## Start with a policy purpose, not a policy number
+
+Use `INS-SOURCE-2026-A` and select a context such as a first inventory, renewal set, endorsement, possible missing document, status notice, claim preparation or replacement. Describe the household purpose and role without entering a policy number, address, insured person's name, vehicle identifier, premium or coverage limit. A purpose code helps a family find the right protected set without exposing the account.
+
+## Map legal-entity and issued-document evidence
+
+The source map can point to an insurer's legal name, regulator, ombudsman or protected declarations using safe IDs and dates. Keep the complete policy, correspondence, claim file, signatures and portal details in protected originals. A public regulator page can explain a process, but it does not prove that a particular household policy is valid or that a specific notice is effective.
+
+## Keep forms and endorsements connected
+
+Each row asks for the issued document set and version clue, then the relationship among declarations, certificates, base forms, endorsements or riders. Do not assume an endorsement is included because a filename mentions it, and do not delete an older form simply because a renewal arrived. Record what was actually found and leave a missing or conflicting relationship open for the insurer or qualified review route.
+
+## Observe access without claiming completeness
+
+Write whether a protected original was opened and its title or version was visible. “Portal opened” is not the same as “complete current set confirmed.” If a listed document is absent, select the possible-missing or conflict status, preserve the notice and identify the responsible source. The tool cannot authenticate a portal, compare legal wording or tell you whether coverage applies.
+
+## Treat status and complaint routes as separate evidence
+
+Renewal, cancellation, nonrenewal, claim and complaint sources answer different questions. Record the current status route and any discrepancy, then assign an owner and target date. Do not turn an intention to call, a submitted form or an insurer acknowledgement into a completed claim or coverage result. Follow the current policy and applicable official process for the real action.
+
+## Preserve ended and replaced sets
+
+When a policy ends or is replaced, record the attributable status event, protected custody and any remaining purpose such as a claim, tax, property or dispute record. Do not destroy or erase originals based on a generic retention period. The log cannot calculate a legal duty or prove every copy is gone; use the controlling source and qualified advice before any destructive action.
+
+## Privacy and commercial boundaries
+
+The tool runs locally as a household source index. Keep names, addresses, identifiers, payment data, claim details and correspondence out of shared rows, and export before clearing browser data. Future insurance or storage recommendations must be outside the evidence fields, clearly labelled as optional affiliate content and never presented as an insurer endorsement, coverage answer or claim shortcut.
+
+## Eight-question closeout
+
+Is the purpose safe and bounded? Is the insurer source attributable? Are declarations, forms and endorsements related by evidence? Was access actually observed? Are missing or conflicting documents visible? Is status separate from claim or complaint action? Are ended sets protected with their remaining purpose? Did the household avoid interpreting coverage or deadlines? If not, leave the source review open.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

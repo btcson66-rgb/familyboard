@@ -3552,6 +3552,30 @@
     "headings": "How to Use FamilyBoard's Moving Box Handover Log Start with the move context and safe ID Keep the four dates chronological Build ten-field event rows Treat statuses as a timeline Preserve official evidence beside the index Reconcile without rewriting history Privacy, access and optional commercial content Eight-question closeout"
   },
   {
+    "title": "FamilyBoard Medical Information Source Handoff Tutorial | Keep Health Records Findable",
+    "description": "Learn how to use FamilyBoard's Household Medical Information Source and Handoff Log to track source owners, versions, access observations and next actions without copying diagnoses or treatment details.",
+    "route": "/guides/familyboard-medical-information-source-handoff-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard medical information source handoff tutorial",
+    "headings": "How to Use FamilyBoard's Household Medical Information Source and Handoff Log Begin with purpose, not a diagnosis Build a source map with safe pointers Use the twelve-field row to preserve layers Treat access as an observation, not permission Keep medical, pharmacy and coverage sources separate Record actions and results separately Privacy, backup and local-first limits Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Caregiver Handoff Tutorial | Track Sources, Scope and Acceptance",
+    "description": "Learn how to use FamilyBoard's Caregiver Handoff Source and Authorization Log to separate care sources, recipient authority, access, custody and acceptance while keeping sensitive instructions protected.",
+    "route": "/guides/familyboard-caregiver-handoff-source-authorization-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard caregiver handoff authorization tutorial",
+    "headings": "How to Use FamilyBoard's Caregiver Handoff Source and Authorization Log Choose one care context and a safe code Map the responsible source before the recipient Define minimum scope and participation Separate access, custody and return Use status to show what is still missing Record briefing and acceptance as actions Escalation stays with qualified sources Privacy, exports and optional commercial content Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Insurance Policy Source Version Tutorial | Find the Current Document Set",
+    "description": "Learn how to use FamilyBoard's Insurance Policy Source and Version Log to connect issued documents, endorsements, access observations and status routes while leaving coverage decisions to the insurer and qualified advice.",
+    "route": "/guides/familyboard-insurance-policy-source-version-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "FamilyBoard insurance policy source version tutorial",
+    "headings": "How to Use FamilyBoard's Insurance Policy Source and Version Log Start with a policy purpose, not a policy number Map legal-entity and issued-document evidence Keep forms and endorsements connected Observe access without claiming completeness Treat status and complaint routes as separate evidence Preserve ended and replaced sets Privacy and commercial boundaries Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

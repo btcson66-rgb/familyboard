@@ -45,6 +45,9 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/annual-subscription-cost-calculator/",
     "/tools/storage-unit-access-inventory-log/",
     "/tools/moving-box-handover-log/",
+    "/tools/household-medical-information-source-handoff-log/",
+    "/tools/caregiver-handoff-source-authorization-log/",
+    "/tools/household-insurance-policy-source-version-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -187,6 +190,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
     "/guides/familyboard-moving-box-handover-log-tutorial/",
     "/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/",
+    "/guides/familyboard-medical-information-source-handoff-tutorial/",
+    "/zh-tw/guides/familyboard-medical-information-source-handoff-tutorial/",
+    "/guides/familyboard-caregiver-handoff-source-authorization-tutorial/",
+    "/zh-tw/guides/familyboard-caregiver-handoff-source-authorization-tutorial/",
+    "/guides/familyboard-insurance-policy-source-version-tutorial/",
+    "/zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1677,6 +1686,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-moving-box-handover-log-tutorial/",
       alternate: "/guides/familyboard-moving-box-handover-log-tutorial/",
       heading: "FamilyBoard 搬家箱件交接紀錄教學：不要把整個搬家壓成「已送達」",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-medical-information-source-handoff-tutorial/",
+      alternate: "/guides/familyboard-medical-information-source-handoff-tutorial/",
+      heading: "FamilyBoard 家庭醫療資訊來源交接教學：把「在線上」變成可查找的安全路徑",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-caregiver-handoff-source-authorization-tutorial/",
+      alternate: "/guides/familyboard-caregiver-handoff-source-authorization-tutorial/",
+      heading: "FamilyBoard 照護者交接與授權教學：先畫清楚邊界，再交給下一個人",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/",
+      alternate: "/guides/familyboard-insurance-policy-source-version-tutorial/",
+      heading: "FamilyBoard 家庭保單來源與版本教學：先確定文件組，再談下一步",
     },
   ]) {
     await page.goto(localized.route);
