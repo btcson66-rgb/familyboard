@@ -5773,12 +5773,145 @@ const householdDateOffsetDefinition = (locale: Locale): Definition => {
   };
 };
 
+const householdTaskLoadDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const frequencyFactors: Record<string, number> = {
+    daily: 7,
+    "every day": 7,
+    weekly: 1,
+    "every week": 1,
+    fortnightly: 0.5,
+    biweekly: 0.5,
+    "every two weeks": 0.5,
+    monthly: 12 / 52,
+    "every month": 12 / 52,
+    每日: 7,
+    每天: 7,
+    每週: 1,
+    每周: 1,
+    隔週: 0.5,
+    隔周: 0.5,
+    每兩週: 0.5,
+    每两周: 0.5,
+    每月: 12 / 52,
+  };
+  const frequencyLabel = (value: string) => {
+    const key = value.trim().toLocaleLowerCase("zh-TW");
+    return frequencyFactors[key] === undefined ? null : frequencyFactors[key];
+  };
+  const rounded = (value: number) => Math.round(value * 10) / 10;
+  const minutesLabel = (value: number) => {
+    const result = rounded(value);
+    return Number.isInteger(result) ? String(result) : result.toFixed(1);
+  };
+  return {
+    intro: zh
+      ? "把重複家務的頻率、每次分鐘數與中性責任代號換算成每週時間估計，讓家庭能討論容量與分工。工具不評分公平、不替你分派，也不把估計當成實測。"
+      : "Turn recurring household tasks, minutes per occurrence and neutral role codes into a weekly time estimate for a capacity conversation. The tool does not score fairness, assign work or present estimates as measured effort.",
+    fields: [
+      text(
+        "review",
+        zh ? "家務負荷複查代號" : "Private task-load review code",
+        zh
+          ? "使用中性代號，不要輸入姓名、地址、電話、帳號或私人對話。"
+          : "Use a neutral code, not a name, address, phone, account or private conversation.",
+        "LOAD-REVIEW-2026-A",
+      ),
+      {
+        name: "tasks",
+        label: zh ? "重複家務明細" : "Recurring task details",
+        type: "textarea",
+        help: zh
+          ? "每行四欄：家務名稱 | 責任代號 | 頻率（每日／每週／隔週／每月） | 每次分鐘數。不要貼住址、聯絡或帳號資料。"
+          : "One line per task: task | role code | frequency (daily, weekly, fortnightly or monthly) | minutes per occurrence. Do not paste address, contact or account data.",
+        value: zh
+          ? "垃圾與回收 | 角色-A | 每週 | 20\n濾網狀態複查 | 角色-B | 每月 | 15\n學校表單追蹤 | 未指派 | 隔週 | 25"
+          : "Trash and recycling | ROLE-A | weekly | 20\nFilter condition review | ROLE-B | monthly | 15\nSchool-form follow-up | UNASSIGNED | fortnightly | 25",
+      },
+    ],
+    run: (values) => {
+      const privacy = [values.review, values.tasks].join("\n");
+      if (!values.review.trim())
+        return zh ? "請輸入家務負荷複查代號。" : "Enter a private task-load review code.";
+      if (
+        /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) ||
+        /(?:\d[\s().+-]*){7,}/.test(privacy) ||
+        /password|passcode|account number|full address|access code|密碼|驗證碼|帳號|完整地址|門禁碼|身分證/i.test(privacy)
+      )
+        return zh
+          ? "偵測到可能的聯絡、帳號、地址或憑證資料；請改用安全代號。"
+          : "A possible contact, account, address or credential was detected; replace it with a safe code.";
+      const rows = values.tasks
+        .split(/\r?\n/)
+        .map((raw, index) => ({
+          line: index + 1,
+          parts: raw.split(/\||｜/).map((part) => part.trim()),
+        }))
+        .filter((row) => row.parts.some(Boolean));
+      if (!rows.length)
+        return zh ? "請至少輸入一行家務明細。" : "Enter at least one task row.";
+      if (rows.length > 40)
+        return zh ? "一次最多輸入 40 行家務明細。" : "Enter no more than 40 task rows at a time.";
+      const invalidShape = rows.filter(
+        (row) => row.parts.length !== 4 || row.parts.some((part) => !part),
+      );
+      if (invalidShape.length)
+        return zh
+          ? `第 ${invalidShape.map((row) => row.line).join("、")} 行格式不完整；每行需要家務、責任代號、頻率與分鐘數四欄。`
+          : `Line${invalidShape.length === 1 ? "" : "s"} ${invalidShape.map((row) => row.line).join(", ")} need four fields: task, role code, frequency and minutes.`;
+      const parsed = rows.map((row) => {
+        const [task, owner, frequency, minutesText] = row.parts;
+        const factor = frequencyLabel(frequency);
+        const minutes = Number(minutesText);
+        return { ...row, task, owner, frequency, factor, minutes };
+      });
+      const invalidFrequency = parsed.filter((row) => row.factor === null);
+      if (invalidFrequency.length)
+        return zh
+          ? `第 ${invalidFrequency.map((row) => row.line).join("、")} 行的頻率無法辨識；請使用每日、每週、隔週或每月。`
+          : `Line${invalidFrequency.length === 1 ? "" : "s"} ${invalidFrequency.map((row) => row.line).join(", ")} use an unsupported frequency; choose daily, weekly, fortnightly or monthly.`;
+      const invalidMinutes = parsed.filter(
+        (row) => !Number.isInteger(row.minutes) || row.minutes < 1 || row.minutes > 1440,
+      );
+      if (invalidMinutes.length)
+        return zh
+          ? `第 ${invalidMinutes.map((row) => row.line).join("、")} 行的分鐘數必須是 1 到 1440 的整數。`
+          : `Line${invalidMinutes.length === 1 ? "" : "s"} ${invalidMinutes.map((row) => row.line).join(", ")} need whole minutes from 1 to 1440.`;
+      const weeklyRows = parsed.map((row) => ({
+        ...row,
+        weekly: rounded(row.minutes * (row.factor as number)),
+      }));
+      const byOwner = new Map<string, number>();
+      weeklyRows.forEach((row) =>
+        byOwner.set(row.owner, rounded((byOwner.get(row.owner) || 0) + row.weekly)),
+      );
+      const total = rounded(weeklyRows.reduce((sum, row) => sum + row.weekly, 0));
+      const sortedOwners = [...byOwner.entries()].sort((a, b) => b[1] - a[1]);
+      const details = weeklyRows
+        .map(
+          (row) =>
+            `- ${row.task} — ${row.owner} — ${row.frequency}: ${row.minutes} min/occurrence → ~${minutesLabel(row.weekly)} weekly min`,
+        )
+        .join("\n");
+      const owners = sortedOwners
+        .map(([owner, minutes]) => `- ${owner}: ~${minutesLabel(minutes)} weekly min`)
+        .join("\n");
+      return zh
+        ? `${values.review.trim()}｜家庭家務負荷每週估計\n家務明細\n${details}\n\n責任代號彙總\n${owners}\n\n全部家務估計：每週約 ${minutesLabel(total)} 分鐘（${minutesLabel(total / 60)} 小時）\n\n這是依輸入頻率與每次分鐘數換算的規劃估計，不是實測、效率評分或公平裁判。每日以 7 次、每週以 1 次、隔週以 0.5 次、每月以 12/52 次換算；實際頻率、準備時間、照護負荷與突發工作仍要由家庭討論並另行記錄。請用 FamilyBoard 任務指定真正負責角色，保留未指派項目，不要用數字責怪無法安全執行的人。`
+        : `${values.review.trim()} — household task-load weekly estimate\nTask details\n${details}\n\nRole-code summary\n${owners}\n\nAll tasks: about ${minutesLabel(total)} minutes per week (${minutesLabel(total / 60)} hours)\n\nThis is a planning estimate from the entered frequency and minutes, not measured effort, an efficiency score or a fairness ruling. Daily uses 7 occurrences, weekly 1, fortnightly 0.5 and monthly 12/52; actual preparation time, care load, interruptions and one-off work need a household conversation and separate records. Use a FamilyBoard task for the real owner, keep unassigned work visible and never use the number to shame someone who cannot safely do a task.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
   "household-time-window-overlap-checker": {
     ...householdTimeWindowOverlapDefinition("en"),
   },
   "household-date-offset-planner": {
     ...householdDateOffsetDefinition("en"),
+  },
+  "household-task-load-calculator": {
+    ...householdTaskLoadDefinition("en"),
   },
   "household-backup-recovery-checker": {
     ...householdBackupRecoveryDefinition("en"),
@@ -9906,6 +10039,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-date-offset-planner": {
     ...householdDateOffsetDefinition("zh-TW"),
+  },
+  "household-task-load-calculator": {
+    ...householdTaskLoadDefinition("zh-TW"),
   },
   "household-backup-recovery-checker": {
     ...householdBackupRecoveryDefinition("zh-TW"),

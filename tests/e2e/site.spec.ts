@@ -41,6 +41,7 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-utility-bill-anomaly-log/",
     "/tools/household-time-window-overlap-checker/",
     "/tools/household-date-offset-planner/",
+    "/tools/household-task-load-calculator/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -111,6 +112,8 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-date-offset-planner-tutorial/",
     "/tools/household-date-offset-planner/",
     "/zh-tw/tools/household-date-offset-planner/",
+    "/tools/household-task-load-calculator/",
+    "/zh-tw/tools/household-task-load-calculator/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -688,6 +691,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-utility-bill-difference-tutorial/",
     "/tools/household-time-window-overlap-checker/",
     "/tools/household-date-offset-planner/",
+    "/tools/household-task-load-calculator/",
     "/zh-tw/tools/household-time-window-overlap-checker/",
     "/guides/familyboard-time-window-overlap-checker-tutorial/",
     "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
@@ -2020,6 +2024,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       alternate: "/tools/household-date-offset-planner/",
       heading: "家庭日期偏移規劃器",
     },
+    {
+      route: "/zh-tw/tools/household-task-load-calculator/",
+      alternate: "/tools/household-task-load-calculator/",
+      heading: "家庭家務負荷計算器",
+    },
   ]) {
     await page.goto(localizedTool.route);
     await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
@@ -2041,6 +2050,14 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       page.locator('link[rel="alternate"][hreflang="zh-TW"]'),
     ).toHaveAttribute("href", `https://familyboard.win${localizedTool.route}`);
   }
+
+  await page.goto("/zh-tw/tools/household-task-load-calculator/");
+  await page.getByLabel("重複家務明細").fill(
+    "垃圾與回收 | 角色-A | 每週 | 20\n濾網狀態複查 | 角色-B | 每月 | 15",
+  );
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".result")).toContainText("全部家務估計");
+  await expect(page.locator(".result")).toContainText("角色-A");
 
   await page.goto("/zh-tw/tools/home-maintenance-schedule-generator/");
   await page.getByLabel("第一次複查日期").fill("2026-09-01");

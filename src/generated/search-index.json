@@ -2984,6 +2984,22 @@
     "headings": "How to Use FamilyBoard's Date Offset Planner for a Follow-Up You Can Defend Start with the source-defined anchor Use a purpose that another person can recognise Sign the direction and the number Convert the result into an owned action Preserve changes instead of rewriting history Share the minimum necessary view Close the loop with the observed answer"
   },
   {
+    "title": "Household Task Load Calculator | Free Weekly Chore Time Estimate",
+    "description": "Estimate weekly household task time from frequency and minutes per occurrence, group it by neutral role code and keep the result local and non-judgmental.",
+    "route": "/tools/household-task-load-calculator/",
+    "cluster": "tools",
+    "keywords": "household task load calculator",
+    "headings": "Household Task Load Calculator: make recurring work visible without turning it into a score Start with a neutral review code Enter one recurring task per line Understand the frequency factors Read the role summary as a conversation starter Turn the estimate into real FamilyBoard work Revisit estimates when the household changes Privacy and future recommendations A useful closeout"
+  },
+  {
+    "title": "家庭家務負荷計算器｜免費每週時間估算工具｜FamilyBoard",
+    "description": "輸入家務頻率、每次分鐘數與中性責任代號，估算每週時間並整理分工討論；資料留在瀏覽器，不替家庭評分。",
+    "route": "/zh-tw/tools/household-task-load-calculator/",
+    "cluster": "tools",
+    "keywords": "家庭家務負荷計算器",
+    "headings": "家庭家務負荷計算器：看見重複工作，不把分鐘變成打分數 先建立中性的複查代號 每行只放一項重複家務 看懂頻率係數 把責任代號彙總當成對話起點 把估算接成真正的 FamilyBoard 任務 家庭情況改變就重新估算 隱私與未來推薦界線 用可複查資料收尾"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
