@@ -1161,11 +1161,11 @@
   },
   {
     "route": "/guides/subscription-renewal-tracker/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "alternateRoute": "/zh-tw/guides/subscription-renewal-tracker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/guides/organize-household-subscriptions/"
+    "redirectTo": ""
   },
   {
     "route": "/guides/recurring-bills-tracker/",
@@ -5475,6 +5475,13 @@
     "alternateRoute": "/guides/subscription-cancellation-refund-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/subscription-renewal-tracker/",
+    "alternateRoute": "/guides/subscription-renewal-tracker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

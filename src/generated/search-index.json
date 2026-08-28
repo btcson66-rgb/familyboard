@@ -1152,6 +1152,14 @@
     "headings": "A subscription is different from a bill because you can just stop paying it Find every subscription from more than one source The five fields that actually matter Free trials are where subscriptions actually go wrong Set your own review date ahead of the seller's notice Record ownership, not just cost Start with the ten that matter, not a forensic audit"
   },
   {
+    "title": "Subscription Renewal Tracker: Review Services Before the Charge Happens",
+    "description": "Track monthly and annual subscription renewals with lead-time reminders, account ownership and cancellation notes.",
+    "route": "/guides/subscription-renewal-tracker/",
+    "cluster": "household-operations",
+    "keywords": "subscription renewal tracker",
+    "headings": "A renewal reminder should create a decision window Annual renewals need longer visibility Monthly renewals may not need individual alerts Track changes Keep cancellation notes factual"
+  },
+  {
     "title": "Recurring Bills Tracker: Organize Due Dates Without Becoming a Banking App",
     "description": "Track household recurring bills, due dates, frequency, owner and payment method notes without connecting bank accounts or storing sensitive credentials.",
     "route": "/guides/recurring-bills-tracker/",

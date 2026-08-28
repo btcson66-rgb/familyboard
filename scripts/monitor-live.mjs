@@ -567,6 +567,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/what-spouse-needs-to-know/</loc>",
       "<loc>https://familyboard.win/guides/recurring-household-tasks/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/recurring-household-tasks/</loc>",
+      "<loc>https://familyboard.win/guides/subscription-renewal-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/subscription-renewal-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/family-task-manager/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-dashboard/</loc>",
@@ -5640,6 +5642,23 @@ const checks = [
       "家庭重複家務",
       "固定日期和完成後間隔是兩種不同邏輯",
       "跑兩個週期，再修正清單",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/guides/subscription-renewal-tracker/",
+    require: [
+      "Subscription Renewal Tracker",
+      "A renewal reminder should create a decision window",
+      "Keep cancellation notes factual",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/subscription-renewal-tracker/",
+    require: [
+      "訂閱續約追蹤",
+      "年度續約要提早四到六週浮現",
+      "取消備註要能幫助下一位接手",
       'hreflang="en"',
     ],
   },

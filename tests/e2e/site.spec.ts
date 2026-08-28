@@ -95,6 +95,8 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/what-spouse-needs-to-know/",
     "/guides/recurring-household-tasks/",
     "/zh-tw/guides/recurring-household-tasks/",
+    "/guides/subscription-renewal-tracker/",
+    "/zh-tw/guides/subscription-renewal-tracker/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -661,6 +663,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/what-spouse-needs-to-know/",
     "/guides/recurring-household-tasks/",
     "/zh-tw/guides/recurring-household-tasks/",
+    "/guides/subscription-renewal-tracker/",
+    "/zh-tw/guides/subscription-renewal-tracker/",
     "/zh-tw/features/home-inventory-tracker/",
     "/zh-tw/features/family-task-manager/",
     "/zh-tw/features/home-dashboard/",
