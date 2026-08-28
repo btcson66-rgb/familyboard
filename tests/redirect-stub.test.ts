@@ -4,7 +4,6 @@ import { createRedirectStub } from "../src/lib/redirect-stub";
 
 const consolidations = [
   ["/guides/chore-chart-for-adults/", "/guides/family-chore-system/"],
-  ["/guides/recurring-household-tasks/", "/guides/family-chore-system/"],
   ["/guides/subscription-renewal-tracker/", "/guides/organize-household-subscriptions/"],
 ] as const;
 

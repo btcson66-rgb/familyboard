@@ -1104,6 +1104,14 @@
     "headings": "Household work is easier to divide when the invisible parts are named A responsibility isn't shared until all four stages have an owner What this looks like for one real task A second example, to show the pattern holds List responsibilities before assigning them Count by frequency, not by task Match tasks to capacity, not just fairness on paper Keep a backup path for anything critical Revisit the split when life changes, not just when it breaks"
   },
   {
+    "title": "Recurring Household Tasks: What Is Worth Automating and What Should Stay Flexible",
+    "description": "Organize recurring household work by daily, weekly, monthly, seasonal and annual responsibilities without turning every routine into an alert.",
+    "route": "/guides/recurring-household-tasks/",
+    "cluster": "household-operations",
+    "keywords": "recurring household tasks",
+    "headings": "Repetition is a good reason to build a system—but not every repeated action needs a notification Daily and weekly Monthly and quarterly Seasonal and annual Use the right trigger Keep recurring work private and portable"
+  },
+  {
     "title": "Family Chore System: Build a Routine People Can Understand at a Glance",
     "description": "Create a family chore system with clear ownership, recurring schedules, age-appropriate expectations and a shared display without over-gamifying normal home life.",
     "route": "/guides/family-chore-system/",

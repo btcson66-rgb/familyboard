@@ -565,6 +565,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/family-emergency-contacts/</loc>",
       "<loc>https://familyboard.win/guides/what-spouse-needs-to-know/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/what-spouse-needs-to-know/</loc>",
+      "<loc>https://familyboard.win/guides/recurring-household-tasks/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/recurring-household-tasks/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/family-task-manager/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-dashboard/</loc>",
@@ -5621,6 +5623,23 @@ const checks = [
       "伴侶需要知道哪些家庭資訊",
       "每項責任至少要有五個欄位",
       "讓另一人不看提示完成三項查找",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/guides/recurring-household-tasks/",
+    require: [
+      "Recurring Household Tasks",
+      "Daily and weekly",
+      "Use the right trigger",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/recurring-household-tasks/",
+    require: [
+      "家庭重複家務",
+      "固定日期和完成後間隔是兩種不同邏輯",
+      "跑兩個週期，再修正清單",
       'hreflang="en"',
     ],
   },

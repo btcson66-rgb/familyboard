@@ -1105,11 +1105,11 @@
   },
   {
     "route": "/guides/recurring-household-tasks/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "alternateRoute": "/zh-tw/guides/recurring-household-tasks/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/guides/family-chore-system/"
+    "redirectTo": ""
   },
   {
     "route": "/guides/family-chore-system/",
@@ -5307,6 +5307,13 @@
     "alternateRoute": "/tools/recurring-chore-planner/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/recurring-household-tasks/",
+    "alternateRoute": "/guides/recurring-household-tasks/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
