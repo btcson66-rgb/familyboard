@@ -61,6 +61,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-master-csv-edit-import/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-history-review/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-subscription-renewal-review/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-members-responsibilities-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-documents-source-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/</loc>",
@@ -608,6 +611,30 @@ const checks = [
       "FamilyBoard 訂閱續約前怎麼複查",
       "用一致方法比較年化費用",
       "都不是未來不扣款的證明",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-members-responsibilities-tutorial/",
+    require: [
+      "FamilyBoard 家庭成員與責任怎麼設定",
+      "先列工作，再列成員",
+      "Members 是責任標籤，不是存取控制表",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-documents-source-review-tutorial/",
+    require: [
+      "FamilyBoard 文件怎麼整理",
+      "Documents 的任務是畫一張地圖",
+      "CSV 方便有意識的批次編修",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/",
+    require: [
+      "FamilyBoard 緊急資訊怎麼整理又不外洩",
+      "先分清楚家庭成員與外部聯絡人",
+      "沒有伺服器副本，也沒有自動跨裝置同步",
     ],
   },
   {

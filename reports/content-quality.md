@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T01:07:44.012Z
+Generated: 2026-08-28T01:18:13.575Z
 
 ## Summary
 
-- Indexable pages: 595
-- Generated HTML routes: 612
+- Indexable pages: 598
+- Generated HTML routes: 615
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 302
+- Pages without a contextual product/tool link: 305
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 112
+- product: 115
 - appliances: 30
 - maintenance: 52
 - household-operations: 104
@@ -148,7 +148,9 @@ Generated: 2026-08-28T01:07:44.012Z
 - /zh-tw/guides/familyboard-consumable-change-history-tutorial/
 - /zh-tw/guides/familyboard-device-retirement-tutorial/
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
+- /zh-tw/guides/familyboard-documents-source-review-tutorial/
 - /zh-tw/guides/familyboard-donation-handoff-tutorial/
+- /zh-tw/guides/familyboard-emergency-information-privacy-tutorial/
 - /zh-tw/guides/familyboard-event-source-index-tutorial/
 - /zh-tw/guides/familyboard-family-display-mode-setup/
 - /zh-tw/guides/familyboard-free-home-management-app-tutorial/
@@ -159,6 +161,7 @@ Generated: 2026-08-28T01:07:44.012Z
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
+- /zh-tw/guides/familyboard-household-members-responsibilities-tutorial/
 - /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
 - /zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/

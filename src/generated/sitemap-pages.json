@@ -385,7 +385,7 @@
   },
   {
     "route": "/guides/familyboard-household-members-responsibilities-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-members-responsibilities-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -393,7 +393,7 @@
   },
   {
     "route": "/guides/familyboard-documents-source-review-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-documents-source-review-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -401,7 +401,7 @@
   },
   {
     "route": "/guides/familyboard-emergency-information-privacy-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -3376,10 +3376,24 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-documents-source-review-tutorial/",
+    "alternateRoute": "/guides/familyboard-documents-source-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-donation-handoff-tutorial/",
     "alternateRoute": "/guides/familyboard-donation-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/",
+    "alternateRoute": "/guides/familyboard-emergency-information-privacy-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -3450,6 +3464,13 @@
     "alternateRoute": "/guides/familyboard-household-meeting-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-members-responsibilities-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-members-responsibilities-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

@@ -361,6 +361,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-master-csv-edit-import/",
     "/zh-tw/guides/familyboard-maintenance-history-review/",
     "/zh-tw/guides/familyboard-subscription-renewal-review/",
+    "/zh-tw/guides/familyboard-household-members-responsibilities-tutorial/",
+    "/zh-tw/guides/familyboard-documents-source-review-tutorial/",
+    "/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3544,6 +3547,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-subscription-renewal-review/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-members-responsibilities-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-documents-source-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",
