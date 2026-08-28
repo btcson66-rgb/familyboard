@@ -49,6 +49,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-home-dashboard-weekly-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/</loc>",
@@ -500,6 +503,30 @@ const checks = [
       "A five-minute weekly review using the FamilyBoard home dashboard",
       "Read the four counters in order",
       "does not send push, email or text notifications",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-free-home-management-app-tutorial/",
+    require: [
+      "FamilyBoard 免費家庭管理 App 怎麼開始",
+      "擴充前先匯出並測試備份",
+      "沒有帳號牆",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-private-family-organizer-tutorial/",
+    require: [
+      "FamilyBoard 私人家庭管理 App 怎麼用",
+      "先把資料分成三層",
+      "不會阻止使用者複製或拍照",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/",
+    require: [
+      "FamilyBoard Today 儀表板每週怎麼複查",
+      "先讀四項數字，再點進來源",
+      "不會傳推播、簡訊或 Email",
     ],
   },
   {

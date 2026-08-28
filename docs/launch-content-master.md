@@ -24763,6 +24763,7 @@ All processing is local to the browser. Review the generated result before print
 
 ## Page 363 — How to Start with the Free FamilyBoard Home Management App
 **Slug:** `/guides/familyboard-free-home-management-app-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-free-home-management-app-tutorial/`
 **Primary intent:** onboard a household to the free FamilyBoard app with a useful first record, a dashboard habit and a verified backup
 **Title tag:** Free Home Management App Tutorial | Start with FamilyBoard
 **Meta description:** Start FamilyBoard in three safe steps: create a local household, add a real asset or task, and export a backup before building a larger home history.
@@ -24833,6 +24834,7 @@ Future affiliate suggestions for binders, labels or storage must remain outside 
 
 ## Page 364 — How to Use FamilyBoard as a Private Family Organizer
 **Slug:** `/guides/familyboard-private-family-organizer-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-private-family-organizer-tutorial/`
 **Primary intent:** choose safe local records, manage privacy boundaries and transfer a FamilyBoard household without account sharing
 **Title tag:** Private Family Organizer Tutorial | Local-First FamilyBoard Guide
 **Meta description:** Learn how to use FamilyBoard as a private family organizer: minimise sensitive data, understand browser storage, encrypt exports and share role-based handoffs.
@@ -24901,6 +24903,7 @@ Future recommendations for storage, labels or backup media must sit outside the 
 
 ## Page 365 — How to Use the FamilyBoard Home Dashboard Every Week
 **Slug:** `/guides/familyboard-home-dashboard-weekly-review-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/`
 **Primary intent:** run a repeatable weekly review from FamilyBoard's Today dashboard while understanding its counters and visibility limits
 **Title tag:** FamilyBoard Home Dashboard Tutorial | Weekly Household Review
 **Meta description:** Use the FamilyBoard home dashboard for a focused weekly review: read the four counters, clear open responsibilities, inspect maintenance due soon and record what stays open.

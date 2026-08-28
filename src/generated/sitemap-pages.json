@@ -2897,7 +2897,7 @@
   },
   {
     "route": "/guides/familyboard-free-home-management-app-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-free-home-management-app-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -2905,7 +2905,7 @@
   },
   {
     "route": "/guides/familyboard-private-family-organizer-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-private-family-organizer-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -2913,7 +2913,7 @@
   },
   {
     "route": "/guides/familyboard-home-dashboard-weekly-review-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -3349,6 +3349,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-free-home-management-app-tutorial/",
+    "alternateRoute": "/guides/familyboard-free-home-management-app-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-guest-arrival-prep-tutorial/",
     "alternateRoute": "/guides/familyboard-guest-arrival-prep-tutorial/",
     "indexable": true,
@@ -3360,6 +3367,13 @@
     "alternateRoute": "/guides/familyboard-home-access-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-dashboard-weekly-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -3493,6 +3507,13 @@
     "alternateRoute": "/guides/familyboard-power-outage-event-log-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-private-family-organizer-tutorial/",
+    "alternateRoute": "/guides/familyboard-private-family-organizer-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

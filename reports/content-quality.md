@@ -1,27 +1,27 @@
 # Content quality report
 
-Generated: 2026-08-28T00:26:21.390Z
+Generated: 2026-08-28T00:36:11.110Z
 
 ## Summary
 
-- Indexable pages: 583
-- Generated HTML routes: 600
+- Indexable pages: 586
+- Generated HTML routes: 603
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 296
+- Pages without a contextual product/tool link: 299
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 105
+- product: 107
 - appliances: 30
 - maintenance: 50
-- household-operations: 101
+- household-operations: 102
 - inventory-warranty: 46
 - records-emergency: 86
 - tools: 124
@@ -151,8 +151,10 @@ Generated: 2026-08-28T00:26:21.390Z
 - /zh-tw/guides/familyboard-donation-handoff-tutorial/
 - /zh-tw/guides/familyboard-event-source-index-tutorial/
 - /zh-tw/guides/familyboard-family-display-mode-setup/
+- /zh-tw/guides/familyboard-free-home-management-app-tutorial/
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
+- /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
 - /zh-tw/guides/familyboard-household-account-list-tutorial/
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
@@ -172,6 +174,7 @@ Generated: 2026-08-28T00:26:21.390Z
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-power-outage-event-log-tutorial/
+- /zh-tw/guides/familyboard-private-family-organizer-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-rental-repair-request-tutorial/
 - /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
