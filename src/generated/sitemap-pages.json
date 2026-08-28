@@ -1577,7 +1577,7 @@
   },
   {
     "route": "/checklists/printable-house-sitter-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/checklists/printable-house-sitter-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1609,7 +1609,7 @@
   },
   {
     "route": "/templates/printable-subscription-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-subscription-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1617,7 +1617,7 @@
   },
   {
     "route": "/templates/printable-annual-renewals/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-annual-renewals/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3321,6 +3321,30 @@
   },
   {
     "route": "/zh-tw/templates/printable-chore-chart/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/checklists/printable-house-sitter-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-subscription-tracker/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-annual-renewals/",
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
@@ -5650,6 +5674,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/templates/printable-annual-renewals/",
+    "alternateRoute": "/templates/printable-annual-renewals/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/templates/printable-appliance-inventory/",
     "alternateRoute": "/templates/printable-appliance-inventory/",
     "indexable": true,
@@ -5694,6 +5725,13 @@
   {
     "route": "/zh-tw/checklists/printable-home-maintenance-checklist/",
     "alternateRoute": "/checklists/printable-home-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/checklists/printable-house-sitter-checklist/",
+    "alternateRoute": "/checklists/printable-house-sitter-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5750,6 +5788,13 @@
   {
     "route": "/zh-tw/templates/printable-service-provider-list/",
     "alternateRoute": "/templates/printable-service-provider-list/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/templates/printable-subscription-tracker/",
+    "alternateRoute": "/templates/printable-subscription-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

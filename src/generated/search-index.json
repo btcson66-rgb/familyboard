@@ -3192,6 +3192,30 @@
     "headings": "可列印家庭家務輪值表：把責任寫清楚，而不是把提醒都放在一個人身上"
   },
   {
+    "title": "可列印看家照護清單｜每日家務、寵物、植物與聯絡交接",
+    "description": "用台灣繁中可列印看家照護清單交代日期、寵物、植物、信件、垃圾、服務到訪與異常升級，不把帳密寫在紙上。",
+    "route": "/zh-tw/checklists/printable-house-sitter-checklist/",
+    "cluster": "printables",
+    "keywords": "可列印看家清單",
+    "headings": "可列印看家照護清單：讓短期代班者知道每天要做什麼、何時求助 每日最低任務與排程事件 異常升級與結束交接"
+  },
+  {
+    "title": "可列印訂閱追蹤表｜費用、週期、持有人與續訂日",
+    "description": "用台灣繁中可列印訂閱追蹤表整理服務名稱、實際費用、扣款週期、帳戶持有人、續訂日與取消備註，不把密碼寫在紙上。",
+    "route": "/zh-tw/templates/printable-subscription-tracker/",
+    "cluster": "printables",
+    "keywords": "可列印訂閱追蹤表",
+    "headings": "可列印訂閱追蹤表：看見真正的年成本與下一個決策日 第一輪盤點欄位 四個決策問題"
+  },
+  {
+    "title": "可列印年度續訂月曆｜家庭服務、保險、會員與登記",
+    "description": "用台灣繁中可列印年度續訂月曆整理十二個月份的服務、保險、會員、登記與定期義務，分開決策日、到期日、持有人與來源。",
+    "route": "/zh-tw/templates/printable-annual-renewals/",
+    "cluster": "printables",
+    "keywords": "可列印年度續訂月曆",
+    "headings": "可列印年度續訂月曆：先看決策窗口，再處理真正的到期日 十二個月總表 五步複查"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

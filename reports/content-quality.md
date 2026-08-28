@@ -1,23 +1,23 @@
 # Content quality report
 
-Generated: 2026-08-28T12:43:08.051Z
+Generated: 2026-08-28T12:56:51.483Z
 
 ## Summary
 
-- Indexable pages: 769
-- Generated HTML routes: 775
+- Indexable pages: 772
+- Generated HTML routes: 778
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 440
+- Pages without a contextual product/tool link: 443
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 28
-- printables: 36
+- printables: 39
 - product: 135
 - inventory-warranty: 60
 - appliances: 56
@@ -117,6 +117,7 @@ Generated: 2026-08-28T12:43:08.051Z
 - /zh-tw/checklists/
 - /zh-tw/checklists/printable-emergency-binder-checklist/
 - /zh-tw/checklists/printable-home-maintenance-checklist/
+- /zh-tw/checklists/printable-house-sitter-checklist/
 - /zh-tw/checklists/printable-monthly-home-checklist/
 - /zh-tw/checklists/printable-moving-checklist/
 - /zh-tw/checklists/printable-pet-sitter-checklist/
@@ -375,6 +376,7 @@ Generated: 2026-08-28T12:43:08.051Z
 - /zh-tw/privacy/
 - /zh-tw/security/
 - /zh-tw/templates/
+- /zh-tw/templates/printable-annual-renewals/
 - /zh-tw/templates/printable-appliance-inventory/
 - /zh-tw/templates/printable-chore-chart/
 - /zh-tw/templates/printable-cleaning-schedule/
@@ -384,6 +386,7 @@ Generated: 2026-08-28T12:43:08.051Z
 - /zh-tw/templates/printable-household-handoff-sheet/
 - /zh-tw/templates/printable-repair-log/
 - /zh-tw/templates/printable-service-provider-list/
+- /zh-tw/templates/printable-subscription-tracker/
 - /zh-tw/templates/printable-warranty-tracker/
 - /zh-tw/terms/
 - /zh-tw/tools/annual-subscription-cost-calculator/

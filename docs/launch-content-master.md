@@ -30545,6 +30545,144 @@ FamilyBoard 的範本把某個具體工作拆成容易填、容易複查、容�
 
 這張表先列真正需要的工作，再決定固定或輪替，不要求點數或排行榜。每列包含家務、頻率、負責人／順序、完成定義與複查日；把「倒垃圾」等模糊名稱拆成家人都能理解的結果，但不把每個小動作變成監控。需要電器、清潔劑、梯子或刀具的工作依年齡、能力、產品標示與成人判斷安排。每週檢視隱形採買、提醒與收尾負擔；連續未完成先拆小或降頻，根本不重要就刪除。紙本適合看板與會議，長期任務可放本機 App，公開推薦用品也必須和輪值表分開並揭露 affiliate 關係。
 
+## Page 416 — 可列印看家照護清單：每日家務、寵物、植物與聯絡交接
+
+**Slug:** `/zh-tw/checklists/printable-house-sitter-checklist/`
+**Alternate route:** `/checklists/printable-house-sitter-checklist/`
+**Primary intent:** 尋找可列印的看家與寵物照護交接清單
+**Title tag:** 可列印看家照護清單｜每日家務、寵物、植物與聯絡交接
+**Meta description:** 用台灣繁中可列印看家照護清單交代日期、寵物、植物、信件、垃圾、服務到訪與異常升級，不把帳密寫在紙上。
+**Primary keyword concept:** 可列印看家清單
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先填寫離家日期、每日三項必要工作與一位備援聯絡人，再用情境演練確認看家者找得到來源。
+**Suggested internal links:** `/zh-tw/tools/house-sitter-instruction-generator/`, `/zh-tw/guides/house-sitter-information/`, `/zh-tw/guides/travel-household-handoff/`, `/zh-tw/features/household-handoff/`
+**FAQ:**
+- 看家清單可以把門鎖密碼寫上去嗎？不建議，帳密與門禁碼應分開透過受控管道交接。
+- 寵物照護要寫到什麼程度？記錄已確認的日常與聯絡來源，醫療判斷依飼主和獸醫指示。
+- 看家者遇到漏水或停電怎麼辦？依家庭批准的升級順序與所在地官方服務處理危險情況。
+- 離家多久要更新一次清單？每次離家、看家者或寵物狀況改變就建立新版本。
+
+# 可列印看家照護清單：讓短期代班者知道每天要做什麼、何時求助
+
+看家交接的目標是交代最低必要工作、權限邊界與異常升級，不是把家庭所有資料攤給代班者。列印前填入離家日期、看家者、主要與備援聯絡人、可處理範圍、不可自行決定的事項及版本／回收日期。帳號、密碼、門禁碼、完整住址和醫療細節應透過受控管道分開交接，紙本只保留必要的代號與來源。
+
+## 每日最低任務與排程事件
+
+| 日期 | 寵物餵食／飲水／觀察 | 植物或設備 | 信件／包裹 | 指定家務 | 完成時間／備註 |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+
+把「照顧寵物」拆成看得到的結果，例如確認水碗仍可使用、依飼主已確認的來源觀察異常；醫療或用藥仍以獸醫和飼主現行指示為準。垃圾、回收、管理處到訪、澆水與包裹分開列，並寫明延誤時通知誰。服務預約不等於工作完成，應分開記錄看家者觀察與官方回覆。
+
+## 異常升級與結束交接
+
+若發現漏水、異味、停電、入侵跡象、設備警示、寵物異常或物品遺失，先離開危險範圍，依家庭批准順序和所在地官方服務處理。記下時間、位置代號、已聯絡角色、回覆來源與下一次複查，不要自行承諾費用或改變設備。回家時共同確認鑰匙與物品已交回、未完成工作仍標為 open、紙本敏感副本已回收。短期用紙本走讀，長期重複任務再放入本機 App；任何推薦用品都應在清單之外揭露 affiliate 關係。
+
+## Page 417 — 可列印訂閱追蹤表：費用、週期、持有人與續訂日
+
+**Slug:** `/zh-tw/templates/printable-subscription-tracker/`
+**Alternate route:** `/templates/printable-subscription-tracker/`
+**Primary intent:** 尋找可列印的家庭訂閱與定期扣款整理表
+**Title tag:** 可列印訂閱追蹤表｜費用、週期、持有人與續訂日
+**Meta description:** 用台灣繁中可列印訂閱追蹤表整理服務名稱、實際費用、扣款週期、帳戶持有人、續訂日與取消備註，不把密碼寫在紙上。
+**Primary keyword concept:** 可列印訂閱追蹤表
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先列出最近兩三期帳單中仍在扣款的服務，再用計算器換算年成本並標記下一次決策日。
+**Suggested internal links:** `/zh-tw/tools/household-subscription-cost-calculator/`, `/zh-tw/guides/organize-household-subscriptions/`, `/zh-tw/features/household-subscription-tracker/`, `/zh-tw/guides/annual-renewal-calendar/`
+**FAQ:**
+- 訂閱追蹤表要不要寫信用卡號？不要，只記最低必要欄位與受控來源。
+- 月費如何比較年成本？用已確認週期和金額換算，並保留帳單來源日期。
+- 找不到帳戶持有人怎麼辦？標為待確認並回到官方帳戶查核，不要猜測填名。
+- 多久檢查一次訂閱？每月帳單複查與年度續訂檢視時更新，變動時立即建新版本。
+
+# 可列印訂閱追蹤表：看見真正的年成本與下一個決策日
+
+訂閱最容易失控的地方是多人開通、年繳被忘記、試用轉付費沒有來源，或取消權限落在沒人負責的帳戶。這張表把目前扣款和是否繼續分開，讓家庭在付款日前有時間查帳、比較或取消。它不是銀行對帳單，也不會登入服務或執行取消；每個金額、週期與日期都要回到官方帳單、合約或帳戶畫面確認。不要寫密碼、完整卡號、驗證碼或安全問題答案。
+
+## 第一輪盤點欄位
+
+| 服務／方案 | 實際金額 | 扣款週期 | 換算年成本 | 帳戶持有人 | 下一次續訂／扣款日 | 官方來源／查核日 | 管理或取消備註 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+
+先看最近兩三期帳單、應用程式商店訂閱頁或服務商通知，不要匯出整個付款歷史。月費乘十二只是比較用年化估算，年繳、促銷、稅金、匯率與附加費可能不同；把帳單金額、估算與可能變動分開並記錄來源日期。若是外幣，保留原幣別，不手算成沒有來源的精確台幣。
+
+## 四個決策問題
+
+檢查是否仍有人使用、是否與家人服務重複、下一個真正的決策日，以及誰有權限處理。付款人、管理者與使用者可能不同，請向可登入官方帳戶的人確認。取消或降級後回到官方畫面取得結果或案件編號；「已送出」不等於下期不會扣款。紙本適合家庭會議，長期資料可放本機訂閱追蹤；未來推薦工具需放在表格外並標示 affiliate。
+
+## Page 418 — 可列印年度續訂月曆：家庭服務、保險、會員與登記
+
+**Slug:** `/zh-tw/templates/printable-annual-renewals/`
+**Alternate route:** `/templates/printable-annual-renewals/`
+**Primary intent:** 尋找可列印的家庭年度續訂與到期月曆
+**Title tag:** 可列印年度續訂月曆｜家庭服務、保險、會員與登記
+**Meta description:** 用台灣繁中可列印年度續訂月曆整理十二個月份的服務、保險、會員、登記與定期義務，分開決策日、到期日、持有人與來源。
+**Primary keyword concept:** 可列印年度續訂月曆
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先填入未來十二個月確定存在的三項續訂，再為需要比較或準備文件的項目提前設定決策日。
+**Suggested internal links:** `/zh-tw/guides/annual-renewal-calendar/`, `/zh-tw/guides/organize-household-subscriptions/`, `/zh-tw/guides/recurring-bills-tracker/`, `/zh-tw/features/household-calendar/`
+**FAQ:**
+- 月曆上的日期是正式法律或付款期限嗎？不是，正式期限以現行官方來源為準。
+- 決策日和續訂日為什麼要分開？決策日提供比較、取消與補文件的提前量。
+- 保險和會員可以放同一張表嗎？可以，但要分清類別、來源和負責人，不能自行解讀保障。
+- 找不到到期日怎麼辦？標記待確認並留下官方來源與下一步，不要用去年日期猜測。
+
+# 可列印年度續訂月曆：先看決策窗口，再處理真正的到期日
+
+家庭一年中有許多不天天出現、卻會影響費用與權益的日期：保險檢視、會員續期、車輛或設備登記、保養合約、雲端年繳與需要提前準備文件的服務。這張月曆把十二個月份攤開，讓集中在同一季的工作提早可見；它不是官方提醒，也不會自動續約、取消或保證保障。正式期限仍以保單、合約、政府或服務商現行來源為準。
+
+## 十二個月總表
+
+| 月份 | 續訂／義務項目 | 類別與服務對象 | 家庭決策日 | 來源所載到期／續訂日 | 負責人 | 官方來源／查核日 | 備註／待確認 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 一月 |  |  |  |  |  |  |  |
+| 二月 |  |  |  |  |  |  |  |
+| 三月 |  |  |  |  |  |  |  |
+| 四月 |  |  |  |  |  |  |  |
+| 五月 |  |  |  |  |  |  |  |
+| 六月 |  |  |  |  |  |  |  |
+| 七月 |  |  |  |  |  |  |  |
+| 八月 |  |  |  |  |  |  |  |
+| 九月 |  |  |  |  |  |  |  |
+| 十月 |  |  |  |  |  |  |  |
+| 十一月 |  |  |  |  |  |  |  |
+| 十二月 |  |  |  |  |  |  |  |
+
+決策日不是把官方日期往前猜一個固定天數，而是依家庭要比較方案、索取文件、詢問持有人或完成交接所需的時間設定。每列補上下一個問題、需要的來源和能處理的人；找不到到期日就標待確認，不用去年日期猜測。
+
+## 五步複查
+
+先從官方來源確認項目與日期，再檢查費用、範圍、付款人和管理者；於決策日比較保留、降級、取消或改期所需資料；執行變更後取得官方結果或案件編號；最後寫下觀察日期與下一次複查並建立新版本。「已送出申請」不等於「下期不會扣款」。月曆只做家庭檢視，長期提醒可放本機行事曆；敏感文件留在受控位置，未來 affiliate 商品窗格須與日期表分開並揭露關係。
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

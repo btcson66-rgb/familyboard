@@ -152,6 +152,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/templates/printable-cleaning-schedule/",
     "/templates/printable-chore-chart/",
     "/zh-tw/templates/printable-chore-chart/",
+    "/checklists/printable-house-sitter-checklist/",
+    "/zh-tw/checklists/printable-house-sitter-checklist/",
+    "/templates/printable-subscription-tracker/",
+    "/zh-tw/templates/printable-subscription-tracker/",
+    "/templates/printable-annual-renewals/",
+    "/zh-tw/templates/printable-annual-renewals/",
     "/templates/printable-appliance-inventory/",
     "/zh-tw/templates/printable-appliance-inventory/",
     "/templates/printable-warranty-tracker/",
@@ -757,6 +763,12 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/templates/printable-cleaning-schedule/",
     "/templates/printable-chore-chart/",
     "/zh-tw/templates/printable-chore-chart/",
+    "/checklists/printable-house-sitter-checklist/",
+    "/zh-tw/checklists/printable-house-sitter-checklist/",
+    "/templates/printable-subscription-tracker/",
+    "/zh-tw/templates/printable-subscription-tracker/",
+    "/templates/printable-annual-renewals/",
+    "/zh-tw/templates/printable-annual-renewals/",
     "/templates/printable-appliance-inventory/",
     "/zh-tw/templates/printable-appliance-inventory/",
     "/templates/printable-warranty-tracker/",
@@ -1095,6 +1107,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "可列印家庭聯絡表" }),
   ).toHaveAttribute("href", "/zh-tw/templates/printable-household-contacts/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "可列印看家照護清單" }),
+  ).toHaveAttribute("href", "/zh-tw/checklists/printable-house-sitter-checklist/");
 
   for (const localized of [
     {
@@ -1186,6 +1201,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/templates/printable-chore-chart/",
       alternate: "/templates/printable-chore-chart/",
       heading: "可列印家庭家務輪值表：把責任寫清楚，而不是把提醒都放在一個人身上",
+    },
+    {
+      route: "/zh-tw/checklists/printable-house-sitter-checklist/",
+      alternate: "/checklists/printable-house-sitter-checklist/",
+      heading: "可列印看家照護清單：讓短期代班者知道每天要做什麼、何時求助",
+    },
+    {
+      route: "/zh-tw/templates/printable-subscription-tracker/",
+      alternate: "/templates/printable-subscription-tracker/",
+      heading: "可列印訂閱追蹤表：看見真正的年成本與下一個決策日",
+    },
+    {
+      route: "/zh-tw/templates/printable-annual-renewals/",
+      alternate: "/templates/printable-annual-renewals/",
+      heading: "可列印年度續訂月曆：先看決策窗口，再處理真正的到期日",
     },
     {
       route: "/zh-tw/privacy/",

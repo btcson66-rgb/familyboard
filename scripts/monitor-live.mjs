@@ -52,6 +52,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/checklists/printable-moving-checklist/</loc>",
       "<loc>https://familyboard.win/checklists/printable-pet-sitter-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/checklists/printable-pet-sitter-checklist/</loc>",
+      "<loc>https://familyboard.win/checklists/printable-house-sitter-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/checklists/printable-house-sitter-checklist/</loc>",
       "<loc>https://familyboard.win/templates/</loc>",
       "<loc>https://familyboard.win/zh-tw/templates/</loc>",
       "<loc>https://familyboard.win/templates/printable-service-provider-list/</loc>",
@@ -64,6 +66,10 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/templates/printable-cleaning-schedule/</loc>",
       "<loc>https://familyboard.win/templates/printable-chore-chart/</loc>",
       "<loc>https://familyboard.win/zh-tw/templates/printable-chore-chart/</loc>",
+      "<loc>https://familyboard.win/templates/printable-subscription-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-subscription-tracker/</loc>",
+      "<loc>https://familyboard.win/templates/printable-annual-renewals/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-annual-renewals/</loc>",
       "<loc>https://familyboard.win/templates/printable-appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/templates/printable-appliance-inventory/</loc>",
       "<loc>https://familyboard.win/templates/printable-warranty-tracker/</loc>",
@@ -6064,6 +6070,30 @@ const checks = [
   {
     path: "/zh-tw/templates/printable-chore-chart/",
     require: ["可列印家庭家務輪值表", "工作、頻率與完成定義", 'lang="zh-TW"'],
+  },
+  {
+    path: "/checklists/printable-house-sitter-checklist/",
+    require: ["Printable House Sitter Checklist", "Daily"],
+  },
+  {
+    path: "/zh-tw/checklists/printable-house-sitter-checklist/",
+    require: ["可列印看家照護清單", "每日最低任務", 'lang="zh-TW"'],
+  },
+  {
+    path: "/templates/printable-subscription-tracker/",
+    require: ["Printable Subscription Tracker", "Review questions"],
+  },
+  {
+    path: "/zh-tw/templates/printable-subscription-tracker/",
+    require: ["可列印訂閱追蹤表", "第一輪盤點欄位", 'lang="zh-TW"'],
+  },
+  {
+    path: "/templates/printable-annual-renewals/",
+    require: ["Printable Annual Renewals Calendar", "Use decision dates"],
+  },
+  {
+    path: "/zh-tw/templates/printable-annual-renewals/",
+    require: ["可列印年度續訂月曆", "十二個月總表", 'lang="zh-TW"'],
   },
 ];
 
