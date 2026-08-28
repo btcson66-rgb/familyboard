@@ -4045,11 +4045,11 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/",
     require: [
-      "FamilyBoard 服務預約怎麼交接",
+      "FamilyBoard 服務預約交接教學",
       'lang="zh-TW"',
       'hreflang="en"',
-      "把正式來源畫成地圖",
-      "提醒、到場、結果",
+      "把預約、進場與結果分開記",
+      "指定主要與備援角色",
     ],
   },
   {

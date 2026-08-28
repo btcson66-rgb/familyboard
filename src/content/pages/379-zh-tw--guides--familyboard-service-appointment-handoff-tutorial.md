@@ -2,23 +2,15 @@
 title: "FamilyBoard 服務預約交接教學｜預約、進場與結果複查"
 description: "用繁體中文整理冷氣、水電、清潔或保固到府服務的預約來源、進場準備、備援角色與結果複查，不把到訪誤當修繕完成。"
 route: "/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/"
-alternateRoute: "/guides/familyboard-service-appointment-handoff-tutorial/"
-locale: "zh-TW"
 primaryIntent: "教台灣家庭把服務預約、進場準備、到訪觀察與結果複查拆成可交接的 FamilyBoard 流程"
 primaryKeyword: "FamilyBoard 服務預約交接教學"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"
-nextStep: "建立一個預約代號、指向有日期的預約來源，並指定準備、進場、到訪與結果複查角色。"
-related:
-  - "/zh-tw/tools/household-service-appointment-handoff-log/"
-  - "/zh-tw/tools/home-service-reminder-generator/"
-  - "/zh-tw/guides/familyboard-household-admin-backup-tutorial/"
-  - "/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/"
-  - "/guides/familyboard-service-appointment-handoff-tutorial/"
+related: []
 faq:
   - question: "FamilyBoard 可以代替我預約師傅或確認報價嗎？"
     answer: "不行。工具只保存家庭交接檢查點，預約、價格和業者條款仍以受保護的正式來源為準。"
@@ -30,7 +22,6 @@ faq:
     answer: "不能。商品只能是揭露後可略過的選項，不能取代業者文件或合格判斷。"
 contentVersion: 1
 ---
-
 # FamilyBoard 服務預約交接教學：把預約、進場與結果分開記
 
 冷氣保養、水電檢查、清潔到府、家電保固或社區安排，都可能在幾個交接點出錯：家人記得日期卻忘了範圍、業者到訪時沒人準備、或把收到帳單誤當成修繕已完成。FamilyBoard 的[家庭服務預約交接紀錄工具](/zh-tw/tools/household-service-appointment-handoff-log/)只保存低敏感度的檢查點，讓預約、家庭準備、到訪和結果複查各自有負責人；它不會聯絡業者、不保存地址或門禁碼、不比較報價，也不檢查設備或保證工作品質。

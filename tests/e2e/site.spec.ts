@@ -1647,7 +1647,7 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     {
       route: "/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/",
       alternate: "/guides/familyboard-service-appointment-handoff-tutorial/",
-      heading: "FamilyBoard 服務預約怎麼交接？家電維修與到場準備 App 教學",
+      heading: "FamilyBoard 服務預約交接教學：把預約、進場與結果分開記",
     },
     {
       route: "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",
