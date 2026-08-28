@@ -573,6 +573,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/chore-chart-for-adults/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-record-linking-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-linking-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-utility-bill-difference-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-utility-bill-difference-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/family-task-manager/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-dashboard/</loc>",
@@ -5696,6 +5698,22 @@ const checks = [
     require: [
       "FamilyBoard 家庭紀錄怎麼關聯",
       "用事件保留歷史",
+      "hreflang=\"en\"",
+    ],
+  },
+  {
+    path: "/guides/familyboard-utility-bill-difference-tutorial/",
+    require: [
+      "How to use FamilyBoard's utility bill difference tool",
+      "Understand what the result means",
+      "Preserve the source path",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-utility-bill-difference-tutorial/",
+    require: [
+      "FamilyBoard 水電帳單差額工具怎麼用",
+      "理解結果能說什麼",
       "hreflang=\"en\"",
     ],
   },
