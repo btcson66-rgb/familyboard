@@ -1,18 +1,18 @@
 # Content quality report
 
-Generated: 2026-08-28T07:38:19.014Z
+Generated: 2026-08-28T07:50:59.486Z
 
 ## Summary
 
-- Indexable pages: 698
-- Generated HTML routes: 717
+- Indexable pages: 700
+- Generated HTML routes: 719
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 400
-- Blocking audit findings: 0
+- Pages without a contextual product/tool link: 401
+- Blocking audit findings: 2
 
 ## Indexable pages by cluster
 
@@ -24,7 +24,7 @@ Generated: 2026-08-28T07:38:19.014Z
 - household-operations: 124
 - inventory-warranty: 56
 - records-emergency: 93
-- tools: 126
+- tools: 128
 
 ## Word-count range
 
@@ -433,6 +433,7 @@ Generated: 2026-08-28T07:38:19.014Z
 - /zh-tw/tools/household-subscription-cancellation-handoff-log/
 - /zh-tw/tools/household-subscription-cost-calculator/
 - /zh-tw/tools/household-trip-packing-handoff-log/
+- /zh-tw/tools/household-utility-bill-anomaly-log/
 - /zh-tw/tools/household-utility-provider-service-handoff-log/
 - /zh-tw/tools/household-vehicle-document-source-status-log/
 - /zh-tw/tools/household-water-leak-event-log/
@@ -457,4 +458,5 @@ Generated: 2026-08-28T07:38:19.014Z
 
 ## Blockers
 
-- None. SEO, sitemap, metadata, placeholder, tool-registration and internal-link gates passed.
+- /tools/household-utility-bill-anomaly-log/: no registered production tool definition
+- /zh-tw/tools/household-utility-bill-anomaly-log/: no registered production tool definition

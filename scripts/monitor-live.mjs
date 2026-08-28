@@ -148,6 +148,7 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-product-recall-action-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-home-maintenance-schedule-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-backup-recovery-checker/</loc>",
+      "<loc>https://familyboard.win/tools/household-utility-bill-anomaly-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/</loc>",
@@ -198,6 +199,7 @@ const checks = [
       "<loc>https://familyboard.win/guides/range-hood-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/air-conditioner-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-utility-bill-anomaly-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/</loc>",
@@ -1655,6 +1657,24 @@ const checks = [
       "家庭備份與還原準備檢查器",
       "工具會檢查什麼",
       "不會查看 IndexedDB",
+    ],
+  },
+  {
+    path: "/tools/household-utility-bill-anomaly-log/",
+    require: [
+      "Household Utility Bill Difference Log",
+      'hreflang="zh-TW"',
+      "Enter received amounts, not guesses",
+      "Read increases and decreases as prompts",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-utility-bill-anomaly-log/",
+    require: [
+      "家庭公用帳單異常紀錄工具",
+      'hreflang="en"',
+      "填入「已收到」的兩期金額",
+      "用差額提示，而不是製造警報",
     ],
   },
   {

@@ -2808,6 +2808,14 @@
     "headings": "How to use FamilyBoard's household decision register without losing the reasoning Frame one question and one decision boundary Name the source and the constraints separately Separate options from the decision and the result Give unresolved decisions one next checkpoint Reopen the register when the facts change Privacy, handoff and affiliate boundaries"
   },
   {
+    "title": "Household Utility Bill Difference Log | Free FamilyBoard Tool",
+    "description": "Compare two received household utility bills, record the arithmetic difference and choose a source-based next check without storing addresses, account numbers or full bills.",
+    "route": "/tools/household-utility-bill-anomaly-log/",
+    "cluster": "tools",
+    "keywords": "utility bill difference calculator",
+    "headings": "Household Utility Bill Difference Log: turn a surprising amount into a checkable question Start with a safe label Enter received amounts, not guesses Keep the source pointer separate Read increases and decreases as prompts A practical household review rhythm Privacy and affiliate boundaries Minimum useful record"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

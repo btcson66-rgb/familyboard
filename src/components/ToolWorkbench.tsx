@@ -5494,6 +5494,51 @@ const householdEventDurationDefinition = (locale: Locale): Definition => {
   };
 };
 
+const utilityBillAnomalyDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const utilities = zh
+    ? ["電費", "水費", "瓦斯費", "網路或通訊費"]
+    : ["Electricity", "Water", "Gas", "Internet or communications"];
+  return {
+    intro: zh
+      ? "比較兩期已收到的家庭公用帳單金額，記錄差額與下一步。結果只是算術與查核提示，不判定計費錯誤、欠費、契約或退款。"
+      : "Compare two received household utility bills, record the difference and choose a next check. The result is arithmetic and a review prompt, not a billing-error, debt, contract or refund finding.",
+    fields: [
+      text(
+        "label",
+        zh ? "帳單安全代稱" : "Safe bill label",
+        zh ? "使用家庭代號，不要輸入姓名、地址、電號、帳號或完整帳單號碼。" : "Use a household code, not a name, address, utility account or full bill number.",
+        zh ? "BILL-CHECK-2026-A" : "BILL-CHECK-2026-A",
+      ),
+      { name: "utility", label: zh ? "服務類型" : "Utility type", type: "select", options: utilities },
+      { name: "period", label: zh ? "本期帳單日期" : "Current bill date", type: "date" },
+      { name: "current", label: zh ? "本期金額" : "Current amount", type: "number", value: "0" },
+      { name: "prior", label: zh ? "上期金額" : "Previous amount", type: "number", value: "0" },
+      text("source", zh ? "來源代號" : "Source pointer", zh ? "例如 BILL-PDF-02 或供應商入口；不要貼帳單全文。" : "For example BILL-PDF-02 or a provider portal; do not paste the full bill.", zh ? "BILL-PDF-02" : "BILL-PDF-02"),
+      text("next", zh ? "下一步" : "Next check", zh ? "例如：回到費率頁確認計費期間，或詢問家庭是否有新增用量。" : "For example: recheck the rate page or ask whether household usage changed.", zh ? "回到費率來源確認期間" : "Recheck the rate source and billing period"),
+    ],
+    run: (values) => {
+      const label = values.label.trim();
+      if (!label) return zh ? "請填寫帳單安全代稱。" : "Enter a safe bill label.";
+      if (/@|密碼|電話|地址|電號|帳號|卡號|password|phone|address|account|meter|card/i.test(label) || /(?:\d[\s().+-]*){7,}/.test(label)) return zh ? "代稱含有可能的個資、帳號或電號；請改用安全代號。" : "The label may contain personal, account or meter data; replace it with a safe code.";
+      const current = Number(values.current);
+      const prior = Number(values.prior);
+      if (!Number.isFinite(current) || !Number.isFinite(prior) || current < 0 || prior < 0) return zh ? "金額必須是零或正數。" : "Amounts must be zero or positive numbers.";
+      if (!values.source.trim() || !values.next.trim()) return zh ? "請填寫來源代號與下一步。" : "Enter a source pointer and next check.";
+      const dateValue = strictIsoDate(values.period);
+      if (!dateValue || dateValue.getTime() > new Date().getTime()) return zh ? "請輸入不晚於今天的有效帳單日期。" : "Enter a valid bill date that is not in the future.";
+      const difference = current - prior;
+      const percent = prior > 0 ? (difference / prior) * 100 : null;
+      const delta = difference === 0 ? (zh ? "無差額" : "no difference") : difference > 0 ? (zh ? `增加 ${difference.toFixed(2)}` : `increase ${difference.toFixed(2)}`) : (zh ? `減少 ${Math.abs(difference).toFixed(2)}` : `decrease ${Math.abs(difference).toFixed(2)}`);
+      const percentText = percent === null ? (zh ? "上期為 0，未計算百分比" : "previous amount was 0; percentage not calculated") : `${percent >= 0 ? "+" : ""}${percent.toFixed(1)}%`;
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      return zh
+        ? `${label}｜${values.utility}帳單差額紀錄\n本期日期：${formatter.format(dateValue)}\n本期金額：${current.toFixed(2)}\n上期金額：${prior.toFixed(2)}\n差額：${delta}\n變化比例：${percentText}\n來源代號：${values.source.trim()}\n下一步：${values.next.trim()}\n\n這是兩個已收到金額的算術比較，不判定費率、讀表、計費期間、欠費、契約、錯誤、退款或爭議。請回到供應商正式帳單與費率來源核對；不要把完整帳戶、地址、電號、付款資料或帳單全文貼進工具。用量、家庭成員、季節、設備與計費週期改變時，差額只是一個需要查明的訊號。`
+        : `${label} — ${values.utility} bill difference record\nCurrent bill date: ${formatter.format(dateValue)}\nCurrent amount: ${current.toFixed(2)}\nPrevious amount: ${prior.toFixed(2)}\nDifference: ${delta}\nChange: ${percentText}\nSource pointer: ${values.source.trim()}\nNext check: ${values.next.trim()}\n\nThis is arithmetic between two received amounts. It does not decide rates, meter readings, billing periods, debt, contract terms, errors, refunds or disputes. Recheck the provider's official bill and rate source. Do not paste full account, address, meter, payment or bill details into the tool. A difference is a prompt to investigate when usage, occupants, season, equipment or billing cycle changed; it is not proof of a problem.`;
+    },
+  };
+};
+
 const decisionRegisterDefinition = (locale: Locale): Definition => {
   const zh = locale === "zh-TW";
   const statuses = zh
@@ -5605,6 +5650,7 @@ const definitions: Record<string, Definition> = {
   "household-backup-recovery-checker": {
     ...householdBackupRecoveryDefinition("en"),
   },
+  "household-utility-bill-anomaly-log": utilityBillAnomalyDefinition("en"),
   "household-decision-register": { ...decisionRegisterDefinition("en") },
   "household-event-source-index-log": { ...householdEventSourceIndexDefinition("en") },
   "household-event-duration-calculator": { ...householdEventDurationDefinition("en") },
@@ -9723,6 +9769,7 @@ const zhTwDefinitions: Record<string, Definition> = {
   "household-backup-recovery-checker": {
     ...householdBackupRecoveryDefinition("zh-TW"),
   },
+  "household-utility-bill-anomaly-log": utilityBillAnomalyDefinition("zh-TW"),
   "household-decision-register": { ...decisionRegisterDefinition("zh-TW") },
   "household-event-source-index-log": { ...householdEventSourceIndexDefinition("zh-TW") },
   "household-event-duration-calculator": { ...householdEventDurationDefinition("zh-TW") },
