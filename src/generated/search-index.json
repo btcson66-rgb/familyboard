@@ -3408,6 +3408,30 @@
     "headings": "Rental Security Deposit Move-Out Tutorial: Compare Condition, Deductions and Refund Evidence Start with the controlling lease and a safe version Compare condition without making a legal conclusion Track handoff and refund as separate events Route unresolved questions to the right source Protect the record and keep recommendations optional"
   },
   {
+    "title": "FamilyBoard Household Calendar Tutorial | Events, Owners and Review Points",
+    "description": "Learn how to use FamilyBoard's private household calendar to connect tasks, events, owners and source notes without exposing unnecessary location or contact details.",
+    "route": "/guides/familyboard-calendar-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard household calendar tutorial",
+    "headings": "FamilyBoard Household Calendar Tutorial: Turn a Reminder Into a Reviewable Event Start with a decision, not a full diary Connect calendar events with tasks carefully Choose visibility that fits the audience Review what actually happened Run a seven-day review instead of chasing every timestamp Test an event with another authorised role"
+  },
+  {
+    "title": "FamilyBoard Warranty Tracker Tutorial | Dates, Receipts and Terms",
+    "description": "Learn how to use FamilyBoard's warranty tracker to connect product identity, receipt evidence, written terms and review dates without guessing coverage.",
+    "route": "/guides/familyboard-warranty-tracker-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "FamilyBoard warranty tracker tutorial",
+    "headings": "FamilyBoard Warranty Tracker Tutorial: Link Evidence Before You Trust a Date Create a safe asset identity Keep warranty promises in separate lanes Use reminders as review points Review expiry without making a legal claim Build a claim-ready evidence chain without storing the claim"
+  },
+  {
+    "title": "FamilyBoard Maintenance Tracker Tutorial | Sources, Owners and Results",
+    "description": "Learn how to use FamilyBoard's maintenance tracker to record source-backed tasks, owners, due reviews and actual results without replacing manufacturer or professional guidance.",
+    "route": "/guides/familyboard-maintenance-tracker-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard maintenance tracker tutorial",
+    "headings": "FamilyBoard Maintenance Tracker Tutorial: Record the Work and the Source, Not a False Guarantee Begin with the source and safe scope Separate ownership, completion and result Use recurrence without hiding exceptions Use a repeatable maintenance review loop"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

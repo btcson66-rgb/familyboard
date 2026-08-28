@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T15:05:34.794Z
+Generated: 2026-08-28T15:21:32.027Z
 
 ## Summary
 
-- Indexable pages: 823
-- Generated HTML routes: 829
+- Indexable pages: 829
+- Generated HTML routes: 835
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 470
+- Pages without a contextual product/tool link: 473
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,10 +19,10 @@ Generated: 2026-08-28T15:05:34.794Z
 - support: 31
 - printables: 39
 - product: 135
-- inventory-warranty: 68
+- inventory-warranty: 70
 - appliances: 56
-- maintenance: 82
-- household-operations: 147
+- maintenance: 84
+- household-operations: 149
 - records-emergency: 113
 - tools: 152
 
@@ -189,6 +189,7 @@ Generated: 2026-08-28T15:05:34.794Z
 - /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-maintenance/
 - /zh-tw/guides/familyboard-building-notice-response-tutorial/
+- /zh-tw/guides/familyboard-calendar-tutorial/
 - /zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-consumable-change-history-tutorial/
@@ -235,6 +236,7 @@ Generated: 2026-08-28T15:05:34.794Z
 - /zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/
 - /zh-tw/guides/familyboard-maintenance-history-review/
 - /zh-tw/guides/familyboard-maintenance-priority-review-tutorial/
+- /zh-tw/guides/familyboard-maintenance-tracker-tutorial/
 - /zh-tw/guides/familyboard-master-csv-edit-import/
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
 - /zh-tw/guides/familyboard-meter-reading-tutorial/
@@ -280,6 +282,7 @@ Generated: 2026-08-28T15:05:34.794Z
 - /zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/
 - /zh-tw/guides/familyboard-warranty-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/
+- /zh-tw/guides/familyboard-warranty-tracker-tutorial/
 - /zh-tw/guides/familyboard-water-leak-event-log-tutorial/
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
 - /zh-tw/guides/fire-extinguisher-records/

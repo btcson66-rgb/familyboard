@@ -32383,6 +32383,208 @@ Future folders, scanners or storage products may be shown beside an educational 
 - Q: Can FamilyBoard decide who is legally right?
   A: No. Use the qualified housing, consumer or legal source for the property’s location.
 
+## Page 443 — FamilyBoard Household Calendar Tutorial: Turn a Reminder Into a Reviewable Event
+
+**Slug:** `/guides/familyboard-calendar-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-calendar-tutorial/`
+**Primary intent:** learn how to use FamilyBoard Household Calendar to record bounded events, ownership, timing and review without treating a reminder as a booking or guarantee
+**Title tag:** FamilyBoard Household Calendar Tutorial | Events, Owners and Review Points
+**Meta description:** Learn how to use FamilyBoard's private household calendar to connect tasks, events, owners and source notes without exposing unnecessary location or contact details.
+**Primary keyword concept:** FamilyBoard household calendar tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Add one household event with a clear owner, end time and review note, then check it from a second role.
+**Suggested internal links:** `/features/household-calendar/`, `/features/family-task-manager/`, `/guides/household-weekly-reset/`, `/guides/familyboard-schedule-conflict-review-tutorial/`
+
+# FamilyBoard Household Calendar Tutorial: Turn a Reminder Into a Reviewable Event
+
+FamilyBoard's Household Calendar is a private browser view for dates that help a household coordinate work: a service window, school handoff, renewal review, maintenance visit or family meeting. It does not book a provider, send a guaranteed notification, verify attendance or replace the source that controls the appointment. This tutorial shows how to make an event useful without putting a complete private itinerary into a shared screen.
+
+## Start with a decision, not a full diary
+
+Create one event for a real household decision. Use a neutral title such as `FILTER-REVIEW` or `LEASE-MEETING`, choose the start and end times, and add the smallest location note another role needs. A source pointer such as `NOTICE-N2` is safer than pasting an address, phone number, access code or complete invitation.
+
+An event is a coordination aid. The provider, school, landlord, agency or official notice remains the authority for the real time, attendance and terms. If the source changes, edit the event for the next action but preserve the old source pointer in the relevant record instead of rewriting history.
+
+## Connect calendar events with tasks carefully
+
+Use a task when one person owns an observable action, such as “open the protected service notice” or “export the household backup.” Use an event when more than one person needs a time window, such as a handoff or inspection. A task can point to an event, but a checked task does not prove that an external appointment occurred. Likewise, an event ending does not mark the related task complete.
+
+For a conflict, record both events and the question that needs a decision. Do not silently move one appointment to make the grid look clear. The [Schedule Conflict Review Tutorial](/guides/familyboard-schedule-conflict-review-tutorial/) can preserve competing sources, priority reasoning and the next owner.
+
+## Choose visibility that fits the audience
+
+Family display mode may be visible from a hallway or shared tablet. Keep titles neutral and omit private contacts, full addresses, health details, account information and access instructions. A calendar is not an access-control system. If a role needs the full source, send them to the protected system rather than expanding the public-safe title.
+
+The app stores records in the current browser and does not automatically synchronise, encrypt or back them up. Export before clearing site data or changing browsers. Test that a second authorised household role can locate the event and its safe source pointer without opening unrelated records.
+
+## Review what actually happened
+
+After the end time, add a factual review note: “source says rescheduled,” “arrival source pending,” “handoff observed” or “question sent.” Do not mark attendance, completion, payment or safety merely because the time passed. If the event creates a maintenance result, link the maintenance history; if it changes a warranty or subscription, link the responsible record.
+
+Future affiliate recommendations must remain outside the calendar grid, private app and generated results. A product cannot book a service, confirm an appointment or make a reminder reliable.
+
+## Run a seven-day review instead of chasing every timestamp
+
+Once a week, scan the next seven days and ask four concrete questions for each event: what source created it, who owns the next action, what is the end time, and what observation will close or reopen it? If an event has no source or owner, move it to a task for a deliberate decision rather than leaving a vague reminder. If a source changes, create a dated note such as `RESCHEDULED-2026-08-29` and keep the original event as history.
+
+For a service visit, the event can say “service window—arrival source pending”; the provider's confirmation and actual arrival belong in the service record. For a school handoff, use a neutral title and link the protected notice; do not copy a child's full route into a hallway display. For a renewal, set a review point before the source-defined date and record whether the account or contract source was actually checked. These examples give the calendar a useful job without turning it into a complete diary.
+
+## Test an event with another authorised role
+
+Ask a second role to answer only from the title, time, safe pointer and next-step note: “What needs attention, which source should you open, and what result should be recorded?” If they need unrelated private records, narrow the title or add a protected pointer. If two events overlap, preserve both and write the decision question; never silently move one just to make the grid appear clear. A small retrieval rehearsal is stronger evidence of a usable handoff than a calendar full of unchecked entries.
+
+When an event is cancelled, retain the cancellation source and observed time, then create the next action. Do not convert cancellation into completion. When an event is no longer useful, mark it as historical or not-applicable with a reason instead of deleting the source trail. This keeps the public page and private app honest about what FamilyBoard can remember.
+
+**Contextual CTA:** Open the Household Calendar, add one bounded event with an owner and end time, then link the protected source and record the first observed result.
+
+**FAQ:**
+- Q: Does the calendar book a provider or send a guaranteed reminder?
+  A: No. It records a household event; the external provider or official source controls the appointment.
+- Q: Should I put a full address in the location field?
+  A: Use the minimum safe note and keep complete access details in protected storage.
+- Q: Does checking a related task prove the appointment happened?
+  A: No. Task completion and external attendance are separate facts.
+- Q: Can I use the calendar as a family access-control list?
+  A: No. Keep sensitive details out of shared views and use the responsible protected system.
+
+## Page 444 — FamilyBoard Warranty Tracker Tutorial: Link Evidence Before You Trust a Date
+
+**Slug:** `/guides/familyboard-warranty-tracker-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-warranty-tracker-tutorial/`
+**Primary intent:** learn how to use FamilyBoard Warranty Tracker to connect an asset, written terms, dates, receipt pointer and review action without deciding coverage
+**Title tag:** FamilyBoard Warranty Tracker Tutorial | Dates, Receipts and Terms
+**Meta description:** Learn how to use FamilyBoard's warranty tracker to connect product identity, receipt evidence, written terms and review dates without guessing coverage.
+**Primary keyword concept:** FamilyBoard warranty tracker tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Add one asset with a protected receipt and written-terms pointer, then leave uncertain dates visibly open.
+**Suggested internal links:** `/features/warranty-tracker/`, `/tools/warranty-checklist-generator/`, `/guides/warranty-expiration/`, `/guides/familyboard-warranty-checklist-generator-tutorial/`
+
+# FamilyBoard Warranty Tracker Tutorial: Link Evidence Before You Trust a Date
+
+The FamilyBoard Warranty Tracker connects an asset to a provider, start and end observations, a receipt pointer and a written-terms pointer. It helps a household find the next source to review; it does not decide coverage, calculate a legally binding expiration, register a product or promise that a claim will succeed. Written terms and the issuer's current process control the real answer.
+
+## Create a safe asset identity
+
+Use an ID such as `WASHER-A3`, and record the public model observation separately from a protected serial-number photo. Do not use a full serial number, order number, account, address or person's name as the shared asset ID. A stable code lets another household role find the evidence without receiving unnecessary personal data.
+
+## Keep warranty promises in separate lanes
+
+An included manufacturer warranty, retailer protection plan, paid service contract, credit-card benefit and installer workmanship promise are not interchangeable. Link each source separately. The tracker may show a date from a document, but it cannot infer which promise applies, whether a transfer is allowed or whether an exclusion defeats a claim.
+
+Record the date event exactly as the source defines it: purchase, delivery, installation, registration, first use or another stated trigger. If the document is silent or contradictory, mark the basis pending and ask the issuer. Do not choose the most convenient date just to turn the card green.
+
+## Use reminders as review points
+
+Set a household review before an observed end date when the source supports one. A reminder is not an extension of coverage and does not stop a deadline. Open the protected terms, compare the model and source version, and record what was checked. The [Warranty Checklist Generator Tutorial](/guides/familyboard-warranty-checklist-generator-tutorial/) provides a fuller evidence checklist before a repair or claim.
+
+If a product fails, preserve the request, response, inspection, parts and outcome in the responsible claim process. A case number means an action was opened, not that coverage was approved. Keep the tracker as the historical pointer and use a separate claim log for the handling chain.
+
+## Review expiry without making a legal claim
+
+The interface can display an expired status after an entered end date passes. That display reflects the entered observation, not a legal ruling. If the written terms are updated, create a new version and keep the prior source. Before sharing, remove private correspondence, full identifiers, receipts and payment information.
+
+Affiliate products, if shown on a public educational page, must be labelled and optional. Buying a folder, scanner or replacement part cannot establish coverage, select a compatible model or improve a claim outcome.
+
+## Build a claim-ready evidence chain without storing the claim
+
+Use one row per asset and source version. A practical review can include `ASSET-A3`, `RECEIPT-R2`, `TERMS-T4`, `MODEL-M1` and `REQUEST-Q1`. The tracker should answer where each original lives, when it was checked and what remains unknown. It should not contain the complete receipt, serial number, private correspondence or payment details. If a product has multiple promises, keep a separate pointer for the manufacturer warranty, retailer plan, paid service contract and installer workmanship commitment.
+
+Before contacting an issuer, compare the public model observation with the protected label source and record whether the source actually states the start event. Purchase, delivery, installation, registration and first use can be different events. If a receipt is missing, record “purchase source pending” and the retrieval owner; do not reconstruct a date from memory. If a product is gifted, rented, transferred or bought through a marketplace, preserve that context and ask the responsible issuer what proof it accepts.
+
+The visible expired state is a review signal based on the entered date. It is not a decision about coverage, consumer rights or an exclusion. Keep the prior version when terms or ownership change, and record a new review date. A case number, service appointment or retailer chat proves an action was opened, not that the claim was approved. Those outcomes belong in the issuer's process and can be linked by a safe code.
+
+**Contextual CTA:** Open Warranty Tracker, create one safe asset ID, link a protected receipt and written-terms pointer, and leave any uncertain start basis pending.
+
+**FAQ:**
+- Q: Does an expired card prove that no coverage exists?
+  A: No. Verify the written terms, source version and issuer process.
+- Q: Which date always starts a warranty?
+  A: None universally. Record the start method stated by the responsible terms.
+- Q: Does a case number mean my claim was approved?
+  A: No. It records an action; preserve the issuer's response and outcome separately.
+- Q: Should I paste the whole receipt or serial number?
+  A: No. Keep originals protected and use safe pointers in the tracker.
+
+## Page 445 — FamilyBoard Maintenance Tracker Tutorial: Record the Work and the Source, Not a False Guarantee
+
+**Slug:** `/guides/familyboard-maintenance-tracker-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-maintenance-tracker-tutorial/`
+**Primary intent:** learn how to use FamilyBoard Maintenance Tracker to connect an asset, maintenance scope, source, owner, due review and observed result without presenting a reminder as a safety certification
+**Title tag:** FamilyBoard Maintenance Tracker Tutorial | Sources, Owners and Results
+**Meta description:** Learn how to use FamilyBoard's maintenance tracker to record source-backed tasks, owners, due reviews and actual results without replacing manufacturer or professional guidance.
+**Primary keyword concept:** FamilyBoard maintenance tracker tutorial
+**Cluster:** maintenance
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Add one source-backed maintenance task, assign an owner and record the first observed result separately from the reminder.
+**Suggested internal links:** `/features/maintenance-tracker/`, `/guides/home-maintenance-records/`, `/guides/familyboard-home-maintenance-schedule-generator-tutorial/`, `/guides/familyboard-maintenance-history-review/`
+
+# FamilyBoard Maintenance Tracker Tutorial: Record the Work and the Source, Not a False Guarantee
+
+The FamilyBoard Maintenance Tracker connects a household task to an asset or area, owner, next-due date, repeat interval, priority and instructions source. Pressing Complete records a household event and advances the entered review date. It does not inspect equipment, certify safety, prove that a professional followed a procedure or guarantee that a failure will not happen.
+
+## Begin with the source and safe scope
+
+Choose a bounded task such as “review the manufacturer filter interval” or “ask the licensed technician for the service report.” Use an asset code like `HVAC-A2` and link the manual, service report or official guidance by a protected pointer. Do not copy credentials, access details, private conversations or hazardous instructions into a general household card.
+
+Intervals are prompts, not universal truths. Model, climate, usage, lease terms and professional advice can change the right schedule. If the source is missing or conflicts with another version, keep the task open and name who should resolve it.
+
+## Separate ownership, completion and result
+
+Assign a role that can observe the task boundary. “Review filter source” is different from “replace filter,” and both differ from “equipment is safe.” A person checking a box proves only that the household recorded completion. Add a maintenance-history entry with the date, source pointer and observed result; do not infer a repair success from elapsed time.
+
+For electrical, gas, structural, high-access, refrigerant, water damage or other hazardous conditions, stop routine experimentation and follow current manufacturer, emergency and qualified-professional instructions. The tracker is not an inspection or emergency response tool.
+
+## Use recurrence without hiding exceptions
+
+When Complete advances the next-due date, review whether the same interval still applies. A missed task, a service visit, a move, a new occupant or a changed appliance may require a new version rather than a silent edit. Record the reason and the next review point. The [Home Maintenance Schedule Generator Tutorial](/guides/familyboard-home-maintenance-schedule-generator-tutorial/) can help draft a schedule; the tracker preserves what the household actually decided and observed.
+
+Before sharing a maintenance card, remove full addresses, serial numbers, alarm codes, account details and private notes. The app is local-first and browser storage is not automatic backup; export before clearing data and test retrieval from a second authorised role.
+
+Future affiliate recommendations for filters, tools or service categories must remain outside the private app, safety warning and generated result. A product cannot certify maintenance, choose a compatible part or replace professional guidance.
+
+## Use a repeatable maintenance review loop
+
+For each card, record the source, scope, owner, review date and observed result in that order. A useful row might say `HVAC-A2 | review filter source | manufacturer manual M-4 | owner role | 2026-09-01 | result pending`. A different row can record a licensed service report, a photo pointer or a parts receipt. These are separate observations; a single completion tick should not imply that every document, installation step and safety question was checked.
+
+When the reminder arrives, read the current source before repeating the task. If the manual changed, the equipment moved, a new occupant took responsibility or a professional found another issue, create a new version with the reason. If the task was missed, keep the missed condition visible and choose a realistic next checkpoint. The schedule generator can suggest a rhythm, but the tracker is where the household records what it actually decided and observed.
+
+After a professional visit, preserve the attributable report and add a later household observation. “Invoice received” and “equipment operates normally on 2026-09-03” answer different questions. If a symptom remains, link the repair or callback record and follow the safety route. For gas, electrical, structural, high-access, refrigerant or serious water conditions, stop experiments and use qualified instructions; the tracker is only the evidence index.
+
+**Contextual CTA:** Open Maintenance Tracker, add one source-backed task with an owner, then record the first actual result separately from the reminder.
+
+**FAQ:**
+- Q: Does completing a task prove the equipment is safe?
+  A: No. It records a household action; safety and workmanship require the responsible source.
+- Q: Can the tracker decide the right maintenance interval?
+  A: No. Verify the model-specific or professional source and record its basis.
+- Q: What happens when I press Complete?
+  A: FamilyBoard records a household event and advances the entered review date; it does not verify external work.
+- Q: Can I put hazardous instructions in a shared card?
+  A: No. Keep detailed instructions in the responsible protected source and follow qualified guidance.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

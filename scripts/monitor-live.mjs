@@ -688,6 +688,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-rental-security-deposit-move-out-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-calendar-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-calendar-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-warranty-tracker-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-warranty-tracker-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-maintenance-tracker-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-tracker-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -6161,6 +6167,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/",
     require: ["租屋押金搬出爭議教學", "扣款說明", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-calendar-tutorial/",
+    require: ["Household Calendar Tutorial", "bounded event"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-calendar-tutorial/",
+    require: ["家庭行事曆 App 教學", "安全備註", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-warranty-tracker-tutorial/",
+    require: ["Warranty Tracker Tutorial", "written terms"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-warranty-tracker-tutorial/",
+    require: ["保固追蹤器 App 教學", "書面條款", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-maintenance-tracker-tutorial/",
+    require: ["Maintenance Tracker Tutorial", "instructions source"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-maintenance-tracker-tutorial/",
+    require: ["維護追蹤器 App 教學", "有邊界的工作", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",
