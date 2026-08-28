@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T06:55:51.155Z
+Generated: 2026-08-28T07:01:35.021Z
 
 ## Summary
 
-- Indexable pages: 680
-- Generated HTML routes: 699
+- Indexable pages: 683
+- Generated HTML routes: 702
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 382
+- Pages without a contextual product/tool link: 385
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-28T06:55:51.155Z
 - product: 120
 - appliances: 56
 - maintenance: 81
-- household-operations: 109
+- household-operations: 112
 - inventory-warranty: 55
 - records-emergency: 92
 - tools: 126
@@ -259,6 +259,7 @@ Generated: 2026-08-28T06:55:51.155Z
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/guides/home-repair-history/
 - /zh-tw/guides/home-service-provider-list/
+- /zh-tw/guides/house-sitter-information/
 - /zh-tw/guides/household-account-list/
 - /zh-tw/guides/household-admin-backup-person/
 - /zh-tw/guides/household-documents-organizer/
@@ -286,6 +287,7 @@ Generated: 2026-08-28T06:55:51.155Z
 - /zh-tw/guides/organize-utility-account-information/
 - /zh-tw/guides/organize-vehicle-documents-at-home/
 - /zh-tw/guides/oven-maintenance-checklist/
+- /zh-tw/guides/pet-sitter-information/
 - /zh-tw/guides/photo-home-inventory/
 - /zh-tw/guides/power-outage-home-preparedness/
 - /zh-tw/guides/power-outage-recovery-household-records/
@@ -311,6 +313,7 @@ Generated: 2026-08-28T06:55:51.155Z
 - /zh-tw/guides/storm-preparation-home-checklist/
 - /zh-tw/guides/subscription-cancellation-refund-records/
 - /zh-tw/guides/summer-home-maintenance-checklist/
+- /zh-tw/guides/travel-household-handoff/
 - /zh-tw/guides/ups-battery-backup-records/
 - /zh-tw/guides/vacuum-cleaner-maintenance-guide/
 - /zh-tw/guides/valuable-item-inventory/

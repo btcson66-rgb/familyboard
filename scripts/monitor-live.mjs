@@ -110,6 +110,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/electronics-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/warranty-expiration/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/appliance-lifespan-planning/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/travel-household-handoff/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/house-sitter-information/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/pet-sitter-information/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1459,6 +1462,33 @@ const checks = [
       'hreflang="en"',
       "公開範圍要附來源與版本",
       "年齡只是一個訊號",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/travel-household-handoff/",
+    require: [
+      "出國旅行家庭交接表",
+      'hreflang="en"',
+      "先對照實際行事曆",
+      "把升級路徑寫得比「找我」更有用",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/house-sitter-information/",
+    require: [
+      "看屋者交接資料表",
+      'hreflang="en"',
+      "把日常任務拆成可勾選列",
+      "門禁和任務資料分開",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/pet-sitter-information/",
+    require: [
+      "寵物保姆照護資料表",
+      'hreflang="en"',
+      "餵食寫量和時間",
+      "藥物與治療只能照原始來源",
     ],
   },
   {

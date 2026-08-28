@@ -1041,7 +1041,7 @@
   },
   {
     "route": "/guides/travel-household-handoff/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/travel-household-handoff/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1049,7 +1049,7 @@
   },
   {
     "route": "/guides/house-sitter-information/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/house-sitter-information/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1057,7 +1057,7 @@
   },
   {
     "route": "/guides/pet-sitter-information/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/pet-sitter-information/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -4336,6 +4336,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/house-sitter-information/",
+    "alternateRoute": "/guides/house-sitter-information/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/house-sitter-instruction-generator/",
     "alternateRoute": "/tools/house-sitter-instruction-generator/",
     "indexable": true,
@@ -5015,6 +5022,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/pet-sitter-information/",
+    "alternateRoute": "/guides/pet-sitter-information/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/pet-sitter-instruction-generator/",
     "alternateRoute": "/tools/pet-sitter-instruction-generator/",
     "indexable": true,
@@ -5278,6 +5292,13 @@
     "alternateRoute": "/terms/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/travel-household-handoff/",
+    "alternateRoute": "/guides/travel-household-handoff/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
