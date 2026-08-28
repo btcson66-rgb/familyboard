@@ -3353,7 +3353,7 @@
   },
   {
     "route": "/pricing/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3393,7 +3393,7 @@
   },
   {
     "route": "/roadmap/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/roadmap/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3401,7 +3401,7 @@
   },
   {
     "route": "/changelog/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/changelog/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3674,6 +3674,13 @@
   {
     "route": "/zh-tw/guides/ceiling-fan-maintenance-checklist/",
     "alternateRoute": "/guides/ceiling-fan-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/changelog/",
+    "alternateRoute": "/changelog/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5674,6 +5681,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/pricing/",
+    "alternateRoute": "/pricing/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/templates/printable-annual-renewals/",
     "alternateRoute": "/templates/printable-annual-renewals/",
     "indexable": true,
@@ -5942,6 +5956,13 @@
   {
     "route": "/zh-tw/guides/returning-home-after-travel-checklist/",
     "alternateRoute": "/guides/returning-home-after-travel-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/roadmap/",
+    "alternateRoute": "/roadmap/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

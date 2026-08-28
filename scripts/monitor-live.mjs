@@ -70,6 +70,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/templates/printable-subscription-tracker/</loc>",
       "<loc>https://familyboard.win/templates/printable-annual-renewals/</loc>",
       "<loc>https://familyboard.win/zh-tw/templates/printable-annual-renewals/</loc>",
+      "<loc>https://familyboard.win/zh-tw/changelog/</loc>",
+      "<loc>https://familyboard.win/zh-tw/pricing/</loc>",
+      "<loc>https://familyboard.win/zh-tw/roadmap/</loc>",
       "<loc>https://familyboard.win/templates/printable-appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/templates/printable-appliance-inventory/</loc>",
       "<loc>https://familyboard.win/templates/printable-warranty-tracker/</loc>",
@@ -6094,6 +6097,18 @@ const checks = [
   {
     path: "/zh-tw/templates/printable-annual-renewals/",
     require: ["可列印年度續訂月曆", "十二個月總表", 'lang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/changelog/",
+    require: ["FamilyBoard 更新紀錄", "1.4.0", 'lang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/pricing/",
+    require: ["FamilyBoard 免費使用", "沒有付費功能門檻", 'lang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/roadmap/",
+    require: ["FamilyBoard 路線圖", "目前優先順序", 'lang="zh-TW"'],
   },
 ];
 

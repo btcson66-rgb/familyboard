@@ -1,22 +1,22 @@
 # Content quality report
 
-Generated: 2026-08-28T12:56:51.483Z
+Generated: 2026-08-28T13:08:15.123Z
 
 ## Summary
 
-- Indexable pages: 772
-- Generated HTML routes: 778
+- Indexable pages: 775
+- Generated HTML routes: 781
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 443
+- Pages without a contextual product/tool link: 446
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
-- support: 28
+- support: 31
 - printables: 39
 - product: 135
 - inventory-warranty: 60
@@ -114,6 +114,7 @@ Generated: 2026-08-28T12:56:51.483Z
 - /tools/rental-security-deposit-move-out-claim-log/
 - /zh-tw/about/
 - /zh-tw/affiliate-disclosure/
+- /zh-tw/changelog/
 - /zh-tw/checklists/
 - /zh-tw/checklists/printable-emergency-binder-checklist/
 - /zh-tw/checklists/printable-home-maintenance-checklist/
@@ -373,7 +374,9 @@ Generated: 2026-08-28T12:56:51.483Z
 - /zh-tw/guides/wifi-router-maintenance-records/
 - /zh-tw/guides/winter-home-maintenance-checklist/
 - /zh-tw/
+- /zh-tw/pricing/
 - /zh-tw/privacy/
+- /zh-tw/roadmap/
 - /zh-tw/security/
 - /zh-tw/templates/
 - /zh-tw/templates/printable-annual-renewals/

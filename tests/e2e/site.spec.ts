@@ -158,6 +158,9 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/templates/printable-subscription-tracker/",
     "/templates/printable-annual-renewals/",
     "/zh-tw/templates/printable-annual-renewals/",
+    "/zh-tw/changelog/",
+    "/zh-tw/pricing/",
+    "/zh-tw/roadmap/",
     "/templates/printable-appliance-inventory/",
     "/zh-tw/templates/printable-appliance-inventory/",
     "/templates/printable-warranty-tracker/",
@@ -769,6 +772,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/templates/printable-subscription-tracker/",
     "/templates/printable-annual-renewals/",
     "/zh-tw/templates/printable-annual-renewals/",
+    "/zh-tw/changelog/",
+    "/zh-tw/pricing/",
+    "/zh-tw/roadmap/",
     "/templates/printable-appliance-inventory/",
     "/zh-tw/templates/printable-appliance-inventory/",
     "/templates/printable-warranty-tracker/",
@@ -1110,6 +1116,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "可列印看家照護清單" }),
   ).toHaveAttribute("href", "/zh-tw/checklists/printable-house-sitter-checklist/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "更新紀錄" }),
+  ).toHaveAttribute("href", "/zh-tw/changelog/");
 
   for (const localized of [
     {
@@ -1216,6 +1225,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/templates/printable-annual-renewals/",
       alternate: "/templates/printable-annual-renewals/",
       heading: "可列印年度續訂月曆：先看決策窗口，再處理真正的到期日",
+    },
+    {
+      route: "/zh-tw/changelog/",
+      alternate: "/changelog/",
+      heading: "FamilyBoard 更新紀錄：只記錄已完成且可驗證的改變",
+    },
+    {
+      route: "/zh-tw/pricing/",
+      alternate: "/pricing/",
+      heading: "FamilyBoard 免費使用：先把家庭工作整理好，不先要求付款",
+    },
+    {
+      route: "/zh-tw/roadmap/",
+      alternate: "/roadmap/",
+      heading: "FamilyBoard 路線圖：先讓家庭資料可靠，再增加表面上的功能量",
     },
     {
       route: "/zh-tw/privacy/",
