@@ -2672,6 +2672,30 @@
     "headings": "How to track a product recall without losing the safety instruction Treat messages as leads and notices as sources Compare the exact unit privately Split notice, action, remedy and result into separate rows Preserve the remedy exactly as offered Connect related records without merging their meaning Escalate a stalled remedy with a clean handoff Privacy and commercial boundaries"
   },
   {
+    "title": "How to Use a Home Maintenance Schedule Generator | FamilyBoard",
+    "description": "Build a home-specific maintenance schedule in FamilyBoard, verify every interval against the real manual, and keep review dates separate from automatic reminders.",
+    "route": "/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "home maintenance schedule generator tutorial",
+    "headings": "How to use a home maintenance schedule generator without trusting a made-up interval Start with an asset inventory, not a blog checklist Choose cadence as a review rhythm Replace every placeholder with attributable evidence Separate inspection, completion and next due date Move the finished schedule into a durable household workflow Privacy and affiliate boundaries"
+  },
+  {
+    "title": "Warranty Expiration Calculator Guide | Start Date, Term and Review Window",
+    "description": "Use FamilyBoard's warranty expiration calculator correctly: identify the real start event, understand month-end dates, save the source and review coverage before it expires.",
+    "route": "/guides/familyboard-warranty-expiration-calculator-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "warranty expiration calculator guide",
+    "headings": "How to use a warranty expiration calculator as a planning aid—not a coverage decision Find the start event named by the terms Understand the month-end rule Pair the end date with a review window Keep arithmetic separate from coverage questions Preserve versions and review locally"
+  },
+  {
+    "title": "Household Subscription Cost Calculator Guide | Monthly and Annual Totals",
+    "description": "Learn how to total weekly, monthly, quarterly and annual subscriptions in FamilyBoard, catch input errors and turn the result into a renewal review without sharing account data.",
+    "route": "/guides/familyboard-household-subscription-cost-calculator-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "household subscription cost calculator guide",
+    "headings": "How to use a household subscription cost calculator before the next renewal Build the list from current evidence Read the annualized math Catch the errors that change decisions Turn a total into a fair review conversation Use categories without hiding the combined view"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

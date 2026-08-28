@@ -24561,6 +24561,204 @@ Future affiliate placements for label makers, storage or shipping supplies must 
 
 ---
 
+---
+
+## Page 360 — How to Use FamilyBoard's Home Maintenance Schedule Generator
+**Slug:** `/guides/familyboard-home-maintenance-schedule-generator-tutorial/`
+**Primary intent:** turn a home-specific asset list into a reviewable maintenance schedule without inventing manufacturer intervals
+**Title tag:** How to Use a Home Maintenance Schedule Generator | FamilyBoard
+**Meta description:** Build a home-specific maintenance schedule in FamilyBoard, verify every interval against the real manual, and keep review dates separate from automatic reminders.
+**Primary keyword concept:** home maintenance schedule generator tutorial
+**Cluster:** maintenance
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/home-maintenance-schedule-generator/`, `/guides/home-maintenance-schedule/`, `/guides/seasonal-home-maintenance-checklist/`, `/features/maintenance-tracker/`
+**FAQ:**
+- Q: Does the generator know the correct interval for my appliance?
+  A: No. It creates a review prompt; the actual interval must come from your model's current manual, support page or responsible authority.
+- Q: Is monthly cadence the same as monthly maintenance?
+  A: No. Cadence controls when you revisit the list. An annual task can appear in a monthly review without becoming a monthly task.
+- Q: Can I include unusual assets such as a water softener or backup generator?
+  A: Yes. Enter any household system or asset as a label, then add its authoritative interval yourself.
+- Q: Will FamilyBoard send a notification when something is due?
+  A: No. The local-first app has no server or background notification service. Reopen the schedule yourself or pair it with a calendar you control.
+
+**Contextual CTA:** Generate a starter list for the systems you actually own, then verify the first interval against its source.
+
+# How to use a home maintenance schedule generator without trusting a made-up interval
+
+A generic maintenance checklist looks reassuring until it lists equipment a household does not own or gives an interval that conflicts with the actual model manual. FamilyBoard's [Home Maintenance Schedule Generator](/tools/home-maintenance-schedule-generator/) takes a narrower approach: you name the systems in your home and it creates prompts to inspect each one, find the real interval and record the next review. It is a planning scaffold, not a manufacturer database.
+
+## Start with an asset inventory, not a blog checklist
+
+Walk through the home and write the systems that matter to your household: `HVAC filter`, `refrigerator`, `smoke alarms`, `water heater`, `water softener` or `backup generator`. Use a neutral label rather than a serial number, address or account ID. If two similar assets have different manuals, give them separate labels such as `upstairs HVAC` and `guest-room HVAC`.
+
+The generator accepts comma-separated entries. Keep the first pass small enough to review—five to ten systems is a useful starting session. A long list can be generated in one go, but verification is easier when you finish one high-consequence system before adding more.
+
+## Choose cadence as a review rhythm
+
+Monthly, quarterly and seasonal settings tell you when to reopen the entire list. They do not change how often an individual filter, alarm or appliance needs service. A monthly household review can contain a task that the manual says to perform annually; the monthly visit simply asks whether the annual task is approaching or whether an observation changed.
+
+Write the cadence in the schedule title so another household member does not mistake it for a task interval. If the home has a seasonal system, note the relevant season and local conditions separately from the global review rhythm.
+
+## Replace every placeholder with attributable evidence
+
+For each generated line, open the asset's current manual, manufacturer support page, inspection record or responsible safety guidance. Record the source location and the exact interval in the asset record, along with the date checked and the model context. Do not fill a blank with a number remembered from another appliance.
+
+The generator intentionally says “confirm the correct manufacturer interval.” That wording is a quality gate. If no authoritative interval is available, leave the prompt open and ask the appropriate professional or authority. The tool cannot infer a filter size, test frequency, local code requirement or safe procedure.
+
+## Separate inspection, completion and next due date
+
+At each review, record what you observed, what you did and what date comes next. “Looked fine” is an observation; “cleaned filter” is an action; “review again on 2026-11-01” is a planning date. Keep a protected pointer to a photo, manual page or service receipt when it matters. Do not paste a full address, account number, private technician message or credential into the schedule.
+
+If the task needs a tool, ladder, electrical isolation or chemical handling, follow the current manual and qualified advice. The generator does not make a job safe or authorise a DIY repair. For smoke, gas, electrical or structural concerns, stop and use the appropriate local emergency or professional route.
+
+## Move the finished schedule into a durable household workflow
+
+The result panel's **Save for app** action stores a local scratch copy. The durable version should sit beside the matching asset record with its source, model, completed date and next review. FamilyBoard cannot notify you while the browser is closed, so place a manual reminder in a calendar or paper routine if the task truly needs an alert.
+
+When an appliance is replaced, sold, moved or recalled, retire the old schedule row and create a dated version. Never let a generic label continue to imply that a new model shares the old interval. The [Maintenance Tracker](/features/maintenance-tracker/) can hold the follow-up context, while this generator remains the starting point.
+
+## Privacy and affiliate boundaries
+
+Keep the generated list free of secrets and identifiers. Browser-only processing does not make a downloaded file a secure archive; review it before sharing. Future affiliate suggestions for labels, binders or basic tools must remain outside the form, clearly disclosed and optional. A product recommendation cannot supply an interval or mark maintenance complete.
+
+**Next step:** enter three real systems, verify one interval against its current source and record the next review date with the source pointer.
+
+---
+
+## Page 361 — How to Use FamilyBoard's Warranty Expiration Calculator
+**Slug:** `/guides/familyboard-warranty-expiration-calculator-tutorial/`
+**Primary intent:** calculate a planning date from a verified warranty start event while preserving the written terms and review window
+**Title tag:** Warranty Expiration Calculator Guide | Start Date, Term and Review Window
+**Meta description:** Use FamilyBoard's warranty expiration calculator correctly: identify the real start event, understand month-end dates, save the source and review coverage before it expires.
+**Primary keyword concept:** warranty expiration calculator guide
+**Cluster:** inventory-warranty
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/warranty-expiration-calculator/`, `/guides/warranty-expiration/`, `/guides/how-to-track-product-warranties/`, `/features/warranty-tracker/`
+**FAQ:**
+- Q: Can I use the purchase date as the warranty start automatically?
+  A: No. Coverage may begin at purchase, delivery, installation, registration or another event named in the written terms.
+- Q: Why does January 31 plus one month become February 28 or 29?
+  A: The calculator uses the last valid day of the target month instead of silently rolling into March.
+- Q: Does the result prove that a claim will be accepted?
+  A: No. It is date arithmetic and cannot confirm scope, exclusions, registration, parts, labour or legal rights.
+- Q: Why calculate a review-by date before the end date?
+  A: A review window gives the household time to find evidence and contact the responsible source while coverage may still be available.
+
+**Contextual CTA:** Calculate one date from the written warranty, then save the start-event source beside the household asset.
+
+# How to use a warranty expiration calculator as a planning aid—not a coverage decision
+
+Warranty dates are easy to misremember because “bought,” “delivered,” “installed” and “registered” may be different events. FamilyBoard's [Warranty Expiration Calculator](/tools/warranty-expiration-calculator/) performs transparent date arithmetic once you supply the start date, term in months and review window. It cannot read a warranty, verify a claim or decide what rights apply.
+
+## Find the start event named by the terms
+
+Open the actual warranty card, invoice, order confirmation, delivery record, installer paperwork or registration terms. Write down the event the document names and keep its source location. A purchase date may be correct for one product and wrong for another. If the documents conflict, leave the date uncertain and ask the seller, manufacturer or qualified adviser rather than choosing the earliest date for convenience.
+
+Use a neutral asset label such as `dishwasher-1` in the calculator. Keep the full model, serial, receipt and address in the protected asset record. The calculator only needs a date and a term; adding identifiers creates exposure without improving the calculation.
+
+## Understand the month-end rule
+
+The calculator adds whole months and converges to the last valid day when the target month lacks the original day number. A start date of January 31 plus one month ends on February 28 in a common year or February 29 in a leap year. That explicit rule avoids JavaScript-style rollover into March and makes repeated calculations reproducible.
+
+Use the result as a planning marker. Record the input date, term, review window and run date next to the output so another person can reproduce it. If a provider defines “end of day,” a leap-year exception or a different counting convention, the written terms control.
+
+## Pair the end date with a review window
+
+The default review window is 30 days before the calculated end date, but the right window depends on the product and the effort needed to assemble a claim. A household may need more time for an appliance that requires a service visit and less for a simple replacement. The review-by date is not a notice deadline, cure period or promise that a claim will be accepted.
+
+At the review, check the current terms, condition, registration status and documentation requirements. Record a dated observation and the source pointer. A service request, repair, replacement or refund belongs in its own evidence timeline; do not overwrite the original calculation when the provider changes the outcome.
+
+## Keep arithmetic separate from coverage questions
+
+The calculator cannot determine whether parts and labour are included, whether an exclusion applies, whether misuse is alleged, whether registration was required, or what consumer law provides. Those questions belong to the current written terms and responsible authorities. The date can tell you when to investigate; it cannot answer the investigation.
+
+If the product has a recall, safety notice or insurance claim, keep that workflow separate. A warranty end date does not cancel a recall instruction or establish that a product is safe to use. Link the related record by a protected asset code rather than copying private documents into the date calculation.
+
+## Preserve versions and review locally
+
+FamilyBoard's **Save for app** action stores a local result in the current browser. It does not sync, notify or back up the receipt. Keep the issued warranty, source version, model context, prior repairs and provider correspondence in the protected asset archive. When ownership changes, create a new dated record and state which source was handed over.
+
+Future affiliate recommendations for storage pouches or label products must remain outside the calculator, clearly disclosed and skippable. Buying an item cannot extend a warranty or change the calculated date.
+
+**Next step:** identify the written start event, calculate the date, and schedule a manual review before the result becomes stale.
+
+---
+
+## Page 362 — How to Use FamilyBoard's Household Subscription Cost Calculator
+**Slug:** `/guides/familyboard-household-subscription-cost-calculator-tutorial/`
+**Primary intent:** normalize mixed billing frequencies into a household monthly and annual view before a renewal decision
+**Title tag:** Household Subscription Cost Calculator Guide | Monthly and Annual Totals
+**Meta description:** Learn how to total weekly, monthly, quarterly and annual subscriptions in FamilyBoard, catch input errors and turn the result into a renewal review without sharing account data.
+**Primary keyword concept:** household subscription cost calculator guide
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/household-subscription-cost-calculator/`, `/tools/annual-subscription-cost-calculator/`, `/guides/organize-household-subscriptions/`, `/features/household-subscription-tracker/`
+**FAQ:**
+- Q: What input format does the calculator use?
+  A: Enter one line as `Name | Amount | frequency`, using weekly, monthly, quarterly or annual (yearly also works).
+- Q: Why annualize a weekly subscription?
+  A: A weekly price can look small until it is multiplied by the number of billing weeks used for the annual comparison.
+- Q: Does the calculator decide what to cancel?
+  A: No. It only normalizes the figures. The household decides based on use, terms, renewal dates and priorities.
+- Q: Are subscription names and amounts uploaded?
+  A: No. The calculation runs in the browser and FamilyBoard has no account or server for this tool.
+
+**Contextual CTA:** Enter the subscriptions you can verify, check every frequency, and mark one renewal date for a real household review.
+
+# How to use a household subscription cost calculator before the next renewal
+
+Streaming, cloud storage, memberships and meal boxes rarely use the same billing unit. Comparing a $15 monthly service with a $45 weekly service by looking only at the charge amount hides the annual commitment. FamilyBoard's [Household Subscription Cost Calculator](/tools/household-subscription-cost-calculator/) converts each line to an annual figure, adds the household total and shows the monthly equivalent.
+
+## Build the list from current evidence
+
+Start with a recent statement, provider account page or receipt. Use a label such as `family music plan` rather than an email address, account number or password. Enter one line in the exact shape `Name | Amount | frequency`. Supported frequencies are weekly, monthly, quarterly and annual; `yearly` is accepted as an alias.
+
+Do not paste a full statement or card number. The calculator needs a name, amount and cadence—not the credential that controls cancellation. If two people pay for the same service, record them as separate lines until the household confirms whether one is redundant.
+
+## Read the annualized math
+
+The calculator multiplies weekly amounts by 52, monthly by 12 and quarterly by 4. Annual amounts stay as entered. It then sums those annual figures and divides by 12 for a monthly-equivalent view. The math is a comparison convention, not a prediction of future price changes or usage.
+
+For example, `$15.99 | monthly` contributes $191.88 per year. `$29.99 | annual` contributes $29.99. A `$45 | weekly` meal box contributes $2,340 under the 52-week convention. Check the output line by line before trusting the total.
+
+## Catch the errors that change decisions
+
+An omitted or misspelled frequency can annualize to zero, making the household total look artificially low. Check decimal separators, promotional periods, taxes, add-ons and plan changes against the current source. If a provider bills every 28 days or uses a custom cycle, record that limitation separately and use a consistent comparison method rather than pretending it is monthly.
+
+Prices can change between calculation and renewal. Write the calculation date and the next billing or renewal date beside the subscription. The [Household Subscription Tracker](/features/household-subscription-tracker/) can hold the follow-up context; the calculator should not become a permanent claim about what a provider will charge.
+
+## Turn a total into a fair review conversation
+
+The number is a prompt, not a cancellation command. Review one service at a time: who uses it, which terms control renewal, whether a free trial converts, whether a cancellation window exists and what the household would lose. Record the decision and its evidence separately from the total. A family may keep a costly service because it replaces another expense, or cancel a cheap one because nobody uses it.
+
+When a cancellation is chosen, preserve the provider confirmation and effective date in a separate handoff record. A button click, email draft or support ticket is not the same as a confirmed end. Never share credentials with another household member through the calculator; use the provider's authorised handoff process.
+
+## Use categories without hiding the combined view
+
+The calculator totals all lines together. For a clearer conversation, run a second pass for streaming, storage, memberships or children’s services and label each pass with the same calculation date. Category totals help explain trade-offs, while the combined total shows the household commitment. Do not compare categories calculated on different prices or dates without noting the difference.
+
+All processing is local to the browser. Review the generated result before printing or sharing, and remove any private service clues that the recipient does not need. Future affiliate comparisons must remain outside the calculator, clearly disclosed and optional; a sponsored service cannot influence the total or cancellation decision.
+
+**Next step:** verify three current subscriptions, correct every frequency, and attach the next renewal date to the one you plan to review first.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

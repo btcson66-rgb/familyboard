@@ -2872,6 +2872,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-warranty-expiration-calculator-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-subscription-cost-calculator-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,

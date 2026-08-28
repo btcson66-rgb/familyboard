@@ -43,6 +43,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-warranty-expiration-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-maintenance-schedule-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/</loc>",
@@ -447,6 +450,30 @@ const checks = [
   {
     path: "/tools/home-maintenance-cost-tracker/",
     require: ["Home Maintenance Cost Tracker", 'rel="canonical"'],
+  },
+  {
+    path: "/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
+    require: [
+      "How to Use FamilyBoard's Home Maintenance Schedule Generator",
+      "Choose cadence as a review rhythm",
+      "not a manufacturer database",
+    ],
+  },
+  {
+    path: "/guides/familyboard-warranty-expiration-calculator-tutorial/",
+    require: [
+      "How to Use FamilyBoard's Warranty Expiration Calculator",
+      "Understand the month-end rule",
+      "cannot confirm scope, exclusions",
+    ],
+  },
+  {
+    path: "/guides/familyboard-household-subscription-cost-calculator-tutorial/",
+    require: [
+      "How to Use FamilyBoard's Household Subscription Cost Calculator",
+      "Read the annualized math",
+      "does not become a permanent claim",
+    ],
   },
   {
     path: "/tools/move-out-condition-record-generator/",

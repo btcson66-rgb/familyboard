@@ -76,3 +76,5 @@ Review output before sharing. Filters catch common full serial, contact, address
 Future affiliate placements for label makers, storage or shipping supplies must stay outside the safety workflow. They cannot select a notice, infer a match, recommend continued use, change an official remedy or make a purchase a condition of receiving help.
 
 **Next step:** save the current authority and manufacturer notices, follow any immediate instruction, then add one dated row for the identity check and one for the remedy owner.
+
+---
