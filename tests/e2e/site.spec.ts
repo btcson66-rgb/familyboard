@@ -134,6 +134,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-repair-punch-list-tutorial/",
     "/guides/familyboard-product-recall-action-tutorial/",
     "/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
+    "/guides/familyboard-household-decision-register-tutorial/",
     "/guides/familyboard-utility-provider-handoff-tutorial/",
     "/guides/familyboard-vehicle-document-source-status-tutorial/",
     "/guides/familyboard-record-retrieval-drill-tutorial/",
@@ -384,6 +385,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-repair-punch-list-tutorial/",
     "/zh-tw/guides/familyboard-product-recall-action-tutorial/",
     "/zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
+    "/zh-tw/guides/familyboard-household-decision-register-tutorial/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3520,6 +3522,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     "https://familyboard.win/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-decision-register-tutorial/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/",
   );
   expect(sitemap).toContain(
@@ -3635,6 +3640,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-decision-register-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

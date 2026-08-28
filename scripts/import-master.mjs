@@ -67,9 +67,14 @@ for (let i = 0; i < lines.length; i += 1) {
 }
 
 const records = headingIndexes.map((start, index) => {
-  const end =
-    headingIndexes[index + 1] ??
-    lines.findIndex((line, i) => i > start && line.startsWith("# PART III"));
+  const endCandidates = [
+    headingIndexes[index + 1],
+    lines.findIndex((line, i) => i > start && line.startsWith("# PART III")),
+    lines.findIndex(
+      (line, i) => i > start && line.startsWith("# END OF MASTER CONTENT + BUILD BRIEF"),
+    ),
+  ].filter((candidate) => candidate >= 0);
+  const end = endCandidates.length ? Math.min(...endCandidates) : lines.length;
   const heading = lines[start];
   const match = heading.match(/^## Page (\d{3}) — (.+)$/);
   const number = Number(match[1]);

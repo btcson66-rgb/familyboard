@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T02:41:03.956Z
+Generated: 2026-08-28T02:54:08.952Z
 
 ## Summary
 
-- Indexable pages: 611
-- Generated HTML routes: 628
+- Indexable pages: 613
+- Generated HTML routes: 630
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 6
-- Pages without a contextual product/tool link: 315
+- Duplicate primary-keyword groups: 7
+- Pages without a contextual product/tool link: 316
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-28T02:41:03.956Z
 - product: 120
 - appliances: 30
 - maintenance: 54
-- household-operations: 107
+- household-operations: 109
 - inventory-warranty: 46
 - records-emergency: 89
 - tools: 124
@@ -46,6 +46,7 @@ Generated: 2026-08-28T02:41:03.956Z
 - caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
 - household account list: /guides/household-account-list/, /tools/household-account-list/
 - 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
+- 家庭決策紀錄工具: /zh-tw/guides/familyboard-household-decision-register-tutorial/, /zh-tw/tools/household-decision-register/
 - 家庭文件查找演練: /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/, /zh-tw/tools/household-record-retrieval-drill-log/
 - 居家服務變更: /zh-tw/guides/home-care-service-plan-changes/, /zh-tw/tools/home-care-service-plan-change-notice-log/
 - 居家服務紀錄: /zh-tw/guides/home-care-service-visit-records/, /zh-tw/tools/home-care-visit-scope-service-result-log/
@@ -164,6 +165,7 @@ Generated: 2026-08-28T02:41:03.956Z
 - /zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/
 - /zh-tw/guides/familyboard-household-account-list-tutorial/
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
+- /zh-tw/guides/familyboard-household-decision-register-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-household-members-responsibilities-tutorial/
