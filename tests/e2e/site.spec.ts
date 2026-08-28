@@ -146,6 +146,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/templates/printable-emergency-contacts/",
     "/templates/",
     "/zh-tw/templates/",
+    "/templates/printable-household-contacts/",
+    "/zh-tw/templates/printable-household-contacts/",
+    "/templates/printable-cleaning-schedule/",
+    "/zh-tw/templates/printable-cleaning-schedule/",
+    "/templates/printable-chore-chart/",
+    "/zh-tw/templates/printable-chore-chart/",
     "/templates/printable-appliance-inventory/",
     "/zh-tw/templates/printable-appliance-inventory/",
     "/templates/printable-warranty-tracker/",
@@ -745,6 +751,12 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/templates/printable-emergency-contacts/",
     "/templates/",
     "/zh-tw/templates/",
+    "/templates/printable-household-contacts/",
+    "/zh-tw/templates/printable-household-contacts/",
+    "/templates/printable-cleaning-schedule/",
+    "/zh-tw/templates/printable-cleaning-schedule/",
+    "/templates/printable-chore-chart/",
+    "/zh-tw/templates/printable-chore-chart/",
     "/templates/printable-appliance-inventory/",
     "/zh-tw/templates/printable-appliance-inventory/",
     "/templates/printable-warranty-tracker/",
@@ -1080,6 +1092,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "繁中範本中心" }),
   ).toHaveAttribute("href", "/zh-tw/templates/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "可列印家庭聯絡表" }),
+  ).toHaveAttribute("href", "/zh-tw/templates/printable-household-contacts/");
 
   for (const localized of [
     {
@@ -1156,6 +1171,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/templates/printable-emergency-contacts/",
       alternate: "/templates/printable-emergency-contacts/",
       heading: "可列印家庭緊急聯絡表：先排好角色與備援，再決定哪一版可以分享",
+    },
+    {
+      route: "/zh-tw/templates/printable-household-contacts/",
+      alternate: "/templates/printable-household-contacts/",
+      heading: "可列印家庭聯絡表：依角色找得到人，不把整本通訊錄攤在桌上",
+    },
+    {
+      route: "/zh-tw/templates/printable-cleaning-schedule/",
+      alternate: "/templates/printable-cleaning-schedule/",
+      heading: "可列印清潔排程表：先維持住家，再把工作分給真正有時間的人",
+    },
+    {
+      route: "/zh-tw/templates/printable-chore-chart/",
+      alternate: "/templates/printable-chore-chart/",
+      heading: "可列印家庭家務輪值表：把責任寫清楚，而不是把提醒都放在一個人身上",
     },
     {
       route: "/zh-tw/privacy/",

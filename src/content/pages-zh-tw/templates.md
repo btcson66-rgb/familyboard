@@ -16,6 +16,7 @@ nextStep: "先選一個本週會使用的範本，填入版本日期與負責人
 related:
   - "/zh-tw/templates/printable-service-provider-list/"
   - "/zh-tw/templates/printable-emergency-contacts/"
+  - "/zh-tw/templates/printable-household-contacts/"
   - "/zh-tw/templates/printable-household-handoff-sheet/"
   - "/zh-tw/checklists/"
 contentVersion: 1
@@ -37,7 +38,11 @@ FamilyBoard 的範本不是要求每個家庭建立一整套檔案櫃，而是�
 
 若目標是「找到誰可以處理」，先看[可列印緊急聯絡表](/zh-tw/templates/printable-emergency-contacts/)或[可列印家庭交接表](/zh-tw/templates/printable-household-handoff-sheet/)。緊急版只保留危急時需要的角色和複查日期，交接版則依對象整理未來工作，兩者不要混成一張公開電話簿。若目標是「下次找得到曾經合作的人」，使用[可列印服務商清單](/zh-tw/templates/printable-service-provider-list/)，把服務類別、公司、聯絡管道、曾做過的工作和最後使用日期分開記錄；服務商名稱不代表目前仍可用，需再次確認。
 
+若需要日常的家人、鄰居、管理員與公共服務查找，可使用[可列印家庭聯絡表](/zh-tw/templates/printable-household-contacts/)。它和緊急版分開，讓一般聯絡不必暴露危急資料，也方便在家庭成員或服務角色變動時單獨更新。
+
 設備與文件工作可從[可列印家電清冊](/zh-tw/templates/printable-appliance-inventory/)、[可列印保固追蹤表](/zh-tw/templates/printable-warranty-tracker/)或[可列印居家修繕紀錄表](/zh-tw/templates/printable-repair-log/)開始。家電清冊回答「這是什麼、文件在哪裡」，保固表回答「起算依據和複查日在哪裡」，修繕表回答「觀察、服務、費用和後續各是什麼」；不要把三種目的壓成一個「已處理」欄位。需要交接責任時，再使用[可列印家庭交接表](/zh-tw/templates/printable-household-handoff-sheet/)只分享對方需要的最低資訊。
+
+清潔與分工可從[可列印清潔排程表](/zh-tw/templates/printable-cleaning-schedule/)或[可列印家庭家務輪值表](/zh-tw/templates/printable-chore-chart/)開始。排程回答「何時做、做到什麼程度」，輪值表回答「誰負責、如何輪替」；先選最低可維持的版本，不要一次建立整套看似完整卻沒人查看的表格。
 
 ## 填寫、列印與保存
 

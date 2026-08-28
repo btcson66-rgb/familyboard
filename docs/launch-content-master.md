@@ -30458,6 +30458,93 @@ FamilyBoard 的範本把某個具體工作拆成容易填、容易複查、容�
 
 這張表讓人在壓力下知道先找誰、找不到時找誰、哪份資料仍待確認。建議分成家庭共用版、受控完整版本和臨時交接版；列印前寫代號、版本日期、保管人和適用期間，完整住址、門禁、帳號、付款、身分證件與詳細醫療資料只放在必要且受控的位置。請用夜間漏水、停電或照顧者臨時缺席等情境演練，確認另一位家人能找到角色、來源、下一步和備援。火災、瓦斯、受傷或撤離情況仍以所在地緊急服務、官方公告、建築管理和專業指示為準。家庭變動後建立新版本，交接結束回收含敏感資料的紙本；推薦用品若出現，也必須和清單分開並揭露 affiliate 關係。
 
+## Page 413 — 可列印家庭聯絡表：家人、鄰居、公共服務與日常支援
+
+**Slug:** `/zh-tw/templates/printable-household-contacts/`
+**Alternate route:** `/templates/printable-household-contacts/`
+**Primary intent:** 尋找可列印的家庭日常聯絡人清單
+**Title tag:** 可列印家庭聯絡表｜家人、鄰居、公共服務與日常支援
+**Meta description:** 用繁中可列印家庭聯絡表依角色整理家人、鄰居、管理單位、公共服務與服務商，保留複查日期並避免把整本通訊錄印出。
+**Primary keyword concept:** 可列印家庭聯絡表
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先列三個日常最常找的角色，寫上用途與複查日，再決定哪些欄位需要分享。
+**Suggested internal links:** `/zh-tw/guides/home-contact-list/`, `/zh-tw/guides/emergency-information-sheet/`, `/zh-tw/templates/printable-emergency-contacts/`, `/zh-tw/features/household-handoff/`
+**FAQ:**
+- 家庭聯絡表和緊急聯絡表有什麼不同？前者整理日常角色，後者只保留危急時必要資訊。
+- 可以把手機通訊錄全部匯出嗎？不建議，只選家庭工作需要的角色與管道。
+- 多久要更新一次？變動後立即更新，平時在每月複查確認。
+- 紙本如何和 App 搭配？紙本做短期交接，長期角色可放入本機 App。
+
+# 可列印家庭聯絡表：依角色找得到人，不把整本通訊錄攤在桌上
+
+這張表讓家人在需要時找到正確角色：家人、鄰居、管理員、水電網路、清潔搬運、學校照顧與寵物支援。它不是手機通訊錄備份，也不是緊急服務名冊。列印前寫家庭代號、適用期間、保管人與版本日期；共用版只放最低必要資訊，完整住址、門禁、帳號、付款、身分證件與醫療細節留在受控位置。用途欄寫「包裹無法收件時」或「冷氣報修」比只寫名字更能交接。公共電話要保留官方來源與複查日；搜尋摘要或舊帳單不一定仍適用。電話、搬家、家庭角色或服務變動後建立新版本並回收舊紙，長期角色可放本機 App，未來推薦用品也只能在表格之外揭露 affiliate 關係。
+
+## Page 414 — 可列印清潔排程表：每日重置、每週家務與輪替深度清潔
+
+**Slug:** `/zh-tw/templates/printable-cleaning-schedule/`
+**Alternate route:** `/templates/printable-cleaning-schedule/`
+**Primary intent:** 尋找可列印的家庭清潔與家務排程表
+**Title tag:** 可列印清潔排程表｜每日重置、每週家務與輪替深度清潔
+**Meta description:** 用繁中可列印清潔排程依房間、頻率、負責人與完成標準安排每日、每週和輪替工作，先建立家庭能維持的最小版本。
+**Primary keyword concept:** 可列印清潔排程
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先選一個每天能維持的最小重置，再加上一項每週工作與一項輪替工作。
+**Suggested internal links:** `/zh-tw/tools/cleaning-schedule-generator/`, `/zh-tw/guides/cleaning-schedule/`, `/zh-tw/guides/deep-cleaning-tracker/`, `/zh-tw/features/family-task-manager/`
+**FAQ:**
+- 清潔排程一定要每天大掃除嗎？不用，先安排能維持生活的最小重置。
+- 誰負責家務怎麼決定？依時間、能力、設備與家庭協議分配。
+- 清潔劑和安全規則要寫在表上嗎？只記已確認來源，不把排程當成危險操作指示。
+- 如何知道排程太滿？連續無法完成就刪減、拆小或重新分配。
+
+# 可列印清潔排程表：先維持住家，再把工作分給真正有時間的人
+
+排程分成每日最小重置、每週工作與輪替深度工作，先寫版本日期、區域、參與者與複查日，再刪掉沒有的房間或設備。完成標準要可觀察，不用「保持整潔」這種模糊句子。清潔、補充、回收與濾網檢查分開記錄；涉及電器、瓦斯、高處或化學品時，只依標籤、手冊與專業來源，不提供拆卸或混用指示。每週檢視是否有隱形採買與提醒負擔，兩次無法完成就縮小或改頻率。紙本適合看板與會議，長期任務可放本機 App，推薦用品必須位於排程之外並揭露 affiliate 關係。
+
+## Page 415 — 可列印家庭家務輪值表：固定或輪替責任與完成標準
+
+**Slug:** `/zh-tw/templates/printable-chore-chart/`
+**Alternate route:** `/templates/printable-chore-chart/`
+**Primary intent:** 尋找適合成人與孩子的可列印家務分工表
+**Title tag:** 可列印家庭家務輪值表｜固定或輪替責任與完成標準
+**Meta description:** 用繁中可列印家務輪值表記錄工作、頻率、負責人、輪替與完成定義，不靠分數或排行榜維持家庭分工。
+**Primary keyword concept:** 可列印家務輪值表
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先列出家庭真正需要的三項工作，寫明完成標準，再協議固定或輪替負責人。
+**Suggested internal links:** `/zh-tw/tools/recurring-chore-planner/`, `/zh-tw/guides/family-chore-system/`, `/zh-tw/features/family-task-manager/`, `/zh-tw/templates/printable-cleaning-schedule/`
+**FAQ:**
+- 家務輪值一定要用點數或獎勵嗎？不用，清楚的工作與完成標準就能開始。
+- 孩子和成人能放同一張表嗎？可以，但要依能力與安全風險調整。
+- 怎麼處理一直沒完成的家務？拆小、改期、重新分配或刪除，不只增加責備。
+- 紙本如何和 App 連結？紙本做看板，重複任務可放本機 App。
+
+# 可列印家庭家務輪值表：把責任寫清楚，而不是把提醒都放在一個人身上
+
+這張表先列真正需要的工作，再決定固定或輪替，不要求點數或排行榜。每列包含家務、頻率、負責人／順序、完成定義與複查日；把「倒垃圾」等模糊名稱拆成家人都能理解的結果，但不把每個小動作變成監控。需要電器、清潔劑、梯子或刀具的工作依年齡、能力、產品標示與成人判斷安排。每週檢視隱形採買、提醒與收尾負擔；連續未完成先拆小或降頻，根本不重要就刪除。紙本適合看板與會議，長期任務可放本機 App，公開推薦用品也必須和輪值表分開並揭露 affiliate 關係。
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

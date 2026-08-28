@@ -58,6 +58,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/templates/printable-service-provider-list/</loc>",
       "<loc>https://familyboard.win/templates/printable-emergency-contacts/</loc>",
       "<loc>https://familyboard.win/zh-tw/templates/printable-emergency-contacts/</loc>",
+      "<loc>https://familyboard.win/templates/printable-household-contacts/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-household-contacts/</loc>",
+      "<loc>https://familyboard.win/templates/printable-cleaning-schedule/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-cleaning-schedule/</loc>",
+      "<loc>https://familyboard.win/templates/printable-chore-chart/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-chore-chart/</loc>",
       "<loc>https://familyboard.win/templates/printable-appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/templates/printable-appliance-inventory/</loc>",
       "<loc>https://familyboard.win/templates/printable-warranty-tracker/</loc>",
@@ -6034,6 +6040,30 @@ const checks = [
   {
     path: "/zh-tw/templates/printable-emergency-contacts/",
     require: ["可列印家庭緊急聯絡表", "角色與備援順序", 'lang="zh-TW"'],
+  },
+  {
+    path: "/templates/printable-household-contacts/",
+    require: ["Printable Household Contact List", "Nearby trusted contacts"],
+  },
+  {
+    path: "/zh-tw/templates/printable-household-contacts/",
+    require: ["可列印家庭聯絡表", "依用途填寫", 'lang="zh-TW"'],
+  },
+  {
+    path: "/templates/printable-cleaning-schedule/",
+    require: ["Printable Cleaning Schedule", "Daily reset"],
+  },
+  {
+    path: "/zh-tw/templates/printable-cleaning-schedule/",
+    require: ["可列印清潔排程表", "三層排程", 'lang="zh-TW"'],
+  },
+  {
+    path: "/templates/printable-chore-chart/",
+    require: ["Printable Household Chore Chart", "Weekly review"],
+  },
+  {
+    path: "/zh-tw/templates/printable-chore-chart/",
+    require: ["可列印家庭家務輪值表", "工作、頻率與完成定義", 'lang="zh-TW"'],
   },
 ];
 

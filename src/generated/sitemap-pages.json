@@ -1553,7 +1553,7 @@
   },
   {
     "route": "/templates/printable-household-contacts/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-household-contacts/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1593,7 +1593,7 @@
   },
   {
     "route": "/templates/printable-cleaning-schedule/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-cleaning-schedule/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1601,7 +1601,7 @@
   },
   {
     "route": "/templates/printable-chore-chart/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-chore-chart/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3297,6 +3297,30 @@
   },
   {
     "route": "/zh-tw/templates/printable-emergency-contacts/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-household-contacts/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-cleaning-schedule/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-chore-chart/",
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
@@ -5633,6 +5657,20 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/templates/printable-chore-chart/",
+    "alternateRoute": "/templates/printable-chore-chart/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/templates/printable-cleaning-schedule/",
+    "alternateRoute": "/templates/printable-cleaning-schedule/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/checklists/printable-emergency-binder-checklist/",
     "alternateRoute": "/checklists/printable-emergency-binder-checklist/",
     "indexable": true,
@@ -5656,6 +5694,13 @@
   {
     "route": "/zh-tw/checklists/printable-home-maintenance-checklist/",
     "alternateRoute": "/checklists/printable-home-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/templates/printable-household-contacts/",
+    "alternateRoute": "/templates/printable-household-contacts/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

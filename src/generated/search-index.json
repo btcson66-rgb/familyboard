@@ -3168,6 +3168,30 @@
     "headings": "可列印家庭緊急聯絡表：先排好角色與備援，再決定哪一版可以分享"
   },
   {
+    "title": "可列印家庭聯絡表｜家人、鄰居、公共服務與日常支援",
+    "description": "用繁中可列印家庭聯絡表依角色整理家人、鄰居、管理單位、公共服務與服務商，保留複查日期並避免把整本通訊錄印出。",
+    "route": "/zh-tw/templates/printable-household-contacts/",
+    "cluster": "printables",
+    "keywords": "可列印家庭聯絡表",
+    "headings": "可列印家庭聯絡表：依角色找得到人，不把整本通訊錄攤在桌上"
+  },
+  {
+    "title": "可列印清潔排程表｜每日重置、每週家務與輪替深度清潔",
+    "description": "用繁中可列印清潔排程依房間、頻率、負責人與完成標準安排每日、每週和輪替工作，先建立家庭能維持的最小版本。",
+    "route": "/zh-tw/templates/printable-cleaning-schedule/",
+    "cluster": "printables",
+    "keywords": "可列印清潔排程",
+    "headings": "可列印清潔排程表：先維持住家，再把工作分給真正有時間的人"
+  },
+  {
+    "title": "可列印家庭家務輪值表｜固定或輪替責任與完成標準",
+    "description": "用繁中可列印家務輪值表記錄工作、頻率、負責人、輪替與完成定義，不靠分數或排行榜維持家庭分工。",
+    "route": "/zh-tw/templates/printable-chore-chart/",
+    "cluster": "printables",
+    "keywords": "可列印家務輪值表",
+    "headings": "可列印家庭家務輪值表：把責任寫清楚，而不是把提醒都放在一個人身上"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
