@@ -424,6 +424,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-event-duration-calculator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-event-duration-calculator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/guides/home-service-provider-list/",
     "alternateRoute": "/zh-tw/guides/home-service-provider-list/",
     "indexable": true,
@@ -3415,6 +3423,13 @@
   {
     "route": "/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/",
     "alternateRoute": "/guides/familyboard-emergency-information-privacy-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-event-duration-calculator-tutorial/",
+    "alternateRoute": "/guides/familyboard-event-duration-calculator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

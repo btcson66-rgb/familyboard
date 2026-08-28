@@ -392,6 +392,14 @@
     "headings": "How to use FamilyBoard's backup recovery checker Decide what the household must recover Export an untouched snapshot Test a copy without overwriting working data Read the date checks as guardrails Assign and repeat the next drill"
   },
   {
+    "title": "FamilyBoard Event Duration Calculator Tutorial | Compare Two Observed Times",
+    "description": "Learn how to use FamilyBoard's household event duration calculator with two observed timestamps, source notes and an honest result that does not replace an official outage, repair or notice record.",
+    "route": "/guides/familyboard-event-duration-calculator-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard household event duration calculator tutorial",
+    "headings": "How to use FamilyBoard's household event duration calculator Define the two moments before opening the tool Enter observed or source-supported times carefully Pair the calculation with a source index Handle date and time errors as evidence gaps Keep the output useful and private"
+  },
+  {
     "title": "Home Service Provider List | Verify Sources, Scope and Prior Work",
     "description": "Build a useful home service provider list with dated registry checks, written scope, prior-work evidence and owner-led follow-up—without treating a listing as an endorsement.",
     "route": "/guides/home-service-provider-list/",

@@ -56,6 +56,7 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-documents-source-review-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-emergency-information-privacy-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-backup-recovery-checker-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-event-duration-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -67,6 +68,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-documents-source-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-backup-recovery-checker-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-event-duration-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -655,6 +657,22 @@ const checks = [
       "FamilyBoard 備份還原檢查器怎麼用",
       "先決定最小必要範圍",
       "用副本測試，避免覆蓋工作資料",
+    ],
+  },
+  {
+    path: "/guides/familyboard-event-duration-calculator-tutorial/",
+    require: [
+      "How to use FamilyBoard's household event duration calculator",
+      "Define the two moments before opening the tool",
+      "does not replace an official outage",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-event-duration-calculator-tutorial/",
+    require: [
+      "家庭事件經過時間計算器怎麼用",
+      "先把問題寫成兩個可觀察的時刻",
+      "不會把算術結果升級成業者或政府的正式時數",
     ],
   },
   {

@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T01:42:29.387Z
+Generated: 2026-08-28T01:54:53.750Z
 
 ## Summary
 
-- Indexable pages: 602
-- Generated HTML routes: 619
+- Indexable pages: 604
+- Generated HTML routes: 621
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 307
+- Pages without a contextual product/tool link: 308
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-28T01:42:29.387Z
 - product: 119
 - appliances: 30
 - maintenance: 52
-- household-operations: 104
+- household-operations: 106
 - inventory-warranty: 46
 - records-emergency: 86
 - tools: 124
@@ -152,6 +152,7 @@ Generated: 2026-08-28T01:42:29.387Z
 - /zh-tw/guides/familyboard-documents-source-review-tutorial/
 - /zh-tw/guides/familyboard-donation-handoff-tutorial/
 - /zh-tw/guides/familyboard-emergency-information-privacy-tutorial/
+- /zh-tw/guides/familyboard-event-duration-calculator-tutorial/
 - /zh-tw/guides/familyboard-event-source-index-tutorial/
 - /zh-tw/guides/familyboard-family-display-mode-setup/
 - /zh-tw/guides/familyboard-free-home-management-app-tutorial/
