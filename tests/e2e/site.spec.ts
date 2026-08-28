@@ -132,6 +132,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-record-retrieval-drill-tutorial/",
     "/guides/familyboard-utility-provider-handoff-tutorial/",
     "/guides/familyboard-vehicle-document-source-status-tutorial/",
+    "/guides/familyboard-record-retrieval-drill-tutorial/",
     "/guides/familyboard-emergency-contact-verification-tutorial/",
     "/guides/familyboard-vehicle-document-source-status-tutorial/",
     "/guides/familyboard-repair-punch-list-tutorial/",
@@ -374,6 +375,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-event-duration-calculator-tutorial/",
     "/zh-tw/guides/familyboard-emergency-contact-verification-tutorial/",
     "/zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/",
+    "/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3507,6 +3509,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     "https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-record-retrieval-drill-tutorial/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-emergency-contact-verification-tutorial/",
   );
   expect(sitemap).toContain(
@@ -3601,6 +3606,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

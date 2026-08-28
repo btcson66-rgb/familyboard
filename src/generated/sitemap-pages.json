@@ -2865,7 +2865,7 @@
   },
   {
     "route": "/guides/familyboard-record-retrieval-drill-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -3640,6 +3640,13 @@
   {
     "route": "/zh-tw/guides/familyboard-private-family-organizer-tutorial/",
     "alternateRoute": "/guides/familyboard-private-family-organizer-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/",
+    "alternateRoute": "/guides/familyboard-record-retrieval-drill-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

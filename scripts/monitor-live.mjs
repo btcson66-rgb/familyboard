@@ -59,6 +59,7 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-event-duration-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-emergency-contact-verification-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-record-retrieval-drill-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -73,6 +74,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-event-duration-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-contact-verification-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -709,6 +711,22 @@ const checks = [
       "汽車行照、保險與召回怎麼整理",
       "先建立不洩漏識別資料的車輛代號",
       "不會查車、登入監理系統",
+    ],
+  },
+  {
+    path: "/guides/familyboard-record-retrieval-drill-tutorial/",
+    require: [
+      "How to Use FamilyBoard for a Record Retrieval Drill",
+      "Choose a small scope and a clear receiver",
+      "does not certify completeness",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/",
+    require: [
+      "家庭文件查找與交接演練怎麼做",
+      "先選一個小範圍和明確收件人",
+      "不要複製密碼、完整地址或私密原件",
     ],
   },
   {

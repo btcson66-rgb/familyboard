@@ -24438,6 +24438,7 @@ Is the incident bounded? Are policy and evidence sources protected and dated? Ar
 
 ## Page 353 — How to Use FamilyBoard for a Record Retrieval Drill
 **Slug:** /guides/familyboard-record-retrieval-drill-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/
 **Primary intent:** learn to test whether a household can find a current record and its source without copying sensitive documents into a shared checklist
 **Title tag:** FamilyBoard Record Retrieval Drill Tutorial | Test Findability Without Sharing Secrets
 **Meta description:** Learn how to run a small FamilyBoard record-retrieval drill: choose one bounded question, map a protected source, record the lookup result and improve the next checkpoint.

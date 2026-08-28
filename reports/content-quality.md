@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T02:13:20.682Z
+Generated: 2026-08-28T02:21:24.687Z
 
 ## Summary
 
-- Indexable pages: 606
-- Generated HTML routes: 623
+- Indexable pages: 607
+- Generated HTML routes: 624
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 310
+- Duplicate primary-keyword groups: 6
+- Pages without a contextual product/tool link: 311
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-28T02:13:20.682Z
 - product: 119
 - appliances: 30
 - maintenance: 52
-- household-operations: 106
+- household-operations: 107
 - inventory-warranty: 46
 - records-emergency: 88
 - tools: 124
@@ -46,6 +46,7 @@ Generated: 2026-08-28T02:13:20.682Z
 - caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
 - household account list: /guides/household-account-list/, /tools/household-account-list/
 - 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
+- 家庭文件查找演練: /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/, /zh-tw/tools/household-record-retrieval-drill-log/
 - 居家服務變更: /zh-tw/guides/home-care-service-plan-changes/, /zh-tw/tools/home-care-service-plan-change-notice-log/
 - 居家服務紀錄: /zh-tw/guides/home-care-service-visit-records/, /zh-tw/tools/home-care-visit-scope-service-result-log/
 
@@ -183,6 +184,7 @@ Generated: 2026-08-28T02:13:20.682Z
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-power-outage-event-log-tutorial/
 - /zh-tw/guides/familyboard-private-family-organizer-tutorial/
+- /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-rental-repair-request-tutorial/
 - /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
