@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T07:09:59.063Z
+Generated: 2026-08-28T07:17:48.154Z
 
 ## Summary
 
-- Indexable pages: 686
-- Generated HTML routes: 705
+- Indexable pages: 689
+- Generated HTML routes: 708
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 388
+- Pages without a contextual product/tool link: 391
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,9 +21,9 @@ Generated: 2026-08-28T07:09:59.063Z
 - product: 120
 - appliances: 56
 - maintenance: 81
-- household-operations: 114
+- household-operations: 116
 - inventory-warranty: 56
-- records-emergency: 92
+- records-emergency: 93
 - tools: 126
 
 ## Word-count range
@@ -156,12 +156,14 @@ Generated: 2026-08-28T07:09:59.063Z
 - /zh-tw/guides/digital-home-binder/
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/dishwasher-maintenance-checklist/
+- /zh-tw/guides/divide-household-responsibilities/
 - /zh-tw/guides/dryer-maintenance-checklist/
 - /zh-tw/guides/electronics-inventory/
 - /zh-tw/guides/emergency-binder/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
 - /zh-tw/guides/fall-home-maintenance-checklist/
+- /zh-tw/guides/family-chore-system/
 - /zh-tw/guides/family-continuity-plan/
 - /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
 - /zh-tw/guides/familyboard-backup-recovery-checker-tutorial/
@@ -319,6 +321,7 @@ Generated: 2026-08-28T07:09:59.063Z
 - /zh-tw/guides/summer-home-maintenance-checklist/
 - /zh-tw/guides/travel-household-handoff/
 - /zh-tw/guides/ups-battery-backup-records/
+- /zh-tw/guides/utility-shutoff-information/
 - /zh-tw/guides/vacuum-cleaner-maintenance-guide/
 - /zh-tw/guides/valuable-item-inventory/
 - /zh-tw/guides/warranty-expiration/

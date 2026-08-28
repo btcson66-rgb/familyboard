@@ -116,6 +116,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/household-replacement-reserve/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/emergency-binder/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/family-continuity-plan/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/utility-shutoff-information/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/divide-household-responsibilities/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/family-chore-system/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1519,6 +1522,33 @@ const checks = [
       'hreflang="en"',
       "先找出只有一個人知道的事情",
       "備援者需要脈絡，不是永久接班",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/utility-shutoff-information/",
+    require: [
+      "家庭水電瓦斯關閉位置",
+      'hreflang="en"',
+      "瓦斯異味時，離開與通報優先",
+      "建立準確的位置與聯絡索引",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/divide-household-responsibilities/",
+    require: [
+      "家庭責任怎麼分工",
+      'hreflang="en"',
+      "每個責任都拆成四個階段",
+      "注意、規劃、執行、追蹤",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/family-chore-system/",
+    require: [
+      "家庭家務系統",
+      'hreflang="en"',
+      "先寫觸發條件，再選週期",
+      "定義完成，不只定義動作",
     ],
   },
   {

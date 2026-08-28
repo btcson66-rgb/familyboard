@@ -1001,7 +1001,7 @@
   },
   {
     "route": "/guides/utility-shutoff-information/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/utility-shutoff-information/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1097,7 +1097,7 @@
   },
   {
     "route": "/guides/divide-household-responsibilities/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/divide-household-responsibilities/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1113,7 +1113,7 @@
   },
   {
     "route": "/guides/family-chore-system/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/family-chore-system/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3412,6 +3412,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/divide-household-responsibilities/",
+    "alternateRoute": "/guides/divide-household-responsibilities/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/dryer-maintenance-checklist/",
     "alternateRoute": "/guides/dryer-maintenance-checklist/",
     "indexable": true,
@@ -3484,6 +3491,13 @@
   {
     "route": "/zh-tw/guides/fall-home-maintenance-checklist/",
     "alternateRoute": "/guides/fall-home-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/family-chore-system/",
+    "alternateRoute": "/guides/family-chore-system/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5325,6 +5339,13 @@
   {
     "route": "/zh-tw/guides/ups-battery-backup-records/",
     "alternateRoute": "/guides/ups-battery-backup-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/utility-shutoff-information/",
+    "alternateRoute": "/guides/utility-shutoff-information/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
