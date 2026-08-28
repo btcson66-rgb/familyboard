@@ -57,6 +57,7 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-emergency-information-privacy-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-backup-recovery-checker-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-event-duration-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-emergency-contact-verification-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -69,6 +70,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-backup-recovery-checker-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-event-duration-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-contact-verification-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -673,6 +675,22 @@ const checks = [
       "家庭事件經過時間計算器怎麼用",
       "先把問題寫成兩個可觀察的時刻",
       "不會把算術結果升級成業者或政府的正式時數",
+    ],
+  },
+  {
+    path: "/guides/familyboard-emergency-contact-verification-tutorial/",
+    require: [
+      "How to verify emergency contacts without creating another risky contact list",
+      "Start with the audience, not a giant master list",
+      "without creating a duplicate directory",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-emergency-contact-verification-tutorial/",
+    require: [
+      "家庭緊急聯絡人怎麼驗證",
+      "先決定這一份要給誰看",
+      "不要把完整電話和地址複製到共用清單",
     ],
   },
   {

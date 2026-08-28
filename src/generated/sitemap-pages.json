@@ -2897,7 +2897,7 @@
   },
   {
     "route": "/guides/familyboard-emergency-contact-verification-tutorial/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-emergency-contact-verification-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -3418,6 +3418,13 @@
     "alternateRoute": "/guides/familyboard-donation-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-emergency-contact-verification-tutorial/",
+    "alternateRoute": "/guides/familyboard-emergency-contact-verification-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

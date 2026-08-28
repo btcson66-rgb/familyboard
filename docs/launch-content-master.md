@@ -24711,6 +24711,7 @@ Can another permitted role state the question and find the current source? Are c
 
 ## Page 357 — How to Use FamilyBoard for Emergency Contact Verification
 **Slug:** `/guides/familyboard-emergency-contact-verification-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-emergency-contact-verification-tutorial/`
 **Primary intent:** verify household emergency contacts by role, source, consent and date without copying private contact details
 **Title tag:** How to Verify Emergency Contacts at Home | FamilyBoard Tutorial
 **Meta description:** Learn a privacy-aware emergency contact verification workflow: check the right source, confirm consent, assign corrections and keep every date honest.
