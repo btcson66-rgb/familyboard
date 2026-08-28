@@ -55,6 +55,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-master-csv-edit-import/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-history-review/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-subscription-renewal-review/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/</loc>",
@@ -554,6 +557,30 @@ const checks = [
       "FamilyBoard Today 儀表板每週怎麼複查",
       "先讀四項數字，再點進來源",
       "不會傳推播、簡訊或 Email",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-master-csv-edit-import/",
+    require: [
+      "FamilyBoard CSV 家庭資料總表怎麼編修",
+      "先留一份不可編修的 JSON 安全快照",
+      "把驗證預覽當成正式複查",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-maintenance-history-review/",
+    require: [
+      "FamilyBoard 維護紀錄完成後怎麼複查",
+      "真正執行或看見結果後再按完成",
+      "不能把危險工作變成適合 DIY",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-subscription-renewal-review/",
+    require: [
+      "FamilyBoard 訂閱續約前怎麼複查",
+      "用一致方法比較年化費用",
+      "都不是未來不扣款的證明",
     ],
   },
   {

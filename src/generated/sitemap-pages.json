@@ -2921,7 +2921,7 @@
   },
   {
     "route": "/guides/familyboard-master-csv-edit-import/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-master-csv-edit-import/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -2929,7 +2929,7 @@
   },
   {
     "route": "/guides/familyboard-maintenance-history-review/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-maintenance-history-review/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -2937,7 +2937,7 @@
   },
   {
     "route": "/guides/familyboard-subscription-renewal-review/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/familyboard-subscription-renewal-review/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -3464,10 +3464,24 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-maintenance-history-review/",
+    "alternateRoute": "/guides/familyboard-maintenance-history-review/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/",
     "alternateRoute": "/guides/familyboard-maintenance-priority-review-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-master-csv-edit-import/",
+    "alternateRoute": "/guides/familyboard-master-csv-edit-import/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -3643,6 +3657,13 @@
     "alternateRoute": "/guides/familyboard-subscription-cancellation-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-subscription-renewal-review/",
+    "alternateRoute": "/guides/familyboard-subscription-renewal-review/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
