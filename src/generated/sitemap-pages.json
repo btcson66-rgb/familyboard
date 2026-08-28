@@ -4136,6 +4136,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-service-provider-verification-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-service-provider-verification-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-repair-change-order-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-repair-change-order-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-repair-punch-list-review-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-repair-punch-list-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -5639,6 +5663,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-repair-change-order-tutorial/",
+    "alternateRoute": "/guides/familyboard-repair-change-order-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/",
     "alternateRoute": "/guides/familyboard-repair-evidence-timeline-tutorial/",
     "indexable": true,
@@ -5648,6 +5679,13 @@
   {
     "route": "/zh-tw/guides/familyboard-repair-punch-list-tutorial/",
     "alternateRoute": "/guides/familyboard-repair-punch-list-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-repair-punch-list-review-tutorial/",
+    "alternateRoute": "/guides/familyboard-repair-punch-list-review-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5739,6 +5777,13 @@
   {
     "route": "/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/",
     "alternateRoute": "/guides/familyboard-service-appointment-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-service-provider-verification-tutorial/",
+    "alternateRoute": "/guides/familyboard-service-provider-verification-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

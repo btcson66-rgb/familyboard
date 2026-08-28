@@ -320,6 +320,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-emergency-drill-tutorial/",
     "/guides/familyboard-product-recall-action-log-tutorial/",
     "/zh-tw/guides/familyboard-product-recall-action-log-tutorial/",
+    "/guides/familyboard-service-provider-verification-tutorial/",
+    "/zh-tw/guides/familyboard-service-provider-verification-tutorial/",
+    "/guides/familyboard-repair-change-order-tutorial/",
+    "/zh-tw/guides/familyboard-repair-change-order-tutorial/",
+    "/guides/familyboard-repair-punch-list-review-tutorial/",
+    "/zh-tw/guides/familyboard-repair-punch-list-review-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2102,6 +2108,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-product-recall-action-log-tutorial/",
       alternate: "/guides/familyboard-product-recall-action-log-tutorial/",
       heading: "FamilyBoard 產品召回行動紀錄教學：保存通知，追蹤安全下一步",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-service-provider-verification-tutorial/",
+      alternate: "/guides/familyboard-service-provider-verification-tutorial/",
+      heading: "FamilyBoard 服務商驗證教學：確認範圍與來源，不把名錄當背書",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-repair-change-order-tutorial/",
+      alternate: "/guides/familyboard-repair-change-order-tutorial/",
+      heading: "FamilyBoard 修繕變更單教學：保留原範圍，讓費用變化可追溯",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-repair-punch-list-review-tutorial/",
+      alternate: "/guides/familyboard-repair-punch-list-review-tutorial/",
+      heading: "FamilyBoard 修繕收尾複查教學：確認回查，不要過早結案",
     },
   ]) {
     await page.goto(localized.route);

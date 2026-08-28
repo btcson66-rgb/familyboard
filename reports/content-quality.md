@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T22:45:30.624Z
+Generated: 2026-08-28T22:55:25.846Z
 
 ## Summary
 
-- Indexable pages: 971
-- Generated HTML routes: 977
+- Indexable pages: 977
+- Generated HTML routes: 983
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 562
+- Pages without a contextual product/tool link: 568
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-28T22:45:30.624Z
 - product: 172
 - inventory-warranty: 82
 - appliances: 68
-- maintenance: 91
+- maintenance: 97
 - household-operations: 201
 - records-emergency: 135
 - tools: 152
@@ -85,8 +85,11 @@ Generated: 2026-08-28T22:45:30.624Z
 - /guides/familyboard-offline-backup-restore/
 - /guides/familyboard-product-recall-action-log-tutorial/
 - /guides/familyboard-pwa-update-tutorial/
+- /guides/familyboard-repair-change-order-tutorial/
+- /guides/familyboard-repair-punch-list-review-tutorial/
 - /guides/familyboard-reset-local-household-tutorial/
 - /guides/familyboard-restore-merge-replace-tutorial/
+- /guides/familyboard-service-provider-verification-tutorial/
 - /guides/familyboard-shared-display-privacy-tutorial/
 - /guides/familyboard-storage-health-warning-tutorial/
 - /guides/familyboard-storage-open-error-tutorial/
@@ -333,7 +336,9 @@ Generated: 2026-08-28T22:45:30.624Z
 - /zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/
 - /zh-tw/guides/familyboard-rental-repair-request-tutorial/
 - /zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/
+- /zh-tw/guides/familyboard-repair-change-order-tutorial/
 - /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
+- /zh-tw/guides/familyboard-repair-punch-list-review-tutorial/
 - /zh-tw/guides/familyboard-repair-punch-list-tutorial/
 - /zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/
 - /zh-tw/guides/familyboard-replacement-part-source-check-tutorial/
@@ -348,6 +353,7 @@ Generated: 2026-08-28T22:45:30.624Z
 - /zh-tw/guides/familyboard-school-record-source-handoff-tutorial/
 - /zh-tw/guides/familyboard-seasonal-reset-tutorial/
 - /zh-tw/guides/familyboard-service-appointment-handoff-tutorial/
+- /zh-tw/guides/familyboard-service-provider-verification-tutorial/
 - /zh-tw/guides/familyboard-service-quote-comparison-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
 - /zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/

@@ -36925,6 +36925,165 @@ Keep receipts, invoices, serial photos and correspondence in their protected sou
 
 **Contextual CTA:** Save the official notice, match one asset’s exact identifiers, assign the next action and leave the remedy open until its source confirms completion.
 
+---
+
+## Page 517 — FamilyBoard Service Provider Verification Tutorial
+**Slug:** /guides/familyboard-service-provider-verification-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-service-provider-verification-tutorial/
+**Primary intent:** verify a home service provider’s source, scope and follow-up without treating a directory listing as endorsement
+**Title tag:** FamilyBoard Service Provider Verification Tutorial | Check Scope and Sources
+**Meta description:** Learn how to record a home service provider verification in FamilyBoard, compare official sources, keep quotes separate and assign follow-up safely.
+**Primary keyword concept:** FamilyBoard service provider verification
+**Cluster:** maintenance
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/home-service-provider-verification-log/, /guides/familyboard-maintenance-event-cost-tutorial/, /guides/familyboard-home-repair-cost-log-tutorial/, /privacy/
+**FAQ:**
+- Q: Does a verification row endorse or license a provider?
+  A: No. It records the sources and checks a household performed; licensing bodies, contracts and official records control.
+- Q: Is a quote proof of the final price or work quality?
+  A: No. Keep quote, approved scope, invoice, payment and observed result as separate dated facts.
+- Q: Should I store a provider’s password or account PIN?
+  A: No. Keep credentials in the protected system that controls them and record only a neutral pointer.
+- Q: Does a completed check guarantee availability next month?
+  A: No. It describes a past check; availability, coverage, staff and terms can change.
+
+# FamilyBoard Service Provider Verification Tutorial: Check Scope and Sources
+
+Choosing a plumber, electrician, cleaner, caregiver or appliance technician often starts with a name in a message and ends with several versions of a quote. FamilyBoard’s free service provider verification log helps a household record what source was checked, what service area and scope were understood, which questions remain open and who owns the next call. It is not a licensing database, endorsement, background check, insurance certificate or guarantee of quality. The responsible authority, provider and written agreement remain the controlling sources.
+
+## Identify the role before the business name
+
+Use a neutral provider ID such as `HVAC-LOCAL-1` and describe the job: “annual heat-pump inspection” is more useful than a company name alone. Record the household asset or area, the requested scope, the service location at a safe level and the date of the check. Keep a full address, account number and private correspondence in the protected source. The log should help another household member understand what role is needed without exposing details they do not need.
+
+## Compare primary sources
+
+Check the provider’s current official website, contract, formal estimate, regulator or trade-license lookup when one applies. Record the source title, URL or protected file pointer and the date reviewed. A search result, review site or forwarded recommendation may help locate a provider, but it is not proof of current license, insurance, service area or authority. If two sources disagree, leave the verification open and assign a question instead of choosing the more convenient claim.
+
+## Separate quote, authorization and result
+
+A quote describes proposed work and may expire. Authorization records what the household accepted. An invoice records what was billed, and a payment source records what settled. The service visit or maintenance event records what the household could observe afterward. Keep these as separate rows or dated events. Do not turn “provider said inspected” into “system safe,” and do not infer a final price from a range or an old estimate. Technical, electrical, gas and structural conclusions belong to qualified sources.
+
+## Assign questions and protect access details
+
+For every unresolved item, name an owner and next date: confirm license number through the regulator, ask whether the quoted part is compatible, request an updated scope or retrieve the completion report. Never put a portal password, lockbox code or account PIN in the verification log. Record that the credential was handled through the protected channel. Before sharing a handoff, preview the fields and include only the provider role, safe source pointer and next action needed by the receiver.
+
+Review the row after the visit and again when a quote, staff member, service area or contract changes. Export a protected backup when the history matters. Future affiliate panels for tool bags, filters or appointment planners may appear outside the verification form with clear disclosure and an easy skip; they cannot license a provider, validate workmanship or guarantee a booking.
+
+When a provider cannot answer a question, record the exact source still missing and the safe channel for the next request. A household can then hand the issue to another role without forwarding a private thread. Keep a dated distinction between “source checked,” “question sent,” “response received” and “work observed.” Those four states prevent a directory listing or a friendly message from being mistaken for a current professional credential.
+
+**Contextual CTA:** Verify one provider role against a current primary source, keep the quote and result separate, and assign every open question.
+
+---
+
+## Page 518 — FamilyBoard Repair Change Order Tutorial
+**Slug:** /guides/familyboard-repair-change-order-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-repair-change-order-tutorial/
+**Primary intent:** record repair scope changes, approval evidence and cost differences without rewriting the original agreement
+**Title tag:** FamilyBoard Repair Change Order Tutorial | Keep Scope and Cost Traceable
+**Meta description:** Learn how to use FamilyBoard’s repair change-order log to preserve the original scope, record requested changes, approvals, cost differences and open questions.
+**Primary keyword concept:** FamilyBoard repair change order
+**Cluster:** maintenance
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/home-repair-change-order-log/, /guides/familyboard-maintenance-event-cost-tutorial/, /guides/familyboard-home-repair-cost-log-tutorial/, /privacy/
+**FAQ:**
+- Q: Does a change order prove that the household accepted a price?
+  A: No. It records the stated request and evidence; the signed or otherwise controlling agreement determines acceptance.
+- Q: Should I replace the original scope when the work changes?
+  A: No. Preserve the original and add a dated change so the sequence stays understandable.
+- Q: Is an approved change proof that the repair was necessary?
+  A: No. Need, safety and technical suitability require the appropriate professional and source.
+- Q: Can the log calculate a legally valid claim?
+  A: No. It organizes facts and follow-up; contract and local rules control disputes and remedies.
+
+# FamilyBoard Repair Change Order Tutorial: Keep Scope and Cost Traceable
+
+Repairs change after a wall is opened, a part is unavailable or a household discovers a second symptom. The dangerous shortcut is to overwrite the first quote until nobody can tell what was originally requested. FamilyBoard’s free repair change-order log keeps the initial scope, the requested change, the reason, approval evidence, cost difference and next owner in a dated sequence. It is a working record, not a signed contract, invoice, building approval or legal claim.
+
+## Freeze the baseline before editing
+
+Give the original estimate or work order a retrievable ID such as `BATH-REPAIR-01` and record its date, scope, unit and source pointer. Note what was visible when the estimate was made, without inventing a diagnosis. Store the full contract, drawings, photos and private address in their protected sources. A baseline lets the household compare a later request with what the provider originally offered.
+
+## Describe the change in observable terms
+
+Each change row can state the requested addition or deletion, the reason given, the source evidence, the proposed cost or time difference and its status. “Replace part B because supplier says part A is unavailable” is more traceable than “extra work.” Attribute a technical conclusion to the provider or report that made it; a household note should say what was observed, not certify a hidden condition. If the reason is unknown, keep it unknown and assign a question.
+
+## Record approval without assuming acceptance
+
+Use statuses such as `Draft`, `Awaiting answer`, `Approved by source`, `Declined` and `Completed observation`. “Approved by source” requires the message, signed page or process that actually controls the job. A text saying “looks fine” may not define price, warranty or authority. Keep the original quote, the revised amount and any deposit or invoice as separate facts. Do not treat a change row as proof that the household paid or that the work passed inspection.
+
+## Keep disputes and close-out visible
+
+If the provider and household disagree, mark the change disputed and record the next contact or formal escalation. Do not delete the disputed row or collapse it into the final invoice. After work, link a maintenance event or punch-list item that describes the observed result, remaining defect and requested report. A new symptom should become a new dated event rather than a silent edit to the original scope.
+
+Review changes before sharing a handoff. Use a neutral asset ID and redacted source pointer; never copy credentials, full addresses or private correspondence into a broad summary. Export a protected backup when the sequence matters. Future affiliate panels for folders, measuring tools or project planners may appear outside the form with clear disclosure and an easy skip; they cannot approve a variation or settle a dispute.
+
+If the change is declined, record what remains in the original scope and what the household will do next. If it is approved, record who approved it and where the controlling copy is stored. When a provider proposes a substitute on site, pause the close-out until the household can compare compatibility, warranty and cost with the source. A careful change record makes later payment review possible without turning a browser note into a contract.
+
+**Contextual CTA:** Freeze the baseline, add one dated scope change with its source and leave approval or disagreement visible until the controlling process answers.
+
+---
+
+## Page 519 — FamilyBoard Repair Punch List Review Tutorial
+**Slug:** /guides/familyboard-repair-punch-list-review-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-repair-punch-list-review-tutorial/
+**Primary intent:** review an existing repair punch list, preserve open gaps and verify rechecks before declaring household work complete
+**Title tag:** FamilyBoard Punch List Review Tutorial | Verify Rechecks Before Close-Out
+**Meta description:** Learn how to review a FamilyBoard repair punch list, compare scope and evidence, confirm rechecks and keep unresolved work visible.
+**Primary keyword concept:** FamilyBoard punch list review
+**Cluster:** maintenance
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/home-repair-punch-list/, /guides/familyboard-repair-change-order-tutorial/, /guides/familyboard-maintenance-event-cost-tutorial/, /guides/familyboard-repair-punch-list-tutorial/, /privacy/
+**FAQ:**
+- Q: Does checking a punch-list row certify the repair?
+  A: No. It records a household observation or source response; required inspections and professional acceptance remain separate.
+- Q: Should I mark every row complete when the worker leaves?
+  A: No. Keep items open when evidence, a callback or a safe follow-up is still missing.
+- Q: Can a punch list decide who is liable for a defect?
+  A: No. Describe the condition and source; contracts, evidence and qualified advice control liability.
+- Q: Can I share the full list with every visitor?
+  A: Share only the bounded rows and redacted pointers the receiver needs; protect addresses, credentials and private notes.
+
+# FamilyBoard Punch List Review Tutorial: Verify Rechecks Before Close-Out
+
+A repair is not necessarily finished when the worker leaves. A loose trim piece, missing document, untested control or promised callback can remain invisible if the household reviews only a “done” label. FamilyBoard’s free punch-list review workflow compares the existing rows with scope, recheck evidence, responses and follow-up dates before a household closes them. It does not certify workmanship, approve a building project or decide liability. The official inspection, contract and qualified professional remain the authority.
+
+## Define the bounded handover
+
+Name the repair, asset and observation window with neutral IDs such as `KITCHEN-REPAIR-02`. Record the baseline scope or work order pointer and who attended as roles. A punch list for a bathroom visit should not silently become a whole-home defect inventory. Keep the full address, private messages and original photos in protected sources, then use a retrievable reference in each row.
+
+## Write one observable gap per row
+
+Describe what can be seen, measured under a safe agreed check or confirmed by a source: “cabinet door rubs at lower hinge” or “completion report still missing.” Avoid conclusions such as “poor workmanship” or “unsafe” unless a qualified source made that finding. Add the expected action, owner, evidence reference and status. One gap per row makes it possible to assign a callback or confirm a specific result.
+
+## Use statuses that preserve uncertainty
+
+`Open` means work remains. `Ready to review` means the responsible person can inspect the evidence. `Waiting on provider` records an outside dependency. `Observed complete` means the stated observation occurred, not that every hidden condition passed. `Disputed` keeps a disagreement visible. Never bulk-close rows to make the project look tidy. If a row is not safe to test, record the limitation and ask the appropriate professional instead of performing a risky experiment.
+
+## Close with evidence and a new date
+
+When a worker returns, keep the original gap and add the new visit date, source response and observed result. Link an updated invoice, report, photo or callback reference without replacing the original. A payment confirmation is not a workmanship certificate, and a quiet appliance is not proof that a concealed defect is gone. If the issue returns, create a new maintenance event or callback rather than erasing the first close-out.
+
+Before sharing a handoff, preview the list and remove full addresses, passwords, access codes and unrelated private notes. Export a protected backup when the repair history matters. Future affiliate panels for labels, inspection lights or project folders may appear outside the punch list with clear disclosure and an easy skip; they cannot declare completion, waive a warranty or resolve a dispute.
+
+At the final review, read each row aloud in the same order as the walkthrough and ask what evidence would change its status. Mark a row closed only when the stated recheck occurred and the pointer can be retrieved. If the receiver cannot find the source, keep the row open and assign a retrieval action. This small discipline catches missing reports and ambiguous “fixed” messages before they disappear into a completed project archive.
+
+**Contextual CTA:** Record one observable gap per row, assign the next owner and leave the item open until the source-backed result is actually visible.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

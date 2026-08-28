@@ -4000,6 +4000,30 @@
     "headings": "FamilyBoard Product Recall Tutorial: Track Notices and Safe Next Actions Capture the notice before interpreting it Separate status, hazard information and household action Track every action with an owner"
   },
   {
+    "title": "FamilyBoard Service Provider Verification Tutorial | Check Scope and Sources",
+    "description": "Learn how to record a home service provider verification in FamilyBoard, compare official sources, keep quotes separate and assign follow-up safely.",
+    "route": "/guides/familyboard-service-provider-verification-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard service provider verification",
+    "headings": "FamilyBoard Service Provider Verification Tutorial: Check Scope and Sources Identify the role before the business name Compare primary sources Separate quote, authorization and result Assign questions and protect access details"
+  },
+  {
+    "title": "FamilyBoard Repair Change Order Tutorial | Keep Scope and Cost Traceable",
+    "description": "Learn how to use FamilyBoard’s repair change-order log to preserve the original scope, record requested changes, approvals, cost differences and open questions.",
+    "route": "/guides/familyboard-repair-change-order-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard repair change order",
+    "headings": "FamilyBoard Repair Change Order Tutorial: Keep Scope and Cost Traceable Freeze the baseline before editing Describe the change in observable terms Record approval without assuming acceptance Keep disputes and close-out visible"
+  },
+  {
+    "title": "FamilyBoard Punch List Review Tutorial | Verify Rechecks Before Close-Out",
+    "description": "Learn how to review a FamilyBoard repair punch list, compare scope and evidence, confirm rechecks and keep unresolved work visible.",
+    "route": "/guides/familyboard-repair-punch-list-review-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard punch list review",
+    "headings": "FamilyBoard Punch List Review Tutorial: Verify Rechecks Before Close-Out Define the bounded handover Write one observable gap per row Use statuses that preserve uncertainty Close with evidence and a new date"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

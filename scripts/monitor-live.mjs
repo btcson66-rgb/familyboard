@@ -836,6 +836,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-drill-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-product-recall-action-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-product-recall-action-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-service-provider-verification-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-service-provider-verification-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-repair-change-order-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-repair-change-order-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-repair-punch-list-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-repair-punch-list-review-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1669,6 +1675,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-product-recall-action-log-tutorial/",
     require: ["產品召回行動紀錄教學", "正式產品召回通知"],
+  },
+  {
+    path: "/guides/familyboard-service-provider-verification-tutorial/",
+    require: ["Service Provider Verification Tutorial", "primary source"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-service-provider-verification-tutorial/",
+    require: ["服務商驗證教學", "第一手來源"],
+  },
+  {
+    path: "/guides/familyboard-repair-change-order-tutorial/",
+    require: ["Repair Change Order Tutorial", "baseline"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-repair-change-order-tutorial/",
+    require: ["修繕變更單教學", "原始基準"],
+  },
+  {
+    path: "/guides/familyboard-repair-punch-list-review-tutorial/",
+    require: ["Punch List Review Tutorial", "punch-list review"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-repair-punch-list-review-tutorial/",
+    require: ["修繕收尾複查教學", "收尾複查"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",
