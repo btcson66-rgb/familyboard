@@ -3008,6 +3008,30 @@
     "headings": "How to Use FamilyBoard's Household Task Load Calculator Without Turning Chores Into a Score Begin with a small review code Use the four-field row format Choose the frequency that matches the observation Read the result in three layers Turn an estimate into a planning conversation Review the estimate after a real week Protect private context and future recommendations Close with an explicit next action"
   },
   {
+    "title": "FamilyBoard 編輯政策｜內容來源、AI 協助與更正流程",
+    "description": "了解 FamilyBoard 如何規劃、撰寫、查核與更新家庭管理內容，以及如何回報錯誤與避免模板頁。",
+    "route": "/zh-tw/editorial-policy/",
+    "cluster": "support",
+    "keywords": "FamilyBoard 編輯政策",
+    "headings": "FamilyBoard 編輯政策：每一頁都要回答一個真實的家庭問題 從一個清楚的使用者問題開始 AI 可以協助整理，但不能取代編輯判斷 安全、法律、醫療與地區資訊要保留條件 更正流程要能讓讀者重做 內容與商業推薦分開 如何判斷一頁是否值得留下"
+  },
+  {
+    "title": "FamilyBoard 家庭資訊免責聲明｜工具、維修與安全建議的使用界線",
+    "description": "了解 FamilyBoard 家庭管理、維修、緊急、法律、醫療與保險資訊的限制，避免把工具結果當成檢查或認證。",
+    "route": "/zh-tw/disclaimer/",
+    "cluster": "support",
+    "keywords": "家庭資訊免責聲明",
+    "headings": "FamilyBoard 家庭資訊免責聲明：整理工具不是現場判斷 工具會做什麼，也不會做什麼 來源、型號與所在地永遠優先 有立即危險時不要等待網站 日期、金額與清單不是承諾 分享與商品推薦的界線 三個容易誤用的情境 使用前後都做一次範圍檢查"
+  },
+  {
+    "title": "關於 FamilyBoard｜免費、免帳號的家庭管理與紀錄工具",
+    "description": "了解 FamilyBoard 為什麼把家庭資產、保養、任務、文件與交接放在同一個本機優先工作區，以及公開內容網站的方向。",
+    "route": "/zh-tw/about/",
+    "cluster": "support",
+    "keywords": "FamilyBoard 是什麼",
+    "headings": "關於 FamilyBoard：讓家庭重要資訊有一個找得到的地方 我們正在做什麼 產品理念 為什麼要寫很多免費指南與工具 我們不會把什麼說成產品能力 一個實際的家庭使用旅程 我們如何決定下一步 你可以如何參與"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -558,6 +558,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/security/</loc>",
       "<loc>https://familyboard.win/zh-tw/affiliate-disclosure/</loc>",
       "<loc>https://familyboard.win/zh-tw/terms/</loc>",
+      "<loc>https://familyboard.win/zh-tw/editorial-policy/</loc>",
+      "<loc>https://familyboard.win/zh-tw/disclaimer/</loc>",
+      "<loc>https://familyboard.win/zh-tw/about/</loc>",
+      "<loc>https://familyboard.win/editorial-policy/</loc>",
+      "<loc>https://familyboard.win/disclaimer/</loc>",
+      "<loc>https://familyboard.win/about/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/digital-home-inventory-backup/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/household-handoff/</loc>",
@@ -5824,6 +5830,30 @@ const checks = [
       "看懂三種結果",
       'lang="zh-TW"',
     ],
+  },
+  {
+    path: "/editorial-policy/",
+    require: ["Editorial Policy", "How pages are prepared"],
+  },
+  {
+    path: "/zh-tw/editorial-policy/",
+    require: ["FamilyBoard 編輯政策", "從一個清楚的使用者問題開始", 'lang="zh-TW"'],
+  },
+  {
+    path: "/disclaimer/",
+    require: ["Household Information Disclaimer", "Use records as a prompt to verify"],
+  },
+  {
+    path: "/zh-tw/disclaimer/",
+    require: ["FamilyBoard 家庭資訊免責聲明", "有立即危險時不要等待網站", 'lang="zh-TW"'],
+  },
+  {
+    path: "/about/",
+    require: ["Homes run on information that usually has no home", "The product philosophy"],
+  },
+  {
+    path: "/zh-tw/about/",
+    require: ["關於 FamilyBoard", "我們正在做什麼", 'lang="zh-TW"'],
   },
 ];
 

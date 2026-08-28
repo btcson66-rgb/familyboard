@@ -116,6 +116,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/tools/household-date-offset-planner/",
     "/tools/household-task-load-calculator/",
     "/zh-tw/tools/household-task-load-calculator/",
+    "/editorial-policy/",
+    "/zh-tw/editorial-policy/",
+    "/disclaimer/",
+    "/zh-tw/disclaimer/",
+    "/about/",
+    "/zh-tw/about/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -664,6 +670,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/security/",
     "/zh-tw/affiliate-disclosure/",
     "/zh-tw/terms/",
+    "/zh-tw/editorial-policy/",
+    "/zh-tw/disclaimer/",
+    "/zh-tw/about/",
     "/zh-tw/guides/digital-home-inventory-backup/",
     "/zh-tw/guides/move-out-home-records/",
     "/zh-tw/guides/home-evacuation-information/",
@@ -699,6 +708,12 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
     "/guides/familyboard-date-offset-planner-tutorial/",
     "/zh-tw/guides/familyboard-date-offset-planner-tutorial/",
+    "/editorial-policy/",
+    "/zh-tw/editorial-policy/",
+    "/disclaimer/",
+    "/zh-tw/disclaimer/",
+    "/about/",
+    "/zh-tw/about/",
     "/zh-tw/features/home-inventory-tracker/",
     "/zh-tw/features/family-task-manager/",
     "/zh-tw/features/home-dashboard/",
@@ -981,6 +996,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/terms/",
       alternate: "/terms/",
       heading: "FamilyBoard 使用條款：免費工具很實用，但仍有清楚的責任界線",
+    },
+    {
+      route: "/zh-tw/editorial-policy/",
+      alternate: "/editorial-policy/",
+      heading: "FamilyBoard 編輯政策：每一頁都要回答一個真實的家庭問題",
+    },
+    {
+      route: "/zh-tw/disclaimer/",
+      alternate: "/disclaimer/",
+      heading: "FamilyBoard 家庭資訊免責聲明：整理工具不是現場判斷",
+    },
+    {
+      route: "/zh-tw/about/",
+      alternate: "/about/",
+      heading: "關於 FamilyBoard：讓家庭重要資訊有一個找得到的地方",
     },
     {
       route: "/zh-tw/guides/digital-home-inventory-backup/",

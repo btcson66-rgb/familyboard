@@ -3136,6 +3136,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/zh-tw/editorial-policy/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/disclaimer/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/about/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3161,7 +3185,7 @@
   },
   {
     "route": "/about/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/about/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3225,7 +3249,7 @@
   },
   {
     "route": "/editorial-policy/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/editorial-policy/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3249,7 +3273,7 @@
   },
   {
     "route": "/disclaimer/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/disclaimer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3286,6 +3310,13 @@
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
     "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/about/",
+    "alternateRoute": "/about/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
   },
   {
     "route": "/zh-tw/affiliate-disclosure/",
@@ -3547,6 +3578,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/disclaimer/",
+    "alternateRoute": "/disclaimer/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/dishwasher-maintenance-checklist/",
     "alternateRoute": "/guides/dishwasher-maintenance-checklist/",
     "indexable": true,
@@ -3563,6 +3601,13 @@
   {
     "route": "/zh-tw/guides/dryer-maintenance-checklist/",
     "alternateRoute": "/guides/dryer-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/editorial-policy/",
+    "alternateRoute": "/editorial-policy/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

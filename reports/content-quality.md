@@ -1,22 +1,22 @@
 # Content quality report
 
-Generated: 2026-08-28T10:45:03.756Z
+Generated: 2026-08-28T10:55:30.955Z
 
 ## Summary
 
-- Indexable pages: 745
-- Generated HTML routes: 751
+- Indexable pages: 748
+- Generated HTML routes: 754
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 416
+- Pages without a contextual product/tool link: 419
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
-- support: 21
+- support: 24
 - printables: 20
 - product: 134
 - inventory-warranty: 60
@@ -110,8 +110,11 @@ Generated: 2026-08-28T10:45:03.756Z
 - /tools/household-vehicle-document-source-status-log/
 - /tools/household-weekly-reset-action-log/
 - /tools/rental-security-deposit-move-out-claim-log/
+- /zh-tw/about/
 - /zh-tw/affiliate-disclosure/
 - /zh-tw/contact/
+- /zh-tw/disclaimer/
+- /zh-tw/editorial-policy/
 - /zh-tw/features/emergency-information-organizer/
 - /zh-tw/features/family-display-mode/
 - /zh-tw/features/family-task-manager/
