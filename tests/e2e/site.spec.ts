@@ -272,6 +272,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-meal-prep-role-log-tutorial/",
     "/guides/familyboard-household-bill-source-status-tutorial/",
     "/zh-tw/guides/familyboard-household-bill-source-status-tutorial/",
+    "/guides/familyboard-household-export-scope-review-tutorial/",
+    "/zh-tw/guides/familyboard-household-export-scope-review-tutorial/",
+    "/guides/familyboard-printout-download-retention-tutorial/",
+    "/zh-tw/guides/familyboard-printout-download-retention-tutorial/",
+    "/guides/familyboard-household-role-change-audit-tutorial/",
+    "/zh-tw/guides/familyboard-household-role-change-audit-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1934,6 +1940,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-household-bill-source-status-tutorial/",
       alternate: "/guides/familyboard-household-bill-source-status-tutorial/",
       heading: "FamilyBoard 家庭帳單來源追蹤教學：先核對來源，再記錄狀態",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-export-scope-review-tutorial/",
+      alternate: "/guides/familyboard-household-export-scope-review-tutorial/",
+      heading: "FamilyBoard 匯出範圍複查教學：只分享真正需要的資料",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-printout-download-retention-tutorial/",
+      alternate: "/guides/familyboard-printout-download-retention-tutorial/",
+      heading: "FamilyBoard 列印與下載副本留存教學：每一份都要有撤回日期",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-role-change-audit-tutorial/",
+      alternate: "/guides/familyboard-household-role-change-audit-tutorial/",
+      heading: "FamilyBoard 家庭角色變更稽核教學：更新下一個真正負責的人",
     },
   ]) {
     await page.goto(localized.route);
@@ -4631,6 +4652,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-household-bill-source-status-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-export-scope-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-export-scope-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-printout-download-retention-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-printout-download-retention-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-role-change-audit-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-role-change-audit-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-seasonal-reset-tutorial/",

@@ -788,6 +788,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-meal-prep-role-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-bill-source-status-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-bill-source-status-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-export-scope-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-export-scope-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-printout-download-retention-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-printout-download-retention-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-role-change-audit-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-role-change-audit-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1429,6 +1435,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-household-bill-source-status-tutorial/",
     require: ["家庭帳單來源追蹤教學", "帳號"],
+  },
+  {
+    path: "/guides/familyboard-household-export-scope-review-tutorial/",
+    require: ["Export Scope Review", "derivative copy"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-export-scope-review-tutorial/",
+    require: ["匯出範圍複查教學", "未修改來源"],
+  },
+  {
+    path: "/guides/familyboard-printout-download-retention-tutorial/",
+    require: ["Printout Retention", "withdraw"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-printout-download-retention-tutorial/",
+    require: ["列印與下載副本留存教學", "撤回"],
+  },
+  {
+    path: "/guides/familyboard-household-role-change-audit-tutorial/",
+    require: ["Role Change Audit", "next action"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-role-change-audit-tutorial/",
+    require: ["家庭角色變更稽核教學", "負責角色"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",

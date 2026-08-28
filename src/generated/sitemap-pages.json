@@ -3944,6 +3944,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-household-export-scope-review-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-export-scope-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-printout-download-retention-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-printout-download-retention-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-role-change-audit-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-role-change-audit-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4964,6 +4988,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-household-export-scope-review-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-export-scope-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-household-handoff-tutorial/",
     "alternateRoute": "/guides/familyboard-household-handoff-tutorial/",
     "indexable": true,
@@ -5010,6 +5041,13 @@
     "alternateRoute": "/guides/familyboard-household-return-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-role-change-audit-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-role-change-audit-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -5239,6 +5277,13 @@
   {
     "route": "/zh-tw/guides/familyboard-power-outage-event-log-tutorial/",
     "alternateRoute": "/guides/familyboard-power-outage-event-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-printout-download-retention-tutorial/",
+    "alternateRoute": "/guides/familyboard-printout-download-retention-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

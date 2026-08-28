@@ -1,28 +1,28 @@
 # Content quality report
 
-Generated: 2026-08-28T20:10:53.265Z
+Generated: 2026-08-28T20:28:53.069Z
 
 ## Summary
 
-- Indexable pages: 923
-- Generated HTML routes: 929
+- Indexable pages: 929
+- Generated HTML routes: 935
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 520
+- Pages without a contextual product/tool link: 523
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 31
 - printables: 39
-- product: 138
+- product: 142
 - inventory-warranty: 82
 - appliances: 66
 - maintenance: 89
-- household-operations: 193
+- household-operations: 195
 - records-emergency: 133
 - tools: 152
 
@@ -247,6 +247,7 @@ Generated: 2026-08-28T20:10:53.265Z
 - /zh-tw/guides/familyboard-household-decision-register-tutorial/
 - /zh-tw/guides/familyboard-household-document-index-generator-tutorial/
 - /zh-tw/guides/familyboard-household-document-redaction-tutorial/
+- /zh-tw/guides/familyboard-household-export-scope-review-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
@@ -254,6 +255,7 @@ Generated: 2026-08-28T20:10:53.265Z
 - /zh-tw/guides/familyboard-household-responsibility-coverage-map-tutorial/
 - /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/
+- /zh-tw/guides/familyboard-household-role-change-audit-tutorial/
 - /zh-tw/guides/familyboard-household-shopping-list-planner-tutorial/
 - /zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/
 - /zh-tw/guides/familyboard-household-task-load-calculator-tutorial/
@@ -287,6 +289,7 @@ Generated: 2026-08-28T20:10:53.265Z
 - /zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-power-outage-event-log-tutorial/
+- /zh-tw/guides/familyboard-printout-download-retention-tutorial/
 - /zh-tw/guides/familyboard-private-family-organizer-tutorial/
 - /zh-tw/guides/familyboard-product-recall-action-tutorial/
 - /zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/

@@ -3808,6 +3808,30 @@
     "headings": "How to Use FamilyBoard's Household Bill Source and Status Log Begin with two current notices Record the source before the status Protect account and payment details Assign one owner and one next action Keep disputes and refunds open Run a weekly or monthly review Prepare a temporary handoff safely Keep commercial tools outside the decision"
   },
   {
+    "title": "FamilyBoard Export Scope Review Tutorial | Share Only What Is Needed",
+    "description": "Learn how to inspect a FamilyBoard JSON or CSV export, remove unnecessary household details, label the copy and preserve the protected local source before sharing.",
+    "route": "/guides/familyboard-household-export-scope-review-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard export scope review tutorial",
+    "headings": "How to Review a FamilyBoard Export Before Sharing It Name the purpose and recipient first Preserve one untouched source export Inspect the derivative copy as a recipient Match format to the job Record what was checked and what remains open Delete or withdraw copies deliberately Keep support and affiliate boundaries clear"
+  },
+  {
+    "title": "FamilyBoard Printout Retention Tutorial | Review Every Offline Copy",
+    "description": "Learn how to inventory FamilyBoard printouts, screenshots and downloads with a safe copy code, audience, expiry date and withdrawal review without storing private records in the index.",
+    "route": "/guides/familyboard-printout-download-retention-tutorial/",
+    "cluster": "product",
+    "keywords": "household printout retention checklist",
+    "headings": "How to Review FamilyBoard Printouts and Downloads Start with copies that can still be found Define audience and purpose Put a withdrawal checkpoint on every copy Inspect before printing or forwarding Keep the source and derivative histories separate Recover copies at the end of the job Keep recommendations out of the decision Keep a closeout record that another person can understand"
+  },
+  {
+    "title": "FamilyBoard Role Change Audit Tutorial | Update the Next Responsible Person",
+    "description": "Learn how to audit FamilyBoard household roles after a move, caregiver change, separation or backup handoff without publishing names, credentials or private records.",
+    "route": "/guides/familyboard-household-role-change-audit-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "household responsibility change checklist",
+    "headings": "How to Audit FamilyBoard After a Household Role Changes Name the trigger without over-sharing Map duties to the next action Review real access separately Ask for acceptance, then verify the result Close old copies and stale assumptions Escalate formal questions to their source Keep future products optional Leave an evidence trail without exposing identities"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

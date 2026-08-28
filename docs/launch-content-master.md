@@ -35555,6 +35555,197 @@ Future folders, scanners or budgeting notebooks may appear as optional recommend
 
 ---
 
+## Page 493 — FamilyBoard Household Export Scope Review Tutorial
+**Slug:** /guides/familyboard-household-export-scope-review-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-export-scope-review-tutorial/
+**Primary intent:** learn to review the minimum useful FamilyBoard export before a handoff, backup test or support request
+**Title tag:** FamilyBoard Export Scope Review Tutorial | Share Only What Is Needed
+**Meta description:** Learn how to inspect a FamilyBoard JSON or CSV export, remove unnecessary household details, label the copy and preserve the protected local source before sharing.
+**Primary keyword concept:** FamilyBoard export scope review tutorial
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /features/private-family-organizer/, /guides/familyboard-master-csv-edit-import/, /guides/familyboard-offline-backup-restore/, /privacy/
+**FAQ:**
+- Q: Does exporting create a safe share automatically?
+  A: No. An export is another copy and may contain more records than the recipient needs.
+- Q: Should I edit the only backup to make it smaller?
+  A: No. Preserve an untouched source export and create a separate derivative copy for review.
+- Q: Does CSV contain every FamilyBoard record?
+  A: No. Formats and fields differ; inspect the actual file and use JSON backup for a complete recovery path when appropriate.
+- Q: Can FamilyBoard send an export to another device for me?
+  A: No. The household controls where a file is saved, moved and deleted.
+
+# How to Review a FamilyBoard Export Before Sharing It
+
+FamilyBoard is local-first, so an export is often the bridge between a browser profile, a backup test, a support question and another authorised device. The free app can create JSON or CSV files, but it cannot know who should receive every household detail. This [export scope review](/features/private-family-organizer/) keeps the untouched source, the review copy and the recipient's actual need separate.
+
+## Name the purpose and recipient first
+
+Before clicking export, write a neutral purpose such as “restore rehearsal,” “maintenance handoff” or “support reproduction.” Name the recipient role and an expiry or review date. A support request may need an app version and safe error description, while a backup test needs a recoverable data file; neither automatically needs addresses, contacts or private notes.
+
+## Preserve one untouched source export
+
+Save the original export in a protected location with its creation date and format. Do not open it in a spreadsheet and overwrite it, and do not remove fields from the only recovery copy. If a file is encrypted, keep its password out of the household task row and record only a safe pointer to the protected process.
+
+## Inspect the derivative copy as a recipient
+
+Create a separate working copy when the purpose allows it. Open it with the same kind of application the recipient will use and search for names, addresses, phone numbers, account identifiers, medical notes, access codes, private messages and unrelated household records. A CSV may look harmless while still exposing columns; a JSON file may contain nested records that are easy to miss.
+
+## Match format to the job
+
+CSV is useful for a deliberate table edit or a narrow human-readable handoff, but it is not automatically a complete restore. JSON preserves the app's structured backup path when the household needs recovery. Never promise that one format contains every field or that a successful download proves a restore will work. Test a copy in an isolated browser profile before relying on it.
+
+## Record what was checked and what remains open
+
+Log the file purpose, format, creation date, review date and safe storage pointer. Record whether the intended role could open the derivative and which questions remain unresolved. “File shared” is an action, not proof that the recipient can use it. If a new copy is created, give it a new version and retention date rather than silently replacing the old one.
+
+## Delete or withdraw copies deliberately
+
+When the handoff closes, recover printouts, remove temporary downloads and ask the recipient to follow the authorised deletion process. Clearing FamilyBoard browser storage does not remove a file already attached to an email, drive or chat. Keep the untouched source only as long as the household's recovery policy requires and document the next review.
+
+## Keep support and affiliate boundaries clear
+
+Support should receive the minimum safe reproduction details, never a full household export by default. Future storage drives, backup services or file tools may appear as optional recommendations with disclosure; they cannot guarantee recovery, confidentiality or compatibility and must never interrupt the export controls.
+
+**Contextual CTA:** Export one untouched source, create a purpose-labeled derivative, inspect it as the recipient and record the copy's scope and review date.
+
+---
+
+## Page 494 — FamilyBoard Printout and Download Retention Tutorial
+**Slug:** /guides/familyboard-printout-download-retention-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-printout-download-retention-tutorial/
+**Primary intent:** learn to track printed and downloaded FamilyBoard copies so household handoffs do not outlive their purpose
+**Title tag:** FamilyBoard Printout Retention Tutorial | Review Every Offline Copy
+**Meta description:** Learn how to inventory FamilyBoard printouts, screenshots and downloads with a safe copy code, audience, expiry date and withdrawal review without storing private records in the index.
+**Primary keyword concept:** household printout retention checklist
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-household-export-scope-review-tutorial/, /guides/familyboard-household-handoff-tutorial/, /features/household-handoff/, /privacy/
+**FAQ:**
+- Q: Does deleting a FamilyBoard row delete a printout?
+  A: No. Paper, screenshots and downloads are separate copies.
+- Q: Should the retention log contain the document itself?
+  A: No. Use a safe copy code and pointer, not a private file or full content.
+- Q: Is a review date an automatic deletion?
+  A: No. It is a household checkpoint to inspect and withdraw the copy through its actual channel.
+- Q: Can a public display be treated like a private handoff?
+  A: No. A visible screen has its own audience and must contain only low-risk information.
+
+# How to Review FamilyBoard Printouts and Downloads
+
+An app record can stay local while its printed checklist, screenshot, browser download or forwarded PDF travels through the household. FamilyBoard's free [handoff workflow](/features/household-handoff/) helps coordinate that copy, but it cannot delete paper or recall a message. A small retention index makes the audience, purpose and next review visible without duplicating the private record.
+
+## Start with copies that can still be found
+
+Use a neutral code such as `COPY-2026-04`, note whether it is paper, screenshot, CSV, JSON or PDF, and record the physical or digital area at a safe level. “Kitchen drawer” or “authorised drive folder” is usually enough; never put a key location, password or full address in a shared row.
+
+## Define audience and purpose
+
+Write who should use the copy and why: a house sitter needs a short task sheet, while a service provider may need one asset pointer. Do not use an old broad export because it is convenient. If the audience changes, create a new derivative and retire the old one rather than expanding access to everyone.
+
+## Put a withdrawal checkpoint on every copy
+
+Choose a review date based on the event ending, the role returning, a source update or a privacy change. The date does not delete anything automatically. At the checkpoint, ask where the copy went, whether the recipient still needs it and which authorised process will recover, shred or delete it.
+
+## Inspect before printing or forwarding
+
+Read the actual page or file as the unintended reader. Remove names, addresses, account data, medical details, access codes and unrelated notes. A public display should stay low risk. A handoff sheet may include a safe pointer and next action, but it should never become a full household database simply because the printer can fit more rows.
+
+## Keep the source and derivative histories separate
+
+Record the source version or date without overwriting the original observation. If a provider, role or room changes, create a new copy code and link it to the current source pointer. A paper copy that is no longer current can be marked withdrawn while the protected source remains available for the next authorised version.
+
+## Recover copies at the end of the job
+
+Ask the responsible role to collect printed pages, clear temporary download folders and follow the recipient's actual deletion process. Clearing a browser or deleting a FamilyBoard record does not remove a screenshot, email attachment, cloud version or photograph of paper. Leave unresolved copies open until the household has a supportable observation.
+
+## Keep recommendations out of the decision
+
+Future label makers, shredders, drives or storage products may appear in an optional area with clear disclosure. They cannot guarantee deletion or confidentiality and must never interrupt the copy review or be required to use the free app.
+
+## Keep a closeout record that another person can understand
+
+When a copy is withdrawn, record the observation rather than relying on memory: the copy code, the channel checked, the date, the role that checked it and the result. A useful result might be “paper collected and placed in the locked shred bin” or “download removed from the authorised device; recipient confirmation still open.” Do not paste the printout, screenshot or private file into the log. If the result is uncertain, leave the item open with a next action and a review date. This makes the retention index a small coordination tool instead of a second document vault. At the next review, compare the copy code with the current source version so an old sheet is not accidentally treated as current guidance.
+
+**Contextual CTA:** Give every current printout or download a safe copy code, audience, purpose and review date, then withdraw one stale copy through its real channel.
+
+---
+
+## Page 495 — FamilyBoard Household Role Change Audit Tutorial
+**Slug:** /guides/familyboard-household-role-change-audit-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-role-change-audit-tutorial/
+**Primary intent:** learn to review FamilyBoard responsibilities, source access and handoff copies when a household role changes
+**Title tag:** FamilyBoard Role Change Audit Tutorial | Update the Next Responsible Person
+**Meta description:** Learn how to audit FamilyBoard household roles after a move, caregiver change, separation or backup handoff without publishing names, credentials or private records.
+**Primary keyword concept:** household responsibility change checklist
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-responsibility-coverage-map/, /guides/familyboard-household-members-responsibilities-tutorial/, /guides/familyboard-share-access-tutorial/, /privacy/
+**FAQ:**
+- Q: Does changing a role label revoke access to a browser or file?
+  A: No. Review the actual device, service and copies separately.
+- Q: Should the audit list every family member by name?
+  A: No. Use role labels in the shared index and keep identities in the responsible protected source.
+- Q: Does assigning a backup prove they accepted the work?
+  A: No. Record the handoff request and the later confirmation as separate events.
+- Q: Is a role audit a legal or employment decision?
+  A: No. It is household coordination; formal duties and rights belong to the applicable source and advice.
+
+# How to Audit FamilyBoard After a Household Role Changes
+
+A move, caregiver transition, separation, new roommate, school change or temporary trip can make yesterday's responsibility map unreliable. FamilyBoard's [responsibility coverage map](/tools/household-responsibility-coverage-map/) can show the next action, but a role label does not change a device password, file share or legal duty. Audit the real boundaries in a deliberate sequence.
+
+## Name the trigger without over-sharing
+
+Record a neutral event code such as `ROLE-2026-05`, the date and the categories affected: maintenance, documents, subscriptions, emergency contacts or display mode. Do not put private relationship details, addresses, credentials or a person's full schedule into the shared row. The trigger only explains why a review is needed.
+
+## Map duties to the next action
+
+For each affected category, write the current owner role, one next action, a source pointer and a review date. “Backup role checks warranty source” is actionable; “Alex handles everything” is not. If no one can accept the next action, leave it open and identify the responsible household decision or outside source instead of inventing coverage.
+
+## Review real access separately
+
+Check the browser profile, printed sheets, downloads, cloud folders and external service invitations that the old role could use. Changing a FamilyBoard label does not revoke those paths. Record only safe observations such as “old handoff copy located” or “provider confirmation still pending,” never a password, token or key location.
+
+## Ask for acceptance, then verify the result
+
+Send the minimum handoff through the authorised channel and record that the new role was asked to review it. Later record what they could actually find, which source they reopened and what remains unclear. An invitation sent, a message read or a task assigned is not proof that the new owner can complete the work.
+
+## Close old copies and stale assumptions
+
+Recover printouts, retire old exports and update the next review dates. Keep historical observations when they explain why a task moved; do not erase the old role and make the timeline look effortless. If a temporary role ends, set an explicit withdrawal checkpoint rather than leaving access open indefinitely.
+
+## Escalate formal questions to their source
+
+Questions about tenancy, care, employment, custody, insurance, finance or safety may require a lease, agency, insurer, school, government or qualified professional. FamilyBoard can preserve a pointer and an open question, but it cannot decide a legal duty, clinical plan, entitlement or access right.
+
+## Keep future products optional
+
+Role-management services, password managers or shared storage may eventually appear as disclosed recommendations. They cannot guarantee that a role change is complete and must never be required for the free local-first workflow. The audit should remain useful with labels, dates and the sources the household already controls.
+
+## Leave an evidence trail without exposing identities
+
+Finish with a short audit record that another responsible role can replay: trigger code, affected category, previous owner role, new owner role, requested handoff date, confirmation date and the next review date. Use role labels and safe source pointers instead of names, credentials or full addresses. If a category has no confirmed owner, mark it as an open coverage gap and state the next person or source that must decide it. This distinction matters during illness, a move or a separation: a neat label can hide an unaccepted duty, while an explicit open item tells the household where attention is still needed. Keep the historical record so later reviewers can see which assumptions changed and why.
+
+**Contextual CTA:** Create one role-change event, assign a single next action for each affected category and verify one real handoff path before closing the old role.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.
