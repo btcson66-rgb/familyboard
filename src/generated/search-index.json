@@ -3144,6 +3144,30 @@
     "headings": "可列印寵物照護檢查表：讓照護者知道今天要做什麼、異常找誰"
   },
   {
+    "title": "繁中家庭範本中心｜可列印清單、交接表與紀錄工作表",
+    "description": "瀏覽 FamilyBoard 繁中家庭範本：聯絡、服務商、緊急、家電、保固、修繕、搬家與交接表，先選一張真正會使用的紙。",
+    "route": "/zh-tw/templates/",
+    "cluster": "support",
+    "keywords": "家庭範本下載",
+    "headings": "繁中家庭範本中心：先選一張真的會被拿起來使用的紙"
+  },
+  {
+    "title": "可列印家庭服務商清單｜水電、家電、管理與維修聯絡",
+    "description": "用繁中可列印服務商清單整理水電、冷氣、家電、鎖匠、社區管理與其他家庭聯絡，保留工作範圍與最後複查日期。",
+    "route": "/zh-tw/templates/printable-service-provider-list/",
+    "cluster": "printables",
+    "keywords": "可列印服務商清單",
+    "headings": "可列印家庭服務商清單：記住做過什麼，不把一次合作當成永久推薦"
+  },
+  {
+    "title": "可列印家庭緊急聯絡表｜家人、公共服務與照顧支援",
+    "description": "用繁中可列印緊急聯絡表整理家庭、管理單位、公共服務、照顧與備援角色，標註複查日期並避免暴露不必要的敏感資料。",
+    "route": "/zh-tw/templates/printable-emergency-contacts/",
+    "cluster": "printables",
+    "keywords": "可列印緊急聯絡表",
+    "headings": "可列印家庭緊急聯絡表：先排好角色與備援，再決定哪一版可以分享"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

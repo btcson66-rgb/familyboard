@@ -140,6 +140,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/checklists/printable-moving-checklist/",
     "/checklists/printable-pet-sitter-checklist/",
     "/zh-tw/checklists/printable-pet-sitter-checklist/",
+    "/templates/printable-service-provider-list/",
+    "/zh-tw/templates/printable-service-provider-list/",
+    "/templates/printable-emergency-contacts/",
+    "/zh-tw/templates/printable-emergency-contacts/",
+    "/templates/",
+    "/zh-tw/templates/",
     "/templates/printable-appliance-inventory/",
     "/zh-tw/templates/printable-appliance-inventory/",
     "/templates/printable-warranty-tracker/",
@@ -733,6 +739,12 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/checklists/printable-moving-checklist/",
     "/checklists/printable-pet-sitter-checklist/",
     "/zh-tw/checklists/printable-pet-sitter-checklist/",
+    "/templates/printable-service-provider-list/",
+    "/zh-tw/templates/printable-service-provider-list/",
+    "/templates/printable-emergency-contacts/",
+    "/zh-tw/templates/printable-emergency-contacts/",
+    "/templates/",
+    "/zh-tw/templates/",
     "/templates/printable-appliance-inventory/",
     "/zh-tw/templates/printable-appliance-inventory/",
     "/templates/printable-warranty-tracker/",
@@ -1065,6 +1077,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "繁中檢查表中心" }),
   ).toHaveAttribute("href", "/zh-tw/checklists/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "繁中範本中心" }),
+  ).toHaveAttribute("href", "/zh-tw/templates/");
 
   for (const localized of [
     {
@@ -1126,6 +1141,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/checklists/printable-pet-sitter-checklist/",
       alternate: "/checklists/printable-pet-sitter-checklist/",
       heading: "可列印寵物照護檢查表：讓照護者知道今天要做什麼、異常找誰",
+    },
+    {
+      route: "/zh-tw/templates/",
+      alternate: "/templates/",
+      heading: "繁中家庭範本中心：先選一張真的會被拿起來使用的紙",
+    },
+    {
+      route: "/zh-tw/templates/printable-service-provider-list/",
+      alternate: "/templates/printable-service-provider-list/",
+      heading: "可列印家庭服務商清單：記住做過什麼，不把一次合作當成永久推薦",
+    },
+    {
+      route: "/zh-tw/templates/printable-emergency-contacts/",
+      alternate: "/templates/printable-emergency-contacts/",
+      heading: "可列印家庭緊急聯絡表：先排好角色與備援，再決定哪一版可以分享",
     },
     {
       route: "/zh-tw/privacy/",

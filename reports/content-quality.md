@@ -1,23 +1,23 @@
 # Content quality report
 
-Generated: 2026-08-28T12:17:30.515Z
+Generated: 2026-08-28T12:30:01.395Z
 
 ## Summary
 
-- Indexable pages: 763
-- Generated HTML routes: 769
+- Indexable pages: 766
+- Generated HTML routes: 772
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 434
+- Pages without a contextual product/tool link: 437
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
-- support: 27
-- printables: 31
+- support: 28
+- printables: 33
 - product: 135
 - inventory-warranty: 60
 - appliances: 56
@@ -374,10 +374,13 @@ Generated: 2026-08-28T12:17:30.515Z
 - /zh-tw/
 - /zh-tw/privacy/
 - /zh-tw/security/
+- /zh-tw/templates/
 - /zh-tw/templates/printable-appliance-inventory/
+- /zh-tw/templates/printable-emergency-contacts/
 - /zh-tw/templates/printable-home-inventory-template/
 - /zh-tw/templates/printable-household-handoff-sheet/
 - /zh-tw/templates/printable-repair-log/
+- /zh-tw/templates/printable-service-provider-list/
 - /zh-tw/templates/printable-warranty-tracker/
 - /zh-tw/terms/
 - /zh-tw/tools/annual-subscription-cost-calculator/

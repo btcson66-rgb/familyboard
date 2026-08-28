@@ -30371,6 +30371,93 @@ FamilyBoard v1 的方向很簡單：讓家庭更容易找到、理解與交接�
 
 這張表先填寵物代號、照護期間、飼主確認日期和主要照護者，再分成交接首頁、每日餵食飲水活動、藥物與觀察、用品環境與外出、異常聯絡和版本複查。請讓照護者用自己的話重述順序；若只能說「照平常」，就補上時間、份量、用品位置或例外情況。藥物與飲食不自行加量、停藥或改變，持續嘔吐、呼吸困難、受傷、疑似中毒等警訊要依飼主、獸醫或所在地緊急服務指示。交接結束後回收含地址、聯絡或醫療資訊的紙本。FamilyBoard 資料留在目前瀏覽器，不會自動聯絡獸醫；公開頁未來若有用品推薦，必須和照護清單分開並揭露 affiliate 關係。
 
+## Page 410 — 繁中家庭範本中心：可列印清單、交接表與紀錄工作表
+
+**Slug:** `/zh-tw/templates/`
+**Alternate route:** `/templates/`
+**Primary intent:** 瀏覽繁中可列印家庭範本與交接工作表
+**Title tag:** 繁中家庭範本中心｜可列印清單、交接表與紀錄工作表
+**Meta description:** 瀏覽 FamilyBoard 繁中家庭範本：聯絡、服務商、緊急、家電、保固、修繕、搬家與交接表，先選一張真正會使用的紙。
+**Primary keyword concept:** 家庭範本下載
+**Cluster:** support
+**Page type:** support
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先選一個本週會使用的範本，填入版本日期與負責人，再刪掉不適用欄位。
+**Suggested internal links:** `/zh-tw/templates/printable-service-provider-list/`, `/zh-tw/templates/printable-emergency-contacts/`, `/zh-tw/templates/printable-household-handoff-sheet/`, `/zh-tw/checklists/`
+**FAQ:**
+- 範本可以直接下載後不修改嗎？不建議，先刪除不適用欄位並補上來源與負責人。
+- 列印範本會把資料上傳嗎？頁面不需要帳號，填寫後的紙本或檔案由使用者保管。
+- 什麼時候該用 App 而不是紙本？短期交接用紙本，長期變動事項用本機 App 並自行備份。
+- 範本旁邊會有商品廣告嗎？目前不會，未來公開推薦也會和主要工作分離並揭露關係。
+
+# 繁中家庭範本中心：先選一張真的會被拿起來使用的紙
+
+FamilyBoard 的範本把某個具體工作拆成容易填、容易複查、容易交接的欄位。可從聯絡人、服務商、緊急資訊、家電、保固、修繕、搬家或家庭交接開始；列印前寫版本日期與保管人，並刪除不適用項目。完整地址、門禁、帳號、卡號、身分證件或詳細醫療內容不應因為要交接就抄入共用紙本。範本只能記錄觀察與聯絡進度，涉及瓦斯、電氣、結構、消防、醫療、法律、保險、租約或正式費用責任時，應回到官方、原廠或合格專業來源。長期變動結果可放入本機 App，未來推薦用品也必須在主要範本之外揭露 affiliate 關係。
+
+## Page 411 — 可列印家庭服務商清單：水電、家電、管理與維修聯絡
+
+**Slug:** `/zh-tw/templates/printable-service-provider-list/`
+**Alternate route:** `/templates/printable-service-provider-list/`
+**Primary intent:** 尋找可列印的家庭服務商與維修聯絡表
+**Title tag:** 可列印家庭服務商清單｜水電、家電、管理與維修聯絡
+**Meta description:** 用繁中可列印服務商清單整理水電、冷氣、家電、鎖匠、社區管理與其他家庭聯絡，保留工作範圍與最後複查日期。
+**Primary keyword concept:** 可列印服務商清單
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先填入一個近期確實用過的服務商，再補上工作範圍、來源與下次複查日。
+**Suggested internal links:** `/zh-tw/guides/home-service-provider-list/`, `/zh-tw/guides/contractor-records/`, `/zh-tw/features/household-handoff/`, `/zh-tw/templates/`
+**FAQ:**
+- 清單要放服務商的私人手機嗎？只放真正需要的聯絡管道，敏感資料留在受控位置。
+- 曾經合作過就代表現在仍然推薦嗎？不代表，重新聯絡前仍要確認狀態、範圍、報價與資格。
+- 如何把服務商和設備連起來？使用設備或房間的中性代號，再於 App 連結資產與歷史。
+- 這張表是施工或推薦名單嗎？不是，它不驗證品質、不提供施工指示，也不取代合約。
+
+# 可列印家庭服務商清單：記住做過什麼，不把一次合作當成永久推薦
+
+這張表記錄服務類別、公司或人員、目前可用的聯絡管道、曾經處理的範圍和最後確認日期。服務商名稱只表示家庭有一段歷史，不代表現在仍營業、可服務或品質最佳；重新聯絡前要確認服務區域、報價、保固與合約。用中性設備代號連結詳細收據、照片和服務對話，不要把完整地址、門禁、帳號、付款或序號抄入共用紙本。漏電、焦味、瓦斯、快速漏水、結構或高處工作只記錄安全觀察並求助，不提供自行拆修指示。每次電話、服務範圍或家庭角色改變都建立新版本，長期歷史可放入本機 App，推薦用品若出現也必須揭露 affiliate 關係。
+
+## Page 412 — 可列印家庭緊急聯絡表：家人、公共服務與照顧支援
+
+**Slug:** `/zh-tw/templates/printable-emergency-contacts/`
+**Alternate route:** `/templates/printable-emergency-contacts/`
+**Primary intent:** 尋找可列印的家庭緊急聯絡人清單
+**Title tag:** 可列印家庭緊急聯絡表｜家人、公共服務與照顧支援
+**Meta description:** 用繁中可列印緊急聯絡表整理家庭、管理單位、公共服務、照顧與備援角色，標註複查日期並避免暴露不必要的敏感資料。
+**Primary keyword concept:** 可列印緊急聯絡表
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先填三個真正會被聯絡的角色，和另一位家人演練一次查找與備援順序。
+**Suggested internal links:** `/zh-tw/tools/emergency-contact-sheet-generator/`, `/zh-tw/guides/emergency-information-sheet/`, `/zh-tw/features/emergency-information-organizer/`, `/zh-tw/checklists/printable-emergency-binder-checklist/`
+**FAQ:**
+- 緊急聯絡表要寫完整住址嗎？只在受控版本且確有必要時保存。
+- 公共服務電話可以只抄網路搜尋結果嗎？先以官方網站、帳單或管理單位確認來源。
+- 這張表能取代緊急服務嗎？不能，危急時依所在地緊急服務與專業指示行動。
+- 如何避免舊電話繼續被使用？變動後建立新版本並回收舊紙，標註有效期間。
+
+# 可列印家庭緊急聯絡表：先排好角色與備援，再決定哪一版可以分享
+
+這張表讓人在壓力下知道先找誰、找不到時找誰、哪份資料仍待確認。建議分成家庭共用版、受控完整版本和臨時交接版；列印前寫代號、版本日期、保管人和適用期間，完整住址、門禁、帳號、付款、身分證件與詳細醫療資料只放在必要且受控的位置。請用夜間漏水、停電或照顧者臨時缺席等情境演練，確認另一位家人能找到角色、來源、下一步和備援。火災、瓦斯、受傷或撤離情況仍以所在地緊急服務、官方公告、建築管理和專業指示為準。家庭變動後建立新版本，交接結束回收含敏感資料的紙本；推薦用品若出現，也必須和清單分開並揭露 affiliate 關係。
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

@@ -52,6 +52,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/checklists/printable-moving-checklist/</loc>",
       "<loc>https://familyboard.win/checklists/printable-pet-sitter-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/checklists/printable-pet-sitter-checklist/</loc>",
+      "<loc>https://familyboard.win/templates/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/</loc>",
+      "<loc>https://familyboard.win/templates/printable-service-provider-list/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-service-provider-list/</loc>",
+      "<loc>https://familyboard.win/templates/printable-emergency-contacts/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-emergency-contacts/</loc>",
       "<loc>https://familyboard.win/templates/printable-appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/templates/printable-appliance-inventory/</loc>",
       "<loc>https://familyboard.win/templates/printable-warranty-tracker/</loc>",
@@ -6004,6 +6010,30 @@ const checks = [
   {
     path: "/zh-tw/templates/printable-household-handoff-sheet/",
     require: ["可列印家庭交接表", "未來 30 天的重要期限", 'lang="zh-TW"'],
+  },
+  {
+    path: "/templates/",
+    require: ["Templates", "How to use a template well"],
+  },
+  {
+    path: "/zh-tw/templates/",
+    require: ["繁中家庭範本中心", "依家庭工作選範本", 'lang="zh-TW"'],
+  },
+  {
+    path: "/templates/printable-service-provider-list/",
+    require: ["Printable Home Service Provider List", "Useful categories"],
+  },
+  {
+    path: "/zh-tw/templates/printable-service-provider-list/",
+    require: ["可列印家庭服務商清單", "建議欄位", 'lang="zh-TW"'],
+  },
+  {
+    path: "/templates/printable-emergency-contacts/",
+    require: ["Printable Emergency Contact Sheet", "Primary contacts"],
+  },
+  {
+    path: "/zh-tw/templates/printable-emergency-contacts/",
+    require: ["可列印家庭緊急聯絡表", "角色與備援順序", 'lang="zh-TW"'],
   },
 ];
 

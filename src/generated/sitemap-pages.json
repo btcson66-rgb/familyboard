@@ -1545,7 +1545,7 @@
   },
   {
     "route": "/templates/printable-service-provider-list/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-service-provider-list/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1561,7 +1561,7 @@
   },
   {
     "route": "/templates/printable-emergency-contacts/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-emergency-contacts/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3280,6 +3280,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/zh-tw/templates/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-service-provider-list/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-emergency-contacts/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -3361,7 +3385,7 @@
   },
   {
     "route": "/templates/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -5616,6 +5640,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/templates/printable-emergency-contacts/",
+    "alternateRoute": "/templates/printable-emergency-contacts/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/templates/printable-home-inventory-template/",
     "alternateRoute": "/templates/printable-home-inventory-template/",
     "indexable": true,
@@ -5667,6 +5698,13 @@
   {
     "route": "/zh-tw/checklists/printable-seasonal-home-checklist/",
     "alternateRoute": "/checklists/printable-seasonal-home-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/templates/printable-service-provider-list/",
+    "alternateRoute": "/templates/printable-service-provider-list/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5933,6 +5971,13 @@
   {
     "route": "/zh-tw/guides/summer-home-maintenance-checklist/",
     "alternateRoute": "/guides/summer-home-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/templates/",
+    "alternateRoute": "/templates/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
