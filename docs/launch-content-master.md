@@ -24327,6 +24327,240 @@ Can another permitted role state the question and find the current source? Are c
 
 ---
 
+---
+
+## Page 357 — How to Use FamilyBoard for Emergency Contact Verification
+**Slug:** `/guides/familyboard-emergency-contact-verification-tutorial/`
+**Primary intent:** verify household emergency contacts by role, source, consent and date without copying private contact details
+**Title tag:** How to Verify Emergency Contacts at Home | FamilyBoard Tutorial
+**Meta description:** Learn a privacy-aware emergency contact verification workflow: check the right source, confirm consent, assign corrections and keep every date honest.
+**Primary keyword concept:** emergency contact verification checklist
+**Cluster:** records-emergency
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/emergency-contact-verification-log/`, `/tools/emergency-contact-sheet-generator/`, `/guides/emergency-information-sheet/`, `/features/emergency-information-organizer/`
+**FAQ:**
+- Q: Is a working phone number proof that an emergency contact is current?
+  A: No. It only shows that a device accepted a call or message at one moment. Confirm the person's role, acceptable channel and sharing scope separately.
+- Q: Should I put full phone numbers into a shared verification sheet?
+  A: Keep the full number in one protected contact source. Use a stable ID and a safe hint such as a channel label or last two digits in the verification log.
+- Q: How often should an emergency contact list be checked?
+  A: Use a regular household review and repeat it after a move, school or caregiver change, consent withdrawal, device change, failed drill or official-source update.
+- Q: Does this checklist replace local emergency instructions?
+  A: No. Local emergency services, building instructions, school forms and responsible authorities control a real incident. The checklist only organizes household follow-up.
+
+**Contextual CTA:** Verify one contact and one official service today with the free Emergency Contact Verification Log.
+
+# How to verify emergency contacts without creating another risky contact list
+
+An emergency contact sheet is useful only when the people and services behind it are still willing, reachable and correctly described. Households often print a list once, save a copy in a phone and then forget that a caregiver moved, a provider changed its outage channel or a relative no longer wants to be the out-of-town contact. A careful verification process checks those assumptions without scattering private details into more files.
+
+FamilyBoard's [Emergency Contact Verification Log](/tools/emergency-contact-verification-log/) is designed as an audit layer, not a second directory. It records a neutral ID, the role the household expects, where the protected source lives, what evidence was checked, the date and the sharing boundary. The full phone number, email, address and care information stay in the source that already controls them.
+
+## Start with the audience, not a giant master list
+
+Decide who will read this particular copy: household members, a babysitter, a school or care provider, a house sitter, or a person helping during a move. Each audience needs a different minimum set. A school pickup sheet may need authorised guardians and the provider's formal channel but not a utility account. A utility outage plan may need a provider source and building role but not a child's medical note.
+
+If you begin with one enormous directory, it is easy to over-share and hard to verify every row. Split a review by purpose and give each copy a version date. The verification log can point to the protected source with IDs such as `CARE-1` or `UTILITY-1` while the audience-facing sheet contains only what that audience needs.
+
+## Define what “verified” means for each role
+
+Verification is not the same for a person and an organization. Ask a personal contact whether they still accept the role, which channel is appropriate and who may receive the detail. Someone can agree to be a private family contact while declining to appear on a publicly visible refrigerator sheet. Record that consent scope in plain language.
+
+For a utility, building manager, school or government service, compare the current official website, statement, contract channel or formal notice. Save the source name and date, not a search-result snippet or an undated printable. A familiar brand name does not prove that the phone number, portal or responsibility is current.
+
+## Use a stable ID and a protected source pointer
+
+The safest shared identifier is a household code that has no meaning outside the protected source: `LOCAL-1`, `SCHOOL-2` or `UTILITY-1`. The source pointer can say `protected contact record LOCAL-1` or `current provider statement`, while a safe channel hint can say `mobile ending 42` or `official outage channel`. Do not use a phone number, account number, full name, address or date of birth as the ID.
+
+This separation reduces drift. If the actual number changes, update the protected record once, then run a new dated verification. Editing several copied sheets by hand is how an old number survives in a car, wallet, school bag and shared chat.
+
+## Give every unresolved row an owner and a real date
+
+Use four evidence statuses: confirmed, needs correction, awaiting confirmation, and retired with removal pending. A status describes the evidence state, not the importance of the contact. A backup caregiver awaiting confirmation may deserve faster attention than several already-confirmed service lines.
+
+Every unresolved ID needs one concrete action, one responsible role and a due date after the review date. “Fix contact” is not an action. “Ask the intended caregiver to confirm the role and sharing scope, then update protected record CARE-1” tells the owner what will close the task. Keep the original review as history and create a new version after the correction; rewriting the old row hides what was true at the time.
+
+## Test the workflow without testing emergency services
+
+You can run a safe household drill: locate the current sheet, identify the primary and backup channels, and send a clearly labelled test message to a consenting participant. Do not call an emergency number as a test, publish a private contact or assume that a delivered message proves future availability. The [Home Emergency Drill Record Generator](/tools/home-emergency-drill-record-generator/) can document the exercise separately from the contact audit.
+
+After the drill, check that every intended reader can find the source pointer, understand the role and identify the next owner. If someone cannot, the plan has a usability gap even when every phone number is technically valid.
+
+## Review after change events and clean every copy
+
+Do not wait for an annual date after a move, school or caregiver change, withdrawn consent, provider transition, phone replacement, failed drill or updated official instruction. Retire the old ID, remove it from printed and digital copies, and confirm that access was removed where the relationship ended. A “confirmed” row is a dated observation, not a promise that a person will answer during a future crisis.
+
+## Privacy and commercial boundaries
+
+Read the result before printing or sharing it. The tool screens common secrets and full contact patterns, but no filter understands every contextual identifier. FamilyBoard's browser processing does not make a downloaded file a secure vault. Keep unredacted details in appropriately controlled storage.
+
+Any future affiliate recommendation for binders, labels or backup supplies belongs after the workflow, with a clear disclosure and a skip option. A product must never change a status, interrupt verification or imply that purchasing it makes a household emergency-ready.
+
+**Next step:** open the verification tool, choose one audience, create three neutral IDs and assign an owner to every unresolved row.
+
+---
+
+## Page 358 — How to Use FamilyBoard for a Home Repair Punch List
+**Slug:** `/guides/familyboard-repair-punch-list-tutorial/`
+**Primary intent:** turn a home walkthrough into dated, observable repair items linked to scope, evidence, owners and rechecks
+**Title tag:** How to Build a Home Repair Punch List | FamilyBoard Tutorial
+**Meta description:** Build a reliable home repair punch list with observable items, scope references, recheck evidence and privacy-safe owner actions—without treating it as an inspection certificate.
+**Primary keyword concept:** home repair punch list checklist
+**Cluster:** maintenance
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/home-repair-punch-list/`, `/tools/home-repair-change-order-log/`, `/guides/renovation-records/`, `/guides/contractor-records/`
+**FAQ:**
+- Q: Does a punch list certify that work is safe or complete?
+  A: No. It records household observations and follow-up. A contract, inspector or qualified professional controls certification and acceptance.
+- Q: What belongs in a punch list instead of a change order?
+  A: An item belongs in the punch list when it is a visible condition within the agreed scope. New or changed work should be proposed in a separate change-order record.
+- Q: When can I close an item?
+  A: Only after the chosen dated recheck evidence is linked. A contractor's message saying “fixed” is a response, not automatically a household recheck.
+- Q: Are target dates legal or warranty deadlines?
+  A: No. They are household follow-up dates. Retrieve contractual, notice, payment, permit and warranty dates from their controlling sources.
+
+**Contextual CTA:** Record one observable condition and its recheck evidence in the free Home Repair Punch List.
+
+# How to build a home repair punch list that survives the final walkthrough
+
+“Finish the bathroom” is a reminder, not a punch list. A useful list lets another person see exactly what was observed, which scope version controls the expectation, who owns the next response and what evidence will justify closing the row. It also keeps a household record honest: a list can organize a question without declaring that concealed work, code compliance or workmanship is safe.
+
+Use FamilyBoard's [Home Repair Punch List](/tools/home-repair-punch-list/) for visible conditions and dated rechecks. Keep contracts, drawings, invoices, permits, inspection reports and original photos in their protected project archive. The browser tool is a coordination record, not a professional inspection or legal acceptance.
+
+## Freeze the controlling scope first
+
+Write a private project label and identify the signed agreement or accepted estimate that established the work. If an approved change order altered the baseline, name its ID and the exact boundary: `CONTRACT-C1 plus CHG-2; excludes dining-room paint`. A review date later than the scope date shows which version the list reconciles.
+
+This step prevents scope disputes from being hidden inside vague defect language. If nobody can point to an agreed expected condition, record an evidence gap and ask the responsible role for clarification. Do not invent a standard because a finish “looks wrong.”
+
+## Describe one observable condition per row
+
+Use a neutral ID such as `KITCHEN-03` and describe what a person can observe: `cabinet door rubs the adjacent panel during full open`, `paint touch-up visible at north wall under daylight`, or `shower trim has an unsealed visible joint`. Include location and conditions needed to repeat the observation, but avoid a full street address, names or private messages.
+
+Avoid diagnosing the cause or assigning blame. “Water behind wall caused by negligent installer” is a conclusion that may require a qualified source. “Damp mark visible below valve after use; PHOTO-18 linked” preserves the observation and leaves the cause open for the right professional.
+
+## Link evidence without copying sensitive originals
+
+Use protected pointers such as `PHOTO-18`, `WALKTHROUGH-2`, `DRAWING-A3` or `INSPECTION-R4`. Record the observation date and preserve the original file, issuer, angle, scope and metadata separately. A photo can show visible appearance on a particular day; it usually cannot prove concealed work, material identity, structural safety or code compliance.
+
+If an immediate hazard appears—fire, gas odor, exposed energized equipment, structural movement, contaminated water or injury—leave the area and follow local emergency, utility, building and professional instructions. Do not approach danger to capture a better photo or keep typing into the checklist.
+
+## Keep response, correction and recheck separate
+
+The tool's statuses make the chronology visible: observed with written response pending; correction planned but not rechecked; provider reports corrected with recheck pending; closed with dated recheck evidence linked; or archived with a reason. A contractor's promise, invoice or photo is valuable evidence, but it is not automatically the household's final observation.
+
+For an open row, write the next evidence required: `obtain written response against DRAWING-A3`, or `recheck full door travel and save dated photo after reported adjustment`. Close only when the chosen recheck is linked. “Done” and “fixed” do not explain what was checked.
+
+## Separate new work from correction work
+
+During a walkthrough, a household may notice a desirable improvement that was never in the agreement. Do not disguise it as a defect. Move it to the [Home Repair Change Order Log](/tools/home-repair-change-order-log/) with the proposed addition, deletion or substitution, its decision and the approved scope source. This protects both the punch-list history and the family's budget conversation.
+
+Keep payment, acceptance, warranty and inspection events in their own records. Consumer guidance from authorities can help a household preserve written promises and inspect carefully, but no generic checklist changes a local contract or creates a universal final-payment rule. The punch list's target date is only a planning checkpoint.
+
+## Reconcile the list at every review
+
+Compare the current rows with the unchanged baseline, approved changes, provider responses, dated evidence and current invoice. If a row is still open at the next review, carry it forward with a new note rather than changing history. If it is archived because the scope was formally excluded or superseded, record that reason and retain the old version.
+
+At close-out, store the final punch-list version beside the contract, change orders, payments, permits, inspection reports, manuals, warranties and unresolved items. The [renovation records guide](/guides/renovation-records/) provides a broader chronology so a later owner can understand what changed and why.
+
+## Privacy, sharing and future recommendations
+
+Review the generated output before sharing. Automated filters catch common phone, email, address, payment, credential, government-ID and signature patterns but cannot understand every private fact. Use role labels and protected pointers; keep full provider details and dispute correspondence in controlled storage.
+
+Future affiliate suggestions for measuring tools, lights or document storage must remain beside—not inside—the walkthrough. They cannot close an item, authorise payment or imply that a sponsored product or contractor meets the agreed scope.
+
+**Next step:** freeze the scope version, add one narrow observable condition, link its protected evidence and name the role that owns the recheck.
+
+---
+
+## Page 359 — How to Use FamilyBoard for a Product Recall Action
+**Slug:** `/guides/familyboard-product-recall-action-tutorial/`
+**Primary intent:** track an official product-recall notice, exact identity comparison, immediate action, remedy and close-out evidence
+**Title tag:** How to Track a Product Recall Safely | FamilyBoard Tutorial
+**Meta description:** Learn a careful product recall workflow: preserve the official notice, compare the exact unit privately, follow immediate instructions and track the remedy to dated close-out.
+**Primary keyword concept:** product recall action checklist
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/tools/product-recall-action-log/`, `/guides/product-registration-tracker/`, `/tools/warranty-claim-evidence-log/`, `/guides/serial-number-tracker/`
+**FAQ:**
+- Q: Does FamilyBoard check live recall databases?
+  A: No. Use the current responsible authority and manufacturer notice, then record the source and protected comparison evidence yourself.
+- Q: Is a matching brand or model enough to call a product affected?
+  A: Not usually. Notices may be limited by model, batch, serial, date code, size, colour, seller or production window.
+- Q: Can I keep using a product while I finish the log?
+  A: Follow the current notice immediately. The tool cannot tell you whether use, unplugging, moving or disposal is safe.
+- Q: When is a recall remedy complete?
+  A: When the notice-specific outcome and a dated household close-out check are linked. A submitted form, label or appointment is an intermediate step.
+
+**Contextual CTA:** Capture the current notice and keep an uncertain product match open in the free Product Recall Action Log.
+
+# How to track a product recall without losing the safety instruction
+
+A forwarded headline can create urgency, but it rarely contains the exact model range, remedy conditions or the latest update. A safe household record starts with the current authority or manufacturer notice, follows any immediate instruction before paperwork, and then preserves the identity comparison and remedy chronology. It never turns a shared spreadsheet into a safety verdict.
+
+FamilyBoard's [Product Recall Action Log](/tools/product-recall-action-log/) is a local workflow record. It does not search live databases, inspect a product, decide whether a unit is affected or tell anyone to use, unplug, move, repair, destroy, return or dispose of an item. Those instructions belong to the current responsible source.
+
+## Treat messages as leads and notices as sources
+
+Use a retailer email, family chat or social post as a prompt to investigate. Open the responsible product-safety authority and the manufacturer's verified recall page. Record a safe notice ID, public URL, issuing role, publication or update date and the exact hazard and consumer-action sections. A third-party summary can be outdated even when its headline is accurate.
+
+If the notice says stop using, unplug, isolate, keep away from children, avoid transfer, return or follow another precaution, do that first. Do not keep operating the product to reproduce a fault, photograph a label or finish the form. Smoke, fire, gas, electric shock, poisoning or injury requires the appropriate emergency and medical response, not a web tracker.
+
+## Compare the exact unit privately
+
+Recall scope can depend on model, batch, serial range, date code, colour, size, seller or production window. A matching marketing name is not enough. Keep the complete label photo, serial number, order record and purchase evidence in protected storage. In the shareable log, point to `ASSET-P7/LABEL-2` and record only what an attributable source supports.
+
+Use explicit states such as `identity check pending`, `comparison underway`, `affected status confirmed by official source` or `not affected—comparison source linked`. If a label is missing or unsafe to access, leave the row open. “Not found” is not the same as “not affected.”
+
+## Split notice, action, remedy and result into separate rows
+
+One row can capture the official notice. A second can capture the protected identity comparison. Another can record an immediate stop-use or isolation action, followed by the company request, shipping evidence, service visit, refund or replacement and final close-out. This structure prevents `recall handled` from hiding an unconfirmed step.
+
+Give each row one source or actor role, one action date, one protected evidence pointer, one owner and one next date. Keep full names, phone numbers, shipping addresses, case numbers and tracking numbers behind the pointer. A case number can prove that a request exists; it does not prove that a remedy arrived.
+
+## Preserve the remedy exactly as offered
+
+Remedies differ: repair, replacement, refund, disposal, return, software update or new instructions. Copy the current requirement into protected evidence and summarise it without making it broader or safer than the notice. Do not improvise destruction, cutting, disassembly or disposal. A step borrowed from another recall can create a new hazard or destroy evidence.
+
+Keep intermediate events visible. A refund request is not a refund. A return label is not a delivered parcel. A service appointment is not a completed repair. A software-update prompt is not proof that the target version installed. Close only when the notice-specific outcome and a dated household check are linked.
+
+## Connect related records without merging their meaning
+
+Product registration may help a manufacturer reach an owner; a warranty may describe ordinary defect coverage; a recall gives notice-specific safety and remedy instructions. Link the [product registration tracker guide](/guides/product-registration-tracker/) and [warranty claim evidence log](/tools/warranty-claim-evidence-log/) when relevant, but preserve the recall notice and remedy history as its own chronology.
+
+Secondhand, donated and sold products need the same honesty. Start with permanent markings and the current notice, not an assumption that a previous owner registered the unit. If a notice restricts transfer, do not sell or donate it. If the item left the household earlier, record the exit date and a protected transfer or disposal pointer; “no longer held” does not prove the safety issue was resolved.
+
+## Escalate a stalled remedy with a clean handoff
+
+If a company is unresponsive, preserve the contact attempt, notice, exact unit comparison and requested remedy in a protected complaint file. Use the responsible authority's current process for the household's jurisdiction. Do not rewrite the log into a legal conclusion or let an escalation status imply that the authority accepted the case.
+
+At review, ask: Is the notice current? Was the exact unit compared by an attributable source? Was the immediate instruction followed? Is each next step owned? Is the remedy outcome linked? If any answer is unknown, keep the relevant row open.
+
+## Privacy and commercial boundaries
+
+Review output before sharing. Filters catch common full serial, contact, address, account, payment, credential, government-ID and tracking patterns but cannot detect every contextual identifier. Browser-only processing does not make downloaded evidence public-safe by itself.
+
+Future affiliate placements for label makers, storage or shipping supplies must stay outside the safety workflow. They cannot select a notice, infer a match, recommend continued use, change an official remedy or make a purchase a condition of receiving help.
+
+**Next step:** save the current authority and manufacturer notices, follow any immediate instruction, then add one dated row for the identity check and one for the remedy owner.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

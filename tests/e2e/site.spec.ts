@@ -131,6 +131,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-record-retrieval-drill-tutorial/",
     "/guides/familyboard-utility-provider-handoff-tutorial/",
     "/guides/familyboard-vehicle-document-source-status-tutorial/",
+    "/guides/familyboard-emergency-contact-verification-tutorial/",
+    "/guides/familyboard-repair-punch-list-tutorial/",
+    "/guides/familyboard-product-recall-action-tutorial/",
     "/guides/familyboard-household-responsibility-coverage-tutorial/",
     "/guides/familyboard-replacement-part-source-check-tutorial/",
     "/guides/familyboard-guest-arrival-prep-tutorial/",
@@ -3460,6 +3463,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-emergency-contact-verification-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-repair-punch-list-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-product-recall-action-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

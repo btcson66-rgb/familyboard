@@ -62,3 +62,5 @@ Notebooks, labels or storage products may eventually appear after the result wit
 ## Before closing a row
 
 Can another permitted role state the question and find the current source? Are constraints and options recorded without sensitive details? Are decision, action and result separate? Is the status supported by an observation? Is the reopen condition clear? If not, keep the row open and return to the responsible source.
+
+---

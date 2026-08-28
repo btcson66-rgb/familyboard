@@ -2648,6 +2648,30 @@
     "headings": "Household Decision Register Eight fields keep a decision honest Use a neutral code and protected source Record constraints, not pressure Review the action and result separately Use it in meetings and handoffs Privacy check before exporting Optional recommendations stay outside the form Before closing a row"
   },
   {
+    "title": "How to Verify Emergency Contacts at Home | FamilyBoard Tutorial",
+    "description": "Learn a privacy-aware emergency contact verification workflow: check the right source, confirm consent, assign corrections and keep every date honest.",
+    "route": "/guides/familyboard-emergency-contact-verification-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "emergency contact verification checklist",
+    "headings": "How to verify emergency contacts without creating another risky contact list Start with the audience, not a giant master list Define what “verified” means for each role Use a stable ID and a protected source pointer Give every unresolved row an owner and a real date Test the workflow without testing emergency services Review after change events and clean every copy Privacy and commercial boundaries"
+  },
+  {
+    "title": "How to Build a Home Repair Punch List | FamilyBoard Tutorial",
+    "description": "Build a reliable home repair punch list with observable items, scope references, recheck evidence and privacy-safe owner actions—without treating it as an inspection certificate.",
+    "route": "/guides/familyboard-repair-punch-list-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "home repair punch list checklist",
+    "headings": "How to build a home repair punch list that survives the final walkthrough Freeze the controlling scope first Describe one observable condition per row Link evidence without copying sensitive originals Keep response, correction and recheck separate Separate new work from correction work Reconcile the list at every review Privacy, sharing and future recommendations"
+  },
+  {
+    "title": "How to Track a Product Recall Safely | FamilyBoard Tutorial",
+    "description": "Learn a careful product recall workflow: preserve the official notice, compare the exact unit privately, follow immediate instructions and track the remedy to dated close-out.",
+    "route": "/guides/familyboard-product-recall-action-tutorial/",
+    "cluster": "product",
+    "keywords": "product recall action checklist",
+    "headings": "How to track a product recall without losing the safety instruction Treat messages as leads and notices as sources Compare the exact unit privately Split notice, action, remedy and result into separate rows Preserve the remedy exactly as offered Connect related records without merging their meaning Escalate a stalled remedy with a clean handoff Privacy and commercial boundaries"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

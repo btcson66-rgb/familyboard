@@ -196,7 +196,12 @@ const zhTwLinks = [
   ['/zh-tw/privacy/', '隱私權政策'], ['/zh-tw/security/', '資安說明'], ['/zh-tw/affiliate-disclosure/', '聯盟行銷揭露'],
   ['/zh-tw/terms/', '使用條款'], ['/zh-tw/contact/', '聯絡我們']
 ];
-const links = isZhTw ? zhTwLinks : englishLinks;
+const englishGuideLinks = [
+  ['/guides/familyboard-emergency-contact-verification-tutorial/', 'Emergency contact verification tutorial'],
+  ['/guides/familyboard-repair-punch-list-tutorial/', 'Repair punch list tutorial'],
+  ['/guides/familyboard-product-recall-action-tutorial/', 'Product recall action tutorial'],
+];
+const links = isZhTw ? zhTwLinks : [...englishLinks, ...englishGuideLinks];
 ---
 <footer class="site-footer">
   <div class="shell footer-grid">

@@ -62,6 +62,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/emergency-supply-inventory/</loc>",
       "<loc>https://familyboard.win/tools/emergency-contact-verification-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-verification-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-emergency-contact-verification-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/emergency-information-sheet/</loc>",
       "<loc>https://familyboard.win/tools/household-power-outage-event-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-power-outage-event-log/</loc>",
@@ -84,6 +85,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/contractor-records/</loc>",
       "<loc>https://familyboard.win/tools/home-repair-punch-list/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-repair-punch-list/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-repair-punch-list-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/renovation-records/</loc>",
       "<loc>https://familyboard.win/tools/home-repair-closeout-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-repair-closeout-checklist/</loc>",
@@ -92,6 +94,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/warranty-claim-evidence-log/</loc>",
       "<loc>https://familyboard.win/tools/product-recall-action-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/product-recall-action-log/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-product-recall-action-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/product-registration-tracker/</loc>",
       "<loc>https://familyboard.win/tools/appliance-service-visit-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-service-visit-log/</loc>",
@@ -781,6 +784,30 @@ const checks = [
       "FamilyBoard Record Retrieval Drill Tutorial",
       "one bounded question",
       "does not inspect files",
+    ],
+  },
+  {
+    path: "/guides/familyboard-emergency-contact-verification-tutorial/",
+    require: [
+      "How to Verify Emergency Contacts at Home",
+      "Start with the audience, not a giant master list",
+      "does not make a downloaded file a secure vault",
+    ],
+  },
+  {
+    path: "/guides/familyboard-repair-punch-list-tutorial/",
+    require: [
+      "How to Build a Home Repair Punch List",
+      "Freeze the controlling scope first",
+      "not a professional inspection or legal acceptance",
+    ],
+  },
+  {
+    path: "/guides/familyboard-product-recall-action-tutorial/",
+    require: [
+      "How to Track a Product Recall Safely",
+      "Compare the exact unit privately",
+      "does not search live databases",
     ],
   },
   {
