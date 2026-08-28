@@ -3384,6 +3384,30 @@
     "headings": "Home Care Complaint Response and Resolution Tutorial: Keep the Response Separate From Improvement Choose the route before writing the story Keep eight evidence layers visible Protect the person’s participation and the evidence custody Read current instructions instead of guessing a deadline Treat closure and improvement as different outcomes Privacy and optional commercial content"
   },
   {
+    "title": "Home Care Billing Discrepancy Tutorial | Reconcile Service and Payment Sources",
+    "description": "Learn how to review a home-care billing discrepancy by separating service evidence, itemized charges, benefit decisions, payments, corrections and refunds.",
+    "route": "/guides/familyboard-home-care-billing-discrepancy-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "home care billing discrepancy tutorial",
+    "headings": "Home Care Billing Discrepancy Tutorial: Reconcile Sources Before Calling a Balance Due Begin with one service period and one currency Keep planned, authorized, delivered and billed separate Use the four amount markers as signals, not conclusions Distinguish Medicare, Medicaid and private arrangements Protect care, payment and identity information"
+  },
+  {
+    "title": "Home Care Payment Refund Collection Notice Tutorial | FamilyBoard",
+    "description": "Learn how to organise home-care payment, refund, collection and adverse notices without copying private account details or guessing a response deadline.",
+    "route": "/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "home care payment refund collection notice tutorial",
+    "headings": "Home Care Payment Refund and Collection Notice Tutorial: Preserve the Notice and the Actual Account Result Classify the document from the responsible source Record delivery without copying the private message Preserve the response route rather than guessing a deadline Link account corrections with the right tool Privacy and commercial boundaries"
+  },
+  {
+    "title": "Rental Security Deposit Move-Out Tutorial | Condition and Refund Evidence",
+    "description": "Learn how to organise rental move-out and security-deposit evidence by separating the lease, inspection, deductions, handoff and actual refund result.",
+    "route": "/guides/familyboard-rental-security-deposit-move-out-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "rental security deposit move out tutorial",
+    "headings": "Rental Security Deposit Move-Out Tutorial: Compare Condition, Deductions and Refund Evidence Start with the controlling lease and a safe version Compare condition without making a legal conclusion Track handoff and refund as separate events Route unresolved questions to the right source Protect the record and keep recommendations optional"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -682,6 +682,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-home-care-complaint-response-resolution-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-care-complaint-response-resolution-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-care-billing-discrepancy-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-care-billing-discrepancy-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-rental-security-deposit-move-out-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -6131,6 +6137,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-home-care-complaint-response-resolution-tutorial/",
     require: ["居家照護抱怨與回應教學", "實際改善", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-care-billing-discrepancy-tutorial/",
+    require: ["Home Care Billing Discrepancy Tutorial", "same-currency arithmetic"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-care-billing-discrepancy-tutorial/",
+    require: ["居家照護費用差異教學", "同幣別算術", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/",
+    require: ["Home Care Payment Refund Collection Notice Tutorial", "protected original"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/",
+    require: ["居家照護付款退款催收通知教學", "受保護原件", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-rental-security-deposit-move-out-tutorial/",
+    require: ["Rental Security Deposit Move-Out Tutorial", "itemised explanation"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/",
+    require: ["租屋押金搬出爭議教學", "扣款說明", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

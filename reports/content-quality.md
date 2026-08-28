@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T14:52:56.556Z
+Generated: 2026-08-28T15:05:34.794Z
 
 ## Summary
 
-- Indexable pages: 817
-- Generated HTML routes: 823
+- Indexable pages: 823
+- Generated HTML routes: 829
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 467
+- Pages without a contextual product/tool link: 470
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-28T14:52:56.556Z
 - appliances: 56
 - maintenance: 82
 - household-operations: 147
-- records-emergency: 107
+- records-emergency: 113
 - tools: 152
 
 ## Word-count range
@@ -207,7 +207,9 @@ Generated: 2026-08-28T14:52:56.556Z
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
 - /zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/
+- /zh-tw/guides/familyboard-home-care-billing-discrepancy-tutorial/
 - /zh-tw/guides/familyboard-home-care-complaint-response-resolution-tutorial/
+- /zh-tw/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/
 - /zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/
 - /zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/
 - /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
@@ -252,6 +254,7 @@ Generated: 2026-08-28T14:52:56.556Z
 - /zh-tw/guides/familyboard-recurring-chore-planner-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-rental-repair-request-tutorial/
+- /zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/
 - /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
 - /zh-tw/guides/familyboard-repair-punch-list-tutorial/
 - /zh-tw/guides/familyboard-replacement-part-source-check-tutorial/

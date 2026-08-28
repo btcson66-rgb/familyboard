@@ -3520,6 +3520,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-home-care-billing-discrepancy-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-care-billing-discrepancy-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-rental-security-deposit-move-out-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4281,8 +4305,22 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-home-care-billing-discrepancy-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-care-billing-discrepancy-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-home-care-complaint-response-resolution-tutorial/",
     "alternateRoute": "/guides/familyboard-home-care-complaint-response-resolution-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -4593,6 +4631,13 @@
     "alternateRoute": "/guides/familyboard-rental-repair-request-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/",
+    "alternateRoute": "/guides/familyboard-rental-security-deposit-move-out-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

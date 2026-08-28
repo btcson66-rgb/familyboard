@@ -32183,6 +32183,206 @@ Any future affiliate area must stay outside safety warnings, complaint intake, o
 - Q: Should I paste allegations or the full response into FamilyBoard?
   A: No. Keep them in the protected process and store only safe source and custody pointers.
 
+## Page 440 — Home Care Billing Discrepancy Tutorial: Reconcile Sources Before Calling a Balance Due
+
+**Slug:** `/guides/familyboard-home-care-billing-discrepancy-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-care-billing-discrepancy-tutorial/`
+**Primary intent:** use the home-care charge, service and payment discrepancy log to connect an actual service period, controlling plan, itemized charge, benefit status, payment and later account result without deciding what is owed
+**Title tag:** Home Care Billing Discrepancy Tutorial | Reconcile Service and Payment Sources
+**Meta description:** Learn how to review a home-care billing discrepancy by separating service evidence, itemized charges, benefit decisions, payments, corrections and refunds.
+**Primary keyword concept:** home care billing discrepancy tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Create one same-currency review row and compare it with the protected plan, service and account sources before drawing any conclusion.
+**Suggested internal links:** `/tools/home-care-charge-service-payment-discrepancy-log/`, `/tools/home-care-visit-scope-service-result-log/`, `/tools/home-care-payment-refund-collection-notice-log/`, `/guides/home-care-service-fees-and-billing/`
+
+# Home Care Billing Discrepancy Tutorial: Reconcile Sources Before Calling a Balance Due
+
+A home-care statement may depend on a plan or contract, an authorization, the service that actually occurred, an itemized provider bill, a payer claim result, a household payment and a later correction. A single number labelled “balance” hides which source is still unresolved. The free [Home Care Charge, Service and Payment Discrepancy Log](/tools/home-care-charge-service-payment-discrepancy-log/) helps connect those sources without declaring an amount owed, a valid claim or a refund.
+
+## Begin with one service period and one currency
+
+Use a safe code such as `HOME-CARE-CHARGE-2026-A` and choose one review period. Confirm the protected person and account relationship in the responsible system, then keep only a safe period pointer in FamilyBoard. Use one currency for each version; the arithmetic does not convert USD, TWD or another currency and cannot replace an accounting or payer source.
+
+The baseline date is the earliest plan, service, fee or notice version included. The current review date is when the household compared the sources. A next checkpoint is a household reminder, not a claim, appeal, collection or lawsuit deadline. Read every current notice immediately.
+
+## Keep planned, authorized, delivered and billed separate
+
+Review the chain in this order:
+
+1. **Plan or contract:** what service was intended under the current version.
+2. **Authorization or benefit decision:** what a payer or program says it may cover.
+3. **Actual service:** what an attributable provider or visit source says occurred.
+4. **Itemized charge:** what the provider statement reports.
+5. **Payer result:** how a claim, notice or benefit statement was processed.
+6. **Payment:** what a payment source shows was actually posted.
+7. **Correction or refund:** what the provider, payer or account source later changed.
+
+A calendar reminder is not an official visit record. A paid claim does not prove the provider posted a household payment correctly. A provider statement does not decide coverage. Link each source with a safe code and leave the missing layer open.
+
+## Use the four amount markers as signals, not conclusions
+
+The tool can record `EXP` (expected household responsibility from the source being reviewed), `BILLED` (provider statement amount), `PAID` (payment actually observed) and `ADJUSTED` (refund or credit actually observed). A billed-minus-expected result is same-currency arithmetic only. It is a prompt to compare sources, not proof of overcharging, debt, eligibility, damages or a refundable amount.
+
+If the values disagree, preserve which document produced each value and its version. Do not overwrite the old amount when a corrected statement arrives; add a new source observation. The [Home Care Payment, Refund and Collection Notice Log](/tools/home-care-payment-refund-collection-notice-log/) is useful when a notice or account handoff creates a separate response route.
+
+## Distinguish Medicare, Medicaid and private arrangements
+
+Original Medicare home-health coverage, Medicaid home- and community-based services, managed-care benefits, private-duty care and private-pay contracts do not share one universal billing rule. An ABN, Medicare Summary Notice, Explanation of Benefits, Home Health Change of Care Notice, provider invoice and collection letter answer different questions. Record the exact document and follow its current instructions through the responsible source.
+
+Do not copy a $0 covered-service statement into a private-care or Medicaid row. Do not call a generic estimate an ABN. If a cost question is also a service complaint or benefit appeal, create separate linked rows because the decision-maker and deadline may differ. FamilyBoard does not determine coverage, medical necessity, legal responsibility or a deadline.
+
+## Protect care, payment and identity information
+
+Use safe aliases and source codes. Keep full bills, account numbers, card details, diagnoses, care notes, addresses, signatures, notices and correspondence in protected storage. Before sharing a row, confirm that the recipient needs only the period, source owner, amount marker and next action. FamilyBoard is local-first and does not become a billing archive or payment service; export a protected backup before clearing browser data.
+
+Future affiliate products such as folders or scanners must stay outside billing review and appeal instructions. Buying a product cannot prove a charge, change a benefit decision or guarantee a refund.
+
+**FAQ:**
+- Q: Does billed minus expected tell me what I owe?
+  A: No. It is arithmetic on entered values; current provider, contract, benefit, payer and payment sources control the real result.
+- Q: Can a calendar prove that a visit did not occur?
+  A: No. It can identify a question, but obtain the responsible actual-service or verification source.
+- Q: Is an ABN the same as a bill or denial?
+  A: No. Each notice or statement has a different purpose and process.
+- Q: When is a refund complete?
+  A: After a responsible correction and the actual payment or account posting are observed separately.
+
+## Page 441 — Home Care Payment Refund and Collection Notice Tutorial: Preserve the Notice and the Actual Account Result
+
+**Slug:** `/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/`
+**Primary intent:** use the payment, refund and collection notice log to classify a notice, preserve delivery and response routes, and distinguish promises, corrections, postings and actual account results
+**Title tag:** Home Care Payment Refund Collection Notice Tutorial | FamilyBoard
+**Meta description:** Learn how to organise home-care payment, refund, collection and adverse notices without copying private account details or guessing a response deadline.
+**Primary keyword concept:** home care payment refund collection notice tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Classify one current notice, link its protected original and record the responsible response route without entering account identifiers.
+**Suggested internal links:** `/tools/home-care-payment-refund-collection-notice-log/`, `/tools/home-care-charge-service-payment-discrepancy-log/`, `/tools/home-care-complaint-response-resolution-log/`, `/guides/home-care-refund-and-collection-notices/`
+
+# Home Care Payment Refund and Collection Notice Tutorial: Preserve the Notice and the Actual Account Result
+
+A provider bill, receipt, payer statement, refund promise, collection message and adverse benefit notice can all mention the same service while answering different questions. The free [Home Care Payment, Refund and Collection Notice Log](/tools/home-care-payment-refund-collection-notice-log/) keeps the notice class, source, delivery, response route and actual result visible. It does not authenticate a notice, decide whether a debt or refund is valid, calculate a deadline or contact anyone.
+
+## Classify the document from the responsible source
+
+Start with `NOTICE-N4` or `COLLECTION-N1`, not a family description or subject line. Open the protected original and identify whether it is a provider invoice, payment receipt, payer statement, refund confirmation, collection notice, adverse benefit notice or appeal decision. Record the issuer role and version, then store the original where the authorised household role can retrieve it.
+
+A Medicare Summary Notice is not a bill. An Advance Beneficiary Notice and a Home Health Change of Care Notice have different purposes. A private contract notice or Medicaid program letter may use entirely different terms. Never rename a document just to fit a familiar category.
+
+## Record delivery without copying the private message
+
+Use a safe observation such as `DELIVERY-D2`, the date it was seen and whether the original was opened. Keep account numbers, barcodes, payment links, full addresses, representative forms, signatures and notice text out of the shared row. If a message looks suspicious, find the provider, payer or program through a known official channel; the tool cannot determine authenticity.
+
+Delivery, acknowledgment, agreement, correction and payment posting are separate events. A refund promise is not a refund. A corrected statement is not necessarily a payment. A collection pause is not necessarily a closed account. Keep each result open until the responsible account or payment source shows what happened.
+
+## Preserve the response route rather than guessing a deadline
+
+Record where the current notice says to respond, who has authority to respond and where the instruction is stored. A safe note can say `deadline text held in NOTICE-N4; route ROUTE-Q2; authority AUTH-A1`. Do not turn unfamiliar notice language into a guessed date. Household reminders cannot extend an official response or appeal period.
+
+If a notice asks for fast action, read it immediately and follow its own instructions. Confirm representative or disclosure authority through the responsible source; family relationship alone may not establish it. For a service-quality issue, use a separate complaint record; for a benefit decision, preserve the appeal route separately.
+
+## Link account corrections with the right tool
+
+Use the [Home Care Charge, Service and Payment Discrepancy Log](/tools/home-care-charge-service-payment-discrepancy-log/) for a statement-versus-payment comparison. Use the [Home Care Complaint, Response and Resolution Log](/tools/home-care-complaint-response-resolution-log/) for a service or handling concern. Use the plan-change record when a notice changes the approved service version. Link the records with a safe event code instead of copying the same protected document into each one.
+
+For Medicare, Medicaid, managed-care and private arrangements, the current notice, plan handbook, contract and official source control. FamilyBoard does not determine coverage, debt validity, legal rights, appeal eligibility or collection consequences. If safety or care continuity is at risk, handle that route before account administration.
+
+## Privacy and commercial boundaries
+
+Before printing or sharing, remove names, full contacts, account and case identifiers, payment details, care content, signatures, credentials and private correspondence. The app is local-first, not a payment portal or legal archive; export and protect backups deliberately.
+
+Any future affiliate recommendation must be clearly labelled and remain outside notice reading, urgent care, payment and appeal steps. A product cannot authenticate a letter, preserve a deadline or guarantee a refund.
+
+**FAQ:**
+- Q: Is a notice the same as a bill or receipt?
+  A: No. They can come from different sources and answer different questions.
+- Q: Does a refund promise prove money was returned?
+  A: No. Keep the promise, correction, payment posting and actual account result separate.
+- Q: Can FamilyBoard calculate an appeal or payment deadline?
+  A: No. Follow the current notice and responsible process.
+- Q: Should I paste an account number or full notice?
+  A: No. Use safe source and event codes and protect the original.
+
+## Page 442 — Rental Security Deposit Move-Out Tutorial: Compare Condition, Deductions and Refund Evidence
+
+**Slug:** `/guides/familyboard-rental-security-deposit-move-out-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/`
+**Primary intent:** use the rental security deposit move-out claim log to organise lease, notice, condition, handoff, deduction explanation and refund evidence without deciding local legal rights
+**Title tag:** Rental Security Deposit Move-Out Tutorial | Condition and Refund Evidence
+**Meta description:** Learn how to organise rental move-out and security-deposit evidence by separating the lease, inspection, deductions, handoff and actual refund result.
+**Primary keyword concept:** rental security deposit move out tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Create one move-out evidence index from the signed lease and current handoff instructions; keep the refund result open until a source confirms it.
+**Suggested internal links:** `/tools/rental-security-deposit-move-out-claim-log/`, `/guides/rental-security-deposit-move-out-claims/`, `/tools/household-record-retrieval-drill-log/`, `/guides/household-documents-organizer/`
+
+# Rental Security Deposit Move-Out Tutorial: Compare Condition, Deductions and Refund Evidence
+
+Moving out creates several records: the signed lease, notice to leave, move-in and move-out condition evidence, inspection arrangement, key or item handoff, deduction explanation and refund or account result. The free [Rental Security Deposit Move-Out Claim Log](/tools/rental-security-deposit-move-out-claim-log/) gives each layer a safe reference. It does not calculate a refund, decide whether a deduction is lawful or replace local housing advice.
+
+## Start with the controlling lease and a safe version
+
+Use `LEASE-L1`, `DEPOSIT-D1` and `INSPECT-I1` as pointers to protected originals. Record the household’s move-out context without entering full names, address, account data or lease text. Note which version was signed and which written move-out instructions were current when the handoff was planned.
+
+An arranged inspection is not proof that an inspection happened. A message promising a refund is not the same as money appearing in an account. Keep the planned date, observed event and responsible source separate so a later reader can see the evidence gap.
+
+## Compare condition without making a legal conclusion
+
+The same mark may be described as ordinary wear, cleaning, repair or missing property, but the answer can depend on the signed agreement, move-in condition, move-out condition, local rule and itemised explanation. Use the log to record the category named by the responsible source and the evidence pointer that supports it. Do not rely on a universal internet rule or a single total.
+
+If the landlord or manager lists a deduction, preserve the date and version of the explanation, its stated category and any supporting source. If the explanation is unclear, record that a focused written question was sent and keep the original question and response in protected storage. Do not paste private correspondence into the household index.
+
+## Track handoff and refund as separate events
+
+Keys, remotes, access cards, appliances and cleaning responsibilities can have their own handoff source. Record what was scheduled, what was actually returned and which source confirms receipt. A condition photograph can support an observation, but it does not by itself authenticate ownership, responsibility or a deduction.
+
+Use a separate status for returned, partially returned, credited, held, deducted or pending. Confirm an actual result against the relevant account statement, receipt or written source. The tool intentionally does not predict a return date or calculate a deposit balance; the current lease, formal notice and applicable local process control those questions.
+
+## Route unresolved questions to the right source
+
+If the issue remains open, preserve the next responsible intake: landlord or manager question, local housing or consumer service, mediation or qualified legal advice. Keep delivery evidence for any request. A household follow-up date is not a statutory deadline, and FamilyBoard cannot decide who is right, authenticate a document, inspect a property or file a claim.
+
+Rules differ by location and housing type. Taiwan residential lease standard terms, U.S. state rules and other jurisdictions are not interchangeable. Confirm the property’s applicable source before using a guide to interpret a deduction. If there is an immediate safety or access problem, use the responsible local service first.
+
+## Protect the record and keep recommendations optional
+
+Do not enter full addresses, landlord or tenant names, phone numbers, bank or card details, lease or notice text, signatures, access codes, photographs of people or a detailed dispute narrative. Store originals safely and share only the minimum pointer needed for a handoff. FamilyBoard is a local-first index, not a vault, payment service or attorney.
+
+Future folders, scanners or storage products may be shown beside an educational page only as clearly labelled optional affiliate content. They must not interrupt a notice, mediation or legal-information step, and purchase cannot create a refund right.
+
+**FAQ:**
+- Q: Does this calculate my security-deposit refund?
+  A: No. It organises sources and statuses; confirm amounts with the current lease, explanation and actual account result.
+- Q: Is ordinary wear automatically non-chargeable?
+  A: Do not assume that. Compare the agreement, condition evidence, local rule and specific explanation.
+- Q: Should I paste a landlord email into the tool?
+  A: No. Keep the original privately and enter a safe code, date and status.
+- Q: Can FamilyBoard decide who is legally right?
+  A: No. Use the qualified housing, consumer or legal source for the property’s location.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.
