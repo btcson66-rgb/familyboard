@@ -2720,6 +2720,30 @@
     "headings": "A five-minute weekly review using the FamilyBoard home dashboard Read the four counters in order Work the next-responsibilities list Inspect maintenance due soon without inventing work Remember what Today does not display Close the review with an explicit handoff"
   },
   {
+    "title": "FamilyBoard Master CSV Tutorial | Edit and Import Household Records Safely",
+    "description": "Learn how to export FamilyBoard's master CSV, edit only the intended fields, preview validation errors and import a safe household update without treating CSV as a backup.",
+    "route": "/guides/familyboard-master-csv-edit-import/",
+    "cluster": "product",
+    "keywords": "FamilyBoard CSV import export tutorial",
+    "headings": "How to edit and import FamilyBoard's master CSV without losing context Start with a JSON safety snapshot Understand the table before changing a cell Make the smallest useful edit Read the validation preview as a review step Verify relationships after the import"
+  },
+  {
+    "title": "FamilyBoard Maintenance History Tutorial | Record Work and Next Due Dates",
+    "description": "Learn how to complete a FamilyBoard maintenance task, add the real observation and cost, review history and set the next date from an authoritative source.",
+    "route": "/guides/familyboard-maintenance-history-review/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard maintenance history tutorial",
+    "headings": "How to review FamilyBoard maintenance history after a task Confirm the task before completing it Complete the action and capture the real event Record cost without turning the history into a bill archive Set the next due date from evidence Close the history review with a second person"
+  },
+  {
+    "title": "FamilyBoard Subscription Renewal Tutorial | Dates, Cost and Proof",
+    "description": "Review FamilyBoard subscriptions before renewal: record the current source, compare annualized cost, assign a role and keep cancellation confirmation separate from payment credentials.",
+    "route": "/guides/familyboard-subscription-renewal-review/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard subscription renewal review",
+    "headings": "How to review FamilyBoard subscriptions before a renewal charge Start with the provider's current source Compare cost with a consistent convention Assign a renewal decision and a real checkpoint Close only after observing the result"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -49,6 +49,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-home-dashboard-weekly-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-master-csv-edit-import/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-maintenance-history-review/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-subscription-renewal-review/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/</loc>",
@@ -503,6 +506,30 @@ const checks = [
       "A five-minute weekly review using the FamilyBoard home dashboard",
       "Read the four counters in order",
       "does not send push, email or text notifications",
+    ],
+  },
+  {
+    path: "/guides/familyboard-master-csv-edit-import/",
+    require: [
+      "How to edit and import FamilyBoard's master CSV",
+      "Start with a JSON safety snapshot",
+      "The master CSV is useful",
+    ],
+  },
+  {
+    path: "/guides/familyboard-maintenance-history-review/",
+    require: [
+      "How to review FamilyBoard maintenance history after a task",
+      "Complete the action and capture the real event",
+      "cannot make a dangerous task suitable",
+    ],
+  },
+  {
+    path: "/guides/familyboard-subscription-renewal-review/",
+    require: [
+      "How to review FamilyBoard subscriptions before a renewal charge",
+      "Compare cost with a consistent convention",
+      "does not prove that future billing has stopped",
     ],
   },
   {

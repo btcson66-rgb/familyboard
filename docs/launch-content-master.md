@@ -24968,6 +24968,196 @@ Future affiliate recommendations must remain after the review, clearly disclosed
 
 ---
 
+## Page 366 — How to Edit and Import FamilyBoard's Master CSV Safely
+**Slug:** `/guides/familyboard-master-csv-edit-import/`
+**Primary intent:** use FamilyBoard's master CSV for deliberate bulk edits while preserving IDs, relationships and a recoverable local backup
+**Title tag:** FamilyBoard Master CSV Tutorial | Edit and Import Household Records Safely
+**Meta description:** Learn how to export FamilyBoard's master CSV, edit only the intended fields, preview validation errors and import a safe household update without treating CSV as a backup.
+**Primary keyword concept:** FamilyBoard CSV import export tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/features/private-family-organizer/`, `/features/free-home-management-app/`, `/guides/familyboard-offline-backup-restore/`, `/tools/household-document-index-generator/`
+**FAQ:**
+- Q: Is the master CSV a complete backup?
+  A: No. It is a spreadsheet-friendly editing and review format. Keep a full JSON backup as the recovery copy because CSV cannot preserve every database detail or relationship safely.
+- Q: Can I rename the IDs while editing?
+  A: Do not rename IDs unless you understand every relationship that points to them. Stable IDs let FamilyBoard merge updates without creating duplicate records or broken references.
+- Q: Does import immediately overwrite the household?
+  A: No. The app shows a validation preview first. In replace workflows, it also downloads a safety snapshot before committing the change.
+- Q: Are CSV values uploaded to FamilyBoard?
+  A: No. Export, editing, validation and import happen in the current browser; the file leaves the browser only when you deliberately save or move it.
+
+**Contextual CTA:** Export one master CSV, change one low-risk field, review the preview, and keep both the original JSON backup and the edited file until the result is verified.
+
+# How to edit and import FamilyBoard's master CSV without losing context
+
+The master CSV is useful when a household needs to correct many records in a spreadsheet, fill in optional fields that quick-add forms do not show, or review a complete table before a handoff. It is also easy to misuse: a spreadsheet can make a local database look like an ordinary flat list. This workflow keeps the CSV as a controlled edit surface while the JSON export remains the recovery copy.
+
+## Start with a JSON safety snapshot
+
+Open Settings and export a complete JSON backup before opening the master table. Give the file a dated, neutral name such as `FAMILYBOARD-BACKUP-2026-08-29.json`, store it somewhere private and do not edit it. The JSON file contains the household database in the format the app can restore; the CSV is designed for inspection and editing, not disaster recovery.
+
+If the browser profile is the only place that holds the household, do not begin a bulk edit while storage is already uncertain. Check the app's storage status, close unrelated spreadsheet copies and keep the original backup until the imported result has been inspected. A download notification is not proof that a file was saved where you expect.
+
+## Understand the table before changing a cell
+
+The master table combines record types that normally live on separate tabs: assets, maintenance tasks and events, warranties, subscriptions, contacts, documents, members and handoff profiles. Each row carries a record type and a stable ID. Related records refer to an asset or another row by that ID, so sorting is harmless but casually replacing IDs is not.
+
+Use the table to add a missing purchase price, manual reference, owner, status or source pointer only when the controlling document is available. Do not paste passwords, card numbers, full addresses, medical narratives or private messages into a column simply because it is convenient. A spreadsheet copy is still a copy of the household data and may be easier to forward than the browser profile.
+
+## Make the smallest useful edit
+
+Keep one change set per review: for example, add installation dates to three assets, correct the owner of two open tasks, or add a source code to maintenance rows. Record the reason and date in your own protected review note rather than hiding a narrative in an arbitrary CSV column. Do not change a status to “complete” because a request was sent; completion should still describe an observed result.
+
+Preserve the header names and delimiter format produced by FamilyBoard. Avoid formulas, merged cells, automatic date conversion and copied formatting that a spreadsheet may turn into a different value. Check that dates remain in the app's expected format, amounts are numbers rather than currency strings, and blank optional fields stay blank. Exporting from a spreadsheet can also add a byte-order mark or alter line endings; use the app's preview to catch problems before import.
+
+## Read the validation preview as a review step
+
+Importing a file is a two-stage action. First, FamilyBoard parses the rows and reports validation errors, unknown record types, duplicate IDs or invalid relationships. Stop when the preview reports an error you do not understand. Fix the copy in the spreadsheet, not by guessing inside the app, and repeat the preview.
+
+When the preview is clean, compare the row count and a few known records with the original app. Use merge when you intend to update or add rows alongside the current household; use replace only when you have deliberately chosen the edited file as the new source of truth. Replace creates a safety snapshot first, but it can still make a large, confusing state if the wrong file was selected.
+
+## Verify relationships after the import
+
+Open Today and the relevant tabs after the commit. Check one asset with a maintenance task, one warranty or subscription date, one owner and one document pointer. Confirm that the labels are readable, dates land in the intended tab and no row that should remain open was accidentally closed. If anything is wrong, do not keep editing the same file. Use the safety snapshot or the untouched JSON backup to recover, then investigate the specific field.
+
+Keep the edited CSV only as long as the review requires. Delete or protect old copies according to the household's normal data-retention practice, especially if the file contains private contacts or purchase details. A local-first app keeps the data from FamilyBoard's server; it does not make every downloaded file harmless.
+
+Future affiliate recommendations for spreadsheet software, label printers or storage media must remain outside the import controls, clearly disclosed and optional. A product cannot validate a relationship, repair a malformed row or make a backup recoverable.
+
+**Next step:** export JSON, export the master CSV, change one clearly documented field, pass the preview, verify three related records and then decide whether the edited file still needs to exist.
+
+---
+
+## Page 367 — How to Review FamilyBoard Maintenance History After a Task
+**Slug:** `/guides/familyboard-maintenance-history-review/`
+**Primary intent:** use FamilyBoard's maintenance completion history to record observations, costs and next due dates without confusing a checkbox with proof of safe work
+**Title tag:** FamilyBoard Maintenance History Tutorial | Record Work and Next Due Dates
+**Meta description:** Learn how to complete a FamilyBoard maintenance task, add the real observation and cost, review history and set the next date from an authoritative source.
+**Primary keyword concept:** FamilyBoard maintenance history tutorial
+**Cluster:** maintenance
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/features/maintenance-tracker/`, `/tools/home-maintenance-schedule-generator/`, `/guides/home-maintenance-log/`, `/guides/familyboard-home-dashboard-weekly-review-tutorial/`
+**FAQ:**
+- Q: What happens when I press Complete on a maintenance card?
+  A: FamilyBoard records a maintenance event dated today, starts its cost at zero and leaves the note blank for later editing; a repeat interval can move the next due date forward.
+- Q: Does a completed record prove that a repair was safe or successful?
+  A: No. It records the household's action and observation. Follow the model manual, official instructions and qualified professionals for hazardous or specialist work.
+- Q: Where should I enter a technician's invoice or detailed report?
+  A: Keep the original invoice or report in its protected source and record a safe reference plus the observed result; do not turn the app into a full financial or technical archive.
+- Q: Can the app invent the next maintenance interval?
+  A: No. Use the manufacturer's current manual, local requirements or a qualified service source. The app only helps you record the date you choose.
+
+**Contextual CTA:** Complete one known low-risk task, write the observation while it is fresh, and attach the next review date to the source that actually controls it.
+
+# How to review FamilyBoard maintenance history after a task
+
+Pressing a completion button is the beginning of a useful maintenance record, not the end. FamilyBoard separates the task, its completion event and the next due date so a household can see what was planned, what someone observed and what still needs a source check. This guide turns one completed card into a traceable history without pretending the app inspected the equipment.
+
+## Confirm the task before completing it
+
+Open the maintenance card and check the linked asset or home area, owner, instructions source, priority and next-due date. If the task says “clean filter” but the source is an old manual or a copied internet interval, pause and find the current manufacturer instruction. A due date is a planning signal; it is not evidence that the work is safe for every model or building.
+
+For electrical, gas, refrigerant, structural, height or other hazardous work, use the responsible professional or official procedure. FamilyBoard can hold a role, date and source pointer, but it cannot make a dangerous task suitable for a do-it-yourself attempt. If the scope changed, keep the original task understandable and create a new source-check or service record rather than rewriting history.
+
+## Complete the action and capture the real event
+
+When the household has actually performed or observed the intended work, select Complete. The app creates a dated maintenance event with cost set to zero and an empty note. That default is deliberately incomplete. Open the event or use the master CSV later to record what was observed: the part or area checked, a visible condition, the person or service role and any unresolved question.
+
+Write observations, not conclusions. “Filter removed, labelled replacement fitted, airflow checked at the register” is a record of what someone saw. “System is safe for another year” is a conclusion that may require a technician, test or authority. Keep the exact invoice, test result or service report in its protected source and use a safe reference in FamilyBoard.
+
+## Record cost without turning the history into a bill archive
+
+The event can hold a cost and note for household review, but the app does not replace an invoice folder, tax record or payment account. Enter the amount in the expected numeric form, note the currency in your protected review context if necessary and link to a safe receipt reference rather than pasting card details or a full statement. A zero cost can mean free household work or an unedited default, so add a note when the distinction matters.
+
+If a service visit produced a quote, change order or warranty decision, link to the relevant source or dedicated tool instead of putting every conversation in the maintenance note. The event should answer “what happened on this date?” while the source retains the terms that govern a dispute or claim.
+
+## Set the next due date from evidence
+
+If the task has a repeat interval, FamilyBoard can calculate a future date after completion. Treat that interval as a value you supplied, not as a recommendation from the app. Compare it with the current model manual, service contract, local climate and the last observation. A task completed on the 31st is clamped to the last valid day of a shorter month; check the displayed result before relying on it.
+
+If no authoritative interval exists, leave the task manual or create a dated review question. Do not fill an empty source with a generic “every six months” rule just to make the dashboard look complete. A clear open question is better evidence than a precise invented date.
+
+## Close the history review with a second person
+
+For a shared household, ask another role to read the event, source pointer, cost note and next checkpoint. Keep private invoices, access codes, medical context and personal messages out of a screen that may be displayed or printed. Export a backup after a meaningful history update; the browser's local database is not a server archive.
+
+The Home Dashboard may show maintenance due within seven days, but it does not show every historical event and it does not send push, email or text notifications while closed. Use a reminder system you control for critical deadlines. Future affiliate recommendations for filters, tools or service plans must be outside the maintenance workflow and cannot determine whether a task is complete.
+
+**Next step:** complete one low-risk maintenance card, write one observed fact and one unresolved question, verify the source-controlled interval and export a backup if the history changed materially.
+
+---
+
+## Page 368 — How to Review FamilyBoard Subscriptions Before Renewal
+**Slug:** `/guides/familyboard-subscription-renewal-review/`
+**Primary intent:** use FamilyBoard subscription records and tasks to review renewal dates, annualized cost and cancellation evidence without storing payment credentials
+**Title tag:** FamilyBoard Subscription Renewal Tutorial | Dates, Cost and Proof
+**Meta description:** Review FamilyBoard subscriptions before renewal: record the current source, compare annualized cost, assign a role and keep cancellation confirmation separate from payment credentials.
+**Primary keyword concept:** FamilyBoard subscription renewal review
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/features/household-subscription-tracker/`, `/tools/household-subscription-cost-calculator/`, `/guides/familyboard-household-subscription-cost-calculator-tutorial/`, `/tools/household-subscription-cancellation-handoff-log/`
+**FAQ:**
+- Q: Does FamilyBoard cancel a subscription for me?
+  A: No. It records a household review and can hold a follow-up task; cancellation must use the provider's authorised channel and confirmation.
+- Q: Should I save a card number or login in the subscription record?
+  A: No. Store credentials and payment details in their protected system and keep only a safe provider or document pointer in FamilyBoard.
+- Q: Why compare annual cost when the provider bills monthly?
+  A: Annualizing makes different billing cadences comparable; it is a planning calculation, not a promise about future price, taxes or usage.
+- Q: Is a cancellation request proof that billing has stopped?
+  A: No. Keep the provider's effective date or confirmation as the evidence and leave the household task open until the result is observed.
+
+**Contextual CTA:** Choose one upcoming renewal, verify its provider source, record the review owner and keep the confirmation outside the household app until the result is final.
+
+# How to review FamilyBoard subscriptions before a renewal charge
+
+A subscription record is most useful when it answers four questions: what service is this, which source controls the terms, when must the household review it and what actually happened after the decision? FamilyBoard can keep those checkpoints locally without becoming a payment wallet, a cancellation agent or a copy of every receipt.
+
+## Start with the provider's current source
+
+Open the provider account page, current terms, receipt or official renewal notice in the authorised channel. In FamilyBoard, use a neutral label such as `family cloud storage` and a safe source code such as `SUB-SOURCE-4`. Record the billing frequency, next renewal date, household owner and a short note about the review question. Do not paste the email address used to sign in, a card number, full invoice, recovery code or password.
+
+If the provider shows a promotional period, tax change, add-on or 28-day cycle, write that limitation in the protected source note and keep the FamilyBoard label simple. A monthly-looking amount can hide an annual commitment or a conversion date. The app should make the question findable, not recreate the provider's billing system.
+
+## Compare cost with a consistent convention
+
+Use the [Household Subscription Cost Calculator](/tools/household-subscription-cost-calculator/) when the household needs a combined view. It converts weekly amounts to 52 weeks, monthly amounts to 12 months, quarterly amounts to four payments and annual amounts as entered, then shows an annual total and monthly equivalent. Enter only values you can verify and keep the calculation date beside the result.
+
+Annualized cost is a comparison convention. It does not include a future price increase, taxes that are not in the entered amount, foreign-exchange movement, cancellation fee or the value a household receives. A high total is a prompt for a fair review, not an instruction to cancel. If two people pay for similar services, list them separately until the household confirms whether they overlap.
+
+## Assign a renewal decision and a real checkpoint
+
+Create a task for the review window, not just the provider's billing date. Include the owner, the source code, the question to answer and the date by which a decision is needed. “Review current use and cancellation terms” is more honest than “cancel service” when the household has not checked the terms. The dashboard can surface the task when it is due, but it will not send an alert while the browser is closed.
+
+Record the decision separately from the action. Keep, renew, downgrade, pause and ask the provider are different outcomes. If a cancellation is chosen, use the provider's official flow, save the confirmation or effective date in its protected location and reference it safely in FamilyBoard. A click, draft email or support ticket does not prove that future billing has stopped.
+
+## Close only after observing the result
+
+After the effective date, check the provider source or the next statement through the authorised account and update the FamilyBoard task with what was observed. If the charge still appears, leave the row open and follow the provider's dispute or support process. Do not mark the subscription inactive because a household member intended to cancel it.
+
+Review who can see the record before printing or displaying a handoff. A label can reveal a family member's habits even without a price. Keep private account details, payment evidence and correspondence out of shared views. Export a backup after a meaningful review and protect the file like the local database.
+
+Future affiliate links for storage, entertainment or budgeting products must sit outside the renewal decision, with a clear disclosure and an easy skip. A sponsored listing cannot change the annualized math or prove a provider cancelled billing.
+
+**Next step:** select one renewal within the next 30 days, verify its current source, calculate a comparable cost, assign the review owner and leave the result open until the provider outcome is observed.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.
