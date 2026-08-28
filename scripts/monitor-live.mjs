@@ -107,6 +107,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/photo-home-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/valuable-item-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/serial-number-tracker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/electronics-inventory/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/warranty-expiration/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/appliance-lifespan-planning/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1429,6 +1432,33 @@ const checks = [
       'hreflang="en"',
       "先分清型號與序號",
       "標籤照是校對證據",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/electronics-inventory/",
+    require: [
+      "家庭電子設備清冊",
+      'hreflang="en"',
+      "目前使用者和位置要隨事件更新",
+      "憑證不屬於一般清冊",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/warranty-expiration/",
+    require: [
+      "保固到期日怎麼算",
+      'hreflang="en"',
+      "真正的起算事件",
+      "full 和 limited 不是同一種保障",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/appliance-lifespan-planning/",
+    require: [
+      "家電壽命規劃",
+      'hreflang="en"',
+      "公開範圍要附來源與版本",
+      "年齡只是一個訊號",
     ],
   },
   {

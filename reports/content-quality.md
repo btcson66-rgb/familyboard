@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T06:50:25.140Z
+Generated: 2026-08-28T06:55:51.155Z
 
 ## Summary
 
-- Indexable pages: 677
-- Generated HTML routes: 696
+- Indexable pages: 680
+- Generated HTML routes: 699
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 379
+- Pages without a contextual product/tool link: 382
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,7 +22,7 @@ Generated: 2026-08-28T06:50:25.140Z
 - appliances: 56
 - maintenance: 81
 - household-operations: 109
-- inventory-warranty: 52
+- inventory-warranty: 55
 - records-emergency: 92
 - tools: 126
 
@@ -138,6 +138,7 @@ Generated: 2026-08-28T06:50:25.140Z
 - /zh-tw/guides/annual-renewal-calendar/
 - /zh-tw/guides/apartment-maintenance-checklist/
 - /zh-tw/guides/appliance-inventory/
+- /zh-tw/guides/appliance-lifespan-planning/
 - /zh-tw/guides/appliance-replacement-planning/
 - /zh-tw/guides/automatic-renewal-charge-dispute-taiwan/
 - /zh-tw/guides/bathroom-exhaust-fan-maintenance-checklist/
@@ -155,6 +156,7 @@ Generated: 2026-08-28T06:50:25.140Z
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/dishwasher-maintenance-checklist/
 - /zh-tw/guides/dryer-maintenance-checklist/
+- /zh-tw/guides/electronics-inventory/
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
 - /zh-tw/guides/fall-home-maintenance-checklist/
@@ -312,6 +314,7 @@ Generated: 2026-08-28T06:50:25.140Z
 - /zh-tw/guides/ups-battery-backup-records/
 - /zh-tw/guides/vacuum-cleaner-maintenance-guide/
 - /zh-tw/guides/valuable-item-inventory/
+- /zh-tw/guides/warranty-expiration/
 - /zh-tw/guides/washing-machine-maintenance-checklist/
 - /zh-tw/guides/water-filter-replacement-guide/
 - /zh-tw/guides/water-heater-maintenance-records/

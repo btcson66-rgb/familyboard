@@ -729,7 +729,7 @@
   },
   {
     "route": "/guides/electronics-inventory/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/electronics-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -777,7 +777,7 @@
   },
   {
     "route": "/guides/warranty-expiration/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/warranty-expiration/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -817,7 +817,7 @@
   },
   {
     "route": "/guides/appliance-lifespan-planning/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/appliance-lifespan-planning/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3230,6 +3230,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/appliance-lifespan-planning/",
+    "alternateRoute": "/guides/appliance-lifespan-planning/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/appliance-maintenance-checklist-generator/",
     "alternateRoute": "/tools/appliance-maintenance-checklist-generator/",
     "indexable": true,
@@ -3407,6 +3414,13 @@
   {
     "route": "/zh-tw/guides/dryer-maintenance-checklist/",
     "alternateRoute": "/guides/dryer-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/electronics-inventory/",
+    "alternateRoute": "/guides/electronics-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5313,6 +5327,13 @@
     "alternateRoute": "/tools/warranty-expiration-calculator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-20",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/warranty-expiration/",
+    "alternateRoute": "/guides/warranty-expiration/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
