@@ -48,6 +48,9 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-medical-information-source-handoff-log/",
     "/tools/caregiver-handoff-source-authorization-log/",
     "/tools/household-insurance-policy-source-version-log/",
+    "/tools/household-school-record-source-handoff-log/",
+    "/tools/household-mail-package-handoff-log/",
+    "/tools/household-plant-care-handoff-log/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -196,6 +199,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-caregiver-handoff-source-authorization-tutorial/",
     "/guides/familyboard-insurance-policy-source-version-tutorial/",
     "/zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/",
+    "/guides/familyboard-school-record-source-handoff-tutorial/",
+    "/zh-tw/guides/familyboard-school-record-source-handoff-tutorial/",
+    "/guides/familyboard-mail-package-handoff-log-tutorial/",
+    "/zh-tw/guides/familyboard-mail-package-handoff-log-tutorial/",
+    "/guides/familyboard-plant-care-handoff-log-tutorial/",
+    "/zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1701,6 +1710,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/",
       alternate: "/guides/familyboard-insurance-policy-source-version-tutorial/",
       heading: "FamilyBoard 家庭保單來源與版本教學：先確定文件組，再談下一步",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-school-record-source-handoff-tutorial/",
+      alternate: "/guides/familyboard-school-record-source-handoff-tutorial/",
+      heading: "FamilyBoard 學校紀錄來源交接教學：把學籍、出缺席與同意文件放回正確來源",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-mail-package-handoff-log-tutorial/",
+      alternate: "/guides/familyboard-mail-package-handoff-log-tutorial/",
+      heading: "FamilyBoard 郵件包裹交接教學：出門期間記錄保管，不暴露地址與追蹤碼",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/",
+      alternate: "/guides/familyboard-plant-care-handoff-log-tutorial/",
+      heading: "FamilyBoard 植物照護交接教學：出門時記錄觀察與責任，不自行診斷",
     },
   ]) {
     await page.goto(localized.route);

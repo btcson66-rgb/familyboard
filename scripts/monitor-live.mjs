@@ -726,6 +726,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-caregiver-handoff-source-authorization-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-insurance-policy-source-version-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-school-record-source-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-school-record-source-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-mail-package-handoff-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-mail-package-handoff-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-plant-care-handoff-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -6371,6 +6377,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/",
     require: ["家庭保單來源與版本教學", "文件組", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-school-record-source-handoff-tutorial/",
+    require: ["Household School Record Source and Handoff Log", "protected learner"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-school-record-source-handoff-tutorial/",
+    require: ["學校紀錄來源交接教學", "安全學生代號", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-mail-package-handoff-log-tutorial/",
+    require: ["Mail and Package Handoff Log", "custody"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-mail-package-handoff-log-tutorial/",
+    require: ["郵件包裹交接教學", "保管", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-plant-care-handoff-log-tutorial/",
+    require: ["Plant Care Handoff Log", "observations"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/",
+    require: ["植物照護交接教學", "觀察", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

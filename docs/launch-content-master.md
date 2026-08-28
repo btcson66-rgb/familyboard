@@ -33739,6 +33739,199 @@ Is the purpose safe and bounded? Is the insurer source attributable? Are declara
 
 ---
 
+## Page 464 — How to Use FamilyBoard's Household School Record Source and Handoff Log
+**Slug:** /guides/familyboard-school-record-source-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-school-record-source-handoff-tutorial/
+**Primary intent:** map school-record sources, protected learner matches and family handoffs without storing student details
+**Title tag:** FamilyBoard School Record Source Handoff Tutorial | Keep School Documents Findable
+**Meta description:** Learn how to use FamilyBoard's Household School Record Source and Handoff Log to connect responsible school sources, current versions and observed results without copying student records.
+**Primary keyword concept:** FamilyBoard school record source handoff tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-school-record-source-handoff-log/, /guides/organize-school-records-at-home/, /guides/familyboard-caregiver-handoff-source-authorization-tutorial/, /guides/familyboard-record-retrieval-drill-tutorial/
+**FAQ:**
+- Q: Does this log read a transcript, report card or support plan?
+  A: No. It points to the responsible protected source and records what the household observed; it cannot access or interpret a school record.
+- Q: Can a row authorize pickup, transport or a disclosure?
+  A: No. School, district, carrier, program and applicable consent processes control authority and acceptance.
+- Q: Does the next checkpoint calculate a school deadline?
+  A: No. It is a household follow-up date, not an enrollment, attendance, support, payment or appeal deadline.
+- Q: What should happen when identity or consent sources conflict?
+  A: Leave the row open, name the responsible school or qualified review route and keep evidence protected.
+
+**Contextual CTA:** Map one learner-safe source and the next family handoff, then keep official records and decisions with the responsible institution.
+
+# How to Use FamilyBoard's Household School Record Source and Handoff Log
+
+Enrollment, attendance, report cards, learning support, school health, transport, activities and consent may each have a different owner. The free [Household School Record Source and Handoff Log](/tools/household-school-record-source-handoff-log/) creates a dated map of responsible sources, protected learner-match evidence, current-version observations and family actions without copying names, grades or private messages. It cannot sign in to a school portal, amend a record, grant pickup authority or interpret education, health or support decisions.
+
+## Start with one purpose and a safe learner alias
+
+Use `SCHOOL-RECORDS-2026-A` and an alias such as `LEARNER-HOUSEHOLD-A`. Choose one context: a new-year source map, transfer, attendance handoff, records request, support meeting, school-health source, transport change, activity or consent review. The purpose says what the household must locate; it must not contain a full name, student number, birth date, diagnosis or classroom details.
+
+## Name the responsible source before the receiving role
+
+Point to a registrar, school office, district portal, teacher, student-services team, health office, transport provider or activity program and state which record role it controls. A family memory, old email or search result is not a controlling source. Keep complete records, signed forms, credentials and contact details in the protected institution or household process.
+
+## Preserve twelve layers instead of a copied profile
+
+Separate the safe learner alias, purpose, responsible source, protected match and checked date, current version, access and custody, status source, family action, discrepancy route, owner, target date and status. This prevents “portal opened” from becoming “the current record for the right learner was confirmed.” A protected pointer can identify evidence type without exposing its contents.
+
+## Treat access, acceptance and results as different events
+
+Record whether a caregiver opened the protected source, whether a school acknowledged an action and what official result was observed. Submitting a form, paying a fee or sending a pickup request is only an action. Keep the row open until the responsible school, agency, carrier or program provides a result. A generated handoff cannot excuse an absence, change a route or prove consent.
+
+## Protect health, support and consent content
+
+The index may point to a school-health office, counselor, special-education team or consent process, but it must not copy diagnosis, medication, evaluation score, accommodation, service minute, discipline narrative or signature. If identity, safety, authority or support sources conflict, use the responsible school, healthcare, education-agency or qualified route. FamilyBoard cannot diagnose or assess eligibility.
+
+## Use academic-year or role change as a new version
+
+When a learner changes school, grade, transport, activity, support team or caregiver, create a new source version and preserve the previous review. The next checkpoint is a household reminder, not a legal or institutional deadline. Record who owns the next check and what evidence must be observed.
+
+## Privacy and optional commercial content
+
+This browser tool is a local index, not a student-record repository. Export before clearing data, protect originals and restrict each handoff to the minimum useful audience. Do not put identifiers, credentials or private correspondence in analytics or future affiliate placements. Any school-supply recommendation must be optional, disclosed and never imply school approval or record security.
+
+## Eight-question closeout
+
+Is the purpose bounded and the learner alias safe? Is the controlling source named? Is protected matching separate? Is the current version dated? Are access, action and result distinct? Are health, support and consent details protected? Did a qualified source receive every conflict? Were pickup and attendance decisions left to the institution? If not, leave the handoff open.
+
+---
+
+## Page 465 — How to Use FamilyBoard's Mail and Package Handoff Log
+**Slug:** /guides/familyboard-mail-package-handoff-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-mail-package-handoff-log-tutorial/
+**Primary intent:** coordinate household mail and package coverage while away without storing addresses, tracking numbers or correspondence contents
+**Title tag:** FamilyBoard Mail and Package Handoff Tutorial | Track Custody Without Exposing Delivery Details
+**Meta description:** Learn how to use FamilyBoard's Mail and Package Handoff Log to record coverage windows, safe source pointers, custody observations and return review without copying addresses or tracking numbers.
+**Primary keyword concept:** FamilyBoard mail package handoff tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-mail-package-handoff-log/, /guides/travel-household-handoff/, /guides/familyboard-home-handoff-summary-generator-tutorial/, /guides/familyboard-household-return-handoff-tutorial/
+**FAQ:**
+- Q: Does the log prove a carrier delivered an item?
+  A: No. It records a household observation; use the carrier, postal service, building or sender source for delivery facts.
+- Q: Should I enter an address or tracking number?
+  A: No. Use safe codes and keep delivery identifiers in the protected original source.
+- Q: Can I paste a letter's contents or parcel label?
+  A: No. Record only the minimum category, custody observation and next action.
+- Q: Does a closed row prove an item was secure or undamaged?
+  A: No. It closes this dated handoff review, not a carrier, building or insurance finding.
+
+**Contextual CTA:** Set a safe coverage window, assign custody and record the return review without turning a household index into a delivery claim.
+
+# How to Use FamilyBoard's Mail and Package Handoff Log
+
+When someone is away, mail and packages become a responsibility: who checks the approved location, which source can answer a delivery question and what must be reviewed after returning? The free [Mail and Package Handoff Log](/tools/household-mail-package-handoff-log/) keeps the window, safe source code, custody role, observation and follow-up separate. It does not read correspondence, expose addresses, store tracking numbers or guarantee delivery or security.
+
+## Define the absence or return window
+
+Use `MAIL-COVER-2026-A` for a weekend away, extended travel, move, building hold or return-home sweep. Start and end dates explain why a row exists and when it should be reviewed; they are household planning dates, not carrier promises.
+
+## Use safe source and location references
+
+Write `BUILDING-HOLD-A`, `POSTAL-SOURCE-B` or `TRUSTED-CUSTODY-C` instead of an address, unit number, mailbox key, tracking number, sender name or full recipient name. Keep labels, photos, access details and private correspondence in the protected source that needs them.
+
+## Separate expectation, observation and custody
+
+“A neighbour may check Friday” is an expectation. “The building notice was seen” is an observation. “The parcel was handed to the return owner” is custody. Record them separately so a plan cannot become proof of delivery. If an item is missing or visibly affected, leave the row open and contact the carrier, building or sender.
+
+## Close with a return-home review
+
+At return, compare the safe category and custody observation with the protected original source. Record what was found, what remains unknown and who owns the next contact. Do not paste correspondence into the row or rewrite an earlier plan; a later carrier response is a new dated observation.
+
+## Privacy and future recommendations
+
+The log runs in the browser and creates a household index, not a postal record. Export before clearing data and limit printed copies. Any future recommendation for parcel bins, labels or storage supplies must be optional, disclosed and outside the handoff controls; it cannot imply carrier endorsement, security certification or insurance coverage.
+
+## Give each handoff role a narrow job
+
+A neighbour may only check an approved holding area, a building desk may only acknowledge a notice, and the returning household member may reconcile the protected original. Write the role, window and return method separately so one person is not assumed to have access to every location or correspondence. If a role changes, open a new row with a new owner rather than editing the previous custody history. This makes a short trip, a move and a long absence distinguishable when the household reviews what actually happened.
+
+## Escalate exceptions to the controlling source
+
+An unrecognised parcel, damaged envelope, missing notice or unexpected delivery belongs with the carrier, postal service, building, sender or other responsible source. FamilyBoard can record that the question was raised, the date and the next owner, but it cannot authenticate a label, decide liability or promise a response. Keep photos, receipts and private correspondence in the protected source and link only a safe evidence pointer. A later answer should be added as a new observation so the original uncertainty remains visible.
+
+## Eight-question closeout
+
+Is the window bounded? Are source and location codes safe? Are expected times distinct from custody? Is each next action owned? Are missing or condition questions open? Were addresses, tracking numbers and correspondence protected? Did the household consult the responsible delivery source? Was return review recorded separately? If not, keep the handoff open.
+
+---
+
+## Page 466 — How to Use FamilyBoard's Plant Care Handoff Log
+**Slug:** /guides/familyboard-plant-care-handoff-log-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/
+**Primary intent:** coordinate plant-care handoffs with safe references, observations and return review without diagnosing plants or exposing access details
+**Title tag:** FamilyBoard Plant Care Handoff Tutorial | Coordinate Care While You Are Away
+**Meta description:** Learn how to use FamilyBoard's Plant Care Handoff Log to record care windows, safe source pointers, observations, owner roles and return review without diagnosing plants or storing private access details.
+**Primary keyword concept:** FamilyBoard plant care handoff tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-plant-care-handoff-log/, /guides/travel-household-handoff/, /guides/familyboard-household-return-handoff-tutorial/, /guides/familyboard-home-handoff-summary-generator-tutorial/
+**FAQ:**
+- Q: Does this tool tell me how often to water a plant?
+  A: No. It organizes a handoff; use care notes or a qualified gardening source for decisions.
+- Q: Should I enter my address or access code for a caretaker?
+  A: No. Keep access details in a separate controlled process and use a safe reference here.
+- Q: Does a completed row prove a plant is healthy?
+  A: No. It records an observed action or review, not plant health, survival or pest status.
+- Q: What if weather or condition changes during the trip?
+  A: Record the new observation, route questions to the care source and reopen the next action rather than guessing a diagnosis.
+
+**Contextual CTA:** Define a short care window, point to protected notes and let the caretaker report observations without making plant-health claims.
+
+# How to Use FamilyBoard's Plant Care Handoff Log
+
+Travel, heat, cold and schedule changes can leave plant care buried in a text thread. The free [Plant Care Handoff Log](/tools/household-plant-care-handoff-log/) turns that thread into a dated handoff: which broad group needs a look, where care notes live, who owns the next action and what was observed on return. It does not diagnose a plant, prescribe watering, store a home address or guarantee survival.
+
+## Bound the care window and plant group
+
+Use `PLANT-REVIEW-2026-A` and a broad group such as “indoor shelf” or “balcony pots.” Choose travel, seasonal change, move, sitter handoff or return-home check. Avoid plant names tied to an address, private messages or access instructions. A bounded group gives the caretaker enough scope without exposing an unnecessary inventory.
+
+## Point to the real care source
+
+Reference a protected care note, nursery label, household photo folder or trusted gardening source by safe ID. Record where the current note is held and who can answer questions, but do not copy access codes or private contacts. A pointer is safer than a paraphrase that becomes stale when light, container or season changes.
+
+## Record observations instead of diagnoses
+
+“Soil surface appeared dry” and “leaf damage was noticed” are observations that can trigger a question. They are not proof of dehydration, disease, pest identity or toxicity. Follow the protected care note and consult a qualified gardening source when unclear. Record observation, date, owner and next check—not an invented treatment.
+
+## Separate planned action from completed review
+
+“A backup role may look on Saturday” is a plan. “The approved care note was checked and an observation recorded” is an action. Leave the row open when a visit, photo or return review is missing. If weather or condition changes, add a new event so the timeline preserves what was known at each point.
+
+## Keep access and privacy outside the shared row
+
+This is a browser-local index. Keep addresses, keys, alarm details, phone numbers and private messages in a separate controlled process. Export before clearing data and share only the minimum reference. Future affiliate items for watering cans, shade cloth or trays must be disclosed, optional and never claim suitability for a particular plant.
+
+## Design a backup for weather and absence changes
+
+When a trip extends, a heat wave arrives or a caretaker cannot visit, record the new event and assign a backup role instead of silently changing the original plan. The backup needs the protected note, broad group and escalation route—not a full home profile. Use a new target date and keep the earlier expected visit visible. A weather observation may explain why a question was raised, but it is not a forecast or a diagnosis; uncertain care choices belong with the original note or a qualified gardening source.
+
+## Review the handoff when returning home
+
+At return, compare the safe group and dated observations with the protected photos or care notes. Mark which planned visits were observed, which were missed and which questions still need an owner. Do not close a row merely because someone said “it was watered”; record the source, date and scope of that observation. If the household changes light, container or placement, create a new version so later caretakers can tell which note was current at the time.
+
+## Eight-question closeout
+
+Is the window short and clear? Is the group broad enough to avoid exposure? Does the pointer lead to current notes? Are observations separated from diagnoses? Are planned and completed visits distinct? Is each next action owned? Were access details protected? Did uncertain questions go to the real care source? If not, keep the handoff open.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

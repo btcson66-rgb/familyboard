@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T17:18:19.033Z
+Generated: 2026-08-28T17:32:30.340Z
 
 ## Summary
 
-- Indexable pages: 865
-- Generated HTML routes: 871
+- Indexable pages: 871
+- Generated HTML routes: 877
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 491
+- Duplicate primary-keyword groups: 11
+- Pages without a contextual product/tool link: 494
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,8 +22,8 @@ Generated: 2026-08-28T17:18:19.033Z
 - inventory-warranty: 72
 - appliances: 64
 - maintenance: 86
-- household-operations: 161
-- records-emergency: 126
+- household-operations: 165
+- records-emergency: 128
 - tools: 152
 
 ## Word-count range
@@ -47,6 +47,7 @@ Generated: 2026-08-28T17:18:19.033Z
 ## Duplicate primary keywords
 
 - caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
+- familyboard plant care handoff tutorial: /guides/familyboard-plant-care-handoff-log-tutorial/, /guides/familyboard-plant-care-handoff-tutorial/
 - household account list: /guides/household-account-list/, /tools/household-account-list/
 - 家電清冊: /zh-tw/guides/appliance-inventory/, /zh-tw/templates/printable-appliance-inventory/
 - 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
@@ -246,6 +247,7 @@ Generated: 2026-08-28T17:18:19.033Z
 - /zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/
 - /zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/
 - /zh-tw/guides/familyboard-internet-incident-tutorial/
+- /zh-tw/guides/familyboard-mail-package-handoff-log-tutorial/
 - /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
 - /zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/
 - /zh-tw/guides/familyboard-maintenance-history-review/
@@ -262,6 +264,7 @@ Generated: 2026-08-28T17:18:19.033Z
 - /zh-tw/guides/familyboard-pantry-review-tutorial/
 - /zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/
 - /zh-tw/guides/familyboard-photo-inventory-tutorial/
+- /zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/
 - /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
 - /zh-tw/guides/familyboard-power-outage-event-log-tutorial/
 - /zh-tw/guides/familyboard-private-family-organizer-tutorial/
@@ -282,6 +285,7 @@ Generated: 2026-08-28T17:18:19.033Z
 - /zh-tw/guides/familyboard-school-activity-handoff-tutorial/
 - /zh-tw/guides/familyboard-school-closure-continuity-tutorial/
 - /zh-tw/guides/familyboard-school-pickup-handoff-tutorial/
+- /zh-tw/guides/familyboard-school-record-source-handoff-tutorial/
 - /zh-tw/guides/familyboard-seasonal-reset-tutorial/
 - /zh-tw/guides/familyboard-service-appointment-handoff-tutorial/
 - /zh-tw/guides/familyboard-service-quote-comparison-tutorial/

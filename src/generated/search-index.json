@@ -3576,6 +3576,30 @@
     "headings": "How to Use FamilyBoard's Insurance Policy Source and Version Log Start with a policy purpose, not a policy number Map legal-entity and issued-document evidence Keep forms and endorsements connected Observe access without claiming completeness Treat status and complaint routes as separate evidence Preserve ended and replaced sets Privacy and commercial boundaries Eight-question closeout"
   },
   {
+    "title": "FamilyBoard School Record Source Handoff Tutorial | Keep School Documents Findable",
+    "description": "Learn how to use FamilyBoard's Household School Record Source and Handoff Log to connect responsible school sources, current versions and observed results without copying student records.",
+    "route": "/guides/familyboard-school-record-source-handoff-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard school record source handoff tutorial",
+    "headings": "How to Use FamilyBoard's Household School Record Source and Handoff Log Start with one purpose and a safe learner alias Name the responsible source before the receiving role Preserve twelve layers instead of a copied profile Treat access, acceptance and results as different events Protect health, support and consent content Use academic-year or role change as a new version Privacy and optional commercial content Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Mail and Package Handoff Tutorial | Track Custody Without Exposing Delivery Details",
+    "description": "Learn how to use FamilyBoard's Mail and Package Handoff Log to record coverage windows, safe source pointers, custody observations and return review without copying addresses or tracking numbers.",
+    "route": "/guides/familyboard-mail-package-handoff-log-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard mail package handoff tutorial",
+    "headings": "How to Use FamilyBoard's Mail and Package Handoff Log Define the absence or return window Use safe source and location references Separate expectation, observation and custody Close with a return-home review Privacy and future recommendations Give each handoff role a narrow job Escalate exceptions to the controlling source Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Plant Care Handoff Tutorial | Coordinate Care While You Are Away",
+    "description": "Learn how to use FamilyBoard's Plant Care Handoff Log to record care windows, safe source pointers, observations, owner roles and return review without diagnosing plants or storing private access details.",
+    "route": "/guides/familyboard-plant-care-handoff-log-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard plant care handoff tutorial",
+    "headings": "How to Use FamilyBoard's Plant Care Handoff Log Bound the care window and plant group Point to the real care source Record observations instead of diagnoses Separate planned action from completed review Keep access and privacy outside the shared row Design a backup for weather and absence changes Review the handoff when returning home Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
