@@ -107,6 +107,8 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-utility-bill-difference-tutorial/",
     "/guides/familyboard-time-window-overlap-checker-tutorial/",
     "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
+    "/guides/familyboard-date-offset-planner-tutorial/",
+    "/zh-tw/guides/familyboard-date-offset-planner-tutorial/",
     "/tools/household-date-offset-planner/",
     "/zh-tw/tools/household-date-offset-planner/",
   ]) {
@@ -689,6 +691,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-time-window-overlap-checker/",
     "/guides/familyboard-time-window-overlap-checker-tutorial/",
     "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
+    "/guides/familyboard-date-offset-planner-tutorial/",
+    "/zh-tw/guides/familyboard-date-offset-planner-tutorial/",
     "/zh-tw/features/home-inventory-tracker/",
     "/zh-tw/features/family-task-manager/",
     "/zh-tw/features/home-dashboard/",
@@ -1665,6 +1669,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
       alternate: "/guides/familyboard-time-window-overlap-checker-tutorial/",
       heading: "FamilyBoard 時間窗口重疊檢查教學：不貼整份行事曆也能看懂結果",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-date-offset-planner-tutorial/",
+      alternate: "/guides/familyboard-date-offset-planner-tutorial/",
+      heading: "家庭日期偏移規劃器教學：把算出的日期變成可複查行動",
     },
     {
       route: "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",

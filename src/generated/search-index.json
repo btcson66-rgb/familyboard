@@ -2976,6 +2976,14 @@
     "headings": "家庭日期偏移規劃器：從確認日期整理下一次複查 先輸入窄範圍用途 基準日期要回到正式來源 使用正負整數加減日數 把規劃日當成提示，不是證明 搭配正確的 FamilyBoard 紀錄 隱私與 affiliate 界線 用五項資料收尾"
   },
   {
+    "title": "How to Use FamilyBoard's Date Offset Planner | Follow-Up Guide",
+    "description": "Learn how to use FamilyBoard's date offset planner for maintenance reviews, handoffs and follow-ups without confusing a calculated date with an official deadline.",
+    "route": "/guides/familyboard-date-offset-planner-tutorial/",
+    "cluster": "product",
+    "keywords": "date offset planner tutorial",
+    "headings": "How to Use FamilyBoard's Date Offset Planner for a Follow-Up You Can Defend Start with the source-defined anchor Use a purpose that another person can recognise Sign the direction and the number Convert the result into an owned action Preserve changes instead of rewriting history Share the minimum necessary view Close the loop with the observed answer"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

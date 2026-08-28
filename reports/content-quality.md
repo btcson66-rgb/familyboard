@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T09:52:10.930Z
+Generated: 2026-08-28T10:02:21.189Z
 
 ## Summary
 
-- Indexable pages: 739
-- Generated HTML routes: 745
+- Indexable pages: 741
+- Generated HTML routes: 747
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 413
+- Pages without a contextual product/tool link: 414
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 130
+- product: 132
 - inventory-warranty: 60
 - appliances: 56
 - maintenance: 82
@@ -35,6 +35,7 @@ Generated: 2026-08-28T09:52:10.930Z
 
 - 381-zh-tw--tools--household-time-window-overlap-checker.md ↔ 383-zh-tw--guides--familyboard-time-window-overlap-checker-tutorial.md: 0.267
 - 292-zh-tw--tools--household-shopping-list-planner.md ↔ 293-zh-tw--guides--familyboard-shopping-list-planner-tutorial.md: 0.240
+- 385-zh-tw--tools--household-date-offset-planner.md ↔ 387-zh-tw--guides--familyboard-date-offset-planner-tutorial.md: 0.171
 - 227-tools--household-pet-record-source-handoff-log.md ↔ 228-tools--household-school-record-source-handoff-log.md: 0.170
 - 289-zh-tw--tools--household-router-support-review-log.md ↔ 290-zh-tw--guides--familyboard-router-support-review-tutorial.md: 0.159
 - 381-zh-tw--tools--household-time-window-overlap-checker.md ↔ 385-zh-tw--tools--household-date-offset-planner.md: 0.159
@@ -173,6 +174,7 @@ Generated: 2026-08-28T09:52:10.930Z
 - /zh-tw/guides/familyboard-building-notice-response-tutorial/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-consumable-change-history-tutorial/
+- /zh-tw/guides/familyboard-date-offset-planner-tutorial/
 - /zh-tw/guides/familyboard-device-retirement-tutorial/
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
 - /zh-tw/guides/familyboard-documents-source-review-tutorial/

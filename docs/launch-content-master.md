@@ -29240,6 +29240,124 @@ Save the neutral code, the exact anchor date, the signed offset, the planned dat
 
 保存中性代號、精確基準日、正負偏移、規劃日、受保護來源指標和一位負責確認的人。確認後另記實際回覆，不要把「算出日期」直接寫成「已核准」。這個小小交接能讓家庭有可討論的日期，又不會讓複製來的數字變成未查證的承諾。
 
+## Page 386 — How to Use the Household Date Offset Planner for Real Follow-ups
+**Slug:** /guides/familyboard-date-offset-planner-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-date-offset-planner-tutorial/
+**Primary intent:** teach households to turn a confirmed date and a day offset into an owned, source-checked follow-up
+**Title tag:** How to Use FamilyBoard's Date Offset Planner | Follow-Up Guide
+**Meta description:** Learn how to use FamilyBoard's date offset planner for maintenance reviews, handoffs and follow-ups without confusing a calculated date with an official deadline.
+**Primary keyword concept:** date offset planner tutorial
+**Cluster:** product
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-date-offset-planner/, /guides/home-maintenance-reminders/, /tools/household-event-duration-calculator/, /zh-tw/guides/familyboard-date-offset-planner-tutorial/
+**FAQ:**
+- Q: Should the offset be based on the day I entered the record or the day the work happened?
+  A: Use the date the controlling source actually defines, such as completion, receipt or notice date, and keep that source pointer beside the calculation.
+- Q: Does a seven-day offset create an automatic reminder?
+  A: No. It produces a planning date. Create a separate owned task or use the responsible calendar if the follow-up must trigger an alert.
+- Q: What if the source changes after I calculate?
+  A: Create a new dated calculation with a new review code. Keep the earlier result as an observation instead of silently overwriting history.
+- Q: Can I share the output with a contractor or school?
+  A: Share only the bounded purpose and the information that recipient needs. Keep addresses, access codes, account details and the original notice in the controlling system.
+
+# How to Use FamilyBoard's Date Offset Planner for a Follow-Up You Can Defend
+
+“Check again in seven days” sounds clear until a household asks: seven days from which event, who owns the check and where did the instruction come from? FamilyBoard's [Household Date Offset Planner](/tools/household-date-offset-planner/) answers only the arithmetic. This guide shows how to turn that result into a small, reviewable follow-up without presenting a calculated date as a promise.
+
+## Start with the source-defined anchor
+
+The anchor is not automatically the day you opened FamilyBoard. It might be the date a filter was replaced, the date a provider sent a notice, the date a handoff was observed or the date a warranty term says it begins. Read the source first and record a neutral pointer such as `MANUAL-C1` or `NOTICE-C2`. If the source uses receipt time, a time zone or business days, note that rule for the responsible person instead of forcing it into a plain calendar-day calculation.
+
+## Use a purpose that another person can recognise
+
+Enter a short label such as “filter review,” “return-window check” or “post-trip reset.” A good label tells a household member why the date exists while avoiding the personal details that make a shared note risky. Do not paste the full email, address, phone number, access code or account identifier. The tool's privacy check is a reminder to keep the source content where it already has the right access controls.
+
+## Sign the direction and the number
+
+Positive seven means seven calendar days after the anchor; negative two means two days before it; zero means the same day. Write the signed value beside the result so a later reader can reproduce it. The planner handles month boundaries and leap days, but it does not skip weekends, convert business days or estimate travel time. If the source says “next business day,” leave that interpretation to the responsible role or an appropriate official calendar.
+
+## Convert the result into an owned action
+
+A planning date becomes useful when a person has a specific next action. Create a FamilyBoard task such as “Check filter condition against manual,” assign an owner and put the planned date in its due-date field. The task is separate from the calculation: completing it records what the household actually did, while the offset record explains why that date was chosen. If the date is informational only, keep it as a note and do not imply that an alert will fire.
+
+## Preserve changes instead of rewriting history
+
+If a provider moves the appointment or a notice is replaced, do not edit the old result until it appears to match. Run the planner again with a new code and anchor, then record “old source superseded” and the new source pointer. This creates a short chain: source observation, calculation, assigned check and observed reply. The [Household Event Duration Calculator](/tools/household-event-duration-calculator/) is a better fit when you need to measure the time between two observations rather than plan the next one.
+
+## Share the minimum necessary view
+
+Before handing the result to a contractor, school or family backup, read it as that person would. A purpose, planned date and next action may be enough; an address, gate code, account number or full notice is not. Keep sensitive originals in their controlling service and use a protected pointer. Future date books or reminder products may be shown outside the result only with a clear affiliate disclosure and an easy skip; no product can change an official deadline or guarantee acceptance.
+
+## Close the loop with the observed answer
+
+On the planned date, record what the responsible role actually found: “manual checked,” “source still pending,” “provider confirmed new date” or “not applicable because the source changed.” Do not mark the original calculation as proof that the work happened. This distinction gives the household a practical review habit while keeping authority with the source and the person who can verify it.
+
+## Page 387 — 家庭日期偏移規劃器教學：把算出的日期變成可複查行動
+**Slug:** /zh-tw/guides/familyboard-date-offset-planner-tutorial/
+**Alternate route:** /guides/familyboard-date-offset-planner-tutorial/
+**Primary intent:** 教台灣家庭從正式來源的基準日加減天數，建立有負責人、來源與實際回覆的複查行動
+**Title tag:** 家庭日期偏移規劃器教學｜把算出的日期變成可複查行動｜FamilyBoard
+**Meta description:** 教你用 FamilyBoard 日期偏移規劃器整理保養、交接與回訪日期，不把算術結果誤當正式期限或自動提醒。
+**Primary keyword concept:** 家庭日期偏移規劃器教學
+**Cluster:** product
+**Page type:** content
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/household-date-offset-planner/, /zh-tw/guides/home-maintenance-reminders/, /zh-tw/tools/household-event-duration-calculator/, /guides/familyboard-date-offset-planner-tutorial/
+**FAQ:**
+- Q: 應該從輸入紀錄的日期，還是事情實際發生的日期開始算？
+  A: 使用正式來源真正定義的完成日、收件日或通知日，並把來源指標和計算一起保存。
+- Q: 加七天會自動建立提醒嗎？
+  A: 不會。工具只產生規劃日期；需要通知時，另外建立有負責人的家庭任務或使用正式行事曆。
+- Q: 算完後來源改日期怎麼辦？
+  A: 用新代號和新基準日重新計算，保留舊結果作為觀察，不要默默覆寫歷史。
+- Q: 可以把結果分享給師傅或學校嗎？
+  A: 只分享對方真正需要的用途和日期；地址、門禁碼、帳號與完整通知留在控制它的受保護系統。
+
+# 家庭日期偏移規劃器教學：把算出的日期變成可複查行動
+
+「七天後再確認」聽起來很清楚，但家庭很快會追問：從哪一天開始算、誰負責、指示來自哪裡？FamilyBoard 的[家庭日期偏移規劃器](/zh-tw/tools/household-date-offset-planner/)只回答日期算術。本教學把結果接成一個可回頭查的複查流程，不把算出的日期包裝成承諾。
+
+## 先找出來源定義的基準日
+
+基準日不一定是你打開 FamilyBoard 的那天，可能是濾網換好的日期、業者寄出通知的日期、觀察到交接完成的日期，或保固條款寫的起算日。先讀正式來源，再用 `MANUAL-C1`、`NOTICE-C2` 這類中性指標保存位置。若來源採收件時間、時區或工作日規則，請把規則交給負責角色解讀，不要硬塞進單純的日曆天數。
+
+## 用別人看得懂又不洩漏資料的用途
+
+輸入「濾網複查」「退貨窗口確認」或「旅行後整理」等短標籤，讓家人知道日期為何存在，同時避免把個人細節放進共享紀錄。不要貼完整 Email、地址、電話、門禁碼或帳號。工具的隱私檢查是在提醒你：原始內容應留在已有適當權限的正式系統。
+
+## 把正負方向和數字一起留下
+
+正七代表基準日後七個日曆天，負二代表基準日前兩天，零則是同一天。結果旁邊寫出正負數，下一位家人才能重做。工具會處理跨月、跨年和閏日，但不會跳過週末、不會換算工作日，也不會估算路程；來源若寫「下一個工作日」，應由負責角色或適當正式行事曆確認。
+
+## 把規劃日接成有負責人的行動
+
+有具體下一步和負責人時，建立家庭任務，例如「依手冊確認濾網狀況」，把規劃日放進到期日。任務和日期計算是兩件事：完成任務會記錄家庭實際做了什麼，偏移紀錄則解釋為何選這天。若只是參考日期，留在備註即可，不要讓家人以為工具會自動發通知。
+
+## 來源變動時新增版本，不要改寫歷史
+
+業者改期或通知換版時，不要因為舊結果看起來相近就直接修改。用新的代號和基準日再算一次，補上「舊來源已被取代」與新指標。這會留下短鏈：來源觀察、日期算術、負責複查和實際回覆。若要計算兩次觀察相隔多久，改用[家庭事件經過時間計算器](/zh-tw/tools/household-event-duration-calculator/)，不要把兩種問題混在同一個欄位。
+
+## 分享前只留下必要視圖
+
+把結果交給師傅、學校或備援家人前，站在對方角度重讀一次。用途、規劃日和下一步可能已足夠；門牌、門禁碼、帳號或完整通知不應出現在這裡。敏感原件留在受保護服務，用來源指標交接。未來若推薦日期用品或提醒商品，必須放在結果之外、清楚揭露 affiliate 關係並可略過；商品不能改變正式期限或保證對方接受。
+
+## 用實際回覆結束這一輪
+
+到了規劃日，記下負責角色真的看到什麼：「已依手冊確認」「來源仍待回覆」「業者確認新日期」或「來源變更所以不適用」。不要把「日期算出來」標成「工作已完成」。這個差異讓家庭有可執行的複查習慣，也把權限留給能查證正式來源的人。
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.
