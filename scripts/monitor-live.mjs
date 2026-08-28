@@ -581,6 +581,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/household-admin-day/</loc>",
       "<loc>https://familyboard.win/guides/service-provider-contact-list/</loc>",
       "<loc>https://familyboard.win/guides/household-shopping-staples/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/household-admin-day/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/service-provider-contact-list/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/household-shopping-staples/</loc>",
     ],
     forbid: [
       "<loc>https://familyboard.win/app/</loc>",
@@ -5410,6 +5413,33 @@ const checks = [
       "Household Shopping Staples",
       "Keep the list intentionally small",
       "Choose an observable restock trigger",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/household-admin-day/",
+    require: [
+      "家庭行政日",
+      "先從平日真的卡住的事情建立佇列",
+      "用 30 分鐘處理一到三件高價值事項",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/zh-tw/guides/service-provider-contact-list/",
+    require: [
+      "家庭服務商聯絡清單",
+      "先用住宅系統分類，再填入服務商",
+      "保存一次服務的完整事件鏈",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/zh-tw/guides/household-shopping-staples/",
+    require: [
+      "家庭日用品清單",
+      "先從一次臨時採買找出真正需求",
+      "讓補貨觸發可以被任何家人看見",
+      'hreflang="en"',
     ],
   },
 ];

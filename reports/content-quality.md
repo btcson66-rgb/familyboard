@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T07:58:07.632Z
+Generated: 2026-08-28T08:05:04.488Z
 
 ## Summary
 
-- Indexable pages: 703
-- Generated HTML routes: 719
+- Indexable pages: 706
+- Generated HTML routes: 722
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 398
+- Pages without a contextual product/tool link: 401
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-28T07:58:07.632Z
 - product: 120
 - appliances: 56
 - maintenance: 82
-- household-operations: 127
+- household-operations: 130
 - inventory-warranty: 56
 - records-emergency: 93
 - tools: 128
@@ -266,12 +266,14 @@ Generated: 2026-08-28T07:58:07.632Z
 - /zh-tw/guides/house-sitter-information/
 - /zh-tw/guides/household-account-list/
 - /zh-tw/guides/household-admin-backup-person/
+- /zh-tw/guides/household-admin-day/
 - /zh-tw/guides/household-documents-organizer/
 - /zh-tw/guides/household-event-source-check-taiwan/
 - /zh-tw/guides/household-management-checklist/
 - /zh-tw/guides/household-medical-information-organization/
 - /zh-tw/guides/household-monthly-review/
 - /zh-tw/guides/household-replacement-reserve/
+- /zh-tw/guides/household-shopping-staples/
 - /zh-tw/guides/household-supplies-inventory/
 - /zh-tw/guides/household-weekly-reset/
 - /zh-tw/guides/how-long-to-keep-household-records/
@@ -317,6 +319,7 @@ Generated: 2026-08-28T07:58:07.632Z
 - /zh-tw/guides/seasonal-home-maintenance-checklist/
 - /zh-tw/guides/serial-number-tracker/
 - /zh-tw/guides/service-history/
+- /zh-tw/guides/service-provider-contact-list/
 - /zh-tw/guides/smoke-alarm-records/
 - /zh-tw/guides/solar-panel-maintenance-records/
 - /zh-tw/guides/spring-home-maintenance-checklist/

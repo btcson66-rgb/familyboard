@@ -1145,7 +1145,7 @@
   },
   {
     "route": "/guides/household-admin-day/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/household-admin-day/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -1201,7 +1201,7 @@
   },
   {
     "route": "/guides/service-provider-contact-list/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/service-provider-contact-list/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -1209,7 +1209,7 @@
   },
   {
     "route": "/guides/household-shopping-staples/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/household-shopping-staples/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -4428,6 +4428,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/household-admin-day/",
+    "alternateRoute": "/guides/household-admin-day/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/household-annual-review-generator/",
     "alternateRoute": "/tools/household-annual-review-generator/",
     "indexable": true,
@@ -4831,6 +4838,13 @@
     "alternateRoute": "/tools/household-shopping-list-planner/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/household-shopping-staples/",
+    "alternateRoute": "/guides/household-shopping-staples/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -5335,6 +5349,13 @@
     "alternateRoute": "/guides/service-history/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/service-provider-contact-list/",
+    "alternateRoute": "/guides/service-provider-contact-list/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
