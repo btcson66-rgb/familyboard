@@ -609,7 +609,7 @@
   },
   {
     "route": "/guides/garbage-disposal-maintenance-guide/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/garbage-disposal-maintenance-guide/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -633,7 +633,7 @@
   },
   {
     "route": "/guides/vacuum-cleaner-maintenance-guide/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/vacuum-cleaner-maintenance-guide/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -697,7 +697,7 @@
   },
   {
     "route": "/guides/home-inventory-for-insurance/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-inventory-for-insurance/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -4000,6 +4000,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/garbage-disposal-maintenance-guide/",
+    "alternateRoute": "/guides/garbage-disposal-maintenance-guide/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/heat-pump-maintenance-records/",
     "alternateRoute": "/guides/heat-pump-maintenance-records/",
     "indexable": true,
@@ -4137,6 +4144,13 @@
     "alternateRoute": "/tools/home-inventory-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-inventory-for-insurance/",
+    "alternateRoute": "/guides/home-inventory-for-insurance/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -5229,6 +5243,13 @@
     "alternateRoute": "/tools/vacation-shutdown-checklist-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/vacuum-cleaner-maintenance-guide/",
+    "alternateRoute": "/guides/vacuum-cleaner-maintenance-guide/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

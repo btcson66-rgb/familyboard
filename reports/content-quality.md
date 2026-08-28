@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T06:32:53.420Z
+Generated: 2026-08-28T06:39:13.870Z
 
 ## Summary
 
-- Indexable pages: 668
-- Generated HTML routes: 687
+- Indexable pages: 671
+- Generated HTML routes: 690
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 370
+- Pages without a contextual product/tool link: 373
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,10 +19,10 @@ Generated: 2026-08-28T06:32:53.420Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 52
+- appliances: 54
 - maintenance: 81
 - household-operations: 109
-- inventory-warranty: 47
+- inventory-warranty: 48
 - records-emergency: 92
 - tools: 126
 
@@ -231,6 +231,7 @@ Generated: 2026-08-28T06:32:53.420Z
 - /zh-tw/guides/freezer-maintenance-checklist/
 - /zh-tw/guides/furnace-maintenance-records/
 - /zh-tw/guides/furniture-inventory/
+- /zh-tw/guides/garbage-disposal-maintenance-guide/
 - /zh-tw/guides/heat-pump-maintenance-records/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
@@ -241,6 +242,7 @@ Generated: 2026-08-28T06:32:53.420Z
 - /zh-tw/guides/home-contact-list/
 - /zh-tw/guides/home-evacuation-information/
 - /zh-tw/guides/home-improvement-receipts/
+- /zh-tw/guides/home-inventory-for-insurance/
 - /zh-tw/guides/home-maintenance-after-vacation/
 - /zh-tw/guides/home-maintenance-binder/
 - /zh-tw/guides/home-maintenance-budget/
@@ -303,6 +305,7 @@ Generated: 2026-08-28T06:32:53.420Z
 - /zh-tw/guides/subscription-cancellation-refund-records/
 - /zh-tw/guides/summer-home-maintenance-checklist/
 - /zh-tw/guides/ups-battery-backup-records/
+- /zh-tw/guides/vacuum-cleaner-maintenance-guide/
 - /zh-tw/guides/washing-machine-maintenance-checklist/
 - /zh-tw/guides/water-filter-replacement-guide/
 - /zh-tw/guides/water-heater-maintenance-records/

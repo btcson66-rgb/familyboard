@@ -98,6 +98,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/water-filter-replacement-guide/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/coffee-maker-maintenance-guide/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/robot-vacuum-maintenance-guide/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/garbage-disposal-maintenance-guide/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/vacuum-cleaner-maintenance-guide/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-inventory-for-insurance/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1339,6 +1342,33 @@ const checks = [
       'hreflang="en"',
       "集塵、濾網、滾刷和地圖資料分開",
       "卡住、過熱與異味要升級",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/garbage-disposal-maintenance-guide/",
+    require: [
+      "廚房食物垃圾處理器保養指南",
+      'hreflang="en"',
+      "油脂、硬物與長纖維分開判斷",
+      "重置按鈕是觀察點，不是修理完成",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/vacuum-cleaner-maintenance-guide/",
+    require: [
+      "吸塵器保養指南",
+      'hreflang="en"',
+      "把濾網、集塵、軟管、滾刷和皮帶分開追蹤",
+      "皮帶常被忽略",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-inventory-for-insurance/",
+    require: [
+      "保險用家庭財物清冊怎麼做",
+      'hreflang="en"',
+      "Triple-I",
+      "備份必須離開住家",
     ],
   },
   {
