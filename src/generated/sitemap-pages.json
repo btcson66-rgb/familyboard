@@ -169,7 +169,7 @@
   },
   {
     "route": "/guides/monthly-home-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/monthly-home-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -177,7 +177,7 @@
   },
   {
     "route": "/guides/quarterly-home-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/quarterly-home-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -185,7 +185,7 @@
   },
   {
     "route": "/guides/seasonal-home-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/seasonal-home-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -4598,6 +4598,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/monthly-home-maintenance-checklist/",
+    "alternateRoute": "/guides/monthly-home-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/move-in-checklist-generator/",
     "alternateRoute": "/tools/move-in-checklist-generator/",
     "indexable": true,
@@ -4752,6 +4759,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/quarterly-home-maintenance-checklist/",
+    "alternateRoute": "/guides/quarterly-home-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/receipt-retention-organizer/",
     "alternateRoute": "/tools/receipt-retention-organizer/",
     "indexable": true,
@@ -4812,6 +4826,13 @@
     "alternateRoute": "/tools/room-inventory-generator/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/seasonal-home-maintenance-checklist/",
+    "alternateRoute": "/guides/seasonal-home-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

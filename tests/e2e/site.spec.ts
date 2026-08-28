@@ -135,6 +135,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-product-recall-action-tutorial/",
     "/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
     "/guides/familyboard-household-decision-register-tutorial/",
+    "/guides/monthly-home-maintenance-checklist/",
+    "/guides/quarterly-home-maintenance-checklist/",
+    "/guides/seasonal-home-maintenance-checklist/",
     "/guides/familyboard-utility-provider-handoff-tutorial/",
     "/guides/familyboard-vehicle-document-source-status-tutorial/",
     "/guides/familyboard-record-retrieval-drill-tutorial/",
@@ -386,6 +389,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-product-recall-action-tutorial/",
     "/zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-decision-register-tutorial/",
+    "/zh-tw/guides/monthly-home-maintenance-checklist/",
+    "/zh-tw/guides/quarterly-home-maintenance-checklist/",
+    "/zh-tw/guides/seasonal-home-maintenance-checklist/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3525,6 +3531,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     "https://familyboard.win/guides/familyboard-household-decision-register-tutorial/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/monthly-home-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/quarterly-home-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/seasonal-home-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/",
   );
   expect(sitemap).toContain(
@@ -3643,6 +3658,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-household-decision-register-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/monthly-home-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/quarterly-home-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/seasonal-home-maintenance-checklist/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

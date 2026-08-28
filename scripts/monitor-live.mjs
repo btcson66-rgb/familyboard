@@ -46,6 +46,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-warranty-expiration-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-home-maintenance-schedule-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-decision-register-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/monthly-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/quarterly-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/seasonal-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -85,6 +88,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-product-recall-action-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-decision-register-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/monthly-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/quarterly-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/seasonal-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -817,6 +823,30 @@ const checks = [
       "家庭決策紀錄怎麼做",
       "一次只定義一個問題和一個範圍",
       "不投票、不替商品排名",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/monthly-home-maintenance-checklist/",
+    require: [
+      "每月居家維護清單怎麼做",
+      "五分鐘逐房間巡視",
+      "不是驗屋",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/quarterly-home-maintenance-checklist/",
+    require: [
+      "每季居家維護清單怎麼做",
+      "回看三個月紀錄",
+      "不複製通用答案",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/seasonal-home-maintenance-checklist/",
+    require: [
+      "季節居家維護清單怎麼排",
+      "梅雨、颱風、酷暑",
+      "不是施工或安全指令",
     ],
   },
   {

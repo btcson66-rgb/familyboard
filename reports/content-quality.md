@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T02:54:08.952Z
+Generated: 2026-08-28T03:08:10.661Z
 
 ## Summary
 
-- Indexable pages: 613
-- Generated HTML routes: 630
+- Indexable pages: 616
+- Generated HTML routes: 633
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 316
+- Pages without a contextual product/tool link: 319
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,7 +20,7 @@ Generated: 2026-08-28T02:54:08.952Z
 - printables: 20
 - product: 120
 - appliances: 30
-- maintenance: 54
+- maintenance: 57
 - household-operations: 109
 - inventory-warranty: 46
 - records-emergency: 89
@@ -235,6 +235,7 @@ Generated: 2026-08-28T02:54:08.952Z
 - /zh-tw/guides/how-long-to-keep-household-records/
 - /zh-tw/guides/how-to-track-product-warranties/
 - /zh-tw/guides/important-household-documents/
+- /zh-tw/guides/monthly-home-maintenance-checklist/
 - /zh-tw/guides/move-out-home-records/
 - /zh-tw/guides/moving-inventory/
 - /zh-tw/guides/organize-appliance-manuals/
@@ -248,10 +249,12 @@ Generated: 2026-08-28T02:54:08.952Z
 - /zh-tw/guides/power-outage-recovery-household-records/
 - /zh-tw/guides/product-registration-tracker/
 - /zh-tw/guides/purchase-receipt-organizer/
+- /zh-tw/guides/quarterly-home-maintenance-checklist/
 - /zh-tw/guides/renovation-records/
 - /zh-tw/guides/rental-security-deposit-move-out-claims/
 - /zh-tw/guides/repair-history/
 - /zh-tw/guides/room-by-room-home-inventory/
+- /zh-tw/guides/seasonal-home-maintenance-checklist/
 - /zh-tw/guides/service-history/
 - /zh-tw/guides/storage-unit-inventory/
 - /zh-tw/guides/storm-preparation-home-checklist/
