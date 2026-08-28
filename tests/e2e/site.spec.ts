@@ -453,6 +453,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/furnace-maintenance-records/",
     "/zh-tw/guides/heat-pump-maintenance-records/",
     "/zh-tw/guides/water-heater-maintenance-records/",
+    "/zh-tw/guides/dehumidifier-maintenance-records/",
+    "/zh-tw/guides/air-purifier-filter-log/",
+    "/zh-tw/guides/solar-panel-maintenance-records/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -4111,6 +4114,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/water-heater-maintenance-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/dehumidifier-maintenance-records/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/air-purifier-filter-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/solar-panel-maintenance-records/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/emergency-information-sheet/",

@@ -3136,6 +3136,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/dehumidifier-maintenance-records/",
+    "alternateRoute": "/zh-tw/guides/dehumidifier-maintenance-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/air-purifier-filter-log/",
+    "alternateRoute": "/zh-tw/guides/air-purifier-filter-log/",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/solar-panel-maintenance-records/",
+    "alternateRoute": "/zh-tw/guides/solar-panel-maintenance-records/",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/zh-tw/affiliate-disclosure/",
     "alternateRoute": "/affiliate-disclosure/",
     "indexable": true,
@@ -3145,6 +3169,13 @@
   {
     "route": "/zh-tw/guides/air-conditioner-maintenance-checklist/",
     "alternateRoute": "/guides/air-conditioner-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/air-purifier-filter-log/",
+    "alternateRoute": "/guides/air-purifier-filter-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -3301,6 +3332,13 @@
     "alternateRoute": "/guides/contractor-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/dehumidifier-maintenance-records/",
+    "alternateRoute": "/guides/dehumidifier-maintenance-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -5065,6 +5103,13 @@
     "alternateRoute": "/guides/service-history/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/solar-panel-maintenance-records/",
+    "alternateRoute": "/guides/solar-panel-maintenance-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

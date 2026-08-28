@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T05:52:19.266Z
+Generated: 2026-08-28T06:03:31.620Z
 
 ## Summary
 
-- Indexable pages: 652
-- Generated HTML routes: 669
+- Indexable pages: 656
+- Generated HTML routes: 675
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 354
+- Pages without a contextual product/tool link: 358
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,8 +19,8 @@ Generated: 2026-08-28T05:52:19.266Z
 - support: 21
 - printables: 20
 - product: 120
-- appliances: 44
-- maintenance: 76
+- appliances: 47
+- maintenance: 77
 - household-operations: 109
 - inventory-warranty: 47
 - records-emergency: 89
@@ -73,6 +73,7 @@ Generated: 2026-08-28T05:52:19.266Z
 - /guides/recurring-household-tasks/
 - /guides/seasonal-home-maintenance-checklist/
 - /guides/service-provider-contact-list/
+- /guides/solar-panel-maintenance-records/
 - /guides/subscription-cancellation-refund-records/
 - /guides/subscription-renewal-tracker/
 - /guides/valuable-item-inventory/
@@ -131,6 +132,7 @@ Generated: 2026-08-28T05:52:19.266Z
 - /zh-tw/features/private-family-organizer/
 - /zh-tw/features/warranty-tracker/
 - /zh-tw/guides/air-conditioner-maintenance-checklist/
+- /zh-tw/guides/air-purifier-filter-log/
 - /zh-tw/guides/annual-home-review/
 - /zh-tw/guides/annual-renewal-calendar/
 - /zh-tw/guides/apartment-maintenance-checklist/
@@ -142,6 +144,7 @@ Generated: 2026-08-28T05:52:19.266Z
 - /zh-tw/guides/computer-electronics-inventory/
 - /zh-tw/guides/condo-maintenance-checklist/
 - /zh-tw/guides/contractor-records/
+- /zh-tw/guides/dehumidifier-maintenance-records/
 - /zh-tw/guides/digital-home-binder/
 - /zh-tw/guides/digital-home-inventory-backup/
 - /zh-tw/guides/dishwasher-maintenance-checklist/
@@ -285,6 +288,7 @@ Generated: 2026-08-28T05:52:19.266Z
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/guides/seasonal-home-maintenance-checklist/
 - /zh-tw/guides/service-history/
+- /zh-tw/guides/solar-panel-maintenance-records/
 - /zh-tw/guides/spring-home-maintenance-checklist/
 - /zh-tw/guides/storage-unit-inventory/
 - /zh-tw/guides/storm-preparation-home-checklist/

@@ -2934,5 +2934,13 @@
     "cluster": "support",
     "keywords": "search home management guides",
     "headings": "Search FamilyBoard"
+  },
+  {
+    "title": "Dehumidifier Maintenance Records | Filter, Drainage and Humidity Notes",
+    "description": "Keep a household record of dehumidifier filters, water collection, drainage, humidity observations and seasonal issues without turning notes into repair instructions.",
+    "route": "/guides/dehumidifier-maintenance-records/",
+    "cluster": "appliances",
+    "keywords": "dehumidifier maintenance records",
+    "headings": "Dehumidifier Maintenance Records: Keep Seasonal Moisture Notes Together Start with a neutral equipment record Record filter, tank and exterior checks separately Describe humidity as an observation, not a promise Escalate water, odor and electrical signals Run a seasonal handoff test Privacy and future recommendations"
   }
 ]

@@ -83,6 +83,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/furnace-maintenance-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/heat-pump-maintenance-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/water-heater-maintenance-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/dehumidifier-maintenance-records/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/air-purifier-filter-log/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/solar-panel-maintenance-records/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1189,6 +1192,33 @@ const checks = [
       'hreflang="en"',
       "把「查看」和「拆修」分清楚",
       "漏水與汰換規劃是兩條時間線",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/dehumidifier-maintenance-records/",
+    require: [
+      "除濕機保養紀錄",
+      'hreflang="en"',
+      "把梅雨季的濕度、水箱與異常分開保存",
+      "濕度讀數描述環境",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/air-purifier-filter-log/",
+    require: [
+      "空氣清淨機濾網更換紀錄",
+      'hreflang="en"',
+      "不要只記「換過」",
+      "清淨機不是污染源處理器",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/solar-panel-maintenance-records/",
+    require: [
+      "家用太陽能板維護紀錄",
+      'hreflang="en"',
+      "發電趨勢和高處電氣風險分開",
+      "颱風前後先確保人身與區域安全",
     ],
   },
   {
