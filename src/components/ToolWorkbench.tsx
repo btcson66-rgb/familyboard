@@ -5650,7 +5650,9 @@ const definitions: Record<string, Definition> = {
   "household-backup-recovery-checker": {
     ...householdBackupRecoveryDefinition("en"),
   },
-  "household-utility-bill-anomaly-log": utilityBillAnomalyDefinition("en"),
+  "household-utility-bill-anomaly-log": {
+    ...utilityBillAnomalyDefinition("en"),
+  },
   "household-decision-register": { ...decisionRegisterDefinition("en") },
   "household-event-source-index-log": { ...householdEventSourceIndexDefinition("en") },
   "household-event-duration-calculator": { ...householdEventDurationDefinition("en") },
@@ -9769,7 +9771,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   "household-backup-recovery-checker": {
     ...householdBackupRecoveryDefinition("zh-TW"),
   },
-  "household-utility-bill-anomaly-log": utilityBillAnomalyDefinition("zh-TW"),
+  "household-utility-bill-anomaly-log": {
+    ...utilityBillAnomalyDefinition("zh-TW"),
+  },
   "household-decision-register": { ...decisionRegisterDefinition("zh-TW") },
   "household-event-source-index-log": { ...householdEventSourceIndexDefinition("zh-TW") },
   "household-event-duration-calculator": { ...householdEventDurationDefinition("zh-TW") },

@@ -1,6 +1,6 @@
 # Content quality report
 
-Generated: 2026-08-28T07:50:59.486Z
+Generated: 2026-08-28T07:53:07.317Z
 
 ## Summary
 
@@ -12,7 +12,7 @@ Generated: 2026-08-28T07:50:59.486Z
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
 - Pages without a contextual product/tool link: 401
-- Blocking audit findings: 2
+- Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
@@ -458,5 +458,4 @@ Generated: 2026-08-28T07:50:59.486Z
 
 ## Blockers
 
-- /tools/household-utility-bill-anomaly-log/: no registered production tool definition
-- /zh-tw/tools/household-utility-bill-anomaly-log/: no registered production tool definition
+- None. SEO, sitemap, metadata, placeholder, tool-registration and internal-link gates passed.
