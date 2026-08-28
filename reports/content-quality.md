@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T20:58:44.385Z
+Generated: 2026-08-28T21:19:33.848Z
 
 ## Summary
 
-- Indexable pages: 935
-- Generated HTML routes: 941
+- Indexable pages: 941
+- Generated HTML routes: 947
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 526
+- Pages without a contextual product/tool link: 532
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 31
 - printables: 39
-- product: 142
+- product: 148
 - inventory-warranty: 82
 - appliances: 66
 - maintenance: 89
@@ -69,10 +69,13 @@ Generated: 2026-08-28T20:58:44.385Z
 - /disclaimer/
 - /editorial-policy/
 - /guides/digital-home-inventory-backup/
+- /guides/familyboard-attachment-metadata-tutorial/
 - /guides/familyboard-browser-storage-maintenance/
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-household-handoff-tutorial/
 - /guides/familyboard-offline-backup-restore/
+- /guides/familyboard-restore-merge-replace-tutorial/
+- /guides/familyboard-storage-health-warning-tutorial/
 - /guides/
 - /guides/seasonal-home-maintenance-checklist/
 - /guides/solar-panel-maintenance-records/
@@ -193,6 +196,7 @@ Generated: 2026-08-28T20:58:44.385Z
 - /zh-tw/guides/familyboard-appliance-repair-callback-tutorial/
 - /zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/
 - /zh-tw/guides/familyboard-appliance-service-visit-tutorial/
+- /zh-tw/guides/familyboard-attachment-metadata-tutorial/
 - /zh-tw/guides/familyboard-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-bill-review-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
@@ -307,6 +311,7 @@ Generated: 2026-08-28T20:58:44.385Z
 - /zh-tw/guides/familyboard-repair-punch-list-tutorial/
 - /zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/
 - /zh-tw/guides/familyboard-replacement-part-source-check-tutorial/
+- /zh-tw/guides/familyboard-restore-merge-replace-tutorial/
 - /zh-tw/guides/familyboard-room-inventory-generator-tutorial/
 - /zh-tw/guides/familyboard-router-support-review-tutorial/
 - /zh-tw/guides/familyboard-schedule-conflict-review-tutorial/
@@ -320,6 +325,7 @@ Generated: 2026-08-28T20:58:44.385Z
 - /zh-tw/guides/familyboard-share-access-tutorial/
 - /zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/
 - /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
+- /zh-tw/guides/familyboard-storage-health-warning-tutorial/
 - /zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/
 - /zh-tw/guides/familyboard-storm-readiness-review-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/

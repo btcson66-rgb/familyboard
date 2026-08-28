@@ -35933,6 +35933,186 @@ Future planners, labels or folders may appear beside the article with a clear af
 
 ---
 
+## Page 499 — FamilyBoard Restore Merge vs Replace Tutorial
+**Slug:** /guides/familyboard-restore-merge-replace-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-restore-merge-replace-tutorial/
+**Primary intent:** choose between merge and replace when restoring a FamilyBoard JSON backup
+**Title tag:** FamilyBoard Restore Merge vs Replace Tutorial | Choose a Safe Recovery Path
+**Meta description:** Learn when to merge or replace a FamilyBoard JSON backup, how validation and safety snapshots work, and how to avoid overwriting newer household records.
+**Primary keyword concept:** FamilyBoard merge or replace restore
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-offline-backup-restore/, /guides/familyboard-household-backup-recovery-checker-tutorial/, /app/, /privacy/
+**FAQ:**
+- Q: What does merge restore do?
+  A: It validates the backup and updates records by their stable IDs while leaving records that are not in the file in place.
+- Q: When is replace restore appropriate?
+  A: Use it when the backup is the intended complete state, such as moving to a clean browser after checking its date and scope.
+- Q: Can FamilyBoard undo a replace restore?
+  A: The app downloads a safety snapshot before a replace restore, so keep that file somewhere durable in case you need to restore the previous state.
+- Q: Does validation change local data?
+  A: No. The validate-only picker reads the file and reports its schema and record count before any restore is applied.
+
+# FamilyBoard Restore: When to Merge and When to Replace
+
+The safest restore choice depends on whether the backup is an addition to the current household or a complete replacement for it. FamilyBoard validates a JSON backup before writing it. **Merge** updates matching records by stable record ID and keeps current records that are absent from the file. **Replace** clears the local tables, downloads a safety snapshot first, and then writes the validated backup. The app cannot decide which copy is newer, so the household must compare dates, scope and the reason for the restore.
+
+## Start with validation, not the restore button
+
+Use the validate-only file picker in the Restore backup card before selecting a mode. For a plain JSON file, FamilyBoard reads the package and reports its export time, schema version and total records without changing the browser database. An encrypted file also needs the password used when it was created; a forgotten password cannot be recovered by the app. If validation fails, keep the current data in place, obtain a fresh copy from the controlled backup location and try again. Do not “fix” a JSON file in a text editor because a seemingly small change can invalidate its authenticated structure.
+
+## Use merge for a cautious addition or device move
+
+Merge is the conservative default when the current browser may contain newer work. It bulk-writes the records present in the backup by stable ID. Existing matching rows are updated, new rows are added, and rows that exist only in the current browser remain. This is useful when a household exported a backup from another device and wants to bring across a known set of records, or when a partial recovery file contains only the tables that were available at export time. Compare the export date with the last local backup first; merging an older copy can still replace newer values for IDs that appear in both files.
+
+## Use replace for a deliberate clean reconstruction
+
+Replace is for a clear recovery boundary: the chosen backup represents the complete household state that should exist in this browser. Before applying it, confirm the file name, export date, household identity and expected record count. FamilyBoard downloads `familyboard-safety-snapshot-<timestamp>.json` immediately before clearing local tables. Keep that snapshot outside the browser, and do not assume a download is safe until you can see it in your normal backup location. Replace is appropriate for a new browser profile, a controlled device migration or a recovery after confirming that the current database is corrupt. It is risky when the current browser contains unexported changes.
+
+## Compare the two modes
+
+| Question | Merge | Replace |
+| --- | --- | --- |
+| Records missing from the file | Stay in the browser | Are removed after the safety snapshot |
+| Matching stable IDs | Updated by the backup | Recreated from the backup |
+| Best fit | Add or reconcile a known copy | Rebuild from a complete, trusted copy |
+| Main risk | An older row can overwrite a matching newer row | Unexported current records are cleared |
+
+## Record the decision and verify the result
+
+Write down why the mode was chosen, which export date was trusted and who checked the result. After restore, review the household name, members, a recent task, a document pointer and any attachment metadata. The app records the last restore time, but that timestamp does not prove that every row is correct. If something is missing, stop editing, keep both the source backup and the safety snapshot, and choose the next recovery action deliberately. Never delete the only copy while investigating.
+
+The free app remains useful without a paid plan or an account. Future storage folders or backup products may appear in a clearly disclosed affiliate panel, but they cannot guarantee recovery and are optional. Your household should be able to validate, merge or replace using its own files and a controlled backup location.
+
+**Contextual CTA:** Validate one backup, compare its export date with the current household, and write a one-sentence reason before choosing merge or replace.
+
+---
+
+## Page 500 — FamilyBoard Storage Health Warning Tutorial
+**Slug:** /guides/familyboard-storage-health-warning-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-storage-health-warning-tutorial/
+**Primary intent:** interpret FamilyBoard storage usage, quota, persistence and backup-age warnings
+**Title tag:** FamilyBoard Storage Health Warning Tutorial | Read Usage, Quota and Backup Age
+**Meta description:** Learn how FamilyBoard reports browser storage usage, quota, persistent storage and backup age, and what to do when a household warning appears.
+**Primary keyword concept:** FamilyBoard storage health warning
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-browser-storage-maintenance/, /guides/familyboard-offline-backup-restore/, /guides/familyboard-old-tablet-display-tutorial/, /app/
+**FAQ:**
+- Q: Does a large quota mean my data is backed up?
+  A: No. Quota is a browser estimate; only an exported JSON backup gives you a portable recovery copy.
+- Q: What does “Not guaranteed by this browser” mean?
+  A: The browser has not granted persistent storage, so it may still clear site data under its own storage policy.
+- Q: Is a seven-day backup warning an error?
+  A: No. It is a prompt to export a fresh recovery JSON because household records may have changed since the last export.
+- Q: Should I clear browser storage to fix a warning?
+  A: No. Clearing site data can remove the local household; export and verify a backup before any browser maintenance.
+
+# How to Read FamilyBoard’s Storage Health Panel
+
+FamilyBoard is a local-first app: the household database lives in the browser that is open now. The Storage health card shows four different signals that are easy to confuse: estimated bytes used, the browser-managed quota, whether persistent storage was granted, and the age of the last successful JSON export. These signals describe risk; they do not certify that a backup exists. A warning is a prompt to make a controlled copy and review your browser setup, not an invitation to delete data.
+
+## Usage and quota answer different questions
+
+Storage used is the browser’s estimate of space consumed by this site. Quota is the amount the browser currently makes available to the origin, and some browsers report only a browser-managed quota. Neither value is a count of household records, a cloud allowance or a prediction of how long data will survive. A small database can still be important, while a large quota does not protect it from profile deletion, private-mode behavior, device loss or a browser policy change. Treat the numbers as an early signal and keep a portable export.
+
+## Persistent storage is protection, not a backup
+
+The panel asks whether the browser reports persistent storage as Granted or Not guaranteed by this browser. When it is not guaranteed, FamilyBoard offers Request durable storage through the browser’s `navigator.storage.persist()` permission. A browser may grant or decline that request according to its policy, engagement signals and device conditions. Even when granted, persistent storage cannot recover a stolen device, a deleted profile or a file that was never exported. Install the PWA where appropriate, keep the browser updated and continue exporting JSON on a schedule.
+
+## Treat the backup-age warning as a decision checkpoint
+
+FamilyBoard records the time of the last successful JSON export. If no export is recorded, the panel says to export JSON before adding irreplaceable records. If the last export is at least seven days old, it shows the age and asks for a fresh copy. This is deliberately simple: the app does not know whether a record is important, whether the downloaded file is on a second device or whether a provider changed. Export plain JSON for portability or encrypted JSON when the file must be protected in transit; store the password separately and test that you can open the file.
+
+## A safe response sequence
+
+1. Stop entering high-value changes while you investigate the warning.
+2. Export a JSON backup from the Export backup card and confirm the download completed.
+3. Place the file in a durable, access-controlled location outside the browser profile.
+4. Use Validate backup without restoring to confirm the export time, schema and record count.
+5. If persistent storage is not guaranteed, request it once and note the browser’s response.
+6. Record the next review date; do not clear site data as a “cleanup” step.
+
+## Know what the panel cannot tell you
+
+The panel cannot measure whether an external drive is healthy, prove that a backup file is uncorrupted after you move it, or decide how many copies your household needs. It cannot see another device’s database. Review a restored copy in an isolated browser only when you have a reason and a safety snapshot plan. Keep credentials, full bills and private conversations in their controlled sources; FamilyBoard stores household pointers and records locally, not a remote archive.
+
+Optional affiliate panels for storage media, labels or backup folders may be shown beside this guide later with a clear disclosure and an easy skip. They must not imply that buying a product grants persistence or replaces the free export workflow.
+
+**Contextual CTA:** Read all four storage signals, export a fresh JSON file, validate it, and write down where the durable copy is kept.
+
+---
+
+## Page 501 — FamilyBoard Attachment Metadata Tutorial
+**Slug:** /guides/familyboard-attachment-metadata-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-attachment-metadata-tutorial/
+**Primary intent:** understand FamilyBoard attachment metadata fields and the boundary between pointers and uploaded files
+**Title tag:** FamilyBoard Attachment Metadata Tutorial | Track Pointers Without Uploading Files
+**Meta description:** Learn how FamilyBoard records attachment names, types, sizes and location references without uploading the underlying file, and how to review them safely.
+**Primary keyword concept:** FamilyBoard attachment metadata
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-document-index-tutorial/, /guides/familyboard-privacy-safe-household-records/, /tools/household-master-table/, /privacy/
+**FAQ:**
+- Q: Does FamilyBoard upload my attachment file?
+  A: No. Attachment metadata stores a description and safe location reference; the underlying file remains in the location you control.
+- Q: Which metadata fields are available?
+  A: The record includes a name, MIME type, byte size and location reference, along with the app’s common record fields.
+- Q: Is metadata enough to recover a lost file?
+  A: No. It is an index, not a copy. Keep the original file in a durable location and back up that location separately.
+- Q: Can I put a secret download URL in the location field?
+  A: Avoid credentials, signed URLs and sensitive tokens. Use a safe pointer that helps an authorised person find the controlled source.
+
+# FamilyBoard Attachment Metadata Is an Index, Not an Upload
+
+An attachment metadata record answers “what file should an authorised person look for, and where?” It does not answer “can FamilyBoard download or restore that file?” FamilyBoard stores the metadata locally in the browser: a human-readable name, a MIME type, a byte size and a location reference, plus the normal record ID and timestamps. The original PDF, image, scan or spreadsheet stays in the file system or service that your household controls. This boundary keeps the free local-first app useful without pretending to be a cloud drive.
+
+## Record a safe pointer
+
+Choose a name that distinguishes the item without exposing unnecessary personal details, such as “boiler warranty 2026” or “lease inspection photos.” MIME type describes the file format (`application/pdf`, `image/jpeg` and similar); it is a label, not a security guarantee. Size is the observed byte count at the time of entry and can become stale after editing. Location reference should point to an authorised folder, document index or protected source using a safe code. Do not paste passwords, private keys, temporary signed URLs, full medical narratives or card details into the record.
+
+## Link metadata to the right household record
+
+Use the document or asset index when the file supports a known item. A warranty scan can point to the appliance asset; an inspection image can point to a document entry or a maintenance event. Keep the relation explicit in the notes or related record rather than assuming that a similar file name is enough. If a file moves, update the pointer and record the date of the change. If a provider replaces a document, preserve the earlier observation before adding the new metadata so a later reviewer can tell which version was checked.
+
+## Review before sharing or exporting
+
+Metadata can reveal as much as a file name: a tenancy address, a child’s school, a medical category or a private provider. Before sharing a master CSV or JSON backup, review names, location references and notes. The app’s master table includes an `attachment` record type with name, MIME type, size and location reference; it is designed for review and controlled bulk editing, not for uploading file contents. JSON backup includes attachment metadata as part of the complete local recovery package. Encrypt a backup when the storage location is not already protected, and keep the password separate.
+
+## A practical attachment check
+
+1. Confirm the original file opens in its controlled source.
+2. Compare its current name, format and byte size with the metadata row.
+3. Replace a stale location reference without copying the file into FamilyBoard.
+4. Check that the related asset, document or maintenance record is correct.
+5. Export JSON after important metadata changes and validate the file.
+6. If the original is missing, mark the pointer as unresolved and ask the authorised source for recovery.
+
+## What the app does not promise
+
+FamilyBoard does not scan your folders, sync attachments across devices, verify file integrity, enforce access permissions or recover a deleted original. A location reference is not proof that a person has permission to open the source. Use the source system’s sharing controls and keep sensitive files there. If a household role changes, update the safe pointer and handoff instructions rather than distributing a secret link.
+
+Future affiliate panels may suggest folders, labels or scanning accessories near this guide, but they are optional and cannot secure, upload or restore a file. The useful free workflow is the honest index: a clear name, accurate metadata, a safe pointer and a separate durable backup of the original source.
+
+**Contextual CTA:** Review three attachment metadata rows, remove any secret tokens, and verify each pointer against the controlled original source.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

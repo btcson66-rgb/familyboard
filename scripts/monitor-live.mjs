@@ -800,6 +800,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-weekly-household-decision-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-restore-merge-replace-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-restore-merge-replace-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-storage-health-warning-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-storage-health-warning-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-attachment-metadata-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-attachment-metadata-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1489,6 +1495,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/",
     require: ["每週家庭決策複查教學", "可測試"],
+  },
+  {
+    path: "/guides/familyboard-restore-merge-replace-tutorial/",
+    require: ["Restore: When to Merge and When to Replace", "safety snapshot"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-restore-merge-replace-tutorial/",
+    require: ["備份還原合併與取代教學", "安全快照"],
+  },
+  {
+    path: "/guides/familyboard-storage-health-warning-tutorial/",
+    require: ["Read FamilyBoard’s Storage Health Panel", "persistent storage"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-storage-health-warning-tutorial/",
+    require: ["儲存健康警示教學", "持久儲存"],
+  },
+  {
+    path: "/guides/familyboard-attachment-metadata-tutorial/",
+    require: ["Attachment Metadata Is an Index", "MIME type"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-attachment-metadata-tutorial/",
+    require: ["附件中繼資料教學", "位置參照"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",

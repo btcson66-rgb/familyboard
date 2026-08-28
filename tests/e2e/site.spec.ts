@@ -284,6 +284,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/",
     "/guides/familyboard-weekly-household-decision-review-tutorial/",
     "/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/",
+    "/guides/familyboard-restore-merge-replace-tutorial/",
+    "/zh-tw/guides/familyboard-restore-merge-replace-tutorial/",
+    "/guides/familyboard-storage-health-warning-tutorial/",
+    "/zh-tw/guides/familyboard-storage-health-warning-tutorial/",
+    "/guides/familyboard-attachment-metadata-tutorial/",
+    "/zh-tw/guides/familyboard-attachment-metadata-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1976,6 +1982,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/",
       alternate: "/guides/familyboard-weekly-household-decision-review-tutorial/",
       heading: "FamilyBoard 每週家庭決策複查教學：把檢視變成可交接的證據",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-restore-merge-replace-tutorial/",
+      alternate: "/guides/familyboard-restore-merge-replace-tutorial/",
+      heading: "FamilyBoard 備份還原合併與取代教學：選擇安全復原路徑",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-storage-health-warning-tutorial/",
+      alternate: "/guides/familyboard-storage-health-warning-tutorial/",
+      heading: "FamilyBoard 儲存健康警示教學：讀懂用量、配額與備份日期",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-attachment-metadata-tutorial/",
+      alternate: "/guides/familyboard-attachment-metadata-tutorial/",
+      heading: "FamilyBoard 附件中繼資料教學：只記索引，不上傳檔案",
     },
   ]) {
     await page.goto(localized.route);
@@ -4709,6 +4730,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-restore-merge-replace-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-restore-merge-replace-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-storage-health-warning-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-storage-health-warning-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-attachment-metadata-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-attachment-metadata-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-seasonal-reset-tutorial/",

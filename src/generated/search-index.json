@@ -3856,6 +3856,30 @@
     "headings": "How to Review Weekly Household Decisions in FamilyBoard Choose a bounded review scope Bring the controlling source, not a copy Write a decision that can be tested Assign one owner and one next action Close with an observation, not a hope Connect weekly and monthly reviews Keep planning products optional"
   },
   {
+    "title": "FamilyBoard Restore Merge vs Replace Tutorial | Choose a Safe Recovery Path",
+    "description": "Learn when to merge or replace a FamilyBoard JSON backup, how validation and safety snapshots work, and how to avoid overwriting newer household records.",
+    "route": "/guides/familyboard-restore-merge-replace-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard merge or replace restore",
+    "headings": "FamilyBoard Restore: When to Merge and When to Replace Start with validation, not the restore button Use merge for a cautious addition or device move Use replace for a deliberate clean reconstruction Compare the two modes Record the decision and verify the result"
+  },
+  {
+    "title": "FamilyBoard Storage Health Warning Tutorial | Read Usage, Quota and Backup Age",
+    "description": "Learn how FamilyBoard reports browser storage usage, quota, persistent storage and backup age, and what to do when a household warning appears.",
+    "route": "/guides/familyboard-storage-health-warning-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard storage health warning",
+    "headings": "How to Read FamilyBoard’s Storage Health Panel Usage and quota answer different questions Persistent storage is protection, not a backup Treat the backup-age warning as a decision checkpoint A safe response sequence Know what the panel cannot tell you"
+  },
+  {
+    "title": "FamilyBoard Attachment Metadata Tutorial | Track Pointers Without Uploading Files",
+    "description": "Learn how FamilyBoard records attachment names, types, sizes and location references without uploading the underlying file, and how to review them safely.",
+    "route": "/guides/familyboard-attachment-metadata-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard attachment metadata",
+    "headings": "FamilyBoard Attachment Metadata Is an Index, Not an Upload Record a safe pointer Link metadata to the right household record Review before sharing or exporting A practical attachment check What the app does not promise"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

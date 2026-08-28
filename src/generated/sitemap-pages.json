@@ -3992,6 +3992,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-restore-merge-replace-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-restore-merge-replace-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-storage-health-warning-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-storage-health-warning-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-attachment-metadata-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-attachment-metadata-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4636,6 +4660,13 @@
   {
     "route": "/zh-tw/guides/familyboard-appliance-service-visit-tutorial/",
     "alternateRoute": "/guides/familyboard-appliance-service-visit-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-attachment-metadata-tutorial/",
+    "alternateRoute": "/guides/familyboard-attachment-metadata-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -5439,6 +5470,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-restore-merge-replace-tutorial/",
+    "alternateRoute": "/guides/familyboard-restore-merge-replace-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-room-inventory-generator-tutorial/",
     "alternateRoute": "/guides/familyboard-room-inventory-generator-tutorial/",
     "indexable": true,
@@ -5527,6 +5565,13 @@
     "alternateRoute": "/guides/familyboard-shopping-list-planner-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-storage-health-warning-tutorial/",
+    "alternateRoute": "/guides/familyboard-storage-health-warning-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
