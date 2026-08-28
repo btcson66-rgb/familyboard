@@ -3928,6 +3928,30 @@
     "headings": "When to Reset a FamilyBoard Local Household Decide whether a reset is actually needed Complete the recovery checklist first Confirm the exact household boundary Verify after clearing"
   },
   {
+    "title": "FamilyBoard Storage Open Error Tutorial | Protect Local Records Before Troubleshooting",
+    "description": "Learn what to do when FamilyBoard cannot open local browser storage, why clearing data is risky, and how to troubleshoot with a controlled profile and backup.",
+    "route": "/guides/familyboard-storage-open-error-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard storage open error",
+    "headings": "FamilyBoard Storage Open Error Tutorial: Preserve the Local Household First Record the exact observation Keep the browser profile intact Use a controlled recovery check Separate quota and permission signals Communicate without exposing the archive"
+  },
+  {
+    "title": "FamilyBoard Task Completion Tutorial | Record the Action Without Overclaiming",
+    "description": "Learn how FamilyBoard records task completion time, where completed tasks disappear from, and why a completed checkbox is not proof of an external outcome.",
+    "route": "/guides/familyboard-task-completion-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard task completion",
+    "headings": "FamilyBoard Task Completion Tutorial: Record the Action Without Overclaiming Define the action before starting Press Complete only for the local action Add the external result separately Review completed work without rewriting history Use completion in handoffs safely"
+  },
+  {
+    "title": "FamilyBoard Member Archive Tutorial | Change Responsibility Without Erasing History",
+    "description": "Learn how to prepare open tasks, maintenance and handoffs before archiving a FamilyBoard member, and why archive is safer than deleting history.",
+    "route": "/guides/familyboard-member-archive-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard archive household member",
+    "headings": "FamilyBoard Member Archive Tutorial: Change Responsibility Without Erasing History Start with a role-change review Reassign open work before archiving Preserve useful history Check external access separately Review handoff and display boundaries"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

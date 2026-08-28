@@ -818,6 +818,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-shared-display-privacy-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-reset-local-household-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-reset-local-household-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-storage-open-error-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-storage-open-error-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-task-completion-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-task-completion-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-member-archive-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-member-archive-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1579,6 +1585,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-reset-local-household-tutorial/",
     require: ["清除本機家庭資料教學", "破壞性"],
+  },
+  {
+    path: "/guides/familyboard-storage-open-error-tutorial/",
+    require: ["Storage Open Error Tutorial", "IndexedDB"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-storage-open-error-tutorial/",
+    require: ["儲存無法開啟教學", "IndexedDB"],
+  },
+  {
+    path: "/guides/familyboard-task-completion-tutorial/",
+    require: ["Task Completion Tutorial", "completion timestamp"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-task-completion-tutorial/",
+    require: ["任務完成教學", "完成時間"],
+  },
+  {
+    path: "/guides/familyboard-member-archive-tutorial/",
+    require: ["Member Archive Tutorial", "archive a member"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-member-archive-tutorial/",
+    require: ["封存家庭成員教學", "保留歷史"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",

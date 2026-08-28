@@ -302,6 +302,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-shared-display-privacy-tutorial/",
     "/guides/familyboard-reset-local-household-tutorial/",
     "/zh-tw/guides/familyboard-reset-local-household-tutorial/",
+    "/guides/familyboard-storage-open-error-tutorial/",
+    "/zh-tw/guides/familyboard-storage-open-error-tutorial/",
+    "/guides/familyboard-task-completion-tutorial/",
+    "/zh-tw/guides/familyboard-task-completion-tutorial/",
+    "/guides/familyboard-member-archive-tutorial/",
+    "/zh-tw/guides/familyboard-member-archive-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2039,6 +2045,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-reset-local-household-tutorial/",
       alternate: "/guides/familyboard-reset-local-household-tutorial/",
       heading: "FamilyBoard 清除本機家庭資料教學：確認備份後再重設",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-storage-open-error-tutorial/",
+      alternate: "/guides/familyboard-storage-open-error-tutorial/",
+      heading: "FamilyBoard 儲存無法開啟教學：先保護本機家庭資料再排查",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-task-completion-tutorial/",
+      alternate: "/guides/familyboard-task-completion-tutorial/",
+      heading: "FamilyBoard 任務完成教學：記錄已做的事，不誤稱外部結果",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-member-archive-tutorial/",
+      alternate: "/guides/familyboard-member-archive-tutorial/",
+      heading: "FamilyBoard 封存家庭成員教學：變更責任但保留歷史",
     },
   ]) {
     await page.goto(localized.route);

@@ -4064,6 +4064,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-storage-open-error-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-storage-open-error-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-task-completion-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-task-completion-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-member-archive-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-member-archive-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -5315,6 +5339,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-member-archive-tutorial/",
+    "alternateRoute": "/guides/familyboard-member-archive-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-meter-reading-tutorial/",
     "alternateRoute": "/guides/familyboard-meter-reading-tutorial/",
     "indexable": true,
@@ -5665,6 +5696,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-storage-open-error-tutorial/",
+    "alternateRoute": "/guides/familyboard-storage-open-error-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
     "alternateRoute": "/guides/familyboard-storage-unit-access-inventory-log-tutorial/",
     "indexable": true,
@@ -5695,6 +5733,13 @@
   {
     "route": "/zh-tw/guides/familyboard-subscription-renewal-review/",
     "alternateRoute": "/guides/familyboard-subscription-renewal-review/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-task-completion-tutorial/",
+    "alternateRoute": "/guides/familyboard-task-completion-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

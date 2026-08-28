@@ -36440,6 +36440,171 @@ After the reset, do not immediately recreate a household with the same name just
 
 ---
 
+## Page 508 — FamilyBoard Storage Open Error Tutorial
+**Slug:** /guides/familyboard-storage-open-error-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-storage-open-error-tutorial/
+**Primary intent:** respond safely when FamilyBoard cannot open browser storage without destroying the local household
+**Title tag:** FamilyBoard Storage Open Error Tutorial | Protect Local Records Before Troubleshooting
+**Meta description:** Learn what to do when FamilyBoard cannot open local browser storage, why clearing data is risky, and how to troubleshoot with a controlled profile and backup.
+**Primary keyword concept:** FamilyBoard storage open error
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-storage-health-warning-tutorial/, /guides/familyboard-offline-backup-restore/, /guides/familyboard-browser-storage-cleanup-tutorial/, /privacy/
+**FAQ:**
+- Q: Should I clear site data when FamilyBoard cannot open storage?
+  A: No. Clearing site data can remove the only local household; preserve backups and troubleshoot the browser profile first.
+- Q: Is a storage-open error proof that records are lost?
+  A: No. It is an observed browser access failure, not proof that the database is empty or unrecoverable.
+- Q: Can another device see this household automatically?
+  A: No. FamilyBoard is local-first and does not sync records between browsers without a deliberate export and restore.
+- Q: What should I send to support?
+  A: Share the browser, version, time, visible error and safe reproduction steps, but never send private records, passwords or a full backup without a controlled process.
+
+# FamilyBoard Storage Open Error Tutorial: Preserve the Local Household First
+
+When FamilyBoard reports that local storage could not be opened, the safest first move is to stop destructive troubleshooting. The message means the current browser could not open the site’s IndexedDB database at that moment. It does not prove that the database is empty, that a household is corrupt, or that a cloud copy exists. Because FamilyBoard keeps records in the current browser, a clear-site-data command, private-window switch or profile deletion can remove the only local copy. Treat the error as an access observation and protect the recovery path before changing settings.
+
+## Record the exact observation
+
+Write the time, browser name and version, operating-system profile, FamilyBoard URL and the wording shown on screen. Note whether the device was offline, recently updated, low on disk space or using a private window. Do not repeatedly refresh while editing a record, and do not paste a complete error screenshot into a public chat if it includes the household name or a document pointer. A short neutral code such as `STORAGE-OPEN-2026-A` lets another adult discuss the incident without copying private content.
+
+## Keep the browser profile intact
+
+Do not clear cookies, site data, IndexedDB, downloads or the entire browser profile as a first response. Do not uninstall a PWA or test in a private window and then assume the result represents the original profile. Close duplicate FamilyBoard tabs, keep the original profile available and use a supported browser according to the app’s current guidance. If the device is shared, ask the profile owner before changing permissions or storage settings. A new empty browser may open FamilyBoard normally while the original household remains inaccessible, so this test must not replace the original evidence.
+
+## Use a controlled recovery check
+
+If a verified JSON backup already exists, open it only in a controlled recovery profile or spare device. Confirm its schema, export date, household name and a few representative records without editing the original browser. A successful restore proves that the backup is readable; it does not prove that the failed browser database was damaged. If no backup exists, do not invent a recovery file by copying partial screen text. Keep the error open, preserve the device and seek a qualified browser or platform review before deleting anything.
+
+## Separate quota and permission signals
+
+Storage usage, browser quota, persistent-storage permission and backup age answer different questions. A quota warning may explain why a write failed, but it cannot prove which record was saved. A private-mode restriction may block IndexedDB while leaving another profile healthy. Check the storage-health page for observed signals, record them with the incident code and leave any uncertain result pending. Never turn “database did not open” into “all records are gone” without a verified source.
+
+## Communicate without exposing the archive
+
+If a support or family handoff is necessary, send the browser version, time, neutral error code and the smallest reproduction step. Keep full contacts, addresses, medical notes, financial details, credentials and backup passwords in their protected sources. FamilyBoard does not require an account and does not silently upload a recovery copy. A future affiliate panel for storage media or password managers may appear outside the troubleshooting steps with clear disclosure and an easy skip; no product can repair a browser database or guarantee recovery.
+
+After the incident, document what was actually tested: profile opened, backup validated, new profile restored or question still pending. Do not close the incident because a blank household opens. Keep the original profile unchanged until the household decides whether recovery, browser repair or a deliberate reset is appropriate.
+
+**Contextual CTA:** Record the browser observation, preserve the original profile, validate an existing backup in isolation, and clear data only after an approved recovery plan.
+
+---
+
+## Page 509 — FamilyBoard Task Completion Tutorial
+**Slug:** /guides/familyboard-task-completion-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-task-completion-tutorial/
+**Primary intent:** mark a FamilyBoard task complete while preserving the difference between a local action and an external result
+**Title tag:** FamilyBoard Task Completion Tutorial | Record the Action Without Overclaiming
+**Meta description:** Learn how FamilyBoard records task completion time, where completed tasks disappear from, and why a completed checkbox is not proof of an external outcome.
+**Primary keyword concept:** FamilyBoard task completion
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /features/family-task-manager/, /guides/familyboard-weekly-household-decision-review-tutorial/, /guides/familyboard-household-handoff-tutorial/, /app/
+**FAQ:**
+- Q: What happens when I press Complete?
+  A: FamilyBoard writes a local completion timestamp and removes the task from open-task views; it does not contact an outside service.
+- Q: Does completion prove a repair or payment happened?
+  A: No. Record external attendance, payment or result separately with its controlling source.
+- Q: Can a completed task appear on the shared display?
+  A: No. The shared display lists open tasks; completed tasks should be preserved in the local task history instead.
+- Q: Should I complete a task after sending a message?
+  A: Only if the task itself was sending the message; keep the recipient’s response or unresolved outcome as a separate follow-up.
+
+# FamilyBoard Task Completion Tutorial: Record the Action Without Overclaiming
+
+FamilyBoard tasks are small, owned household actions: checking a filter, requesting a document, packing a bag or asking a provider a defined question. The Complete button records that the local task action was finished at a specific time. It does not press a remote button, verify an appointment, settle a bill, approve a repair or prove that another person accepted the result. Good task hygiene keeps the local action, outside response and later review as separate facts.
+
+## Define the action before starting
+
+Write a title that describes one observable action and assign one household owner. “Ask installer for revised arrival window” is easier to close than “deal with repair.” Put the source pointer, expected response and stop condition in the private notes or linked record. Avoid copying full addresses, account numbers or private correspondence into a task title because open titles can appear in the dashboard, handoff and shared display.
+
+## Press Complete only for the local action
+
+When the owner finishes the defined action, press Complete once. FamilyBoard writes the current completion time and the item leaves open-task views, including the dashboard and shared display. If the action was sending a request, completion means the request was sent—not that the provider replied. If the action was checking a document, completion means the check was performed—not that the document is authentic or current. Keep the wording factual so a later reviewer can understand what the timestamp represents.
+
+## Add the external result separately
+
+Create a follow-up task or linked event when a response, attendance, payment or inspection is still pending. Record “provider acknowledged,” “appointment moved,” “invoice received” or “question unanswered” only when that observation comes from the relevant source. A message sent, calendar event created or task completed is not proof of delivery, attendance, safety, coverage or reimbursement. Preserve a contradiction rather than editing the original task to make the timeline look complete.
+
+## Review completed work without rewriting history
+
+During a weekly household review, look at the task’s related maintenance event, warranty evidence, subscription record or handoff note. If the original task was too broad, keep its completion timestamp and add a narrower corrective task. Do not reopen or delete a completed row just to change the meaning of a past action. A short note explaining why a new follow-up exists is more useful than an apparently perfect list with no history.
+
+## Use completion in handoffs safely
+
+Handoff profiles focus on open work, so a completed task normally does not transfer as an outstanding action. If the receiver needs to know what was already attempted, include a protected source pointer or a neutral summary rather than copying every message. Before sharing, remove names, phone numbers, full addresses, credentials and private notes. The free local-first app has no server account that silently archives a task for another device; export a backup when the history matters.
+
+Future affiliate panels for planners, labels or timers may be displayed outside the task form with clear disclosure and an easy skip. They cannot mark an action complete, contact a provider or guarantee a household result. The useful workflow remains available when every product recommendation is ignored.
+
+**Contextual CTA:** Rewrite one broad task as a single observable action, complete it once, and create a separate follow-up for any outside response.
+
+---
+
+## Page 510 — FamilyBoard Member Archive Tutorial
+**Slug:** /guides/familyboard-member-archive-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-member-archive-tutorial/
+**Primary intent:** archive a former FamilyBoard household member without losing historical context or leaving open work ownerless
+**Title tag:** FamilyBoard Member Archive Tutorial | Change Responsibility Without Erasing History
+**Meta description:** Learn how to prepare open tasks, maintenance and handoffs before archiving a FamilyBoard member, and why archive is safer than deleting history.
+**Primary keyword concept:** FamilyBoard archive household member
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-household-members-responsibilities-tutorial/, /guides/familyboard-household-role-change-audit-tutorial/, /guides/familyboard-household-handoff-tutorial/, /privacy/
+**FAQ:**
+- Q: Does archiving a member delete old records?
+  A: No. Archive is a status change intended to preserve history while removing the person from active selection where appropriate.
+- Q: Should I archive a member with open tasks?
+  A: First review and reassign open work or record why it remains pending; do not leave a critical action without a responsible role.
+- Q: Does archive revoke access to every copy or source?
+  A: No. It changes the local FamilyBoard member record, not browser profiles, shared files or external permissions.
+- Q: Can I use a member’s full personal details in a handoff note?
+  A: Use the minimum identity needed for the receiver and keep private contact or identity details in their controlled source.
+
+# FamilyBoard Member Archive Tutorial: Change Responsibility Without Erasing History
+
+Families change: someone moves out, a caregiver role ends, a child becomes independent or a temporary helper no longer participates. FamilyBoard lets the household archive a member instead of pretending that the person never owned a task. Archiving is a local record decision. It does not remove a browser profile, revoke a shared file, change a service provider’s account or erase a message already sent. Prepare the responsibility transition first, then archive the member deliberately.
+
+## Start with a role-change review
+
+Record the reason and date in a neutral administrative note, not in a public task title. Review open tasks, maintenance owners, subscription reviewers, handoff profiles and any display labels that use the member’s name. Ask which work is still active, which source belongs to the former role and who is authorised to accept the next action. A person leaving the household is a trigger for a coverage review, not proof that every item they once touched is finished.
+
+## Reassign open work before archiving
+
+Give each open action one current owner or leave it explicitly pending with a named decision. Update the due date only when a source or household decision supports the change. For maintenance, preserve the earlier owner and add the new responsible role; for subscriptions or documents, confirm that the reviewer can reach the controlling source. Do not bulk-replace names just to make cards look current. A dated handoff note explains what changed and which questions still need an answer.
+
+## Preserve useful history
+
+Completed tasks, maintenance events and past handoffs may need the former member’s name to explain what happened. Keep that context when it is necessary, but remove unnecessary personal details from shared summaries. Archive should reduce active choices without rewriting historical records. If an old name itself creates a privacy concern, use a neutral internal code where the app and the household process allow it, while keeping the authoritative identity mapping in a protected source.
+
+## Check external access separately
+
+Archiving a local member does not close an email account, remove a cloud-folder collaborator, change a building access credential or delete a provider contact. Ask the responsible administrator to review those systems through their own controls. Do not paste passwords, access codes, full addresses or private correspondence into FamilyBoard merely to remember that a permission review is needed. A task such as “ask administrator to remove former access” records the action; the administrator’s confirmation is a separate result.
+
+## Review handoff and display boundaries
+
+Open each relevant handoff profile after the role change and confirm that the next receiver sees only the intended tasks, maintenance items, non-sensitive contacts and source pointers. Check the shared display as a visitor: member names, task titles and due status can remain visible. Remove a sensitive name from a display title rather than assuming archive will redact it. Export a protected backup before a large role transition so the household can recover its local history if the browser is later cleared.
+
+Future affiliate panels for label makers, planners or password managers may appear outside the role-change form with clear disclosure and an easy skip. They cannot archive a person across external systems or decide who should own a family responsibility. The free workflow is complete when the new owner and unresolved questions are visible without exposing unnecessary personal data.
+
+**Contextual CTA:** Review open work, assign the next responsible role, check external permissions separately, then archive the former member while preserving necessary history.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

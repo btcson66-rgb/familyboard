@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T21:53:29.003Z
+Generated: 2026-08-28T22:05:47.629Z
 
 ## Summary
 
-- Indexable pages: 953
-- Generated HTML routes: 959
+- Indexable pages: 959
+- Generated HTML routes: 965
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 544
+- Pages without a contextual product/tool link: 550
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 31
 - printables: 39
-- product: 160
+- product: 166
 - inventory-warranty: 82
 - appliances: 66
 - maintenance: 89
@@ -76,12 +76,15 @@ Generated: 2026-08-28T21:53:29.003Z
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-household-handoff-tutorial/
 - /guides/familyboard-master-csv-edit-import-tutorial/
+- /guides/familyboard-member-archive-tutorial/
 - /guides/familyboard-offline-backup-restore/
 - /guides/familyboard-pwa-update-tutorial/
 - /guides/familyboard-reset-local-household-tutorial/
 - /guides/familyboard-restore-merge-replace-tutorial/
 - /guides/familyboard-shared-display-privacy-tutorial/
 - /guides/familyboard-storage-health-warning-tutorial/
+- /guides/familyboard-storage-open-error-tutorial/
+- /guides/familyboard-task-completion-tutorial/
 - /guides/
 - /guides/seasonal-home-maintenance-checklist/
 - /guides/solar-panel-maintenance-records/
@@ -288,6 +291,7 @@ Generated: 2026-08-28T21:53:29.003Z
 - /zh-tw/guides/familyboard-meal-prep-role-log-tutorial/
 - /zh-tw/guides/familyboard-meal-prep-tutorial/
 - /zh-tw/guides/familyboard-medical-information-source-handoff-tutorial/
+- /zh-tw/guides/familyboard-member-archive-tutorial/
 - /zh-tw/guides/familyboard-meter-reading-tutorial/
 - /zh-tw/guides/familyboard-monthly-review-action-tutorial/
 - /zh-tw/guides/familyboard-move-in-checklist-generator-tutorial/
@@ -338,11 +342,13 @@ Generated: 2026-08-28T21:53:29.003Z
 - /zh-tw/guides/familyboard-shared-display-privacy-tutorial/
 - /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
 - /zh-tw/guides/familyboard-storage-health-warning-tutorial/
+- /zh-tw/guides/familyboard-storage-open-error-tutorial/
 - /zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/
 - /zh-tw/guides/familyboard-storm-readiness-review-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/
 - /zh-tw/guides/familyboard-subscription-renewal-review/
+- /zh-tw/guides/familyboard-task-completion-tutorial/
 - /zh-tw/guides/familyboard-task-load-calculator-tutorial/
 - /zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
