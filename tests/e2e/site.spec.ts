@@ -260,6 +260,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-home-repair-cost-log-tutorial/",
     "/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
     "/zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+    "/guides/familyboard-shared-device-privacy-review-tutorial/",
+    "/zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/",
+    "/guides/familyboard-household-document-redaction-tutorial/",
+    "/zh-tw/guides/familyboard-household-document-redaction-tutorial/",
+    "/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+    "/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1892,6 +1898,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
       alternate: "/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
       heading: "FamilyBoard 到府照護服務範圍與結果教學：分開記錄服務與觀察",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/",
+      alternate: "/guides/familyboard-shared-device-privacy-review-tutorial/",
+      heading: "FamilyBoard 共用裝置隱私複查教學：開始前先確認存取範圍",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-document-redaction-tutorial/",
+      alternate: "/guides/familyboard-household-document-redaction-tutorial/",
+      heading: "FamilyBoard 家庭文件遮罩教學：只分享真正需要的副本",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+      alternate: "/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+      heading: "FamilyBoard 租屋維修交接教學：保留清楚的修繕時間線",
     },
   ]) {
     await page.goto(localized.route);
@@ -4553,6 +4574,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-shared-device-privacy-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-document-redaction-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-household-document-redaction-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-seasonal-reset-tutorial/",

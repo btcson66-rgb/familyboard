@@ -3760,6 +3760,30 @@
     "headings": "How to Use FamilyBoard's Home-Care Visit Scope and Service Result Log Set the visit window and safe role Record the authorised scope first Keep provider report and observation distinct Log changes and refusal safely Define an escalation route Close only on an observed result Keep service recommendations optional Review the record with the right boundary"
   },
   {
+    "title": "FamilyBoard Shared-Device Privacy Tutorial | Review Access Before You Start",
+    "description": "Learn how to use FamilyBoard on a shared phone, tablet or browser: review screen access, local storage, exports and role boundaries without turning the private app into a public account.",
+    "route": "/guides/familyboard-shared-device-privacy-review-tutorial/",
+    "cluster": "product",
+    "keywords": "shared device family organizer privacy tutorial",
+    "headings": "How to Review Privacy Before Using FamilyBoard on a Shared Device Decide whether the device is appropriate Separate screen access from household roles Review browser storage and session habits Treat exports as new copies Review after a device or role change Keep advertising outside privacy decisions A five-question shared-device check"
+  },
+  {
+    "title": "FamilyBoard Document Redaction Tutorial | Share the Minimum Useful Copy",
+    "description": "Learn how to use FamilyBoard's document review workflow to identify the recipient, redact unnecessary household identifiers and retain an authoritative original before sharing a copy.",
+    "route": "/guides/familyboard-household-document-redaction-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "household document redaction tutorial",
+    "headings": "How to Use FamilyBoard to Prepare a Redacted Household Document Copy Name the recipient and purpose first Preserve the authoritative original Mark fields by necessity Verify the redaction technically Send through the right channel Retain and withdraw copies deliberately Optional document products stay outside the boundary"
+  },
+  {
+    "title": "FamilyBoard Rental Maintenance Handoff Tutorial | Keep the Repair Trail Clear",
+    "description": "Learn how to use FamilyBoard for a rental-home maintenance handoff: record the observed condition, formal notice source, access window, response and follow-up without giving tenancy law advice.",
+    "route": "/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "rental home maintenance handoff tutorial",
+    "headings": "How to Use FamilyBoard for a Rental Home Maintenance Handoff Start with a safe property reference Describe the observed condition Use the formal request channel Define an access window safely Separate response from result Preserve evidence without over-sharing Keep legal and product boundaries visible Close the loop with a dated review"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

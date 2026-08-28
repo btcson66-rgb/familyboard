@@ -35173,6 +35173,193 @@ Before sharing a visit summary, ask whether each sentence is an authorised scope
 
 ---
 
+## Page 487 — FamilyBoard Shared-Device Privacy Review Tutorial
+**Slug:** /guides/familyboard-shared-device-privacy-review-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/
+**Primary intent:** learn to review a shared browser or tablet before using FamilyBoard, separating local storage, screen access, export copies and household roles
+**Title tag:** FamilyBoard Shared-Device Privacy Tutorial | Review Access Before You Start
+**Meta description:** Learn how to use FamilyBoard on a shared phone, tablet or browser: review screen access, local storage, exports and role boundaries without turning the private app into a public account.
+**Primary keyword concept:** shared device family organizer privacy tutorial
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /app/, /features/private-family-organizer/, /guides/familyboard-browser-storage-cleanup-tutorial/, /guides/familyboard-offline-backup-restore/
+**FAQ:**
+- Q: Does local-first mean anyone using the device can never see the records?
+  A: No. Anyone with access to the browser profile or an exported file may see what that device makes available.
+- Q: Does FamilyBoard create separate accounts for household roles?
+  A: No. Use safe role labels and the device or protected process your household controls.
+- Q: Is an export safe to send in a group chat?
+  A: Not automatically. Inspect and redact the file before sharing it through an authorised channel.
+- Q: Does clearing browser data delete every copy?
+  A: No. It affects that browser storage; downloads, printed pages and other devices may still contain copies.
+
+# How to Review Privacy Before Using FamilyBoard on a Shared Device
+
+FamilyBoard is designed to work without an account, which is useful when a household shares a tablet, family computer or browser profile. It also means the household must understand who can open that profile, where local records live and what happens when a backup leaves the device. The free [FamilyBoard app](/app/) is a local coordination tool, not a permission system, encrypted vault or guarantee that a shared screen is private.
+
+## Decide whether the device is appropriate
+
+Start with the device, browser profile and people who can unlock it. A device in a common room may be convenient for a shopping list but unsuitable for medical, financial or access secrets. Use a safe workspace label and keep sensitive instructions in the responsible protected source. Do not assume that a private app becomes private merely because it has no login page.
+
+## Separate screen access from household roles
+
+FamilyBoard can record role labels such as “maintenance owner” or “backup contact,” but a label does not restrict the screen. Agree who may view, edit, print or export before entering records. If a person must not see a detail, keep that detail outside the shared workspace and leave a neutral source pointer instead. Test the arrangement with a low-risk example before adding real household information.
+
+## Review browser storage and session habits
+
+Check which browser profile is active, whether the device uses an automatic unlock, and whether another family member can switch profiles. Close the app when the shared session is finished and avoid leaving an export in a public Downloads folder. Do not install extensions or copy-paste secrets merely to make a handoff faster. Browser storage is local coordination state, not an automatic backup or access-control boundary.
+
+## Treat exports as new copies
+
+An export can help a household recover or move records, but it may contain more context than the person receiving it needs. Open it in a safe location, remove unnecessary names, addresses, identifiers and private notes, and send only through the authorised channel. A printed checklist, screenshot or forwarded file is another copy with its own retention and deletion responsibility.
+
+## Review after a device or role change
+
+When a tablet is sold, a browser profile changes, a child becomes an adult or a helper leaves the household, list which local records and exports may exist. Move needed records through a tested backup, then clear the old browser storage and recover printed copies where appropriate. Clearing one browser does not delete a download or another device. Record the review date and the remaining uncertainty rather than claiming that every copy is gone.
+
+## Keep advertising outside privacy decisions
+
+Future password managers, tablets, storage services or family products may appear in optional space. They cannot guarantee confidentiality, deletion, encryption or suitability and must never be required to use the free local app. The privacy review should remain useful when every product card is skipped.
+
+## A five-question shared-device check
+
+Can the household name the active browser profile? Who can view the screen? Which details stay in a protected source? Where could an export or printout remain? What will be reviewed when the device or role changes? If any answer is unknown, keep the record low-risk and schedule a review before adding sensitive content.
+
+**Contextual CTA:** Test one low-risk FamilyBoard record on the shared device, review screen access and export copies, then record the next privacy review date.
+
+---
+
+## Page 488 — FamilyBoard Household Document Redaction Tutorial
+**Slug:** /guides/familyboard-household-document-redaction-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-document-redaction-tutorial/
+**Primary intent:** learn to prepare a minimum-necessary household document copy for a handoff or service request while preserving an authoritative original
+**Title tag:** FamilyBoard Document Redaction Tutorial | Share the Minimum Useful Copy
+**Meta description:** Learn how to use FamilyBoard's document review workflow to identify the recipient, redact unnecessary household identifiers and retain an authoritative original before sharing a copy.
+**Primary keyword concept:** household document redaction tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /features/household-documents-organizer/, /guides/familyboard-documents-source-review-tutorial/, /guides/familyboard-important-household-document-review-tutorial/, /features/private-family-organizer/
+**FAQ:**
+- Q: Is drawing a black box over text enough to redact a PDF?
+  A: Not always. Verify that hidden text or metadata cannot be recovered and share a flattened copy when appropriate.
+- Q: Should the original document be edited to remove private details?
+  A: No. Preserve the authoritative original and create a separate, dated sharing copy.
+- Q: Does FamilyBoard decide what a recipient needs?
+  A: No. The authorised household role and the recipient's legitimate process define the minimum.
+- Q: Is a redacted copy proof that a service request will be accepted?
+  A: No. Acceptance depends on the receiving organisation and its current requirements.
+
+# How to Use FamilyBoard to Prepare a Redacted Household Document Copy
+
+A household often needs to send one page from a larger document: a service provider may need a model and purchase date, while a helper does not need an address, account number or unrelated family history. FamilyBoard's local-first [Household Documents Organizer](/features/household-documents-organizer/) can help track the source, recipient, purpose and review date. It does not redact files automatically, certify privacy or decide what an authority requires.
+
+## Name the recipient and purpose first
+
+Write a safe reference such as `SHARE-2026-A`, the recipient role, purpose and expiry or review date. “Repair company needs model evidence” is narrower than “send appliance documents.” Do not begin by deleting whatever looks private; first decide what legitimate question the recipient must answer. If the purpose is unclear, pause and ask through the responsible channel.
+
+## Preserve the authoritative original
+
+Keep the original invoice, policy, lease or manual in its controlling protected location and record its version or date. Create a separate working copy for review. Never crop or overwrite the source simply to make one request convenient. A redacted copy is a derivative with its own filename, recipient and retention decision, not a replacement for the original evidence.
+
+## Mark fields by necessity
+
+Review names, addresses, signatures, account identifiers, barcodes, QR codes, dates and notes. Keep a field only when the recipient needs it for the stated purpose or a current formal process requires it. A model number may be necessary for a repair request; a full payment account rarely is. Use a safe pointer when the recipient only needs confirmation that an authorised source exists.
+
+## Verify the redaction technically
+
+A visual black rectangle may leave selectable text, layers, OCR data or metadata underneath. Use a trusted local redaction workflow, flatten or export a verified copy when appropriate, then reopen it and test search, selection, copy and metadata. Do not upload a private document to an unknown online converter merely because it is faster. Record who checked the copy and when.
+
+## Send through the right channel
+
+Confirm the recipient address or portal from the authoritative process. Record the submission date, copy version and what remains open, but do not paste credentials or a private message thread into FamilyBoard. If the recipient asks for more, create a new review rather than forwarding the entire original by default. A request from an unverified contact is a signal to pause, not permission to disclose.
+
+## Retain and withdraw copies deliberately
+
+Set a review or deletion date for the derivative copy. Recover printouts, remove temporary downloads and note which authorised system keeps the original. Clearing FamilyBoard browser storage does not remove a copy already sent or printed. Export only the minimum local backup and inspect it before sharing. A later change in address, service provider or household role should trigger a fresh review.
+
+## Optional document products stay outside the boundary
+
+Future scanners, cloud drives or document services may be displayed as optional recommendations. They cannot guarantee redaction, confidentiality, acceptance or deletion and must never be required to create a free sharing record. The workflow should remain useful with ordinary local tools and an authorised recipient.
+
+**Contextual CTA:** Choose one legitimate recipient, preserve the original, create a separate minimum-use copy and record its version, channel and review date.
+
+---
+
+## Page 489 — FamilyBoard Rental Home Maintenance Handoff Tutorial
+**Slug:** /guides/familyboard-rental-home-maintenance-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/
+**Primary intent:** learn to document a rental home's maintenance request, landlord or manager source, access window, condition observation and follow-up without making legal claims
+**Title tag:** FamilyBoard Rental Maintenance Handoff Tutorial | Keep the Repair Trail Clear
+**Meta description:** Learn how to use FamilyBoard for a rental-home maintenance handoff: record the observed condition, formal notice source, access window, response and follow-up without giving tenancy law advice.
+**Primary keyword concept:** rental home maintenance handoff tutorial
+**Cluster:** maintenance
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/rental-repair-request-log/, /guides/rental-home-maintenance-log/, /guides/familyboard-home-repair-cost-log-tutorial/, /guides/familyboard-home-repair-change-order-tutorial/
+**FAQ:**
+- Q: Does the handoff decide who is legally responsible for a repair?
+  A: No. The lease, current local rules and qualified advice control legal questions.
+- Q: Should a tenant publish the full address or lease number in the app?
+  A: Prefer a safe property reference and keep complete identifiers in the protected tenancy record.
+- Q: Is sending a message the same as giving formal notice?
+  A: Not necessarily. Follow the lease or responsible local process and preserve its confirmation.
+- Q: Does a landlord response prove the repair is complete?
+  A: No. Keep the response and the tenant's later condition observation separate.
+
+# How to Use FamilyBoard for a Rental Home Maintenance Handoff
+
+Rental repairs often involve several facts: what a tenant observed, which channel accepts a request, when access is possible, what the manager replied and whether the condition changed. FamilyBoard's free [Rental Repair Request Log](/tools/rental-repair-request-log/) can keep those facts in a local timeline. It is not legal advice, a notice service, an inspection certificate or a substitute for the lease and current local process.
+
+## Start with a safe property reference
+
+Use `RENTAL-MAINT-2026-A` and a short area label such as “kitchen exhaust.” Keep the full address, lease number, names and access code in the protected tenancy source. A safe reference lets an authorised household role connect the right request without putting a complete identity record into a shared task list.
+
+## Describe the observed condition
+
+Record date, room or area, visible symptom, effect on use and any safe photo pointer. “Water mark grew after rain” is an observation; “landlord negligence” is a conclusion the log must not invent. Do not dismantle electrical, gas, structural or mould-related equipment to investigate. If there may be immediate danger, follow current emergency instructions first.
+
+## Use the formal request channel
+
+Point to the lease, property manager portal, registered email or other controlling source and record its version or date. A casual chat may be useful evidence but may not satisfy the formal notice process. Log when the request was sent, how confirmation was received and what question remains open. Do not treat a FamilyBoard timestamp as proof that an external notice was accepted.
+
+## Define an access window safely
+
+Record a proposed date and a role such as “authorised maintenance entrant,” not a key location or alarm code. Confirm access through the tenancy process and record only that the authorised channel acknowledged it. If the window changes, add a new event rather than editing history. A tenant should not enter a restricted area or direct a contractor beyond the permission actually granted.
+
+## Separate response from result
+
+Keep the manager's reply, contractor estimate, scheduled visit and tenant's later observation separate. “Technician scheduled” does not mean “repair completed,” and “looks better” does not prove a building or safety diagnosis. Link any change order or cost question to its own source. If the issue continues, leave it open with the next responsible role and review date.
+
+## Preserve evidence without over-sharing
+
+Export a backup before clearing browser data and inspect photos, messages and documents before sending them. Share the minimum needed through the authorised channel; do not post a full lease or neighbour information in a public group. Recover outdated printouts and temporary downloads when the request closes. FamilyBoard has no server account that silently archives the rental record.
+
+## Keep legal and product boundaries visible
+
+Disputes about deposits, habitability, access or notice require the lease, current local rules and qualified advice. Future tenant portals, inspection services or repair products may appear outside the log with disclosure, but cannot guarantee a legal outcome, response time or workmanship and must remain optional.
+
+## Close the loop with a dated review
+
+Set a review date for the next responsible role and write what evidence should be checked then: a confirmation number, a visit record, a receipt, a new condition observation or a message that the request is still waiting. When the issue closes, record the date and the source that supports closure instead of rewriting the original symptom. If the repair is incomplete, create the next follow-up event with its owner and deadline. This makes the handoff useful to a household member who was not present and keeps an unresolved safety concern visible. Never mark a repair complete merely because a calendar appointment passed or a message was read.
+
+**Contextual CTA:** Log one rental repair from observed condition to formal request, access window, response and later observation; leave any legal or safety question with its responsible source.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

@@ -776,6 +776,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-repair-cost-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-home-care-visit-scope-service-result-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-shared-device-privacy-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-document-redaction-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-document-redaction-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-rental-home-maintenance-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1369,6 +1375,30 @@ const checks = [
       "一筆問題至少留下七個欄位",
       "不是法律意見，也不替租約判定責任",
     ],
+  },
+  {
+    path: "/guides/familyboard-shared-device-privacy-review-tutorial/",
+    require: ["How to Review Privacy Before Using FamilyBoard", "local storage"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/",
+    require: ["共用裝置隱私複查教學", "本機協調工具"],
+  },
+  {
+    path: "/guides/familyboard-household-document-redaction-tutorial/",
+    require: ["How to Use FamilyBoard to Prepare a Redacted Household Document Copy", "redaction"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-document-redaction-tutorial/",
+    require: ["家庭文件遮罩教學", "遮罩"],
+  },
+  {
+    path: "/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+    require: ["How to Use FamilyBoard for a Rental Home Maintenance Handoff", "lease"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+    require: ["租屋維修交接教學", "租約"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",

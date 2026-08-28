@@ -3896,6 +3896,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-shared-device-privacy-review-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-document-redaction-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-document-redaction-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4895,6 +4919,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-household-document-redaction-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-document-redaction-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-household-handoff-tutorial/",
     "alternateRoute": "/guides/familyboard-household-handoff-tutorial/",
     "indexable": true,
@@ -5231,6 +5262,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+    "alternateRoute": "/guides/familyboard-rental-home-maintenance-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-rental-repair-request-tutorial/",
     "alternateRoute": "/guides/familyboard-rental-repair-request-tutorial/",
     "indexable": true,
@@ -5347,6 +5385,13 @@
     "alternateRoute": "/guides/familyboard-share-access-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/",
+    "alternateRoute": "/guides/familyboard-shared-device-privacy-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

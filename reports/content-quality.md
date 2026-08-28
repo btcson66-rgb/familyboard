@@ -1,29 +1,29 @@
 # Content quality report
 
-Generated: 2026-08-28T19:27:57.737Z
+Generated: 2026-08-28T20:03:23.076Z
 
 ## Summary
 
-- Indexable pages: 911
-- Generated HTML routes: 917
+- Indexable pages: 917
+- Generated HTML routes: 923
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 514
+- Pages without a contextual product/tool link: 517
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 31
 - printables: 39
-- product: 136
+- product: 138
 - inventory-warranty: 82
 - appliances: 66
-- maintenance: 87
+- maintenance: 89
 - household-operations: 187
-- records-emergency: 131
+- records-emergency: 133
 - tools: 152
 
 ## Word-count range
@@ -244,6 +244,7 @@ Generated: 2026-08-28T19:27:57.737Z
 - /zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-household-decision-register-tutorial/
 - /zh-tw/guides/familyboard-household-document-index-generator-tutorial/
+- /zh-tw/guides/familyboard-household-document-redaction-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
@@ -292,6 +293,7 @@ Generated: 2026-08-28T19:27:57.737Z
 - /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/
 - /zh-tw/guides/familyboard-recurring-chore-planner-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
+- /zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/
 - /zh-tw/guides/familyboard-rental-repair-request-tutorial/
 - /zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/
 - /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
@@ -309,6 +311,7 @@ Generated: 2026-08-28T19:27:57.737Z
 - /zh-tw/guides/familyboard-service-appointment-handoff-tutorial/
 - /zh-tw/guides/familyboard-service-quote-comparison-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
+- /zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/
 - /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
 - /zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/
 - /zh-tw/guides/familyboard-storm-readiness-review-tutorial/
