@@ -416,6 +416,14 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-backup-recovery-checker-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-backup-recovery-checker-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/guides/home-service-provider-list/",
     "alternateRoute": "/zh-tw/guides/home-service-provider-list/",
     "indexable": true,
@@ -3325,6 +3333,13 @@
     "alternateRoute": "/features/free-home-management-app/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-backup-recovery-checker-tutorial/",
+    "alternateRoute": "/guides/familyboard-backup-recovery-checker-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

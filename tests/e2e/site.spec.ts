@@ -147,6 +147,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-household-members-responsibilities-tutorial/",
     "/guides/familyboard-documents-source-review-tutorial/",
     "/guides/familyboard-emergency-information-privacy-tutorial/",
+    "/guides/familyboard-backup-recovery-checker-tutorial/",
     "/guides/familyboard-household-responsibility-coverage-tutorial/",
     "/guides/familyboard-replacement-part-source-check-tutorial/",
     "/guides/familyboard-guest-arrival-prep-tutorial/",
@@ -366,6 +367,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-household-members-responsibilities-tutorial/",
     "/zh-tw/guides/familyboard-documents-source-review-tutorial/",
     "/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/",
+    "/zh-tw/guides/familyboard-backup-recovery-checker-tutorial/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3544,6 +3546,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     "https://familyboard.win/guides/familyboard-emergency-information-privacy-tutorial/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-backup-recovery-checker-tutorial/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/",
   );
   expect(sitemap).toContain(
@@ -3569,6 +3574,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-backup-recovery-checker-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

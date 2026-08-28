@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T01:31:54.297Z
+Generated: 2026-08-28T01:42:29.387Z
 
 ## Summary
 
-- Indexable pages: 600
-- Generated HTML routes: 617
+- Indexable pages: 602
+- Generated HTML routes: 619
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 5
-- Pages without a contextual product/tool link: 306
+- Pages without a contextual product/tool link: 307
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 117
+- product: 119
 - appliances: 30
 - maintenance: 52
 - household-operations: 104
@@ -140,6 +140,7 @@ Generated: 2026-08-28T01:31:54.297Z
 - /zh-tw/guides/emergency-information-sheet/
 - /zh-tw/guides/emergency-supply-inventory/
 - /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
+- /zh-tw/guides/familyboard-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-bill-review-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-maintenance/

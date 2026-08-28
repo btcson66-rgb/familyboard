@@ -384,6 +384,14 @@
     "headings": "Household Backup Recovery Checker What the checker validates What it cannot prove A practical five-minute drill Protect exports and plan the next test"
   },
   {
+    "title": "FamilyBoard Backup Recovery Checker Tutorial | Test, Record and Repeat",
+    "description": "Learn how to use FamilyBoard's backup recovery checker: export a safe snapshot, test a copy, record scope honestly and assign the next recovery drill without uploading private data.",
+    "route": "/guides/familyboard-backup-recovery-checker-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard backup recovery checker tutorial",
+    "headings": "How to use FamilyBoard's backup recovery checker Decide what the household must recover Export an untouched snapshot Test a copy without overwriting working data Read the date checks as guardrails Assign and repeat the next drill"
+  },
+  {
     "title": "Home Service Provider List | Verify Sources, Scope and Prior Work",
     "description": "Build a useful home service provider list with dated registry checks, written scope, prior-work evidence and owner-led follow-up—without treating a listing as an endorsement.",
     "route": "/guides/home-service-provider-list/",

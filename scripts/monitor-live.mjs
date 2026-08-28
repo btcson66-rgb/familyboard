@@ -55,6 +55,7 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-household-members-responsibilities-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-documents-source-review-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-emergency-information-privacy-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-backup-recovery-checker-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -65,6 +66,7 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-members-responsibilities-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-documents-source-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-information-privacy-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-backup-recovery-checker-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -637,6 +639,22 @@ const checks = [
       "FamilyBoard 緊急資訊怎麼整理又不外洩",
       "先分清楚家庭成員與外部聯絡人",
       "沒有伺服器副本，也沒有自動跨裝置同步",
+    ],
+  },
+  {
+    path: "/guides/familyboard-backup-recovery-checker-tutorial/",
+    require: [
+      "How to use FamilyBoard's backup recovery checker",
+      "Export an untouched snapshot",
+      "without overwriting working data",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-backup-recovery-checker-tutorial/",
+    require: [
+      "FamilyBoard 備份還原檢查器怎麼用",
+      "先決定最小必要範圍",
+      "用副本測試，避免覆蓋工作資料",
     ],
   },
   {
