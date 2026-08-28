@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T03:19:10.672Z
+Generated: 2026-08-28T03:30:24.179Z
 
 ## Summary
 
-- Indexable pages: 619
-- Generated HTML routes: 636
+- Indexable pages: 622
+- Generated HTML routes: 639
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 322
+- Pages without a contextual product/tool link: 325
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,7 +20,7 @@ Generated: 2026-08-28T03:19:10.672Z
 - printables: 20
 - product: 120
 - appliances: 30
-- maintenance: 60
+- maintenance: 63
 - household-operations: 109
 - inventory-warranty: 46
 - records-emergency: 89
@@ -131,11 +131,13 @@ Generated: 2026-08-28T03:19:10.672Z
 - /zh-tw/features/private-family-organizer/
 - /zh-tw/features/warranty-tracker/
 - /zh-tw/guides/annual-renewal-calendar/
+- /zh-tw/guides/apartment-maintenance-checklist/
 - /zh-tw/guides/appliance-inventory/
 - /zh-tw/guides/appliance-replacement-planning/
 - /zh-tw/guides/automatic-renewal-charge-dispute-taiwan/
 - /zh-tw/guides/caregiver-handoff-checklist/
 - /zh-tw/guides/cleaning-schedule/
+- /zh-tw/guides/condo-maintenance-checklist/
 - /zh-tw/guides/contractor-records/
 - /zh-tw/guides/digital-home-binder/
 - /zh-tw/guides/digital-home-inventory-backup/
@@ -212,6 +214,7 @@ Generated: 2026-08-28T03:19:10.672Z
 - /zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/
 - /zh-tw/guides/familyboard-water-leak-event-log-tutorial/
 - /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
+- /zh-tw/guides/first-time-homeowner-maintenance-guide/
 - /zh-tw/guides/home-care-refund-and-collection-notices/
 - /zh-tw/guides/home-care-service-complaint-resolution/
 - /zh-tw/guides/home-care-service-fees-and-billing/

@@ -52,6 +52,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/spring-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/summer-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/fall-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/first-time-homeowner-maintenance-guide/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/apartment-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/condo-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -97,6 +100,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/spring-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/summer-home-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/fall-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/first-time-homeowner-maintenance-guide/</loc>",
+      "<loc>https://familyboard.win/guides/apartment-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/condo-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -877,6 +883,30 @@ const checks = [
       "秋季居家維護清單怎麼做",
       "颱風或豪雨後先留下可重現的觀察",
       "不是颱風預測、結構鑑定或暖氣施工指令",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/first-time-homeowner-maintenance-guide/",
+    require: [
+      "第一次買房後要做什麼",
+      "先盤點系統，再安排工作",
+      "不是驗屋、設備診斷或施工指令",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/apartment-maintenance-checklist/",
+    require: [
+      "租屋族公寓維護清單怎麼做",
+      "把日常照護和修繕回報分成兩條線",
+      "不是法律意見或自行修繕指令",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/condo-maintenance-checklist/",
+    require: [
+      "大樓公寓維護清單怎麼分",
+      "先把兩個範圍建成兩個來源群組",
+      "不是建築鑑定、施工或法律意見",
     ],
   },
   {

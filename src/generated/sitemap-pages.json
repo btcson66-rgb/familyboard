@@ -225,7 +225,7 @@
   },
   {
     "route": "/guides/first-time-homeowner-maintenance-guide/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/first-time-homeowner-maintenance-guide/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -233,7 +233,7 @@
   },
   {
     "route": "/guides/apartment-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/apartment-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -241,7 +241,7 @@
   },
   {
     "route": "/guides/condo-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/condo-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3149,6 +3149,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/apartment-maintenance-checklist/",
+    "alternateRoute": "/guides/apartment-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/appliance-age-calculator/",
     "alternateRoute": "/tools/appliance-age-calculator/",
     "indexable": true,
@@ -3244,6 +3251,13 @@
     "alternateRoute": "/guides/cleaning-schedule/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/condo-maintenance-checklist/",
+    "alternateRoute": "/guides/condo-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -3839,6 +3853,13 @@
     "alternateRoute": "/guides/familyboard-weekly-reset-action-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/first-time-homeowner-maintenance-guide/",
+    "alternateRoute": "/guides/first-time-homeowner-maintenance-guide/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
