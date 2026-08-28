@@ -2936,6 +2936,22 @@
     "headings": "How to use FamilyBoard's utility bill difference tool without jumping to a conclusion 1. Choose a narrow comparison 2. Understand what the result means 3. Preserve the source path, not the private bill 4. Turn the difference into one next check 5. Use a calm review rhythm"
   },
   {
+    "title": "Household Time-Window Overlap Checker | Free FamilyBoard Tool",
+    "description": "Compare two household activity or service windows in local time, identify overlap or a handoff boundary and record a safe next check without calendar sync.",
+    "route": "/tools/household-time-window-overlap-checker/",
+    "cluster": "tools",
+    "keywords": "household time overlap checker",
+    "headings": "Household Time-Window Overlap Checker: compare two windows without copying a calendar Enter only a bounded scope Compare the four actual endpoints Treat the result as a question Keep source ownership visible Use the companion records for the right job Privacy and affiliate boundary Minimum useful record"
+  },
+  {
+    "title": "家庭時間窗口重疊檢查工具｜免費比較行程與到府服務時間｜FamilyBoard",
+    "description": "比較兩個家庭活動、接送或到府服務的本機時間，辨識重疊或交接邊界，再指定來源查核下一步；不讀取行事曆也不替你改期。",
+    "route": "/zh-tw/tools/household-time-window-overlap-checker/",
+    "cluster": "tools",
+    "keywords": "家庭時間重疊檢查工具",
+    "headings": "家庭時間窗口重疊檢查工具：不貼整份行事曆也能先比較 先用安全代號和短標籤 填入兩個窗口的四個時間點 把結果當成待查問題 讓來源和責任可以交接 需要更完整衝突時使用其他工具 隱私與 affiliate 界線 最小可用紀錄"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

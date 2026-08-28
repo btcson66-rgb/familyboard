@@ -28882,6 +28882,122 @@ FamilyBoard runs this calculation in the current browser and does not upload the
 
 預約範圍是否夠小？每個預約和報價來源是否有日期？準備、進場、到訪和結果是否分開？主要與備援角色是否明確？分享前是否移除地址與憑證？社區或租屋規則是否留在正式來源？結果是否只描述觀察而非診斷？推薦是否揭露且可略過？只要有一題答不出來，就讓這次交接保持開放，交給能查正式來源的人繼續。
 
+## Page 380 — Household Time-Window Overlap Checker
+**Slug:** /tools/household-time-window-overlap-checker/
+**Alternate route:** /zh-tw/tools/household-time-window-overlap-checker/
+**Primary intent:** compare two concrete household time windows without exposing a calendar invitation or treating arithmetic as a scheduling decision
+**Title tag:** Household Time-Window Overlap Checker | Free FamilyBoard Tool
+**Meta description:** Compare two household activity or service windows in local time, identify overlap or a handoff boundary and record a safe next check without calendar sync.
+**Primary keyword concept:** household time overlap checker
+**Cluster:** tools
+**Page type:** tool
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-schedule-conflict-review-log/, /tools/household-event-duration-calculator/, /guides/familyboard-schedule-conflict-review-tutorial/, /zh-tw/tools/household-time-window-overlap-checker/
+**FAQ:**
+- Q: Does this checker read or change my calendar?
+  A: No. It compares four date-and-time values entered in the current browser; the responsible calendar, school, employer or provider source controls the real schedule.
+- Q: Is touching at an end time an overlap?
+  A: No. A window ending exactly when another begins is reported as a boundary, but the household should still confirm handoff or travel time.
+- Q: Can the result decide which appointment wins?
+  A: No. It only reports arithmetic overlap and suggests a source-based follow-up; priority, permission and rescheduling remain human decisions.
+- Q: Should I paste a full invitation or address?
+  A: No. Use bounded labels and a protected source pointer, keeping names, addresses, phone numbers, access details and invitation text in their original system.
+
+# Household Time-Window Overlap Checker: compare two windows without copying a calendar
+
+Two household events can look like a conflict because their dates are close, even when their actual windows do not overlap. A school pickup, a repair visit, a work shift and a shared car may each have a start and end time that needs a quick comparison. This free browser tool performs that narrow arithmetic in local time. It does not read a calendar, contact a provider, send a reschedule request, choose a priority or guarantee that anyone will arrive.
+
+## Enter only a bounded scope
+
+Use a code such as `WINDOW-REVIEW-2026-A` and short labels like “school pickup” or “utility service visit.” Do not paste an invitation, address, phone number, account number, gate code or private message. The labels should help a household role recognise the question without turning the comparison into a copy of the controlling calendar or booking source.
+
+## Compare the four actual endpoints
+
+Enter the date, start and end time for both windows. The checker uses the current browser's local clock convention and requires each end to be later than its start. It reports an overlap when one window starts before the other ends and the other starts before the first ends. If one ends exactly as the other begins, it reports a boundary rather than pretending there is an overlap; travel, setup and handoff time still need a human check.
+
+## Treat the result as a question
+
+An overlap is an arithmetic signal, not a decision about who should cancel or which person has authority. A non-overlap does not prove that the family can complete both tasks: distance, preparation, access rules, a school release process or a provider's arrival range may still matter. Point to a protected source such as `CALENDAR-C1` and assign one role to confirm the current version.
+
+## Keep source ownership visible
+
+The tool can record a pointer and next action, but it cannot see whether a calendar invite was accepted, whether a school changed pickup rules or whether a provider confirmed a narrower window. Record “responsible role to confirm the service window” rather than “fixed.” If a source changes, create a dated comparison again so the household can tell which version was used.
+
+## Use the companion records for the right job
+
+When the question is a larger conflict with constraints and proposed changes, use the [Household Schedule Conflict Review Log](/tools/household-schedule-conflict-review-log/). When you need the elapsed time between two observations, use the [Household Event Duration Calculator](/tools/household-event-duration-calculator/). This checker is intentionally smaller: it answers only whether two entered windows overlap in local arithmetic.
+
+## Privacy and affiliate boundary
+
+FamilyBoard processes these values in the current browser and does not upload them to a FamilyBoard server. Protect the source calendar, invitation, address, account and contact details in the service that controls them. Future calendar-printing, label or travel products may appear outside the result with a clear affiliate disclosure and an easy skip; no product can grant permission, change a schedule or guarantee a successful handoff.
+
+## Minimum useful record
+
+Enter two concrete windows, a neutral code, a protected source pointer and one dated next check. Let the responsible person confirm the real schedule in the source system before closing the question. The value is a small, reproducible comparison that prevents a guessed conflict from becoming a false household commitment.
+
+## Page 381 — 家庭時間窗口重疊檢查工具（Traditional Chinese）
+**Slug:** /zh-tw/tools/household-time-window-overlap-checker/
+**Alternate route:** /tools/household-time-window-overlap-checker/
+**Primary intent:** 讓台灣家庭比較兩個具體日期與時間窗口，保留安全來源指標，不把算術結果當成排程決定
+**Title tag:** 家庭時間窗口重疊檢查工具｜免費比較行程與到府服務時間｜FamilyBoard
+**Meta description:** 比較兩個家庭活動、接送或到府服務的本機時間，辨識重疊或交接邊界，再指定來源查核下一步；不讀取行事曆也不替你改期。
+**Primary keyword concept:** 家庭時間重疊檢查工具
+**Cluster:** tools
+**Page type:** tool
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/household-schedule-conflict-review-log/, /zh-tw/tools/household-event-duration-calculator/, /zh-tw/guides/familyboard-schedule-conflict-review-tutorial/, /tools/household-time-window-overlap-checker/
+**FAQ:**
+- Q: 這個工具會讀取或修改我的行事曆嗎？
+  A: 不會。它只在目前瀏覽器比較你輸入的四個日期與時間，真正排程仍以家庭、學校、雇主或業者正式來源為準。
+- Q: 一個窗口結束、另一個剛好開始算重疊嗎？
+  A: 不算重疊，工具會標成邊界相接；但仍要由家庭確認移動、準備和交接緩衝。
+- Q: 結果可以決定哪個預約優先嗎？
+  A: 不行。結果只有算術上的重疊提示，優先順序、授權與改期仍要由負責角色決定。
+- Q: 可以把完整邀請或地址貼進去嗎？
+  A: 不可以。使用窄範圍標籤和受保護來源指標，姓名、地址、電話、門禁資料和邀請全文留在原本系統。
+
+# 家庭時間窗口重疊檢查工具：不貼整份行事曆也能先比較
+
+家庭行程日期接近，不一定真的衝突；學校接送、到府維修、工作班表和共用車輛都有開始與結束時間，先比較四個端點，才能知道要問什麼。這個免費瀏覽器工具只做本機時間的窄範圍算術，不讀取行事曆、不聯絡業者、不送出改期、不替家庭排優先順序，也不保證任何人會準時到場。
+
+## 先用安全代號和短標籤
+
+使用 `WINDOW-REVIEW-2026-A` 這類家庭代號，再填「學校接送」「水電到府檢查」等短標籤。不要把完整邀請、門牌、電話、帳號、門禁碼或私人訊息貼進工具。標籤的目的只是讓家庭角色認得這次比較，不是複製真正控制排程的行事曆或預約來源。
+
+## 填入兩個窗口的四個時間點
+
+為兩個窗口各填日期、開始和結束時間；工具使用目前瀏覽器的本機時間慣例，並要求每個結束時間晚於開始時間。當第一個開始早於第二個結束、第二個開始又早於第一個結束，就回報「時間重疊」。若一個窗口剛好在另一個開始時結束，工具會回報「邊界相接」而不是捏造重疊；移動、準備和交接緩衝仍要人工確認。
+
+## 把結果當成待查問題
+
+「重疊」只是算術訊號，不代表誰應該取消，也不代表某人有權限改期。「未重疊」同樣不保證兩件事做得到，因為距離、準備、進場規則、學校放行程序或業者到府範圍仍可能造成實際限制。來源欄可以寫 `CALENDAR-C1`，再指定一個角色回到正式來源確認目前版本。
+
+## 讓來源和責任可以交接
+
+工具可以保存來源指標和下一步，但看不到邀請是否接受、學校是否改了接送規則，或業者是否確認較窄的時間窗口。請寫「由負責角色確認服務窗口」，不要直接寫「已解決」。來源改變時重新建立有日期的比較，讓家人知道這次是依哪個版本作出的初步觀察。
+
+## 需要更完整衝突時使用其他工具
+
+如果要整理限制、角色、改期提案和正式結果，請使用[家庭行程衝突複查工具](/zh-tw/tools/household-schedule-conflict-review-log/)。如果要計算兩次觀察相隔多久，請使用[家庭事件經過時間計算器](/zh-tw/tools/household-event-duration-calculator/)。本工具刻意保持小範圍，只回答兩個輸入窗口在本機時間上是否重疊。
+
+## 隱私與 affiliate 界線
+
+FamilyBoard 在目前瀏覽器處理這些輸入，不會把它們上傳到 FamilyBoard 伺服器。行事曆、邀請、地址、帳號與聯絡資料仍由原本服務保管。未來若出現行事曆紙本、標籤或旅行用品推薦，應放在結果之外、清楚揭露 affiliate 關係並可略過；商品不能授予進場權限、改變排程或保證交接成功。
+
+## 最小可用紀錄
+
+輸入兩個具體窗口、家庭安全代號、受保護來源指標和一個有日期的下一步，再由負責角色回到正式系統確認。這個工具的價值，是讓家庭用可重現的小比較避免把猜測的衝突變成錯誤承諾。
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

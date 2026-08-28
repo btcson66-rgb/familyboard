@@ -5646,7 +5646,80 @@ const householdBackupRecoveryDefinition = (locale: Locale): Definition => {
   };
 };
 
+const householdTimeWindowOverlapDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const formatDateTime = (value: Date) =>
+    new Intl.DateTimeFormat(zh ? "zh-TW" : "en", {
+      dateStyle: "medium",
+      timeStyle: "short",
+    }).format(value);
+  return {
+    intro: zh
+      ? "比較兩個家庭活動或服務窗口是否在本機時間上重疊，並把結果轉成一個可查核的排程問題。工具不讀取行事曆、不替你改期，也不判定誰優先。"
+      : "Compare two household activity or service windows in this browser's local time and turn the result into a checkable scheduling question. The tool does not read calendars, reschedule anyone or decide which event has priority.",
+    fields: [
+      text(
+        "review",
+        zh ? "家庭排程複查代號" : "Private schedule-review code",
+        zh
+          ? "使用中性代號，不要輸入姓名、地址、電話、帳號、邀請全文或門禁資料。"
+          : "Use a neutral code, not a name, address, phone, account, full invitation or access detail.",
+        "WINDOW-REVIEW-2026-A",
+      ),
+      text(
+        "firstLabel",
+        zh ? "第一個窗口名稱" : "First window label",
+        zh ? "只寫家庭需要辨識的範圍，例如學校接送或冷氣到府服務。" : "Name only the bounded purpose, such as school pickup or an air-conditioner visit.",
+        zh ? "學校接送" : "School pickup",
+      ),
+      { name: "firstDate", label: zh ? "第一個窗口日期" : "First window date", type: "date", value: "2026-08-29" },
+      text("firstStart", zh ? "第一個窗口開始（HH:MM）" : "First window starts (HH:MM)", undefined, "09:00"),
+      text("firstEnd", zh ? "第一個窗口結束（HH:MM）" : "First window ends (HH:MM)", undefined, "10:30"),
+      text(
+        "secondLabel",
+        zh ? "第二個窗口名稱" : "Second window label",
+        zh ? "寫另一個需要比較的活動、接送或服務窗口。" : "Name the other activity, pickup or service window to compare.",
+        zh ? "水電到府檢查" : "Utility service visit",
+      ),
+      { name: "secondDate", label: zh ? "第二個窗口日期" : "Second window date", type: "date", value: "2026-08-29" },
+      text("secondStart", zh ? "第二個窗口開始（HH:MM）" : "Second window starts (HH:MM)", undefined, "10:00"),
+      text("secondEnd", zh ? "第二個窗口結束（HH:MM）" : "Second window ends (HH:MM)", undefined, "11:00"),
+      text(
+        "source",
+        zh ? "受保護來源指標與下一步" : "Protected source pointer and next check",
+        zh
+          ? "只填來源代號與要查的動作，例如 CALENDAR-C1；不要貼邀請全文、地址或聯絡資料。"
+          : "Use a source code and a checkable action, such as CALENDAR-C1; do not paste a full invite, address or contact detail.",
+        "CALENDAR-C1 | Ask the responsible role to confirm the service window",
+      ),
+    ],
+    run: (values) => {
+      const privacy = [values.review, values.firstLabel, values.secondLabel, values.source].join("\n");
+      if (!values.review.trim()) return zh ? "請輸入家庭排程複查代號。" : "Enter a private schedule-review code.";
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy) || /password|passcode|account number|full address|access code|密碼|驗證碼|帳號|完整地址|門禁碼|身分證/i.test(privacy))
+        return zh ? "偵測到可能的聯絡、帳號、地址或憑證資料；請改用安全來源代號。" : "A possible contact, account, address or credential was detected; replace it with a safe source code.";
+      if (!values.firstLabel.trim() || !values.secondLabel.trim()) return zh ? "請填寫兩個窗口名稱。" : "Enter both window labels.";
+      if (!values.source.trim()) return zh ? "請填寫受保護來源指標與下一步。" : "Enter a protected source pointer and next check.";
+      const firstStart = localDateTime(values.firstDate, values.firstStart);
+      const firstEnd = localDateTime(values.firstDate, values.firstEnd);
+      const secondStart = localDateTime(values.secondDate, values.secondStart);
+      const secondEnd = localDateTime(values.secondDate, values.secondEnd);
+      if (!firstStart || !firstEnd || !secondStart || !secondEnd) return zh ? "四個時間都必須使用有效日期與 24 小時制 HH:MM。" : "Use valid dates and 24-hour HH:MM values for all four times.";
+      if (firstEnd.getTime() <= firstStart.getTime() || secondEnd.getTime() <= secondStart.getTime()) return zh ? "每個窗口的結束時間都必須晚於開始時間。" : "Each window must end after it starts.";
+      const overlap = firstStart.getTime() < secondEnd.getTime() && secondStart.getTime() < firstEnd.getTime();
+      const boundary = firstEnd.getTime() === secondStart.getTime() || secondEnd.getTime() === firstStart.getTime();
+      if (zh) {
+        return `${values.review.trim()}｜家庭時間窗口比較\n第一個窗口：${values.firstLabel.trim()}｜${formatDateTime(firstStart)}–${formatDateTime(firstEnd)}\n第二個窗口：${values.secondLabel.trim()}｜${formatDateTime(secondStart)}–${formatDateTime(secondEnd)}\n結果：${overlap ? "時間重疊，等待家庭角色確認如何處理" : boundary ? "只在邊界相接，沒有重疊；仍需確認交接緩衝" : "未重疊，但仍需回到正式來源確認窗口版本"}\n\n來源指標與下一步：${values.source.trim()}\n\n這是本機時間的算術比較，不是行事曆同步、改期通知、優先順序裁判或到場保證。請由負責角色回到正式行事曆、學校、雇主、管理室或業者來源確認真正安排；不要把完整邀請、地址、電話或門禁資料貼入共享紀錄。`;
+      }
+      return `${values.review.trim()} — household time-window comparison\nFirst window: ${values.firstLabel.trim()} | ${formatDateTime(firstStart)}–${formatDateTime(firstEnd)}\nSecond window: ${values.secondLabel.trim()} | ${formatDateTime(secondStart)}–${formatDateTime(secondEnd)}\nResult: ${overlap ? "Windows overlap; a household role should confirm the next decision" : boundary ? "Windows touch at a boundary but do not overlap; confirm handoff time" : "Windows do not overlap; still confirm the current source version"}\n\nSource pointer and next check: ${values.source.trim()}\n\nThis is local-time arithmetic, not calendar sync, rescheduling, a priority ruling or an arrival guarantee. Have the responsible role confirm the actual arrangement in the current calendar, school, employer, building or provider source; do not paste invitations, addresses, phone numbers or access details into a shared record.`;
+    },
+  };
+};
+
 const definitions: Record<string, Definition> = {
+  "household-time-window-overlap-checker": {
+    ...householdTimeWindowOverlapDefinition("en"),
+  },
   "household-backup-recovery-checker": {
     ...householdBackupRecoveryDefinition("en"),
   },
@@ -9768,6 +9841,9 @@ const definitions: Record<string, Definition> = {
 };
 
 const zhTwDefinitions: Record<string, Definition> = {
+  "household-time-window-overlap-checker": {
+    ...householdTimeWindowOverlapDefinition("zh-TW"),
+  },
   "household-backup-recovery-checker": {
     ...householdBackupRecoveryDefinition("zh-TW"),
   },

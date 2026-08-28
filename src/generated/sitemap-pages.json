@@ -3040,6 +3040,22 @@
     "redirectTo": ""
   },
   {
+    "route": "/tools/household-time-window-overlap-checker/",
+    "alternateRoute": "/zh-tw/tools/household-time-window-overlap-checker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/tools/household-time-window-overlap-checker/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -4974,6 +4990,13 @@
     "alternateRoute": "/guides/household-supplies-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/tools/household-time-window-overlap-checker/",
+    "alternateRoute": "/tools/household-time-window-overlap-checker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

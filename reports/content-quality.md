@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T09:23:20.947Z
+Generated: 2026-08-28T09:32:23.316Z
 
 ## Summary
 
-- Indexable pages: 733
-- Generated HTML routes: 739
+- Indexable pages: 735
+- Generated HTML routes: 741
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 410
+- Pages without a contextual product/tool link: 411
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -24,7 +24,7 @@ Generated: 2026-08-28T09:23:20.947Z
 - maintenance: 82
 - household-operations: 139
 - records-emergency: 97
-- tools: 130
+- tools: 132
 
 ## Word-count range
 
@@ -441,6 +441,7 @@ Generated: 2026-08-28T09:23:20.947Z
 - /zh-tw/tools/household-storm-readiness-review/
 - /zh-tw/tools/household-subscription-cancellation-handoff-log/
 - /zh-tw/tools/household-subscription-cost-calculator/
+- /zh-tw/tools/household-time-window-overlap-checker/
 - /zh-tw/tools/household-trip-packing-handoff-log/
 - /zh-tw/tools/household-utility-bill-anomaly-log/
 - /zh-tw/tools/household-utility-provider-service-handoff-log/

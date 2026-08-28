@@ -575,6 +575,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-linking-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-utility-bill-difference-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-utility-bill-difference-tutorial/</loc>",
+      "<loc>https://familyboard.win/tools/household-time-window-overlap-checker/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-time-window-overlap-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/family-task-manager/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-dashboard/</loc>",
@@ -5715,6 +5717,22 @@ const checks = [
       "FamilyBoard 水電帳單差額工具怎麼用",
       "理解結果能說什麼",
       "hreflang=\"en\"",
+    ],
+  },
+  {
+    path: "/tools/household-time-window-overlap-checker/",
+    require: [
+      "Household Time-Window Overlap Checker",
+      "Compare the four actual endpoints",
+      "does not read a calendar",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-time-window-overlap-checker/",
+    require: [
+      "家庭時間窗口重疊檢查工具",
+      "填入兩個窗口的四個時間點",
+      'lang="zh-TW"',
     ],
   },
 ];

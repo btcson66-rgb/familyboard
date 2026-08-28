@@ -39,6 +39,7 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/tools/household-decision-register/",
     "/tools/household-backup-recovery-checker/",
     "/tools/household-utility-bill-anomaly-log/",
+    "/tools/household-time-window-overlap-checker/",
   ]) {
     await page.goto(route);
     await page.getByRole("button", { name: "Generate result" }).click();
@@ -417,6 +418,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-decision-register/",
     "/zh-tw/tools/household-backup-recovery-checker/",
     "/zh-tw/tools/household-utility-bill-anomaly-log/",
+    "/zh-tw/tools/household-time-window-overlap-checker/",
     "/zh-tw/tools/household-building-notice-response-log/",
     "/zh-tw/tools/rental-repair-request-log/",
     "/zh-tw/tools/household-school-closure-continuity-log/",
@@ -677,6 +679,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-record-linking-tutorial/",
     "/guides/familyboard-utility-bill-difference-tutorial/",
     "/zh-tw/guides/familyboard-utility-bill-difference-tutorial/",
+    "/tools/household-time-window-overlap-checker/",
+    "/zh-tw/tools/household-time-window-overlap-checker/",
     "/zh-tw/features/home-inventory-tracker/",
     "/zh-tw/features/family-task-manager/",
     "/zh-tw/features/home-dashboard/",
@@ -3454,6 +3458,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/household-utility-bill-anomaly-log/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-time-window-overlap-checker/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-time-window-overlap-checker/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/tools/household-event-source-index-log/",
