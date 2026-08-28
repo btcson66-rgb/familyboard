@@ -143,6 +143,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/familyboard-master-csv-edit-import/",
     "/guides/familyboard-maintenance-history-review/",
     "/guides/familyboard-subscription-renewal-review/",
+    "/guides/familyboard-household-members-responsibilities-tutorial/",
+    "/guides/familyboard-documents-source-review-tutorial/",
+    "/guides/familyboard-emergency-information-privacy-tutorial/",
     "/guides/familyboard-household-responsibility-coverage-tutorial/",
     "/guides/familyboard-replacement-part-source-check-tutorial/",
     "/guides/familyboard-guest-arrival-prep-tutorial/",
@@ -3514,6 +3517,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-subscription-renewal-review/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-household-members-responsibilities-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-documents-source-review-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-emergency-information-privacy-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/",

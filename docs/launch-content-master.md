@@ -3355,6 +3355,202 @@ Future affiliate recommendations must remain clearly disclosed outside the evide
 
 ---
 
+## Page 369 — How to Set Up FamilyBoard Household Members and Responsibilities
+**Slug:** `/guides/familyboard-household-members-responsibilities-tutorial/`
+**Primary intent:** configure household members in FamilyBoard and assign accountable owners without turning a shared list into an identity or permission system
+**Title tag:** FamilyBoard Members Tutorial | Set Roles and Household Responsibilities
+**Meta description:** Learn how to add household members in FamilyBoard, assign one accountable owner to tasks and maintenance, archive old roles and keep sensitive identity details out of the local app.
+**Primary keyword concept:** FamilyBoard household members tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/features/family-task-manager/`, `/features/maintenance-tracker/`, `/features/private-family-organizer/`, `/guides/familyboard-household-responsibility-coverage-tutorial/`
+**FAQ:**
+- Q: Does adding a member create an account or invite that person?
+  A: No. A member is a local household record used for labels and ownership. FamilyBoard does not send an invitation or create login credentials.
+- Q: Can one task have several owners?
+  A: The task record has one owner. Choose the person accountable for the next outcome and mention supporting roles in a safe note or separate handoff.
+- Q: Does a member name control what that person can see?
+  A: No. Members are not an access-control list. Anyone who can open the browser profile may be able to view its local records.
+- Q: What should I do when someone moves out?
+  A: Archive the old member after reviewing open responsibilities, then reassign or hand off each active task. Do not delete the history just to make the current list look tidy.
+
+**Contextual CTA:** Add only the people who need an ownership label, assign one overdue task, and ask the backup role to find its source and next checkpoint.
+
+# How to set up FamilyBoard household members and responsibilities
+
+FamilyBoard's Members tab is deliberately small. It gives a household stable labels for ownership; it is not a contact directory, account system or permission manager. A useful setup answers “who is accountable for the next household outcome?” without collecting more personal information than the workflow needs.
+
+## Start with a responsibility map, not a people list
+
+Before opening the app, list five responsibilities that regularly fall between people: booking an appliance service, checking a warranty source, taking out a return, confirming school pickup or reviewing a renewal. For each, name the person who will notice the next checkpoint and record the result. That person may arrange professional work rather than perform it.
+
+Only then add the members needed for those labels. A first name, neutral nickname or role such as “backup household role” is usually enough. Do not paste birth dates, government identifiers, full addresses, passwords, medical details or private messages into a general member record. The browser profile is local, but anyone using that profile can read the text.
+
+## Add and edit members safely
+
+Open Members and select **Add a household member**. Enter a readable label and a short role. The role is a human reminder such as “maintenance coordinator” or “school-contact role”; it does not grant authority. If the label is ambiguous, add a distinguishing responsibility rather than sensitive identity details.
+
+Review the list for duplicates before assigning owners. “Sam,” “Samuel” and “Sam (backup)” can describe one person or three different roles. Pick one stable label, then use the task or handoff note for the context. Stable labels make Today, maintenance history and CSV relationships easier to interpret later.
+
+When a role changes, edit the role deliberately and review every open task that points to that member. A role edit changes the current label; it does not prove that the person accepted a duty or that a past event was performed by them. Keep evidence of acceptance or a service result in the appropriate protected source.
+
+## Assign accountability in Tasks and Maintenance
+
+Tasks are open responsibilities with an owner, due date, recurrence note and completion state. Maintenance records also have an owner and a next-due date, plus an asset or home area and an instructions source. Select one accountable owner for each record. “Anyone” is useful only when the household has a real way to notice and claim the work; otherwise it hides a gap.
+
+Use the notes field for a safe source pointer and the next action, not a long conversation. “Owner checks current manufacturer manual before booking” is more useful than “Alex knows what to do.” If several people help, keep one accountable owner and create a separate handoff or task when another person has a distinct outcome.
+
+Completing a task records the household action; it does not certify that an outside provider, school, insurer or authority accepted it. For hazardous maintenance, the owner should arrange qualified help and preserve the invoice or report in its controlled location. FamilyBoard can remember who is following up; it cannot decide whether work is safe or legally sufficient.
+
+## Test the backup path
+
+Once a week, ask the backup role to open Today, select one owned item and answer three questions: what is due, where is the controlling source, and what result will close the item? If the answer requires a password, full contact record or private document, keep that content in its protected system and record only a safe pointer in FamilyBoard.
+
+This drill exposes a common failure: a named owner exists, but nobody can identify the next action when that person is away. Reassign the next outcome or create a handoff record. Do not duplicate the entire household database into a chat just to make the handoff convenient; a smaller, intentional summary is safer.
+
+## Archive old members without erasing context
+
+When someone moves out or a role is no longer used, review open tasks, maintenance items, subscriptions and handoff profiles first. Reassign future work, record the handoff result and then archive the member. Archived labels should remain understandable in historical events. Export a JSON backup after a meaningful change, and keep it protected because it contains the complete local database.
+
+Member records do not control app access, sharing, emergency authority or legal relationships. Future affiliate recommendations for labels, tablets or chore charts must stay outside the member form, be clearly disclosed and remain optional; a product cannot assign responsibility or prove that a person agreed.
+
+**Next step:** add one neutral member label, assign one real responsibility, run a backup retrieval drill and export a protected backup if the household database changed.
+
+---
+
+## Page 370 — How to Use FamilyBoard Documents to Find the Right Source
+**Slug:** `/guides/familyboard-documents-source-review-tutorial/`
+**Primary intent:** organize document pointers in FamilyBoard so a household can find the current protected source without copying sensitive files into the app
+**Title tag:** FamilyBoard Documents Tutorial | Build a Findable Household Source Index
+**Meta description:** Learn how to use FamilyBoard Documents to label manuals, receipts and contracts, link them to assets, set review dates and preserve the protected original outside the app.
+**Primary keyword concept:** FamilyBoard documents tab tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/features/household-documents-organizer/`, `/guides/familyboard-master-csv-edit-import/`, `/guides/digital-home-binder/`, `/tools/household-document-index-generator/`
+**FAQ:**
+- Q: Does the Documents tab store or upload my PDF?
+  A: No. It stores a label and location reference in the browser. The original file remains wherever you keep it.
+- Q: What is a good location reference?
+  A: Use a stable, private pointer such as a protected folder name and filename or an authorised provider portal. Do not paste a password or a public share link that exposes the file.
+- Q: Does a review date create a reminder?
+  A: It shows a date status in Documents. It does not send push, email or text alerts and it does not automatically appear on Today; pair important dates with a task.
+- Q: Can I use FamilyBoard as my legal or tax archive?
+  A: No. Keep originals, retention decisions and official submissions in systems appropriate to them. FamilyBoard is a household index and planning aid.
+
+**Contextual CTA:** Index one manual and one receipt, link both to the same asset, then ask another household role to find the protected originals using only the pointers.
+
+# How to use FamilyBoard Documents to find the right source
+
+The Documents tab is a map, not a filing cabinet. It answers “what is this source, where is the protected original and when should someone look at it again?” Keeping that boundary clear prevents a convenient household note from becoming an accidental second copy of a contract, receipt or sensitive record.
+
+## Choose a source before creating a row
+
+Open the real source first: the current manufacturer manual, provider portal, signed agreement, invoice, insurance notice or official letter. Confirm that you are allowed to use it and that the copy is the version your household intends to rely on. Then create a short FamilyBoard name such as “washer manual — current model” or “water-heater service invoice — March.”
+
+Use the category to help future searches: manuals, purchase records, service invoices, warranties, insurance references, utility information or property records. The category is a household label, not a legal classification. If the source is unknown or outdated, say so in the note and leave the review open rather than guessing.
+
+## Write a pointer that another person can follow
+
+The location reference should identify where the original lives without reproducing it. Examples include “protected drive / Home / Appliances / Washer / manual-2026.pdf” or “provider portal, authorised account, current terms screen.” Avoid public links, access tokens, passwords, full account numbers and private messages. If a filename contains sensitive information, use a neutral alias and keep the mapping in the protected system.
+
+Link the document to an asset when it concerns one physical item. A single washer asset can then show its manual, purchase record, warranty and maintenance history together. For a lease, insurance policy or utility source that covers the household rather than an asset, leave the asset link empty and use a precise household label.
+
+## Set review dates only when a review is real
+
+Use a review date for a decision point: a renewal window, an annual source check, a contract notice period or a planned accuracy review. Do not set every document to six months just to fill the calendar. A manual may need review only after a model change; a one-time receipt may not need a review date at all.
+
+Documents sorts dated records before undated records and labels them overdue, due today or by date. That status is a prompt when the app is open, not a notification service. For a consequential deadline, create a separate Task with an owner and the same source pointer so it appears in Today and can be completed only after the result is observed.
+
+## Review a source without rewriting it
+
+At review time, open the protected original and compare its issuer, date, version, scope and next action with the FamilyBoard row. Update the pointer or add a new version when the source changed; do not silently overwrite a history that explains why a family decision was made. If a provider says a term applies, record that it was stated by the provider and keep the exact notice in the controlled source.
+
+FamilyBoard does not authenticate signatures, coverage, ownership, tax status, legal effect or document completeness. When a source governs a claim, purchase, lease, health matter or official process, follow the issuer's current instructions and obtain qualified advice when needed. The app's job is to make the route findable.
+
+## Run a retrieval drill and protect the index
+
+Ask a backup role to retrieve one manual and one receipt using the app's labels and pointers. They should be able to identify the protected location without seeing unnecessary private details. If the pointer is stale, fix the source first, then update FamilyBoard and record the correction date. This small drill is more valuable than adding dozens of untested rows.
+
+Export a JSON backup after a meaningful index change and store it separately from the browser profile. The backup includes all local records, including private notes and contacts; protect it accordingly. CSV is useful for deliberate edits, but it is not a complete recovery copy. Future affiliate placements for scanners, folders or storage media must be outside the indexing workflow, clearly labelled and optional; a product cannot verify or preserve an original for you.
+
+**Next step:** create two source pointers, link them to one asset, complete a retrieval drill and add an owned task for the next document review that actually matters.
+
+---
+
+## Page 371 — How to Use FamilyBoard Emergency Information Without Oversharing
+**Slug:** `/guides/familyboard-emergency-information-privacy-tutorial/`
+**Primary intent:** prepare a minimal emergency information view in FamilyBoard while keeping sensitive details in protected, authoritative sources
+**Title tag:** FamilyBoard Emergency Tab Tutorial | Prepare Useful, Private Contact Information
+**Meta description:** Learn how to use FamilyBoard's Emergency tab for safe contact pointers, review sensitive flags and hand off only the minimum information needed in an urgent household situation.
+**Primary keyword concept:** FamilyBoard emergency information tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/features/emergency-information-organizer/`, `/guides/familyboard-emergency-contact-verification-tutorial/`, `/guides/familyboard-private-family-organizer-tutorial/`, `/tools/emergency-contact-sheet-generator/`
+**FAQ:**
+- Q: Is the Emergency tab a replacement for calling emergency services?
+  A: No. It is a household reference. In an urgent situation, use the current local emergency service and responsible professional or authority instructions.
+- Q: Should I paste medical details or access codes into a contact note?
+  A: No. Keep diagnoses, medication instructions, full addresses, keys, passwords and private messages in an appropriate protected source.
+- Q: Does marking a contact sensitive hide it from everyone?
+  A: It helps the app exclude the record from certain summaries, but it is not a permission boundary. Anyone with the browser profile may still access local data.
+- Q: How often should emergency information be reviewed?
+  A: Review after a move, provider change, household-role change or failed contact test, and set a practical manual checkpoint. FamilyBoard does not send alerts while closed.
+
+**Contextual CTA:** Verify one outside contact through its authoritative source, store only a safe pointer, and test that the household can find the route without exposing a full private record.
+
+# How to use FamilyBoard Emergency information without oversharing
+
+Emergency preparation has two competing needs: a person must find the next route quickly, but a public screen or casual export should not expose the household's complete private life. FamilyBoard's Emergency tab helps with the first need when you keep the second boundary explicit.
+
+## Separate outside contacts from household members
+
+Members are people in the household who can own tasks. Emergency contacts are outside people or services the household may need to reach: a utility outage line, building manager, clinic, veterinarian, trusted neighbour or qualified repair provider. Keep those lists separate so a household label is not mistaken for an authorised emergency contact.
+
+Start with categories and safe names. “Water utility outage line” and “after-hours veterinary route” are easier to review than a personal nickname with no context. Record the official source or a protected location reference. Do not assume that a listing, advertisement or old phone number is current; verify it through the responsible organisation.
+
+## Use the minimum useful fields
+
+The contact record can hold a name, category, phone, email, notes and a sensitive flag. Treat every field as readable by anyone who can open the browser profile. A safe note might say “use the official provider portal; account owner keeps credentials.” It should not contain a password, door code, full address, policy number, diagnosis, medication direction or private conversation.
+
+For a personal contact, ask whether the household truly needs the number in this general-purpose app. If yes, keep a neutral label and a current-source pointer. If the person has asked for limited disclosure, record that boundary in the protected consent or contact system rather than relying on a FamilyBoard checkbox.
+
+## Mark sensitive information and review the display boundary
+
+Use the sensitive flag when a contact should not appear in a generated emergency summary or handoff view. Then inspect the actual output with a test record. The flag reduces inclusion in supported summaries; it does not encrypt the browser database, revoke access or make a shared tablet private. Display mode also shows only selected operational records, but task titles and owner labels can still reveal more than intended.
+
+Before printing or sharing anything, remove personal contacts, detailed notes, exact locations and other fields the recipient does not need. A contact sheet is a convenience, not proof that a person will answer, that a provider is authorised, or that a household is prepared for every emergency.
+
+## Verify routes instead of trusting memory
+
+Open the official website, current notice or authorised account route and compare the contact label, service scope and availability. Record when the source was checked and what remains unknown. For a utility or building issue, distinguish an outage reporting route from an emergency service. For a medical or care situation, follow the current clinician, service provider and local emergency instructions; the app must not become a second set of clinical directions.
+
+Run a simple retrieval drill: ask a backup role to find the contact, identify the authoritative source and state what information they are allowed to disclose. If the route is stale, leave the item open and assign the next check. Do not mark a contact “verified” merely because a call was attempted; preserve the provider's actual response or an attributed result in the protected source.
+
+## Keep local data and exports protected
+
+FamilyBoard stores emergency records in the current browser's local database. There is no server copy or automatic multi-device sync. A JSON export contains the entire household dataset, including contacts and notes, so store it in a protected location and label it carefully. A backup is not useful if nobody can retrieve it, but making it public to solve that problem creates a different risk; test access with a minimum summary instead.
+
+When a household moves, changes provider, changes care roles or discovers a failed route, create a new dated review and retire the old pointer. Do not silently rewrite the history or copy a complete contact list into a group chat. Future affiliate recommendations for emergency bags, labels or phones must be clearly disclosed, optional and outside the contact workflow; a product cannot provide emergency response or validate a provider.
+
+**Next step:** verify one contact from its authoritative source, mark its disclosure boundary, run a backup retrieval drill and create a manual review checkpoint for the next real change.
+
+---
+
 ## Page 049 — Home Service Provider List
 **Slug:** `/guides/home-service-provider-list/`
 **Primary intent:** create and verify a home service provider list

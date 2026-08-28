@@ -1,11 +1,11 @@
 # Content quality report
 
-Generated: 2026-08-28T00:56:09.832Z
+Generated: 2026-08-28T01:07:44.012Z
 
 ## Summary
 
-- Indexable pages: 592
-- Generated HTML routes: 609
+- Indexable pages: 595
+- Generated HTML routes: 612
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
@@ -18,7 +18,7 @@ Generated: 2026-08-28T00:56:09.832Z
 
 - support: 21
 - printables: 20
-- product: 109
+- product: 112
 - appliances: 30
 - maintenance: 52
 - household-operations: 104

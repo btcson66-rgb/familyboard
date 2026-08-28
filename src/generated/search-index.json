@@ -352,6 +352,30 @@
     "headings": "Water leak response records: a safe evidence and follow-up workflow Stop at the safety boundary before collecting more evidence Start with the earliest fact you can actually support Preserve original photos and make later images comparable Keep four layers separate: observation, finding, work and recovery “Water stopped” is an observation, not proof of repair Treat a water-meter change as a clue, not a location diagnosis Verify the responsible notification channel Drying should begin promptly without becoming a universal timer Give each open area one evidence-based next action Renters and owners need different sources, not different facts Record costs without turning them into a claim verdict Close the event only after a new observation"
   },
   {
+    "title": "FamilyBoard Members Tutorial | Set Roles and Household Responsibilities",
+    "description": "Learn how to add household members in FamilyBoard, assign one accountable owner to tasks and maintenance, archive old roles and keep sensitive identity details out of the local app.",
+    "route": "/guides/familyboard-household-members-responsibilities-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard household members tutorial",
+    "headings": "How to set up FamilyBoard household members and responsibilities Start with a responsibility map, not a people list Add and edit members safely Assign accountability in Tasks and Maintenance Test the backup path Archive old members without erasing context"
+  },
+  {
+    "title": "FamilyBoard Documents Tutorial | Build a Findable Household Source Index",
+    "description": "Learn how to use FamilyBoard Documents to label manuals, receipts and contracts, link them to assets, set review dates and preserve the protected original outside the app.",
+    "route": "/guides/familyboard-documents-source-review-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard documents tab tutorial",
+    "headings": "How to use FamilyBoard Documents to find the right source Choose a source before creating a row Write a pointer that another person can follow Set review dates only when a review is real Review a source without rewriting it Run a retrieval drill and protect the index"
+  },
+  {
+    "title": "FamilyBoard Emergency Tab Tutorial | Prepare Useful, Private Contact Information",
+    "description": "Learn how to use FamilyBoard's Emergency tab for safe contact pointers, review sensitive flags and hand off only the minimum information needed in an urgent household situation.",
+    "route": "/guides/familyboard-emergency-information-privacy-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard emergency information tutorial",
+    "headings": "How to use FamilyBoard Emergency information without oversharing Separate outside contacts from household members Use the minimum useful fields Mark sensitive information and review the display boundary Verify routes instead of trusting memory Keep local data and exports protected"
+  },
+  {
     "title": "Home Service Provider List | Verify Sources, Scope and Prior Work",
     "description": "Build a useful home service provider list with dated registry checks, written scope, prior-work evidence and owner-led follow-up—without treating a listing as an endorsement.",
     "route": "/guides/home-service-provider-list/",

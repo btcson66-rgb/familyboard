@@ -52,6 +52,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-master-csv-edit-import/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-maintenance-history-review/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-subscription-renewal-review/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-members-responsibilities-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-documents-source-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-emergency-information-privacy-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-private-family-organizer-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/</loc>",
@@ -533,6 +536,30 @@ const checks = [
       "How to review FamilyBoard subscriptions before a renewal charge",
       "Compare cost with a consistent convention",
       "does not prove that future billing has stopped",
+    ],
+  },
+  {
+    path: "/guides/familyboard-household-members-responsibilities-tutorial/",
+    require: [
+      "How to set up FamilyBoard household members and responsibilities",
+      "Start with a responsibility map, not a people list",
+      "Members are not an access-control list",
+    ],
+  },
+  {
+    path: "/guides/familyboard-documents-source-review-tutorial/",
+    require: [
+      "How to use FamilyBoard Documents to find the right source",
+      "The Documents tab is a map, not a filing cabinet",
+      "CSV is useful for deliberate edits",
+    ],
+  },
+  {
+    path: "/guides/familyboard-emergency-information-privacy-tutorial/",
+    require: [
+      "How to use FamilyBoard Emergency information without oversharing",
+      "Separate outside contacts from household members",
+      "There is no server copy or automatic multi-device sync",
     ],
   },
   {

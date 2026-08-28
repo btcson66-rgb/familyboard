@@ -384,6 +384,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-household-members-responsibilities-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-documents-source-review-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-emergency-information-privacy-tutorial/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/guides/home-service-provider-list/",
     "alternateRoute": "/zh-tw/guides/home-service-provider-list/",
     "indexable": true,
