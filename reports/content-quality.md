@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T04:49:15.693Z
+Generated: 2026-08-28T05:11:54.204Z
 
 ## Summary
 
-- Indexable pages: 643
-- Generated HTML routes: 660
+- Indexable pages: 645
+- Generated HTML routes: 662
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 346
+- Pages without a contextual product/tool link: 347
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -24,7 +24,7 @@ Generated: 2026-08-28T04:49:15.693Z
 - household-operations: 109
 - inventory-warranty: 46
 - records-emergency: 89
-- tools: 124
+- tools: 126
 
 ## Word-count range
 
@@ -346,6 +346,7 @@ Generated: 2026-08-28T04:49:15.693Z
 - /zh-tw/tools/household-internet-incident-review-log/
 - /zh-tw/tools/household-inventory-photo-capture-log/
 - /zh-tw/tools/household-mail-package-handoff-log/
+- /zh-tw/tools/household-maintenance-delegation-map/
 - /zh-tw/tools/household-maintenance-priority-review-log/
 - /zh-tw/tools/household-meal-prep-role-log/
 - /zh-tw/tools/household-medical-information-source-handoff-log/

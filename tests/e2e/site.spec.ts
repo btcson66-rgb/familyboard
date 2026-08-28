@@ -116,6 +116,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/tools/household-home-access-handoff-log/",
     "/tools/household-schedule-conflict-review-log/",
     "/tools/household-maintenance-priority-review-log/",
+    "/tools/household-maintenance-delegation-map/",
     "/tools/household-service-quote-comparison-log/",
     "/guides/familyboard-family-display-mode-setup/",
     "/guides/familyboard-browser-storage-maintenance/",
@@ -331,6 +332,7 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/tools/household-home-access-handoff-log/",
     "/zh-tw/tools/household-schedule-conflict-review-log/",
     "/zh-tw/tools/household-maintenance-priority-review-log/",
+    "/zh-tw/tools/household-maintenance-delegation-map/",
     "/zh-tw/tools/household-service-quote-comparison-log/",
     "/zh-tw/guides/familyboard-family-display-mode-setup/",
     "/zh-tw/guides/familyboard-browser-storage-maintenance/",
@@ -3382,6 +3384,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-service-quote-comparison-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/tools/household-maintenance-delegation-map/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/tools/household-maintenance-delegation-map/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-old-tablet-display-tutorial/",

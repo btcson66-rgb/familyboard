@@ -4340,6 +4340,52 @@ const maintenancePriorityReviewDefinition = (locale: Locale): Definition => {
   };
 };
 
+const maintenanceDelegationDefinition = (locale: Locale): Definition => {
+  const zh = locale === "zh-TW";
+  const statuses = zh
+    ? ["尚未開始", "進行中", "等待外部回覆", "已完成", "暫停並記理由"]
+    : ["Not started", "In progress", "Waiting for external response", "Completed", "Paused—with reason recorded"];
+  const defaults = zh
+    ? "MAINT-1｜冷氣濾網查看｜依說明書確認可由使用者清潔的部位｜家庭維護角色｜家庭清潔角色｜2026-09-05｜進行中\nMAINT-2｜年度冷氣專業保養｜取得合格服務商的預約與結果紀錄｜家庭聯絡角色｜合格服務商｜2026-09-12｜等待外部回覆\nMAINT-3｜抽油煙機油網清潔｜依型號手冊清潔金屬油網並回填風量觀察｜家庭清潔角色｜家庭清潔角色｜2026-09-08｜尚未開始"
+    : "MAINT-1 | AC filter check | Confirm the user-serviceable cleaning scope in the manual | Household maintenance role | Household cleaning role | 2026-09-05 | In progress\nMAINT-2 | Annual AC professional service | Obtain a qualified provider appointment and preserve the result | Household liaison role | Qualified service provider | 2026-09-12 | Waiting for external response\nMAINT-3 | Range-hood grease filter | Clean the metal filter under the model manual and record airflow observation | Household cleaning role | Household cleaning role | 2026-09-08 | Not started";
+  return {
+    intro: zh
+      ? "把居家維護的結果負責人、實際執行角色、下一個動作、期限與交接狀態放在同一份摘要。工具只在瀏覽器產生家庭分工紀錄，不判斷誰應該負責、不提供危險工作的 DIY 指示，也不會發送背景通知。"
+      : "Keep the outcome owner, hands-on role, next action, due date and handoff status for recurring home maintenance in one summary. This browser-only tool creates a household workflow record; it does not decide who should work, provide hazardous DIY instructions or send background notifications.",
+    fields: [
+      text("review", zh ? "家庭維護分工私人代號" : "Private maintenance-delegation reference", zh ? "使用家庭代號，不要輸入姓名、地址、電話或私人通信。" : "Use a household code; do not enter names, addresses, phone numbers or private correspondence.", "MAINT-DELEGATE-2026-A"),
+      { name: "context", label: zh ? "本次分工情境" : "Delegation context", type: "select", options: zh ? ["建立新分工", "旅行或請假前交接", "年度回顧後重新分配", "看見行政工作集中", "設備或住家狀況改變"] : ["Create a new split", "Handoff before travel or leave", "Reassign after annual review", "Invisible admin load surfaced", "Home or equipment changed"] },
+      { name: "reviewDate", label: zh ? "本次檢視日期" : "Current review date", type: "date", value: "2026-08-28" },
+      { name: "nextReview", label: zh ? "下次分工複查日期" : "Next delegation review date", type: "date", value: "2026-09-19" },
+      text("rows", zh ? "維護分工列（每行 7 欄，以｜分隔）" : "Maintenance delegation rows (7 fields per line, separated by |)", zh ? `最多 12 行；格式：ID｜維護工作｜下一個動作｜結果負責角色｜實際執行角色｜期限 YYYY-MM-DD｜狀態（${statuses.join("／")}）。` : `Up to 12 lines; format: ID | responsibility | next action | outcome owner role | hands-on role | due date YYYY-MM-DD | status (${statuses.join(" / ")}).`, defaults),
+      text("storage", zh ? "受保護維護來源位置" : "Protected maintenance-source location", zh ? "填資料夾或流程代號，不要貼完整聯絡、地址、帳號或門禁資料。" : "Use a folder or process code; do not paste full contacts, addresses, accounts or access details.", zh ? "家庭紀錄／維護分工／MAINT-DELEGATE-2026-A" : "Household records / maintenance delegation / MAINT-DELEGATE-2026-A"),
+    ],
+    run: (values) => {
+      const review = strictIsoDate(values.reviewDate), next = strictIsoDate(values.nextReview);
+      if (!review || !next) return zh ? "請輸入有效的本次與下次分工複查日期。" : "Enter valid current and next delegation-review dates.";
+      if (next < review) return zh ? "下次分工複查日期不能早於本次檢視。" : "The next delegation review cannot be earlier than the current review.";
+      if (values.review.trim().length < 4 || values.storage.trim().length < 10) return zh ? "請提供安全家庭代號與受保護來源位置。" : "Provide a safe household reference and protected source location.";
+      const rows = values.rows.split(/\r?\n/).map((raw, index) => ({ line: index + 1, parts: raw.trim().split(/[|｜]/).map((part) => part.trim()) })).filter((row) => row.parts.some(Boolean));
+      if (!rows.length || rows.length > 12) return zh ? "請輸入 1 至 12 行維護分工。" : "Enter 1 to 12 maintenance-delegation rows.";
+      const malformed = rows.filter((row) => row.parts.length !== 7 || row.parts.some((part) => !part));
+      if (malformed.length) return zh ? `第 ${malformed.map((row) => row.line).join("、")} 行必須有 7 個非空白欄位。` : `Line ${malformed.map((row) => row.line).join(", ")} must contain 7 non-empty fields.`;
+      if (new Set(rows.map((row) => row.parts[0].toLocaleUpperCase("en"))).size !== rows.length) return zh ? "每行維護分工都需要唯一 ID。" : "Every delegation row needs a unique ID.";
+      const dueDates = rows.map((row) => strictIsoDate(row.parts[5]));
+      if (dueDates.some((due) => !due || due < review || due > next)) return zh ? "每個期限都必須有效，且介於本次檢視與下次複查之間。" : "Every due date must be valid and fall between the current review and next review.";
+      const invalidStatus = rows.filter((row) => !statuses.includes(row.parts[6]));
+      if (invalidStatus.length) return zh ? "請使用欄位說明中的指定狀態。" : "Use an exact status from the field instructions.";
+      const thin = rows.filter((row) => row.parts[1].length < 4 || row.parts[2].length < 8 || row.parts[3].length < 3 || row.parts[4].length < 3);
+      if (thin.length) return zh ? `第 ${thin.map((row) => row.line).join("、")} 行需要工作、下一步與兩種角色。` : `Line ${thin.map((row) => row.line).join(", ")} needs the responsibility, next action and both roles.`;
+      const privacy = [values.review, values.rows, values.storage].join("\n").replace(/\b\d{4}-\d{2}-\d{2}\b/g, "");
+      if (/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i.test(privacy) || /(?:\d[\s().+-]*){7,}/.test(privacy) || /password|passcode|full address|phone number|account number|card number|門禁|密碼|完整地址|電話|帳號|卡號|身分證|私人通信/i.test(privacy)) return zh ? "偵測到聯絡、憑證、金融或私人資料；請改用安全代號。" : "A contact, credential, financial or private detail was detected; use safe codes.";
+      const formatter = new Intl.DateTimeFormat(locale, { dateStyle: "long" });
+      const counts = statuses.map((status) => `${status}: ${rows.filter((row) => row.parts[6] === status).length}`).join(zh ? "、" : ", ");
+      const rendered = rows.map((row, index) => zh ? `${row.parts[0]}｜工作：${row.parts[1]}｜下一步：${row.parts[2]}｜結果負責：${row.parts[3]}｜執行角色：${row.parts[4]}｜期限：${formatter.format(dueDates[index] as Date)}｜狀態：${row.parts[6]}` : `${row.parts[0]} — responsibility: ${row.parts[1]} — next action: ${row.parts[2]} — outcome owner: ${row.parts[3]} — hands-on role: ${row.parts[4]} — due: ${formatter.format(dueDates[index] as Date)} — status: ${row.parts[6]}`).join("\n");
+      return zh ? `${values.review.trim()}｜家庭維護分工摘要\n情境：${values.context}\n本次檢視：${formatter.format(review)}\n下次複查：${formatter.format(next)}\n狀態統計：${counts}\n\n有版本的維護分工\n${rendered}\n\n受保護維護來源位置：${values.storage.trim()}\n\n這份輸出只整理家庭責任與交接，不替家庭決定公平性、不提供瓦斯、電氣、高處或結構工作的 DIY 指示、不發送通知，也不證明任一人已完成專業服務。請依說明書與合格來源處理實際工作。` : `${values.review.trim()} — household maintenance delegation summary\nContext: ${values.context}\nCurrent review: ${formatter.format(review)}\nNext review: ${formatter.format(next)}\nStatus counts: ${counts}\n\nVersioned maintenance delegation\n${rendered}\n\nProtected maintenance-source location: ${values.storage.trim()}\n\nThis output only organizes household responsibility and handoff. It does not decide fairness, provide DIY instructions for gas, electrical, height or structural work, send notifications or prove that anyone completed professional service. Follow the applicable manual and qualified sources for the real work.`;
+    },
+  };
+};
+
 const serviceQuoteComparisonDefinition = (locale: Locale): Definition => {
   const zh = locale === "zh-TW";
   const statuses = zh
@@ -5568,6 +5614,7 @@ const definitions: Record<string, Definition> = {
   "household-router-support-review-log": routerSupportReviewDefinition("en"),
   "household-account-list": householdAccountDefinition("en"),
   "household-responsibility-coverage-map": householdResponsibilityCoverageDefinition("en"),
+  "household-maintenance-delegation-map": maintenanceDelegationDefinition("en"),
   "household-replacement-part-source-check-log": householdReplacementPartSourceCheckDefinition("en"),
   "household-consumable-change-history-log": householdConsumableChangeHistoryDefinition("en"),
   "household-repair-evidence-timeline-log": householdRepairEvidenceTimelineDefinition("en"),
@@ -9728,6 +9775,9 @@ const zhTwDefinitions: Record<string, Definition> = {
   },
   "household-responsibility-coverage-map": {
     ...householdResponsibilityCoverageDefinition("zh-TW"),
+  },
+  "household-maintenance-delegation-map": {
+    ...maintenanceDelegationDefinition("zh-TW"),
   },
   "household-replacement-part-source-check-log": {
     ...householdReplacementPartSourceCheckDefinition("zh-TW"),

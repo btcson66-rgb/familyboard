@@ -401,6 +401,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-schedule-conflict-review-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-maintenance-priority-review-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-maintenance-priority-review-log/</loc>",
+      "<loc>https://familyboard.win/tools/household-maintenance-delegation-map/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/household-maintenance-delegation-map/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-maintenance-priority-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-service-quote-comparison-log/</loc>",
@@ -2072,6 +2074,15 @@ const checks = [
     ],
   },
   {
+    path: "/tools/household-maintenance-delegation-map/",
+    require: [
+      "Free Home Maintenance Delegation Map",
+      'hreflang="zh-TW"',
+      "Separate outcome ownership from physical work",
+      "Use safe source pointers",
+    ],
+  },
+  {
     path: "/guides/appliance-inventory/",
     require: [
       "Build an appliance inventory that survives delivery",
@@ -3313,6 +3324,15 @@ const checks = [
       'hreflang="en"',
       "先比較範圍，再看金額",
       "把家庭限制寫成要問的問題",
+    ],
+  },
+  {
+    path: "/zh-tw/tools/household-maintenance-delegation-map/",
+    require: [
+      "家庭維護分工地圖工具",
+      'hreflang="en"',
+      "一列只放一個可觀察的下一步",
+      "危險工作只分配「找正確來源」",
     ],
   },
   {

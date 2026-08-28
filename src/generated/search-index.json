@@ -2792,6 +2792,14 @@
     "headings": "How to review FamilyBoard subscriptions before a renewal charge Start with the provider's current source Compare cost with a consistent convention Assign a renewal decision and a real checkpoint Close only after observing the result"
   },
   {
+    "title": "Free Home Maintenance Delegation Map | Owners, Next Steps and Handoffs",
+    "description": "A private-first home maintenance delegation map for separating outcome ownership, physical work, due dates and handoff status without unsafe DIY advice or automatic notifications.",
+    "route": "/tools/household-maintenance-delegation-map/",
+    "cluster": "tools",
+    "keywords": "home maintenance delegation map",
+    "headings": "Free Home Maintenance Delegation Map Separate outcome ownership from physical work Treat dates as review points, not guarantees Use safe source pointers Affiliate boundary"
+  },
+  {
     "title": "FamilyBoard Decision Register Tutorial | Record Household Choices Clearly",
     "description": "Learn how to use FamilyBoard's household decision register to keep one question, source, constraints, owner and observed outcome together while protecting private documents and sensitive decisions.",
     "route": "/guides/familyboard-household-decision-register-tutorial/",
