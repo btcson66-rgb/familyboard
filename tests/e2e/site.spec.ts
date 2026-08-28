@@ -104,6 +104,8 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-record-linking-tutorial/",
     "/guides/familyboard-utility-bill-difference-tutorial/",
     "/zh-tw/guides/familyboard-utility-bill-difference-tutorial/",
+    "/guides/familyboard-time-window-overlap-checker-tutorial/",
+    "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -681,6 +683,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-utility-bill-difference-tutorial/",
     "/tools/household-time-window-overlap-checker/",
     "/zh-tw/tools/household-time-window-overlap-checker/",
+    "/guides/familyboard-time-window-overlap-checker-tutorial/",
+    "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
     "/zh-tw/features/home-inventory-tracker/",
     "/zh-tw/features/family-task-manager/",
     "/zh-tw/features/home-dashboard/",
@@ -1654,6 +1658,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       heading: "FamilyBoard 服務預約交接教學：把預約、進場與結果分開記",
     },
     {
+      route: "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
+      alternate: "/guides/familyboard-time-window-overlap-checker-tutorial/",
+      heading: "FamilyBoard 時間窗口重疊檢查教學",
+    },
+    {
       route: "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",
       alternate: "/guides/familyboard-subscription-cancellation-handoff-tutorial/",
       heading: "FamilyBoard 訂閱怎麼取消與交接？先確認窗口，再複查正式結果",
@@ -1987,6 +1996,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/tools/household-school-closure-continuity-log/",
       alternate: "/tools/household-school-closure-continuity-log/",
       heading: "停課家庭連續運作時間線工具",
+    },
+    {
+      route: "/zh-tw/tools/household-time-window-overlap-checker/",
+      alternate: "/tools/household-time-window-overlap-checker/",
+      heading: "家庭時間窗口重疊檢查工具",
     },
   ]) {
     await page.goto(localizedTool.route);

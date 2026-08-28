@@ -577,6 +577,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-utility-bill-difference-tutorial/</loc>",
       "<loc>https://familyboard.win/tools/household-time-window-overlap-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-time-window-overlap-checker/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/family-task-manager/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-dashboard/</loc>",
@@ -5732,6 +5734,22 @@ const checks = [
     require: [
       "家庭時間窗口重疊檢查工具",
       "填入兩個窗口的四個時間點",
+      'lang="zh-TW"',
+    ],
+  },
+  {
+    path: "/guides/familyboard-time-window-overlap-checker-tutorial/",
+    require: [
+      "How to Use FamilyBoard's Time-Window Overlap Checker",
+      "Read the three possible results",
+      "Separate arithmetic from the household decision",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
+    require: [
+      "FamilyBoard 時間窗口重疊檢查教學",
+      "看懂三種結果",
       'lang="zh-TW"',
     ],
   },

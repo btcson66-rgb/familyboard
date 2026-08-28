@@ -2952,6 +2952,14 @@
     "headings": "家庭時間窗口重疊檢查工具：不貼整份行事曆也能先比較 先用安全代號和短標籤 填入兩個窗口的四個時間點 把結果當成待查問題 讓來源和責任可以交接 需要更完整衝突時使用其他工具 隱私與 affiliate 界線 最小可用紀錄"
   },
   {
+    "title": "How to Use FamilyBoard's Time-Window Overlap Checker | Practical Guide",
+    "description": "Learn how to compare household activity and service windows, interpret overlap or boundary results and assign a source-based follow-up without copying a calendar.",
+    "route": "/guides/familyboard-time-window-overlap-checker-tutorial/",
+    "cluster": "product",
+    "keywords": "time-window overlap checker tutorial",
+    "headings": "How to Use FamilyBoard's Time-Window Overlap Checker Without Copying a Calendar Start with one bounded question Enter dates and endpoints exactly as observed Read the three possible results Separate arithmetic from the household decision Escalate to a fuller record when needed Privacy, accessibility and affiliate boundaries A repeatable closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

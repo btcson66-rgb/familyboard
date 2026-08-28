@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T09:32:23.316Z
+Generated: 2026-08-28T09:43:27.879Z
 
 ## Summary
 
-- Indexable pages: 735
-- Generated HTML routes: 741
+- Indexable pages: 737
+- Generated HTML routes: 743
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 411
+- Pages without a contextual product/tool link: 412
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 128
+- product: 130
 - inventory-warranty: 60
 - appliances: 56
 - maintenance: 82
@@ -33,6 +33,7 @@ Generated: 2026-08-28T09:32:23.316Z
 
 ## Highest similarity pairs
 
+- 381-zh-tw--tools--household-time-window-overlap-checker.md ↔ 383-zh-tw--guides--familyboard-time-window-overlap-checker-tutorial.md: 0.267
 - 292-zh-tw--tools--household-shopping-list-planner.md ↔ 293-zh-tw--guides--familyboard-shopping-list-planner-tutorial.md: 0.240
 - 227-tools--household-pet-record-source-handoff-log.md ↔ 228-tools--household-school-record-source-handoff-log.md: 0.170
 - 289-zh-tw--tools--household-router-support-review-log.md ↔ 290-zh-tw--guides--familyboard-router-support-review-tutorial.md: 0.159
@@ -230,6 +231,7 @@ Generated: 2026-08-28T09:32:23.316Z
 - /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
 - /zh-tw/guides/familyboard-subscription-renewal-review/
+- /zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
 - /zh-tw/guides/familyboard-utility-bill-difference-tutorial/
 - /zh-tw/guides/familyboard-utility-provider-handoff-tutorial/
