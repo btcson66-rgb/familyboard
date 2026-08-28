@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T14:34:59.173Z
+Generated: 2026-08-28T14:52:56.556Z
 
 ## Summary
 
-- Indexable pages: 811
-- Generated HTML routes: 817
+- Indexable pages: 817
+- Generated HTML routes: 823
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 464
+- Pages without a contextual product/tool link: 467
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,7 +23,7 @@ Generated: 2026-08-28T14:34:59.173Z
 - appliances: 56
 - maintenance: 82
 - household-operations: 147
-- records-emergency: 101
+- records-emergency: 107
 - tools: 152
 
 ## Word-count range
@@ -207,6 +207,9 @@ Generated: 2026-08-28T14:34:59.173Z
 - /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
 - /zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/
+- /zh-tw/guides/familyboard-home-care-complaint-response-resolution-tutorial/
+- /zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/
+- /zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/
 - /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
 - /zh-tw/guides/familyboard-home-inventory-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/

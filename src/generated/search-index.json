@@ -3360,6 +3360,30 @@
     "headings": "Warranty Checklist Generator Tutorial: Preserve Purchase Evidence Before You Need It Start with the product source Distinguish dates and events Prepare a claim without promising the outcome Handoff and privacy"
   },
   {
+    "title": "Home Care Service Plan Change Notice Tutorial | FamilyBoard",
+    "description": "Learn how to document a home-care service change without treating a message, signature or effective date as proof that the new service was implemented.",
+    "route": "/guides/familyboard-home-care-service-plan-change-notice-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "home care service plan change notice tutorial",
+    "headings": "Home Care Service Plan Change Notice Tutorial: Separate Notice, Version and First Changed Visit Start with a safe change code and a bounded question Keep seven layers separate Identify the notice without guessing its name Compare versions without copying protected care instructions Treat transition and the first changed service as evidence Privacy and handoff checks"
+  },
+  {
+    "title": "Home Care Service Interruption Backup Tutorial | FamilyBoard",
+    "description": "Learn how to document a home-care service interruption and continuity attempt without promising a backup, storing care instructions or treating a phone call as resolution.",
+    "route": "/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "home care service interruption backup tutorial",
+    "headings": "Home Care Service Interruption Backup and Continuity Tutorial: Record the Gap Before Promising a Replacement Check immediate safety before opening a routine row Separate five facts that are often merged Record a qualified route, not an improvised care plan Use the result layer to close honestly Protect the handoff and the backup file"
+  },
+  {
+    "title": "Home Care Complaint Response Tutorial | FamilyBoard",
+    "description": "Learn how to document a home-care complaint and its response without storing allegations, calculating deadlines or treating a closed case as proof of improvement.",
+    "route": "/guides/familyboard-home-care-complaint-response-resolution-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "home care complaint response tutorial",
+    "headings": "Home Care Complaint Response and Resolution Tutorial: Keep the Response Separate From Improvement Choose the route before writing the story Keep eight evidence layers visible Protect the person’s participation and the evidence custody Read current instructions instead of guessing a deadline Treat closure and improvement as different outcomes Privacy and optional commercial content"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

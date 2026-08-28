@@ -676,6 +676,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-room-inventory-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-warranty-checklist-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-warranty-checklist-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-care-service-plan-change-notice-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-care-complaint-response-resolution-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-care-complaint-response-resolution-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -6101,6 +6107,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-warranty-checklist-generator-tutorial/",
     require: ["保固資料檢查表產生器教學", "購買來源", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-care-service-plan-change-notice-tutorial/",
+    require: ["Home Care Service Plan Change Notice Tutorial", "responsible source"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/",
+    require: ["居家照護服務計畫變更通知教學", "負責來源", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/",
+    require: ["Home Care Service Interruption Backup Tutorial", "immediate danger"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/",
+    require: ["居家照護服務中斷與備援教學", "立即安全", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-care-complaint-response-resolution-tutorial/",
+    require: ["Home Care Complaint Response Tutorial", "actual improvement"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-care-complaint-response-resolution-tutorial/",
+    require: ["居家照護抱怨與回應教學", "實際改善", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

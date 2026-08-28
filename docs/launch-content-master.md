@@ -17560,7 +17560,7 @@ A reviewed row does not mean the household agrees, the complaint was substantiat
 
 An intake receipt can show that a responsible route accepted or logged a concern. It does not show that an investigation occurred. An investigation status can show that a process is underway. It does not show that every allegation was accepted or that the person had a chance to participate. A written response can show what the agency concluded or promised. It does not show that a corrective action occurred.
 
-Actual improvement requires later evidence from the service relationship. A new scheduling procedure can be announced but not used. Training can be documented while the same failure recurs. A replacement worker can be assigned but not arrive. The household row therefore keeps the attributable response, corrective action and actual service result in the same field but as three distinct statements.
+Actual improvement requires later evidence from the service relationship. Record an actual improvement only when a later service observation supports it. A new scheduling procedure can be announced but not used. Training can be documented while the same failure recurs. A replacement worker can be assigned but not arrive. The household row therefore keeps the attributable response, corrective action and actual service result in the same field but as three distinct statements.
 
 Use neutral language: `response R6 received; corrective action ACTION-3 stated; first later service result observed` is more accurate than `problem fixed`. If the household disagrees with a response, record the disagreement or remaining issue in the protected process and keep the appropriate review route open. Do not change an agency's `closed` case status into household satisfaction.
 
@@ -31964,6 +31964,224 @@ This file is intended to be handed directly to Codex/Claude Code after the `fami
 | SL | `/app/` | FamilyBoard App — Private Local Household Dashboard | supporting page |  | 124 |
 
 ---
+
+## Page 437 — Home Care Service Plan Change Notice Tutorial: Separate Notice, Version and First Changed Visit
+
+**Slug:** `/guides/familyboard-home-care-service-plan-change-notice-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/`
+**Primary intent:** use the home-care service plan change and notice log to separate a change signal, responsible source, notice, household response, transition and first changed-service result
+**Title tag:** Home Care Service Plan Change Notice Tutorial | FamilyBoard
+**Meta description:** Learn how to document a home-care service change without treating a message, signature or effective date as proof that the new service was implemented.
+**Primary keyword concept:** home care service plan change notice tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Record one real change signal, its responsible source and the first implementation checkpoint; leave unanswered layers open.
+**Suggested internal links:** `/tools/home-care-service-plan-change-notice-log/`, `/tools/home-care-service-interruption-backup-continuity-log/`, `/tools/home-care-complaint-response-resolution-log/`, `/guides/caregiver-handoff-checklist/`
+
+# Home Care Service Plan Change Notice Tutorial: Separate Notice, Version and First Changed Visit
+
+A home-care schedule or plan can change through a reassessment, agency message, program notice, contract amendment, worker transition or service-ending decision. Those signals are not the same thing as an approved change, and an effective date is not proof that the first changed service occurred. The free [Home Care Service Plan Change and Notice Log](/tools/home-care-service-plan-change-notice-log/) helps a household connect the source, versions, notice, response, transition and implementation result without copying clinical instructions or rights documents.
+
+## Start with a safe change code and a bounded question
+
+Use a code such as `CARE-CHANGE-2026-A` and write one question: “Which source controls the next service batch?” Choose the context—reassessment, contract scope, worker transition, reduction, increase, cost notice or disagreement. Do not paste a person’s name, case number, diagnosis, exact visit window or private notice text into the household index.
+
+The baseline date is the last source version checked before the signal. The current review date is when the household checked its pointers. The next checkpoint manages follow-up only; none of these dates is an appeal, filing, coverage or legal deadline.
+
+## Keep seven layers separate
+
+Record the chain in order:
+
+1. **Signal:** someone proposed, predicted or reported a change.
+2. **Responsible decision:** the ordering professional, program, agency, payer or contract process issued an attributable result.
+3. **Version:** the old and current plan, authorization, contract or attachment can be distinguished.
+4. **Notice:** the responsible process supplied the applicable notice and delivery record.
+5. **Response:** the person or household received, questioned, agreed, declined or disagreed as the real process allows.
+6. **Transition:** replacement, continuity and handoff arrangements have a source.
+7. **Implementation:** the first changed service or missed transition was actually observed and recorded separately.
+
+A scheduling call can be useful evidence of a signal but cannot silently amend the controlling plan. A signature may acknowledge receipt without proving agreement. A notice may state an effective date without proving implementation. The log keeps those claims visible instead of using one “changed” checkbox.
+
+## Identify the notice without guessing its name
+
+Some Original Medicare home-health changes use a specific notice, while Medicaid, managed-care, private-pay and community programs may use different documents or routes. Record the exact title shown by the responsible source. Do not label every email an HHCCN, ABN or appeal decision. If the source is unclear, keep the row open and ask the agency, plan, program, contract owner or qualified adviser which process applies.
+
+Read a current notice immediately when it arrives. FamilyBoard does not calculate a response or appeal deadline because the controlling document, program, jurisdiction and facts determine the real timing. A household reminder is not an extension of an official period.
+
+## Compare versions without copying protected care instructions
+
+Use safe pointers such as `PLAN-OLD-2`, `PLAN-CURRENT-3` and `NOTICE-N4`. Record which source was checked and what broad layer changed—frequency, service window, provider, covered scope, contract term or transition—not the clinical or personal-care instructions. Keep the full plan, notice, signature, accessibility request and appeal material in the system that owns them.
+
+If the proposed version conflicts with the older source, preserve both pointers and name the responsible reviewer. Do not edit the old row to make the dates agree. A conflict is a useful status: it tells the household which question must be resolved before calling the change complete.
+
+## Treat transition and the first changed service as evidence
+
+Record a safe batch such as `BATCH-C` and link the first attributable service result. “Replacement worker assigned” is not the same as “replacement service observed.” “Old schedule still occurred” is an implementation conflict, not proof that the new plan is invalid. Use the [Home Care Service Interruption, Backup and Continuity Log](/tools/home-care-service-interruption-backup-continuity-log/) when the approved plan is unchanged but the expected service temporarily stops.
+
+If the household disagrees, keep the change record factual and open the appropriate complaint, grievance or appeal route in the responsible process. The [Home Care Complaint, Response and Resolution Log](/tools/home-care-complaint-response-resolution-log/) can preserve a separate receipt, response and later service result. Do not treat a household entry as an official filing.
+
+## Privacy and handoff checks
+
+Before printing or sharing, remove full identifiers, health details, exact schedules, access instructions, account data, signatures and private correspondence. A backup role should be able to find the protected source from a safe pointer, but should not receive more care information than the task requires. FamilyBoard stores the working index in the current browser; export and protect a backup before clearing site data.
+
+Future affiliate recommendations for folders, scanners or labels must remain outside notice reading, service continuity and rights decisions. A purchase cannot create coverage, replace a service or make a response deadline safe.
+
+**FAQ:**
+- Q: Does an agency message prove that the plan changed?
+  A: No. It is a signal until the responsible source, version and applicable notice or contract process are attributable.
+- Q: Does signing a notice mean the person agreed?
+  A: Not necessarily. Receipt, acknowledgment, agreement, disagreement and waiver are separate claims controlled by the real process.
+- Q: Can FamilyBoard tell me whether an HHCCN or appeal applies?
+  A: No. Record the exact source and ask the responsible program, agency, plan or qualified adviser.
+- Q: When can I close the household change row?
+  A: After the relevant source, versions, notice, response, transition, first changed-service result and reopen rule are linked; official validity remains with the responsible process.
+
+## Page 438 — Home Care Service Interruption Backup and Continuity Tutorial: Record the Gap Before Promising a Replacement
+
+**Slug:** `/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/`
+**Primary intent:** use the home-care interruption log to separate urgent safety action, responsible-source confirmation, qualified backup, replacement attempt, resumption and unresolved gap
+**Title tag:** Home Care Service Interruption Backup Tutorial | FamilyBoard
+**Meta description:** Learn how to document a home-care service interruption and continuity attempt without promising a backup, storing care instructions or treating a phone call as resolution.
+**Primary keyword concept:** home care service interruption backup tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Create one interruption row from a real missed or threatened service and identify the next responsible checkpoint.
+**Suggested internal links:** `/tools/home-care-service-interruption-backup-continuity-log/`, `/tools/home-care-service-plan-change-notice-log/`, `/tools/home-care-visit-scope-service-result-log/`, `/guides/emergency-information-privacy/`
+
+# Home Care Service Interruption Backup and Continuity Tutorial: Record the Gap Before Promising a Replacement
+
+A missed visit, worker absence, agency closure, transportation failure or sudden service pause can create an urgent household question: what is unsafe now, which source confirms the interruption and what happened when a replacement was attempted? The free [Home Care Service Interruption, Backup and Continuity Log](/tools/home-care-service-interruption-backup-continuity-log/) creates a dated source map. It does not provide care instructions, arrange staffing or guarantee continuity.
+
+## Check immediate safety before opening a routine row
+
+If anyone may be in immediate danger, follow local emergency services, the responsible clinical or safety plan and current qualified instructions first. Do not wait for a FamilyBoard row, and do not use the tool to decide whether a person can safely manage without the service. After urgent action, record only a safe pointer to the responsible route.
+
+Use `CARE-GAP-2026-A` for the household index and state the narrow interruption context: missed visit, provider cancellation, temporary agency closure, transport failure, worker transition or unconfirmed service. Keep the person’s name, care task, medication, mobility details, exact address and private messages in protected systems.
+
+## Separate five facts that are often merged
+
+1. **Expected service:** what the current plan or contract source says should occur.
+2. **Interruption signal:** who reported a cancellation, absence or risk, and when.
+3. **Responsible confirmation:** which agency, program, plan or coordinator confirmed the status.
+4. **Continuity attempt:** the qualified backup, escalation or official route that was actually contacted.
+5. **Observed result:** replacement occurred, service resumed, a gap remained or the responsible process issued a new instruction.
+
+“A worker said someone would call” is not a confirmed replacement. “A backup name exists” is not a completed visit. “The agency closed the ticket” is not proof that the service resumed. Use separate pointers and dates so a later handoff can see what is still open.
+
+## Record a qualified route, not an improvised care plan
+
+The tool can store a safe role such as `AGENCY-ONCALL`, `PROGRAM-CASE`, `AUTHORIZED-REP` or `EMERGENCY-ROUTE`. It must not contain medication changes, lifting techniques, clinical thresholds, emergency instructions or a person’s full schedule. Those instructions belong to the responsible protected plan and qualified source.
+
+When a backup is proposed, record the source, scope and confirmation status. Do not infer that a relative, neighbor or marketplace worker is qualified, authorized, insured or able to provide the service. If the responsible source cannot confirm a safe replacement, keep the continuity gap open and use the official escalation route.
+
+## Use the result layer to close honestly
+
+Close a household interruption row only when the source, interruption, continuity attempt, actual result, custody and reopen condition are visible. A row can remain open after a replacement visit if the scope was unclear or the first result is still being checked. If the approved plan itself changed, link the [Home Care Service Plan Change and Notice Log](/tools/home-care-service-plan-change-notice-log/) instead of treating a temporary gap as a permanent amendment.
+
+For repeated failures or a disputed response, use the [Home Care Complaint, Response and Resolution Log](/tools/home-care-complaint-response-resolution-log/) as a separate chain. Preserve the agency’s response accurately, then add the later observed service result; do not rewrite a response as improvement.
+
+## Protect the handoff and the backup file
+
+Before exporting, remove health details, exact locations, credentials, full contacts, case numbers and private correspondence. Keep the safe pointer and source owner, and store the complete protected record where the responsible roles can access it. FamilyBoard is local-first: browser storage is not automatic cloud backup, encryption or recovery service.
+
+Affiliate products, if introduced later, must stay outside urgent instructions, the interruption form and generated output. A folder, phone or paid service cannot make a person safe or guarantee a replacement.
+
+**FAQ:**
+- Q: Can the tool tell me what care to provide during a gap?
+  A: No. Follow the responsible protected plan, qualified source and emergency instructions.
+- Q: Does a backup worker’s name prove the service is arranged?
+  A: No. Preserve the accountable source, scope, confirmation and actual result separately.
+- Q: Should I mark the interruption resolved when the agency replies?
+  A: Not automatically. A response is different from a completed replacement or resumed service.
+- Q: What if the interruption changes the approved plan?
+  A: Keep the gap record and link a separate plan-change or notice record with its own source and process.
+
+## Page 439 — Home Care Complaint Response and Resolution Tutorial: Keep the Response Separate From Improvement
+
+**Slug:** `/guides/familyboard-home-care-complaint-response-resolution-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-care-complaint-response-resolution-tutorial/`
+**Primary intent:** use the home-care complaint log to distinguish safety route, inquiry, complaint, grievance, appeal, receipt, investigation, response, corrective action and later service result
+**Title tag:** Home Care Complaint Response Tutorial | FamilyBoard
+**Meta description:** Learn how to document a home-care complaint and its response without storing allegations, calculating deadlines or treating a closed case as proof of improvement.
+**Primary keyword concept:** home care complaint response tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Create a safe complaint index for one real concern and link its responsible receipt and next review point.
+**Suggested internal links:** `/tools/home-care-complaint-response-resolution-log/`, `/tools/home-care-service-plan-change-notice-log/`, `/tools/home-care-service-interruption-backup-continuity-log/`, `/guides/caregiver-handoff-checklist/`
+
+# Home Care Complaint Response and Resolution Tutorial: Keep the Response Separate From Improvement
+
+A home-care concern may be a routine inquiry, an agency complaint, a grievance, an adverse-benefit appeal, a quality report or an urgent safety matter. Each route can have a different decision-maker, receipt, notice, deadline and evidence rule. The free [Home Care Complaint, Response and Resolution Log](/tools/home-care-complaint-response-resolution-log/) helps a household preserve those distinctions without copying allegations, protected care details or legal documents.
+
+## Choose the route before writing the story
+
+Use a code such as `CARE-COMPLAINT-2026-A`. First ask whether anyone needs immediate protection or official reporting. Then classify the narrow route: information request, agency complaint or grievance, benefit appeal, external quality complaint, billing dispute or rights and retaliation follow-up. Do not paste the narrative into the tool; store it in the responsible process and keep only a safe pointer.
+
+One event can create more than one route. A missed service may need an agency continuity complaint and a separate appeal if a payer issued an adverse determination. Link the safe IDs, but do not merge receipts, decision-makers or deadlines. The label chosen by a household does not override the official process.
+
+## Keep eight evidence layers visible
+
+Record the signal, safety check, responsible handling source, protected relationship match, evidence custody, intake and receipt, investigation or response scope, person participation, attributable response, corrective action, actual later service result and reopen rule. A receipt shows that a route accepted or logged something; it does not prove the investigation was complete. A response states what the agency concluded or promised; it does not prove the service changed.
+
+Use neutral language such as `receipt R4 observed`, `response scope limited to scheduling`, `corrective action stated`, and `first later service result pending`. Do not type “fixed,” “substantiated,” “retaliation proven” or “household satisfied” unless the responsible source actually makes that claim and the household’s own result remains separate.
+
+## Protect the person’s participation and the evidence custody
+
+A relative or coordinator may submit a concern, but relationship alone does not prove authority or the protected person’s wishes. Record a safe pointer to the applicable representative, communication support or participation source. Keep the actual conversation, accommodation request, witness statement, complaint text, medical information and attachments in the qualified protected process.
+
+The household can record where its own dated observation is stored and who can retrieve it. That does not make the household an investigator or prove causation. Preserve original files without silently editing them; add a new version when the issue recurs or the responsible source changes.
+
+## Read current instructions instead of guessing a deadline
+
+Medicare-certified home-health agencies, Medicaid programs, managed-care plans, private contracts and state authorities can use different complaint, grievance and appeal routes. A current notice, plan handbook or official agency instruction controls. FamilyBoard does not calculate a deadline, promise continuation of benefits or decide which authority has jurisdiction. Read the actual notice immediately and contact the responsible route.
+
+If the concern involves immediate danger, suspected abuse, neglect, exploitation or retaliation, use local emergency and official reporting sources first. Do not interview a suspected person, investigate through the tool or promise anonymity that the real process does not provide.
+
+## Treat closure and improvement as different outcomes
+
+An agency may close a case because it sent a response, completed its internal review, transferred the matter or found no further internal action. The household can still disagree, await a corrective action or observe whether later service improved. Keep the agency status accurate and leave the actual-result layer open when necessary.
+
+Record an actual improvement only when a later service observation supports it; a written response or announced corrective action alone is not that evidence.
+
+Use the interruption log for a continuity gap and the plan-change log for a changed version or notice. The complaint log should point to those records, not duplicate private care instructions. A later recurrence starts a new dated version; it is evidence of a new event, not automatic proof that an earlier investigation was wrong.
+
+## Privacy and optional commercial content
+
+Before sharing, remove names, contacts, addresses, case identifiers, health facts, costs, signatures, credentials and private correspondence. FamilyBoard’s local-first browser storage is not a complaint archive, legal file or cloud recovery service; export and protect backups deliberately.
+
+Any future affiliate area must stay outside safety warnings, complaint intake, official links and generated results. A paid product cannot validate a complaint, select a provider, change a status or replace an official response.
+
+**FAQ:**
+- Q: Is this a complaint filing service?
+  A: No. It is a private index; file through the responsible agency, plan, program or authority.
+- Q: Is a grievance the same as an appeal?
+  A: No. The real notice and process determine the route; preserve each receipt and decision separately.
+- Q: Can I close the row when the agency sends a response?
+  A: Not necessarily. Keep the later corrective action, actual service result, unresolved item and reopen rule visible.
+- Q: Should I paste allegations or the full response into FamilyBoard?
+  A: No. Keep them in the protected process and store only safe source and custody pointers.
 
 # FINAL HANDOFF TO CODEX — START WORK
 

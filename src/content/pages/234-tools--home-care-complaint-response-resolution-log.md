@@ -92,7 +92,7 @@ A reviewed row does not mean the household agrees, the complaint was substantiat
 
 An intake receipt can show that a responsible route accepted or logged a concern. It does not show that an investigation occurred. An investigation status can show that a process is underway. It does not show that every allegation was accepted or that the person had a chance to participate. A written response can show what the agency concluded or promised. It does not show that a corrective action occurred.
 
-Actual improvement requires later evidence from the service relationship. A new scheduling procedure can be announced but not used. Training can be documented while the same failure recurs. A replacement worker can be assigned but not arrive. The household row therefore keeps the attributable response, corrective action and actual service result in the same field but as three distinct statements.
+Actual improvement requires later evidence from the service relationship. Record an actual improvement only when a later service observation supports it. A new scheduling procedure can be announced but not used. Training can be documented while the same failure recurs. A replacement worker can be assigned but not arrive. The household row therefore keeps the attributable response, corrective action and actual service result in the same field but as three distinct statements.
 
 Use neutral language: `response R6 received; corrective action ACTION-3 stated; first later service result observed` is more accurate than `problem fixed`. If the household disagrees with a response, record the disagreement or remaining issue in the protected process and keep the appropriate review route open. Do not change an agency's `closed` case status into household satisfaction.
 

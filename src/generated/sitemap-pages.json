@@ -3496,6 +3496,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-home-care-service-plan-change-notice-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-home-care-complaint-response-resolution-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-care-complaint-response-resolution-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4252,6 +4276,27 @@
   {
     "route": "/zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
     "alternateRoute": "/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-home-care-complaint-response-resolution-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-care-complaint-response-resolution-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-care-service-plan-change-notice-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
