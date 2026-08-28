@@ -2696,6 +2696,30 @@
     "headings": "How to use a household subscription cost calculator before the next renewal Build the list from current evidence Read the annualized math Catch the errors that change decisions Turn a total into a fair review conversation Use categories without hiding the combined view"
   },
   {
+    "title": "Free Home Management App Tutorial | Start with FamilyBoard",
+    "description": "Start FamilyBoard in three safe steps: create a local household, add a real asset or task, and export a backup before building a larger home history.",
+    "route": "/guides/familyboard-free-home-management-app-tutorial/",
+    "cluster": "product",
+    "keywords": "free home management app tutorial",
+    "headings": "A practical first day with the free FamilyBoard home management app Step 1: create a local household with minimal information Step 2: add one record with an obvious review date Step 3: learn what Today does and does not show Step 4: export before scaling up Add history in layers, not as one giant import Set expectations for a free, local-first app"
+  },
+  {
+    "title": "Private Family Organizer Tutorial | Local-First FamilyBoard Guide",
+    "description": "Learn how to use FamilyBoard as a private family organizer: minimise sensitive data, understand browser storage, encrypt exports and share role-based handoffs.",
+    "route": "/guides/familyboard-private-family-organizer-tutorial/",
+    "cluster": "product",
+    "keywords": "private family organizer app tutorial",
+    "headings": "How to use FamilyBoard as a private family organizer without oversharing Classify information before entering it Understand the browser boundary Transfer a household without sharing an account Make a role-based handoff Privacy checks before display or print Affiliate content stays outside the private record"
+  },
+  {
+    "title": "FamilyBoard Home Dashboard Tutorial | Weekly Household Review",
+    "description": "Use the FamilyBoard home dashboard for a focused weekly review: read the four counters, clear open responsibilities, inspect maintenance due soon and record what stays open.",
+    "route": "/guides/familyboard-home-dashboard-weekly-review-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "home dashboard weekly review",
+    "headings": "A five-minute weekly review using the FamilyBoard home dashboard Read the four counters in order Work the next-responsibilities list Inspect maintenance due soon without inventing work Remember what Today does not display Close the review with an explicit handoff"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

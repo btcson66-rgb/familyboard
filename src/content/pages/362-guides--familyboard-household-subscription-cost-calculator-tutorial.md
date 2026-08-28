@@ -62,3 +62,5 @@ The calculator totals all lines together. For a clearer conversation, run a seco
 All processing is local to the browser. Review the generated result before printing or sharing, and remove any private service clues that the recipient does not need. Future affiliate comparisons must remain outside the calculator, clearly disclosed and optional; a sponsored service cannot influence the total or cancellation decision.
 
 **Next step:** verify three current subscriptions, correct every frequency, and attach the next renewal date to the one you plan to review first.
+
+---

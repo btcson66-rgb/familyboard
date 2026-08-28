@@ -24759,6 +24759,212 @@ All processing is local to the browser. Review the generated result before print
 
 ---
 
+---
+
+## Page 363 — How to Start with the Free FamilyBoard Home Management App
+**Slug:** `/guides/familyboard-free-home-management-app-tutorial/`
+**Primary intent:** onboard a household to the free FamilyBoard app with a useful first record, a dashboard habit and a verified backup
+**Title tag:** Free Home Management App Tutorial | Start with FamilyBoard
+**Meta description:** Start FamilyBoard in three safe steps: create a local household, add a real asset or task, and export a backup before building a larger home history.
+**Primary keyword concept:** free home management app tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/features/free-home-management-app/`, `/features/home-dashboard/`, `/features/private-family-organizer/`, `/guides/familyboard-offline-backup-restore/`
+**FAQ:**
+- Q: Do I need an account or email to start FamilyBoard?
+  A: No. The current app creates the household in the browser's local database without an account or sign-in.
+- Q: What should I enter first?
+  A: Add one real, low-risk asset or responsibility that the household can review this week, then check that it appears on the relevant tab.
+- Q: Is the free app a limited trial?
+  A: No paid tier currently locks the app's tabs. The practical limit is browser storage and the fact that each browser profile has its own local household.
+- Q: Who makes the backup?
+  A: You do. Export a JSON backup from Settings and test a restore; there is no hidden server copy behind the free local-first design.
+
+**Contextual CTA:** Open the free app, create one useful record and export your first local backup.
+
+# A practical first day with the free FamilyBoard home management app
+
+The fastest way to abandon a household app is to import everything before learning how it stores, displays and backs up information. FamilyBoard is deliberately free and local-first: the app has no account wall, no paid tab and no server-side household database. That makes the first session simple, but it also makes the backup responsibility visible. This tutorial uses a small first-day loop so a household understands the product before committing years of history.
+
+## Step 1: create a local household with minimal information
+
+Open the [free home management app](/features/free-home-management-app/) and create a household name. Add member names only when the household needs them for ownership or handoff. Do not begin by pasting addresses, account numbers, passwords, medical notes or private messages into a general note. A label such as `Apartment home` is enough to prove that the browser profile is the one you intend to use.
+
+The onboarding write happens in the current browser's local database. There is no email verification and no remote round-trip that makes a second copy. If two devices show different records later, that is expected until you deliberately transfer a backup.
+
+## Step 2: add one record with an obvious review date
+
+Choose one responsibility the household already understands: a maintenance task for a known appliance, a warranty review, a recurring chore or a document pointer. Use a neutral asset label and the source location rather than copying the full document. Assign an owner only if that role is clear. The aim is to see the record move through the app, not to design a perfect taxonomy.
+
+Open the relevant tab, edit the record once, and return to Today. Check that the task, active asset or upcoming responsibility appears where you expect. If the record does not make sense to another household member, improve the label before adding twenty more records. Clear language is part of data quality.
+
+## Step 3: learn what Today does and does not show
+
+The [Home Dashboard](/features/home-dashboard/) is a triage view, not a full archive. It counts overdue tasks, maintenance due within seven days, active assets and active subscriptions, then shows short lists of the next responsibilities and maintenance due. Warranties and renewals remain on their own tabs unless you create a task to review them.
+
+The dashboard does not send a notification while the browser is closed. Reopen the app as part of a weekly or monthly routine, and use a calendar you control when a date truly needs an alert. Never assume that a green empty state proves the household has no future work; it only describes the dashboard's current window.
+
+## Step 4: export before scaling up
+
+After the first useful record works, open Settings and export a JSON backup. Give the file a neutral custody label such as `HOUSEHOLD-BACKUP-2026-08`; do not put names, addresses or account details in the filename. Save it somewhere private and note the app version or categories included.
+
+An export is a snapshot, not synchronisation. Make a controlled restore test in a separate browser profile or test device and confirm that the sample record appears. A successful test shows that this file can be read; it does not guarantee recovery from every device failure. Read the [offline backup and restore guide](/guides/familyboard-offline-backup-restore/) before clearing browser data.
+
+## Add history in layers, not as one giant import
+
+Once the loop is familiar, add assets, maintenance, warranties, subscriptions, emergency information, documents and handoff notes in the order the household will review them. Export again after meaningful changes. The local browser quota is the practical ceiling; there is no plan-based history cap, but clearing site data without a backup can remove the only copy.
+
+Use the master CSV only when a spreadsheet edit genuinely helps, and review its validation preview before importing. Keep sensitive originals in the system that controls them. FamilyBoard is not a password manager, bank, medical record, legal filing system or emergency dispatch channel.
+
+## Set expectations for a free, local-first app
+
+The free design means every current tab is available without checkout, but it also means one household per browser profile and no automatic cross-device sync. Anyone who can unlock the device may be able to open the local records, so use the device's own passcode and encryption. An encrypted export protects the file with its password; a forgotten password has no recovery route.
+
+Future affiliate suggestions for binders, labels or storage must remain outside the app workflow, clearly disclosed and skippable. Buying a product cannot unlock a feature, create a backup or make a household prepared.
+
+**Next step:** create one low-risk record, find it from Today, export a backup and write the date of your next manual review.
+
+---
+
+## Page 364 — How to Use FamilyBoard as a Private Family Organizer
+**Slug:** `/guides/familyboard-private-family-organizer-tutorial/`
+**Primary intent:** choose safe local records, manage privacy boundaries and transfer a FamilyBoard household without account sharing
+**Title tag:** Private Family Organizer Tutorial | Local-First FamilyBoard Guide
+**Meta description:** Learn how to use FamilyBoard as a private family organizer: minimise sensitive data, understand browser storage, encrypt exports and share role-based handoffs.
+**Primary keyword concept:** private family organizer app tutorial
+**Cluster:** product
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/features/private-family-organizer/`, `/features/household-handoff/`, `/features/emergency-information-organizer/`, `/guides/familyboard-share-access-tutorial/`
+**FAQ:**
+- Q: Does local-first mean the device is automatically secure?
+  A: No. Anyone who can unlock the device and browser may see local records. Use the device's own security controls and share only what is needed.
+- Q: Can I use one FamilyBoard account on two phones?
+  A: There is no account or automatic sync. Move a household manually with a JSON backup and verify the restore on the receiving device.
+- Q: Should I store passwords or full medical details in the organizer?
+  A: No. Use a protected system for secrets and sensitive originals; FamilyBoard can hold a safe pointer and the responsible role.
+- Q: Does an encrypted backup have a password reset?
+  A: No. Keep the encryption password in a secure password manager; a forgotten password cannot be recovered by FamilyBoard.
+
+**Contextual CTA:** Set one privacy boundary, add one role-owned record and perform a controlled backup transfer.
+
+# How to use FamilyBoard as a private family organizer without oversharing
+
+“Private” is a workflow decision, not a claim that a browser is invisible. FamilyBoard's [Private Family Organizer](/features/private-family-organizer/) keeps household records in the current browser's IndexedDB, avoids an app account and supports offline use after its shell is cached. The tradeoff is explicit custody: the household chooses what to enter, who can unlock the device, where exports go and how another device receives a copy.
+
+## Classify information before entering it
+
+Use FamilyBoard for coordination facts that benefit from a durable history: an asset label, a maintenance observation, a renewal review, a role-owned task or a protected document pointer. Keep passwords, payment credentials, full identity numbers, access codes, detailed medical information and private conversations in the system designed for them.
+
+When a record needs context, write the minimum useful label. `Insurance policy source in protected folder; renewal review assigned` is safer than copying the policy number and full address into a shared task. A pointer helps an authorised role find the original without making a second sensitive archive.
+
+## Understand the browser boundary
+
+Local storage means there is no FamilyBoard server copy to log into from a new device. It also means a cleared browser profile, deleted site data or failed device can remove the only local database. Use the device's passcode, operating-system encryption and browser profile controls. Do not describe the app as a vault, identity service or guaranteed recovery system.
+
+The app can request persistent storage, which may reduce automatic eviction risk, but the browser decides whether to grant it. Persistence does not protect against deliberate clearing, profile deletion or hardware failure. Export a backup before troubleshooting storage or installing a major browser update.
+
+## Transfer a household without sharing an account
+
+To move to another device, export a JSON backup from Settings, transfer the file through a channel you trust, and restore it in the receiving browser. Choose merge or replace deliberately and keep the safety snapshot created by the restore flow. Open several records after restoring and check that the receiving device is now the intended source of truth.
+
+An encrypted export uses a password you provide. Store that password separately and never send it in the same message as the file. If the password is lost, the encrypted export is not recoverable by support. A plain export is easier to open but must be treated like the private household database itself.
+
+## Make a role-based handoff
+
+The [Household Handoff](/features/household-handoff/) view can explain what another person needs to do without sending the full database. Share a responsibility, source pointer, next checkpoint and boundary: `maintenance list reviewed; current warranty source located; next export due Friday`. Ask the receiver to repeat the source location and next action, not to request credentials.
+
+When a role ends, remove access to the device or file, retire the relevant task and create a dated note about the handoff. Do not rewrite history to make an old assignee disappear; preserve the chronology and restrict the new copy to the people who still need it.
+
+## Privacy checks before display or print
+
+Family Display Mode is a large-type shared view, not an access-control layer. Before displaying it, remove names, schedules, medical details, addresses and access information that visitors do not need. A printed handoff has the same risk as a downloaded file; review the audience and destroy stale copies through the household's normal process.
+
+Browser-only processing keeps the app from receiving household fields, but it does not prevent a user from copying or photographing them. Trust comes from minimisation, device security, source custody, backup discipline and a clear handoff—not from the word “local.”
+
+## Affiliate content stays outside the private record
+
+Future recommendations for storage, labels or backup media must sit outside the record editor with a clear disclosure and a skip option. A sponsored product cannot change a privacy flag, inspect your household, require an email or make a handoff safer by itself.
+
+**Next step:** remove one unnecessary sensitive field, export a labelled backup and ask the next household role to complete a source-pointer handoff.
+
+---
+
+## Page 365 — How to Use the FamilyBoard Home Dashboard Every Week
+**Slug:** `/guides/familyboard-home-dashboard-weekly-review-tutorial/`
+**Primary intent:** run a repeatable weekly review from FamilyBoard's Today dashboard while understanding its counters and visibility limits
+**Title tag:** FamilyBoard Home Dashboard Tutorial | Weekly Household Review
+**Meta description:** Use the FamilyBoard home dashboard for a focused weekly review: read the four counters, clear open responsibilities, inspect maintenance due soon and record what stays open.
+**Primary keyword concept:** home dashboard weekly review
+**Cluster:** household-operations
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** `/features/home-dashboard/`, `/tools/household-weekly-reset-action-log/`, `/guides/household-weekly-reset/`, `/features/family-display-mode/`
+**FAQ:**
+- Q: What does the Today dashboard count?
+  A: It counts overdue tasks, maintenance due within seven days, active assets and active subscriptions from the current local household.
+- Q: Why are warranties not a dashboard counter?
+  A: Warranties and subscriptions have dedicated tabs. Create a task to review an important date if you want it to appear in the dashboard workflow.
+- Q: Does an empty dashboard mean the household has no work?
+  A: No. It means nothing is overdue or due within the dashboard's current window. Future items remain on their full tabs.
+- Q: Does the dashboard sync with another family member's phone?
+  A: No. Each browser profile has its own local database unless the household is manually transferred with a backup.
+
+**Contextual CTA:** Open Today, read each counter aloud, then assign one owner to every open row before the next weekly review.
+
+# A five-minute weekly review using the FamilyBoard home dashboard
+
+The FamilyBoard [Home Dashboard](/features/home-dashboard/) is intentionally plain. Today is a triage surface that answers “what needs attention now?” rather than a chart wall or a complete household archive. A short weekly review works when everyone understands what the four counters mean, what the two lists omit and how to carry an unresolved item forward.
+
+## Read the four counters in order
+
+Start with overdue tasks: open tasks whose due date has passed. Then read maintenance due soon: maintenance tasks whose next-due date falls within the next seven days. Active assets count records not marked archived, and active subscriptions count subscriptions still marked active. These numbers are recalculated from the local database when Today loads.
+
+The counters are signals, not a preparedness score. One overdue caregiver task can matter more than ten routine maintenance items. Read the underlying rows before deciding what to do, and do not hide a difficult task merely to improve the number.
+
+## Work the next-responsibilities list
+
+Today shows up to five open tasks sorted by due date, with undated tasks after dated ones. For each row, confirm the owner, the source or context and the next action. If the date no longer reflects reality, update the task with a reason rather than silently moving it. If the task belongs to a contract, school, provider or authority, keep the controlling date in that source and use FamilyBoard as the household checkpoint.
+
+The [Weekly Reset Action Log](/tools/household-weekly-reset-action-log/) can preserve the review decision when a task stays open. A completed checkbox proves only that the household marked it complete; it does not prove that a provider, authority or repair result actually occurred.
+
+## Inspect maintenance due soon without inventing work
+
+The maintenance card shows up to five items inside the seven-day window. Open the full Maintenance tab when you need a longer horizon. Check the linked asset, the current source or manual, the last observation and the next due date. If the source is uncertain, record a source-check task rather than guessing an interval.
+
+Do not treat the dashboard as an instruction to climb, disconnect, open or repair equipment. Follow the current manual and qualified guidance for electrical, gas, structural or other hazardous work. The dashboard tells you what your household recorded; it cannot certify that a task is safe.
+
+## Remember what Today does not display
+
+Warranties, subscription renewals, documents, completed history and tasks due more than seven days out live on their own tabs. An empty Today state therefore means “nothing in this narrow window,” not “nothing to maintain.” Add a review task for a warranty or renewal that needs attention, and keep the issued source in its proper record.
+
+The dashboard does not send push, email or text notifications while the browser is closed. Reopen the app at a time the household can keep, and pair critical dates with a calendar or reminder system you control. Never rely on a stale tab as the only alert for an emergency, legal, medical or payment deadline.
+
+## Close the review with an explicit handoff
+
+Ask each owner to state the row they own, the source pointer and the next checkpoint. If another person will use a shared screen, switch to [Family Display Mode](/features/family-display-mode/) only after removing private details that visitors do not need. The display is a view, not a permission system.
+
+At the end, export a backup when the review changed meaningful records. Keep the file labelled and private. A weekly review improves findability and ownership; it does not replace professional advice, official instructions or a server-backed backup service.
+
+Future affiliate recommendations must remain after the review, clearly disclosed and optional. A product cannot lower a counter, assign an owner or make a household task complete.
+
+**Next step:** read Today aloud, open one underlying record per counter and leave the next checkpoint visible for the person who owns it.
+
+---
+
 # PART III — ESSENTIAL SUPPORTING PAGES
 
 > These are required product/trust/navigation pages. They are in addition to the 200-page content target, so the final site may launch with roughly 210-215 public routes plus the private app shell. This is still intentionally “about 200 pages,” not a page-count contest.

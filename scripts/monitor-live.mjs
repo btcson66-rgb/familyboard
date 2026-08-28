@@ -46,6 +46,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/familyboard-warranty-expiration-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-home-maintenance-schedule-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-dashboard-weekly-review-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/</loc>",
@@ -473,6 +476,30 @@ const checks = [
       "How to Use FamilyBoard's Household Subscription Cost Calculator",
       "Read the annualized math",
       "does not become a permanent claim",
+    ],
+  },
+  {
+    path: "/guides/familyboard-free-home-management-app-tutorial/",
+    require: [
+      "A practical first day with the free FamilyBoard home management app",
+      "Step 4: export before scaling up",
+      "no account wall",
+    ],
+  },
+  {
+    path: "/guides/familyboard-private-family-organizer-tutorial/",
+    require: [
+      "How to use FamilyBoard as a private family organizer",
+      "Classify information before entering it",
+      "does not prevent a user from copying",
+    ],
+  },
+  {
+    path: "/guides/familyboard-home-dashboard-weekly-review-tutorial/",
+    require: [
+      "A five-minute weekly review using the FamilyBoard home dashboard",
+      "Read the four counters in order",
+      "does not send push, email or text notifications",
     ],
   },
   {
