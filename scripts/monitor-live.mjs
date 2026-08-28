@@ -561,9 +561,15 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/editorial-policy/</loc>",
       "<loc>https://familyboard.win/zh-tw/disclaimer/</loc>",
       "<loc>https://familyboard.win/zh-tw/about/</loc>",
+      "<loc>https://familyboard.win/zh-tw/checklists/printable-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-home-inventory-template/</loc>",
+      "<loc>https://familyboard.win/zh-tw/templates/printable-household-handoff-sheet/</loc>",
       "<loc>https://familyboard.win/editorial-policy/</loc>",
       "<loc>https://familyboard.win/disclaimer/</loc>",
       "<loc>https://familyboard.win/about/</loc>",
+      "<loc>https://familyboard.win/checklists/printable-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/templates/printable-home-inventory-template/</loc>",
+      "<loc>https://familyboard.win/templates/printable-household-handoff-sheet/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/digital-home-inventory-backup/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/household-handoff/</loc>",
@@ -5854,6 +5860,30 @@ const checks = [
   {
     path: "/zh-tw/about/",
     require: ["關於 FamilyBoard", "我們正在做什麼", 'lang="zh-TW"'],
+  },
+  {
+    path: "/checklists/printable-home-maintenance-checklist/",
+    require: ["Printable Home Maintenance Checklist", "Printable sections"],
+  },
+  {
+    path: "/zh-tw/checklists/printable-home-maintenance-checklist/",
+    require: ["可列印居家保養檢查表", "日常可安全觀察的變化", 'lang="zh-TW"'],
+  },
+  {
+    path: "/templates/printable-home-inventory-template/",
+    require: ["Printable Home Inventory Template", "What to record first"],
+  },
+  {
+    path: "/zh-tw/templates/printable-home-inventory-template/",
+    require: ["可列印家庭財物清冊範本", "可列印主表", 'lang="zh-TW"'],
+  },
+  {
+    path: "/templates/printable-household-handoff-sheet/",
+    require: ["Printable Household Handoff Sheet", "Next 30 days"],
+  },
+  {
+    path: "/zh-tw/templates/printable-household-handoff-sheet/",
+    require: ["可列印家庭交接表", "未來 30 天的重要期限", 'lang="zh-TW"'],
   },
 ];
 

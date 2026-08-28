@@ -1489,7 +1489,7 @@
   },
   {
     "route": "/checklists/printable-home-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/checklists/printable-home-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1513,7 +1513,7 @@
   },
   {
     "route": "/templates/printable-home-inventory-template/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-home-inventory-template/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1641,7 +1641,7 @@
   },
   {
     "route": "/templates/printable-household-handoff-sheet/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/templates/printable-household-handoff-sheet/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3153,6 +3153,30 @@
   },
   {
     "route": "/zh-tw/about/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/checklists/printable-home-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-home-inventory-template/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/templates/printable-household-handoff-sheet/",
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
@@ -5456,6 +5480,27 @@
   {
     "route": "/zh-tw/guides/preventive-home-maintenance/",
     "alternateRoute": "/guides/preventive-home-maintenance/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/templates/printable-home-inventory-template/",
+    "alternateRoute": "/templates/printable-home-inventory-template/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/checklists/printable-home-maintenance-checklist/",
+    "alternateRoute": "/checklists/printable-home-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/templates/printable-household-handoff-sheet/",
+    "alternateRoute": "/templates/printable-household-handoff-sheet/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

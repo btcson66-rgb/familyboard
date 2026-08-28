@@ -122,6 +122,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/disclaimer/",
     "/about/",
     "/zh-tw/about/",
+    "/checklists/printable-home-maintenance-checklist/",
+    "/zh-tw/checklists/printable-home-maintenance-checklist/",
+    "/templates/printable-home-inventory-template/",
+    "/zh-tw/templates/printable-home-inventory-template/",
+    "/templates/printable-household-handoff-sheet/",
+    "/zh-tw/templates/printable-household-handoff-sheet/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -377,6 +383,11 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/purchase-receipt-organizer/",
     "/guides/appliance-inventory/",
     "/templates/printable-home-inventory-template/",
+    "/checklists/printable-home-maintenance-checklist/",
+    "/zh-tw/checklists/printable-home-maintenance-checklist/",
+    "/zh-tw/templates/printable-home-inventory-template/",
+    "/templates/printable-household-handoff-sheet/",
+    "/zh-tw/templates/printable-household-handoff-sheet/",
     "/pricing/",
     "/zh-tw/",
     "/zh-tw/guides/home-maintenance-schedule/",
@@ -970,6 +981,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "裝潢追加工程教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/contractor-records/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "可列印居家保養檢查表" }),
+  ).toHaveAttribute("href", "/zh-tw/checklists/printable-home-maintenance-checklist/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "可列印家庭財物清冊" }),
+  ).toHaveAttribute("href", "/zh-tw/templates/printable-home-inventory-template/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "可列印家庭交接表" }),
+  ).toHaveAttribute("href", "/zh-tw/templates/printable-household-handoff-sheet/");
 
   for (const localized of [
     {
@@ -1011,6 +1031,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/about/",
       alternate: "/about/",
       heading: "關於 FamilyBoard：讓家庭重要資訊有一個找得到的地方",
+    },
+    {
+      route: "/zh-tw/checklists/printable-home-maintenance-checklist/",
+      alternate: "/checklists/printable-home-maintenance-checklist/",
+      heading: "可列印居家保養檢查表：先留下真正需要複查的線索",
+    },
+    {
+      route: "/zh-tw/templates/printable-home-inventory-template/",
+      alternate: "/templates/printable-home-inventory-template/",
+      heading: "可列印家庭財物清冊範本：記下未來真的找得回來的資訊",
+    },
+    {
+      route: "/zh-tw/templates/printable-household-handoff-sheet/",
+      alternate: "/templates/printable-household-handoff-sheet/",
+      heading: "可列印家庭交接表：讓責任換手，而不是把一堆資料丟給下一個人",
     },
     {
       route: "/zh-tw/guides/digital-home-inventory-backup/",
