@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T13:23:32.791Z
+Generated: 2026-08-28T13:39:02.554Z
 
 ## Summary
 
-- Indexable pages: 781
-- Generated HTML routes: 787
+- Indexable pages: 787
+- Generated HTML routes: 793
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 449
+- Pages without a contextual product/tool link: 452
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -24,7 +24,7 @@ Generated: 2026-08-28T13:23:32.791Z
 - maintenance: 82
 - household-operations: 139
 - records-emergency: 97
-- tools: 142
+- tools: 148
 
 ## Word-count range
 
@@ -219,6 +219,7 @@ Generated: 2026-08-28T13:23:32.791Z
 - /zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/
 - /zh-tw/guides/familyboard-internet-incident-tutorial/
 - /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
+- /zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/
 - /zh-tw/guides/familyboard-maintenance-history-review/
 - /zh-tw/guides/familyboard-maintenance-priority-review-tutorial/
 - /zh-tw/guides/familyboard-master-csv-edit-import/
@@ -234,6 +235,7 @@ Generated: 2026-08-28T13:23:32.791Z
 - /zh-tw/guides/familyboard-private-family-organizer-tutorial/
 - /zh-tw/guides/familyboard-product-recall-action-tutorial/
 - /zh-tw/guides/familyboard-record-linking-tutorial/
+- /zh-tw/guides/familyboard-record-retention-decision-log-tutorial/
 - /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-rental-repair-request-tutorial/
@@ -255,6 +257,7 @@ Generated: 2026-08-28T13:23:32.791Z
 - /zh-tw/guides/familyboard-task-load-calculator-tutorial/
 - /zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
+- /zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/
 - /zh-tw/guides/familyboard-utility-bill-difference-tutorial/
 - /zh-tw/guides/familyboard-utility-provider-handoff-tutorial/
 - /zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/

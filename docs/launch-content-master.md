@@ -30854,6 +30854,174 @@ First delete rooms, equipment and tasks that do not exist. Second replace vague 
 
 Run the edited plan for one week or one rotation. Record which rows were skipped, which standards were unclear and who carried reminders or shopping. Then change frequency, split a task or remove it before creating recurring records. Electrical, chemical, ladder and high-risk work must follow labels, manuals and qualified guidance; the schedule is not a safety procedure. Saved tasks remain in the current browser, so export a backup after meaningful changes. Future cleaning-product recommendations must sit outside the task instructions and disclose any affiliate relationship.
 
+## Page 422 — Utility Bill Difference Tutorial: Turn a Surprising Amount into a Checkable Question
+
+**Slug:** `/guides/familyboard-utility-bill-anomaly-log-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/`
+**Primary intent:** compare two received household utility bills without declaring an error
+**Title tag:** Utility Bill Difference Tutorial | FamilyBoard
+**Meta description:** Learn how to compare two received utility bills, preserve a safe source pointer and choose a dated next check without exposing account details.
+**Primary keyword concept:** utility bill difference calculator tutorial
+**Cluster:** tools
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Compare two received amounts, then record one source-based follow-up in FamilyBoard.
+**Suggested internal links:** `/tools/household-utility-bill-anomaly-log/`, `/tools/household-bill-source-status-log/`, `/guides/recurring-bills-tracker/`, `/features/local-first-home-organizer/`
+
+# Utility Bill Difference Tutorial: Turn a Surprising Amount into a Checkable Question
+
+A utility bill can change because of weather, occupancy, equipment, a billing-period boundary, a credit, a meter reading or a rate notice. The useful first move is not to call the bill wrong. Compare two amounts you actually received, preserve a pointer to the protected source, and choose the next question a household member can check.
+
+The free [Household Utility Bill Difference Log](/tools/household-utility-bill-anomaly-log/) performs arithmetic between a current and previous amount. It can show an absolute difference and, when the previous amount is above zero, a percentage change. It does not read a meter, know the tariff, contact a provider, calculate debt or prove a refund. Treat it as a dated household review note.
+
+## Start with a safe label and two received amounts
+
+Use `BILL-CHECK-2026-A` rather than a name, address, account number or payment reference. Select electricity, water, gas or internet/communications, then enter the current and previous amounts exactly as printed. Do not paste a full bill or silently remove a credit. If the periods differ, note that fact in the protected source and make “compare billing dates” the next check.
+
+## Read the arithmetic without inventing an explanation
+
+An increase may follow a hot month, a new appliance, more people at home, a longer period, a changed rate or a corrected reading. A decrease may follow travel, a vacancy, a credit or a shorter period. The calculator cannot choose among these explanations. A zero previous amount deliberately has no invented percentage. Record the output as an observation, not a provider conclusion.
+
+## Keep the source pointer and next action separate
+
+Use a pointer such as `BILL-PDF-02`, `PORTAL-APR` or `PAPER-FOLDER-U1` that an authorised household member can resolve to the original. Keep the address, account identifier, payment detail and bill itself in the protected location. Then write one narrow action with an owner and date: check a rate notice, compare billing periods, confirm an equipment change, or ask the person with provider access to request clarification.
+
+## Close, revise and share safely
+
+Review two or three recent statements, not every fluctuation. If a provider later issues a corrected bill, create a new comparison version instead of overwriting the first signal. FamilyBoard keeps local records in the current browser; export a backup after important changes and avoid placing sensitive account data in a shared summary. Future product recommendations must sit outside the workbench, be clearly disclosed and never promise a lower bill or a successful dispute.
+
+## A five-minute review example
+
+Suppose a water bill is higher after a month with guests. Enter the two printed amounts, keep the bill dates in the protected source and write “check the number of billed days and the provider's current rate notice” as the next action. If the dates match and the rate did not change, ask the person who can see the meter or provider portal to compare the reading. If the reading is still unexplained, record that the source question remains open. This sequence keeps an observation, a hypothesis and an official answer separate.
+
+**FAQ:**
+- Q: Does the difference prove the provider made a mistake?
+  A: No. It is arithmetic on two amounts; rates, readings, credits and periods still require the provider's source.
+- Q: Can I paste an account number or full bill?
+  A: No. Use a safe label and source pointer, and keep the original in a protected location.
+- Q: Does it calculate a late-payment deadline or refund?
+  A: No. It does not provide legal, financial or provider advice or calculate deadlines.
+- Q: Why record a decrease too?
+  A: A decrease can also signal a credit, shorter period, travel or corrected reading worth checking.
+
+## Page 423 — Maintenance Delegation Map Tutorial: Make Ownership and Handoffs Observable
+
+**Slug:** `/guides/familyboard-maintenance-delegation-map-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/`
+**Primary intent:** separate outcome ownership, physical work and safe next steps for home maintenance
+**Title tag:** Home Maintenance Delegation Map Tutorial | FamilyBoard
+**Meta description:** Learn how to map a home maintenance owner, executor, due date and handoff status without assigning unsafe DIY work or exposing private details.
+**Primary keyword concept:** home maintenance delegation map tutorial
+**Cluster:** tools
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Map one recurring maintenance item and ask another household role to repeat the handoff.
+**Suggested internal links:** `/tools/household-maintenance-delegation-map/`, `/guides/home-maintenance-delegation/`, `/tools/household-responsibility-coverage-map/`, `/guides/family-chore-system/`
+
+# Maintenance Delegation Map Tutorial: Make Ownership and Handoffs Observable
+
+“Someone will handle it” is not a handoff. The free [Home Maintenance Delegation Map](/tools/household-maintenance-delegation-map/) turns one recurring item into a small record: the outcome owner, the person or service doing physical work, one observable next step, a due date and a status. It does not send notifications after the page closes and it does not decide who should accept a task.
+
+## Write the outcome owner and executor separately
+
+The outcome owner notices the review point, finds the controlling source, follows up and records what happened. The executor may be another family member, building management or a qualified provider. They can be the same role, but writing both prevents a job from disappearing when the person who noticed it is unavailable. Use a neutral reference such as `MAINT-DELEGATE-2026-A`, not a name or address.
+
+## Make the next step observable
+
+“Fix the air conditioner” is too broad. “Check the filter against the model manual,” “ask building management who maintains the shared duct,” or “request a qualified service appointment” can be reviewed. Add a status such as waiting for an external reply when a landlord, warranty team or provider controls the next move. A due date is a review point, not a promise that a part will arrive or a repair is safe.
+
+## Keep safety and source pointers in the record
+
+For gas, electrical, structural, roofing, high-place or disassembly work, assign a safe source-finding action rather than a DIY repair. Point to `MANUAL-AC1`, `SERVICE-2` or a building process while keeping full documents, phone numbers, access codes and private messages in protected storage. A completed status only records what the household observed; it does not verify workmanship, licensing, permits or compliance.
+
+## Practise the handoff and review the map
+
+Ask the executor or backup role to repeat the item, source pointer, next action and review date without relying on a private conversation. If they cannot, shorten the row or add the missing source. When a provider replies, record the observed result and create a new version if the scope changes. FamilyBoard remains useful without purchasing anything; future labels or binders must be outside the workbench with a clear affiliate disclosure.
+
+## A handoff that can be checked
+
+For a noisy bathroom exhaust fan, the owner might be “household maintenance role,” the executor “qualified service provider,” and the next step “find the model manual and ask building management whether the duct is shared.” The review date is when the owner will check for a reply, not a promise that the fan is safe to use. When the provider responds, record the source pointer and observed scope. If the household decides to wait, change the status and explain why; do not leave a vague completed label that the next person might read as a safety clearance.
+
+Before saving, read the row aloud as if you were away from home: what item is this, who owns the outcome, who may perform the work, which source can be trusted and what observation will close the next review? If any answer depends on a private memory, replace it with a neutral pointer or a clearly assigned question. That small rehearsal exposes hidden assumptions and makes a backup role possible without publishing the family's address or access details.
+
+**FAQ:**
+- Q: Does the map decide who is responsible?
+  A: No. It records the household's decision and separates outcome ownership from physical work.
+- Q: Can it assign electrical or roof work as a family chore?
+  A: It should record safe source-finding or qualified-service steps, not hazardous DIY work.
+- Q: Does completed prove the repair is safe?
+  A: No. It records an observed status and cannot verify workmanship or compliance.
+- Q: Will it notify someone later?
+  A: No. Add the review point to the household's chosen reminder or calendar after checking the record.
+
+## Page 424 — Record Retention Decision Tutorial: Replace Magic Numbers with Source-Led Reviews
+
+**Slug:** `/guides/familyboard-record-retention-decision-log-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/`
+**Primary intent:** document a source-led household retention, archive or disposal decision without inventing a deadline
+**Title tag:** Household Record Retention Decision Tutorial | FamilyBoard
+**Meta description:** Learn how to record a household retention decision with its source, trigger, hold screen, owner and checkpoint without treating a generic number as legal advice.
+**Primary keyword concept:** household record retention schedule tutorial
+**Cluster:** tools
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Log one record class, identify its controlling source and set a dated checkpoint.
+**Suggested internal links:** `/tools/household-record-retention-decision-log/`, `/guides/how-long-to-keep-household-records/`, `/tools/receipt-retention-organizer/`, `/guides/important-household-documents/`
+
+# Record Retention Decision Tutorial: Replace Magic Numbers with Source-Led Reviews
+
+A generic chart that says “keep for three years” cannot know the record's purpose, jurisdiction, filing or payment event, written term, claim, dispute or active use. The [Household Record Retention Decision Log](/tools/household-record-retention-decision-log/) records why a household is reviewing a class of records, which source was checked, which trigger matters, whether a hold remains, who owns the decision and when it will be revisited.
+
+## Start with a scope and a safe pointer
+
+Use `RETENTION-2026-A` rather than a person's name, address, taxpayer number, claim number or document contents. State the purpose—annual review, a move, a product disposition, a claim or a source update. Use a pointer such as `POLICY-P3`, `WARRANTY-W4` or a dated official URL. Keep statements, returns, agreements, identity details and medical or legal content in their protected systems.
+
+## Record the trigger and screen for holds
+
+Each row should identify the source-checked date, controlling source and jurisdiction, source-defined trigger or end event, active use or exception screen, protected version state, proposed or observed action, owner, target or outcome date and status. A claim, dispute, audit request, ownership issue, replacement need or another purpose can keep a record active. A checkpoint helps the household review again; it is not an external deadline.
+
+## Distinguish candidate, archive and completed action
+
+“Disposal candidate” means a human still needs to approve and perform the action. “Transferred or archived” changes custody or active use; it is not destruction. “Disposal completed” records an observed method and safe evidence pointer, but cannot prove that every email attachment, backup, download, device or recipient copy is gone. The tool never opens, deletes or shreds a file.
+
+## Revisit the source instead of trusting a preset
+
+When an issuer changes a rule or a household discovers a claim, create a new version rather than overwriting the old reasoning. Ask the person who controls the official source to confirm the branch, then record the observed result and next checkpoint. Automated privacy screening catches common identifiers but not every combination, so read the final summary before sharing. Future storage products, if any, must be optional, outside the workbench and clearly disclosed as affiliate recommendations.
+
+## A review conversation before disposal
+
+Take one class such as a paid invoice. Ask what purpose it served, which source defines any obligation, whether a claim or audit is active, where the authoritative version is kept and what event would reopen the question. If nobody can answer the source question, the correct status is still open. If an authorised person later shreds a paper copy, record the method and a safe evidence pointer without pasting the invoice. Another copy may remain in a backup or email, so the record should never say that every copy disappeared unless the controlling process actually proves that.
+
+Use the checkpoint to learn, not to force a disposal. A household may decide to retain a record because the source is unclear, transfer it to a person who handles a claim, or archive it in a controlled folder while an adviser reviews the rule. Each choice deserves its own observed date and reason. The tool's value is a visible chain from purpose to source to action; it is not a shortcut around a regulator, issuer, contract or professional recommendation.
+
+**FAQ:**
+- Q: Does this create a legal retention schedule?
+  A: No. It records a source-led household decision; the responsible authority, agreement or adviser controls the real duty.
+- Q: Why is there no preset such as three or seven years?
+  A: A preset cannot know the jurisdiction, filing, payment event, claim, dispute or special rule that applies.
+- Q: Can it delete or shred a record?
+  A: No. It records an authorised observed action but never opens or changes a file or verifies every copy.
+- Q: What is the difference between archive and disposal?
+  A: Archive changes controlled storage or active use; disposal records an observed removal or destruction method.
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

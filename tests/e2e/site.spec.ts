@@ -118,6 +118,18 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/",
     "/guides/familyboard-cleaning-schedule-generator-tutorial/",
     "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/",
+    "/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+    "/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+    "/guides/familyboard-maintenance-delegation-map-tutorial/",
+    "/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/",
+    "/guides/familyboard-record-retention-decision-log-tutorial/",
+    "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/",
+    "/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+    "/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+    "/guides/familyboard-maintenance-delegation-map-tutorial/",
+    "/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/",
+    "/guides/familyboard-record-retention-decision-log-tutorial/",
+    "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/",
     "/tools/household-date-offset-planner/",
     "/zh-tw/tools/household-date-offset-planner/",
     "/tools/household-task-load-calculator/",
@@ -906,6 +918,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "清潔排程產生器教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "帳單差異紀錄教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "維護分工地圖教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "文件保存決策教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭財物清冊教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/room-by-room-home-inventory/");
@@ -2025,6 +2046,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-appliance-age-calculator-tutorial/",
       alternate: "/guides/familyboard-appliance-age-calculator-tutorial/",
       heading: "家電年齡計算器教學：先算清楚經過多久，再決定要查什麼",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+      alternate: "/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+      heading: "家庭水電帳單差異紀錄教學：把突然變高的金額變成可查問題",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/",
+      alternate: "/guides/familyboard-maintenance-delegation-map-tutorial/",
+      heading: "家庭維護分工地圖教學：把負責人、執行者與交接寫清楚",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/",
+      alternate: "/guides/familyboard-record-retention-decision-log-tutorial/",
+      heading: "家庭文件保存決策紀錄教學：不要用一個年限取代來源查核",
     },
     {
       route: "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/",

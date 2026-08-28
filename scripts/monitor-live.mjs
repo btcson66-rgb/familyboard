@@ -646,6 +646,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-cleaning-schedule-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-utility-bill-anomaly-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-maintenance-delegation-map-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-record-retention-decision-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -5951,6 +5957,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/",
     require: ["清潔排程產生器教學", "三層輸出的差異", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+    require: ["Utility Bill Difference Tutorial", "protected source"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+    require: ["家庭水電帳單差異紀錄教學", "交接演練", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-maintenance-delegation-map-tutorial/",
+    require: ["Maintenance Delegation Map Tutorial", "observable"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/",
+    require: ["家庭維護分工地圖教學", "結果負責", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-record-retention-decision-log-tutorial/",
+    require: ["Record Retention Decision Tutorial", "source-led"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/",
+    require: ["家庭文件保存決策紀錄教學", "觸發事件", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

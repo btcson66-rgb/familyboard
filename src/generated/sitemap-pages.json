@@ -3376,6 +3376,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-maintenance-delegation-map-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-record-retention-decision-log-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4221,6 +4245,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/",
+    "alternateRoute": "/guides/familyboard-maintenance-delegation-map-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-maintenance-history-review/",
     "alternateRoute": "/guides/familyboard-maintenance-history-review/",
     "indexable": true,
@@ -4321,6 +4352,13 @@
   {
     "route": "/zh-tw/guides/familyboard-record-linking-tutorial/",
     "alternateRoute": "/guides/familyboard-record-linking-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-record-retention-decision-log-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -4470,6 +4508,13 @@
     "alternateRoute": "/guides/familyboard-trip-handoff-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-27",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+    "alternateRoute": "/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

@@ -3240,6 +3240,30 @@
     "headings": "Cleaning Schedule Generator Tutorial: edit the skeleton until it fits real life Put the highest-traffic rooms first Choose a pace you can repeat Read the three layers differently Work through an example Perform three editing passes Trial, privacy and boundaries"
   },
   {
+    "title": "Utility Bill Difference Tutorial | FamilyBoard",
+    "description": "Learn how to compare two received utility bills, preserve a safe source pointer and choose a dated next check without exposing account details.",
+    "route": "/guides/familyboard-utility-bill-anomaly-log-tutorial/",
+    "cluster": "tools",
+    "keywords": "utility bill difference calculator tutorial",
+    "headings": "Utility Bill Difference Tutorial: Turn a Surprising Amount into a Checkable Question Start with a safe label and two received amounts Read the arithmetic without inventing an explanation Keep the source pointer and next action separate Close, revise and share safely A five-minute review example"
+  },
+  {
+    "title": "Home Maintenance Delegation Map Tutorial | FamilyBoard",
+    "description": "Learn how to map a home maintenance owner, executor, due date and handoff status without assigning unsafe DIY work or exposing private details.",
+    "route": "/guides/familyboard-maintenance-delegation-map-tutorial/",
+    "cluster": "tools",
+    "keywords": "home maintenance delegation map tutorial",
+    "headings": "Maintenance Delegation Map Tutorial: Make Ownership and Handoffs Observable Write the outcome owner and executor separately Make the next step observable Keep safety and source pointers in the record Practise the handoff and review the map A handoff that can be checked"
+  },
+  {
+    "title": "Household Record Retention Decision Tutorial | FamilyBoard",
+    "description": "Learn how to record a household retention decision with its source, trigger, hold screen, owner and checkpoint without treating a generic number as legal advice.",
+    "route": "/guides/familyboard-record-retention-decision-log-tutorial/",
+    "cluster": "tools",
+    "keywords": "household record retention schedule tutorial",
+    "headings": "Record Retention Decision Tutorial: Replace Magic Numbers with Source-Led Reviews Start with a scope and a safe pointer Record the trigger and screen for holds Distinguish candidate, archive and completed action Revisit the source instead of trusting a preset A review conversation before disposal"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
