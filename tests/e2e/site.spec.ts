@@ -153,6 +153,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/refrigerator-maintenance-checklist/",
     "/guides/freezer-maintenance-checklist/",
     "/guides/washing-machine-maintenance-checklist/",
+    "/guides/home-maintenance-binder/",
+    "/guides/home-maintenance-budget/",
+    "/guides/home-maintenance-reminders/",
     "/guides/familyboard-utility-provider-handoff-tutorial/",
     "/guides/familyboard-vehicle-document-source-status-tutorial/",
     "/guides/familyboard-record-retrieval-drill-tutorial/",
@@ -422,6 +425,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/refrigerator-maintenance-checklist/",
     "/zh-tw/guides/freezer-maintenance-checklist/",
     "/zh-tw/guides/washing-machine-maintenance-checklist/",
+    "/zh-tw/guides/home-maintenance-binder/",
+    "/zh-tw/guides/home-maintenance-budget/",
+    "/zh-tw/guides/home-maintenance-reminders/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3615,6 +3621,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     "https://familyboard.win/zh-tw/guides/washing-machine-maintenance-checklist/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/home-maintenance-binder/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/home-maintenance-budget/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/home-maintenance-reminders/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/",
   );
   expect(sitemap).toContain(
@@ -3787,6 +3802,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/washing-machine-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/home-maintenance-binder/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/home-maintenance-budget/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/home-maintenance-reminders/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

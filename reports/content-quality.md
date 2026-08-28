@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T04:04:16.794Z
+Generated: 2026-08-28T04:16:18.748Z
 
 ## Summary
 
-- Indexable pages: 631
-- Generated HTML routes: 648
+- Indexable pages: 634
+- Generated HTML routes: 651
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 334
+- Pages without a contextual product/tool link: 337
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,7 +20,7 @@ Generated: 2026-08-28T04:04:16.794Z
 - printables: 20
 - product: 120
 - appliances: 33
-- maintenance: 69
+- maintenance: 72
 - household-operations: 109
 - inventory-warranty: 46
 - records-emergency: 89
@@ -225,9 +225,12 @@ Generated: 2026-08-28T04:04:16.794Z
 - /zh-tw/guides/home-contact-list/
 - /zh-tw/guides/home-evacuation-information/
 - /zh-tw/guides/home-improvement-receipts/
+- /zh-tw/guides/home-maintenance-binder/
+- /zh-tw/guides/home-maintenance-budget/
 - /zh-tw/guides/home-maintenance-calendar/
 - /zh-tw/guides/home-maintenance-log/
 - /zh-tw/guides/home-maintenance-records/
+- /zh-tw/guides/home-maintenance-reminders/
 - /zh-tw/guides/home-maintenance-schedule/
 - /zh-tw/guides/home-repair-history/
 - /zh-tw/guides/home-service-provider-list/

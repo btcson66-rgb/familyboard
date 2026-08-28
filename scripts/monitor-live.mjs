@@ -64,6 +64,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/refrigerator-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/freezer-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/washing-machine-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-binder/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-budget/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-reminders/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -121,6 +124,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/refrigerator-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/freezer-maintenance-checklist/</loc>",
       "<loc>https://familyboard.win/guides/washing-machine-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/home-maintenance-binder/</loc>",
+      "<loc>https://familyboard.win/guides/home-maintenance-budget/</loc>",
+      "<loc>https://familyboard.win/guides/home-maintenance-reminders/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -997,6 +1003,30 @@ const checks = [
       "洗衣機保養清單怎麼做",
       "前開門膠圈要留下乾燥習慣",
       "不是拆機、電氣或水管施工指令",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-maintenance-binder/",
+    require: [
+      "居家維護資料夾怎麼整理",
+      "來源地圖",
+      "不是法律或安全認證",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-maintenance-budget/",
+    require: [
+      "居家維護預算怎麼編",
+      "把真實支出分清楚",
+      "不是法律或財務建議",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/home-maintenance-reminders/",
+    require: [
+      "居家維護提醒怎麼設定",
+      "提醒不是完成證據",
+      "不會發送推播、電子郵件或簡訊",
     ],
   },
   {

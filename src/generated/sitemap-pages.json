@@ -297,7 +297,7 @@
   },
   {
     "route": "/guides/home-maintenance-binder/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-maintenance-binder/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -313,7 +313,7 @@
   },
   {
     "route": "/guides/home-maintenance-budget/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-maintenance-budget/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -321,7 +321,7 @@
   },
   {
     "route": "/guides/home-maintenance-reminders/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/home-maintenance-reminders/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -4010,6 +4010,20 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/home-maintenance-binder/",
+    "alternateRoute": "/guides/home-maintenance-binder/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-maintenance-budget/",
+    "alternateRoute": "/guides/home-maintenance-budget/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/home-maintenance-calendar/",
     "alternateRoute": "/guides/home-maintenance-calendar/",
     "indexable": true,
@@ -4033,6 +4047,13 @@
   {
     "route": "/zh-tw/guides/home-maintenance-records/",
     "alternateRoute": "/guides/home-maintenance-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/home-maintenance-reminders/",
+    "alternateRoute": "/guides/home-maintenance-reminders/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
