@@ -36274,6 +36274,172 @@ Export a fresh JSON backup after you finish the first-run review and store it ou
 
 ---
 
+## Page 505 — FamilyBoard PWA Update Tutorial
+**Slug:** /guides/familyboard-pwa-update-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-pwa-update-tutorial/
+**Primary intent:** understand FamilyBoard’s service-worker update prompt and reload safely
+**Title tag:** FamilyBoard PWA Update Tutorial | Refresh Without Losing Local Data
+**Meta description:** Learn how FamilyBoard’s PWA update banner works, when to export a backup, and why updating the app does not mean clearing browser storage.
+**Primary keyword concept:** FamilyBoard PWA update
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-offline-backup-restore/, /guides/familyboard-storage-health-warning-tutorial/, /guides/familyboard-old-tablet-display-tutorial/, /app/
+**FAQ:**
+- Q: Does pressing Update now erase the local household?
+  A: No. The service worker activates the new cached assets and the page reloads; it does not call the local database reset action.
+- Q: Should I export before updating?
+  A: Export first when the household has irreplaceable changes or the last backup is old, because browser storage and backups are separate risks.
+- Q: What if the update banner never appears?
+  A: It may mean no waiting service worker is ready, the browser is offline, or the installed version is current; continue using the app and keep backups.
+- Q: Is a PWA update cloud synchronization?
+  A: No. It updates app assets in the browser and does not upload or merge household records across devices.
+
+# How FamilyBoard’s PWA Update Prompt Works
+
+FamilyBoard uses a browser service worker to cache the app shell and offer a controlled update. When a newer worker is waiting and the browser already controls the page, the app shows “A newer FamilyBoard version is ready” with an Update now button. Pressing it sends a skip-waiting message; after the new worker takes control, the page reloads. This changes app assets, not the household database. Updating is therefore a browser lifecycle event, while backup and recovery remain your responsibility.
+
+## Read the banner before acting
+
+An update prompt is not an emergency warning and does not mean the current data is corrupt. Check whether you are online, confirm the visible household name and note any important unsaved work. If the last JSON export is old or no backup exists, export a fresh copy first. The app’s storage-health card can show the last successful export, but the banner itself cannot see whether your downloaded file is stored safely.
+
+## What happens when you choose Update now
+
+The page tells the waiting service worker to activate, then listens for the controller change and reloads once. The browser fetches or serves the new static assets according to its cache policy. No account is created, no records are sent to a server and no merge or replace restore is triggered. A temporary reload or brief offline state is possible; wait for the page to settle before entering a new record. If the page does not return, keep the backup and reopen the known FamilyBoard URL in a supported browser profile.
+
+## Keep app update separate from data maintenance
+
+Do not clear site data to “finish” an update. Clearing browser storage can remove the local household and is a different, destructive action. Do not uninstall a PWA until you have exported and validated JSON. If you use an old tablet as a shared display, update it only after confirming which browser profile is the display and which one contains private administration records.
+
+## Verify after the reload
+
+Check the displayed app version, household name, one open task, today’s event and a recent maintenance item. Review that contact records and detailed notes remain in their private tabs; a reload should not turn the shared display into an administration screen. If something looks different, record the observation and compare the app version and backup date before editing. A successful reload proves that the new worker controls the page, not that every household decision is current.
+
+Future affiliate panels for compatible tablets, storage media or password managers may appear with a clear disclosure and easy skip. They cannot guarantee an update, protect browser data or create sync. The free app remains useful with a supported browser, a controlled profile and a verified backup.
+
+For a household that uses more than one browser, record the profile name, app version and last reload time for each device. This small maintenance note prevents one successfully refreshed tablet from being mistaken for a completed household update. If a device stays offline for several days, preserve its local records and schedule a short read-only review after connectivity returns. Do not repeatedly clear caches while troubleshooting; cache cleanup and data deletion have different consequences. A version check also cannot confirm that a downloaded JSON file is complete, readable or stored somewhere the family can retrieve. Keep those checks separate and name the person responsible for the follow-up.
+
+**Contextual CTA:** Export when needed, choose Update now once, wait for the reload, and verify the version and a few representative records.
+
+---
+
+## Page 506 — FamilyBoard Shared Display Privacy Tutorial
+**Slug:** /guides/familyboard-shared-display-privacy-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-shared-display-privacy-tutorial/
+**Primary intent:** configure and review FamilyBoard’s shared display without exposing private household records
+**Title tag:** FamilyBoard Shared Display Privacy Tutorial | Show Tasks, Hide Private Details
+**Meta description:** Learn what FamilyBoard’s shared display shows and hides, how to choose low-sensitivity titles, and why a display URL is not an access-control system.
+**Primary keyword concept:** FamilyBoard shared display privacy
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-family-display-mode-setup/, /guides/familyboard-old-tablet-display-tutorial/, /guides/familyboard-shared-device-privacy-review-tutorial/, /privacy/
+**FAQ:**
+- Q: Which records are hidden from the shared display?
+  A: Contact records, detailed notes and other private record types are not shown; task and event titles remain visible.
+- Q: Does the display anonymize a sensitive task title?
+  A: No. Titles and some task context remain visible, so write low-sensitivity titles before showing the screen publicly.
+- Q: Is the display safe on an unlocked tablet?
+  A: It reduces the fields shown but cannot secure the browser, prevent screenshots or control who can view the device.
+- Q: Does display mode replace a private handoff?
+  A: No. Detailed notes, contacts and controlled source pointers belong in private views and authorised handoff channels.
+
+# How to Use FamilyBoard’s Shared Display Without Oversharing
+
+FamilyBoard’s shared display is a low-sensitivity overview for a kitchen tablet, hallway screen or household check-in. It shows the household name, current date, up to six open task titles, up to six events for today and dated maintenance items. It does not show contacts, detailed notes or other private record types. Task and event titles remain visible, so display privacy begins when you choose what those titles say. The display is a presentation boundary, not a login, encryption layer or permission system.
+
+## Prepare titles before opening the display
+
+Use observable, low-sensitivity wording such as “Call plumber about leak” or “Pack school bag,” not a diagnosis, account number, full address or private dispute. Put detailed context in the private task or source record. Review event titles and maintenance names as well; the display can show them to anyone who can see the screen. If a title cannot be made safe, keep that item for the private tab and use a neutral household action on the display.
+
+## Know the visible and hidden boundary
+
+The shared view refreshes every minute and lists task owners by household name when available, along with due status. Today’s event titles and times can appear, and the “Coming up” section shows maintenance titles and status. Contact records are excluded, as are detailed notes and other private record types. This design reduces exposure but does not inspect the meaning of a title, remove names from a task or hide the household name. Read the screen as a public noticeboard with carefully chosen content.
+
+## Protect the device and its surroundings
+
+Place the display where visitors cannot read more than intended, lock the operating-system profile, and disable browser features that reveal private tabs or autofill. Do not leave the administration tab open beside the display. A person who can use the browser may still navigate, take a photograph or inspect device history. When the household role changes, review the profile, visible titles and any saved browser access; display mode cannot revoke a copied screenshot or a remembered URL.
+
+## Review the display after changes
+
+After adding a task, event or maintenance item, open the shared view and check the actual rendered title. At the next weekly review, remove stale notices, shorten sensitive wording and verify that the visible list still represents a useful household decision. If an item needs a private source, keep the pointer and detailed note out of the display title. The app does not send a push, email or text alert when the screen is viewed.
+
+Future affiliate panels for matte screen protectors, tablet stands or privacy filters may appear with clear disclosure and an easy skip. They cannot guarantee confidentiality or replace a locked browser profile. The free shared display should remain useful with no purchase at all.
+
+Review the display from the same distance and angle as a visitor. Ask whether a passing neighbour, delivery worker or child could infer a medical appointment, travel plan or financial problem from a short title. Replace the sensitive title with a neutral action while retaining the precise context in the private task or event record. Then verify that the owner and due-status labels still help the family act. This review is more reliable than assuming a URL is secret, because a shared screen can be photographed and a browser profile can remain unlocked. Keep a dated note of the review so another adult can repeat it after the household changes its display routine.
+
+**Contextual CTA:** Read the display as a visitor would, rewrite one sensitive title, and keep its detailed context in the private record.
+
+---
+
+## Page 507 — FamilyBoard Reset Local Household Tutorial
+**Slug:** /guides/familyboard-reset-local-household-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-reset-local-household-tutorial/
+**Primary intent:** decide when and how to clear a FamilyBoard local household after exporting a verified backup
+**Title tag:** FamilyBoard Reset Local Household Tutorial | Clear Data Deliberately
+**Meta description:** Learn what FamilyBoard’s Reset local household action removes, how to confirm the household name, and what to verify before clearing browser data.
+**Primary keyword concept:** FamilyBoard reset local household
+**Cluster:** product
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-offline-backup-restore/, /guides/familyboard-encrypted-backup-password-tutorial/, /guides/familyboard-shared-display-privacy-tutorial/, /privacy/
+**FAQ:**
+- Q: What does Reset local household remove?
+  A: It clears all FamilyBoard data in the current browser and reloads the app; it does not delete files in external sources.
+- Q: Can I undo a reset without a backup?
+  A: No. You need a valid JSON backup or another controlled source; the reset action itself does not create a recovery copy.
+- Q: Why must I type the household name?
+  A: The exact-name confirmation is a deliberate friction that helps prevent an accidental destructive click.
+- Q: Should I reset to fix a database-open error?
+  A: No. Keep existing backups and try a supported browser profile; clearing data can destroy the only local copy.
+
+# When to Reset a FamilyBoard Local Household
+
+Reset local household is the destructive action in FamilyBoard’s Settings view. It removes all FamilyBoard data in the current browser after you type the exact household name, then reloads the page. It does not delete an external document, attachment or backup file, and it does not upload anything for later recovery. Because the action is intentionally irreversible without a separate copy, treat it as a data-lifecycle decision, not routine browser maintenance.
+
+## Decide whether a reset is actually needed
+
+A reset can make sense before handing a device to another household, when a browser profile is being retired, or when you have a deliberate plan to rebuild from a complete verified backup. It is not a fix for a storage-health warning, a missing password or a service-worker update. If the database will not open, follow the app’s instruction not to clear browser data; keep backups and try a supported profile. If the display shows an old task, investigate the source and backup before deleting the local state.
+
+## Complete the recovery checklist first
+
+1. Export plain or encrypted JSON from the current household.
+2. Place the file in a durable, access-controlled location outside the browser.
+3. Use validate-only restore to confirm its schema, export time and record count.
+4. Open or test the backup through a controlled recovery plan, without guessing passwords.
+5. Record who approved the reset, why it is needed and what happens next.
+6. Confirm that external attachment files and source documents have their own copies.
+
+The app does not automatically create a safety snapshot for reset. A downloaded file that has not been checked is not proof of recovery. If the household is moving to another browser, complete the first-run restore there before clearing the old one whenever practical.
+
+## Confirm the exact household boundary
+
+The reset button stays disabled until the text matches the household name shown by FamilyBoard. Read the name and browser profile aloud, then type it deliberately. This friction cannot stop someone who intentionally clears the profile, but it reduces accidental clicks while browsing settings. Do not paste a sensitive secret as the household name merely to make confirmation harder; the name is visible in the app and may be included in backups.
+
+## Verify after clearing
+
+The page reloads into onboarding. Do not create a new household until you know whether the reset was part of a device handoff or a planned restore. Keep the old JSON and the reset approval record until the new state has been checked. If the purpose was privacy, review browser downloads, saved profiles and external source permissions separately; clearing the FamilyBoard database cannot retract a CSV someone already copied.
+
+Future affiliate panels for storage drives, privacy tools or password managers may be shown with a clear disclosure and easy skip. They cannot undo a reset or guarantee deletion from every browser copy. The free app’s safe rule is simple: export, validate, approve, then clear only the intended local profile.
+
+After the reset, do not immediately recreate a household with the same name just to test the button. First confirm that the old browser profile no longer shows the previous records, then decide whether the clean state is intentional. If the purpose was device retirement, remove the browser profile or use the device owner’s documented wipe process as a separate step. If the purpose was recovery testing, restore into a controlled profile and compare a few known records rather than editing the only backup. Keep the reset reason, confirmation time and backup location in an administrative note that does not contain passwords. This creates an audit trail without placing private credentials in a shared checklist.
+
+**Contextual CTA:** Export and validate a JSON backup, write the reset reason, confirm the exact profile and household name, then clear only when recovery is ready.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

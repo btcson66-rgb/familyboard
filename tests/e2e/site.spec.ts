@@ -296,6 +296,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-master-csv-edit-import-tutorial/",
     "/guides/familyboard-app-first-run-restore-tutorial/",
     "/zh-tw/guides/familyboard-app-first-run-restore-tutorial/",
+    "/guides/familyboard-pwa-update-tutorial/",
+    "/zh-tw/guides/familyboard-pwa-update-tutorial/",
+    "/guides/familyboard-shared-display-privacy-tutorial/",
+    "/zh-tw/guides/familyboard-shared-display-privacy-tutorial/",
+    "/guides/familyboard-reset-local-household-tutorial/",
+    "/zh-tw/guides/familyboard-reset-local-household-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2018,6 +2024,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-app-first-run-restore-tutorial/",
       alternate: "/guides/familyboard-app-first-run-restore-tutorial/",
       heading: "FamilyBoard 首次啟動復原教學：在新瀏覽器開啟既有家庭",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-pwa-update-tutorial/",
+      alternate: "/guides/familyboard-pwa-update-tutorial/",
+      heading: "FamilyBoard PWA 更新教學：重新載入但不清除本機資料",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-shared-display-privacy-tutorial/",
+      alternate: "/guides/familyboard-shared-display-privacy-tutorial/",
+      heading: "FamilyBoard 共用看板隱私教學：顯示任務，隱藏私密細節",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-reset-local-household-tutorial/",
+      alternate: "/guides/familyboard-reset-local-household-tutorial/",
+      heading: "FamilyBoard 清除本機家庭資料教學：確認備份後再重設",
     },
   ]) {
     await page.goto(localized.route);
@@ -4787,6 +4808,24 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/familyboard-app-first-run-restore-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-pwa-update-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-pwa-update-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-shared-display-privacy-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-shared-display-privacy-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/familyboard-reset-local-household-tutorial/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/familyboard-reset-local-household-tutorial/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-seasonal-reset-tutorial/",

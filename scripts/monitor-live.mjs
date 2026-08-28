@@ -812,6 +812,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-master-csv-edit-import-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-app-first-run-restore-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-app-first-run-restore-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-pwa-update-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-pwa-update-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-shared-display-privacy-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-shared-display-privacy-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-reset-local-household-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-reset-local-household-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1549,6 +1555,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-app-first-run-restore-tutorial/",
     require: ["首次啟動復原教學", "乾淨瀏覽器"],
+  },
+  {
+    path: "/guides/familyboard-pwa-update-tutorial/",
+    require: ["PWA Update Prompt", "service worker"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-pwa-update-tutorial/",
+    require: ["PWA 更新教學", "Service Worker"],
+  },
+  {
+    path: "/guides/familyboard-shared-display-privacy-tutorial/",
+    require: ["Shared Display Without Oversharing", "low-sensitivity"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-shared-display-privacy-tutorial/",
+    require: ["共用看板隱私教學", "訪客視角"],
+  },
+  {
+    path: "/guides/familyboard-reset-local-household-tutorial/",
+    require: ["Reset a FamilyBoard Local Household", "destructive"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-reset-local-household-tutorial/",
+    require: ["清除本機家庭資料教學", "破壞性"],
   },
   {
     path: "/zh-tw/guides/home-maintenance-records/",

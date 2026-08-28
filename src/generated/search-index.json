@@ -3904,6 +3904,30 @@
     "headings": "Restore an Existing FamilyBoard Household on First Run Prepare the right file Use onboarding validation boundaries Check the restored local state Protect the next recovery point"
   },
   {
+    "title": "FamilyBoard PWA Update Tutorial | Refresh Without Losing Local Data",
+    "description": "Learn how FamilyBoard’s PWA update banner works, when to export a backup, and why updating the app does not mean clearing browser storage.",
+    "route": "/guides/familyboard-pwa-update-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard PWA update",
+    "headings": "How FamilyBoard’s PWA Update Prompt Works Read the banner before acting What happens when you choose Update now Keep app update separate from data maintenance Verify after the reload"
+  },
+  {
+    "title": "FamilyBoard Shared Display Privacy Tutorial | Show Tasks, Hide Private Details",
+    "description": "Learn what FamilyBoard’s shared display shows and hides, how to choose low-sensitivity titles, and why a display URL is not an access-control system.",
+    "route": "/guides/familyboard-shared-display-privacy-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard shared display privacy",
+    "headings": "How to Use FamilyBoard’s Shared Display Without Oversharing Prepare titles before opening the display Know the visible and hidden boundary Protect the device and its surroundings Review the display after changes"
+  },
+  {
+    "title": "FamilyBoard Reset Local Household Tutorial | Clear Data Deliberately",
+    "description": "Learn what FamilyBoard’s Reset local household action removes, how to confirm the household name, and what to verify before clearing browser data.",
+    "route": "/guides/familyboard-reset-local-household-tutorial/",
+    "cluster": "product",
+    "keywords": "FamilyBoard reset local household",
+    "headings": "When to Reset a FamilyBoard Local Household Decide whether a reset is actually needed Complete the recovery checklist first Confirm the exact household boundary Verify after clearing"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

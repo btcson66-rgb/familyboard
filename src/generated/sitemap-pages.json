@@ -4040,6 +4040,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-pwa-update-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-pwa-update-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-shared-display-privacy-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-shared-display-privacy-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-reset-local-household-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-reset-local-household-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -5424,6 +5448,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-pwa-update-tutorial/",
+    "alternateRoute": "/guides/familyboard-pwa-update-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/",
     "alternateRoute": "/guides/familyboard-receipt-retention-organizer-tutorial/",
     "indexable": true,
@@ -5515,6 +5546,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-reset-local-household-tutorial/",
+    "alternateRoute": "/guides/familyboard-reset-local-household-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-restore-merge-replace-tutorial/",
     "alternateRoute": "/guides/familyboard-restore-merge-replace-tutorial/",
     "indexable": true,
@@ -5601,6 +5639,13 @@
   {
     "route": "/zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/",
     "alternateRoute": "/guides/familyboard-shared-device-privacy-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-shared-display-privacy-tutorial/",
+    "alternateRoute": "/guides/familyboard-shared-display-privacy-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

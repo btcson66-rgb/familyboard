@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T21:35:31.450Z
+Generated: 2026-08-28T21:53:29.003Z
 
 ## Summary
 
-- Indexable pages: 947
-- Generated HTML routes: 953
+- Indexable pages: 953
+- Generated HTML routes: 959
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 13
-- Pages without a contextual product/tool link: 538
+- Pages without a contextual product/tool link: 544
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 31
 - printables: 39
-- product: 154
+- product: 160
 - inventory-warranty: 82
 - appliances: 66
 - maintenance: 89
@@ -77,7 +77,10 @@ Generated: 2026-08-28T21:35:31.450Z
 - /guides/familyboard-household-handoff-tutorial/
 - /guides/familyboard-master-csv-edit-import-tutorial/
 - /guides/familyboard-offline-backup-restore/
+- /guides/familyboard-pwa-update-tutorial/
+- /guides/familyboard-reset-local-household-tutorial/
 - /guides/familyboard-restore-merge-replace-tutorial/
+- /guides/familyboard-shared-display-privacy-tutorial/
 - /guides/familyboard-storage-health-warning-tutorial/
 - /guides/
 - /guides/seasonal-home-maintenance-checklist/
@@ -304,6 +307,7 @@ Generated: 2026-08-28T21:35:31.450Z
 - /zh-tw/guides/familyboard-private-family-organizer-tutorial/
 - /zh-tw/guides/familyboard-product-recall-action-tutorial/
 - /zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/
+- /zh-tw/guides/familyboard-pwa-update-tutorial/
 - /zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/
 - /zh-tw/guides/familyboard-record-linking-tutorial/
 - /zh-tw/guides/familyboard-record-retention-decision-log-tutorial/
@@ -317,6 +321,7 @@ Generated: 2026-08-28T21:35:31.450Z
 - /zh-tw/guides/familyboard-repair-punch-list-tutorial/
 - /zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/
 - /zh-tw/guides/familyboard-replacement-part-source-check-tutorial/
+- /zh-tw/guides/familyboard-reset-local-household-tutorial/
 - /zh-tw/guides/familyboard-restore-merge-replace-tutorial/
 - /zh-tw/guides/familyboard-room-inventory-generator-tutorial/
 - /zh-tw/guides/familyboard-router-support-review-tutorial/
@@ -330,6 +335,7 @@ Generated: 2026-08-28T21:35:31.450Z
 - /zh-tw/guides/familyboard-service-quote-comparison-tutorial/
 - /zh-tw/guides/familyboard-share-access-tutorial/
 - /zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/
+- /zh-tw/guides/familyboard-shared-display-privacy-tutorial/
 - /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
 - /zh-tw/guides/familyboard-storage-health-warning-tutorial/
 - /zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/
