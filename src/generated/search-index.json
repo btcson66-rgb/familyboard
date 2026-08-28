@@ -3216,6 +3216,30 @@
     "headings": "可列印年度續訂月曆：先看決策窗口，再處理真正的到期日 十二個月總表 五步複查"
   },
   {
+    "title": "Appliance Age Calculator Tutorial | Use Purchase or Installation Dates Correctly",
+    "description": "Learn how FamilyBoard calculates appliance age from a known purchase or installation date, how to handle uncertain dates, and how to save the result with service history.",
+    "route": "/guides/familyboard-appliance-age-calculator-tutorial/",
+    "cluster": "tools",
+    "keywords": "appliance age calculator tutorial",
+    "headings": "Appliance Age Calculator Tutorial: record the date before you interpret the number Start with a source, not a guess Enter a recognizable name and date Work through the calendar rule Do not turn age into a failure forecast Put the result back into a useful record Safety boundary"
+  },
+  {
+    "title": "Appliance Replacement Planner Tutorial | Read Monitor and Review Without Guessing",
+    "description": "Learn how FamilyBoard's appliance replacement planner uses your own horizon and condition input, what Monitor and Review mean, and what evidence to collect next.",
+    "route": "/guides/familyboard-appliance-replacement-planner-tutorial/",
+    "cluster": "tools",
+    "keywords": "appliance replacement planner tutorial",
+    "headings": "Appliance Replacement Planner Tutorial: turn a flag into a research queue Prepare four honest inputs Understand the transparent flag rule A worked comparison Build the next evidence list Choose a horizon that reflects a real plan Privacy and safety"
+  },
+  {
+    "title": "Cleaning Schedule Generator Tutorial | Build a Daily, Weekly and Deep-Clean Rhythm",
+    "description": "Learn how FamilyBoard's cleaning schedule generator uses room order and rotation pace, why you must edit its prompts, and how to turn a realistic result into household tasks.",
+    "route": "/guides/familyboard-cleaning-schedule-generator-tutorial/",
+    "cluster": "tools",
+    "keywords": "cleaning schedule generator tutorial",
+    "headings": "Cleaning Schedule Generator Tutorial: edit the skeleton until it fits real life Put the highest-traffic rooms first Choose a pace you can repeat Read the three layers differently Work through an example Perform three editing passes Trial, privacy and boundaries"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -30683,6 +30683,177 @@ FamilyBoard 的範本把某個具體工作拆成容易填、容易複查、容�
 
 先從官方來源確認項目與日期，再檢查費用、範圍、付款人和管理者；於決策日比較保留、降級、取消或改期所需資料；執行變更後取得官方結果或案件編號；最後寫下觀察日期與下一次複查並建立新版本。「已送出申請」不等於「下期不會扣款」。月曆只做家庭檢視，長期提醒可放本機行事曆；敏感文件留在受控位置，未來 affiliate 商品窗格須與日期表分開並揭露關係。
 
+## Page 419 — Appliance Age Calculator Tutorial: Record the Date Before You Interpret the Number
+
+**Slug:** `/guides/familyboard-appliance-age-calculator-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-appliance-age-calculator-tutorial/`
+**Primary intent:** learn how to use the FamilyBoard appliance age calculator
+**Title tag:** Appliance Age Calculator Tutorial | Use Purchase or Installation Dates Correctly
+**Meta description:** Learn how FamilyBoard calculates appliance age from a known purchase or installation date, how to handle uncertain dates, and how to save the result with service history.
+**Primary keyword concept:** appliance age calculator tutorial
+**Cluster:** tools
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** Calculate one appliance with a traceable date, then save the result beside its model, serial number, warranty status and repair history.
+**Suggested internal links:** `/tools/appliance-age-calculator/`, `/guides/appliance-lifespan-planning/`, `/guides/appliance-replacement-planning/`, `/tools/appliance-replacement-planner/`
+**FAQ:**
+- Q: Can the appliance age calculator predict when a unit will fail?
+  A: No. It calculates elapsed calendar time only; it has no usage, maintenance, diagnostic or manufacturer-lifespan data.
+- Q: Can I decode a manufacture date from a serial number?
+  A: Do not assume so. Date-code schemes vary by manufacturer and model year, so use a known purchase or installation date instead.
+- Q: Should I enter purchase date or installation date?
+  A: Use the date that matches your purpose and the source. Warranty planning follows the warranty terms; wear planning often follows installation.
+- Q: What if the date is only an estimate?
+  A: Enter the best supported estimate, label it approximate in the appliance record, and do not treat the result as more precise than its input.
+
+# Appliance Age Calculator Tutorial: record the date before you interpret the number
+
+The age of an appliance is a useful fact with a narrow meaning. FamilyBoard's [Appliance Age Calculator](/tools/appliance-age-calculator/) answers how many complete years and months have elapsed between a known start date and today. It does not answer whether a refrigerator, water heater, dishwasher or washer should be replaced, and it does not forecast a failure. This tutorial shows how to supply a defensible date, understand the calendar calculation and preserve enough context for another household member to review later.
+
+## Start with a source, not a guess
+
+Look for the purchase date in an invoice, order record, warranty registration or receipt. Look for an installation date in an installer handoff, service invoice or maintenance history. A built-in appliance may have been purchased weeks before it began operating. If you are organizing warranty coverage, use the start method stated by the manufacturer or contract. If you are organizing wear and service history, installation may be the more meaningful milestone. When the original is missing, use an estimate only when you can explain why, and write that uncertainty in the appliance record.
+
+## Enter a recognizable name and date
+
+Use a name that a second person can identify without opening the machine, such as “Kitchen refrigerator — main unit” or “First-floor water heater.” Avoid labels like “old appliance” that become ambiguous after a move or replacement. Enter the known date in the calculator and keep the date source, source-check date and whether the date is exact or approximate. The tool counts calendar months; it does not divide total days by 30. A current month becomes complete only when today's day-of-month reaches the starting day-of-month.
+
+## Work through the calendar rule
+
+An appliance installed on March 15, 2019 shows seven years and five months when checked on August 21, 2026 because August 21 has passed the fifteenth. Checked on August 10, the same appliance shows seven years and four months because the current month is not complete yet. A result changing after a few days is expected, not evidence that the historical date changed. Save the check date with the result so a later reviewer can reproduce the calculation.
+
+## Do not turn age into a failure forecast
+
+The calculator cannot read a serial-number code, inspect a compressor, detect a leak or know how heavily a household uses a machine. Two appliances with the same age may have completely different maintenance and repair histories. It cannot estimate today's replacement price, decide whether a repair is economical, or replace a manufacturer manual, qualified technician or safety instruction. A precise-looking number does not create evidence that was absent from the input.
+
+## Put the result back into a useful record
+
+Save the age with model, serial number, warranty status, source pointer, recent service visits, observed condition and next review date. If the date is approximate, preserve that label. When a household is weighing replacement, use the [Appliance Replacement Planner](/tools/appliance-replacement-planner/) to put the age beside a self-defined planning horizon and current condition; do not copy the age as a replacement command. Ask another household member to locate the source and explain what the date represents. After meaningful changes, export a local backup. FamilyBoard stores these records in the current browser, not in a cross-device account. Future recommendations must stay separate from the calculation and disclose any affiliate relationship.
+
+## Safety boundary
+
+Never approach a hot, wet, energized, gas-connected or elevated appliance just to find a date. If there is an odor, leak, overheating, exposed wiring or unusual noise, stop the observation and use the appropriate manufacturer, building, emergency or qualified-service channel. A calculator organizes a known fact; it does not make a questionable appliance safe.
+
+## Page 420 — Appliance Replacement Planner Tutorial: Turn a Flag into a Research Queue
+
+**Slug:** `/guides/familyboard-appliance-replacement-planner-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/`
+**Primary intent:** learn how to use the appliance replacement planner without treating it as a failure prediction
+**Title tag:** Appliance Replacement Planner Tutorial | Read Monitor and Review Without Guessing
+**Meta description:** Learn how FamilyBoard's appliance replacement planner uses your own horizon and condition input, what Monitor and Review mean, and what evidence to collect next.
+**Primary keyword concept:** appliance replacement planner tutorial
+**Cluster:** tools
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** Run one appliance with a real service history, then record its dimensions, connection type and next review action instead of treating the flag as a verdict.
+**Suggested internal links:** `/tools/appliance-replacement-planner/`, `/tools/appliance-age-calculator/`, `/guides/appliance-replacement-planning/`, `/guides/household-replacement-reserve/`
+**FAQ:**
+- Q: What is the difference between Monitor and Review?
+  A: Monitor means normal condition and more than two years remain in your chosen horizon; Review means inspect the situation now, not that the appliance has failed.
+- Q: Does a large repair estimate automatically create Review?
+  A: No. The estimate is carried for reference; the flag uses reported condition and remaining horizon.
+- Q: Is the planning horizon a manufacturer lifespan?
+  A: No. It is your household's own planning window and has no built-in brand-life data.
+- Q: What should I do when a normal appliance receives Review?
+  A: Verify the dates and inputs, gather history and dimensions, and obtain a real quote if replacement is being considered.
+
+# Appliance Replacement Planner Tutorial: turn a flag into a research queue
+
+The [Appliance Replacement Planner](/tools/appliance-replacement-planner/) is deliberately modest. It does not diagnose equipment, rank brands or announce a replacement deadline. It compares the age calculated from your start date with a planning horizon you choose, then checks the condition you report. The result is **Monitor** or **Review**. Used correctly, that flag creates a small research queue so a household can collect dimensions, service history and sources before a rushed decision.
+
+## Prepare four honest inputs
+
+Enter a recognizable appliance name, a purchase or installation date, a planning horizon and the current condition. The horizon means how long your household intends to plan around keeping this appliance; it is not a manufacturer lifespan, warranty term or safety rating. Choose the condition that matches what you can actually observe: working normally, performance changed and worth watching, or repair decision pending. A recent repair estimate is optional context. If the date is uncertain, use the [Appliance Age Calculator](/tools/appliance-age-calculator/) first and label the result approximate.
+
+## Understand the transparent flag rule
+
+The planner calculates current age, subtracts it from your chosen horizon and checks two conditions together. If the condition is working normally and more than two years remain, the result is **Monitor**. Otherwise it is **Review**. A Review flag therefore has two possible meanings: the reported condition is not normal, or the household's own planning window is nearly used up. The repair estimate is shown back to you but does not independently decide the flag. This simple rule is intentional: another person can reproduce it from the inputs instead of trusting an unexplained score.
+
+## A worked comparison
+
+Suppose a refrigerator was purchased January 10, 2020. With a twelve-year horizon and normal condition, more than five years remain in the household's plan, so the result is Monitor. Change only the start date to January 10, 2015 and the remaining window falls below two years; the result becomes Review even if the refrigerator still appears normal. Review means “look at this now.” It does not mean “the refrigerator is broken” or “buy a new one today.”
+
+## Build the next evidence list
+
+For a Review result, check the actual condition, recent service notes, warranty status, model and serial number, dimensions, ventilation, electrical or plumbing connection and likely installation constraints. If replacement is genuinely being considered, request a current quote and record its date, scope and expiry. If repair is more likely, preserve the service source, expected result and follow-up date. Keep observations, household decisions and professional conclusions in separate fields. A repair amount alone cannot establish that replacement is cheaper, safer or appropriate.
+
+## Choose a horizon that reflects a real plan
+
+One family may set a short horizon because it expects to move; another may set a longer horizon after renovating a kitchen. Neither number is universally correct. Revisit the horizon when the household, budget, property or appliance use changes, and preserve the old value with a reason rather than quietly stretching it to obtain Monitor. Ask a second person to explain why the horizon was chosen and what event would reopen the review.
+
+## Privacy and safety
+
+The planner does not ask you to dismantle equipment or approach a leak, hot surface, gas connection or exposed wire. Stop and use the appropriate qualified or emergency channel when an appliance is unsafe. Saved results remain in the current browser and do not become a cloud account; export a backup after meaningful record changes. Future product recommendations must remain outside the decision output and disclose any affiliate relationship.
+
+## Page 421 — Cleaning Schedule Generator Tutorial: Edit the Skeleton Until It Fits Real Life
+
+**Slug:** `/guides/familyboard-cleaning-schedule-generator-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/`
+**Primary intent:** learn how to use the FamilyBoard cleaning schedule generator
+**Title tag:** Cleaning Schedule Generator Tutorial | Build a Daily, Weekly and Deep-Clean Rhythm
+**Meta description:** Learn how FamilyBoard's cleaning schedule generator uses room order and rotation pace, why you must edit its prompts, and how to turn a realistic result into household tasks.
+**Primary keyword concept:** cleaning schedule generator tutorial
+**Cluster:** tools
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** Generate a three-layer schedule from three to five real rooms, delete anything the household cannot maintain, then assign the remaining work and review date.
+**Suggested internal links:** `/tools/cleaning-schedule-generator/`, `/guides/cleaning-schedule/`, `/guides/deep-cleaning-tracker/`, `/templates/printable-cleaning-schedule/`
+**FAQ:**
+- Q: Why does the daily reset include only three rooms?
+  A: It intentionally uses the first three rooms in your list so a daily routine stays short; reorder the list before generating.
+- Q: What does “complete the household-defined clean” mean?
+  A: It is a prompt for you to replace with an observable weekly standard for that room.
+- Q: How is the deep-clean order chosen?
+  A: Rooms are cycled in the exact order you enter them under the pace you select.
+- Q: Does the generator adjust for pets, household size or available time?
+  A: No. It uses rooms and pace only; edit the result to match your real capacity.
+
+# Cleaning Schedule Generator Tutorial: edit the skeleton until it fits real life
+
+The [Cleaning Schedule Generator](/tools/cleaning-schedule-generator/) is a starting structure, not an authority on how a home should look. It separates a short daily reset, a weekly pass across every listed room and a slower deep-clean rotation. It does not know household size, pets, allergies, floor materials, equipment, accessibility needs or available time. The useful workflow is to generate a small skeleton, edit it with the people doing the work and only then save recurring tasks.
+
+## Put the highest-traffic rooms first
+
+Enter rooms as a comma-separated list, such as “Kitchen, Bathroom, Living room, Bedroom.” The order has two deliberate effects. The daily reset always uses the first three rooms, and the deep-clean rotation numbers rooms in the order entered. If the entryway matters more than the living room, place it earlier before generating. The tool does not infer traffic, mess, risk or fairness from room names; those are household decisions.
+
+## Choose a pace you can repeat
+
+Select a deep-clean pace such as one area each week, two areas each month or seasonal rotation. The choice describes how often a single area gets a detailed turn; it does not require a full-house deep clean on every cycle. A slower schedule completed consistently is more useful than an ambitious schedule skipped repeatedly. Treat skipped work as evidence that the pace or task definition needs revision, not as a reason to blame a person.
+
+## Read the three layers differently
+
+The daily reset is for a few high-traffic actions such as clearing surfaces or returning used items. The weekly section covers every room but uses a prompt such as “complete the household-defined clean,” because only your household can define what that means for a particular kitchen or bathroom. The deep-clean section rotates through rooms one at a time. Do not copy the same work into all three layers; keep maintenance, regular cleaning and occasional detail review distinct.
+
+## Work through an example
+
+With Kitchen, Bathroom, Living room and Bedroom and a one-area-each-week pace, the daily reset contains the first three rooms; Bedroom appears in weekly and deep-clean layers instead. The deep-clean cycle labels Kitchen Cycle 1, Bathroom Cycle 2, Living room Cycle 3 and Bedroom Cycle 4. If that order conflicts with the family's actual routine, reorder the input and regenerate. Editing a heading after the fact hides the decision that produced the rotation.
+
+## Perform three editing passes
+
+First delete rooms, equipment and tasks that do not exist. Second replace vague phrases such as “keep clean” with observable results, for example “table cleared and recycling placed in the named bin.” Third assign work by time, ability, safety and invisible preparation or closing effort. The generator has no household-size or pet fields, so a long output is a signal to reduce scope. Save the revised plan with a version date and review date, using the [printable cleaning schedule](/templates/printable-cleaning-schedule/) for a meeting or offline board.
+
+## Trial, privacy and boundaries
+
+Run the edited plan for one week or one rotation. Record which rows were skipped, which standards were unclear and who carried reminders or shopping. Then change frequency, split a task or remove it before creating recurring records. Electrical, chemical, ladder and high-risk work must follow labels, manuals and qualified guidance; the schedule is not a safety procedure. Saved tasks remain in the current browser, so export a backup after meaningful changes. Future cleaning-product recommendations must sit outside the task instructions and disclose any affiliate relationship.
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

@@ -3352,6 +3352,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-appliance-age-calculator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-appliance-age-calculator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-appliance-replacement-planner-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-cleaning-schedule-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -3567,6 +3591,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-appliance-age-calculator-tutorial/",
+    "alternateRoute": "/guides/familyboard-appliance-age-calculator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/tools/appliance-age-calculator/",
     "alternateRoute": "/tools/appliance-age-calculator/",
     "indexable": true,
@@ -3613,6 +3644,13 @@
     "alternateRoute": "/tools/appliance-repair-callback-log/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/",
+    "alternateRoute": "/guides/familyboard-appliance-replacement-planner-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -3695,6 +3733,13 @@
   {
     "route": "/zh-tw/guides/chore-chart-for-adults/",
     "alternateRoute": "/guides/chore-chart-for-adults/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-cleaning-schedule-generator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

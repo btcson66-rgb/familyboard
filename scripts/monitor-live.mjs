@@ -640,6 +640,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-task-load-calculator/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-task-load-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-task-load-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-appliance-age-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-age-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-appliance-replacement-planner-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-cleaning-schedule-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -5921,6 +5927,30 @@ const checks = [
       "按四個欄位寫一列家務",
       'lang="zh-TW"',
     ],
+  },
+  {
+    path: "/guides/familyboard-appliance-age-calculator-tutorial/",
+    require: ["Appliance Age Calculator Tutorial", "calendar calculation"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-appliance-age-calculator-tutorial/",
+    require: ["家電年齡計算器教學", "交接演練", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-appliance-replacement-planner-tutorial/",
+    require: ["Appliance Replacement Planner Tutorial", "research queue"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/",
+    require: ["家電汰換規劃器教學", "用表格把決策拆開", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-cleaning-schedule-generator-tutorial/",
+    require: ["Cleaning Schedule Generator Tutorial", "three layers"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/",
+    require: ["清潔排程產生器教學", "三層輸出的差異", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

@@ -112,6 +112,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-date-offset-planner-tutorial/",
     "/guides/familyboard-task-load-calculator-tutorial/",
     "/zh-tw/guides/familyboard-task-load-calculator-tutorial/",
+    "/guides/familyboard-appliance-age-calculator-tutorial/",
+    "/zh-tw/guides/familyboard-appliance-age-calculator-tutorial/",
+    "/guides/familyboard-appliance-replacement-planner-tutorial/",
+    "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/",
+    "/guides/familyboard-cleaning-schedule-generator-tutorial/",
+    "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/",
     "/tools/household-date-offset-planner/",
     "/zh-tw/tools/household-date-offset-planner/",
     "/tools/household-task-load-calculator/",
@@ -809,6 +815,12 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
     "/guides/familyboard-date-offset-planner-tutorial/",
     "/zh-tw/guides/familyboard-date-offset-planner-tutorial/",
+    "/guides/familyboard-appliance-age-calculator-tutorial/",
+    "/zh-tw/guides/familyboard-appliance-age-calculator-tutorial/",
+    "/guides/familyboard-appliance-replacement-planner-tutorial/",
+    "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/",
+    "/guides/familyboard-cleaning-schedule-generator-tutorial/",
+    "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/",
     "/editorial-policy/",
     "/zh-tw/editorial-policy/",
     "/disclaimer/",
@@ -885,6 +897,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家電修換決策教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/appliance-replacement-planning/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家電年齡計算器教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-appliance-age-calculator-tutorial/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "家電汰換規劃器教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "清潔排程產生器教學" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/");
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "家庭財物清冊教學" }),
   ).toHaveAttribute("href", "/zh-tw/guides/room-by-room-home-inventory/");
@@ -1999,6 +2020,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-task-load-calculator-tutorial/",
       alternate: "/guides/familyboard-task-load-calculator-tutorial/",
       heading: "家庭家務負荷計算器教學：先看見每週時間，再把分工談清楚",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-appliance-age-calculator-tutorial/",
+      alternate: "/guides/familyboard-appliance-age-calculator-tutorial/",
+      heading: "家電年齡計算器教學：先算清楚經過多久，再決定要查什麼",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/",
+      alternate: "/guides/familyboard-appliance-replacement-planner-tutorial/",
+      heading: "家電汰換規劃器教學：把「要不要換」拆成能查證的下一步",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/",
+      alternate: "/guides/familyboard-cleaning-schedule-generator-tutorial/",
+      heading: "清潔排程產生器教學：先產生骨架，再改成你家做得到的節奏",
     },
     {
       route: "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",

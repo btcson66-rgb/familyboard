@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T13:08:15.123Z
+Generated: 2026-08-28T13:23:32.791Z
 
 ## Summary
 
-- Indexable pages: 775
-- Generated HTML routes: 781
+- Indexable pages: 781
+- Generated HTML routes: 787
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 446
+- Pages without a contextual product/tool link: 449
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -24,7 +24,7 @@ Generated: 2026-08-28T13:08:15.123Z
 - maintenance: 82
 - household-operations: 139
 - records-emergency: 97
-- tools: 136
+- tools: 142
 
 ## Word-count range
 
@@ -182,11 +182,14 @@ Generated: 2026-08-28T13:08:15.123Z
 - /zh-tw/guides/family-continuity-plan/
 - /zh-tw/guides/family-emergency-contacts/
 - /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
+- /zh-tw/guides/familyboard-appliance-age-calculator-tutorial/
+- /zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/
 - /zh-tw/guides/familyboard-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-bill-review-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
 - /zh-tw/guides/familyboard-browser-storage-maintenance/
 - /zh-tw/guides/familyboard-building-notice-response-tutorial/
+- /zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-consumable-change-history-tutorial/
 - /zh-tw/guides/familyboard-date-offset-planner-tutorial/
