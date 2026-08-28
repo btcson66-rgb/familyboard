@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T06:44:45.426Z
+Generated: 2026-08-28T06:50:25.140Z
 
 ## Summary
 
-- Indexable pages: 674
-- Generated HTML routes: 693
+- Indexable pages: 677
+- Generated HTML routes: 696
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 376
+- Pages without a contextual product/tool link: 379
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,7 +22,7 @@ Generated: 2026-08-28T06:44:45.426Z
 - appliances: 56
 - maintenance: 81
 - household-operations: 109
-- inventory-warranty: 49
+- inventory-warranty: 52
 - records-emergency: 92
 - tools: 126
 
@@ -284,6 +284,7 @@ Generated: 2026-08-28T06:44:45.426Z
 - /zh-tw/guides/organize-utility-account-information/
 - /zh-tw/guides/organize-vehicle-documents-at-home/
 - /zh-tw/guides/oven-maintenance-checklist/
+- /zh-tw/guides/photo-home-inventory/
 - /zh-tw/guides/power-outage-home-preparedness/
 - /zh-tw/guides/power-outage-recovery-household-records/
 - /zh-tw/guides/preventive-home-maintenance/
@@ -299,6 +300,7 @@ Generated: 2026-08-28T06:44:45.426Z
 - /zh-tw/guides/robot-vacuum-maintenance-guide/
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/guides/seasonal-home-maintenance-checklist/
+- /zh-tw/guides/serial-number-tracker/
 - /zh-tw/guides/service-history/
 - /zh-tw/guides/smoke-alarm-records/
 - /zh-tw/guides/solar-panel-maintenance-records/
@@ -309,6 +311,7 @@ Generated: 2026-08-28T06:44:45.426Z
 - /zh-tw/guides/summer-home-maintenance-checklist/
 - /zh-tw/guides/ups-battery-backup-records/
 - /zh-tw/guides/vacuum-cleaner-maintenance-guide/
+- /zh-tw/guides/valuable-item-inventory/
 - /zh-tw/guides/washing-machine-maintenance-checklist/
 - /zh-tw/guides/water-filter-replacement-guide/
 - /zh-tw/guides/water-heater-maintenance-records/

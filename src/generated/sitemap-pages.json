@@ -705,7 +705,7 @@
   },
   {
     "route": "/guides/photo-home-inventory/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/photo-home-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -745,7 +745,7 @@
   },
   {
     "route": "/guides/valuable-item-inventory/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/valuable-item-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -753,7 +753,7 @@
   },
   {
     "route": "/guides/serial-number-tracker/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/serial-number-tracker/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -5008,6 +5008,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/photo-home-inventory/",
+    "alternateRoute": "/guides/photo-home-inventory/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/power-outage-home-preparedness/",
     "alternateRoute": "/guides/power-outage-home-preparedness/",
     "indexable": true,
@@ -5183,6 +5190,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/serial-number-tracker/",
+    "alternateRoute": "/guides/serial-number-tracker/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/service-history/",
     "alternateRoute": "/guides/service-history/",
     "indexable": true,
@@ -5269,6 +5283,13 @@
   {
     "route": "/zh-tw/guides/vacuum-cleaner-maintenance-guide/",
     "alternateRoute": "/guides/vacuum-cleaner-maintenance-guide/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/valuable-item-inventory/",
+    "alternateRoute": "/guides/valuable-item-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

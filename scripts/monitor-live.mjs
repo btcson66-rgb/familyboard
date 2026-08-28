@@ -104,6 +104,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/air-purifier-maintenance-guide/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/dehumidifier-maintenance-guide/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-inventory-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/photo-home-inventory/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/valuable-item-inventory/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/serial-number-tracker/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1399,6 +1402,33 @@ const checks = [
       'hreflang="en"',
       "兩分鐘測試",
       "真正能完成的清冊",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/photo-home-inventory/",
+    require: [
+      "家庭財物拍照清冊",
+      'hreflang="en"',
+      "三種照片各自解決不同問題",
+      "檢查背景和 EXIF 隱私",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/valuable-item-inventory/",
+    require: [
+      "高價物品清冊",
+      'hreflang="en"',
+      "購買價不等於目前價值",
+      "來源與 provenance",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/serial-number-tracker/",
+    require: [
+      "家電序號追蹤表",
+      'hreflang="en"',
+      "先分清型號與序號",
+      "標籤照是校對證據",
     ],
   },
   {
