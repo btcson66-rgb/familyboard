@@ -1,11 +1,11 @@
 # Content quality report
 
-Generated: 2026-08-28T08:38:27.221Z
+Generated: 2026-08-28T08:43:45.735Z
 
 ## Summary
 
-- Indexable pages: 719
-- Generated HTML routes: 730
+- Indexable pages: 721
+- Generated HTML routes: 731
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
@@ -23,7 +23,7 @@ Generated: 2026-08-28T08:38:27.221Z
 - appliances: 56
 - maintenance: 82
 - household-operations: 131
-- records-emergency: 95
+- records-emergency: 97
 - tools: 128
 
 ## Word-count range
@@ -62,7 +62,6 @@ Generated: 2026-08-28T08:38:27.221Z
 - /editorial-policy/
 - /guides/chore-chart-for-adults/
 - /guides/digital-home-inventory-backup/
-- /guides/family-emergency-contacts/
 - /guides/familyboard-browser-storage-maintenance/
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-household-handoff-tutorial/
@@ -166,6 +165,7 @@ Generated: 2026-08-28T08:38:27.221Z
 - /zh-tw/guides/fall-home-maintenance-checklist/
 - /zh-tw/guides/family-chore-system/
 - /zh-tw/guides/family-continuity-plan/
+- /zh-tw/guides/family-emergency-contacts/
 - /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
 - /zh-tw/guides/familyboard-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-bill-review-tutorial/

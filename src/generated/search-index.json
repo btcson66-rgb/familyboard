@@ -976,6 +976,14 @@
     "headings": "An emergency binder should be short enough to use under pressure Start with contacts, organized by role, not alphabetically Add operational notes that are accurate, not exhaustive Reference sensitive documents instead of duplicating them Build the binder's supply and evacuation sections from official planning documents Decide who gets a copy, and in what form A binder that's never been opened by anyone but its author has a hidden flaw Review on a schedule, and after any household change"
   },
   {
+    "title": "Family Emergency Contacts: Build a List People Can Actually Use",
+    "description": "Create a concise family emergency contact list with household members, local support, utilities and care contacts, plus offline access.",
+    "route": "/guides/family-emergency-contacts/",
+    "cluster": "records-emergency",
+    "keywords": "family emergency contacts list",
+    "headings": "An emergency contact list should answer “who do I call next?” Use clear contact roles Include more than one communication path where appropriate Make an offline copy Test the list"
+  },
+  {
     "title": "Emergency Information Sheet: Build, Verify and Share One Useful Page",
     "description": "Build a one-page emergency information sheet with verified contacts, audience-specific details, offline copies, privacy boundaries and review evidence.",
     "route": "/guides/emergency-information-sheet/",

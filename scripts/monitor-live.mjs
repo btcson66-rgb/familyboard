@@ -561,6 +561,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/digital-home-inventory-backup/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/household-handoff/</loc>",
+      "<loc>https://familyboard.win/guides/family-emergency-contacts/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/family-emergency-contacts/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/family-task-manager/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-dashboard/</loc>",
@@ -5582,6 +5584,24 @@ const checks = [
       "家庭交接功能",
       "沒有設定檔時的保守預設",
       "無論怎麼選都會排除的內容",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/guides/family-emergency-contacts/",
+    require: [
+      "Family Emergency Contacts",
+      "who do I call next",
+      "Make an offline copy",
+      "Test the list",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/family-emergency-contacts/",
+    require: [
+      "家庭緊急聯絡清單",
+      "台灣的官方求助管道要和家庭聯絡人分層",
+      "用五分鐘走讀測試這張卡",
       'hreflang="en"',
     ],
   },

@@ -977,11 +977,11 @@
   },
   {
     "route": "/guides/family-emergency-contacts/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "alternateRoute": "/zh-tw/guides/family-emergency-contacts/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/guides/emergency-information-sheet/"
+    "redirectTo": ""
   },
   {
     "route": "/guides/emergency-information-sheet/",
@@ -3529,6 +3529,13 @@
     "alternateRoute": "/features/family-display-mode/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/family-emergency-contacts/",
+    "alternateRoute": "/guides/family-emergency-contacts/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
