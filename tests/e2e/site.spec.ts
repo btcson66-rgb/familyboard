@@ -91,6 +91,8 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/features/household-handoff/",
     "/guides/family-emergency-contacts/",
     "/zh-tw/guides/family-emergency-contacts/",
+    "/guides/what-spouse-needs-to-know/",
+    "/zh-tw/guides/what-spouse-needs-to-know/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -653,6 +655,8 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/features/household-handoff/",
     "/guides/family-emergency-contacts/",
     "/zh-tw/guides/family-emergency-contacts/",
+    "/guides/what-spouse-needs-to-know/",
+    "/zh-tw/guides/what-spouse-needs-to-know/",
     "/zh-tw/features/home-inventory-tracker/",
     "/zh-tw/features/family-task-manager/",
     "/zh-tw/features/home-dashboard/",

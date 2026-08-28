@@ -1072,6 +1072,14 @@
     "headings": "Continuity planning isn't only for businesses — a household has single points of failure too Map single-person knowledge before you plan anything else A backup owner needs context, not a new job Write the next action, not just the category name Connect continuity records to protected contacts, not exposed ones Review after every major life change, not on a fixed calendar Start with the five responsibilities that would hurt most if they lapsed A continuity plan is a living document, not a one-time project"
   },
   {
+    "title": "What Your Spouse or Partner Needs to Know About the Household",
+    "description": "Make invisible household admin transferable by documenting recurring obligations, providers, renewals, maintenance and emergency information.",
+    "route": "/guides/what-spouse-needs-to-know/",
+    "cluster": "household-operations",
+    "keywords": "household information spouse should know",
+    "headings": "What a spouse or partner needs is a map, not a second copy of every private detail Share the map, not every detail Focus on recurring obligations Use handoff views instead of shared spreadsheets no one updates Respect privacy within partnership"
+  },
+  {
     "title": "Household Admin Backup Person: How to Prepare Someone to Step In Temporarily",
     "description": "Choose a backup household administrator and give them a clear view of recurring obligations, contacts, records and upcoming household work.",
     "route": "/guides/household-admin-backup-person/",

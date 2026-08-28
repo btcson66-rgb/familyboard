@@ -563,6 +563,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/features/household-handoff/</loc>",
       "<loc>https://familyboard.win/guides/family-emergency-contacts/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/family-emergency-contacts/</loc>",
+      "<loc>https://familyboard.win/guides/what-spouse-needs-to-know/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/what-spouse-needs-to-know/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-inventory-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/family-task-manager/</loc>",
       "<loc>https://familyboard.win/zh-tw/features/home-dashboard/</loc>",
@@ -5602,6 +5604,23 @@ const checks = [
       "家庭緊急聯絡清單",
       "台灣的官方求助管道要和家庭聯絡人分層",
       "用五分鐘走讀測試這張卡",
+      'hreflang="en"',
+    ],
+  },
+  {
+    path: "/guides/what-spouse-needs-to-know/",
+    require: [
+      "What a spouse or partner needs is a map",
+      "Focus on recurring obligations",
+      "Respect privacy within the partnership",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/what-spouse-needs-to-know/",
+    require: [
+      "伴侶需要知道哪些家庭資訊",
+      "每項責任至少要有五個欄位",
+      "讓另一人不看提示完成三項查找",
       'hreflang="en"',
     ],
   },

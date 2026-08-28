@@ -1,11 +1,11 @@
 # Content quality report
 
-Generated: 2026-08-28T08:43:45.735Z
+Generated: 2026-08-28T08:47:29.638Z
 
 ## Summary
 
-- Indexable pages: 721
-- Generated HTML routes: 731
+- Indexable pages: 723
+- Generated HTML routes: 732
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
@@ -22,7 +22,7 @@ Generated: 2026-08-28T08:43:45.735Z
 - inventory-warranty: 60
 - appliances: 56
 - maintenance: 82
-- household-operations: 131
+- household-operations: 133
 - records-emergency: 97
 - tools: 128
 
@@ -73,7 +73,6 @@ Generated: 2026-08-28T08:43:45.735Z
 - /guides/subscription-cancellation-refund-records/
 - /guides/subscription-renewal-tracker/
 - /guides/valuable-item-inventory/
-- /guides/what-spouse-needs-to-know/
 - /
 - /pricing/
 - /privacy/
@@ -347,6 +346,7 @@ Generated: 2026-08-28T08:43:45.735Z
 - /zh-tw/guides/water-leak-photo-evidence-records/
 - /zh-tw/guides/water-leak-response-home-records/
 - /zh-tw/guides/water-softener-maintenance-records/
+- /zh-tw/guides/what-spouse-needs-to-know/
 - /zh-tw/guides/wifi-router-maintenance-records/
 - /zh-tw/guides/winter-home-maintenance-checklist/
 - /zh-tw/

@@ -1073,11 +1073,11 @@
   },
   {
     "route": "/guides/what-spouse-needs-to-know/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
+    "alternateRoute": "/zh-tw/guides/what-spouse-needs-to-know/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": "/guides/household-admin-backup-person/"
+    "redirectTo": ""
   },
   {
     "route": "/guides/household-admin-backup-person/",
@@ -5606,6 +5606,13 @@
   {
     "route": "/zh-tw/guides/water-softener-maintenance-records/",
     "alternateRoute": "/guides/water-softener-maintenance-records/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/what-spouse-needs-to-know/",
+    "alternateRoute": "/guides/what-spouse-needs-to-know/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

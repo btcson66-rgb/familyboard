@@ -6,7 +6,6 @@ const consolidations = [
   ["/guides/chore-chart-for-adults/", "/guides/family-chore-system/"],
   ["/guides/recurring-household-tasks/", "/guides/family-chore-system/"],
   ["/guides/subscription-renewal-tracker/", "/guides/organize-household-subscriptions/"],
-  ["/guides/what-spouse-needs-to-know/", "/guides/household-admin-backup-person/"],
 ] as const;
 
 const master = fs.readFileSync("docs/launch-content-master.md", "utf8");
