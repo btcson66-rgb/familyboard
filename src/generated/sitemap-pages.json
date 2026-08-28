@@ -3448,6 +3448,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-home-maintenance-cost-tracker-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-home-service-reminder-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-recurring-chore-planner-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-recurring-chore-planner-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4216,6 +4240,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-maintenance-cost-tracker-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
     "alternateRoute": "/guides/familyboard-home-maintenance-schedule-generator-tutorial/",
     "indexable": true,
@@ -4225,6 +4256,13 @@
   {
     "route": "/zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/",
     "alternateRoute": "/guides/familyboard-home-repair-closeout-checklist-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-service-reminder-generator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
@@ -4456,6 +4494,13 @@
   {
     "route": "/zh-tw/guides/familyboard-record-retrieval-drill-tutorial/",
     "alternateRoute": "/guides/familyboard-record-retrieval-drill-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-recurring-chore-planner-tutorial/",
+    "alternateRoute": "/guides/familyboard-recurring-chore-planner-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

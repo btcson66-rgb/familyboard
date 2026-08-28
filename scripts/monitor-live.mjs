@@ -664,6 +664,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-document-index-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-emergency-binder-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-binder-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-maintenance-cost-tracker-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-service-reminder-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-recurring-chore-planner-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-recurring-chore-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -6041,6 +6047,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-emergency-binder-generator-tutorial/",
     require: ["家庭緊急資料夾產生器教學", "緊急資料夾", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-maintenance-cost-tracker-tutorial/",
+    require: ["Home Maintenance Cost Tracker Tutorial", "bounded maintenance"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/",
+    require: ["居家維護費用追蹤器教學", "收費、付款與退款", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-home-service-reminder-generator-tutorial/",
+    require: ["Home Service Reminder Generator Tutorial", "provider guarantee"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/",
+    require: ["居家服務提醒產生器教學", "家庭複查點", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-recurring-chore-planner-tutorial/",
+    require: ["Recurring Chore Planner Tutorial", "observable boundary"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-recurring-chore-planner-tutorial/",
+    require: ["週期家事規劃器教學", "可觀察的工作", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

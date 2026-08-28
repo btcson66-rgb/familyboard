@@ -31386,6 +31386,186 @@ Treat a drill as evidence about the packet, not as a pass-or-fail judgment about
 - Q: Does handing a packet to someone prove they can respond correctly?
   A: No. Rehearse retrieval, escalation and unresolved questions with the people who may use it.
 
+## Page 431 — Home Maintenance Cost Tracker Tutorial: Turn Receipts Into a Reviewable History
+
+**Slug:** `/guides/familyboard-home-maintenance-cost-tracker-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/`
+**Primary intent:** use the free home maintenance cost tracker to record attributable costs, scope, source evidence and follow-up without presenting it as accounting or financial advice
+**Title tag:** Home Maintenance Cost Tracker Tutorial | FamilyBoard
+**Meta description:** Learn how to record household maintenance costs by scope, source and outcome, then keep unknown charges open for review with FamilyBoard.
+**Primary keyword concept:** home maintenance cost tracker tutorial
+**Cluster:** inventory-warranty
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Log one completed maintenance event and one unresolved charge with separate source pointers.
+**Suggested internal links:** `/tools/home-maintenance-cost-tracker/`, `/tools/home-repair-cost-log/`, `/guides/home-maintenance-budget/`, `/features/maintenance-tracker/`
+
+# Home Maintenance Cost Tracker Tutorial: Turn Receipts Into a Reviewable History
+
+The useful question is rarely “how much did the house cost?” It is “which work was in scope, what source supports the amount, what remains uncertain and who should review it?” The free [Home Maintenance Cost Tracker](/tools/home-maintenance-cost-tracker/) records a bounded maintenance event, category, source pointer, amount as observed, payment or refund status and next review. It is not a bank feed, tax tool, accounting ledger or guarantee of a contractor's invoice.
+
+## Pick a bounded event
+
+Use a neutral reference such as `MAINT-COST-2026-A` and choose one repair, service visit, inspection or planned project. A bounded event prevents unrelated receipts and personal spending from becoming a permanent household profile. Record the work scope and service date only as far as the controlling source supports them.
+
+## Keep charge, payment and refund separate
+
+An invoice states a requested charge. A receipt or bank record may support payment. A credit, refund or disputed amount is another source and should not be silently subtracted. Point to safe codes such as `INVOICE-I1`, `RECEIPT-R1` and `REFUND-F1`; never paste card numbers, full account identifiers or private messages into the tracker.
+
+## Record an observed result
+
+The tool can preserve the amount, currency, category and source date that an authorised person actually observed. It cannot decide whether a charge is fair, deductible, legally owed or covered by insurance. Leave a row open when a scope change, tax, permit, warranty credit, reimbursement or contractor question still needs a responsible source.
+
+## Review totals without false precision
+
+Group costs by a useful scope such as plumbing, appliance service or building work. A total is a summary of entered observations, not a forecast or a statement of household wealth. If a receipt is missing, say “source pending” instead of estimating. When a project changes, create a new dated event and preserve the earlier record so the difference can be explained later.
+
+## Handoff and privacy
+
+Ask a backup household role to locate the source pointers and explain which amounts remain unresolved. Keep addresses, payment details, signatures, account numbers and disputes in their protected source. Records stay in the current browser profile and are not automatically synchronized, encrypted or backed up. Any future finance or storage product recommendation must sit outside the tracker, be labelled optional and never imply that buying it verifies a cost.
+
+## Use the total to ask a better question
+
+An unusual total can be a prompt to compare the scope, source date and payment state, not a reason to accuse a provider or stop necessary work. Keep the original observation, write the question that needs answering and assign the next source. When the work is part of a warranty, lease or insurance process, preserve the reference and let that controlling agreement define what evidence is needed. The tracker is strongest when it makes a small discrepancy visible without pretending to resolve it.
+
+If several small jobs share one invoice, split the rows by the source's stated scope and retain the invoice pointer on each row. If the source does not provide that breakdown, keep one row and explain the limitation. This avoids creating precise-looking categories that the contractor never supplied. At the next review, compare the observed result with the original scope and record who answered any remaining question.
+
+**FAQ:**
+- Q: Is this a replacement for accounting or tax advice?
+  A: No. It is a dated household observation log; use the responsible accounting, tax, contract or insurance source.
+- Q: Does an invoice prove payment?
+  A: No. Keep payment, credit and refund evidence separate.
+- Q: Should I estimate a missing receipt?
+  A: Keep the amount open as source pending rather than inventing precision.
+- Q: Can I share a cost export with a contractor?
+  A: Only after removing unnecessary personal and payment details and confirming the recipient needs each field.
+
+## Page 432 — Home Service Reminder Generator Tutorial: Make a Checkpoint Without Promising a Provider Deadline
+
+**Slug:** `/guides/familyboard-home-service-reminder-generator-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/`
+**Primary intent:** create a clear household reminder for maintenance, renewal or source review while separating a household checkpoint from an external service commitment
+**Title tag:** Home Service Reminder Generator Tutorial | FamilyBoard
+**Meta description:** Learn to create safe home service reminders with a source, owner, trigger and review date without treating a reminder as a provider guarantee.
+**Primary keyword concept:** home service reminder generator tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Generate one reminder from a real source and assign a role to review it.
+**Suggested internal links:** `/tools/home-service-reminder-generator/`, `/tools/household-date-offset-planner/`, `/guides/home-maintenance-reminders/`, `/features/family-task-manager/`
+
+# Home Service Reminder Generator Tutorial: Make a Checkpoint Without Promising a Provider Deadline
+
+A household reminder is a prompt to look at a source, not a promise that a contractor, landlord, manufacturer or utility will act by that date. The free [Home Service Reminder Generator](/tools/home-service-reminder-generator/) creates a dated checkpoint with a safe subject, controlling source, responsible role, trigger and next action. It does not send a provider request, schedule an appointment or calculate a legal deadline.
+
+## Start from a real trigger
+
+Choose a source event: a manufacturer instruction, a service visit result, an official notice, a lease change or a household review rhythm. Use `SERVICE-REMINDER-2026-A` and describe the purpose without an address, account number or personal name. If the source gives a required date, record it as source-provided; do not turn a guess into a deadline.
+
+## Write the action a person can perform
+
+“Check the current filter source,” “open the provider notice” or “ask the responsible role whether a visit was confirmed” is testable. “Remember maintenance” is too vague. Keep the action separate from the expected outcome: sending a request is not an appointment, and opening a page is not proof that a service is available.
+
+## Assign an owner and backup
+
+Use role labels such as “home-maintenance role” and “backup household role.” Point to a safe source code and state what reopens the reminder if the usual person is away, the service location changes or the notice is replaced. Do not use the reminder to assign legal responsibility, medical care, electrical work, gas work or other specialist tasks.
+
+## Close only on an observed result
+
+Leave a reminder open until the responsible source supplies a result that the household can record. A provider may change a window, reject a request or require identity verification. Preserve that outcome and create a new checkpoint when the next action is known. Keep old reminders as history instead of silently moving a date until the list looks tidy.
+
+## Protect the reminder list
+
+Records stay in the current browser profile and are not automatically synchronized, encrypted or backed up. Export before clearing data and inspect the text before printing or sharing. A future calendar, label or service product may be shown outside the form as optional labelled affiliate content; a purchase cannot make a reminder accurate or guarantee an appointment.
+
+## Review reminders in a quiet routine
+
+At a weekly or monthly household review, look only at reminders whose trigger has arrived or whose source changed. Confirm the source, record what was observed and schedule the smallest next action. Do not keep postponing a reminder without explaining why; a repeated deferral is evidence that its owner, scope or frequency needs a conversation. A short dated history is more useful than a long list of alarms no one can interpret.
+
+Use one reminder for one checkpoint. A single entry that mixes an air-conditioner filter, a lease renewal and a contractor visit cannot tell the next role which source controls the question. Split unrelated checkpoints, give each a safe label and connect them with a separate FamilyBoard task only when the timing genuinely depends on another result.
+
+**FAQ:**
+- Q: Does a reminder book a service appointment?
+  A: No. Follow the provider's current official process and record the observed response.
+- Q: Can I use the reminder as a legal deadline?
+  A: No. Use the controlling contract, notice or qualified advice for deadlines.
+- Q: What if the provider does not reply?
+  A: Keep the reminder open, record the dated attempt and name the next responsible source.
+- Q: Should reminders contain full addresses or account numbers?
+  A: No. Use a safe code and keep identifiers in the protected source.
+
+## Page 433 — Recurring Chore Planner Tutorial: Build a Routine That Can Bend Without Losing Ownership
+
+**Slug:** `/guides/familyboard-recurring-chore-planner-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-recurring-chore-planner-tutorial/`
+**Primary intent:** use a recurring chore planner to define task scope, frequency, role and review trigger without turning a flexible household routine into surveillance or legal allocation
+**Title tag:** Recurring Chore Planner Tutorial | FamilyBoard
+**Meta description:** Learn how to build a flexible recurring chore plan with clear ownership, backup triggers and review points using FamilyBoard.
+**Primary keyword concept:** recurring chore planner tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Plan three recurring tasks with observable scope, a role and a backup trigger.
+**Suggested internal links:** `/tools/recurring-chore-planner/`, `/tools/household-task-load-calculator/`, `/guides/divide-household-responsibilities/`, `/features/family-task-manager/`
+
+# Recurring Chore Planner Tutorial: Build a Routine That Can Bend Without Losing Ownership
+
+A chore list works when another person can understand what “done” means and what happens when the usual role is unavailable. The free [Recurring Chore Planner](/tools/recurring-chore-planner/) creates a starter routine with task scope, frequency, role label, backup trigger and review note. It does not monitor people, judge effort, create employment obligations or decide a family's legal responsibility.
+
+## Describe a repeatable scope
+
+Start with three tasks that affect the household if forgotten: recycling handoff, checking a filter source, preparing a school form or reviewing a recurring bill. Use `ROUTINE-2026-A` and write the observable boundary, not a person's name or a private complaint. “Put recycling at the collection point” is clearer than “handle rubbish.”
+
+## Choose a rhythm that can change
+
+Daily, weekly and monthly are planning rhythms, not guarantees. A service visit, illness, travel, school closure or weather event can reopen a task or change its frequency. Record a review trigger and keep the original plan so the household can see why it changed. Do not treat a skipped occurrence as proof that someone failed; record the condition and agree on the next step.
+
+## Use roles and backups, not surveillance
+
+Labels such as “kitchen role,” “admin role” and “backup household role” make ownership visible while limiting personal data. A backup trigger should be observable: the usual role is away, a notice changes or the next review date arrives. The planner is not an employee timesheet, a care plan or a way to infer motivation. Discuss fairness and capacity with the people involved.
+
+## Keep effort separate from completion
+
+If a task takes longer than expected, record the new scope or split it into phases. A task being checked off does not prove that an outside service accepted the result or that a source was current. For work involving gas, electricity, heights, lifting, medication or building safety, point to the qualified source and do not improvise instructions in the chore list.
+
+## Review load and privacy
+
+Pair the routine with the task-load calculator when the number of minutes or roles becomes hard to see. Records remain in the current browser profile and are not automatically encrypted, synced or backed up. Export before clearing data and remove private disputes before sharing. Future labels, planners or household products may appear outside the workbench as optional labelled affiliate content; a purchase cannot prove that a chore was completed.
+
+## Re-negotiate when conditions change
+
+When a household member travels, a child starts school, a pet arrives or a maintenance project changes the week, pause and redraw the routine rather than adding invisible exceptions. Record the condition, the temporary backup role and the date to review the change. The planner should help people discuss capacity and trade-offs; it should never become a scoreboard used without context. Restore the ordinary rhythm only after the household observes that it fits again.
+
+Ask each role to describe the smallest acceptable result and the signal that a task needs help. This turns a vague promise into a handoff that can survive a busy week. Keep the conversation separate from the record: store the neutral scope, source and trigger in the planner, and leave personal conflict or sensitive reasons in the private discussion where they belong.
+
+**FAQ:**
+- Q: Is this a surveillance or employee timesheet tool?
+  A: No. It is a flexible household planning aid with role labels and review triggers.
+- Q: Should I assign chores by legal responsibility?
+  A: No. Use household agreements and qualified advice for legal or care questions.
+- Q: What makes a task observable?
+  A: State the boundary and result another person can recognise, plus what source or role reopens it.
+- Q: Can a product be required to use the planner?
+  A: No. The free routine must work without any purchase or affiliate click.
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

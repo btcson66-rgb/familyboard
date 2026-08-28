@@ -3312,6 +3312,30 @@
     "headings": "Emergency Binder Generator Tutorial: Design a Small Packet People Can Use Under Pressure Pick one scenario first Separate immediate contacts from reference sources State the boundary of every instruction Add update triggers and rehearse retrieval Keep versions, not silent edits Protect people who may see the packet Review after every rehearsal"
   },
   {
+    "title": "Home Maintenance Cost Tracker Tutorial | FamilyBoard",
+    "description": "Learn how to record household maintenance costs by scope, source and outcome, then keep unknown charges open for review with FamilyBoard.",
+    "route": "/guides/familyboard-home-maintenance-cost-tracker-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "home maintenance cost tracker tutorial",
+    "headings": "Home Maintenance Cost Tracker Tutorial: Turn Receipts Into a Reviewable History Pick a bounded event Keep charge, payment and refund separate Record an observed result Review totals without false precision Handoff and privacy Use the total to ask a better question"
+  },
+  {
+    "title": "Home Service Reminder Generator Tutorial | FamilyBoard",
+    "description": "Learn to create safe home service reminders with a source, owner, trigger and review date without treating a reminder as a provider guarantee.",
+    "route": "/guides/familyboard-home-service-reminder-generator-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "home service reminder generator tutorial",
+    "headings": "Home Service Reminder Generator Tutorial: Make a Checkpoint Without Promising a Provider Deadline Start from a real trigger Write the action a person can perform Assign an owner and backup Close only on an observed result Protect the reminder list Review reminders in a quiet routine"
+  },
+  {
+    "title": "Recurring Chore Planner Tutorial | FamilyBoard",
+    "description": "Learn how to build a flexible recurring chore plan with clear ownership, backup triggers and review points using FamilyBoard.",
+    "route": "/guides/familyboard-recurring-chore-planner-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "recurring chore planner tutorial",
+    "headings": "Recurring Chore Planner Tutorial: Build a Routine That Can Bend Without Losing Ownership Describe a repeatable scope Choose a rhythm that can change Use roles and backups, not surveillance Keep effort separate from completion Review load and privacy Re-negotiate when conditions change"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

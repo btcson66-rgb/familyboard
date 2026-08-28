@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T14:07:18.010Z
+Generated: 2026-08-28T14:19:54.352Z
 
 ## Summary
 
-- Indexable pages: 799
-- Generated HTML routes: 805
+- Indexable pages: 805
+- Generated HTML routes: 811
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 458
+- Pages without a contextual product/tool link: 461
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -19,10 +19,10 @@ Generated: 2026-08-28T14:07:18.010Z
 - support: 31
 - printables: 39
 - product: 135
-- inventory-warranty: 60
+- inventory-warranty: 62
 - appliances: 56
 - maintenance: 82
-- household-operations: 143
+- household-operations: 147
 - records-emergency: 101
 - tools: 152
 
@@ -208,8 +208,10 @@ Generated: 2026-08-28T14:07:18.010Z
 - /zh-tw/guides/familyboard-home-access-handoff-tutorial/
 - /zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/
 - /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
+- /zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/
 - /zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/
 - /zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/
+- /zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/
 - /zh-tw/guides/familyboard-household-account-list-tutorial/
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-annual-review-generator-tutorial/
@@ -243,6 +245,7 @@ Generated: 2026-08-28T14:07:18.010Z
 - /zh-tw/guides/familyboard-record-linking-tutorial/
 - /zh-tw/guides/familyboard-record-retention-decision-log-tutorial/
 - /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/
+- /zh-tw/guides/familyboard-recurring-chore-planner-tutorial/
 - /zh-tw/guides/familyboard-recycling-handoff-tutorial/
 - /zh-tw/guides/familyboard-rental-repair-request-tutorial/
 - /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
