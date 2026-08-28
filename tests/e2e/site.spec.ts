@@ -110,6 +110,8 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
     "/guides/familyboard-date-offset-planner-tutorial/",
     "/zh-tw/guides/familyboard-date-offset-planner-tutorial/",
+    "/guides/familyboard-task-load-calculator-tutorial/",
+    "/zh-tw/guides/familyboard-task-load-calculator-tutorial/",
     "/tools/household-date-offset-planner/",
     "/zh-tw/tools/household-date-offset-planner/",
     "/tools/household-task-load-calculator/",
@@ -1678,6 +1680,11 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-date-offset-planner-tutorial/",
       alternate: "/guides/familyboard-date-offset-planner-tutorial/",
       heading: "家庭日期偏移規劃器教學：把算出的日期變成可複查行動",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-task-load-calculator-tutorial/",
+      alternate: "/guides/familyboard-task-load-calculator-tutorial/",
+      heading: "家庭家務負荷計算器教學：先看見每週時間，再把分工談清楚",
     },
     {
       route: "/zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/",

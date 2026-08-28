@@ -1,24 +1,24 @@
 # Content quality report
 
-Generated: 2026-08-28T10:20:48.673Z
+Generated: 2026-08-28T10:35:43.823Z
 
 ## Summary
 
-- Indexable pages: 743
-- Generated HTML routes: 749
+- Indexable pages: 745
+- Generated HTML routes: 751
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 415
+- Pages without a contextual product/tool link: 416
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 21
 - printables: 20
-- product: 132
+- product: 134
 - inventory-warranty: 60
 - appliances: 56
 - maintenance: 82
@@ -234,6 +234,7 @@ Generated: 2026-08-28T10:20:48.673Z
 - /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
 - /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
 - /zh-tw/guides/familyboard-subscription-renewal-review/
+- /zh-tw/guides/familyboard-task-load-calculator-tutorial/
 - /zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/
 - /zh-tw/guides/familyboard-trip-handoff-tutorial/
 - /zh-tw/guides/familyboard-utility-bill-difference-tutorial/

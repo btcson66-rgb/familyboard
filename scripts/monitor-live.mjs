@@ -581,6 +581,8 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/tools/household-date-offset-planner/</loc>",
       "<loc>https://familyboard.win/tools/household-task-load-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-task-load-calculator/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-task-load-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-task-load-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -5772,6 +5774,22 @@ const checks = [
     require: [
       "家庭家務負荷計算器",
       "每週時間",
+      'lang="zh-TW"',
+    ],
+  },
+  {
+    path: "/guides/familyboard-task-load-calculator-tutorial/",
+    require: [
+      "How to Use FamilyBoard's Household Task Load Calculator",
+      "four-field row format",
+      "Close with an explicit next action",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-task-load-calculator-tutorial/",
+    require: [
+      "家庭家務負荷計算器教學",
+      "按四個欄位寫一列家務",
       'lang="zh-TW"',
     ],
   },

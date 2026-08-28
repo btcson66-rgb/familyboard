@@ -3000,6 +3000,14 @@
     "headings": "家庭家務負荷計算器：看見重複工作，不把分鐘變成打分數 先建立中性的複查代號 每行只放一項重複家務 看懂頻率係數 把責任代號彙總當成對話起點 把估算接成真正的 FamilyBoard 任務 家庭情況改變就重新估算 隱私與未來推薦界線 用可複查資料收尾"
   },
   {
+    "title": "How to Use FamilyBoard's Household Task Load Calculator | Weekly Chore Planning Guide",
+    "description": "Learn how to estimate recurring household task time, group it by neutral role code and turn the estimate into a reviewable conversation without scoring fairness.",
+    "route": "/guides/familyboard-task-load-calculator-tutorial/",
+    "cluster": "product",
+    "keywords": "household task load calculator tutorial",
+    "headings": "How to Use FamilyBoard's Household Task Load Calculator Without Turning Chores Into a Score Begin with a small review code Use the four-field row format Choose the frequency that matches the observation Read the result in three layers Turn an estimate into a planning conversation Review the estimate after a real week Protect private context and future recommendations Close with an explicit next action"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

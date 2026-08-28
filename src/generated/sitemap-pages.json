@@ -3120,6 +3120,22 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-task-load-calculator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-task-load-calculator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-task-load-calculator-tutorial/",
+    "alternateRoute": "",
+    "indexable": false,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "",
     "indexable": true,
@@ -4135,6 +4151,13 @@
   {
     "route": "/zh-tw/guides/familyboard-subscription-renewal-review/",
     "alternateRoute": "/guides/familyboard-subscription-renewal-review/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-task-load-calculator-tutorial/",
+    "alternateRoute": "/guides/familyboard-task-load-calculator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

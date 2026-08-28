@@ -29492,6 +29492,148 @@ Save the review code, the exact rows, the date of the conversation and one next 
 
 保存複查代號、完整輸入行、討論日期和一個下一步，再把估算和下一次複查時真正觀察到的時間放在一起比較。價值不在得到完美數字，而在為原本看不見的工作建立共同語言，讓家庭能根據實際變化有意識地調整安排。
 
+## Page 390 — How to Use FamilyBoard's Household Task Load Calculator Without Turning Chores Into a Score
+**Slug:** /guides/familyboard-task-load-calculator-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-task-load-calculator-tutorial/
+**Primary intent:** teach households to estimate recurring chore time and use the estimate to prepare a specific, source-safe planning conversation
+**Title tag:** How to Use FamilyBoard's Household Task Load Calculator | Weekly Chore Planning Guide
+**Meta description:** Learn how to estimate recurring household task time, group it by neutral role code and turn the estimate into a reviewable conversation without scoring fairness.
+**Primary keyword concept:** household task load calculator tutorial
+**Cluster:** product
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/household-task-load-calculator/, /guides/recurring-household-tasks/, /guides/chore-chart-for-adults/, /zh-tw/guides/familyboard-task-load-calculator-tutorial/
+**FAQ:**
+- Q: Is the result a precise timesheet?
+  A: No. It is a transparent weekly planning estimate based on the minutes and frequency you enter. Travel, interruptions, preparation and unusual weeks can make the real effort different.
+- Q: Does the calculator decide who should do more?
+  A: No. Neutral role codes only group the rows you entered. Discuss capacity, preferences, safety and actual observations separately before changing an owner.
+- Q: What should I enter for a monthly task?
+  A: Enter the minutes for one occurrence and choose monthly. The tool spreads twelve occurrences across fifty-two weeks so the approximation is visible and reproducible.
+- Q: Can I paste a family's private task list?
+  A: Use short labels and neutral codes only. Keep names, addresses, health details, account information, passwords and private messages in the protected system that already controls them.
+
+# How to Use FamilyBoard's Household Task Load Calculator Without Turning Chores Into a Score
+
+Most chore discussions start with a feeling: “There is always something else to do.” A useful next question is narrower: which recurring tasks are on the list, how often does each happen and how many minutes does one occurrence usually take? FamilyBoard's free [Household Task Load Calculator](/tools/household-task-load-calculator/) turns those observations into an approximate weekly total. It does not decide who is working hardest, assign a chore or settle a disagreement. This guide shows how to use the estimate as a calm planning input.
+
+## Begin with a small review code
+
+Before listing tasks, create a neutral code such as `LOAD-REVIEW-2026-A`. The code lets a later reader refer to the same review without putting a household member's name, address or private message into a shared page. Add the date and the reason in a protected FamilyBoard note if you need an audit trail. A code is not an identity system and should not be reused as a password.
+
+## Use the four-field row format
+
+Each row follows `task | role code | frequency | minutes per occurrence`. For example, `recycling | ROLE-A | weekly | 20` says only that a recurring recycling task is associated with a neutral code and usually takes about twenty minutes each week. Keep the label bounded: “school-form follow-up” is more useful than pasting an entire message from a school portal. If a task has several phases, either estimate the whole repeatable activity or split it into clearly named rows; do not hide a large preparation step inside a tiny number.
+
+The tool accepts up to forty rows. Minutes must be whole numbers from 1 to 1,440. A row with a blank role code can still be counted, but an explicit neutral code makes the conversation easier. If you do not know the duration, write down an observation first instead of inventing precision.
+
+## Choose the frequency that matches the observation
+
+Daily work is multiplied by seven. Weekly work stays at one occurrence per week. Fortnightly or every-two-weeks work uses 0.5 occurrences per week. Monthly work uses 12/52, a transparent way to spread twelve occurrences across fifty-two weeks. These factors are planning conventions, not a promise about a calendar. A school term, holiday, illness, weather event or building collection schedule can make a particular week different.
+
+If “as needed” work is important, do not disguise it as weekly. Give it a separate review note with the observed date range and source pointer, then decide whether a repeatable estimate is appropriate. The calculator is intentionally small: it handles recurring arithmetic, not forecasting or a complete time study.
+
+## Read the result in three layers
+
+The result first shows each row's estimated weekly minutes. This makes a surprising total traceable: a monthly fifteen-minute check contributes about 3.46 minutes per week, while a weekly twenty-minute task contributes twenty. Next, the tool groups minutes by the role codes you supplied. Finally, it shows the list total in minutes and hours. Keep all three layers visible when you discuss the result so nobody mistakes a role subtotal for a judgment about a person.
+
+Rounding is a communication choice. The underlying calculation retains a decimal estimate, while the display makes it readable. If a difference is small, treat it as a prompt to observe again rather than an argument over a decimal place. The output cannot see interruptions, mental load, travel, accessibility needs or whether a task was completed safely.
+
+## Turn an estimate into a planning conversation
+
+Ask three questions in order: “Which rows are still current?”, “Which minutes came from an actual observation?” and “What capacity or safety constraint changes the plan?” A role code is a starting label, not a permanent owner. If someone is unavailable, create a FamilyBoard task for the temporary handoff and record the reason without exposing private health or employment details. If the list itself is wrong, edit the source observation and run a new review instead of silently changing an old result.
+
+The existing [recurring household tasks guide](/guides/recurring-household-tasks/) can help you decide whether an item belongs on a repeatable list. When the discussion needs a visible adult rotation, use the [adult chore chart guide](/guides/chore-chart-for-adults/) after the estimate; the calculator and the chart have different jobs.
+
+## Review the estimate after a real week
+
+Choose one or two high-impact rows and observe them for a defined period. Record the date, broad outcome and protected source pointer, not a surveillance log. Compare the observation with the estimate: was the task skipped, interrupted, combined with another trip or expanded by a seasonal condition? Update the next review with a new code when the pattern changes. Preserving the earlier result gives the household a history of assumptions instead of a false sense that the first number was exact.
+
+## Protect private context and future recommendations
+
+Do not paste names, phone numbers, addresses, account identifiers, passwords, medical details or the contents of a private conversation. The calculator runs in the current browser and is not a substitute for the system that controls a school, care or service record. Share the total or a neutral row only when the recipient needs it. If FamilyBoard later displays a recommended timer, planner or printed chore product, it must sit outside the calculation, be clearly marked as an affiliate recommendation and remain optional; a product cannot prove effort or make a family plan fair.
+
+## Close with an explicit next action
+
+End the review with one dated action: confirm a row with its source, ask a role whether the estimate still fits, or create a temporary handoff. Write what happened after the action, not just “calculator completed.” That final observation is what turns a number into useful household knowledge while leaving authority with the people who can verify the work.
+
+## Page 391 — 家庭家務負荷計算器教學：先看見每週時間，再把分工談清楚
+**Slug:** /zh-tw/guides/familyboard-task-load-calculator-tutorial/
+**Alternate route:** /guides/familyboard-task-load-calculator-tutorial/
+**Primary intent:** 教台灣家庭估算重複家務每週時間，將觀察整理成可複查、能討論的分工資料
+**Title tag:** 家庭家務負荷計算器教學｜估算每週時間，再把分工談清楚｜FamilyBoard
+**Meta description:** 用台灣繁體中文學會整理重複家務、換算每週估計並依中性責任代號討論分工，不把數字當成公平評分。
+**Primary keyword concept:** 家庭家務負荷計算器教學
+**Cluster:** product
+**Page type:** content
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /zh-tw/tools/household-task-load-calculator/, /zh-tw/guides/recurring-household-tasks/, /zh-tw/guides/chore-chart-for-adults/, /guides/familyboard-task-load-calculator-tutorial/
+**FAQ:**
+- Q: 結果是精準的工時表嗎？
+  A: 不是。它只依你輸入的每次分鐘數與頻率做透明的每週規劃估計；移動、打斷、準備、臨時狀況與不同週次都可能讓實際時間不同。
+- Q: 計算器會判定誰應該多做一點嗎？
+  A: 不會。中性責任代號只負責把你輸入的資料分組；容量、偏好、安全與實際觀察要另外討論，不能用小數字替人下結論。
+- Q: 每月一次的家務要怎麼輸入？
+  A: 填一回合需要的分鐘數並選每月；工具以十二次分散到五十二週的方式估算，計算規則透明且可重做。
+- Q: 可以把家人的私人家務清單整段貼上去嗎？
+  A: 不建議。只放短標籤與中性代號；姓名、地址、健康資訊、帳號、密碼與私人訊息應留在原本有適當權限的系統。
+
+# 家庭家務負荷計算器教學：先看見每週時間，再把分工談清楚
+
+很多家務爭論從「怎麼永遠做不完」開始。更容易查核的第一個問題是：哪些工作會重複、多久做一次、每次大約花幾分鐘？FamilyBoard 的[家庭家務負荷計算器](/zh-tw/tools/household-task-load-calculator/)把這些觀察換成每週估計。它不會替家庭分配工作，也不會說誰比較辛苦或直接給公平分數；本教學示範怎麼把數字當成討論的起點。
+
+## 先建立一個不指向個人的複查代號
+
+先輸入 `LOAD-REVIEW-2026-A` 這類中性代號，並在受保護的 FamilyBoard 紀錄寫下日期與這次要回答的問題。代號讓下一位家人知道自己讀的是哪一輪資料，卻不必把姓名、住址或私人訊息放進共享頁面。代號不是身分驗證，也不應重複拿來當密碼。
+
+## 按四個欄位寫一列家務
+
+每列格式是「家務｜責任代號｜頻率｜每次分鐘」。例如「資源回收｜角色-A｜每週｜20」，只表達一項重複工作、暫時分組與大約時間。標籤要短而有用途，可以寫「聯絡簿回覆」或「濾網狀態複查」，不要把學校訊息、社區公告或業者 Email 全文貼進來。若一項工作含有準備、執行與收尾，請拆成看得懂的列，或誠實估整個可重複流程，不要把一大段準備藏在一個看似精準的小數字裡。
+
+工具最多接受 40 列，每次分鐘必須是 1 到 1,440 的整數。責任代號可以先填「未指定」，但填入中性代號比較容易進行後續交接。不確定分鐘數時，先在受保護紀錄做一次觀察，再輸入估計，不要假裝自己有秒數級精準度。
+
+## 頻率要符合台灣家庭真正遇到的節奏
+
+每日工作乘以 7，每週工作維持 1 次，隔週／每兩週以每週 0.5 次估算，每月則以 12/52 分散到每週。這些是透明的規劃係數，不是承諾某一週一定有同樣工作量。學期、寒暑假、連假、颱風停班停課、社區資源回收日調整或家人臨時生病，都可能讓實際週次不同。
+
+「有需要才做」不要硬改成每週。可以在受保護紀錄保留發生日期、來源指標與觀察期間，等累積足夠資料再決定是否適合做成重複估計。這個工具只處理小範圍的頻率算術，不預測未來，也不是完整工時研究。
+
+## 結果要分三層看
+
+第一層是每列每週估計分鐘，讓總數突然變大時找得到原因；例如每月一次、每次 15 分鐘約等於每週 3.46 分鐘，而每週 20 分鐘的回收工作就是 20 分鐘。第二層依你輸入的責任代號彙總，第三層才是整張清單的總分鐘與小時。三層一起看，才不會把某個代號的小計誤認成對某位家人的評語。
+
+小數位是溝通用的近似，不是拿來爭論誰多了幾十秒。計算器看不到接送繞路、照護中斷、無障礙需求、心理負擔或工作是否安全完成；差距很小時，安排下一輪實際觀察比爭論四捨五入更有用。
+
+## 把估計變成有界線的家庭會議
+
+依序問三件事：「這列現在還存在嗎？」「分鐘是實際觀察還是印象？」「有什麼容量或安全條件會改變安排？」責任代號是討論用標籤，不是永久指定的主人。家人臨時無法處理時，可以建立 FamilyBoard 任務做短期交接；涉及健康、工作或照護的理由只留下必要摘要，不要把敏感細節搬到共享頁面。
+
+若你要判斷一件事是否真的屬於固定家務，可先讀[重複家庭任務教學](/zh-tw/guides/recurring-household-tasks/)。需要做成人輪值表時，再參考[成人家務分工表教學](/zh-tw/guides/chore-chart-for-adults/)。計算器、任務清單與輪值表各有工作，混在一起反而會讓人誤會數字就是決定。
+
+## 實際過一週後再複查
+
+挑一兩項影響最大的家務，限定觀察期間，記下日期、概略結果與受保護來源指標，不要做成監控家人的逐分鐘日誌。比較估計與觀察：是臨時中斷、順路一起完成、季節性增加，還是原本那列已經不再適用？模式改變時用新代號重跑，保留舊結果做為當時的觀察。這樣留下的是假設如何變動的歷史，而不是把第一個數字假裝成真相。
+
+## 保護私人內容，也預留未來商品揭露位置
+
+不要貼姓名、電話、地址、帳號、密碼、醫療細節或私人對話。工具在目前瀏覽器計算，不能取代學校、照護或服務紀錄真正的權限系統；分享前只給對方需要的總量或中性列。未來若頁面在結果外放計時器、紙本家務表或整理用品推薦，必須清楚標示 affiliate 關係、可以略過，而且商品不能證明付出、改變正式規則或保證分工公平。
+
+## 用一個明確下一步收尾
+
+每次複查最後只留一個有日期的行動：向來源確認一列、詢問責任角色估計是否仍適用，或建立短期交接任務。行動完成後記錄實際回覆，不要只寫「已計算」。真正有價值的是這個回覆，因為它讓家庭累積可理解的經驗，也讓每個結論回到能查證工作的人手上。
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.
