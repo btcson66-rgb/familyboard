@@ -58,6 +58,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/rental-home-maintenance-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-maintenance-records/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/home-repair-history/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/winter-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/preventive-home-maintenance/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/maintenance-priorities/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -109,6 +112,9 @@ const checks = [
       "<loc>https://familyboard.win/guides/rental-home-maintenance-log/</loc>",
       "<loc>https://familyboard.win/guides/home-maintenance-records/</loc>",
       "<loc>https://familyboard.win/guides/home-repair-history/</loc>",
+      "<loc>https://familyboard.win/guides/winter-home-maintenance-checklist/</loc>",
+      "<loc>https://familyboard.win/guides/preventive-home-maintenance/</loc>",
+      "<loc>https://familyboard.win/guides/maintenance-priorities/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-backup-recovery-checker/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/appliance-age-calculator/</loc>",
@@ -937,6 +943,30 @@ const checks = [
       "居家修繕歷史怎麼整理",
       "先寫症狀，再放專業判斷",
       "不是建築鑑定、施工或法律意見",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/winter-home-maintenance-checklist/",
+    require: [
+      "冬季居家維護清單怎麼做",
+      "濕冷天先固定一條觀察路線",
+      "不是屋頂、瓦斯、電氣、暖氣或結構維修指令",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/preventive-home-maintenance/",
+    require: [
+      "預防性居家維護怎麼做",
+      "先問「不做會怎樣」",
+      "不是設備診斷、驗屋或安全評分",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/maintenance-priorities/",
+    require: [
+      "居家維護優先順序怎麼排",
+      "先分四個層級",
+      "不是安全認證，也不是自動替家庭決定",
     ],
   },
   {

@@ -147,6 +147,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/guides/rental-home-maintenance-log/",
     "/guides/home-maintenance-records/",
     "/guides/home-repair-history/",
+    "/guides/winter-home-maintenance-checklist/",
+    "/guides/preventive-home-maintenance/",
+    "/guides/maintenance-priorities/",
     "/guides/familyboard-utility-provider-handoff-tutorial/",
     "/guides/familyboard-vehicle-document-source-status-tutorial/",
     "/guides/familyboard-record-retrieval-drill-tutorial/",
@@ -410,6 +413,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/rental-home-maintenance-log/",
     "/zh-tw/guides/home-maintenance-records/",
     "/zh-tw/guides/home-repair-history/",
+    "/zh-tw/guides/winter-home-maintenance-checklist/",
+    "/zh-tw/guides/preventive-home-maintenance/",
+    "/zh-tw/guides/maintenance-priorities/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3585,6 +3591,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     "https://familyboard.win/zh-tw/guides/home-repair-history/",
   );
   expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/winter-home-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/preventive-home-maintenance/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/maintenance-priorities/",
+  );
+  expect(sitemap).toContain(
     "https://familyboard.win/guides/familyboard-vehicle-document-source-status-tutorial/",
   );
   expect(sitemap).toContain(
@@ -3739,6 +3754,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/guides/home-repair-history/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/winter-home-maintenance-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/preventive-home-maintenance/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/guides/maintenance-priorities/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/household-event-source-check-taiwan/",

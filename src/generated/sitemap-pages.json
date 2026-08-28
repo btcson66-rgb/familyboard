@@ -217,7 +217,7 @@
   },
   {
     "route": "/guides/winter-home-maintenance-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/winter-home-maintenance-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -273,7 +273,7 @@
   },
   {
     "route": "/guides/preventive-home-maintenance/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/preventive-home-maintenance/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -281,7 +281,7 @@
   },
   {
     "route": "/guides/maintenance-priorities/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/maintenance-priorities/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -4633,6 +4633,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/maintenance-priorities/",
+    "alternateRoute": "/guides/maintenance-priorities/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/features/maintenance-tracker/",
     "alternateRoute": "/features/maintenance-tracker/",
     "indexable": true,
@@ -4756,6 +4763,13 @@
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-28",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/preventive-home-maintenance/",
+    "alternateRoute": "/guides/preventive-home-maintenance/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -4994,6 +5008,13 @@
     "alternateRoute": "/guides/water-leak-response-home-records/",
     "indexable": true,
     "lastReviewedAt": "2026-08-23",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/winter-home-maintenance-checklist/",
+    "alternateRoute": "/guides/winter-home-maintenance-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   }
 ]

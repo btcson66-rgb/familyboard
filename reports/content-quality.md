@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T03:40:47.205Z
+Generated: 2026-08-28T03:54:03.514Z
 
 ## Summary
 
-- Indexable pages: 625
-- Generated HTML routes: 642
+- Indexable pages: 628
+- Generated HTML routes: 645
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 7
-- Pages without a contextual product/tool link: 328
+- Pages without a contextual product/tool link: 331
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -20,7 +20,7 @@ Generated: 2026-08-28T03:40:47.205Z
 - printables: 20
 - product: 120
 - appliances: 30
-- maintenance: 66
+- maintenance: 69
 - household-operations: 109
 - inventory-warranty: 46
 - records-emergency: 89
@@ -241,6 +241,7 @@ Generated: 2026-08-28T03:40:47.205Z
 - /zh-tw/guides/how-long-to-keep-household-records/
 - /zh-tw/guides/how-to-track-product-warranties/
 - /zh-tw/guides/important-household-documents/
+- /zh-tw/guides/maintenance-priorities/
 - /zh-tw/guides/monthly-home-maintenance-checklist/
 - /zh-tw/guides/move-out-home-records/
 - /zh-tw/guides/moving-inventory/
@@ -253,6 +254,7 @@ Generated: 2026-08-28T03:40:47.205Z
 - /zh-tw/guides/organize-vehicle-documents-at-home/
 - /zh-tw/guides/power-outage-home-preparedness/
 - /zh-tw/guides/power-outage-recovery-household-records/
+- /zh-tw/guides/preventive-home-maintenance/
 - /zh-tw/guides/product-registration-tracker/
 - /zh-tw/guides/purchase-receipt-organizer/
 - /zh-tw/guides/quarterly-home-maintenance-checklist/
@@ -270,6 +272,7 @@ Generated: 2026-08-28T03:40:47.205Z
 - /zh-tw/guides/summer-home-maintenance-checklist/
 - /zh-tw/guides/water-leak-photo-evidence-records/
 - /zh-tw/guides/water-leak-response-home-records/
+- /zh-tw/guides/winter-home-maintenance-checklist/
 - /zh-tw/
 - /zh-tw/privacy/
 - /zh-tw/security/
