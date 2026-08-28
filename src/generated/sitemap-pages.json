@@ -1569,7 +1569,7 @@
   },
   {
     "route": "/checklists/printable-emergency-binder-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/checklists/printable-emergency-binder-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1585,7 +1585,7 @@
   },
   {
     "route": "/checklists/printable-pet-sitter-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/checklists/printable-pet-sitter-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1625,7 +1625,7 @@
   },
   {
     "route": "/checklists/printable-moving-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/checklists/printable-moving-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -3249,6 +3249,30 @@
   },
   {
     "route": "/zh-tw/checklists/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/checklists/printable-emergency-binder-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/checklists/printable-moving-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-19",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/zh-tw/checklists/printable-pet-sitter-checklist/",
     "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
@@ -5585,6 +5609,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/checklists/printable-emergency-binder-checklist/",
+    "alternateRoute": "/checklists/printable-emergency-binder-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/templates/printable-home-inventory-template/",
     "alternateRoute": "/templates/printable-home-inventory-template/",
     "indexable": true,
@@ -5608,6 +5639,20 @@
   {
     "route": "/zh-tw/checklists/printable-monthly-home-checklist/",
     "alternateRoute": "/checklists/printable-monthly-home-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/checklists/printable-moving-checklist/",
+    "alternateRoute": "/checklists/printable-moving-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/checklists/printable-pet-sitter-checklist/",
+    "alternateRoute": "/checklists/printable-pet-sitter-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

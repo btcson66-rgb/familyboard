@@ -1,23 +1,23 @@
 # Content quality report
 
-Generated: 2026-08-28T12:02:21.977Z
+Generated: 2026-08-28T12:17:30.515Z
 
 ## Summary
 
-- Indexable pages: 760
-- Generated HTML routes: 766
+- Indexable pages: 763
+- Generated HTML routes: 769
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 431
+- Pages without a contextual product/tool link: 434
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
 - support: 27
-- printables: 28
+- printables: 31
 - product: 135
 - inventory-warranty: 60
 - appliances: 56
@@ -115,8 +115,11 @@ Generated: 2026-08-28T12:02:21.977Z
 - /zh-tw/about/
 - /zh-tw/affiliate-disclosure/
 - /zh-tw/checklists/
+- /zh-tw/checklists/printable-emergency-binder-checklist/
 - /zh-tw/checklists/printable-home-maintenance-checklist/
 - /zh-tw/checklists/printable-monthly-home-checklist/
+- /zh-tw/checklists/printable-moving-checklist/
+- /zh-tw/checklists/printable-pet-sitter-checklist/
 - /zh-tw/checklists/printable-seasonal-home-checklist/
 - /zh-tw/contact/
 - /zh-tw/disclaimer/

@@ -3120,6 +3120,30 @@
     "headings": "繁中可列印家庭檢查表：把今天要做的事寫成能交接的清單"
   },
   {
+    "title": "可列印家庭緊急資料夾清單｜聯絡、文件與複查欄位",
+    "description": "用繁中可列印清單整理家庭緊急聯絡、設備、寵物、文件位置與複查日期；不把敏感資料全部印在同一張紙上。",
+    "route": "/zh-tw/checklists/printable-emergency-binder-checklist/",
+    "cluster": "printables",
+    "keywords": "家庭緊急資料夾清單",
+    "headings": "可列印家庭緊急資料夾清單：先整理分頁，再決定誰需要看什麼"
+  },
+  {
+    "title": "可列印搬家檢查表｜水電、清冊、文件與新家交接",
+    "description": "用繁中可列印搬家清單整理租約或交屋時間、公共服務、箱件、屋況、文件備份與新家第一週。",
+    "route": "/zh-tw/checklists/printable-moving-checklist/",
+    "cluster": "printables",
+    "keywords": "可列印搬家檢查表",
+    "headings": "可列印搬家檢查表：把前後兩個住家的責任交接在同一條時間線上"
+  },
+  {
+    "title": "可列印寵物照護檢查表｜餵食、作息、用品與聯絡交接",
+    "description": "用繁中可列印寵物照護清單交接餵食、散步、藥物、用品、獸醫來源與緊急聯絡，保留飼主確認日期和隱私界線。",
+    "route": "/zh-tw/checklists/printable-pet-sitter-checklist/",
+    "cluster": "printables",
+    "keywords": "可列印寵物照護檢查表",
+    "headings": "可列印寵物照護檢查表：讓照護者知道今天要做什麼、異常找誰"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

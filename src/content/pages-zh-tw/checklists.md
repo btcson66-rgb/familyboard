@@ -43,7 +43,7 @@ faq:
 
 ## 緊急、搬家與暫時交接
 
-遇到旅行、停電、颱風、搬家或照顧安排變動，可從[可列印家庭交接表](/zh-tw/templates/printable-household-handoff-sheet/)、[可列印家電清冊](/zh-tw/templates/printable-appliance-inventory/)、[可列印保固追蹤表](/zh-tw/templates/printable-warranty-tracker/)或[可列印居家修繕紀錄表](/zh-tw/templates/printable-repair-log/)開始。先寫使用對象、有效期間和聯絡流程，再只放入對方需要的低敏感度資訊；敏感聯絡人、門禁、完整住址、付款與醫療細節不應因為要交接就全部印出。緊急資料夾、搬家、看家與寵物照護的繁中專頁會依逐頁審查結果陸續補上，不先放入尚未存在的連結。
+遇到旅行、停電、颱風、搬家或照顧安排變動，可從[可列印家庭交接表](/zh-tw/templates/printable-household-handoff-sheet/)、[家庭緊急資料夾清單](/zh-tw/checklists/printable-emergency-binder-checklist/)、[搬家檢查表](/zh-tw/checklists/printable-moving-checklist/)或[寵物照護檢查表](/zh-tw/checklists/printable-pet-sitter-checklist/)開始。先寫使用對象、有效期間和聯絡流程，再只放入對方需要的低敏感度資訊；敏感聯絡人、門禁、完整住址、付款與醫療細節不應因為要交接就全部印出。看家與新家設置的繁中專頁會依逐頁審查結果陸續補上，不先放入尚未存在的連結。
 
 ## 家務、清潔與週期責任
 

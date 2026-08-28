@@ -30284,6 +30284,93 @@ FamilyBoard v1 的方向很簡單：讓家庭更容易找到、理解與交接�
 
 這個繁中檢查表中心依每月、季節、居家保養、家電／保固／修繕、緊急、搬家、看家、寵物、清潔、家務與交接分類。頁面強調表格的價值在於寫清楚範圍、日期、負責人與下一步，而不是把每格填滿；不適用項目應刪除，原廠手冊、租約、官方要求與安全能力優先。紙本適合會議、短期走讀與離線交接，持續追蹤的結果再轉成 FamilyBoard 的資產、保養、任務或文件備註。分享前移除住址、門禁、帳號、付款、完整序號與私人資料；公開檢查表維持免費，未來商品推薦若有，必須和主要表格分離並清楚揭露 affiliate。
 
+## Page 407 — 可列印家庭緊急資料夾清單：聯絡、文件與複查欄位
+
+**Slug:** `/zh-tw/checklists/printable-emergency-binder-checklist/`
+**Alternate route:** `/checklists/printable-emergency-binder-checklist/`
+**Primary intent:** 尋找可列印的家庭緊急資料夾分頁清單
+**Title tag:** 可列印家庭緊急資料夾清單｜聯絡、文件與複查欄位
+**Meta description:** 用繁中可列印清單整理家庭緊急聯絡、設備、寵物、文件位置與複查日期；不把敏感資料全部印在同一張紙上。
+**Primary keyword concept:** 家庭緊急資料夾清單
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先列印分頁索引，再只把目前真正需要交接的低敏感度資訊放入資料夾。
+**Suggested internal links:** `/zh-tw/guides/emergency-binder/`, `/zh-tw/tools/emergency-binder-generator/`, `/zh-tw/guides/family-emergency-contacts/`, `/zh-tw/features/emergency-information-organizer/`
+**FAQ:**
+- 緊急資料夾要放完整住址、門禁和電話嗎？不一定，臨時交接版本只放對方需要的最低資訊。
+- 這張清單是消防或防災的官方標準嗎？不是，所在地官方公告與合格專業意見優先。
+- 紙本資料夾和 App 如何分工？紙本適合離線交接，長期變動事項可放入本機 App 並自行備份。
+- 多久要複查一次？搬家、設備或聯絡人變動後立即複查，平時在每月或季節檢視確認。
+
+# 可列印家庭緊急資料夾清單：先整理分頁，再決定誰需要看什麼
+
+緊急資料夾不是把全家所有機密集中影印，而是讓人在停電、旅行、照顧交接、設備故障或需要聯絡服務商時找得到下一步。列印前先寫資料夾代號、版本日期與保管人；完整地址、門禁碼、帳號、信用卡、身分證件影本和詳細醫療紀錄不要因為「緊急」就全部放入可自由翻閱的位置。建議分成聯絡索引、住宅與設備、寵物與照顧、文件位置、事件紀錄和複查頁，並為每頁寫明誰看、何時看、看完做什麼。遇到瓦斯、冒煙、裸露電線、快速漏水或受傷，清單只能協助找聯絡資訊，不能取代緊急服務、設備手冊或專業處理。紙本與電子備份都要標記版本；未來推薦用品也只能在公開內容之外揭露 affiliate 關係。
+
+## Page 408 — 可列印搬家檢查表：水電、清冊、文件與新家交接
+
+**Slug:** `/zh-tw/checklists/printable-moving-checklist/`
+**Alternate route:** `/checklists/printable-moving-checklist/`
+**Primary intent:** 尋找可列印的搬家前後時間線與交接清單
+**Title tag:** 可列印搬家檢查表｜水電、清冊、文件與新家交接
+**Meta description:** 用繁中可列印搬家清單整理租約或交屋時間、公共服務、箱件、屋況、文件備份與新家第一週。
+**Primary keyword concept:** 可列印搬家檢查表
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先寫搬家日期與交屋責任，再把每個階段最多三件必做工作交給負責人。
+**Suggested internal links:** `/zh-tw/guides/moving-house-organizer/`, `/zh-tw/guides/moving-inventory/`, `/zh-tw/tools/move-in-checklist-generator/`, `/zh-tw/guides/move-out-home-records/`
+**FAQ:**
+- 搬家檢查表可以套用所有家庭嗎？不行，租屋、買賣、社區與成員差異要自行調整。
+- 搬家前最先要備份什麼？先備份家庭紀錄，再保存租約、交屋、保固與服務確認來源。
+- 紙本清單和工具怎麼搭配？紙本做現場勾選，箱件、負責人和日期可在 App 持續更新。
+- 發現屋況損傷怎麼記錄？寫日期、位置、觀察、照片參照、通知和回覆，不自行判定責任。
+
+# 可列印搬家檢查表：把前後兩個住家的責任交接在同一條時間線上
+
+搬家最容易遺漏的是誰在什麼日期確認哪份來源。清單分成搬家前兩到六週、舊屋最後走讀、新屋第一天與第一週：寫下搬家或交屋日期、搬運與管理聯絡、公共服務申請和確認、箱件代號、備份狀態、鑰匙與屋況照片。不要只把「已申請」當成「已生效」，也不要把房東或業者責任寫成未查證結論。涉及瓦斯、電氣、結構或高處工作時只記錄安全觀察並求助。完成後，把需長期追蹤的資產、保養與文件位置放入本機 App，分享紙本前移除完整住址、門禁、帳號和付款資料；推薦用品若出現也必須位於清單之外並揭露 affiliate 關係。
+
+## Page 409 — 可列印寵物照護檢查表：餵食、作息、用品與聯絡交接
+
+**Slug:** `/zh-tw/checklists/printable-pet-sitter-checklist/`
+**Alternate route:** `/checklists/printable-pet-sitter-checklist/`
+**Primary intent:** 尋找可列印的寵物保姆照護交接清單
+**Title tag:** 可列印寵物照護檢查表｜餵食、作息、用品與聯絡交接
+**Meta description:** 用繁中可列印寵物照護清單交接餵食、散步、藥物、用品、獸醫來源與緊急聯絡，保留飼主確認日期和隱私界線。
+**Primary keyword concept:** 可列印寵物照護檢查表
+**Cluster:** printables
+**Page type:** printable
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 在交接前和照護者一起走過一輪，刪除不適用項目並確認誰能處理異常。
+**Suggested internal links:** `/zh-tw/tools/pet-sitter-instruction-generator/`, `/zh-tw/guides/pet-sitter-information/`, `/zh-tw/guides/organize-pet-records/`, `/zh-tw/guides/family-emergency-contacts/`
+**FAQ:**
+- 要把完整病歷和晶片資料印出來嗎？只提供當次照護所需的最低資訊。
+- 餵食量可以照網路建議填嗎？不行，依飼主、獸醫或正式來源確認的指示。
+- 照護者發現異常時先做什麼？按預先寫好的聯絡順序通知，危急狀況依專業指示處理。
+- 紙本和 App 如何搭配？紙本做短期交接，長期用品與任務可放入本機 App。
+
+# 可列印寵物照護檢查表：讓照護者知道今天要做什麼、異常找誰
+
+這張表先填寵物代號、照護期間、飼主確認日期和主要照護者，再分成交接首頁、每日餵食飲水活動、藥物與觀察、用品環境與外出、異常聯絡和版本複查。請讓照護者用自己的話重述順序；若只能說「照平常」，就補上時間、份量、用品位置或例外情況。藥物與飲食不自行加量、停藥或改變，持續嘔吐、呼吸困難、受傷、疑似中毒等警訊要依飼主、獸醫或所在地緊急服務指示。交接結束後回收含地址、聯絡或醫療資訊的紙本。FamilyBoard 資料留在目前瀏覽器，不會自動聯絡獸醫；公開頁未來若有用品推薦，必須和照護清單分開並揭露 affiliate 關係。
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

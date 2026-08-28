@@ -46,6 +46,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/checklists/printable-monthly-home-checklist/</loc>",
       "<loc>https://familyboard.win/checklists/printable-seasonal-home-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/checklists/printable-seasonal-home-checklist/</loc>",
+      "<loc>https://familyboard.win/checklists/printable-emergency-binder-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/checklists/printable-emergency-binder-checklist/</loc>",
+      "<loc>https://familyboard.win/checklists/printable-moving-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/checklists/printable-moving-checklist/</loc>",
+      "<loc>https://familyboard.win/checklists/printable-pet-sitter-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/checklists/printable-pet-sitter-checklist/</loc>",
       "<loc>https://familyboard.win/templates/printable-appliance-inventory/</loc>",
       "<loc>https://familyboard.win/zh-tw/templates/printable-appliance-inventory/</loc>",
       "<loc>https://familyboard.win/templates/printable-warranty-tracker/</loc>",
@@ -5958,6 +5964,30 @@ const checks = [
   {
     path: "/zh-tw/checklists/printable-home-maintenance-checklist/",
     require: ["可列印居家保養檢查表", "日常可安全觀察的變化", 'lang="zh-TW"'],
+  },
+  {
+    path: "/checklists/printable-emergency-binder-checklist/",
+    require: ["Printable Emergency Binder Checklist", "Household-specific emergency notes"],
+  },
+  {
+    path: "/zh-tw/checklists/printable-emergency-binder-checklist/",
+    require: ["可列印家庭緊急資料夾清單", "列印後的逐格複查", 'lang="zh-TW"'],
+  },
+  {
+    path: "/checklists/printable-moving-checklist/",
+    require: ["Printable Moving Checklist", "Before the move"],
+  },
+  {
+    path: "/zh-tw/checklists/printable-moving-checklist/",
+    require: ["可列印搬家檢查表", "箱件與責任交接", 'lang="zh-TW"'],
+  },
+  {
+    path: "/checklists/printable-pet-sitter-checklist/",
+    require: ["Printable Pet Sitter Checklist", "Feeding"],
+  },
+  {
+    path: "/zh-tw/checklists/printable-pet-sitter-checklist/",
+    require: ["可列印寵物照護檢查表", "交接演練與每日回報", 'lang="zh-TW"'],
   },
   {
     path: "/templates/printable-home-inventory-template/",
