@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T07:32:51.397Z
+Generated: 2026-08-28T07:38:19.014Z
 
 ## Summary
 
-- Indexable pages: 695
-- Generated HTML routes: 714
+- Indexable pages: 698
+- Generated HTML routes: 717
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 8
-- Pages without a contextual product/tool link: 397
+- Pages without a contextual product/tool link: 400
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,7 +21,7 @@ Generated: 2026-08-28T07:32:51.397Z
 - product: 120
 - appliances: 56
 - maintenance: 82
-- household-operations: 121
+- household-operations: 124
 - inventory-warranty: 56
 - records-emergency: 93
 - tools: 126
@@ -287,7 +287,9 @@ Generated: 2026-08-28T07:32:51.397Z
 - /zh-tw/guides/monthly-home-maintenance-checklist/
 - /zh-tw/guides/move-in-maintenance-checklist/
 - /zh-tw/guides/move-out-home-records/
+- /zh-tw/guides/moving-house-organizer/
 - /zh-tw/guides/moving-inventory/
+- /zh-tw/guides/new-home-setup-checklist/
 - /zh-tw/guides/organize-appliance-manuals/
 - /zh-tw/guides/organize-household-subscriptions/
 - /zh-tw/guides/organize-insurance-documents/
@@ -312,6 +314,7 @@ Generated: 2026-08-28T07:32:51.397Z
 - /zh-tw/guides/rental-home-maintenance-log/
 - /zh-tw/guides/rental-security-deposit-move-out-claims/
 - /zh-tw/guides/repair-history/
+- /zh-tw/guides/returning-home-after-travel-checklist/
 - /zh-tw/guides/robot-vacuum-maintenance-guide/
 - /zh-tw/guides/room-by-room-home-inventory/
 - /zh-tw/guides/seasonal-home-maintenance-checklist/

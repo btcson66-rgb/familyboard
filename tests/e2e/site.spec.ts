@@ -495,6 +495,9 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/guides/deep-cleaning-tracker/",
     "/zh-tw/guides/guest-preparation-checklist/",
     "/zh-tw/guides/vacation-home-shutdown-checklist/",
+    "/zh-tw/guides/returning-home-after-travel-checklist/",
+    "/zh-tw/guides/new-home-setup-checklist/",
+    "/zh-tw/guides/moving-house-organizer/",
     "/zh-tw/features/free-home-management-app/",
     "/zh-tw/tools/warranty-expiration-calculator/",
     "/zh-tw/tools/home-maintenance-schedule-generator/",
@@ -3268,6 +3271,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/vacation-home-shutdown-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/returning-home-after-travel-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/new-home-setup-checklist/",
+  );
+  expect(sitemap).toContain(
+    "https://familyboard.win/zh-tw/guides/moving-house-organizer/",
   );
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/tools/appliance-age-calculator/",

@@ -1265,7 +1265,7 @@
   },
   {
     "route": "/guides/returning-home-after-travel-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/returning-home-after-travel-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1273,7 +1273,7 @@
   },
   {
     "route": "/guides/moving-house-organizer/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/moving-house-organizer/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -1281,7 +1281,7 @@
   },
   {
     "route": "/guides/new-home-setup-checklist/",
-    "alternateRoute": "",
+    "alternateRoute": "/zh-tw/guides/new-home-setup-checklist/",
     "indexable": true,
     "lastReviewedAt": "2026-08-19",
     "locale": "en",
@@ -5008,10 +5008,24 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/moving-house-organizer/",
+    "alternateRoute": "/guides/moving-house-organizer/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/moving-inventory/",
     "alternateRoute": "/guides/moving-inventory/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/new-home-setup-checklist/",
+    "alternateRoute": "/guides/new-home-setup-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {
@@ -5250,6 +5264,13 @@
     "alternateRoute": "/guides/repair-history/",
     "indexable": true,
     "lastReviewedAt": "2026-08-24",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/returning-home-after-travel-checklist/",
+    "alternateRoute": "/guides/returning-home-after-travel-checklist/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

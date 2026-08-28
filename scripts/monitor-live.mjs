@@ -125,6 +125,9 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/deep-cleaning-tracker/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/guest-preparation-checklist/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/vacation-home-shutdown-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/returning-home-after-travel-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/new-home-setup-checklist/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/moving-house-organizer/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-subscription-cost-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-free-home-management-app-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-private-family-organizer-tutorial/</loc>",
@@ -1609,6 +1612,33 @@ const checks = [
       'hreflang="en"',
       "先確認水與可能的慢漏",
       "處理會持續抵達的郵件、包裹與垃圾",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/returning-home-after-travel-checklist/",
+    require: [
+      "旅行返家檢查清單",
+      'hreflang="en"',
+      "先保留行李，走固定路線",
+      "記錄沒有異常的區域",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/new-home-setup-checklist/",
+    require: [
+      "入住新家清單",
+      'hreflang="en"',
+      "先記入住事件與住宅型態",
+      "前 30 天只做三次回顧",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/moving-house-organizer/",
+    require: [
+      "搬家總整理指南",
+      'hreflang="en"',
+      "先建立四個階段",
+      "地址與服務變更要留結果",
     ],
   },
   {
