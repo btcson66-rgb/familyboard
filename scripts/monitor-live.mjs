@@ -702,6 +702,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-repair-change-order-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-emergency-contact-sheet-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-appliance-manual-source-check-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-appliance-service-visit-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-service-visit-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-appliance-repair-callback-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-appliance-repair-callback-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -6251,6 +6257,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-storm-readiness-review-tutorial/",
     require: ["風暴準備複查教學", "在地來源", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-appliance-manual-source-check-tutorial/",
+    require: ["Appliance Manual Source Check Tutorial", "neutral asset code"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/",
+    require: ["家電說明書來源複查教學", "型號", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-appliance-service-visit-tutorial/",
+    require: ["Appliance Service Visit Tutorial", "Scope, Findings"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-appliance-service-visit-tutorial/",
+    require: ["家電服務到府紀錄教學", "服務商", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-appliance-repair-callback-tutorial/",
+    require: ["Appliance Repair Callback Tutorial", "Recurring Symptoms"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-appliance-repair-callback-tutorial/",
+    require: ["家電維修回訪紀錄教學", "症狀重現", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

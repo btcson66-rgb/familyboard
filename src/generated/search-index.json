@@ -3480,6 +3480,30 @@
     "headings": "FamilyBoard Storm Readiness Review Tutorial: Use Local Sources and Visible Gaps, Not a Universal Score Select one current local source Choose a review question you can observe Separate preparation from hazardous work Keep gaps and assumptions visible Run a handoff rehearsal"
   },
   {
+    "title": "FamilyBoard Appliance Manual Source Check Tutorial | Match Model, Version and Source",
+    "description": "Learn how to use FamilyBoard to check an appliance manual source by model, date and responsible provider while keeping serial numbers private and unresolved conflicts visible.",
+    "route": "/guides/familyboard-appliance-manual-source-check-tutorial/",
+    "cluster": "appliances",
+    "keywords": "FamilyBoard appliance manual source check tutorial",
+    "headings": "How to Use FamilyBoard's Appliance Manual Source Check Log Start with a neutral asset code Match the model before trusting the filename Record source ownership and version dates Separate operating guidance from household notes Handle conflicting manuals as a visible decision Link recalls and parts without making a safety claim Test retrieval with the smallest safe audience Export and close with source discipline Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Appliance Service Visit Tutorial | Scope, Findings and Follow-Up",
+    "description": "Learn how to record an appliance service visit with FamilyBoard: define scope, preserve provider findings, separate parts and payment, and assign a household recheck.",
+    "route": "/guides/familyboard-appliance-service-visit-tutorial/",
+    "cluster": "appliances",
+    "keywords": "FamilyBoard appliance service visit tutorial",
+    "headings": "How to Use FamilyBoard's Appliance Service Visit Log Define one visit boundary Capture the request and appointment sources Separate provider statements from household observations Keep scope, approval and work distinct Schedule a safe household recheck Link callbacks without erasing history Review privacy and handoff access Eight-question closeout"
+  },
+  {
+    "title": "FamilyBoard Appliance Repair Callback Tutorial | Recurring Symptoms and Evidence",
+    "description": "Learn how to use FamilyBoard's Appliance Repair Callback Log to link a recurring symptom to the earlier visit, preserve new sources and keep warranty or safety decisions with the responsible provider.",
+    "route": "/guides/familyboard-appliance-repair-callback-tutorial/",
+    "cluster": "appliances",
+    "keywords": "FamilyBoard appliance repair callback tutorial",
+    "headings": "How to Use FamilyBoard's Appliance Repair Callback Log Open a new callback, not a rewritten old visit Record when and how the recurrence was noticed Bridge the earlier provider statement Separate callback request, acknowledgement and result Keep warranty and safety decisions with the right source Version parts, remedies and changed conditions Handoff and export with minimum data Eight-question closeout"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -32943,6 +32943,207 @@ Use the review to decide what information should remain private. A public displa
 - Q: Should I hide an unresolved gap to make the score look better?
   A: No. Keep the gap visible, assign an owner and record the next review date.
 
+---
+
+## Page 452 — How to Use FamilyBoard's Appliance Manual Source Check Log
+**Slug:** /guides/familyboard-appliance-manual-source-check-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/
+**Primary intent:** learn to match an appliance manual to the correct model and source version without treating a download as repair or safety permission
+**Title tag:** FamilyBoard Appliance Manual Source Check Tutorial | Match Model, Version and Source
+**Meta description:** Learn how to use FamilyBoard to check an appliance manual source by model, date and responsible provider while keeping serial numbers private and unresolved conflicts visible.
+**Primary keyword concept:** FamilyBoard appliance manual source check tutorial
+**Cluster:** appliances
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/appliance-manual-source-check-log/, /guides/organize-appliance-manuals/, /guides/serial-number-tracker/, /tools/product-recall-action-log/
+**FAQ:**
+- Q: Does the log tell me how to repair or install an appliance?
+  A: No. It records the source match; the manufacturer manual and qualified professional control those instructions.
+- Q: Should I enter a full serial number in a shared row?
+  A: No. Use a neutral asset code and keep the identifier in a protected record.
+- Q: Does downloading a PDF prove it is the current manual?
+  A: No. Record the model, source, version date and any unresolved conflict before relying on it.
+- Q: Can a manual confirm that a recalled appliance is safe to use?
+  A: No. Use the current recall notice, manufacturer and relevant authority for that decision.
+
+**Contextual CTA:** Create one neutral appliance code, link the protected model evidence and record which current source was checked before the next maintenance conversation.
+
+# How to Use FamilyBoard's Appliance Manual Source Check Log
+
+An appliance folder can contain several manuals that look interchangeable. A retailer PDF may use a regional model name, a household may own a later revision, and a search result may point to an obsolete instruction. The free [Appliance Manual Source Check Log](/tools/appliance-manual-source-check-log/) helps a household record which model evidence, source, version and review date were matched. It does not download files, identify an appliance, approve a repair, authorise installation or decide whether equipment is safe.
+
+## Start with a neutral asset code
+
+Use `APPLIANCE-MANUAL-2026-A` or another code with no name, address, account, serial number or purchase ID. Keep the full model and serial evidence in the protected inventory source. The shared row can say “kitchen cooling asset; model evidence MODEL-M1,” allowing an authorised role to return to the original without copying an identifier into a printable binder.
+
+## Match the model before trusting the filename
+
+Record the manufacturer, model family, region and any revision label exactly as shown by the protected source. A filename such as `washer-manual.pdf` is not a model match. If the label is hard to reach, do not move, tilt, disconnect or open equipment just to photograph it. Wait for a safe service opportunity or follow the manufacturer’s safe label-location guidance. A missing model match is an open gap, not permission to guess.
+
+## Record source ownership and version dates
+
+Use pointers such as `MANUAL-SOURCE-1` and note whether the source is a manufacturer page, issued paper manual, authorised provider or protected household copy. Save the date checked and any visible revision or publication date. A current webpage can replace an older PDF; retain both observations when the change matters. The log records what was seen and where to look again, not a permanent guarantee that a website will remain available.
+
+## Separate operating guidance from household notes
+
+The manual may describe cleaning, limits, warnings or service contacts. Copy only a short safe pointer into the log and keep the controlled document in its original location. Do not rewrite a warning into a casual checklist or turn a remembered setting into manufacturer advice. If a question concerns gas, electricity, refrigerant, structural support, water pressure or a recall, stop the household workflow and use the current qualified or official source.
+
+## Handle conflicting manuals as a visible decision
+
+If two documents show different model numbers, regions, dates or instructions, record both source codes and the exact conflict. Assign a role to contact the manufacturer, provider or qualified technician. Do not delete the inconvenient file or choose the answer that makes a task easier. “Source conflict pending” is more useful than a green status that hides uncertainty. When the responsible source replies, add a new dated observation instead of rewriting the earlier question.
+
+## Link recalls and parts without making a safety claim
+
+A manual source can connect to a product-registration or recall record, but it cannot determine whether a notice applies to a particular asset. Use the [Product Recall Action Log](/tools/product-recall-action-log/) for the notice, source date and official next step. A part number in a manual is not proof of compatibility, and a retailer listing is not a substitute for the manufacturer or qualified service source. Never use this log to authorise a repair or bypass a warning.
+
+## Test retrieval with the smallest safe audience
+
+Ask an authorised second role to find the source using the neutral code, model pointer and review date. They should be able to state where the current source lives and which question remains open without receiving the serial number, account, address or entire document. If they cannot find it, record whether the pointer, permission, region or version label failed. Improve one part and run a new check; do not mark the whole appliance archive complete because one PDF opened.
+
+## Export and close with source discipline
+
+Before export, remove serial numbers, full addresses, purchase records, private messages and access details. FamilyBoard is local-first and browser storage is not automatic backup, so export and test retrieval before clearing site data. A binder, scanner or storage product may appear outside the workflow in the future with clear disclosure and a skip option; no product guarantees a correct manual, safe operation or a successful repair.
+
+## Eight-question closeout
+
+Is the asset code neutral? Was the model matched from a protected source? Is the source owner and version date recorded? Are operating instructions kept in the controlling document? Are conflicts visible and assigned? Are recalls and parts linked without a safety conclusion? Can an authorised role retrieve the right source? Were sensitive identifiers removed and any recommendation kept optional? If not, keep the check open.
+
+---
+
+## Page 453 — How to Use FamilyBoard's Appliance Service Visit Log
+**Slug:** /guides/familyboard-appliance-service-visit-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-appliance-service-visit-tutorial/
+**Primary intent:** learn to document an appliance service visit from request through source-backed follow-up without turning a provider note into a safety certification
+**Title tag:** FamilyBoard Appliance Service Visit Tutorial | Scope, Findings and Follow-Up
+**Meta description:** Learn how to record an appliance service visit with FamilyBoard: define scope, preserve provider findings, separate parts and payment, and assign a household recheck.
+**Primary keyword concept:** FamilyBoard appliance service visit tutorial
+**Cluster:** appliances
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/appliance-service-visit-log/, /guides/service-history/, /guides/repair-history/, /tools/appliance-repair-callback-log/
+**FAQ:**
+- Q: Does the visit log verify a technician’s licence or workmanship?
+  A: No. It preserves an attributable visit record; the provider and responsible authority control those questions.
+- Q: Is a paid invoice proof that the appliance is fixed?
+  A: No. Payment, stated work, observed result and later recurrence are separate events.
+- Q: Can I use the log to approve electrical or gas work?
+  A: No. Follow the current qualified professional and emergency guidance.
+- Q: Should a full address or account number be copied into the shared record?
+  A: No. Use a service code and protected source pointer.
+
+**Contextual CTA:** Start one service code with the requested scope, provider source and visit date, then leave the observed result open until the household can safely recheck it.
+
+# How to Use FamilyBoard's Appliance Service Visit Log
+
+The useful record of a service visit is more than “technician came.” A request, appointment, stated scope, provider finding, authorised work, part, invoice and later household observation may each come from a different source. The free [Appliance Service Visit Log](/tools/appliance-service-visit-log/) keeps those stages separate so a family can hand off the next question. It does not authenticate a technician, diagnose equipment, approve work, negotiate a contract, verify a payment or certify safety.
+
+## Define one visit boundary
+
+Use `SERVICE-VISIT-2026-A` and choose one appliance or home system without placing its serial number, address or account ID in the shared code. State the reason for contact in observable terms: “dryer stops before cycle ends” or “water mark observed near appliance.” Avoid writing a diagnosis before the provider examines it. A single visit boundary prevents a routine cleaning, a repair request and a later callback from becoming one confusing line.
+
+## Capture the request and appointment sources
+
+Record when the household noticed the issue, when the request was sent, how the provider acknowledged it and the planned visit window. Use safe pointers such as `REQUEST-R1` and `APPOINTMENT-A1`; keep emails, names, phone numbers and full addresses in the protected provider or household system. An appointment confirmation proves a slot was offered, not that anyone attended or that work was authorised.
+
+## Separate provider statements from household observations
+
+At the visit, record the provider’s wording as an attributable note and link the source date. “Provider reported blocked filter” is different from “household saw lint at the filter.” Do not rewrite an estimate or finding as a fact that FamilyBoard independently verified. If the provider gives a warning about electricity, gas, water, refrigerant or structure, follow that instruction and qualified guidance rather than extending the log into a do-it-yourself procedure.
+
+## Keep scope, approval and work distinct
+
+An estimate or suggested part is not approval. Record whether the household accepted, declined or deferred a defined scope, and who was authorised to make that decision. Later record the work stated as completed, the part or material source, the invoice pointer and any warranty or return condition. A signed screen, payment receipt or case number may prove an action occurred, but it does not prove the appliance performs safely afterward.
+
+## Schedule a safe household recheck
+
+The follow-up row should name an observable result and a date: “one normal cycle observed without the earlier symptom” or “leak remains under review.” Do not open panels, bypass guards, run equipment unattended or recreate a dangerous failure for the sake of a test. If the provider or manual requires a qualified check, leave the household result pending and assign the appropriate source. A recheck can be inconclusive; that is a valid status.
+
+## Link callbacks without erasing history
+
+If the symptom returns, use the [Appliance Repair Callback Log](/tools/appliance-repair-callback-log/) for the recurrence and link back to this visit code. Preserve the original provider statement, scope, invoice and observation. Do not edit the first visit to make it look as though the provider never claimed completion. A dated sequence helps a warranty or service conversation without declaring fault, coverage or compensation.
+
+## Review privacy and handoff access
+
+Before printing or exporting, remove names, full addresses, serial numbers, payment data, private messages, access instructions and photographs that reveal more than the receiver needs. Ask an authorised role to find the protected visit source and state the next checkpoint using only the neutral code. Browser storage is local-first, not an automatic backup; export and test retrieval before clearing data. Future service or storage products must remain outside the control fields, disclosed and skippable.
+
+## Eight-question closeout
+
+Is the visit boundary clear? Are request, appointment, attendance, finding, authorisation, work, invoice and result separate? Are provider statements attributable? Were hazards left to qualified guidance? Is the recheck safe and observable? Are callbacks linked without rewriting history? Can the intended role retrieve the protected source? Were sensitive details removed and recommendations kept optional? If not, leave the visit open.
+
+---
+
+## Page 454 — How to Use FamilyBoard's Appliance Repair Callback Log
+**Slug:** /guides/familyboard-appliance-repair-callback-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-appliance-repair-callback-tutorial/
+**Primary intent:** learn to record a recurring appliance symptom and callback without deciding fault, warranty coverage or safe operation
+**Title tag:** FamilyBoard Appliance Repair Callback Tutorial | Recurring Symptoms and Evidence
+**Meta description:** Learn how to use FamilyBoard's Appliance Repair Callback Log to link a recurring symptom to the earlier visit, preserve new sources and keep warranty or safety decisions with the responsible provider.
+**Primary keyword concept:** FamilyBoard appliance repair callback tutorial
+**Cluster:** appliances
+**Page type:** content
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Suggested internal links:** /tools/appliance-repair-callback-log/, /tools/appliance-service-visit-log/, /guides/repair-history/, /tools/warranty-claim-evidence-log/
+**FAQ:**
+- Q: Does a callback prove the earlier repair was defective?
+  A: No. It records that a symptom or question returned; the provider or qualified source determines cause.
+- Q: Does a callback automatically extend a warranty deadline?
+  A: No. Keep the current written terms and provider response as the controlling sources.
+- Q: Can I run a dangerous test to reproduce the symptom?
+  A: No. Stop at hazards and follow the manual, provider or emergency instructions.
+- Q: Should I delete the original visit after opening a callback?
+  A: No. Link a new dated callback while preserving the earlier history.
+
+**Contextual CTA:** Create a neutral callback code, link the earlier service visit, describe one observed recurrence and assign the next provider-source checkpoint.
+
+# How to Use FamilyBoard's Appliance Repair Callback Log
+
+A repair can appear complete until the same noise, leak, shutdown or error returns. Families then need to answer three different questions: what was observed again, what did the provider previously state, and what new response is still pending? The free [Appliance Repair Callback Log](/tools/appliance-repair-callback-log/) keeps that bridge visible. It does not diagnose a fault, assign blame, extend a warranty, approve continued use, negotiate a refund or replace a qualified inspection.
+
+## Open a new callback, not a rewritten old visit
+
+Use `CALLBACK-2026-A` and link the earlier `SERVICE-VISIT-2026-A` or another protected reference. Describe the recurrence in observable language: “same display code appeared during a later cycle” or “water was observed below the unit.” Do not write “bad repair” until the responsible source makes that statement. A new code protects the chronology and shows which evidence belongs to which visit.
+
+## Record when and how the recurrence was noticed
+
+Capture the date, operating context and safe observation source. If the issue appeared while a child, older adult or person needing assistance was present, record the handoff and stop conditions without naming private details. Do not repeat an unsafe operation, remove a guard, touch wiring or approach a leak to obtain a better photograph. “Could not safely reproduce” is a useful fact and keeps the household from turning a record into a hazard.
+
+## Bridge the earlier provider statement
+
+Link the original visit source, stated scope, part or work pointer and household recheck. Keep the provider’s words attributable and unchanged. A paid invoice, “completed” status or parts receipt is not proof that the appliance remained fixed. If the earlier source and the recurrence conflict, preserve both and ask the provider or qualified professional which current check controls. Do not fill the gap with a search snippet or a family assumption.
+
+## Separate callback request, acknowledgement and result
+
+Record when the household contacted the provider, what source acknowledged the request, the offered visit or remedy, and what result was actually observed. A ticket number proves a contact was opened, not that a technician attended or a claim was accepted. If a provider asks for a serial number, full address or account detail, keep that exchange in the protected channel and put only a safe pointer in the shared log.
+
+## Keep warranty and safety decisions with the right source
+
+Use the [Warranty Claim Evidence Log](/tools/warranty-claim-evidence-log/) for a protected claim timeline, but do not treat either log as a coverage decision. Written terms, manufacturer notices, insurer processes and qualified professionals control coverage and safe operation. If the appliance has smoke, burning smell, exposed wiring, gas, flooding, structural movement or a medical dependency, stop the callback workflow and follow current emergency or professional instructions.
+
+## Version parts, remedies and changed conditions
+
+When a new part, setting, provider or household circumstance changes, add a dated observation and link the source. Do not silently replace the first symptom with the latest explanation. A callback can end with “provider response pending,” “new visit scheduled,” “household observation inconclusive” or “source says no further action”; none of those labels is a universal safety or legal conclusion. Preserve unresolved questions for the next authorised role.
+
+## Handoff and export with minimum data
+
+Ask a permitted role to restate the recurrence, earlier source code and next checkpoint without receiving the full invoice, serial number, address, payment record or private correspondence. Before export, remove identifiers and check old paper copies. FamilyBoard is local-first and browser storage is not automatic backup, so export and test retrieval before clearing data. Any future product recommendation must be outside the callback controls, clearly disclosed and optional.
+
+## Eight-question closeout
+
+Is the callback linked to a preserved earlier visit? Is the recurrence observable and safely obtained? Are provider statements attributable? Are request, acknowledgement, visit and result separate? Were warranty and safety decisions left to their sources? Were changed parts and conditions versioned? Can the receiver find the protected evidence without secrets? Were sensitive fields removed and any recommendation kept skippable? If not, keep the callback open.
+
+---
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

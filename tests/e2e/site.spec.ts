@@ -166,6 +166,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/",
     "/guides/familyboard-storm-readiness-review-tutorial/",
     "/zh-tw/guides/familyboard-storm-readiness-review-tutorial/",
+    "/guides/familyboard-appliance-manual-source-check-tutorial/",
+    "/zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/",
+    "/guides/familyboard-appliance-service-visit-tutorial/",
+    "/zh-tw/guides/familyboard-appliance-service-visit-tutorial/",
+    "/guides/familyboard-appliance-repair-callback-tutorial/",
+    "/zh-tw/guides/familyboard-appliance-repair-callback-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -1611,6 +1617,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/features/free-home-management-app/",
       alternate: "/features/free-home-management-app/",
       heading: "FamilyBoard 使用教學：先建立一套會持續使用的家庭管理流程",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/",
+      alternate: "/guides/familyboard-appliance-manual-source-check-tutorial/",
+      heading: "FamilyBoard 家電說明書來源複查教學：先對型號，再相信版本",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-appliance-service-visit-tutorial/",
+      alternate: "/guides/familyboard-appliance-service-visit-tutorial/",
+      heading: "FamilyBoard 家電服務到府紀錄教學：拆開範圍、發現與後續",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-appliance-repair-callback-tutorial/",
+      alternate: "/guides/familyboard-appliance-repair-callback-tutorial/",
+      heading: "FamilyBoard 家電維修回訪紀錄教學：症狀重現也不先猜責任",
     },
   ]) {
     await page.goto(localized.route);

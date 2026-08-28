@@ -3616,6 +3616,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-appliance-manual-source-check-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-appliance-service-visit-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-appliance-service-visit-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-appliance-repair-callback-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-appliance-repair-callback-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4220,6 +4244,27 @@
     "alternateRoute": "/features/free-home-management-app/",
     "indexable": true,
     "lastReviewedAt": "2026-08-22",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/",
+    "alternateRoute": "/guides/familyboard-appliance-manual-source-check-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-appliance-repair-callback-tutorial/",
+    "alternateRoute": "/guides/familyboard-appliance-repair-callback-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-appliance-service-visit-tutorial/",
+    "alternateRoute": "/guides/familyboard-appliance-service-visit-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },
   {

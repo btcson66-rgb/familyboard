@@ -73,6 +73,9 @@ const records = headingIndexes.map((start, index) => {
     lines.findIndex(
       (line, i) => i > start && line.startsWith("# END OF MASTER CONTENT + BUILD BRIEF"),
     ),
+    lines.findIndex(
+      (line, i) => i > start && line.startsWith("# FINAL HANDOFF TO CODEX"),
+    ),
   ].filter((candidate) => candidate >= 0);
   const end = endCandidates.length ? Math.min(...endCandidates) : lines.length;
   const heading = lines[start];
