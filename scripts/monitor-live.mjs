@@ -52,6 +52,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/templates/printable-warranty-tracker/</loc>",
       "<loc>https://familyboard.win/templates/printable-repair-log/</loc>",
       "<loc>https://familyboard.win/zh-tw/templates/printable-repair-log/</loc>",
+      "<loc>https://familyboard.win/guides/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/</loc>",
+      "<loc>https://familyboard.win/tools/</loc>",
+      "<loc>https://familyboard.win/zh-tw/tools/</loc>",
+      "<loc>https://familyboard.win/checklists/</loc>",
+      "<loc>https://familyboard.win/zh-tw/checklists/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/</loc>",
       "<loc>https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/</loc>",
@@ -5631,6 +5637,30 @@ const checks = [
   {
     path: "/zh-tw/templates/printable-repair-log/",
     require: ["可列印居家修繕紀錄表", "記錄症狀", '<html lang="zh-TW">', 'hreflang="en"'],
+  },
+  {
+    path: "/guides/",
+    require: ["Home and Household Management Guides", "Maintain the home", 'hreflang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/guides/",
+    require: ["繁中家庭管理指南", "依家庭工作選擇入口", '<html lang="zh-TW">', 'hreflang="en"'],
+  },
+  {
+    path: "/tools/",
+    require: ["Free Home Management Tools and Calculators", "Maintenance planning", 'hreflang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/tools/",
+    require: ["免費家庭管理工具", "日期、保固與保養", '<html lang="zh-TW">', 'hreflang="en"'],
+  },
+  {
+    path: "/checklists/",
+    require: ["Printable Household Checklists", "Maintenance", 'hreflang="zh-TW"'],
+  },
+  {
+    path: "/zh-tw/checklists/",
+    require: ["繁中可列印家庭檢查表", "每月與季節複查", '<html lang="zh-TW">', 'hreflang="en"'],
   },
   {
     path: "/features/home-record-keeper/",

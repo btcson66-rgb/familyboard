@@ -140,6 +140,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/templates/printable-warranty-tracker/",
     "/templates/printable-repair-log/",
     "/zh-tw/templates/printable-repair-log/",
+    "/guides/",
+    "/zh-tw/guides/",
+    "/tools/",
+    "/zh-tw/tools/",
+    "/checklists/",
+    "/zh-tw/checklists/",
   ]) {
     expect(sitemap).toContain(`<loc>https://familyboard.win${route}</loc>`);
   }
@@ -721,6 +727,12 @@ test("representative routes have no serious accessibility violations", async ({
     "/zh-tw/templates/printable-warranty-tracker/",
     "/templates/printable-repair-log/",
     "/zh-tw/templates/printable-repair-log/",
+    "/guides/",
+    "/zh-tw/guides/",
+    "/tools/",
+    "/zh-tw/tools/",
+    "/checklists/",
+    "/zh-tw/checklists/",
     "/guides/family-emergency-contacts/",
     "/zh-tw/guides/family-emergency-contacts/",
     "/guides/what-spouse-needs-to-know/",
@@ -1032,6 +1044,15 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(
     page.locator(".site-footer").getByRole("link", { name: "可列印居家修繕紀錄表" }),
   ).toHaveAttribute("href", "/zh-tw/templates/printable-repair-log/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "繁中指南中心" }),
+  ).toHaveAttribute("href", "/zh-tw/guides/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "繁中工具中心" }),
+  ).toHaveAttribute("href", "/zh-tw/tools/");
+  await expect(
+    page.locator(".site-footer").getByRole("link", { name: "繁中檢查表中心" }),
+  ).toHaveAttribute("href", "/zh-tw/checklists/");
 
   for (const localized of [
     {
@@ -1063,6 +1084,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/templates/printable-repair-log/",
       alternate: "/templates/printable-repair-log/",
       heading: "可列印居家修繕紀錄表：把「修過了」寫成下一個人看得懂的歷程",
+    },
+    {
+      route: "/zh-tw/guides/",
+      alternate: "/guides/",
+      heading: "繁中家庭管理指南：從下一個真實工作開始整理",
+    },
+    {
+      route: "/zh-tw/tools/",
+      alternate: "/tools/",
+      heading: "免費家庭管理工具：先解決一個小問題，再留下可查證的結果",
+    },
+    {
+      route: "/zh-tw/checklists/",
+      alternate: "/checklists/",
+      heading: "繁中可列印家庭檢查表：把今天要做的事寫成能交接的清單",
     },
     {
       route: "/zh-tw/privacy/",

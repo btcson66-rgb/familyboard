@@ -1,22 +1,22 @@
 # Content quality report
 
-Generated: 2026-08-28T11:46:00.398Z
+Generated: 2026-08-28T12:02:21.977Z
 
 ## Summary
 
-- Indexable pages: 757
-- Generated HTML routes: 763
+- Indexable pages: 760
+- Generated HTML routes: 766
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 9
-- Pages without a contextual product/tool link: 428
+- Duplicate primary-keyword groups: 10
+- Pages without a contextual product/tool link: 431
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
-- support: 24
+- support: 27
 - printables: 28
 - product: 135
 - inventory-warranty: 60
@@ -55,6 +55,7 @@ Generated: 2026-08-28T11:46:00.398Z
 - 家庭文件查找演練: /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/, /zh-tw/tools/household-record-retrieval-drill-log/
 - 居家服務變更: /zh-tw/guides/home-care-service-plan-changes/, /zh-tw/tools/home-care-service-plan-change-notice-log/
 - 居家服務紀錄: /zh-tw/guides/home-care-service-visit-records/, /zh-tw/tools/home-care-visit-scope-service-result-log/
+- 免費家庭管理工具: /zh-tw/, /zh-tw/tools/
 
 ## Pages without contextual product/tool links
 
@@ -113,6 +114,7 @@ Generated: 2026-08-28T11:46:00.398Z
 - /tools/rental-security-deposit-move-out-claim-log/
 - /zh-tw/about/
 - /zh-tw/affiliate-disclosure/
+- /zh-tw/checklists/
 - /zh-tw/checklists/printable-home-maintenance-checklist/
 - /zh-tw/checklists/printable-monthly-home-checklist/
 - /zh-tw/checklists/printable-seasonal-home-checklist/
@@ -301,6 +303,7 @@ Generated: 2026-08-28T11:46:00.398Z
 - /zh-tw/guides/humidifier-maintenance-guide/
 - /zh-tw/guides/hvac-filter-tracker/
 - /zh-tw/guides/important-household-documents/
+- /zh-tw/guides/
 - /zh-tw/guides/maintenance-priorities/
 - /zh-tw/guides/microwave-maintenance-checklist/
 - /zh-tw/guides/monthly-home-maintenance-checklist/
@@ -470,6 +473,7 @@ Generated: 2026-08-28T11:46:00.398Z
 - /zh-tw/tools/household-water-leak-event-log/
 - /zh-tw/tools/household-weekly-reset-action-log/
 - /zh-tw/tools/important-household-document-review/
+- /zh-tw/tools/
 - /zh-tw/tools/move-in-checklist-generator/
 - /zh-tw/tools/move-out-condition-record-generator/
 - /zh-tw/tools/moving-box-handover-log/

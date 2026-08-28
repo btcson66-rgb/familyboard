@@ -190,7 +190,7 @@ for (const file of htmlFiles) {
           : "page";
   const slug = route.split("/").filter(Boolean).at(-1) || "";
   const toolFunctional =
-    routeType === "tool" && route !== "/tools/"
+    routeType === "tool" && route !== "/tools/" && route !== "/zh-tw/tools/"
       ? toolDefinitions.has(slug)
       : "n/a";
 

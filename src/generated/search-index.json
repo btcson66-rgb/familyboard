@@ -3096,6 +3096,30 @@
     "headings": "可列印居家修繕紀錄表：把「修過了」寫成下一個人看得懂的歷程"
   },
   {
+    "title": "家庭管理指南｜居家保養、家電紀錄、文件與交接教學｜FamilyBoard",
+    "description": "從台灣家庭常見的居家保養、家電清冊、文件整理、緊急交接與日常分工開始，找到適合下一個家庭工作的繁中 FamilyBoard 指南。",
+    "route": "/zh-tw/guides/",
+    "cluster": "support",
+    "keywords": "家庭管理指南",
+    "headings": "繁中家庭管理指南：從下一個真實工作開始整理"
+  },
+  {
+    "title": "免費家庭管理工具｜保固、保養、備份與交接計算器｜FamilyBoard",
+    "description": "瀏覽 FamilyBoard 免費繁中家庭工具：保固到期、保養排程、訂閱費用、事件時間、日期偏移、備份檢查與交接紀錄，全部在瀏覽器完成。",
+    "route": "/zh-tw/tools/",
+    "cluster": "support",
+    "keywords": "免費家庭管理工具",
+    "headings": "免費家庭管理工具：先解決一個小問題，再留下可查證的結果"
+  },
+  {
+    "title": "可列印家庭檢查表｜居家保養、搬家、緊急與交接清單｜FamilyBoard",
+    "description": "瀏覽 FamilyBoard 繁中可列印家庭檢查表，涵蓋每月與季節保養、緊急資料夾、搬家、看家、寵物照護、家務與家庭交接。",
+    "route": "/zh-tw/checklists/",
+    "cluster": "support",
+    "keywords": "可列印家庭檢查表",
+    "headings": "繁中可列印家庭檢查表：把今天要做的事寫成能交接的清單"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

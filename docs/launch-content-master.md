@@ -30193,6 +30193,97 @@ FamilyBoard v1 的方向很簡單：讓家庭更容易找到、理解與交接�
 
 這張表把症狀、服務商工作、費用、結果、照片／發票參照與後續複查分開，避免一句「已修好」掩蓋仍未解決的問題。頁面教使用者先寫可觀察的聲音、氣味、錯誤、位置和日期，再記錄服務商的診斷與實際更換／調整，不把猜測當成原因；估價與最終收據也不能混為一談。對漏電、焦味、瓦斯、快速漏水、裸露電線或結構問題，表格只保存時間線，不提供自行拆修指示，應依房東、管理單位、原廠或合格專業流程處理。多次維修要新增列而非覆蓋舊結果，並指定回訪、零件、退款或保固確認的負責人和日期。FamilyBoard 可將資產、保養與任務連結，但資料留在目前瀏覽器；分享前需移除門禁、帳號與付款資訊，未來推薦商品也必須位於主要紀錄之外並揭露 affiliate 關係。
 
+## Page 404 — 繁中家庭管理指南：從下一個真實工作開始整理
+
+**Slug:** `/zh-tw/guides/`
+**Alternate route:** `/guides/`
+**Primary intent:** 瀏覽繁中家庭管理與居家保養指南
+**Title tag:** 家庭管理指南｜居家保養、家電紀錄、文件與交接教學｜FamilyBoard
+**Meta description:** 從台灣家庭常見的居家保養、家電清冊、文件整理、緊急交接與日常分工開始，找到適合下一個家庭工作的繁中 FamilyBoard 指南。
+**Primary keyword concept:** 家庭管理指南
+**Cluster:** support
+**Page type:** support
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 先選一個本週真的要完成的家庭工作，再從對應指南建立最小可維持的紀錄。
+**Suggested internal links:** `/zh-tw/guides/home-maintenance-schedule/`, `/zh-tw/guides/room-by-room-home-inventory/`, `/zh-tw/guides/digital-home-binder/`, `/zh-tw/guides/household-monthly-review/`
+**FAQ:**
+- 指南中心和 App 有什麼關係？指南解釋決策與紀錄方法，App 保存本機資產、保養、任務和交接資料。
+- 不知道從哪篇開始怎麼辦？依眼前工作選家電、保固、修繕、交接或每月複查入口。
+- 保養週期可以直接照做嗎？不能，手冊、租約、官方規定和專業意見優先。
+- 繁中指南是英文逐句翻譯嗎？不是，依台灣住宅、氣候、通路與家庭分工重新撰寫。
+
+# 繁中家庭管理指南：從下一個真實工作開始整理
+
+這個繁中指南中心以台灣家庭的公寓、租屋、梅雨與颱風、家電到府服務、網購收據、照顧交接與日常分工為背景，幫你回答「現在要先確認什麼、留下什麼、交給誰」。內容依居家保養、家電與保固、文件與備份、緊急交接、家庭分工與週期複查分類，每篇都說明資料來源、不適用欄位、責任與安全界線。指南不取代設備手冊、所在地規定、法律／醫療／保險意見或合格專業人員；它的用途是讓下一個可執行步驟更容易被找到、查證和交接。繁中頁不是英文換字，而是以在地搜尋語意與生活情境重新撰寫；完成後可將長期事項放入本機 App，並自行備份。
+
+---
+
+## Page 405 — 免費家庭管理工具：先解決一個小問題，再留下可查證的結果
+
+**Slug:** `/zh-tw/tools/`
+**Alternate route:** `/tools/`
+**Primary intent:** 尋找免費繁中家庭管理計算器與紀錄工具
+**Title tag:** 免費家庭管理工具｜保固、保養、備份與交接計算器｜FamilyBoard
+**Meta description:** 瀏覽 FamilyBoard 免費繁中家庭工具：保固到期、保養排程、訂閱費用、事件時間、日期偏移、備份檢查與交接紀錄，全部在瀏覽器完成。
+**Primary keyword concept:** 免費家庭管理工具
+**Cluster:** support
+**Page type:** support
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 只選一個現在有明確輸入與輸出的家庭問題，完成結果後再決定是否保存成 App 紀錄。
+**Suggested internal links:** `/zh-tw/tools/warranty-expiration-calculator/`, `/zh-tw/tools/home-maintenance-schedule-generator/`, `/zh-tw/tools/household-backup-recovery-checker/`, `/zh-tw/tools/household-task-load-calculator/`
+**FAQ:**
+- 工具會上傳家庭資料嗎？計算在目前瀏覽器完成，不需帳號，但仍應避免輸入敏感資料。
+- 結果能當正式期限或專業建議嗎？不能，正式來源與專業意見優先。
+- 能保存到 App 嗎？可手動整理成資產、保養或任務，但不會自動同步或提醒。
+- 會強迫購買商品嗎？不會，未來推薦也必須可忽略、在結果外並揭露 affiliate。
+
+# 免費家庭管理工具：先解決一個小問題，再留下可查證的結果
+
+繁中工具區依日期／保固／保養、費用／時間、備份／文件／交接，以及用品／事件／責任分組，提供窄範圍計算器與紀錄表。日期工具只做算術，費用工具保留原幣別與來源，交接工具只產生低敏感度摘要；沒有任何工具會讀取家庭帳戶、判定法律權利、診斷設備或替你發送背景提醒。所有輸入在目前瀏覽器處理，不需註冊，使用者應自行避免完整地址、門禁、卡號與私人對話，並在長期保存前確認來源與備份。公開工具維持免費；未來若出現商品推薦，會與主要結果分離、清楚揭露 affiliate 且不影響任何免費功能。
+
+---
+
+## Page 406 — 繁中可列印家庭檢查表：把今天要做的事寫成能交接的清單
+
+**Slug:** `/zh-tw/checklists/`
+**Alternate route:** `/checklists/`
+**Primary intent:** 瀏覽繁中可列印家庭檢查表與工作表
+**Title tag:** 可列印家庭檢查表｜居家保養、搬家、緊急與交接清單｜FamilyBoard
+**Meta description:** 瀏覽 FamilyBoard 繁中可列印家庭檢查表，涵蓋每月與季節保養、緊急資料夾、搬家、看家、寵物照護、家務與家庭交接。
+**Primary keyword concept:** 可列印家庭檢查表
+**Cluster:** support
+**Page type:** support
+**Language:** zh-TW
+**Language exclusive:** yes
+**Indexable:** yes
+**Depth:** verified
+**Published:** 2026-08-29
+**Last reviewed:** 2026-08-29
+**Content version:** 1
+**Next step:** 選一張最貼近目前家庭工作的表格，先寫日期與負責人，再刪掉不適用的欄位。
+**Suggested internal links:** `/zh-tw/checklists/printable-monthly-home-checklist/`, `/zh-tw/checklists/printable-seasonal-home-checklist/`, `/zh-tw/checklists/printable-home-maintenance-checklist/`, `/zh-tw/templates/printable-household-handoff-sheet/`
+**FAQ:**
+- 檢查表可以每格照做嗎？先刪除不適用項目，再依家庭、住宅、氣候與所在地規則調整。
+- 紙本和 App 怎麼分工？紙本適合短期走讀與交接，長期事項再放入 App 並自行備份。
+- 表格會收集家庭資料嗎？不需帳號，但列印與分享前要自行移除敏感資料。
+- 檢查表旁會放商品廣告嗎？目前不會；未來推薦必須在主要表格之外並揭露 affiliate。
+
+# 繁中可列印家庭檢查表：把今天要做的事寫成能交接的清單
+
+這個繁中檢查表中心依每月、季節、居家保養、家電／保固／修繕、緊急、搬家、看家、寵物、清潔、家務與交接分類。頁面強調表格的價值在於寫清楚範圍、日期、負責人與下一步，而不是把每格填滿；不適用項目應刪除，原廠手冊、租約、官方要求與安全能力優先。紙本適合會議、短期走讀與離線交接，持續追蹤的結果再轉成 FamilyBoard 的資產、保養、任務或文件備註。分享前移除住址、門禁、帳號、付款、完整序號與私人資料；公開檢查表維持免費，未來商品推薦若有，必須和主要表格分離並清楚揭露 affiliate。
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.
