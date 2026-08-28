@@ -23,6 +23,10 @@ const groups = [
   { test: /inventory|label|organizer/, items: [
     { en: 'Label maker', zh: '標籤機', query: 'label maker home organization' },
     { en: 'Storage labels', zh: '收納標籤', query: 'home storage labels' }
+  ] },
+  { test: /task-load|chore|responsibility/, items: [
+    { en: 'Magnetic chore planner', zh: '磁吸家務規劃表', query: 'magnetic chore planner family' },
+    { en: 'Kitchen timer', zh: '廚房計時器', query: 'kitchen timer household tasks' }
   ] }
 ];
 const group = groups.find((candidate) => candidate.test.test(route));
