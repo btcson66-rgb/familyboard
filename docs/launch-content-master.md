@@ -31200,6 +31200,192 @@ Write the route code, the date and the conditions first. Then record one barrier
 - Q: Can the tool provide transfer or evacuation instructions?
   A: No. Do not use it to improvise lifting, transfer, construction or emergency procedures.
 
+## Page 428 — Household Annual Review Generator Tutorial: Turn a Yearly Reset Into Evidence
+
+**Slug:** `/guides/familyboard-household-annual-review-generator-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/`
+**Primary intent:** use the annual review generator to inspect maintenance, renewals, records, backups and open decisions without claiming a household is complete
+**Title tag:** Household Annual Review Generator Tutorial | FamilyBoard
+**Meta description:** Learn how to run a calm household annual review with FamilyBoard, preserve evidence, assign follow-ups and keep unknowns visible.
+**Primary keyword concept:** annual household review generator tutorial
+**Cluster:** household-operations
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Generate a bounded annual review, then turn only observed gaps into separate dated tasks.
+**Suggested internal links:** `/tools/household-annual-review-generator/`, `/guides/household-annual-review/`, `/tools/household-task-load-calculator/`, `/features/home-dashboard/`
+
+# Household Annual Review Generator Tutorial: Turn a Yearly Reset Into Evidence
+
+An annual review is useful when it answers what changed, what was actually checked and what still needs a responsible source. The free [Household Annual Review Generator](/tools/household-annual-review-generator/) creates a dated checklist across maintenance, warranties, renewals, documents, emergency information, backups and unresolved decisions. It does not certify insurance, safety, legal compliance or financial completeness.
+
+## Choose a bounded review window
+
+Start with a neutral reference such as `ANNUAL-REVIEW-2026-A` and choose the household period you can really inspect. A move, new caregiver, major repair or new appliance may justify a separate review. Do not make one giant list that includes every private record. A narrow scope keeps the output readable and makes it clear which sources were not checked.
+
+## Generate prompts, not promises
+
+The generator offers prompts such as checking a maintenance history, locating an appliance warranty source, reviewing emergency contacts, testing a backup export and looking for changed subscriptions. Treat each as a question. “Prompt generated” is not “source verified,” and a checked box is not proof that a provider, insurer, landlord, authority or professional agrees with the household's conclusion.
+
+## Record the source and observed result
+
+For every prompt you act on, note a safe source code, observation date and exact result in the appropriate FamilyBoard record. Use `SOURCE-WARRANTY-1` or `EMERGENCY-INFO-2`, not a full policy number, address, password or private message. Keep an unresolved item open when the source is missing, contradictory, out of date or controlled by someone outside the household.
+
+## Separate actions from outcomes
+
+Creating a task, sending an email or opening a portal is an action. It does not prove that a renewal succeeded, a repair was accepted or a backup can be restored. Use a separate task for the next follow-up and close it only when an authorised source has supplied an observable result. Preserve the original review and create a new version when the household's facts change.
+
+## Rehearse the handoff
+
+Ask a backup household role to find the safe source pointers and explain which gaps remain. The rehearsal should work without sharing credentials, full medical details, payment data or private disputes. If the person cannot find the controlling source, record that as a coverage gap instead of silently marking the annual review complete.
+
+## Protect the private boundary
+
+The public guide is indexable, but the review output stays in the current browser profile. It is not automatically synchronized, encrypted or backed up. Export a suitable backup through the app before clearing browser data, and inspect the text before printing or sharing. Any future affiliate recommendation belongs outside the generator, must be labelled and optional, and cannot imply that a purchase completes a review.
+
+## Close the loop without forcing certainty
+
+At the end of the review, count open questions rather than only completed prompts. A missing receipt, an untested restore, an expired contact or an unresolved provider notice should each have a named next source and a review date. If no one can answer yet, say so plainly. The annual generator is valuable because it leaves a trail for the next person and the next year; it is not a scorecard that rewards hiding uncertainty. Keep a short summary on the dashboard and retain detailed evidence in the record that owns it.
+
+**FAQ:**
+- Q: Does this generator prove that a household is safe or legally compliant?
+  A: No. It creates prompts and follow-up structure; responsible authorities and qualified professionals control those conclusions.
+- Q: Should I review every document every year?
+  A: Choose a bounded scope and let the controlling source or a real change determine what needs another review.
+- Q: Is a task marked complete the same as an outcome being verified?
+  A: No. Keep the source observation and outcome separate.
+- Q: Can I share the generated list with a contractor or caregiver?
+  A: Only after removing unnecessary personal details and confirming that the recipient needs each remaining item.
+
+## Page 429 — Household Document Index Generator Tutorial: Build a Findable Binder Without Copying Secrets
+
+**Slug:** `/guides/familyboard-household-document-index-generator-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-household-document-index-generator-tutorial/`
+**Primary intent:** design a household document index with safe pointers, ownership and review triggers without storing credentials or complete documents
+**Title tag:** Household Document Index Generator Tutorial | FamilyBoard
+**Meta description:** Learn to create a practical household document index that points to current sources, preserves versions and keeps sensitive details out of shared lists.
+**Primary keyword concept:** household document index generator tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Index three records that another household role would need to locate during a real handoff.
+**Suggested internal links:** `/tools/household-document-index-generator/`, `/tools/household-record-retrieval-drill-log/`, `/guides/household-documents/`, `/features/household-documents-organizer/`
+
+# Household Document Index Generator Tutorial: Build a Findable Binder Without Copying Secrets
+
+“The document is somewhere in the folder” is not a reliable handoff. The free [Household Document Index Generator](/tools/household-document-index-generator/) helps create a bounded map of record type, safe source pointer, responsible role, version observation, access check and next review. It is an index, not cloud storage, a password manager, legal advice or a duplicate of the document itself.
+
+## Start with a decision the document supports
+
+Choose a real use case: a warranty claim, a rental move, emergency contact lookup, appliance service visit or school/care handoff. Use a neutral index code such as `DOC-INDEX-2026-A`. A purpose tells you which records belong and prevents a permanent catalogue of private material that nobody reviews.
+
+## Use one row per controlling source
+
+Record a safe category such as “current appliance warranty,” “building notice,” “insurance policy source” or “emergency instruction.” Point to `WARRANTY-FOLDER-1` or `BUILDING-SOURCE-2`; do not paste the full policy, account number, QR code, password, signature, diagnosis or private conversation. If two sources control different questions, create two rows rather than pretending one file answers both.
+
+## Capture version and access separately
+
+The index should say when an authorised person observed a version and whether the protected source could be opened. Access does not prove that the document is current, complete, legally sufficient or accepted by an outside party. Keep the old observation when a new version arrives and create a new dated row or index version instead of overwriting history.
+
+## Practise retrieval with the least exposure
+
+Ask a backup role to locate three safe pointers and explain what each source controls. They should not need credentials or a full document copy for the rehearsal. If a pointer is stale, a folder is inaccessible or a source disagrees, mark the gap open and identify the responsible owner or authority. A successful search is evidence about findability, not proof about the document's content.
+
+## Make retention a source decision
+
+Do not invent a universal retention period. Record the reason the household is keeping an item, the source that controls any required period and the event that would trigger a review. When a lease, policy, warranty, service relationship or household role changes, review the index and preserve the decision that explains what happened to the old version.
+
+## Keep indexing private and optional
+
+Entries remain in the current browser profile and are not automatically encrypted, synchronized or backed up. Export before clearing data, inspect the index before printing and keep sensitive originals in their responsible protected system. Future folders, scanners or storage products may be shown outside the workbench only as labelled optional affiliate content; buying one cannot prove that a document is current or findable.
+
+## Give every pointer a recovery path
+
+Before calling an index useful, ask what happens if the folder moves, a link expires or the usual organiser is away. Record a safe replacement pointer, a role that can request access and the event that should reopen the row. Never solve a broken pointer by copying the entire document into a less protected list. A good index makes the next question obvious while keeping the sensitive answer in the system designed to protect it.
+
+**FAQ:**
+- Q: Should the index contain the document text?
+  A: No. Use a safe pointer and keep the controlling document in its protected source.
+- Q: Does an accessible pointer prove the document is valid?
+  A: No. It only records a findability and version observation.
+- Q: How long should every household record be kept?
+  A: Use the responsible agreement, authority or qualified source; do not invent one period for every record.
+- Q: Can a backup person practise without seeing private details?
+  A: Yes. Rehearse safe pointers, ownership and escalation while withholding credentials and unnecessary content.
+
+## Page 430 — Emergency Binder Generator Tutorial: Design a Small Packet People Can Use Under Pressure
+
+**Slug:** `/guides/familyboard-emergency-binder-generator-tutorial/`
+**Alternate route:** `/zh-tw/guides/familyboard-emergency-binder-generator-tutorial/`
+**Primary intent:** create a bounded emergency information packet with source pointers, update triggers and privacy limits without giving medical or emergency instructions
+**Title tag:** Emergency Binder Generator Tutorial | FamilyBoard
+**Meta description:** Learn how to build a practical emergency binder outline with current sources, safe contacts, update triggers and a rehearsal plan using FamilyBoard.
+**Primary keyword concept:** emergency binder generator tutorial
+**Cluster:** records-emergency
+**Page type:** content
+**Language:** en
+**Language exclusive:** no
+**Indexable:** yes
+**Depth:** verified
+**Published date:** 2026-08-29
+**Editorial review date:** 2026-08-29
+**Content version:** 1
+**Next step:** Build a small packet for one real scenario, then rehearse finding the controlling source.
+**Suggested internal links:** `/tools/emergency-binder-generator/`, `/tools/emergency-contact-sheet-generator/`, `/guides/emergency-information-organizer/`, `/features/emergency-information-organizer/`
+
+# Emergency Binder Generator Tutorial: Design a Small Packet People Can Use Under Pressure
+
+An emergency binder should reduce searching, not become a second archive of every private detail. The free [Emergency Binder Generator](/tools/emergency-binder-generator/) creates an outline for emergency contacts, utilities, household instructions, document pointers, backup roles and review triggers. It does not replace emergency services, a clinician, an authority, an insurer or a building plan.
+
+## Pick one scenario first
+
+Choose a concrete use such as a short power outage, a water leak, a house-sitter handoff or a family member temporarily unavailable. Use `EMERGENCY-PACKET-2026-A`, not a full address or resident profile. A scenario tells you what belongs and keeps the packet short enough to use when people are tired or communications are limited.
+
+## Separate immediate contacts from reference sources
+
+An emergency contact sheet can contain only the minimum contact labels and numbers that an authorised person truly needs. A binder index can point to a utility shutoff source, insurance policy source, care plan, pet instruction or building notice without copying the whole record. Never place passwords, recovery codes, payment data, diagnoses or private disputes in a broadly shared packet.
+
+## State the boundary of every instruction
+
+Write “call the local emergency number,” “follow the provider's current outage process” or “locate the protected care instruction,” not improvised medical, electrical, gas, structural or evacuation advice. The generator can make a source and escalation route visible; it cannot decide what is safe in a live emergency. If a danger is immediate, use local emergency services and qualified responders.
+
+## Add update triggers and rehearse retrieval
+
+Record what would reopen the packet: a move, new provider, changed household role, new care instruction, expired contact or a drill that exposed a gap. Ask a backup role to find the packet, identify the responsible source and say what remains unknown. A printed page that nobody can locate is not a usable backup, so test the actual path and record the observed result.
+
+## Keep versions, not silent edits
+
+When a utility, insurer, building, caregiver or household role changes, preserve the dated packet result and create a new version. “Printed” or “sent” is an action; it does not prove the recipient received or understood the information. Keep confirmation and unresolved gaps visible until the responsible person or source answers.
+
+## Protect people who may see the packet
+
+The app stores records in the current browser profile and does not automatically sync, encrypt or back them up. Inspect every field before printing, sharing or leaving the packet in a vehicle. Future first-aid bags, labels or document folders may appear in a clearly labelled optional affiliate area outside the generator. A product must never be required to complete the free packet or presented as a guarantee of safety.
+
+## Review after every rehearsal
+
+Treat a drill as evidence about the packet, not as a pass-or-fail judgment about a person. If a contact number was unclear, a source pointer could not be found or the escalation route was ambiguous, preserve the observation and assign the smallest repair. Repeat the rehearsal under the conditions in which the packet may be used, such as low light, a visitor helping or a brief loss of internet. This makes the binder more usable without pretending that a household can control every emergency outcome.
+
+**FAQ:**
+- Q: Is a generated binder an emergency plan approved by an authority?
+  A: No. It is a private information outline; local emergency services and responsible professionals control live instructions.
+- Q: Should I print all medical and financial details?
+  A: No. Minimise exposure and point to the protected source when authorised access is required.
+- Q: How often should the packet be checked?
+  A: Use real change triggers and a dated household review rather than an invented universal interval.
+- Q: Does handing a packet to someone prove they can respond correctly?
+  A: No. Rehearse retrieval, escalation and unresolved questions with the people who may use it.
+
 # END OF MASTER CONTENT + BUILD BRIEF
 
 This file is intended to be handed directly to Codex/Claude Code after the `familyboard.win` and brand name are chosen. The implementation agent should preserve this file in the repository (for example under `/docs/launch-content-master.md`) as the original v1 editorial and product specification.

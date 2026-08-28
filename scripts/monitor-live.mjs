@@ -658,6 +658,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-home-accessibility-walkthrough-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-annual-review-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-document-index-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-document-index-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-emergency-binder-generator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-emergency-binder-generator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-date-offset-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-time-window-overlap-checker-tutorial/</loc>",
@@ -6011,6 +6017,30 @@ const checks = [
   {
     path: "/zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/",
     require: ["居家無障礙動線複查教學", "實際使用者", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-household-annual-review-generator-tutorial/",
+    require: ["Household Annual Review Generator Tutorial", "Generate prompts"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
+    require: ["家庭年度檢視產生器教學", "年度檢視", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-household-document-index-generator-tutorial/",
+    require: ["Household Document Index Generator Tutorial", "controlling source"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-document-index-generator-tutorial/",
+    require: ["家庭文件索引產生器教學", "控制來源", 'lang="zh-TW"'],
+  },
+  {
+    path: "/guides/familyboard-emergency-binder-generator-tutorial/",
+    require: ["Emergency Binder Generator Tutorial", "emergency binder outline"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-emergency-binder-generator-tutorial/",
+    require: ["家庭緊急資料夾產生器教學", "緊急資料夾", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-date-offset-planner-tutorial/",

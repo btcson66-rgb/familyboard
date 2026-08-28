@@ -3424,6 +3424,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-household-annual-review-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-document-index-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-document-index-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-emergency-binder-generator-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-emergency-binder-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4115,6 +4139,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-emergency-binder-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-emergency-binder-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-emergency-contact-verification-tutorial/",
     "alternateRoute": "/guides/familyboard-emergency-contact-verification-tutorial/",
     "indexable": true,
@@ -4213,8 +4244,22 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-annual-review-generator-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-household-decision-register-tutorial/",
     "alternateRoute": "/guides/familyboard-household-decision-register-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-document-index-generator-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-document-index-generator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"

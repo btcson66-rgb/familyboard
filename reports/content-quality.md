@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T13:52:52.089Z
+Generated: 2026-08-28T14:07:18.010Z
 
 ## Summary
 
-- Indexable pages: 793
-- Generated HTML routes: 799
+- Indexable pages: 799
+- Generated HTML routes: 805
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 455
+- Pages without a contextual product/tool link: 458
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,8 +22,8 @@ Generated: 2026-08-28T13:52:52.089Z
 - inventory-warranty: 60
 - appliances: 56
 - maintenance: 82
-- household-operations: 141
-- records-emergency: 97
+- household-operations: 143
+- records-emergency: 101
 - tools: 152
 
 ## Word-count range
@@ -197,6 +197,7 @@ Generated: 2026-08-28T13:52:52.089Z
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
 - /zh-tw/guides/familyboard-documents-source-review-tutorial/
 - /zh-tw/guides/familyboard-donation-handoff-tutorial/
+- /zh-tw/guides/familyboard-emergency-binder-generator-tutorial/
 - /zh-tw/guides/familyboard-emergency-contact-verification-tutorial/
 - /zh-tw/guides/familyboard-emergency-information-privacy-tutorial/
 - /zh-tw/guides/familyboard-event-duration-calculator-tutorial/
@@ -211,7 +212,9 @@ Generated: 2026-08-28T13:52:52.089Z
 - /zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/
 - /zh-tw/guides/familyboard-household-account-list-tutorial/
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
+- /zh-tw/guides/familyboard-household-annual-review-generator-tutorial/
 - /zh-tw/guides/familyboard-household-decision-register-tutorial/
+- /zh-tw/guides/familyboard-household-document-index-generator-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-household-members-responsibilities-tutorial/

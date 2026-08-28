@@ -3288,6 +3288,30 @@
     "headings": "Home Accessibility Walkthrough Tutorial: Observe, Retest and Keep Uncertainty Open Choose one real path and a safe code Describe observations, not conclusions Assign a reversible next step Retest with the actual users Handoff, version and privacy Compare conditions, not people A repeatable walkthrough note"
   },
   {
+    "title": "Household Annual Review Generator Tutorial | FamilyBoard",
+    "description": "Learn how to run a calm household annual review with FamilyBoard, preserve evidence, assign follow-ups and keep unknowns visible.",
+    "route": "/guides/familyboard-household-annual-review-generator-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "annual household review generator tutorial",
+    "headings": "Household Annual Review Generator Tutorial: Turn a Yearly Reset Into Evidence Choose a bounded review window Generate prompts, not promises Record the source and observed result Separate actions from outcomes Rehearse the handoff Protect the private boundary Close the loop without forcing certainty"
+  },
+  {
+    "title": "Household Document Index Generator Tutorial | FamilyBoard",
+    "description": "Learn to create a practical household document index that points to current sources, preserves versions and keeps sensitive details out of shared lists.",
+    "route": "/guides/familyboard-household-document-index-generator-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "household document index generator tutorial",
+    "headings": "Household Document Index Generator Tutorial: Build a Findable Binder Without Copying Secrets Start with a decision the document supports Use one row per controlling source Capture version and access separately Practise retrieval with the least exposure Make retention a source decision Keep indexing private and optional Give every pointer a recovery path"
+  },
+  {
+    "title": "Emergency Binder Generator Tutorial | FamilyBoard",
+    "description": "Learn how to build a practical emergency binder outline with current sources, safe contacts, update triggers and a rehearsal plan using FamilyBoard.",
+    "route": "/guides/familyboard-emergency-binder-generator-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "emergency binder generator tutorial",
+    "headings": "Emergency Binder Generator Tutorial: Design a Small Packet People Can Use Under Pressure Pick one scenario first Separate immediate contacts from reference sources State the boundary of every instruction Add update triggers and rehearse retrieval Keep versions, not silent edits Protect people who may see the packet Review after every rehearsal"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
