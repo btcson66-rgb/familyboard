@@ -880,6 +880,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-attachment-expiry-review-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-quiet-hours-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-quiet-hours-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-task-dependency-map-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-task-dependency-map-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-receipt-source-verification-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-receipt-source-verification-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-language-preference-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-language-preference-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1553,6 +1559,30 @@ const checks = [
       "Define one service and one property boundary",
       "does not identify a provider",
     ],
+  },
+  {
+    path: "/guides/familyboard-household-task-dependency-map-tutorial/",
+    require: ["FamilyBoard Household Task Dependency Map", "See What Must Happen First", "does not run tasks"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-task-dependency-map-tutorial/",
+    require: ["FamilyBoard 家庭任務依賴地圖教學", "先看清楚誰與什麼必須到位", "不會替你執行任務"],
+  },
+  {
+    path: "/guides/familyboard-receipt-source-verification-tutorial/",
+    require: ["FamilyBoard Receipt Source Verification", "Keep Purchase Evidence Traceable", "does not authenticate a receipt"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-receipt-source-verification-tutorial/",
+    require: ["FamilyBoard 收據來源查核教學", "讓採買證據可追溯但不過度宣稱", "不驗證收據"],
+  },
+  {
+    path: "/guides/familyboard-household-language-preference-handoff-tutorial/",
+    require: ["FamilyBoard Language Preference Handoff", "Make Household Instructions Understandable", "does not certify a translation"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-language-preference-handoff-tutorial/",
+    require: ["FamilyBoard 家庭語言偏好交接教學", "讓指示易懂又不取代正式來源", "不認證翻譯"],
   },
   {
     path: "/zh-tw/guides/familyboard-utility-provider-handoff-tutorial/",

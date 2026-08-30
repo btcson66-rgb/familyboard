@@ -38004,6 +38004,161 @@ Quiet-hours records are especially useful during handoffs, travel and school bre
 
 At the next review, compare the planned boundary with actual interruptions and keep both the success and the failure visible. If a sender repeatedly ignores the boundary, assign a conversation to the role that controls that channel instead of publishing more personal routine. This gives the family a respectful communication policy while preserving access to genuinely important work.
 
+## Page 538 — FamilyBoard Household Task Dependency Map Tutorial
+**Slug:** /guides/familyboard-household-task-dependency-map-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-task-dependency-map-tutorial/
+**Primary intent:** map the people, sources and prerequisites that a household task depends on so a handoff can expose the next safe action
+**Title tag:** FamilyBoard Household Task Dependency Map | See What Must Happen First
+**Meta description:** Learn how to map FamilyBoard task dependencies, owners, source pointers and blockers without turning a household plan into a private surveillance log.
+**Primary keyword concept:** FamilyBoard household task dependency map
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-household-handoff-tutorial/, /guides/familyboard-household-responsibility-coverage-map-tutorial/, /tools/household-decision-log/, /privacy/
+**FAQ:**
+- Q: Does a dependency map execute tasks automatically?
+  A: No. It shows prerequisites and ownership; people and source systems still perform the work.
+- Q: Should every private detail be added to the map?
+  A: No. Add only the neutral pointer and context needed to unblock the defined task.
+- Q: Is a blocked task proof that someone failed?
+  A: No. It records a missing prerequisite, not a judgment about a person.
+- Q: What if the dependency changes?
+  A: Add a dated change and preserve the prior map so the handoff remains explainable.
+
+# FamilyBoard Household Task Dependency Map: See What Must Happen First
+
+A household task can look simple while depending on a keyholder, a provider reply, a document version, an approval or a safe time window. FamilyBoard’s task-dependency map tutorial helps a household show those relationships and identify the next action without exposing a complete calendar or judging a person. It does not run tasks, grant permissions, verify a contractor or predict completion. People and the systems that control each source remain responsible for the result.
+
+## Start with one outcome
+
+Name one observable outcome such as “repair visit can begin,” “renewal decision is ready” or “backup can be restored.” Add the role that owns the outcome and a neutral task ID. Avoid a giant graph that mixes unrelated errands, medical details and private conversations. A small map makes it easier to see whether a task is waiting for a source, a decision, an access condition or another task’s result.
+
+## Record prerequisites, not assumptions
+
+For each prerequisite, write the source pointer, responsible role, expected state and next checkpoint. A provider confirmation is different from a household preference; a document pointer is different from permission to open it. Use states such as `Not started`, `Waiting for source`, `Waiting for approval`, `Ready for handoff`, `Blocked—reason recorded` and `Observed—result pending`. If a dependency is only a guess, mark it as an assumption and assign a check rather than drawing it as a fact.
+
+## Make the next safe action obvious
+
+Every blocked node should have one owner and one action that can be observed. “Ask the source owner whether the current warranty version applies” is actionable; “fix paperwork” is not. Keep passwords, access codes, full addresses and sensitive notes in their controlling systems. Share the minimum map slice needed by the receiver, and test whether they can explain what they can do without requesting another person’s credentials.
+
+## Preserve change history
+
+When a provider changes a date or an approval is withdrawn, add a dated event with the old state, new state, source and affected role. Do not move every dependent task silently. A change may unblock one branch while creating a new access or safety dependency elsewhere. Future affiliate panels for planning boards, labels or family calendars may appear outside the workflow with disclosure and an easy skip; a product cannot perform the prerequisite or guarantee completion.
+
+**Contextual CTA:** Choose one household outcome, list three real prerequisites and assign the smallest safe next action to each owner.
+
+At review time, compare the predicted dependency with what actually happened. Record whether the source responded, whether the handoff was understood and which assumption remained untested. If a task repeatedly blocks at the same node, route that question to the role controlling the source instead of adding more reminders. A dependency map is successful when it clarifies responsibility and uncertainty, not when every box is marked complete.
+
+For a handoff, show only the branch the receiver needs. A person responsible for access may need the confirmed window and keyholder pointer, while a person reviewing a renewal may need the current document source and approval state. Keep unrelated dependencies hidden, and record why a branch was not shared. If the receiver cannot explain the dependency without private coaching, add a neutral label or permission route. Do not treat a completed prerequisite as evidence that the final outcome is safe or approved. After the outcome, close each prerequisite with the observed result, source, date and remaining limitation so the map can be reused without guessing.
+
+## Page 539 — FamilyBoard Receipt Source Verification Tutorial
+**Slug:** /guides/familyboard-receipt-source-verification-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-receipt-source-verification-tutorial/
+**Primary intent:** connect a household receipt reference to its controlling seller or payment source without overstating authenticity, ownership or warranty rights
+**Title tag:** FamilyBoard Receipt Source Verification | Keep Purchase Evidence Traceable
+**Meta description:** Learn how to record receipt source checks in FamilyBoard, preserve dates and item references, limit disclosure and separate evidence from legal conclusions.
+**Primary keyword concept:** FamilyBoard receipt source verification
+**Cluster:** inventory-warranty
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-purchase-comparison-tutorial/, /guides/familyboard-document-source-handoff-tutorial/, /guides/familyboard-warranty-claim-evidence-log-tutorial/, /privacy/
+**FAQ:**
+- Q: Does a receipt pointer prove a purchase is valid?
+  A: No. It records where the household checked; the seller, payment provider and applicable law control the outcome.
+- Q: Should a full receipt be shared in a family timeline?
+  A: No. Share a neutral reference and only the fields needed for the next action.
+- Q: Can FamilyBoard confirm warranty eligibility?
+  A: No. It organizes evidence; the written warranty and responsible provider decide eligibility.
+- Q: What if the receipt and product label disagree?
+  A: Preserve both observations and assign a source-owner check instead of choosing a match by guesswork.
+
+# FamilyBoard Receipt Source Verification: Keep Purchase Evidence Traceable
+
+A receipt may be a paper slip, retailer email, payment record or marketplace download, and those sources do not always agree. FamilyBoard’s receipt-source verification tutorial helps a household record which source was checked, which item it appears to describe and what remains uncertain. It does not authenticate a receipt, determine ownership, calculate a refund, confirm warranty eligibility or replace tax and legal records. The seller, payment provider and written terms remain authoritative.
+
+## Give the evidence a neutral identity
+
+Create a receipt ID and connect it to the protected inventory item without copying a full card number, address or private correspondence. Record the purchase date as shown, seller or channel, item description, currency and the source pointer. A screenshot or forwarded email may be a lead rather than the controlling record. If the household needs a handoff, state one question: “Can the source owner locate the original invoice for this model?”
+
+## Compare the fields that matter
+
+Check item name, model, serial or order reference, seller, date, quantity and installation or delivery note when available. Mark each field as `Observed`, `Source checked`, `Not present`, `Conflicting` or `Needs confirmation`. A similar product photo is not proof of a match, and a receipt line does not prove that a repair was completed. Keep the full document in its responsible system and use a neutral pointer in the shared timeline.
+
+## Separate evidence from conclusions
+
+Record what the receipt says and what the household observes as two different events. Do not turn a purchase date into a promise that a warranty claim will succeed. If a payment provider, retailer or manufacturer must answer, assign that role and a date. Preserve the question when the reply is late. Future affiliate panels for receipt scanners, folders or storage products may appear outside the workflow with clear disclosure and an easy skip; a product cannot create authenticity or legal rights.
+
+## Recheck after a dispute or change
+
+Reopen the verification after a replacement, return, move, warranty claim, account change or new recipient. Add the new source and reason instead of overwriting the first observation. If a copy was shared, record its audience and return plan. When receipt and product records disagree, keep both pointers and write who can resolve the conflict. This gives a future coordinator an evidence trail without exposing the household’s entire purchase history.
+
+**Contextual CTA:** Create one neutral receipt ID, compare the controlling fields and assign one source-owner question for every unresolved mismatch.
+
+At the next review, ask the receiver to explain which source controls the next action and which fields were not verified. If they cannot, improve the pointer or permission route rather than sharing the whole receipt. A careful source check supports inventory and warranty work while keeping legal conclusions with the responsible provider.
+
+Keep purchase evidence separate from household budgeting and private payment details. A source check can say that a retailer record was located, while the amount, payer or account remains protected. If a receipt is needed for insurance or a warranty conversation, give the authorised role a precise question and preserve the original audience. When a seller changes systems or a marketplace closes an order page, record the failure and the replacement source rather than silently replacing history. This makes the evidence trail useful for a future move, claim or repair without implying that FamilyBoard can enforce a provider’s policy.
+
+## Page 540 — FamilyBoard Household Language Preference Handoff Tutorial
+**Slug:** /guides/familyboard-household-language-preference-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-language-preference-handoff-tutorial/
+**Primary intent:** hand off a household task with the recipient’s language and accessibility preference while preserving the original meaning and source boundaries
+**Title tag:** FamilyBoard Language Preference Handoff | Make Household Instructions Understandable
+**Meta description:** Learn how to record FamilyBoard language preferences, translation limits and confirmation steps so a household handoff is understandable without exposing private details.
+**Primary keyword concept:** FamilyBoard household language preference handoff
+**Cluster:** support
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-handoff-acceptance-tutorial/, /guides/familyboard-document-source-handoff-tutorial/, /guides/familyboard-household-notification-routing-tutorial/, /privacy/
+**FAQ:**
+- Q: Does a translated summary replace the controlling document?
+  A: No. It helps coordination; the issuer’s version and qualified interpreter remain authoritative.
+- Q: Should a language preference reveal a person’s full profile?
+  A: No. Record only the preference and task context needed by the authorised recipient.
+- Q: Can FamilyBoard certify a translation?
+  A: No. It can record what was used and what was confirmed, but cannot certify meaning.
+- Q: What if two people understand the instruction differently?
+  A: Preserve both observations, pause the risky action and route the question to the responsible source.
+
+# FamilyBoard Language Preference Handoff: Make Household Instructions Understandable
+
+A handoff can fail even when every field is present if the recipient cannot understand the language, terms or accessibility format. FamilyBoard’s language-preference handoff tutorial helps a household record the preferred language, format and confirmation step for one task. It does not certify a translation, replace an official document, provide an interpreter or decide a medical, legal or safety meaning. The issuer or qualified professional remains responsible for the controlling wording.
+
+## Record preference, not a personal dossier
+
+Write the recipient role, preferred language, format and task purpose. A person may prefer Traditional Chinese for a repair visit, English for a software screen or audio support for a long checklist. Do not add unrelated identity, diagnosis, immigration status or family history. Keep a neutral preference ID and a source pointer so the receiver can ask for authorised context only when necessary.
+
+## Preserve the original meaning
+
+When summarising, keep names of fields, dates, warnings and limits that affect the action. Mark whether the text came from an issuer, a household paraphrase, a machine translation or a qualified interpreter. Do not silently simplify a condition or turn “ask the provider” into an instruction to proceed. If a translated copy is shared, record its audience, date and review plan while keeping the original protected.
+
+## Confirm understanding safely
+
+Ask the receiver to explain the next action and the stop condition in their own words. Record `Preference noted`, `Summary drafted`, `Source checked`, `Receiver confirmed`, `Meaning question open` or `Interpreter needed`. Confirmation means the receiver can describe the scoped task; it does not prove that a legal or technical translation is correct. If understanding differs, pause and route the question to the controlling source.
+
+## Review when context changes
+
+Language, region, device, accessibility format and provider terms can change. Add a dated version after a move, new recipient, revised document or failed handoff. Future affiliate panels for translation tools, caption devices or accessible printing may appear outside the workflow with clear disclosure and an easy skip; a product cannot certify meaning or guarantee comprehension.
+
+**Contextual CTA:** Record one recipient preference, preserve the controlling source and test whether the next action and stop condition were understood.
+
+At the next review, compare the intended wording with the receiver’s explanation and keep any uncertainty visible. If an interpreter or provider must answer, assign that role rather than asking a family member to guess. A good language handoff makes action possible without turning a preference into a public profile or replacing the source document.
+
+When a handoff crosses generations, languages or accessibility needs, let the recipient choose the format that helps them act and record that choice as a limited preference. Avoid storing a full conversation or assuming that one family member can translate every technical term. If the source contains a warning, measurement or legal condition, preserve its original wording and identify who can explain it. After the receiver confirms the next step, record the confirmation separately from the source owner’s approval. This distinction protects the family from both silent mistranslation and unnecessary disclosure.
+
+Use the same discipline for a printed checklist, a shared display and a spoken briefing. Identify which version is current, who prepared it and when the recipient should ask again. A machine translation can help someone find a field, but it cannot prove that a contract clause, medical instruction or safety warning has the intended meaning. If the language preference is itself sensitive, store only the role and format needed for this task. Review the handoff after a provider changes terminology, a family member changes device or an accessibility need is reported. A concise record of preference, source, confirmation and limit is more useful than a large bilingual transcript.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

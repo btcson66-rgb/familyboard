@@ -4168,6 +4168,30 @@
     "headings": "FamilyBoard Household Quiet Hours: Protect Rest Without Missing Important Tasks Define the boundary in plain language Separate routine from urgent Choose an escalation route Review changes and outcomes"
   },
   {
+    "title": "FamilyBoard Household Task Dependency Map | See What Must Happen First",
+    "description": "Learn how to map FamilyBoard task dependencies, owners, source pointers and blockers without turning a household plan into a private surveillance log.",
+    "route": "/guides/familyboard-household-task-dependency-map-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard household task dependency map",
+    "headings": "FamilyBoard Household Task Dependency Map: See What Must Happen First Start with one outcome Record prerequisites, not assumptions Make the next safe action obvious Preserve change history"
+  },
+  {
+    "title": "FamilyBoard Receipt Source Verification | Keep Purchase Evidence Traceable",
+    "description": "Learn how to record receipt source checks in FamilyBoard, preserve dates and item references, limit disclosure and separate evidence from legal conclusions.",
+    "route": "/guides/familyboard-receipt-source-verification-tutorial/",
+    "cluster": "inventory-warranty",
+    "keywords": "FamilyBoard receipt source verification",
+    "headings": "FamilyBoard Receipt Source Verification: Keep Purchase Evidence Traceable Give the evidence a neutral identity Compare the fields that matter Separate evidence from conclusions Recheck after a dispute or change"
+  },
+  {
+    "title": "FamilyBoard Language Preference Handoff | Make Household Instructions Understandable",
+    "description": "Learn how to record FamilyBoard language preferences, translation limits and confirmation steps so a household handoff is understandable without exposing private details.",
+    "route": "/guides/familyboard-household-language-preference-handoff-tutorial/",
+    "cluster": "support",
+    "keywords": "FamilyBoard household language preference handoff",
+    "headings": "FamilyBoard Language Preference Handoff: Make Household Instructions Understandable Record preference, not a personal dossier Preserve the original meaning Confirm understanding safely Review when context changes"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

@@ -1,28 +1,28 @@
 # Content quality report
 
-Generated: 2026-08-30T23:34:36.941Z
+Generated: 2026-08-30T23:49:03.533Z
 
 ## Summary
 
-- Indexable pages: 1013
-- Generated HTML routes: 1019
+- Indexable pages: 1019
+- Generated HTML routes: 1025
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 12
-- Pages without a contextual product/tool link: 604
+- Pages without a contextual product/tool link: 610
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
-- support: 31
+- support: 33
 - printables: 39
 - product: 174
-- inventory-warranty: 82
+- inventory-warranty: 84
 - appliances: 70
 - maintenance: 103
-- household-operations: 214
+- household-operations: 216
 - records-emergency: 148
 - tools: 152
 
@@ -87,8 +87,10 @@ Generated: 2026-08-30T23:34:36.941Z
 - /guides/familyboard-household-availability-window-tutorial/
 - /guides/familyboard-household-decision-log-tutorial/
 - /guides/familyboard-household-handoff-tutorial/
+- /guides/familyboard-household-language-preference-handoff-tutorial/
 - /guides/familyboard-household-notification-routing-tutorial/
 - /guides/familyboard-household-quiet-hours-tutorial/
+- /guides/familyboard-household-task-dependency-map-tutorial/
 - /guides/familyboard-maintenance-event-cost-tutorial/
 - /guides/familyboard-maintenance-evidence-confidence-tutorial/
 - /guides/familyboard-master-csv-edit-import-tutorial/
@@ -99,6 +101,7 @@ Generated: 2026-08-30T23:34:36.941Z
 - /guides/familyboard-product-recall-action-log-tutorial/
 - /guides/familyboard-purchase-comparison-tutorial/
 - /guides/familyboard-pwa-update-tutorial/
+- /guides/familyboard-receipt-source-verification-tutorial/
 - /guides/familyboard-record-retention-decision-tutorial/
 - /guides/familyboard-record-retrieval-practice-tutorial/
 - /guides/familyboard-repair-change-order-tutorial/
@@ -304,6 +307,7 @@ Generated: 2026-08-30T23:34:36.941Z
 - /zh-tw/guides/familyboard-household-document-redaction-tutorial/
 - /zh-tw/guides/familyboard-household-export-scope-review-tutorial/
 - /zh-tw/guides/familyboard-household-handoff-tutorial/
+- /zh-tw/guides/familyboard-household-language-preference-handoff-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-household-members-responsibilities-tutorial/
@@ -315,6 +319,7 @@ Generated: 2026-08-30T23:34:36.941Z
 - /zh-tw/guides/familyboard-household-role-change-audit-tutorial/
 - /zh-tw/guides/familyboard-household-shopping-list-planner-tutorial/
 - /zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/
+- /zh-tw/guides/familyboard-household-task-dependency-map-tutorial/
 - /zh-tw/guides/familyboard-household-task-load-calculator-tutorial/
 - /zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/
 - /zh-tw/guides/familyboard-important-household-document-review-tutorial/
@@ -360,6 +365,7 @@ Generated: 2026-08-30T23:34:36.941Z
 - /zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/
 - /zh-tw/guides/familyboard-pwa-update-tutorial/
 - /zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/
+- /zh-tw/guides/familyboard-receipt-source-verification-tutorial/
 - /zh-tw/guides/familyboard-record-linking-tutorial/
 - /zh-tw/guides/familyboard-record-retention-decision-log-tutorial/
 - /zh-tw/guides/familyboard-record-retention-decision-tutorial/

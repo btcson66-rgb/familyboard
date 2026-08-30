@@ -4304,6 +4304,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-household-task-dependency-map-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-task-dependency-map-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-receipt-source-verification-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-receipt-source-verification-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-language-preference-handoff-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-language-preference-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -5457,6 +5481,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-household-language-preference-handoff-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-language-preference-handoff-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
     "alternateRoute": "/guides/familyboard-household-meeting-agenda-action-log-tutorial/",
     "indexable": true,
@@ -5531,6 +5562,13 @@
     "alternateRoute": "/guides/familyboard-household-subscription-cost-calculator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-task-dependency-map-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-task-dependency-map-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
     "locale": "zh-TW"
   },
   {
@@ -5853,6 +5891,13 @@
     "alternateRoute": "/guides/familyboard-receipt-retention-organizer-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-receipt-source-verification-tutorial/",
+    "alternateRoute": "/guides/familyboard-receipt-source-verification-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
     "locale": "zh-TW"
   },
   {

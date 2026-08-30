@@ -364,6 +364,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-attachment-expiry-review-tutorial/",
     "/guides/familyboard-household-quiet-hours-tutorial/",
     "/zh-tw/guides/familyboard-household-quiet-hours-tutorial/",
+    "/guides/familyboard-household-task-dependency-map-tutorial/",
+    "/zh-tw/guides/familyboard-household-task-dependency-map-tutorial/",
+    "/guides/familyboard-receipt-source-verification-tutorial/",
+    "/zh-tw/guides/familyboard-receipt-source-verification-tutorial/",
+    "/guides/familyboard-household-language-preference-handoff-tutorial/",
+    "/zh-tw/guides/familyboard-household-language-preference-handoff-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2256,6 +2262,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-household-quiet-hours-tutorial/",
       alternate: "/guides/familyboard-household-quiet-hours-tutorial/",
       heading: "FamilyBoard 家庭安靜時段教學：保護休息也不漏掉重要工作",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-task-dependency-map-tutorial/",
+      alternate: "/guides/familyboard-household-task-dependency-map-tutorial/",
+      heading: "FamilyBoard 家庭任務依賴地圖教學：先看清楚誰與什麼必須到位",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-receipt-source-verification-tutorial/",
+      alternate: "/guides/familyboard-receipt-source-verification-tutorial/",
+      heading: "FamilyBoard 收據來源查核教學：讓採買證據可追溯但不過度宣稱",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-language-preference-handoff-tutorial/",
+      alternate: "/guides/familyboard-household-language-preference-handoff-tutorial/",
+      heading: "FamilyBoard 家庭語言偏好交接教學：讓指示易懂又不取代正式來源",
     },
   ]) {
     await page.goto(localized.route);
