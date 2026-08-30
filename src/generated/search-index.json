@@ -4144,6 +4144,30 @@
     "headings": "FamilyBoard Maintenance Evidence Confidence: Record What You Know Separate four evidence types Use confidence that explains the basis Connect the next action Review after real triggers"
   },
   {
+    "title": "FamilyBoard Household Notification Routing | Send the Right Reminder Safely",
+    "description": "Learn how to route FamilyBoard household reminders by role, purpose and minimum detail without exposing private notes or assuming delivery.",
+    "route": "/guides/familyboard-household-notification-routing-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard household notification routing",
+    "headings": "FamilyBoard Household Notification Routing: Send the Right Reminder Safely Define the action before the channel Match detail to the audience Record delivery as an observation Build a safe fallback"
+  },
+  {
+    "title": "FamilyBoard Attachment Expiry Review | Keep Shared Copies Useful",
+    "description": "Learn how to review FamilyBoard attachment age, purpose, source and return status before an old copy causes confusion or oversharing.",
+    "route": "/guides/familyboard-attachment-expiry-review-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard attachment expiry review",
+    "headings": "FamilyBoard Attachment Expiry Review: Keep Shared Copies Useful Name the copy and its purpose Review currentness and sensitivity Track the result without pretending deletion Reopen when context changes"
+  },
+  {
+    "title": "FamilyBoard Household Quiet Hours | Protect Rest Without Missing Important Tasks",
+    "description": "Learn how to document FamilyBoard quiet hours, urgent exceptions and backup roles without exposing a family member’s complete routine.",
+    "route": "/guides/familyboard-household-quiet-hours-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard household quiet hours",
+    "headings": "FamilyBoard Household Quiet Hours: Protect Rest Without Missing Important Tasks Define the boundary in plain language Separate routine from urgent Choose an escalation route Review changes and outcomes"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
