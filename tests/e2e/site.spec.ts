@@ -358,6 +358,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-document-source-handoff-tutorial/",
     "/guides/familyboard-maintenance-evidence-confidence-tutorial/",
     "/zh-tw/guides/familyboard-maintenance-evidence-confidence-tutorial/",
+    "/guides/familyboard-household-notification-routing-tutorial/",
+    "/zh-tw/guides/familyboard-household-notification-routing-tutorial/",
+    "/guides/familyboard-attachment-expiry-review-tutorial/",
+    "/zh-tw/guides/familyboard-attachment-expiry-review-tutorial/",
+    "/guides/familyboard-household-quiet-hours-tutorial/",
+    "/zh-tw/guides/familyboard-household-quiet-hours-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2235,6 +2241,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-maintenance-evidence-confidence-tutorial/",
       alternate: "/guides/familyboard-maintenance-evidence-confidence-tutorial/",
       heading: "FamilyBoard 保養證據信心教學：分開觀察、說法與未解假設",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-notification-routing-tutorial/",
+      alternate: "/guides/familyboard-household-notification-routing-tutorial/",
+      heading: "FamilyBoard 家庭通知分流教學：把提醒交給正確角色並保留最少資訊",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-attachment-expiry-review-tutorial/",
+      alternate: "/guides/familyboard-attachment-expiry-review-tutorial/",
+      heading: "FamilyBoard 附件到期複查教學：讓共用副本保留用途與來源",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-quiet-hours-tutorial/",
+      alternate: "/guides/familyboard-household-quiet-hours-tutorial/",
+      heading: "FamilyBoard 家庭安靜時段教學：保護休息也不漏掉重要工作",
     },
   ]) {
     await page.goto(localized.route);

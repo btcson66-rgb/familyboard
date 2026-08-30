@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-30T23:20:44.602Z
+Generated: 2026-08-30T23:34:36.941Z
 
 ## Summary
 
-- Indexable pages: 1007
-- Generated HTML routes: 1013
+- Indexable pages: 1013
+- Generated HTML routes: 1019
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 12
-- Pages without a contextual product/tool link: 598
+- Pages without a contextual product/tool link: 604
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -22,8 +22,8 @@ Generated: 2026-08-30T23:20:44.602Z
 - inventory-warranty: 82
 - appliances: 70
 - maintenance: 103
-- household-operations: 210
-- records-emergency: 146
+- household-operations: 214
+- records-emergency: 148
 - tools: 152
 
 ## Word-count range
@@ -70,6 +70,7 @@ Generated: 2026-08-30T23:20:44.602Z
 - /guides/digital-home-inventory-backup/
 - /guides/familyboard-app-first-run-restore-tutorial/
 - /guides/familyboard-appliance-manual-source-tutorial/
+- /guides/familyboard-attachment-expiry-review-tutorial/
 - /guides/familyboard-attachment-metadata-tutorial/
 - /guides/familyboard-backup-restore-rehearsal-tutorial/
 - /guides/familyboard-browser-storage-maintenance/
@@ -86,6 +87,8 @@ Generated: 2026-08-30T23:20:44.602Z
 - /guides/familyboard-household-availability-window-tutorial/
 - /guides/familyboard-household-decision-log-tutorial/
 - /guides/familyboard-household-handoff-tutorial/
+- /guides/familyboard-household-notification-routing-tutorial/
+- /guides/familyboard-household-quiet-hours-tutorial/
 - /guides/familyboard-maintenance-event-cost-tutorial/
 - /guides/familyboard-maintenance-evidence-confidence-tutorial/
 - /guides/familyboard-master-csv-edit-import-tutorial/
@@ -230,6 +233,7 @@ Generated: 2026-08-30T23:20:44.602Z
 - /zh-tw/guides/familyboard-appliance-repair-callback-tutorial/
 - /zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/
 - /zh-tw/guides/familyboard-appliance-service-visit-tutorial/
+- /zh-tw/guides/familyboard-attachment-expiry-review-tutorial/
 - /zh-tw/guides/familyboard-attachment-metadata-tutorial/
 - /zh-tw/guides/familyboard-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/
@@ -303,6 +307,8 @@ Generated: 2026-08-30T23:20:44.602Z
 - /zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/
 - /zh-tw/guides/familyboard-household-meeting-tutorial/
 - /zh-tw/guides/familyboard-household-members-responsibilities-tutorial/
+- /zh-tw/guides/familyboard-household-notification-routing-tutorial/
+- /zh-tw/guides/familyboard-household-quiet-hours-tutorial/
 - /zh-tw/guides/familyboard-household-responsibility-coverage-map-tutorial/
 - /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
 - /zh-tw/guides/familyboard-household-return-handoff-tutorial/

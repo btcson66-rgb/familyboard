@@ -37845,6 +37845,165 @@ Invite a second household member to classify one event without seeing the creato
 
 When evidence conflicts, record both observations and identify the role that can resolve the conflict. Do not average them into a score or infer that a quiet machine is repaired. A later reviewer should be able to see the asset, date, source and next check, plus the exact limit on what the household observed. This keeps the maintenance timeline honest while still giving the family a practical path forward.
 
+## Page 535 — FamilyBoard Household Notification Routing Tutorial
+**Slug:** /guides/familyboard-household-notification-routing-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-notification-routing-tutorial/
+**Primary intent:** route household reminders to the right role while limiting sensitive detail and recording delivery uncertainty
+**Title tag:** FamilyBoard Household Notification Routing | Send the Right Reminder Safely
+**Meta description:** Learn how to route FamilyBoard household reminders by role, purpose and minimum detail without exposing private notes or assuming delivery.
+**Primary keyword concept:** FamilyBoard household notification routing
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-household-handoff-tutorial/, /guides/familyboard-contact-sensitivity-tutorial/, /tools/household-decision-log/, /privacy/
+**FAQ:**
+- Q: Does a routed reminder prove that someone received it?
+  A: No. It records the intended channel and any observed result; delivery and reading stay with that channel.
+- Q: Should a notification include the whole task note?
+  A: No. Send only the action, time window and safe pointer needed by the recipient.
+- Q: Can FamilyBoard send SMS or email automatically?
+  A: No. It helps plan and document routing; the external channel remains responsible for sending.
+- Q: What if a recipient is unavailable?
+  A: Record the missed route, assign a backup role and keep the original reminder history.
+
+# FamilyBoard Household Notification Routing: Send the Right Reminder Safely
+
+A reminder is useful only when the right person can act on it without receiving unrelated household history. FamilyBoard’s notification-routing tutorial helps a household choose a role, purpose, channel and minimum message for one task. It does not send SMS, email or push notifications, confirm a recipient read a message, or expose a provider’s contact database. The external channel and responsible person remain the source of delivery truth.
+
+## Define the action before the channel
+
+Start with one observable action: unlock an approved entrance, collect a parcel, call a service provider or review a renewal. Name the recipient role rather than copying a full contact list. Write the due window, safe pointer and escalation role. “Check the protected appliance source before Friday” is more useful and safer than pasting an address, serial number or private conversation into a group message. If the task has no clear owner, keep it in planning until a role accepts it.
+
+## Match detail to the audience
+
+Separate the action from the sensitive context that explains it. A caregiver may need a time range and accessibility note; a neighbour may need only a parcel code; a service provider may need a confirmed appointment reference. Keep alarm codes, account numbers, medical details and complete notes in their controlling system. Use neutral IDs and source pointers so the recipient can ask for authorised access instead of receiving a permanent copy. Preview the message as the recipient would see it before using the external channel.
+
+## Record delivery as an observation
+
+Use states such as `Draft—recipient pending`, `Route selected`, `Sent by external channel`, `Recipient confirmed`, `No response—backup assigned` and `Closed—result recorded`. A sent message is not the same as a read message, and a read message is not proof that the task happened. Record the channel, date, responsible role and observed response without copying the full thread. If a notification fails, retain the failure and create a new route rather than silently changing the original record.
+
+## Build a safe fallback
+
+For time-sensitive work, name a backup role and the condition that activates it. The backup should know the same minimum action and protected source pointer, not the primary person’s whole schedule. Confirm that the backup can reach the responsible source without borrowing credentials. Future affiliate panels for reminder apps, accessibility devices or communication planners may appear outside the workflow with clear disclosure and an easy skip; a product cannot guarantee delivery or consent.
+
+**Contextual CTA:** Route one household action to one role, preview the minimum message and record what the external channel actually confirmed.
+
+For a recurring reminder, separate a standing preference from a confirmed delivery. A family may usually ask one person to check the mailbox, while a specific parcel still needs a dated confirmation from the carrier or recipient. Record both facts and preserve their sources. If the same reminder is sent to two roles, state whether the second is a backup or an independent responsibility. This prevents duplicated work and avoids exposing a private reason for the request. Review the route after a role change, device change or missed handoff, and keep the old route so another coordinator can explain why the channel changed.
+
+When someone asks for more context, treat the request as a new purpose. Recheck audience, sensitivity, authority and return plan before expanding the message. If a channel cannot provide a reliable result, record that limitation and move the task to a controlled source rather than adding more recipients. A useful routing record makes one action easier to complete while keeping the household’s wider history private.
+
+After the due window, compare the intended route with the observed result. Record whether the recipient acted, delegated, declined or never responded, and identify which source supplied that observation. If a recurring reminder repeatedly misses the same role, change the owner or channel deliberately and preserve the prior attempts. This creates a useful routing history without turning FamilyBoard into a message archive or surveillance system.
+
+## Page 536 — FamilyBoard Attachment Expiry Review Tutorial
+**Slug:** /guides/familyboard-attachment-expiry-review-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-attachment-expiry-review-tutorial/
+**Primary intent:** review whether a household attachment is still needed, current and safely shareable without editing the protected original
+**Title tag:** FamilyBoard Attachment Expiry Review | Keep Shared Copies Useful
+**Meta description:** Learn how to review FamilyBoard attachment age, purpose, source and return status before an old copy causes confusion or oversharing.
+**Primary keyword concept:** FamilyBoard attachment expiry review
+**Cluster:** records-emergency
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-attachment-metadata-tutorial/, /guides/familyboard-data-export-redaction-tutorial/, /guides/familyboard-document-source-handoff-tutorial/, /privacy/
+**FAQ:**
+- Q: Does an expiry date delete the original attachment?
+  A: No. It prompts a review of a copy or pointer; the responsible system controls retention.
+- Q: Is an old attachment automatically inaccurate?
+  A: No. It may be useful history, but its currentness and purpose must be stated.
+- Q: Can FamilyBoard redact the protected original?
+  A: No. Create a separate reviewed copy and keep the original untouched.
+- Q: What if nobody can confirm a copy was returned?
+  A: Keep the uncertainty visible, record the last known audience and ask the source owner for the correct process.
+
+# FamilyBoard Attachment Expiry Review: Keep Shared Copies Useful
+
+Households often keep a downloaded receipt, repair photo or care instruction long after the task ends. FamilyBoard’s attachment-expiry review tutorial helps people distinguish a protected source from a temporary copy, state why a copy exists and decide when to review its audience. It does not delete files, revoke access, scan a device or certify that an attachment is safe. Retention and access remain controlled by the system where the original lives.
+
+## Name the copy and its purpose
+
+Give the copy a neutral ID, source pointer, audience role and reason for sharing. A delivery photo for one parcel is different from a household inventory backup. Record the expected end of the sharing window and the person who can confirm the result. Do not use a filename such as “latest” as proof of currentness. Keep credentials, full addresses, financial details and private correspondence in the protected source.
+
+## Review currentness and sensitivity
+
+At the review date, compare the copy with the controlling source and note issuer, version, language, region and any supersession clue. Check whether the original task changed, whether the audience is still authorised and whether metadata reveals more than the image or document itself. If a smaller copy is needed, create it as a new reviewed artifact; never edit the only recovery or legal record. If the source cannot be checked, mark the limitation rather than guessing.
+
+## Track the result without pretending deletion
+
+Use states such as `Review due`, `Current—purpose retained`, `Superseded—history kept`, `Return requested`, `Return confirmed` and `Confirmation unavailable`. Record who checked the channel and what was observed: a paper copy collected, a download removed from an authorised device or a recipient still unreachable. A review event is evidence about one channel at one time, not proof that every duplicate disappeared.
+
+## Reopen when context changes
+
+Recheck after a move, role change, incident, source update or new recipient. If a provider asks for more detail, treat it as a new purpose and repeat the sensitivity review. Future affiliate panels for encrypted storage, scanners or shredders may appear outside the workflow with disclosure and an easy skip; a product cannot erase an external copy or make a document legally sufficient.
+
+**Contextual CTA:** Give one attachment a purpose, source pointer and review date, then record the exact channel result without overwriting history.
+
+For a recurring review, distinguish an attachment that is still needed for current action from one retained only for history. Put the current source pointer beside both so a reader does not mistake an old image or PDF for the controlling instruction. If the audience changes, create a new sharing event with its own approval and review date. Do not rely on a browser download folder, camera roll or chat history as the household’s archive. Those locations may contain duplicates that the source owner cannot see. FamilyBoard can document the question and the observed result, but it cannot enumerate every device or cloud copy.
+
+If a copy cannot be returned, destroyed or reconciled, keep it open with a named owner and next checkpoint. A clear unresolved state is safer than a confident deletion claim. This record also helps a new coordinator understand why a historical attachment remains and which formal source should be consulted before any new decision.
+
+When a copy remains useful as history, label it clearly and keep the current source pointer beside it. If the family cannot establish who holds a copy, assign that question to the source owner and set a next review date. This turns an expiry field into a practical privacy and provenance check rather than a false promise of automatic deletion.
+
+## Page 537 — FamilyBoard Household Quiet Hours Tutorial
+**Slug:** /guides/familyboard-household-quiet-hours-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-quiet-hours-tutorial/
+**Primary intent:** plan household quiet hours and escalation boundaries without hiding urgent responsibilities or publishing personal routines
+**Title tag:** FamilyBoard Household Quiet Hours | Protect Rest Without Missing Important Tasks
+**Meta description:** Learn how to document FamilyBoard quiet hours, urgent exceptions and backup roles without exposing a family member’s complete routine.
+**Primary keyword concept:** FamilyBoard household quiet hours
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-household-availability-window-tutorial/, /guides/familyboard-household-notification-routing-tutorial/, /guides/familyboard-emergency-information-privacy-tutorial/, /privacy/
+**FAQ:**
+- Q: Do quiet hours block every reminder?
+  A: No. They document a preference and an agreed urgent path; external channels still control delivery.
+- Q: Should quiet hours be shared publicly?
+  A: No. Share only the role, exception and safe escalation detail needed by an authorised audience.
+- Q: Can FamilyBoard identify an emergency?
+  A: No. It cannot monitor people, detect danger or replace emergency services.
+- Q: What if the household routine changes?
+  A: Add a dated change, preserve the old boundary and tell the role responsible for the channel.
+
+# FamilyBoard Household Quiet Hours: Protect Rest Without Missing Important Tasks
+
+Rest, school, shift work and care routines can make a household unavailable for ordinary messages at certain times. FamilyBoard’s quiet-hours tutorial helps a family document a communication boundary, define a narrow urgent exception and assign a backup route. It does not silence phones, detect emergencies, monitor a person or guarantee that an external sender follows the plan. Quiet hours are a coordination note that must be communicated through the responsible channel.
+
+## Define the boundary in plain language
+
+Name the audience, recurring period and purpose. “No routine household reminders from 22:00–07:00; urgent access issue goes to the designated backup role” is clearer than posting a full sleep or work schedule. Use a role and neutral time range, not a bedroom location, diagnosis or detailed calendar. If different members have different boundaries, record separate profiles and explain which task each profile covers.
+
+## Separate routine from urgent
+
+List examples of routine work that can wait, such as a shopping reminder or document review, and define what counts as urgent for the household. Avoid inventing medical or safety rules. For gas smell, fire, violence or immediate danger, direct people to local emergency services and the responsible professional path. FamilyBoard can preserve the agreed route and source pointer, but it cannot judge severity or replace an emergency plan.
+
+## Choose an escalation route
+
+Record the first role, backup role, channel and next checkpoint. Note whether the route was proposed, acknowledged or tested. A quiet-hours exception should reveal the minimum action: “call the designated keyholder,” not the family’s entire contact list. Keep account numbers, access codes and private notes in protected systems. Ask the backup to repeat the route without coaching so a boundary that looks complete is actually understandable.
+
+## Review changes and outcomes
+
+When work shifts, school terms, caregiving or travel changes the boundary, add a dated version rather than editing the old one. After a real exception, record what channel was used, who responded and whether the message contained too much detail. Future affiliate panels for sleep aids, notification planners or accessibility hardware may appear outside the workflow with clear disclosure and an easy skip; a product cannot enforce quiet hours or promise a response.
+
+**Contextual CTA:** Write one quiet-hours boundary, define one urgent exception and test the backup route with the smallest safe amount of information.
+
+For households with rotating shifts or multiple time zones, write each role’s boundary separately and identify which one controls a particular task. A shared display may need a simple “routine later” label while a private device holds the exception route. Keep the two views connected by a neutral event ID rather than copying detailed personal routines. If a sender repeatedly ignores the boundary, record the observation and assign a conversation to the role that controls the channel. Do not respond by publishing more schedule detail. Review whether the exception was actually necessary, whether the backup understood it and whether the message exposed information unrelated to the action.
+
+Quiet-hours records are especially useful during handoffs, travel and school breaks because assumptions change quickly. Add a dated version, source of the change and next review date. The goal is a respectful, testable policy with a clear escalation path, not an automatic promise that every notification will wait.
+
+At the next review, compare the planned boundary with actual interruptions and keep both the success and the failure visible. If a sender repeatedly ignores the boundary, assign a conversation to the role that controls that channel instead of publishing more personal routine. This gives the family a respectful communication policy while preserving access to genuinely important work.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

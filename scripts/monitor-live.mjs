@@ -874,6 +874,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-document-source-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-maintenance-evidence-confidence-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-evidence-confidence-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-notification-routing-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-notification-routing-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-attachment-expiry-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-attachment-expiry-review-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-quiet-hours-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-quiet-hours-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1515,6 +1521,30 @@ const checks = [
       "分開觀察、說法與未解假設",
       "這是一張證據和不確定性的地圖",
     ],
+  },
+  {
+    path: "/guides/familyboard-household-notification-routing-tutorial/",
+    require: ["FamilyBoard Household Notification Routing", "Send the Right Reminder Safely", "does not send SMS"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-notification-routing-tutorial/",
+    require: ["FamilyBoard 家庭通知分流教學", "把提醒交給正確角色並保留最少資訊", "不會發送簡訊"],
+  },
+  {
+    path: "/guides/familyboard-attachment-expiry-review-tutorial/",
+    require: ["FamilyBoard Attachment Expiry Review", "Keep Shared Copies Useful", "does not delete files"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-attachment-expiry-review-tutorial/",
+    require: ["FamilyBoard 附件到期複查教學", "讓共用副本保留用途與來源", "不會刪檔"],
+  },
+  {
+    path: "/guides/familyboard-household-quiet-hours-tutorial/",
+    require: ["FamilyBoard Household Quiet Hours", "Protect Rest Without Missing Important Tasks", "does not silence phones"],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-quiet-hours-tutorial/",
+    require: ["FamilyBoard 家庭安靜時段教學", "保護休息也不漏掉重要工作", "不會替手機靜音"],
   },
   {
     path: "/guides/familyboard-utility-provider-handoff-tutorial/",

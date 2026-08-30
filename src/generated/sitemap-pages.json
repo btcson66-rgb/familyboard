@@ -4280,6 +4280,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-household-notification-routing-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-notification-routing-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-attachment-expiry-review-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-attachment-expiry-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-household-quiet-hours-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-household-quiet-hours-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4943,6 +4967,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-attachment-expiry-review-tutorial/",
+    "alternateRoute": "/guides/familyboard-attachment-expiry-review-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-attachment-metadata-tutorial/",
     "alternateRoute": "/guides/familyboard-attachment-metadata-tutorial/",
     "indexable": true,
@@ -5444,6 +5475,20 @@
     "alternateRoute": "/guides/familyboard-household-members-responsibilities-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-notification-routing-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-notification-routing-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-household-quiet-hours-tutorial/",
+    "alternateRoute": "/guides/familyboard-household-quiet-hours-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
     "locale": "zh-TW"
   },
   {
