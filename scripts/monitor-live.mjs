@@ -868,6 +868,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-closure-reopening-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-data-export-redaction-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-data-export-redaction-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-availability-window-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-availability-window-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-document-source-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-document-source-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-maintenance-evidence-confidence-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-maintenance-evidence-confidence-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1460,6 +1466,54 @@ const checks = [
       "FamilyBoard 匯出資料遮罩教學",
       "分享最少但保留可行動資訊",
       "不會加密、不保證匿名",
+    ],
+  },
+  {
+    path: "/guides/familyboard-household-availability-window-tutorial/",
+    require: [
+      "FamilyBoard Household Availability Window",
+      "Coordinate Without Oversharing",
+      "does not book an appointment",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-household-availability-window-tutorial/",
+    require: [
+      "FamilyBoard 家庭可用時段教學",
+      "協調時間但不公開整份行事曆",
+      "可用時段只是需要再確認的協調計畫",
+    ],
+  },
+  {
+    path: "/guides/familyboard-document-source-handoff-tutorial/",
+    require: [
+      "FamilyBoard Document Source Handoff",
+      "Preserve Provenance",
+      "does not authenticate a signature",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-document-source-handoff-tutorial/",
+    require: [
+      "FamilyBoard 文件來源交接教學",
+      "保留出處、版本與權限界線",
+      "發行者、合約、主管機關或控制該文件的服務才是來源",
+    ],
+  },
+  {
+    path: "/guides/familyboard-maintenance-evidence-confidence-tutorial/",
+    require: [
+      "FamilyBoard Maintenance Evidence Confidence",
+      "Record What You Know",
+      "does not diagnose equipment",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-maintenance-evidence-confidence-tutorial/",
+    require: [
+      "FamilyBoard 保養證據信心教學",
+      "分開觀察、說法與未解假設",
+      "這是一張證據和不確定性的地圖",
     ],
   },
   {

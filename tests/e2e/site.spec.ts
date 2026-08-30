@@ -352,6 +352,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-home-closure-reopening-tutorial/",
     "/guides/familyboard-data-export-redaction-tutorial/",
     "/zh-tw/guides/familyboard-data-export-redaction-tutorial/",
+    "/guides/familyboard-household-availability-window-tutorial/",
+    "/zh-tw/guides/familyboard-household-availability-window-tutorial/",
+    "/guides/familyboard-document-source-handoff-tutorial/",
+    "/zh-tw/guides/familyboard-document-source-handoff-tutorial/",
+    "/guides/familyboard-maintenance-evidence-confidence-tutorial/",
+    "/zh-tw/guides/familyboard-maintenance-evidence-confidence-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2214,6 +2220,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-data-export-redaction-tutorial/",
       alternate: "/guides/familyboard-data-export-redaction-tutorial/",
       heading: "FamilyBoard 匯出資料遮罩教學：分享最少但保留可行動資訊",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-household-availability-window-tutorial/",
+      alternate: "/guides/familyboard-household-availability-window-tutorial/",
+      heading: "FamilyBoard 家庭可用時段教學：協調時間但不公開整份行事曆",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-document-source-handoff-tutorial/",
+      alternate: "/guides/familyboard-document-source-handoff-tutorial/",
+      heading: "FamilyBoard 文件來源交接教學：保留出處、版本與權限界線",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-maintenance-evidence-confidence-tutorial/",
+      alternate: "/guides/familyboard-maintenance-evidence-confidence-tutorial/",
+      heading: "FamilyBoard 保養證據信心教學：分開觀察、說法與未解假設",
     },
   ]) {
     await page.goto(localized.route);

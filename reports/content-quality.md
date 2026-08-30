@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-30T23:06:01.228Z
+Generated: 2026-08-30T23:20:44.602Z
 
 ## Summary
 
-- Indexable pages: 1001
-- Generated HTML routes: 1007
+- Indexable pages: 1007
+- Generated HTML routes: 1013
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 12
-- Pages without a contextual product/tool link: 592
+- Pages without a contextual product/tool link: 598
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,9 +21,9 @@ Generated: 2026-08-30T23:06:01.228Z
 - product: 174
 - inventory-warranty: 82
 - appliances: 70
-- maintenance: 101
-- household-operations: 208
-- records-emergency: 144
+- maintenance: 103
+- household-operations: 210
+- records-emergency: 146
 - tools: 152
 
 ## Word-count range
@@ -76,15 +76,18 @@ Generated: 2026-08-30T23:06:01.228Z
 - /guides/familyboard-calendar-timezone-tutorial/
 - /guides/familyboard-contact-sensitivity-tutorial/
 - /guides/familyboard-data-export-redaction-tutorial/
+- /guides/familyboard-document-source-handoff-tutorial/
 - /guides/familyboard-emergency-drill-tutorial/
 - /guides/familyboard-encrypted-backup-password-tutorial/
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-handoff-acceptance-tutorial/
 - /guides/familyboard-home-closure-reopening-tutorial/
 - /guides/familyboard-household-admin-escalation-tutorial/
+- /guides/familyboard-household-availability-window-tutorial/
 - /guides/familyboard-household-decision-log-tutorial/
 - /guides/familyboard-household-handoff-tutorial/
 - /guides/familyboard-maintenance-event-cost-tutorial/
+- /guides/familyboard-maintenance-evidence-confidence-tutorial/
 - /guides/familyboard-master-csv-edit-import-tutorial/
 - /guides/familyboard-member-archive-tutorial/
 - /guides/familyboard-move-out-condition-tutorial/
@@ -246,6 +249,7 @@ Generated: 2026-08-30T23:06:01.228Z
 - /zh-tw/guides/familyboard-date-offset-planner-tutorial/
 - /zh-tw/guides/familyboard-device-retirement-tutorial/
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
+- /zh-tw/guides/familyboard-document-source-handoff-tutorial/
 - /zh-tw/guides/familyboard-documents-source-review-tutorial/
 - /zh-tw/guides/familyboard-donation-handoff-tutorial/
 - /zh-tw/guides/familyboard-emergency-binder-generator-tutorial/
@@ -287,6 +291,7 @@ Generated: 2026-08-30T23:06:01.228Z
 - /zh-tw/guides/familyboard-household-admin-backup-tutorial/
 - /zh-tw/guides/familyboard-household-admin-escalation-tutorial/
 - /zh-tw/guides/familyboard-household-annual-review-generator-tutorial/
+- /zh-tw/guides/familyboard-household-availability-window-tutorial/
 - /zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/
 - /zh-tw/guides/familyboard-household-bill-source-status-tutorial/
 - /zh-tw/guides/familyboard-household-decision-log-tutorial/
@@ -314,6 +319,7 @@ Generated: 2026-08-30T23:06:01.228Z
 - /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
 - /zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/
 - /zh-tw/guides/familyboard-maintenance-event-cost-tutorial/
+- /zh-tw/guides/familyboard-maintenance-evidence-confidence-tutorial/
 - /zh-tw/guides/familyboard-maintenance-history-review/
 - /zh-tw/guides/familyboard-maintenance-priority-review-tutorial/
 - /zh-tw/guides/familyboard-maintenance-tracker-tutorial/

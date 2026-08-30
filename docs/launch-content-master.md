@@ -37692,6 +37692,159 @@ At the end of the window, confirm whether the copy was returned, destroyed or in
 
 If the recipient asks for more detail, treat that request as a new purpose and repeat the field review. Do not append the entire backup simply because one field was missing. Create a controlled permission route through the system that owns the original, record the approval and keep the export narrow. When a copy is returned or destroyed, note who confirmed it and when; if confirmation is impossible, keep the uncertainty visible and ask the source owner what process applies. This makes redaction a repeatable decision rather than a one-time edit.
 
+## Page 532 — FamilyBoard Household Availability Window Tutorial
+**Slug:** /guides/familyboard-household-availability-window-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-household-availability-window-tutorial/
+**Primary intent:** coordinate when a household role, provider or caregiver can act without exposing a full personal calendar
+**Title tag:** FamilyBoard Availability Window Tutorial | Coordinate Without Oversharing
+**Meta description:** Learn how to record a useful FamilyBoard availability window, define a purpose, protect private schedules and confirm whether a handoff can happen.
+**Primary keyword concept:** FamilyBoard household availability window
+**Cluster:** household-operations
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-service-appointment-handoff-tutorial/, /guides/familyboard-handoff-acceptance-tutorial/, /tools/household-decision-log/, /privacy/
+**FAQ:**
+- Q: Does an availability window promise that someone will be present?
+  A: No. It records a planned window under stated conditions; plans, travel and emergencies can change.
+- Q: Should I share my whole calendar with a provider?
+  A: No. Share only the window and access detail needed for the defined visit.
+- Q: Can FamilyBoard book an appointment?
+  A: No. The tool records a coordination plan; booking and confirmation stay with the provider or household.
+- Q: What if the window changes?
+  A: Add a dated change and notify the responsible channel rather than silently editing the original plan.
+
+# FamilyBoard Household Availability Window: Coordinate Without Oversharing
+
+Many household tasks fail because the right person is available only during a small window, while the handoff exposes an entire calendar. FamilyBoard’s availability-window tutorial helps a household state when a role can act, what the window is for and which access conditions matter. It does not book an appointment, track a person, guarantee presence or reveal a provider’s live schedule. A window is a coordination estimate that must be confirmed through the responsible channel.
+
+## Define the action and audience
+
+Start with one action: a technician arrival, a parcel handoff, a caregiver briefing or a family meeting. Name the audience and the minimum information they need. Use a neutral event ID and a date or time range rather than copying unrelated appointments. A provider may need “Tuesday 14:00–16:00, someone authorized will answer the intercom,” not the family’s work calendar or travel details. Keep exact addresses, alarm codes and private notes in protected systems.
+
+## State confidence and dependencies
+
+Record whether the window is proposed, requested, confirmed by the provider, confirmed by the household or already observed. Note dependencies such as a keyholder, interpreter, accessible entrance, weather condition or another person’s approval. A proposed slot is not a booking, and a message that says “around two” is not a precise commitment. If the source is a provider portal or written notice, preserve its date and pointer without copying credentials.
+
+## Make changes visible
+
+When a window moves, add a change event with the old and new range, source, reason and person who must be told. Do not overwrite the original and leave a reader wondering which time was promised. Use states such as `Proposed`, `Waiting for confirmation`, `Confirmed—access dependency`, `Changed—notification pending` and `Observed—result pending`. If the household cannot safely provide access, record the constraint and route a new request instead of improvising.
+
+## Close with the actual result
+
+After the window, write what happened: provider arrived, no one could answer, the task was rescheduled or the household observed a follow-up. Keep the provider report, invoice and maintenance event as separate sources. Return temporary keys and review any printed handoff. Future affiliate panels for calendars, lockboxes or planners may appear outside the workflow with disclosure and an easy skip; a product cannot guarantee attendance or authorize access.
+
+**Contextual CTA:** Choose one household action, share one minimal availability window and record every change and observed result with its source.
+
+For a recurring task, distinguish a standing preference from a confirmed appointment. A household may generally be available on weekday afternoons while a provider has confirmed only one date. Record those as separate facts and preserve the source for each. If a window is missed, note whether the cause was a late arrival, an access problem, an unclear message or a change in household capacity. Assign the correction to the role that can change the relevant source, and retest the handoff with the same minimum disclosure. This keeps a calendar aid from becoming an accidental promise.
+
+At the next review, compare the planned window with the actual arrival or handoff and record whether the source was a provider confirmation, a household message or a direct observation. If the answer is different, preserve the original window and assign the correction to the role that controls the appointment or access route. A repeatable window record should help someone coordinate one action without exposing a pattern of when the home is empty.
+
+## Page 533 — FamilyBoard Document Source Handoff Tutorial
+**Slug:** /guides/familyboard-document-source-handoff-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-document-source-handoff-tutorial/
+**Primary intent:** hand off a document reference by preserving provenance, currentness, access limits and the receiver’s next action
+**Title tag:** FamilyBoard Document Source Handoff | Preserve Provenance
+**Meta description:** Learn how to hand off a FamilyBoard document source safely, record provenance and version, limit disclosure and test whether the receiver can find the controlling record.
+**Primary keyword concept:** FamilyBoard document source handoff
+**Cluster:** records-emergency
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-documents-source-review-tutorial/, /guides/familyboard-record-retrieval-practice-tutorial/, /tools/household-document-index-generator/, /privacy/
+**FAQ:**
+- Q: Does a source pointer prove that a document is authentic?
+  A: No. It records where the household looked; the issuer or controlling system remains authoritative.
+- Q: Should the entire document be copied into a handoff?
+  A: No. Share the minimum pointer and context needed by the receiver.
+- Q: Is the newest file always the controlling version?
+  A: No. Check issuer, effective date, supersession language and the process that controls the record.
+- Q: What if the receiver cannot access the source?
+  A: Record the permission dependency and route it to the source owner; do not bypass the control.
+
+# FamilyBoard Document Source Handoff: Preserve Provenance
+
+A document handoff often fails when someone shares a file but not its origin, effective date or access boundary. FamilyBoard’s document-source handoff tutorial helps a household connect a neutral reference to the controlling record, state what was checked and give the receiver a safe next action. It does not authenticate a signature, determine legal effect, upload a file or grant permission. The issuer, contract, authority or service that controls the document remains the source of truth.
+
+## Name the document’s job
+
+Write what the receiver needs to do: compare a warranty term, find a current emergency instruction, prepare a repair visit or confirm a school notice. Use a neutral document ID and identify the audience. Avoid putting a full policy number, address, signature or private correspondence in the handoff. A useful summary says which protected source to open and which question to answer, not every sentence in the document.
+
+## Capture provenance and version
+
+Record issuer, source type, effective or publication date, language or region, supersession clue and the date your household checked it. A retailer PDF, forwarded attachment or search result may be a lead rather than the controlling source. If two versions disagree, preserve both pointers and assign a source-owner question. Do not call a file current merely because its filename contains “latest.”
+
+## Confirm access without bypassing controls
+
+Ask the receiver to locate the protected source using the pointer and explain what they can and cannot see. If permission, identity verification or a provider login is required, stop at that boundary and record the dependency. Never put a password, recovery code or full private file in the shared row. Use states such as `Pointer checked`, `Version question open`, `Permission needed`, `Receiver found source` and `Superseded—history retained` to separate findability from authority.
+
+## Keep the handoff revisable
+
+When the issuer updates the document, add a new source event and keep the previous history. Review the handoff after a move, claim, service visit, policy change or emergency exercise. If a printout or download was used, track its audience and return plan. Future affiliate panels for scanners, folders or document-management products may appear outside the workflow with disclosure and an easy skip; a product cannot prove provenance or legal sufficiency.
+
+**Contextual CTA:** Give one receiver one document question, preserve the controlling source pointer and test whether the version and access limits are understood.
+
+When a receiver reports that a link is broken or a file looks different, keep the original handoff and add a source-review event. Check the issuer, effective date, language and region again before replacing the pointer. A copied PDF may remain useful as history even after a newer instruction controls current action. Record who decided that distinction and what the receiver should do while the question is open. This small provenance trail prevents a family from passing around several unnamed files and calling the most recent download authoritative.
+
+Ask the receiver to repeat the lookup without coaching. If the pointer works only for the person who created it, add a clearer neutral label or a controlled permission route. Keep the full document in its responsible system and note whether the handoff is for history, current action or a temporary review. Those distinctions make it possible to retain an older source without accidentally presenting it as current guidance.
+
+## Page 534 — FamilyBoard Maintenance Evidence Confidence Tutorial
+**Slug:** /guides/familyboard-maintenance-evidence-confidence-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-maintenance-evidence-confidence-tutorial/
+**Primary intent:** distinguish household observation, provider statement, source evidence and unresolved assumption in a maintenance record
+**Title tag:** FamilyBoard Maintenance Evidence Confidence | Record What You Know
+**Meta description:** Learn how to record maintenance evidence confidence in FamilyBoard, separate observations from diagnoses and assign the next source-based check.
+**Primary keyword concept:** FamilyBoard maintenance evidence confidence
+**Cluster:** maintenance
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-maintenance-history-review/, /guides/familyboard-service-provider-verification-tutorial/, /tools/maintenance-evidence-timeline/, /privacy/
+**FAQ:**
+- Q: Does a confidence label diagnose a maintenance problem?
+  A: No. It describes the basis of a record and what still needs a qualified or official source.
+- Q: Is a provider statement the same as household observation?
+  A: No. Keep attributable statements and what the household actually saw as separate evidence.
+- Q: Can a photo prove that a repair was completed correctly?
+  A: No. It may show a limited observation; completion, code compliance and safety need the responsible source.
+- Q: What should I do with an assumption?
+  A: Label it as unresolved, assign a next check and avoid using it as a confirmed fact.
+
+# FamilyBoard Maintenance Evidence Confidence: Record What You Know
+
+Maintenance histories become unreliable when a guess, a provider comment and a household observation are all written as “fixed.” FamilyBoard’s evidence-confidence tutorial helps a household show the basis of each maintenance note and choose the next source-based check. It does not diagnose equipment, certify a repair, verify code compliance or promise that a warning will not return. The record is a map of evidence and uncertainty, not a professional inspection.
+
+## Separate four evidence types
+
+For each event, identify the household observation, provider statement, controlling document and unresolved assumption. “Water was visible under the sink” is an observation. “Technician replaced the seal” is an attributable statement. A manual or invoice can support what was supplied, while “the leak is permanently solved” is an assumption until the responsible process confirms it. Keep each type in its own field or dated event.
+
+## Use confidence that explains the basis
+
+Choose labels such as `Observed directly`, `Source document checked`, `Provider reported`, `Partially observed`, `Conflicting sources` and `Unresolved`. Add the date, asset ID, source pointer and person who recorded it. A confidence label is not a probability and should not be turned into a safety score. If the source is missing, say so plainly and assign the smallest next check that could improve the record.
+
+## Connect the next action
+
+An unresolved smell, repeated trip, moisture mark or unusual noise may need a manufacturer instruction, landlord response, utility notice or qualified professional. Record the question and owner without instructing anyone to open a dangerous cover or handle gas or live electricity. Compare the approved scope, invoice and observed result separately. If they disagree, open a change or escalation event rather than rewriting history.
+
+## Review after real triggers
+
+Recheck confidence after a return visit, new symptom, part replacement, move, recall or seasonal load. Preserve the earlier evidence so another household member can see what changed. Keep photos, invoices and full reports in their protected source and share only a neutral pointer. Future affiliate panels for inspection lights, moisture meters or folders may appear outside the workflow with disclosure and an easy skip; a product cannot diagnose or certify a result.
+
+**Contextual CTA:** Label one maintenance note by its evidence basis, assign the next source-based check and keep assumptions separate from observations.
+
+Invite a second household member to classify one event without seeing the creator’s hidden context. If they cannot tell whether a statement came from a provider, a manual or direct observation, the record needs clearer fields. Keep the complete report, invoice and photograph in the protected source, and use a neutral pointer in the shared timeline. A later review should be able to answer what changed, which evidence was rechecked and which uncertainty remains. That is a more useful confidence practice than assigning a high label to every completed-looking task.
+
+When evidence conflicts, record both observations and identify the role that can resolve the conflict. Do not average them into a score or infer that a quiet machine is repaired. A later reviewer should be able to see the asset, date, source and next check, plus the exact limit on what the household observed. This keeps the maintenance timeline honest while still giving the family a practical path forward.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

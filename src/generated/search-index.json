@@ -4120,6 +4120,30 @@
     "headings": "FamilyBoard Data Export Redaction: Share the Minimum Useful Copy Name the purpose and audience first Inspect fields and hidden context Track the copy and its limits Recheck, return and reopen"
   },
   {
+    "title": "FamilyBoard Availability Window Tutorial | Coordinate Without Oversharing",
+    "description": "Learn how to record a useful FamilyBoard availability window, define a purpose, protect private schedules and confirm whether a handoff can happen.",
+    "route": "/guides/familyboard-household-availability-window-tutorial/",
+    "cluster": "household-operations",
+    "keywords": "FamilyBoard household availability window",
+    "headings": "FamilyBoard Household Availability Window: Coordinate Without Oversharing Define the action and audience State confidence and dependencies Make changes visible Close with the actual result"
+  },
+  {
+    "title": "FamilyBoard Document Source Handoff | Preserve Provenance",
+    "description": "Learn how to hand off a FamilyBoard document source safely, record provenance and version, limit disclosure and test whether the receiver can find the controlling record.",
+    "route": "/guides/familyboard-document-source-handoff-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard document source handoff",
+    "headings": "FamilyBoard Document Source Handoff: Preserve Provenance Name the document’s job Capture provenance and version Confirm access without bypassing controls Keep the handoff revisable"
+  },
+  {
+    "title": "FamilyBoard Maintenance Evidence Confidence | Record What You Know",
+    "description": "Learn how to record maintenance evidence confidence in FamilyBoard, separate observations from diagnoses and assign the next source-based check.",
+    "route": "/guides/familyboard-maintenance-evidence-confidence-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard maintenance evidence confidence",
+    "headings": "FamilyBoard Maintenance Evidence Confidence: Record What You Know Separate four evidence types Use confidence that explains the basis Connect the next action Review after real triggers"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",
