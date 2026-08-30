@@ -37545,6 +37545,153 @@ Review the medium as well as the words. A shared screen can expose browser tabs 
 
 Minimum disclosure still needs enough context to prevent a wrong action. Keep a neutral ID, source version, responsible role, effective window and escalation route, while withholding unrelated names, addresses and private conversations. If a receiver needs the full original to proceed, use the source owner’s controlled permission process rather than widening the handoff. After the task ends, record whether the copy was returned, destroyed or intentionally retained and why. This history lets the next reviewer repeat the privacy check without guessing what happened to earlier copies.
 
+## Page 529 — FamilyBoard Vendor Onboarding Tutorial
+**Slug:** /guides/familyboard-vendor-onboarding-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-vendor-onboarding-tutorial/
+**Primary intent:** prepare a safe first handoff to a household service provider by defining scope, source, access limits and a return path
+**Title tag:** FamilyBoard Vendor Onboarding Tutorial | Start With a Safe Scope
+**Meta description:** Learn how to onboard a household service provider with FamilyBoard, define the visit scope, verify the source, limit access and record a closeout.
+**Primary keyword concept:** FamilyBoard vendor onboarding
+**Cluster:** maintenance
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-service-provider-verification-tutorial/, /tools/home-service-provider-verification-log/, /guides/familyboard-privacy-review-handoff-tutorial/, /privacy/
+**FAQ:**
+- Q: Does onboarding prove that a provider is licensed or insured?
+  A: No. It records the source checked and open questions; the provider and responsible authority control those facts.
+- Q: Should I give a provider the whole household board?
+  A: No. Share a narrow visit scope and the minimum pointer needed for that work.
+- Q: Can FamilyBoard approve a quote or authorize a repair?
+  A: No. Approval, contract terms and technical decisions remain with the household and the responsible professional.
+- Q: What should happen after the visit?
+  A: Record the observed result, collect the provider’s attributable source and close or reopen the handoff with an owner.
+
+# FamilyBoard Vendor Onboarding: Start With a Safe Scope
+
+The first handoff to a plumber, cleaner, electrician, caregiver or appliance technician sets the tone for the whole job. A household may need to share a location pointer and a clear task without exposing unrelated schedules, account details or private notes. FamilyBoard’s vendor onboarding tutorial helps define that boundary, record which source was checked and leave a closeout path. It does not verify a license, recommend a provider, authorize work or replace a contract, permit or professional judgment.
+
+## Define one visit and one outcome
+
+Create a neutral visit ID and describe the bounded work: inspect a leaking valve, service one appliance or quote a specific room. Record the intended date window, responsible household role and what an observable closeout would look like. Avoid vague instructions such as “fix everything.” A narrow scope makes it easier to notice a change request and prevents a provider from receiving information that is irrelevant to the visit.
+
+## Verify the source and access route
+
+Use the provider’s current official site, written quote, license portal or service agreement as appropriate. Record the source title, version or date and a protected pointer. A review site, forwarded message or search snippet can help locate a candidate but cannot prove current authorization, service area or insurance. Keep door codes, alarm credentials, full addresses and account numbers in their controlling system. The handoff can say that a secure access route was arranged without copying the secret.
+
+## Record the limits before work starts
+
+State what the provider may see, which rooms or assets are in scope and who can approve an additional request. If the work could involve electricity, gas, refrigerant, structural changes or personal care, record the professional boundary and the stop condition. Do not treat a provider’s arrival as permission to expand the job. Use statuses such as `Scope confirmed`, `Source or authority pending`, `Access arranged`, `Change request open` and `Visit not completed` so preparation is not confused with a result.
+
+## Close with an attributable result
+
+After the visit, separate what the provider reported from what the household actually observed. Keep the quote, invoice, warranty statement and maintenance event as separate sources, each with its own date. If the work differs from the approved scope, create a change question rather than silently editing the original. Revoke or return temporary access through the responsible system and review any printed or downloaded handoff. Future affiliate panels for contractor notebooks, lockboxes or document folders may appear outside the workflow with disclosure and an easy skip; a product cannot validate a provider or make a repair safe.
+
+**Contextual CTA:** Give one provider one bounded visit, record the official source and access limit, then close the handoff with an observed result and next owner.
+
+Before the appointment, ask the household receiver to repeat the scope in their own words and identify who can approve a change. If the provider requests a new room, part or access method, pause the original handoff and record a separate question. Afterward, compare the agreed scope with the invoice and the observed condition without turning either into a warranty claim. This sequence keeps preparation, authorization, work and follow-up distinct, so a later coordinator can see exactly where responsibility moved.
+
+## Page 530 — FamilyBoard Home Closure and Reopening Tutorial
+**Slug:** /guides/familyboard-home-closure-reopening-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-home-closure-reopening-tutorial/
+**Primary intent:** prepare and review a temporary home closure and reopening without treating a checklist as a guarantee of property safety
+**Title tag:** FamilyBoard Home Closure and Reopening | Leave, Return, Review
+**Meta description:** Learn how to use FamilyBoard to record a temporary home closure, assign checks, protect private access details and document what changed when you return.
+**Primary keyword concept:** FamilyBoard home closure reopening
+**Cluster:** maintenance
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/vacation-home-shutdown-checklist/, /tools/household-storm-readiness-review/, /guides/familyboard-household-admin-escalation-tutorial/, /privacy/
+**FAQ:**
+- Q: Does a completed closure checklist prove the home is safe?
+  A: No. It records planned and observed actions; weather, systems and conditions can change.
+- Q: Should an access code be written in the checklist?
+  A: No. Keep credentials in the responsible secure system and record only the access dependency.
+- Q: Can FamilyBoard predict a storm or prevent a pipe leak?
+  A: No. Use current local alerts, manufacturer instructions and qualified help for real conditions.
+- Q: What is different about reopening?
+  A: Reopening is a new observation pass; record changes rather than assuming the closure state is still true.
+
+# FamilyBoard Home Closure and Reopening: Leave, Return, Review
+
+A house that is closed for a trip, renovation, relocation or temporary vacancy does not stay in a frozen state. Weather, utilities, pests, security, neighbours and equipment can change while nobody is there. FamilyBoard’s home closure and reopening tutorial turns the plan into assigned checks and a dated record of what was actually observed. It is not an inspection certificate, insurance guarantee, emergency service or prediction tool. Follow current local alerts and the instructions for the systems in the home.
+
+## Choose a reason and a boundary
+
+State why the home is closing, the planned window and which systems are in scope: water, heating or cooling, mail, plants, alarms, appliances or a temporary contractor visit. Separate responsibilities that belong to a landlord, property manager, utility or service provider. Use a neutral location label rather than putting a full address in a broadly shared row. A bounded plan is easier to hand off and easier to revise when the absence lasts longer than expected.
+
+## Assign checks that someone can observe
+
+For each check, name an owner, source and expected observation. “Confirm the main valve position from the protected home record” is clearer than “secure the plumbing.” Record the date and whether the check was completed, unavailable or needs professional review. Keep keys, alarm codes and account credentials out of FamilyBoard; the record can note that an authorized route exists. If a severe-weather warning, leak, smoke, odour or exposed conductor appears, stop and use local emergency or qualified guidance.
+
+## Review the closure state before reopening
+
+The person reopening the home should not simply tick the same list. Ask what changed: a power interruption, a new notice, a wet area, a tripped breaker, a moved appliance or an uncollected delivery. Record the source checked and an observed result, not a diagnosis. If a provider or neighbour reports a condition, preserve that attributable report separately from the household’s observation. Create an escalation or maintenance event for anything that cannot be safely resolved by the current role.
+
+## Close the loop and protect the history
+
+Record who completed the reopening, which items were not tested and what follow-up date remains. Keep the plan history so a future absence can reuse a known boundary without assuming conditions are identical. Return temporary keys or printed instructions through the responsible process and remove unnecessary copies. Future affiliate panels for leak sensors, timers or storage bins may appear outside the checklist with clear disclosure and an easy skip; no product can guarantee a property condition or replace current emergency advice.
+
+**Contextual CTA:** Define one closure window, assign observable checks and make reopening a fresh evidence pass with its own owner and limitations.
+
+Use a different person for at least one reopening check when possible. A second reader may notice an uncollected notice, a changed device setting or a damp area that the person who closed the home overlooked. Record what was not inspected because of time, weather or access, and schedule a source-based follow-up. Do not copy a key, alarm code or full address into a shared checklist. A clear limitation and an owner are more useful than a confident checkmark that no one can reproduce.
+
+## Page 531 — FamilyBoard Data Export Redaction Tutorial
+**Slug:** /guides/familyboard-data-export-redaction-tutorial/
+**Alternate route:** /zh-tw/guides/familyboard-data-export-redaction-tutorial/
+**Primary intent:** review and reduce sensitive fields in a FamilyBoard export before sharing a copy while preserving the source needed for action
+**Title tag:** FamilyBoard Data Export Redaction | Share the Minimum Useful Copy
+**Meta description:** Learn how to review a FamilyBoard export, remove unnecessary personal details, keep source pointers usable and track every copy’s audience and return plan.
+**Primary keyword concept:** FamilyBoard data export redaction
+**Cluster:** records-emergency
+**Page type:** content
+**Depth:** verified
+**Indexable:** yes
+**Published date:** 2026-08-31
+**Editorial review date:** 2026-08-31
+**Content version:** 1
+**Suggested internal links:** /guides/familyboard-privacy-review-handoff-tutorial/, /guides/familyboard-offline-backup-restore/, /tools/household-share-access-review-log/, /privacy/
+**FAQ:**
+- Q: Does deleting a field from an export delete it from the app?
+  A: No. An edited copy is separate; the original local data remains under the household’s control.
+- Q: Is replacing a name with an ID always anonymous?
+  A: No. Dates, addresses, combinations of facts and source pointers may still identify someone.
+- Q: Can redaction preserve a legal or backup requirement?
+  A: Not by itself. Confirm required records with the controlling authority and keep an intact protected backup when needed.
+- Q: Should the redacted copy be kept forever?
+  A: Only with a stated purpose and review date; otherwise record a return or safe disposal plan.
+
+# FamilyBoard Data Export Redaction: Share the Minimum Useful Copy
+
+An export is easy to forward and hard to take back. A household may need to give a coordinator a task list, a contractor an asset pointer or a caregiver a limited schedule, but the full FamilyBoard backup can contain unrelated records. This tutorial explains how to review a copy before sharing while keeping the original and any required evidence protected. It does not encrypt a file, guarantee anonymity, decide a legal retention rule or remotely erase a copy that has already left the household.
+
+## Name the purpose and audience first
+
+Write one reason for the export, the recipient role and the time window. A backup for recovery is different from a handoff for a service visit. Choose the smallest data set that supports the action and create a neutral export ID. Keep the intact backup in a protected location; never edit the only recovery copy to make a smaller handoff. If the audience or purpose is uncertain, pause at draft and ask the responsible role.
+
+## Inspect fields and hidden context
+
+Review names, addresses, phone numbers, account references, serials, dates, notes, attachments and metadata. A combination of a room, date and event can identify a home even when a name is removed. Replace a field with a neutral role or source pointer only when the recipient can still act safely. Preserve version, owner, expiry and escalation context that prevents a wrong action. Do not paste credentials, recovery codes, full documents or private conversations into a redacted summary.
+
+## Track the copy and its limits
+
+Record which fields were withheld, which source remains protected, who received the copy and how access was delivered. Use states such as `Draft—scope pending`, `Redacted—ready for review`, `Shared—return due`, `Shared—source owner follow-up` and `Disposed—confirmed`. Ask the recipient to explain the next step and what they cannot see. A redacted export is not proof that the recipient has legal authority or that an earlier screenshot was removed.
+
+## Recheck, return and reopen
+
+At the end of the window, confirm whether the copy was returned, destroyed or intentionally retained with a reason and next review date. Reopen the review after a role change, source update, incident or new purpose. Keep the history of what was withheld so another coordinator can repeat the decision without guessing. Future affiliate panels for privacy screens, encrypted drives or shredders may appear outside the export workflow with clear disclosure and an easy skip; a product cannot make a copy private by itself.
+
+**Contextual CTA:** Define one audience and purpose, remove fields that do not support the action and record the return or review plan for every exported copy.
+
+If the recipient asks for more detail, treat that request as a new purpose and repeat the field review. Do not append the entire backup simply because one field was missing. Create a controlled permission route through the system that owns the original, record the approval and keep the export narrow. When a copy is returned or destroyed, note who confirmed it and when; if confirmation is impossible, keep the uncertainty visible and ask the source owner what process applies. This makes redaction a repeatable decision rather than a one-time edit.
+
 # FINAL HANDOFF TO CODEX — START WORK
 
 This document is approved as the v1 build specification.

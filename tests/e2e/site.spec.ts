@@ -346,6 +346,12 @@ test("public SEO, keyboard and eight production tools work", async ({
     "/zh-tw/guides/familyboard-purchase-comparison-tutorial/",
     "/guides/familyboard-privacy-review-handoff-tutorial/",
     "/zh-tw/guides/familyboard-privacy-review-handoff-tutorial/",
+    "/guides/familyboard-vendor-onboarding-tutorial/",
+    "/zh-tw/guides/familyboard-vendor-onboarding-tutorial/",
+    "/guides/familyboard-home-closure-reopening-tutorial/",
+    "/zh-tw/guides/familyboard-home-closure-reopening-tutorial/",
+    "/guides/familyboard-data-export-redaction-tutorial/",
+    "/zh-tw/guides/familyboard-data-export-redaction-tutorial/",
     "/guides/familyboard-household-annual-review-generator-tutorial/",
     "/zh-tw/guides/familyboard-household-annual-review-generator-tutorial/",
     "/guides/familyboard-household-document-index-generator-tutorial/",
@@ -2193,6 +2199,21 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       route: "/zh-tw/guides/familyboard-privacy-review-handoff-tutorial/",
       alternate: "/guides/familyboard-privacy-review-handoff-tutorial/",
       heading: "FamilyBoard 交接隱私複查教學：少分享但保留可行動脈絡",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-vendor-onboarding-tutorial/",
+      alternate: "/guides/familyboard-vendor-onboarding-tutorial/",
+      heading: "FamilyBoard 服務商初次交接教學：先限定工作範圍與存取",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-home-closure-reopening-tutorial/",
+      alternate: "/guides/familyboard-home-closure-reopening-tutorial/",
+      heading: "FamilyBoard 離家關屋與返家複查教學：離開和回來都要有紀錄",
+    },
+    {
+      route: "/zh-tw/guides/familyboard-data-export-redaction-tutorial/",
+      alternate: "/guides/familyboard-data-export-redaction-tutorial/",
+      heading: "FamilyBoard 匯出資料遮罩教學：分享最少但保留可行動資訊",
     },
   ]) {
     await page.goto(localized.route);

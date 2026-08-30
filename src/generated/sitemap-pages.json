@@ -4232,6 +4232,30 @@
     "redirectTo": ""
   },
   {
+    "route": "/guides/familyboard-vendor-onboarding-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-vendor-onboarding-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-home-closure-reopening-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-home-closure-reopening-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
+    "route": "/guides/familyboard-data-export-redaction-tutorial/",
+    "alternateRoute": "/zh-tw/guides/familyboard-data-export-redaction-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/pricing/",
     "alternateRoute": "/zh-tw/pricing/",
     "indexable": true,
@@ -4993,6 +5017,13 @@
     "locale": "zh-TW"
   },
   {
+    "route": "/zh-tw/guides/familyboard-data-export-redaction-tutorial/",
+    "alternateRoute": "/guides/familyboard-data-export-redaction-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
+    "locale": "zh-TW"
+  },
+  {
     "route": "/zh-tw/guides/familyboard-date-offset-planner-tutorial/",
     "alternateRoute": "/guides/familyboard-date-offset-planner-tutorial/",
     "indexable": true,
@@ -5179,6 +5210,13 @@
     "alternateRoute": "/guides/familyboard-home-care-visit-scope-service-result-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-home-closure-reopening-tutorial/",
+    "alternateRoute": "/guides/familyboard-home-closure-reopening-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
     "locale": "zh-TW"
   },
   {
@@ -6075,6 +6113,13 @@
     "alternateRoute": "/guides/familyboard-vehicle-document-source-status-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/guides/familyboard-vendor-onboarding-tutorial/",
+    "alternateRoute": "/guides/familyboard-vendor-onboarding-tutorial/",
+    "indexable": true,
+    "lastReviewedAt": "2026-08-31",
     "locale": "zh-TW"
   },
   {

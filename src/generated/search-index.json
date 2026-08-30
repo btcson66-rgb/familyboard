@@ -4096,6 +4096,30 @@
     "headings": "FamilyBoard Privacy Review Handoff: Share Less, Explain More Name the audience and window Remove unnecessary detail, not useful context Check copies and the recipient’s route Reopen when the purpose changes"
   },
   {
+    "title": "FamilyBoard Vendor Onboarding Tutorial | Start With a Safe Scope",
+    "description": "Learn how to onboard a household service provider with FamilyBoard, define the visit scope, verify the source, limit access and record a closeout.",
+    "route": "/guides/familyboard-vendor-onboarding-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard vendor onboarding",
+    "headings": "FamilyBoard Vendor Onboarding: Start With a Safe Scope Define one visit and one outcome Verify the source and access route Record the limits before work starts Close with an attributable result"
+  },
+  {
+    "title": "FamilyBoard Home Closure and Reopening | Leave, Return, Review",
+    "description": "Learn how to use FamilyBoard to record a temporary home closure, assign checks, protect private access details and document what changed when you return.",
+    "route": "/guides/familyboard-home-closure-reopening-tutorial/",
+    "cluster": "maintenance",
+    "keywords": "FamilyBoard home closure reopening",
+    "headings": "FamilyBoard Home Closure and Reopening: Leave, Return, Review Choose a reason and a boundary Assign checks that someone can observe Review the closure state before reopening Close the loop and protect the history"
+  },
+  {
+    "title": "FamilyBoard Data Export Redaction | Share the Minimum Useful Copy",
+    "description": "Learn how to review a FamilyBoard export, remove unnecessary personal details, keep source pointers usable and track every copy’s audience and return plan.",
+    "route": "/guides/familyboard-data-export-redaction-tutorial/",
+    "cluster": "records-emergency",
+    "keywords": "FamilyBoard data export redaction",
+    "headings": "FamilyBoard Data Export Redaction: Share the Minimum Useful Copy Name the purpose and audience first Inspect fields and hidden context Track the copy and its limits Recheck, return and reopen"
+  },
+  {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
     "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
     "route": "/pricing/",

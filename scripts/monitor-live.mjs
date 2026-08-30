@@ -862,6 +862,12 @@ const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-purchase-comparison-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-privacy-review-handoff-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-privacy-review-handoff-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-vendor-onboarding-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-vendor-onboarding-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-home-closure-reopening-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-home-closure-reopening-tutorial/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-data-export-redaction-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-data-export-redaction-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-power-outage-event-log-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-storm-readiness-review-tutorial/</loc>",
@@ -1406,6 +1412,54 @@ const checks = [
       "FamilyBoard 交接隱私複查教學",
       "少分享但保留可行動脈絡",
       "不會加密檔案、不會撤回已存在的副本",
+    ],
+  },
+  {
+    path: "/guides/familyboard-vendor-onboarding-tutorial/",
+    require: [
+      "FamilyBoard Vendor Onboarding",
+      "Start With a Safe Scope",
+      "does not verify a license",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-vendor-onboarding-tutorial/",
+    require: [
+      "FamilyBoard 服務商初次交接教學",
+      "先限定工作範圍與存取",
+      "不驗證執照、不推薦業者",
+    ],
+  },
+  {
+    path: "/guides/familyboard-home-closure-reopening-tutorial/",
+    require: [
+      "FamilyBoard Home Closure and Reopening",
+      "Leave, Return, Review",
+      "not an inspection certificate",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-home-closure-reopening-tutorial/",
+    require: [
+      "FamilyBoard 離家關屋與返家複查教學",
+      "離開和回來都要有紀錄",
+      "清單只能指出需要升級，不能判定原因",
+    ],
+  },
+  {
+    path: "/guides/familyboard-data-export-redaction-tutorial/",
+    require: [
+      "FamilyBoard Data Export Redaction",
+      "Share the Minimum Useful Copy",
+      "does not encrypt a file",
+    ],
+  },
+  {
+    path: "/zh-tw/guides/familyboard-data-export-redaction-tutorial/",
+    require: [
+      "FamilyBoard 匯出資料遮罩教學",
+      "分享最少但保留可行動資訊",
+      "不會加密、不保證匿名",
     ],
   },
   {

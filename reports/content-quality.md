@@ -1,17 +1,17 @@
 # Content quality report
 
-Generated: 2026-08-28T23:34:09.140Z
+Generated: 2026-08-30T23:06:01.228Z
 
 ## Summary
 
-- Indexable pages: 995
-- Generated HTML routes: 1001
+- Indexable pages: 1001
+- Generated HTML routes: 1007
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 12
-- Pages without a contextual product/tool link: 586
+- Pages without a contextual product/tool link: 592
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -21,9 +21,9 @@ Generated: 2026-08-28T23:34:09.140Z
 - product: 174
 - inventory-warranty: 82
 - appliances: 70
-- maintenance: 97
+- maintenance: 101
 - household-operations: 208
-- records-emergency: 142
+- records-emergency: 144
 - tools: 152
 
 ## Word-count range
@@ -75,10 +75,12 @@ Generated: 2026-08-28T23:34:09.140Z
 - /guides/familyboard-browser-storage-maintenance/
 - /guides/familyboard-calendar-timezone-tutorial/
 - /guides/familyboard-contact-sensitivity-tutorial/
+- /guides/familyboard-data-export-redaction-tutorial/
 - /guides/familyboard-emergency-drill-tutorial/
 - /guides/familyboard-encrypted-backup-password-tutorial/
 - /guides/familyboard-family-display-mode-setup/
 - /guides/familyboard-handoff-acceptance-tutorial/
+- /guides/familyboard-home-closure-reopening-tutorial/
 - /guides/familyboard-household-admin-escalation-tutorial/
 - /guides/familyboard-household-decision-log-tutorial/
 - /guides/familyboard-household-handoff-tutorial/
@@ -102,6 +104,7 @@ Generated: 2026-08-28T23:34:09.140Z
 - /guides/familyboard-storage-health-warning-tutorial/
 - /guides/familyboard-storage-open-error-tutorial/
 - /guides/familyboard-task-completion-tutorial/
+- /guides/familyboard-vendor-onboarding-tutorial/
 - /guides/
 - /guides/seasonal-home-maintenance-checklist/
 - /guides/solar-panel-maintenance-records/
@@ -239,6 +242,7 @@ Generated: 2026-08-28T23:34:09.140Z
 - /zh-tw/guides/familyboard-clothing-care-tutorial/
 - /zh-tw/guides/familyboard-consumable-change-history-tutorial/
 - /zh-tw/guides/familyboard-contact-sensitivity-tutorial/
+- /zh-tw/guides/familyboard-data-export-redaction-tutorial/
 - /zh-tw/guides/familyboard-date-offset-planner-tutorial/
 - /zh-tw/guides/familyboard-device-retirement-tutorial/
 - /zh-tw/guides/familyboard-document-renewal-tutorial/
@@ -266,6 +270,7 @@ Generated: 2026-08-28T23:34:09.140Z
 - /zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/
 - /zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/
 - /zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/
+- /zh-tw/guides/familyboard-home-closure-reopening-tutorial/
 - /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
 - /zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/
 - /zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/
@@ -393,6 +398,7 @@ Generated: 2026-08-28T23:34:09.140Z
 - /zh-tw/guides/familyboard-utility-provider-handoff-tutorial/
 - /zh-tw/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/
+- /zh-tw/guides/familyboard-vendor-onboarding-tutorial/
 - /zh-tw/guides/familyboard-warranty-checklist-generator-tutorial/
 - /zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/
 - /zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/
