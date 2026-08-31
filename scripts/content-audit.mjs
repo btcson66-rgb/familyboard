@@ -30,7 +30,12 @@ function frontmatterValue(frontmatter, key) {
 }
 
 for (const file of files) {
-  const raw = fs.readFileSync(path.join(directory, file), "utf8");
+  // Git's Windows checkout uses CRLF, while GitHub Actions checks out LF.
+  // Normalize before parsing so the mandatory local preflight and CI audit
+  // evaluate the same frontmatter instead of reporting every page as empty.
+  const raw = fs
+    .readFileSync(path.join(directory, file), "utf8")
+    .replace(/\r\n/g, "\n");
   const match = raw.match(/^---\n([\s\S]*?)\n---\n?/);
   const frontmatter = match?.[1] || "";
   const body = raw.slice(match?.[0].length || 0);

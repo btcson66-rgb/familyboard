@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "initial-full = 提交 sitemap 全部 URL；dry-run = 只印出將提交什麼，不實際送出"
+        description: "dry-run = IndexNow dry-run + GSC readback；initial-full = 明確提交 IndexNow 與 GSC sitemap"
         type: choice
         options: [dry-run, initial-full]
         default: dry-run
@@ -47,39 +47,33 @@ jobs:
           fi
 
   gsc-sitemap:
-    name: GSC sitemap 重新提交
+    name: GSC sitemap readback / conditional submit
     runs-on: ubuntu-latest
-    # 憑證不在 repo 裡。未設定 secrets 時整個 job 跳過，而不是紅一個假失敗。
-    # 需要的 secrets（值分別是兩個 JSON 檔的完整內容）：
+    # 憑證不在 repo 裡。缺少 secrets 必須失敗，避免整個 workflow 顯示綠燈，
+    # 但實際上從未驗證 GSC。需要的 secrets（值分別是兩個 JSON 檔的完整內容）：
     #   GSC_OAUTH_CLIENT_JSON  OAuth client（installed 或 web）
     #   GSC_OAUTH_TOKEN_JSON   含 refresh_token
-    if: ${{ github.event.inputs.mode == 'initial-full' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 24 }
-      - name: 檢查憑證是否已設定
-        id: creds
+      - name: Read back GSC sitemap state
         env:
           CLIENT_JSON: ${{ secrets.GSC_OAUTH_CLIENT_JSON }}
           TOKEN_JSON: ${{ secrets.GSC_OAUTH_TOKEN_JSON }}
         run: |
-          if [ -n "$CLIENT_JSON" ] && [ -n "$TOKEN_JSON" ]; then
-            echo "present=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "present=false" >> "$GITHUB_OUTPUT"
-            echo "GSC_OAUTH_CLIENT_JSON / GSC_OAUTH_TOKEN_JSON 未設定，略過 GSC 提交。" >> "$GITHUB_STEP_SUMMARY"
-          fi
-      - name: 寫出憑證並提交 sitemap
-        if: steps.creds.outputs.present == 'true'
-        env:
-          CLIENT_JSON: ${{ secrets.GSC_OAUTH_CLIENT_JSON }}
-          TOKEN_JSON: ${{ secrets.GSC_OAUTH_TOKEN_JSON }}
-        run: |
+          test -n "$CLIENT_JSON" || { echo "GSC_OAUTH_CLIENT_JSON is missing" >&2; exit 1; }
+          test -n "$TOKEN_JSON" || { echo "GSC_OAUTH_TOKEN_JSON is missing" >&2; exit 1; }
           umask 077
           printf '%s' "$CLIENT_JSON" > "$RUNNER_TEMP/gsc-client.json"
           printf '%s' "$TOKEN_JSON" > "$RUNNER_TEMP/gsc-token.json"
-          GSC_OAUTH_CLIENT_PATH="$RUNNER_TEMP/gsc-client.json" \
-          GSC_OAUTH_TOKEN_PATH="$RUNNER_TEMP/gsc-token.json" \
-          node scripts/gsc-bootstrap.mjs --apply
-          rm -f "$RUNNER_TEMP/gsc-client.json" "$RUNNER_TEMP/gsc-token.json"
+          trap 'rm -f "$RUNNER_TEMP/gsc-client.json" "$RUNNER_TEMP/gsc-token.json"' EXIT
+          if [ "${{ inputs.mode }}" = "initial-full" ]; then
+            GSC_OAUTH_CLIENT_PATH="$RUNNER_TEMP/gsc-client.json" \
+            GSC_OAUTH_TOKEN_PATH="$RUNNER_TEMP/gsc-token.json" \
+            node scripts/gsc-bootstrap.mjs --apply
+          else
+            GSC_OAUTH_CLIENT_PATH="$RUNNER_TEMP/gsc-client.json" \
+            GSC_OAUTH_TOKEN_PATH="$RUNNER_TEMP/gsc-token.json" \
+            node scripts/gsc-bootstrap.mjs
+          fi
