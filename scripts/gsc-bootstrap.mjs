@@ -85,36 +85,39 @@ if (!entry && apply) {
 
 if (entry) {
   console.log(`PERMISSION ${entry.permissionLevel}`);
+  const sitemapEndpoint = endpoint(
+    `/${encodeURIComponent(siteUrl)}/sitemaps/${encodeURIComponent(sitemapUrl)}`,
+  );
   if (apply) {
-    const sitemapEndpoint = endpoint(
-      `/${encodeURIComponent(siteUrl)}/sitemaps/${encodeURIComponent(sitemapUrl)}`,
-    );
     const submit = await getJson(sitemapEndpoint, { method: "PUT" });
     console.log(
       `SUBMIT_SITEMAP ${submit.response.status} ${submit.response.ok ? "PASS" : "FAIL"}`,
     );
     if (!submit.response.ok)
-      console.error(submit.json?.error?.message || submit.json);
-    const status = await getJson(sitemapEndpoint);
-    console.log(
-      `SITEMAP_READBACK ${status.response.status} ${status.response.ok ? "PASS" : "FAIL"}`,
-    );
-    if (status.response.ok) {
-      console.log(
-        JSON.stringify(
-          {
-            path: status.json.path,
-            lastSubmitted: status.json.lastSubmitted || null,
-            lastDownloaded: status.json.lastDownloaded || null,
-            isPending: status.json.isPending ?? null,
-            warnings: status.json.warnings || 0,
-            errors: status.json.errors || 0,
-          },
-          null,
-          2,
-        ),
-      );
-    } else console.error(status.json?.error?.message || status.json);
+      throw new Error(submit.json?.error?.message || String(submit.json));
+  }
+  const status = await getJson(sitemapEndpoint);
+  console.log(
+    `SITEMAP_READBACK ${status.response.status} ${status.response.ok ? "PASS" : "FAIL"}`,
+  );
+  if (!status.response.ok)
+    throw new Error(status.json?.error?.message || String(status.json));
+  console.log(
+    JSON.stringify(
+      {
+        path: status.json.path,
+        lastSubmitted: status.json.lastSubmitted || null,
+        lastDownloaded: status.json.lastDownloaded || null,
+        isPending: status.json.isPending ?? null,
+        warnings: status.json.warnings || 0,
+        errors: status.json.errors || 0,
+      },
+      null,
+      2,
+    ),
+  );
+  if (status.json.isPending && !status.json.lastDownloaded) {
+    console.warn("GSC_PENDING Sitemap is registered but Google has not downloaded it yet; no repeat PUT is sent in readback mode.");
   }
 } else if (!apply) {
   console.log(
