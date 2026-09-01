@@ -477,7 +477,8 @@ test("representative routes have no serious accessibility violations", async ({
   // turn a complete accessibility sweep into a timeout on slower CI runners.
   // The representative matrix now covers the full public library (1,000+ routes).
   // Keep the gate long enough for Axe to inspect every route on slower CI runners.
-  test.setTimeout(1_800_000);
+  // GitHub-hosted runners take materially longer than local Chromium for 652 routes.
+  test.setTimeout(3_600_000);
   for (const route of [
     "/",
     "/guides/home-maintenance-schedule/",
@@ -1152,7 +1153,9 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
 }) => {
   // Keep the full Traditional Chinese route matrix intact as the library
   // grows; slower CI workers need more than the original v1 ceiling.
-  test.setTimeout(600_000);
+  // The localized matrix is now 500+ routes; allow the slower hosted runner to
+  // finish the complete indexability and interaction sweep.
+  test.setTimeout(1_800_000);
   await page.goto("/zh-tw/");
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
