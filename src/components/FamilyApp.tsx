@@ -9,7 +9,16 @@ import {
   type ReactNode,
 } from "react";
 import "./app.css";
-import { addMonthsClamped, annualizedCost } from "../lib/calculations";
+import {
+  addMonthsClamped,
+  annualizedActiveTotalsByCurrency,
+  eventOccursOnLocalDate,
+  eventRangeIsValid,
+  localIsoDate,
+  sortByOptionalIsoDate,
+  sortUpcomingThenPastIsoDate,
+  warrantyReviewDate,
+} from "../lib/calculations";
 import {
   DB_SCHEMA_VERSION,
   base,
@@ -78,8 +87,10 @@ type Input = {
   type?: string;
   required?: boolean;
   options?: string[];
+  optionLabels?: Record<string, string>;
   value?: string;
   help?: string;
+  min?: number;
 };
 type ToolDraft = {
   slug: string;
@@ -120,6 +131,14 @@ const download = (name: string, value: unknown) =>
     JSON.stringify(value, null, 2),
     "application/json;charset=utf-8",
   );
+const safeExternalUrl = (value: string) => {
+  try {
+    const parsed = new URL(value);
+    return ["https:", "http:"].includes(parsed.protocol) ? parsed.toString() : "";
+  } catch {
+    return "";
+  }
+};
 
 function FilePicker({
   label,
@@ -175,11 +194,13 @@ function QuickForm({
   title,
   fields,
   submitLabel = "Add record",
+  validate,
   onSubmit,
 }: {
   title: string;
   fields: Input[];
   submitLabel?: string;
+  validate?: (values: Record<string, string>) => string;
   onSubmit: (values: Record<string, string>) => Promise<void>;
 }) {
   const initial = useMemo(
@@ -194,6 +215,7 @@ function QuickForm({
   );
   const [values, setValues] = useState<Record<string, string>>(initial);
   const [busy, setBusy] = useState(false);
+  const [validationError, setValidationError] = useState("");
   return (
     <Localize>
     <details className="app-form-shell" open>
@@ -205,7 +227,13 @@ function QuickForm({
       className="app-form"
       onSubmit={async (event) => {
         event.preventDefault();
+        const nextValidationError = validate?.(values) || "";
+        if (nextValidationError) {
+          setValidationError(nextValidationError);
+          return;
+        }
         setBusy(true);
+        setValidationError("");
         try {
           await onSubmit(values);
           setValues(initial);
@@ -222,13 +250,15 @@ function QuickForm({
             {field.options ? (
               <select
                 value={values[field.name]}
-                onChange={(event) =>
-                  setValues({ ...values, [field.name]: event.target.value })
-                }
+                required={field.required}
+                onChange={(event) => {
+                  setValidationError("");
+                  setValues({ ...values, [field.name]: event.target.value });
+                }}
               >
                 {field.options.map((option) => (
                   <option key={option} value={option}>
-                    {option || "None"}
+                    {option ? field.optionLabels?.[option] || option : "None"}
                   </option>
                 ))}
               </select>
@@ -236,24 +266,30 @@ function QuickForm({
               <textarea
                 value={values[field.name]}
                 required={field.required}
-                onChange={(event) =>
-                  setValues({ ...values, [field.name]: event.target.value })
-                }
+                onChange={(event) => {
+                  setValidationError("");
+                  setValues({ ...values, [field.name]: event.target.value });
+                }}
               />
             ) : (
               <input
                 type={field.type || "text"}
                 value={values[field.name]}
                 required={field.required}
-                onChange={(event) =>
-                  setValues({ ...values, [field.name]: event.target.value })
-                }
+                min={field.min}
+                onChange={(event) => {
+                  setValidationError("");
+                  setValues({ ...values, [field.name]: event.target.value });
+                }}
               />
             )}
             {field.help && <span className="help">{field.help}</span>}
           </label>
         ))}
       </div>
+      {validationError && (
+        <p className="app-error" role="alert">{validationError}</p>
+      )}
       <button disabled={busy} type="submit">
         {busy ? "Saving…" : submitLabel}
       </button>
@@ -288,6 +324,10 @@ function FamilyAppBody() {
   const [tab, setTab] = useState<Tab>("today");
   const [message, setMessage] = useState("");
   const [toolDrafts, setToolDrafts] = useState<ToolDraft[]>([]);
+  const [online, setOnline] = useState(
+    typeof navigator === "undefined" ? true : navigator.onLine,
+  );
+  const [offlineCacheReady, setOfflineCacheReady] = useState(false);
   const household = data.households[0];
   const householdId = household?.id || "";
   const refresh = useCallback(async () => {
@@ -311,6 +351,9 @@ function FamilyAppBody() {
   useEffect(() => {
     refresh();
     navigator.storage?.persist?.().catch(() => false);
+    navigator.serviceWorker?.ready
+      .then(() => setOfflineCacheReady(true))
+      .catch(() => setOfflineCacheReady(false));
     try {
       setToolDrafts(
         JSON.parse(localStorage.getItem("familyboard:tool-inbox") || "[]"),
@@ -319,6 +362,31 @@ function FamilyAppBody() {
       localStorage.removeItem("familyboard:tool-inbox");
     }
   }, [refresh]);
+  useEffect(() => {
+    const updateConnection = async () => {
+      if (!navigator.onLine) {
+        setOnline(false);
+        return;
+      }
+      try {
+        const response = await fetch(
+          `/robots.txt?connection-check=${Date.now()}`,
+          { method: "HEAD", cache: "no-store" },
+        );
+        setOnline(response.ok);
+      } catch {
+        setOnline(false);
+      }
+    };
+    const handleConnectionChange = () => void updateConnection();
+    void updateConnection();
+    window.addEventListener("online", handleConnectionChange);
+    window.addEventListener("offline", handleConnectionChange);
+    return () => {
+      window.removeEventListener("online", handleConnectionChange);
+      window.removeEventListener("offline", handleConnectionChange);
+    };
+  }, []);
   useEffect(() => {
     const sync = () => refresh();
     const timer = window.setInterval(sync, 60_000);
@@ -339,6 +407,10 @@ function FamilyAppBody() {
     () =>
       Object.fromEntries(data.assets.map((asset) => [asset.id, asset.name])),
     [data.assets],
+  );
+  const subscriptionTotals = useMemo(
+    () => annualizedActiveTotalsByCurrency(data.subscriptions),
+    [data.subscriptions],
   );
 
   if (!ready) return <Onboarding onComplete={refresh} checking />;
@@ -471,7 +543,12 @@ function FamilyAppBody() {
           <div className="app-context" role="note">
             <span>Saved on this device</span>
             <span>No account</span>
-            <span>Offline-ready</span>
+            <span role="status">{online ? "Online now" : "Offline now"}</span>
+            <span>
+              {offlineCacheReady
+                ? "Offline app cache ready"
+                : "Keep this page open once to prepare offline use"}
+            </span>
           </div>
           <div className="app-title">
             <div>
@@ -539,7 +616,11 @@ function FamilyAppBody() {
                 title="Add an asset"
                 fields={[
                   { name: "name", label: "Asset name", required: true },
-                  { name: "category", label: "Category", value: "Appliance" },
+                  {
+                    name: "category",
+                    label: "Category",
+                    value: locale === "zh-TW" ? "家電" : "Appliance",
+                  },
                   { name: "location", label: "Location" },
                   { name: "brand", label: "Brand" },
                   { name: "model", label: "Model" },
@@ -582,8 +663,18 @@ function FamilyAppBody() {
                     <p className="detail">
                       {[item.brand, item.model].filter(Boolean).join(" ") ||
                         "Brand/model not recorded"}{" "}
-                      · purchased {labelDate(item.purchaseDate)}
+                      {locale === "zh-TW"
+                        ? `· 購買日 ${labelDate(item.purchaseDate)}`
+                        : `· purchased ${labelDate(item.purchaseDate)}`}
                     </p>
+                    {item.serialNumber && (
+                      <p className="detail">
+                        Serial number: {item.serialNumber}
+                      </p>
+                    )}
+                    {item.notes && (
+                      <p className="detail">Notes: {item.notes}</p>
+                    )}
                     <div className="app-actions">
                       <button
                         className="secondary"
@@ -628,12 +719,14 @@ function FamilyAppBody() {
                     name: "assetId",
                     label: "Related asset",
                     options: assetOptions,
+                    optionLabels: assets,
                   },
                   { name: "homeArea", label: "Home area" },
                   {
                     name: "ownerMemberId",
                     label: "Owner",
                     options: memberOptions,
+                    optionLabels: names,
                   },
                   { name: "nextDue", label: "Next due", type: "date" },
                   {
@@ -641,6 +734,7 @@ function FamilyAppBody() {
                     label: "Repeat months after completion",
                     type: "number",
                     value: "0",
+                    min: 0,
                   },
                   {
                     name: "priority",
@@ -674,7 +768,7 @@ function FamilyAppBody() {
                     <header>
                       <h2>{item.title}</h2>
                       <span
-                        className={`status ${item.nextDue && item.nextDue < new Date().toISOString().slice(0, 10) ? "overdue" : ""}`}
+                        className={`status ${item.nextDue && item.nextDue < localIsoDate() ? "overdue" : ""}`}
                       >
                         {dueStatus(item.nextDue)}
                       </span>
@@ -686,17 +780,15 @@ function FamilyAppBody() {
                       · {names[item.ownerMemberId] || "Unassigned"}
                     </p>
                     <p className="detail">
-                      Source:{" "}
+                      <span>Priority:</span> {item.priority} · <span>Source:</span>{" "}
                       {item.instructionsSource ||
                         "Add manufacturer/provider source"}{" "}
                       ·{" "}
-                      {
-                        data.maintenanceEvents.filter(
-                          (event) => event.maintenanceTaskId === item.id,
-                        ).length
-                      }{" "}
-                      completions
+                      {`${data.maintenanceEvents.filter(
+                        (event) => event.maintenanceTaskId === item.id,
+                      ).length} completions`}
                     </p>
+                    {item.notes && <p className="detail">Notes: {item.notes}</p>}
                     {data.maintenanceEvents
                       .filter((event) => event.maintenanceTaskId === item.id)
                       .sort((a, b) =>
@@ -705,11 +797,16 @@ function FamilyAppBody() {
                       .slice(0, 5)
                       .map((event) => (
                         <p className="detail" key={event.id}>
-                          Completed{" "}
-                          {dateTime(event.completedAt)}
-                          {event.cost
-                            ? ` · ${new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(event.cost)}`
-                            : ""}
+                          <span>{`Completed ${dateTime(event.completedAt)}`}</span>
+                          {event.cost ? (
+                            <>
+                              {" · "}<span>Recorded cost</span>{" "}
+                              {new Intl.NumberFormat(
+                                locale === "zh-TW" ? "zh-TW" : "en-US",
+                                { maximumFractionDigits: 2 },
+                              ).format(event.cost)}
+                            </>
+                          ) : null}
                         </p>
                       ))}
                     <div className="app-actions">
@@ -727,7 +824,7 @@ function FamilyAppBody() {
                             const nextDue =
                               item.intervalMonths > 0
                                 ? addMonthsClamped(
-                                    new Date().toISOString().slice(0, 10),
+                                    localIsoDate(),
                                     item.intervalMonths,
                                   )
                                 : "";
@@ -764,6 +861,7 @@ function FamilyAppBody() {
                     name: "assetId",
                     label: "Asset",
                     options: assetOptions,
+                    optionLabels: assets,
                     required: true,
                   },
                   { name: "provider", label: "Provider" },
@@ -791,23 +889,35 @@ function FamilyAppBody() {
                 }
               />
               <div className="app-grid">
-                {data.warranties.map((item) => (
+                {sortUpcomingThenPastIsoDate(
+                  data.warranties,
+                  (item) => item.endsAt,
+                  localIsoDate(),
+                ).map((item) => (
                   <div className="app-card" key={item.id}>
                     <header>
                       <h2>{assets[item.assetId] || "Unlinked warranty"}</h2>
                       <span
-                        className={`status ${item.endsAt < new Date().toISOString().slice(0, 10) ? "overdue" : ""}`}
+                        className={`status ${item.endsAt < localIsoDate() ? "overdue" : ""}`}
                       >
-                        {item.endsAt < new Date().toISOString().slice(0, 10)
+                        {item.endsAt < localIsoDate()
                           ? "Expired"
                           : `Ends ${labelDate(item.endsAt)}`}
                       </span>
                     </header>
                     <p>{item.provider || "Provider not recorded"}</p>
                     <p className="detail">
-                      Receipt: {item.receiptReference || "Not recorded"} ·
-                      Written terms control exact coverage.
+                      <span>Receipt:</span>{" "}
+                      {item.receiptReference || "Not recorded"} ·{" "}
+                      <span>Written terms control exact coverage.</span>
                     </p>
+                    <p className="detail">
+                      Coverage: {labelDate(item.startsAt)} – {labelDate(item.endsAt)}
+                    </p>
+                    <p className="detail">
+                      Terms: {item.termsReference || "Not recorded"}
+                    </p>
+                    {item.notes && <p className="detail">Notes: {item.notes}</p>}
                   </div>
                 ))}
               </div>
@@ -819,9 +929,18 @@ function FamilyAppBody() {
                 title="Add a subscription"
                 fields={[
                   { name: "name", label: "Service", required: true },
-                  { name: "category", label: "Category", value: "Household" },
-                  { name: "cost", label: "Cost", type: "number", value: "0" },
-                  { name: "currency", label: "Currency", value: "USD" },
+                  {
+                    name: "category",
+                    label: "Category",
+                    value: locale === "zh-TW" ? "家庭" : "Household",
+                  },
+                  { name: "cost", label: "Cost", type: "number", value: "0", min: 0 },
+                  {
+                    name: "currency",
+                    label: "Currency",
+                    options: ["TWD", "USD", "JPY"],
+                    value: locale === "zh-TW" ? "TWD" : "USD",
+                  },
                   {
                     name: "billingFrequency",
                     label: "Billing frequency",
@@ -833,11 +952,13 @@ function FamilyAppBody() {
                     label: "Review days before",
                     type: "number",
                     value: "14",
+                    min: 0,
                   },
                   {
                     name: "ownerMemberId",
                     label: "Owner",
                     options: memberOptions,
+                    optionLabels: names,
                   },
                   {
                     name: "managementUrl",
@@ -864,23 +985,36 @@ function FamilyAppBody() {
                 }
               />
               <p className="notice">
-                Annualized active total:{" "}
-                {new Intl.NumberFormat("en-US", {
-                  style: "currency",
-                  currency: "USD",
-                }).format(
-                  data.subscriptions
-                    .filter((item) => item.status === "active")
-                    .reduce(
-                      (sum, item) =>
-                        sum + annualizedCost(item.cost, item.billingFrequency),
-                      0,
-                    ),
-                )}
+                Annualized active totals by currency:{" "}
+                {Object.entries(subscriptionTotals).length
+                  ? Object.entries(subscriptionTotals)
+                      .sort(([left], [right]) => left.localeCompare(right))
+                      .map(
+                        ([currency, total]) =>
+                          `${currency} ${new Intl.NumberFormat(locale === "zh-TW" ? "zh-TW" : "en-US", { maximumFractionDigits: 2 }).format(total)}`,
+                      )
+                      .join(" · ")
+                  : "No active subscriptions."}
               </p>
               <div className="app-grid">
-                {data.subscriptions.map((item) => (
-                  <div className="app-card" key={item.id}>
+                {[
+                  ...sortByOptionalIsoDate(
+                    data.subscriptions.filter((item) => item.status === "active"),
+                    (item) => item.nextRenewal,
+                  ),
+                  ...sortByOptionalIsoDate(
+                    data.subscriptions.filter((item) => item.status !== "active"),
+                    (item) => item.nextRenewal,
+                  ),
+                ].map((item) => {
+                  const managementUrl = safeExternalUrl(item.managementUrl);
+                  const reviewDate = item.nextRenewal
+                    ? warrantyReviewDate(
+                        item.nextRenewal,
+                        Math.max(0, item.reviewBeforeDays || 0),
+                      )
+                    : "";
+                  return <div className="app-card" key={item.id}>
                     <header>
                       <h2>{item.name}</h2>
                       <span className="status">{item.status}</span>
@@ -889,10 +1023,21 @@ function FamilyAppBody() {
                       {item.currency} {item.cost.toFixed(2)} ·{" "}
                       {item.billingFrequency}
                     </p>
+                    <p className="detail">Category: {item.category || "Not recorded"}</p>
                     <p className="detail">
                       Renewal {labelDate(item.nextRenewal)} ·{" "}
+                      Review by {labelDate(reviewDate)} ·{" "}
                       {names[item.ownerMemberId] || "Unassigned"}
                     </p>
+                    {managementUrl && (
+                      <p className="detail">
+                        Management: <a href={managementUrl} target="_blank" rel="noopener noreferrer">Open service page</a>
+                      </p>
+                    )}
+                    {item.paymentMethodNote && (
+                      <p className="detail">Payment note: {item.paymentMethodNote}</p>
+                    )}
+                    {item.notes && <p className="detail">Notes: {item.notes}</p>}
                     <div className="app-actions">
                       <button
                         className="secondary"
@@ -913,8 +1058,8 @@ function FamilyAppBody() {
                           : "Mark cancelled"}
                       </button>
                     </div>
-                  </div>
-                ))}
+                  </div>;
+                })}
               </div>
             </>
           )}
@@ -927,7 +1072,7 @@ function FamilyAppBody() {
                   {
                     name: "category",
                     label: "Category",
-                    value: "Household contact",
+                    value: locale === "zh-TW" ? "家庭聯絡人" : "Household contact",
                   },
                   { name: "phone", label: "Phone", type: "tel" },
                   { name: "email", label: "Email", type: "email" },
@@ -940,7 +1085,7 @@ function FamilyAppBody() {
                     name: "sensitive",
                     label: "Visibility",
                     options: ["false", "true"],
-                    help: "Sensitive contacts are excluded from shared display and handoff by default.",
+                    help: "Sensitive contacts remain visible in this private tab and backups, but are excluded from handoff. Family display shows no contacts.",
                   },
                 ]}
                 onSubmit={(v) =>
@@ -954,23 +1099,45 @@ function FamilyAppBody() {
                 }
               />
               <div className="app-grid">
-                {data.contacts.map((item) => (
-                  <div className="app-card" key={item.id}>
-                    <header>
-                      <h2>{item.name}</h2>
-                      <span
-                        className={`status ${item.sensitive ? "attention" : ""}`}
-                      >
-                        {item.sensitive ? "Private" : "Shareable"}
-                      </span>
-                    </header>
-                    <p>{item.category}</p>
-                    <p>
-                      {item.phone} {item.email}
-                    </p>
-                    <p className="detail">{item.notes}</p>
-                  </div>
-                ))}
+                {[...data.contacts]
+                  .sort(
+                    (left, right) =>
+                      left.category.localeCompare(right.category, locale) ||
+                      left.name.localeCompare(right.name, locale),
+                  )
+                  .map((item) => {
+                    const telephone = item.phone.replace(/[^+\d]/g, "");
+                    return (
+                      <div className="app-card" key={item.id}>
+                        <header>
+                          <h2>{item.name}</h2>
+                          <span
+                            className={`status ${item.sensitive ? "attention" : ""}`}
+                          >
+                            {item.sensitive ? "Private" : "Shareable"}
+                          </span>
+                        </header>
+                        <p>{item.category}</p>
+                        {item.phone || item.email ? (
+                          <p className="contact-links">
+                            {telephone ? (
+                              <a href={`tel:${telephone}`}>{item.phone}</a>
+                            ) : (
+                              item.phone
+                            )}
+                            {item.email && (
+                              <a href={`mailto:${item.email.trim()}`}>
+                                {item.email}
+                              </a>
+                            )}
+                          </p>
+                        ) : (
+                          <p>No contact details recorded.</p>
+                        )}
+                        {item.notes && <p className="detail">{item.notes}</p>}
+                      </div>
+                    );
+                  })}
               </div>
               <p className="notice">
                 FamilyBoard organizes contacts; it does not replace current
@@ -984,7 +1151,11 @@ function FamilyAppBody() {
                 title="Add a document reference"
                 fields={[
                   { name: "name", label: "Record name", required: true },
-                  { name: "category", label: "Category", value: "Home record" },
+                  {
+                    name: "category",
+                    label: "Category",
+                    value: locale === "zh-TW" ? "家庭文件" : "Home record",
+                  },
                   {
                     name: "locationReference",
                     label: "Where the original is stored",
@@ -994,6 +1165,7 @@ function FamilyAppBody() {
                     name: "relatedAssetId",
                     label: "Related asset",
                     options: assetOptions,
+                    optionLabels: assets,
                   },
                   { name: "reviewDate", label: "Review date", type: "date" },
                   { name: "notes", label: "Notes", type: "textarea" },
@@ -1008,16 +1180,30 @@ function FamilyAppBody() {
                 }
               />
               <div className="app-grid">
-                {data.documents.map((item) => (
+                {data.documents.length === 0 && (
+                  <Empty>
+                    No document references yet. Add a pointer to one important
+                    original you need to find again.
+                  </Empty>
+                )}
+                {sortByOptionalIsoDate(
+                  data.documents,
+                  (item) => item.reviewDate,
+                ).map((item) => (
                   <div className="app-card" key={item.id}>
                     <h2>{item.name}</h2>
                     <p>
                       {item.category} · {item.locationReference}
                     </p>
                     <p className="detail">
-                      {assets[item.relatedAssetId] || "No asset link"} · review{" "}
-                      {labelDate(item.reviewDate)}
+                      {assets[item.relatedAssetId] || "No asset link"} ·{" "}
+                      <span>Review:</span> {dueStatus(item.reviewDate)}
+                      {item.reviewDate &&
+                        item.reviewDate <= localIsoDate() && (
+                          <> · {labelDate(item.reviewDate)}</>
+                        )}
                     </p>
+                    {item.notes && <p className="detail">Notes: {item.notes}</p>}
                   </div>
                 ))}
               </div>
@@ -1103,7 +1289,7 @@ function Onboarding({
               .map((member) => ({
                 ...base(id),
                 name: member,
-                role: "Household member",
+                role: locale === "zh-TW" ? "家庭成員" : "Household member",
               }));
             if (rows.length) await db.members.bulkAdd(rows);
           });
@@ -1216,6 +1402,7 @@ function MembersView({
   householdId: string;
   save: (action: () => Promise<unknown>) => Promise<void>;
 }) {
+  const { locale } = useAppLocale();
   return (
     <Localize>
     <>
@@ -1223,7 +1410,11 @@ function MembersView({
         title="Add a household member"
         fields={[
           { name: "name", label: "Member name", required: true },
-          { name: "role", label: "Household role", value: "Household member" },
+          {
+            name: "role",
+            label: "Household role",
+            value: locale === "zh-TW" ? "家庭成員" : "Household member",
+          },
         ]}
         onSubmit={(values) =>
           save(() =>
@@ -1278,16 +1469,24 @@ function Today({
   setTab: (tab: Tab) => void;
 }) {
   const { due: dueStatus } = useAppLocale();
-  const active = data.tasks.filter((item) => !item.completedAt);
+  const today = localIsoDate();
+  const maintenanceCutoff = new Date();
+  maintenanceCutoff.setDate(maintenanceCutoff.getDate() + 7);
+  const active = sortByOptionalIsoDate(
+    data.tasks.filter((item) => !item.completedAt),
+    (item) => item.dueDate,
+  );
   const overdue = active.filter(
     (item) =>
-      item.dueDate && item.dueDate < new Date().toISOString().slice(0, 10),
+      item.dueDate && item.dueDate < today,
   );
-  const dueMaintenance = data.maintenanceTasks.filter(
-    (item) =>
-      item.nextDue &&
-      item.nextDue <=
-        new Date(Date.now() + 7 * 86400000).toISOString().slice(0, 10),
+  const dueMaintenance = sortByOptionalIsoDate(
+    data.maintenanceTasks.filter(
+      (item) =>
+        item.nextDue &&
+        item.nextDue <= localIsoDate(maintenanceCutoff),
+    ),
+    (item) => item.nextDue,
   );
   return (
     <Localize>
@@ -1390,7 +1589,12 @@ function TasksView({
         title="Add a task"
         fields={[
           { name: "title", label: "Responsibility", required: true },
-          { name: "ownerMemberId", label: "Owner", options: memberOptions },
+          {
+            name: "ownerMemberId",
+            label: "Owner",
+            options: memberOptions,
+            optionLabels: names,
+          },
           { name: "dueDate", label: "Due date", type: "date" },
           {
             name: "recurrence",
@@ -1423,6 +1627,11 @@ function TasksView({
           { name: "location", label: "Location" },
           { name: "notes", label: "Notes", type: "textarea" },
         ]}
+        validate={(v) =>
+          eventRangeIsValid(v.startsAt, v.endsAt)
+            ? ""
+            : "End time must be later than the start time."
+        }
         onSubmit={(v) =>
           save(() =>
             db.events.add({ ...base(householdId), ...v } as HouseholdEvent),
@@ -1442,6 +1651,7 @@ function TasksView({
               {names[item.ownerMemberId] || "Unassigned"} ·{" "}
               {item.recurrence || "One-off"}
             </p>
+            {item.notes && <p className="detail">Notes: {item.notes}</p>}
             {!item.completedAt && (
               <div className="app-actions">
                 <button
@@ -1460,16 +1670,21 @@ function TasksView({
             )}
           </div>
         ))}
-        {data.events.map((item) => (
-          <div className="app-card" key={item.id}>
-            <span className="card-tag">Calendar event</span>
-            <h2>{item.title}</h2>
-            <p>
-              {dateTime(item.startsAt)} ·{" "}
-              {item.location || "No location"}
-            </p>
-          </div>
-        ))}
+        {sortByOptionalIsoDate(data.events, (item) => item.startsAt).map(
+          (item) => (
+            <div className="app-card" key={item.id}>
+              <span className="card-tag">Calendar event</span>
+              <h2>{item.title}</h2>
+              <p>
+                {dateTime(item.startsAt)} · {item.location || "No location"}
+              </p>
+              {item.endsAt && (
+                <p className="detail">{`Ends ${dateTime(item.endsAt)}`}</p>
+              )}
+              {item.notes && <p className="detail">Notes: {item.notes}</p>}
+            </div>
+          ),
+        )}
       </div>
     </>
     </Localize>
@@ -1489,8 +1704,11 @@ function HandoffView({
   householdId: string;
   save: (action: () => Promise<unknown>) => Promise<void>;
 }) {
-  const { due: dueStatus, dateTime } = useAppLocale();
-  const profile = data.handoffProfiles[0];
+  const { locale, due: dueStatus, date: labelDate, dateTime } = useAppLocale();
+  const [selectedProfileId, setSelectedProfileId] = useState("");
+  const profile =
+    data.handoffProfiles.find((item) => item.id === selectedProfileId) ??
+    data.handoffProfiles[0];
   const { tasks, contacts, maintenanceTasks, documents } = buildHandoffSnapshot(
     data,
     profile,
@@ -1525,29 +1743,55 @@ function HandoffView({
           },
           { name: "notes", label: "Profile note", type: "textarea" },
         ]}
-        onSubmit={(values) =>
-          save(() =>
-            db.handoffProfiles.add({
-              ...base(householdId),
-              name: values.name,
-              purpose: values.purpose,
-              includeTasks: values.includeTasks === "yes",
-              includeMaintenance: values.includeMaintenance === "yes",
-              includeContacts: values.includeContacts === "yes",
-              includeDocuments: values.includeDocuments === "yes",
-              notes: values.notes,
-            } as HandoffProfile),
-          )
-        }
+        onSubmit={async (values) => {
+          const record = {
+            ...base(householdId),
+            name: values.name,
+            purpose: values.purpose,
+            includeTasks: values.includeTasks === "yes",
+            includeMaintenance: values.includeMaintenance === "yes",
+            includeContacts: values.includeContacts === "yes",
+            includeDocuments: values.includeDocuments === "yes",
+            notes: values.notes,
+          } as HandoffProfile;
+          await save(() => db.handoffProfiles.add(record));
+          setSelectedProfileId(record.id);
+        }}
       />
+      {data.handoffProfiles.length > 0 && (
+        <section className="app-card handoff-profile-picker">
+          <label>
+            Handoff profile
+            <select
+              value={profile?.id || ""}
+              onChange={(event) => setSelectedProfileId(event.target.value)}
+            >
+              {data.handoffProfiles.map((item) => (
+                <option key={item.id} value={item.id}>
+                  {item.name} — {item.purpose}
+                </option>
+              ))}
+            </select>
+          </label>
+          <p className="help">
+            Select the profile that matches this handoff before reviewing or
+            printing the sheet.
+          </p>
+        </section>
+      )}
       <div className="handoff-sheet">
         <h2>{data.households[0]?.name} household handoff</h2>
         <p>
           {profile
-            ? `Profile: ${profile.name} · `
-            : "Default privacy profile · "}
-          Generated {dateTime(new Date())} · Confirm dates before
-          sharing.
+            ? locale === "zh-TW"
+              ? `設定檔：${profile.name} · `
+              : `Profile: ${profile.name} · `
+            : locale === "zh-TW"
+              ? "預設隱私設定檔 · "
+              : "Default privacy profile · "}
+          {locale === "zh-TW"
+            ? `產生時間 ${dateTime(new Date())} · 分享前請再次確認日期。`
+            : `Generated ${dateTime(new Date())} · Confirm dates before sharing.`}
         </p>
         <h3>Responsibilities</h3>
         {tasks.length ? (
@@ -1577,8 +1821,11 @@ function HandoffView({
         {documents.length > 0 && <h3>Document locations</h3>}
         {documents.map((item) => (
           <p key={item.id}>
-            <strong>{item.name}</strong> —{" "}
-            {item.locationReference || "Location not recorded"}
+            <strong>{item.name}</strong> — {item.category} —{" "}
+            {item.locationReference || "Location not recorded"} —{" "}
+            {assets[item.relatedAssetId] || "No asset link"} —{" "}
+            <span>Review:</span>{" "}
+            {labelDate(item.reviewDate)}
           </p>
         ))}
         <h3>Intentionally excluded</h3>
@@ -1608,9 +1855,20 @@ function DisplayView({
     month: "long",
     day: "numeric",
   });
-  const todayKey = new Date().toISOString().slice(0, 10);
-  const events = data.events.filter((item) =>
-    item.startsAt.startsWith(todayKey),
+  const todayKey = localIsoDate();
+  const tasks = sortByOptionalIsoDate(
+    data.tasks.filter((item) => !item.completedAt),
+    (item) => item.dueDate,
+  );
+  const events = sortByOptionalIsoDate(
+    data.events.filter((item) =>
+      eventOccursOnLocalDate(item.startsAt, item.endsAt, todayKey),
+    ),
+    (item) => item.startsAt,
+  );
+  const maintenance = sortByOptionalIsoDate(
+    data.maintenanceTasks.filter((item) => item.nextDue),
+    (item) => item.nextDue,
   );
   return (
     <Localize>
@@ -1621,16 +1879,17 @@ function DisplayView({
       <div className="app-grid">
         <section className="app-card">
           <h2>Household tasks</h2>
-          {data.tasks
-            .filter((item) => !item.completedAt)
-            .slice(0, 6)
-            .map((item) => (
+          {tasks.length ? (
+            tasks.slice(0, 6).map((item) => (
               <p key={item.id}>
                 <strong>{item.title}</strong> ·{" "}
                 {names[item.ownerMemberId] || "Anyone"} ·{" "}
                 {dueStatus(item.dueDate)}
               </p>
-            ))}
+            ))
+          ) : (
+            <p>No open household tasks.</p>
+          )}
         </section>
         <section className="app-card">
           <h2>Today’s events</h2>
@@ -1650,19 +1909,20 @@ function DisplayView({
         </section>
         <section className="app-card">
           <h2>Coming up</h2>
-          {data.maintenanceTasks
-            .slice()
-            .sort((a, b) => a.nextDue.localeCompare(b.nextDue))
-            .slice(0, 6)
-            .map((item) => (
+          {maintenance.length ? (
+            maintenance.slice(0, 6).map((item) => (
               <p key={item.id}>
                 <strong>{item.title}</strong> · {dueStatus(item.nextDue)}
               </p>
-            ))}
+            ))
+          ) : (
+            <p>No dated maintenance items.</p>
+          )}
         </section>
       </div>
       <p>
-        Private records and sensitive contacts are hidden from this display.
+        Contact records, detailed notes and other private record types are not
+        shown. Task and event titles remain visible.
       </p>
     </div>
     </Localize>
@@ -1727,7 +1987,7 @@ function SettingsView({
       const backup = await createBackup();
       const output = encrypted ? await encryptBackup(backup, password) : backup;
       download(
-        `familyboard-backup-${new Date().toISOString().slice(0, 10)}${encrypted ? ".encrypted" : ""}.json`,
+        `familyboard-backup-${localIsoDate()}${encrypted ? ".encrypted" : ""}.json`,
         output,
       );
       await db.settings.put(baseSetting("lastBackup", now()));
@@ -1792,7 +2052,7 @@ function SettingsView({
       setError("");
       const csv = exportMasterTable(data, householdId);
       downloadFile(
-        `familyboard-master-${new Date().toISOString().slice(0, 10)}.csv`,
+        `familyboard-master-${localIsoDate()}.csv`,
         csv,
         "text/csv;charset=utf-8",
       );

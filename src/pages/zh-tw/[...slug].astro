@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ToolWorkbench from '../../components/ToolWorkbench';
+import Recommendation from '../../components/Recommendation.astro';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pagesZhTw');
@@ -20,6 +21,7 @@ const related = entry.data.related
   .filter((item): item is NonNullable<typeof item> => Boolean(item));
 const routeSlug = entry.data.route.split('/').filter(Boolean).at(-1) || '';
 const pageType = entry.data.pageType === 'content' ? 'article' : 'website';
+const pageTypeLabel = entry.data.pageType === 'tool' ? '免費工具' : entry.data.pageType === 'support' ? '服務資訊' : '實用指南';
 ---
 <BaseLayout
   title={entry.data.title}
@@ -36,15 +38,16 @@ const pageType = entry.data.pageType === 'content' ? 'article' : 'website';
   <Breadcrumbs route={entry.data.route} title={entry.data.title} locale="zh-TW" />
   <div class="shell page-grid">
     <article class="article">
-      <div class="meta"><span><a href="/editorial-policy/">FamilyBoard 編輯團隊</a></span><span>發布與複查日期：{entry.data.lastReviewedAt.toLocaleDateString('zh-TW', { dateStyle: 'long' })}</span><span>{entry.data.pageType === 'tool' ? '免費工具' : '實用指南'}</span></div>
+      <div class="meta"><span><a href="/editorial-policy/">FamilyBoard 編輯團隊</a></span><span>發布與複查日期：{entry.data.lastReviewedAt.toLocaleDateString('zh-TW', { dateStyle: 'long' })}</span><span>{pageTypeLabel}</span></div>
       {entry.data.pageType === 'tool' ? <>
         <h1>{entry.data.title.replace(/｜.*$/, '')}</h1>
         <p class="lede"><strong>快速答案：</strong>{entry.data.description}</p>
         <ToolWorkbench client:load slug={routeSlug} title={entry.data.title} locale="zh-TW" />
         <Content />
       </> : <Content />}
+      <Recommendation route={entry.data.route} locale="zh-TW" />
       {related.length > 0 && <section class="section"><div class="section-head"><h2>繼續使用 FamilyBoard</h2></div><div class="card-grid">{related.map((item) => <a class="card" href={item.data.route}><h3>{item.data.title.replace(/｜.*$/, '')}</h3><p>{item.data.description}</p></a>)}</div></section>}
-      <p class="notice">發現錯誤或過期資訊？<a href="/contact/">請提供頁面網址與可靠來源（聯絡頁為英文）。</a></p>
+      <p class="notice">發現錯誤或過期資訊？<a href="/zh-tw/contact/">請提供頁面網址與可靠來源。</a></p>
     </article>
     <aside class="toc-card"><strong>FamilyBoard</strong><p>免費、免帳號的家庭保養、保固與責任管理工具。</p><a class="button" href="/zh-tw/app/">開啟繁中 App</a><p class="help">核心家庭紀錄保留在目前瀏覽器；請定期自行匯出備份。</p>{entry.data.pageType === 'tool' && <p><a href="/zh-tw/">查看繁中首頁</a></p>}</aside>
   </div>

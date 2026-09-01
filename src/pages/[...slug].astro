@@ -10,7 +10,7 @@ import { createRedirectStub } from '../lib/redirect-stub';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages');
-  return pages.filter((entry) => entry.data.route !== '/').map((entry) => ({
+  return pages.filter((entry) => entry.data.route !== '/' && !entry.data.route.startsWith('/zh-tw/')).map((entry) => ({
     params: { slug: entry.data.route.replace(/^\/+|\/+$/g, '') },
     props: { entry }
   }));

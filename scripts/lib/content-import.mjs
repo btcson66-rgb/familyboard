@@ -47,7 +47,8 @@ export function parseFaq(block) {
   for (const line of lines.slice(start + 1)) {
     if (
       /^---\s*$/.test(line) ||
-      /^\*\*(?:Contextual CTA|CTA|Depth|Redirects to):\*\*/i.test(line)
+      /^\*\*(?:Contextual CTA|CTA|Depth|Redirects to):\*\*/i.test(line) ||
+      /^#\s+/.test(line)
     ) {
       break;
     }
@@ -115,8 +116,8 @@ export function renderGeneratedMarkdown(record, launchDate) {
     `pageType: ${yamlDoubleQuoted(record.pageType)}`,
     `indexable: ${record.indexable}`,
     `depthVerified: ${Boolean(record.depthVerified)}`,
-    `publishedAt: ${yamlDoubleQuoted(launchDate)}`,
-    `lastReviewedAt: ${yamlDoubleQuoted(launchDate)}`,
+    `publishedAt: ${yamlDoubleQuoted(record.publishedAt || launchDate)}`,
+    `lastReviewedAt: ${yamlDoubleQuoted(record.lastReviewedAt || launchDate)}`,
     ...(record.nextStep
       ? [`nextStep: ${yamlDoubleQuoted(record.nextStep)}`]
       : []),
@@ -135,7 +136,7 @@ export function renderGeneratedMarkdown(record, launchDate) {
           ]),
         ]
       : ["faq: []"]),
-    "contentVersion: 1",
+    `contentVersion: ${record.contentVersion || 1}`,
     "---",
     "",
   ].join("\n");

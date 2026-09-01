@@ -9,7 +9,7 @@ pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-08-22"
 nextStep: "Add your three most expensive recurring subscriptions first, check the annualized total, and mark anything you no longer use as cancelled."
 related:
   - "/features/family-task-manager/"
@@ -18,13 +18,13 @@ related:
   - "/features/free-home-management-app/"
 faq:
   - question: "How is the annualized subscription total calculated?"
-    answer: "FamilyBoard multiplies each active subscription's cost by a fixed factor based on its billing frequency — 52 for weekly, 12 for monthly, 4 for quarterly, and 1 for annual — then sums every active subscription. The total updates automatically whenever you add, cancel or reactivate a subscription."
+    answer: "FamilyBoard multiplies each active subscription's cost by a fixed factor based on its billing frequency — 52 for weekly, 12 for monthly, 4 for quarterly, and 1 for annual — then sums records only within the same currency. USD, TWD and JPY remain separate because the app does not fetch exchange rates."
   - question: "Does FamilyBoard remind me before a subscription renews?"
     answer: "Not automatically as a standalone alert. The review-before-days field records how much notice you'd want, but the practical way to get a real reminder on the dashboard is to create a task due that many days before the renewal date."
   - question: "Is it safe to store my credit card number in the payment method note?"
     answer: "No — don't. That field's help text explicitly says never to store card numbers or passwords there. It's meant for a household-readable note like \"billed to the joint checking account,\" not actual payment credentials, which belong in a dedicated password manager."
   - question: "What happens when I mark a subscription as cancelled?"
-    answer: "Its status changes to \"cancelled,\" which removes it from the active-subscription dashboard count and the annualized total. The record itself isn't deleted, so its cost history and notes stay available, and you can reactivate it later with one click if you resubscribe."
+    answer: "Its status changes to \"cancelled,\" which removes it from the active-subscription dashboard count and annualized totals. The record itself is not deleted, so its entered details stay available and you can reactivate it later. FamilyBoard does not automatically record a dedicated cancellation date."
 contentVersion: 1
 ---
 # Subscriptions are household obligations, not just line items
@@ -33,19 +33,19 @@ A subscription tracker often gets treated as a pure budgeting tool. Cost matters
 
 ## What a subscription record holds
 
-The quick-add form captures the service name, category (defaulting to "Household"), cost, currency (defaulting to USD), billing frequency (monthly, annual, weekly or quarterly), next renewal date, a review-lead-time in days before renewal (defaulting to 14), an owner, a management URL, and a payment-method note. That last field has an explicit warning built into its help text: "Never store card numbers or passwords." The record can identify which card or account a subscription bills to in general terms — "the household Visa" — without ever becoming a place to store the actual number.
+The English quick-add form captures the service name, category (defaulting to "Household"), a non-negative cost, currency (defaulting to USD), billing frequency (monthly, annual, weekly or quarterly), next renewal date, a non-negative review-lead-time in days before renewal (defaulting to 14), an owner, a management URL, and a payment-method note. The Traditional Chinese interface defaults to the category 家庭 and currency TWD. The payment-note help text explicitly says: "Never store card numbers or passwords." It can identify an account in general terms — "household Visa" — without becoming a place to store the actual number.
 
 ## The annualized total is computed live
 
-Above your subscription list, the tab shows one figure: the annualized cost of every subscription currently marked active. The calculation is straightforward — weekly costs are multiplied by 52, monthly by 12, quarterly by 4, and annual by 1 — and it's recomputed every time the page loads, so adding or cancelling a subscription changes the total immediately.
+Above the subscription list, the tab shows annualized active totals separated by currency. The calculation is straightforward — weekly costs are multiplied by 52, monthly by 12, quarterly by 4, and annual by 1 — and is recomputed when the data changes. Adding, cancelling or reactivating a subscription changes the corresponding currency total immediately. FamilyBoard does not fetch exchange rates and never adds USD, TWD and JPY into a misleading combined number.
 
 ## A worked example of the annualized math
 
-Say a household has three active subscriptions: a $15.99/month streaming service, a $89.99/quarterly pest-control plan, and a $6.49/week meal-kit box. The annualized total shown on the tab would be (15.99 × 12) + (89.99 × 4) + (6.49 × 52) = $191.88 + $359.96 + $337.48 = $889.32. That's the number that makes an easy-to-ignore set of small recurring charges visible as one yearly figure — the meal-kit box alone, billed weekly, is easy to underestimate until it's annualized.
+Say a household has three active USD subscriptions: a $15.99/month streaming service, an $89.99/quarterly pest-control plan, and a $6.49/week meal-kit box. The USD annualized total is (15.99 × 12) + (89.99 × 4) + (6.49 × 52) = $889.32. If the same household also records a TWD 1,200 annual service, the notice shows `TWD 1,200 · USD 889.32`; it does not call the sum 2,089.32 because those numbers are different currencies.
 
 ## Marking a subscription cancelled instead of deleting it
 
-Each subscription card has a button that toggles between "Mark cancelled" and "Reactivate." Cancelling doesn't delete the record — it changes its status to "cancelled," which removes it from the active-subscription count on the dashboard and from the annualized total, while keeping its history (what it cost, when it was cancelled) intact in case you want to look back at it or resubscribe.
+Each subscription card has a button that toggles between "Mark cancelled" and "Reactivate." Cancelling doesn't delete the record — it changes its status to "cancelled," which removes it from the active-subscription count on the dashboard and from the annualized totals while keeping the entered cost, renewal, owner, category, URL and notes. The current record does not have a dedicated cancellation-date field, so write a date in Notes before cancelling if that history matters. Active records are shown first by nearest renewal date, followed by cancelled records.
 
 ## Reviewing before renewal
 

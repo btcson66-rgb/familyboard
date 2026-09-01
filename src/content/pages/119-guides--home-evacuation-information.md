@@ -12,9 +12,9 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Use local emergency guidance to define the real actions, then use FamilyBoard to make sure the household can find the people, records and responsibilities that support them."
 related:
+  - "/tools/home-emergency-drill-record-generator/"
   - "/guides/storm-preparation-home-checklist/"
   - "/guides/emergency-supply-inventory/"
-  - "/guides/pet-sitter-information/"
   - "/features/emergency-information-organizer/"
 faq:
   - question: "How many days of supplies should a household evacuation go-bag hold?"
@@ -54,3 +54,5 @@ Details about when a household is away, home-access information, or specifics ab
 ## Review after every household change, not on a fixed calendar
 
 A new pet, a new caregiver, a new vehicle, or a family member who's started attending a different school all change what the evacuation checklist actually needs to cover. Treat each of those changes as an immediate trigger to update the plan rather than waiting for an annual review — the plan is only useful if it reflects the household as it exists today.
+
+Once the information is current, use the [home emergency drill record generator](/tools/home-emergency-drill-record-generator/) to document a calm announced practice. A drill record should show what the household actually tried and what still needs work; it should never convert an untested route or a stopped exercise into a claim that the home is safe.

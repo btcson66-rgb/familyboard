@@ -1,6 +1,6 @@
 ---
 title: "Warranty Tracker for Appliances and Household Purchases | FamilyBoard"
-description: "Track household warranties, purchase dates, receipts and expiration windows before you need them."
+description: "Track household warranty providers, receipt references, written terms and expiration windows before you need them."
 route: "/features/warranty-tracker/"
 primaryIntent: "find an appliance or product warranty tracker"
 primaryKeyword: "warranty tracker"
@@ -9,7 +9,7 @@ pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-08-22"
 nextStep: "Add a warranty for the newest significant purchase in your home while the receipt is still easy to find, and link it to that item's asset record."
 related:
   - "/features/home-inventory-tracker/"
@@ -37,7 +37,7 @@ The quick-add form requires an asset link and an end date; provider, start date,
 
 ## Status is computed, not typed in
 
-You never mark a warranty as expired yourself. The card compares the end date against today's date every time you open the tab: if the end date has passed, the badge reads "Expired"; otherwise it reads "Ends" followed by the date. That means the status is always current the moment you look at it, with no separate step to update it as time passes.
+You never mark a warranty as expired yourself. The card compares the end date against today's date every time you open the tab: if the end date has passed, the badge reads "Expired"; on the end date itself and before it, the badge reads "Ends" followed by the date. Warranties that have not expired are listed first by nearest end date, followed by expired records with the most recently expired first. The status and order update when you open the app; no manual status field is involved.
 
 ## The receipt reference field, and why it's just text
 
@@ -45,12 +45,12 @@ The receipt reference is a plain string field — "PDF in email, subject 'Order 
 
 ## A worked example
 
-A household buys a washing machine with a 2-year manufacturer warranty starting the installation date. They add the asset first (brand, model, serial number from the door frame, purchase date), then add a warranty: asset = the washing machine, provider "LG," starts at the install date, ends 24 months later, receipt reference "email folder 'Appliances 2026'," terms reference "warranty card, kitchen drawer." Fourteen months in, the card reads "Ends [date 10 months out]" — a fast answer to "is this still covered" without digging through email. If the machine develops a drain problem in month 20, the warranty record and a maintenance event logged against the same asset both exist, so the repair history and the coverage window sit side by side.
+A household buys a washing machine with a two-year manufacturer warranty starting on the installation date. They add the asset first (brand, model, serial number from the door frame and purchase date), then add a warranty: asset = the washing machine, provider = manufacturer, starts at the installation date, ends 24 months later, receipt reference = "email folder 'Appliances 2026'," and terms reference = "warranty card, kitchen drawer." Fourteen months in, the card reads "Ends [date 10 months out]" — a fast answer to "is the recorded period still open?" without digging through email. If the machine develops a drain problem in month 20, the warranty record and the maintenance history remain in their respective tabs under the same asset name.
 
-## Warranty and repair history stay on the same asset
+## One asset name connects the records across tabs
 
-Because a warranty links to an asset ID, and a maintenance completion event links to a maintenance task that also has an asset ID, both threads trace back to the same appliance. Opening the asset shows you both: what's covered, and what's already been serviced — useful context if you're deciding whether an issue is worth a warranty claim or a routine repair.
+Because a warranty links to an asset ID, and a maintenance completion event links to a maintenance task that can use the same asset ID, both records identify the same appliance. FamilyBoard currently has no unified asset-detail screen: you switch between Warranties and Maintenance and use the consistent asset name to connect them. The app records the paperwork location and service timeline; it does not decide whether the issue is covered or whether a claim is worthwhile.
 
 ## What FamilyBoard does not do
 
-It does not read your warranty terms or tell you whether a specific repair is covered — the "written terms control" reminder on every card is there because coverage rules genuinely vary by manufacturer, retailer and sometimes by state consumer-protection law. It does not track extended or third-party warranties any differently from manufacturer warranties; you record whatever terms and provider apply. And it does not notify you by email or push alert as an end date approaches — the "Ends" badge only updates when you open the app.
+It does not read your warranty terms or tell you whether a specific repair is covered — the "written terms control" reminder on every card is there because coverage rules vary by provider, product and agreement. It does not track extended or third-party warranties differently from manufacturer warranties; you record whichever terms and provider apply. It also has no review-before field and does not notify you by email or push alert as an end date approaches. If you need action before expiry, create a separate task with a real owner and due date.

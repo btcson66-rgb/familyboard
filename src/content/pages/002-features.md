@@ -9,7 +9,7 @@ pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-08-22"
 nextStep: "If your biggest pain point is remembering upkeep, start with the Maintenance Tracker. If it is scattered receipts and models, start with Home Inventory."
 related:
   - "/features/home-inventory-tracker/"
@@ -24,7 +24,7 @@ faq:
     answer: "Add your assets first, since maintenance, warranties and documents all link back to an asset record. Start with the handful of appliances or systems you'd actually miss the receipt or manual for, then add maintenance and warranty records against them."
   - question: "Is there a mobile app, or is this only a website?"
     answer: "FamilyBoard is a Progressive Web App you use in your browser and can add to your phone or tablet's home screen for an app-like icon and standalone window. There's no separate native app, and no app-store account is involved."
-contentVersion: 1
+contentVersion: 2
 ---
 # One household dashboard, built around the work behind the calendar
 
@@ -58,7 +58,7 @@ Tasks carry a title, an owner, a due date, a free-text recurrence note and compl
 
 ## Emergency — contacts that stay local
 
-Emergency contacts hold name, category, phone, email, notes and a sensitive flag. Marking a contact sensitive removes it from the printable handoff sheet by default — nothing about it is ever exposed by the app's design. See **[Emergency Information Organizer](/features/emergency-information-organizer/)**.
+Emergency contacts hold name, category, phone, email, notes and a sensitive flag. Marking a contact sensitive removes it from the printable handoff sheet, but the record remains visible in the private Emergency tab and full backups. Family Display renders no contacts at all. See **[Emergency Information Organizer](/features/emergency-information-organizer/)**.
 
 ## Documents — where things actually are
 

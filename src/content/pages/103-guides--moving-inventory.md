@@ -1,64 +1,110 @@
 ---
-title: "Moving Inventory: Track Boxes, Rooms, Valuable Items and What Needs Special Handling"
-description: "Create a moving inventory that separates box-level tracking from valuable-item documentation — and understand what federal law actually protects if a mover loses something."
+title: "Moving Inventory Checklist | Box IDs, Loading, Delivery and Damage Records"
+description: "Build a moving inventory that separates household box IDs, the mover's official inventory, loading custody, delivery reconciliation and unresolved loss or damage records."
 route: "/guides/moving-inventory/"
-primaryIntent: "inventory items for a move"
+primaryIntent: "create a box and handover inventory before, during and after a household move"
 primaryKeyword: "moving inventory checklist"
 cluster: "inventory-warranty"
 pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
-nextStep: "Use a room-based box ID system for ordinary contents, document valuable items individually before the move, and keep permanent asset records only for what still matters after unpacking."
+lastReviewedAt: "2026-08-24"
+nextStep: "Create private box IDs before tape hides the contents, then use the Moving Box Handover Log to preserve loading, destination reconciliation and unresolved issues as separate attributable events."
 related:
+  - "/tools/moving-box-handover-log/"
   - "/guides/room-by-room-home-inventory/"
   - "/guides/valuable-item-inventory/"
-  - "/guides/storage-unit-inventory/"
-  - "/features/home-inventory-tracker/"
+  - "/tools/move-in-checklist-generator/"
 faq:
-  - question: "How much does a mover actually owe me if they lose or damage something?"
-    answer: "Under the federal default, Released Value Protection, interstate movers are liable for only $0.60 per pound per item — a 50-pound television worth $2,000 would be compensated around $30. Full Value Protection is the paid alternative that covers actual replacement value instead, and it's worth considering for anything genuinely valuable."
-  - question: "Do I need to list every item in every box for a moving inventory?"
-    answer: "No. A box ID, source room, destination room and a short contents description is enough for ordinary belongings. The detail that actually matters is reserved for high-value or fragile items, which deserve individual records rather than being folded into a general box list."
-  - question: "What happens to a moving inventory after the move is done?"
-    answer: "The box-level records can be archived or deleted once unpacking is complete — they were only needed to track the move itself. Permanent asset records for possessions that matter long-term should already exist separately and simply continue on afterward."
-  - question: "Should valuable items be declared to the mover specifically?"
-    answer: "Yes, if using Full Value Protection. An undeclared valuable item packed in an ordinary box is generally treated the same as any other box contents if something happens to it, so declaring high-value items separately is what makes that higher protection level actually apply to them."
-contentVersion: 1
+  - question: "Do I need to list every item inside every moving box?"
+    answer: "Usually no. Ordinary contents can use a private box ID, source zone, destination zone, broad contents group and handling note. Separately identify items whose contract, mover inventory, valuation, insurance, safety or household purpose requires item-level evidence."
+  - question: "Is my household moving spreadsheet the same as the mover's inventory?"
+    answer: "No. For a U.S. interstate move, FMCSA says the mover must prepare an inventory before or at loading and attach a completed mover inventory to the bill of lading. A household list can cross-reference those documents but cannot replace, amend or prove them."
+  - question: "Does signing at delivery mean everything arrived undamaged?"
+    answer: "Do not let a household status imply that conclusion. Compare delivered items with the controlling inventory, record observable shortages or new condition issues, and read the actual receipt before signing. Its effect depends on the document, jurisdiction and facts."
+  - question: "What protection applies to a U.S. interstate move?"
+    answer: "FMCSA says interstate movers must offer Full Value Protection and Released Value. Unless the customer chooses Released Value, Full Value Protection applies; Released Value is limited to 60 cents per pound per article. FamilyBoard does not select or interpret coverage."
+  - question: "When can I delete a moving inventory?"
+    answer: "Use purpose-based retention, not an automatic unpacking date. Keep the relevant version while an unresolved or linked contract, claim, insurance, tax, ownership, warranty, storage or legal purpose remains."
+contentVersion: 2
 ---
-# A moving inventory answers "where is it," not "what do we own"
+# A moving inventory checklist should track custody, not just contents
 
-A permanent home inventory answers "what do we own?" A moving inventory answers a narrower, more urgent question: where is each thing right now, where is it going, and does it need special handling along the way? Treating these as the same project is what makes moving inventories feel overwhelming — they're not the same task.
+A packing list can tell you that `BOX-K-014` contains everyday dishes. A useful moving inventory also tells you whether that box was included in the loading count, which source recorded the handoff, where it should go, whether it appeared at destination and who owns the next check if it did not. Packing, carrier custody and household possession are separate events.
 
-## Box-level records are enough for ordinary contents
+This guide is for household organization. It does not verify a mover, broker, license, vehicle, insurance, contract, estimate, bill of lading, inventory, packing, loading, delivery or condition; calculate a claim or legal deadline; decide fault, liability, valuation, coverage, damages, acceptance or settlement; file a claim or complaint; or certify that a move is complete.
 
-You don't need to list every plate. A box needs an ID, a source room, a destination room, and a short contents note — "kitchen → kitchen, everyday dishes and glasses" is a complete, useful record. This level of detail is what actually gets used during unloading; itemizing every object inside slows the packing process down for no real benefit.
+**Already packing? [Open the free Moving Box Handover Log](/tools/moving-box-handover-log/) and keep the shareable index separate from private originals.**
 
-## What federal law actually protects if something goes wrong
+## Use three linked records instead of one overloaded spreadsheet
 
-For an interstate move using a professional mover, it's worth knowing what the default protection actually covers, because it's less than most people assume. Under federal regulation, [interstate movers are required to offer Released Value Protection at $0.60 per pound per article, included at no additional cost](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-375) — which means a $2,000, 50-pound television damaged in transit would be compensated at roughly $30 under the default option, not its actual value. Full Value Protection is the paid alternative, where the mover is liable for the item's actual replacement value rather than a weight-based calculation. Knowing this before the move — not after something breaks — is what makes the valuable-item documentation below actually matter.
+The **household box index** gives each box, wrapped furniture group or separately handled item a short private ID. It records source zone, intended destination zone, broad contents category, handling note and a protected photo pointer when useful. It helps the household pack and reconcile; it is not a contract or valuation declaration.
 
-## Keep valuable or fragile items separate from the box system
+The **controlling move documents** include the estimate, order for service, contract or bill of lading, mover-prepared inventory, amendments, valuation selection, insurance source and special-item declaration. Keep originals protected. A household timeline should use safe references such as `BOL-B1`, `MOVER-INV-M1` and `EST-E1`, not full addresses, signatures, shipment numbers or payment details.
 
-High-value, serialized or fragile possessions deserve individual records and photos taken before the move, not just a line in a box's contents note. This is also where declaring a high-value item to the mover, if using Full Value Protection, actually matters — an undeclared valuable inside an ordinary box is treated as ordinary box contents if something happens to it. See [valuable item inventory](/guides/valuable-item-inventory/) for how to document these properly.
+The **handover and outcome timeline** records packing, loading or custodian acceptance, destination handover, reconciliation, missing items, visible condition issues, notice, response and actual outcome. Each event needs an attributable source, not just a changed status.
 
-## Destination labeling does double duty
+These layers can cross-reference one another without becoming interchangeable. A household photo does not amend the mover's inventory; a carrier inventory does not prove every box was unpacked; a signed receipt should not be summarized as `no damage` unless the actual source and applicable process support that wording.
 
-Labeling which room a box belongs to in the new home does more than speed up unloading day — it also becomes a natural checkpoint for confirming everything arrived. A box labeled for a specific destination room that never turns up during unpacking is a much easier thing to notice and report than a gap in an unlabeled pile.
+## Build box IDs that remain useful after stacking
 
-## A numbering system beats a purely descriptive one
+A box ID should be short, unique and visible on more than one side. `K-014` or `BED2-006` is easier to call out during unloading than a paragraph. The protected index can expand the ID into source and destination zones, broad contents group, an approximate count only when useful, handling instructions, photo pointer and current custody or reconciliation status.
 
-"Box 14 — kitchen → kitchen, everyday dishes" is easier to track across a move than relying on written descriptions alone on the outside of each box, especially once boxes get stacked and the labels facing outward aren't always the ones with the full contents note. A simple sequential number per box, cross-referenced to the fuller contents note in the household record, means a mover or family member can call out "box 14" and everyone knows immediately which one that is, without reading a paragraph off the side of a box.
+Avoid writing a complete address, resident name, phone number, work schedule, valuable-item list or access instruction on the outer label. Labels may be visible to movers, neighbors, storage staff and passersby. The outside needs enough information to route the box, not a map of private contents.
 
-## Photograph anything you disassemble
+`Bedroom` is unclear in a three-bedroom home. Use stable protected zones such as `Origin kitchen / lower pantry`, `Destination bedroom 2 / north wall` or `Storage unit / rack C`. If the destination changes, keep the plan and add the actual placement event. Overwriting the plan can make a rerouted box appear missing.
 
-Furniture disassembled for a move — a bed frame, a modular shelving unit, anything with hardware that needs to go back together correctly — is much easier to reassemble correctly with a photo of how it looked put together, plus a photo of the hardware taped to the corresponding piece. This is a small step at disassembly time that saves real frustration during setup in the new home, especially for furniture with non-obvious assembly.
+## Photograph context without creating unsafe evidence
 
-## The first-night box is its own separate category
+Before closing a box, a broad photo can link the visible contents group to its ID. For furniture, photograph the overall item, pre-existing observable condition and disassembly layout before work begins. Keep hardware in a labelled container tied to the furniture ID.
 
-Beyond the general box system, it's worth keeping one clearly marked box or bag entirely separate from the numbered system — the items needed the first night in a new home before anything else is unpacked: toiletries, a change of clothes, basic kitchen items, chargers, any medication. This isn't really inventory in the same sense as the rest of the move; it's a practical exception worth planning for so the first evening in a new home doesn't mean digging through numbered boxes to find a toothbrush.
+Do not move a heavy object, climb on unstable furniture, open energized equipment or reproduce a fault for a photograph. A photo records what the camera captured; it does not establish cause, ownership, value, safe operation or responsibility. Keep the unedited original and capture date protected. Preserve annotated copies as derivatives rather than replacing the original.
 
-## The moving layer is temporary; archive it once you're settled
+## For a U.S. interstate move, preserve the mover's inventory and bill of lading
 
-Once unpacking is complete, box-level records have served their purpose and can be archived or removed, while permanent asset records for the possessions that matter long-term stay in place. A moving inventory isn't meant to become a permanent fixture — its job ends when the move does.
+FMCSA's current [pickup guidance](https://www.fmcsa.dot.gov/protect-your-move/how-to/subpartE) says an interstate mover must prepare an inventory before or at loading. The inventory records existence and condition; the customer may note disagreements, should retain a copy, and the completed mover inventory becomes an attachment to the bill of lading. The bill of lading is the contract for that interstate shipment, not the household spreadsheet.
+
+Before signing, compare item and condition entries with what you can safely observe. Use the document's actual correction or notation process for disagreements. Do not change a FamilyBoard row to make it look as if the mover accepted a household note.
+
+This federal guidance applies to interstate household-goods moves. Intrastate movers, portable containers, rental vehicles, self-moves and international moves may use different documents and rules. Start with the actual contract and responsible regulator instead of borrowing the federal workflow by analogy.
+
+## Correctly separate valuation from inventory detail
+
+FMCSA's current [liability and protection guidance](https://www.fmcsa.dot.gov/consumer-protection/protect-your-move/are-you-moving/liability-protection) says interstate movers must offer Full Value Protection and Released Value. Unless a customer selects Released Value, Full Value Protection applies. Released Value provides no more than $0.60 per pound per article; it is not a statement of market price. FMCSA describes extraordinary-value items as worth more than $100 per pound and explains that a mover may limit responsibility unless those items are specifically listed in shipping documents.
+
+Do not turn those general rules into an automatic coverage result. The chosen option, written terms, declared items, packing, exclusions, insurance and facts still matter. FMCSA also warns that packing your own boxes can make a claim harder to establish. Keep declarations and valuation selections with official shipment documents, not exposed on a box exterior.
+
+## Loading needs a count and an attributable custody event
+
+Before loading, freeze a dated household version. Group boxes so the team can count without blocking safe work: by room, loading zone or rolling batch. Record `household count observed`, `mover inventory reference` or `container seal source` accurately. Do not write `mover accepted all boxes` unless an attributable mover document supports that exact fact.
+
+For friend or family help, use role labels such as `household loading lead`, `rental-vehicle driver role` or `storage receiving role`. Private names and contact details stay protected.
+
+## Reconcile at destination before unpacking disperses the evidence
+
+At delivery, compare incoming box IDs and separately handled items with the controlling inventory. FMCSA's [delivery guidance](https://www.fmcsa.dot.gov/protect-your-move/how-to/subpartG) tells interstate customers to check delivered items against the inventory and record loss or damage. Other moves follow their applicable contracts and processes.
+
+Run a **handover check** for which IDs were observed at destination and what visible condition existed before dispersal. Then run a **reconciliation check** for which planned groups are present, missing, rerouted or still unverified. Keep `destination handover recorded—reconciliation pending` separate from `reconciled and unpacked`. One truck unloading event does not prove every box is present.
+
+## Describe observable condition, not blame
+
+Useful wording is narrow: `BOX-K-014 not located in kitchen, bedroom 2 or staging zone during 2026-08-24 count`; `wrapped desk showed a visible split at lower-left edge before unwrapping; photo P7`; or `mover inventory line 42 was marked received while household reconciliation remains open`.
+
+Avoid unsupported conclusions such as `stolen`, `mover broke it`, `unsafe`, `claim approved`, `fully delivered` or `waived`. Preserve the source, date and next evidence gap. For electrical, fuel, chemical, structural, sharp-object or lifting danger, stop routine checking and follow current emergency, manufacturer and qualified-professional instructions.
+
+## A notice draft is not a delivered notice
+
+If a box is missing or an item appears damaged, preserve the current inventory, photos and contract sources before editing. A draft email or planned call does not prove delivery. Keep an attributable sent copy, portal receipt, signed notation or other source required by the applicable process.
+
+FMCSA publishes [loss and damage guidance](https://www.fmcsa.dot.gov/protect-your-move/resources/discovered-loss-damage) for interstate moves, but FMCSA does not settle private claims. State, local, international, insurance and contract processes differ. FamilyBoard does not calculate a federal, state or contract deadline. Record an externally verified date as a protected source pointer and household checkpoint.
+
+## Retention ends when the purpose ends, not when the last box opens
+
+Unpacking is one milestone, not a universal deletion date. Keep the relevant version while a shortage, damage observation, correction, payment, claim, insurance, tax, ownership, warranty, storage or legal purpose remains. Keep official documents for the period required by their controlling source. If a permanent asset record links to a moving photo, migrate or preserve useful evidence before minimizing the move file.
+
+When every group has an attributable outcome and no external purpose remains, archive a limited final index or delete redundant working copies according to a verified household retention plan. Do not erase the only source merely because the living room is clear.
+
+## Affiliate supplies are operational aids, not evidence
+
+A future clearly labelled affiliate area may recommend ordinary labels, markers, document sleeves, storage bins or scanners. A commission cannot verify a mover, contract, inventory, box, condition, delivery, notice, claim or result. Buying a recommended product cannot move an event to `loaded`, `delivered` or `completed`.

@@ -279,6 +279,20 @@ button.secondary {
   padding: 0.1em 0.35em;
   border-radius: 6px;
   background: var(--surface);
+  color: var(--ink);
+}
+.article pre {
+  overflow-x: auto;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface) !important;
+}
+.article pre code,
+.article pre code span {
+  padding: 0;
+  background: transparent !important;
+  color: var(--ink) !important;
 }
 .article table,
 .printable table {

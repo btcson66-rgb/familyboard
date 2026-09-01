@@ -1,52 +1,116 @@
 ---
-title: "Caregiver Handoff Checklist: Transfer Routines, Contacts and Household Responsibilities Clearly"
-description: "Create a caregiver handoff with routines, contacts, household logistics and current instructions while protecting sensitive information."
+title: "Caregiver Handoff Checklist: Sources, Authority, Access and Acceptance"
+description: "Build a caregiver handoff around the current source, recipient authority, minimum access, daily logistics and observed acceptance without exposing care details."
 route: "/guides/caregiver-handoff-checklist/"
-primaryIntent: "hand off household/care responsibilities temporarily"
+primaryIntent: "prepare a source-controlled caregiver handoff without exposing care details or inventing authority"
 primaryKeyword: "caregiver handoff checklist"
 cluster: "records-emergency"
 pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
-nextStep: "Generate a temporary handoff packet and review it from the caregiver's perspective: what would they have to call you to ask?"
+lastReviewedAt: "2026-08-26"
+nextStep: "Build one dated source-and-authorization map, then ask the receiving caregiver to demonstrate access and name the route for a missing or conflicting instruction."
 related:
+  - "/tools/caregiver-handoff-source-authorization-log/"
+  - "/tools/home-care-visit-scope-service-result-log/"
+  - "/guides/household-medical-information-organization/"
+  - "/guides/emergency-information-sheet/"
   - "/guides/household-admin-backup-person/"
-  - "/guides/pet-sitter-information/"
-  - "/guides/house-sitter-information/"
-  - "/tools/home-handoff-summary-generator/"
+  - "/privacy/"
 faq:
-  - question: "What information should a caregiver handoff prioritize?"
-    answer: "The operational rhythm of the day — arrival/departure times, meals, transportation, activity schedules and communication preferences — plus any current, qualified-source care instructions reproduced exactly. Avoid trying to convey the family's full history; a handoff that's too long to actually read before arrival fails the same way an incomplete one does."
-  - question: "Can a household app generate medical or behavioral care instructions for a caregiver handoff?"
-    answer: "No. Those instructions must come from a qualified source — a clinician, therapist or current care plan — and the household record should reproduce them exactly rather than summarizing, softening or filling gaps with a guess. If a care plan seems unclear, check with the source before the handoff, not during it."
-  - question: "How does a household keep sensitive contacts out of a caregiver's handoff packet?"
-    answer: "By marking those contacts sensitive in the household's records — a contact flagged that way is automatically excluded from any generated handoff snapshot. This keeps private contacts, like a family member's own therapist or an unrelated personal contact, from ending up on a document a temporary caregiver takes with them."
-  - question: "Should a temporary caregiver get access to the whole household database?"
-    answer: "No — build a filtered handoff containing only the tasks, care instructions and contacts relevant to that specific caregiving period. A narrower handoff is both easier for the caregiver to actually use and lower-risk if it's misplaced or the arrangement ends."
-contentVersion: 1
+  - question: "What belongs in a caregiver handoff checklist?"
+    answer: "The care window and purpose, care recipient's participation, responsible source for each current plan or instruction, recipient authority and minimum scope, actual access and custody, daily logistics, escalation route, caregiver acceptance and the observed result. Keep names and care details in protected sources."
+  - question: "Does being a family member or caregiver automatically grant access to health information?"
+    answer: "No. A family title, a permitted disclosure relevant to care or payment, personal-representative authority and a written authorization are different. Use the provider, plan and applicable process to establish the scope; FamilyBoard records only a safe pointer and observed result."
+  - question: "Can FamilyBoard create medication, feeding, transfer or behavioral instructions?"
+    answer: "No. Those instructions must remain with the current qualified source. The index may record that the protected version was opened and handed off, but it must not generate, summarize, reconcile or interpret the instruction."
+  - question: "Is sending a file enough to close a caregiver handoff?"
+    answer: "No. Sending is an action. Test whether the intended recipient can open the current protected source, record whether the defined scope was accepted and preserve the responsible result or unresolved issue."
+  - question: "What changes require a new handoff version?"
+    answer: "A different caregiver, authority, setting, provider or agency, plan version, medicine-list source, access path, schedule, transport arrangement, recipient preference, emergency route or caregiver-capacity change should open a new dated version."
+  - question: "Can the checklist confirm respite, home-care or discharge services?"
+    answer: "No. It can record an official source, inquiry, application or acceptance result, but it cannot determine eligibility, submit a request, book service or treat discharge paperwork as proof that receiving care began."
+  - question: "What should happen when two care sources conflict?"
+    answer: "Preserve the conflict, stop the affected completion claim and route the issue to the responsible provider, agency, case manager or qualified source. Do not choose or blend instructions in the household tool."
+contentVersion: 2
 ---
-# A caregiver handoff should describe the current routine, not the entire family history
+# Build a caregiver handoff that another person can accept without exposing a care file
 
-Whether the caregiver supports a child, an older adult, a family member with a disability or another dependent, the handoff exists to answer one question well: what does this specific caregiver need to know for this specific period of care? A handoff that tries to convey the family's entire history ends up too long to actually read before the caregiver arrives, which defeats the purpose as thoroughly as leaving something important out.
+A handoff for a child, older adult, person with a disability or another person receiving support is not one giant summary. It is a controlled connection among the person receiving care, the current source of each instruction, the recipient's authority and minimum access, the everyday logistics for this care period, and a result showing that the receiving caregiver could actually use the handoff.
 
-## Organize the day the way the caregiver will actually live it
+FamilyBoard does not decide who may receive protected information, appoint a representative, create a care plan, interpret a discharge instruction, recommend a treatment, reconcile medication, assess capacity, verify a home-care agency or caregiver, book respite or transport, submit an application, contact a provider or calculate a medical, insurance, program or legal deadline. Use the free [Caregiver Handoff Source and Authorization Log](/tools/caregiver-handoff-source-authorization-log/) to record safe source and result pointers. Keep names, diagnoses, medicines, care instructions, addresses, access codes, schedules and authority documents in the responsible protected system.
 
-Arrival and departure times, meal timing and any dietary notes, transportation logistics (who drives, what car seat, what pickup procedure), school or activity schedules, communication preferences (text vs. call, and when it's okay to interrupt), and the household's everyday routines form the operational core. Write it in the order the day unfolds — morning routine, then daytime logistics, then evening — rather than as a flat alphabetical list, since that's how the caregiver will actually reference it in the moment.
+When the handoff involves recurring agency visits, keep the recipient's authority and access here, then use the [Home Care Visit Scope and Service Result Log](/tools/home-care-visit-scope-service-result-log/) for the separate service-plan version, official arrival-and-departure evidence pointer, household exception and responsible agency result. A caregiver handoff does not prove that a visit occurred, and a visit event does not prove that the receiving person held the right information or authority.
 
-## Separate care instructions from household logistics — and never generate the former
+## Begin with a safe alias, care window and stated purpose
 
-Medical, behavioral or clinical instructions must come from qualified sources: a current care plan, a clinician's written instruction, a therapist's behavioral guidance. The household organizer's job is to preserve that instruction exactly as given — reproducing it, not summarizing or softening it — and it should never generate its own care recommendation or fill a gap with a guess. If a care plan is unclear or seems out of date, that's a signal to check with the qualified source before the handoff happens, not to improvise around it.
+Open one dated handoff version for one period: `CARE-PERSON-A`, `temporary substitute`, `2026-08-28 morning through evening`. A safe alias protects the working index, but the responsible care source must still match the right person in its protected process. Do not put the real name, birth date, address or detailed schedule into a shared planning tool.
 
-## Provide contacts a caregiver can act on immediately, and protect the ones that shouldn't be shared
+State the purpose narrowly: a regular caregiver change, temporary substitute, respite period, discharge transition, appointment transport or current service change. The purpose controls which sources and logistics are necessary. It does not expand the recipient's authority.
 
-Primary and backup family contacts, relevant professional contacts (pediatrician, home-care agency, therapist), and clear emergency guidance should be easy to find without digging. At the same time, not every household contact belongs in a caregiver's hands — a contact marked `sensitive` in the household's records is automatically filtered out of any generated handoff packet, which is exactly the mechanism that keeps, say, a family member's private therapist or an unrelated personal contact from ending up on a document a temporary caregiver walks away with.
+## Record the care recipient's participation and preference separately
 
-## Limit access to what this handoff actually requires
+When appropriate to the situation, record how the person receiving care participated, what communication or accessibility support was used and where the current preference is held. Do not turn a household observation into a clinical or legal capacity judgment. A preference may guide the handoff while a separate protected source controls who may receive information or make a decision.
 
-A temporary caregiver should never receive the household's full private database by default. Build the handoff as a filtered export — tasks, relevant care instructions and contacts, specifically — rather than granting broad access and hoping the caregiver only looks at what's relevant. The narrower the handoff, the less there is to worry about if it's misplaced or the caregiving arrangement ends.
+If the person cannot participate at that moment, record only the responsible source used for the current process. Do not write `family decided` as a substitute for the provider, program, legal or other qualified process that actually applies.
 
-## Test it from the caregiver's side before you need it
+## A caregiver title, permitted disclosure and personal-representative authority are different
 
-The best review of a handoff packet isn't rereading it yourself — it's imagining the actual questions a caregiver would have to call and ask if this were all they had. If the packet doesn't answer "what if the child has a meltdown at pickup" or "what if Grandma refuses her afternoon medication," those are the gaps to close before the handoff, not during it.
+The [HHS family-and-friends guidance](https://www.hhs.gov/hipaa/for-individuals/family-members-friends/index.html) explains that a covered provider may share information directly relevant to a person's involvement in care or payment in defined circumstances. That is not the same as being the person's personal representative. [HHS guidance on family access](https://www.hhs.gov/hipaa/for-professionals/faq/2069/under-hipaa-when-can-a-family-member/index.html) also distinguishes access through personal-representative status under applicable law from access through a written authorization.
+
+Therefore, keep three fields separate: `caregiver role`, `information this recipient may receive for this purpose`, and `decisions or actions the responsible source says this recipient may take`. Never infer one from another. Store the actual authorization, identity evidence, signature or legal document only in its protected source; the household index holds a safe pointer, scope observation and the result of the responsible review.
+
+## Link to the current plan or instruction; do not copy it into the index
+
+The [CDC care-plan guidance](https://www.cdc.gov/caregiving/guidelines/index.html) lists sensitive material that a real care plan may contain, including health conditions, treatments, medicines, providers, coverage and contacts. That is why the public-safe handoff index should not become a second clinical record. Record `current source-issued plan version opened in protected location`, not its medical contents.
+
+Separate these source categories:
+
+- current provider, discharge team, case manager, agency or program plan;
+- medicine or pharmacy source controlled by the prescriber or dispensing professional;
+- mobility, transfer, feeding, swallowing, toileting, bathing, wound, device, behavioral or emergency instructions from the qualified source responsible for them;
+- household routine and logistics that do not replace a professional instruction; and
+- escalation routes for a contradiction, missing instruction or change in condition.
+
+If two sources conflict, do not choose the one that appears newer or easier. Preserve the conflict, stop the affected handoff claim and route it to the responsible provider, agency, case manager or qualified source.
+
+## Organize daily logistics without turning them into clinical instructions
+
+The caregiver may need an arrival window, key pickup process, transport source, appointment reference, household task, communication route and where to find the protected current plan. These can be arranged in the order the care period unfolds. Keep real addresses, school or appointment locations, access codes and detailed movement schedules out of a broadly shared page.
+
+Do not rewrite a source-issued eating, medication, transfer, behavior, device or emergency instruction as a casual household tip. A source pointer and access test are safer than a paraphrase that can lose a condition or exception. If the caregiver cannot open the current source, the handoff remains open.
+
+## Test access and custody from the receiving side
+
+`File shared` is an action, not proof that the caregiver can use it. Test the intended protected path with the intended role and record only a safe result: `current plan opened`, `backup contact route available`, `printed source-issued copy placed in protected handoff envelope` or `access denied—agency review pending`.
+
+The test should also cover end-of-care custody. Record who returns a physical copy, which temporary access should end and where a changed source will be recorded. FamilyBoard does not revoke access or erase a third party's copy; the responsible service or account owner must perform and verify those actions.
+
+## Treat discharge, agency changes and respite as source changes
+
+The [Medicare discharge-planning checklist](https://www.medicare.gov/publications/11376-your-discharge-planning-checklist.pdf) frames the patient and caregiver as members of a transition-planning team. A discharge notice, completed caregiver briefing, receiving-provider acceptance and actual home-care start are still different events. Record each responsible source and observed result rather than collapsing them into `discharge complete`.
+
+A respite period, substitute caregiver or home-care worker change also creates a new recipient, care window, access test and acceptance result. Reusing the previous handoff without checking current sources can preserve a stale plan or an expired permission.
+
+## Briefing, caregiver acceptance and an observed handoff result are three events
+
+`Briefing scheduled` means a conversation is planned. `Caregiver accepted the handoff` means the recipient stated that the defined sources and logistics were received for the stated period. `Observed handoff result` records what actually happened: access worked, the receiving service confirmed its role, or the responsible source responded. None of these proves clinical correctness.
+
+Ask the recipient to identify the protected source they would use, the route for a missing or conflicting instruction, and the boundary of their assigned logistics. Record the result without copying private questions or health details. A missing answer keeps the row open.
+
+## Include caregiver capacity and respite routes without promising service
+
+Caregiver support is part of a reliable handoff. The [Administration for Community Living's National Family Caregiver Support Program](https://acl.gov/programs/support-caregivers/national-family-caregiver-support-program) describes information, access assistance, counseling, training, respite and limited supplemental services through participating systems. Availability, eligibility and acceptance depend on the responsible local program.
+
+Record a safe service source, inquiry or case pointer and the result actually received. Do not write `respite approved` when only an application, referral or voicemail exists. A caregiver who cannot safely accept the defined period is a planning signal, not a failure to hide.
+
+## Reopen the handoff when a meaningful event changes
+
+Create a new dated version when the caregiver, authority, care setting, provider or agency, source-issued plan, medicine-list source, access path, schedule, transport arrangement, recipient preference, emergency route or caregiver capacity changes. Preserve the earlier version as history; do not overwrite it to make the record appear continuous.
+
+For an emergency or urgent health concern, use the current source-issued emergency instruction and local emergency service. FamilyBoard cannot assess urgency or supply a replacement instruction.
+
+## Keep recommendations outside the critical workflow
+
+A future affiliate area may show clearly labelled, non-personalized products such as document sleeves, labels or household organizers after the handoff workflow. It must not appear inside an emergency step, imitate a provider recommendation, claim suitability for a medical need, or use protected care details for targeting. A purchase is never required to complete the handoff.

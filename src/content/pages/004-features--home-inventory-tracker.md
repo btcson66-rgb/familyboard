@@ -9,7 +9,7 @@ pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-08-22"
 nextStep: "Add the first appliance or vehicle you'd hate to lose the receipt or serial number for, then export the master CSV from Settings to fill in purchase price and manual reference."
 related:
   - "/features/maintenance-tracker/"
@@ -41,11 +41,11 @@ Every asset card carries two buttons: "Watch" and "Archive." Watch flips the sta
 
 ## Why connect inventory to maintenance, warranties and documents
 
-An asset by itself is just a name and a serial number. The reason to record one in FamilyBoard rather than a plain spreadsheet is that maintenance tasks, warranties and document references all reference an asset by its ID, and every screen that lists them shows the asset's name next to the entry. Complete a maintenance task on the dishwasher, and that completion is visible from the dishwasher's context, not just as an isolated log line. Add a warranty for the same asset, and the warranty screen shows the asset name in its header instead of a bare provider name.
+An asset by itself is just a name and a serial number. The reason to record one in FamilyBoard rather than a plain spreadsheet is that maintenance tasks, warranties and document references all reference an asset by its ID, and the related screens show the asset's name next to each entry. Complete a maintenance task on the dishwasher and the completion log identifies the dishwasher; add a warranty for the same asset and the warranty card shows its name instead of only a provider. FamilyBoard does not currently provide a single asset-detail screen that gathers all those records in one panel, so move between the relevant tabs and use the shared asset name as the connecting thread.
 
 ## A worked example
 
-A household adds "Dishwasher" as an asset: category Appliance, location Kitchen, brand Bosch, model SHP878, serial number recorded from the inner door frame, purchase date the day it was installed, notes "installed by contractor, drain hose routed under sink." Later, in Settings, they export the master CSV and fill in purchase price ($899) and manual reference (a link to the PDF they saved). They then create a maintenance task titled "Clean filter and check door seal" linked to that same asset, and a warranty record for the same asset with the manufacturer's two-year term and a receipt reference pointing to a folder in their email. All three records now show "Dishwasher" as their connecting thread — opening any one of them gives context for the other two through the asset name and linked records.
+A household adds "Dishwasher" as an asset: category Appliance, location Kitchen, brand Bosch, model SHP878, serial number recorded from the inner door frame, purchase date the day it was installed, notes "installed by contractor, drain hose routed under sink." Later, in Settings, they export the master CSV and fill in purchase price ($899) and manual reference (a link to the PDF they saved). They then create a maintenance task titled "Clean filter and check door seal" linked to that same asset, and a warranty record for the same asset with the manufacturer's two-year term and a receipt reference pointing to a folder in their email. All three records now show "Dishwasher" as their connecting thread. They remain on separate tabs rather than opening into one combined asset history, but the consistent asset name makes the relationship visible wherever each record is listed.
 
 ## Keep detail proportional to value
 

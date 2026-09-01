@@ -7,6 +7,7 @@ import {
   type ReactElement,
   type ReactNode,
 } from "react";
+import { localIsoDate } from "../lib/calculations";
 
 export type AppLocale = "en" | "zh-TW";
 
@@ -56,7 +57,10 @@ const zhTw: Record<string, string> = {
   "Local data · no app analytics": "本機資料 · App 不載入分析追蹤",
   "Saved on this device": "資料儲存在這台裝置",
   "No account": "不需帳號",
-  "Offline-ready": "可離線使用",
+  "Online now": "目前有網路",
+  "Offline now": "目前已離線",
+  "Offline app cache ready": "離線 App 快取已就緒",
+  "Keep this page open once to prepare offline use": "請先保持本頁開啟，完成離線使用準備",
   "Saved locally on this device.": "已儲存在這台裝置。",
   "The browser storage quota is full. Export a backup, free space safely and try again.":
     "瀏覽器儲存空間已滿。請先匯出備份、安全釋放空間後再試一次。",
@@ -101,6 +105,9 @@ const zhTw: Record<string, string> = {
   "Manual, official support page or provider.": "例如原廠手冊、官方支援頁或服務商。",
   "Whole household": "全屋",
   Unassigned: "未指派",
+  "Priority:": "優先順序：",
+  "Source:": "來源：",
+  "Recorded cost": "已記錄費用",
   Source: "來源：",
   "Add manufacturer/provider source": "請補上原廠或服務商來源",
   Complete: "標記完成",
@@ -114,9 +121,11 @@ const zhTw: Record<string, string> = {
   "Unlinked warranty": "未連結資產的保固",
   Expired: "已過期",
   "Provider not recorded": "尚未記錄提供者",
-  Receipt: "收據：",
+  "Receipt:": "收據：",
   "Not recorded": "尚未記錄",
   "Written terms control exact coverage.": "實際保障範圍以書面條款為準。",
+  "Coverage:": "保障期間：",
+  "Terms:": "條款：",
   "Add a subscription": "新增訂閱",
   Service: "服務名稱",
   Household: "家庭",
@@ -135,7 +144,16 @@ const zhTw: Record<string, string> = {
   cancelled: "已取消",
   Reactivate: "重新啟用",
   "Mark cancelled": "標記為已取消",
-  "Annualized active total:": "有效訂閱年化總額：",
+  "Annualized active totals by currency:": "有效訂閱依幣別年化總額：",
+  "No active subscriptions.": "目前沒有有效訂閱。",
+  "Renewal": "續約日",
+  "Review by": "複查日",
+  "Management:": "管理：",
+  "Open service page": "開啟服務管理頁",
+  "Payment note:": "付款備註：",
+  "Category:": "分類：",
+  "Notes:": "備註：",
+  "Serial number:": "序號：",
   "Add a contact": "新增聯絡人",
   "Person or service": "人員或服務單位",
   "Household contact": "家庭聯絡人",
@@ -145,8 +163,8 @@ const zhTw: Record<string, string> = {
   Visibility: "顯示範圍",
   false: "可分享",
   true: "敏感",
-  "Sensitive contacts are excluded from shared display and handoff by default.":
-    "敏感聯絡人預設不會出現在共用看板與交接摘要。",
+  "Sensitive contacts remain visible in this private tab and backups, but are excluded from handoff. Family display shows no contacts.":
+    "敏感聯絡人仍會出現在這個私密分頁與完整備份，但不會進入交接摘要；家庭看板完全不顯示聯絡人。",
   Private: "私密",
   Shareable: "可分享",
   "FamilyBoard organizes contacts; it does not replace current official local emergency guidance.":
@@ -156,7 +174,10 @@ const zhTw: Record<string, string> = {
   "Home record": "家庭文件",
   "Where the original is stored": "原始文件存放位置",
   "Review date": "複查日期",
+  "Review:": "複查日：",
   "No asset link": "未連結資產",
+  "No document references yet. Add a pointer to one important original you need to find again.":
+    "目前沒有文件索引。先為一份日後必須找得到的重要原件建立位置指引。",
   "This v1 stores document references, not uploaded document files. Keep durable originals in storage you control.":
     "目前版本只保存文件索引，不會上傳文件檔案。請把耐久副本保存在自己控制的儲存空間。",
   "No account needed": "不需建立帳號",
@@ -204,8 +225,12 @@ const zhTw: Record<string, string> = {
   "Add a calendar event": "新增行事曆事件",
   Event: "事件名稱",
   "Calendar event": "行事曆事件",
+  "End time must be later than the start time.": "結束時間必須晚於開始時間。",
   "One-off": "單次",
   "Create a sharing profile": "建立分享設定檔",
+  "Handoff profile": "交接設定檔",
+  "Select the profile that matches this handoff before reviewing or printing the sheet.":
+    "檢查或列印摘要前，先選擇符合這次交接情境的設定檔。",
   "Profile name": "設定檔名稱",
   Purpose: "用途",
   "Include open tasks": "包含未完成任務",
@@ -233,9 +258,12 @@ const zhTw: Record<string, string> = {
   Anyone: "任何成員",
   "Today’s events": "今日事件",
   "No household events today.": "今天沒有家庭事件。",
+  "No open household tasks.": "目前沒有未完成的家庭任務。",
   "Coming up": "即將到期",
-  "Private records and sensitive contacts are hidden from this display.":
-    "這個畫面不會顯示私密紀錄與敏感聯絡人。",
+  "No dated maintenance items.": "目前沒有已設定日期的保養工作。",
+  "No contact details recorded.": "尚未記錄聯絡方式。",
+  "Contact records, detailed notes and other private record types are not shown. Task and event titles remain visible.":
+    "這個看板不顯示聯絡人、詳細備註與其他私密紀錄類型；任務與事件標題仍會顯示。",
   "Storage health": "儲存狀態",
   "App version:": "App 版本：",
   "Database schema:": "資料庫架構版本：",
@@ -381,9 +409,9 @@ export function useAppLocale() {
     },
     due(value: string) {
       if (!value) return locale === "zh-TW" ? "未填日期" : "No date";
-      if (value < new Date().toISOString().slice(0, 10))
+      if (value < localIsoDate())
         return locale === "zh-TW" ? "已逾期" : "Overdue";
-      if (value === new Date().toISOString().slice(0, 10))
+      if (value === localIsoDate())
         return locale === "zh-TW" ? "今天到期" : "Due today";
       const formatted = new Intl.DateTimeFormat(locale === "zh-TW" ? "zh-TW" : "en", {
         dateStyle: "medium",

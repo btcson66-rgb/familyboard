@@ -9,7 +9,7 @@ pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-08-22"
 nextStep: "Add a document reference for the warranty or manual you'd have the hardest time finding again, and link it to the asset it belongs to."
 related:
   - "/features/home-inventory-tracker/"
@@ -22,10 +22,10 @@ faq:
   - question: "What's a good location reference to write if my documents are just scattered in email?"
     answer: "Something specific enough to search for later: the sender, subject line and rough date (\"email from LG Support, subject 'Order Confirmation,' March 2026\") works better than \"in email,\" since you can search Gmail or Outlook directly for that phrase."
   - question: "What happens on the review date — does FamilyBoard remind me?"
-    answer: "The review date is stored as a field on the document record, but the Documents tab doesn't currently show a \"review due\" counter or alert. It's most useful paired with a task you create with a matching due date, which does show up on the dashboard."
+    answer: "The Documents tab sorts dated records before undated ones and shows whether the review is overdue, due today or due on the formatted date. It does not put that review on the Today dashboard or send an alert, so pair consequential dates with a household task that has an owner and matching due date."
   - question: "Is my document backup safe if my browser data gets cleared?"
     answer: "Only if you've exported a JSON backup from Settings beforehand — that backup includes your document references and notes. Clearing browser data without a recent backup means losing the index, though any actual files you referenced (stored elsewhere) are unaffected."
-contentVersion: 1
+contentVersion: 2
 ---
 # A document index, not a file cabinet
 
@@ -39,9 +39,9 @@ The quick-add form asks for a record name, a category (defaulting to "Home recor
 
 A document with no asset link is just a name and a location string, no more useful than a well-labeled folder. Link it to an asset, though, and it shows up alongside that asset's other records — the same connective pattern the Maintenance and Warranty tabs use. A "Water heater installation manual" document linked to the Water Heater asset becomes something you'd actually find again when a technician asks which model you have.
 
-## The review date field
+## The review date field is visible and sorted, but it is not a notification
 
-Documents like insurance policies, service contracts or lease agreements benefit from a periodic look, not a one-time filing. The review date field exists for exactly that — set it to when the document should next be checked (a renewal date, an annual review), and it becomes a normal date field you can track the same way you'd track any other household deadline, even though the Documents tab itself doesn't currently surface "review due soon" as a dashboard counter the way maintenance does.
+Documents like insurance policies, service contracts or lease agreements benefit from a periodic look, not a one-time filing. Set the review date to the real decision point: a renewal window, notice deadline or scheduled accuracy check. The Documents tab puts dated records before undated records and describes each date as overdue, due today or due on the formatted date. It still does not add document reviews to the Today dashboard or send push, email or text alerts. If missing the date has consequences, create a separate household task with a real owner and matching due date.
 
 ## A worked example
 

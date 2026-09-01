@@ -1,40 +1,44 @@
 # Content quality report
 
-Generated: 2026-08-25T09:42:51.120Z
+Generated: 2026-09-01T16:30:08.334Z
 
 ## Summary
 
-- Indexable pages: 204
-- Generated HTML routes: 223
+- Indexable pages: 1019
+- Generated HTML routes: 1025
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
-- Internal instruction leakage: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 0
-- Pages without a contextual product/tool link: 29
+- Duplicate primary-keyword groups: 12
+- Pages without a contextual product/tool link: 610
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
-- support: 15
-- printables: 20
-- product: 16
-- appliances: 30
-- maintenance: 31
-- household-operations: 19
-- inventory-warranty: 25
-- records-emergency: 22
-- tools: 26
+- support: 33
+- printables: 39
+- product: 174
+- inventory-warranty: 84
+- appliances: 70
+- maintenance: 103
+- household-operations: 216
+- records-emergency: 148
+- tools: 152
 
 ## Word-count range
 
-- Lowest: https://familyboard.win/checklists/printable-pet-sitter-checklist/ (64 words)
-- Highest: https://familyboard.win/zh-tw/guides/home-maintenance-schedule/ (1941 words)
+- Lowest: https://familyboard.win/search/ (19 words)
+- Highest: https://familyboard.win/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/ (5785 words)
 
 ## Highest similarity pairs
 
-- None above the reporting threshold.
+- 381-zh-tw--tools--household-time-window-overlap-checker.md ↔ 383-zh-tw--guides--familyboard-time-window-overlap-checker-tutorial.md: 0.267
+- 292-zh-tw--tools--household-shopping-list-planner.md ↔ 293-zh-tw--guides--familyboard-shopping-list-planner-tutorial.md: 0.240
+- 385-zh-tw--tools--household-date-offset-planner.md ↔ 387-zh-tw--guides--familyboard-date-offset-planner-tutorial.md: 0.171
+- 227-tools--household-pet-record-source-handoff-log.md ↔ 228-tools--household-school-record-source-handoff-log.md: 0.170
+- 289-zh-tw--tools--household-router-support-review-log.md ↔ 290-zh-tw--guides--familyboard-router-support-review-tutorial.md: 0.159
+- 381-zh-tw--tools--household-time-window-overlap-checker.md ↔ 385-zh-tw--tools--household-date-offset-planner.md: 0.159
 
 ## Safety-source warnings
 
@@ -42,7 +46,18 @@ Generated: 2026-08-25T09:42:51.120Z
 
 ## Duplicate primary keywords
 
-- None.
+- caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
+- household task load calculator tutorial: /guides/familyboard-household-task-load-calculator-tutorial/, /guides/familyboard-task-load-calculator-tutorial/
+- familyboard plant care handoff tutorial: /guides/familyboard-plant-care-handoff-log-tutorial/, /guides/familyboard-plant-care-handoff-tutorial/
+- household account list: /guides/household-account-list/, /tools/household-account-list/
+- 家電清冊: /zh-tw/guides/appliance-inventory/, /zh-tw/templates/printable-appliance-inventory/
+- 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
+- 家庭緊急資料夾: /zh-tw/guides/emergency-binder/, /zh-tw/tools/emergency-binder-generator/
+- 家庭決策紀錄工具: /zh-tw/guides/familyboard-household-decision-register-tutorial/, /zh-tw/tools/household-decision-register/
+- 家庭家務負荷計算器教學: /zh-tw/guides/familyboard-household-task-load-calculator-tutorial/, /zh-tw/guides/familyboard-task-load-calculator-tutorial/
+- 居家服務變更: /zh-tw/guides/home-care-service-plan-changes/, /zh-tw/tools/home-care-service-plan-change-notice-log/
+- 居家服務紀錄: /zh-tw/guides/home-care-service-visit-records/, /zh-tw/tools/home-care-visit-scope-service-result-log/
+- 免費家庭管理工具: /zh-tw/, /zh-tw/tools/
 
 ## Pages without contextual product/tool links
 
@@ -52,28 +67,609 @@ Generated: 2026-08-25T09:42:51.120Z
 - /contact/
 - /disclaimer/
 - /editorial-policy/
-- /guides/chore-chart-for-adults/
 - /guides/digital-home-inventory-backup/
-- /guides/family-emergency-contacts/
-- /guides/household-admin-day/
-- /guides/household-handoff/
-- /guides/household-shopping-staples/
-- /guides/important-household-documents/
+- /guides/familyboard-app-first-run-restore-tutorial/
+- /guides/familyboard-appliance-manual-source-tutorial/
+- /guides/familyboard-attachment-expiry-review-tutorial/
+- /guides/familyboard-attachment-metadata-tutorial/
+- /guides/familyboard-backup-restore-rehearsal-tutorial/
+- /guides/familyboard-browser-storage-maintenance/
+- /guides/familyboard-calendar-timezone-tutorial/
+- /guides/familyboard-contact-sensitivity-tutorial/
+- /guides/familyboard-data-export-redaction-tutorial/
+- /guides/familyboard-document-source-handoff-tutorial/
+- /guides/familyboard-emergency-drill-tutorial/
+- /guides/familyboard-encrypted-backup-password-tutorial/
+- /guides/familyboard-family-display-mode-setup/
+- /guides/familyboard-handoff-acceptance-tutorial/
+- /guides/familyboard-home-closure-reopening-tutorial/
+- /guides/familyboard-household-admin-escalation-tutorial/
+- /guides/familyboard-household-availability-window-tutorial/
+- /guides/familyboard-household-decision-log-tutorial/
+- /guides/familyboard-household-handoff-tutorial/
+- /guides/familyboard-household-language-preference-handoff-tutorial/
+- /guides/familyboard-household-notification-routing-tutorial/
+- /guides/familyboard-household-quiet-hours-tutorial/
+- /guides/familyboard-household-task-dependency-map-tutorial/
+- /guides/familyboard-maintenance-event-cost-tutorial/
+- /guides/familyboard-maintenance-evidence-confidence-tutorial/
+- /guides/familyboard-master-csv-edit-import-tutorial/
+- /guides/familyboard-member-archive-tutorial/
+- /guides/familyboard-move-out-condition-tutorial/
+- /guides/familyboard-offline-backup-restore/
+- /guides/familyboard-privacy-review-handoff-tutorial/
+- /guides/familyboard-product-recall-action-log-tutorial/
+- /guides/familyboard-purchase-comparison-tutorial/
+- /guides/familyboard-pwa-update-tutorial/
+- /guides/familyboard-receipt-source-verification-tutorial/
+- /guides/familyboard-record-retention-decision-tutorial/
+- /guides/familyboard-record-retrieval-practice-tutorial/
+- /guides/familyboard-repair-change-order-tutorial/
+- /guides/familyboard-repair-punch-list-review-tutorial/
+- /guides/familyboard-reset-local-household-tutorial/
+- /guides/familyboard-restore-merge-replace-tutorial/
+- /guides/familyboard-service-provider-verification-tutorial/
+- /guides/familyboard-shared-display-privacy-tutorial/
+- /guides/familyboard-storage-health-warning-tutorial/
+- /guides/familyboard-storage-open-error-tutorial/
+- /guides/familyboard-task-completion-tutorial/
+- /guides/familyboard-vendor-onboarding-tutorial/
 - /guides/
-- /guides/recurring-household-tasks/
 - /guides/seasonal-home-maintenance-checklist/
-- /guides/service-provider-contact-list/
-- /guides/subscription-renewal-tracker/
+- /guides/solar-panel-maintenance-records/
+- /guides/subscription-cancellation-refund-records/
 - /guides/valuable-item-inventory/
-- /guides/what-spouse-needs-to-know/
 - /
 - /pricing/
 - /privacy/
 - /roadmap/
 - /security/
 - /terms/
+- /tools/household-accessibility-walkthrough-log/
+- /tools/household-bill-source-status-log/
+- /tools/household-clothing-care-repair-log/
+- /tools/household-document-renewal-review-log/
+- /tools/household-donation-handoff-log/
+- /tools/household-guest-arrival-prep-log/
+- /tools/household-home-access-handoff-log/
+- /tools/household-internet-incident-review-log/
+- /tools/household-inventory-photo-capture-log/
+- /tools/household-mail-package-handoff-log/
+- /tools/household-maintenance-priority-review-log/
+- /tools/household-meal-prep-role-log/
+- /tools/household-meeting-agenda-action-log/
+- /tools/household-meter-reading-review-log/
+- /tools/household-monthly-review-action-log/
+- /tools/household-pantry-expiry-review-log/
+- /tools/household-plant-care-handoff-log/
+- /tools/household-recycling-handoff-log/
+- /tools/household-return-handoff-log/
+- /tools/household-schedule-conflict-review-log/
+- /tools/household-school-activity-handoff-log/
+- /tools/household-school-pickup-handoff-log/
+- /tools/household-seasonal-reset-action-log/
+- /tools/household-service-appointment-handoff-log/
+- /tools/household-service-quote-comparison-log/
+- /tools/household-share-access-review-log/
+- /tools/household-subscription-cancellation-handoff-log/
+- /tools/household-trip-packing-handoff-log/
+- /tools/household-vehicle-document-source-status-log/
+- /tools/household-weekly-reset-action-log/
+- /tools/rental-security-deposit-move-out-claim-log/
+- /zh-tw/about/
+- /zh-tw/affiliate-disclosure/
+- /zh-tw/changelog/
+- /zh-tw/checklists/
+- /zh-tw/checklists/printable-emergency-binder-checklist/
+- /zh-tw/checklists/printable-home-maintenance-checklist/
+- /zh-tw/checklists/printable-house-sitter-checklist/
+- /zh-tw/checklists/printable-monthly-home-checklist/
+- /zh-tw/checklists/printable-moving-checklist/
+- /zh-tw/checklists/printable-pet-sitter-checklist/
+- /zh-tw/checklists/printable-seasonal-home-checklist/
+- /zh-tw/contact/
+- /zh-tw/disclaimer/
+- /zh-tw/editorial-policy/
+- /zh-tw/features/emergency-information-organizer/
+- /zh-tw/features/family-display-mode/
+- /zh-tw/features/family-task-manager/
+- /zh-tw/features/free-home-management-app/
+- /zh-tw/features/home-dashboard/
+- /zh-tw/features/home-inventory-tracker/
+- /zh-tw/features/home-record-keeper/
+- /zh-tw/features/household-calendar/
+- /zh-tw/features/household-documents-organizer/
+- /zh-tw/features/household-handoff/
+- /zh-tw/features/household-operations-system/
+- /zh-tw/features/household-subscription-tracker/
+- /zh-tw/features/
+- /zh-tw/features/local-first-home-organizer/
+- /zh-tw/features/maintenance-tracker/
+- /zh-tw/features/no-account-family-organizer/
+- /zh-tw/features/offline-household-organizer/
+- /zh-tw/features/private-family-organizer/
+- /zh-tw/features/warranty-tracker/
+- /zh-tw/guides/air-conditioner-maintenance-checklist/
+- /zh-tw/guides/air-purifier-filter-log/
+- /zh-tw/guides/air-purifier-maintenance-guide/
+- /zh-tw/guides/annual-home-review/
+- /zh-tw/guides/annual-renewal-calendar/
+- /zh-tw/guides/apartment-maintenance-checklist/
+- /zh-tw/guides/appliance-inventory/
+- /zh-tw/guides/appliance-lifespan-planning/
+- /zh-tw/guides/appliance-replacement-planning/
+- /zh-tw/guides/automatic-renewal-charge-dispute-taiwan/
+- /zh-tw/guides/bathroom-exhaust-fan-maintenance-checklist/
+- /zh-tw/guides/carbon-monoxide-alarm-records/
+- /zh-tw/guides/caregiver-handoff-checklist/
+- /zh-tw/guides/ceiling-fan-maintenance-checklist/
+- /zh-tw/guides/chore-chart-for-adults/
+- /zh-tw/guides/cleaning-schedule/
+- /zh-tw/guides/coffee-maker-maintenance-guide/
+- /zh-tw/guides/computer-electronics-inventory/
+- /zh-tw/guides/condo-maintenance-checklist/
+- /zh-tw/guides/contractor-records/
+- /zh-tw/guides/deep-cleaning-tracker/
+- /zh-tw/guides/dehumidifier-maintenance-guide/
+- /zh-tw/guides/dehumidifier-maintenance-records/
+- /zh-tw/guides/digital-home-binder/
+- /zh-tw/guides/digital-home-inventory-backup/
+- /zh-tw/guides/dishwasher-maintenance-checklist/
+- /zh-tw/guides/divide-household-responsibilities/
+- /zh-tw/guides/dryer-maintenance-checklist/
+- /zh-tw/guides/electronics-inventory/
+- /zh-tw/guides/emergency-binder/
+- /zh-tw/guides/emergency-information-sheet/
+- /zh-tw/guides/emergency-supply-inventory/
+- /zh-tw/guides/fall-home-maintenance-checklist/
+- /zh-tw/guides/family-chore-system/
+- /zh-tw/guides/family-continuity-plan/
+- /zh-tw/guides/family-emergency-contacts/
+- /zh-tw/guides/familyboard-accessibility-walkthrough-tutorial/
+- /zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/
+- /zh-tw/guides/familyboard-app-first-run-restore-tutorial/
+- /zh-tw/guides/familyboard-appliance-age-calculator-tutorial/
+- /zh-tw/guides/familyboard-appliance-maintenance-checklist-generator-tutorial/
+- /zh-tw/guides/familyboard-appliance-manual-source-check-tutorial/
+- /zh-tw/guides/familyboard-appliance-manual-source-tutorial/
+- /zh-tw/guides/familyboard-appliance-purchase-installation-tutorial/
+- /zh-tw/guides/familyboard-appliance-repair-callback-tutorial/
+- /zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/
+- /zh-tw/guides/familyboard-appliance-service-visit-tutorial/
+- /zh-tw/guides/familyboard-attachment-expiry-review-tutorial/
+- /zh-tw/guides/familyboard-attachment-metadata-tutorial/
+- /zh-tw/guides/familyboard-backup-recovery-checker-tutorial/
+- /zh-tw/guides/familyboard-backup-restore-rehearsal-tutorial/
+- /zh-tw/guides/familyboard-bill-review-tutorial/
+- /zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/
+- /zh-tw/guides/familyboard-browser-storage-maintenance/
+- /zh-tw/guides/familyboard-building-notice-response-tutorial/
+- /zh-tw/guides/familyboard-calendar-timezone-tutorial/
+- /zh-tw/guides/familyboard-calendar-tutorial/
+- /zh-tw/guides/familyboard-caregiver-handoff-source-authorization-tutorial/
+- /zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/
+- /zh-tw/guides/familyboard-clothing-care-repair-log-tutorial/
+- /zh-tw/guides/familyboard-clothing-care-tutorial/
+- /zh-tw/guides/familyboard-consumable-change-history-tutorial/
+- /zh-tw/guides/familyboard-contact-sensitivity-tutorial/
+- /zh-tw/guides/familyboard-data-export-redaction-tutorial/
+- /zh-tw/guides/familyboard-date-offset-planner-tutorial/
+- /zh-tw/guides/familyboard-device-retirement-tutorial/
+- /zh-tw/guides/familyboard-document-renewal-tutorial/
+- /zh-tw/guides/familyboard-document-source-handoff-tutorial/
+- /zh-tw/guides/familyboard-documents-source-review-tutorial/
+- /zh-tw/guides/familyboard-donation-handoff-tutorial/
+- /zh-tw/guides/familyboard-emergency-binder-generator-tutorial/
+- /zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/
+- /zh-tw/guides/familyboard-emergency-contact-verification-tutorial/
+- /zh-tw/guides/familyboard-emergency-drill-tutorial/
+- /zh-tw/guides/familyboard-emergency-information-privacy-tutorial/
+- /zh-tw/guides/familyboard-emergency-supply-inventory-audit-tutorial/
+- /zh-tw/guides/familyboard-encrypted-backup-password-tutorial/
+- /zh-tw/guides/familyboard-event-duration-calculator-tutorial/
+- /zh-tw/guides/familyboard-event-source-index-tutorial/
+- /zh-tw/guides/familyboard-family-display-mode-setup/
+- /zh-tw/guides/familyboard-free-home-management-app-tutorial/
+- /zh-tw/guides/familyboard-guest-arrival-prep-tutorial/
+- /zh-tw/guides/familyboard-guest-service-visit-reset-tutorial/
+- /zh-tw/guides/familyboard-handoff-acceptance-tutorial/
+- /zh-tw/guides/familyboard-home-access-handoff-tutorial/
+- /zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/
+- /zh-tw/guides/familyboard-home-care-billing-discrepancy-tutorial/
+- /zh-tw/guides/familyboard-home-care-complaint-response-resolution-tutorial/
+- /zh-tw/guides/familyboard-home-care-payment-refund-collection-notice-tutorial/
+- /zh-tw/guides/familyboard-home-care-service-interruption-backup-continuity-tutorial/
+- /zh-tw/guides/familyboard-home-care-service-plan-change-notice-tutorial/
+- /zh-tw/guides/familyboard-home-care-visit-scope-service-result-tutorial/
+- /zh-tw/guides/familyboard-home-closure-reopening-tutorial/
+- /zh-tw/guides/familyboard-home-dashboard-weekly-review-tutorial/
+- /zh-tw/guides/familyboard-home-emergency-drill-record-tutorial/
+- /zh-tw/guides/familyboard-home-handoff-summary-generator-tutorial/
+- /zh-tw/guides/familyboard-home-inventory-checklist-generator-tutorial/
+- /zh-tw/guides/familyboard-home-maintenance-cost-tracker-tutorial/
+- /zh-tw/guides/familyboard-home-maintenance-schedule-generator-tutorial/
+- /zh-tw/guides/familyboard-home-repair-change-order-tutorial/
+- /zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/
+- /zh-tw/guides/familyboard-home-repair-cost-log-tutorial/
+- /zh-tw/guides/familyboard-home-service-provider-verification-tutorial/
+- /zh-tw/guides/familyboard-home-service-reminder-generator-tutorial/
+- /zh-tw/guides/familyboard-house-sitter-instruction-generator-tutorial/
+- /zh-tw/guides/familyboard-household-account-list-tutorial/
+- /zh-tw/guides/familyboard-household-admin-backup-tutorial/
+- /zh-tw/guides/familyboard-household-admin-escalation-tutorial/
+- /zh-tw/guides/familyboard-household-annual-review-generator-tutorial/
+- /zh-tw/guides/familyboard-household-availability-window-tutorial/
+- /zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/
+- /zh-tw/guides/familyboard-household-bill-source-status-tutorial/
+- /zh-tw/guides/familyboard-household-decision-log-tutorial/
+- /zh-tw/guides/familyboard-household-decision-register-tutorial/
+- /zh-tw/guides/familyboard-household-document-index-generator-tutorial/
+- /zh-tw/guides/familyboard-household-document-redaction-tutorial/
+- /zh-tw/guides/familyboard-household-export-scope-review-tutorial/
+- /zh-tw/guides/familyboard-household-handoff-tutorial/
+- /zh-tw/guides/familyboard-household-language-preference-handoff-tutorial/
+- /zh-tw/guides/familyboard-household-meeting-agenda-action-log-tutorial/
+- /zh-tw/guides/familyboard-household-meeting-tutorial/
+- /zh-tw/guides/familyboard-household-members-responsibilities-tutorial/
+- /zh-tw/guides/familyboard-household-notification-routing-tutorial/
+- /zh-tw/guides/familyboard-household-quiet-hours-tutorial/
+- /zh-tw/guides/familyboard-household-responsibility-coverage-map-tutorial/
+- /zh-tw/guides/familyboard-household-responsibility-coverage-tutorial/
+- /zh-tw/guides/familyboard-household-return-handoff-tutorial/
+- /zh-tw/guides/familyboard-household-role-change-audit-tutorial/
+- /zh-tw/guides/familyboard-household-shopping-list-planner-tutorial/
+- /zh-tw/guides/familyboard-household-subscription-cost-calculator-tutorial/
+- /zh-tw/guides/familyboard-household-task-dependency-map-tutorial/
+- /zh-tw/guides/familyboard-household-task-load-calculator-tutorial/
+- /zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/
+- /zh-tw/guides/familyboard-important-household-document-review-tutorial/
+- /zh-tw/guides/familyboard-insurance-claim-timeline-tutorial/
+- /zh-tw/guides/familyboard-insurance-policy-source-version-tutorial/
+- /zh-tw/guides/familyboard-internet-incident-tutorial/
+- /zh-tw/guides/familyboard-mail-package-handoff-log-tutorial/
+- /zh-tw/guides/familyboard-mail-package-handoff-tutorial/
+- /zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/
+- /zh-tw/guides/familyboard-maintenance-event-cost-tutorial/
+- /zh-tw/guides/familyboard-maintenance-evidence-confidence-tutorial/
+- /zh-tw/guides/familyboard-maintenance-history-review/
+- /zh-tw/guides/familyboard-maintenance-priority-review-tutorial/
+- /zh-tw/guides/familyboard-maintenance-tracker-tutorial/
+- /zh-tw/guides/familyboard-master-csv-edit-import/
+- /zh-tw/guides/familyboard-master-csv-edit-import-tutorial/
+- /zh-tw/guides/familyboard-meal-prep-role-log-tutorial/
+- /zh-tw/guides/familyboard-meal-prep-tutorial/
+- /zh-tw/guides/familyboard-medical-information-source-handoff-tutorial/
+- /zh-tw/guides/familyboard-member-archive-tutorial/
+- /zh-tw/guides/familyboard-meter-reading-tutorial/
+- /zh-tw/guides/familyboard-monthly-review-action-tutorial/
+- /zh-tw/guides/familyboard-move-in-checklist-generator-tutorial/
+- /zh-tw/guides/familyboard-move-out-condition-report-generator-tutorial/
+- /zh-tw/guides/familyboard-move-out-condition-tutorial/
+- /zh-tw/guides/familyboard-moving-box-handover-log-tutorial/
+- /zh-tw/guides/familyboard-offline-backup-restore/
+- /zh-tw/guides/familyboard-old-tablet-display-tutorial/
+- /zh-tw/guides/familyboard-pantry-expiry-review-log-tutorial/
+- /zh-tw/guides/familyboard-pantry-review-tutorial/
+- /zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/
+- /zh-tw/guides/familyboard-pet-sitter-instruction-generator-tutorial/
+- /zh-tw/guides/familyboard-photo-inventory-tutorial/
+- /zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/
+- /zh-tw/guides/familyboard-plant-care-handoff-tutorial/
+- /zh-tw/guides/familyboard-power-outage-event-log-tutorial/
+- /zh-tw/guides/familyboard-printout-download-retention-tutorial/
+- /zh-tw/guides/familyboard-privacy-review-handoff-tutorial/
+- /zh-tw/guides/familyboard-private-family-organizer-tutorial/
+- /zh-tw/guides/familyboard-product-recall-action-log-tutorial/
+- /zh-tw/guides/familyboard-product-recall-action-tutorial/
+- /zh-tw/guides/familyboard-purchase-comparison-tutorial/
+- /zh-tw/guides/familyboard-purchase-delivery-evidence-tutorial/
+- /zh-tw/guides/familyboard-pwa-update-tutorial/
+- /zh-tw/guides/familyboard-receipt-retention-organizer-tutorial/
+- /zh-tw/guides/familyboard-receipt-source-verification-tutorial/
+- /zh-tw/guides/familyboard-record-linking-tutorial/
+- /zh-tw/guides/familyboard-record-retention-decision-log-tutorial/
+- /zh-tw/guides/familyboard-record-retention-decision-tutorial/
+- /zh-tw/guides/familyboard-record-retrieval-drill-tutorial/
+- /zh-tw/guides/familyboard-record-retrieval-practice-tutorial/
+- /zh-tw/guides/familyboard-recurring-chore-planner-tutorial/
+- /zh-tw/guides/familyboard-recycling-handoff-tutorial/
+- /zh-tw/guides/familyboard-rental-home-maintenance-handoff-tutorial/
+- /zh-tw/guides/familyboard-rental-repair-request-tutorial/
+- /zh-tw/guides/familyboard-rental-security-deposit-move-out-tutorial/
+- /zh-tw/guides/familyboard-repair-change-order-tutorial/
+- /zh-tw/guides/familyboard-repair-evidence-timeline-tutorial/
+- /zh-tw/guides/familyboard-repair-punch-list-review-tutorial/
+- /zh-tw/guides/familyboard-repair-punch-list-tutorial/
+- /zh-tw/guides/familyboard-replacement-part-source-check-log-tutorial/
+- /zh-tw/guides/familyboard-replacement-part-source-check-tutorial/
+- /zh-tw/guides/familyboard-reset-local-household-tutorial/
+- /zh-tw/guides/familyboard-restore-merge-replace-tutorial/
+- /zh-tw/guides/familyboard-room-inventory-generator-tutorial/
+- /zh-tw/guides/familyboard-router-support-review-tutorial/
+- /zh-tw/guides/familyboard-schedule-conflict-review-tutorial/
+- /zh-tw/guides/familyboard-school-activity-handoff-tutorial/
+- /zh-tw/guides/familyboard-school-closure-continuity-tutorial/
+- /zh-tw/guides/familyboard-school-pickup-handoff-tutorial/
+- /zh-tw/guides/familyboard-school-record-source-handoff-tutorial/
+- /zh-tw/guides/familyboard-seasonal-reset-tutorial/
+- /zh-tw/guides/familyboard-service-appointment-handoff-tutorial/
+- /zh-tw/guides/familyboard-service-provider-verification-tutorial/
+- /zh-tw/guides/familyboard-service-quote-comparison-tutorial/
+- /zh-tw/guides/familyboard-share-access-tutorial/
+- /zh-tw/guides/familyboard-shared-device-privacy-review-tutorial/
+- /zh-tw/guides/familyboard-shared-display-privacy-tutorial/
+- /zh-tw/guides/familyboard-shopping-list-planner-tutorial/
+- /zh-tw/guides/familyboard-storage-health-warning-tutorial/
+- /zh-tw/guides/familyboard-storage-open-error-tutorial/
+- /zh-tw/guides/familyboard-storage-unit-access-inventory-log-tutorial/
+- /zh-tw/guides/familyboard-storm-readiness-review-tutorial/
+- /zh-tw/guides/familyboard-subscription-cancellation-handoff-tutorial/
+- /zh-tw/guides/familyboard-subscription-cancellation-result-review-tutorial/
+- /zh-tw/guides/familyboard-subscription-renewal-review/
+- /zh-tw/guides/familyboard-task-completion-tutorial/
+- /zh-tw/guides/familyboard-task-load-calculator-tutorial/
+- /zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/
+- /zh-tw/guides/familyboard-trip-handoff-tutorial/
+- /zh-tw/guides/familyboard-trip-packing-handoff-log-tutorial/
+- /zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/
+- /zh-tw/guides/familyboard-utility-bill-difference-tutorial/
+- /zh-tw/guides/familyboard-utility-provider-handoff-tutorial/
+- /zh-tw/guides/familyboard-vacation-shutdown-checklist-generator-tutorial/
+- /zh-tw/guides/familyboard-vehicle-document-source-status-tutorial/
+- /zh-tw/guides/familyboard-vendor-onboarding-tutorial/
+- /zh-tw/guides/familyboard-warranty-checklist-generator-tutorial/
+- /zh-tw/guides/familyboard-warranty-claim-evidence-log-tutorial/
+- /zh-tw/guides/familyboard-warranty-expiration-calculator-tutorial/
+- /zh-tw/guides/familyboard-warranty-tracker-tutorial/
+- /zh-tw/guides/familyboard-water-leak-event-log-tutorial/
+- /zh-tw/guides/familyboard-weekly-household-decision-review-tutorial/
+- /zh-tw/guides/familyboard-weekly-reset-action-tutorial/
+- /zh-tw/guides/fire-extinguisher-records/
+- /zh-tw/guides/first-time-homeowner-maintenance-guide/
+- /zh-tw/guides/freezer-maintenance-checklist/
+- /zh-tw/guides/furnace-maintenance-records/
+- /zh-tw/guides/furniture-inventory/
+- /zh-tw/guides/garbage-disposal-maintenance-guide/
+- /zh-tw/guides/guest-preparation-checklist/
+- /zh-tw/guides/heat-pump-maintenance-records/
+- /zh-tw/guides/home-care-refund-and-collection-notices/
+- /zh-tw/guides/home-care-service-complaint-resolution/
+- /zh-tw/guides/home-care-service-fees-and-billing/
+- /zh-tw/guides/home-care-service-interruption-backup-plan/
+- /zh-tw/guides/home-care-service-plan-changes/
+- /zh-tw/guides/home-care-service-visit-records/
+- /zh-tw/guides/home-contact-list/
+- /zh-tw/guides/home-evacuation-information/
+- /zh-tw/guides/home-improvement-receipts/
+- /zh-tw/guides/home-inventory-checklist/
+- /zh-tw/guides/home-inventory-for-insurance/
+- /zh-tw/guides/home-maintenance-after-vacation/
+- /zh-tw/guides/home-maintenance-binder/
+- /zh-tw/guides/home-maintenance-budget/
+- /zh-tw/guides/home-maintenance-calendar/
+- /zh-tw/guides/home-maintenance-delegation/
+- /zh-tw/guides/home-maintenance-log/
+- /zh-tw/guides/home-maintenance-records/
+- /zh-tw/guides/home-maintenance-reminders/
 - /zh-tw/guides/home-maintenance-schedule/
+- /zh-tw/guides/home-purchase-records/
+- /zh-tw/guides/home-repair-history/
+- /zh-tw/guides/home-service-provider-list/
+- /zh-tw/guides/house-sitter-information/
+- /zh-tw/guides/household-account-list/
+- /zh-tw/guides/household-admin-backup-person/
+- /zh-tw/guides/household-admin-day/
+- /zh-tw/guides/household-documents-organizer/
+- /zh-tw/guides/household-event-source-check-taiwan/
+- /zh-tw/guides/household-handoff/
+- /zh-tw/guides/household-management-checklist/
+- /zh-tw/guides/household-medical-information-organization/
+- /zh-tw/guides/household-monthly-review/
+- /zh-tw/guides/household-replacement-reserve/
+- /zh-tw/guides/household-shopping-staples/
+- /zh-tw/guides/household-supplies-inventory/
+- /zh-tw/guides/household-weekly-reset/
+- /zh-tw/guides/how-long-to-keep-household-records/
+- /zh-tw/guides/how-to-track-product-warranties/
+- /zh-tw/guides/humidifier-maintenance-guide/
+- /zh-tw/guides/hvac-filter-tracker/
+- /zh-tw/guides/important-household-documents/
+- /zh-tw/guides/
+- /zh-tw/guides/maintenance-priorities/
+- /zh-tw/guides/microwave-maintenance-checklist/
+- /zh-tw/guides/monthly-home-maintenance-checklist/
+- /zh-tw/guides/move-in-maintenance-checklist/
+- /zh-tw/guides/move-out-home-records/
+- /zh-tw/guides/moving-house-organizer/
+- /zh-tw/guides/moving-inventory/
+- /zh-tw/guides/new-home-setup-checklist/
+- /zh-tw/guides/organize-appliance-manuals/
+- /zh-tw/guides/organize-household-subscriptions/
+- /zh-tw/guides/organize-insurance-documents/
+- /zh-tw/guides/organize-pet-records/
+- /zh-tw/guides/organize-school-records-at-home/
+- /zh-tw/guides/organize-utility-account-information/
+- /zh-tw/guides/organize-vehicle-documents-at-home/
+- /zh-tw/guides/oven-maintenance-checklist/
+- /zh-tw/guides/pantry-restock-system/
+- /zh-tw/guides/pet-sitter-information/
+- /zh-tw/guides/photo-home-inventory/
+- /zh-tw/guides/power-outage-home-preparedness/
+- /zh-tw/guides/power-outage-recovery-household-records/
+- /zh-tw/guides/preventive-home-maintenance/
+- /zh-tw/guides/product-registration-tracker/
+- /zh-tw/guides/purchase-receipt-organizer/
+- /zh-tw/guides/quarterly-home-maintenance-checklist/
+- /zh-tw/guides/range-hood-maintenance-checklist/
+- /zh-tw/guides/recurring-bills-tracker/
+- /zh-tw/guides/recurring-household-tasks/
+- /zh-tw/guides/refrigerator-maintenance-checklist/
+- /zh-tw/guides/renovation-records/
+- /zh-tw/guides/rental-home-maintenance-log/
+- /zh-tw/guides/rental-security-deposit-move-out-claims/
+- /zh-tw/guides/repair-history/
+- /zh-tw/guides/returning-home-after-travel-checklist/
+- /zh-tw/guides/robot-vacuum-maintenance-guide/
+- /zh-tw/guides/room-by-room-home-inventory/
+- /zh-tw/guides/seasonal-home-maintenance-checklist/
+- /zh-tw/guides/serial-number-tracker/
+- /zh-tw/guides/service-history/
+- /zh-tw/guides/service-provider-contact-list/
+- /zh-tw/guides/smoke-alarm-records/
+- /zh-tw/guides/solar-panel-maintenance-records/
+- /zh-tw/guides/spring-home-maintenance-checklist/
+- /zh-tw/guides/storage-unit-inventory/
+- /zh-tw/guides/storm-preparation-home-checklist/
+- /zh-tw/guides/subscription-cancellation-refund-records/
+- /zh-tw/guides/subscription-renewal-tracker/
+- /zh-tw/guides/summer-home-maintenance-checklist/
+- /zh-tw/guides/travel-household-handoff/
+- /zh-tw/guides/ups-battery-backup-records/
+- /zh-tw/guides/utility-shutoff-information/
+- /zh-tw/guides/vacation-home-shutdown-checklist/
+- /zh-tw/guides/vacuum-cleaner-maintenance-guide/
+- /zh-tw/guides/valuable-item-inventory/
+- /zh-tw/guides/warranty-expiration/
+- /zh-tw/guides/washing-machine-maintenance-checklist/
+- /zh-tw/guides/water-filter-replacement-guide/
+- /zh-tw/guides/water-heater-maintenance-records/
+- /zh-tw/guides/water-leak-photo-evidence-records/
+- /zh-tw/guides/water-leak-response-home-records/
+- /zh-tw/guides/water-softener-maintenance-records/
+- /zh-tw/guides/what-spouse-needs-to-know/
+- /zh-tw/guides/wifi-router-maintenance-records/
+- /zh-tw/guides/winter-home-maintenance-checklist/
 - /zh-tw/
+- /zh-tw/pricing/
+- /zh-tw/privacy/
+- /zh-tw/roadmap/
+- /zh-tw/security/
+- /zh-tw/templates/
+- /zh-tw/templates/printable-annual-renewals/
+- /zh-tw/templates/printable-appliance-inventory/
+- /zh-tw/templates/printable-chore-chart/
+- /zh-tw/templates/printable-cleaning-schedule/
+- /zh-tw/templates/printable-emergency-contacts/
+- /zh-tw/templates/printable-home-inventory-template/
+- /zh-tw/templates/printable-household-contacts/
+- /zh-tw/templates/printable-household-handoff-sheet/
+- /zh-tw/templates/printable-repair-log/
+- /zh-tw/templates/printable-service-provider-list/
+- /zh-tw/templates/printable-subscription-tracker/
+- /zh-tw/templates/printable-warranty-tracker/
+- /zh-tw/terms/
+- /zh-tw/tools/annual-subscription-cost-calculator/
+- /zh-tw/tools/appliance-age-calculator/
+- /zh-tw/tools/appliance-maintenance-checklist-generator/
+- /zh-tw/tools/appliance-manual-source-check-log/
+- /zh-tw/tools/appliance-purchase-installation-record/
+- /zh-tw/tools/appliance-repair-callback-log/
+- /zh-tw/tools/appliance-replacement-planner/
+- /zh-tw/tools/appliance-service-visit-log/
+- /zh-tw/tools/caregiver-handoff-source-authorization-log/
+- /zh-tw/tools/cleaning-schedule-generator/
+- /zh-tw/tools/emergency-binder-generator/
+- /zh-tw/tools/emergency-contact-sheet-generator/
+- /zh-tw/tools/emergency-contact-verification-log/
+- /zh-tw/tools/emergency-supply-inventory-audit/
+- /zh-tw/tools/home-care-charge-service-payment-discrepancy-log/
+- /zh-tw/tools/home-care-complaint-response-resolution-log/
+- /zh-tw/tools/home-care-payment-refund-collection-notice-log/
+- /zh-tw/tools/home-care-service-interruption-backup-continuity-log/
+- /zh-tw/tools/home-care-service-plan-change-notice-log/
+- /zh-tw/tools/home-care-visit-scope-service-result-log/
+- /zh-tw/tools/home-emergency-drill-record-generator/
+- /zh-tw/tools/home-handoff-summary-generator/
+- /zh-tw/tools/home-inventory-checklist-generator/
+- /zh-tw/tools/home-maintenance-cost-tracker/
+- /zh-tw/tools/home-maintenance-schedule-generator/
+- /zh-tw/tools/home-repair-change-order-log/
+- /zh-tw/tools/home-repair-closeout-checklist/
+- /zh-tw/tools/home-repair-cost-log/
+- /zh-tw/tools/home-repair-punch-list/
+- /zh-tw/tools/home-service-provider-verification-log/
+- /zh-tw/tools/home-service-reminder-generator/
+- /zh-tw/tools/house-sitter-instruction-generator/
+- /zh-tw/tools/household-accessibility-walkthrough-log/
+- /zh-tw/tools/household-account-list/
+- /zh-tw/tools/household-annual-review-generator/
+- /zh-tw/tools/household-backup-recovery-checker/
+- /zh-tw/tools/household-bill-source-status-log/
+- /zh-tw/tools/household-building-notice-response-log/
+- /zh-tw/tools/household-clothing-care-repair-log/
+- /zh-tw/tools/household-consumable-change-history-log/
+- /zh-tw/tools/household-date-offset-planner/
+- /zh-tw/tools/household-decision-register/
+- /zh-tw/tools/household-device-retirement-handoff-log/
+- /zh-tw/tools/household-document-index-generator/
+- /zh-tw/tools/household-document-renewal-review-log/
+- /zh-tw/tools/household-donation-handoff-log/
+- /zh-tw/tools/household-event-duration-calculator/
+- /zh-tw/tools/household-event-source-index-log/
+- /zh-tw/tools/household-guest-arrival-prep-log/
+- /zh-tw/tools/household-home-access-handoff-log/
+- /zh-tw/tools/household-insurance-claim-timeline-log/
+- /zh-tw/tools/household-insurance-policy-source-version-log/
+- /zh-tw/tools/household-internet-incident-review-log/
+- /zh-tw/tools/household-inventory-photo-capture-log/
+- /zh-tw/tools/household-mail-package-handoff-log/
+- /zh-tw/tools/household-maintenance-delegation-map/
+- /zh-tw/tools/household-maintenance-priority-review-log/
+- /zh-tw/tools/household-meal-prep-role-log/
+- /zh-tw/tools/household-medical-information-source-handoff-log/
+- /zh-tw/tools/household-meeting-agenda-action-log/
+- /zh-tw/tools/household-meter-reading-review-log/
+- /zh-tw/tools/household-monthly-review-action-log/
+- /zh-tw/tools/household-pantry-expiry-review-log/
+- /zh-tw/tools/household-pet-record-source-handoff-log/
+- /zh-tw/tools/household-plant-care-handoff-log/
+- /zh-tw/tools/household-power-outage-event-log/
+- /zh-tw/tools/household-record-retention-decision-log/
+- /zh-tw/tools/household-record-retrieval-drill-log/
+- /zh-tw/tools/household-recycling-handoff-log/
+- /zh-tw/tools/household-repair-evidence-timeline-log/
+- /zh-tw/tools/household-replacement-part-source-check-log/
+- /zh-tw/tools/household-responsibility-coverage-map/
+- /zh-tw/tools/household-return-handoff-log/
+- /zh-tw/tools/household-router-support-review-log/
+- /zh-tw/tools/household-schedule-conflict-review-log/
+- /zh-tw/tools/household-school-activity-handoff-log/
+- /zh-tw/tools/household-school-closure-continuity-log/
+- /zh-tw/tools/household-school-pickup-handoff-log/
+- /zh-tw/tools/household-school-record-source-handoff-log/
+- /zh-tw/tools/household-seasonal-reset-action-log/
+- /zh-tw/tools/household-service-appointment-handoff-log/
+- /zh-tw/tools/household-service-quote-comparison-log/
+- /zh-tw/tools/household-share-access-review-log/
+- /zh-tw/tools/household-shopping-list-planner/
+- /zh-tw/tools/household-storm-readiness-review/
+- /zh-tw/tools/household-subscription-cancellation-handoff-log/
+- /zh-tw/tools/household-subscription-cost-calculator/
+- /zh-tw/tools/household-task-load-calculator/
+- /zh-tw/tools/household-time-window-overlap-checker/
+- /zh-tw/tools/household-trip-packing-handoff-log/
+- /zh-tw/tools/household-utility-bill-anomaly-log/
+- /zh-tw/tools/household-utility-provider-service-handoff-log/
+- /zh-tw/tools/household-vehicle-document-source-status-log/
+- /zh-tw/tools/household-water-leak-event-log/
+- /zh-tw/tools/household-weekly-reset-action-log/
+- /zh-tw/tools/important-household-document-review/
+- /zh-tw/tools/
+- /zh-tw/tools/move-in-checklist-generator/
+- /zh-tw/tools/move-out-condition-record-generator/
+- /zh-tw/tools/moving-box-handover-log/
+- /zh-tw/tools/pet-sitter-instruction-generator/
+- /zh-tw/tools/product-recall-action-log/
+- /zh-tw/tools/purchase-delivery-evidence-log/
+- /zh-tw/tools/receipt-retention-organizer/
+- /zh-tw/tools/recurring-chore-planner/
+- /zh-tw/tools/rental-repair-request-log/
+- /zh-tw/tools/rental-security-deposit-move-out-claim-log/
+- /zh-tw/tools/room-inventory-generator/
+- /zh-tw/tools/storage-unit-access-inventory-log/
+- /zh-tw/tools/vacation-shutdown-checklist-generator/
+- /zh-tw/tools/warranty-checklist-generator/
+- /zh-tw/tools/warranty-claim-evidence-log/
 - /zh-tw/tools/warranty-expiration-calculator/
 
 ## Blockers

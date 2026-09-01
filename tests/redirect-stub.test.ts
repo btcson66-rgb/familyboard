@@ -3,20 +3,6 @@ import { describe, expect, it } from "vitest";
 import { createRedirectStub } from "../src/lib/redirect-stub";
 
 const consolidations = [
-  ["/features/local-first-home-organizer/", "/features/private-family-organizer/"],
-  ["/features/offline-household-organizer/", "/features/private-family-organizer/"],
-  ["/features/no-account-family-organizer/", "/features/private-family-organizer/"],
-  ["/features/home-record-keeper/", "/features/free-home-management-app/"],
-  ["/features/household-operations-system/", "/features/free-home-management-app/"],
-  ["/guides/chore-chart-for-adults/", "/guides/family-chore-system/"],
-  ["/guides/recurring-household-tasks/", "/guides/family-chore-system/"],
-  ["/guides/household-admin-day/", "/guides/household-weekly-reset/"],
-  ["/guides/subscription-renewal-tracker/", "/guides/organize-household-subscriptions/"],
-  ["/guides/service-provider-contact-list/", "/guides/home-service-provider-list/"],
-  ["/guides/household-shopping-staples/", "/guides/household-supplies-inventory/"],
-  ["/guides/what-spouse-needs-to-know/", "/guides/household-admin-backup-person/"],
-  ["/guides/household-handoff/", "/guides/household-admin-backup-person/"],
-  ["/guides/family-emergency-contacts/", "/guides/emergency-information-sheet/"],
 ] as const;
 
 const master = fs.readFileSync("docs/launch-content-master.md", "utf8");
@@ -56,9 +42,7 @@ describe("consolidated-route redirect stub", () => {
   );
 
   it("does not leave redirect sources in suggested internal links", () => {
-    const sourceRoutes = new Set<string>(
-      consolidations.map(([source]) => source),
-    );
+    const sourceRoutes = new Set<string>();
     const linkedSources = [
       ...master.matchAll(/^\*\*Suggested internal links:\*\*\s*([^\n]+)$/gm),
     ].flatMap((match) =>

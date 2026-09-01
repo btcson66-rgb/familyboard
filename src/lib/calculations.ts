@@ -10,7 +10,7 @@ export function addMonthsClamped(isoDate: string, months: number) {
       new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate(),
     ),
   );
-  return date.toISOString().slice(0, 10);
+  return localIsoDate(date);
 }
 
 export function annualizedCost(cost: number, frequency: string) {
@@ -24,9 +24,83 @@ export function annualizedCost(cost: number, frequency: string) {
   return cost * (factors[frequency.toLowerCase()] || 0);
 }
 
+export function annualizedActiveTotalsByCurrency(
+  subscriptions: Array<{
+    cost: number;
+    billingFrequency: string;
+    currency: string;
+    status: string;
+  }>,
+) {
+  return subscriptions
+    .filter((item) => item.status === "active")
+    .reduce<Record<string, number>>((totals, item) => {
+      const currency = item.currency.trim().toUpperCase() || "UNSPECIFIED";
+      totals[currency] =
+        (totals[currency] || 0) +
+        annualizedCost(item.cost, item.billingFrequency);
+      return totals;
+    }, {});
+}
+
 export function warrantyReviewDate(endDate: string, daysBefore: number) {
   const date = new Date(`${endDate}T12:00:00`);
   if (Number.isNaN(date.valueOf())) throw new Error("Invalid date");
   date.setDate(date.getDate() - daysBefore);
-  return date.toISOString().slice(0, 10);
+  return localIsoDate(date);
+}
+
+export function localIsoDate(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+export function eventRangeIsValid(startsAt: string, endsAt: string) {
+  if (!startsAt) return false;
+  return !endsAt || endsAt > startsAt;
+}
+
+export function eventOccursOnLocalDate(
+  startsAt: string,
+  endsAt: string,
+  date: string,
+) {
+  const startsOn = startsAt.slice(0, 10);
+  const endsOn = endsAt.slice(0, 10);
+  if (startsOn === date) return true;
+  return Boolean(endsAt && startsOn < date && endsOn >= date);
+}
+
+export function sortByOptionalIsoDate<T>(
+  items: T[],
+  getDate: (item: T) => string,
+) {
+  return [...items].sort((a, b) => {
+    const dateA = getDate(a);
+    const dateB = getDate(b);
+    if (!dateA) return dateB ? 1 : 0;
+    if (!dateB) return -1;
+    return dateA.localeCompare(dateB);
+  });
+}
+
+export function sortUpcomingThenPastIsoDate<T>(
+  items: T[],
+  getDate: (item: T) => string,
+  today: string,
+) {
+  return [...items].sort((a, b) => {
+    const dateA = getDate(a);
+    const dateB = getDate(b);
+    if (!dateA) return dateB ? 1 : 0;
+    if (!dateB) return -1;
+    const aIsPast = dateA < today;
+    const bIsPast = dateB < today;
+    if (aIsPast !== bIsPast) return aIsPast ? 1 : -1;
+    return aIsPast
+      ? dateB.localeCompare(dateA)
+      : dateA.localeCompare(dateB);
+  });
 }

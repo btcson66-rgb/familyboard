@@ -1,6 +1,6 @@
 ---
 title: "Family Display Mode — Turn an Old Tablet into a Household Dashboard | FamilyBoard"
-description: "Use a tablet-friendly full-screen view for today’s events, chores, maintenance alerts and household notices without buying dedicated family calendar hardware."
+description: "Use a tablet-friendly shared view for open tasks, today’s events and dated maintenance without buying dedicated family calendar hardware."
 route: "/features/family-display-mode/"
 primaryIntent: "use an old tablet as a family dashboard"
 primaryKeyword: "family dashboard tablet"
@@ -9,8 +9,8 @@ pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
-nextStep: "Try Display mode on a spare tablet or old phone before buying dedicated family-dashboard hardware — add it to the home screen for a near-app experience."
+lastReviewedAt: "2026-08-22"
+nextStep: "Try Display mode on the device that will show it. Enter records there or restore a backup first; FamilyBoard does not sync data from your phone to a separate tablet."
 related:
   - "/features/home-dashboard/"
   - "/features/household-calendar/"
@@ -20,12 +20,14 @@ faq:
   - question: "Does the family display show sensitive contacts or documents?"
     answer: "No. Display mode only renders three record types — open household tasks, today's events, and upcoming maintenance. Contacts, warranties, subscriptions and documents don't appear on this screen at all, regardless of any sensitivity flag."
   - question: "How often does the display update?"
-    answer: "The app reloads its underlying data about once a minute while the tab is open, and immediately when the browser tab becomes visible again after being backgrounded. The \"refreshes every minute\" label on the display reflects that actual timer."
+    answer: "The app reloads the local database about once a minute while the tab is open, and when the browser tab becomes visible again. That can pick up changes from another tab using the same browser profile; it does not fetch changes from a different phone, tablet or account."
   - question: "Can I turn an old tablet into a dedicated FamilyBoard screen?"
-    answer: "Yes. FamilyBoard is a Progressive Web App with a standalone display mode, so a compatible browser lets you add it to the device's home screen and launch it without browser address bars or tabs, similar to a dedicated app."
+    answer: "Yes, if the browser supports installing Progressive Web Apps. Add FamilyBoard to the tablet's home screen, launch it in its standalone window and open the Display tab. The app navigation remains available, and the tablet keeps its own local data rather than syncing another device."
   - question: "Should I worry about what task titles say if the display is visible to guests?"
     answer: "It's worth a moment's thought. Display mode limits which record types show (no contacts, warranties or documents), but it doesn't screen individual task or event titles for sensitive wording, so anything you title a task will be visible to anyone who can see the screen."
-contentVersion: 1
+  - question: "Will a task completed on my phone disappear from the wall tablet automatically?"
+    answer: "No. A phone and a separate tablet do not share FamilyBoard's local database. To keep the wall tablet current, update records on that tablet or deliberately transfer and restore a current backup; restoring replaces or merges data according to the option you choose."
+contentVersion: 2
 ---
 # A simplified, low-sensitivity view built for a shared screen
 
@@ -33,20 +35,20 @@ Dedicated family-display hardware exists, but many homes already have an old tab
 
 ## Exactly three things appear on it
 
-Display mode shows the household name, today's formatted date, and three cards: household tasks (up to six open tasks, each showing the title, assigned owner or "Anyone" if unassigned, and due status), today's events (up to six events whose start time falls today, each with a formatted time), and "Coming up" (maintenance tasks sorted by next-due date, showing up to six). That's the complete list — no warranties, no subscriptions, no documents, and no emergency contacts appear on this screen at all, sensitive or not, because those record types simply aren't part of what Display mode renders.
+Display mode shows the household name, today's formatted date, and three cards. Household tasks are the first six open tasks sorted by due date, with dated work before undated work; each shows title, assigned owner or "Anyone," and due status. Today's events are the first six in start-time order, including an overnight or multi-day event whose recorded end has not passed the current local date. "Coming up" shows the first six maintenance items that actually have a next-due date, nearest first. No warranties, subscriptions, documents or emergency contacts appear because those record types are not rendered here.
 
 ## "Refreshes every minute" is a real, specific number
 
-The badge at the top of the display reads "Shared view · refreshes every minute," and that's not a marketing phrase — the app underneath reloads its data from the local database on a 60-second timer while the tab stays open, plus immediately whenever the browser tab becomes visible again. That means a task completed on your phone shows up on the wall display within a minute if both are pointed at the same browser profile and the display's tab is active, though in practice Display mode is most useful as a read-only board rather than something you update from itself.
+The badge at the top reads "Shared view · refreshes every minute." The app reloads its current browser profile's local database on a 60-second timer and when the tab becomes visible again. Another tab or window in the same browser storage environment can therefore be reflected on the next reload. A separate phone and wall tablet do not share IndexedDB, even if they use the same browser brand or operating-system account. There is no FamilyBoard cloud sync behind the timer.
 
 ## Why it's honest to call this "low-sensitivity," not "safe for anyone"
 
-The footer text says private records and sensitive contacts are hidden from this display — true, in the sense that contacts (sensitive or not) never render here at all, along with warranties, subscriptions, documents and notes fields. But a task title itself could still reveal something you'd rather a houseguest not read on the wall ("pick up prescription refill"). Display mode limits which record types appear; it doesn't screen individual task titles for sensitivity, so it's worth a moment's thought about what you title a task if the display tablet sits somewhere visitors pass.
+The footer states the boundary directly: contact records, detailed notes and other private record types are not shown, but task and event titles remain visible. A title such as "pick up prescription refill" may reveal more than you want a guest to read. Owner names, due status and event start times are visible too. Display mode reduces exposed fields; it does not classify wording or turn a shared tablet into a locked-down kiosk.
 
 ## Turning a spare tablet into a display
 
-Because FamilyBoard is a PWA with a standalone display mode declared in its manifest, a compatible browser can add it to a device's home screen and launch it without browser chrome, closer to a dedicated app than a bookmarked tab. Point an old tablet's browser at the Display tab, add it to the home screen, and prop it up — no separate hardware purchase or app-store account required.
+Because FamilyBoard is a PWA whose manifest requests a standalone window, a compatible browser can add it to a device's home screen and launch it without normal address bars or tabs. That is separate from the in-app Display tab: app navigation remains available, so this is a readable shared view rather than a tamper-proof kiosk. Populate the tablet's own database by entering records there or restoring a deliberate backup, then open Display. No app-store account or dedicated display purchase is required.
 
 ## A worked example
 
-A household mounts an old 8-inch tablet in the kitchen. It shows "The Garcia Household," today's date, three open tasks under "Household tasks" (trash day owner unassigned, a bill to pay assigned to one parent, a school form due), one event under "Today's events" (a 4 PM pickup), and under "Coming up," the next maintenance item — an HVAC filter check due in five days. Nobody has to open the full app to see the day's shape; anyone walking past the kitchen gets the same read.
+A household restores a reviewed backup onto an old 8-inch tablet, then opens Display in the kitchen. It shows "The Garcia Household," today's date, three open tasks in due-date order, one 4 PM pickup event and an HVAC filter check due in five days. The household updates records on that tablet during its weekly reset; changes made only on a parent's phone will not appear there automatically. Anyone walking past gets the same read, so titles are kept brief and non-sensitive.
