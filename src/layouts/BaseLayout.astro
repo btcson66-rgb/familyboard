@@ -147,6 +147,12 @@ const faqSchema = faq.length > 0 ? {
     {!isApp && <Header locale={locale} languageSwitchPath={languageSwitchPath} />}
     <main id="main-content" tabindex="-1"><slot /></main>
     {!isApp && <Footer locale={locale} />}
+    <script is:inline>
+      document.querySelectorAll('input[type="checkbox"][disabled]:not([aria-label])').forEach((input) => {
+        const label = input.parentElement?.textContent?.trim() || 'Checklist item';
+        input.setAttribute('aria-label', label);
+      });
+    </script>
     <div id="pwa-update" class="pwa-update" role="status" hidden>
       <span>{isZhTw ? '有新版 FamilyBoard 可以使用。' : 'A newer FamilyBoard version is ready.'}</span>
       <button id="pwa-update-button" type="button">{isZhTw ? '立即更新' : 'Update now'}</button>

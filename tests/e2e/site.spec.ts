@@ -475,7 +475,9 @@ test("representative routes have no serious accessibility violations", async ({
   // The representative route matrix intentionally covers the growing public
   // library. Keep a generous ceiling so adding a substantive page does not
   // turn a complete accessibility sweep into a timeout on slower CI runners.
-  test.setTimeout(600_000);
+  // The representative matrix now covers the full public library (1,000+ routes).
+  // Keep the gate long enough for Axe to inspect every route on slower CI runners.
+  test.setTimeout(1_800_000);
   for (const route of [
     "/",
     "/guides/home-maintenance-schedule/",
