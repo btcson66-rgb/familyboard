@@ -1,15 +1,14 @@
 # Content quality report
 
-Generated: 2026-09-02T05:05:36.967Z
+Generated: 2026-09-01T16:30:08.334Z
 
 ## Summary
 
-- Indexable pages: 1018
+- Indexable pages: 1019
 - Generated HTML routes: 1025
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
-- Internal instruction leakage: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
 - Duplicate primary-keyword groups: 12
 - Pages without a contextual product/tool link: 610
@@ -17,7 +16,7 @@ Generated: 2026-09-02T05:05:36.967Z
 
 ## Indexable pages by cluster
 
-- support: 32
+- support: 33
 - printables: 39
 - product: 174
 - inventory-warranty: 84
@@ -29,7 +28,7 @@ Generated: 2026-09-02T05:05:36.967Z
 
 ## Word-count range
 
-- Lowest: https://familyboard.win/checklists/printable-pet-sitter-checklist/ (64 words)
+- Lowest: https://familyboard.win/search/ (19 words)
 - Highest: https://familyboard.win/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/ (5785 words)
 
 ## Highest similarity pairs

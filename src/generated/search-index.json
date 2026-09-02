@@ -4312,6 +4312,14 @@
     "headings": "Household Information Disclaimer Use records as a prompt to verify"
   },
   {
+    "title": "Search Household Guides and Tools | FamilyBoard",
+    "description": "Search FamilyBoard household guides, calculators, generators, checklists and templates.",
+    "route": "/search/",
+    "cluster": "support",
+    "keywords": "search home management guides",
+    "headings": "Search FamilyBoard"
+  },
+  {
     "title": "Dehumidifier Maintenance Records | Filter, Drainage and Humidity Notes",
     "description": "Keep a household record of dehumidifier filters, water collection, drainage, humidity observations and seasonal issues without turning notes into repair instructions.",
     "route": "/guides/dehumidifier-maintenance-records/",
