@@ -36,6 +36,7 @@ jobs:
           # worthcalc do it. Keep in sync with public/ads.txt and scripts/monitor-live.mjs.
           PUBLIC_ADSENSE_PUBLISHER_ID: pub-9117672212804270
           PUBLIC_AMAZON_ASSOCIATES_TAG: ${{ vars.PUBLIC_AMAZON_ASSOCIATES_TAG }}
+      - run: npm run audit:monitor
       - run: npx playwright install --with-deps chromium
       - run: npm run e2e
       - uses: actions/configure-pages@v5
