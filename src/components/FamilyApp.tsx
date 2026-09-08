@@ -467,18 +467,25 @@ function FamilyAppBody() {
   };
 
   const save = async (action: () => Promise<unknown>) => {
+    let transientMessage = "";
     try {
       await action();
       await refresh();
-      setMessage("Saved locally on this device.");
+      transientMessage = "Saved locally on this device.";
     } catch (caught) {
-      setMessage(
+      transientMessage =
         caught instanceof DOMException && caught.name === "QuotaExceededError"
           ? "The browser storage quota is full. Export a backup, free space safely and try again."
-          : "The record could not be saved. Your previous local data was left in place.",
-      );
+          : "The record could not be saved. Your previous local data was left in place.";
     }
-    setTimeout(() => setMessage(""), 2400);
+    setMessage(transientMessage);
+    setTimeout(
+      () =>
+        setMessage((current) =>
+          current === transientMessage ? "" : current,
+        ),
+      2400,
+    );
   };
   const memberOptions = [
     "",
