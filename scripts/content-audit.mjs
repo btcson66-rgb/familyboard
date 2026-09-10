@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { countBodyWords } from "./lib/word-count.mjs";
+import { readMarkdown } from "./lib/markdown-source.mjs";
 
 const directory = path.resolve("src/content/pages");
 const localizedDirectory = path.resolve("src/content/pages-zh-tw");
@@ -38,9 +39,7 @@ for (const file of files) {
   // Git's Windows checkout uses CRLF, while GitHub Actions checks out LF.
   // Normalize before parsing so the mandatory local preflight and CI audit
   // evaluate the same frontmatter instead of reporting every page as empty.
-  const raw = fs
-    .readFileSync(path.join(directory, file), "utf8")
-    .replace(/\r\n/g, "\n");
+  const raw = readMarkdown(path.join(directory, file));
   const match = raw.match(/^---\n([\s\S]*?)\n---\n?/);
   const frontmatter = match?.[1] || "";
   const body = raw.slice(match?.[0].length || 0);
@@ -97,7 +96,7 @@ for (const file of files) {
 }
 
 for (const file of localizedFiles) {
-  const raw = fs.readFileSync(path.join(localizedDirectory, file), "utf8");
+  const raw = readMarkdown(path.join(localizedDirectory, file));
   const match = raw.match(/^---\n([\s\S]*?)\n---\n?/);
   const frontmatter = match?.[1] || "";
   const body = raw.slice(match?.[0].length || 0);

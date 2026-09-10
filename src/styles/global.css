@@ -594,6 +594,11 @@ textarea {
   border-radius: 14px;
   background: white;
   box-shadow: var(--shadow);
+  pointer-events: none;
+}
+
+.pwa-update button {
+  pointer-events: auto;
 }
 .pwa-update[hidden] {
   display: none;
