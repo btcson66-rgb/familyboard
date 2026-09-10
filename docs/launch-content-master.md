@@ -605,6 +605,8 @@ Add one room or one category at a time rather than trying to catalog the whole h
 
 Household maintenance often fails because the information is incomplete, not because the work is hard. Someone remembers changing a filter "a while ago." A technician visited, but the invoice is buried in email. `FamilyBoard`'s Maintenance tab exists to replace that guesswork with a dated record tied to the actual thing being maintained.
 
+**Choose the right starting point:** Use the Maintenance Tracker when you need a real record of an asset, owner, due date, source and completed work. If you only need a first-pass list of what to review, use the [Home Maintenance Schedule Generator](/tools/home-maintenance-schedule-generator/) first, then bring the tasks worth keeping into the tracker. The generator creates a starter review; it does not supply manufacturer intervals or background reminders.
+
 ## What a maintenance task actually stores
 
 The quick-add form asks for a title, a related asset (from your Assets list), a home area (for maintenance that isn't tied to one specific asset, like "gutters" or "yard"), an owner, a next-due date, a repeat interval in months, a priority (normal, high or low), and an instructions source — a place to note "owner's manual page 14" or "HVAC company recommendation" so the interval has a traceable origin instead of being invented. Underneath, the record also carries a trigger type of date, interval-after-completion, seasonal or manual; the quick-add form sets this automatically — if you enter a repeat interval greater than zero it becomes interval-after-completion, otherwise it's date. Seasonal and manual trigger types exist on the record and can be set through the Settings master CSV for tasks that don't fit either automatic pattern.
@@ -658,6 +660,8 @@ FamilyBoard doesn't send a push notification or email when a task comes due — 
 # The worst time to look for warranty information is after something stops working
 
 Warranty paperwork is easy to ignore when a product is new. Months or years later, the details are spread across an email receipt, a PDF manual, a store loyalty account and a photo of a serial number nobody can find again. `FamilyBoard`'s Warranties tab exists to capture that information once, while it's easy, and tie it to the item it actually covers.
+
+**At a glance:** A FamilyBoard warranty record connects an asset to its provider, start and end dates, receipt reference and terms reference, so you can answer “what is this covered by, and where is the paperwork?” from one local record. It computes the date status when you open the app, but it does not read the written terms or send email, push or SMS expiry alerts. If you need to calculate a review date before recording the warranty, use the [Warranty Expiration Calculator](/tools/warranty-expiration-calculator/) and then add the result to the asset-linked record.
 
 ## What a warranty record holds
 
@@ -7838,6 +7842,8 @@ Quick answer: build a short catalog that says what each record is for, which sou
 A digital home binder can help with ordinary work—finding an appliance manual, the source for a renewal or the latest repair record—and with a limited household handoff. It is not a legal-document vault, password manager, cloud-sync service, emergency alert source, insurance determination or proof that a copied file is authentic, current or sufficient. FamilyBoard records pointers and relationships; the controlling original and responsible issuer remain outside the generated index.
 
 **Want to test the binder instead of assuming it works? [Use the free Household Record Retrieval & Handoff Drill Log](/tools/household-record-retrieval-drill-log/).**
+
+**Binder or handoff?** Use this guide to design the record map and test whether sources are findable. When another person needs a dated, limited operating view, continue to the [Household Handoff Guide](/guides/household-handoff/) or the [Household Handoff feature](/features/household-handoff/) instead of copying the whole binder into a shareable document.
 
 ## Start with retrieval questions, not a universal folder list
 

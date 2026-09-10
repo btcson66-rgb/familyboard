@@ -1,0 +1,15 @@
+{
+  "expectedProperty": "sc-domain:familyboard.win",
+  "status": "GSC_AUTH_MISSING",
+  "sites": [],
+  "property": null,
+  "propertyDetail": null,
+  "auth": {
+    "clientPathSet": false,
+    "tokenPathSet": false,
+    "clientPathExists": false,
+    "tokenPathExists": false
+  },
+  "reason": "GSC OAuth client/token path is missing or unavailable.",
+  "evidence": "NEEDS_EVIDENCE"
+}

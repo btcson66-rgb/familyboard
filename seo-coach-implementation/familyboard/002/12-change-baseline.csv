@@ -1,0 +1,5 @@
+Metric,Before,After,Delta,Evidence
+Substantive public pages changed in local source,0,3,3,REPO_EVIDENCE
+New public URLs,0,0,0,REPO_EVIDENCE
+Technically indexable built routes,1018,1018,0,REPO_EVIDENCE
+Sitemap-eligible built URLs,1018,1018,0,SITE_OBSERVATION
