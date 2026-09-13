@@ -539,20 +539,20 @@ https://familyboard.win/guides/familyboard-household-quiet-hours-tutorial/,PASS,
 https://familyboard.win/guides/familyboard-household-task-dependency-map-tutorial/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/familyboard-receipt-source-verification-tutorial/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/familyboard-household-language-preference-handoff-tutorial/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
-https://familyboard.win/pricing/,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,REVIEW,REVIEW,PASS,REVIEW,contextual_internal_links; clear_next_action; source_quality
+https://familyboard.win/pricing/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,REVIEW,PASS,REVIEW,clear_next_action; source_quality
 https://familyboard.win/privacy/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/security/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/about/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,REVIEW,clear_next_action
 https://familyboard.win/contact/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,REVIEW,clear_next_action
-https://familyboard.win/roadmap/,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,REVIEW,PASS,PASS,REVIEW,contextual_internal_links; clear_next_action
+https://familyboard.win/roadmap/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,REVIEW,clear_next_action
 https://familyboard.win/changelog/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,REVIEW,clear_next_action
-https://familyboard.win/guides/,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,REVIEW,PASS,PASS,REVIEW,first_party_resource; clear_next_action
-https://familyboard.win/tools/,PASS,PASS,PASS,REVIEW,PASS,REVIEW,PASS,REVIEW,REVIEW,PASS,REVIEW,contextual_internal_links; non_template_sections; clear_next_action; source_quality
-https://familyboard.win/checklists/,PASS,PASS,PASS,REVIEW,PASS,REVIEW,REVIEW,REVIEW,PASS,PASS,REVIEW,contextual_internal_links; non_template_sections; first_party_resource; clear_next_action
-https://familyboard.win/templates/,PASS,PASS,PASS,REVIEW,PASS,PASS,REVIEW,PASS,REVIEW,PASS,REVIEW,contextual_internal_links; first_party_resource; source_quality
+https://familyboard.win/guides/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,REVIEW,clear_next_action
+https://familyboard.win/tools/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,REVIEW,PASS,REVIEW,clear_next_action; source_quality
+https://familyboard.win/checklists/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,REVIEW,clear_next_action
+https://familyboard.win/templates/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,REVIEW,source_quality
 https://familyboard.win/editorial-policy/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,REVIEW,clear_next_action
 https://familyboard.win/affiliate-disclosure/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,REVIEW,clear_next_action
-https://familyboard.win/terms/,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,PASS,REVIEW,PASS,REVIEW,contextual_internal_links; source_quality
+https://familyboard.win/terms/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,REVIEW,source_quality
 https://familyboard.win/disclaimer/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,REVIEW,clear_next_action
 https://familyboard.win/guides/dehumidifier-maintenance-records/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/zh-tw/affiliate-disclosure/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
