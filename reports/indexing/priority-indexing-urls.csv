@@ -1,10 +1,10 @@
 priority,url,reason,indexable,main_content_inlinks,candidate_main_content_inlinks,production_main_content_inlinks,click_depth,sitemap,gsc_status,manual_action
-Tier 1,https://familyboard.win/,homepage,YES,1,5,1,0,YES,Indexed,validation sample only; no Request Indexing sent
-Tier 2,https://familyboard.win/features/,product/features,YES,2,6,2,1,YES,Indexed,validation sample only; no Request Indexing sent
-Tier 2,https://familyboard.win/guides/,guides hub,YES,1,5,1,1,YES,Indexed,validation sample only; no Request Indexing sent
-Tier 2,https://familyboard.win/tools/,tools hub,YES,0,5,0,1,YES,Indexed,validation sample only; no Request Indexing sent
-Tier 2,https://familyboard.win/checklists/,checklists hub,YES,0,5,0,1,YES,Indexed,validation sample only; no Request Indexing sent
-Tier 2,https://familyboard.win/templates/,templates hub,YES,0,5,0,1,YES,Indexed,validation sample only; no Request Indexing sent
+Tier 1,https://familyboard.win/,homepage,YES,5,5,5,0,YES,Indexed,validation sample only; no Request Indexing sent
+Tier 2,https://familyboard.win/features/,product/features,YES,6,6,6,1,YES,Indexed,validation sample only; no Request Indexing sent
+Tier 2,https://familyboard.win/guides/,guides hub,YES,5,5,5,1,YES,Indexed,validation sample only; no Request Indexing sent
+Tier 2,https://familyboard.win/tools/,tools hub,YES,5,5,5,1,YES,Indexed,validation sample only; no Request Indexing sent
+Tier 2,https://familyboard.win/checklists/,checklists hub,YES,5,5,5,1,YES,Indexed,validation sample only; no Request Indexing sent
+Tier 2,https://familyboard.win/templates/,templates hub,YES,5,5,5,1,YES,Indexed,validation sample only; no Request Indexing sent
 Tier 2,https://familyboard.win/guides/maintenance-priorities/,maintenance,YES,4,4,4,1,YES,Indexed,validation sample only; no Request Indexing sent
 Tier 3,https://familyboard.win/guides/appliance-replacement-planning/,appliances,YES,14,14,14,2,YES,Indexed,validation sample only; no Request Indexing sent
 Tier 3,https://familyboard.win/guides/home-inventory-checklist/,inventory-warranty,YES,6,6,6,2,YES,Indexed,validation sample only; no Request Indexing sent
@@ -12,4 +12,4 @@ Tier 3,https://familyboard.win/guides/emergency-information-sheet/,records-emerg
 Tier 3,https://familyboard.win/guides/household-management-checklist/,household-operations,YES,4,4,4,2,YES,Indexed,validation sample only; no Request Indexing sent
 Tier 3,https://familyboard.win/features/home-inventory-tracker/,product,YES,28,28,28,1,YES,Indexed,validation sample only; no Request Indexing sent
 Tier 3,https://familyboard.win/tools/home-maintenance-schedule-generator/,tools,YES,12,12,12,1,YES,Indexed,validation sample only; no Request Indexing sent
-Tier 3,https://familyboard.win/templates/printable-home-inventory-template/,printables,YES,2,3,2,1,YES,Indexed,validation sample only; no Request Indexing sent
+Tier 3,https://familyboard.win/templates/printable-home-inventory-template/,printables,YES,3,3,3,1,YES,Indexed,validation sample only; no Request Indexing sent

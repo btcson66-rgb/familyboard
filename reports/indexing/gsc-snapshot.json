@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-13T08:00:00.000Z",
+  "capturedAt": "2026-09-13T12:58:03.133Z",
   "property": "sc-domain:familyboard.win",
   "authStatus": "PASS",
   "reportUpdated": "2026-09-04",
@@ -12,13 +12,37 @@
   "crawledNotIndexedCount": 0,
   "sitemapApi": {
     "path": "https://familyboard.win/sitemap-index.xml",
+    "lastSubmitted": "2026-09-13T12:50:44.846Z",
+    "lastDownloaded": null,
+    "isPending": true,
+    "warnings": 0,
+    "errors": 0,
+    "discoveredUrls": 0,
+    "uiStatus": "無法擷取 / pending",
+    "submissionPolicy": "submitted exactly once after production deploy; no repeat submission"
+  },
+  "preDeploySitemapApi": {
+    "path": "https://familyboard.win/sitemap-index.xml",
     "lastSubmitted": "2026-08-21T16:52:28.777Z",
     "lastDownloaded": null,
     "isPending": true,
     "warnings": 0,
     "errors": 0,
     "discoveredUrls": 0,
-    "uiStatus": "無法讀取 Sitemap"
+    "source": "GSC API readback before deployment"
+  },
+  "pageIndexingReadback": {
+    "source": "GSC UI",
+    "capturedAt": "2026-09-13T12:54:27.135Z",
+    "latestReportDate": "2026-09-04",
+    "knownUrls": 132,
+    "indexedCount": 115,
+    "notIndexedCount": 17,
+    "noindexCount": 14,
+    "redirectCount": 3,
+    "discoveredNotIndexedCount": 0,
+    "crawledNotIndexedCount": 0,
+    "note": "Page Indexing UI has not reprocessed the post-deploy sitemap yet"
   },
   "indexedUrls": [
     "https://familyboard.win/guides/home-inventory-checklist/",
@@ -158,5 +182,14 @@
     "http://www.familyboard.win/",
     "https://www.familyboard.win/"
   ],
-  "inspection": {}
+  "inspection": {
+    "source": "GSC URL Inspection API read-only sample",
+    "capturedAt": "2026-09-13T12:58:03.837Z",
+    "indexedSample": 10,
+    "noindexSample": 14,
+    "redirectSample": 3,
+    "discoveredNotIndexedSample": 0,
+    "crawledNotIndexedSample": 0,
+    "note": "Detailed current readbacks are in gsc-inspection-sample.csv; no Request Indexing action was sent"
+  }
 }

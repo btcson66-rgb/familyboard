@@ -1,12 +1,14 @@
 url,source,http_status,canonical,robots,h1,rendered_body,internal_links,structured_data,hreflang,sitemap_membership,decision
-https://familyboard.win/,production-QA-sample,200,https://familyboard.win/,"index,follow,max-image-preview:large",PASS,PASS,11,PASS,en | zh-TW | x-default,YES,PASS
+https://familyboard.win/guides/familyboard-household-task-load-calculator-tutorial/,redirect-sample,200,https://familyboard.win/guides/familyboard-task-load-calculator-tutorial/,"noindex,follow",PASS,PASS,1,PASS,,NO_EXPECTED,PASS
+https://familyboard.win/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/,redirect-sample,200,https://familyboard.win/zh-tw/guides/familyboard-task-load-calculator-tutorial/,"noindex,follow",PASS,PASS,1,PASS,,NO_EXPECTED,PASS
+https://familyboard.win/,production-QA-sample,200,https://familyboard.win/,"index,follow,max-image-preview:large",PASS,PASS,20,PASS,en | zh-TW | x-default,YES,PASS
 https://familyboard.win/app/,private-app,200,https://familyboard.win/app/,"noindex,follow",PASS,PASS,2,PASS,en | zh-TW | x-default,NO_EXPECTED,PASS
 https://familyboard.win/zh-tw/app/,private-app,200,https://familyboard.win/zh-tw/app/,"noindex,follow",PASS,PASS,2,PASS,en | zh-TW | x-default,NO_EXPECTED,PASS
-https://familyboard.win/features/,production-QA-sample,200,https://familyboard.win/features/,"index,follow,max-image-preview:large",PASS,PASS,38,PASS,en | zh-TW | x-default,YES,PASS
-https://familyboard.win/guides/,production-QA-sample,200,https://familyboard.win/guides/,"index,follow,max-image-preview:large",PASS,PASS,358,PASS,en | zh-TW | x-default,YES,PASS
-https://familyboard.win/tools/,production-QA-sample,200,https://familyboard.win/tools/,"index,follow,max-image-preview:large",PASS,PASS,114,PASS,en | zh-TW | x-default,YES,PASS
-https://familyboard.win/checklists/,production-QA-sample,200,https://familyboard.win/checklists/,"index,follow,max-image-preview:large",PASS,PASS,10,PASS,en | zh-TW | x-default,YES,PASS
-https://familyboard.win/templates/,production-QA-sample,200,https://familyboard.win/templates/,"index,follow,max-image-preview:large",PASS,PASS,14,PASS,en | zh-TW | x-default,YES,PASS
+https://familyboard.win/features/,production-QA-sample,200,https://familyboard.win/features/,"index,follow,max-image-preview:large",PASS,PASS,43,PASS,en | zh-TW | x-default,YES,PASS
+https://familyboard.win/guides/,production-QA-sample,200,https://familyboard.win/guides/,"index,follow,max-image-preview:large",PASS,PASS,362,PASS,en | zh-TW | x-default,YES,PASS
+https://familyboard.win/tools/,production-QA-sample,200,https://familyboard.win/tools/,"index,follow,max-image-preview:large",PASS,PASS,119,PASS,en | zh-TW | x-default,YES,PASS
+https://familyboard.win/checklists/,production-QA-sample,200,https://familyboard.win/checklists/,"index,follow,max-image-preview:large",PASS,PASS,15,PASS,en | zh-TW | x-default,YES,PASS
+https://familyboard.win/templates/,production-QA-sample,200,https://familyboard.win/templates/,"index,follow,max-image-preview:large",PASS,PASS,19,PASS,en | zh-TW | x-default,YES,PASS
 https://familyboard.win/pricing/,production-QA-sample,200,https://familyboard.win/pricing/,"index,follow,max-image-preview:large",PASS,PASS,4,PASS,en | zh-TW | x-default,YES,PASS
 https://familyboard.win/roadmap/,production-QA-sample,200,https://familyboard.win/roadmap/,"index,follow,max-image-preview:large",PASS,PASS,3,PASS,en | zh-TW | x-default,YES,PASS
 https://familyboard.win/terms/,production-QA-sample,200,https://familyboard.win/terms/,"index,follow,max-image-preview:large",PASS,PASS,8,PASS,en | zh-TW | x-default,YES,PASS
