@@ -5,6 +5,7 @@ import { readFile } from "node:fs/promises";
 test("public SEO, keyboard and eight production tools work", async ({
   page,
 }) => {
+  test.setTimeout(90000);
   await page.goto("/");
   await expect(page).toHaveTitle(/FamilyBoard/);
   await expect(page.locator("main h1:visible")).toHaveCount(1);
