@@ -1,34 +1,35 @@
 # Content quality report
 
-Generated: 2026-09-01T16:30:08.334Z
+Generated: 2026-09-13T09:17:15.186Z
 
 ## Summary
 
-- Indexable pages: 1019
+- Indexable pages: 1016
 - Generated HTML routes: 1025
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
+- Internal instruction leakage: 0
 - Missing-source warnings on safety-sensitive numeric claims: 0
-- Duplicate primary-keyword groups: 12
+- Duplicate primary-keyword groups: 10
 - Pages without a contextual product/tool link: 610
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
-- support: 33
+- support: 32
 - printables: 39
 - product: 174
 - inventory-warranty: 84
 - appliances: 70
 - maintenance: 103
-- household-operations: 216
+- household-operations: 214
 - records-emergency: 148
 - tools: 152
 
 ## Word-count range
 
-- Lowest: https://familyboard.win/search/ (19 words)
+- Lowest: https://familyboard.win/checklists/printable-pet-sitter-checklist/ (64 words)
 - Highest: https://familyboard.win/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/ (5785 words)
 
 ## Highest similarity pairs
@@ -48,8 +49,6 @@ Generated: 2026-09-01T16:30:08.334Z
 
 - caregiver handoff checklist: /guides/caregiver-handoff-checklist/, /tools/caregiver-handoff-source-authorization-log/
 - household task load calculator tutorial: /guides/familyboard-household-task-load-calculator-tutorial/, /guides/familyboard-task-load-calculator-tutorial/
-- familyboard plant care handoff tutorial: /guides/familyboard-plant-care-handoff-log-tutorial/, /guides/familyboard-plant-care-handoff-tutorial/
-- household account list: /guides/household-account-list/, /tools/household-account-list/
 - 家電清冊: /zh-tw/guides/appliance-inventory/, /zh-tw/templates/printable-appliance-inventory/
 - 照護交接清單: /zh-tw/guides/caregiver-handoff-checklist/, /zh-tw/tools/caregiver-handoff-source-authorization-log/
 - 家庭緊急資料夾: /zh-tw/guides/emergency-binder/, /zh-tw/tools/emergency-binder-generator/
@@ -91,6 +90,7 @@ Generated: 2026-09-01T16:30:08.334Z
 - /guides/familyboard-household-notification-routing-tutorial/
 - /guides/familyboard-household-quiet-hours-tutorial/
 - /guides/familyboard-household-task-dependency-map-tutorial/
+- /guides/familyboard-household-task-load-calculator-tutorial/
 - /guides/familyboard-maintenance-event-cost-tutorial/
 - /guides/familyboard-maintenance-evidence-confidence-tutorial/
 - /guides/familyboard-master-csv-edit-import-tutorial/
@@ -114,7 +114,6 @@ Generated: 2026-09-01T16:30:08.334Z
 - /guides/familyboard-storage-open-error-tutorial/
 - /guides/familyboard-task-completion-tutorial/
 - /guides/familyboard-vendor-onboarding-tutorial/
-- /guides/
 - /guides/seasonal-home-maintenance-checklist/
 - /guides/solar-panel-maintenance-records/
 - /guides/subscription-cancellation-refund-records/

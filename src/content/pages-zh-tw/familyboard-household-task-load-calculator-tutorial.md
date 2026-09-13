@@ -8,10 +8,11 @@ primaryIntent: "用家庭家務負荷計算器估算重複分鐘來討論容量�
 primaryKeyword: "家庭家務負荷計算器教學"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"
+redirectTo: "/zh-tw/guides/familyboard-task-load-calculator-tutorial/"
 nextStep: "輸入五項重複家務與中性責任代號，檢查漏掉的隱形工作，再把一個共識轉成有負責人的 App 任務。"
 related:
   - "/zh-tw/tools/household-task-load-calculator/"

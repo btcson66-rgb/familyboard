@@ -379,6 +379,7 @@ The production brand is **FamilyBoard** and the production domain is **familyboa
 **Title tag:** `FamilyBoard — A Private Home Management System for Everything Your Household Runs`
 **Meta description:** `Keep home maintenance, warranties, assets, subscriptions, recurring tasks and emergency information together in a private local-first household dashboard.`
 **Primary keyword concept:** home management system
+**Editorial review date:** 2026-09-13
 **Suggested internal links:** `/features/`, `/guides/home-maintenance-schedule/`, `/tools/home-maintenance-schedule-generator/`, `/app/`
 
 # A home has hundreds of moving parts. Keep the important ones in one place.
@@ -5773,6 +5774,8 @@ A household's actual priorities shift — a new hobby brings in equipment worth 
 If you don't know the exact purchase date or price, leave the field blank or write "approximate, unconfirmed" rather than inventing a specific-looking number. A checklist with honest gaps is more trustworthy later than one with fabricated precision — an adjuster or your own future self can tell the difference between "unknown" and a made-up date that turns out to be wrong.
 
 ## A practical order of operations
+
+If a paper-first walkthrough is more useful, use the [printable home inventory template](/templates/printable-home-inventory-template/) for the room, item, model and serial fields before transferring the finished records to the digital tracker.
 
 1. Use this checklist to decide, category by category, what's worth a record at all.
 2. Walk the house room by room to actually create the records — a [room-by-room pass](/guides/room-by-room-home-inventory/) finishes faster than trying to do the whole house in one sitting.
@@ -20875,9 +20878,9 @@ A future clearly labelled affiliate area could compare storage bins, labels, reu
 ## Page 294 — Household Account List
 **Slug:** /tools/household-account-list/
 **Primary intent:** organize household service ownership, source indexes, backup roles and transfer checkpoints without storing credentials
-**Title tag:** Household Account List | Free Private Service Handoff Tool
+**Title tag:** Household Account List Tool | Free Private Service Handoff Log
 **Meta description:** Build a privacy-first household service account index with safe provider codes, management roles, backup plans and review dates. FamilyBoard never asks for passwords, verification codes, full identifiers or payment data.
-**Primary keyword concept:** household account list
+**Primary keyword concept:** household account list tool
 **Cluster:** household-operations
 **Page type:** tool
 **Depth:** verified
@@ -33864,9 +33867,9 @@ Is the window bounded? Are source and location codes safe? Are expected times di
 **Slug:** /guides/familyboard-plant-care-handoff-log-tutorial/
 **Alternate route:** /zh-tw/guides/familyboard-plant-care-handoff-log-tutorial/
 **Primary intent:** coordinate plant-care handoffs with safe references, observations and return review without diagnosing plants or exposing access details
-**Title tag:** FamilyBoard Plant Care Handoff Tutorial | Coordinate Care While You Are Away
+**Title tag:** FamilyBoard Plant Care Handoff Log Tutorial | Coordinate Care While You Are Away
 **Meta description:** Learn how to use FamilyBoard's Plant Care Handoff Log to record care windows, safe source pointers, observations, owner roles and return review without diagnosing plants or storing private access details.
-**Primary keyword concept:** FamilyBoard plant care handoff tutorial
+**Primary keyword concept:** FamilyBoard plant care handoff log tutorial
 **Cluster:** household-operations
 **Page type:** content
 **Indexable:** yes
@@ -34614,6 +34617,7 @@ Calendars, planners or travel accessories may eventually appear as optional reco
 **Editorial review date:** 2026-08-29
 **Content version:** 1
 **Suggested internal links:** /tools/household-task-load-calculator/, /guides/familyboard-recurring-chore-planner-tutorial/, /guides/divide-household-responsibilities/, /features/family-task-manager/
+**Redirects to:** /guides/familyboard-task-load-calculator-tutorial/
 **FAQ:**
 - Q: What does the calculator estimate?
   A: It converts entered frequency and minutes into an approximate weekly total by neutral role code.

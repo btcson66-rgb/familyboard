@@ -30,6 +30,48 @@ const hubItems = isHub ? pages.filter((candidate) => {
   if (entry.data.route === '/guides/') return candidate.data.pageType === 'content' && !candidate.data.route.startsWith('/features/');
   return candidate.data.route.startsWith(entry.data.route) && candidate.data.route !== entry.data.route;
 }).sort((a, b) => a.data.title.localeCompare(b.data.title)) : [];
+const guideGroupOrder = ['maintenance', 'appliances', 'inventory-warranty', 'records-emergency', 'household-operations', 'tools', 'product', 'support'];
+const guideGroups = entry.data.route === '/guides/' ? guideGroupOrder.map((cluster) => ({
+  cluster,
+  items: hubItems.filter((item) => item.data.cluster === cluster),
+})).filter((group) => group.items.length > 0) : [];
+const hubBridge = {
+  '/guides/': [
+    { route: '/', label: 'Start with the household overview', text: 'Choose the right household job before opening a detailed guide.' },
+    { route: '/tools/', label: 'Use a focused household tool', text: 'Move from understanding a task to producing a bounded result.' },
+    { route: '/checklists/', label: 'Print a checklist', text: 'Turn a guide into a reviewable household action list.' },
+    { route: '/features/', label: 'Explore the product', text: 'See which FamilyBoard feature supports the workflow.' },
+    { route: '/templates/', label: 'Start with a template', text: 'Use a reusable record when the task needs a durable handoff.' },
+  ],
+  '/tools/': [
+    { route: '/', label: 'Return to the household overview', text: 'Choose a broader workflow when a focused result needs context.' },
+    { route: '/guides/', label: 'Learn the workflow', text: 'Read the context and limits before using a tool.' },
+    { route: '/features/', label: 'See the product boundary', text: 'Understand what stays local and what the app does not claim.' },
+    { route: '/checklists/', label: 'Use a printable follow-up', text: 'Carry a tool result into a bounded household checklist.' },
+    { route: '/templates/', label: 'Keep a reusable record', text: 'Choose a template when the output needs to be revisited.' },
+  ],
+  '/features/': [
+    { route: '/', label: 'Start at the household overview', text: 'See how the product fits the broader household workflow.' },
+    { route: '/guides/', label: 'Read practical guides', text: 'Learn the household job behind each product capability.' },
+    { route: '/tools/', label: 'Try a focused tool', text: 'Use a calculator, generator or review log for the next step.' },
+    { route: '/checklists/', label: 'Browse checklists', text: 'Use a printable path for recurring or handoff work.' },
+    { route: '/templates/', label: 'Browse templates', text: 'Start a reusable household record without creating an account.' },
+  ],
+  '/checklists/': [
+    { route: '/', label: 'Start at the household overview', text: 'Choose the household workflow before printing a focused checklist.' },
+    { route: '/guides/', label: 'Understand the context', text: 'Read the guide that explains the task and its limits.' },
+    { route: '/tools/', label: 'Generate a focused result', text: 'Use a tool when the checklist needs calculated or structured output.' },
+    { route: '/features/', label: 'See the matching feature', text: 'Connect a printed task to the private household workspace.' },
+    { route: '/templates/', label: 'Choose a reusable template', text: 'Use a template when the record will be updated over time.' },
+  ],
+  '/templates/': [
+    { route: '/', label: 'Start at the household overview', text: 'Choose the household workflow before keeping a reusable record.' },
+    { route: '/guides/', label: 'Read the supporting guides', text: 'Understand what evidence and ownership each record needs.' },
+    { route: '/tools/', label: 'Use a supporting tool', text: 'Create a structured result before you save or print it.' },
+    { route: '/features/', label: 'Explore FamilyBoard features', text: 'See how private browser storage supports the workflow.' },
+    { route: '/checklists/', label: 'Find a checklist', text: 'Choose a bounded action list for the next household review.' },
+  ],
+}[entry.data.route] ?? [];
 const pageType = entry.data.pageType === 'content' ? 'article' : 'website';
 ---
 <BaseLayout title={entry.data.title} description={entry.data.description} canonicalPath={redirectStub?.canonicalPath ?? entry.data.route} alternatePath={redirectStub ? undefined : alternatePath} indexable={redirectStub?.indexable ?? entry.data.indexable} robots={redirectStub?.robots} pageType={redirectStub ? 'website' : pageType} publishedAt={entry.data.publishedAt} lastReviewedAt={entry.data.lastReviewedAt} faq={redirectStub ? [] : entry.data.faq} publicIntegrationsEnabled={redirectStub?.publicIntegrationsEnabled ?? true} redirectRefresh={redirectStub?.refreshContent}>
@@ -49,7 +91,8 @@ const pageType = entry.data.pageType === 'content' ? 'article' : 'website';
       {entry.data.pageType === 'tool' && <ToolWorkbench client:only="react" slug={routeSlug} title={entry.data.title} />}
       {entry.data.pageType === 'printable' && <PrintableSheet client:visible route={entry.data.route} title={entry.data.title} />}
       {entry.data.route === '/search/' && <SiteSearch client:load />}
-      {isHub && <section class="section"><div class="section-head"><h2>Explore this collection</h2></div><div class="card-grid">{hubItems.map((item) => <a class="card" href={item.data.route}><span class="card-tag">{item.data.cluster.replace('-', ' ')}</span><h3>{item.data.title.replace(/ \|.*$/, '')}</h3><p>{item.data.description}</p></a>)}</div></section>}
+      {hubBridge.length > 0 && <section class="section" aria-labelledby="related-collections"><div class="section-head"><div><span class="eyebrow">Choose the next layer</span><h2 id="related-collections">Move between household collections</h2><p class="lede">Each collection links to the explanation, tool, printable and product context that supports the same household job.</p></div></div><div class="card-grid">{hubBridge.map((item) => <a class="card" href={item.route}><span class="card-tag">Related collection</span><h3>{item.label}</h3><p>{item.text}</p></a>)}</div></section>}
+      {isHub && <section class="section"><div class="section-head"><div><span class="eyebrow">Organized by household job</span><h2>Explore this collection</h2></div></div>{entry.data.route === '/guides/' ? guideGroups.map((group) => <section class="hub-group"><h3>{group.cluster.replace('-', ' ')}</h3><div class="card-grid">{group.items.map((item) => <a class="card" href={item.data.route}><span class="card-tag">{item.data.pageType}</span><h3>{item.data.title.replace(/ \|.*$/, '')}</h3><p>{item.data.description}</p></a>)}</div></section>) : <div class="card-grid">{hubItems.map((item) => <a class="card" href={item.data.route}><span class="card-tag">{item.data.cluster.replace('-', ' ')}</span><h3>{item.data.title.replace(/ \|.*$/, '')}</h3><p>{item.data.description}</p></a>)}</div>}</section>}
       <Recommendation route={entry.data.route} />
       {related.length > 0 && <section class="section"><div class="section-head"><h2>Keep going</h2></div><div class="card-grid">{related.map((item) => <a class="card" href={item.data.route}><h3>{item.data.title.replace(/ \|.*$/, '')}</h3><p>{item.data.description}</p></a>)}</div></section>}
       <p class="notice">Found an error or an outdated instruction? <a href="/contact/">Send us the page URL and a reliable supporting source.</a></p>

@@ -2296,11 +2296,11 @@
     "headings": "家庭採買清單怎麼做？免費補貨與到貨複查工具 先定義採買情境，不要把全家庫存搬進來 把庫存、來源與到貨結果分開 九欄格式讓家人知道下一步 八種狀態把「已買」與「已收到」分開 不把清單變成付款、地址或健康資料 聯盟商品只能在答案之後、而且可略過"
   },
   {
-    "title": "Household Account List | Free Private Service Handoff Tool",
+    "title": "Household Account List Tool | Free Private Service Handoff Log",
     "description": "Build a privacy-first household service account index with safe provider codes, management roles, backup plans and review dates. FamilyBoard never asks for passwords, verification codes, full identifiers or payment data.",
     "route": "/tools/household-account-list/",
     "cluster": "household-operations",
-    "keywords": "household account list",
+    "keywords": "household account list tool",
     "headings": "Household Account List What belongs in an account-service index Use a bounded context The eight-column row format Keep action separate from confirmation Privacy boundary: index, never credential A practical first run Optional affiliate space must not change the answer"
   },
   {
@@ -3592,11 +3592,11 @@
     "headings": "How to Use FamilyBoard's Mail and Package Handoff Log Define the absence or return window Use safe source and location references Separate expectation, observation and custody Close with a return-home review Privacy and future recommendations Give each handoff role a narrow job Escalate exceptions to the controlling source Eight-question closeout"
   },
   {
-    "title": "FamilyBoard Plant Care Handoff Tutorial | Coordinate Care While You Are Away",
+    "title": "FamilyBoard Plant Care Handoff Log Tutorial | Coordinate Care While You Are Away",
     "description": "Learn how to use FamilyBoard's Plant Care Handoff Log to record care windows, safe source pointers, observations, owner roles and return review without diagnosing plants or storing private access details.",
     "route": "/guides/familyboard-plant-care-handoff-log-tutorial/",
     "cluster": "household-operations",
-    "keywords": "FamilyBoard plant care handoff tutorial",
+    "keywords": "FamilyBoard plant care handoff log tutorial",
     "headings": "How to Use FamilyBoard's Plant Care Handoff Log Bound the care window and plant group Point to the real care source Record observations instead of diagnoses Separate planned action from completed review Keep access and privacy outside the shared row Design a backup for weather and absence changes Review the handoff when returning home Eight-question closeout"
   },
   {
@@ -3686,14 +3686,6 @@
     "cluster": "household-operations",
     "keywords": "household time-window overlap checker tutorial",
     "headings": "How to Use FamilyBoard's Household Time-Window Overlap Checker Define a bounded comparison Enter the four real endpoints Add the human buffer Keep authority in the source Test a handoff Record the buffer decision Future affiliate space and boundaries"
-  },
-  {
-    "title": "FamilyBoard Task Load Calculator Tutorial | Discuss Capacity Without Scoring People",
-    "description": "Learn how to use FamilyBoard's Household Task Load Calculator to estimate recurring weekly minutes, expose missing work and plan a conversation without judging household members.",
-    "route": "/guides/familyboard-household-task-load-calculator-tutorial/",
-    "cluster": "household-operations",
-    "keywords": "household task load calculator tutorial",
-    "headings": "How to Use FamilyBoard's Household Task Load Calculator Start with one planning question Enter one recurring task per line Understand the approximation Discuss invisible work with evidence Turn the conversation into a handoff Include setup and follow-up honestly Future affiliate space and boundaries"
   },
   {
     "title": "FamilyBoard Shopping List Planner Tutorial | Turn Restock Notes Into Clear Handoffs",
@@ -4310,14 +4302,6 @@
     "cluster": "support",
     "keywords": "household information disclaimer",
     "headings": "Household Information Disclaimer Use records as a prompt to verify"
-  },
-  {
-    "title": "Search Household Guides and Tools | FamilyBoard",
-    "description": "Search FamilyBoard household guides, calculators, generators, checklists and templates.",
-    "route": "/search/",
-    "cluster": "support",
-    "keywords": "search home management guides",
-    "headings": "Search FamilyBoard"
   },
   {
     "title": "Dehumidifier Maintenance Records | Filter, Drainage and Humidity Notes",
