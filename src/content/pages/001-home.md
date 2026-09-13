@@ -9,7 +9,7 @@ pageType: "content"
 indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-09-13"
 nextStep: "Open the free local-first app and add the first thing in your home you would hate to lose the receipt, warranty or maintenance history for."
 related:
   - "/features/"

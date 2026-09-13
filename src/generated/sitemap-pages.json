@@ -3,7 +3,7 @@
     "route": "/",
     "alternateRoute": "/zh-tw/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-09-13",
     "locale": "en",
     "redirectTo": ""
   },
@@ -3826,10 +3826,10 @@
   {
     "route": "/guides/familyboard-household-task-load-calculator-tutorial/",
     "alternateRoute": "/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/",
-    "indexable": true,
+    "indexable": false,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
-    "redirectTo": ""
+    "redirectTo": "/guides/familyboard-task-load-calculator-tutorial/"
   },
   {
     "route": "/guides/familyboard-household-shopping-list-planner-tutorial/",
@@ -5574,7 +5574,7 @@
   {
     "route": "/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/",
     "alternateRoute": "/guides/familyboard-household-task-load-calculator-tutorial/",
-    "indexable": true,
+    "indexable": false,
     "lastReviewedAt": "2026-08-29",
     "locale": "zh-TW"
   },

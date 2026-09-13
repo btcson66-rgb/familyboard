@@ -1,0 +1,36 @@
+url,locale,page_type,action,target,reason
+https://familyboard.win/guides/familyboard-household-task-load-calculator-tutorial/,en,content,REDIRECT,https://familyboard.win/guides/familyboard-task-load-calculator-tutorial/,Duplicate task-load user job; retain the richer tutorial as the canonical answer.
+https://familyboard.win/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/,zh-TW,content,REDIRECT,https://familyboard.win/zh-tw/guides/familyboard-task-load-calculator-tutorial/,Duplicate task-load user job; retain the richer Traditional Chinese tutorial as the canonical answer.
+https://familyboard.win/zh-tw/guides/appliance-inventory/,zh-TW,content,KEEP_BOTH,,Guide explains the inventory workflow; printable is a reusable paper output.
+https://familyboard.win/zh-tw/templates/printable-appliance-inventory/,zh-TW,printable,KEEP_BOTH,,Printable output has a distinct use-after-search job from the explanatory guide.
+https://familyboard.win/zh-tw/guides/caregiver-handoff-checklist/,zh-TW,content,KEEP_BOTH,,Checklist planning intent is distinct from the structured source and authorization log.
+https://familyboard.win/zh-tw/tools/caregiver-handoff-source-authorization-log/,zh-TW,tool,KEEP_BOTH,,Structured source and authorization log intent is distinct from the planning guide.
+https://familyboard.win/zh-tw/guides/emergency-binder/,zh-TW,content,KEEP_BOTH,,Guide explains binder structure; generator produces a bounded draft.
+https://familyboard.win/zh-tw/tools/emergency-binder-generator/,zh-TW,tool,KEEP_BOTH,,Generator has a direct-use output distinct from the explanatory guide.
+https://familyboard.win/zh-tw/guides/familyboard-household-decision-register-tutorial/,zh-TW,content,KEEP_BOTH,,Decision method tutorial is distinct from direct-use decision register.
+https://familyboard.win/zh-tw/tools/household-decision-register/,zh-TW,tool,KEEP_BOTH,,Direct-use decision register is distinct from the tutorial.
+https://familyboard.win/zh-tw/guides/home-care-service-plan-changes/,zh-TW,content,KEEP_BOTH,,Change-planning guide is distinct from the structured notice log.
+https://familyboard.win/zh-tw/tools/home-care-service-plan-change-notice-log/,zh-TW,tool,KEEP_BOTH,,Direct-use change notice log is distinct from the explanatory guide.
+https://familyboard.win/zh-tw/guides/home-care-service-visit-records/,zh-TW,content,KEEP_BOTH,,Visit-record guidance is distinct from the direct-use service result log.
+https://familyboard.win/zh-tw/tools/home-care-visit-scope-service-result-log/,zh-TW,tool,KEEP_BOTH,,Direct-use service result log is distinct from the explanatory guide.
+https://familyboard.win/app/,en,private-app,INTENTIONAL_NOINDEX,,"Private local-first application surface; keep noindex,follow."
+https://familyboard.win/zh-tw/app/,zh-TW,private-app,INTENTIONAL_NOINDEX,,"Private local-first application surface; keep noindex,follow."
+https://familyboard.win/offline/,en,system,INTENTIONAL_NOINDEX,,Offline/system route; not an independent search landing page.
+https://familyboard.win/guides/caregiver-handoff-checklist/,en,content,KEEP_BOTH,,Checklist planning intent is distinct from the structured source/authorization log tool.
+https://familyboard.win/tools/caregiver-handoff-source-authorization-log/,en,tool,KEEP_BOTH,,Structured source and authorization log intent is distinct from the planning guide.
+https://familyboard.win/guides/household-account-list/,en,content,RETARGET,,Guide keeps the explanatory intent; the tool is positioned for building the actual account index.
+https://familyboard.win/tools/household-account-list/,en,tool,RETARGET,,Tool keeps the direct-use intent and no longer competes on the generic guide keyword.
+https://familyboard.win/guides/familyboard-plant-care-handoff-tutorial/,en,content,RETARGET,,General plant-care handoff guidance is separated from the log-specific coordination tutorial.
+https://familyboard.win/guides/familyboard-plant-care-handoff-log-tutorial/,en,content,RETARGET,,Log-specific coordination tutorial is positioned around the handoff record job.
+https://familyboard.win/guides/household-shopping-staples/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.
+https://familyboard.win/guides/chore-chart-for-adults/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.
+https://familyboard.win/guides/what-spouse-needs-to-know/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.
+https://familyboard.win/features/offline-household-organizer/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.
+https://familyboard.win/features/emergency-information-organizer/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.
+https://familyboard.win/guides/emergency-information-sheet/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.
+https://familyboard.win/guides/move-in-maintenance-checklist/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.
+https://familyboard.win/guides/vacation-home-shutdown-checklist/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.
+https://familyboard.win/guides/new-home-setup-checklist/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.
+https://familyboard.win/features/home-record-keeper/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.
+https://familyboard.win/guides/first-time-homeowner-maintenance-guide/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.
+https://familyboard.win/features/local-first-home-organizer/,en,historical-GSC,ALREADY_REPAIRED_OR_REVIEW,,Historical GSC noindex sample; current production/source audit must be checked separately before any indexability change.

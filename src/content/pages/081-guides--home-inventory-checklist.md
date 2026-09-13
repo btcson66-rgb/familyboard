@@ -69,6 +69,8 @@ If you don't know the exact purchase date or price, leave the field blank or wri
 
 ## A practical order of operations
 
+If a paper-first walkthrough is more useful, use the [printable home inventory template](/templates/printable-home-inventory-template/) for the room, item, model and serial fields before transferring the finished records to the digital tracker.
+
 1. Use this checklist to decide, category by category, what's worth a record at all.
 2. Walk the house room by room to actually create the records — a [room-by-room pass](/guides/room-by-room-home-inventory/) finishes faster than trying to do the whole house in one sitting.
 3. Add photos where they help identification, particularly for anything hard to describe in words.

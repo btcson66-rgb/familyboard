@@ -9,6 +9,13 @@ const zhTwHome = zhTwPages.find((entry) => entry.data.alternateRoute === '/');
 const { Content } = await render(home);
 const featuredRoutes = ['/features/home-inventory-tracker/', '/features/maintenance-tracker/', '/features/household-handoff/', '/tools/home-maintenance-schedule-generator/', '/tools/warranty-expiration-calculator/', '/templates/printable-home-inventory-template/'];
 const featured = featuredRoutes.map((route) => pages.find((entry) => entry.data.route === route)).filter(Boolean);
+const discoveryPaths = [
+  { route: '/guides/', label: 'Guides', text: 'Understand maintenance, appliances, records and household operations before you choose a workflow.' },
+  { route: '/features/', label: 'Features', text: 'See the product boundaries and the private, local-first parts of FamilyBoard.' },
+  { route: '/tools/', label: 'Tools', text: 'Use a focused calculator, generator or review log for one household task.' },
+  { route: '/checklists/', label: 'Checklists', text: 'Turn a bounded home task into a printable, reviewable checklist.' },
+  { route: '/templates/', label: 'Templates', text: 'Start with a reusable household record or printable handoff sheet.' },
+];
 ---
 <BaseLayout title={home.data.title} description={home.data.description} canonicalPath="/" alternatePath={zhTwHome?.data.route} indexable={home.data.indexable} faq={home.data.faq} publishedAt={home.data.publishedAt} lastReviewedAt={home.data.lastReviewedAt}>
   <section class="hero"><div class="shell hero-grid">
@@ -29,5 +36,9 @@ const featured = featuredRoutes.map((route) => pages.find((entry) => entry.data.
   <section class="section tint"><div class="shell"><div class="section-head"><div><span class="eyebrow">Start small</span><h2>Build household memory one useful record at a time</h2></div><a href="/guides/">Browse all guides →</a></div>
     <div class="card-grid">{featured.map((entry) => <a class="card" href={entry!.data.route}><span class="card-tag">{entry!.data.cluster.replace('-', ' ')}</span><h3>{entry!.data.title.replace(/ \|.*$/, '')}</h3><p>{entry!.data.description}</p></a>)}</div>
   </div></section>
+  <section class="section" aria-labelledby="household-paths"><div class="shell"><div class="section-head"><div><span class="eyebrow">Choose a path</span><h2 id="household-paths">Find the right household starting point</h2><p class="lede">These collections connect the public explanations, product boundaries and practical outputs so an important page does not depend on a single route being discovered.</p></div></div>
+    <div class="card-grid">{discoveryPaths.map((item) => <a class="card" href={item.route}><span class="card-tag">Household path</span><h3>{item.label}</h3><p>{item.text}</p></a>)}</div>
+  </div></section>
+  <section class="section tint" aria-labelledby="site-trust"><div class="narrow"><div class="card"><span class="eyebrow">Site and product details</span><h2 id="site-trust">Understand the boundaries before you save anything</h2><p>FamilyBoard's public pages explain what the product can do, what stays in the browser and which household decisions still need an official source or a qualified professional.</p><p><a href="/pricing/">See current pricing</a> · <a href="/roadmap/">Read the product roadmap</a> · <a href="/terms/">Review the terms</a> · <a href="/privacy/">Read the privacy boundary</a></p></div></div></section>
   <section class="section"><div class="narrow"><div class="card"><span class="eyebrow">Local-first by design</span><h2>Your home records stay on your device</h2><p>Public guides and tools can be discovered on the web. The private household workspace uses browser storage, excludes its state from the sitemap and does not load public-site analytics.</p><p><a href="/privacy/">Read the privacy boundary</a> · <a href="/security/">Understand browser-storage limits</a></p></div></div></section>
 </BaseLayout>

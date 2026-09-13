@@ -1,9 +1,9 @@
 ---
-title: "FamilyBoard Plant Care Handoff Tutorial | Coordinate Care While You Are Away"
+title: "FamilyBoard Plant Care Handoff Log Tutorial | Coordinate Care While You Are Away"
 description: "Learn how to use FamilyBoard's Plant Care Handoff Log to record care windows, safe source pointers, observations, owner roles and return review without diagnosing plants or storing private access details."
 route: "/guides/familyboard-plant-care-handoff-log-tutorial/"
 primaryIntent: "coordinate plant-care handoffs with safe references, observations and return review without diagnosing plants or exposing access details"
-primaryKeyword: "FamilyBoard plant care handoff tutorial"
+primaryKeyword: "FamilyBoard plant care handoff log tutorial"
 cluster: "household-operations"
 pageType: "content"
 indexable: true

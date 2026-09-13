@@ -1,9 +1,9 @@
 ---
-title: "Household Account List | Free Private Service Handoff Tool"
+title: "Household Account List Tool | Free Private Service Handoff Log"
 description: "Build a privacy-first household service account index with safe provider codes, management roles, backup plans and review dates. FamilyBoard never asks for passwords, verification codes, full identifiers or payment data."
 route: "/tools/household-account-list/"
 primaryIntent: "organize household service ownership, source indexes, backup roles and transfer checkpoints without storing credentials"
-primaryKeyword: "household account list"
+primaryKeyword: "household account list tool"
 cluster: "household-operations"
 pageType: "tool"
 indexable: true

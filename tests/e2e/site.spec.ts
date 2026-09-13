@@ -1964,11 +1964,6 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       heading: "FamilyBoard 家庭時間窗口重疊檢查器教學：先算端點，再問正式來源",
     },
     {
-      route: "/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/",
-      alternate: "/guides/familyboard-household-task-load-calculator-tutorial/",
-      heading: "FamilyBoard 家庭家務負荷計算器教學：讓隱形工作可以被討論",
-    },
-    {
       route: "/zh-tw/guides/familyboard-household-shopping-list-planner-tutorial/",
       alternate: "/guides/familyboard-household-shopping-list-planner-tutorial/",
       heading: "FamilyBoard 家庭採買清單規劃器教學：讓補貨備忘可以被交接",
@@ -2304,6 +2299,14 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
       page.locator('link[rel="alternate"][hreflang="zh-TW"]'),
     ).toHaveAttribute("href", `https://familyboard.win${localized.route}`);
   }
+
+  await page.goto("/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/");
+  await expect(page).toHaveURL(/\/zh-tw\/guides\/familyboard-task-load-calculator-tutorial\/$/);
+  await expect(page.locator("h1")).toContainText("家庭家務負荷計算器教學");
+
+  await page.goto("/guides/familyboard-household-task-load-calculator-tutorial/");
+  await expect(page).toHaveURL(/\/guides\/familyboard-task-load-calculator-tutorial\/$/);
+  await expect(page.locator("h1")).toContainText("Household Task Load Calculator");
 
   await page.goto("/zh-tw/guides/household-event-source-check-taiwan/");
   await expect(page.locator("h1")).toHaveText(
@@ -4543,12 +4546,12 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await page
     .getByLabel("促銷結束後每次標準扣款（非促銷可填同額）")
     .fill("320");
-  await page.getByLabel("促銷或免費試用結束日（非促銷可留空）").fill("2026-09-10");
-  await page.getByLabel("已核對的下次扣款／續約日").fill("2026-09-30");
+  await page.getByLabel("促銷或免費試用結束日（非促銷可留空）").fill("2099-09-10");
+  await page.getByLabel("已核對的下次扣款／續約日").fill("2099-09-30");
   await page.getByRole("spinbutton", { name: "預留幾天做續約決定" }).fill("10");
   await page.getByRole("button", { name: "產生結果" }).click();
   await expect(page.locator(".result")).toContainText("標準價年化：NT$3,840");
-  await expect(page.locator(".result")).toContainText("2026年9月20日");
+  await expect(page.locator(".result")).toContainText("2099年9月20日");
   await expect(page.locator(".result")).toContainText("無法以目前 0 元價格計算百分比");
 
   await page.goto("/zh-tw/tools/emergency-binder-generator/");

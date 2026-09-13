@@ -759,8 +759,6 @@ export const checks = [
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-backup-recovery-checker-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-time-window-overlap-checker-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-time-window-overlap-checker-tutorial/</loc>",
-      "<loc>https://familyboard.win/guides/familyboard-household-task-load-calculator-tutorial/</loc>",
-      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-shopping-list-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-shopping-list-planner-tutorial/</loc>",
       "<loc>https://familyboard.win/guides/familyboard-household-responsibility-coverage-map-tutorial/</loc>",
@@ -936,6 +934,8 @@ export const checks = [
     forbid: [
       "<loc>https://familyboard.win/app/</loc>",
       "<loc>https://familyboard.win/zh-tw/app/</loc>",
+      "<loc>https://familyboard.win/guides/familyboard-household-task-load-calculator-tutorial/</loc>",
+      "<loc>https://familyboard.win/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/</loc>",
     ],
   },
   {
@@ -980,11 +980,11 @@ export const checks = [
   },
   {
     path: "/guides/familyboard-household-task-load-calculator-tutorial/",
-    require: ["Household Task Load Calculator", "approximate weekly"],
+    require: ["This page has moved", "/guides/familyboard-task-load-calculator-tutorial/", "noindex,follow"],
   },
   {
     path: "/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/",
-    require: ["家庭家務負荷計算器教學", "隱形工作", 'lang="zh-TW"'],
+    require: ["This page has moved", "這個頁面已移至新的 FamilyBoard 教學位置。", "/zh-tw/guides/familyboard-task-load-calculator-tutorial/", 'lang="zh-TW"'],
   },
   {
     path: "/guides/familyboard-household-shopping-list-planner-tutorial/",

@@ -7,7 +7,7 @@ const home = pages.find((entry) => entry.data.route === '/zh-tw/');
 if (!home) throw new Error('Traditional Chinese home content missing');
 const { Content } = await render(home);
 const featured = pages
-  .filter((entry) => entry.data.route !== '/zh-tw/')
+  .filter((entry) => entry.data.route !== '/zh-tw/' && !entry.data.redirectTo)
   .sort((a, b) => a.data.title.localeCompare(b.data.title, 'zh-TW'));
 ---
 <BaseLayout

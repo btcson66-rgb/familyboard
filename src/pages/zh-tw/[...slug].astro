@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ToolWorkbench from '../../components/ToolWorkbench';
 import Recommendation from '../../components/Recommendation.astro';
+import { createRedirectStub } from '../../lib/redirect-stub';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pagesZhTw');
@@ -15,6 +16,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const redirectStub = entry.data.redirectTo ? createRedirectStub(entry.data.redirectTo) : null;
 const pages = await getCollection('pagesZhTw');
 const related = entry.data.related
   .map((route: string) => pages.find((candidate) => candidate.data.route === route))
@@ -26,15 +28,25 @@ const pageTypeLabel = entry.data.pageType === 'tool' ? '免費工具' : entry.da
 <BaseLayout
   title={entry.data.title}
   description={entry.data.description}
-  canonicalPath={entry.data.route}
-  alternatePath={entry.data.alternateRoute}
+  canonicalPath={redirectStub?.canonicalPath ?? entry.data.route}
+  alternatePath={redirectStub ? undefined : entry.data.alternateRoute}
   locale="zh-TW"
-  indexable={entry.data.indexable}
-  pageType={pageType}
+  indexable={redirectStub?.indexable ?? entry.data.indexable}
+  robots={redirectStub?.robots}
+  pageType={redirectStub ? 'website' : pageType}
   publishedAt={entry.data.publishedAt}
   lastReviewedAt={entry.data.lastReviewedAt}
-  faq={entry.data.faq}
+  faq={redirectStub ? [] : entry.data.faq}
+  publicIntegrationsEnabled={redirectStub?.publicIntegrationsEnabled ?? true}
+  redirectRefresh={redirectStub?.refreshContent}
 >
+  {redirectStub ? <div class="shell page-grid">
+    <article class="article redirect-stub">
+      <h1>{redirectStub.heading}</h1>
+      <p>這個頁面已移至新的 FamilyBoard 教學位置。</p>
+      <p><a class="button" href={redirectStub.linkHref}>前往目前頁面</a></p>
+    </article>
+  </div> : <>
   <Breadcrumbs route={entry.data.route} title={entry.data.title} locale="zh-TW" />
   <div class="shell page-grid">
     <article class="article">
@@ -51,4 +63,5 @@ const pageTypeLabel = entry.data.pageType === 'tool' ? '免費工具' : entry.da
     </article>
     <aside class="toc-card"><strong>FamilyBoard</strong><p>免費、免帳號的家庭保養、保固與責任管理工具。</p><a class="button" href="/zh-tw/app/">開啟繁中 App</a><p class="help">核心家庭紀錄保留在目前瀏覽器；請定期自行匯出備份。</p>{entry.data.pageType === 'tool' && <p><a href="/zh-tw/">查看繁中首頁</a></p>}</aside>
   </div>
+  </>}
 </BaseLayout>
