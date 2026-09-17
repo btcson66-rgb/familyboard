@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Field = {
   name: string;
@@ -15071,6 +15071,15 @@ export default function ToolWorkbench({
   const [values, setValues] = useState<Record<string, string>>(initial);
   const [result, setResult] = useState("");
   const [status, setStatus] = useState("");
+  // This component is server-rendered so that crawlers (and readers on a slow
+  // connection) get the real tool — its heading, instructions and every field
+  // label — in the HTML instead of an empty div. The trade-off is a window where
+  // the markup exists but the JavaScript that makes it work has not arrived, and
+  // a click in that window would silently do nothing. Gate the controls on mount
+  // so the form is readable immediately but only becomes clickable once it can
+  // actually respond.
+  const [ready, setReady] = useState(false);
+  useEffect(() => setReady(true), []);
   if (!definition)
     return (
       <section className="tool-shell">
@@ -15143,7 +15152,9 @@ export default function ToolWorkbench({
           ))}
         </div>
         <div>
-          <button type="submit">{copy.generate}</button>{" "}
+          <button type="submit" disabled={!ready}>
+            {copy.generate}
+          </button>{" "}
           <button
             className="secondary"
             type="button"

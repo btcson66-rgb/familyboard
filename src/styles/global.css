@@ -574,8 +574,27 @@ textarea {
 }
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.55rem 1.2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.footer-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.footer-heading {
+  margin: 0 0 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9fb8b0;
+}
+.footer-legal {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: #9fb8b0;
 }
 .app-body {
   background: #eef2ed;
@@ -644,6 +663,7 @@ textarea {
   }
   .footer-links {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 }
 

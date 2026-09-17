@@ -33,6 +33,8 @@ contentVersion: 1
 
 Household maintenance often fails because the information is incomplete, not because the work is hard. Someone remembers changing a filter "a while ago." A technician visited, but the invoice is buried in email. `FamilyBoard`'s Maintenance tab exists to replace that guesswork with a dated record tied to the actual thing being maintained.
 
+**Choose the right starting point:** Use the Maintenance Tracker when you need a real record of an asset, owner, due date, source and completed work. If you only need a first-pass list of what to review, use the [Home Maintenance Schedule Generator](/tools/home-maintenance-schedule-generator/) first, then bring the tasks worth keeping into the tracker. The generator creates a starter review; it does not supply manufacturer intervals or background reminders.
+
 ## What a maintenance task actually stores
 
 The quick-add form asks for a title, a related asset (from your Assets list), a home area (for maintenance that isn't tied to one specific asset, like "gutters" or "yard"), an owner, a next-due date, a repeat interval in months, a priority (normal, high or low), and an instructions source — a place to note "owner's manual page 14" or "HVAC company recommendation" so the interval has a traceable origin instead of being invented. Underneath, the record also carries a trigger type of date, interval-after-completion, seasonal or manual; the quick-add form sets this automatically — if you enter a repeat interval greater than zero it becomes interval-after-completion, otherwise it's date. Seasonal and manual trigger types exist on the record and can be set through the Settings master CSV for tasks that don't fit either automatic pattern.

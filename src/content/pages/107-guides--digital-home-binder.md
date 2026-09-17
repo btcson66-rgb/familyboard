@@ -38,6 +38,8 @@ A digital home binder can help with ordinary work—finding an appliance manual,
 
 **Want to test the binder instead of assuming it works? [Use the free Household Record Retrieval & Handoff Drill Log](/tools/household-record-retrieval-drill-log/).**
 
+**Binder or handoff?** Use this guide to design the record map and test whether sources are findable. When another person needs a dated, limited operating view, continue to the [Household Handoff Guide](/guides/household-handoff/) or the [Household Handoff feature](/features/household-handoff/) instead of copying the whole binder into a shareable document.
+
 ## Start with retrieval questions, not a universal folder list
 
 No fixed set of ten tabs makes every household complete. A renter with one vehicle, a homeowner managing a renovation, a caregiver and a household with pets will ask different questions. Begin with five to eight real retrieval prompts: Where is the current lease or ownership source? Which document supports this appliance warranty? Who services this home system? What obligation renews next? Which minimized contact reference is available if the usual coordinator cannot answer?

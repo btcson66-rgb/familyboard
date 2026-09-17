@@ -9,6 +9,12 @@ export default tseslint.config(
       "dist/**",
       ".astro/**",
       "node_modules/**",
+      // Playwright artifacts. These are gitignored, but flat config does not read
+      // .gitignore, so a local `npm run e2e` followed by `npm run lint` otherwise
+      // reports thousands of errors from bundled trace resources. CI happens to
+      // lint before it runs e2e, which is the only reason this stayed hidden.
+      "test-results/**",
+      "playwright-report/**",
       "reports/**",
       "src/content/pages/**",
       "src/generated/**",

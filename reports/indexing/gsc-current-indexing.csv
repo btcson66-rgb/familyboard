@@ -6,7 +6,6 @@ noindex,14,GSC Page Indexing snapshot,2026-09-04,
 redirect,3,GSC Page Indexing snapshot,2026-09-04,
 discovered_not_indexed,0,GSC Page Indexing snapshot,2026-09-04,
 crawled_not_indexed,0,GSC Page Indexing snapshot,2026-09-04,
-sitemap_last_submitted,2026-09-13T12:50:44.846Z,GSC Sitemaps API readback,2026-09-13T12:58:03.133Z,submitted exactly once after deploy
-sitemap_last_downloaded,null,GSC Sitemaps API readback,2026-09-13T12:58:03.133Z,pending
-sitemap_status,registered_pending,GSC Sitemaps API/UI,2026-09-13T12:58:03.134Z,PASS
-sitemap_discovered_urls,0,GSC Sitemaps API/UI,2026-09-13T12:58:03.134Z,
+sitemap_last_downloaded,null,GSC Sitemaps API readback,2026-09-17T16:46:33.964Z,pending
+sitemap_status,registered_pending,GSC Sitemaps API/UI,2026-09-17T16:46:33.965Z,PASS
+sitemap_discovered_urls,0,GSC Sitemaps API/UI,2026-09-17T16:46:33.965Z,

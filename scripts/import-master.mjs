@@ -403,7 +403,38 @@ Solar records can reveal an address, energy use, roof layout and financial contr
   },
 ];
 
-const all = [...records, ...supportRecords, ...extraRecords];
+// The master document still carries a set of /zh-tw/ routes, but Traditional
+// Chinese pages are owned by src/content/pages-zh-tw/ (which is hand-maintained,
+// not generated) and are built by src/pages/zh-tw/[...slug].astro. Neither page
+// template renders a /zh-tw/ route out of this English collection, so these
+// records produced no HTML — they only leaked sideways: 54 duplicate entries in
+// sitemap-pages.json (27 of them disagreeing about `indexable`, with the sitemap
+// staying correct only because the zh-TW entry happened to be appended last), 17
+// zh-TW links inside the English /guides/ hub, and 37 zh-TW routes in the English
+// search index. Drop them here, at the single point where the English record set
+// is assembled.
+const zhTwOwnedRoutes = new Set(
+  fs.existsSync(path.resolve("src/content/pages-zh-tw"))
+    ? fs
+        .readdirSync(path.resolve("src/content/pages-zh-tw"))
+        .filter((name) => name.endsWith(".md"))
+        .map((name) =>
+          (fs
+            .readFileSync(path.join(path.resolve("src/content/pages-zh-tw"), name), "utf8")
+            .match(/^route:\s*"?([^"\n]+)"?$/m)?.[1] || "").trim(),
+        )
+        .filter(Boolean)
+    : [],
+);
+const englishRecords = [...records, ...supportRecords, ...extraRecords];
+for (const record of englishRecords) {
+  if (record.route.startsWith("/zh-tw/") && !zhTwOwnedRoutes.has(record.route))
+    throw new Error(
+      `Master defines ${record.route} but src/content/pages-zh-tw/ has no page for it; ` +
+        "it would be dropped from the site entirely. Add the zh-TW page or remove the master entry.",
+    );
+}
+const all = englishRecords.filter((record) => !record.route.startsWith("/zh-tw/"));
 
 
 

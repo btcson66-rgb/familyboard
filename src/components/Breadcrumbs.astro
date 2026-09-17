@@ -8,7 +8,11 @@ const parent = parts[0] || '';
 const labels: Record<string,string> = isZhTw
   ? { guides: '指南', features: '功能', tools: '工具', checklists: '檢查表', templates: '範本' }
   : { guides: 'Guides', features: 'Features', tools: 'Tools', checklists: 'Checklists', templates: 'Templates' };
-const showParent = !isZhTw && parts.length > 1 && Boolean(parent && labels[parent]);
+// zh-TW pages used to be excluded here, which left every Traditional Chinese page
+// with a two-level Home > Page trail and no collection tier — the hierarchy Google
+// reads from BreadcrumbList. Both locales have the collection hubs, so both get
+// the parent level.
+const showParent = parts.length > 1 && Boolean(parent && labels[parent]);
 const currentLabel = title.replace(/ \|.*$/, '');
 const homePath = isZhTw ? '/zh-tw/' : '/';
 const parentPath = isZhTw ? `/zh-tw/${parent}/` : `/${parent}/`;

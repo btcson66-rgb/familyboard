@@ -2160,41 +2160,9 @@
     "redirectTo": ""
   },
   {
-    "route": "/zh-tw/guides/familyboard-home-access-handoff-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/tools/household-home-access-handoff-log/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
     "route": "/tools/household-schedule-conflict-review-log/",
     "alternateRoute": "/zh-tw/tools/household-schedule-conflict-review-log/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/tools/household-schedule-conflict-review-log/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/familyboard-schedule-conflict-review-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
     "lastReviewedAt": "2026-08-27",
     "locale": "en",
     "redirectTo": ""
@@ -2208,41 +2176,9 @@
     "redirectTo": ""
   },
   {
-    "route": "/zh-tw/tools/household-maintenance-priority-review-log/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/familyboard-maintenance-priority-review-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
     "route": "/tools/household-service-quote-comparison-log/",
     "alternateRoute": "/zh-tw/tools/household-service-quote-comparison-log/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/tools/household-service-quote-comparison-log/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/familyboard-service-quote-comparison-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
     "lastReviewedAt": "2026-08-27",
     "locale": "en",
     "redirectTo": ""
@@ -2256,41 +2192,9 @@
     "redirectTo": ""
   },
   {
-    "route": "/zh-tw/guides/familyboard-family-display-mode-setup/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/familyboard-old-tablet-display-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
     "route": "/guides/familyboard-browser-storage-maintenance/",
     "alternateRoute": "/zh-tw/guides/familyboard-browser-storage-maintenance/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/familyboard-browser-storage-maintenance/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/familyboard-browser-storage-cleanup-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
     "lastReviewedAt": "2026-08-27",
     "locale": "en",
     "redirectTo": ""
@@ -2304,41 +2208,9 @@
     "redirectTo": ""
   },
   {
-    "route": "/zh-tw/tools/household-seasonal-reset-action-log/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/familyboard-seasonal-reset-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
     "route": "/tools/household-device-retirement-handoff-log/",
     "alternateRoute": "/zh-tw/tools/household-device-retirement-handoff-log/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/tools/household-device-retirement-handoff-log/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/familyboard-device-retirement-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
     "lastReviewedAt": "2026-08-27",
     "locale": "en",
     "redirectTo": ""
@@ -2352,41 +2224,9 @@
     "redirectTo": ""
   },
   {
-    "route": "/zh-tw/tools/household-router-support-review-log/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/familyboard-router-support-review-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
     "route": "/tools/household-shopping-list-planner/",
     "alternateRoute": "/zh-tw/tools/household-shopping-list-planner/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/tools/household-shopping-list-planner/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-27",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/familyboard-shopping-list-planner-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
     "lastReviewedAt": "2026-08-27",
     "locale": "en",
     "redirectTo": ""
@@ -3032,24 +2872,8 @@
     "redirectTo": ""
   },
   {
-    "route": "/zh-tw/guides/familyboard-service-appointment-handoff-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
     "route": "/tools/household-time-window-overlap-checker/",
     "alternateRoute": "/zh-tw/tools/household-time-window-overlap-checker/",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/tools/household-time-window-overlap-checker/",
-    "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -3064,24 +2888,8 @@
     "redirectTo": ""
   },
   {
-    "route": "/zh-tw/guides/familyboard-time-window-overlap-checker-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
     "route": "/tools/household-date-offset-planner/",
     "alternateRoute": "/zh-tw/tools/household-date-offset-planner/",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/tools/household-date-offset-planner/",
-    "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -3096,24 +2904,8 @@
     "redirectTo": ""
   },
   {
-    "route": "/zh-tw/guides/familyboard-date-offset-planner-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
     "route": "/tools/household-task-load-calculator/",
     "alternateRoute": "/zh-tw/tools/household-task-load-calculator/",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/tools/household-task-load-calculator/",
-    "alternateRoute": "",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
     "locale": "en",
@@ -3124,230 +2916,6 @@
     "alternateRoute": "/zh-tw/guides/familyboard-task-load-calculator-tutorial/",
     "indexable": true,
     "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/familyboard-task-load-calculator-tutorial/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/editorial-policy/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/disclaimer/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/about/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/checklists/printable-home-maintenance-checklist/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-home-inventory-template/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-household-handoff-sheet/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-29",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/features/",
-    "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/checklists/printable-monthly-home-checklist/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/checklists/printable-seasonal-home-checklist/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-appliance-inventory/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-warranty-tracker/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-repair-log/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/guides/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/tools/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/checklists/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/checklists/printable-emergency-binder-checklist/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/checklists/printable-moving-checklist/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/checklists/printable-pet-sitter-checklist/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-service-provider-list/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-emergency-contacts/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-household-contacts/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-cleaning-schedule/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-chore-chart/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/checklists/printable-house-sitter-checklist/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-subscription-tracker/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
-    "locale": "en",
-    "redirectTo": ""
-  },
-  {
-    "route": "/zh-tw/templates/printable-annual-renewals/",
-    "alternateRoute": "",
-    "indexable": true,
-    "lastReviewedAt": "2026-08-19",
     "locale": "en",
     "redirectTo": ""
   },

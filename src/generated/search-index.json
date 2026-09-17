@@ -2160,28 +2160,12 @@
     "headings": "Household Home Access Handoff Log Permission comes before the log Record least-privilege scope Separate arrival, return and reset Keep affiliate suggestions outside access decisions"
   },
   {
-    "title": "家庭進出與歸還複查工具｜FamilyBoard 免費安全交接紀錄",
-    "description": "免費整理家庭維修到訪、親友照看與物品歸還的範圍、來源、角色與複查日期；不保存地址、鑰匙、門禁碼或訪客身分。",
-    "route": "/zh-tw/tools/household-home-access-handoff-log/",
-    "cluster": "household-operations",
-    "keywords": "家庭進出交接紀錄工具",
-    "headings": "家庭進出與歸還複查工具"
-  },
-  {
     "title": "Free Household Schedule Conflict Log | Reschedule Decisions and Owners | FamilyBoard",
     "description": "Review overlapping family, school, work and service commitments with safe source codes, constraints, owners and reschedule observations—without storing full calendars or contact data.",
     "route": "/tools/household-schedule-conflict-review-log/",
     "cluster": "household-operations",
     "keywords": "household schedule conflict log",
     "headings": "Household Schedule Conflict Review Log Keep original calendars in control Compare constraints before proposing a change Do not publish private routines Affiliate placement stays outside decisions"
-  },
-  {
-    "title": "家庭行程衝突複查工具｜改期決策、角色與來源紀錄｜FamilyBoard",
-    "description": "免費整理家庭行程重疊、時間窗口、限制、負責角色與改期結果；不保存完整行事曆、地址、聯絡或私人訊息。",
-    "route": "/zh-tw/tools/household-schedule-conflict-review-log/",
-    "cluster": "household-operations",
-    "keywords": "家庭行程衝突複查工具",
-    "headings": "家庭行程衝突複查工具 讓衝突可接手但不暴露生活模式 聯盟商品不應影響決定"
   },
   {
     "title": "Free Home Maintenance Priority Review Log | Observations, Owners and Follow-Up | FamilyBoard",
@@ -2192,28 +2176,12 @@
     "headings": "Household Maintenance Priority Review Log Observe before you explain Keep priority as a household decision Affiliate recommendations stay outside maintenance action"
   },
   {
-    "title": "居家維護優先複查工具｜觀察、限制、角色與後續行動｜FamilyBoard",
-    "description": "免費整理家電或居家設備的可見異常、說明書與服務來源、使用限制、家庭角色與複查結果；不提供拆修指示或安全保證。",
-    "route": "/zh-tw/tools/household-maintenance-priority-review-log/",
-    "cluster": "maintenance",
-    "keywords": "居家維護優先複查工具",
-    "headings": "居家維護優先複查工具 先寫觀察，再寫要問的問題 家庭優先順序不是專業安全評分 聯盟商品只能放在行動之外"
-  },
-  {
     "title": "Household Service Quote Comparison Log | Compare Scope, Inclusions and Follow-Up",
     "description": "A free, private-first log for comparing dated service quotes, inclusions, exclusions, household constraints and unanswered questions without ranking providers or giving price advice.",
     "route": "/tools/household-service-quote-comparison-log/",
     "cluster": "maintenance",
     "keywords": "service quote comparison log",
     "headings": "Household Service Quote Comparison Log Compare scope before totals Treat household constraints as questions Decide without pretending certainty Affiliate boundary"
-  },
-  {
-    "title": "居家服務報價比較工具｜範圍、包含項目與後續提問｜FamilyBoard",
-    "description": "免費整理不同服務報價的日期、來源、包含與排除、家庭限制、提問和決定；不搜尋業者、不判定價格合理、不替你簽約。",
-    "route": "/zh-tw/tools/household-service-quote-comparison-log/",
-    "cluster": "maintenance",
-    "keywords": "居家服務報價比較工具",
-    "headings": "居家服務報價比較工具｜範圍、包含項目與後續提問 先比較範圍，再看金額 把家庭限制寫成要問的問題 家庭決定不等於專業判定 聯盟商品放在工作台之外"
   },
   {
     "title": "FamilyBoard Family Display Mode Setup Guide | Old Tablet, Privacy and Offline Limits",
@@ -2240,28 +2208,12 @@
     "headings": "Household Seasonal Reset Action Log Why a seasonal log needs more than a checkbox Start with the transition, not a copied list Build a source-aware row Keep professional boundaries visible Review open work before the next transition Privacy and future product recommendations Five-minute handoff"
   },
   {
-    "title": "家庭換季複查怎麼記？免費季節行動紀錄工具｜FamilyBoard",
-    "description": "用 FamilyBoard 繁中工具記錄換季環境來源、設備或區域觀察、行動窗口與負責角色，不把清單當成安全檢查或天氣預測。",
-    "route": "/zh-tw/tools/household-seasonal-reset-action-log/",
-    "cluster": "household-operations",
-    "keywords": "家庭換季複查工具",
-    "headings": "家庭換季複查怎麼記？免費季節行動紀錄工具 為什麼不能只勾「完成」 先選真正接近的季節轉換 每一列都要有來源和可觀察內容 把需要專業判斷的事留在正確流程 下一次複查要處理開放列 隱私與未來商品推薦界線 交接前的五分鐘"
-  },
-  {
     "title": "Household Device Retirement Handoff Log | Free FamilyBoard Tool",
     "description": "Record protected device matches, account sign-out, backup checks, wipe windows and handoff results without putting passwords or serial numbers in the form.",
     "route": "/tools/household-device-retirement-handoff-log/",
     "cluster": "records-emergency",
     "keywords": "device retirement handoff checklist",
     "headings": "Household Device Retirement and Handoff Log Inventory is not a wipe Use a private reference and a protected source map The nine fields keep decisions in order Check the data boundary before the action Handoff, recycling and repair are different paths What to do when the sequence is interrupted Privacy and future affiliate placement"
-  },
-  {
-    "title": "舊手機要怎麼清除再送人？免費裝置退役交接工具｜FamilyBoard",
-    "description": "用 FamilyBoard 繁中工具整理裝置比對、帳號登出、備份驗證、清除窗口與回收交接，不輸入密碼或完整序號。",
-    "route": "/zh-tw/tools/household-device-retirement-handoff-log/",
-    "cluster": "records-emergency",
-    "keywords": "舊手機清除交接工具",
-    "headings": "舊手機要怎麼清除再送人？免費裝置退役交接工具 財物清冊不等於資料清除 先建立代號與受保護來源地圖 九個欄位讓順序清楚 先決定要保留什麼，再碰裝置 出售、捐贈、回收和送修不是同一路徑 中斷時保留未完成狀態 隱私與聯盟推薦界線 交接前的六個問題"
   },
   {
     "title": "Household Router Support Review Log | Firmware, ISP Ownership and Replacement",
@@ -2272,28 +2224,12 @@
     "headings": "Household Router Support Review Log Working is not the same as supported Start with a safe device code Build a dated source map Use the nine fields in order Record ownership before buying anything Keep credentials outside the log Close only an observed result Privacy and future recommendations Before the next router decision"
   },
   {
-    "title": "Wi-Fi 路由器支援期限怎麼查？免費家庭網路複查工具｜FamilyBoard",
-    "description": "記錄家用路由器型號、製造商支援期限、韌體查核、ISP 設備責任與汰換決定，不輸入 Wi-Fi 或管理密碼。",
-    "route": "/zh-tw/tools/household-router-support-review-log/",
-    "cluster": "records-emergency",
-    "keywords": "路由器支援期限複查工具",
-    "headings": "Wi-Fi 路由器支援期限怎麼查？免費家庭網路複查工具 能連線不等於仍受支援 用安全代號，不要公開網路秘密 先畫出製造商、ISP 與設定來源地圖 九欄讓事實、責任與決定分開 先確認所有權，再比較新設備 憑證留在密碼管理位置 汰換後只記錄實際觀察 隱私與未來商品推薦界線"
-  },
-  {
     "title": "Household Shopping List Planner | Free Private Restock Tool",
     "description": "Create a practical household shopping list with safe item codes, quantities, purposes, sources, owners and arrival checks. The browser tool does not scan inventory, compare prices or store payment data.",
     "route": "/tools/household-shopping-list-planner/",
     "cluster": "household-operations",
     "keywords": "household shopping list planner",
     "headings": "Household Shopping List Planner Begin with a purpose, not a giant inventory Keep inventory, source and purchase result separate Use the nine fields in order Eight statuses keep action from becoming evidence Do not turn the list into a payment or health record Future affiliate placement must remain optional"
-  },
-  {
-    "title": "家庭採買清單怎麼做？免費補貨與到貨複查工具｜FamilyBoard",
-    "description": "用 FamilyBoard 建立家庭補貨清單，分開記錄品項用途、數量單位、標示或原廠來源、負責角色與到貨結果；不讀庫存、不比價、不保存地址或付款資料。",
-    "route": "/zh-tw/tools/household-shopping-list-planner/",
-    "cluster": "household-operations",
-    "keywords": "家庭採買清單、家庭補貨清單",
-    "headings": "家庭採買清單怎麼做？免費補貨與到貨複查工具 先定義採買情境，不要把全家庫存搬進來 把庫存、來源與到貨結果分開 九欄格式讓家人知道下一步 八種狀態把「已買」與「已收到」分開 不把清單變成付款、地址或健康資料 聯盟商品只能在答案之後、而且可略過"
   },
   {
     "title": "Household Account List Tool | Free Private Service Handoff Log",
@@ -2944,14 +2880,6 @@
     "headings": "Household Time-Window Overlap Checker: compare two windows without copying a calendar Enter only a bounded scope Compare the four actual endpoints Treat the result as a question Keep source ownership visible Use the companion records for the right job Privacy and affiliate boundary Minimum useful record"
   },
   {
-    "title": "家庭時間窗口重疊檢查工具｜免費比較行程與到府服務時間｜FamilyBoard",
-    "description": "比較兩個家庭活動、接送或到府服務的本機時間，辨識重疊或交接邊界，再指定來源查核下一步；不讀取行事曆也不替你改期。",
-    "route": "/zh-tw/tools/household-time-window-overlap-checker/",
-    "cluster": "tools",
-    "keywords": "家庭時間重疊檢查工具",
-    "headings": "家庭時間窗口重疊檢查工具：不貼整份行事曆也能先比較 先用安全代號和短標籤 填入兩個窗口的四個時間點 把結果當成待查問題 讓來源和責任可以交接 需要更完整衝突時使用其他工具 隱私與 affiliate 界線 最小可用紀錄"
-  },
-  {
     "title": "How to Use FamilyBoard's Time-Window Overlap Checker | Practical Guide",
     "description": "Learn how to compare household activity and service windows, interpret overlap or boundary results and assign a source-based follow-up without copying a calendar.",
     "route": "/guides/familyboard-time-window-overlap-checker-tutorial/",
@@ -2966,14 +2894,6 @@
     "cluster": "tools",
     "keywords": "household date offset calculator",
     "headings": "Household Date Offset Planner: turn a confirmed date into a review plan Enter a bounded purpose Choose the anchor date carefully Add or subtract whole calendar days Treat the result as a prompt, not proof Pair it with the right FamilyBoard record Privacy and affiliate boundaries A useful closeout"
-  },
-  {
-    "title": "家庭日期偏移規劃器｜免費加減天數與複查日期工具｜FamilyBoard",
-    "description": "從家庭已確認日期加上或減去天數，規劃保養、交接或回訪日期，同時保留正式來源與隱私界線。",
-    "route": "/zh-tw/tools/household-date-offset-planner/",
-    "cluster": "tools",
-    "keywords": "家庭日期偏移計算器",
-    "headings": "家庭日期偏移規劃器：從確認日期整理下一次複查 先輸入窄範圍用途 基準日期要回到正式來源 使用正負整數加減日數 把規劃日當成提示，不是證明 搭配正確的 FamilyBoard 紀錄 隱私與 affiliate 界線 用五項資料收尾"
   },
   {
     "title": "How to Use FamilyBoard's Date Offset Planner | Follow-Up Guide",
@@ -2992,228 +2912,12 @@
     "headings": "Household Task Load Calculator: make recurring work visible without turning it into a score Start with a neutral review code Enter one recurring task per line Understand the frequency factors Read the role summary as a conversation starter Turn the estimate into real FamilyBoard work Revisit estimates when the household changes Privacy and future recommendations A useful closeout"
   },
   {
-    "title": "家庭家務負荷計算器｜免費每週時間估算工具｜FamilyBoard",
-    "description": "輸入家務頻率、每次分鐘數與中性責任代號，估算每週時間並整理分工討論；資料留在瀏覽器，不替家庭評分。",
-    "route": "/zh-tw/tools/household-task-load-calculator/",
-    "cluster": "tools",
-    "keywords": "家庭家務負荷計算器",
-    "headings": "家庭家務負荷計算器：看見重複工作，不把分鐘變成打分數 先建立中性的複查代號 每行只放一項重複家務 看懂頻率係數 把責任代號彙總當成對話起點 把估算接成真正的 FamilyBoard 任務 家庭情況改變就重新估算 隱私與未來推薦界線 用可複查資料收尾"
-  },
-  {
     "title": "How to Use FamilyBoard's Household Task Load Calculator | Weekly Chore Planning Guide",
     "description": "Learn how to estimate recurring household task time, group it by neutral role code and turn the estimate into a reviewable conversation without scoring fairness.",
     "route": "/guides/familyboard-task-load-calculator-tutorial/",
     "cluster": "product",
     "keywords": "household task load calculator tutorial",
     "headings": "How to Use FamilyBoard's Household Task Load Calculator Without Turning Chores Into a Score Begin with a small review code Use the four-field row format Choose the frequency that matches the observation Read the result in three layers Turn an estimate into a planning conversation Review the estimate after a real week Protect private context and future recommendations Close with an explicit next action"
-  },
-  {
-    "title": "FamilyBoard 編輯政策｜內容來源、AI 協助與更正流程",
-    "description": "了解 FamilyBoard 如何規劃、撰寫、查核與更新家庭管理內容，以及如何回報錯誤與避免模板頁。",
-    "route": "/zh-tw/editorial-policy/",
-    "cluster": "support",
-    "keywords": "FamilyBoard 編輯政策",
-    "headings": "FamilyBoard 編輯政策：每一頁都要回答一個真實的家庭問題 從一個清楚的使用者問題開始 AI 可以協助整理，但不能取代編輯判斷 安全、法律、醫療與地區資訊要保留條件 更正流程要能讓讀者重做 內容與商業推薦分開 如何判斷一頁是否值得留下"
-  },
-  {
-    "title": "FamilyBoard 家庭資訊免責聲明｜工具、維修與安全建議的使用界線",
-    "description": "了解 FamilyBoard 家庭管理、維修、緊急、法律、醫療與保險資訊的限制，避免把工具結果當成檢查或認證。",
-    "route": "/zh-tw/disclaimer/",
-    "cluster": "support",
-    "keywords": "家庭資訊免責聲明",
-    "headings": "FamilyBoard 家庭資訊免責聲明：整理工具不是現場判斷 工具會做什麼，也不會做什麼 來源、型號與所在地永遠優先 有立即危險時不要等待網站 日期、金額與清單不是承諾 分享與商品推薦的界線 三個容易誤用的情境 使用前後都做一次範圍檢查"
-  },
-  {
-    "title": "關於 FamilyBoard｜免費、免帳號的家庭管理與紀錄工具",
-    "description": "了解 FamilyBoard 為什麼把家庭資產、保養、任務、文件與交接放在同一個本機優先工作區，以及公開內容網站的方向。",
-    "route": "/zh-tw/about/",
-    "cluster": "support",
-    "keywords": "FamilyBoard 是什麼",
-    "headings": "關於 FamilyBoard：讓家庭重要資訊有一個找得到的地方 我們正在做什麼 產品理念 為什麼要寫很多免費指南與工具 我們不會把什麼說成產品能力 一個實際的家庭使用旅程 我們如何決定下一步 你可以如何參與"
-  },
-  {
-    "title": "可列印居家保養檢查表｜依季節、設備與紀錄安排家庭複查｜FamilyBoard",
-    "description": "下載前就能看懂的台灣繁中居家保養檢查表：依日常觀察、季節轉換、設備來源與交接紀錄整理，不把通用清單誤當成固定維修期限。",
-    "route": "/zh-tw/checklists/printable-home-maintenance-checklist/",
-    "cluster": "printables",
-    "keywords": "可列印居家保養檢查表",
-    "headings": "可列印居家保養檢查表：先留下真正需要複查的線索 列印前先寫下這次複查的範圍 A. 日常可安全觀察的變化 B. 季節轉換與台灣住宅情境 C. 把觀察接回家庭紀錄 D. 交接與 App 分工"
-  },
-  {
-    "title": "可列印家庭財物清冊範本｜房間、型號、序號與來源欄位｜FamilyBoard",
-    "description": "用台灣繁中列印一份不會失控的家庭財物清冊：先記家電、3C、車輛與難以重建的物品，再補照片、收據、保固和交接來源。",
-    "route": "/zh-tw/templates/printable-home-inventory-template/",
-    "cluster": "printables",
-    "keywords": "可列印家庭財物清冊範本",
-    "headings": "可列印家庭財物清冊範本：記下未來真的找得回來的資訊 這次清冊的邊界與主表 照片、來源與租屋交接 紙本與 FamilyBoard 分工"
-  },
-  {
-    "title": "可列印家庭交接表｜未來 30 天工作、聯絡人與責任範圍｜FamilyBoard",
-    "description": "為出差、住院、搬家或角色更換列印一張家庭交接表：整理未來 30 天期限、固定責任、住家問題、聯絡來源與明確排除的敏感資料。",
-    "route": "/zh-tw/templates/printable-household-handoff-sheet/",
-    "cluster": "printables",
-    "keywords": "可列印家庭交接表",
-    "headings": "可列印家庭交接表：讓責任換手，而不是把一堆資料丟給下一個人 範圍、期限與未來 30 天 責任、問題與聯絡來源 納入、排除與小測試 和 FamilyBoard App 搭配"
-  },
-  {
-    "title": "可列印每月家庭檢查表｜用 30 分鐘整理下個月的家務",
-    "description": "下載或列印一張適合台灣家庭的每月檢查表，檢查居家狀況、保養、續訂、文件與交接，不把每個月變成大掃除。",
-    "route": "/zh-tw/checklists/printable-monthly-home-checklist/",
-    "cluster": "printables",
-    "keywords": "每月家庭檢查表",
-    "headings": "可列印每月家庭檢查表：30 分鐘整理下個月真正要注意的事"
-  },
-  {
-    "title": "可列印季節家庭檢查表｜春夏秋冬依住家情境調整",
-    "description": "用一張可重複列印的季節家庭檢查表，依台灣氣候、設備負載、戶外環境與家庭行程調整春夏秋冬的準備與收尾。",
-    "route": "/zh-tw/checklists/printable-seasonal-home-checklist/",
-    "cluster": "printables",
-    "keywords": "季節家庭檢查表",
-    "headings": "可列印季節家庭檢查表：讓季節提醒配合住家與設備"
-  },
-  {
-    "title": "可列印家電清冊｜記錄型號、序號、保固與維修位置",
-    "description": "用一張適合台灣家庭的家電清冊，整理廚房、洗衣、冷氣與其他設備的型號、序號、購買資訊、保固和說明書位置。",
-    "route": "/zh-tw/templates/printable-appliance-inventory/",
-    "cluster": "printables",
-    "keywords": "家電清冊",
-    "headings": "可列印家電清冊：把報修時會被問的資料放在找得到的位置"
-  },
-  {
-    "title": "可列印保固追蹤表｜購買日期、條款來源與到期前複查",
-    "description": "列印一張保固追蹤表，整理家電與家庭用品的購買證明、型號、起算事件、保固期限、條款位置與到期前複查。",
-    "route": "/zh-tw/templates/printable-warranty-tracker/",
-    "cluster": "printables",
-    "keywords": "保固追蹤表",
-    "headings": "可列印保固追蹤表：先保留證據，再把複查安排在來得及的時間"
-  },
-  {
-    "title": "可列印居家修繕紀錄表｜症狀、服務、費用與後續結果",
-    "description": "列印一張家庭修繕紀錄表，分開記錄觀察到的症狀、服務商、實際工作、費用、結果、照片與後續複查。",
-    "route": "/zh-tw/templates/printable-repair-log/",
-    "cluster": "printables",
-    "keywords": "居家修繕紀錄表",
-    "headings": "可列印居家修繕紀錄表：把「修過了」寫成下一個人看得懂的歷程"
-  },
-  {
-    "title": "家庭管理指南｜居家保養、家電紀錄、文件與交接教學｜FamilyBoard",
-    "description": "從台灣家庭常見的居家保養、家電清冊、文件整理、緊急交接與日常分工開始，找到適合下一個家庭工作的繁中 FamilyBoard 指南。",
-    "route": "/zh-tw/guides/",
-    "cluster": "support",
-    "keywords": "家庭管理指南",
-    "headings": "繁中家庭管理指南：從下一個真實工作開始整理"
-  },
-  {
-    "title": "免費家庭管理工具｜保固、保養、備份與交接計算器｜FamilyBoard",
-    "description": "瀏覽 FamilyBoard 免費繁中家庭工具：保固到期、保養排程、訂閱費用、事件時間、日期偏移、備份檢查與交接紀錄，全部在瀏覽器完成。",
-    "route": "/zh-tw/tools/",
-    "cluster": "support",
-    "keywords": "免費家庭管理工具",
-    "headings": "免費家庭管理工具：先解決一個小問題，再留下可查證的結果"
-  },
-  {
-    "title": "可列印家庭檢查表｜居家保養、搬家、緊急與交接清單｜FamilyBoard",
-    "description": "瀏覽 FamilyBoard 繁中可列印家庭檢查表，涵蓋每月與季節保養、緊急資料夾、搬家、看家、寵物照護、家務與家庭交接。",
-    "route": "/zh-tw/checklists/",
-    "cluster": "support",
-    "keywords": "可列印家庭檢查表",
-    "headings": "繁中可列印家庭檢查表：把今天要做的事寫成能交接的清單"
-  },
-  {
-    "title": "可列印家庭緊急資料夾清單｜聯絡、文件與複查欄位",
-    "description": "用繁中可列印清單整理家庭緊急聯絡、設備、寵物、文件位置與複查日期；不把敏感資料全部印在同一張紙上。",
-    "route": "/zh-tw/checklists/printable-emergency-binder-checklist/",
-    "cluster": "printables",
-    "keywords": "家庭緊急資料夾清單",
-    "headings": "可列印家庭緊急資料夾清單：先整理分頁，再決定誰需要看什麼"
-  },
-  {
-    "title": "可列印搬家檢查表｜水電、清冊、文件與新家交接",
-    "description": "用繁中可列印搬家清單整理租約或交屋時間、公共服務、箱件、屋況、文件備份與新家第一週。",
-    "route": "/zh-tw/checklists/printable-moving-checklist/",
-    "cluster": "printables",
-    "keywords": "可列印搬家檢查表",
-    "headings": "可列印搬家檢查表：把前後兩個住家的責任交接在同一條時間線上"
-  },
-  {
-    "title": "可列印寵物照護檢查表｜餵食、作息、用品與聯絡交接",
-    "description": "用繁中可列印寵物照護清單交接餵食、散步、藥物、用品、獸醫來源與緊急聯絡，保留飼主確認日期和隱私界線。",
-    "route": "/zh-tw/checklists/printable-pet-sitter-checklist/",
-    "cluster": "printables",
-    "keywords": "可列印寵物照護檢查表",
-    "headings": "可列印寵物照護檢查表：讓照護者知道今天要做什麼、異常找誰"
-  },
-  {
-    "title": "繁中家庭範本中心｜可列印清單、交接表與紀錄工作表",
-    "description": "瀏覽 FamilyBoard 繁中家庭範本：聯絡、服務商、緊急、家電、保固、修繕、搬家與交接表，先選一張真正會使用的紙。",
-    "route": "/zh-tw/templates/",
-    "cluster": "support",
-    "keywords": "家庭範本下載",
-    "headings": "繁中家庭範本中心：先選一張真的會被拿起來使用的紙"
-  },
-  {
-    "title": "可列印家庭服務商清單｜水電、家電、管理與維修聯絡",
-    "description": "用繁中可列印服務商清單整理水電、冷氣、家電、鎖匠、社區管理與其他家庭聯絡，保留工作範圍與最後複查日期。",
-    "route": "/zh-tw/templates/printable-service-provider-list/",
-    "cluster": "printables",
-    "keywords": "可列印服務商清單",
-    "headings": "可列印家庭服務商清單：記住做過什麼，不把一次合作當成永久推薦"
-  },
-  {
-    "title": "可列印家庭緊急聯絡表｜家人、公共服務與照顧支援",
-    "description": "用繁中可列印緊急聯絡表整理家庭、管理單位、公共服務、照顧與備援角色，標註複查日期並避免暴露不必要的敏感資料。",
-    "route": "/zh-tw/templates/printable-emergency-contacts/",
-    "cluster": "printables",
-    "keywords": "可列印緊急聯絡表",
-    "headings": "可列印家庭緊急聯絡表：先排好角色與備援，再決定哪一版可以分享"
-  },
-  {
-    "title": "可列印家庭聯絡表｜家人、鄰居、公共服務與日常支援",
-    "description": "用繁中可列印家庭聯絡表依角色整理家人、鄰居、管理單位、公共服務與服務商，保留複查日期並避免把整本通訊錄印出。",
-    "route": "/zh-tw/templates/printable-household-contacts/",
-    "cluster": "printables",
-    "keywords": "可列印家庭聯絡表",
-    "headings": "可列印家庭聯絡表：依角色找得到人，不把整本通訊錄攤在桌上"
-  },
-  {
-    "title": "可列印清潔排程表｜每日重置、每週家務與輪替深度清潔",
-    "description": "用繁中可列印清潔排程依房間、頻率、負責人與完成標準安排每日、每週和輪替工作，先建立家庭能維持的最小版本。",
-    "route": "/zh-tw/templates/printable-cleaning-schedule/",
-    "cluster": "printables",
-    "keywords": "可列印清潔排程",
-    "headings": "可列印清潔排程表：先維持住家，再把工作分給真正有時間的人"
-  },
-  {
-    "title": "可列印家庭家務輪值表｜固定或輪替責任與完成標準",
-    "description": "用繁中可列印家務輪值表記錄工作、頻率、負責人、輪替與完成定義，不靠分數或排行榜維持家庭分工。",
-    "route": "/zh-tw/templates/printable-chore-chart/",
-    "cluster": "printables",
-    "keywords": "可列印家務輪值表",
-    "headings": "可列印家庭家務輪值表：把責任寫清楚，而不是把提醒都放在一個人身上"
-  },
-  {
-    "title": "可列印看家照護清單｜每日家務、寵物、植物與聯絡交接",
-    "description": "用台灣繁中可列印看家照護清單交代日期、寵物、植物、信件、垃圾、服務到訪與異常升級，不把帳密寫在紙上。",
-    "route": "/zh-tw/checklists/printable-house-sitter-checklist/",
-    "cluster": "printables",
-    "keywords": "可列印看家清單",
-    "headings": "可列印看家照護清單：讓短期代班者知道每天要做什麼、何時求助 每日最低任務與排程事件 異常升級與結束交接"
-  },
-  {
-    "title": "可列印訂閱追蹤表｜費用、週期、持有人與續訂日",
-    "description": "用台灣繁中可列印訂閱追蹤表整理服務名稱、實際費用、扣款週期、帳戶持有人、續訂日與取消備註，不把密碼寫在紙上。",
-    "route": "/zh-tw/templates/printable-subscription-tracker/",
-    "cluster": "printables",
-    "keywords": "可列印訂閱追蹤表",
-    "headings": "可列印訂閱追蹤表：看見真正的年成本與下一個決策日 第一輪盤點欄位 四個決策問題"
-  },
-  {
-    "title": "可列印年度續訂月曆｜家庭服務、保險、會員與登記",
-    "description": "用台灣繁中可列印年度續訂月曆整理十二個月份的服務、保險、會員、登記與定期義務，分開決策日、到期日、持有人與來源。",
-    "route": "/zh-tw/templates/printable-annual-renewals/",
-    "cluster": "printables",
-    "keywords": "可列印年度續訂月曆",
-    "headings": "可列印年度續訂月曆：先看決策窗口，再處理真正的到期日 十二個月總表 五步複查"
   },
   {
     "title": "Appliance Age Calculator Tutorial | Use Purchase or Installation Dates Correctly",

@@ -1,6 +1,6 @@
 # Content quality report
 
-Generated: 2026-09-13T09:17:15.186Z
+Generated: 2026-09-17T16:46:30.907Z
 
 ## Summary
 
@@ -10,9 +10,9 @@ Generated: 2026-09-13T09:17:15.186Z
 - Broken internal links: 0
 - Placeholder findings: 0
 - Internal instruction leakage: 0
-- Missing-source warnings on safety-sensitive numeric claims: 0
+- Missing-source warnings on safety-sensitive numeric claims: 1
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 610
+- Pages without a contextual product/tool link: 566
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -34,16 +34,11 @@ Generated: 2026-09-13T09:17:15.186Z
 
 ## Highest similarity pairs
 
-- 381-zh-tw--tools--household-time-window-overlap-checker.md ↔ 383-zh-tw--guides--familyboard-time-window-overlap-checker-tutorial.md: 0.267
-- 292-zh-tw--tools--household-shopping-list-planner.md ↔ 293-zh-tw--guides--familyboard-shopping-list-planner-tutorial.md: 0.240
-- 385-zh-tw--tools--household-date-offset-planner.md ↔ 387-zh-tw--guides--familyboard-date-offset-planner-tutorial.md: 0.171
 - 227-tools--household-pet-record-source-handoff-log.md ↔ 228-tools--household-school-record-source-handoff-log.md: 0.170
-- 289-zh-tw--tools--household-router-support-review-log.md ↔ 290-zh-tw--guides--familyboard-router-support-review-tutorial.md: 0.159
-- 381-zh-tw--tools--household-time-window-overlap-checker.md ↔ 385-zh-tw--tools--household-date-offset-planner.md: 0.159
 
 ## Safety-source warnings
 
-- None.
+- /guides/familyboard-household-subscription-cost-calculator-tutorial/
 
 ## Duplicate primary keywords
 
@@ -60,17 +55,9 @@ Generated: 2026-09-13T09:17:15.186Z
 
 ## Pages without contextual product/tool links
 
-- /about/
-- /affiliate-disclosure/
-- /changelog/
-- /contact/
-- /disclaimer/
-- /editorial-policy/
 - /guides/digital-home-inventory-backup/
-- /guides/familyboard-app-first-run-restore-tutorial/
 - /guides/familyboard-appliance-manual-source-tutorial/
 - /guides/familyboard-attachment-expiry-review-tutorial/
-- /guides/familyboard-attachment-metadata-tutorial/
 - /guides/familyboard-backup-restore-rehearsal-tutorial/
 - /guides/familyboard-browser-storage-maintenance/
 - /guides/familyboard-calendar-timezone-tutorial/
@@ -117,44 +104,8 @@ Generated: 2026-09-13T09:17:15.186Z
 - /guides/seasonal-home-maintenance-checklist/
 - /guides/solar-panel-maintenance-records/
 - /guides/subscription-cancellation-refund-records/
-- /guides/valuable-item-inventory/
 - /
 - /pricing/
-- /privacy/
-- /roadmap/
-- /security/
-- /terms/
-- /tools/household-accessibility-walkthrough-log/
-- /tools/household-bill-source-status-log/
-- /tools/household-clothing-care-repair-log/
-- /tools/household-document-renewal-review-log/
-- /tools/household-donation-handoff-log/
-- /tools/household-guest-arrival-prep-log/
-- /tools/household-home-access-handoff-log/
-- /tools/household-internet-incident-review-log/
-- /tools/household-inventory-photo-capture-log/
-- /tools/household-mail-package-handoff-log/
-- /tools/household-maintenance-priority-review-log/
-- /tools/household-meal-prep-role-log/
-- /tools/household-meeting-agenda-action-log/
-- /tools/household-meter-reading-review-log/
-- /tools/household-monthly-review-action-log/
-- /tools/household-pantry-expiry-review-log/
-- /tools/household-plant-care-handoff-log/
-- /tools/household-recycling-handoff-log/
-- /tools/household-return-handoff-log/
-- /tools/household-schedule-conflict-review-log/
-- /tools/household-school-activity-handoff-log/
-- /tools/household-school-pickup-handoff-log/
-- /tools/household-seasonal-reset-action-log/
-- /tools/household-service-appointment-handoff-log/
-- /tools/household-service-quote-comparison-log/
-- /tools/household-share-access-review-log/
-- /tools/household-subscription-cancellation-handoff-log/
-- /tools/household-trip-packing-handoff-log/
-- /tools/household-vehicle-document-source-status-log/
-- /tools/household-weekly-reset-action-log/
-- /tools/rental-security-deposit-move-out-claim-log/
 - /zh-tw/about/
 - /zh-tw/affiliate-disclosure/
 - /zh-tw/changelog/

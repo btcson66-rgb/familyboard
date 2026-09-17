@@ -322,10 +322,31 @@ for (const key of ["title", "metaDescription", "canonical"]) {
 errors.push(...new Set(brokenLinks));
 errors.push(...placeholders.map((route) => `${route}: placeholder token`));
 
-const sitemapFile = path.join(root, "sitemap-0.xml");
-if (!fs.existsSync(sitemapFile)) errors.push("sitemap-0.xml missing");
+// The sitemap is split into per-locale, per-section segments by
+// scripts/split-sitemap.mjs so Google Search Console reports coverage per
+// section. Every segment is audited, and hreflang reciprocity is checked across
+// the merged set — alternates are allowed to live in a different segment from
+// their source URL, which is what happens for every en/zh-TW pair here.
+const sitemapFiles = fs
+  .readdirSync(root)
+  .filter((name) => /^sitemap-(en|zh-tw)-[a-z]+\.xml$/.test(name))
+  .sort();
+const sitemapIndexFile = path.join(root, "sitemap-index.xml");
+if (!sitemapFiles.length) errors.push("no sitemap-<locale>-<section>.xml segments found");
+else if (!fs.existsSync(sitemapIndexFile)) errors.push("sitemap-index.xml missing");
 else {
-  const sitemapXml = fs.readFileSync(sitemapFile, "utf8");
+  const indexXml = fs.readFileSync(sitemapIndexFile, "utf8");
+  for (const name of sitemapFiles)
+    if (!indexXml.includes(`/${name}<`))
+      errors.push(`sitemap-index.xml does not reference ${name}`);
+  for (const loc of [...indexXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])) {
+    const name = loc.split("/").pop();
+    if (!sitemapFiles.includes(name))
+      errors.push(`sitemap-index.xml references missing segment ${name}`);
+  }
+  const sitemapXml = sitemapFiles
+    .map((name) => fs.readFileSync(path.join(root, name), "utf8"))
+    .join("");
   const sitemapEntries = new Map(
     [...sitemapXml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => {
       const block = match[1];
