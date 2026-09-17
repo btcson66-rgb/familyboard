@@ -9,3 +9,9 @@ test-results/
 coverage/
 reports/lighthouse-*.json
 artifacts/
+
+# Local Playwright config overrides. A contributor whose machine has a different
+# Chromium build than the installed @playwright/test expects needs a config with
+# an explicit executablePath; that path is machine-specific and must never reach
+# the repo, where it would override the config CI runs.
+playwright.local.ts
