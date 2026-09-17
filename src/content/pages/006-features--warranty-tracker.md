@@ -31,6 +31,8 @@ contentVersion: 1
 
 Warranty paperwork is easy to ignore when a product is new. Months or years later, the details are spread across an email receipt, a PDF manual, a store loyalty account and a photo of a serial number nobody can find again. `FamilyBoard`'s Warranties tab exists to capture that information once, while it's easy, and tie it to the item it actually covers.
 
+**At a glance:** A FamilyBoard warranty record connects an asset to its provider, start and end dates, receipt reference and terms reference, so you can answer “what is this covered by, and where is the paperwork?” from one local record. It computes the date status when you open the app, but it does not read the written terms or send email, push or SMS expiry alerts. If you need to calculate a review date before recording the warranty, use the [Warranty Expiration Calculator](/tools/warranty-expiration-calculator/) and then add the result to the asset-linked record.
+
 ## What a warranty record holds
 
 The quick-add form requires an asset link and an end date; provider, start date, receipt reference, terms reference and notes are all optional but recorded when you have them. The asset link is what makes a warranty a warranty rather than a floating note — pick "Dishwasher" from the asset dropdown and the warranty card's header shows "Dishwasher," not a generic entry.

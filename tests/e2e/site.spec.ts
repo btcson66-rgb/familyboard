@@ -1,6 +1,21 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type APIRequestContext } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { readFile } from "node:fs/promises";
+
+async function readSitemap(request: APIRequestContext): Promise<string> {
+  // The sitemap is split into per-locale, per-section segments (see
+  // scripts/split-sitemap.mjs). Follow the index and concatenate every segment so
+  // these assertions keep checking the full URL set rather than one section.
+  const index = await (await request.get("/sitemap-index.xml")).text();
+  const segments = [...index.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) =>
+    new URL(match[1]).pathname,
+  );
+  expect(segments.length).toBeGreaterThan(0);
+  const bodies = await Promise.all(
+    segments.map(async (segment) => (await request.get(segment)).text()),
+  );
+  return bodies.join("");
+}
 
 test("public SEO, keyboard and eight production tools work", async ({
   page,
@@ -87,7 +102,7 @@ test("public SEO, keyboard and eight production tools work", async ({
   ).toBeHidden();
   await page.emulateMedia({ media: "screen" });
 
-  const sitemap = await (await page.request.get("/sitemap-0.xml")).text();
+  const sitemap = await readSitemap(page.request);
   expect(sitemap).not.toContain("/app/");
   expect(sitemap).not.toContain(
     "<loc>https://familyboard.win/offline/</loc>",
@@ -1173,285 +1188,36 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
     .locator('script[type="application/ld+json"]')
     .allTextContents();
   expect(structuredData.join(" ")).toContain('"@type":"FAQPage"');
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "隱私權政策" }),
-  ).toHaveAttribute("href", "/zh-tw/privacy/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "聯絡我們" }),
-  ).toHaveAttribute("href", "/zh-tw/contact/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "資安說明" }),
-  ).toHaveAttribute("href", "/zh-tw/security/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "聯盟行銷揭露" }),
-  ).toHaveAttribute("href", "/zh-tw/affiliate-disclosure/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "使用條款" }),
-  ).toHaveAttribute("href", "/zh-tw/terms/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電修換決策教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/appliance-replacement-planning/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電年齡計算器教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-appliance-age-calculator-tutorial/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電汰換規劃器教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-appliance-replacement-planner-tutorial/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "清潔排程產生器教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-cleaning-schedule-generator-tutorial/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "帳單差異紀錄教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-utility-bill-anomaly-log-tutorial/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "維護分工地圖教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-maintenance-delegation-map-tutorial/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "文件保存決策教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-record-retention-decision-log-tutorial/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "修繕結案清單教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-home-repair-closeout-checklist-tutorial/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "寵物紀錄交接教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-pet-record-source-handoff-tutorial/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "居家動線複查教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-home-accessibility-walkthrough-log-tutorial/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭財物清冊教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/room-by-room-home-inventory/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "清潔排程教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/cleaning-schedule/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭防災演練紀錄表" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/home-emergency-drill-record-generator/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭避難計畫教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/home-evacuation-information/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭緊急物資盤點表" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/emergency-supply-inventory-audit/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "緊急避難包清單教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/emergency-supply-inventory/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料驗證" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/emergency-contact-verification-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭停電事件紀錄" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/household-power-outage-event-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "停電紀錄 App 教學" }),
-  ).toHaveAttribute(
-    "href",
-    "/zh-tw/guides/familyboard-power-outage-event-log-tutorial/",
-  );
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "停電復電後紀錄指南" }),
-  ).toHaveAttribute(
-    "href",
-    "/zh-tw/guides/power-outage-recovery-household-records/",
-  );
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭漏水事件紀錄" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/household-water-leak-event-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭事件時間計算器" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/household-event-duration-calculator/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭事件來源索引" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/household-event-source-index-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "事件來源索引 App 教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/familyboard-event-source-index-tutorial/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭公告來源查核指南" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/household-event-source-check-taiwan/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "漏水紀錄 App 教學" }),
-  ).toHaveAttribute(
-    "href",
-    "/zh-tw/guides/familyboard-water-leak-event-log-tutorial/",
-  );
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "漏水照片證據指南" }),
-  ).toHaveAttribute(
-    "href",
-    "/zh-tw/guides/water-leak-photo-evidence-records/",
-  );
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭颱風準備複查" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/household-storm-readiness-review/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "到府服務商查證紀錄" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/home-service-provider-verification-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "居家修繕追加變更紀錄" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/home-repair-change-order-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "居家修繕缺失複查表" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/home-repair-punch-list/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "居家修繕結案資料包" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/home-repair-closeout-checklist/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "產品保固申請紀錄表" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/warranty-claim-evidence-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "產品召回處置紀錄表" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/product-recall-action-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電到府維修紀錄表" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/appliance-service-visit-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電維修後復發紀錄" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/appliance-repair-callback-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電購買與安裝紀錄", exact: true }),
-  ).toHaveAttribute("href", "/zh-tw/tools/appliance-purchase-installation-record/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "購買與到貨證據紀錄" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/purchase-delivery-evidence-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "搬家箱件交接紀錄" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/moving-box-handover-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "搬家物品清單教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/moving-inventory/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "迷你倉進出與物品紀錄" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/storage-unit-access-inventory-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "迷你倉物品清單教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/storage-unit-inventory/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭文件查找演練" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/household-record-retrieval-drill-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭數位資料夾教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/digital-home-binder/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭重要文件盤點" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/important-household-document-review/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭重要文件清單" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/important-household-documents/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭文件保存決策" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/household-record-retention-decision-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭文件保存期限" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/how-long-to-keep-household-records/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電說明書來源核對" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/appliance-manual-source-check-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電說明書整理" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/organize-appliance-manuals/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭保單來源與版本核對" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/household-insurance-policy-source-version-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "保單整理教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/organize-insurance-documents/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "水電瓦斯網路交接紀錄" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/household-utility-provider-service-handoff-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "水電過戶與結清教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/organize-utility-account-information/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電清冊教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/appliance-inventory/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "網購到貨與退換貨教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/purchase-receipt-organizer/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "保固申請與追蹤教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/how-to-track-product-warranties/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "產品註冊與召回教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/product-registration-tracker/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電到府維修教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/service-history/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家電屢修不復教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/repair-history/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "緊急聯絡資料表教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/emergency-information-sheet/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭停電準備指南" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/power-outage-home-preparedness/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭漏水處理指南" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/water-leak-response-home-records/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "家庭防颱準備指南" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/storm-preparation-home-checklist/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "找水電與維修業者指南" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/home-service-provider-list/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "裝潢驗收紀錄教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/renovation-records/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "裝潢收據整理教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/home-improvement-receipts/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "裝潢追加工程教學" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/contractor-records/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "可列印居家保養檢查表" }),
-  ).toHaveAttribute("href", "/zh-tw/checklists/printable-home-maintenance-checklist/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "可列印家庭財物清冊" }),
-  ).toHaveAttribute("href", "/zh-tw/templates/printable-home-inventory-template/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "可列印家庭交接表" }),
-  ).toHaveAttribute("href", "/zh-tw/templates/printable-household-handoff-sheet/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "功能總覽" }),
-  ).toHaveAttribute("href", "/zh-tw/features/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "可列印每月家庭檢查表" }),
-  ).toHaveAttribute("href", "/zh-tw/checklists/printable-monthly-home-checklist/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "可列印季節家庭檢查表" }),
-  ).toHaveAttribute("href", "/zh-tw/checklists/printable-seasonal-home-checklist/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "可列印家電清冊" }),
-  ).toHaveAttribute("href", "/zh-tw/templates/printable-appliance-inventory/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "可列印保固追蹤表" }),
-  ).toHaveAttribute("href", "/zh-tw/templates/printable-warranty-tracker/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "可列印居家修繕紀錄表" }),
-  ).toHaveAttribute("href", "/zh-tw/templates/printable-repair-log/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "繁中指南中心" }),
-  ).toHaveAttribute("href", "/zh-tw/guides/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "繁中工具中心" }),
-  ).toHaveAttribute("href", "/zh-tw/tools/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "繁中檢查表中心" }),
-  ).toHaveAttribute("href", "/zh-tw/checklists/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "繁中範本中心" }),
-  ).toHaveAttribute("href", "/zh-tw/templates/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "可列印家庭聯絡表" }),
-  ).toHaveAttribute("href", "/zh-tw/templates/printable-household-contacts/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "可列印看家照護清單" }),
-  ).toHaveAttribute("href", "/zh-tw/checklists/printable-house-sitter-checklist/");
-  await expect(
-    page.locator(".site-footer").getByRole("link", { name: "更新紀錄" }),
-  ).toHaveAttribute("href", "/zh-tw/changelog/");
+  // The footer is intentionally small. It used to carry 433 deep links on every
+  // Traditional Chinese page, which made sitewide boilerplate 67% of the average
+  // page's HTML. Per-article crawl paths belong to the collection hubs and to the
+  // contextual links inside each article, not here. The count assertion below is a
+  // regression guard: if it fails because links were added back, fix the footer,
+  // not the number.
+  await expect(page.locator(".site-footer a")).toHaveCount(18);
+  for (const [name, href] of [
+    ["指南", "/zh-tw/guides/"],
+    ["工具", "/zh-tw/tools/"],
+    ["檢查表", "/zh-tw/checklists/"],
+    ["範本", "/zh-tw/templates/"],
+    ["功能", "/zh-tw/features/"],
+    ["開啟應用程式", "/zh-tw/app/"],
+    ["價格（免費）", "/zh-tw/pricing/"],
+    ["產品藍圖", "/zh-tw/roadmap/"],
+    ["更新紀錄", "/zh-tw/changelog/"],
+    ["關於 FamilyBoard", "/zh-tw/about/"],
+    ["聯絡我們", "/zh-tw/contact/"],
+    ["編輯政策", "/zh-tw/editorial-policy/"],
+    ["隱私權政策", "/zh-tw/privacy/"],
+    ["資安說明", "/zh-tw/security/"],
+    ["使用條款", "/zh-tw/terms/"],
+    ["免責聲明", "/zh-tw/disclaimer/"],
+    ["聯盟行銷揭露", "/zh-tw/affiliate-disclosure/"],
+  ] as const) {
+    await expect(
+      page.locator(".site-footer").getByRole("link", { name, exact: true }),
+    ).toHaveAttribute("href", href);
+  }
 
   for (const localized of [
     {
@@ -4619,7 +4385,7 @@ test("Traditional Chinese pages are indexable, correctly localized and functiona
   await expect(page.locator(".result")).toContainText("公開召回或檢修訊息");
   await expect(page.locator(".result")).toContainText("不要把這份清單當成拆解");
 
-  const sitemap = await (await page.request.get("/sitemap-0.xml")).text();
+  const sitemap = await readSitemap(page.request);
   expect(sitemap).toContain("https://familyboard.win/zh-tw/");
   expect(sitemap).toContain(
     "https://familyboard.win/zh-tw/guides/home-maintenance-schedule/",
