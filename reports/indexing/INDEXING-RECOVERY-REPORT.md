@@ -1,6 +1,6 @@
 # FAMILYBOARD-INDEXING-RECOVERY-001
 
-Generated: 2026-09-17T16:46:34.387Z
+Generated: 2026-09-17T17:09:34.329Z
 Mode: local build audit with saved GSC snapshot
 Branch: luna/familyboard-indexing-recovery-001
 

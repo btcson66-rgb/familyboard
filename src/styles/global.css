@@ -717,3 +717,11 @@ textarea {
     margin: 1.4cm;
   }
 }
+
+/* The tool form is server-rendered and disabled until its island hydrates, so the
+   controls cannot silently discard input typed into markup React has not adopted
+   yet. Keep that window legible rather than looking broken. */
+.tool-form :disabled {
+  opacity: 0.6;
+  cursor: progress;
+}

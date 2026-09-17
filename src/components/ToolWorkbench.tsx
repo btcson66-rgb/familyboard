@@ -15074,10 +15074,12 @@ export default function ToolWorkbench({
   // This component is server-rendered so that crawlers (and readers on a slow
   // connection) get the real tool — its heading, instructions and every field
   // label — in the HTML instead of an empty div. The trade-off is a window where
-  // the markup exists but the JavaScript that makes it work has not arrived, and
-  // a click in that window would silently do nothing. Gate the controls on mount
-  // so the form is readable immediately but only becomes clickable once it can
-  // actually respond.
+  // the markup exists but the JavaScript that makes it work has not arrived.
+  // Every control is gated on mount, not just the submit button: these are
+  // controlled inputs, so text typed into the server-rendered form before React
+  // hydrates is silently discarded the moment the controlled `value` takes over.
+  // Disabling them makes that window honest — the form is readable immediately
+  // and becomes usable only once it can actually keep what you put in it.
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   if (!definition)
@@ -15113,6 +15115,7 @@ export default function ToolWorkbench({
               {field.label}
               {field.type === "select" ? (
                 <select
+                  disabled={!ready}
                   value={values[field.name]}
                   onChange={(event) =>
                     setValues((current) => ({
@@ -15127,6 +15130,7 @@ export default function ToolWorkbench({
                 </select>
               ) : field.type === "textarea" ? (
                 <textarea
+                  disabled={!ready}
                   value={values[field.name]}
                   onChange={(event) =>
                     setValues((current) => ({
@@ -15138,6 +15142,7 @@ export default function ToolWorkbench({
               ) : (
                 <input
                   type={field.type || "text"}
+                  disabled={!ready}
                   value={values[field.name]}
                   onChange={(event) =>
                     setValues((current) => ({
@@ -15158,6 +15163,7 @@ export default function ToolWorkbench({
           <button
             className="secondary"
             type="button"
+            disabled={!ready}
             onClick={() => {
               setValues(initial);
               setResult("");

@@ -1,7 +1,7 @@
 # GSC after deploy
 
 Status: NOT_DEPLOYED_PR_PENDING
-Captured: 2026-09-17T16:46:34.387Z
+Captured: 2026-09-17T17:09:34.330Z
 Property: sc-domain:familyboard.win
 
 The implementation branch has not been merged to main, so this is intentionally not a post-deploy success claim. After the approved production deployment, read back the sitemap once and save: lastDownloaded, status, warnings, errors, discovered URLs, known URLs, indexed URLs, Discovered-not-indexed, Crawled-not-indexed, noindex, redirect and duplicate/canonical categories.
