@@ -6,7 +6,7 @@ primaryIntent: "teach households to record provider identity, source, scope and 
 primaryKeyword: "FamilyBoard home service provider verification tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

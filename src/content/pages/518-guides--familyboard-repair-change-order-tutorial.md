@@ -6,7 +6,7 @@ primaryIntent: "record repair scope changes, approval evidence and cost differen
 primaryKeyword: "FamilyBoard repair change order"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

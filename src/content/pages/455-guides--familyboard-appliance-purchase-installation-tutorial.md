@@ -6,7 +6,7 @@ primaryIntent: "learn to keep purchase, delivery, installation and first-observa
 primaryKeyword: "FamilyBoard appliance purchase installation tutorial"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

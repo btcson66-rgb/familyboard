@@ -6,7 +6,7 @@ primaryIntent: "record a bounded household question, source, constraints, role a
 primaryKeyword: "household decision log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

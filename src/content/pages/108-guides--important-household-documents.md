@@ -6,7 +6,7 @@ primaryIntent: "build a household-specific important-document list with current 
 primaryKeyword: "important household documents"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-24"

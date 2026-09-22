@@ -6,7 +6,7 @@ primaryIntent: "learn to preserve a dated repair evidence index and handoff with
 primaryKeyword: "FamilyBoard repair evidence timeline tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

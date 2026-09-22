@@ -6,7 +6,7 @@ primaryIntent: "reconcile a home repair close-out package without certifying com
 primaryKeyword: "home repair closeout checklist"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"

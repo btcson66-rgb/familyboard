@@ -6,7 +6,7 @@ primaryIntent: "learn to map medical-record, medication-list, referral and care-
 primaryKeyword: "FamilyBoard medical information source handoff tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "use the warranty checklist generator to capture purchase, model,
 primaryKeyword: "warranty checklist generator tutorial"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

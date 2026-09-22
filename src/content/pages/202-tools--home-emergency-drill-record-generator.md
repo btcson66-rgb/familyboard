@@ -6,7 +6,7 @@ primaryIntent: "document a household emergency exercise and assign follow-up imp
 primaryKeyword: "home emergency drill record generator"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"

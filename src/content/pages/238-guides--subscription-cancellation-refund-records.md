@@ -6,7 +6,7 @@ primaryIntent: "document an auto-renewal cancellation, refund request and recurr
 primaryKeyword: "subscription cancellation refund record"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

@@ -6,7 +6,7 @@ primaryIntent: "document the official source, protected person match, current se
 primaryKeyword: "home care visit log"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-26"
 lastReviewedAt: "2026-08-26"

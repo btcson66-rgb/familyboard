@@ -6,7 +6,7 @@ primaryIntent: "teach households to record repair scope changes, source approval
 primaryKeyword: "FamilyBoard home repair change order tutorial"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

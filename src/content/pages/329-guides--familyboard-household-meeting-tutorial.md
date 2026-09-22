@@ -6,7 +6,7 @@ primaryIntent: "learn a short, privacy-aware FamilyBoard meeting workflow that t
 primaryKeyword: "FamilyBoard household meeting tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "record bounded household decisions with sources, constraints, ac
 primaryKeyword: "household decision register tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

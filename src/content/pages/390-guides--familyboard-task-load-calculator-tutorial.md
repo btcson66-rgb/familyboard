@@ -6,7 +6,7 @@ primaryIntent: "teach households to estimate recurring chore time and use the es
 primaryKeyword: "household task load calculator tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

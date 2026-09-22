@@ -6,7 +6,7 @@ primaryIntent: "teach households to review storm-related sources, supplies and r
 primaryKeyword: "FamilyBoard storm readiness review tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

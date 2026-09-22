@@ -6,7 +6,7 @@ primaryIntent: "document a home insurance incident and follow-up without storing
 primaryKeyword: "insurance claim timeline log"
 cluster: "records-emergency"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

@@ -6,7 +6,7 @@ primaryIntent: "record a product recall notice, identify affected household asse
 primaryKeyword: "FamilyBoard product recall action log"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

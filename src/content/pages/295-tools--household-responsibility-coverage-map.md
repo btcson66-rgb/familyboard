@@ -6,7 +6,7 @@ primaryIntent: "map recurring household responsibilities to a real scope, contro
 primaryKeyword: "household responsibility chart"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

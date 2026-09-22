@@ -6,7 +6,7 @@ primaryIntent: "record a completed maintenance event, observed cost and follow-u
 primaryKeyword: "FamilyBoard maintenance event cost"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

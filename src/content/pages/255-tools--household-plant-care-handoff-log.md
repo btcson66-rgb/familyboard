@@ -6,7 +6,7 @@ primaryIntent: "organize household plant care handoffs during travel without pla
 primaryKeyword: "plant care handoff log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

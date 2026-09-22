@@ -6,7 +6,7 @@ primaryIntent: "manage a home during winter or peak heating season"
 primaryKeyword: "winter home maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

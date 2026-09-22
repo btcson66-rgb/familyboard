@@ -6,7 +6,7 @@ primaryIntent: "coordinate packing, home coverage and return checks with source 
 primaryKeyword: "trip packing and home handoff log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

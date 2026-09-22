@@ -6,7 +6,7 @@ primaryIntent: "organize school or childcare closure notices with household care
 primaryKeyword: "school closure continuity log"
 cluster: "records-emergency"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

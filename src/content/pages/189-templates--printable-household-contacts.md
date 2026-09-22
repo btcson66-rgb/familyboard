@@ -6,7 +6,7 @@ primaryIntent: "print a household quick-contact sheet"
 primaryKeyword: "printable household contact list"
 cluster: "printables"
 pageType: "printable"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

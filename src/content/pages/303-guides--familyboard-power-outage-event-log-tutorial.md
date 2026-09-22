@@ -6,7 +6,7 @@ primaryIntent: "teach households to use FamilyBoard to separate outage observati
 primaryKeyword: "FamilyBoard power outage log tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

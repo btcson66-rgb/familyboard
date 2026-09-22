@@ -6,7 +6,7 @@ primaryIntent: "find a household dashboard or home command center"
 primaryKeyword: "home dashboard"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-22"

@@ -6,7 +6,7 @@ primaryIntent: "document purchase, fulfillment, possession, condition, issue not
 primaryKeyword: "purchase delivery record"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-24"
 lastReviewedAt: "2026-08-24"

@@ -6,7 +6,7 @@ primaryIntent: "organize household school pickup and after-care handoffs without
 primaryKeyword: "school pickup handoff log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

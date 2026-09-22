@@ -6,7 +6,7 @@ primaryIntent: "learn to track storage-unit zones, visits, relocation, removal a
 primaryKeyword: "FamilyBoard storage unit access inventory tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

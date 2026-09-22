@@ -6,7 +6,7 @@ primaryIntent: "learn how to use FamilyBoard Warranty Tracker to connect an asse
 primaryKeyword: "FamilyBoard warranty tracker tutorial"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

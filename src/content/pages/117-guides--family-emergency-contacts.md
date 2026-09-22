@@ -6,7 +6,7 @@ primaryIntent: "build a family emergency contact list"
 primaryKeyword: "family emergency contacts list"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

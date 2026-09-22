@@ -6,7 +6,7 @@ primaryIntent: "learn to organize household maintenance observations, sources an
 primaryKeyword: "FamilyBoard maintenance priority tutorial"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

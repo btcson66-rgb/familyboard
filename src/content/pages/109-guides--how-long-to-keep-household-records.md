@@ -6,7 +6,7 @@ primaryIntent: "decide how long to keep a household record from its current sour
 primaryKeyword: "how long to keep household records"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-24"

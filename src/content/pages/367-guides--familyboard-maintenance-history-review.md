@@ -6,7 +6,7 @@ primaryIntent: "use FamilyBoard's maintenance completion history to record obser
 primaryKeyword: "FamilyBoard maintenance history tutorial"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

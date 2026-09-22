@@ -6,7 +6,7 @@ primaryIntent: "learn to hand off a household service appointment by separating 
 primaryKeyword: "FamilyBoard service appointment handoff tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

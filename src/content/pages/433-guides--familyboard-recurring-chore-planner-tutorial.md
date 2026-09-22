@@ -6,7 +6,7 @@ primaryIntent: "use a recurring chore planner to define task scope, frequency, r
 primaryKeyword: "recurring chore planner tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "record where household utility controls are and who can operate 
 primaryKeyword: "utility shutoff information sheet"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

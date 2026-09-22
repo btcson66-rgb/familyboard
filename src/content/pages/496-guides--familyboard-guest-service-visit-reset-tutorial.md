@@ -6,7 +6,7 @@ primaryIntent: "learn to verify household reset actions after a guest or service
 primaryKeyword: "service visit reset checklist"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "learn a FamilyBoard replacement-part source workflow that avoids
 primaryKeyword: "replacement part compatibility check tutorial"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

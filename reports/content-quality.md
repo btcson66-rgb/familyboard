@@ -1,10 +1,10 @@
 # Content quality report
 
-Generated: 2026-09-17T17:09:30.798Z
+Generated: 2026-09-22T11:28:33.725Z
 
 ## Summary
 
-- Indexable pages: 1016
+- Indexable pages: 102
 - Generated HTML routes: 1025
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
@@ -12,25 +12,25 @@ Generated: 2026-09-17T17:09:30.798Z
 - Internal instruction leakage: 0
 - Missing-source warnings on safety-sensitive numeric claims: 1
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 566
+- Pages without a contextual product/tool link: 600
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
 
-- support: 32
-- printables: 39
-- product: 174
-- inventory-warranty: 84
-- appliances: 70
-- maintenance: 103
-- household-operations: 214
-- records-emergency: 148
-- tools: 152
+- support: 30
+- printables: 10
+- product: 11
+- inventory-warranty: 6
+- appliances: 11
+- household-operations: 5
+- records-emergency: 4
+- maintenance: 7
+- tools: 18
 
 ## Word-count range
 
 - Lowest: https://familyboard.win/checklists/printable-pet-sitter-checklist/ (64 words)
-- Highest: https://familyboard.win/zh-tw/tools/home-care-charge-service-payment-discrepancy-log/ (5785 words)
+- Highest: https://familyboard.win/zh-tw/tools/annual-subscription-cost-calculator/ (2997 words)
 
 ## Highest similarity pairs
 
@@ -38,7 +38,7 @@ Generated: 2026-09-17T17:09:30.798Z
 
 ## Safety-source warnings
 
-- /guides/familyboard-household-subscription-cost-calculator-tutorial/
+- /guides/family-chore-system/
 
 ## Duplicate primary keywords
 
@@ -56,8 +56,10 @@ Generated: 2026-09-17T17:09:30.798Z
 ## Pages without contextual product/tool links
 
 - /guides/digital-home-inventory-backup/
+- /guides/familyboard-app-first-run-restore-tutorial/
 - /guides/familyboard-appliance-manual-source-tutorial/
 - /guides/familyboard-attachment-expiry-review-tutorial/
+- /guides/familyboard-attachment-metadata-tutorial/
 - /guides/familyboard-backup-restore-rehearsal-tutorial/
 - /guides/familyboard-browser-storage-maintenance/
 - /guides/familyboard-calendar-timezone-tutorial/
@@ -104,8 +106,40 @@ Generated: 2026-09-17T17:09:30.798Z
 - /guides/seasonal-home-maintenance-checklist/
 - /guides/solar-panel-maintenance-records/
 - /guides/subscription-cancellation-refund-records/
+- /guides/valuable-item-inventory/
 - /
 - /pricing/
+- /tools/household-accessibility-walkthrough-log/
+- /tools/household-bill-source-status-log/
+- /tools/household-clothing-care-repair-log/
+- /tools/household-document-renewal-review-log/
+- /tools/household-donation-handoff-log/
+- /tools/household-guest-arrival-prep-log/
+- /tools/household-home-access-handoff-log/
+- /tools/household-internet-incident-review-log/
+- /tools/household-inventory-photo-capture-log/
+- /tools/household-mail-package-handoff-log/
+- /tools/household-maintenance-priority-review-log/
+- /tools/household-meal-prep-role-log/
+- /tools/household-meeting-agenda-action-log/
+- /tools/household-meter-reading-review-log/
+- /tools/household-monthly-review-action-log/
+- /tools/household-pantry-expiry-review-log/
+- /tools/household-plant-care-handoff-log/
+- /tools/household-recycling-handoff-log/
+- /tools/household-return-handoff-log/
+- /tools/household-schedule-conflict-review-log/
+- /tools/household-school-activity-handoff-log/
+- /tools/household-school-pickup-handoff-log/
+- /tools/household-seasonal-reset-action-log/
+- /tools/household-service-appointment-handoff-log/
+- /tools/household-service-quote-comparison-log/
+- /tools/household-share-access-review-log/
+- /tools/household-subscription-cancellation-handoff-log/
+- /tools/household-trip-packing-handoff-log/
+- /tools/household-vehicle-document-source-status-log/
+- /tools/household-weekly-reset-action-log/
+- /tools/rental-security-deposit-move-out-claim-log/
 - /zh-tw/about/
 - /zh-tw/affiliate-disclosure/
 - /zh-tw/changelog/

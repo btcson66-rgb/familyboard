@@ -6,7 +6,7 @@ primaryIntent: "learn to build a time-bounded, testable household administration
 primaryKeyword: "FamilyBoard household administration backup tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

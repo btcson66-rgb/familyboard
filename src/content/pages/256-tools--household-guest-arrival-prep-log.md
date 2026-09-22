@@ -6,7 +6,7 @@ primaryIntent: "organize household guest or service-visit preparation and reset 
 primaryKeyword: "guest arrival preparation log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

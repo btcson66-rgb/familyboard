@@ -6,7 +6,7 @@ primaryIntent: "prepare a safe first handoff to a household service provider by 
 primaryKeyword: "FamilyBoard vendor onboarding"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-31"
 lastReviewedAt: "2026-08-31"

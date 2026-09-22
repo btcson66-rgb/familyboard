@@ -6,7 +6,7 @@ primaryIntent: "check whether a FamilyBoard local backup has a known scope, prot
 primaryKeyword: "household backup recovery checklist tool"
 cluster: "product"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

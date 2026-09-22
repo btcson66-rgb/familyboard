@@ -6,7 +6,7 @@ primaryIntent: "document why a household record is retained, replaced, archived 
 primaryKeyword: "FamilyBoard record retention decision"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

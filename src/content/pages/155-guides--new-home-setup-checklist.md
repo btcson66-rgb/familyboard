@@ -6,7 +6,7 @@ primaryIntent: "organize the first days and weeks in a new home"
 primaryKeyword: "new home setup checklist"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

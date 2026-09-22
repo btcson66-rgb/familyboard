@@ -6,7 +6,7 @@ primaryIntent: "organize household item donation and transfer handoffs without m
 primaryKeyword: "household donation log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

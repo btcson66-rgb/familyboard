@@ -6,7 +6,7 @@ primaryIntent: "calculate a follow-up date from a confirmed household date witho
 primaryKeyword: "household date offset calculator"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "maintain FamilyBoard browser storage and clear site data without
 primaryKeyword: "FamilyBoard browser storage maintenance"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

@@ -6,7 +6,7 @@ primaryIntent: "use a responsibility coverage map to document work scope, contro
 primaryKeyword: "household responsibility chart tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

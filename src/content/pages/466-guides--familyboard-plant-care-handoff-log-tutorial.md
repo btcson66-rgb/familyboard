@@ -6,7 +6,7 @@ primaryIntent: "coordinate plant-care handoffs with safe references, observation
 primaryKeyword: "FamilyBoard plant care handoff log tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

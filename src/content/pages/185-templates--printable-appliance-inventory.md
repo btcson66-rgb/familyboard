@@ -6,7 +6,7 @@ primaryIntent: "print an appliance-specific inventory"
 primaryKeyword: "printable appliance inventory"
 cluster: "printables"
 pageType: "printable"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

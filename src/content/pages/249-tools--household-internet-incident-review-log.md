@@ -6,7 +6,7 @@ primaryIntent: "review household internet outage scope, provider status sources,
 primaryKeyword: "household internet outage log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

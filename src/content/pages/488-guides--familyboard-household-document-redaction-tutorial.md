@@ -6,7 +6,7 @@ primaryIntent: "learn to prepare a minimum-necessary household document copy for
 primaryKeyword: "household document redaction tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

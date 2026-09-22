@@ -6,7 +6,7 @@ primaryIntent: "learn to compare one recurring subscription price across billing
 primaryKeyword: "FamilyBoard annual subscription cost calculator tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

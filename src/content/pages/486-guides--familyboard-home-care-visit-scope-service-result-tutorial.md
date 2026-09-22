@@ -6,7 +6,7 @@ primaryIntent: "learn to document a time-bounded home-care visit's authorised sc
 primaryKeyword: "home care visit scope service result log tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

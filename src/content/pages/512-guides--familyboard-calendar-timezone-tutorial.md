@@ -6,7 +6,7 @@ primaryIntent: "record FamilyBoard calendar events with clear local-time and sou
 primaryKeyword: "FamilyBoard calendar timezone"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

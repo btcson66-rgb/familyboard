@@ -6,7 +6,7 @@ primaryIntent: "document an appliance or home-system service visit from request 
 primaryKeyword: "appliance service visit log"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-24"
 lastReviewedAt: "2026-08-24"

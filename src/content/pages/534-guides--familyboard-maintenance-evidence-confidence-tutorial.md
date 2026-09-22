@@ -6,7 +6,7 @@ primaryIntent: "distinguish household observation, provider statement, source ev
 primaryKeyword: "FamilyBoard maintenance evidence confidence"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-31"
 lastReviewedAt: "2026-08-31"

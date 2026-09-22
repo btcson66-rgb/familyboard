@@ -6,7 +6,7 @@ primaryIntent: "organize household fire-extinguisher inventory and inspection re
 primaryKeyword: "home fire extinguisher inspection record"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

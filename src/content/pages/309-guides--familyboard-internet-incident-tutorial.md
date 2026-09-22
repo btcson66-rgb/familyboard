@@ -6,7 +6,7 @@ primaryIntent: "learn a local-first workflow for recording a household internet 
 primaryKeyword: "FamilyBoard internet outage log tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

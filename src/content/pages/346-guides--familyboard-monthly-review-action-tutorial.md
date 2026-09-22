@@ -6,7 +6,7 @@ primaryIntent: "learn a monthly FamilyBoard review that checks sources, backups 
 primaryKeyword: "FamilyBoard monthly household review tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "track care-label sources, storage zones, condition observations 
 primaryKeyword: "clothing care and repair log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

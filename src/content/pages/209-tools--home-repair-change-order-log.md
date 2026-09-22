@@ -6,7 +6,7 @@ primaryIntent: "reconcile written home repair changes against the original proje
 primaryKeyword: "home repair change order log"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"

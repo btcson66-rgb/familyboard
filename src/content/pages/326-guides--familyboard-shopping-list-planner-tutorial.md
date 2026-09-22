@@ -6,7 +6,7 @@ primaryIntent: "learn a repeatable FamilyBoard household restocking workflow tha
 primaryKeyword: "FamilyBoard shopping list planner tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

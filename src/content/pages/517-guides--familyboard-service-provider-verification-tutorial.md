@@ -6,7 +6,7 @@ primaryIntent: "verify a home service provider’s source, scope and follow-up w
 primaryKeyword: "FamilyBoard service provider verification"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

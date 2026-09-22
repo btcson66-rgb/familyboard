@@ -6,7 +6,7 @@ primaryIntent: "use a replacement-part source check log to connect a device, com
 primaryKeyword: "replacement part compatibility checklist tutorial"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

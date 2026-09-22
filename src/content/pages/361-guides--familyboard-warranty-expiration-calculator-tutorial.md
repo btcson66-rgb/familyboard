@@ -6,7 +6,7 @@ primaryIntent: "calculate a planning date from a verified warranty start event w
 primaryKeyword: "warranty expiration calculator guide"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

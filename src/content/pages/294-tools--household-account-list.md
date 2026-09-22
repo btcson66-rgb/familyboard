@@ -6,7 +6,7 @@ primaryIntent: "organize household service ownership, source indexes, backup rol
 primaryKeyword: "household account list tool"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

@@ -6,7 +6,7 @@ primaryIntent: "organize account sign-out, backup checks, device wiping and hand
 primaryKeyword: "device retirement handoff checklist"
 cluster: "records-emergency"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

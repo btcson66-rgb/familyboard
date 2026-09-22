@@ -6,7 +6,7 @@ primaryIntent: "choose between merge and replace when restoring a FamilyBoard JS
 primaryKeyword: "FamilyBoard merge or replace restore"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

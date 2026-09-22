@@ -6,7 +6,7 @@ primaryIntent: "use the document review tool to find missing sources, stale vers
 primaryKeyword: "important household document review tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

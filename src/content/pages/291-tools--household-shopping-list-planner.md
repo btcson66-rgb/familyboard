@@ -6,7 +6,7 @@ primaryIntent: "build a household shopping and restock list by purpose, source, 
 primaryKeyword: "household shopping list planner"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

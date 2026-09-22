@@ -6,7 +6,7 @@ primaryIntent: "decide why a receipt is being kept and when to review it"
 primaryKeyword: "receipt retention organizer"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

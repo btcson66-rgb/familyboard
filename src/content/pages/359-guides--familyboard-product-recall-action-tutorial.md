@@ -6,7 +6,7 @@ primaryIntent: "track an official product-recall notice, exact identity comparis
 primaryKeyword: "product recall action checklist"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

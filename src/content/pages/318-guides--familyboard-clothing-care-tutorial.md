@@ -6,7 +6,7 @@ primaryIntent: "learn a small, privacy-aware clothing rotation and repair handof
 primaryKeyword: "FamilyBoard clothing organization tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

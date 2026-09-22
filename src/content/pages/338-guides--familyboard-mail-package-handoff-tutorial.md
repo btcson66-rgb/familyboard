@@ -6,7 +6,7 @@ primaryIntent: "learn a privacy-aware FamilyBoard workflow for collecting mail a
 primaryKeyword: "FamilyBoard mail and package handoff tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

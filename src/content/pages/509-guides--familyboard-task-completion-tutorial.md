@@ -6,7 +6,7 @@ primaryIntent: "mark a FamilyBoard task complete while preserving the difference
 primaryKeyword: "FamilyBoard task completion"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

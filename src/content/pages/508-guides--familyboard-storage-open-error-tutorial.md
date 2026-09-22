@@ -6,7 +6,7 @@ primaryIntent: "respond safely when FamilyBoard cannot open browser storage with
 primaryKeyword: "FamilyBoard storage open error"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

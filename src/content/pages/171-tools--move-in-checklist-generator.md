@@ -6,7 +6,7 @@ primaryIntent: "generate a new-home move-in checklist"
 primaryKeyword: "move in checklist generator"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

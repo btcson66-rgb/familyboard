@@ -6,7 +6,7 @@ primaryIntent: "find an appliance or product warranty tracker"
 primaryKeyword: "warranty tracker"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-22"

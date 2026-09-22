@@ -6,7 +6,7 @@ primaryIntent: "run a focused family meeting with decisions, open questions, own
 primaryKeyword: "FamilyBoard household meeting agenda action log tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

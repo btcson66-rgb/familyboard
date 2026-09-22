@@ -6,7 +6,7 @@ primaryIntent: "generate a recurring family chore plan"
 primaryKeyword: "recurring chore planner"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

@@ -6,7 +6,7 @@ primaryIntent: "review household document sources, dates and renewal decisions w
 primaryKeyword: "household document renewal tracker"
 cluster: "records-emergency"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

@@ -6,7 +6,7 @@ primaryIntent: "learn a source-first household bill review workflow without turn
 primaryKeyword: "FamilyBoard household bill tracking tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

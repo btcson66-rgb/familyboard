@@ -13,6 +13,7 @@ const source = path.resolve(process.argv[2] || "docs/launch-content-master.md");
 const outputDir = path.resolve("src/content/pages");
 const searchOutput = path.resolve("src/generated/search-index.json");
 const sitemapOutput = path.resolve("src/generated/sitemap-pages.json");
+const indexabilityPolicyPath = path.resolve("src/config/indexability-policy.json");
 const launchDate = "2026-08-19";
 const minimumCorePages = 200;
 // Navigational entry points. These are how crawlers reach everything else, so they
@@ -23,6 +24,12 @@ const structuralRoutes = new Set(["/", "/features/"]);
 
 if (!fs.existsSync(source))
   throw new Error(`Master brief not found: ${source}`);
+if (!fs.existsSync(indexabilityPolicyPath))
+  throw new Error(`Indexability policy not found: ${indexabilityPolicyPath}`);
+const indexabilityPolicy = JSON.parse(fs.readFileSync(indexabilityPolicyPath, "utf8"));
+if (!Array.isArray(indexabilityPolicy.indexableRoutes))
+  throw new Error("Indexability policy must define indexableRoutes as an array");
+const approvedIndexableRoutes = new Set(indexabilityPolicy.indexableRoutes);
 const raw = fs.readFileSync(source, "utf8").replace(/\r\n/g, "\n");
 const lines = raw.split("\n");
 
@@ -488,6 +495,7 @@ for (const record of all) {
   if (record.redirectTo) record.indexable = false;
   else if (record.pageType === "content")
     record.indexable = !record.heldUnderDepth;
+  record.indexable = record.indexable && approvedIndexableRoutes.has(record.route);
 }
 if (records.length < minimumCorePages)
   throw new Error(
@@ -534,7 +542,11 @@ const zhTwPages = fs.existsSync(zhTwDir)
         return {
           route: normalizeRoute(frontmatterValue(markdown, "route")),
           alternateRoute: alternateRoute ? normalizeRoute(alternateRoute) : "",
-          indexable: frontmatterValue(markdown, "indexable") !== "false",
+          indexable:
+            frontmatterValue(markdown, "indexable") !== "false" &&
+            approvedIndexableRoutes.has(
+              normalizeRoute(frontmatterValue(markdown, "route")),
+            ),
           lastReviewedAt: frontmatterValue(markdown, "lastReviewedAt"),
           locale: "zh-TW",
         };

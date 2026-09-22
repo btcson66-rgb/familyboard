@@ -6,7 +6,7 @@ primaryIntent: "record which household replacement parts belong to which device,
 primaryKeyword: "replacement part compatibility checklist"
 cluster: "inventory-warranty"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

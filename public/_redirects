@@ -1,0 +1,8 @@
+# Reviewed T1 consolidations. GitHub Pages ignores this file; Cloudflare Pages
+# applies these as server-side redirects after the hosting cutover.
+/guides/familyboard-annual-subscription-cost-calculator-tutorial/ /tools/annual-subscription-cost-calculator/ 301
+/guides/familyboard-house-sitter-instruction-generator-tutorial/ /tools/house-sitter-instruction-generator/ 301
+/guides/familyboard-pet-sitter-instruction-generator-tutorial/ /tools/pet-sitter-instruction-generator/ 301
+/guides/familyboard-emergency-contact-sheet-generator-tutorial/ /tools/emergency-contact-sheet-generator/ 301
+/zh-tw/guides/familyboard-annual-subscription-cost-calculator-tutorial/ /zh-tw/tools/annual-subscription-cost-calculator/ 301
+/zh-tw/guides/familyboard-emergency-contact-sheet-generator-tutorial/ /zh-tw/tools/emergency-contact-sheet-generator/ 301

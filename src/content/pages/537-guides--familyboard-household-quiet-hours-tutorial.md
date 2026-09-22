@@ -6,7 +6,7 @@ primaryIntent: "plan household quiet hours and escalation boundaries without hid
 primaryKeyword: "FamilyBoard household quiet hours"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-31"
 lastReviewedAt: "2026-08-31"

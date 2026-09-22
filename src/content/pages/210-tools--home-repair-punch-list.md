@@ -6,7 +6,7 @@ primaryIntent: "build a dated home repair punch list with scope references, visi
 primaryKeyword: "home repair punch list"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"

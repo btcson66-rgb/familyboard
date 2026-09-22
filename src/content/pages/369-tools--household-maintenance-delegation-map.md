@@ -6,7 +6,7 @@ primaryIntent: "make recurring maintenance responsibility observable and transfe
 primaryKeyword: "home maintenance delegation map"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "verify emergency contact records, consent and update ownership w
 primaryKeyword: "emergency contact verification log"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"

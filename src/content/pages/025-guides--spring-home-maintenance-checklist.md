@@ -6,7 +6,7 @@ primaryIntent: "prepare a home for spring conditions"
 primaryKeyword: "spring home maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

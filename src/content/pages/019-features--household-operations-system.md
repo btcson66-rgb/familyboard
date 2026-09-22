@@ -6,7 +6,7 @@ primaryIntent: "understand software for running household operations"
 primaryKeyword: "household operations system"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

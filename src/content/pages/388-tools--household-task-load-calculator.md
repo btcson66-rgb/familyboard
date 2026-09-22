@@ -6,7 +6,7 @@ primaryIntent: "estimate recurring household time by role so a family can discus
 primaryKeyword: "household task load calculator"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

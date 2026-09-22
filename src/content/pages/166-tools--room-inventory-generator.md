@@ -6,7 +6,7 @@ primaryIntent: "create an inventory template for one room"
 primaryKeyword: "room inventory generator"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

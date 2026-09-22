@@ -6,7 +6,7 @@ primaryIntent: "create a list of recurring home tasks"
 primaryKeyword: "recurring household tasks"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

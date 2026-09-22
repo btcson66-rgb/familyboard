@@ -6,7 +6,7 @@ primaryIntent: "learn to match an appliance manual to the correct model and sour
 primaryKeyword: "FamilyBoard appliance manual source check tutorial"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

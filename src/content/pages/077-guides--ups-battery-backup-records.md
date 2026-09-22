@@ -6,7 +6,7 @@ primaryIntent: "track household backup-power devices"
 primaryKeyword: "UPS battery replacement tracker"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

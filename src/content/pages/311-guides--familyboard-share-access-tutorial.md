@@ -6,7 +6,7 @@ primaryIntent: "learn a least-privilege household document handoff workflow with
 primaryKeyword: "FamilyBoard document sharing permissions tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

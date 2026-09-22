@@ -6,7 +6,7 @@ primaryIntent: "learn a privacy-aware FamilyBoard timeline for school closure, r
 primaryKeyword: "FamilyBoard school closure planning tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "learn to coordinate a bounded school or after-school pickup hand
 primaryKeyword: "FamilyBoard school pickup handoff tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

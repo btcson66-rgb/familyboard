@@ -6,7 +6,7 @@ primaryIntent: "create a dated home service provider verification log using offi
 primaryKeyword: "home service provider verification checklist"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"

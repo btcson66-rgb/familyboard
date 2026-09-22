@@ -6,7 +6,7 @@ primaryIntent: "learn to assemble a dated warranty claim evidence trail from pur
 primaryKeyword: "warranty claim evidence log tutorial"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

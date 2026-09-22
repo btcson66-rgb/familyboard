@@ -15,4 +15,5 @@ jobs:
       - run: npm run audit:content
       - run: npm run audit:similarity
       - run: npm run build
+      - run: npm run audit:prune
       - run: npm run audit:monitor

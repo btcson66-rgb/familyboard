@@ -6,7 +6,7 @@ primaryIntent: "coordinate packing, home coverage and return checks with safe re
 primaryKeyword: "FamilyBoard trip packing and home handoff tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

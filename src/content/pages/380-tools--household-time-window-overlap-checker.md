@@ -6,7 +6,7 @@ primaryIntent: "compare two concrete household time windows without exposing a c
 primaryKeyword: "household time overlap checker"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

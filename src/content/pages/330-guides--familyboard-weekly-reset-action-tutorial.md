@@ -6,7 +6,7 @@ primaryIntent: "learn a focused FamilyBoard weekly household reset that turns op
 primaryKeyword: "FamilyBoard weekly reset tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

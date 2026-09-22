@@ -6,7 +6,7 @@ primaryIntent: "review bills, maintenance, documents and tasks monthly"
 primaryKeyword: "monthly household review"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

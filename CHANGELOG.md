@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.0 — 2026-09-22
+
+Consolidate the public search surface from more than 1,000 URLs to 102 evidence-backed indexable routes while keeping every existing content page available with `noindex,follow`. Add a reproducible GSC/content pruning plan, reviewed merge decisions, a shared indexability policy for English and Traditional Chinese pages, sitemap and hreflang guards, six reviewed Cloudflare redirects, and a dual Cloudflare Pages/GitHub Pages deployment path for a reversible hosting cutover.
+
 ## 1.4.0 — 2026-08-20
 
 Add a safe household master-table workflow to both app languages: export all supported local records to a single UTF-8 CSV, download a blank template, preview and validate imports, merge by stable ID or append with relationship remapping, and automatically download a full JSON safety snapshot before any write. Add durable-storage status/request controls, stale-backup reminders, fully localized file pickers, relationship-integrity checks, spreadsheet-formula protection and end-to-end round-trip coverage.

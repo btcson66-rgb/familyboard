@@ -6,7 +6,7 @@ primaryIntent: "simple household calendar inside a broader home system"
 primaryKeyword: "household calendar"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-22"

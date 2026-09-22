@@ -6,7 +6,7 @@ primaryIntent: "learn to hand off building, landlord and service notices as a da
 primaryKeyword: "FamilyBoard building notice response tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

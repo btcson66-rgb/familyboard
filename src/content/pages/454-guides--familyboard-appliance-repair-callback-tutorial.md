@@ -6,7 +6,7 @@ primaryIntent: "learn to record a recurring appliance symptom and callback witho
 primaryKeyword: "FamilyBoard appliance repair callback tutorial"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

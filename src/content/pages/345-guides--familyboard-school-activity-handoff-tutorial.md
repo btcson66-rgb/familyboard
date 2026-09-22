@@ -6,7 +6,7 @@ primaryIntent: "learn to hand off school activity notices, consent forms and pre
 primaryKeyword: "FamilyBoard school activity handoff tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

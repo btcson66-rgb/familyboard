@@ -6,7 +6,7 @@ primaryIntent: "turn a short weekly household review into owned actions and a da
 primaryKeyword: "household weekly reset action log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

@@ -6,7 +6,7 @@ primaryIntent: "create a structured rental move-out inspection and handover reco
 primaryKeyword: "move out condition report generator"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"

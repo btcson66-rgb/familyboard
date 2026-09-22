@@ -6,7 +6,7 @@ primaryIntent: "document a recurring appliance symptom and the repair callback t
 primaryKeyword: "appliance repair callback log"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-24"
 lastReviewedAt: "2026-08-24"

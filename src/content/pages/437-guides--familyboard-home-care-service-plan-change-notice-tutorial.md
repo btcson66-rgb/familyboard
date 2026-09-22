@@ -6,7 +6,7 @@ primaryIntent: "use the home-care service plan change and notice log to separate
 primaryKeyword: "home care service plan change notice tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

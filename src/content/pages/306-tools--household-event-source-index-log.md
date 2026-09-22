@@ -6,7 +6,7 @@ primaryIntent: "create a minimal, dated source and evidence index for one househ
 primaryKeyword: "household event source index"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

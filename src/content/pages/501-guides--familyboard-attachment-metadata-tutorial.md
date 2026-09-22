@@ -6,7 +6,7 @@ primaryIntent: "understand FamilyBoard attachment metadata fields and the bounda
 primaryKeyword: "FamilyBoard attachment metadata"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

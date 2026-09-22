@@ -6,7 +6,7 @@ primaryIntent: "use the payment, refund and collection notice log to classify a 
 primaryKeyword: "home care payment refund collection notice tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

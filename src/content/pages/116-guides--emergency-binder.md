@@ -6,7 +6,7 @@ primaryIntent: "build a household emergency binder"
 primaryKeyword: "emergency binder"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

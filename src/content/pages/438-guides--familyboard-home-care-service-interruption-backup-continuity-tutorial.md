@@ -6,7 +6,7 @@ primaryIntent: "use the home-care interruption log to separate urgent safety act
 primaryKeyword: "home care service interruption backup tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"
