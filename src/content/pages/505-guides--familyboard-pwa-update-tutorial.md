@@ -6,7 +6,7 @@ primaryIntent: "understand FamilyBoard’s service-worker update prompt and relo
 primaryKeyword: "FamilyBoard PWA update"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

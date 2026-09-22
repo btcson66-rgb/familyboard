@@ -6,7 +6,7 @@ primaryIntent: "use FamilyBoard subscription records and tasks to review renewal
 primaryKeyword: "FamilyBoard subscription renewal review"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

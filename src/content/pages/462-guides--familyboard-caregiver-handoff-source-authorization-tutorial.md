@@ -6,7 +6,7 @@ primaryIntent: "learn to document caregiver source, recipient authority, minimum
 primaryKeyword: "FamilyBoard caregiver handoff authorization tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

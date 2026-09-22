@@ -6,7 +6,7 @@ primaryIntent: "turn a home walkthrough into dated, observable repair items link
 primaryKeyword: "home repair punch list checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

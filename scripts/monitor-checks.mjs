@@ -1,3 +1,5 @@
+import fs from "node:fs";
+
 // Shared expectation table for the live monitor and the offline dist verifier.
 // Both must read the same list: when they drift apart, a wrong expectation can sit
 // red in production for days without anyone being able to catch it before deploy.
@@ -7569,3 +7571,44 @@ export const checks = [
     require: ["FamilyBoard 路線圖", "目前優先順序", 'lang="zh-TW"'],
   },
 ];
+
+// Sitemap membership is generated from the reviewed indexability policy. Keeping
+// hundreds of literal <loc> strings above made an intentional prune look like an
+// outage and allowed that list to drift away from the source of truth. Preserve
+// the human-authored page checks, but make every sitemap segment compare its
+// complete URL set with the committed manifest.
+const sitemapPages = JSON.parse(
+  fs.readFileSync(new URL("../src/generated/sitemap-pages.json", import.meta.url), "utf8"),
+);
+
+function sitemapSegmentFor(route) {
+  const isZh = route === "/zh-tw/" || route.startsWith("/zh-tw/");
+  const locale = isZh ? "zh-tw" : "en";
+  const sectionPath = isZh ? route.replace(/^\/zh-tw/, "") || "/" : route;
+  const section = sectionPath.startsWith("/guides/")
+    ? "guides"
+    : sectionPath.startsWith("/tools/")
+      ? "tools"
+      : sectionPath.startsWith("/checklists/") || sectionPath.startsWith("/templates/")
+        ? "printables"
+        : sectionPath.startsWith("/features/")
+          ? "features"
+          : "core";
+  return `/sitemap-${locale}-${section}.xml`;
+}
+
+const sitemapLocs = new Map();
+for (const page of sitemapPages) {
+  if (!page.indexable || page.redirectTo) continue;
+  const segment = sitemapSegmentFor(page.route);
+  const locs = sitemapLocs.get(segment) || [];
+  locs.push(new URL(page.route, "https://familyboard.win").href);
+  sitemapLocs.set(segment, locs);
+}
+
+for (const check of checks) {
+  const exactLocs = sitemapLocs.get(check.path);
+  if (!exactLocs) continue;
+  check.require = [];
+  check.exactLocs = exactLocs.sort();
+}

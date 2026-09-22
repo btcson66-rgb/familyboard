@@ -6,7 +6,7 @@ primaryIntent: "route household reminders to the right role while limiting sensi
 primaryKeyword: "FamilyBoard household notification routing"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-31"
 lastReviewedAt: "2026-08-31"

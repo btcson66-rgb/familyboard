@@ -6,7 +6,7 @@ primaryIntent: "learn to review FamilyBoard responsibilities, source access and 
 primaryKeyword: "household responsibility change checklist"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

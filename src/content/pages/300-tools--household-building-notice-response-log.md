@@ -6,7 +6,7 @@ primaryIntent: "track property-manager, landlord and service notices with source
 primaryKeyword: "building notice response log"
 cluster: "records-emergency"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

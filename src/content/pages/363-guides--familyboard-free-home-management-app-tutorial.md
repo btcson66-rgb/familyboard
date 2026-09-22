@@ -6,7 +6,7 @@ primaryIntent: "onboard a household to the free FamilyBoard app with a useful fi
 primaryKeyword: "free home management app tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "convert maintenance into a calendar"
 primaryKeyword: "home maintenance calendar"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

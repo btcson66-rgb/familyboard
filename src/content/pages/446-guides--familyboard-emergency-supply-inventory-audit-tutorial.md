@@ -6,7 +6,7 @@ primaryIntent: "teach a household to audit emergency supplies by item, source, c
 primaryKeyword: "FamilyBoard emergency supply inventory audit tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

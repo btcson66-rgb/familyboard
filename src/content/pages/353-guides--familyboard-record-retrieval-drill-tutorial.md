@@ -6,7 +6,7 @@ primaryIntent: "learn to test whether a household can find a current record and 
 primaryKeyword: "household record retrieval drill tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

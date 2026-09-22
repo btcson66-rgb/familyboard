@@ -6,7 +6,7 @@ primaryIntent: "organize home router records without storing insecure credential
 primaryKeyword: "home router inventory tracker"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

@@ -3,7 +3,7 @@
 // Why: Google Search Console reports coverage (indexed / not indexed, and the
 // reason) per sitemap file. One 508 KB sitemap carrying all 1,016 URLs gives a
 // single undifferentiated number, which is exactly the state this site was stuck
-// in — 1,016 submitted, 132 known, and no way to see which section Google was
+// in — more than 1,000 submitted, 132 known, and no way to see which section Google was
 // skipping. Segmented files turn that into a per-section readout, and smaller
 // files are also less likely to stall on fetch.
 //

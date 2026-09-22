@@ -6,7 +6,7 @@ primaryIntent: "learn to record an item’s condition, receiving channel and han
 primaryKeyword: "FamilyBoard donation handoff tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "track when device consumables were changed, what condition was o
 primaryKeyword: "filter replacement history tracker"
 cluster: "maintenance"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

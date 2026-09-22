@@ -6,7 +6,7 @@ primaryIntent: "home organizer that works offline"
 primaryKeyword: "offline household organizer"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-22"

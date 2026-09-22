@@ -6,7 +6,7 @@ primaryIntent: "organize maintenance observations, use constraints, owners and s
 primaryKeyword: "home maintenance priority review log"
 cluster: "maintenance"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

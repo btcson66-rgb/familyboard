@@ -6,7 +6,7 @@ primaryIntent: "record a household decision with its question, evidence, owner, 
 primaryKeyword: "FamilyBoard household decision log"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

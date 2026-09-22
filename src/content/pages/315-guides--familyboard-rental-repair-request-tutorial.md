@@ -6,7 +6,7 @@ primaryIntent: "learn a source-linked rental repair handoff that separates obser
 primaryKeyword: "FamilyBoard rental repair request tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

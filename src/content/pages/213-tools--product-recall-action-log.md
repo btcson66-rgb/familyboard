@@ -6,7 +6,7 @@ primaryIntent: "verify a product safety notice and track the household response 
 primaryKeyword: "product recall tracker"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"

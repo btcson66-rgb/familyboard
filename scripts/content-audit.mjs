@@ -5,6 +5,10 @@ import { readMarkdown } from "./lib/markdown-source.mjs";
 
 const directory = path.resolve("src/content/pages");
 const localizedDirectory = path.resolve("src/content/pages-zh-tw");
+const indexabilityPolicy = JSON.parse(
+  fs.readFileSync(path.resolve("src/config/indexability-policy.json"), "utf8"),
+);
+const approvedIndexableRoutes = new Set(indexabilityPolicy.indexableRoutes);
 const files = fs.readdirSync(directory).filter((file) => file.endsWith(".md"));
 const localizedFiles = fs.existsSync(localizedDirectory)
   ? fs.readdirSync(localizedDirectory).filter((file) => file.endsWith(".md"))
@@ -51,7 +55,9 @@ for (const file of files) {
     keyword: frontmatterValue(frontmatter, "primaryKeyword"),
     cluster: frontmatterValue(frontmatter, "cluster"),
     pageType: frontmatterValue(frontmatter, "pageType"),
-    indexable: frontmatterValue(frontmatter, "indexable") === "true",
+    indexable:
+      frontmatterValue(frontmatter, "indexable") === "true" &&
+      approvedIndexableRoutes.has(frontmatterValue(frontmatter, "route")),
     depthVerified: frontmatterValue(frontmatter, "depthVerified") === "true",
     redirectTo: frontmatterValue(frontmatter, "redirectTo"),
     faqCount: (frontmatter.match(/^\s*- question:\s/gm) || []).length,
@@ -112,7 +118,9 @@ for (const file of localizedFiles) {
     keyword: frontmatterValue(frontmatter, "primaryKeyword"),
     cluster: frontmatterValue(frontmatter, "cluster"),
     pageType: frontmatterValue(frontmatter, "pageType"),
-    indexable: frontmatterValue(frontmatter, "indexable") === "true",
+    indexable:
+      frontmatterValue(frontmatter, "indexable") === "true" &&
+      approvedIndexableRoutes.has(frontmatterValue(frontmatter, "route")),
     faqCount: (frontmatter.match(/^\s*- question:\s/gm) || []).length,
     wordCount: countBodyWords(body),
     cjkCharacters:

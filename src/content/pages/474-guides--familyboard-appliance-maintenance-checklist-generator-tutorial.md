@@ -6,7 +6,7 @@ primaryIntent: "generate a practical appliance maintenance checklist while keepi
 primaryKeyword: "appliance maintenance checklist generator tutorial"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

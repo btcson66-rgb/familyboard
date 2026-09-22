@@ -6,7 +6,7 @@ primaryIntent: "learn how to use the FamilyBoard cleaning schedule generator"
 primaryKeyword: "cleaning schedule generator tutorial"
 cluster: "tools"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

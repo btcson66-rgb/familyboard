@@ -6,7 +6,7 @@ primaryIntent: "learn to hand off indoor and balcony plant care with a bounded s
 primaryKeyword: "FamilyBoard plant care handoff tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

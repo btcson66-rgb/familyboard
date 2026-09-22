@@ -6,7 +6,7 @@ primaryIntent: "learn to document an appliance service visit from request throug
 primaryKeyword: "FamilyBoard appliance service visit tutorial"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

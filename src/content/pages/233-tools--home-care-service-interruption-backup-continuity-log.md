@@ -6,7 +6,7 @@ primaryIntent: "track an unexpected home-care service interruption from safety c
 primaryKeyword: "home care service interruption backup plan"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-26"
 lastReviewedAt: "2026-08-26"

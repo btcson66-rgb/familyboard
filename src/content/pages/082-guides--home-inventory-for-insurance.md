@@ -6,7 +6,7 @@ primaryIntent: "create an inventory that may help with insurance documentation"
 primaryKeyword: "home inventory for insurance"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

@@ -6,7 +6,7 @@ primaryIntent: "print a warranty tracking worksheet"
 primaryKeyword: "printable warranty tracker"
 cluster: "printables"
 pageType: "printable"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

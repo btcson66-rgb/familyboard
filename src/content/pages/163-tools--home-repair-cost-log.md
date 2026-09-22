@@ -6,7 +6,7 @@ primaryIntent: "log costs for repairs over time"
 primaryKeyword: "home repair cost log"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

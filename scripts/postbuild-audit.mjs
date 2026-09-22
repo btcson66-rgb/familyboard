@@ -366,6 +366,8 @@ else {
     }),
   );
   const actual = new Set(sitemapEntries.keys());
+  if (actual.size > 150)
+    errors.push(`sitemap has ${actual.size} URLs; T1 limit is 150`);
   const expected = new Set(
     records
       .filter(

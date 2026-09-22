@@ -6,7 +6,7 @@ primaryIntent: "plan household meal preparation with source references, roles an
 primaryKeyword: "household meal prep planner"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

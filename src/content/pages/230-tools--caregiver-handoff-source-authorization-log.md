@@ -6,7 +6,7 @@ primaryIntent: "document caregiver-handoff sources, recipient authority, minimum
 primaryKeyword: "caregiver handoff checklist"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-26"
 lastReviewedAt: "2026-08-26"

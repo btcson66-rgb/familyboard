@@ -6,7 +6,7 @@ primaryIntent: "route a household administrative issue to the right owner when a
 primaryKeyword: "FamilyBoard household admin escalation"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

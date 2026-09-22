@@ -35,9 +35,21 @@ for (const check of checks) {
   checked += 1;
   const missing = check.require.filter((token) => !body.includes(token));
   const present = (check.forbid || []).filter((token) => body.includes(token));
+  const actualLocs = [...body.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]).sort();
+  const expectedLocs = check.exactLocs || null;
 
   if (missing.length) failures.push({ path: check.path, reason: `missing: ${missing.join(" | ")}` });
   if (present.length) failures.push({ path: check.path, reason: `forbidden present: ${present.join(" | ")}` });
+  if (expectedLocs && JSON.stringify(actualLocs) !== JSON.stringify(expectedLocs)) {
+    const expected = new Set(expectedLocs);
+    const actual = new Set(actualLocs);
+    const omitted = expectedLocs.filter((loc) => !actual.has(loc));
+    const unexpected = actualLocs.filter((loc) => !expected.has(loc));
+    failures.push({
+      path: check.path,
+      reason: `sitemap set mismatch; missing: ${omitted.join(" | ") || "none"}; unexpected: ${unexpected.join(" | ") || "none"}`,
+    });
+  }
 }
 
 console.log(`Checked ${checked} of ${checks.length} monitor expectations against dist/.`);

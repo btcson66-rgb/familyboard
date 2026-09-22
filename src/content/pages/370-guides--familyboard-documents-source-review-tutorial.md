@@ -6,7 +6,7 @@ primaryIntent: "organize document pointers in FamilyBoard so a household can fin
 primaryKeyword: "FamilyBoard documents tab tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

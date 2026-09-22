@@ -6,7 +6,7 @@ primaryIntent: "learn to prepare a time-bounded house-sitter instruction sheet w
 primaryKeyword: "FamilyBoard house sitter instruction tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

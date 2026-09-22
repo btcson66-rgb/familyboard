@@ -6,7 +6,7 @@ primaryIntent: "teach households to compare two utility bills and assign a sourc
 primaryKeyword: "utility bill difference tool tutorial"
 cluster: "tools"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

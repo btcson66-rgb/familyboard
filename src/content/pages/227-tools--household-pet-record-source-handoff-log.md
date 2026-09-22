@@ -6,7 +6,7 @@ primaryIntent: "document pet registry, veterinary-source, travel, boarding and c
 primaryKeyword: "pet records organizer"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-24"
 lastReviewedAt: "2026-08-24"

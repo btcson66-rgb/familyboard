@@ -6,7 +6,7 @@ primaryIntent: "coordinate household mail and package coverage while away withou
 primaryKeyword: "FamilyBoard mail package handoff tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

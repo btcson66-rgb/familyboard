@@ -6,7 +6,7 @@ primaryIntent: "understand appliance lifespan estimates responsibly"
 primaryKeyword: "appliance lifespan planning"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

@@ -6,7 +6,7 @@ primaryIntent: "connect a household receipt reference to its controlling seller 
 primaryKeyword: "FamilyBoard receipt source verification"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-31"
 lastReviewedAt: "2026-08-31"

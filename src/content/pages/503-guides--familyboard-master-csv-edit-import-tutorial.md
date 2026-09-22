@@ -6,7 +6,7 @@ primaryIntent: "edit a FamilyBoard master CSV safely and preview stable-ID updat
 primaryKeyword: "FamilyBoard master CSV edit import"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "track less-frequent cleaning tasks"
 primaryKeyword: "deep cleaning tracker"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

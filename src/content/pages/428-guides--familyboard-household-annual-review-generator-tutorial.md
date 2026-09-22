@@ -6,7 +6,7 @@ primaryIntent: "use the annual review generator to inspect maintenance, renewals
 primaryKeyword: "annual household review generator tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

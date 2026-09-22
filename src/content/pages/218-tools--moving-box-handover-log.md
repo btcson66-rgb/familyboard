@@ -6,7 +6,7 @@ primaryIntent: "track moving boxes from household packing through loading, desti
 primaryKeyword: "moving box handover log"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-24"
 lastReviewedAt: "2026-08-24"

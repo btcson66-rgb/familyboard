@@ -6,7 +6,7 @@ primaryIntent: "create a dated household storm preparation review linked to curr
 primaryKeyword: "household storm readiness checklist"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"

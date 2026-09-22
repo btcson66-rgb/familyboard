@@ -6,7 +6,7 @@ primaryIntent: "learn a privacy-aware home access, visitor and return handoff wi
 primaryKeyword: "FamilyBoard home access handoff tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

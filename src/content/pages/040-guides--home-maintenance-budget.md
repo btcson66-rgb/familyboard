@@ -6,7 +6,7 @@ primaryIntent: "plan and track home maintenance spending"
 primaryKeyword: "home maintenance budget"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

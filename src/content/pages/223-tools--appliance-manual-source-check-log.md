@@ -6,7 +6,7 @@ primaryIntent: "verify and document appliance manual sources by exact model, rol
 primaryKeyword: "appliance manual organizer"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-24"
 lastReviewedAt: "2026-08-24"

@@ -6,7 +6,7 @@ primaryIntent: "document a source-led household record retention, archive or dis
 primaryKeyword: "household record retention schedule"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-24"
 lastReviewedAt: "2026-08-24"

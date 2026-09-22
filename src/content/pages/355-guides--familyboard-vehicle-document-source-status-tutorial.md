@@ -6,7 +6,7 @@ primaryIntent: "learn to organise vehicle registration, insurance, inspection, r
 primaryKeyword: "vehicle document source status tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

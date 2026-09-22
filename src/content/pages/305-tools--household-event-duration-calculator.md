@@ -6,7 +6,7 @@ primaryIntent: "calculate elapsed time between two observed household event time
 primaryKeyword: "household event duration calculator"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

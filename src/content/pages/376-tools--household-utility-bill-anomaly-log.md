@@ -6,7 +6,7 @@ primaryIntent: "compare household utility bills and record a safe follow-up"
 primaryKeyword: "utility bill difference calculator"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

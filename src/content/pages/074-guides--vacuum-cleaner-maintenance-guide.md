@@ -6,7 +6,7 @@ primaryIntent: "maintain vacuum filters, bags and brushes"
 primaryKeyword: "vacuum cleaner maintenance guide"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

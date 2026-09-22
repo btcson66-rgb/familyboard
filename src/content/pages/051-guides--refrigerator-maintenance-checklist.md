@@ -6,7 +6,7 @@ primaryIntent: "organize refrigerator maintenance and records"
 primaryKeyword: "refrigerator maintenance checklist"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

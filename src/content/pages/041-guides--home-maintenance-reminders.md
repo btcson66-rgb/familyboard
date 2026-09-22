@@ -6,7 +6,7 @@ primaryIntent: "set reminders for home maintenance"
 primaryKeyword: "home maintenance reminders"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

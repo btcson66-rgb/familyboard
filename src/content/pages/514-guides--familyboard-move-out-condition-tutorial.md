@@ -6,7 +6,7 @@ primaryIntent: "create a factual move-out walkthrough record with rooms, keys, m
 primaryKeyword: "FamilyBoard move-out condition report"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

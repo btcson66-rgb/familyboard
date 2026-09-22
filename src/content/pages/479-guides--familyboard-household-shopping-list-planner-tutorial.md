@@ -6,7 +6,7 @@ primaryIntent: "use a household shopping list planner to connect a safe item pur
 primaryKeyword: "household shopping list planner tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

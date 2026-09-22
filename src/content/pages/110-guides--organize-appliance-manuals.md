@@ -6,7 +6,7 @@ primaryIntent: "organize current appliance manuals by exact model, document role
 primaryKeyword: "organize appliance manuals"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-24"

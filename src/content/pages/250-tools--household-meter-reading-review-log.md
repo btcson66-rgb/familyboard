@@ -6,7 +6,7 @@ primaryIntent: "record manual water, electricity or gas display observations wit
 primaryKeyword: "household meter reading log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

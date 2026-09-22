@@ -6,7 +6,7 @@ primaryIntent: "learn to map issued insurance documents, forms, endorsements, ac
 primaryKeyword: "FamilyBoard insurance policy source version tutorial"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

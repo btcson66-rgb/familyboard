@@ -6,7 +6,7 @@ primaryIntent: "build a dated warranty claim evidence timeline without deciding 
 primaryKeyword: "warranty claim tracker"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

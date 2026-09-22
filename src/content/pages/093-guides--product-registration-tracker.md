@@ -6,7 +6,7 @@ primaryIntent: "document manufacturer registration, notification and recall-foll
 primaryKeyword: "product registration tracker"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

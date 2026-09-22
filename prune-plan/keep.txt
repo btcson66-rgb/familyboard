@@ -1,0 +1,103 @@
+/guides/humidifier-maintenance-guide/	228	有曝光 228
+/tools/warranty-expiration-calculator/	221	真工具
+/templates/printable-home-inventory-template/	122	有曝光 122
+/checklists/printable-moving-checklist/	73	有曝光 73
+/tools/annual-subscription-cost-calculator/	67	真工具
+/zh-tw/tools/warranty-expiration-calculator/	33	真工具
+/features/home-inventory-tracker/	32	有曝光 32
+/guides/	26	核心路徑
+/guides/household-replacement-reserve/	22	有曝光 22
+/guides/warranty-expiration/	19	有曝光 19
+/guides/dryer-maintenance-checklist/	18	有曝光 18
+/tools/household-subscription-cost-calculator/	15	真工具
+/guides/freezer-maintenance-checklist/	15	有曝光 15
+/guides/how-to-track-product-warranties/	14	有曝光 14
+/checklists/printable-house-sitter-checklist/	13	有曝光 13
+/	12	核心路徑
+/guides/robot-vacuum-maintenance-guide/	9	有曝光 9
+/tools/home-maintenance-cost-tracker/	9	真工具
+/zh-tw/	8	核心路徑
+/guides/quarterly-home-maintenance-checklist/	8	有曝光 8
+/guides/family-continuity-plan/	7	有曝光 7
+/tools/	6	核心路徑
+/tools/house-sitter-instruction-generator/	5	有曝光 5
+/guides/household-documents-organizer/	5	有曝光 5
+/features/household-handoff/	4	有曝光 4
+/guides/water-heater-maintenance-records/	4	有曝光 4
+/pricing/	4	核心路徑
+/tools/pet-sitter-instruction-generator/	4	有曝光 4
+/features/	4	核心路徑
+/guides/household-management-checklist/	4	有曝光 4
+/guides/photo-home-inventory/	4	有曝光 4
+/guides/family-chore-system/	4	有曝光 4
+/templates/printable-service-provider-list/	3	有曝光 3
+/guides/water-leak-response-home-records/	3	有曝光 3
+/privacy/	3	核心路徑
+/templates/	3	核心路徑
+/tools/emergency-contact-sheet-generator/	3	真工具
+/search/	3	有曝光 3
+/features/free-home-management-app/	3	有曝光 3
+/tools/home-maintenance-schedule-generator/	3	真工具
+/checklists/printable-seasonal-home-checklist/	3	有曝光 3
+/checklists/printable-home-maintenance-checklist/	3	有曝光 3
+/changelog/	2	核心路徑
+/features/private-family-organizer/	2	有曝光 2
+/zh-tw/guides/home-maintenance-schedule/	2	有曝光 2
+/templates/printable-household-handoff-sheet/	2	有曝光 2
+/guides/ceiling-fan-maintenance-checklist/	2	有曝光 2
+/guides/renovation-records/	2	有曝光 2
+/guides/microwave-maintenance-checklist/	2	有曝光 2
+/guides/household-admin-backup-person/	2	有曝光 2
+/roadmap/	2	核心路徑
+/guides/washing-machine-maintenance-checklist/	2	有曝光 2
+/checklists/printable-new-home-checklist/	1	有曝光 1
+/tools/household-annual-review-generator/	1	有曝光 1
+/features/maintenance-tracker/	1	有曝光 1
+/guides/garbage-disposal-maintenance-guide/	1	有曝光 1
+/guides/home-maintenance-after-vacation/	1	有曝光 1
+/guides/appliance-replacement-planning/	1	有曝光 1
+/guides/home-service-provider-list/	1	有曝光 1
+/checklists/printable-pet-sitter-checklist/	1	有曝光 1
+/terms/	1	核心路徑
+/guides/moving-house-organizer/	1	有曝光 1
+/checklists/	1	核心路徑
+/features/household-documents-organizer/	1	有曝光 1
+/guides/guest-preparation-checklist/	1	有曝光 1
+/guides/household-supplies-inventory/	1	有曝光 1
+/features/family-display-mode/	1	有曝光 1
+/templates/printable-annual-renewals/	1	有曝光 1
+/guides/monthly-home-maintenance-checklist/	1	有曝光 1
+/tools/home-inventory-checklist-generator/	1	有曝光 1
+/guides/power-outage-home-preparedness/	1	有曝光 1
+/guides/dishwasher-maintenance-checklist/	1	有曝光 1
+/guides/organize-pet-records/	1	有曝光 1
+/affiliate-disclosure/	1	核心路徑
+/guides/oven-maintenance-checklist/	1	有曝光 1
+/disclaimer/	1	核心路徑
+/tools/appliance-age-calculator/	0	真工具
+/about/	0	核心路徑
+/contact/	0	核心路徑
+/editorial-policy/	0	核心路徑
+/security/	0	核心路徑
+/zh-tw/about/	0	核心路徑
+/zh-tw/affiliate-disclosure/	0	核心路徑
+/zh-tw/tools/annual-subscription-cost-calculator/	0	真工具
+/zh-tw/tools/appliance-age-calculator/	0	真工具
+/zh-tw/changelog/	0	核心路徑
+/zh-tw/checklists/	0	核心路徑
+/zh-tw/contact/	0	核心路徑
+/zh-tw/disclaimer/	0	核心路徑
+/zh-tw/editorial-policy/	0	核心路徑
+/zh-tw/tools/emergency-contact-sheet-generator/	0	真工具
+/zh-tw/features/	0	核心路徑
+/zh-tw/guides/	0	核心路徑
+/zh-tw/tools/home-maintenance-cost-tracker/	0	真工具
+/zh-tw/tools/home-maintenance-schedule-generator/	0	真工具
+/zh-tw/tools/household-subscription-cost-calculator/	0	真工具
+/zh-tw/pricing/	0	核心路徑
+/zh-tw/privacy/	0	核心路徑
+/zh-tw/roadmap/	0	核心路徑
+/zh-tw/security/	0	核心路徑
+/zh-tw/templates/	0	核心路徑
+/zh-tw/terms/	0	核心路徑
+/zh-tw/tools/	0	核心路徑

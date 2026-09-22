@@ -6,7 +6,7 @@ primaryIntent: "create a source-led action review for important household docume
 primaryKeyword: "important household documents checklist"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-24"
 lastReviewedAt: "2026-08-24"

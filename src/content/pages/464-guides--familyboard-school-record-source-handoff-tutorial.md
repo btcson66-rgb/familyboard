@@ -6,7 +6,7 @@ primaryIntent: "map school-record sources, protected learner matches and family 
 primaryKeyword: "FamilyBoard school record source handoff tutorial"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "review pantry labels, storage zones, package observations and ro
 primaryKeyword: "FamilyBoard pantry expiry review log tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

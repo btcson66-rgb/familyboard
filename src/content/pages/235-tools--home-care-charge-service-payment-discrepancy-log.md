@@ -6,7 +6,7 @@ primaryIntent: "reconcile a home-care service period, current plan or contract v
 primaryKeyword: "home care billing discrepancy log"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

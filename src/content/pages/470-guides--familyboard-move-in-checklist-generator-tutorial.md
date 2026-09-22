@@ -6,7 +6,7 @@ primaryIntent: "use the move-in checklist generator to capture first-day evidenc
 primaryKeyword: "move-in checklist generator tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

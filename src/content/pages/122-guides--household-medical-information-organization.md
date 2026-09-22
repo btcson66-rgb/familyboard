@@ -6,7 +6,7 @@ primaryIntent: "organize household medical information by responsible source, pr
 primaryKeyword: "organize family medical information"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-26"

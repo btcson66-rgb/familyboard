@@ -6,7 +6,7 @@ primaryIntent: "restore an existing household during FamilyBoard onboarding with
 primaryKeyword: "FamilyBoard first-run restore"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

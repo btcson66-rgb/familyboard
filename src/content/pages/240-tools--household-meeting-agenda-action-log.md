@@ -6,7 +6,7 @@ primaryIntent: "create a focused family meeting agenda with decisions, owners an
 primaryKeyword: "household meeting agenda action log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

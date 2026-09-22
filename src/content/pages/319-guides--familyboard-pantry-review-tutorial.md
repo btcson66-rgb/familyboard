@@ -6,7 +6,7 @@ primaryIntent: "learn a small, source-aware pantry rotation workflow without tre
 primaryKeyword: "FamilyBoard pantry organization tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

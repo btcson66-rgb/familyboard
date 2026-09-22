@@ -6,7 +6,7 @@ primaryIntent: "track label dates, storage zones, package observations and house
 primaryKeyword: "pantry expiry review log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

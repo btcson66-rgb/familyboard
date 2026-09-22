@@ -6,7 +6,7 @@ primaryIntent: "track a tenant repair request from observation through landlord 
 primaryKeyword: "rental repair request log"
 cluster: "records-emergency"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

@@ -6,7 +6,7 @@ primaryIntent: "document health-information sources, protected person matches, a
 primaryKeyword: "medical information organizer"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-26"
 lastReviewedAt: "2026-08-26"

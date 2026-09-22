@@ -6,7 +6,7 @@ primaryIntent: "use a household time-window overlap checker to compare two concr
 primaryKeyword: "household time-window overlap checker tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

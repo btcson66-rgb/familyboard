@@ -6,7 +6,7 @@ primaryIntent: "learn to use the clothing care and repair log for source-led war
 primaryKeyword: "clothing care and repair log tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

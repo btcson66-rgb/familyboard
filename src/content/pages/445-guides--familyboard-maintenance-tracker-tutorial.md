@@ -6,7 +6,7 @@ primaryIntent: "learn how to use FamilyBoard Maintenance Tracker to connect an a
 primaryKeyword: "FamilyBoard maintenance tracker tutorial"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

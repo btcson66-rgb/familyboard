@@ -6,7 +6,7 @@ primaryIntent: "create a checklist when buying a warrantied household item"
 primaryKeyword: "warranty checklist"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

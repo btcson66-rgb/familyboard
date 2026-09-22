@@ -6,7 +6,7 @@ primaryIntent: "list household services and account owners without storing passw
 primaryKeyword: "household account list"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

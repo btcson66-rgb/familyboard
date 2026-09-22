@@ -6,7 +6,7 @@ primaryIntent: "prepare for home-service appointments and record arrival or foll
 primaryKeyword: "service appointment handoff log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

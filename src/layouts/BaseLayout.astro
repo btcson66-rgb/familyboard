@@ -11,6 +11,7 @@ interface Props {
   description: string;
   canonicalPath?: string;
   alternatePath?: string;
+  languageSwitchPath?: string;
   locale?: 'en' | 'zh-TW';
   indexable?: boolean;
   robots?: string;
@@ -28,6 +29,7 @@ const {
   description,
   canonicalPath = Astro.url.pathname,
   alternatePath,
+  languageSwitchPath: languageSwitchOverride,
   locale = 'en',
   indexable = true,
   robots,
@@ -45,7 +47,7 @@ const alternate = alternatePath ? new URL(alternatePath, brand.origin).toString(
 const isZhTw = locale === 'zh-TW';
 const englishUrl = isZhTw ? alternate : canonical;
 const zhTwUrl = isZhTw ? canonical : alternate;
-const languageSwitchPath = alternatePath || (isZhTw ? '/' : '/zh-tw/');
+const languageSwitchPath = languageSwitchOverride || alternatePath || (isZhTw ? '/' : '/zh-tw/');
 const isApp = /^\/(?:zh-tw\/)?app\//.test(canonicalPath);
 const ga4Id = import.meta.env.PROD && !isApp && publicIntegrationsEnabled ? import.meta.env.PUBLIC_GA4_MEASUREMENT_ID?.trim() : '';
 const adsenseAccount = !isApp && publicIntegrationsEnabled && monetization.adsensePublisherId ? `ca-${monetization.adsensePublisherId.replace(/^ca-/, '')}` : '';

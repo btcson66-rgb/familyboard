@@ -6,7 +6,7 @@ primaryIntent: "configure and review FamilyBoard’s shared display without expo
 primaryKeyword: "FamilyBoard shared display privacy"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

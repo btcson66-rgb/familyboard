@@ -6,7 +6,7 @@ primaryIntent: "decide when and how to clear a FamilyBoard local household after
 primaryKeyword: "FamilyBoard reset local household"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

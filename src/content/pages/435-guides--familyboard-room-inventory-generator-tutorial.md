@@ -6,7 +6,7 @@ primaryIntent: "use the room inventory generator to create a focused room list w
 primaryKeyword: "room inventory generator tutorial"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

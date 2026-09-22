@@ -6,7 +6,7 @@ primaryIntent: "keep a dated, source-linked timeline of observable repair condit
 primaryKeyword: "home repair evidence log"
 cluster: "records-emergency"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

@@ -6,7 +6,7 @@ primaryIntent: "review maintenance, renewals, records, backups and household rol
 primaryKeyword: "household monthly review log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

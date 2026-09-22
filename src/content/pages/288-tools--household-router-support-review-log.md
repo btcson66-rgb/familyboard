@@ -6,7 +6,7 @@ primaryIntent: "record router support status, firmware checks, ISP equipment res
 primaryKeyword: "router support review log"
 cluster: "records-emergency"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

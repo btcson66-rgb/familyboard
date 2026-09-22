@@ -6,7 +6,7 @@ primaryIntent: "organize dehumidifier maintenance and humidity observations"
 primaryKeyword: "dehumidifier maintenance records"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

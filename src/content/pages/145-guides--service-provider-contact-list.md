@@ -6,7 +6,7 @@ primaryIntent: "keep contractor and service contacts by household system"
 primaryKeyword: "home service provider contact list"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

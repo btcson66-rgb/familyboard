@@ -6,7 +6,7 @@ primaryIntent: "learn a focused FamilyBoard seasonal household review that prese
 primaryKeyword: "FamilyBoard seasonal reset tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

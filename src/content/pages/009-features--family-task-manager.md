@@ -6,7 +6,7 @@ primaryIntent: "manage recurring household tasks"
 primaryKeyword: "family task manager"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-22"

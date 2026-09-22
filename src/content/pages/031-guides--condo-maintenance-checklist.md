@@ -6,7 +6,7 @@ primaryIntent: "understand maintenance responsibilities in a condo"
 primaryKeyword: "condo maintenance checklist"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

@@ -6,7 +6,7 @@ primaryIntent: "prepare and review a temporary home closure and reopening withou
 primaryKeyword: "FamilyBoard home closure reopening"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-31"
 lastReviewedAt: "2026-08-31"

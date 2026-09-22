@@ -6,7 +6,7 @@ primaryIntent: "create a neutral move-out walkthrough record with observations, 
 primaryKeyword: "move-out condition report generator tutorial"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

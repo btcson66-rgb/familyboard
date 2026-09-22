@@ -6,7 +6,7 @@ primaryIntent: "review an existing repair punch list, preserve open gaps and ver
 primaryKeyword: "FamilyBoard punch list review"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

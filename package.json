@@ -1,6 +1,6 @@
 {
   "name": "familyboard",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "serve:test": "node scripts/serve-dist.mjs",
     "import:content": "node scripts/import-master.mjs docs/launch-content-master.md",
     "postbuild": "node scripts/split-sitemap.mjs && node scripts/postbuild-audit.mjs",
-    "check": "npm run lint && npm run typecheck && npm run test && npm run audit:content && npm run audit:similarity && npm run build && npm run audit:indexing && npm run audit:monitor",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run audit:content && npm run audit:similarity && npm run build && npm run audit:prune && npm run audit:indexing && npm run audit:monitor",
     "preflight": "npm run check && npm run e2e",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "astro check",
@@ -20,6 +20,7 @@
     "audit:similarity": "node scripts/content-similarity-audit.mjs",
     "audit:indexing": "node scripts/indexing-audit.mjs",
     "audit:seo": "node scripts/split-sitemap.mjs && node scripts/postbuild-audit.mjs",
+    "audit:prune": "node scripts/prune-acceptance.mjs",
     "audit:monitor": "node scripts/verify-monitor-expectations.mjs",
     "monitor:live": "node scripts/monitor-live.mjs",
     "indexnow:submit": "node scripts/submit-indexnow.mjs",

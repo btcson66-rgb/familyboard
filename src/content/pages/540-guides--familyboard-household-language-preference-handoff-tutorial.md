@@ -6,7 +6,7 @@ primaryIntent: "hand off a household task with the recipient’s language and ac
 primaryKeyword: "FamilyBoard household language preference handoff"
 cluster: "support"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-31"
 lastReviewedAt: "2026-08-31"

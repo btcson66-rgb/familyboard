@@ -6,7 +6,7 @@ primaryIntent: "learn a source-linked household filter and consumable history wo
 primaryKeyword: "FamilyBoard filter replacement history tutorial"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

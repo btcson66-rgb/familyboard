@@ -6,7 +6,7 @@ primaryIntent: "separate outcome ownership, physical work and safe next steps fo
 primaryKeyword: "home maintenance delegation map tutorial"
 cluster: "tools"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

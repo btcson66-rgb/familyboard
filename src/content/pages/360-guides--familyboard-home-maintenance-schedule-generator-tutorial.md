@@ -6,7 +6,7 @@ primaryIntent: "turn a home-specific asset list into a reviewable maintenance sc
 primaryKeyword: "home maintenance schedule generator tutorial"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "verify the correct appliance manual source and model match befor
 primaryKeyword: "FamilyBoard appliance manual source"
 cluster: "appliances"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

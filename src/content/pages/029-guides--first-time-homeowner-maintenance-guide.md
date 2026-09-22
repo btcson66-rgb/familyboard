@@ -6,7 +6,7 @@ primaryIntent: "learn how to start maintaining a first home"
 primaryKeyword: "first time homeowner maintenance guide"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"

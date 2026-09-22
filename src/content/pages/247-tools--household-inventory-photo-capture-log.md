@@ -6,7 +6,7 @@ primaryIntent: "plan and review household inventory photo sessions with a define
 primaryKeyword: "home inventory photo checklist log"
 cluster: "inventory-warranty"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

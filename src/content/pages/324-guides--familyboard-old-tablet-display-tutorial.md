@@ -6,7 +6,7 @@ primaryIntent: "learn to operate a low-sensitivity FamilyBoard display on an old
 primaryKeyword: "FamilyBoard old tablet display tutorial"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-28"
 lastReviewedAt: "2026-08-28"

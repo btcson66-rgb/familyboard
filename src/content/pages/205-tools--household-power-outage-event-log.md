@@ -6,7 +6,7 @@ primaryIntent: "record a household power outage timeline, observed system condit
 primaryKeyword: "power outage event log"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"

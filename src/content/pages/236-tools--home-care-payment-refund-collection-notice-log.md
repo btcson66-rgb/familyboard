@@ -6,7 +6,7 @@ primaryIntent: "record a home-care payment, refund, collection or adverse notice
 primaryKeyword: "home care payment refund collection notice log"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

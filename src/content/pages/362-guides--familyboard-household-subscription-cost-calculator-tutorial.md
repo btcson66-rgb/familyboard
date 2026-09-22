@@ -6,7 +6,7 @@ primaryIntent: "normalize mixed billing frequencies into a household monthly and
 primaryKeyword: "household subscription cost calculator guide"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

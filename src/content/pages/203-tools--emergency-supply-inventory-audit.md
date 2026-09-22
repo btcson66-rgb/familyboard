@@ -6,7 +6,7 @@ primaryIntent: "audit household emergency supplies against current guidance and 
 primaryKeyword: "emergency supply inventory audit"
 cluster: "tools"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: false
 publishedAt: "2026-08-23"
 lastReviewedAt: "2026-08-23"

@@ -6,7 +6,7 @@ primaryIntent: "create a private, source-aware log for seasonal household transi
 primaryKeyword: "seasonal household reset action log"
 cluster: "household-operations"
 pageType: "tool"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-27"
 lastReviewedAt: "2026-08-27"

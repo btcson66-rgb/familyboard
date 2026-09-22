@@ -6,7 +6,7 @@ primaryIntent: "document a safe household emergency exercise and turn observed g
 primaryKeyword: "FamilyBoard emergency drill record"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

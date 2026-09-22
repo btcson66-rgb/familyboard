@@ -6,7 +6,7 @@ primaryIntent: "use the free home maintenance cost tracker to record attributabl
 primaryKeyword: "home maintenance cost tracker tutorial"
 cluster: "inventory-warranty"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

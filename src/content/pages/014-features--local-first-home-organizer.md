@@ -6,7 +6,7 @@ primaryIntent: "find a local-first home organizer"
 primaryKeyword: "local-first home organizer"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

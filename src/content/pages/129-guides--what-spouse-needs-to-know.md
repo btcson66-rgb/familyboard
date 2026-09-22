@@ -6,7 +6,7 @@ primaryIntent: "reduce hidden household admin knowledge between partners"
 primaryKeyword: "household information spouse should know"
 cluster: "household-operations"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

@@ -6,7 +6,7 @@ primaryIntent: "review and reduce sensitive fields in a FamilyBoard export befor
 primaryKeyword: "FamilyBoard data export redaction"
 cluster: "records-emergency"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-31"
 lastReviewedAt: "2026-08-31"

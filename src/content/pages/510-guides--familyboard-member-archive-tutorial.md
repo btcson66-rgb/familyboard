@@ -6,7 +6,7 @@ primaryIntent: "archive a former FamilyBoard household member without losing his
 primaryKeyword: "FamilyBoard archive household member"
 cluster: "product"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-29"
 lastReviewedAt: "2026-08-29"

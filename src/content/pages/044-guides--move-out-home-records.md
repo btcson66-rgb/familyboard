@@ -6,7 +6,7 @@ primaryIntent: "organize records before leaving a home"
 primaryKeyword: "move out home checklist records"
 cluster: "maintenance"
 pageType: "content"
-indexable: true
+indexable: false
 depthVerified: true
 publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
