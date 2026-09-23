@@ -31,6 +31,8 @@ contentVersion: 1
 
 No single number predicts when a specific appliance will fail. [Published lifespan ranges](/guides/appliance-lifespan-planning/) describe a population, not your unit. A repair's cost describes one incident, not the whole picture. Age alone ignores how the unit has actually been treated. Combined, though, these three signals — age against the published range, real repair history, and current performance — give a household something genuinely useful to plan around, which none of them provides in isolation.
 
+Warranty status is a separate planning input. Use the product's written start rule and term with the [warranty expiration date calculator](/tools/warranty-expiration-calculator/), but do not let a date calculation replace a repair assessment or the actual coverage terms.
+
 ## Where the appliance sits in its published range
 
 A refrigerator, per trade-association and manufacturer figures, typically lasts 10–14 years, sometimes longer; a tank water heater typically runs 8–12 years. An appliance below that range is probably not a near-term concern regardless of anything else. One at or past the top of its range deserves closer attention — not because it's guaranteed to fail, but because that's where the odds genuinely start shifting.

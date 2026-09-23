@@ -41,6 +41,7 @@ jobs:
       - run: npm run audit:links
       - run: npm run audit:monitor
       - run: npx playwright install --with-deps chromium
+      - run: npm run audit:phase2:static
       - run: npm run e2e
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

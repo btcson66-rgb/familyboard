@@ -44,7 +44,7 @@ const groups = [
     <article class="answer-card"><h2>家庭資料存在哪裡？</h2><p>核心 App 紀錄預設保存在這個瀏覽器的本機資料庫。目前版本沒有帳號，也沒有集中保存家庭資料的伺服器。</p></article>
     <article class="answer-card"><h2>現在需要付費嗎？</h2><p>目前網頁版可免費使用，核心功能沒有結帳牆；私密家庭工作區也不顯示廣告。</p></article>
   </div></div></section>
-  <section class="section"><div class="narrow article"><div class="meta"><span><a href="/editorial-policy/">FamilyBoard 編輯團隊</a></span><span>發布與複查日期：2026 年 8 月 20 日</span><span>繁體中文（台灣）</span></div><Content /></div></section>
+  <section class="section"><div class="narrow article"><div class="meta"><span><a href="/editorial-policy/">FamilyBoard 編輯團隊</a></span><span>發布與複查日期：2026 年 8 月 20 日</span><span>繁體中文（台灣）</span></div><div class="editorial-content"><Content /></div></div></section>
   <section class="section tint"><div class="shell"><div class="section-head"><div><span class="eyebrow">繁中內容中心</span><h2>從實際工具、App 工作流程到資料與使用界線</h2></div></div>
     {groups.map((group) => <section class="hub-group" aria-labelledby={group.id}><h3 id={group.id}>{group.label}</h3><div class="card-grid">{group.entries.map((entry) => <a class="card" href={entry.data.route}><span class="card-tag">{group.label}</span><h3>{entry.data.title.replace(/｜.*$/, '')}</h3><p>{entry.data.description}</p></a>)}</div></section>)}
     {trust.length > 0 && <p><strong>信任與政策：</strong>{trust.map((entry, index) => <>{index > 0 && ' · '}<a href={entry.data.route}>{entry.data.title.replace(/｜.*$/, '')}</a></>)}</p>}

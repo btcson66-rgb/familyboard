@@ -63,6 +63,8 @@ Most smartphone photos carry embedded EXIF metadata, including precise GPS coord
 
 Photo documentation isn't a monthly chore. The Triple-I guidance is to update after a real trigger — a move, a major purchase, a renovation, receiving or disposing of something significant — rather than on a fixed calendar that mostly just repeats photos of things that haven't changed. Treating "just bought something" as the update trigger, instead of "it's been six months," keeps the inventory current without turning it into a recurring photography assignment nobody wants to do.
 
+For a newly photographed purchase, capture the warranty's written start rule while the receipt is still easy to find. If the document supplies a date and term, the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) can produce a review date without guessing what the warranty covers.
+
 ## A realistic first session
 
 Pick one room. Take the overview shot or a 30–60 second narrated video walkthrough first, then follow with individual photos only for the handful of items in that room that would actually matter in a claim, a sale or a repair — electronics, major appliances, anything with real value. That's a session you can finish in under 15 minutes per room, which is the difference between a photo inventory that gets started and one that gets abandoned after the first attempt.

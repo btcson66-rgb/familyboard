@@ -2,6 +2,18 @@ import { useMemo } from "react";
 
 const columnsByRoute: Array<[RegExp, string[]]> = [
   [
+    /printable-home-inventory-template/,
+    [
+      "Room / 房間",
+      "Item / 品項",
+      "Brand / model / 品牌／型號",
+      "Serial number / 序號",
+      "Purchase date / 購買日期",
+      "Receipt / photo reference / 收據／照片索引",
+      "Notes / 備註",
+    ],
+  ],
+  [
     /inventory/,
     [
       "Room / area",
@@ -53,7 +65,13 @@ const columnsByRoute: Array<[RegExp, string[]]> = [
   ],
   [
     /moving|new-home/,
-    ["When", "Task", "Owner", "Contact / account", "Complete"],
+    [
+      "When / 時程",
+      "Task / 工作",
+      "Owner / 負責人",
+      "Contact / account / 聯絡／帳戶",
+      "Complete / 完成",
+    ],
   ],
   [
     /emergency-binder/,

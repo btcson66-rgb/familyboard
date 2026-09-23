@@ -3,3 +3,9 @@ https://:project.pages.dev/*
 
 https://:version.:project.pages.dev/*
   X-Robots-Tag: noindex
+
+/downloads/*.pdf
+  Content-Type: application/pdf
+
+/downloads/*.csv
+  Content-Type: text/csv; charset=utf-8

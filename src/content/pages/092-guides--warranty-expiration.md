@@ -29,7 +29,7 @@ contentVersion: 2
 ---
 # A warranty expiration date answers "when," not "what's covered"
 
-Once you know what starts a warranty clock, calculating the end date is arithmetic — the [Warranty Expiration Calculator](/tools/warranty-expiration-calculator/) handles that part. What's harder, and what this page actually covers, is the part before the math: what date the term is measured from, why that's not always obvious, and why the calculated date is a planning aid rather than a coverage decision.
+Once you know what starts a warranty clock, calculating the end date is arithmetic — the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) handles that part. What's harder, and what this page actually covers, is the part before the math: what date the term is measured from, why that's not always obvious, and why the calculated date is a planning aid rather than a coverage decision.
 
 ## What actually starts the clock
 

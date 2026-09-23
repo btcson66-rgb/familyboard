@@ -17,3 +17,4 @@ jobs:
       - run: npm run build
       - run: npm run audit:prune
       - run: npm run audit:monitor
+      - run: npm run audit:phase2:static

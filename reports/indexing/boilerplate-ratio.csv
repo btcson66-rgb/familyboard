@@ -1,7 +1,7 @@
 url,locale,cluster,page_type,main_words,shared_boilerplate_words,boilerplate_ratio,repeated_blocks,decision
 https://familyboard.win/,en,product,content,377,0,0.000,0,PASS
 https://familyboard.win/features/,en,product,content,757,0,0.000,0,PASS
-https://familyboard.win/features/home-inventory-tracker/,en,product,content,698,0,0.000,0,PASS
+https://familyboard.win/features/home-inventory-tracker/,en,product,content,738,0,0.000,0,PASS
 https://familyboard.win/features/maintenance-tracker/,en,product,content,775,0,0.000,0,PASS
 https://familyboard.win/features/household-documents-organizer/,en,product,content,575,0,0.000,0,PASS
 https://familyboard.win/features/household-handoff/,en,product,content,516,0,0.000,0,PASS
@@ -25,13 +25,13 @@ https://familyboard.win/guides/humidifier-maintenance-guide/,en,appliances,conte
 https://familyboard.win/guides/ceiling-fan-maintenance-checklist/,en,appliances,content,541,0,0.000,0,PASS
 https://familyboard.win/guides/garbage-disposal-maintenance-guide/,en,appliances,content,670,0,0.000,0,PASS
 https://familyboard.win/guides/robot-vacuum-maintenance-guide/,en,appliances,content,560,0,0.000,0,PASS
-https://familyboard.win/guides/photo-home-inventory/,en,inventory-warranty,content,732,0,0.000,0,PASS
-https://familyboard.win/guides/how-to-track-product-warranties/,en,inventory-warranty,content,1384,0,0.000,0,PASS
-https://familyboard.win/guides/warranty-expiration/,en,inventory-warranty,content,810,0,0.000,0,PASS
-https://familyboard.win/guides/appliance-replacement-planning/,en,inventory-warranty,content,717,0,0.000,0,PASS
+https://familyboard.win/guides/photo-home-inventory/,en,inventory-warranty,content,777,0,0.000,0,PASS
+https://familyboard.win/guides/how-to-track-product-warranties/,en,inventory-warranty,content,1385,0,0.000,0,PASS
+https://familyboard.win/guides/warranty-expiration/,en,inventory-warranty,content,811,0,0.000,0,PASS
+https://familyboard.win/guides/appliance-replacement-planning/,en,inventory-warranty,content,756,0,0.000,0,PASS
 https://familyboard.win/guides/household-replacement-reserve/,en,inventory-warranty,content,732,0,0.000,0,PASS
-https://familyboard.win/guides/renovation-records/,en,inventory-warranty,content,1408,0,0.000,0,PASS
-https://familyboard.win/guides/household-documents-organizer/,en,records-emergency,content,601,0,0.000,0,PASS
+https://familyboard.win/guides/renovation-records/,en,inventory-warranty,content,1446,0,0.000,0,PASS
+https://familyboard.win/guides/household-documents-organizer/,en,records-emergency,content,640,0,0.000,0,PASS
 https://familyboard.win/guides/organize-pet-records/,en,records-emergency,content,1518,0,0.000,0,PASS
 https://familyboard.win/guides/family-continuity-plan/,en,records-emergency,content,676,0,0.000,0,PASS
 https://familyboard.win/guides/household-admin-backup-person/,en,records-emergency,content,702,0,0.000,0,PASS
@@ -41,7 +41,7 @@ https://familyboard.win/guides/household-supplies-inventory/,en,household-operat
 https://familyboard.win/guides/guest-preparation-checklist/,en,household-operations,content,721,0,0.000,0,PASS
 https://familyboard.win/guides/moving-house-organizer/,en,household-operations,content,802,0,0.000,0,PASS
 https://familyboard.win/tools/home-maintenance-schedule-generator/,en,tools,tool,540,0,0.000,0,PASS
-https://familyboard.win/tools/warranty-expiration-calculator/,en,tools,tool,655,0,0.000,0,PASS
+https://familyboard.win/tools/warranty-expiration-calculator/,en,tools,tool,889,0,0.000,0,PASS
 https://familyboard.win/tools/appliance-age-calculator/,en,tools,tool,541,0,0.000,0,PASS
 https://familyboard.win/tools/household-subscription-cost-calculator/,en,tools,tool,503,0,0.000,0,PASS
 https://familyboard.win/tools/annual-subscription-cost-calculator/,en,tools,tool,539,0,0.000,0,PASS
@@ -53,12 +53,12 @@ https://familyboard.win/tools/pet-sitter-instruction-generator/,en,tools,tool,56
 https://familyboard.win/tools/emergency-contact-sheet-generator/,en,tools,tool,542,0,0.000,0,PASS
 https://familyboard.win/checklists/printable-home-maintenance-checklist/,en,printables,printable,212,0,0.000,0,PASS
 https://familyboard.win/checklists/printable-seasonal-home-checklist/,en,printables,printable,109,0,0.000,0,PASS
-https://familyboard.win/templates/printable-home-inventory-template/,en,printables,printable,84,0,0.000,0,PASS
+https://familyboard.win/templates/printable-home-inventory-template/,en,printables,printable,128,0,0.000,0,PASS
 https://familyboard.win/templates/printable-service-provider-list/,en,printables,printable,55,0,0.000,0,PASS
 https://familyboard.win/checklists/printable-house-sitter-checklist/,en,printables,printable,46,0,0.000,0,PASS
 https://familyboard.win/checklists/printable-pet-sitter-checklist/,en,printables,printable,50,0,0.000,0,PASS
 https://familyboard.win/templates/printable-annual-renewals/,en,printables,printable,50,0,0.000,0,PASS
-https://familyboard.win/checklists/printable-moving-checklist/,en,printables,printable,97,0,0.000,0,PASS
+https://familyboard.win/checklists/printable-moving-checklist/,en,printables,printable,124,0,0.000,0,PASS
 https://familyboard.win/checklists/printable-new-home-checklist/,en,printables,printable,84,0,0.000,0,PASS
 https://familyboard.win/templates/printable-household-handoff-sheet/,en,printables,printable,113,0,0.000,0,PASS
 https://familyboard.win/about/,en,support,support,185,0,0.000,0,PASS
@@ -90,7 +90,7 @@ https://familyboard.win/zh-tw/features/,zh-TW,product,content,60,0,0.000,0,PASS
 https://familyboard.win/zh-tw/guides/,zh-TW,support,support,77,0,0.000,0,PASS
 https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/,zh-TW,tools,tool,49,0,0.000,0,PASS
 https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/,zh-TW,tools,tool,45,0,0.000,0,PASS
-https://familyboard.win/zh-tw/guides/home-maintenance-schedule/,zh-TW,maintenance,content,38,0,0.000,0,PASS
+https://familyboard.win/zh-tw/guides/home-maintenance-schedule/,zh-TW,maintenance,content,41,0,0.000,0,PASS
 https://familyboard.win/zh-tw/,zh-TW,product,content,39,0,0.000,0,PASS
 https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/,zh-TW,tools,tool,33,0,0.000,0,PASS
 https://familyboard.win/zh-tw/pricing/,zh-TW,support,support,31,0,0.000,0,PASS
@@ -100,4 +100,4 @@ https://familyboard.win/zh-tw/security/,zh-TW,support,support,86,0,0.000,0,PASS
 https://familyboard.win/zh-tw/templates/,zh-TW,support,support,38,0,0.000,0,PASS
 https://familyboard.win/zh-tw/terms/,zh-TW,support,support,56,0,0.000,0,PASS
 https://familyboard.win/zh-tw/tools/,zh-TW,support,support,57,0,0.000,0,PASS
-https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/,zh-TW,tools,tool,30,0,0.000,0,PASS
+https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/,zh-TW,tools,tool,122,0,0.000,0,PASS

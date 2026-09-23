@@ -94,13 +94,31 @@ test("public SEO, keyboard and eight production tools work", async ({
   await expect(page.locator(".result")).toContainText("Estimated term end");
 
   await page.goto("/templates/printable-home-inventory-template/");
-  await expect(page.locator(".printable thead th")).toHaveCount(5);
+  await expect(page.locator(".printable thead th")).toHaveCount(7);
+  await expect(page.getByRole("link", { name: "Download PDF" })).toHaveAttribute("download", "");
+  await expect(page.getByRole("link", { name: "Download CSV (Excel)" })).toHaveAttribute("download", "");
   await page.emulateMedia({ media: "print" });
   await expect(page.locator(".printable table")).toBeVisible();
   await expect(
     page.getByRole("button", { name: "Print this worksheet" }),
   ).toBeHidden();
   await page.emulateMedia({ media: "screen" });
+
+  await page.goto("/checklists/printable-moving-checklist/");
+  await expect(page.locator(".printable thead th")).toHaveCount(5);
+  await expect(page.getByRole("link", { name: "Download PDF" })).toHaveAttribute("download", "");
+  await expect(page.getByRole("link", { name: "Download CSV (Excel)" })).toHaveAttribute("download", "");
+
+  for (const route of [
+    "/tools/warranty-expiration-calculator/",
+    "/zh-tw/tools/warranty-expiration-calculator/",
+  ]) {
+    await page.goto(route);
+    await page.emulateMedia({ media: "print" });
+    await expect(page.locator(".tool-shell")).toBeVisible();
+    await expect(page.locator(".site-header")).toBeHidden();
+    await page.emulateMedia({ media: "screen" });
+  }
 
   const sitemap = await readSitemap(page.request);
   const sitemapManifest = JSON.parse(

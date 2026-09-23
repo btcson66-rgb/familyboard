@@ -60,7 +60,7 @@ If a salesperson made an additional promise, preserve the written confirmation. 
 
 Download or print the warranty that applied to the purchase and record the retrieval date. Do not rely only on a current support page: models, regions, product generations and terms can change while a URL stays the same.
 
-Record each relevant period separately if coverage differs for the whole product, parts, labor, battery, compressor or another component. A calculated end date is useful for planning, but it cannot decide which term applies or whether an event is covered. Use the [warranty expiration calculator](/tools/warranty-expiration-calculator/) only after finding the written start rule and term.
+Record each relevant period separately if coverage differs for the whole product, parts, labor, battery, compressor or another component. A calculated end date is useful for planning, but it cannot decide which term applies or whether an event is covered. Use the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) only after finding the written start rule and term.
 
 The FTC's [Businessperson's Guide to Federal Warranty Law](https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law) describes US federal rules for written consumer product warranties, including limits on certain tie-in sales provisions. Those rules are jurisdiction-specific and do not turn a household tracker into legal advice. State implied-warranty rules and remedies can differ, and a service contract follows its own agreement.
 

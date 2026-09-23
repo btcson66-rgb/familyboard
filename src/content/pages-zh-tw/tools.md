@@ -35,7 +35,7 @@ FamilyBoard 的繁中工具區不是把計算器名稱堆在一起，而是依�
 
 ## 日期、保固與保養
 
-[保固到期計算器](/zh-tw/tools/warranty-expiration-calculator/)可從已確認的起算日與期限做日期算術；[家庭日期偏移規劃器](/zh-tw/tools/household-date-offset-planner/)適合把「完成後幾天再看」轉成規劃日；[居家保養排程產生器](/zh-tw/tools/home-maintenance-schedule-generator/)則幫你依設備、來源與使用情境整理可複查的排程。輸入前先查清楚日期由哪份收據、手冊、通知或條款控制，並把估計值與正式期限分開。這些工具不會替你判斷起算事件、工作日、時區、適用地區或保養安全性。
+[保固到期日計算](/zh-tw/tools/warranty-expiration-calculator/)可從已確認的起算日與期限做日期算術；[家庭日期偏移規劃器](/zh-tw/tools/household-date-offset-planner/)適合把「完成後幾天再看」轉成規劃日；[居家保養排程產生器](/zh-tw/tools/home-maintenance-schedule-generator/)則幫你依設備、來源與使用情境整理可複查的排程。輸入前先查清楚日期由哪份收據、手冊、通知或條款控制，並把估計值與正式期限分開。這些工具不會替你判斷起算事件、工作日、時區、適用地區或保養安全性。
 
 ## 費用與時間整理
 
