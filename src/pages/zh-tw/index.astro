@@ -1,14 +1,24 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { isRouteIndexable } from '../../lib/indexability';
 
 const pages = await getCollection('pagesZhTw');
 const home = pages.find((entry) => entry.data.route === '/zh-tw/');
 if (!home) throw new Error('Traditional Chinese home content missing');
 const { Content } = await render(home);
 const featured = pages
-  .filter((entry) => entry.data.route !== '/zh-tw/' && !entry.data.redirectTo)
+  .filter((entry) => entry.data.route !== '/zh-tw/' && !entry.data.redirectTo && isRouteIndexable(entry.data.route))
   .sort((a, b) => a.data.title.localeCompare(b.data.title, 'zh-TW'));
+const tools = featured.filter((entry) => entry.data.pageType === 'tool');
+const printables = featured.filter((entry) => entry.data.pageType === 'printable' || /\/zh-tw\/(?:checklists|templates)\//.test(entry.data.route));
+const trust = featured.filter((entry) => entry.data.pageType === 'support' && !printables.includes(entry));
+const guides = featured.filter((entry) => !tools.includes(entry) && !printables.includes(entry) && !trust.includes(entry));
+const groups = [
+  { id: 'zh-guides', label: '實用指南', entries: guides },
+  { id: 'zh-tools', label: '免費工具', entries: tools },
+  { id: 'zh-printables', label: '可列印資源', entries: printables },
+].filter((group) => group.entries.length > 0);
 ---
 <BaseLayout
   title={home.data.title}
@@ -36,7 +46,8 @@ const featured = pages
   </div></div></section>
   <section class="section"><div class="narrow article"><div class="meta"><span><a href="/editorial-policy/">FamilyBoard 編輯團隊</a></span><span>發布與複查日期：2026 年 8 月 20 日</span><span>繁體中文（台灣）</span></div><Content /></div></section>
   <section class="section tint"><div class="shell"><div class="section-head"><div><span class="eyebrow">繁中內容中心</span><h2>從實際工具、App 工作流程到資料與使用界線</h2></div></div>
-    <div class="card-grid">{featured.map((entry) => <a class="card" href={entry.data.route}><span class="card-tag">{entry.data.pageType === 'tool' ? '免費工具' : entry.data.pageType === 'support' ? '信任與政策' : '實用指南'}</span><h3>{entry.data.title.replace(/｜.*$/, '')}</h3><p>{entry.data.description}</p></a>)}</div>
+    {groups.map((group) => <section class="hub-group" aria-labelledby={group.id}><h3 id={group.id}>{group.label}</h3><div class="card-grid">{group.entries.map((entry) => <a class="card" href={entry.data.route}><span class="card-tag">{group.label}</span><h3>{entry.data.title.replace(/｜.*$/, '')}</h3><p>{entry.data.description}</p></a>)}</div></section>)}
+    {trust.length > 0 && <p><strong>信任與政策：</strong>{trust.map((entry, index) => <>{index > 0 && ' · '}<a href={entry.data.route}>{entry.data.title.replace(/｜.*$/, '')}</a></>)}</p>}
   </div></section>
-  <section class="section"><div class="narrow"><div class="card"><span class="eyebrow">資料界線</span><h2>公開內容可被搜尋，私密紀錄留在裝置</h2><p>繁中指南與工具是公開且可索引的內容；家庭工作區本身不進 sitemap、不載入公開站分析或廣告程式碼。更換裝置前仍必須自行匯出備份。</p><p><a href="/zh-tw/privacy/">閱讀繁中隱私權政策</a> · <a href="/zh-tw/security/">了解資安與瀏覽器儲存限制</a> · <a href="/zh-tw/guides/digital-home-inventory-backup/">照步驟完成備份還原</a></p></div></div></section>
+  <section class="section"><div class="narrow"><div class="card"><span class="eyebrow">資料界線</span><h2>公開內容可被搜尋，私密紀錄留在裝置</h2><p>繁中指南與工具是公開且可索引的內容；家庭工作區本身不進 sitemap、不載入公開站分析或廣告程式碼。更換裝置前仍必須自行匯出備份。</p><p><a href="/zh-tw/privacy/">閱讀繁中隱私權政策</a> · <a href="/zh-tw/security/">了解資安與瀏覽器儲存限制</a></p></div></div></section>
 </BaseLayout>

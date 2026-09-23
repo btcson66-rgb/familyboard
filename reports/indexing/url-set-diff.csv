@@ -9,7 +9,7 @@ https://familyboard.win/changelog/,YES,YES,YES,YES,200,"index,follow,max-image-p
 https://familyboard.win/checklists/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/checklists/,,,sitemap,,,11,1,GSC indexed
 https://familyboard.win/checklists/printable-home-maintenance-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/checklists/printable-home-maintenance-checklist/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/checklists/printable-house-sitter-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/checklists/printable-house-sitter-checklist/,,,sitemap,,,8,2,GSC indexed
-https://familyboard.win/checklists/printable-monthly-home-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/checklists/printable-monthly-home-checklist/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/checklists/printable-monthly-home-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/checklists/printable-monthly-home-checklist/,,,unknown,,,,,GSC indexed
 https://familyboard.win/checklists/printable-moving-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/checklists/printable-moving-checklist/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/checklists/printable-new-home-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/checklists/printable-new-home-checklist/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/checklists/printable-pet-sitter-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/checklists/printable-pet-sitter-checklist/,,,sitemap,,,8,2,GSC indexed
@@ -18,82 +18,82 @@ https://familyboard.win/contact/,YES,YES,YES,YES,200,"index,follow,max-image-pre
 https://familyboard.win/disclaimer/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/disclaimer/,,,sitemap,,,5,1,GSC indexed
 https://familyboard.win/editorial-policy/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/editorial-policy/,,,sitemap,,,100,1,GSC indexed
 https://familyboard.win/features/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/features/,,,sitemap,,,12,1,GSC indexed
-https://familyboard.win/features/emergency-information-organizer/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/features/emergency-information-organizer/,,,unknown,,,,2,known but not indexed
+https://familyboard.win/features/emergency-information-organizer/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/features/emergency-information-organizer/,,,unknown,,,,,known but not indexed
 https://familyboard.win/features/family-display-mode/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/features/family-display-mode/,,,sitemap,,,8,2,GSC indexed
 https://familyboard.win/features/free-home-management-app/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/features/free-home-management-app/,,,sitemap,,,13,2,GSC indexed
 https://familyboard.win/features/home-inventory-tracker/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/features/home-inventory-tracker/,,,sitemap,,,14,1,GSC indexed
-https://familyboard.win/features/home-record-keeper/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/features/home-record-keeper/,,,unknown,,,,3,known but not indexed
+https://familyboard.win/features/home-record-keeper/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/features/home-record-keeper/,,,unknown,,,,,known but not indexed
 https://familyboard.win/features/household-documents-organizer/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/features/household-documents-organizer/,,,sitemap,,,9,2,GSC indexed
 https://familyboard.win/features/household-handoff/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/features/household-handoff/,,,sitemap,,,14,1,GSC indexed
-https://familyboard.win/features/local-first-home-organizer/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/features/local-first-home-organizer/,,,unknown,,,,3,known but not indexed
+https://familyboard.win/features/local-first-home-organizer/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/features/local-first-home-organizer/,,,unknown,,,,,known but not indexed
 https://familyboard.win/features/maintenance-tracker/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/features/maintenance-tracker/,,,sitemap,,,14,1,GSC indexed
-https://familyboard.win/features/offline-household-organizer/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/features/offline-household-organizer/,,,unknown,,,,3,known but not indexed
+https://familyboard.win/features/offline-household-organizer/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/features/offline-household-organizer/,,,unknown,,,,,known but not indexed
 https://familyboard.win/features/private-family-organizer/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/features/private-family-organizer/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/guides/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/,,,sitemap,,,11,1,GSC indexed
-https://familyboard.win/guides/air-conditioner-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/air-conditioner-maintenance-checklist/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/air-conditioner-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/air-conditioner-maintenance-checklist/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/appliance-replacement-planning/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/appliance-replacement-planning/,,,sitemap,,,10,2,GSC indexed
-https://familyboard.win/guides/carbon-monoxide-alarm-records/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/carbon-monoxide-alarm-records/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/carbon-monoxide-alarm-records/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/carbon-monoxide-alarm-records/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/ceiling-fan-maintenance-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/ceiling-fan-maintenance-checklist/,,,sitemap,,,7,2,GSC indexed
-https://familyboard.win/guides/chore-chart-for-adults/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/chore-chart-for-adults/,,,unknown,,,,3,known but not indexed
-https://familyboard.win/guides/coffee-maker-maintenance-guide/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/coffee-maker-maintenance-guide/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/guides/condo-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/condo-maintenance-checklist/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/guides/digital-home-binder/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/digital-home-binder/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/chore-chart-for-adults/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/chore-chart-for-adults/,,,unknown,,,,,known but not indexed
+https://familyboard.win/guides/coffee-maker-maintenance-guide/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/coffee-maker-maintenance-guide/,,,unknown,,,,,GSC indexed
+https://familyboard.win/guides/condo-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/condo-maintenance-checklist/,,,unknown,,,,,GSC indexed
+https://familyboard.win/guides/digital-home-binder/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/digital-home-binder/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/dishwasher-maintenance-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/dishwasher-maintenance-checklist/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/guides/dryer-maintenance-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/dryer-maintenance-checklist/,,,sitemap,,,8,2,GSC indexed
-https://familyboard.win/guides/emergency-information-sheet/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/emergency-information-sheet/,,,unknown,,,,3,known but not indexed
-https://familyboard.win/guides/fall-home-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/fall-home-maintenance-checklist/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/emergency-information-sheet/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/emergency-information-sheet/,,,unknown,,,,,known but not indexed
+https://familyboard.win/guides/fall-home-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/fall-home-maintenance-checklist/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/family-chore-system/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/family-chore-system/,,,sitemap,,,5,2,GSC indexed
 https://familyboard.win/guides/family-continuity-plan/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/family-continuity-plan/,,,sitemap,,,5,2,GSC indexed
-https://familyboard.win/guides/first-time-homeowner-maintenance-guide/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/first-time-homeowner-maintenance-guide/,,,unknown,,,,3,known but not indexed
+https://familyboard.win/guides/first-time-homeowner-maintenance-guide/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/first-time-homeowner-maintenance-guide/,,,unknown,,,,,known but not indexed
 https://familyboard.win/guides/freezer-maintenance-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/freezer-maintenance-checklist/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/guides/garbage-disposal-maintenance-guide/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/garbage-disposal-maintenance-guide/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/guides/guest-preparation-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/guest-preparation-checklist/,,,sitemap,,,5,2,GSC indexed
-https://familyboard.win/guides/home-evacuation-information/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/home-evacuation-information/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/guides/home-inventory-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/home-inventory-checklist/,,,unknown,,,,2,GSC indexed
-https://familyboard.win/guides/home-inventory-for-insurance/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/home-inventory-for-insurance/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/home-evacuation-information/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/home-evacuation-information/,,,unknown,,,,,GSC indexed
+https://familyboard.win/guides/home-inventory-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/home-inventory-checklist/,,,unknown,,,,,GSC indexed
+https://familyboard.win/guides/home-inventory-for-insurance/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/home-inventory-for-insurance/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/home-maintenance-after-vacation/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/home-maintenance-after-vacation/,,,sitemap,,,6,2,GSC indexed
-https://familyboard.win/guides/home-repair-history/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/home-repair-history/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/home-repair-history/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/home-repair-history/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/home-service-provider-list/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/home-service-provider-list/,,,sitemap,,,11,2,GSC indexed
-https://familyboard.win/guides/house-sitter-information/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/house-sitter-information/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/house-sitter-information/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/house-sitter-information/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/household-admin-backup-person/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/household-admin-backup-person/,,,sitemap,,,5,2,GSC indexed
 https://familyboard.win/guides/household-documents-organizer/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/household-documents-organizer/,,,sitemap,,,4,2,GSC indexed
 https://familyboard.win/guides/household-management-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/household-management-checklist/,,,sitemap,,,6,2,GSC indexed
 https://familyboard.win/guides/household-replacement-reserve/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/household-replacement-reserve/,,,sitemap,,,6,2,GSC indexed
-https://familyboard.win/guides/household-shopping-staples/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/household-shopping-staples/,,,unknown,,,,3,known but not indexed
+https://familyboard.win/guides/household-shopping-staples/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/household-shopping-staples/,,,unknown,,,,,known but not indexed
 https://familyboard.win/guides/household-supplies-inventory/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/household-supplies-inventory/,,,sitemap,,,7,2,GSC indexed
-https://familyboard.win/guides/how-long-to-keep-household-records/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/how-long-to-keep-household-records/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/how-long-to-keep-household-records/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/how-long-to-keep-household-records/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/how-to-track-product-warranties/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/how-to-track-product-warranties/,,,sitemap,,,9,2,GSC indexed
 https://familyboard.win/guides/humidifier-maintenance-guide/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/humidifier-maintenance-guide/,,,sitemap,,,7,2,GSC indexed
-https://familyboard.win/guides/maintenance-priorities/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/maintenance-priorities/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/maintenance-priorities/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/maintenance-priorities/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/microwave-maintenance-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/microwave-maintenance-checklist/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/guides/monthly-home-maintenance-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/monthly-home-maintenance-checklist/,,,sitemap,,,6,2,GSC indexed
-https://familyboard.win/guides/move-in-maintenance-checklist/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/move-in-maintenance-checklist/,,,unknown,,,,3,known but not indexed
+https://familyboard.win/guides/move-in-maintenance-checklist/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/move-in-maintenance-checklist/,,,unknown,,,,,known but not indexed
 https://familyboard.win/guides/moving-house-organizer/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/moving-house-organizer/,,,sitemap,,,6,2,GSC indexed
-https://familyboard.win/guides/moving-inventory/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/moving-inventory/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/guides/new-home-setup-checklist/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/new-home-setup-checklist/,,,unknown,,,,3,known but not indexed
+https://familyboard.win/guides/moving-inventory/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/moving-inventory/,,,unknown,,,,,GSC indexed
+https://familyboard.win/guides/new-home-setup-checklist/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/new-home-setup-checklist/,,,unknown,,,,,known but not indexed
 https://familyboard.win/guides/organize-pet-records/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/organize-pet-records/,,,sitemap,,,6,2,GSC indexed
-https://familyboard.win/guides/organize-school-records-at-home/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/organize-school-records-at-home/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/guides/organize-utility-account-information/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/organize-utility-account-information/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/guides/organize-vehicle-documents-at-home/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/organize-vehicle-documents-at-home/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/organize-school-records-at-home/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/organize-school-records-at-home/,,,unknown,,,,,GSC indexed
+https://familyboard.win/guides/organize-utility-account-information/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/organize-utility-account-information/,,,unknown,,,,,GSC indexed
+https://familyboard.win/guides/organize-vehicle-documents-at-home/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/organize-vehicle-documents-at-home/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/oven-maintenance-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/oven-maintenance-checklist/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/guides/photo-home-inventory/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/photo-home-inventory/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/guides/power-outage-home-preparedness/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/power-outage-home-preparedness/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/guides/quarterly-home-maintenance-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/quarterly-home-maintenance-checklist/,,,sitemap,,,6,2,GSC indexed
-https://familyboard.win/guides/range-hood-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/range-hood-maintenance-checklist/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/range-hood-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/range-hood-maintenance-checklist/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/renovation-records/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/renovation-records/,,,sitemap,,,6,2,GSC indexed
-https://familyboard.win/guides/repair-history/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/repair-history/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/repair-history/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/repair-history/,,,unknown,,,,,GSC indexed
 https://familyboard.win/guides/robot-vacuum-maintenance-guide/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/robot-vacuum-maintenance-guide/,,,sitemap,,,9,2,GSC indexed
-https://familyboard.win/guides/room-by-room-home-inventory/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/room-by-room-home-inventory/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/guides/service-history/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/service-history/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/guides/spring-home-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/spring-home-maintenance-checklist/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/guides/summer-home-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/summer-home-maintenance-checklist/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/guides/vacation-home-shutdown-checklist/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/vacation-home-shutdown-checklist/,,,unknown,,,,3,known but not indexed
+https://familyboard.win/guides/room-by-room-home-inventory/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/room-by-room-home-inventory/,,,unknown,,,,,GSC indexed
+https://familyboard.win/guides/service-history/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/service-history/,,,unknown,,,,,GSC indexed
+https://familyboard.win/guides/spring-home-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/spring-home-maintenance-checklist/,,,unknown,,,,,GSC indexed
+https://familyboard.win/guides/summer-home-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/summer-home-maintenance-checklist/,,,unknown,,,,,GSC indexed
+https://familyboard.win/guides/vacation-home-shutdown-checklist/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/vacation-home-shutdown-checklist/,,,unknown,,,,,known but not indexed
 https://familyboard.win/guides/warranty-expiration/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/warranty-expiration/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/guides/washing-machine-maintenance-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/washing-machine-maintenance-checklist/,,,sitemap,,,8,2,GSC indexed
 https://familyboard.win/guides/water-heater-maintenance-records/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/water-heater-maintenance-records/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/guides/water-leak-response-home-records/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/guides/water-leak-response-home-records/,,,sitemap,,,10,2,GSC indexed
-https://familyboard.win/guides/what-spouse-needs-to-know/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/what-spouse-needs-to-know/,,,unknown,,,,3,known but not indexed
-https://familyboard.win/guides/winter-home-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/winter-home-maintenance-checklist/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/guides/what-spouse-needs-to-know/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/guides/what-spouse-needs-to-know/,,,unknown,,,,,known but not indexed
+https://familyboard.win/guides/winter-home-maintenance-checklist/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/guides/winter-home-maintenance-checklist/,,,unknown,,,,,GSC indexed
 https://familyboard.win/pricing/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/pricing/,,,sitemap,,,6,1,GSC indexed
 https://familyboard.win/privacy/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/privacy/,,,sitemap,,,8,1,GSC indexed
 https://familyboard.win/roadmap/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/roadmap/,,,sitemap,,,6,1,GSC indexed
@@ -101,7 +101,7 @@ https://familyboard.win/search/,NO,NO,YES,YES,200,"noindex,follow",https://famil
 https://familyboard.win/security/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/security/,,,sitemap,,,6,1,GSC indexed
 https://familyboard.win/templates/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/templates/,,,sitemap,,,10,1,GSC indexed
 https://familyboard.win/templates/printable-annual-renewals/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/templates/printable-annual-renewals/,,,sitemap,,,7,2,GSC indexed
-https://familyboard.win/templates/printable-chore-chart/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/templates/printable-chore-chart/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/templates/printable-chore-chart/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/templates/printable-chore-chart/,,,unknown,,,,,GSC indexed
 https://familyboard.win/templates/printable-home-inventory-template/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/templates/printable-home-inventory-template/,,,sitemap,,,8,1,GSC indexed
 https://familyboard.win/templates/printable-household-handoff-sheet/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/templates/printable-household-handoff-sheet/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/templates/printable-service-provider-list/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/templates/printable-service-provider-list/,,,sitemap,,,8,2,GSC indexed
@@ -109,24 +109,24 @@ https://familyboard.win/terms/,YES,YES,YES,YES,200,"index,follow,max-image-previ
 https://familyboard.win/tools/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/,,,sitemap,,,10,1,GSC indexed
 https://familyboard.win/tools/annual-subscription-cost-calculator/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/annual-subscription-cost-calculator/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/tools/appliance-age-calculator/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/appliance-age-calculator/,,,sitemap,,,8,2,GSC discovery gap
-https://familyboard.win/tools/appliance-maintenance-checklist-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/appliance-maintenance-checklist-generator/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/tools/appliance-replacement-planner/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/appliance-replacement-planner/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/tools/emergency-binder-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/emergency-binder-generator/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/tools/appliance-maintenance-checklist-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/appliance-maintenance-checklist-generator/,,,unknown,,,,,GSC indexed
+https://familyboard.win/tools/appliance-replacement-planner/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/appliance-replacement-planner/,,,unknown,,,,,GSC indexed
+https://familyboard.win/tools/emergency-binder-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/emergency-binder-generator/,,,unknown,,,,,GSC indexed
 https://familyboard.win/tools/emergency-contact-sheet-generator/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/emergency-contact-sheet-generator/,,,sitemap,,,7,2,GSC indexed
-https://familyboard.win/tools/home-handoff-summary-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/home-handoff-summary-generator/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/tools/home-handoff-summary-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/home-handoff-summary-generator/,,,unknown,,,,,GSC indexed
 https://familyboard.win/tools/home-inventory-checklist-generator/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/home-inventory-checklist-generator/,,,sitemap,,,8,2,GSC indexed
 https://familyboard.win/tools/home-maintenance-cost-tracker/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/home-maintenance-cost-tracker/,,,sitemap,,,8,2,GSC indexed
 https://familyboard.win/tools/home-maintenance-schedule-generator/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/home-maintenance-schedule-generator/,,,sitemap,,,11,1,GSC indexed
-https://familyboard.win/tools/home-service-reminder-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/home-service-reminder-generator/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/tools/home-service-reminder-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/home-service-reminder-generator/,,,unknown,,,,,GSC indexed
 https://familyboard.win/tools/house-sitter-instruction-generator/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/house-sitter-instruction-generator/,,,sitemap,,,8,2,GSC indexed
 https://familyboard.win/tools/household-annual-review-generator/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/household-annual-review-generator/,,,sitemap,,,8,2,GSC indexed
-https://familyboard.win/tools/household-document-index-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/household-document-index-generator/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/tools/household-document-index-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/household-document-index-generator/,,,unknown,,,,,GSC indexed
 https://familyboard.win/tools/household-subscription-cost-calculator/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/household-subscription-cost-calculator/,,,sitemap,,,7,2,GSC indexed
-https://familyboard.win/tools/move-in-checklist-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/move-in-checklist-generator/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/tools/move-in-checklist-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/move-in-checklist-generator/,,,unknown,,,,,GSC indexed
 https://familyboard.win/tools/pet-sitter-instruction-generator/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/pet-sitter-instruction-generator/,,,sitemap,,,9,2,GSC indexed
-https://familyboard.win/tools/receipt-retention-organizer/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/receipt-retention-organizer/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/tools/vacation-shutdown-checklist-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/vacation-shutdown-checklist-generator/,,,unknown,,,,3,GSC indexed
-https://familyboard.win/tools/warranty-checklist-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/warranty-checklist-generator/,,,unknown,,,,3,GSC indexed
+https://familyboard.win/tools/receipt-retention-organizer/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/receipt-retention-organizer/,,,unknown,,,,,GSC indexed
+https://familyboard.win/tools/vacation-shutdown-checklist-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/vacation-shutdown-checklist-generator/,,,unknown,,,,,GSC indexed
+https://familyboard.win/tools/warranty-checklist-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/warranty-checklist-generator/,,,unknown,,,,,GSC indexed
 https://familyboard.win/tools/warranty-expiration-calculator/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/warranty-expiration-calculator/,,,sitemap,,,11,1,GSC indexed
 https://familyboard.win/zh-tw/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/,,,sitemap,,,7,1,GSC indexed
 https://familyboard.win/zh-tw/about/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/about/,,,sitemap,,,6,2,GSC discovery gap

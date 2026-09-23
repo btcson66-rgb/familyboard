@@ -1,6 +1,6 @@
 {
   "name": "familyboard",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "serve:test": "node scripts/serve-dist.mjs",
     "import:content": "node scripts/import-master.mjs docs/launch-content-master.md",
     "postbuild": "node scripts/split-sitemap.mjs && node scripts/postbuild-audit.mjs",
-    "check": "npm run lint && npm run typecheck && npm run test && npm run audit:content && npm run audit:similarity && npm run build && npm run audit:prune && npm run audit:indexing && npm run audit:monitor",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run audit:content && npm run audit:similarity && npm run build && npm run audit:prune && npm run audit:indexing && npm run audit:links && npm run audit:monitor",
     "preflight": "npm run check && npm run e2e",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "astro check",
@@ -19,6 +19,7 @@
     "audit:content": "node scripts/content-audit.mjs",
     "audit:similarity": "node scripts/content-similarity-audit.mjs",
     "audit:indexing": "node scripts/indexing-audit.mjs",
+    "audit:links": "node scripts/link-policy-audit.mjs",
     "audit:seo": "node scripts/split-sitemap.mjs && node scripts/postbuild-audit.mjs",
     "audit:prune": "node scripts/prune-acceptance.mjs",
     "audit:monitor": "node scripts/verify-monitor-expectations.mjs",
@@ -30,6 +31,7 @@
     "e2e:install": "playwright install chromium"
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "^7.2.3",
     "@astrojs/react": "latest",
     "@astrojs/sitemap": "latest",
     "astro": "latest",

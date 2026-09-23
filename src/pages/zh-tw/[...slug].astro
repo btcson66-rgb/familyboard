@@ -26,7 +26,7 @@ const alternatePath = pageIndexable && entry.data.alternateRoute && isRouteIndex
   : undefined;
 const related = entry.data.related
   .map((route: string) => pages.find((candidate) => candidate.data.route === route))
-  .filter((item): item is NonNullable<typeof item> => Boolean(item));
+  .filter((item): item is NonNullable<typeof item> => item !== undefined && (!pageIndexable || isRouteIndexable(item.data.route)));
 const routeSlug = entry.data.route.split('/').filter(Boolean).at(-1) || '';
 // Collection hubs. The English tree has listed its children since launch; the
 // Traditional Chinese tree never did, which left all 515 zh-TW pages with no
@@ -76,7 +76,7 @@ const pageTypeLabel = entry.data.pageType === 'tool' ? '免費工具' : entry.da
   description={entry.data.description}
   canonicalPath={redirectStub?.canonicalPath ?? entry.data.route}
   alternatePath={redirectStub ? undefined : alternatePath}
-  languageSwitchPath={redirectStub ? undefined : entry.data.alternateRoute}
+  languageSwitchPath={redirectStub ? undefined : pageIndexable ? (alternatePath ?? '/') : entry.data.alternateRoute}
   locale="zh-TW"
   indexable={redirectStub?.indexable ?? pageIndexable}
   robots={redirectStub?.robots}

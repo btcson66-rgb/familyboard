@@ -1,7 +1,9 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import { unified } from '@astrojs/markdown-remark';
 import fs from 'node:fs';
+import rehypeIndexableLinkPolicy from './scripts/rehype-indexable-link-policy.mjs';
 
 const sitemapPages = JSON.parse(
   fs.readFileSync(new URL('./src/generated/sitemap-pages.json', import.meta.url), 'utf8')
@@ -17,6 +19,9 @@ export default defineConfig({
   site: 'https://familyboard.win',
   output: 'static',
   trailingSlash: 'always',
+  markdown: {
+    processor: unified({ rehypePlugins: [rehypeIndexableLinkPolicy] })
+  },
   integrations: [
     react(),
     sitemap({

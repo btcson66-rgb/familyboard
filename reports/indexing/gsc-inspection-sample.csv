@@ -1,26 +1,26 @@
 url,gsc_status,last_crawl,crawl_allowed,indexing_allowed,page_fetch,user_declared_canonical,google_selected_canonical,referring_page,sitemap,rendered_html,http_status,robots,cluster,main_content_inlinks,click_depth,content_intent,nearest_competing_page,notes
-https://familyboard.win/guides/home-inventory-checklist/,Indexed,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,2,,,snapshot category only
+https://familyboard.win/guides/home-inventory-checklist/,Indexed,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
 https://familyboard.win/disclaimer/,Indexed,,,,,,,,,live server HTML audited,200,"index,follow,max-image-preview:large",,5,1,understand the limits of household guidance,,snapshot category only
-https://familyboard.win/guides/maintenance-priorities/,Indexed,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
-https://familyboard.win/guides/service-history/,Indexed,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
+https://familyboard.win/guides/maintenance-priorities/,Indexed,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/guides/service-history/,Indexed,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
 https://familyboard.win/templates/printable-household-handoff-sheet/,Indexed,,,,,,,,,live server HTML audited,200,"index,follow,max-image-preview:large",,7,2,print a concise handoff of household responsibilities,,snapshot category only
 https://familyboard.win/features/family-display-mode/,Indexed,,,,,,,,,live server HTML audited,200,"index,follow,max-image-preview:large",,8,2,use an old tablet as a family dashboard,,snapshot category only
 https://familyboard.win/checklists/printable-new-home-checklist/,Indexed,,,,,,,,,live server HTML audited,200,"index,follow,max-image-preview:large",,7,2,print a first-week new-home setup checklist,,snapshot category only
 https://familyboard.win/features/household-documents-organizer/,Indexed,,,,,,,,,live server HTML audited,200,"index,follow,max-image-preview:large",,9,2,organize household documents digitally,,snapshot category only
-https://familyboard.win/tools/receipt-retention-organizer/,Indexed,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
+https://familyboard.win/tools/receipt-retention-organizer/,Indexed,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
 https://familyboard.win/tools/warranty-expiration-calculator/,Indexed,,,,,,,,,live server HTML audited,200,"index,follow,max-image-preview:large",,11,1,calculate a product warranty end date,,snapshot category only
-https://familyboard.win/guides/household-shopping-staples/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
-https://familyboard.win/guides/chore-chart-for-adults/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
-https://familyboard.win/guides/what-spouse-needs-to-know/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
-https://familyboard.win/features/offline-household-organizer/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
-https://familyboard.win/features/emergency-information-organizer/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,2,,,snapshot category only
-https://familyboard.win/guides/emergency-information-sheet/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
-https://familyboard.win/guides/move-in-maintenance-checklist/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
-https://familyboard.win/guides/vacation-home-shutdown-checklist/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
-https://familyboard.win/guides/new-home-setup-checklist/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
-https://familyboard.win/features/home-record-keeper/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
-https://familyboard.win/guides/first-time-homeowner-maintenance-guide/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
-https://familyboard.win/features/local-first-home-organizer/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,3,,,snapshot category only
+https://familyboard.win/guides/household-shopping-staples/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/guides/chore-chart-for-adults/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/guides/what-spouse-needs-to-know/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/features/offline-household-organizer/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/features/emergency-information-organizer/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/guides/emergency-information-sheet/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/guides/move-in-maintenance-checklist/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/guides/vacation-home-shutdown-checklist/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/guides/new-home-setup-checklist/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/features/home-record-keeper/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/guides/first-time-homeowner-maintenance-guide/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
+https://familyboard.win/features/local-first-home-organizer/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,,,,snapshot category only
 https://familyboard.win/zh-tw/app/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,2,,,snapshot category only
 https://familyboard.win/app/,noindex,,,,,,,,,live server HTML audited,200,"noindex,follow",,0,1,,,snapshot category only
 http://familyboard.win/,redirect,,,,,,,,,live server HTML audited,200,"index,follow,max-image-preview:large",,12,0,find a simple private system for managing a home,,snapshot category only
