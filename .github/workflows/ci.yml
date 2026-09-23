@@ -17,3 +17,5 @@ jobs:
       - run: npm run build
       - run: npm run audit:prune
       - run: npm run audit:monitor
+      - run: npx playwright install --with-deps chromium
+      - run: npm run audit:phase2

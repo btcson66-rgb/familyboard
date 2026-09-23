@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.3 — 2026-09-23
+
+Document the warranty calculator's month-end convention with tested leap-year and year-boundary cases, add source-checked U.S. and Taiwan warranty examples plus Taiwan Civil Code period guidance, and connect eight English and three Traditional Chinese indexable content paths to the calculators. Add deterministic A4 PDF and UTF-8 BOM CSV downloads for the home inventory and moving printables, first-screen download controls, Excel and print-preview evidence, and automated link/download acceptance checks.
+
 ## 1.6.2 — 2026-09-23
 
 Enforce a single indexable internal-link graph across rendered Markdown and site components, reduce the Traditional Chinese homepage to reviewed indexable destinations, remove search from the sitemap policy, add the remaining reviewed redirects, and prevent Cloudflare preview domains from being indexed.

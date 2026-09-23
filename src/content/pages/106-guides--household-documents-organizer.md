@@ -51,6 +51,8 @@ Legal originals — property deeds, passports, Social Security cards, estate doc
 
 Every document record benefits from a `reviewDate`, not a fixed shelf life. A warranty's review date is its expiration date. A tax-relevant receipt's review date follows the retention period that actually applies to it — the [IRS generally recommends three years for most individual tax records](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records), longer for specific situations like a bad-debt or worthless-securities claim. A renovation record's review date is "as long as you own the home." Assigning the reason, not a blanket timer, is what keeps the index accurate instead of either bloated or prematurely emptied.
 
+If a warranty document states both the start event and term, use the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) to derive the review date, and keep the document pointer beside the result so another household member can verify it.
+
 ## Test the system with someone who didn't build it
 
 The best validation is handing the index to a partner or adult family member and asking them to find one specific document — the water heater warranty, the pet's last vet reference, the renter's insurance policy number location — without help. If they can't find it in under a minute, the category structure needs a clearer label, not more folders.

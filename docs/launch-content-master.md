@@ -566,6 +566,8 @@ Every asset card carries two buttons: "Watch" and "Archive." Watch flips the sta
 
 An asset by itself is just a name and a serial number. The reason to record one in FamilyBoard rather than a plain spreadsheet is that maintenance tasks, warranties and document references all reference an asset by its ID, and the related screens show the asset's name next to each entry. Complete a maintenance task on the dishwasher and the completion log identifies the dishwasher; add a warranty for the same asset and the warranty card shows its name instead of only a provider. FamilyBoard does not currently provide a single asset-detail screen that gathers all those records in one panel, so move between the relevant tabs and use the shared asset name as the connecting thread.
 
+When the written warranty gives a start date and term, use the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) to create a review date, then keep that result beside the source document rather than treating the calculated date as coverage proof.
+
 ## A worked example
 
 A household adds "Dishwasher" as an asset: category Appliance, location Kitchen, brand Bosch, model SHP878, serial number recorded from the inner door frame, purchase date the day it was installed, notes "installed by contractor, drain hose routed under sink." Later, in Settings, they export the master CSV and fill in purchase price ($899) and manual reference (a link to the PDF they saved). They then create a maintenance task titled "Clean filter and check door seal" linked to that same asset, and a warranty record for the same asset with the manufacturer's two-year term and a receipt reference pointing to a folder in their email. All three records now show "Dishwasher" as their connecting thread. They remain on separate tabs rather than opening into one combined asset history, but the consistent asset name makes the relationship visible wherever each record is listed.
@@ -5910,6 +5912,8 @@ Most smartphone photos carry embedded EXIF metadata, including precise GPS coord
 
 Photo documentation isn't a monthly chore. The Triple-I guidance is to update after a real trigger — a move, a major purchase, a renovation, receiving or disposing of something significant — rather than on a fixed calendar that mostly just repeats photos of things that haven't changed. Treating "just bought something" as the update trigger, instead of "it's been six months," keeps the inventory current without turning it into a recurring photography assignment nobody wants to do.
 
+For a newly photographed purchase, capture the warranty's written start rule while the receipt is still easy to find. If the document supplies a date and term, the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) can produce a review date without guessing what the warranty covers.
+
 ## A realistic first session
 
 Pick one room. Take the overview shot or a 30–60 second narrated video walkthrough first, then follow with individual photos only for the handful of items in that room that would actually matter in a claim, a sale or a repair — electronics, major appliances, anything with real value. That's a session you can finish in under 15 minutes per room, which is the difference between a photo inventory that gets started and one that gets abandoned after the first attempt.
@@ -6470,7 +6474,7 @@ If a salesperson made an additional promise, preserve the written confirmation. 
 
 Download or print the warranty that applied to the purchase and record the retrieval date. Do not rely only on a current support page: models, regions, product generations and terms can change while a URL stays the same.
 
-Record each relevant period separately if coverage differs for the whole product, parts, labor, battery, compressor or another component. A calculated end date is useful for planning, but it cannot decide which term applies or whether an event is covered. Use the [warranty expiration calculator](/tools/warranty-expiration-calculator/) only after finding the written start rule and term.
+Record each relevant period separately if coverage differs for the whole product, parts, labor, battery, compressor or another component. A calculated end date is useful for planning, but it cannot decide which term applies or whether an event is covered. Use the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) only after finding the written start rule and term.
 
 The FTC's [Businessperson's Guide to Federal Warranty Law](https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law) describes US federal rules for written consumer product warranties, including limits on certain tie-in sales provisions. Those rules are jurisdiction-specific and do not turn a household tracker into legal advice. State implied-warranty rules and remedies can differ, and a service contract follows its own agreement.
 
@@ -6555,7 +6559,7 @@ A future affiliate area may show clearly labelled scanners, storage media, label
 
 # A warranty expiration date answers "when," not "what's covered"
 
-Once you know what starts a warranty clock, calculating the end date is arithmetic — the [Warranty Expiration Calculator](/tools/warranty-expiration-calculator/) handles that part. What's harder, and what this page actually covers, is the part before the math: what date the term is measured from, why that's not always obvious, and why the calculated date is a planning aid rather than a coverage decision.
+Once you know what starts a warranty clock, calculating the end date is arithmetic — the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) handles that part. What's harder, and what this page actually covers, is the part before the math: what date the term is measured from, why that's not always obvious, and why the calculated date is a planning aid rather than a coverage decision.
 
 ## What actually starts the clock
 
@@ -6941,6 +6945,8 @@ A future affiliate area may show clearly labelled storage supplies, label makers
 
 No single number predicts when a specific appliance will fail. [Published lifespan ranges](/guides/appliance-lifespan-planning/) describe a population, not your unit. A repair's cost describes one incident, not the whole picture. Age alone ignores how the unit has actually been treated. Combined, though, these three signals — age against the published range, real repair history, and current performance — give a household something genuinely useful to plan around, which none of them provides in isolation.
 
+Warranty status is a separate planning input. Use the product's written start rule and term with the [warranty expiration date calculator](/tools/warranty-expiration-calculator/), but do not let a date calculation replace a repair assessment or the actual coverage terms.
+
 ## Where the appliance sits in its published range
 
 A refrigerator, per trade-association and manufacturer figures, typically lasts 10–14 years, sometimes longer; a tank water heater typically runs 8–12 years. An appliance below that range is probably not a near-term concern regardless of anything else. One at or past the top of its range deserves closer attention — not because it's guaranteed to fail, but because that's where the odds genuinely start shifting.
@@ -7246,6 +7252,8 @@ Paint formulas, tile batch references, flooring product names, fixture models an
 A new appliance, HVAC system, water heater, pump or control system needs an asset record with model, installation evidence, manual, warranty source and maintenance schedule. Link that asset back to the renovation rather than making the project record the only place it exists. The project explains why and when it entered the home; the asset record follows service and replacement over its useful life.
 
 Do not infer a warranty start date from a household walkthrough. Use the actual warranty terms, purchase or installation evidence and responsible source. Likewise, do not treat a FamilyBoard `closed` status as a manufacturer claim decision or a waiver of later rights.
+
+Once the close-out package identifies the controlling start event and term, the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) can create a review date for the new asset. The manufacturer's or installer's written terms still control the real deadline.
 
 ## Preserve tax evidence without letting the archive decide tax treatment
 
@@ -7810,6 +7818,8 @@ Legal originals — property deeds, passports, Social Security cards, estate doc
 ## Set a review date instead of guessing when to declean
 
 Every document record benefits from a `reviewDate`, not a fixed shelf life. A warranty's review date is its expiration date. A tax-relevant receipt's review date follows the retention period that actually applies to it — the [IRS generally recommends three years for most individual tax records](https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records), longer for specific situations like a bad-debt or worthless-securities claim. A renovation record's review date is "as long as you own the home." Assigning the reason, not a blanket timer, is what keeps the index accurate instead of either bloated or prematurely emptied.
+
+If a warranty document states both the start event and term, use the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) to derive the review date, and keep the document pointer beside the result so another household member can verify it.
 
 ## Test the system with someone who didn't build it
 
@@ -11439,7 +11449,29 @@ A purchase date is not automatically a warranty start date. Depending on the pro
 
 Enter the start date, the warranty term in months, and how many days before expiration you want a review flag (30 days by default). The calculator adds the term to the start date to get an estimated end date, then subtracts your review window from that end date to get a review-by date.
 
-The one place simple date math goes wrong is the end of a month, and this calculator handles it with an explicit rule rather than letting JavaScript's default date rollover decide for you. If the target month doesn't have the same day number as the start date, the calculator lands on that month's last valid day instead of spilling into the following month. Adding one month to January 31 gives February 28 in a common year, or February 29 in a leap year — never March 3, which is what naive date arithmetic would silently produce. That convergence rule is what makes the output predictable and reproducible every time you run the same dates through it, regardless of which months are involved.
+## Month-end date rule
+
+The one place simple date math goes wrong is the end of a month, and this calculator handles it with an explicit rule rather than letting JavaScript's default date rollover decide for you. If the target month doesn't have the same day number as the start date, the calculator lands on that month's last valid day instead of spilling into the following month.
+
+- January 31, 2026 plus 12 months is January 31, 2027.
+- February 29, 2028 plus 12 months is February 28, 2029 because 2029 has no February 29.
+- February 28, 2027 plus 12 months is February 28, 2028; the calculator does not automatically promote an ordinary February 28 anniversary to leap day.
+- December 31, 2026 plus 12 months is December 31, 2027.
+- December 31, 2026 plus 2 months is February 28, 2027 because February has no 31st.
+
+This convergence rule makes repeated inputs predictable. It is a calculator convention, not a warranty interpretation: the manufacturer's written terms override this calculation, including any stated start event, end-of-period rule, extension or separate component term.
+
+## Typical warranty terms
+
+These current examples show why you must keep the product, region and start method with the number. They are not universal category defaults.
+
+| Product example | Written term and starting method | Official source (checked September 23, 2026) |
+|---|---|---|
+| Samsung U.S. home appliances | Most products have a one-year standard warranty; Samsung says the purchase date determines the warranty period. Model-specific terms may differ. | [Samsung Home Appliance Warranty](https://www.samsung.com/us/home-appliances/warranty/) |
+| Apple iPhone and iPad in the United States | One year from the date of original retail purchase by the end-user purchaser. | [Apple One (1) Year Limited Warranty](https://www.apple.com/legal/warranty/products/ios-warranty-document-us.html) |
+| Toyota vehicles in the United States | Basic coverage is 36 months or 36,000 miles, whichever comes first, beginning on the in-service date when first delivered, leased or used as a company car or demonstrator. | [Toyota warranty coverage](https://support.toyota.com/s/article/What-warranty-coverag-7683) |
+
+Always open the terms for the exact model and market. Longer coverage for one component does not extend every part of the product.
 
 ## Worked example
 
@@ -12782,7 +12814,7 @@ Use the same worksheet four times a year and let the actual tasks change with yo
 
 This worksheet is for items worth identifying later. Do not try to list every object.
 
-| Room | Item | Brand/Model | Serial | Purchase date | Receipt/photo reference | Notes |
+| Room / 房間 | Item / 品項 | Brand / model / 品牌／型號 | Serial number / 序號 | Purchase date / 購買日期 | Receipt / photo reference / 收據／照片索引 | Notes / 備註 |
 |---|---|---|---|---|---|---|
 | | | | | | | |
 | | | | | | | |
@@ -12798,6 +12830,8 @@ This worksheet is for items worth identifying later. Do not try to list every ob
 ## What to record first
 
 Prioritize appliances, electronics, valuable items, tools, vehicles and home systems. Use photos for context and labels. If a serial number is difficult or unsafe to reach, leave it blank until service makes it accessible.
+
+For a product whose written terms identify a start date and term, use the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) and copy the review date into the optional field. Keep the receipt or terms reference in the table so the calculation remains traceable.
 
 **CTA:** Use the digital tracker when you want maintenance, warranty and repair history attached to the same item.
 
@@ -13238,6 +13272,14 @@ The decision date may be more important than the payment date. Give the househol
 **Suggested internal links:** `/guides/moving-house-organizer/`, `/guides/moving-inventory/`, `/tools/move-in-checklist-generator/`, `/guides/move-out-home-records/`
 
 # Printable Moving Checklist
+
+Use the table as a compact ownership view, then use the detailed sections below to make sure no stage is skipped.
+
+| When / 時程 | Task / 工作 | Owner / 負責人 | Contact / account / 聯絡／帳戶 | Complete / 完成 |
+|---|---|---|---|---|
+| | | | | |
+| | | | | |
+| | | | | |
 
 ### Before the move
 - [ ] Confirm move/closing/lease timeline.

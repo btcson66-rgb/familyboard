@@ -83,6 +83,8 @@ A new appliance, HVAC system, water heater, pump or control system needs an asse
 
 Do not infer a warranty start date from a household walkthrough. Use the actual warranty terms, purchase or installation evidence and responsible source. Likewise, do not treat a FamilyBoard `closed` status as a manufacturer claim decision or a waiver of later rights.
 
+Once the close-out package identifies the controlling start event and term, the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) can create a review date for the new asset. The manufacturer's or installer's written terms still control the real deadline.
+
 ## Preserve tax evidence without letting the archive decide tax treatment
 
 For U.S. homeowners, current [IRS Publication 523](https://www.irs.gov/publications/p523) and [Publication 530](https://www.irs.gov/publications/p530) explain that qualifying improvements may increase basis, while ordinary repair and maintenance costs generally do not; repair-type work may be treated differently when part of an extensive remodeling or restoration project. Credits, subsidies, insurance reimbursement, business or rental use and improvements later removed can change the calculation.

@@ -21,6 +21,14 @@ contentVersion: 1
 ---
 # Printable Moving Checklist
 
+Use the table as a compact ownership view, then use the detailed sections below to make sure no stage is skipped.
+
+| When / 時程 | Task / 工作 | Owner / 負責人 | Contact / account / 聯絡／帳戶 | Complete / 完成 |
+|---|---|---|---|---|
+| | | | | |
+| | | | | |
+| | | | | |
+
 ## Before the move
 - [ ] Confirm move/closing/lease timeline.
 - [ ] Book moving/transport help if needed.

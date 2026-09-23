@@ -15,6 +15,16 @@ describe("date and cost rules", () => {
     expect(addMonthsClamped("2026-01-31", 1)).toBe("2026-02-28"));
   it("handles leap-year month end", () =>
     expect(addMonthsClamped("2028-01-31", 1)).toBe("2028-02-29"));
+  it("keeps the same calendar day across a full year", () =>
+    expect(addMonthsClamped("2026-01-31", 12)).toBe("2027-01-31"));
+  it("clamps leap day when the following year has no February 29", () =>
+    expect(addMonthsClamped("2028-02-29", 12)).toBe("2029-02-28"));
+  it("does not promote February 28 to leap day in a later leap year", () =>
+    expect(addMonthsClamped("2027-02-28", 12)).toBe("2028-02-28"));
+  it("keeps December 31 across a full year", () =>
+    expect(addMonthsClamped("2026-12-31", 12)).toBe("2027-12-31"));
+  it("clamps December 31 plus two months to February month-end", () =>
+    expect(addMonthsClamped("2026-12-31", 2)).toBe("2027-02-28"));
   it("annualizes supported frequencies", () => {
     expect(annualizedCost(10, "monthly")).toBe(120);
     expect(annualizedCost(10, "quarterly")).toBe(40);

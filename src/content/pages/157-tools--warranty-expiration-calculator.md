@@ -41,7 +41,29 @@ A purchase date is not automatically a warranty start date. Depending on the pro
 
 Enter the start date, the warranty term in months, and how many days before expiration you want a review flag (30 days by default). The calculator adds the term to the start date to get an estimated end date, then subtracts your review window from that end date to get a review-by date.
 
-The one place simple date math goes wrong is the end of a month, and this calculator handles it with an explicit rule rather than letting JavaScript's default date rollover decide for you. If the target month doesn't have the same day number as the start date, the calculator lands on that month's last valid day instead of spilling into the following month. Adding one month to January 31 gives February 28 in a common year, or February 29 in a leap year — never March 3, which is what naive date arithmetic would silently produce. That convergence rule is what makes the output predictable and reproducible every time you run the same dates through it, regardless of which months are involved.
+## Month-end date rule
+
+The one place simple date math goes wrong is the end of a month, and this calculator handles it with an explicit rule rather than letting JavaScript's default date rollover decide for you. If the target month doesn't have the same day number as the start date, the calculator lands on that month's last valid day instead of spilling into the following month.
+
+- January 31, 2026 plus 12 months is January 31, 2027.
+- February 29, 2028 plus 12 months is February 28, 2029 because 2029 has no February 29.
+- February 28, 2027 plus 12 months is February 28, 2028; the calculator does not automatically promote an ordinary February 28 anniversary to leap day.
+- December 31, 2026 plus 12 months is December 31, 2027.
+- December 31, 2026 plus 2 months is February 28, 2027 because February has no 31st.
+
+This convergence rule makes repeated inputs predictable. It is a calculator convention, not a warranty interpretation: the manufacturer's written terms override this calculation, including any stated start event, end-of-period rule, extension or separate component term.
+
+## Typical warranty terms
+
+These current examples show why you must keep the product, region and start method with the number. They are not universal category defaults.
+
+| Product example | Written term and starting method | Official source (checked September 23, 2026) |
+|---|---|---|
+| Samsung U.S. home appliances | Most products have a one-year standard warranty; Samsung says the purchase date determines the warranty period. Model-specific terms may differ. | [Samsung Home Appliance Warranty](https://www.samsung.com/us/home-appliances/warranty/) |
+| Apple iPhone and iPad in the United States | One year from the date of original retail purchase by the end-user purchaser. | [Apple One (1) Year Limited Warranty](https://www.apple.com/legal/warranty/products/ios-warranty-document-us.html) |
+| Toyota vehicles in the United States | Basic coverage is 36 months or 36,000 miles, whichever comes first, beginning on the in-service date when first delivered, leased or used as a company car or demonstrator. | [Toyota warranty coverage](https://support.toyota.com/s/article/What-warranty-coverag-7683) |
+
+Always open the terms for the exact model and market. Longer coverage for one component does not extend every part of the product.
 
 ## Worked example
 

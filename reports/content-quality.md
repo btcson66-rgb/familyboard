@@ -1,6 +1,6 @@
 # Content quality report
 
-Generated: 2026-09-23T05:48:43.985Z
+Generated: 2026-09-23T12:04:25.647Z
 
 ## Summary
 
@@ -12,7 +12,7 @@ Generated: 2026-09-23T05:48:43.985Z
 - Internal instruction leakage: 0
 - Missing-source warnings on safety-sensitive numeric claims: 1
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 609
+- Pages without a contextual product/tool link: 606
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -55,7 +55,6 @@ Generated: 2026-09-23T05:48:43.985Z
 
 ## Pages without contextual product/tool links
 
-- /guides/appliance-replacement-planning/
 - /guides/digital-home-inventory-backup/
 - /guides/familyboard-app-first-run-restore-tutorial/
 - /guides/familyboard-appliance-manual-source-tutorial/
@@ -109,9 +108,7 @@ Generated: 2026-09-23T05:48:43.985Z
 - /guides/household-replacement-reserve/
 - /guides/monthly-home-maintenance-checklist/
 - /guides/moving-house-organizer/
-- /guides/photo-home-inventory/
 - /guides/power-outage-home-preparedness/
-- /guides/renovation-records/
 - /guides/seasonal-home-maintenance-checklist/
 - /guides/solar-panel-maintenance-records/
 - /guides/subscription-cancellation-refund-records/

@@ -98,6 +98,16 @@ const siblings = isHub || redirectStub ? [] : clusterSiblings(
   { count: 6, exclude: entry.data.related },
 );
 const pageType = entry.data.pageType === 'content' ? 'article' : 'website';
+const downloads = {
+  '/templates/printable-home-inventory-template/': {
+    pdf: '/downloads/familyboard-home-inventory-template.pdf',
+    csv: '/downloads/familyboard-home-inventory-template.csv',
+  },
+  '/checklists/printable-moving-checklist/': {
+    pdf: '/downloads/familyboard-moving-checklist.pdf',
+    csv: '/downloads/familyboard-moving-checklist.csv',
+  },
+}[entry.data.route];
 ---
 <BaseLayout title={entry.data.title} description={entry.data.description} canonicalPath={redirectStub?.canonicalPath ?? entry.data.route} alternatePath={redirectStub ? undefined : alternatePath} languageSwitchPath={redirectStub ? undefined : pageIndexable ? (alternatePath ?? '/zh-tw/') : alternateEntry?.data.route} indexable={redirectStub?.indexable ?? pageIndexable} robots={redirectStub?.robots} pageType={redirectStub ? 'website' : pageType} publishedAt={entry.data.publishedAt} lastReviewedAt={entry.data.lastReviewedAt} faq={redirectStub ? [] : entry.data.faq} publicIntegrationsEnabled={redirectStub?.publicIntegrationsEnabled ?? true} redirectRefresh={redirectStub?.refreshContent}>
   {redirectStub ? <div class="shell page-grid">
@@ -111,10 +121,14 @@ const pageType = entry.data.pageType === 'content' ? 'article' : 'website';
   <div class="shell page-grid">
     <article class="article">
       <div class="meta"><span><a href="/editorial-policy/">FamilyBoard Editorial Team</a></span><span>Published and reviewed {entry.data.lastReviewedAt.toLocaleDateString('en-US', { dateStyle: 'long' })}</span><span>{entry.data.cluster.replace('-', ' ')}</span></div>
-      <Content />
+      {downloads && <div class="download-actions no-print" aria-label="Template downloads">
+        <a class="button" href={downloads.pdf} download>Download PDF</a>
+        <a class="button button-secondary" href={downloads.csv} download>Download CSV (Excel)</a>
+      </div>}
+      <div class="editorial-content"><Content /></div>
       {entry.data.nextStep && <aside class="next-step"><h2>Next step in FamilyBoard</h2><p>{entry.data.nextStep}</p></aside>}
       {entry.data.pageType === 'tool' && <ToolWorkbench client:load slug={routeSlug} title={entry.data.title} />}
-      {entry.data.pageType === 'printable' && <PrintableSheet client:visible route={entry.data.route} title={entry.data.title} />}
+      {entry.data.pageType === 'printable' && <div class="download-printable"><PrintableSheet client:visible route={entry.data.route} title={entry.data.title} /></div>}
       {entry.data.route === '/search/' && <SiteSearch client:load />}
       {hubBridge.length > 0 && <section class="section" aria-labelledby="related-collections"><div class="section-head"><div><span class="eyebrow">Choose the next layer</span><h2 id="related-collections">Move between household collections</h2><p class="lede">Each collection links to the explanation, tool, printable and product context that supports the same household job.</p></div></div><div class="card-grid">{hubBridge.map((item) => <a class="card" href={item.route}><span class="card-tag">Related collection</span><h3>{item.label}</h3><p>{item.text}</p></a>)}</div></section>}
       {isHub && <section class="section"><div class="section-head"><div><span class="eyebrow">Organized by household job</span><h2>Explore this collection</h2></div></div>{entry.data.route === '/guides/' ? guideGroups.map((group) => <section class="hub-group"><h3>{group.cluster.replace('-', ' ')}</h3><div class="card-grid">{group.items.map((item) => <a class="card" href={item.data.route}><span class="card-tag">{item.data.pageType}</span><h3>{item.data.title.replace(/ \|.*$/, '')}</h3><p>{item.data.description}</p></a>)}</div></section>) : <div class="card-grid">{hubItems.map((item) => <a class="card" href={item.data.route}><span class="card-tag">{item.data.cluster.replace('-', ' ')}</span><h3>{item.data.title.replace(/ \|.*$/, '')}</h3><p>{item.data.description}</p></a>)}</div>}</section>}

@@ -23,7 +23,7 @@ contentVersion: 1
 
 This worksheet is for items worth identifying later. Do not try to list every object.
 
-| Room | Item | Brand/Model | Serial | Purchase date | Receipt/photo reference | Notes |
+| Room / 房間 | Item / 品項 | Brand / model / 品牌／型號 | Serial number / 序號 | Purchase date / 購買日期 | Receipt / photo reference / 收據／照片索引 | Notes / 備註 |
 |---|---|---|---|---|---|---|
 | | | | | | | |
 | | | | | | | |
@@ -39,3 +39,5 @@ This worksheet is for items worth identifying later. Do not try to list every ob
 ## What to record first
 
 Prioritize appliances, electronics, valuable items, tools, vehicles and home systems. Use photos for context and labels. If a serial number is difficult or unsafe to reach, leave it blank until service makes it accessible.
+
+For a product whose written terms identify a start date and term, use the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) and copy the review date into the optional field. Keep the receipt or terms reference in the table so the calculation remains traceable.
