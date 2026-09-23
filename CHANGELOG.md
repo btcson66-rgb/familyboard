@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.1 — 2026-09-23
+
+Make the production technical audit parse `robots.txt` through its shared HTTP session so Cloudflare cannot turn the Python standard-library follow-up request into 102 false `ROBOTS_TXT_BLOCK` findings. The corrected audit verifies the live 102-URL sitemap with zero blockers.
+
 ## 1.6.0 — 2026-09-22
 
 Consolidate the public search surface from more than 1,000 URLs to 102 evidence-backed indexable routes while keeping every existing content page available with `noindex,follow`. Add a reproducible GSC/content pruning plan, reviewed merge decisions, a shared indexability policy for English and Traditional Chinese pages, sitemap and hreflang guards, six reviewed Cloudflare redirects, and a dual Cloudflare Pages/GitHub Pages deployment path for a reversible hosting cutover.
