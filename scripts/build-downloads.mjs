@@ -51,7 +51,7 @@ const contentTypes = {
 function csvBuffer(columns) {
   const escape = (value) => `"${value.replaceAll('"', '""')}"`;
   const rows = [columns, ...Array.from({ length: 20 }, () => columns.map(() => ""))];
-  return Buffer.from(`\uFEFF${rows.map((row) => row.map(escape).join(",")).join("\r\n")}\r\n`, "utf8");
+  return Buffer.from(`\uFEFF${rows.map((row) => row.map(escape).join(",")).join("\n")}\n`, "utf8");
 }
 
 function normalizePdfMetadata(buffer) {
