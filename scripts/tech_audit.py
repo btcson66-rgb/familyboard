@@ -313,8 +313,11 @@ def main():
 
     robots = rp.RobotFileParser()
     try:
-        robots.set_url(up.urljoin(origin, "/robots.txt"))
-        robots.read()
+        robots_url = up.urljoin(origin, "/robots.txt")
+        robots_response = fetch(robots_url, session)
+        robots_response.raise_for_status()
+        robots.set_url(robots_url)
+        robots.parse(robots_response.text.splitlines())
         print(f"robots.txt 已讀取")
     except Exception:  # noqa: BLE001
         robots = None
