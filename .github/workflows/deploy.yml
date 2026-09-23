@@ -37,6 +37,8 @@ jobs:
           PUBLIC_ADSENSE_PUBLISHER_ID: pub-9117672212804270
           PUBLIC_AMAZON_ASSOCIATES_TAG: ${{ vars.PUBLIC_AMAZON_ASSOCIATES_TAG }}
       - run: npm run audit:prune
+      - run: npm run audit:indexing
+      - run: npm run audit:links
       - run: npm run audit:monitor
       - run: npx playwright install --with-deps chromium
       - run: npm run e2e

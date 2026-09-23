@@ -8,7 +8,7 @@ https://familyboard.win/features/household-handoff/,PASS,PASS,PASS,PASS,PASS,PAS
 https://familyboard.win/features/family-display-mode/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/features/private-family-organizer/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,REVIEW,source_quality
 https://familyboard.win/features/free-home-management-app/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,REVIEW,source_quality
-https://familyboard.win/guides/monthly-home-maintenance-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
+https://familyboard.win/guides/monthly-home-maintenance-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,REVIEW,first_party_resource
 https://familyboard.win/guides/quarterly-home-maintenance-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/home-maintenance-after-vacation/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/power-outage-home-preparedness/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
@@ -25,21 +25,21 @@ https://familyboard.win/guides/humidifier-maintenance-guide/,PASS,PASS,PASS,PASS
 https://familyboard.win/guides/ceiling-fan-maintenance-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/garbage-disposal-maintenance-guide/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/robot-vacuum-maintenance-guide/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
-https://familyboard.win/guides/photo-home-inventory/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
+https://familyboard.win/guides/photo-home-inventory/,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,REVIEW,first_party_resource
 https://familyboard.win/guides/how-to-track-product-warranties/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/warranty-expiration/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
-https://familyboard.win/guides/appliance-replacement-planning/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
-https://familyboard.win/guides/household-replacement-reserve/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,REVIEW,source_quality
+https://familyboard.win/guides/appliance-replacement-planning/,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,REVIEW,first_party_resource
+https://familyboard.win/guides/household-replacement-reserve/,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,REVIEW,PASS,REVIEW,first_party_resource; source_quality
 https://familyboard.win/guides/renovation-records/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/household-documents-organizer/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/organize-pet-records/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/family-continuity-plan/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
-https://familyboard.win/guides/household-admin-backup-person/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
+https://familyboard.win/guides/household-admin-backup-person/,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,REVIEW,first_party_resource
 https://familyboard.win/guides/household-management-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/family-chore-system/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/guides/household-supplies-inventory/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
-https://familyboard.win/guides/guest-preparation-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
-https://familyboard.win/guides/moving-house-organizer/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
+https://familyboard.win/guides/guest-preparation-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,REVIEW,first_party_resource
+https://familyboard.win/guides/moving-house-organizer/,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,REVIEW,first_party_resource
 https://familyboard.win/tools/home-maintenance-schedule-generator/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/tools/warranty-expiration-calculator/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,REVIEW,source_quality
 https://familyboard.win/tools/appliance-age-calculator/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,REVIEW,source_quality
@@ -57,9 +57,9 @@ https://familyboard.win/templates/printable-home-inventory-template/,PASS,PASS,P
 https://familyboard.win/templates/printable-service-provider-list/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/checklists/printable-house-sitter-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/checklists/printable-pet-sitter-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,REVIEW,source_quality
-https://familyboard.win/templates/printable-annual-renewals/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
-https://familyboard.win/checklists/printable-moving-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
-https://familyboard.win/checklists/printable-new-home-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
+https://familyboard.win/templates/printable-annual-renewals/,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,REVIEW,first_party_resource
+https://familyboard.win/checklists/printable-moving-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,REVIEW,first_party_resource
+https://familyboard.win/checklists/printable-new-home-checklist/,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,PASS,PASS,PASS,REVIEW,first_party_resource
 https://familyboard.win/templates/printable-household-handoff-sheet/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,
 https://familyboard.win/pricing/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,REVIEW,REVIEW,PASS,REVIEW,clear_next_action; source_quality
 https://familyboard.win/privacy/,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,PASS,

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.2 — 2026-09-23
+
+Enforce a single indexable internal-link graph across rendered Markdown and site components, reduce the Traditional Chinese homepage to reviewed indexable destinations, remove search from the sitemap policy, add the remaining reviewed redirects, and prevent Cloudflare preview domains from being indexed.
+
 ## 1.6.1 — 2026-09-23
 
 Make the production technical audit parse `robots.txt` through its shared HTTP session so Cloudflare cannot turn the Python standard-library follow-up request into 102 false `ROBOTS_TXT_BLOCK` findings. The corrected audit verifies the live 102-URL sitemap with zero blockers.

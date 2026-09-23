@@ -28,7 +28,9 @@ const alternateEntry = zhTwPages.find((candidate) => candidate.data.alternateRou
 const alternatePath = pageIndexable && alternateEntry && isRouteIndexable(alternateEntry.data.route)
   ? alternateEntry.data.route
   : undefined;
-const related = entry.data.related.map((route: string) => pages.find((candidate) => candidate.data.route === route)).filter((item): item is NonNullable<typeof item> => Boolean(item));
+const related = entry.data.related
+  .map((route: string) => pages.find((candidate) => candidate.data.route === route))
+  .filter((item): item is NonNullable<typeof item> => item !== undefined && (!pageIndexable || isRouteIndexable(item.data.route)));
 const routeSlug = entry.data.route.split('/').filter(Boolean).at(-1) || '';
 const isHub = ['/guides/', '/tools/', '/checklists/', '/templates/', '/features/'].includes(entry.data.route);
 const hubItems = isHub ? pages.filter((candidate) => {
@@ -97,7 +99,7 @@ const siblings = isHub || redirectStub ? [] : clusterSiblings(
 );
 const pageType = entry.data.pageType === 'content' ? 'article' : 'website';
 ---
-<BaseLayout title={entry.data.title} description={entry.data.description} canonicalPath={redirectStub?.canonicalPath ?? entry.data.route} alternatePath={redirectStub ? undefined : alternatePath} languageSwitchPath={redirectStub ? undefined : alternateEntry?.data.route} indexable={redirectStub?.indexable ?? pageIndexable} robots={redirectStub?.robots} pageType={redirectStub ? 'website' : pageType} publishedAt={entry.data.publishedAt} lastReviewedAt={entry.data.lastReviewedAt} faq={redirectStub ? [] : entry.data.faq} publicIntegrationsEnabled={redirectStub?.publicIntegrationsEnabled ?? true} redirectRefresh={redirectStub?.refreshContent}>
+<BaseLayout title={entry.data.title} description={entry.data.description} canonicalPath={redirectStub?.canonicalPath ?? entry.data.route} alternatePath={redirectStub ? undefined : alternatePath} languageSwitchPath={redirectStub ? undefined : pageIndexable ? (alternatePath ?? '/zh-tw/') : alternateEntry?.data.route} indexable={redirectStub?.indexable ?? pageIndexable} robots={redirectStub?.robots} pageType={redirectStub ? 'website' : pageType} publishedAt={entry.data.publishedAt} lastReviewedAt={entry.data.lastReviewedAt} faq={redirectStub ? [] : entry.data.faq} publicIntegrationsEnabled={redirectStub?.publicIntegrationsEnabled ?? true} redirectRefresh={redirectStub?.refreshContent}>
   {redirectStub ? <div class="shell page-grid">
     <article class="article redirect-stub">
       <h1>{redirectStub.heading}</h1>
