@@ -1197,6 +1197,12 @@ test("representative routes have no serious accessibility violations", async ({
   }
 });
 
+test.describe("Traditional Chinese content matrix", () => {
+  // This matrix visits 500+ public routes. The separate offline tests exercise
+  // the service worker; caching every matrix navigation can starve hydration on
+  // slower CI runners and leave the server-rendered tool controls disabled.
+  test.use({ serviceWorkers: "block" });
+
 test("Traditional Chinese pages follow the indexability policy, stay localized and remain functional", async ({
   page,
 }) => {
@@ -4474,7 +4480,11 @@ test("Traditional Chinese pages follow the indexability policy, stay localized a
   expect(sitemapPaths).not.toContain(
     "/guides/familyboard-power-outage-event-log-tutorial/",
   );
+});
+});
 
+test("Traditional Chinese app keeps its localized offline and data workflow", async ({ page }) => {
+  test.setTimeout(90_000);
   await page.goto("/zh-tw/app/");
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
