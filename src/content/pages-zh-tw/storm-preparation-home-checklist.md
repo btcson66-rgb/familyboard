@@ -10,13 +10,13 @@ cluster: "maintenance"
 pageType: "content"
 indexable: true
 publishedAt: "2026-08-23"
-lastReviewedAt: "2026-08-23"
+lastReviewedAt: "2026-09-24"
+workbenchSlug: "household-storm-readiness-review"
 related:
-  - "/zh-tw/tools/household-storm-readiness-review/"
   - "/zh-tw/guides/power-outage-home-preparedness/"
   - "/zh-tw/guides/emergency-supply-inventory/"
-  - "/zh-tw/tools/emergency-supply-inventory-audit/"
-contentVersion: 1
+  - "/zh-tw/features/maintenance-tracker/"
+contentVersion: 2
 faq:
   - question: "颱風來了家裡要準備什麼？可以照同一張網路清單全部買齊嗎？"
     answer: "先確認住家實際轄區的氣象、淹水、坡地、撤離、建物與家庭需求，再盤點現有物資。台灣官方清單可作起點，但人數、照護、寵物、住宅型態、設備及地方指示不同；通用採購包不會自動涵蓋家庭需求，也不能取代逐項實物查核。"
@@ -141,6 +141,28 @@ FamilyBoard 的家庭資料留在目前瀏覽器，沒有帳號或雲端代管�
 
 颱風後另開事件紀錄，保存實際停電、漏水、物品狀況、通知、修繕與復原，不要回頭把準備紀錄改成好像早就預知結果。比較兩份資料，才知道哪個警報管道有收到、哪個物資找不到、哪項分工失效，以及下一次要提早多久完成。
 
-**下一步：** 使用[家庭颱風準備複查表](/zh-tw/tools/household-storm-readiness-review/)，先建立一筆目前官方來源，再為每個未完成項目指定一個可查證動作、負責人與期限。
+**下一步：** 使用頁面下方的家庭颱風準備複查工作區，先建立一筆目前官方來源，再為每個未完成項目指定一個可查證動作、負責人與期限。
 
 **行動提示：** 不要把「清單勾完」當安全結論；讓每個勾選都有來源、日期與證據，情勢更新時立即重查。
+
+## 可列印的防颱分工表
+
+| 區域 | 本次核對 | 負責角色 | 未完成時的下一步 |
+|---|---|---|---|
+| 官方警報 | 氣象、淹水、坡地與地方指示 | 資訊核對人 | 寫明重查時間 |
+| 住宅外部 | 可安全觀察的窗戶、陽台與排水 | 住宅負責人 | 通知管理或合格人員 |
+| 物資通訊 | 實物、電力與離線聯絡 | 備援角色 | 補齊或標示缺口 |
+| 事件後 | 停電、漏水、損壞與修復 | 紀錄負責人 | 建立新事件版本 |
+
+## 這份指南不做什麼
+
+本頁不預報個別住家的風雨、不判定是否需要撤離、不認證建物安全，也不提供攀高、上屋頂、固定招牌、修理電線或操作公共機電設備的 DIY 指示。撤離、停班停課、道路與收容資訊以當下中央及地方政府公告為準；有立即危險時先離開並使用正式緊急管道。
+
+## 官方來源與本次查核
+
+本頁正文其他外部來源亦於 2026-09-24 逐一開啟核對；以下兩項是本次索引決策的主要台灣官方依據。
+
+- [中央氣象署：颱風百問（114 年 6 月版）](https://www.cwa.gov.tw/V8/C/K/Encyclopedia/typhoon/typhoon.pdf)（查核日期：2026-09-24）
+- [內政部消防署：全民防災 e 點通](https://www.nfa.gov.tw/cht/index.php?act=article&article_id=10263&code=print&ids=1520)（查核日期：2026-09-24）
+
+下方工作台可把本次來源、分工與未完成事項產生為文字結果；主動按「儲存至 App」後，結果才會進入同一瀏覽器的本機工具收件匣。

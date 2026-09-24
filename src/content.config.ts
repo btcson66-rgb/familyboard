@@ -25,6 +25,7 @@ const pageSchema = z.object({
   lastReviewedAt: z.coerce.date(),
   related: z.array(z.string()).default([]),
   nextStep: z.string().default(""),
+  workbenchSlug: z.string().optional(),
   redirectTo: z.string().regex(/^\/(?:$|[^?#].*\/$)/).optional(),
   contentVersion: z.number().int().positive().default(1),
   faq: z

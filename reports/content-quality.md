@@ -1,18 +1,18 @@
 # Content quality report
 
-Generated: 2026-09-23T12:04:25.647Z
+Generated: 2026-09-23T23:54:04.775Z
 
 ## Summary
 
-- Indexable pages: 102
-- Generated HTML routes: 1025
+- Indexable pages: 109
+- Generated HTML routes: 1026
 - Duplicate metadata blockers: 0
 - Broken internal links: 0
 - Placeholder findings: 0
 - Internal instruction leakage: 0
 - Missing-source warnings on safety-sensitive numeric claims: 1
 - Duplicate primary-keyword groups: 10
-- Pages without a contextual product/tool link: 606
+- Pages without a contextual product/tool link: 607
 - Blocking audit findings: 0
 
 ## Indexable pages by cluster
@@ -23,14 +23,14 @@ Generated: 2026-09-23T12:04:25.647Z
 - inventory-warranty: 6
 - appliances: 11
 - household-operations: 5
-- records-emergency: 4
-- maintenance: 7
+- records-emergency: 8
+- maintenance: 10
 - tools: 18
 
 ## Word-count range
 
 - Lowest: https://familyboard.win/checklists/printable-pet-sitter-checklist/ (64 words)
-- Highest: https://familyboard.win/zh-tw/tools/annual-subscription-cost-calculator/ (2997 words)
+- Highest: https://familyboard.win/zh-tw/guides/home-care-service-complaint-resolution/ (6081 words)
 
 ## Highest similarity pairs
 
@@ -157,6 +157,7 @@ Generated: 2026-09-23T12:04:25.647Z
 - /zh-tw/checklists/printable-moving-checklist/
 - /zh-tw/checklists/printable-pet-sitter-checklist/
 - /zh-tw/checklists/printable-seasonal-home-checklist/
+- /zh-tw/checklists/year-end-cleaning-checklist/
 - /zh-tw/contact/
 - /zh-tw/disclaimer/
 - /zh-tw/editorial-policy/

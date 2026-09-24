@@ -103,7 +103,12 @@ const pageTypeLabel = entry.data.pageType === 'tool' ? '免費工具' : entry.da
         <p class="lede"><strong>快速答案：</strong>{entry.data.description}</p>
         <ToolWorkbench client:load slug={routeSlug} title={entry.data.title} locale="zh-TW" />
           <div class="editorial-content"><Content /></div>
-        </> : <div class="editorial-content"><Content /></div>}
+        </> : <>
+          <div class="editorial-content"><Content /></div>
+          {entry.data.workbenchSlug && <section class="guide-workbench" aria-label="把這份清單存進 App">
+            <ToolWorkbench client:load slug={entry.data.workbenchSlug} title={entry.data.title} locale="zh-TW" />
+          </section>}
+        </>}
       {isHub && <section class="section" aria-labelledby="zh-hub"><div class="section-head"><div><span class="eyebrow">依家庭工作分類</span><h2 id="zh-hub">瀏覽這個分類</h2></div></div>{guideGroups.length > 0 ? guideGroups.map((group) => <section class="hub-group"><h3>{clusterLabels[group.cluster] ?? group.cluster}</h3><div class="card-grid">{group.items.map((item) => <a class="card" href={item.data.route}><span class="card-tag">{clusterLabels[item.data.cluster] ?? item.data.cluster}</span><h3>{item.data.title.replace(/｜.*$/, '')}</h3><p>{item.data.description}</p></a>)}</div></section>) : <div class="card-grid">{hubItems.map((item) => <a class="card" href={item.data.route}><span class="card-tag">{clusterLabels[item.data.cluster] ?? item.data.cluster}</span><h3>{item.data.title.replace(/｜.*$/, '')}</h3><p>{item.data.description}</p></a>)}</div>}</section>}
       <Recommendation route={entry.data.route} locale="zh-TW" />
       {related.length > 0 && <section class="section"><div class="section-head"><h2>繼續使用 FamilyBoard</h2></div><div class="card-grid">{related.map((item) => <a class="card" href={item.data.route}><h3>{item.data.title.replace(/｜.*$/, '')}</h3><p>{item.data.description}</p></a>)}</div></section>}

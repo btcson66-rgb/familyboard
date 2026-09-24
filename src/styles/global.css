@@ -719,6 +719,19 @@ textarea {
     color: black;
     text-decoration: none;
   }
+  .editorial-content table,
+  .editorial-content thead,
+  .editorial-content tbody,
+  .editorial-content tr,
+  .editorial-content th,
+  .editorial-content td {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .guide-workbench {
+    break-before: page;
+    page-break-before: always;
+  }
   @page {
     margin: 1.4cm;
   }

@@ -4442,8 +4442,8 @@
   {
     "route": "/zh-tw/guides/emergency-supply-inventory/",
     "alternateRoute": "/guides/emergency-supply-inventory/",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-23",
+    "indexable": true,
+    "lastReviewedAt": "2026-09-24",
     "locale": "zh-TW"
   },
   {
@@ -5968,8 +5968,8 @@
   {
     "route": "/zh-tw/guides/home-care-service-complaint-resolution/",
     "alternateRoute": "",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-27",
+    "indexable": true,
+    "lastReviewedAt": "2026-09-24",
     "locale": "zh-TW"
   },
   {
@@ -6927,8 +6927,8 @@
   {
     "route": "/zh-tw/guides/move-out-home-records/",
     "alternateRoute": "/guides/move-out-home-records/",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-23",
+    "indexable": true,
+    "lastReviewedAt": "2026-09-24",
     "locale": "zh-TW"
   },
   {
@@ -7011,8 +7011,8 @@
   {
     "route": "/zh-tw/guides/organize-utility-account-information/",
     "alternateRoute": "/guides/organize-utility-account-information/",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-24",
+    "indexable": true,
+    "lastReviewedAt": "2026-09-24",
     "locale": "zh-TW"
   },
   {
@@ -7060,8 +7060,8 @@
   {
     "route": "/zh-tw/guides/power-outage-home-preparedness/",
     "alternateRoute": "/guides/power-outage-home-preparedness/",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-23",
+    "indexable": true,
+    "lastReviewedAt": "2026-09-24",
     "locale": "zh-TW"
   },
   {
@@ -7459,8 +7459,8 @@
   {
     "route": "/zh-tw/guides/storm-preparation-home-checklist/",
     "alternateRoute": "/guides/storm-preparation-home-checklist/",
-    "indexable": false,
-    "lastReviewedAt": "2026-08-23",
+    "indexable": true,
+    "lastReviewedAt": "2026-09-24",
     "locale": "zh-TW"
   },
   {
@@ -7650,6 +7650,13 @@
     "alternateRoute": "/guides/winter-home-maintenance-checklist/",
     "indexable": false,
     "lastReviewedAt": "2026-08-29",
+    "locale": "zh-TW"
+  },
+  {
+    "route": "/zh-tw/checklists/year-end-cleaning-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-09-24",
     "locale": "zh-TW"
   }
 ]

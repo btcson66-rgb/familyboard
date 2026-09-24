@@ -1,6 +1,6 @@
 {
   "name": "familyboard",
-  "version": "1.6.3",
+  "version": "1.7.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,7 +12,7 @@
     "import:content": "node scripts/import-master.mjs docs/launch-content-master.md",
     "postbuild": "node scripts/split-sitemap.mjs && node scripts/postbuild-audit.mjs",
     "check": "npm run lint && npm run typecheck && npm run test && npm run audit:content && npm run audit:similarity && npm run build && npm run audit:prune && npm run audit:indexing && npm run audit:links && npm run audit:monitor",
-    "preflight": "npm run check && npm run audit:phase2 && npm run e2e",
+    "preflight": "npm run check && npm run audit:phase2 && npm run audit:phase3:static && npm run e2e",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "astro check",
     "test": "vitest run",
@@ -26,6 +26,8 @@
     "audit:monitor": "node scripts/verify-monitor-expectations.mjs",
     "audit:phase2:static": "node scripts/phase2-acceptance.mjs",
     "audit:phase2": "npm run audit:phase2:static && node scripts/build-downloads.mjs --check",
+    "audit:phase3:static": "node scripts/phase3-acceptance.mjs",
+    "evidence:phase3": "node scripts/capture-phase3-evidence.mjs",
     "monitor:live": "node scripts/monitor-live.mjs",
     "indexnow:submit": "node scripts/submit-indexnow.mjs",
     "gsc:bootstrap": "node scripts/gsc-bootstrap.mjs",
