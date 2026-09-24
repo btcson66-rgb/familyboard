@@ -1,6 +1,6 @@
 {
   "name": "familyboard",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -37,30 +37,30 @@
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.2.3",
-    "@astrojs/react": "latest",
-    "@astrojs/sitemap": "latest",
-    "astro": "latest",
-    "dexie": "latest",
-    "marked": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "zod": "latest"
+    "@astrojs/react": "6.0.3",
+    "@astrojs/sitemap": "3.7.3",
+    "astro": "7.3.4",
+    "dexie": "4.4.5",
+    "marked": "18.0.10",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "4.4.3"
   },
   "devDependencies": {
-    "@astrojs/check": "latest",
-    "@axe-core/playwright": "latest",
+    "@astrojs/check": "0.9.10",
+    "@axe-core/playwright": "4.13.0",
     "@eslint/js": "^10.0.1",
-    "@playwright/test": "latest",
-    "@testing-library/react": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
+    "@playwright/test": "1.62.1",
+    "@testing-library/react": "16.3.2",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
     "eslint": "^10.8.1",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "fake-indexeddb": "latest",
+    "fake-indexeddb": "6.2.5",
     "globals": "^17.11.0",
     "jsdom": "^29.0.0",
-    "typescript": "latest",
+    "typescript": "6.0.3",
     "typescript-eslint": "^8.67.0",
-    "vitest": "latest"
+    "vitest": "4.1.11"
   }
 }
