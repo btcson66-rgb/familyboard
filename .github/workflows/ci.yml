@@ -18,3 +18,4 @@ jobs:
       - run: npm run audit:prune
       - run: npm run audit:monitor
       - run: npm run audit:phase2:static
+      - run: npm run audit:phase3:static

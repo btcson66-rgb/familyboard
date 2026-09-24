@@ -1,6 +1,6 @@
 # FAMILYBOARD-INDEXING-RECOVERY-001
 
-Generated: 2026-09-23T12:04:29.369Z
+Generated: 2026-09-23T23:54:08.890Z
 Mode: local build audit with saved GSC snapshot
 Branch: luna/familyboard-indexing-recovery-001
 
@@ -10,11 +10,11 @@ This recovery keeps new URL expansion frozen. It repairs discovery paths and dup
 
 ## A–N current evidence
 
-- **A. Repo technically indexable:** 102 candidate URLs after the two-locale merge redirect.
-- **B. Production sitemap:** 102 URLs in the local candidate sitemap.
+- **A. Repo technically indexable:** 109 candidate URLs after the two-locale merge redirect.
+- **B. Production sitemap:** 109 URLs in the local candidate sitemap.
 - **C. GSC known URLs:** 132.
 - **D. GSC indexed URLs:** 115.
-- **E. Current GSC categories:** 24 candidate repo URLs are not in the saved GSC known set; 17 known URLs are not indexed; Discovered-not-indexed=0; Crawled-not-indexed=0; noindex=14; redirect=3; canonical conflicts in the audited sitemap=0; semantic candidates=6.
+- **E. Current GSC categories:** 31 candidate repo URLs are not in the saved GSC known set; 17 known URLs are not indexed; Discovered-not-indexed=0; Crawled-not-indexed=0; noindex=14; redirect=3; canonical conflicts in the audited sitemap=0; semantic candidates=6.
 - **F. Three root causes:** (1) GSC sitemap lifecycle is pending/stale: API lastDownloaded=null, isPending=true, UI status was unable to read and discovered 0; (2) the original site graph had five contextual orphans and hub navigation did not cover the collection paths; (3) duplicate task-load routes and an old route in Footer/zh-TW home created weak discovery and redirect-stub links.
 - **G. Actual source changes:** docs/launch-content-master.md, src/components/Footer.astro, src/pages/index.astro, src/pages/[...slug].astro, src/pages/zh-tw/[...slug].astro, src/pages/zh-tw/index.astro, src/content/pages-zh-tw/familyboard-household-task-load-calculator-tutorial.md, src/content/pages/081-guides--home-inventory-checklist.md, scripts/indexing-audit.mjs, scripts/monitor-checks.mjs, tests/e2e/site.spec.ts, package.json.
 - **H. Merged pages:** English /guides/familyboard-household-task-load-calculator-tutorial/ and zh-TW /zh-tw/guides/familyboard-household-task-load-calculator-tutorial/ now redirect to the richer task-load tutorials.
@@ -54,4 +54,4 @@ gsc-after-deploy.md records the required post-merge readback. This branch is not
 
 ## Exact URL-set note
 
-The live URL-set diff contains 24 production sitemap URLs absent from the saved GSC known set. The candidate repo diff contains 24 candidate URLs absent from that set; six saved known URLs are outside the current production sitemap (including host redirects and private/search surfaces), so the exact intersection differs from the simple 1,018 minus 132 size gap.
+The live URL-set diff contains 31 production sitemap URLs absent from the saved GSC known set. The candidate repo diff contains 31 candidate URLs absent from that set; six saved known URLs are outside the current production sitemap (including host redirects and private/search surfaces), so the exact intersection differs from the simple 1,018 minus 132 size gap.

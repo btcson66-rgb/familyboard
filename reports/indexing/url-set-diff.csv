@@ -16,7 +16,7 @@ https://familyboard.win/checklists/printable-pet-sitter-checklist/,YES,YES,YES,Y
 https://familyboard.win/checklists/printable-seasonal-home-checklist/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/checklists/printable-seasonal-home-checklist/,,,sitemap,,,7,2,GSC indexed
 https://familyboard.win/contact/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/contact/,,,sitemap,,,75,1,GSC indexed
 https://familyboard.win/disclaimer/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/disclaimer/,,,sitemap,,,5,1,GSC indexed
-https://familyboard.win/editorial-policy/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/editorial-policy/,,,sitemap,,,100,1,GSC indexed
+https://familyboard.win/editorial-policy/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/editorial-policy/,,,sitemap,,,107,1,GSC indexed
 https://familyboard.win/features/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/features/,,,sitemap,,,12,1,GSC indexed
 https://familyboard.win/features/emergency-information-organizer/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/features/emergency-information-organizer/,,,unknown,,,,,known but not indexed
 https://familyboard.win/features/family-display-mode/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/features/family-display-mode/,,,sitemap,,,8,2,GSC indexed
@@ -129,19 +129,26 @@ https://familyboard.win/tools/vacation-shutdown-checklist-generator/,NO,NO,YES,Y
 https://familyboard.win/tools/warranty-checklist-generator/,NO,NO,YES,YES,200,"noindex,follow",https://familyboard.win/tools/warranty-checklist-generator/,,,unknown,,,,,GSC indexed
 https://familyboard.win/tools/warranty-expiration-calculator/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/tools/warranty-expiration-calculator/,,,sitemap,,,17,1,GSC indexed
 https://familyboard.win/zh-tw/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/,,,sitemap,,,7,1,GSC indexed
-https://familyboard.win/zh-tw/about/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/about/,,,sitemap,,,6,2,GSC discovery gap
+https://familyboard.win/zh-tw/about/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/about/,,,sitemap,,,7,2,GSC discovery gap
 https://familyboard.win/zh-tw/affiliate-disclosure/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/affiliate-disclosure/,,,sitemap,,,6,2,GSC discovery gap
 https://familyboard.win/zh-tw/app/,NO,NO,YES,NO,200,"noindex,follow",https://familyboard.win/zh-tw/app/,,,unknown,,,,2,known but not indexed
 https://familyboard.win/zh-tw/changelog/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/changelog/,,,sitemap,,,8,2,GSC discovery gap
-https://familyboard.win/zh-tw/checklists/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/checklists/,,,sitemap,,,9,2,GSC discovery gap
-https://familyboard.win/zh-tw/contact/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/contact/,,,sitemap,,,24,2,GSC discovery gap
+https://familyboard.win/zh-tw/checklists/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/checklists/,,,sitemap,,,11,2,GSC discovery gap
+https://familyboard.win/zh-tw/checklists/year-end-cleaning-checklist/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/checklists/year-end-cleaning-checklist/,,,sitemap,,,5,2,GSC discovery gap
+https://familyboard.win/zh-tw/contact/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/contact/,,,sitemap,,,31,2,GSC discovery gap
 https://familyboard.win/zh-tw/disclaimer/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/disclaimer/,,,sitemap,,,7,2,GSC discovery gap
 https://familyboard.win/zh-tw/editorial-policy/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/editorial-policy/,,,sitemap,,,8,2,GSC discovery gap
 https://familyboard.win/zh-tw/features/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/features/,,,sitemap,,,1,2,GSC discovery gap
 https://familyboard.win/zh-tw/guides/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/guides/,,,sitemap,,,7,2,GSC discovery gap
-https://familyboard.win/zh-tw/guides/home-maintenance-schedule/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/guides/home-maintenance-schedule/,,,sitemap,,,4,2,GSC indexed
+https://familyboard.win/zh-tw/guides/emergency-supply-inventory/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/guides/emergency-supply-inventory/,,,sitemap,,,6,2,GSC discovery gap
+https://familyboard.win/zh-tw/guides/home-care-service-complaint-resolution/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/guides/home-care-service-complaint-resolution/,,,sitemap,,,5,2,GSC discovery gap
+https://familyboard.win/zh-tw/guides/home-maintenance-schedule/,YES,YES,YES,YES,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/guides/home-maintenance-schedule/,,,sitemap,,,7,2,GSC indexed
+https://familyboard.win/zh-tw/guides/move-out-home-records/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/guides/move-out-home-records/,,,sitemap,,,5,2,GSC discovery gap
+https://familyboard.win/zh-tw/guides/organize-utility-account-information/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/guides/organize-utility-account-information/,,,sitemap,,,5,2,GSC discovery gap
+https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/,,,sitemap,,,6,2,GSC discovery gap
+https://familyboard.win/zh-tw/guides/storm-preparation-home-checklist/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/guides/storm-preparation-home-checklist/,,,sitemap,,,7,2,GSC discovery gap
 https://familyboard.win/zh-tw/pricing/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/pricing/,,,sitemap,,,7,2,GSC discovery gap
-https://familyboard.win/zh-tw/privacy/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/privacy/,,,sitemap,,,13,2,GSC discovery gap
+https://familyboard.win/zh-tw/privacy/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/privacy/,,,sitemap,,,16,2,GSC discovery gap
 https://familyboard.win/zh-tw/roadmap/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/roadmap/,,,sitemap,,,7,2,GSC discovery gap
 https://familyboard.win/zh-tw/security/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/security/,,,sitemap,,,6,2,GSC discovery gap
 https://familyboard.win/zh-tw/templates/,YES,YES,NO,NO,200,"index,follow,max-image-preview:large",https://familyboard.win/zh-tw/templates/,,,sitemap,,,7,2,GSC discovery gap

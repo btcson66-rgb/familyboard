@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.0 — 2026-09-24
+
+Reopen six source-reviewed Traditional Chinese household guides with explicit safety limits, dated Taiwan official sources, print-safe A4 tables and embedded save-to-App workbenches. Add a language-exclusive year-end cleaning checklist with local sanitation boundaries, raise the exact indexable route set from 102 to 109, keep product-tutorial duplicates noindex, and verify two guide-to-IndexedDB workflows end to end.
+
 ## 1.6.3 — 2026-09-23
 
 Document the warranty calculator's month-end convention with tested leap-year and year-boundary cases, add source-checked U.S. and Taiwan warranty examples plus Taiwan Civil Code period guidance, and connect eight English and three Traditional Chinese indexable content paths to the calculators. Add deterministic A4 PDF and UTF-8 BOM CSV downloads for the home inventory and moving printables, first-screen download controls, Excel and print-preview evidence, and automated link/download acceptance checks.

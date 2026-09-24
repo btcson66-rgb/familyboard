@@ -2098,12 +2098,12 @@ test("Traditional Chinese pages follow the indexability policy, stay localized a
       "href",
       `https://familyboard.win${localized.route}`,
     );
+    const localizedIsIndexable = indexableRoutes.has(localized.route);
     const pairIsIndexable =
-      indexableRoutes.has(localized.route) &&
-      indexableRoutes.has(localized.alternate);
+      localizedIsIndexable && indexableRoutes.has(localized.alternate);
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
       "content",
-      pairIsIndexable
+      localizedIsIndexable
         ? "index,follow,max-image-preview:large"
         : "noindex,follow",
     );
@@ -2118,7 +2118,10 @@ test("Traditional Chinese pages follow the indexability policy, stay localized a
     }
     await expect(
       page.getByRole("link", { name: "Switch to English" }),
-    ).toHaveAttribute("href", localized.alternate);
+    ).toHaveAttribute(
+      "href",
+      localizedIsIndexable && !pairIsIndexable ? "/" : localized.alternate,
+    );
     await expect(page.locator(".recommendations")).toHaveCount(0);
 
     await page.goto(localized.alternate);
@@ -2132,6 +2135,20 @@ test("Traditional Chinese pages follow the indexability policy, stay localized a
       ).toHaveCount(0);
     }
   }
+
+  await page.goto("/zh-tw/checklists/year-end-cleaning-checklist/");
+  await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
+  await expect(page.locator("h1")).toHaveText(
+    "年終大掃除清單：不要把三週工作壓成一天",
+  );
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    "content",
+    "index,follow,max-image-preview:large",
+  );
+  await expect(page.locator('link[rel="alternate"][hreflang]')).toHaveCount(0);
+  await expect(
+    page.getByRole("link", { name: "Switch to English" }),
+  ).toHaveAttribute("href", "/");
 
   await page.goto("/zh-tw/guides/familyboard-household-task-load-calculator-tutorial/");
   await expect(page).toHaveURL(/\/zh-tw\/guides\/familyboard-task-load-calculator-tutorial\/$/);
@@ -3098,9 +3115,9 @@ test("Traditional Chinese pages follow the indexability policy, stay localized a
       heading: "家庭家務負荷計算器",
     },
   ]) {
+    const localizedIsIndexable = indexableRoutes.has(localizedTool.route);
     const pairIsIndexable =
-      indexableRoutes.has(localizedTool.route) &&
-      indexableRoutes.has(localizedTool.alternate);
+      localizedIsIndexable && indexableRoutes.has(localizedTool.alternate);
     await page.goto(localizedTool.route);
     await expect(page.locator("html")).toHaveAttribute("lang", "zh-TW");
     await expect(page.locator("h1")).toHaveText(localizedTool.heading);
@@ -3119,7 +3136,10 @@ test("Traditional Chinese pages follow the indexability policy, stay localized a
     }
     await expect(
       page.getByRole("link", { name: "Switch to English" }),
-    ).toHaveAttribute("href", localizedTool.alternate);
+    ).toHaveAttribute(
+      "href",
+      localizedIsIndexable && !pairIsIndexable ? "/" : localizedTool.alternate,
+    );
     await expect(page.locator(".recommendations")).toHaveCount(0);
 
     await page.goto(localizedTool.alternate);
@@ -4858,4 +4878,65 @@ test("first connected visit precaches both app shells for offline opening", asyn
   } finally {
     await context.setOffline(false);
   }
+});
+
+test("two reopened zh-TW guides save generated records into IndexedDB and remain visible", async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    testInfo.project.name !== "chromium",
+    "One browser persistence path is sufficient; public smoke runs in every project.",
+  );
+  test.setTimeout(90000);
+
+  await page.goto("/zh-tw/app/");
+  await page.getByLabel("家庭名稱").fill("Phase 3 驗收家庭");
+  await page.getByRole("button", { name: "建立本機家庭" }).click();
+  await expect(page.getByRole("heading", { name: "今日總覽" })).toBeVisible();
+
+  await page.goto("/zh-tw/guides/power-outage-home-preparedness/");
+  await expect(page.locator(".editorial-content table")).toBeVisible();
+  await page.getByLabel("第一次觀察到停電的日期").fill("2026-08-23");
+  await page.getByLabel("家庭下次複查日期").fill("2026-08-25");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".guide-workbench .result")).toContainText("家庭停電事件紀錄");
+  await page.getByRole("button", { name: "儲存至 App" }).click();
+  await expect(page.getByRole("status")).toContainText("已儲存到目前瀏覽器");
+
+  await page.goto("/zh-tw/guides/storm-preparation-home-checklist/");
+  await expect(page.locator(".editorial-content table")).toBeVisible();
+  await page.getByLabel("本次複查日期").fill("2026-08-23");
+  await page.getByLabel("家庭下次複查日期").fill("2026-08-25");
+  await page.getByRole("button", { name: "產生結果" }).click();
+  await expect(page.locator(".guide-workbench .result")).toContainText("家庭颱風準備複查");
+  await page.getByRole("button", { name: "儲存至 App" }).click();
+  await expect(page.getByRole("status")).toContainText("已儲存到目前瀏覽器");
+
+  await page.goto("/zh-tw/app/");
+  await expect(page.getByText("2 saved tool results")).toBeVisible();
+  await page.getByRole("button", { name: "匯入已儲存結果" }).click();
+  await page.getByRole("button", { name: "文件" }).click();
+  await expect(page.getByRole("heading", { name: /停電怎麼準備/ })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /颱風來了家裡要準備什麼/ })).toBeVisible();
+
+  const indexedDbDocumentCount = await page.evaluate(async () => {
+    const request = indexedDB.open("familyboard");
+    const db = await new Promise<IDBDatabase>((resolve, reject) => {
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+    const countRequest = db.transaction("documents", "readonly").objectStore("documents").count();
+    const count = await new Promise<number>((resolve, reject) => {
+      countRequest.onsuccess = () => resolve(countRequest.result);
+      countRequest.onerror = () => reject(countRequest.error);
+    });
+    db.close();
+    return count;
+  });
+  expect(indexedDbDocumentCount).toBe(2);
+
+  await page.reload();
+  await page.getByRole("button", { name: "文件" }).click();
+  await expect(page.getByRole("heading", { name: /停電怎麼準備/ })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /颱風來了家裡要準備什麼/ })).toBeVisible();
 });
