@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.1 — 2026-09-24
+
+Replace all 17 floating `latest` dependency specifiers with exact locked versions and update Astro plus vulnerable transitive packages. Both full and production-only `npm audit` now report zero vulnerabilities. The generated HTML route set (1,026 paths), sitemap XML (11 identical files) and robots meta are unchanged from v1.7.0; Phase 4 adds no SEO route or content changes.
+
 ## 1.7.0 — 2026-09-24
 
 Reopen six source-reviewed Traditional Chinese household guides with explicit safety limits, dated Taiwan official sources, print-safe A4 tables and embedded save-to-App workbenches. Add a language-exclusive year-end cleaning checklist with local sanitation boundaries, raise the exact indexable route set from 102 to 109, keep product-tutorial duplicates noindex, and verify two guide-to-IndexedDB workflows end to end.
