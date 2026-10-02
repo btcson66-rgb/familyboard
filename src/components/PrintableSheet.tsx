@@ -116,7 +116,7 @@ export default function PrintableSheet({
       <p>
         Household: ____________________ &nbsp; Review date: ____________________
       </p>
-      <div className="printable-table">
+      <div className="printable-table" tabIndex={0} role="region" aria-label="Printable worksheet columns">
         <table>
           <thead>
             <tr>
