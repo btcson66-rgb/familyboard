@@ -11435,11 +11435,13 @@ If you type in a dozen systems at once, the generator hands you back two dozen p
 **Title tag:** `Free Warranty Expiration Calculator | Purchase Date + Warranty Term`
 **Meta description:** `Calculate an estimated warranty end date from a known start date and warranty term, then save the date and source with the household asset.`
 **Primary keyword concept:** warranty expiration calculator
+**Editorial review date:** 2026-10-02
+**Content version:** 2
 **Suggested internal links:** `/guides/warranty-expiration/`, `/guides/how-to-track-product-warranties/`, `/features/warranty-tracker/`, `/app/`
 
 # Warranty Expiration Calculator
 
-Use this calculator once you know the exact date a warranty starts and how long it runs. It answers one question precisely: given that start date and term, what date does coverage end, and when should you review the paperwork before it does?
+Use this calculator once you know the exact date a warranty starts and how long it runs. It estimates a planning date from your inputs and a date to review the paperwork. It does not decide when contractual coverage legally ends.
 
 ## Find the real start date first
 
@@ -11475,7 +11477,25 @@ Always open the terms for the exact model and market. Longer coverage for one co
 
 ## Worked example
 
-Start date: August 19, 2026. Term: 24 months (the calculator's default). Adding 24 months lands on August 19, 2028 — a clean case with no month-end adjustment needed, since both months have a 19th. With the default 30-day review window, the review-by date is July 20, 2028. If your own warranty runs from a month-end date instead — say a March 31 installation with a 6-month term — the end date converges to September 30, since September has no 31st.
+Start date: August 19, 2026. Term: 24 months (enter this explicitly; the tool starts at 12 months). Adding 24 months lands on August 19, 2028 — a clean case with no month-end adjustment needed, since both months have a 19th. With the default 30-day review window, the review-by date is July 20, 2028. If your own warranty runs from a month-end date instead — say a March 31 installation with a 6-month term — the end date converges to September 30, since September has no 31st.
+
+## Three date examples you can reproduce
+
+Set the review window to 30 days for each example. The start date and term are illustrative inputs, not manufacturer warranty terms.
+
+| Entered start | Entered months | Estimated term end | Review by |
+|---|---|---|---|
+| January 31, 2026 | 1 | February 28, 2026 | January 29, 2026 |
+| February 29, 2028 | 12 | February 28, 2029 | January 29, 2029 |
+| August 19, 2026 | 24 | August 19, 2028 | July 20, 2028 |
+
+In the first row, a 30-day review window begins before the start date because the example term is shorter than that window. Choose a shorter review window if it better matches your paperwork task; the result is a planning prompt, not an automatic alert.
+
+## How to handle an extended warranty
+
+If written terms give a total term of 36 months from the original start, enter that same start and 36 months. If a separate extension starts after an earlier term, record its own documented start and term separately. Do not simply add two plans: they may overlap, cover different parts, or name different starting events. This calculator has one start and one term per run.
+
+Copy the source, start event, input months and both output dates into your record. For a printable record, use the [home inventory PDF or CSV template](/templates/printable-home-inventory-template/). For questions about the tool, use [FamilyBoard contact](/contact/) without sending receipts, serial numbers or private household data.
 
 ## What the result can't tell you
 
@@ -12805,14 +12825,32 @@ Use the same worksheet four times a year and let the actual tasks change with yo
 ## Page 184 — Printable Home Inventory Template
 **Slug:** `/templates/printable-home-inventory-template/`
 **Primary intent:** print a home inventory worksheet
-**Title tag:** `Printable Home Inventory Template | Room, Item, Model, Serial and Purchase Record`
-**Meta description:** `Print a practical home inventory template for meaningful household assets, photos, model numbers, serial numbers and purchase records.`
+**Title tag:** `Free Home Inventory Template | Printable PDF and CSV`
+**Meta description:** `Download a free home inventory PDF or CSV without an account. Record room, item, model, serial and receipt references, with a filled example and private backup steps.`
 **Primary keyword concept:** printable home inventory template
+**Editorial review date:** 2026-10-02
+**Content version:** 2
 **Suggested internal links:** `/guides/home-inventory-checklist/`, `/tools/home-inventory-checklist-generator/`, `/guides/photo-home-inventory/`, `/features/home-inventory-tracker/`
 
 # Printable Home Inventory Template
 
-This worksheet is for items worth identifying later. Do not try to list every object.
+Start with one room and the items you would need to identify later. Download the blank [PDF worksheet](/downloads/familyboard-home-inventory-template.pdf) for handwriting, or the [CSV template](/downloads/familyboard-home-inventory-template.csv) for a spreadsheet. Both are free static files: no account, email address or household upload is required. You can use the template without opening the app.
+
+## Choose the format for your task
+
+<section style="max-width:100%;overflow-x:auto">
+
+| Format | Best starting use | What it contains |
+|---|---|---|
+| Printable PDF | Handwrite a room-by-room record | A landscape worksheet with blank rows and seven inventory columns |
+| CSV | Open in Excel or another spreadsheet | The same seven column headings and blank rows; it is not an Excel workbook with formulas |
+| Print this worksheet | Print the blank worksheet from this page | Use the browser print preview, check paper size and fit before printing |
+
+</section>
+
+The blank download does not include the filled example below. Keep receipts and photos separately, and put a safe reference in the sheet rather than assuming a download stores attachments.
+
+<section style="max-width:100%;overflow-x:auto">
 
 | Room / 房間 | Item / 品項 | Brand / model / 品牌／型號 | Serial number / 序號 | Purchase date / 購買日期 | Receipt / photo reference / 收據／照片索引 | Notes / 備註 |
 |---|---|---|---|---|---|---|
@@ -12820,7 +12858,33 @@ This worksheet is for items worth identifying later. Do not try to list every ob
 | | | | | | | |
 | | | | | | | |
 
-### Optional additional fields
+</section>
+
+### Filled example: one room, two items
+
+These rows are illustrative household records, not real purchases or product recommendations. The seven fields match the downloadable files.
+
+<section style="max-width:100%;overflow-x:auto">
+
+| Room | Item | Brand / model | Serial number | Purchase date | Receipt / photo reference | Notes |
+|---|---|---|---|---|---|---|
+| Kitchen | Refrigerator | Model from appliance label | Ending 4821 | 2026-01-31 | ITEM-01 / receipt / label-photo | Check the written warranty start event |
+| Living room | Desk | Model unknown | Not available | Unknown | ITEM-02 / room-photo | Measure before moving; keep unknown fields blank |
+
+</section>
+
+Give each item a code such as ITEM-01. Use that code in the receipt and photo filenames so another household member can find the source. Do not invent a purchase date, value or serial number to fill a cell.
+
+## Keep the completed copy private
+
+1. Save the downloaded file to a folder you control, then add only the details you need. Check a spreadsheet app's sync settings before entering household information.
+2. Keep original receipts, photos and complete identifiers in a protected location; use masked identifiers or location references on paper or shared copies.
+3. Save a second copy on another trusted device or storage location. A file on one laptop, or records in one browser, is not a backup by itself.
+4. Add a review date after a purchase, move or disposal. Share only the rows needed for the recipient's task.
+
+FamilyBoard does not receive values you write into the downloaded worksheet. The public page and static download still use a network connection. If you later use the private app, its records stay in that browser unless you export a backup; clearing browser storage can remove them.
+
+## Optional additional fields
 - Purchase price: __________
 - Warranty end: __________
 - Current household owner/user: __________

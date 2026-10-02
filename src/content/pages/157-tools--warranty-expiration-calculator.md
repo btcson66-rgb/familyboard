@@ -9,7 +9,7 @@ pageType: "tool"
 indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-10-02"
 nextStep: "Calculate the date, then save it with the receipt, model, serial number, and the exact warranty-start event so the number still means something when you check back in two years."
 related:
   - "/guides/warranty-expiration/"
@@ -27,11 +27,11 @@ faq:
     answer: "Warranty claims and paperwork take time to assemble, and problems are easier to catch with coverage still active. The review-by date — 30 days before expiration by default — is a prompt to re-check the item's condition and gather documentation while you can still act on what you find."
   - question: "Will FamilyBoard remind me automatically when the review date arrives?"
     answer: "No. FamilyBoard stores records in your browser only, with no account or server, so it can't send a notification while the browser is closed. The review-by date is meant to be checked when you next open your household records, not something that alerts you on its own."
-contentVersion: 1
+contentVersion: 2
 ---
 # Warranty Expiration Calculator
 
-Use this calculator once you know the exact date a warranty starts and how long it runs. It answers one question precisely: given that start date and term, what date does coverage end, and when should you review the paperwork before it does?
+Use this calculator once you know the exact date a warranty starts and how long it runs. It estimates a planning date from your inputs and a date to review the paperwork. It does not decide when contractual coverage legally ends.
 
 ## Find the real start date first
 
@@ -67,7 +67,25 @@ Always open the terms for the exact model and market. Longer coverage for one co
 
 ## Worked example
 
-Start date: August 19, 2026. Term: 24 months (the calculator's default). Adding 24 months lands on August 19, 2028 — a clean case with no month-end adjustment needed, since both months have a 19th. With the default 30-day review window, the review-by date is July 20, 2028. If your own warranty runs from a month-end date instead — say a March 31 installation with a 6-month term — the end date converges to September 30, since September has no 31st.
+Start date: August 19, 2026. Term: 24 months (enter this explicitly; the tool starts at 12 months). Adding 24 months lands on August 19, 2028 — a clean case with no month-end adjustment needed, since both months have a 19th. With the default 30-day review window, the review-by date is July 20, 2028. If your own warranty runs from a month-end date instead — say a March 31 installation with a 6-month term — the end date converges to September 30, since September has no 31st.
+
+## Three date examples you can reproduce
+
+Set the review window to 30 days for each example. The start date and term are illustrative inputs, not manufacturer warranty terms.
+
+| Entered start | Entered months | Estimated term end | Review by |
+|---|---|---|---|
+| January 31, 2026 | 1 | February 28, 2026 | January 29, 2026 |
+| February 29, 2028 | 12 | February 28, 2029 | January 29, 2029 |
+| August 19, 2026 | 24 | August 19, 2028 | July 20, 2028 |
+
+In the first row, a 30-day review window begins before the start date because the example term is shorter than that window. Choose a shorter review window if it better matches your paperwork task; the result is a planning prompt, not an automatic alert.
+
+## How to handle an extended warranty
+
+If written terms give a total term of 36 months from the original start, enter that same start and 36 months. If a separate extension starts after an earlier term, record its own documented start and term separately. Do not simply add two plans: they may overlap, cover different parts, or name different starting events. This calculator has one start and one term per run.
+
+Copy the source, start event, input months and both output dates into your record. For a printable record, use the [home inventory PDF or CSV template](/templates/printable-home-inventory-template/). For questions about the tool, use [FamilyBoard contact](/contact/) without sending receipts, serial numbers or private household data.
 
 ## What the result can't tell you
 
