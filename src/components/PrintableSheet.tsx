@@ -116,30 +116,32 @@ export default function PrintableSheet({
       <p>
         Household: ____________________ &nbsp; Review date: ____________________
       </p>
-      <table>
-        <thead>
-          <tr>
-            {columns.map((column) => (
-              <th scope="col" key={column}>
-                {column}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {Array.from({ length: 10 }, (_, row) => (
-            <tr key={row}>
+      <div className="printable-table">
+        <table>
+          <thead>
+            <tr>
               {columns.map((column) => (
-                <td key={column}>
-                  &nbsp;
-                  <br />
-                  &nbsp;
-                </td>
+                <th scope="col" key={column}>
+                  {column}
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {Array.from({ length: 10 }, (_, row) => (
+              <tr key={row}>
+                {columns.map((column) => (
+                  <td key={column}>
+                    &nbsp;
+                    <br />
+                    &nbsp;
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </section>
   );
 }

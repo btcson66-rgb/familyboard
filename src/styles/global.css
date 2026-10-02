@@ -300,6 +300,12 @@ button.secondary {
   border-collapse: collapse;
   margin: 1.5rem 0;
 }
+@media screen {
+  .printable-table {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
 .article th,
 .article td,
 .printable th,

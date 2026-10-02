@@ -341,7 +341,7 @@
     "route": "/tools/warranty-expiration-calculator/",
     "cluster": "tools",
     "keywords": "warranty expiration calculator",
-    "headings": "Warranty Expiration Calculator Find the real start date first How the calculator works Month-end date rule Typical warranty terms Worked example What the result can't tell you What to save alongside the date"
+    "headings": "Warranty Expiration Calculator Find the real start date first How the calculator works Month-end date rule Typical warranty terms Worked example Three date examples you can reproduce How to handle an extended warranty What the result can't tell you What to save alongside the date"
   },
   {
     "title": "Free Appliance Age Calculator | Calculate Age from Purchase or Installation Date",
@@ -432,12 +432,12 @@
     "headings": "Printable Seasonal Home Checklist Systems entering heavy use Systems leaving heavy use Exterior/property review Household operations Record update"
   },
   {
-    "title": "Printable Home Inventory Template | Room, Item, Model, Serial and Purchase Record",
-    "description": "Print a practical home inventory template for meaningful household assets, photos, model numbers, serial numbers and purchase records.",
+    "title": "Free Home Inventory Template | Printable PDF and CSV",
+    "description": "Download a free home inventory PDF or CSV without an account. Record room, item, model, serial and receipt references, with a filled example and private backup steps.",
     "route": "/templates/printable-home-inventory-template/",
     "cluster": "printables",
     "keywords": "printable home inventory template",
-    "headings": "Printable Home Inventory Template Optional additional fields What to record first"
+    "headings": "Printable Home Inventory Template Choose the format for your task Filled example: one room, two items Keep the completed copy private Optional additional fields What to record first"
   },
   {
     "title": "Printable Home Service Provider List | Contractors and Household Contacts",
