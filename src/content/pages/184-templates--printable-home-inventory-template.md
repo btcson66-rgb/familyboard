@@ -25,7 +25,7 @@ Start with one room and the items you would need to identify later. Download the
 
 ## Choose the format for your task
 
-<section style="max-width:100%;overflow-x:auto">
+<section tabindex="0" aria-label="Download format comparison" style="max-width:100%;overflow-x:auto">
 
 | Format | Best starting use | What it contains |
 |---|---|---|
@@ -37,7 +37,7 @@ Start with one room and the items you would need to identify later. Download the
 
 The blank download does not include the filled example below. Keep receipts and photos separately, and put a safe reference in the sheet rather than assuming a download stores attachments.
 
-<section style="max-width:100%;overflow-x:auto">
+<section tabindex="0" aria-label="Blank home inventory table" style="max-width:100%;overflow-x:auto">
 
 | Room / 房間 | Item / 品項 | Brand / model / 品牌／型號 | Serial number / 序號 | Purchase date / 購買日期 | Receipt / photo reference / 收據／照片索引 | Notes / 備註 |
 |---|---|---|---|---|---|---|
@@ -51,7 +51,7 @@ The blank download does not include the filled example below. Keep receipts and 
 
 These rows are illustrative household records, not real purchases or product recommendations. The seven fields match the downloadable files.
 
-<section style="max-width:100%;overflow-x:auto">
+<section tabindex="0" aria-label="Filled home inventory example" style="max-width:100%;overflow-x:auto">
 
 | Room | Item | Brand / model | Serial number | Purchase date | Receipt / photo reference | Notes |
 |---|---|---|---|---|---|---|
