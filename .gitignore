@@ -15,3 +15,15 @@ artifacts/
 # an explicit executablePath; that path is machine-specific and must never reach
 # the repo, where it would override the config CI runs.
 playwright.local.ts
+
+# SEO cross audit: retain raw public responses and screenshots locally
+docs/seo/evidence/**/responses/
+docs/seo/evidence/**/*.png
+docs/seo/evidence/**/*.zip
+docs/seo/evidence/**/*.pdf
+__pycache__/
+
+# Keep verbose graphs and console logs local
+docs/seo/evidence/**/*.log
+docs/seo/evidence/**/links.json
+docs/seo/evidence/**/indexability.csv

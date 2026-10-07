@@ -1,0 +1,16 @@
+[
+  {
+    "file": "public/downloads/familyboard-home-inventory-template.csv",
+    "checkout_sha256": "286c70bfa1fa1464c680f975f9321d06b1623b38ff72a48a7f69e1ddd7235508",
+    "git_blob_sha256": "aea7f6ac5cb45284e42c98c705f4738cc2633fba1c10937948fe4001661f60de",
+    "checkout_CRLF": 21,
+    "matches_after_EOL_normalization": true
+  },
+  {
+    "file": "public/downloads/familyboard-moving-checklist.csv",
+    "checkout_sha256": "93f758922ce73f87520147c801565f24c287127b1e9c4aa00b93aab69ecb324b",
+    "git_blob_sha256": "7539d2b68ec4a836a78547acb6931a8478a1eb4f002d4be8f3e32cbba3919df6",
+    "checkout_CRLF": 21,
+    "matches_after_EOL_normalization": true
+  }
+]
