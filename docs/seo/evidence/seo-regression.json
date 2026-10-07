@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "before_pages": 112,
+  "after_pages": 112,
+  "allowed_paths": [],
+  "errors": [],
+  "editorial_changes": [],
+  "scope": "Static production/local crawl comparison; does not establish deployment or search indexing."
+}

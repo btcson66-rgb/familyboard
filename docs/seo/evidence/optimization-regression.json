@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "before_pages": 112,
+  "after_pages": 112,
+  "allowed_paths": [],
+  "errors": [],
+  "editorial_changes": [
+    {
+      "path": "/tools/annual-subscription-cost-calculator/",
+      "field": "title",
+      "before": "Annual Subscription Cost Calculator | Convert Monthly, Weekly or Quarterly Pricing",
+      "after": "Annual Subscription Cost Calculator: Weekly to Yearly"
+    },
+    {
+      "path": "/tools/annual-subscription-cost-calculator/",
+      "field": "description",
+      "before": "Convert a recurring subscription price into its approximate yearly cost and compare billing frequencies clearly.",
+      "after": "Enter a subscription price and weekly, monthly, quarterly or annual billing. Compare its yearly cost, monthly equivalent and five-year total at today's price."
+    }
+  ],
+  "scope": "Static production/local crawl comparison; does not establish deployment or search indexing."
+}

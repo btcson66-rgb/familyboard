@@ -1,0 +1,1068 @@
+{
+  "origin": "https://familyboard.win/",
+  "captured_at": "2026-10-07T05:31:07.744088+00:00",
+  "max_pages": 0,
+  "pages": 112,
+  "homepage_anchor_reachable": 112,
+  "sitemap_unique_urls": 109,
+  "sitemaps": [
+    {
+      "url": "https://familyboard.win/sitemap-index.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "error": null,
+      "kind": "sitemapindex",
+      "references": 10,
+      "unique_references": 10
+    },
+    {
+      "url": "https://familyboard.win/sitemap-en-core.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "error": null,
+      "kind": "urlset",
+      "references": 12,
+      "unique_references": 12
+    },
+    {
+      "url": "https://familyboard.win/sitemap-en-features.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "error": null,
+      "kind": "urlset",
+      "references": 8,
+      "unique_references": 8
+    },
+    {
+      "url": "https://familyboard.win/sitemap-en-guides.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "error": null,
+      "kind": "urlset",
+      "references": 33,
+      "unique_references": 33
+    },
+    {
+      "url": "https://familyboard.win/sitemap-en-printables.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "error": null,
+      "kind": "urlset",
+      "references": 12,
+      "unique_references": 12
+    },
+    {
+      "url": "https://familyboard.win/sitemap-en-tools.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "error": null,
+      "kind": "urlset",
+      "references": 12,
+      "unique_references": 12
+    },
+    {
+      "url": "https://familyboard.win/sitemap-zh-tw-core.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "error": null,
+      "kind": "urlset",
+      "references": 12,
+      "unique_references": 12
+    },
+    {
+      "url": "https://familyboard.win/sitemap-zh-tw-features.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "error": null,
+      "kind": "urlset",
+      "references": 1,
+      "unique_references": 1
+    },
+    {
+      "url": "https://familyboard.win/sitemap-zh-tw-guides.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "error": null,
+      "kind": "urlset",
+      "references": 8,
+      "unique_references": 8
+    },
+    {
+      "url": "https://familyboard.win/sitemap-zh-tw-printables.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "error": null,
+      "kind": "urlset",
+      "references": 3,
+      "unique_references": 3
+    },
+    {
+      "url": "https://familyboard.win/sitemap-zh-tw-tools.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "error": null,
+      "kind": "urlset",
+      "references": 8,
+      "unique_references": 8
+    }
+  ],
+  "robots_status": 200,
+  "robots_available": true,
+  "status_counts": {
+    "200": 112
+  },
+  "indexable": 109,
+  "noindex": 3,
+  "fetch_errors": 0,
+  "sitemap_errors": [],
+  "invalid_sitemap_members": [],
+  "broken_internal_links": [],
+  "redirect_internal_links": [],
+  "unverified_internal_links": [
+    {
+      "source": "https://familyboard.win/templates/printable-home-inventory-template/",
+      "target": "https://familyboard.win/downloads/familyboard-home-inventory-template.pdf"
+    },
+    {
+      "source": "https://familyboard.win/templates/printable-home-inventory-template/",
+      "target": "https://familyboard.win/downloads/familyboard-home-inventory-template.csv"
+    },
+    {
+      "source": "https://familyboard.win/templates/printable-home-inventory-template/",
+      "target": "https://familyboard.win/downloads/familyboard-home-inventory-template.pdf"
+    },
+    {
+      "source": "https://familyboard.win/templates/printable-home-inventory-template/",
+      "target": "https://familyboard.win/downloads/familyboard-home-inventory-template.csv"
+    },
+    {
+      "source": "https://familyboard.win/checklists/printable-moving-checklist/",
+      "target": "https://familyboard.win/downloads/familyboard-moving-checklist.pdf"
+    },
+    {
+      "source": "https://familyboard.win/checklists/printable-moving-checklist/",
+      "target": "https://familyboard.win/downloads/familyboard-moving-checklist.csv"
+    }
+  ],
+  "robots_blocked_not_fetched": [],
+  "redirect_chains": [],
+  "hreflang_issues": [
+    {
+      "url": "https://familyboard.win/app/",
+      "target": "https://familyboard.win/app/",
+      "issue": "target_not_canonical_indexable_200"
+    },
+    {
+      "url": "https://familyboard.win/app/",
+      "target": "https://familyboard.win/zh-tw/app/",
+      "issue": "target_not_canonical_indexable_200"
+    },
+    {
+      "url": "https://familyboard.win/app/",
+      "target": "https://familyboard.win/app/",
+      "issue": "target_not_canonical_indexable_200"
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/app/",
+      "target": "https://familyboard.win/app/",
+      "issue": "target_not_canonical_indexable_200"
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/app/",
+      "target": "https://familyboard.win/zh-tw/app/",
+      "issue": "target_not_canonical_indexable_200"
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/app/",
+      "target": "https://familyboard.win/app/",
+      "issue": "target_not_canonical_indexable_200"
+    }
+  ],
+  "metadata_qa": [
+    {
+      "url": "https://familyboard.win/",
+      "title_length": 81,
+      "description_length": 154,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/about/",
+      "title_length": 65,
+      "description_length": 158,
+      "signals": []
+    },
+    {
+      "url": "https://familyboard.win/affiliate-disclosure/",
+      "title_length": 34,
+      "description_length": 113,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/changelog/",
+      "title_length": 51,
+      "description_length": 79,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/checklists/",
+      "title_length": 72,
+      "description_length": 100,
+      "signals": [
+        "title_length_signal",
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/contact/",
+      "title_length": 19,
+      "description_length": 141,
+      "signals": []
+    },
+    {
+      "url": "https://familyboard.win/disclaimer/",
+      "title_length": 46,
+      "description_length": 97,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/editorial-policy/",
+      "title_length": 30,
+      "description_length": 80,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/features/",
+      "title_length": 93,
+      "description_length": 146,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/features/home-inventory-tracker/",
+      "title_length": 93,
+      "description_length": 130,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/features/household-handoff/",
+      "title_length": 88,
+      "description_length": 159,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/features/maintenance-tracker/",
+      "title_length": 83,
+      "description_length": 111,
+      "signals": [
+        "title_length_signal",
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/",
+      "title_length": 50,
+      "description_length": 152,
+      "signals": []
+    },
+    {
+      "url": "https://familyboard.win/pricing/",
+      "title_length": 54,
+      "description_length": 115,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/privacy/",
+      "title_length": 76,
+      "description_length": 160,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/roadmap/",
+      "title_length": 32,
+      "description_length": 120,
+      "signals": []
+    },
+    {
+      "url": "https://familyboard.win/security/",
+      "title_length": 51,
+      "description_length": 153,
+      "signals": []
+    },
+    {
+      "url": "https://familyboard.win/templates/",
+      "title_length": 81,
+      "description_length": 151,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/templates/printable-home-inventory-template/",
+      "title_length": 52,
+      "description_length": 166,
+      "signals": [
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/terms/",
+      "title_length": 26,
+      "description_length": 84,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/tools/",
+      "title_length": 56,
+      "description_length": 148,
+      "signals": []
+    },
+    {
+      "url": "https://familyboard.win/tools/home-maintenance-schedule-generator/",
+      "title_length": 72,
+      "description_length": 147,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/tools/warranty-expiration-calculator/",
+      "title_length": 67,
+      "description_length": 139,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/",
+      "title_length": 31,
+      "description_length": 58,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/checklists/printable-home-maintenance-checklist/",
+      "title_length": 77,
+      "description_length": 119,
+      "signals": [
+        "title_length_signal",
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/checklists/printable-house-sitter-checklist/",
+      "title_length": 75,
+      "description_length": 113,
+      "signals": [
+        "title_length_signal",
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/checklists/printable-moving-checklist/",
+      "title_length": 79,
+      "description_length": 117,
+      "signals": [
+        "title_length_signal",
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/checklists/printable-new-home-checklist/",
+      "title_length": 68,
+      "description_length": 130,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/checklists/printable-pet-sitter-checklist/",
+      "title_length": 76,
+      "description_length": 112,
+      "signals": [
+        "title_length_signal",
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/checklists/printable-seasonal-home-checklist/",
+      "title_length": 76,
+      "description_length": 147,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/features/family-display-mode/",
+      "title_length": 81,
+      "description_length": 137,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/features/free-home-management-app/",
+      "title_length": 78,
+      "description_length": 161,
+      "signals": [
+        "title_length_signal",
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/features/household-documents-organizer/",
+      "title_length": 94,
+      "description_length": 138,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/features/private-family-organizer/",
+      "title_length": 85,
+      "description_length": 145,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/appliance-replacement-planning/",
+      "title_length": 102,
+      "description_length": 166,
+      "signals": [
+        "title_length_signal",
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/ceiling-fan-maintenance-checklist/",
+      "title_length": 81,
+      "description_length": 157,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/dishwasher-maintenance-checklist/",
+      "title_length": 75,
+      "description_length": 152,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/dryer-maintenance-checklist/",
+      "title_length": 74,
+      "description_length": 161,
+      "signals": [
+        "title_length_signal",
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/family-chore-system/",
+      "title_length": 70,
+      "description_length": 162,
+      "signals": [
+        "title_length_signal",
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/family-continuity-plan/",
+      "title_length": 75,
+      "description_length": 132,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/freezer-maintenance-checklist/",
+      "title_length": 74,
+      "description_length": 161,
+      "signals": [
+        "title_length_signal",
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/garbage-disposal-maintenance-guide/",
+      "title_length": 77,
+      "description_length": 155,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/guest-preparation-checklist/",
+      "title_length": 77,
+      "description_length": 155,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/home-maintenance-after-vacation/",
+      "title_length": 58,
+      "description_length": 117,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/home-service-provider-list/",
+      "title_length": 65,
+      "description_length": 174,
+      "signals": [
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/household-admin-backup-person/",
+      "title_length": 76,
+      "description_length": 139,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/household-documents-organizer/",
+      "title_length": 80,
+      "description_length": 111,
+      "signals": [
+        "title_length_signal",
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/household-management-checklist/",
+      "title_length": 73,
+      "description_length": 145,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/household-replacement-reserve/",
+      "title_length": 94,
+      "description_length": 179,
+      "signals": [
+        "title_length_signal",
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/household-supplies-inventory/",
+      "title_length": 84,
+      "description_length": 127,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/how-to-track-product-warranties/",
+      "title_length": 65,
+      "description_length": 189,
+      "signals": [
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/humidifier-maintenance-guide/",
+      "title_length": 69,
+      "description_length": 146,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/microwave-maintenance-checklist/",
+      "title_length": 75,
+      "description_length": 165,
+      "signals": [
+        "title_length_signal",
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/monthly-home-maintenance-checklist/",
+      "title_length": 64,
+      "description_length": 132,
+      "signals": []
+    },
+    {
+      "url": "https://familyboard.win/guides/moving-house-organizer/",
+      "title_length": 81,
+      "description_length": 134,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/organize-pet-records/",
+      "title_length": 65,
+      "description_length": 130,
+      "signals": []
+    },
+    {
+      "url": "https://familyboard.win/guides/oven-maintenance-checklist/",
+      "title_length": 76,
+      "description_length": 149,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/photo-home-inventory/",
+      "title_length": 79,
+      "description_length": 122,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/power-outage-home-preparedness/",
+      "title_length": 80,
+      "description_length": 167,
+      "signals": [
+        "title_length_signal",
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/quarterly-home-maintenance-checklist/",
+      "title_length": 76,
+      "description_length": 134,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/renovation-records/",
+      "title_length": 62,
+      "description_length": 159,
+      "signals": []
+    },
+    {
+      "url": "https://familyboard.win/guides/robot-vacuum-maintenance-guide/",
+      "title_length": 67,
+      "description_length": 149,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/warranty-expiration/",
+      "title_length": 68,
+      "description_length": 171,
+      "signals": [
+        "title_length_signal",
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/washing-machine-maintenance-checklist/",
+      "title_length": 74,
+      "description_length": 161,
+      "signals": [
+        "title_length_signal",
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/water-heater-maintenance-records/",
+      "title_length": 74,
+      "description_length": 162,
+      "signals": [
+        "title_length_signal",
+        "long_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/guides/water-leak-response-home-records/",
+      "title_length": 68,
+      "description_length": 155,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/templates/printable-annual-renewals/",
+      "title_length": 82,
+      "description_length": 135,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/templates/printable-household-handoff-sheet/",
+      "title_length": 86,
+      "description_length": 142,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/templates/printable-service-provider-list/",
+      "title_length": 73,
+      "description_length": 105,
+      "signals": [
+        "title_length_signal",
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/tools/annual-subscription-cost-calculator/",
+      "title_length": 82,
+      "description_length": 112,
+      "signals": [
+        "title_length_signal",
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/tools/appliance-age-calculator/",
+      "title_length": 80,
+      "description_length": 132,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/tools/emergency-contact-sheet-generator/",
+      "title_length": 77,
+      "description_length": 133,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/tools/home-inventory-checklist-generator/",
+      "title_length": 67,
+      "description_length": 134,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/tools/home-maintenance-cost-tracker/",
+      "title_length": 70,
+      "description_length": 126,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/tools/house-sitter-instruction-generator/",
+      "title_length": 79,
+      "description_length": 158,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/tools/household-annual-review-generator/",
+      "title_length": 78,
+      "description_length": 140,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/tools/household-subscription-cost-calculator/",
+      "title_length": 65,
+      "description_length": 122,
+      "signals": []
+    },
+    {
+      "url": "https://familyboard.win/tools/pet-sitter-instruction-generator/",
+      "title_length": 75,
+      "description_length": 136,
+      "signals": [
+        "title_length_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/about/",
+      "title_length": 31,
+      "description_length": 60,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/affiliate-disclosure/",
+      "title_length": 33,
+      "description_length": 63,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/changelog/",
+      "title_length": 30,
+      "description_length": 54,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/checklists/",
+      "title_length": 36,
+      "description_length": 61,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/checklists/year-end-cleaning-checklist/",
+      "title_length": 25,
+      "description_length": 65,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/contact/",
+      "title_length": 33,
+      "description_length": 60,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/disclaimer/",
+      "title_length": 36,
+      "description_length": 55,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/editorial-policy/",
+      "title_length": 32,
+      "description_length": 50,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/features/",
+      "title_length": 33,
+      "description_length": 68,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/guides/",
+      "title_length": 36,
+      "description_length": 65,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/guides/emergency-supply-inventory/",
+      "title_length": 25,
+      "description_length": 58,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/guides/home-care-service-complaint-resolution/",
+      "title_length": 37,
+      "description_length": 64,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/guides/home-maintenance-schedule/",
+      "title_length": 22,
+      "description_length": 51,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/guides/move-out-home-records/",
+      "title_length": 25,
+      "description_length": 55,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/guides/organize-utility-account-information/",
+      "title_length": 28,
+      "description_length": 52,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/",
+      "title_length": 26,
+      "description_length": 62,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/guides/storm-preparation-home-checklist/",
+      "title_length": 25,
+      "description_length": 62,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/pricing/",
+      "title_length": 33,
+      "description_length": 66,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/privacy/",
+      "title_length": 40,
+      "description_length": 69,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/roadmap/",
+      "title_length": 44,
+      "description_length": 66,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/security/",
+      "title_length": 36,
+      "description_length": 65,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/templates/",
+      "title_length": 24,
+      "description_length": 60,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/terms/",
+      "title_length": 38,
+      "description_length": 68,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/tools/",
+      "title_length": 35,
+      "description_length": 68,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/tools/annual-subscription-cost-calculator/",
+      "title_length": 23,
+      "description_length": 54,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/tools/appliance-age-calculator/",
+      "title_length": 21,
+      "description_length": 47,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/",
+      "title_length": 31,
+      "description_length": 51,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/",
+      "title_length": 23,
+      "description_length": 47,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/",
+      "title_length": 23,
+      "description_length": 48,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/",
+      "title_length": 23,
+      "description_length": 49,
+      "signals": [
+        "short_description_signal"
+      ]
+    },
+    {
+      "url": "https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/",
+      "title_length": 19,
+      "description_length": 51,
+      "signals": [
+        "short_description_signal"
+      ]
+    }
+  ],
+  "metadata_signal_counts": {
+    "title_length_signal": 57,
+    "short_description_signal": 48,
+    "long_description_signal": 14
+  },
+  "limitations": [
+    "Static HTML anchors only; JS-generated routes not discovered.",
+    "Incoming links count distinct source URLs, including navigation; contextual relevance needs review.",
+    "Bing/Ahrefs page-level status unavailable unless supplied separately.",
+    "Length is an advisory signal, never a standalone failure.",
+    "Files and query/state links recorded as unverified, not counted as broken.",
+    "No search indexing or traffic guarantee."
+  ]
+}

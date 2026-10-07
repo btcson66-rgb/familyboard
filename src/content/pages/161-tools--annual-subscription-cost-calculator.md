@@ -1,6 +1,6 @@
 ---
-title: "Annual Subscription Cost Calculator | Convert Monthly, Weekly or Quarterly Pricing"
-description: "Convert a recurring subscription price into its approximate yearly cost and compare billing frequencies clearly."
+title: "Annual Subscription Cost Calculator: Weekly to Yearly"
+description: "Enter a subscription price and weekly, monthly, quarterly or annual billing. Compare its yearly cost, monthly equivalent and five-year total at today's price."
 route: "/tools/annual-subscription-cost-calculator/"
 primaryIntent: "convert one subscription price to annual cost"
 primaryKeyword: "annual subscription cost calculator"

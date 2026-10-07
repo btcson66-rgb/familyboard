@@ -360,8 +360,8 @@
     "headings": "Household Subscription Cost Calculator How to enter your list, and how it's calculated Worked example What it doesn't do What the total is actually for What to save with the total Grouping subscriptions by category yourself"
   },
   {
-    "title": "Annual Subscription Cost Calculator | Convert Monthly, Weekly or Quarterly Pricing",
-    "description": "Convert a recurring subscription price into its approximate yearly cost and compare billing frequencies clearly.",
+    "title": "Annual Subscription Cost Calculator: Weekly to Yearly",
+    "description": "Enter a subscription price and weekly, monthly, quarterly or annual billing. Compare its yearly cost, monthly equivalent and five-year total at today's price.",
     "route": "/tools/annual-subscription-cost-calculator/",
     "cluster": "tools",
     "keywords": "annual subscription cost calculator",

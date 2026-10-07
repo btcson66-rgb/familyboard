@@ -11682,8 +11682,8 @@ The calculator totals every line together into one household number, but it does
 ## Page 161 — Annual Subscription Cost Calculator
 **Slug:** `/tools/annual-subscription-cost-calculator/`
 **Primary intent:** convert one subscription price to annual cost
-**Title tag:** `Annual Subscription Cost Calculator | Convert Monthly, Weekly or Quarterly Pricing`
-**Meta description:** `Convert a recurring subscription price into its approximate yearly cost and compare billing frequencies clearly.`
+**Title tag:** `Annual Subscription Cost Calculator: Weekly to Yearly`
+**Meta description:** `Enter a subscription price and weekly, monthly, quarterly or annual billing. Compare its yearly cost, monthly equivalent and five-year total at today's price.`
 **Primary keyword concept:** annual subscription cost calculator
 **Suggested internal links:** `/tools/household-subscription-cost-calculator/`, `/guides/organize-household-subscriptions/`, `/guides/annual-renewal-calendar/`, `/features/household-subscription-tracker/`
 

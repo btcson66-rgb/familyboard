@@ -1,0 +1,4038 @@
+[
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Homepage",
+    "title": "FamilyBoard — A Private Home Management System for Everything Your Household Runs",
+    "description": "Keep home maintenance, warranties, assets, subscriptions, recurring tasks and emergency information together in a private local-first household dashboard.",
+    "h1": [
+      "A home has hundreds of moving parts. Keep the important ones in one place."
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.016,
+    "is_html": true,
+    "incoming_links": 87,
+    "crawl_depth": 0,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/about/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/about/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "About FamilyBoard — Why We Are Building a Better Household Memory",
+    "description": "FamilyBoard is a privacy-first household management project built to connect the maintenance, records and recurring responsibilities that keep a home running.",
+    "h1": [
+      "Homes run on information that usually has no home"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/about/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/about/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/about/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/affiliate-disclosure/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/affiliate-disclosure/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Affiliate Disclosure | FamilyBoard",
+    "description": "How contextual product recommendations and affiliate links support FamilyBoard without changing editorial advice.",
+    "h1": [
+      "Affiliate Disclosure"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/affiliate-disclosure/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/affiliate-disclosure/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/affiliate-disclosure/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/app/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": false,
+    "robots_allowed": true,
+    "meta_robots": "noindex,follow",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/app/",
+    "in_sitemap": false,
+    "language": "en",
+    "page_type": "Private App",
+    "title": "FamilyBoard App — Private Local Household Dashboard",
+    "description": "Track household assets, maintenance, warranties, subscriptions, tasks, emergency contacts and handoffs in a free local-first app.",
+    "h1": [
+      "Set up your home without creating an account."
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/app/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/app/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/app/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 80,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "NOINDEX",
+    "reason": "source policy classification required; do not bulk remove"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/changelog/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/changelog/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "FamilyBoard Changelog — Product and Content Updates",
+    "description": "Track real FamilyBoard releases, fixes, migrations and meaningful site updates.",
+    "h1": [
+      "Changelog"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/changelog/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/changelog/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/changelog/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/checklists/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/checklists/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Printable Household Checklists | Maintenance, Emergency, Moving and More",
+    "description": "Print practical home maintenance, monthly review, seasonal, emergency, sitter and moving checklists.",
+    "h1": [
+      "Printable Household Checklists"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/checklists/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/checklists/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/checklists/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/contact/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/contact/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Contact FamilyBoard",
+    "description": "Report a FamilyBoard bug, accessibility issue, content correction, privacy concern or security vulnerability through a working support route.",
+    "h1": [
+      "Contact FamilyBoard"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/contact/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/contact/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/contact/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/disclaimer/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/disclaimer/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Household Information Disclaimer | FamilyBoard",
+    "description": "Limits of FamilyBoard household, maintenance, emergency, legal, insurance and safety information.",
+    "h1": [
+      "Household Information Disclaimer"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/disclaimer/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/disclaimer/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/disclaimer/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/editorial-policy/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/editorial-policy/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Editorial Policy | FamilyBoard",
+    "description": "How FamilyBoard plans, edits, sources and corrects household-management content.",
+    "h1": [
+      "Editorial Policy"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/editorial-policy/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/editorial-policy/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/editorial-policy/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 110,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/features/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/features/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Household Management Features — Assets, Maintenance, Warranties, Tasks and More | FamilyBoard",
+    "description": "See how FamilyBoard organizes household assets, maintenance, warranties, subscriptions, tasks, emergency information, backups and family handoffs.",
+    "h1": [
+      "One household dashboard, built around the work behind the calendar"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/features/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/features/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/features/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/features/home-inventory-tracker/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/features/home-inventory-tracker/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Private Home Inventory Tracker for Appliances, Electronics and Household Assets | FamilyBoard",
+    "description": "Create a practical home inventory with model numbers, serial numbers, purchase details, warranties, maintenance and local records.",
+    "h1": [
+      "A useful home inventory is not a list of everything you own"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 16,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/features/household-handoff/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/features/household-handoff/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Household Handoff — Make the Invisible Work of Running a Home Transferable | FamilyBoard",
+    "description": "Create a concise household handoff showing upcoming obligations, recurring responsibilities, service contacts and the information another trusted person needs.",
+    "h1": [
+      "A printable briefing built from your own records, not a fresh document"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 16,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/features/maintenance-tracker/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/features/maintenance-tracker/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Home Maintenance Tracker with Recurring Schedules and Service History | FamilyBoard",
+    "description": "Track recurring home maintenance, completion dates, service history, costs and the assets each task belongs to.",
+    "h1": [
+      "Stop relying on “I think we did that recently”"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 16,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Home and Household Management Guides | FamilyBoard",
+    "description": "Practical guides for home maintenance, appliance records, warranties, household documents, emergency handoffs, chores and recurring home administration.",
+    "h1": [
+      "Home and Household Management Guides"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/guides/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/guides/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/guides/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/pricing/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/pricing/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
+    "description": "FamilyBoard is a free local-first household organizer with no account, checkout, subscription or paid feature gate.",
+    "h1": [
+      "FamilyBoard is free"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/pricing/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/pricing/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/pricing/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/privacy/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/privacy/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Privacy Policy — What FamilyBoard Collects and What Never Leaves Your Device",
+    "description": "What the public site measures, which third parties are involved, and why household records in the FamilyBoard app never reach a server. Written to be checkable.",
+    "h1": [
+      "Privacy Policy"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/privacy/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/privacy/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/privacy/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/roadmap/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/roadmap/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "FamilyBoard Free Product Roadmap",
+    "description": "See the current improvement roadmap for the free FamilyBoard local-first household organizer, tools and content library.",
+    "h1": [
+      "A roadmap for the free product"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/roadmap/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/roadmap/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/roadmap/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/search/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": false,
+    "robots_allowed": true,
+    "meta_robots": "noindex,follow",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/search/",
+    "in_sitemap": false,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Search Household Guides and Tools | FamilyBoard",
+    "description": "Search FamilyBoard household guides, calculators, generators, checklists and templates.",
+    "h1": [
+      "Search FamilyBoard"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 78,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "NOINDEX",
+    "reason": "source policy classification required; do not bulk remove"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/security/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/security/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Security and Local-First Architecture | FamilyBoard",
+    "description": "Learn how FamilyBoard uses local browser storage, backups, optional encryption and data-minimization principles, plus the limits users should understand.",
+    "h1": [
+      "Security without impossible promises"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/security/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/security/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/security/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/templates/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/templates/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Printable Household Templates | Inventory, Warranty, Repairs, Contacts and Chores",
+    "description": "Use printable household templates for home inventory, appliances, warranties, repairs, service providers, contacts, chores, subscriptions and handoffs.",
+    "h1": [
+      "Printable Household Templates"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/templates/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/templates/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/templates/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.11,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/templates/printable-home-inventory-template/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/templates/printable-home-inventory-template/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Free Home Inventory Template | Printable PDF and CSV",
+    "description": "Download a free home inventory PDF or CSV without an account. Record room, item, model, serial and receipt references, with a filled example and private backup steps.",
+    "h1": [
+      "Printable Home Inventory Template"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/terms/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/terms/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Terms of Use | FamilyBoard",
+    "description": "Terms for using the free FamilyBoard website, local-first app, tools and printables.",
+    "h1": [
+      "Terms of Use"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/terms/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/terms/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/terms/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Free Home Management Tools and Calculators | FamilyBoard",
+    "description": "Use free local browser tools for maintenance schedules, warranties, home inventory, subscriptions, emergency binders, moving and household handoffs.",
+    "h1": [
+      "Free Home Management Tools"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 79,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/home-maintenance-schedule-generator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/home-maintenance-schedule-generator/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Free Home Maintenance Schedule Generator | Build a Custom Household Plan",
+    "description": "Create a starter home maintenance schedule based on your home type, systems and seasons, then edit it to match actual manuals and local conditions.",
+    "h1": [
+      "Free Home Maintenance Schedule Generator"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/home-maintenance-schedule-generator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/home-maintenance-schedule-generator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 13,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/warranty-expiration-calculator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/warranty-expiration-calculator/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Free Warranty Expiration Calculator | Purchase Date + Warranty Term",
+    "description": "Calculate an estimated warranty end date from a known start date and warranty term, then save the date and source with the household asset.",
+    "h1": [
+      "Warranty Expiration Calculator"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/warranty-expiration-calculator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/warranty-expiration-calculator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.109,
+    "is_html": true,
+    "incoming_links": 19,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Homepage",
+    "title": "FamilyBoard 繁體中文版｜免費、免帳號的家庭管理工具",
+    "description": "用免費的 FamilyBoard 整理居家保養、資產、保固、訂閱與家庭責任；資料預設保留在目前瀏覽器，不需註冊帳號。",
+    "h1": [
+      "免費的家庭管理工具，把重要家務從記憶移到可靠紀錄"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.031,
+    "is_html": true,
+    "incoming_links": 87,
+    "crawl_depth": 1,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/checklists/printable-home-maintenance-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/checklists/printable-home-maintenance-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Printable Home Maintenance Checklist | Editable Household Maintenance Planner",
+    "description": "Print an editable home maintenance checklist organized by routine review, seasonal work, systems and follow-up records.",
+    "h1": [
+      "Printable Home Maintenance Checklist"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/checklists/printable-house-sitter-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/checklists/printable-house-sitter-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Printable House Sitter Checklist | Daily Home, Pet and Contact Instructions",
+    "description": "Print a house-sitter checklist for daily tasks, pets, plants, deliveries, waste, contacts and problem escalation.",
+    "h1": [
+      "Printable House Sitter Checklist"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/checklists/printable-moving-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/checklists/printable-moving-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Printable Moving Checklist | Utilities, Inventory, Documents and New-Home Setup",
+    "description": "Print a moving checklist divided into timeline, utilities, inventory, documents, old-home closure and new-home setup.",
+    "h1": [
+      "Printable Moving Checklist"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/checklists/printable-new-home-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/checklists/printable-new-home-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Printable New Home Checklist | First Day, First Week and First Month",
+    "description": "Print a new-home checklist for utilities, equipment records, contacts, maintenance, household documents and emergency information.",
+    "h1": [
+      "Printable New Home Checklist"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/checklists/printable-pet-sitter-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/checklists/printable-pet-sitter-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Printable Pet Sitter Checklist | Feeding, Routine, Supplies and Vet Contacts",
+    "description": "Print a pet-sitter checklist with owner-entered feeding, routine, supplies, veterinarian and emergency contacts.",
+    "h1": [
+      "Printable Pet Sitter Checklist"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/checklists/printable-seasonal-home-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/checklists/printable-seasonal-home-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Printable Seasonal Home Checklist | Spring, Summer, Fall and Winter Planning",
+    "description": "Print a four-season home planning worksheet that adapts to climate, equipment and household routines instead of prescribing one national checklist.",
+    "h1": [
+      "Printable Seasonal Home Checklist"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/features/family-display-mode/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/features/family-display-mode/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Family Display Mode — Turn an Old Tablet into a Household Dashboard | FamilyBoard",
+    "description": "Use a tablet-friendly shared view for open tasks, today’s events and dated maintenance without buying dedicated family calendar hardware.",
+    "h1": [
+      "A simplified, low-sensitivity view built for a shared screen"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/features/free-home-management-app/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/features/free-home-management-app/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Free Home Management App — Every Feature, No Account, No Paywall | FamilyBoard",
+    "description": "A free home management app with no paid tier gating any feature: assets, maintenance, warranties, subscriptions, tasks, handoff and encrypted backups, all local.",
+    "h1": [
+      "Free because there’s nothing behind a paywall to unlock"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 15,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/features/household-documents-organizer/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/features/household-documents-organizer/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Household Documents Organizer for Warranties, Manuals, Receipts and Home Records | FamilyBoard",
+    "description": "Organize household document references around the home, asset or responsibility they belong to instead of relying on disconnected folders.",
+    "h1": [
+      "A document index, not a file cabinet"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.109,
+    "is_html": true,
+    "incoming_links": 11,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/features/private-family-organizer/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/features/private-family-organizer/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Private Family Organizer — Local-First, Offline and No Account Required | FamilyBoard",
+    "description": "A household organizer that stores records in your browser, works offline, needs no account, and gives you password-protected backups you control.",
+    "h1": [
+      "Local-first, offline and no-account are one design decision, not three features"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.109,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/appliance-replacement-planning/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/appliance-replacement-planning/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Appliance Replacement Planning: Use Age, Repair History and Household Needs Without Predicting Failure",
+    "description": "Plan appliance replacement by combining published lifespan ranges, the widely cited 50% repair rule and real repair history — instead of relying on any single number.",
+    "h1": [
+      "Replacement planning combines three signals — none of them alone is reliable"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.109,
+    "is_html": true,
+    "incoming_links": 11,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/ceiling-fan-maintenance-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/ceiling-fan-maintenance-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Ceiling Fan Maintenance Checklist: Wobble Fixes, Lubrication and the 30-Inch Rule",
+    "description": "A real ceiling fan maintenance checklist: why fans wobble, the balancing-kit fix, motor lubrication interval, and the clearance rule most installs get wrong.",
+    "h1": [
+      "Ceiling fan maintenance checklist: wobble, lubrication and the clearance rule"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.109,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/dishwasher-maintenance-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/dishwasher-maintenance-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Dishwasher Maintenance Checklist: The Filter Most Owners Never Knew Existed",
+    "description": "A real dishwasher maintenance checklist: the filter-cleaning interval most owners never learn, spray-arm care, leak response and lifespan, with sources.",
+    "h1": [
+      "Dishwasher maintenance checklist: the filter most owners never knew existed"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/dryer-maintenance-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/dryer-maintenance-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Dryer Maintenance Checklist: Lint Trap, Vent Cleaning and Fire-Risk Basics",
+    "description": "A dryer maintenance checklist built around fire-prevention data: lint trap habits, exhaust vent cleaning intervals and the warning signs that mean stop using it.",
+    "h1": [
+      "Dryer maintenance checklist: this is a fire-prevention task, not just tidiness"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/family-chore-system/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/family-chore-system/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Family Chore System: Build a Routine People Can Understand at a Glance",
+    "description": "Create a family chore system with clear ownership, recurring schedules, age-appropriate expectations and a shared display without over-gamifying normal home life.",
+    "h1": [
+      "A chore system needs four things to work: a task, an owner, a frequency and a definition of done"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 6,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/family-continuity-plan/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/family-continuity-plan/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Family Continuity Plan: Keep the Household Running When Normal Roles Change",
+    "description": "Build a family continuity plan for recurring obligations, household admin, service contacts, pets, dependents and essential records.",
+    "h1": [
+      "Continuity planning isn’t only for businesses — a household has single points of failure too"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 6,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/freezer-maintenance-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/freezer-maintenance-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Freezer Maintenance Checklist: Defrosting, Coils and the Power-Outage Math",
+    "description": "A standalone freezer maintenance checklist with real defrost and coil-cleaning intervals, plus the 48-hour/24-hour outage rule that decides whether food is safe.",
+    "h1": [
+      "Freezer maintenance checklist: defrosting, coils and the outage math the fridge doesn’t need"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/garbage-disposal-maintenance-guide/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/garbage-disposal-maintenance-guide/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Garbage Disposal Maintenance Guide: What Never to Grind, and the Reset Button",
+    "description": "A real garbage disposal maintenance guide: what InSinkErator says never to grind, how the reset/overload button works, and a real 8-15 year lifespan range.",
+    "h1": [
+      "Garbage disposal maintenance guide: what never to grind, and the reset button"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/guest-preparation-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/guest-preparation-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Guest Preparation Checklist: A Calm 24-Hour Home Reset Before Visitors Arrive",
+    "description": "Prepare for overnight guests with sleeping space, linens, bathroom basics, access information and household routines without over-cleaning the entire home.",
+    "h1": [
+      "Guest preparation is about making a house usable by someone who doesn’t live there — for a weekend, not a takeover"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 6,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/home-maintenance-after-vacation/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/home-maintenance-after-vacation/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Home Maintenance After Vacation: A Quick Return-Home Check",
+    "description": "Use a short after-vacation home check to spot changes, restart household routines and close out travel handoff tasks.",
+    "h1": [
+      "Home maintenance after vacation: a quick return-home check"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/home-service-provider-list/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/home-service-provider-list/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Home Service Provider List | Verify Sources, Scope and Prior Work",
+    "description": "Build a useful home service provider list with dated registry checks, written scope, prior-work evidence and owner-led follow-up—without treating a listing as an endorsement.",
+    "h1": [
+      "Home service provider list: verify identity, scope and prior work before you rely on it"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 12,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/household-admin-backup-person/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/household-admin-backup-person/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Household Admin Backup Person: How to Prepare Someone to Step In Temporarily",
+    "description": "Choose a backup household administrator and give them a clear view of recurring obligations, contacts, records and upcoming household work.",
+    "h1": [
+      "Every important household system should have a second person who can find the map"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 6,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/household-documents-organizer/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/household-documents-organizer/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "How to Organize Household Documents Without Building a Giant Digital Junk Drawer",
+    "description": "Organize household documents by purpose, asset, property and responsibility so important records stay findable.",
+    "h1": [
+      "Household documents are easier to manage when the filing system mirrors real decisions"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 5,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/household-management-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/household-management-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Household Management Checklist: The Recurring Work Behind a Well-Run Home",
+    "description": "Use a household management checklist to map maintenance, documents, bills, tasks, supplies, emergency information and recurring responsibilities.",
+    "h1": [
+      "Household management is easier when responsibilities are visible"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 7,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/household-replacement-reserve/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/household-replacement-reserve/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Household Replacement Reserve: Plan for Known Big Purchases Without Pretending to Predict Them",
+    "description": "Build a household replacement reserve list from published appliance lifespan ranges and real repair history, without pretending to forecast exact failure dates or savings targets.",
+    "h1": [
+      "A replacement reserve is a list, not a forecast"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 7,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/household-supplies-inventory/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/household-supplies-inventory/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Household Supplies Inventory: Filters, Cleaning Products and Maintenance Consumables",
+    "description": "Track household consumables that matter for maintenance and continuity, such as compatible filters, bags and replacement parts.",
+    "h1": [
+      "A supplies inventory exists for items that have to match a specific machine — not for soap"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/how-to-track-product-warranties/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/how-to-track-product-warranties/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "How to Track Product Warranties and Warranty Claims | FamilyBoard",
+    "description": "Track written warranty terms, purchase evidence, product identity, service history, claim messages, delivery proof, responses and outcomes without treating a tracker as a coverage decision.",
+    "h1": [
+      "How to track product warranties: build the record before a claim becomes urgent"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/humidifier-maintenance-guide/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/humidifier-maintenance-guide/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Humidifier Maintenance Guide: The EPA's Every-Third-Day Cleaning Rule",
+    "description": "A real humidifier maintenance guide built on EPA cleaning guidance: daily tank care, the every-third-day deep clean, and the 50% humidity ceiling.",
+    "h1": [
+      "Humidifier maintenance guide: the EPA’s every-third-day rule, and why standing water is the actual risk"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.11,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/microwave-maintenance-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/microwave-maintenance-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Microwave Maintenance Checklist: Waveguide Cover, Turntable and Door Safety",
+    "description": "A real microwave maintenance checklist: waveguide-cover care, why running it empty causes damage, turntable troubleshooting and when door damage means stop using it.",
+    "h1": [
+      "Microwave maintenance checklist: the waveguide cover, the turntable and the door"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/monthly-home-maintenance-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/monthly-home-maintenance-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Monthly Home Maintenance Checklist: A 30-Minute Household Review",
+    "description": "Use a simple monthly home maintenance review to catch small issues, update records and keep recurring household work from piling up.",
+    "h1": [
+      "A monthly home maintenance checklist should take about 30 minutes, not a full day"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/moving-house-organizer/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/moving-house-organizer/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Moving House Organizer: Tasks, Utilities, Inventory, Documents and the First Week",
+    "description": "Organize a move by workstream: utilities, addresses, documents, box inventory, service providers, old-home closure and new-home setup.",
+    "h1": [
+      "A move is easier managed as workstreams than as one giant checklist"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 7,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/organize-pet-records/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/organize-pet-records/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "How to Organize Pet Records by Source, Pet Match and Care Handoff",
+    "description": "Build a private pet record index for microchip sources, vaccination evidence, veterinary instructions, travel and sitter handoffs.",
+    "h1": [
+      "Organize pet records without turning the shared care sheet into a medical file"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.047,
+    "is_html": true,
+    "incoming_links": 7,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/oven-maintenance-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/oven-maintenance-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Oven Maintenance Checklist: Self-Clean Frequency, Gasket Life and Gas Safety",
+    "description": "A real oven maintenance checklist: how often self-clean actually should run, why it ages the door gasket, and what's professional-only on a gas oven.",
+    "h1": [
+      "Oven maintenance checklist: what self-clean actually costs, and what gas rules out"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/photo-home-inventory/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/photo-home-inventory/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "How to Make a Photo Home Inventory Without Creating an Unsearchable Camera Roll",
+    "description": "Use room photos, item close-ups and structured labels to create a home inventory that remains searchable and useful later.",
+    "h1": [
+      "A photo home inventory is only as useful as your ability to find one photo again"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/power-outage-home-preparedness/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/power-outage-home-preparedness/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Power Outage Preparedness at Home | Build a Household Plan That Can Be Rechecked",
+    "description": "Prepare a home for power outages with verified contacts, offline information, power-dependent support plans, equipment records, safe evidence and a restoration review.",
+    "h1": [
+      "Power outage preparedness at home: build a plan the household can actually use"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/guides/power-outage-home-preparedness/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/guides/power-outage-home-preparedness/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/quarterly-home-maintenance-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/quarterly-home-maintenance-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Quarterly Home Maintenance Checklist: Review the Systems Monthly Checks Miss",
+    "description": "A quarterly household maintenance review for equipment records, recurring services, supplies, safety information and seasonal changes.",
+    "h1": [
+      "Quarterly maintenance is the bridge between monthly awareness and annual projects"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.093,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/renovation-records/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/renovation-records/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Renovation Records | Scope, Changes, Punch List and Warranties",
+    "description": "Build a renovation record that connects agreed scope, change orders, payments, dated observations, punch-list follow-up, products, warranties and tax evidence.",
+    "h1": [
+      "Renovation records should preserve the project chronology, not just the final photos"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.109,
+    "is_html": true,
+    "incoming_links": 7,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/robot-vacuum-maintenance-guide/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/robot-vacuum-maintenance-guide/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Robot Vacuum Maintenance Guide: Filter, Brush and Battery Intervals",
+    "description": "Real robot vacuum maintenance intervals: filter replacement every 2 months, brush cleaning weekly, and why the battery has its own separate lifespan.",
+    "h1": [
+      "Robot vacuum maintenance guide: filter, brushes and the battery that wears out on its own schedule"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.109,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/warranty-expiration/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/warranty-expiration/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Warranty Expiration: How to Track the Date Without Assuming Coverage",
+    "description": "Understand what actually starts a warranty clock, how long common product categories typically run, and why the calculated date is a planning aid, not a coverage decision.",
+    "h1": [
+      "A warranty expiration date answers “when,” not “what’s covered”"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/washing-machine-maintenance-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/washing-machine-maintenance-checklist/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Washing Machine Maintenance Checklist: Hoses, Gasket Mold and Drain Filter",
+    "description": "A washing machine maintenance checklist covering supply-hose replacement, gasket mold prevention and drain-filter cleaning, each with a real interval and source.",
+    "h1": [
+      "Washing machine maintenance checklist: the three failure points that actually cause trouble"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.11,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/water-heater-maintenance-records/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/water-heater-maintenance-records/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Water Heater Maintenance Records: Flush, Anode Rod and T&P Valve Intervals",
+    "description": "Water heater maintenance records with real intervals for tank flushing, anode rod inspection, T&P valve testing and expected lifespan, sourced from manufacturers.",
+    "h1": [
+      "Water heater maintenance records: the tasks that actually extend its life"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/guides/water-leak-response-home-records/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/guides/water-leak-response-home-records/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Guide",
+    "title": "Water Leak Response Records | A Safe Evidence and Follow-Up Workflow",
+    "description": "Build a household water leak record with safe observations, original evidence, verified notices, qualified findings, repair history and recovery follow-up.",
+    "h1": [
+      "Water leak response records: a safe evidence and follow-up workflow"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 11,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/templates/printable-annual-renewals/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/templates/printable-annual-renewals/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Printable Annual Renewals Calendar | Household Services, Insurance and Memberships",
+    "description": "Print a 12-month household renewal calendar for subscriptions, insurance references, memberships, registrations and recurring services.",
+    "h1": [
+      "Printable Annual Renewals Calendar"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/templates/printable-household-handoff-sheet/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/templates/printable-household-handoff-sheet/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Printable Household Handoff Sheet | Tasks, Contacts, Services and Upcoming Obligations",
+    "description": "Print a household handoff sheet with the next 30 days, recurring responsibilities, service contacts, pets, utilities and emergency references.",
+    "h1": [
+      "Printable Household Handoff Sheet"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/templates/printable-service-provider-list/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/templates/printable-service-provider-list/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Content",
+    "title": "Printable Home Service Provider List | Contractors and Household Contacts",
+    "description": "Print a household service-provider list with trade, company, contact, prior work and related home system.",
+    "h1": [
+      "Printable Home Service Provider List"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/annual-subscription-cost-calculator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/annual-subscription-cost-calculator/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Annual Subscription Cost Calculator | Convert Monthly, Weekly or Quarterly Pricing",
+    "description": "Convert a recurring subscription price into its approximate yearly cost and compare billing frequencies clearly.",
+    "h1": [
+      "Annual Subscription Cost Calculator"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/annual-subscription-cost-calculator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/annual-subscription-cost-calculator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/annual-subscription-cost-calculator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/appliance-age-calculator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/appliance-age-calculator/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Free Appliance Age Calculator | Calculate Age from Purchase or Installation Date",
+    "description": "Calculate the known age of an appliance from its purchase or installation date and save the result with repair and warranty history.",
+    "h1": [
+      "Appliance Age Calculator"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/appliance-age-calculator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/appliance-age-calculator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/appliance-age-calculator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/emergency-contact-sheet-generator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/emergency-contact-sheet-generator/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Free Emergency Contact Sheet Generator | Household, Utility and Care Contacts",
+    "description": "Create a printable emergency contact sheet with household members, nearby support, utilities, care contacts and a last-reviewed date.",
+    "h1": [
+      "Emergency Contact Sheet Generator"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/emergency-contact-sheet-generator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/emergency-contact-sheet-generator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/home-inventory-checklist-generator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/home-inventory-checklist-generator/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Free Home Inventory Checklist Generator | Room-by-Room Starter List",
+    "description": "Generate a selective room-by-room home inventory checklist for appliances, electronics, furniture, tools and valuable household items.",
+    "h1": [
+      "Home Inventory Checklist Generator"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/home-maintenance-cost-tracker/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/home-maintenance-cost-tracker/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Free Home Maintenance Cost Tracker | Repairs, Service and Planned Work",
+    "description": "Track actual household maintenance, repair and replacement spending by date, asset and category without linking bank accounts.",
+    "h1": [
+      "Home Maintenance Cost Tracker"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/home-maintenance-cost-tracker/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/home-maintenance-cost-tracker/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/house-sitter-instruction-generator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/house-sitter-instruction-generator/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Free House Sitter Instructions Generator | Home, Pets, Contacts and Daily Tasks",
+    "description": "Generate a limited house-sitter packet with daily responsibilities, contacts, pets, deliveries and escalation steps without exposing unrelated household data.",
+    "h1": [
+      "House Sitter Instructions Generator"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.125,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/household-annual-review-generator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/household-annual-review-generator/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Household Annual Review Generator | Maintenance, Renewals, Records and Backups",
+    "description": "Create a customized annual household review for assets, maintenance, warranties, subscriptions, contacts, emergency information and backups.",
+    "h1": [
+      "Household Annual Review Generator"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.125,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/household-subscription-cost-calculator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/household-subscription-cost-calculator/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Household Subscription Cost Calculator | Monthly and Annual Total",
+    "description": "Add household subscriptions with monthly, annual or custom billing cycles and see the normalized monthly and yearly total.",
+    "h1": [
+      "Household Subscription Cost Calculator"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/household-subscription-cost-calculator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/household-subscription-cost-calculator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 9,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/tools/pet-sitter-instruction-generator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/tools/pet-sitter-instruction-generator/",
+    "in_sitemap": true,
+    "language": "en",
+    "page_type": "Tool",
+    "title": "Free Pet Sitter Instructions Generator | Routine, Supplies and Vet Contacts",
+    "description": "Create a pet-sitter care sheet with user-entered feeding, routine, supplies, veterinarian contacts and emergency escalation information.",
+    "h1": [
+      "Pet Sitter Instructions Generator"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/about/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/about/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "關於 FamilyBoard｜免費、免帳號的家庭管理與紀錄工具",
+    "description": "了解 FamilyBoard 為什麼把家庭資產、保養、任務、文件與交接放在同一個本機優先工作區，以及公開內容網站的方向。",
+    "h1": [
+      "關於 FamilyBoard：讓家庭重要資訊有一個找得到的地方"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/about/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/about/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/about/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/affiliate-disclosure/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/affiliate-disclosure/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "FamilyBoard 聯盟行銷揭露｜推薦標示、佣金與編輯獨立原則",
+    "description": "了解 FamilyBoard 未來如何標示聯盟商品、佣金是否影響售價與文章內容、哪些位置不放推薦，以及點擊前應自行確認的事項。",
+    "h1": [
+      "FamilyBoard 聯盟行銷揭露：先讓你知道連結如何支持網站"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/affiliate-disclosure/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/affiliate-disclosure/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/affiliate-disclosure/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/app/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": false,
+    "robots_allowed": true,
+    "meta_robots": "noindex,follow",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/app/",
+    "in_sitemap": false,
+    "language": "zh-TW",
+    "page_type": "Private App",
+    "title": "FamilyBoard App 繁體中文版｜免費本機家庭管理工具",
+    "description": "在免費、免帳號的本機優先 App 中整理家庭資產、保養、保固、訂閱、任務、緊急聯絡人與交接摘要。",
+    "h1": [
+      "不用註冊帳號，立即建立家庭工作區。"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/app/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/app/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/app/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 34,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "NOINDEX",
+    "reason": "source policy classification required; do not bulk remove"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/changelog/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/changelog/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "FamilyBoard 更新紀錄｜功能、資料耐久性與內容改進",
+    "description": "查看 FamilyBoard 真實發布、資料遷移、備份還原、繁中介面與公開內容的更新，不虛構尚未發生的版本。",
+    "h1": [
+      "FamilyBoard 更新紀錄：只記錄已完成且可驗證的改變"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/changelog/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/changelog/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/changelog/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/checklists/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/checklists/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "可列印家庭檢查表｜居家保養、搬家、緊急與交接清單｜FamilyBoard",
+    "description": "瀏覽 FamilyBoard 繁中可列印家庭檢查表，涵蓋每月與季節保養、緊急資料夾、搬家、看家、寵物照護、家務與家庭交接。",
+    "h1": [
+      "繁中可列印家庭檢查表：把今天要做的事寫成能交接的清單"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/checklists/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/checklists/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/checklists/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/checklists/year-end-cleaning-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/checklists/year-end-cleaning-checklist/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "年終大掃除清單：春節前 3 週的安全分工與回收流程",
+    "description": "依環境部、地方清潔隊與經濟部官方資料，按春節前三週安排廚房、浴室、客廳、臥室、陽台、冷氣與除濕機清潔，附 A4 列印表與安全界線。",
+    "h1": [
+      "年終大掃除清單：不要把三週工作壓成一天"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 6,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/contact/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/contact/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "聯絡 FamilyBoard｜錯誤回報、內容更正、無障礙與資安通報",
+    "description": "用繁體中文回報 FamilyBoard 功能錯誤、內容更正、無障礙問題、隱私疑慮或安全漏洞；包含需提供與不可公開的資料。",
+    "h1": [
+      "聯絡 FamilyBoard：先選對回報管道，也保護自己的家庭資料"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/contact/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/contact/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/contact/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/disclaimer/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/disclaimer/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "FamilyBoard 家庭資訊免責聲明｜工具、維修與安全建議的使用界線",
+    "description": "了解 FamilyBoard 家庭管理、維修、緊急、法律、醫療與保險資訊的限制，避免把工具結果當成檢查或認證。",
+    "h1": [
+      "FamilyBoard 家庭資訊免責聲明：整理工具不是現場判斷"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/disclaimer/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/disclaimer/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/disclaimer/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/editorial-policy/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/editorial-policy/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "FamilyBoard 編輯政策｜內容來源、AI 協助與更正流程",
+    "description": "了解 FamilyBoard 如何規劃、撰寫、查核與更新家庭管理內容，以及如何回報錯誤與避免模板頁。",
+    "h1": [
+      "FamilyBoard 編輯政策：每一頁都要回答一個真實的家庭問題"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/editorial-policy/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/editorial-policy/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/editorial-policy/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/features/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/features/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "FamilyBoard 功能總覽｜資產、保養、保固、任務與家庭交接",
+    "description": "用台灣家庭真正會遇到的情境，逐一了解 FamilyBoard 的今日總覽、資產、保養、保固、訂閱、任務、緊急資訊、文件、交接與顯示模式。",
+    "h1": [
+      "FamilyBoard 功能總覽：把家庭管理分成看得懂、接得起來的工作"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/features/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/features/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/features/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/guides/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/guides/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Guide",
+    "title": "家庭管理指南｜居家保養、家電紀錄、文件與交接教學｜FamilyBoard",
+    "description": "從台灣家庭常見的居家保養、家電清冊、文件整理、緊急交接與日常分工開始，找到適合下一個家庭工作的繁中 FamilyBoard 指南。",
+    "h1": [
+      "繁中家庭管理指南：從下一個真實工作開始整理"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/guides/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/guides/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/guides/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/guides/emergency-supply-inventory/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/guides/emergency-supply-inventory/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Guide",
+    "title": "緊急避難包清單怎麼整理｜台灣家庭物資盤點與複查指南",
+    "description": "依臺灣全民安全指引與消防署資料，分開居家儲備和緊急避難包，逐項整理水食、衛生、生活防災、照護需求、存放、期限及複查。",
+    "h1": [
+      "緊急避難包清單怎麼整理：從台灣官方指引變成家裡真的拿得走的物資"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 7,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/guides/home-care-service-complaint-resolution/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/guides/home-care-service-complaint-resolution/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Guide",
+    "title": "居家服務怎麼申訴？服務單位回覆、1966、地方主管機關、調處與改善結果指南",
+    "description": "台灣居家服務申訴實務指南：先處理安全，再分辨詢問、服務單位申訴、給付異議、1966、地方主管機關陳情與調處，追蹤回覆及真正改善。",
+    "h1": [
+      "居家服務怎麼申訴？服務單位回覆、1966、地方主管機關、調處與改善結果指南"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.125,
+    "is_html": true,
+    "incoming_links": 6,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/guides/home-maintenance-schedule/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/guides/home-maintenance-schedule/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Guide",
+    "title": "居家保養排程怎麼做？台灣家庭可執行的建立方法",
+    "description": "從實際設備、原廠說明書、風險與季節建立居家保養排程；包含台灣家庭適用的欄位、範例、安全界線與官方來源。",
+    "h1": [
+      "居家保養排程怎麼做？先從你家真的有的設備開始"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 32,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/guides/move-out-home-records/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/guides/move-out-home-records/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Guide",
+    "title": "退租點交注意事項｜台灣租屋屋況、押金與資料交接流程",
+    "description": "從租約與搬入現況開始，按退租前、共同點交與點交後三階段整理台灣租屋屋況照片、鑰匙、表計、費用、押金與隱私資料。",
+    "h1": [
+      "退租點交注意事項：把搬離住宅變成可核對、可結案的流程"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 6,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/guides/organize-utility-account-information/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/guides/organize-utility-account-information/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Guide",
+    "title": "水電過戶怎麼整理？搬家結清、戶名、停電報修與電信申訴清單",
+    "description": "台灣家庭水電瓦斯與網路帳務整理教學：分清供應單位、戶名責任、搬家結算、停電報修、安全入口與電信申訴證據。",
+    "h1": [
+      "水電過戶怎麼整理？先分清供應單位、戶名、結算與安全入口"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 6,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/guides/power-outage-home-preparedness/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Guide",
+    "title": "停電怎麼準備？台灣家庭停電前、進行中與復電後完整指南",
+    "description": "依台電與官方安全資料，整理台灣家庭停電準備：1911 與官方查詢、社區大樓、冰箱、需電力照護、照明通訊、復電複查與事件紀錄。",
+    "h1": [
+      "停電怎麼準備：台灣家庭需要的不是購物清單，而是一套可查證流程"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/guides/power-outage-home-preparedness/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/guides/power-outage-home-preparedness/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/guides/storm-preparation-home-checklist/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/guides/storm-preparation-home-checklist/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Guide",
+    "title": "颱風來了家裡要準備什麼？台灣家庭防颱清單與分工指南",
+    "description": "依氣象署、消防署、水利署、地方政府與台電資訊，整理台灣家庭防颱準備：查警報、辨識淹水與坡地資訊、分工、物資、停電及逐項複查。",
+    "h1": [
+      "颱風來了家裡要準備什麼：台灣家庭要先對官方資訊，再做清單"
+    ],
+    "hreflang": [],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 8,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/pricing/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/pricing/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "FamilyBoard 免費使用｜免帳號、免付款、沒有付費功能門檻",
+    "description": "FamilyBoard 是免費的 local-first 家庭管理工具，公開指南、工具、範本與本機 App 不需要註冊、結帳或訂閱。",
+    "h1": [
+      "FamilyBoard 免費使用：先把家庭工作整理好，不先要求付款"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/pricing/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/pricing/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/pricing/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/privacy/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/privacy/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "FamilyBoard 隱私權政策｜家庭資料不上傳、Cookie 與網站分析說明",
+    "description": "了解 FamilyBoard 公開網站與私密 App 的資料界線、GA4 與 Cookie、瀏覽器本機儲存、備份、聯盟連結及未來廣告原則。",
+    "h1": [
+      "FamilyBoard 隱私權政策：公開網站與私密 App 是兩個不同空間"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/privacy/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/privacy/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/privacy/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/roadmap/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/roadmap/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "FamilyBoard 產品路線圖｜免費 local-first App、工具與內容方向",
+    "description": "查看 FamilyBoard 免費產品目前的改善方向：備份還原、家庭交接、無障礙、離線可靠性、繁中內容與公開工具；路線圖不承諾日期。",
+    "h1": [
+      "FamilyBoard 路線圖：先讓家庭資料可靠，再增加表面上的功能量"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/roadmap/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/roadmap/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/roadmap/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/security/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/security/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "FamilyBoard 資安與本機優先架構｜備份加密、裝置風險與漏洞通報",
+    "description": "了解 FamilyBoard 如何在瀏覽器保存家庭資料、加密備份使用的技術、裝置與分享畫面的安全界線，以及正確的私人漏洞通報方式。",
+    "h1": [
+      "FamilyBoard 資安說明：本機優先減少資料集中，但不等於沒有風險"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/security/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/security/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/security/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.078,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/templates/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/templates/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "繁中家庭範本中心｜可列印清單、交接表與紀錄工作表",
+    "description": "瀏覽 FamilyBoard 繁中家庭範本：聯絡、服務商、緊急、家電、保固、修繕、搬家與交接表，先選一張真正會使用的紙。",
+    "h1": [
+      "繁中家庭範本中心：先選一張真的會被拿起來使用的紙"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/templates/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/templates/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/templates/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/terms/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/terms/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Content",
+    "title": "FamilyBoard 使用條款｜免費 App、工具、家庭資料與內容使用規則",
+    "description": "閱讀 FamilyBoard 免費網站、本機優先 App、計算器、產生器與列印表單的使用界線、備份責任、可接受使用方式及第三方連結說明。",
+    "h1": [
+      "FamilyBoard 使用條款：免費工具很實用，但仍有清楚的責任界線"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/terms/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/terms/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/terms/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/tools/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/tools/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Tool",
+    "title": "免費家庭管理工具｜保固、保養、備份與交接計算器｜FamilyBoard",
+    "description": "瀏覽 FamilyBoard 免費繁中家庭工具：保固到期、保養排程、訂閱費用、事件時間、日期偏移、備份檢查與交接紀錄，全部在瀏覽器完成。",
+    "h1": [
+      "免費家庭管理工具：先解決一個小問題，再留下可查證的結果"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/tools/annual-subscription-cost-calculator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/tools/annual-subscription-cost-calculator/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Tool",
+    "title": "訂閱年成本計算器｜每 4 週、月繳與促銷轉正價",
+    "description": "免費換算單一訂閱的月均與年化成本，分清每週、每 4 週、每月、季度和年繳，並比較免費試用或促銷結束後標準價。",
+    "h1": [
+      "訂閱年成本計算器"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/annual-subscription-cost-calculator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/annual-subscription-cost-calculator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/annual-subscription-cost-calculator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/tools/appliance-age-calculator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/tools/appliance-age-calculator/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Tool",
+    "title": "家電年齡計算器｜用購買日或安裝日算使用年數",
+    "description": "輸入家電購買日或安裝日，免費計算目前使用幾年幾個月；分清精確與約略日期，不把年齡誤當故障預測。",
+    "h1": [
+      "家電年齡計算器"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/appliance-age-calculator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/appliance-age-calculator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/appliance-age-calculator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/tools/emergency-contact-sheet-generator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Tool",
+    "title": "家庭緊急聯絡表產生器｜台灣 110、119、112 與自訂電話",
+    "description": "免費產生可列印的家庭緊急聯絡表，整理台灣 110、119、112、家人、社區、公用事業與照護聯絡方式。",
+    "h1": [
+      "家庭緊急聯絡表產生器"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/emergency-contact-sheet-generator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/emergency-contact-sheet-generator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/tools/home-maintenance-cost-tracker/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Tool",
+    "title": "居家維護費用追蹤器｜台幣彙總已完成與已規劃支出",
+    "description": "逐筆輸入日期、居家維護項目、費用與狀態，免費加總已完成及已規劃支出；支援台幣且不連接銀行帳戶。",
+    "h1": [
+      "居家維護費用追蹤器"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/home-maintenance-cost-tracker/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/home-maintenance-cost-tracker/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/tools/home-maintenance-schedule-generator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Tool",
+    "title": "免費居家保養排程產生器｜依設備建立家庭維護清單",
+    "description": "輸入家中實際設備、負責人與複查日期，產生可列印的居家保養起始排程；適合台灣自宅、公寓與租屋家庭。",
+    "h1": [
+      "免費居家保養排程產生器"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/home-maintenance-schedule-generator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/home-maintenance-schedule-generator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.094,
+    "is_html": true,
+    "incoming_links": 33,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/tools/household-subscription-cost-calculator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Tool",
+    "title": "家庭訂閱費用計算器｜台幣月均與年度總額免費換算",
+    "description": "輸入影音、雲端、會員或其他家庭訂閱，將每週、每月、每季與每年扣款換算成月均與年度總額；資料不上傳。",
+    "h1": [
+      "家庭訂閱費用計算器"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/household-subscription-cost-calculator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/household-subscription-cost-calculator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.047,
+    "is_html": true,
+    "incoming_links": 10,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  },
+  {
+    "site": "127.0.0.1:4434",
+    "url": "http://127.0.0.1:4434/zh-tw/tools/warranty-expiration-calculator/",
+    "http_status": 200,
+    "fetch_error": null,
+    "indexable": true,
+    "robots_allowed": true,
+    "meta_robots": "index,follow,max-image-preview:large",
+    "x_robots": "",
+    "canonical": "https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/",
+    "in_sitemap": true,
+    "language": "zh-TW",
+    "page_type": "Tool",
+    "title": "免費保固到期日計算器｜購買日加保固月數",
+    "description": "輸入購買或保固起算日、保固月數與提前複查天數，計算預估到期日；包含月底日期規則、台灣保證書重點與限制。",
+    "h1": [
+      "免費保固到期日計算器"
+    ],
+    "hreflang": [
+      {
+        "language": "en",
+        "url": "https://familyboard.win/tools/warranty-expiration-calculator/"
+      },
+      {
+        "language": "zh-TW",
+        "url": "https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/"
+      },
+      {
+        "language": "x-default",
+        "url": "https://familyboard.win/tools/warranty-expiration-calculator/"
+      }
+    ],
+    "location": "",
+    "refresh": "",
+    "content_type": "text/html; charset=utf-8",
+    "response_seconds": 0.062,
+    "is_html": true,
+    "incoming_links": 11,
+    "crawl_depth": 2,
+    "bing_status": "UNKNOWN (supplied aggregate only)",
+    "recommended_state": "KEEP_INDEXABLE",
+    "reason": "current HTTP/robots eligibility; quality and search indexing separate"
+  }
+]
