@@ -1091,7 +1091,7 @@
     "route": "/guides/household-management-checklist/",
     "alternateRoute": "/zh-tw/guides/household-management-checklist/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-10-19",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1627,7 +1627,7 @@
     "route": "/checklists/printable-moving-checklist/",
     "alternateRoute": "/zh-tw/checklists/printable-moving-checklist/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-10-19",
     "locale": "en",
     "redirectTo": ""
   },

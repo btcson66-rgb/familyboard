@@ -1,5 +1,26 @@
 import { useMemo } from "react";
 
+const movingTasks = [
+  ["6–8 weeks", "Confirm move date, key collection and handover"],
+  ["6–8 weeks", "Check notice requirements and building access"],
+  ["6–8 weeks", "Confirm transport, scope and arrival contacts"],
+  ["6–8 weeks", "Start room inventory and label boxes"],
+  ["2–4 weeks", "Confirm utility and internet stop/start dates"],
+  ["2–4 weeks", "Arrange relevant address changes"],
+  ["2–4 weeks", "Pack nonessentials; separate important documents"],
+  ["2–4 weeks", "Arrange care for pets or children if needed"],
+  ["Final week", "Reconfirm access, arrival times and keys"],
+  ["Final week", "Pack medicines, chargers and first-night supplies"],
+  ["Final week", "Label equipment parts and photograph connections"],
+  ["Final week", "Export backup and keep a separate copy"],
+  ["Moving day", "Photograph condition; note applicable meter readings"],
+  ["Moving day", "Check cupboards and count boxes"],
+  ["Moving day", "Record returned keys and handover confirmation"],
+  ["First week", "Confirm services and check arriving items"],
+  ["First week", "Save appliance records and update contacts"],
+  ["First week", "Check final bills and export updated backup"],
+];
+
 const columnsByRoute: Array<[RegExp, string[]]> = [
   [
     /printable-home-inventory-template/,
@@ -101,8 +122,13 @@ export default function PrintableSheet({
       ],
     [route],
   );
+  const isMovingChecklist = route === "/checklists/printable-moving-checklist/";
+  const rows = isMovingChecklist
+    ? [...movingTasks.map(([when, task]) => [when, task, "", "", "☐"]),
+      ...Array.from({ length: 3 }, () => columns.map(() => ""))]
+    : Array.from({ length: 10 }, () => columns.map(() => ""));
   return (
-    <section className="printable" aria-labelledby="printable-heading">
+    <section className={isMovingChecklist ? "printable moving-checklist" : "printable"} aria-labelledby="printable-heading">
       <div className="no-print">
         <span className="card-tag">Printable worksheet</span>
         <h2 id="printable-heading">Make a clean paper or PDF copy</h2>
@@ -116,8 +142,10 @@ export default function PrintableSheet({
       <p>
         Household: ____________________ &nbsp; Review date: ____________________
       </p>
+      {isMovingChecklist && <p>Move date: ____________________ · Adapt this suggested timeline to your agreements. Keep passwords and access codes off shared copies.</p>}
       <div className="printable-table" tabIndex={0} role="region" aria-label="Printable worksheet columns">
         <table>
+          {isMovingChecklist && <colgroup><col style={{ width: "15%" }} /><col style={{ width: "37%" }} /><col style={{ width: "13%" }} /><col style={{ width: "25%" }} /><col style={{ width: "10%" }} /></colgroup>}
           <thead>
             <tr>
               {columns.map((column) => (
@@ -128,13 +156,11 @@ export default function PrintableSheet({
             </tr>
           </thead>
           <tbody>
-            {Array.from({ length: 10 }, (_, row) => (
+            {rows.map((cells, row) => (
               <tr key={row}>
-                {columns.map((column) => (
+                {columns.map((column, index) => (
                   <td key={column}>
-                    &nbsp;
-                    <br />
-                    &nbsp;
+                    {cells[index] || <>&nbsp;<br />&nbsp;</>}
                   </td>
                 ))}
               </tr>

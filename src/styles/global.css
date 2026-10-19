@@ -693,6 +693,7 @@ textarea {
 }
 
 @media print {
+  .skip-link,
   .site-header,
   .site-footer,
   .breadcrumbs,

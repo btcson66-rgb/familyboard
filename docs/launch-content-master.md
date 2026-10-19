@@ -9822,13 +9822,16 @@ Ask the backup person to actually find three things: a specific service contact,
 **Meta description:** `Use a household management checklist to map maintenance, documents, bills, tasks, supplies, emergency information and recurring responsibilities.`
 **Primary keyword concept:** household management checklist
 **Depth:** verified
+**Editorial review date:** 2026-10-19
 **Suggested internal links:** `/tools/household-annual-review-generator/`, `/guides/family-chore-system/`, `/guides/divide-household-responsibilities/`, `/features/home-dashboard/`
 
-# Household management is easier when responsibilities are visible
+# Household management checklist: weekly, monthly and quarterly tasks
 
 A home does not run on one system. It runs on five small ones — equipment, documents, recurring money, supplies and continuity — each with its own rhythm. "Stay organized" is not a checklist. Below is the actual one: the categories, the specific items inside each, and the review cadence that keeps each from going stale.
 
 ## The checklist, by category
+
+<section tabindex="0" aria-label="Household management categories" style="max-width:100%;overflow-x:auto">
 
 | Category | What belongs in it | Review cadence |
 |---|---|---|
@@ -9837,6 +9840,36 @@ A home does not run on one system. It runs on five small ones — equipment, doc
 | Recurring money | Subscriptions, recurring bills, and annual renewals — tracked as three separate records, not one | Monthly for bills, quarterly for subscriptions, annually for renewals |
 | Supplies & routines | The chore system, shared shopping staples, pet or childcare routines | Weekly |
 | People & continuity | The household contact list, the account-and-service index, a named backup person for critical responsibilities | After any change of provider, address or household member |
+
+</section>
+
+## A practical recurring checklist
+
+The timing below is a suggested starting routine, not a safety or legal maintenance schedule. Equipment manuals, actual due dates and your household's needs take priority.
+
+### Each week: keep the next seven days visible
+
+- [ ] Review upcoming appointments and household tasks; name the person responsible for each.
+- [ ] Check shared supplies before shopping and remove duplicate purchases from the list.
+- [ ] Confirm arrangements for children, pets or a visitor when they apply.
+- [ ] Close completed tasks and move unfinished ones to a date someone has agreed to own.
+
+### Each month: check deadlines and changed records
+
+- [ ] Review the next bill and renewal dates; confirm who will act before each deadline.
+- [ ] Compare current subscriptions with actual household use using the [subscription cost calculator](/tools/household-subscription-cost-calculator/).
+- [ ] Check maintenance tasks due for the equipment you actually own.
+- [ ] Add receipts and model details for new purchases to the [home inventory template](/templates/printable-home-inventory-template/).
+- [ ] Export a fresh backup after important record changes and store a copy separately from this browser.
+
+### Each quarter: make sure someone else can find the essentials
+
+- [ ] Review provider contacts and document locations after any change.
+- [ ] Check whether a named backup person knows the next essential responsibilities.
+- [ ] Remove obsolete records and resolve tasks that have no owner.
+- [ ] Use the [household handoff sheet](/templates/printable-household-handoff-sheet/) for practical instructions; keep passwords and sensitive codes separately.
+
+For example, an internet renewal can be a single task: “Alex checks the current plan before 15 November; provider reference is in the private account index.” This gives a person, an action, a deadline and a record location without exposing credentials. A serial number, by contrast, stays a reference record until the appliance changes. Start with five responsibilities that currently get missed, then expand only when the routine works.
 
 ## Why "recurring money" is three records, not one
 
@@ -13329,48 +13362,91 @@ The decision date may be more important than the payment date. Give the househol
 
 ## Page 198 — Printable Moving Checklist
 **Slug:** `/checklists/printable-moving-checklist/`
-**Primary intent:** print a moving-house checklist
-**Title tag:** `Printable Moving Checklist | Utilities, Inventory, Documents and New-Home Setup`
-**Meta description:** `Print a moving checklist divided into timeline, utilities, inventory, documents, old-home closure and new-home setup.`
+**Primary intent:** download and print a moving timeline with assigned tasks
+**Title tag:** `Free Printable Moving Checklist (PDF & CSV) | FamilyBoard`
+**Meta description:** `Download a free moving checklist PDF or editable CSV. Plan an 8-week move, transfer utilities, pack first-night essentials and record the handover. No signup.`
 **Primary keyword concept:** printable moving checklist
-**Suggested internal links:** `/guides/moving-house-organizer/`, `/guides/moving-inventory/`, `/tools/move-in-checklist-generator/`, `/guides/move-out-home-records/`
+**Depth:** verified
+**Editorial review date:** 2026-10-19
+**Suggested internal links:** `/guides/moving-house-organizer/`, `/templates/printable-home-inventory-template/`, `/checklists/printable-new-home-checklist/`, `/templates/printable-household-handoff-sheet/`
 
-# Printable Moving Checklist
+# Free printable moving checklist: an 8-week plan
 
-Use the table as a compact ownership view, then use the detailed sections below to make sure no stage is skipped.
+Download the **[moving checklist PDF](/downloads/familyboard-moving-checklist.pdf)** for a ready-to-print task list, or the **[editable CSV worksheet](/downloads/familyboard-moving-checklist.csv)** to assign owners and dates in Excel, Google Sheets or another spreadsheet. Both are free and require no account or email address. The PDF includes the core moving tasks plus space for your own; the CSV is a blank five-column planning sheet.
 
-| When / 時程 | Task / 工作 | Owner / 負責人 | Contact / account / 聯絡／帳戶 | Complete / 完成 |
-|---|---|---|---|---|
-| | | | | |
-| | | | | |
-| | | | | |
+This is a household planning sequence, not a required notice period. Start earlier if you need to sell a home, arrange accessibility support or move internationally. With a shorter deadline, keep the same order and give service transfers and access arrangements priority over nonessential packing.
 
-### Before the move
-- [ ] Confirm move/closing/lease timeline.
-- [ ] Book moving/transport help if needed.
-- [ ] Plan utility/service start and stop dates.
-- [ ] Create box/room ID system.
-- [ ] Back up household records.
+## How to use the checklist
 
-### Final week
-- [ ] Prepare essential first-night items.
-- [ ] Confirm keys/access process.
-- [ ] Photograph/document condition where relevant.
-- [ ] Separate important documents from moving boxes.
+Write the move date at the top, cross out tasks that do not apply, and assign one owner per task. A task is complete when its result is confirmed: for example, an internet installation appointment has a confirmation number, rather than merely a request sent. Keep the paper with your first-night bag instead of inside a moving box.
 
-### Old home closeout
-- [ ] Close/transfer location-specific services.
-- [ ] Record final condition/hand-off documents.
-- [ ] Archive old-home records.
+Use a separate private note for account details. On a sheet that movers, visitors or building staff may see, record a service name and the location of the private record rather than passwords, entry codes or complete account numbers. Keep a second copy of important records somewhere you can access if your phone or laptop is unavailable.
 
-### New home first week
-- [ ] Verify utilities and key contacts.
-- [ ] Add major appliances/systems.
-- [ ] Create initial maintenance records.
-- [ ] Update household address/contact sheet.
-- [ ] Export a new backup after setup.
+## 6–8 weeks before: settle dates and responsibilities
 
-**CTA:** Use the moving organizer when you need deadlines and box inventory in one live dashboard.
+- [ ] Confirm the moving date, key collection and old-home handover with the people involved.
+- [ ] Check your lease or purchase paperwork for the actual notice and access requirements.
+- [ ] Decide who packs, transports and carries fragile or heavy items; confirm the scope in writing with any provider you hire.
+- [ ] Check lift reservations, parking and building access at both addresses.
+- [ ] Start a room-by-room [home inventory](/templates/printable-home-inventory-template/); mark items to keep, donate or dispose of.
+
+Photograph valuable items before packing and give each box an identifier such as K-01 for kitchen or B-01 for bedroom. Put the identifier on the top and a side, then use the same code in your inventory. A box list works best when another person can match the label to a destination room without opening it.
+
+## 2–4 weeks before: services, records and packing
+
+- [ ] Arrange utility and internet stop/start dates; record each provider's confirmation.
+- [ ] Check address changes with relevant providers, employers and official services for your location.
+- [ ] Pack nonessential items and mark destination rooms clearly.
+- [ ] Separate lease or purchase documents, receipts, keys and essential personal records from shipment boxes.
+- [ ] Make arrangements for pets, children or anyone needing support on moving day.
+
+Do not assume every provider transfers an existing account automatically. Record which address the final bill relates to and who will check it. If service at the old address must stay active through the handover, confirm the stop date rather than cancelling when packing begins. For a fuller record of responsibilities, use the [moving-house organizer](/guides/moving-house-organizer/).
+
+## Final week: prepare what travels with you
+
+- [ ] Reconfirm arrival times, access contacts and key collection.
+- [ ] Pack a first-night bag: medicines, chargers, toiletries, clothing, water and basic food.
+- [ ] Add bedding, towels, toilet paper and simple cleaning supplies to an accessible essentials box.
+- [ ] Photograph cable connections and label detachable parts before packing equipment.
+- [ ] Export a FamilyBoard backup and copy it to a separate location you control.
+
+Mark the essentials box distinctly and decide who carries it. If your new home will not have internet immediately, keep access instructions and key contact numbers available offline. FamilyBoard records stay in the current browser by default; signing into a browser on a new device does not create a FamilyBoard cloud restore.
+
+## Moving day: old-home handover
+
+- [ ] Photograph the empty rooms and record meter readings where applicable.
+- [ ] Check cupboards, storage spaces and the area around large appliances for forgotten items.
+- [ ] Record which keys or access devices were returned, to whom and when.
+- [ ] Compare the box count with the inventory before transport leaves.
+- [ ] Keep the handover confirmation with your move documents.
+
+Where condition or service responsibility matters, retain the dated record and confirm the process with the property contact. This worksheet does not determine deposit rights, legal notice periods or insurance coverage; the agreement and official local process control those questions.
+
+## First week in the new home
+
+- [ ] Confirm utilities, internet arrangements and the main property contact.
+- [ ] Match arriving boxes to your list and note missing or damaged items promptly.
+- [ ] Save appliance model details, manuals and existing maintenance information.
+- [ ] Update the household contact sheet and the next review dates.
+- [ ] Check final old-address bills, then export a fresh backup of updated records.
+
+Use the [new-home checklist](/checklists/printable-new-home-checklist/) for setup tasks after the move. If someone else will help manage the household, put current responsibilities and contact locations on a [household handoff sheet](/templates/printable-household-handoff-sheet/), with sensitive details kept separately.
+
+## Adapt the plan to your household
+
+For renters, add landlord communications and the agreed inspection. For homeowners, add the contacts and documents needed for the handover. For a small local move, some transport tasks can be combined, but keep records, keys and essential supplies independently accessible. The blank worksheet columns are **when, task, owner, contact/reference and complete**; use them for the tasks specific to your home rather than copying every suggestion uncritically.
+
+**Contextual CTA:** Download the checklist, assign one owner to each applicable task and export a backup before changing devices or clearing browser storage.
+
+**FAQ:**
+- Q: Is the printable moving checklist really free?
+  A: Yes. The PDF and CSV downloads require no account, email address or payment. The PDF contains moving tasks and space for personal additions; the CSV is a blank planning worksheet for your own dates and owners. You can use either without putting household records in FamilyBoard.
+- Q: What is the difference between the PDF and CSV?
+  A: The PDF is a ready-to-print moving task list organized by stage. The CSV is an editable five-column sheet for timing, tasks, owners, contact references and completion. Open the CSV in a spreadsheet when you need to customize responsibilities; download the PDF when you want the prepared checklist on paper.
+- Q: Can I use this checklist if I only have one week to move?
+  A: Yes. Compress the earlier stages, confirm access and service dates first, and keep essentials and documents out of shipment boxes. The suggested eight-week sequence is a planning aid, not a required notice period. Your lease, provider arrangements and local requirements determine the actual deadlines you must meet.
+- Q: Will FamilyBoard transfer my household records to a new device automatically?
+  A: No. Core records are stored in the current browser, and FamilyBoard has no household cloud account. Export a backup, keep a copy in a separate location you control, and restore it in the destination browser. Check the restored records before relying on the new device or clearing the old one.
 
 ---
 
