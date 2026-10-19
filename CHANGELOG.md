@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.0 — 2026-10-19
+
+Make the existing moving checklist deliver a ready-to-print, staged task list instead of only an empty worksheet. Keep the editable CSV as a blank planning sheet and explain the difference. Expand the household management guide with weekly, monthly and quarterly actions and add direct homepage paths to both resources. Preserve the 109 indexable URLs, privacy boundaries and existing search experiments. Search visibility remains pending GSC observation.
+
 ## 1.7.1 — 2026-09-24
 
 Replace all 17 floating `latest` dependency specifiers with exact locked versions and update Astro plus vulnerable transitive packages. Both full and production-only `npm audit` now report zero vulnerabilities. The generated HTML route set (1,026 paths), sitemap XML (11 identical files) and robots meta are unchanged from v1.7.0; Phase 4 adds no SEO route or content changes.

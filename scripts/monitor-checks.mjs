@@ -7456,7 +7456,7 @@ export const checks = [
   },
   {
     path: "/checklists/printable-moving-checklist/",
-    require: ["Printable Moving Checklist", "Before the move"],
+    require: ["Free Printable Moving Checklist", "6–8 weeks before", "/downloads/familyboard-moving-checklist.pdf", "Confirm utility and internet stop/start dates"],
   },
   {
     path: "/zh-tw/checklists/printable-moving-checklist/",
