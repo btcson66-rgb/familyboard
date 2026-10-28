@@ -1,6 +1,6 @@
 ---
-title: "Private Home Inventory Tracker for Appliances, Electronics and Household Assets | FamilyBoard"
-description: "Create a practical home inventory with model numbers, serial numbers, purchase details, warranties, maintenance and local records."
+title: "Free Home Inventory Tracker App | Appliances, Serial Numbers & Warranties | FamilyBoard"
+description: "Track household appliances, electronics, serial numbers, purchase receipts, warranties, and maintenance history locally in your browser—free, private, no account required."
 route: "/features/home-inventory-tracker/"
 primaryIntent: "find a home inventory tracker"
 primaryKeyword: "home inventory tracker"
@@ -30,6 +30,8 @@ contentVersion: 1
 # A useful home inventory is not a list of everything you own
 
 Trying to catalog every household object is one of the fastest ways to abandon a home inventory project. `FamilyBoard`'s Assets tab is built around a narrower goal: give the things that create cost, maintenance or responsibility a real record, and let that record connect to everything else — maintenance, warranties and documents — instead of sitting alone.
+
+**Quick summary:** Use `FamilyBoard`'s free local-first home inventory tracker to record appliances, electronics, vehicles, and home systems by room, brand, model, serial number, purchase date, and status (`active`, `watch`, or `archived`). Every record stays in your browser's local database with zero signup and links directly to your maintenance schedules, warranty expiration dates, and receipt references, or exports to CSV/JSON for offline backup.
 
 ## What an asset record actually holds
 

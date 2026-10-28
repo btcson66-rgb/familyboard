@@ -16,8 +16,8 @@
     "headings": "One household dashboard, built around the work behind the calendar Today — the dashboard Assets — the inventory Maintenance — the recurring work Warranties — coverage windows Subscriptions — recurring costs Tasks — one-off and recurring responsibilities Emergency — contacts that stay local Documents — where things actually are Handoff and Display — for the rest of the household Settings — backups, storage and the master table What ties the twelve screens together"
   },
   {
-    "title": "Private Home Inventory Tracker for Appliances, Electronics and Household Assets | FamilyBoard",
-    "description": "Create a practical home inventory with model numbers, serial numbers, purchase details, warranties, maintenance and local records.",
+    "title": "Free Home Inventory Tracker App | Appliances, Serial Numbers & Warranties | FamilyBoard",
+    "description": "Track household appliances, electronics, serial numbers, purchase receipts, warranties, and maintenance history locally in your browser—free, private, no account required.",
     "route": "/features/home-inventory-tracker/",
     "cluster": "product",
     "keywords": "home inventory tracker",
@@ -433,7 +433,7 @@
   },
   {
     "title": "Free Home Inventory Template | Printable PDF and CSV",
-    "description": "Download a free home inventory PDF or CSV without an account. Record room, item, model, serial and receipt references, with a filled example and private backup steps.",
+    "description": "Download a free printable home inventory template in PDF or CSV (Excel) with no signup. Record room, item, brand/model, serial number, purchase date, and receipt references.",
     "route": "/templates/printable-home-inventory-template/",
     "cluster": "printables",
     "keywords": "printable home inventory template",
@@ -569,7 +569,7 @@
   },
   {
     "title": "Printable Household Checklists | Maintenance, Emergency, Moving and More",
-    "description": "Print practical home maintenance, monthly review, seasonal, emergency, sitter and moving checklists.",
+    "description": "Free printable household checklists for monthly reviews, seasonal home maintenance, moving, house sitting, and pet care—readable in HTML or ready to print with no signup.",
     "route": "/checklists/",
     "cluster": "support",
     "keywords": "",

@@ -1,6 +1,6 @@
 ---
 title: "Free Home Inventory Template | Printable PDF and CSV"
-description: "Download a free home inventory PDF or CSV without an account. Record room, item, model, serial and receipt references, with a filled example and private backup steps."
+description: "Download a free printable home inventory template in PDF or CSV (Excel) with no signup. Record room, item, brand/model, serial number, purchase date, and receipt references."
 route: "/templates/printable-home-inventory-template/"
 primaryIntent: "print a home inventory worksheet"
 primaryKeyword: "printable home inventory template"
@@ -22,6 +22,8 @@ contentVersion: 2
 # Printable Home Inventory Template
 
 Start with one room and the items you would need to identify later. Download the blank [PDF worksheet](/downloads/familyboard-home-inventory-template.pdf) for handwriting, or the [CSV template](/downloads/familyboard-home-inventory-template.csv) for a spreadsheet. Both are free static files: no account, email address or household upload is required. You can use the template without opening the app.
+
+**Quick summary:** A practical home inventory starts with seven core columns—**Room**, **Item**, **Brand / model**, **Serial number**, **Purchase date**, **Receipt / photo reference**, and **Notes**—focusing first on major appliances, electronics, tools, and vehicles rather than everyday consumables. Assign each item a short code (such as `ITEM-01`) so your worksheet rows match your receipt and label-photo filenames.
 
 ## Choose the format for your task
 

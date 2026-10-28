@@ -1,6 +1,6 @@
 ---
 title: "Printable Household Checklists | Maintenance, Emergency, Moving and More"
-description: "Print practical home maintenance, monthly review, seasonal, emergency, sitter and moving checklists."
+description: "Free printable household checklists for monthly reviews, seasonal home maintenance, moving, house sitting, and pet care—readable in HTML or ready to print with no signup."
 route: "/checklists/"
 primaryIntent: "support FamilyBoard users"
 primaryKeyword: ""

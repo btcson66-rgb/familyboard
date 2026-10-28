@@ -1,0 +1,95 @@
+# FamilyBoard (familyboard.win)
+
+> FamilyBoard is a free, no-account, local-first household operations system, interactive tool suite, and printable checklist/template library (available in English and Traditional Chinese / 台灣繁體中文).
+> All household records (assets, appliances, maintenance schedules, warranties, subscriptions, emergency contacts, documents, and handoff sheets) are stored locally in the user's browser via IndexedDB (`Dexie`). No signup, login, or cloud upload is required.
+
+## Core Positioning & Privacy Architecture (核心定位與本機優先架構)
+
+- **100% Free & No Account Required (免費、免註冊)**: Every interactive calculator, generator, printable PDF/CSV template, and the full household web app (`/app/` and `/zh-tw/app/`) can be used immediately without registration or email gating.
+- **Local-First Browser Storage (IndexedDB 本機儲存)**: Household data entered in the app or tools remains in the user's browser on their own device. Backups are user-controlled via plain JSON, password-encrypted JSON, or master CSV export/import.
+- **Bilingual Coverage (雙語支援 — English & 繁體中文)**:
+  - English Home: https://familyboard.win/
+  - Traditional Chinese Home (台灣繁體中文首頁): https://familyboard.win/zh-tw/
+  - Private Web Application (EN / zh-TW): https://familyboard.win/app/ | https://familyboard.win/zh-tw/app/
+
+## Interactive Household Tools & Calculators (免費互動工具與計算機)
+
+- **Tools Hub (工具總覽)**:
+  - EN: https://familyboard.win/tools/
+  - zh-TW: https://familyboard.win/zh-tw/tools/
+- **Home Maintenance Schedule Generator (免費居家保養排程產生器)**: Build a custom, printable maintenance review schedule from the actual equipment installed in a house, condo, or rental.
+  - EN: https://familyboard.win/tools/home-maintenance-schedule-generator/
+  - zh-TW: https://familyboard.win/zh-tw/tools/home-maintenance-schedule-generator/
+- **Warranty Expiration Date Calculator (免費保固到期日計算器)**: Calculate estimated warranty end dates and advance review reminders from a confirmed start event (purchase, delivery, or installation date) plus coverage months using deterministic month-end clamping (`月底收斂規則`, e.g., Jan 31 + 1 month → Feb 28/29), with Taiwan Consumer Protection Act Art. 25 (`消費者保護法第 25 條`) and Civil Code Art. 120–121 (`民法第 120、121 條`) reference context.
+  - EN: https://familyboard.win/tools/warranty-expiration-calculator/
+  - zh-TW: https://familyboard.win/zh-tw/tools/warranty-expiration-calculator/
+- **House Sitter Instruction Generator (看家交接指引產生器)**: Generate a bounded, task-specific handoff sheet covering utilities, routines, contacts, and escalation rules without exposing sensitive household files.
+  - EN: https://familyboard.win/tools/house-sitter-instruction-generator/
+- **Pet Sitter Instruction Generator (寵物照護交接產生器)**: Create structured feeding, medication, routine, and veterinary emergency instructions for a temporary caregiver.
+  - EN: https://familyboard.win/tools/pet-sitter-instruction-generator/
+- **Home Inventory Checklist Generator (家庭財物清冊產生器)**: Build a room-by-room inventory starting checklist focused on appliances, electronics, serial-numbered equipment, and hard-to-replace items.
+  - EN: https://familyboard.win/tools/home-inventory-checklist-generator/
+- **Emergency Contact Sheet Generator (緊急聯絡表產生器)**: Create a printable household emergency contact and utility shutoff reference sheet.
+  - EN: https://familyboard.win/tools/emergency-contact-sheet-generator/
+  - zh-TW: https://familyboard.win/zh-tw/tools/emergency-contact-sheet-generator/
+- **Home Maintenance Cost Tracker (居家維護支出估算與追蹤器)**: Summarize completed and planned maintenance costs across household equipment.
+  - EN: https://familyboard.win/tools/home-maintenance-cost-tracker/
+  - zh-TW: https://familyboard.win/zh-tw/tools/home-maintenance-cost-tracker/
+- **Appliance Age Calculator (家電機齡與紀錄計算器)**: Track equipment age from installation or manufacture date alongside service notes.
+  - EN: https://familyboard.win/tools/appliance-age-calculator/
+  - zh-TW: https://familyboard.win/zh-tw/tools/appliance-age-calculator/
+- **Household & Annual Subscription Cost Calculators (家庭訂閱與年繳支出計算器)**: Convert monthly, quarterly, and annual household subscriptions into monthly and yearly totals with upcoming renewal review dates.
+  - EN: https://familyboard.win/tools/household-subscription-cost-calculator/ | https://familyboard.win/tools/annual-subscription-cost-calculator/
+  - zh-TW: https://familyboard.win/zh-tw/tools/household-subscription-cost-calculator/ | https://familyboard.win/zh-tw/tools/annual-subscription-cost-calculator/
+- **Household Annual Review Generator (家庭年度總檢視產生器)**: Produce a structured annual review checklist for home maintenance, warranties, renewals, and backup verification.
+  - EN: https://familyboard.win/tools/household-annual-review-generator/
+
+## Printable Templates & Checklists (免費可列印範本與家庭檢查表 — PDF / CSV / HTML)
+
+- **Templates Hub (可列印範本總覽)**:
+  - EN: https://familyboard.win/templates/
+  - zh-TW: https://familyboard.win/zh-tw/templates/
+- **Printable Home Inventory Template (可列印家庭財物清冊範本 — PDF & CSV)**: Free downloadable landscape PDF worksheet (`/downloads/familyboard-home-inventory-template.pdf`) and spreadsheet CSV (`/downloads/familyboard-home-inventory-template.csv`) with seven core columns (`Room`, `Item`, `Brand / model`, `Serial number`, `Purchase date`, `Receipt / photo reference`, `Notes`), item-code linking (`ITEM-01`), and privacy-safe backup steps.
+  - EN: https://familyboard.win/templates/printable-home-inventory-template/
+- **Other Printable Templates**:
+  - Printable Household Handoff Sheet: https://familyboard.win/templates/printable-household-handoff-sheet/
+  - Printable Annual Renewals Tracker: https://familyboard.win/templates/printable-annual-renewals/
+  - Printable Home Service Provider List: https://familyboard.win/templates/printable-service-provider-list/
+- **Checklists Hub & Printable Checklists (可列印家庭檢查表)**:
+  - EN Hub: https://familyboard.win/checklists/
+  - zh-TW Hub: https://familyboard.win/zh-tw/checklists/
+  - Printable Home Maintenance Checklist: https://familyboard.win/checklists/printable-home-maintenance-checklist/
+  - Printable Moving Checklist (with PDF & CSV downloads): https://familyboard.win/checklists/printable-moving-checklist/
+  - Printable House Sitter Checklist: https://familyboard.win/checklists/printable-house-sitter-checklist/
+  - Printable Pet Sitter Checklist: https://familyboard.win/checklists/printable-pet-sitter-checklist/
+  - Printable New Home Checklist: https://familyboard.win/checklists/printable-new-home-checklist/
+  - Printable Seasonal Home Checklist: https://familyboard.win/checklists/printable-seasonal-home-checklist/
+  - Year-End Cleaning Checklist (年終大掃除檢查表): https://familyboard.win/zh-tw/checklists/year-end-cleaning-checklist/
+
+## Product Features & Guides (核心功能與實用指南)
+
+- **Features Overview**: https://familyboard.win/features/ | https://familyboard.win/zh-tw/features/
+  - Home Inventory Tracker (家電、3C 與家庭資產追蹤): https://familyboard.win/features/home-inventory-tracker/
+  - Home Maintenance Tracker (居家保養追蹤): https://familyboard.win/features/maintenance-tracker/
+  - Household Documents Organizer (家庭重要文件索引整理): https://familyboard.win/features/household-documents-organizer/
+  - Household Handoff & Continuity (家庭交接模式): https://familyboard.win/features/household-handoff/
+  - Family Display Mode (家庭看板顯示模式): https://familyboard.win/features/family-display-mode/
+  - Private Local-First Family Organizer: https://familyboard.win/features/private-family-organizer/ | https://familyboard.win/features/free-home-management-app/
+- **Guides Library (居家管理與保養指南)**:
+  - EN Guides Hub: https://familyboard.win/guides/
+  - zh-TW Guides Hub: https://familyboard.win/zh-tw/guides/
+  - Key Taiwan zh-TW Guides:
+    - 居家保養排程建立指南: https://familyboard.win/zh-tw/guides/home-maintenance-schedule/
+    - 停電家庭準備與應變紀錄: https://familyboard.win/zh-tw/guides/power-outage-home-preparedness/
+    - 防颱與暴風雨前居家檢查清單: https://familyboard.win/zh-tw/guides/storm-preparation-home-checklist/
+    - 家庭緊急物資清冊與效期管理: https://familyboard.win/zh-tw/guides/emergency-supply-inventory/
+    - 水電瓦斯與通訊帳戶資訊整理: https://familyboard.win/zh-tw/guides/organize-utility-account-information/
+    - 退租與搬遷點交紀錄整理: https://familyboard.win/zh-tw/guides/move-out-home-records/
+
+## Editorial Standards, Safety & Citation Policy (編輯規範、安全邊界與引用說明)
+
+- **Verification & Safety Boundary**: FamilyBoard organizes household records and planning checklists; it does not replace manufacturer manuals, licensed electrical/plumbing/gas/HVAC trades, emergency services, insurance policy terms, or legal/medical advice.
+- **Editorial Policy**: https://familyboard.win/editorial-policy/ | https://familyboard.win/zh-tw/editorial-policy/
+- **Privacy & Security**: https://familyboard.win/privacy/ | https://familyboard.win/security/
+- **Household Information Disclaimer**: https://familyboard.win/disclaimer/ | https://familyboard.win/zh-tw/disclaimer/
+- **Sitemap Index**: https://familyboard.win/sitemap-index.xml

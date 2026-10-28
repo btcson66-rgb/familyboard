@@ -543,8 +543,8 @@ The same Today data — tasks, events, upcoming maintenance — can be shown in 
 ## Page 004 — Home Inventory Tracker
 **Slug:** `/features/home-inventory-tracker/`
 **Primary intent:** find a home inventory tracker
-**Title tag:** `Private Home Inventory Tracker for Appliances, Electronics and Household Assets | FamilyBoard`
-**Meta description:** `Create a practical home inventory with model numbers, serial numbers, purchase details, warranties, maintenance and local records.`
+**Title tag:** `Free Home Inventory Tracker App | Appliances, Serial Numbers & Warranties | FamilyBoard`
+**Meta description:** `Track household appliances, electronics, serial numbers, purchase receipts, warranties, and maintenance history locally in your browser—free, private, no account required.`
 **Primary keyword concept:** home inventory tracker
 **Depth:** verified
 **Editorial review date:** 2026-08-22
@@ -553,6 +553,8 @@ The same Today data — tasks, events, upcoming maintenance — can be shown in 
 # A useful home inventory is not a list of everything you own
 
 Trying to catalog every household object is one of the fastest ways to abandon a home inventory project. `FamilyBoard`'s Assets tab is built around a narrower goal: give the things that create cost, maintenance or responsibility a real record, and let that record connect to everything else — maintenance, warranties and documents — instead of sitting alone.
+
+**Quick summary:** Use `FamilyBoard`'s free local-first home inventory tracker to record appliances, electronics, vehicles, and home systems by room, brand, model, serial number, purchase date, and status (`active`, `watch`, or `archived`). Every record stays in your browser's local database with zero signup and links directly to your maintenance schedules, warranty expiration dates, and receipt references, or exports to CSV/JSON for offline backup.
 
 ## What an asset record actually holds
 
@@ -12859,7 +12861,7 @@ Use the same worksheet four times a year and let the actual tasks change with yo
 **Slug:** `/templates/printable-home-inventory-template/`
 **Primary intent:** print a home inventory worksheet
 **Title tag:** `Free Home Inventory Template | Printable PDF and CSV`
-**Meta description:** `Download a free home inventory PDF or CSV without an account. Record room, item, model, serial and receipt references, with a filled example and private backup steps.`
+**Meta description:** `Download a free printable home inventory template in PDF or CSV (Excel) with no signup. Record room, item, brand/model, serial number, purchase date, and receipt references.`
 **Primary keyword concept:** printable home inventory template
 **Editorial review date:** 2026-10-02
 **Content version:** 2
@@ -12868,6 +12870,8 @@ Use the same worksheet four times a year and let the actual tasks change with yo
 # Printable Home Inventory Template
 
 Start with one room and the items you would need to identify later. Download the blank [PDF worksheet](/downloads/familyboard-home-inventory-template.pdf) for handwriting, or the [CSV template](/downloads/familyboard-home-inventory-template.csv) for a spreadsheet. Both are free static files: no account, email address or household upload is required. You can use the template without opening the app.
+
+**Quick summary:** A practical home inventory starts with seven core columns—**Room**, **Item**, **Brand / model**, **Serial number**, **Purchase date**, **Receipt / photo reference**, and **Notes**—focusing first on major appliances, electronics, tools, and vehicles rather than everyday consumables. Assign each item a short code (such as `ITEM-01`) so your worksheet rows match your receipt and label-photo filenames.
 
 ## Choose the format for your task
 
@@ -26447,7 +26451,7 @@ Each tool states exactly what it produces, and your private form values stay in 
 **Slug:** `/checklists/`
 **Indexable:** Yes
 **Title tag:** `Printable Household Checklists | Maintenance, Emergency, Moving and More`
-**Meta description:** `Print practical home maintenance, monthly review, seasonal, emergency, sitter and moving checklists.`
+**Meta description:** `Free printable household checklists for monthly reviews, seasonal home maintenance, moving, house sitting, and pet care—readable in HTML or ready to print with no signup.`
 
 # Printable Household Checklists
 

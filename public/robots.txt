@@ -1,5 +1,29 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://familyboard.win/sitemap-index.xml
+User-agent: OAI-SearchBot
+Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Machine-readable site guide for LLMs: https://familyboard.win/llms.txt
+Sitemap: https://familyboard.win/sitemap-index.xml
