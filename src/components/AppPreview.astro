@@ -1,0 +1,202 @@
+---
+/*
+ * Hero preview of the app's Today view, used by the English and zh-TW homepages.
+ * Rows describe an example household, not anyone's data; ticking a task only updates this preview.
+ */
+interface Props {
+  locale: 'en' | 'zh-TW';
+}
+
+const { locale } = Astro.props;
+const copy = locale === 'zh-TW'
+  ? {
+      nav: ['今天', '資產', '保養', '保固', '訂閱', '交接'],
+      saved: '已存在這台裝置 · 不需帳號',
+      title: '楓林街的今天',
+      metrics: ['本週待辦', '追蹤中的資產', '保固'],
+      legend: '本週',
+      caption: '範例家庭。勾選一項試試看——在真正的 App 裡，每筆紀錄都只存在你的瀏覽器。',
+      tasks: [
+        { title: '更換冷氣濾網', where: '客廳冷氣 · 保養', due: '週六', tone: 'soon' },
+        { title: '測試住警器', where: '走廊 · 保養', due: '週日', tone: 'soon' },
+        { title: '汽車保險續約', where: '訂閱', due: '9 天後', tone: 'later' },
+        { title: '洗碗機保固到期', where: '廚房 · 保固', due: '21 天後', tone: 'later' },
+      ],
+    }
+  : {
+      nav: ['Today', 'Assets', 'Maintenance', 'Warranties', 'Subscriptions', 'Handoff'],
+      saved: 'Saved on this device · No account',
+      title: 'Today at Maple Street',
+      metrics: ['open this week', 'tracked assets', 'warranties'],
+      legend: 'This week',
+      caption: 'An example household. Tick a task to try it — in the real app every record stays in your browser.',
+      tasks: [
+        { title: 'Replace furnace filter', where: 'Furnace · Maintenance', due: 'Sat', tone: 'soon' },
+        { title: 'Test smoke alarms', where: 'Hallway · Maintenance', due: 'Sun', tone: 'soon' },
+        { title: 'Renew car insurance', where: 'Subscriptions', due: '9 days', tone: 'later' },
+        { title: 'Dishwasher warranty ends', where: 'Kitchen · Warranties', due: '21 days', tone: 'later' },
+      ],
+    };
+const captionId = `hearth-preview-caption-${locale}`;
+---
+
+<figure class="hearth-preview" data-hearth-preview aria-labelledby={captionId}>
+  <div class="hp-window">
+    <div class="hp-bar" aria-hidden="true"><span class="hp-dots"><i></i><i></i><i></i></span><span class="hp-url">familyboard.win/app</span></div>
+    <div class="hp-body">
+      <ul class="hp-nav" aria-hidden="true">
+        {copy.nav.map((item, index) => <li class={index === 0 ? 'is-active' : undefined}>{item}</li>)}
+      </ul>
+      <div class="hp-main">
+        <p class="hp-saved">{copy.saved}</p>
+        <p class="hp-title">{copy.title}</p>
+        <div class="hp-metrics">
+          <p><strong data-hp-open>{copy.tasks.length}</strong><span>{copy.metrics[0]}</span></p>
+          <p><strong>12</strong><span>{copy.metrics[1]}</span></p>
+          <p><strong>3</strong><span>{copy.metrics[2]}</span></p>
+        </div>
+        <fieldset class="hp-list">
+          <legend>{copy.legend}</legend>
+          {copy.tasks.map((task) => (
+            <label class="hp-task">
+              <input type="checkbox" data-hp-task />
+              <span class="hp-task__text"><b>{task.title}</b><small>{task.where}</small></span>
+              <span class={`hp-chip hp-chip--${task.tone}`}>{task.due}</span>
+            </label>
+          ))}
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <figcaption id={captionId}>{copy.caption}</figcaption>
+</figure>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-hearth-preview]').forEach((root) => {
+    const open = root.querySelector<HTMLElement>('[data-hp-open]');
+    const boxes = [...root.querySelectorAll<HTMLInputElement>('[data-hp-task]')];
+    const update = () => { if (open) open.textContent = String(boxes.filter((box) => !box.checked).length); };
+    boxes.forEach((box) => box.addEventListener('change', update));
+  });
+</script>
+
+<style>
+  .hearth-preview {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+
+  .hp-window {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgb(42 36 32 / 6%), 0 40px 80px -28px rgb(42 36 32 / 35%);
+    transform: rotate(-1.2deg);
+  }
+
+  .hp-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+  }
+
+  .hp-dots { display: inline-flex; gap: 0.35rem; }
+  .hp-dots i { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--line); }
+  .hp-dots i:first-child { background: var(--clay); }
+  .hp-dots i:nth-child(2) { background: var(--honey); }
+
+  .hp-url {
+    flex: 1;
+    max-width: 16rem;
+    margin-inline: auto;
+    padding: 0.15rem 0.75rem;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--muted);
+    font-size: 0.72rem;
+    text-align: center;
+  }
+
+  .hp-body { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); }
+
+  .hp-nav {
+    margin: 0;
+    padding: 0.9rem 0.6rem;
+    border-right: 1px solid var(--line);
+    background: var(--surface);
+    list-style: none;
+    font-size: 0.8rem;
+    font-weight: 650;
+    color: #5a4e46;
+  }
+
+  .hp-nav li { padding: 0.4rem 0.6rem; border-radius: 10px; }
+  .hp-nav .is-active { background: #fff; color: var(--ink); box-shadow: inset 3px 0 0 var(--clay); }
+
+  .hp-main { padding: 1rem 1.1rem 1.15rem; }
+
+  .hp-saved { margin: 0; color: var(--leaf); font-size: 0.7rem; font-weight: 750; }
+  .hp-saved::before { content: "✓ "; }
+
+  .hp-title {
+    margin: 0.2rem 0 0.75rem;
+    font-family: var(--display);
+    font-size: 1.45rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .hp-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+
+  .hp-metrics p {
+    margin: 0;
+    padding: 0.55rem 0.65rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper);
+  }
+
+  .hp-metrics strong { display: block; font-family: var(--display); font-size: 1.45rem; font-weight: 600; line-height: 1.1; }
+  .hp-metrics span { color: var(--muted); font-size: 0.7rem; }
+
+  .hp-list { margin: 0.85rem 0 0; padding: 0; border: 0; }
+  .hp-list legend { margin-bottom: 0.35rem; padding: 0; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+  .hp-task {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.5rem 0.25rem;
+    border-top: 1px solid var(--line);
+    cursor: pointer;
+  }
+
+  .hp-task input { width: 1.1rem; height: 1.1rem; margin: 0; accent-color: var(--leaf); cursor: pointer; }
+  .hp-task__text { display: grid; min-width: 0; line-height: 1.3; }
+  .hp-task__text b { font-size: 0.86rem; font-weight: 700; }
+  .hp-task__text small { color: var(--muted); font-size: 0.72rem; }
+  .hp-task:has(input:checked) .hp-task__text b { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--leaf); }
+
+  .hp-chip { padding: 0.1rem 0.55rem; border-radius: 999px; font-size: 0.7rem; font-weight: 800; white-space: nowrap; }
+  .hp-chip--soon { background: var(--clay-soft); color: var(--clay-dark); }
+  .hp-chip--later { background: var(--surface); color: #5a4e46; }
+  .hp-task:has(input:checked) .hp-chip { background: var(--leaf-soft); color: var(--leaf); }
+
+  .hearth-preview figcaption { margin: 1.1rem 0 0; color: var(--muted); font-size: 0.85rem; text-align: center; }
+
+  @media (max-width: 560px) {
+    .hp-window { transform: none; }
+    .hp-body { grid-template-columns: minmax(0, 1fr); }
+    .hp-nav { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hp-window { transform: none; }
+  }
+</style>
