@@ -1,0 +1,289 @@
+/*
+ * FamilyBoard "Hearth" layer (2026-10 portfolio redesign).
+ *
+ * Loaded after global.css and app.css. FamilyBoard is the one product in the
+ * portfolio people live inside, so it should feel like a well-made household
+ * object: warm linen, espresso ink, terracotta for the things you press,
+ * soft generous corners and a display serif with some warmth in it.
+ *
+ * Green is not the brand colour here. It survives only where it means
+ * something: "saved on this device", "done", the logo's own leaf.
+ */
+
+/* Screen only: the printable worksheets are rendered to PDF from these pages and must stay byte-identical
+   (scripts/build-downloads.mjs --check), and a printed sheet should stay plain black-on-white anyway. */
+@media screen {
+  :root {
+    --ink: #2a2420;
+    --muted: #6c6058;
+    --paper: #fbf7f0;
+    --surface: #f3ebdf;
+    --surface-2: #ece2d3;
+    --line: #e4d9c9;
+    --clay: #b5482a;
+    --clay-dark: #8f3720;
+    --clay-soft: #f8e3d9;
+    --honey: #e9b04a;
+    --honey-soft: #fbefd3;
+    --leaf: #2f6b4f;
+    --leaf-dark: #8f3720;
+    --leaf-soft: #e1eee5;
+    --radius: 22px;
+    --radius-sm: 14px;
+    --shadow: 0 1px 2px rgb(42 36 32 / 5%), 0 18px 44px -12px rgb(42 36 32 / 16%);
+    --display: "Fraunces Variable", "Iowan Old Style", "Palatino Linotype", Georgia, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", serif;
+    --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    font-family: var(--sans);
+  }
+
+  body { background: var(--paper); color: var(--ink); }
+
+  a { color: var(--clay-dark); text-decoration-thickness: 1px; }
+  a:hover { color: var(--clay); }
+
+  :focus-visible { outline: 3px solid var(--honey); outline-offset: 3px; }
+
+  ::selection { background: var(--honey-soft); color: var(--ink); }
+
+  h1,
+  h2,
+  .hero-title,
+  .section-head h2,
+  .article h1,
+  .article h2,
+  .app-title h1,
+  .onboarding-panel h1 {
+    font-family: var(--display);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  /* ---------- Header ---------- */
+
+  .site-header {
+    border-bottom-color: var(--line);
+    background: color-mix(in srgb, var(--paper) 90%, transparent);
+  }
+
+  .brand { color: var(--ink); font-family: var(--display); font-size: 1.2rem; font-weight: 650; letter-spacing: -0.01em; }
+
+  .nav-links a { border-radius: 999px; color: var(--ink); font-weight: 600; }
+  .nav-links a:hover { background: var(--surface); color: var(--ink); }
+
+  .nav-open {
+    padding-inline: 1.05rem !important;
+    border-radius: 999px !important;
+    background: var(--ink) !important;
+  }
+
+  .nav-open:hover { background: var(--clay-dark) !important; }
+
+  /* ---------- Buttons & forms ---------- */
+
+  .button,
+  button {
+    border-radius: 999px;
+    background: var(--clay);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 25%) inset, 0 6px 16px -6px rgb(181 72 42 / 55%);
+    transition: background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .button:hover,
+  button:hover { background: var(--clay-dark); color: #fff; transform: translateY(-1px); }
+
+  .button.secondary,
+  button.secondary {
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--ink);
+    box-shadow: none;
+  }
+
+  .button.secondary:hover,
+  button.secondary:hover { border-color: var(--ink); background: #fff; color: var(--ink); }
+
+  input,
+  select,
+  textarea { border-radius: var(--radius-sm); border-color: var(--line); }
+
+  input:focus,
+  select:focus,
+  textarea:focus { border-color: var(--clay); }
+
+  /* ---------- Surfaces ---------- */
+
+  .eyebrow { color: var(--clay-dark); letter-spacing: 0.12em; }
+
+  .toc-card,
+  .card,
+  .tool-shell,
+  .printable,
+  .recommendations,
+  .search-panel,
+  .answer-card {
+    border-color: var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: var(--shadow);
+  }
+
+  .card[href]:hover {
+    border-color: color-mix(in srgb, var(--clay) 35%, var(--line));
+    box-shadow: 0 1px 2px rgb(42 36 32 / 6%), 0 26px 50px -16px rgb(42 36 32 / 24%);
+  }
+
+  .card-tag {
+    border-radius: 999px;
+    background: var(--honey-soft);
+    color: #6f4a0c;
+  }
+
+  .section.tint { background: var(--surface); }
+
+  .section-head h2 { letter-spacing: -0.025em; }
+
+  .article p,
+  .article li { color: #3d3530; }
+
+  .article blockquote { border-left-color: var(--honey); background: var(--surface); }
+
+  .next-step {
+    border-color: color-mix(in srgb, var(--clay) 25%, var(--line));
+    border-radius: var(--radius);
+    background: var(--clay-soft);
+  }
+
+  .trust-row li::before { color: var(--leaf); }
+
+  /* ---------- Footer ---------- */
+
+  .site-footer { border-top: 0; background: #241e1b; color: #e7ddd2; }
+  .footer-heading,
+  .footer-legal { color: #b3a598; }
+  .footer-grid a:hover { color: var(--honey); }
+
+  /* ---------- App (the product itself) ----------
+     Scoped under body.app-body: app.css is imported by the React island and lands after this file. */
+
+  body.app-body { background: var(--paper); }
+
+  .app-body .app-shell { background: var(--paper); color: var(--ink); }
+
+  .app-body .app-topbar { border-bottom-color: var(--line); background: rgb(251 247 240 / 92%); }
+
+  .app-body .app-language { border-color: var(--line); }
+
+  .app-body .privacy-pill { background: var(--leaf-soft); color: var(--leaf); }
+
+  .app-body .app-nav { border-right-color: var(--line); background: var(--surface); }
+
+  .app-body .app-nav button {
+    border-radius: 12px;
+    background: transparent;
+    color: #5a4e46;
+    box-shadow: none;
+  }
+
+  .app-body .app-nav button:hover { background: var(--surface-2); color: var(--ink); transform: translateX(2px); }
+
+  .app-body .app-nav button.active {
+    border-color: var(--line);
+    background: #fff;
+    color: var(--ink);
+    box-shadow: inset 4px 0 0 var(--clay), 0 6px 14px -8px rgb(42 36 32 / 25%);
+  }
+
+  .app-body .app-context { color: var(--muted); }
+  .app-body .app-context span::before { color: var(--leaf); }
+  .app-body .app-title p { color: var(--muted); }
+
+  .app-body .metric,
+  .app-body .app-card,
+  .app-body .app-form-shell {
+    border-color: var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: var(--shadow);
+  }
+
+  .app-body .metric strong { font-family: var(--display); font-size: 2.1rem; font-weight: 600; font-variant-numeric: lining-nums tabular-nums; }
+  .app-body .metric span,
+  .app-body .app-card p { color: var(--muted); }
+  .app-body .metric::after { background: var(--honey-soft); }
+
+  .app-body .app-form-shell > summary { color: var(--ink); }
+  .app-body .app-form-shell > summary:hover { background: var(--paper); }
+  .app-body .app-form-shell .form-toggle { background: var(--clay-soft); color: var(--clay-dark); }
+  .app-body .app-form { border-top-color: var(--line); background: var(--paper); }
+
+  .app-body .status { background: var(--surface); }
+  .app-body .status.attention { background: var(--honey-soft); color: #6f4a0c; }
+  .app-body .status.overdue { background: #fde0d6; color: #7c2b17; }
+
+  .app-body .app-empty { border-color: #cdbfac; border-radius: var(--radius-sm); color: var(--muted); }
+
+  .app-body .onboarding {
+    background:
+      radial-gradient(circle at 85% 10%, rgb(233 176 74 / 22%), transparent 26rem),
+      radial-gradient(circle at 5% 95%, rgb(181 72 42 / 10%), transparent 24rem),
+      var(--paper);
+  }
+
+  .app-body .onboarding-panel { border-color: var(--line); border-radius: 28px; box-shadow: var(--shadow); }
+
+  .app-body .display-mode { background: #241e1b; }
+  .app-body .display-mode .app-card { color: var(--ink); }
+
+  .app-body .app-success { background: var(--leaf-soft); color: var(--leaf); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .button,
+    button,
+    .app-body .app-nav button { transition: none; }
+    .button:hover,
+    button:hover,
+    .app-body .app-nav button:hover { transform: none; }
+  }
+
+  @media (max-width: 560px) {
+    .nav-wrap { gap: 0.5rem; }
+    .brand { font-size: 1.05rem; }
+    .language-switch,
+    .nav-open { white-space: nowrap; font-size: 0.86rem; }
+    .nav-open { padding-inline: 0.85rem !important; }
+  }
+
+  /* ---------- Home hero ---------- */
+
+  .hero {
+    border-bottom-color: var(--line);
+    background:
+      radial-gradient(circle at 88% 12%, rgb(233 176 74 / 26%), transparent 24rem),
+      radial-gradient(circle at 70% 95%, rgb(181 72 42 / 9%), transparent 22rem),
+      var(--paper);
+  }
+
+  .hero::after { background: rgb(181 72 42 / 8%); }
+
+  .hero-title {
+    font-size: clamp(2.6rem, 5.2vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.035em;
+  }
+
+  .hero .lede { color: #4a4039; }
+}
+
+/* Homepage hero balance (both locales use .hero-grid with the app preview). */
+@media screen and (min-width: 861px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr); }
+}
+
+/* CJK has no Fraunces glyphs and falls back to a sans; give it the weight the Latin display face carries. */
+@media screen {
+  :lang(zh-TW) :is(h1, h2, .hero-title, .section-head h2) { font-weight: 700; letter-spacing: 0; }
+}

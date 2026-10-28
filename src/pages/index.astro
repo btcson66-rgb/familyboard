@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import AppPreview from '../components/AppPreview.astro';
 const pages = await getCollection('pages');
 const zhTwPages = await getCollection('pagesZhTw');
 const home = pages.find((entry) => entry.data.route === '/');
@@ -25,7 +26,7 @@ const discoveryPaths = [
       <div class="hero-actions"><a class="button" href="/app/">Open the free app</a><a class="button secondary" href="/features/">See how it works</a></div>
       <ul class="trust-row"><li>No account</li><li>Local-first storage</li><li>Offline-capable</li><li>Backup and restore</li><li>Private app stays ad-free</li></ul>
     </div>
-    <div class="hero-brand-visual" aria-label="FamilyBoard home operations logo"><img src="/brand/familyboard-mark.png" width="256" height="256" alt="" fetchpriority="high" /><p class="hero-visual-note">Home assets · upkeep · responsibilities · handoff</p></div>
+    <AppPreview locale="en" />
   </div></section>
   <section class="section" aria-labelledby="household-starter-checklists"><div class="shell"><div class="section-head"><div><span class="eyebrow">Start with one task</span><h2 id="household-starter-checklists">Practical checklists you can use today</h2><p class="lede">Choose a recurring household routine or prepare a move. Read the tasks, print a copy and assign responsibilities without creating an account.</p></div></div><div class="card-grid">
     <a class="card" href="/guides/household-management-checklist/"><h3>Household management checklist</h3><p>A weekly, monthly and quarterly routine for tasks, bills, supplies, records and a backup person.</p></a>
@@ -46,3 +47,4 @@ const discoveryPaths = [
   <section class="section tint" aria-labelledby="site-trust"><div class="narrow"><div class="card"><span class="eyebrow">Site and product details</span><h2 id="site-trust">Understand the boundaries before you save anything</h2><p>FamilyBoard's public pages explain what the product can do, what stays in the browser and which household decisions still need an official source or a qualified professional.</p><p><a href="/pricing/">See current pricing</a> · <a href="/roadmap/">Read the product roadmap</a> · <a href="/terms/">Review the terms</a> · <a href="/privacy/">Read the privacy boundary</a></p></div></div></section>
   <section class="section"><div class="narrow"><div class="card"><span class="eyebrow">Local-first by design</span><h2>Your home records stay on your device</h2><p>Public guides and tools can be discovered on the web. The private household workspace uses browser storage, excludes its state from the sitemap and does not load public-site analytics.</p><p><a href="/privacy/">Read the privacy boundary</a> · <a href="/security/">Understand browser-storage limits</a></p></div></div></section>
 </BaseLayout>
+

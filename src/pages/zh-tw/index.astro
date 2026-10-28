@@ -1,4 +1,5 @@
 ---
+import AppPreview from '../../components/AppPreview.astro';
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { isRouteIndexable } from '../../lib/indexability';
@@ -37,7 +38,7 @@ const groups = [
       <div class="hero-actions"><a class="button" href="/zh-tw/app/">開啟繁中 App</a><a class="button secondary" href="/zh-tw/guides/home-maintenance-schedule/">先看居家保養指南</a><a class="button secondary" href="/zh-tw/checklists/year-end-cleaning-checklist/">年終大掃除清單</a></div>
       <ul class="trust-row"><li>不需帳號</li><li>本機優先儲存</li><li>可離線使用</li><li>可備份與還原</li><li>私密工作區不放廣告</li></ul>
     </div>
-    <div class="hero-brand-visual" aria-label="FamilyBoard 家庭營運識別圖"><img src="/brand/familyboard-mark.png" width="256" height="256" alt="" fetchpriority="high" /><p class="hero-visual-note">家庭資產 · 居家保養 · 責任分工 · 交接</p></div>
+    <AppPreview locale="zh-TW" />
   </div></section>
   <section class="section" aria-labelledby="quick-answers"><div class="shell"><div class="section-head"><div><span class="eyebrow">快速解答</span><h2 id="quick-answers">一分鐘認識 FamilyBoard</h2></div></div><div class="answer-grid">
     <article class="answer-card"><h2>FamilyBoard 是什麼？</h2><p>一套免費的家庭營運工具，用來集中整理設備、保養、保固、訂閱、任務、緊急聯絡人與家庭交接紀錄。</p></article>

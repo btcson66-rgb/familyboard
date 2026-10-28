@@ -1,5 +1,7 @@
 ---
+import '@fontsource-variable/fraunces/wght.css';
 import '../styles/global.css';
+import '../styles/hearth.css';
 import { brand } from '../config/brand';
 import { monetization } from '../config/monetization';
 import Header from '../components/Header.astro';
@@ -120,7 +122,7 @@ const faqSchema = faq.length > 0 ? {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="theme-color" content="#176b52" />
+    <meta name="theme-color" content="#fbf7f0" />
     <meta name="description" content={description} />
     <meta name="robots" content={robotsContent} />
     {redirectRefresh && <meta http-equiv="refresh" content={redirectRefresh} />}
