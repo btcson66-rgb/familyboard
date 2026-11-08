@@ -547,7 +547,7 @@ The same Today data — tasks, events, upcoming maintenance — can be shown in 
 **Meta description:** `Track household appliances, electronics, serial numbers, purchase receipts, warranties, and maintenance history locally in your browser—free, private, no account required.`
 **Primary keyword concept:** home inventory tracker
 **Depth:** verified
-**Editorial review date:** 2026-08-22
+**Editorial review date:** 2026-11-08
 **Suggested internal links:** `/features/maintenance-tracker/`, `/features/warranty-tracker/`, `/features/household-documents-organizer/`, `/features/free-home-management-app/`
 
 # A useful home inventory is not a list of everything you own
@@ -581,6 +581,26 @@ Not every item earns eight fields. A modest lamp might get a name and a location
 ## Build it gradually, and know the limits
 
 Add one room or one category at a time rather than trying to catalog the whole house in one sitting. And keep the honest limits in mind: everything lives in this browser's local database, there's no photo-upload field on the asset record itself (photos would need to be referenced as a document instead), and if you use a different browser or device, this asset list doesn't follow you there automatically — export a JSON backup from Settings if you want to move it.
+
+## Quick reference: what to write in each asset field
+
+| Field | What to write | Why it helps later |
+|---|---|---|
+| Name | The plain name you would say aloud, such as "Kitchen dishwasher" | Finds the right record when several appliances share a brand |
+| Category | Appliance, electronics, vehicle or home system | Keeps the list sortable when it grows |
+| Location | Room or area, such as "Garage" | Tells a repair person or family member where to look |
+| Brand and model | Copy exactly from the nameplate | Needed for manuals, parts and warranty questions |
+| Serial number | Copy from the nameplate, checking 0 versus O | Often requested for a warranty claim or insurance report |
+| Purchase date | Use the receipt or order date | Anchors warranty and age calculations |
+| Notes | Where the receipt and manual are kept | Points to evidence without storing the file itself |
+
+## What insurers say a home inventory is for
+
+The Insurance Information Institute (Triple-I) explains that [an up-to-date home inventory can help you settle an insurance claim faster, verify losses for an income tax return and buy the right amount of coverage](https://www.iii.org/article/how-to-create-a-home-inventory). Its checklist asks for each item's description, make and model, serial number, price and place of purchase. Those are the same fields in this tracker's quick-add form, so recording them for the appliances and electronics that would be costly to replace already gives you the raw material an insurer or agent is likely to ask about. The National Association of Insurance Commissioners adds, in its [disaster-preparedness consumer alert](https://content.naic.org/article/consumer-insight-disaster-preparedness) (published in 2014), that higher-value items such as jewelry, electronics or collectibles may exceed standard policy limits, so the inventory is also a prompt to ask your insurer about coverage. Neither source says what your own policy will pay; that depends on the policy.
+
+## Why local-first helps both claims readiness and privacy
+
+FamilyBoard keeps asset records in IndexedDB inside your own browser; there is no account and no household-data server, so serial numbers and purchase prices are not sent to FamilyBoard. That is a privacy advantage for a list that doubles as a map of what is valuable in your home. It is not a backup: a browser profile can be cleared or lost with the device, and Triple-I recommends keeping a copy of the inventory somewhere outside the home. After you add items, export the JSON (or password-encrypted JSON) backup from Settings and store it in a place that would survive a fire or flood.
 
 **Contextual CTA:** Add the first appliance or vehicle you'd hate to lose the receipt or serial number for, then export the master CSV from Settings to fill in purchase price and manual reference.
 
@@ -11415,6 +11435,7 @@ Once the household record holds real information — utility accounts, emergency
 **Meta description:** `Create a starter home maintenance schedule based on your home type, systems and seasons, then edit it to match actual manuals and local conditions.`
 **Primary keyword concept:** home maintenance schedule generator
 **Suggested internal links:** `/guides/home-maintenance-schedule/`, `/guides/seasonal-home-maintenance-checklist/`, `/features/maintenance-tracker/`, `/app/`
+**Editorial review date:** 2026-11-08
 
 # Free Home Maintenance Schedule Generator
 
@@ -11450,6 +11471,22 @@ A schedule only stays useful if the numbers in it came from somewhere real. For 
 
 If you type in a dozen systems at once, the generator hands you back two dozen prompts, and reading a manual for every single one in one sitting is exactly the kind of project that gets abandoned halfway. It's fine to generate the full list up front and then work through it in a different order than it printed in — start with whatever would cause the most disruption if it failed unexpectedly, like a water heater or an HVAC system, confirm its real interval first, and let lower-stakes items like light fixtures or small appliances wait a week or two without any harm done.
 
+## Quick reference: from your entry to the starter schedule
+
+| You type | The generator returns | You add from the manual |
+|---|---|---|
+| HVAC filter | An inspect-and-confirm prompt and a record-completion prompt | The filter size, the interval the manufacturer gives and the last change date |
+| Refrigerator | The same two prompts | The coil or filter guidance for your exact model |
+| Smoke alarms | The same two prompts | The test and replacement interval printed by the manufacturer |
+
+## What an official maintenance checklist does and does not cover
+
+ENERGY STAR's [heating and cooling maintenance checklist](https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist) recommends annual pre-season check-ups by a contractor, cooling in spring and heating in fall, and lists typical tasks such as checking thermostat settings, electrical connections, the condensate drain and system controls. Use it as a reference when you decide which HVAC rows to keep in the generated schedule and when to book a contractor. It describes a typical check-up, not a rule for your equipment, so the manufacturer's manual and a qualified technician decide the actual interval and the work.
+
+## Keeping the schedule local
+
+The generator builds the starter schedule in your browser from the home type and systems you select, and nothing you choose is sent to FamilyBoard. If you carry the tasks into the maintenance tracker, they are stored in your browser's local database with no account. Add the manual source and last-service date to each task, and export a backup so the history survives a cleared browser.
+
 **FAQ:**
 - Q: Does the generator know how often my furnace filter needs changing?
   A: No. It has no manufacturer database, so it prompts you to check your furnace's manual or support page and enter the real interval yourself. The generated line exists to remind you which systems still need that lookup, not to supply the number.
@@ -11470,7 +11507,7 @@ If you type in a dozen systems at once, the generator hands you back two dozen p
 **Title tag:** `Free Warranty Expiration Calculator | Purchase Date + Warranty Term`
 **Meta description:** `Calculate an estimated warranty end date from a known start date and warranty term, then save the date and source with the household asset.`
 **Primary keyword concept:** warranty expiration calculator
-**Editorial review date:** 2026-10-02
+**Editorial review date:** 2026-11-08
 **Content version:** 2
 **Suggested internal links:** `/guides/warranty-expiration/`, `/guides/how-to-track-product-warranties/`, `/features/warranty-tracker/`, `/app/`
 
@@ -11549,6 +11586,14 @@ A date by itself is hard to defend later if you can't show where it came from. K
 - a running log of repairs, replacements, or prior claims.
 
 FamilyBoard's app runs entirely in your browser — there's no account and nothing syncs to a server, so the private workspace where you'd keep this asset record only exists on the device you're using right now. The result panel's **Save for app** button stores the calculated text locally as a quick reference; treat the full asset record, with the receipt and warranty document attached, as the version that actually matters two years from now.
+
+## What the law requires you to be able to find
+
+In the United States, the Magnuson-Moss Warranty Act ([15 U.S.C. 2301 and following](https://www.govinfo.gov/link/uscode/15/2301)) governs written warranties on consumer products and is the basis for FTC rules requiring warranty terms to be disclosed in plain language, including the coverage period and exclusions. The calculator does not read that text. It only adds a term you enter to a start date you enter, so confirm both against the warranty document, and note that some warranties start on delivery or installation rather than the purchase date. A date from this tool is a reminder to check the warranty, not a determination that coverage exists.
+
+## Why a local record helps when you claim
+
+When a product fails, a claim usually needs the receipt, the model and serial number and the warranty terms. Saving the calculated date with those details in the FamilyBoard app keeps them in one place in your own browser, with no account and no FamilyBoard server holding them, which protects privacy but also means you must export your own backup. Keep the original receipt or a photo of it outside the app as well.
 
 **FAQ:**
 - Q: Does the purchase date always equal the warranty start date?
@@ -11721,6 +11766,7 @@ The calculator totals every line together into one household number, but it does
 **Meta description:** `Enter a subscription price and weekly, monthly, quarterly or annual billing. Compare its yearly cost, monthly equivalent and five-year total at today's price.`
 **Primary keyword concept:** annual subscription cost calculator
 **Suggested internal links:** `/tools/household-subscription-cost-calculator/`, `/guides/organize-household-subscriptions/`, `/guides/annual-renewal-calendar/`, `/features/household-subscription-tracker/`
+**Editorial review date:** 2026-11-08
 
 # Annual Subscription Cost Calculator
 
@@ -11749,6 +11795,23 @@ An annualized figure is most useful compared against something concrete, not vie
 ## What to keep with the number
 
 An annualized figure is only useful if you remember what it was for. Note the service name, the price you entered, the billing frequency, and the date you calculated it — prices change often enough that a number from eight months ago may no longer be accurate. FamilyBoard's app stores this kind of record locally in your browser, with no account or sync, so it's worth exporting or noting the figure somewhere durable if you want to compare it again at renewal time.
+
+## Quick reference: how each billing frequency becomes a yearly cost
+
+| Billing frequency | Cycles per year | A $12 charge becomes |
+|---|---|---|
+| Weekly | 52 | $624 a year, $52 a month |
+| Monthly | 12 | $144 a year, $12 a month |
+| Quarterly | 4 | $48 a year, $4 a month |
+| Annual | 1 | $12 a year, $1 a month |
+
+## Where the number fits in official consumer guidance
+
+The calculator only converts a price and billing frequency into a yearly figure; it cannot see your contract or your bank. The Consumer Financial Protection Bureau explains that with [automatic payments from a bank account](https://www.consumerfinance.gov/ask-cfpb/how-do-automatic-payments-from-a-bank-account-work-en-2021/) you give the company permission to take payments, and advises verifying the company before agreeing and keeping track of what is being charged. Use the yearly total as the amount to check against your statements, then confirm the actual cancellation and renewal terms with the provider. The result does not tell you whether a charge is authorized or whether a trial has converted to a paid plan.
+
+## Why the inputs stay in your browser
+
+The price you type is calculated in the page and is not sent to FamilyBoard, and subscription costs are excluded from family-display and handoff views by default. If you save the result to the FamilyBoard app, it is stored in your browser's local database with no account, so your list of services is not held on a FamilyBoard server. Export a backup from Settings if you want to keep the record across devices.
 
 **FAQ:**
 - Q: How does the calculator turn a weekly price into an annual one?
@@ -12863,7 +12926,7 @@ Use the same worksheet four times a year and let the actual tasks change with yo
 **Title tag:** `Free Home Inventory Template | Printable PDF and CSV`
 **Meta description:** `Download a free printable home inventory template in PDF or CSV (Excel) with no signup. Record room, item, brand/model, serial number, purchase date, and receipt references.`
 **Primary keyword concept:** printable home inventory template
-**Editorial review date:** 2026-10-02
+**Editorial review date:** 2026-11-08
 **Content version:** 2
 **Suggested internal links:** `/guides/home-inventory-checklist/`, `/tools/home-inventory-checklist-generator/`, `/guides/photo-home-inventory/`, `/features/home-inventory-tracker/`
 
@@ -12933,6 +12996,14 @@ FamilyBoard does not receive values you write into the downloaded worksheet. The
 Prioritize appliances, electronics, valuable items, tools, vehicles and home systems. Use photos for context and labels. If a serial number is difficult or unsafe to reach, leave it blank until service makes it accessible.
 
 For a product whose written terms identify a start date and term, use the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) and copy the review date into the optional field. Keep the receipt or terms reference in the table so the calculation remains traceable.
+
+## What the official guidance says about inventory fields
+
+Triple-I's [home inventory brochure](https://www.iii.org/article/brochure-home-inventory) says an inventory can help you buy the amount of insurance you need and get a claim settled faster, and suggests choosing a method that works for you, whether room by room or by category. It also advises keeping receipts and noting each item's cost, purchase date, make and model, and storing a copy outside the home. The template covers room, item, make and model, serial number, purchase date and receipt reference; write the price in the Notes column so a completed sheet carries everything that guidance asks for. Triple-I's [step-by-step article](https://www.iii.org/article/how-to-create-a-home-inventory) recommends starting with a small contained area, such as one cabinet or closet, which is a realistic way to fill the first page of this sheet before tackling the rest of the house. NAIC's [consumer alert on disaster preparedness](https://content.naic.org/article/consumer-insight-disaster-preparedness) is a reminder to keep copies of insurance documents in a waterproof container, which applies equally to a printed inventory.
+
+## Paper now, local-first copy later
+
+A printed or CSV sheet works without any software, and a PDF you fill in by hand never touches a server. If you later move the rows into the FamilyBoard tracker, they are stored in your browser rather than on a FamilyBoard account, which keeps serial numbers and prices private but means you still need your own exported backup and an offsite copy of the sheet. Keep the paper original and one digital copy in different places.
 
 **CTA:** Use the digital tracker when you want maintenance, warranty and repair history attached to the same item.
 
@@ -26398,6 +26469,7 @@ Content updates belong here only when they represent meaningful site-wide work. 
 **Indexable:** Yes
 **Title tag:** `Home and Household Management Guides | FamilyBoard`
 **Meta description:** `Practical guides for home maintenance, appliance records, warranties, household documents, emergency handoffs, chores and recurring home administration.`
+**Editorial review date:** 2026-11-08
 
 # Home and Household Management Guides
 
@@ -26423,6 +26495,24 @@ Build emergency information, sitter packets and household handoff systems so the
 
 Create chore systems, reviews, subscription records, annual-renewal calendars and practical household routines.
 
+## Which household tool or template to use
+
+Pick the guide or companion page that matches the household job in front of you. Each row names the question, the page that answers it and what you will have afterwards.
+
+| If you need to… | Open | What you will decide |
+|---|---|---|
+| Find a printable home inventory template for insurance or a move | [Printable home inventory template](/templates/printable-home-inventory-template/) | Which fields to record per room and item |
+| Compare a home inventory tracker app with a spreadsheet | [Home inventory tracker](/features/home-inventory-tracker/) | Whether to keep serial numbers and purchase dates in one local list |
+| Learn how to photograph belongings for a record | [Photo home inventory guide](/guides/photo-home-inventory/) | Which photos are worth taking and where to store them |
+| Find out when a product warranty ends | [Warranty expiration calculator](/tools/warranty-expiration-calculator/) | A review date to save beside the receipt |
+| Keep warranty paperwork findable | [How to track product warranties](/guides/how-to-track-product-warranties/) | What proof to keep and who checks it |
+| Turn a monthly routine into a short list | [Monthly home maintenance checklist](/guides/monthly-home-maintenance-checklist/) | A small set of repeatable checks |
+| Start a maintenance plan from the systems you own | [Home maintenance schedule generator](/tools/home-maintenance-schedule-generator/) | A starter schedule to edit against your manuals |
+
+## Official references behind these picks
+
+Two official references explain why several rows above start with a record rather than a reminder. The Insurance Information Institute says a [home inventory can speed up an insurance claim and help you buy the right amount of coverage](https://www.iii.org/article/how-to-create-a-home-inventory), and ENERGY STAR's [maintenance checklist](https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist) shows the kind of seasonal check-up a schedule should prompt you to book. Both are general guidance, so your policy and your equipment manuals decide the specifics. FamilyBoard keeps the records you make from these guides in your own browser, with no account, so export a backup to keep an offsite copy.
+
 ---
 
 ## Supporting Page I — Tools Hub
@@ -26430,6 +26520,7 @@ Create chore systems, reviews, subscription records, annual-renewal calendars an
 **Indexable:** Yes
 **Title tag:** `Free Home Management Tools and Calculators | FamilyBoard`
 **Meta description:** `Use free local browser tools for maintenance schedules, warranties, home inventory, subscriptions, emergency binders, moving and household handoffs.`
+**Editorial review date:** 2026-11-08
 
 # Free Home Management Tools
 
@@ -26445,6 +26536,24 @@ These tools are designed to do useful work without requiring an account. They ar
 
 Each tool states exactly what it produces, and your private form values stay in this browser.
 
+## Which household tool or template to use
+
+Choose a tool by the result you want to hold in your hand when you finish. All of them run in your browser and ask for no account.
+
+| If you need to… | Open | Result you get |
+|---|---|---|
+| Calculate the year-end date of a product warranty | [Warranty expiration calculator](/tools/warranty-expiration-calculator/) | An estimated end date and a note to verify the source |
+| See what a subscription costs per year | [Annual subscription cost calculator](/tools/annual-subscription-cost-calculator/) | Yearly, monthly and multi-year totals |
+| Compare several household subscriptions | [Household subscription cost calculator](/tools/household-subscription-cost-calculator/) | A combined recurring-cost view |
+| Generate a home maintenance schedule | [Home maintenance schedule generator](/tools/home-maintenance-schedule-generator/) | A starter plan by home type, systems and season |
+| Build a room-by-room home inventory checklist | [Home inventory checklist generator](/tools/home-inventory-checklist-generator/) | A checklist to walk through each room |
+| Track the age of an appliance | [Appliance age calculator](/tools/appliance-age-calculator/) | Age from purchase or manufacture date |
+| Keep a home inventory long term | [Home inventory tracker](/features/home-inventory-tracker/) | A local list with model, serial number and status |
+
+## Official references behind these picks
+
+Some results are only as good as the source behind the numbers. Before relying on a warranty date, read the written terms, which U.S. law requires sellers to make available ([Magnuson-Moss Warranty Act, 15 U.S.C. 2301](https://www.govinfo.gov/link/uscode/15/2301)). Before trusting a subscription total, compare it with the company's actual billing, and see the Consumer Financial Protection Bureau's explanation of [how automatic payments work](https://www.consumerfinance.gov/ask-cfpb/how-do-automatic-payments-from-a-bank-account-work-en-2021/). The tools calculate in your browser and send no household values to FamilyBoard, but they cannot verify a contract for you.
+
 ---
 
 ## Supporting Page J — Checklists Hub
@@ -26452,6 +26561,7 @@ Each tool states exactly what it produces, and your private form values stay in 
 **Indexable:** Yes
 **Title tag:** `Printable Household Checklists | Maintenance, Emergency, Moving and More`
 **Meta description:** `Free printable household checklists for monthly reviews, seasonal home maintenance, moving, house sitting, and pet care—readable in HTML or ready to print with no signup.`
+**Editorial review date:** 2026-11-08
 
 # Printable Household Checklists
 
@@ -26466,7 +26576,24 @@ Group resources into:
 - Sitters and travel
 - Moving and new-home setup
 
-Add a note explaining that safety, legal and manufacturer-specific actions must follow the relevant authoritative guidance.
+Safety, legal and manufacturer-specific actions always follow the relevant authoritative guidance; a checklist is a prompt to check, not an inspection.
+
+## Which household tool or template to use
+
+Match the moment you are in to the checklist that fits it, and note which template or tool continues the work afterwards.
+
+| If you need to… | Open | What to use next |
+|---|---|---|
+| Review the home once a month | [Printable home maintenance checklist](/checklists/printable-home-maintenance-checklist/) | [Home maintenance schedule generator](/tools/home-maintenance-schedule-generator/) to tailor the list |
+| Prepare the house for a new season | [Seasonal home checklist](/checklists/printable-seasonal-home-checklist/) | [Monthly maintenance guide](/guides/monthly-home-maintenance-checklist/) for the routine between seasons |
+| Plan a move and keep track of belongings | [Printable moving checklist](/checklists/printable-moving-checklist/) | [Printable home inventory template](/templates/printable-home-inventory-template/) to list what moves |
+| Settle into a new home | [New home checklist](/checklists/printable-new-home-checklist/) | [Home inventory tracker](/features/home-inventory-tracker/) to record what you own |
+| Leave a sitter in charge of the house | [House sitter checklist](/checklists/printable-house-sitter-checklist/) | [House sitter instruction generator](/tools/house-sitter-instruction-generator/) |
+| Leave a sitter in charge of a pet | [Pet sitter checklist](/checklists/printable-pet-sitter-checklist/) | [Pet sitter instruction generator](/tools/pet-sitter-instruction-generator/) |
+
+## Official references behind these picks
+
+A checklist works best next to an authoritative reference. ENERGY STAR's [heating and cooling maintenance checklist](https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist) recommends annual pre-season check-ups by a contractor, which is a good prompt for the seasonal and monthly lists above. For storm season, the National Association of Insurance Commissioners [advises keeping copies of insurance documents in a waterproof container](https://content.naic.org/article/consumer-insight-disaster-preparedness), a step you can add to the moving and emergency lists. Use these as general guidance and defer to your own manuals and policy.
 
 ---
 
@@ -26475,6 +26602,7 @@ Add a note explaining that safety, legal and manufacturer-specific actions must 
 **Indexable:** Yes
 **Title tag:** `Printable Household Templates | Inventory, Warranty, Repairs, Contacts and Chores`
 **Meta description:** `Use printable household templates for home inventory, appliances, warranties, repairs, service providers, contacts, chores, subscriptions and handoffs.`
+**Editorial review date:** 2026-11-08
 
 # Printable Household Templates
 
@@ -26489,7 +26617,23 @@ Categories:
 - Subscriptions and renewals
 - Household handoff
 
-Each template page needs a print stylesheet, plain HTML table/form structure, examples and a link to the corresponding digital feature.
+Each template page prints cleanly, is also readable as plain HTML, includes examples and links to the matching digital feature.
+
+## Which household tool or template to use
+
+Pick the blank record that matches what your household needs to keep, and see which tool or guide fills it in.
+
+| If you need to… | Open | Pairs well with |
+|---|---|---|
+| Record belongings by room for insurance or a move | [Printable home inventory template](/templates/printable-home-inventory-template/) | [Home inventory tracker](/features/home-inventory-tracker/) once the list is long |
+| Track subscriptions and renewal dates | [Printable annual renewals sheet](/templates/printable-annual-renewals/) | [Annual subscription cost calculator](/tools/annual-subscription-cost-calculator/) |
+| List trusted plumbers, electricians and other providers | [Printable service provider list](/templates/printable-service-provider-list/) | [Home service provider list guide](/guides/home-service-provider-list/) |
+| Hand the household to someone else for a few days | [Printable household handoff sheet](/templates/printable-household-handoff-sheet/) | [Household handoff feature](/features/household-handoff/) |
+| Keep warranty dates next to receipts | [Warranty expiration calculator](/tools/warranty-expiration-calculator/) | [How to track product warranties](/guides/how-to-track-product-warranties/) |
+
+## Official references behind these picks
+
+Templates are most useful when they match what insurers and regulators expect you to be able to produce. The Insurance Information Institute's [home inventory brochure](https://www.iii.org/article/brochure-home-inventory) recommends noting each item's cost, purchase date and make and model and storing a copy outside the home, which is what the home inventory template is built for. Filling in a paper template keeps the data off any server; if you move it into the FamilyBoard app it stays in your browser, so keep your own exported backup.
 
 ---
 

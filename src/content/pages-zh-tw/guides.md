@@ -11,7 +11,7 @@ pageType: "support"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-29"
-lastReviewedAt: "2026-08-29"
+lastReviewedAt: "2026-11-08"
 nextStep: "先選一個本週真的要完成的家庭工作，再從對應指南建立最小可維持的紀錄。"
 related:
   - "/zh-tw/guides/home-maintenance-schedule/"
@@ -60,5 +60,22 @@ faq:
 先說明目的與所在地，再找到控制資料的原始來源，最後才把必要的結果放入 App。涉及瓦斯、電氣、結構、屋頂、高處、消防、醫療、法律、保險或租約的問題，請依官方要求或合格專業人員處理；FamilyBoard 不提供現場診斷或認證。文章中的範例代號只是降低暴露的寫法，不是要你把真實敏感資料貼到公開頁面。
 
 繁中指南與公開工具可以被搜尋，但私密 App 仍只使用目前瀏覽器的本機資料，不會跨裝置同步，也不會在背景發推播。完成一篇指南後，若需要長期追蹤，再建立資產、保養或任務並在重大變更後備份。這樣每篇文章都回到一個可執行、可查證、可交接的家庭結果。
+
+## 家庭營運工具與範本選用對照表
+
+下表依你手上的問題，指出該讀哪一篇、或改用哪個工具與範本；表中連結都是目前繁中站可直接開啟的頁面。
+
+| 你想處理的事 | 先開這一頁 | 讀完可以決定 |
+|---|---|---|
+| 想找可列印的家庭財物清冊範本（保險、搬家備用） | [可列印家庭財物清冊範本](/zh-tw/templates/printable-home-inventory-template/) | 每個房間與物品要記哪些欄位 |
+| 想比較家庭資產清單 App 與試算表 | [家庭資產清單 App 教學](/zh-tw/features/home-inventory-tracker/) | 型號、序號與購買日要不要集中在本機清單 |
+| 想知道產品保固何時到期 | [保固到期日計算器](/zh-tw/tools/warranty-expiration-calculator/) | 一個要與發票放在一起的複查日期 |
+| 想建立居家保養節奏 | [居家保養排程指南](/zh-tw/guides/home-maintenance-schedule/)；[居家保養排程產生器](/zh-tw/tools/home-maintenance-schedule-generator/) | 先查哪些設備、依手冊決定週期 |
+| 想整理訂閱與固定費用 | [訂閱年成本計算器](/zh-tw/tools/annual-subscription-cost-calculator/) | 每年實際花多少、哪些要複查 |
+| 想為停電或颱風先備好清單 | [停電居家準備指南](/zh-tw/guides/power-outage-home-preparedness/) | 要先確認的設備與聯絡資訊 |
+
+## 這些建議的官方依據
+
+上表偏重「先留下紀錄」，原因可以在官方資料看到：美國保險資訊協會說明，[更新的家庭財物清冊可加快理賠並協助決定投保額](https://www.iii.org/article/how-to-create-a-home-inventory)（英文）；台灣行政院消費者保護處則提醒，送修前要[記錄產品序號並保留送修單據](https://cpc.ey.gov.tw/Page/8644AFB8F5DCB8A3/286ce994-7f56-4290-8482-4c819dc863f0)，以便日後舉證。兩者都是一般性說明，實際條件仍以你的保單、契約與原廠手冊為準。FamilyBoard 讓這些紀錄只存在你的瀏覽器，沒有帳號，所以請定期匯出備份並另存一份在住家以外的地方。
 
 **下一步：** 從[居家保養指南](/zh-tw/guides/home-maintenance-schedule/)、[家庭資產 App](/zh-tw/features/home-inventory-tracker/)或[家庭每月檢視](/zh-tw/guides/household-monthly-review/)選一條最貼近本週工作的路徑。

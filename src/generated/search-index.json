@@ -21,7 +21,7 @@
     "route": "/features/home-inventory-tracker/",
     "cluster": "product",
     "keywords": "home inventory tracker",
-    "headings": "A useful home inventory is not a list of everything you own What an asset record actually holds Watch and Archive, not delete Why connect inventory to maintenance, warranties and documents A worked example Keep detail proportional to value Build it gradually, and know the limits"
+    "headings": "A useful home inventory is not a list of everything you own What an asset record actually holds Watch and Archive, not delete Why connect inventory to maintenance, warranties and documents A worked example Keep detail proportional to value Build it gradually, and know the limits Quick reference: what to write in each asset field What insurers say a home inventory is for Why local-first helps both claims readiness and privacy"
   },
   {
     "title": "Home Maintenance Tracker with Recurring Schedules and Service History | FamilyBoard",
@@ -333,7 +333,7 @@
     "route": "/tools/home-maintenance-schedule-generator/",
     "cluster": "tools",
     "keywords": "home maintenance schedule generator",
-    "headings": "Free Home Maintenance Schedule Generator What you actually get Worked example What it can't determine What to save with the finished list Working through a long list without stalling out"
+    "headings": "Free Home Maintenance Schedule Generator What you actually get Worked example What it can't determine What to save with the finished list Working through a long list without stalling out Quick reference: from your entry to the starter schedule What an official maintenance checklist does and does not cover Keeping the schedule local"
   },
   {
     "title": "Free Warranty Expiration Calculator | Purchase Date + Warranty Term",
@@ -341,7 +341,7 @@
     "route": "/tools/warranty-expiration-calculator/",
     "cluster": "tools",
     "keywords": "warranty expiration calculator",
-    "headings": "Warranty Expiration Calculator Find the real start date first How the calculator works Month-end date rule Typical warranty terms Worked example Three date examples you can reproduce How to handle an extended warranty What the result can't tell you What to save alongside the date"
+    "headings": "Warranty Expiration Calculator Find the real start date first How the calculator works Month-end date rule Typical warranty terms Worked example Three date examples you can reproduce How to handle an extended warranty What the result can't tell you What to save alongside the date What the law requires you to be able to find Why a local record helps when you claim"
   },
   {
     "title": "Free Appliance Age Calculator | Calculate Age from Purchase or Installation Date",
@@ -365,7 +365,7 @@
     "route": "/tools/annual-subscription-cost-calculator/",
     "cluster": "tools",
     "keywords": "annual subscription cost calculator",
-    "headings": "Annual Subscription Cost Calculator What it converts, and how Worked example What the number doesn't account for When one subscription isn't the real question Reading the annualized number against your budget What to keep with the number"
+    "headings": "Annual Subscription Cost Calculator What it converts, and how Worked example What the number doesn't account for When one subscription isn't the real question Reading the annualized number against your budget What to keep with the number Quick reference: how each billing frequency becomes a yearly cost Where the number fits in official consumer guidance Why the inputs stay in your browser"
   },
   {
     "title": "Free Home Maintenance Cost Tracker | Repairs, Service and Planned Work",
@@ -437,7 +437,7 @@
     "route": "/templates/printable-home-inventory-template/",
     "cluster": "printables",
     "keywords": "printable home inventory template",
-    "headings": "Printable Home Inventory Template Choose the format for your task Filled example: one room, two items Keep the completed copy private Optional additional fields What to record first"
+    "headings": "Printable Home Inventory Template Choose the format for your task Filled example: one room, two items Keep the completed copy private Optional additional fields What to record first What the official guidance says about inventory fields Paper now, local-first copy later"
   },
   {
     "title": "Printable Home Service Provider List | Contractors and Household Contacts",
@@ -557,7 +557,7 @@
     "route": "/guides/",
     "cluster": "support",
     "keywords": "",
-    "headings": "Home and Household Management Guides Maintain the home Know what you own Keep documents findable Make the household transferable Organize recurring life"
+    "headings": "Home and Household Management Guides Maintain the home Know what you own Keep documents findable Make the household transferable Organize recurring life Which household tool or template to use Official references behind these picks"
   },
   {
     "title": "Free Home Management Tools and Calculators | FamilyBoard",
@@ -565,7 +565,7 @@
     "route": "/tools/",
     "cluster": "support",
     "keywords": "",
-    "headings": "Free Home Management Tools"
+    "headings": "Free Home Management Tools Which household tool or template to use Official references behind these picks"
   },
   {
     "title": "Printable Household Checklists | Maintenance, Emergency, Moving and More",
@@ -573,7 +573,7 @@
     "route": "/checklists/",
     "cluster": "support",
     "keywords": "",
-    "headings": "Printable Household Checklists"
+    "headings": "Printable Household Checklists Which household tool or template to use Official references behind these picks"
   },
   {
     "title": "Printable Household Templates | Inventory, Warranty, Repairs, Contacts and Chores",
@@ -581,7 +581,7 @@
     "route": "/templates/",
     "cluster": "support",
     "keywords": "",
-    "headings": "Printable Household Templates How to use a template well"
+    "headings": "Printable Household Templates Which household tool or template to use Official references behind these picks How to use a template well"
   },
   {
     "title": "Editorial Policy | FamilyBoard",

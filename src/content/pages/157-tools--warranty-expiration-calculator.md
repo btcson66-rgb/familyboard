@@ -9,7 +9,7 @@ pageType: "tool"
 indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-10-02"
+lastReviewedAt: "2026-11-08"
 nextStep: "Calculate the date, then save it with the receipt, model, serial number, and the exact warranty-start event so the number still means something when you check back in two years."
 related:
   - "/guides/warranty-expiration/"
@@ -104,3 +104,11 @@ A date by itself is hard to defend later if you can't show where it came from. K
 - a running log of repairs, replacements, or prior claims.
 
 FamilyBoard's app runs entirely in your browser — there's no account and nothing syncs to a server, so the private workspace where you'd keep this asset record only exists on the device you're using right now. The result panel's **Save for app** button stores the calculated text locally as a quick reference; treat the full asset record, with the receipt and warranty document attached, as the version that actually matters two years from now.
+
+## What the law requires you to be able to find
+
+In the United States, the Magnuson-Moss Warranty Act ([15 U.S.C. 2301 and following](https://www.govinfo.gov/link/uscode/15/2301)) governs written warranties on consumer products and is the basis for FTC rules requiring warranty terms to be disclosed in plain language, including the coverage period and exclusions. The calculator does not read that text. It only adds a term you enter to a start date you enter, so confirm both against the warranty document, and note that some warranties start on delivery or installation rather than the purchase date. A date from this tool is a reminder to check the warranty, not a determination that coverage exists.
+
+## Why a local record helps when you claim
+
+When a product fails, a claim usually needs the receipt, the model and serial number and the warranty terms. Saving the calculated date with those details in the FamilyBoard app keeps them in one place in your own browser, with no account and no FamilyBoard server holding them, which protects privacy but also means you must export your own backup. Keep the original receipt or a photo of it outside the app as well.

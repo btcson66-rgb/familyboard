@@ -165,6 +165,8 @@ const supportRecords = supportIndexes
       pageType: "support",
       indexable,
       depthVerified: false,
+      lastReviewedAt: authoringField(block, "Editorial review date") || undefined,
+      publishedAt: authoringField(block, "Published date") || undefined,
       contentVersion: Number(authoringField(block, "Content version")) || 1,
       redirectTo: redirectValue ? normalizeRoute(redirectValue) : "",
       nextStep: nextStepField(block).replaceAll("`", ""),

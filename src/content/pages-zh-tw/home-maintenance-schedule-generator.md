@@ -10,7 +10,7 @@ cluster: "tools"
 pageType: "tool"
 indexable: true
 publishedAt: "2026-08-22"
-lastReviewedAt: "2026-08-22"
+lastReviewedAt: "2026-11-08"
 related:
   - "/zh-tw/guides/home-maintenance-schedule/"
   - "/zh-tw/tools/warranty-expiration-calculator/"
@@ -62,6 +62,14 @@ faq:
 自宅家庭通常能直接安排專有設備，但社區大樓還有公共設施與管委會責任；租屋則需再確認租約、房東與房客的處理界線。清單可以用來記錄「何時發現、何時通知、對方如何回覆」，不能用來替代責任判斷。
 
 涉及電力、瓦斯、冷媒、消防設備、結構、高處或其他危險工作時，排程內容應是停止使用、遠離危險範圍、保存必要資訊並聯絡合格專業人員。住宅用火災警報器等安全設備應依產品說明與消防署公開指引處理，可參考消防署的[住宅用火災警報器 Q&A](https://www.nfa.gov.tw/cht/index.php?code=list&ids=1083)。
+
+## 官方保養清單可以怎麼對照
+
+美國能源之星（ENERGY STAR）的[冷暖氣系統保養清單](https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist)（英文）建議每年在換季前請合格廠商檢查，春季檢查冷氣、秋季檢查暖氣，典型項目包括恆溫設定、電氣接點、冷凝排水與控制功能。台灣家庭可以把它當作安排冷氣與空調設備複查的參考：決定在產生的排程裡保留哪些設備列、何時預約師傅。它描述的是一般檢查內容，不是針對你那台設備的規定，實際週期與作業仍以原廠說明書與合格技師為準。
+
+## 排程只留在你的瀏覽器
+
+這個產生器在瀏覽器內，依你選的住宅類型與設備建立起始排程，選項不會送到 FamilyBoard。若把項目帶進 App，也只存在目前瀏覽器的本機資料庫，沒有帳號。請在每一項補上說明書依據與上次保養日期，並定期匯出備份，才不會因為清除瀏覽器資料而失去歷史。
 
 ## 常見問題
 

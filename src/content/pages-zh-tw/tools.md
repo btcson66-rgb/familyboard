@@ -11,7 +11,7 @@ pageType: "support"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-29"
-lastReviewedAt: "2026-08-29"
+lastReviewedAt: "2026-11-08"
 nextStep: "只選一個現在有明確輸入與輸出的家庭問題，完成結果後再決定是否保存成 App 紀錄。"
 related:
   - "/zh-tw/tools/warranty-expiration-calculator/"
@@ -54,5 +54,23 @@ FamilyBoard 的繁中工具區不是把計算器名稱堆在一起，而是依�
 工具在目前瀏覽器運作，沒有註冊要求，也不會自動跨裝置同步。輸入時避免完整姓名、住址、門禁、帳號、卡號、醫療細節或原始對話；用 `ASSET-01`、`REVIEW-2026-08` 這類中性代號已足以完成大部分整理。若要保存到 App，先確認資料的來源、用途和誰可以看到，重大變更後匯出備份。涉及瓦斯、電氣、結構、醫療、法律、保險或正式費用責任時，請回到官方與專業來源。
 
 所有工具免費使用，未來若在公開文章旁出現可選的商品類別，會放在主要結果之外並清楚揭露 affiliate 關係；不會在私密 App、家庭顯示、交接輸出或下載檔案中插入廣告。工具的價值是減少一次查找或算術錯誤，而不是替家庭做不透明的決策。
+
+## 家庭營運工具與範本選用對照表
+
+先決定你想拿到的結果，再選工具；每個工具都在瀏覽器內計算，不需註冊。
+
+| 你想處理的事 | 先開這一頁 | 會得到 |
+|---|---|---|
+| 計算產品保固到期日 | [保固到期日計算器](/zh-tw/tools/warranty-expiration-calculator/) | 預估到期日與要核對的保固文件 |
+| 把月費、季費換成年費 | [訂閱年成本計算器](/zh-tw/tools/annual-subscription-cost-calculator/) | 年成本、月均與多年累計 |
+| 合併比較多項家庭訂閱 | [家庭訂閱費用計算器](/zh-tw/tools/household-subscription-cost-calculator/) | 整個家庭的定期支出總覽 |
+| 依住家設備產生保養排程 | [居家保養排程產生器](/zh-tw/tools/home-maintenance-schedule-generator/) | 可再依原廠手冊修改的起始排程 |
+| 查看家電使用年數 | [家電年齡計算器](/zh-tw/tools/appliance-age-calculator/) | 由購買或出廠日推算的年數 |
+| 長期保存家中設備資料 | [家庭資產清單 App 教學](/zh-tw/features/home-inventory-tracker/) | 型號、序號、保固與保養的本機清單 |
+| 印出一份家庭財物清冊 | [可列印家庭財物清冊範本](/zh-tw/templates/printable-home-inventory-template/) | 可手寫或匯入試算表的空白清冊 |
+
+## 使用結果前先核對的官方說明
+
+工具的結果要搭配原始文件才有用。計算保固日期前，可對照消費者保護處說明的[保證書應載明事項](https://cpc.ey.gov.tw/Page/4432D6D5FA6677B9/d028c4a9-7840-4902-bdb7-d4c64b30162e)，確認起算日與期間確實寫在書面保證上；遇到扣款或服務爭議時，可依[申訴管道與機制](https://cpc.ey.gov.tw/Page/1DCF8AA4D223F601/37082320-17f6-43d9-b3f5-1d9adb61211a)先向業者申訴，再向縣市消費者服務中心求助。這些是一般說明，個案仍以契約及主管機關認定為準。工具在瀏覽器內計算，不會把家庭資料傳到 FamilyBoard。
 
 **下一步：** 先開啟[保固到期計算器](/zh-tw/tools/warranty-expiration-calculator/)或[家庭備份還原檢查器](/zh-tw/tools/household-backup-recovery-checker/)，完成一個可驗證的小結果，再決定是否建立長期紀錄。

@@ -9,7 +9,7 @@ pageType: "content"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-22"
+lastReviewedAt: "2026-11-08"
 nextStep: "Add the first appliance or vehicle you'd hate to lose the receipt or serial number for, then export the master CSV from Settings to fill in purchase price and manual reference."
 related:
   - "/features/maintenance-tracker/"
@@ -58,3 +58,23 @@ Not every item earns eight fields. A modest lamp might get a name and a location
 ## Build it gradually, and know the limits
 
 Add one room or one category at a time rather than trying to catalog the whole house in one sitting. And keep the honest limits in mind: everything lives in this browser's local database, there's no photo-upload field on the asset record itself (photos would need to be referenced as a document instead), and if you use a different browser or device, this asset list doesn't follow you there automatically — export a JSON backup from Settings if you want to move it.
+
+## Quick reference: what to write in each asset field
+
+| Field | What to write | Why it helps later |
+|---|---|---|
+| Name | The plain name you would say aloud, such as "Kitchen dishwasher" | Finds the right record when several appliances share a brand |
+| Category | Appliance, electronics, vehicle or home system | Keeps the list sortable when it grows |
+| Location | Room or area, such as "Garage" | Tells a repair person or family member where to look |
+| Brand and model | Copy exactly from the nameplate | Needed for manuals, parts and warranty questions |
+| Serial number | Copy from the nameplate, checking 0 versus O | Often requested for a warranty claim or insurance report |
+| Purchase date | Use the receipt or order date | Anchors warranty and age calculations |
+| Notes | Where the receipt and manual are kept | Points to evidence without storing the file itself |
+
+## What insurers say a home inventory is for
+
+The Insurance Information Institute (Triple-I) explains that [an up-to-date home inventory can help you settle an insurance claim faster, verify losses for an income tax return and buy the right amount of coverage](https://www.iii.org/article/how-to-create-a-home-inventory). Its checklist asks for each item's description, make and model, serial number, price and place of purchase. Those are the same fields in this tracker's quick-add form, so recording them for the appliances and electronics that would be costly to replace already gives you the raw material an insurer or agent is likely to ask about. The National Association of Insurance Commissioners adds, in its [disaster-preparedness consumer alert](https://content.naic.org/article/consumer-insight-disaster-preparedness) (published in 2014), that higher-value items such as jewelry, electronics or collectibles may exceed standard policy limits, so the inventory is also a prompt to ask your insurer about coverage. Neither source says what your own policy will pay; that depends on the policy.
+
+## Why local-first helps both claims readiness and privacy
+
+FamilyBoard keeps asset records in IndexedDB inside your own browser; there is no account and no household-data server, so serial numbers and purchase prices are not sent to FamilyBoard. That is a privacy advantage for a list that doubles as a map of what is valuable in your home. It is not a backup: a browser profile can be cleared or lost with the device, and Triple-I recommends keeping a copy of the inventory somewhere outside the home. After you add items, export the JSON (or password-encrypted JSON) backup from Settings and store it in a place that would survive a fire or flood.

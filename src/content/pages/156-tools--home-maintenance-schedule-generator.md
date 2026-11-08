@@ -9,7 +9,7 @@ pageType: "tool"
 indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-11-08"
 nextStep: "Generate the schedule, replace each \"confirm the correct manufacturer interval\" line with the real number from your own manual, and save the finished list to the matching asset record."
 related:
   - "/guides/home-maintenance-schedule/"
@@ -60,3 +60,19 @@ A schedule only stays useful if the numbers in it came from somewhere real. For 
 ## Working through a long list without stalling out
 
 If you type in a dozen systems at once, the generator hands you back two dozen prompts, and reading a manual for every single one in one sitting is exactly the kind of project that gets abandoned halfway. It's fine to generate the full list up front and then work through it in a different order than it printed in — start with whatever would cause the most disruption if it failed unexpectedly, like a water heater or an HVAC system, confirm its real interval first, and let lower-stakes items like light fixtures or small appliances wait a week or two without any harm done.
+
+## Quick reference: from your entry to the starter schedule
+
+| You type | The generator returns | You add from the manual |
+|---|---|---|
+| HVAC filter | An inspect-and-confirm prompt and a record-completion prompt | The filter size, the interval the manufacturer gives and the last change date |
+| Refrigerator | The same two prompts | The coil or filter guidance for your exact model |
+| Smoke alarms | The same two prompts | The test and replacement interval printed by the manufacturer |
+
+## What an official maintenance checklist does and does not cover
+
+ENERGY STAR's [heating and cooling maintenance checklist](https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist) recommends annual pre-season check-ups by a contractor, cooling in spring and heating in fall, and lists typical tasks such as checking thermostat settings, electrical connections, the condensate drain and system controls. Use it as a reference when you decide which HVAC rows to keep in the generated schedule and when to book a contractor. It describes a typical check-up, not a rule for your equipment, so the manufacturer's manual and a qualified technician decide the actual interval and the work.
+
+## Keeping the schedule local
+
+The generator builds the starter schedule in your browser from the home type and systems you select, and nothing you choose is sent to FamilyBoard. If you carry the tasks into the maintenance tracker, they are stored in your browser's local database with no account. Add the manual source and last-service date to each task, and export a backup so the history survives a cleared browser.
