@@ -9,7 +9,7 @@ pageType: "printable"
 indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-10-02"
+lastReviewedAt: "2026-11-08"
 nextStep: "Use the digital tracker when you want maintenance, warranty and repair history attached to the same item."
 related:
   - "/guides/home-inventory-checklist/"
@@ -85,3 +85,11 @@ FamilyBoard does not receive values you write into the downloaded worksheet. The
 Prioritize appliances, electronics, valuable items, tools, vehicles and home systems. Use photos for context and labels. If a serial number is difficult or unsafe to reach, leave it blank until service makes it accessible.
 
 For a product whose written terms identify a start date and term, use the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) and copy the review date into the optional field. Keep the receipt or terms reference in the table so the calculation remains traceable.
+
+## What the official guidance says about inventory fields
+
+Triple-I's [home inventory brochure](https://www.iii.org/article/brochure-home-inventory) says an inventory can help you buy the amount of insurance you need and get a claim settled faster, and suggests choosing a method that works for you, whether room by room or by category. It also advises keeping receipts and noting each item's cost, purchase date, make and model, and storing a copy outside the home. The template covers room, item, make and model, serial number, purchase date and receipt reference; write the price in the Notes column so a completed sheet carries everything that guidance asks for. Triple-I's [step-by-step article](https://www.iii.org/article/how-to-create-a-home-inventory) recommends starting with a small contained area, such as one cabinet or closet, which is a realistic way to fill the first page of this sheet before tackling the rest of the house. NAIC's [consumer alert on disaster preparedness](https://content.naic.org/article/consumer-insight-disaster-preparedness) is a reminder to keep copies of insurance documents in a waterproof container, which applies equally to a printed inventory.
+
+## Paper now, local-first copy later
+
+A printed or CSV sheet works without any software, and a PDF you fill in by hand never touches a server. If you later move the rows into the FamilyBoard tracker, they are stored in your browser rather than on a FamilyBoard account, which keeps serial numbers and prices private but means you still need your own exported backup and an offsite copy of the sheet. Keep the paper original and one digital copy in different places.

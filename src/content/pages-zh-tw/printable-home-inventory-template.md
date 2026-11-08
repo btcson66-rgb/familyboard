@@ -11,7 +11,7 @@ pageType: "printable"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-29"
-lastReviewedAt: "2026-08-29"
+lastReviewedAt: "2026-11-08"
 nextStep: "先選一個房間和五件最難重建的物品，填完代號與來源後，再決定哪些欄位值得交給 FamilyBoard 長期追蹤。"
 related:
   - "/zh-tw/guides/home-inventory-checklist/"
@@ -90,6 +90,14 @@ contentVersion: 1
 紙本適合走動拍照、搬家點交、家庭會議和離線查找。需要長期連結保養、保固、修繕歷史的項目，可手動加入 [FamilyBoard 家庭財物追蹤功能](/zh-tw/features/home-inventory-tracker/)，讓物品代號、事件和來源保持一致。App 不會自動掃描這張紙、讀取照片或替你判斷物品價值；資料留在目前瀏覽器，重要紀錄仍要由你匯出並保存在獨立、可測試的位置。
 
 建立備份時保留版本日期，不要只覆寫一份檔案。清冊的價值在於能和來源、事件及下一步互相指向，而不是欄位數量。新購、搬家、贈與、出售、捐贈、保固維修或照片重新拍攝時建立更新事件，保留舊紀錄以免日後無法解釋變化。
+
+## 填表時可對照的官方說明
+
+Triple-I 的[家庭財物清冊手冊](https://www.iii.org/article/brochure-home-inventory)（英文）指出，清冊有助於決定投保額並加快理賠，也建議保留收據、記下價格、購買日與品牌型號，並把副本存放在住家以外的地方。本範本的欄位涵蓋位置、品牌型號、序號、取得日與收據來源，與這份清單的重點大致對應（價格可寫在備註或「保固／下一步」欄），填完的表格可以當作與保險業者或代理人討論的底稿。Triple-I 另有[逐步說明](https://www.iii.org/article/how-to-create-a-home-inventory)，建議先從廚房小家電櫃這類小範圍開始，與其一次寫完整個家，不如先填滿這張表的第一頁。NAIC 的[災害準備提醒](https://content.naic.org/article/consumer-insight-disaster-preparedness)則建議把保險文件影本放在防水容器，列印出來的清冊同樣適用。台灣的[手機送修注意事項](https://cpc.ey.gov.tw/Page/8644AFB8F5DCB8A3/286ce994-7f56-4290-8482-4c819dc863f0)也提到要記錄產品序號並保留單據，可作為「序號欄」為什麼值得填的實例。這些外部資料都是一般建議，不等於你的保單條款。
+
+## 紙本先填，本機再整理，並各留一份副本
+
+紙本或 CSV 不需要任何軟體，手寫的 PDF 也不會經過伺服器。之後若把資料搬進 FamilyBoard，內容會存在你的瀏覽器而不是 FamilyBoard 帳號，序號與金額因此不會集中在別人的伺服器上；代價是你必須自己匯出備份。請把紙本原件與一份電子檔分開放在不同地點。
 
 ## 常見問題與下一步
 

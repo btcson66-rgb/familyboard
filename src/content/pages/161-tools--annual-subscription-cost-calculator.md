@@ -9,7 +9,7 @@ pageType: "tool"
 indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-08-19"
+lastReviewedAt: "2026-11-08"
 nextStep: "Calculate the annual figure, then note the service, price, and billing frequency alongside it so you have a real number to compare against at the next renewal."
 related:
   - "/tools/household-subscription-cost-calculator/"
@@ -54,3 +54,20 @@ An annualized figure is most useful compared against something concrete, not vie
 ## What to keep with the number
 
 An annualized figure is only useful if you remember what it was for. Note the service name, the price you entered, the billing frequency, and the date you calculated it — prices change often enough that a number from eight months ago may no longer be accurate. FamilyBoard's app stores this kind of record locally in your browser, with no account or sync, so it's worth exporting or noting the figure somewhere durable if you want to compare it again at renewal time.
+
+## Quick reference: how each billing frequency becomes a yearly cost
+
+| Billing frequency | Cycles per year | A $12 charge becomes |
+|---|---|---|
+| Weekly | 52 | $624 a year, $52 a month |
+| Monthly | 12 | $144 a year, $12 a month |
+| Quarterly | 4 | $48 a year, $4 a month |
+| Annual | 1 | $12 a year, $1 a month |
+
+## Where the number fits in official consumer guidance
+
+The calculator only converts a price and billing frequency into a yearly figure; it cannot see your contract or your bank. The Consumer Financial Protection Bureau explains that with [automatic payments from a bank account](https://www.consumerfinance.gov/ask-cfpb/how-do-automatic-payments-from-a-bank-account-work-en-2021/) you give the company permission to take payments, and advises verifying the company before agreeing and keeping track of what is being charged. Use the yearly total as the amount to check against your statements, then confirm the actual cancellation and renewal terms with the provider. The result does not tell you whether a charge is authorized or whether a trial has converted to a paid plan.
+
+## Why the inputs stay in your browser
+
+The price you type is calculated in the page and is not sent to FamilyBoard, and subscription costs are excluded from family-display and handoff views by default. If you save the result to the FamilyBoard app, it is stored in your browser's local database with no account, so your list of services is not held on a FamilyBoard server. Export a backup from Settings if you want to keep the record across devices.

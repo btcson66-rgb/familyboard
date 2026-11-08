@@ -18,6 +18,7 @@ interface Props {
   indexable?: boolean;
   robots?: string;
   pageType?: 'website' | 'article' | 'app';
+  schemaType?: 'Article' | 'TechArticle';
   bodyClass?: string;
   publishedAt?: Date;
   lastReviewedAt?: Date;
@@ -36,6 +37,7 @@ const {
   indexable = true,
   robots,
   pageType = 'website',
+  schemaType,
   bodyClass = '',
   publishedAt,
   lastReviewedAt,
@@ -64,19 +66,24 @@ const adsenseAccount = !isApp && publicIntegrationsEnabled && monetization.adsen
 const adsenseLoader = adsenseAccount && !robotsContent.includes('noindex') ? adsenseAccount : '';
 const organizationId = `${brand.origin}/#organization`;
 const websiteId = `${brand.origin}/#website`;
+// One team byline for every public page, in both locales. It is an organization,
+// never an invented person (see docs/seo/SEO_RULES.md: no fabricated authors).
+const authorName = isZhTw ? 'FamilyBoard 家庭營運編輯團隊' : 'FamilyBoard Household Ops Editorial Team';
+const authorUrl = `${brand.origin}${isZhTw ? '/zh-tw/editorial-policy/' : '/editorial-policy/'}`;
+const articleType = pageType === 'app' ? undefined : (schemaType ?? (pageType === 'article' ? 'Article' : undefined));
 const logoUrl = `${brand.origin}/brand/familyboard-mark.png`;
 const schema = pageType === 'app'
   ? { '@context': 'https://schema.org', '@type': 'WebApplication', '@id': `${canonical}#app`, name: brand.name, url: canonical, applicationCategory: 'LifestyleApplication', operatingSystem: 'Any', browserRequirements: 'Requires a modern browser with IndexedDB and Web Crypto support', softwareVersion: APP_VERSION, isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, description, image: logoUrl, publisher: { '@id': organizationId } }
   : {
       '@context': 'https://schema.org',
-      '@type': pageType === 'article' ? 'Article' : 'WebPage',
+      '@type': articleType ?? 'WebPage',
       '@id': `${canonical}#webpage`,
       name: title,
-      headline: pageType === 'article' ? title.replace(/ \|.*$/, '') : undefined,
+      headline: articleType ? title.replace(/\s*[|｜].*$/, '') : undefined,
       url: canonical,
       description,
       inLanguage: locale,
-      author: pageType === 'article' ? { '@type': 'Organization', name: isZhTw ? 'FamilyBoard 編輯團隊' : 'FamilyBoard Editorial Team', url: `${brand.origin}/editorial-policy/` } : undefined,
+      author: articleType ? { '@type': 'Organization', name: authorName, url: authorUrl } : undefined,
       datePublished: publishedAt?.toISOString(),
       dateModified: lastReviewedAt?.toISOString(),
       isPartOf: { '@id': websiteId },
@@ -125,6 +132,7 @@ const faqSchema = faq.length > 0 ? {
     <meta name="theme-color" content="#fbf7f0" />
     <meta name="description" content={description} />
     <meta name="robots" content={robotsContent} />
+    {!isApp && <meta name="author" content={authorName} />}
     {redirectRefresh && <meta http-equiv="refresh" content={redirectRefresh} />}
     {adsenseAccount && <meta name="google-adsense-account" content={adsenseAccount} />}
     {adsenseLoader && <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseLoader}`} crossorigin="anonymous"></script>}

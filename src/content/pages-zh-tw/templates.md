@@ -11,7 +11,7 @@ pageType: "support"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-29"
-lastReviewedAt: "2026-08-29"
+lastReviewedAt: "2026-11-08"
 nextStep: "先選一個本週會使用的範本，填入版本日期與負責人，再刪掉不適用欄位。"
 related:
   - "/zh-tw/templates/printable-service-provider-list/"
@@ -57,5 +57,21 @@ FamilyBoard 的範本不是要求每個家庭建立一整套檔案櫃，而是�
 列印後不要先把所有欄位填滿。請挑一個本週會發生的工作，例如找服務商、交接鑰匙或確認保固，寫下日期、負責人、來源和下一步，再請另一位家人單獨讀一次。若他不知道哪一格代表「尚未完成」、哪裡能找到原始文件，問題通常是欄位太模糊或分享範圍太大。把「待確認」「已通知」「已完成」分成不同狀態，避免一個勾選框掩蓋等待中的回覆。
 
 紙本適合短期走讀與離線場合，電子紀錄適合需要重複複查的事情。轉入 App 時只帶入中性代號、日期、責任和文件位置，原始地址、帳號、付款、完整序號與對話仍留在受控位置。每次服務商、設備、家庭角色、住宅或條款改變，都建立新版本並標上生效日；過時版本要回收，不要讓兩份相反指示同時流通。範本的成功標準是下一個人能採取正確的下一步，而不是紙張看起來很完整。
+
+## 家庭營運工具與範本選用對照表
+
+先看你要長期保存什麼，再選對應的空白紀錄，以及能幫你填寫的工具或指南。
+
+| 你想處理的事 | 先開這一頁 | 搭配使用 |
+|---|---|---|
+| 為保險或搬家記錄家中物品 | [可列印家庭財物清冊範本](/zh-tw/templates/printable-home-inventory-template/) | [家庭資產清單 App 教學](/zh-tw/features/home-inventory-tracker/) |
+| 追蹤訂閱與續約日期 | [可列印年度續約表](/zh-tw/templates/printable-annual-renewals/) | [訂閱年成本計算器](/zh-tw/tools/annual-subscription-cost-calculator/) |
+| 整理常用的水電與維修師傅 | [可列印服務商清單](/zh-tw/templates/printable-service-provider-list/) | [居家照護服務爭議處理指南](/zh-tw/guides/home-care-service-complaint-resolution/) |
+| 讓家人或保母代為照顧家中 | [可列印家庭交接表](/zh-tw/templates/printable-household-handoff-sheet/) | [緊急聯絡單產生器](/zh-tw/tools/emergency-contact-sheet-generator/) |
+| 把保固日期與收據放在一起 | [保固到期日計算器](/zh-tw/tools/warranty-expiration-calculator/) | [保固追蹤功能](/zh-tw/features/warranty-tracker/) |
+
+## 範本與官方建議的對照
+
+美國保險資訊協會的[家庭財物清冊說明](https://www.iii.org/article/how-to-create-a-home-inventory)（英文）建議記下品名、品牌型號、序號、價格與購買地點，並把副本放在住家以外；這正是「可列印家庭財物清冊範本」適合的用途。台灣消保處也提醒[送修時要記錄序號、保留單據](https://cpc.ey.gov.tw/Page/8644AFB8F5DCB8A3/286ce994-7f56-4290-8482-4c819dc863f0)。紙本範本不經過任何伺服器；若搬進 App，資料只存在你的瀏覽器，請自行匯出備份。
 
 **下一步：** 先開啟[可列印服務商清單](/zh-tw/templates/printable-service-provider-list/)，填入一個最近真正使用過的服務類別與複查日期。

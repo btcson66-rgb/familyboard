@@ -27,7 +27,7 @@
     "route": "/features/home-inventory-tracker/",
     "alternateRoute": "/zh-tw/features/home-inventory-tracker/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-22",
+    "lastReviewedAt": "2026-11-08",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1291,7 +1291,7 @@
     "route": "/tools/home-maintenance-schedule-generator/",
     "alternateRoute": "/zh-tw/tools/home-maintenance-schedule-generator/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-11-08",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1299,7 +1299,7 @@
     "route": "/tools/warranty-expiration-calculator/",
     "alternateRoute": "/zh-tw/tools/warranty-expiration-calculator/",
     "indexable": true,
-    "lastReviewedAt": "2026-10-02",
+    "lastReviewedAt": "2026-11-08",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1331,7 +1331,7 @@
     "route": "/tools/annual-subscription-cost-calculator/",
     "alternateRoute": "/zh-tw/tools/annual-subscription-cost-calculator/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-11-08",
     "locale": "en",
     "redirectTo": ""
   },
@@ -1515,7 +1515,7 @@
     "route": "/templates/printable-home-inventory-template/",
     "alternateRoute": "/zh-tw/templates/printable-home-inventory-template/",
     "indexable": true,
-    "lastReviewedAt": "2026-10-02",
+    "lastReviewedAt": "2026-11-08",
     "locale": "en",
     "redirectTo": ""
   },
@@ -3955,7 +3955,7 @@
     "route": "/guides/",
     "alternateRoute": "/zh-tw/guides/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-11-08",
     "locale": "en",
     "redirectTo": ""
   },
@@ -3963,7 +3963,7 @@
     "route": "/tools/",
     "alternateRoute": "/zh-tw/tools/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-11-08",
     "locale": "en",
     "redirectTo": ""
   },
@@ -3971,7 +3971,7 @@
     "route": "/checklists/",
     "alternateRoute": "/zh-tw/checklists/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-11-08",
     "locale": "en",
     "redirectTo": ""
   },
@@ -3979,7 +3979,7 @@
     "route": "/templates/",
     "alternateRoute": "/zh-tw/templates/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-19",
+    "lastReviewedAt": "2026-11-08",
     "locale": "en",
     "redirectTo": ""
   },
@@ -4100,7 +4100,7 @@
     "route": "/zh-tw/tools/annual-subscription-cost-calculator/",
     "alternateRoute": "/tools/annual-subscription-cost-calculator/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-22",
+    "lastReviewedAt": "2026-11-08",
     "locale": "zh-TW"
   },
   {
@@ -4247,7 +4247,7 @@
     "route": "/zh-tw/checklists/",
     "alternateRoute": "/checklists/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-29",
+    "lastReviewedAt": "2026-11-08",
     "locale": "zh-TW"
   },
   {
@@ -5927,7 +5927,7 @@
     "route": "/zh-tw/guides/",
     "alternateRoute": "/guides/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-29",
+    "lastReviewedAt": "2026-11-08",
     "locale": "zh-TW"
   },
   {
@@ -6088,7 +6088,7 @@
     "route": "/zh-tw/features/home-inventory-tracker/",
     "alternateRoute": "/features/home-inventory-tracker/",
     "indexable": false,
-    "lastReviewedAt": "2026-08-22",
+    "lastReviewedAt": "2026-11-08",
     "locale": "zh-TW"
   },
   {
@@ -6158,7 +6158,7 @@
     "route": "/zh-tw/tools/home-maintenance-schedule-generator/",
     "alternateRoute": "/tools/home-maintenance-schedule-generator/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-22",
+    "lastReviewedAt": "2026-11-08",
     "locale": "zh-TW"
   },
   {
@@ -7131,7 +7131,7 @@
     "route": "/zh-tw/templates/printable-home-inventory-template/",
     "alternateRoute": "/templates/printable-home-inventory-template/",
     "indexable": false,
-    "lastReviewedAt": "2026-08-29",
+    "lastReviewedAt": "2026-11-08",
     "locale": "zh-TW"
   },
   {
@@ -7488,7 +7488,7 @@
     "route": "/zh-tw/templates/",
     "alternateRoute": "/templates/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-29",
+    "lastReviewedAt": "2026-11-08",
     "locale": "zh-TW"
   },
   {
@@ -7502,7 +7502,7 @@
     "route": "/zh-tw/tools/",
     "alternateRoute": "/tools/",
     "indexable": true,
-    "lastReviewedAt": "2026-08-29",
+    "lastReviewedAt": "2026-11-08",
     "locale": "zh-TW"
   },
   {
@@ -7572,7 +7572,7 @@
     "route": "/zh-tw/tools/warranty-expiration-calculator/",
     "alternateRoute": "/tools/warranty-expiration-calculator/",
     "indexable": true,
-    "lastReviewedAt": "2026-10-02",
+    "lastReviewedAt": "2026-11-08",
     "locale": "zh-TW"
   },
   {

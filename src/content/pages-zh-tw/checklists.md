@@ -11,7 +11,7 @@ pageType: "support"
 indexable: true
 depthVerified: true
 publishedAt: "2026-08-29"
-lastReviewedAt: "2026-08-29"
+lastReviewedAt: "2026-11-08"
 nextStep: "選一張最貼近目前家庭工作的表格，先寫日期與負責人，再刪掉不適用的欄位。"
 related:
   - "/zh-tw/checklists/printable-monthly-home-checklist/"
@@ -58,5 +58,21 @@ FamilyBoard 的表格免費使用，不會要求註冊，也不會把填寫內�
 ### 讓一張紙真的被使用
 
 列印後先在家庭會議或走讀中試填一格，確認家人看得懂欄位、找得到來源，也知道遇到異常要聯絡誰。完成一輪後記下版本日期，回收過時的副本；如果沒有人會在固定時間查看，就把它縮短或改成 App 任務。檢查表的成功標準是下一個人能採取正確的下一步，而不是頁面看起來很滿。
+
+## 家庭營運工具與範本選用對照表
+
+依你現在的情境選清單，並看接著要用哪個工具或範本把工作做完。
+
+| 你想處理的事 | 先開這一頁 | 接著使用 |
+|---|---|---|
+| 年底想一次整理環境 | [年末大掃除清單](/zh-tw/checklists/year-end-cleaning-checklist/) | [居家保養排程產生器](/zh-tw/tools/home-maintenance-schedule-generator/)安排明年的保養 |
+| 想每月檢視居家保養 | [居家保養排程指南](/zh-tw/guides/home-maintenance-schedule/) | [居家保養排程產生器](/zh-tw/tools/home-maintenance-schedule-generator/) |
+| 要搬家並確認物品去向 | [搬離住處的紀錄指南](/zh-tw/guides/move-out-home-records/) | [可列印家庭財物清冊範本](/zh-tw/templates/printable-home-inventory-template/) |
+| 要準備颱風或停電 | [颱風前居家準備清單](/zh-tw/guides/storm-preparation-home-checklist/) | [緊急聯絡單產生器](/zh-tw/tools/emergency-contact-sheet-generator/) |
+| 想備好緊急用品 | [緊急用品清點指南](/zh-tw/guides/emergency-supply-inventory/) | [家庭資產清單 App 教學](/zh-tw/features/home-inventory-tracker/) |
+
+## 清單搭配的官方參考
+
+清單是提醒你去確認，不是檢查報告。美國能源之星的[冷暖氣保養清單](https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist)（英文）建議每年換季前請合格廠商檢查，可作為安排冷氣與空調設備複查的參考；實際週期仍以原廠說明書為準。要搬家時，台灣消保處提醒[記錄序號並保留單據](https://cpc.ey.gov.tw/Page/8644AFB8F5DCB8A3/286ce994-7f56-4290-8482-4c819dc863f0)，可以和家庭財物清冊一起準備。
 
 **下一步：** 先開啟[每月家庭檢查表](/zh-tw/checklists/printable-monthly-home-checklist/)，寫下本次日期與三個真正要追蹤的家庭工作。
