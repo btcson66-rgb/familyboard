@@ -445,7 +445,7 @@
     "route": "/templates/printable-service-provider-list/",
     "cluster": "printables",
     "keywords": "printable home service provider list",
-    "headings": "Printable Home Service Provider List Useful categories Verify before relying on old contacts"
+    "headings": "Printable Home Service Provider List A finished sheet: example household The blank sheet Useful categories What each column is for Judgement calls When to use this sheet, and when to use another What this sheet does not cover"
   },
   {
     "title": "Printable House Sitter Checklist | Daily Home, Pet and Contact Instructions",
@@ -453,7 +453,7 @@
     "route": "/checklists/printable-house-sitter-checklist/",
     "cluster": "printables",
     "keywords": "printable house sitter checklist",
-    "headings": "Printable House Sitter Checklist Daily Scheduled days Contacts If something looks wrong"
+    "headings": "Printable House Sitter Checklist A finished sheet: example household The blank sheet Daily Scheduled days Contacts If something looks wrong How to fill in each part What not to write on a sheet that stays in the house When to use this sheet, and when to use another What this sheet does not cover"
   },
   {
     "title": "Printable Pet Sitter Checklist | Feeding, Routine, Supplies and Vet Contacts",
@@ -461,7 +461,7 @@
     "route": "/checklists/printable-pet-sitter-checklist/",
     "cluster": "printables",
     "keywords": "printable pet sitter checklist",
-    "headings": "Printable Pet Sitter Checklist Feeding Routine Supplies Contacts Medication/treatment"
+    "headings": "Printable Pet Sitter Checklist A finished sheet: example household The blank sheet Feeding Routine Supplies Contacts Medication/treatment How to fill in each part When to use this sheet, and when to use another What this sheet does not cover"
   },
   {
     "title": "Printable Annual Renewals Calendar | Household Services, Insurance and Memberships",
@@ -469,7 +469,7 @@
     "route": "/templates/printable-annual-renewals/",
     "cluster": "printables",
     "keywords": "printable annual renewal calendar",
-    "headings": "Printable Annual Renewals Calendar Use decision dates"
+    "headings": "Printable Annual Renewals Calendar A finished sheet: example household The blank sheet What each column is for Use decision dates: they matter more than payment dates When to use this sheet, and when to use another What this sheet does not cover"
   },
   {
     "title": "Free Printable Moving Checklist (PDF & CSV) | FamilyBoard",
@@ -485,7 +485,7 @@
     "route": "/checklists/printable-new-home-checklist/",
     "cluster": "printables",
     "keywords": "printable new home checklist",
-    "headings": "Printable New Home Checklist First day First week First month"
+    "headings": "Printable New Home Checklist A partly finished checklist: example household The blank checklist First day First week First month How to use each section Renting or owning When to use this sheet, and when to use another What this checklist does not cover"
   },
   {
     "title": "Printable Household Handoff Sheet | Tasks, Contacts, Services and Upcoming Obligations",
@@ -493,7 +493,7 @@
     "route": "/templates/printable-household-handoff-sheet/",
     "cluster": "printables",
     "keywords": "printable household handoff sheet",
-    "headings": "Printable Household Handoff Sheet Next 30 days Recurring household responsibilities Current home issues Pets / dependents Key household contacts Secure records How to test the handoff"
+    "headings": "Printable Household Handoff Sheet A finished sheet: example household The blank sheet Next 30 days Recurring household responsibilities Current home issues Pets / dependents Key household contacts Secure records How to fill in each part Test it When to use this sheet, and when to use another What this sheet does not cover"
   },
   {
     "title": "FamilyBoard Is Free — No Account or Paid Plan Required",
