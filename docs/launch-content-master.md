@@ -13111,24 +13111,81 @@ Write what you observed first, then the provider's diagnosis. This makes recurri
 
 # Printable Home Service Provider List
 
+<div class="no-print">
+
+A contact list becomes a service-provider list when each name comes with what that business did for you and when. This page shows a completed sheet first, then the blank one to print.
+
+## A finished sheet: example household
+
+Every business below is invented, and the phone numbers use the 555-01xx range reserved for fiction. Nothing here is a real company, a recommendation or a price; the rows show the level of detail that makes an old entry still useful.
+
+</div>
+
+<div class="no-print" tabindex="0" role="region" aria-label="Filled example service provider list" style="max-width:100%;overflow-x:auto">
+
+| Service | Company/person | Phone | Website/email | What they worked on | Last used |
+|---|---|---|---|---|---|
+| Plumbing | Example Plumbing Co. (ask for Dana) | 555-0143 | booking page on the invoice | Replaced kitchen tap cartridge. Noted a slow bathroom drain but not asked to fix it. Invoice in the house folder. | Mar |
+| Heating/cooling | Example Heating & Air | 555-0178 | email on the service report | Yearly boiler service. Filter size is written on the report in the binder. | Oct |
+| Locksmith/access | Example Lock & Key | 555-0119 | not listed | Rekeyed the front door after move-in; two keys cut. | Jan |
+| Appliance repair | Example Appliance Repair | 555-0166 | online booking form | Dishwasher drain pump. The invoice states the guarantee period. | Jun |
+| Building/property management | Building office, weekdays | 555-0102 | front-desk email | Not used yet. Recommended by a neighbour for water shut-off access. | none |
+
+</div>
+
+<div class="no-print">
+
+The last row shows a judgement call: a business you have only heard about goes on the list, marked as not yet used, so that nobody later mistakes a recommendation for a track record.
+
+## The blank sheet
+
+Printing this page gives you the blank table below, without the example or the guidance.
+
+</div>
+
+<div tabindex="0" role="region" aria-label="Blank service provider list" style="max-width:100%;overflow-x:auto">
+
 | Service | Company/person | Phone | Website/email | What they worked on | Last used |
 |---|---|---|---|---|---|
 | | | | | | |
 | | | | | | |
 
-### Useful categories
-- Plumbing
-- Heating/cooling
-- Appliance repair
-- Electrical
-- Building/property management
-- Locksmith/access
-- General contractor
-- Other household-specific services
+</div>
 
-## Verify before relying on old contacts
+<div class="no-print">
 
-Businesses change numbers, hours and ownership. Mark a `Last verified` date for critical contacts.
+## Useful categories
+
+Worth a row each: plumbing, heating and cooling, electrical, appliance repair, locksmith or access, building or property management, a general contractor, and any service specific to your home.
+
+## What each column is for
+
+- **Service:** the trade as you would type it into a search box when the problem happens: plumbing, boiler, locksmith.
+- **Company/person:** the name as it appears on the invoice, plus the person to ask for if you would. The business name is what you can look up again later; a first name alone is not.
+- **Phone:** the number that reached a human. If a different number works after hours, put both in the cell and say which is which.
+- **Website/email:** where to book or send photos. Leave it blank rather than guessing the address.
+- **What they worked on:** the column that turns a phone book into a record. Name the job, the appliance or system it concerned, how it ended, and where the paperwork is. "Boiler" is not enough in a home with two; "hallway boiler, annual service, report in binder" is.
+- **Last used:** the month and the year. It tells the next reader how stale the entry is. A contact you have not used for several years should be checked before you rely on it.
+
+The sheet has no column for a verification date. When you confirm that a number or business still works, write "checked" and the month next to the phone number, especially for the contacts you would need in a hurry.
+
+## Judgement calls
+
+Do not copy account numbers, customer PINs, gate codes or alarm codes onto this list; a printed list is read by guests and tradespeople. Put a recommended-but-unused business on the list only if you mark it so. If a job went badly, say so in the "worked on" cell, with the date, because that is the information your future self will want.
+
+## When to use this sheet, and when to use another
+
+- To decide whether a business deserves a place on the list at all, read the guide on [building a home service provider list](/guides/home-service-provider-list/), which covers checking the business identity and keeping a listing separate from an endorsement.
+- When someone is covering for you for a few weeks, use the [household handoff sheet](/templates/printable-household-handoff-sheet/) and refer to this list from it, instead of copying the providers across.
+- Starting from nothing in a new home? Begin with the [new home checklist](/checklists/printable-new-home-checklist/), which asks for these contacts in the first week.
+- For emergency numbers and household contacts, use the [emergency contact sheet generator](/tools/emergency-contact-sheet-generator/); this list is for planned and repair work.
+- The [FamilyBoard app](/app/) stores contacts locally in your browser and can include the non-sensitive ones in a handoff sheet; see [household handoff](/features/household-handoff/).
+
+## What this sheet does not cover
+
+It does not check licences, insurance or reviews, and a name on the list is not an endorsement of the business. It will not tell you who to call in an emergency: for fire, gas or a medical problem, use local emergency services. Detailed history of work on a particular appliance belongs with that appliance's record, not on this one page.
+
+</div>
 
 **CTA:** Keep the printed version limited; detailed private service history belongs with the relevant asset/project.
 
@@ -13246,6 +13303,45 @@ Name: ____________________ Phone: ____________________
 
 # Printable House Sitter Checklist
 
+<div class="no-print">
+
+A house-sitter checklist replaces the pile of text messages and the "you'll figure it out" that usually fills the last evening before a trip. Below is a completed one for a short trip, followed by the blank sheet to print.
+
+## A finished sheet: example household
+
+The household, pets, contacts and instructions here are invented. They show how specific a good entry is and how little of it is private. Copy the level of detail, not the content.
+
+**Dates:** 14 March to 24 March, back by early evening
+
+**Daily**
+- Pets: Biscuit (indoor cat): one scoop of dry food morning and evening (scoop is in the food bin), fresh water, scoop the litter once a day. Keep the balcony door shut.
+- Plants: three on the living-room windowsill, water on Sunday only, about a cup each. Leave the cactus alone.
+- Mail/deliveries: bring parcels in from the porch, leave letters in the tray by the door, open nothing.
+- Household task: open the bedroom blinds in the morning, close them at dusk, hallway light on from 6 pm.
+
+**Scheduled days**
+- Trash/recycling: bins out Tuesday evening. This is a recycling week.
+- Service visit: boiler engineer, Thursday morning. Text Sam to confirm before letting anyone in.
+- Other: window cleaner may call on Friday; no payment needed.
+
+**Contacts**
+Primary: Sam, 555-0143, evenings. Backup: Priya's sister, 555-0187, lives ten minutes away and can come over. Building/service contact: caretaker, 555-0102, weekdays.
+
+**If something looks wrong**
+Water on the floor: turn the red-handled valve under the kitchen sink clockwise, then phone Sam. Smoke or an alarm sounding: leave the house, call emergency services, then Sam. For repairs under what we agreed in advance, phone the plumber from the service list; above that, ask first.
+
+*Alarm code and spare key were handled in person before we left.*
+
+</div>
+
+<div class="no-print">
+
+## The blank sheet
+
+Printing this page gives you the blank checklist below, without the example or the guidance around it.
+
+</div>
+
 **Dates:** __________ to __________
 
 ### Daily
@@ -13269,6 +13365,33 @@ Write the household's approved escalation instruction here: ____________________
 
 > Provide access credentials separately using an appropriate secure method.
 
+<div class="no-print">
+
+## How to fill in each part
+
+- **Dates:** write the day the sitter starts and the day and rough time you return. If you will be hard to reach for part of the trip, say when.
+- **Daily:** write each task as something a stranger could do without asking: a quantity, a place, a time. "Feed normally" is a guess; "one scoop, scoop is in the food bin" is an instruction. One line per task keeps the sheet readable.
+- **Scheduled days:** anything that happens on a particular day and not every day. Bins that alternate weeks need the sentence "this is a recycling week", because the sitter cannot see last week's calendar.
+- **Contacts:** name two people who can really be reached. The backup should preferably live nearby and not be travelling with you, so that someone can physically get to the house.
+- **If something looks wrong:** this is the part people leave blank. Write what you would want done: who to ring first, whether the sitter may call a tradesperson, and up to what cost, agreed before you leave. A sitter without that line either does nothing or spends your money.
+
+## What not to write on a sheet that stays in the house
+
+The sheet lies on a counter where visitors, delivery people and tradespeople can read it, and it announces that the home is occupied by a sitter and when you return. Leave off alarm codes, lockbox and safe combinations, door-entry codes, banking or card details, passport numbers and anything else you would not want a stranger to read. Give access details in person or by a method you trust, and write only that they were handled ("alarm code given in person"). Keep the sheet out of sight from windows and the front door. The note at the foot of the sheet says the same thing in one line.
+
+## When to use this sheet, and when to use another
+
+- If the sitter's job is mostly the pets, move the detail to the [pet sitter checklist](/checklists/printable-pet-sitter-checklist/) and keep one line about the pet here.
+- For longer or more complicated stays, the [house-sitter instruction generator](/tools/house-sitter-instruction-generator/) turns your routine into a typed packet.
+- A sitter covering weeks of bills, deadlines and household decisions needs the [household handoff sheet](/templates/printable-household-handoff-sheet/), not just daily tasks.
+- When you get home, [what to check after a vacation](/guides/home-maintenance-after-vacation/) covers the return end of the trip.
+
+## What this sheet does not cover
+
+It does not choose, screen or vet a sitter, and it is not an agreement about pay, liability or damage. Some home insurance policies attach conditions to an empty home or to who stays in it; the sheet cannot tell you what yours says, so check the policy wording or ask your insurer before you travel. Medical and veterinary details belong with the people qualified to give them, not on a sheet that anyone in the house can read.
+
+</div>
+
 **CTA:** Use the generator when the sitter needs more than a one-page checklist.
 
 ---
@@ -13282,6 +13405,44 @@ Write the household's approved escalation instruction here: ____________________
 **Suggested internal links:** `/tools/pet-sitter-instruction-generator/`, `/guides/pet-sitter-information/`, `/guides/organize-pet-records/`, `/features/emergency-information-organizer/`
 
 # Printable Pet Sitter Checklist
+
+<div class="no-print">
+
+A pet-sitter sheet turns what you know about an animal from living with it into steps a stranger can follow. This page shows a completed sheet first, then the blank one to print.
+
+## A finished sheet: example household
+
+The dog, clinics and numbers below are invented, and the 555-01xx numbers are not real. The routine is only an example of how specific an entry should be; it is not a standard for any animal.
+
+**Pet:** Juno, medium dog, brown with a white chest
+**Last reviewed:** 2 March, the day before travel
+
+**Feeding**
+8:00 and 17:30, one level cup of the dry food (measuring cup is in the food bin) with a spoonful of the wet food on top. Water bowl refilled at each meal and before bed. No table scraps.
+
+**Routine**
+Walk/activity: two walks, about half an hour in the morning and a shorter one in the evening, on a harness and lead, never off-lead. She pulls towards the park gate, so keep her on the short lead there.
+Sleeping routine: crate in the hallway with the door open and the blue blanket.
+Other household notes: she may bolt through the front door when someone knocks; put her in the kitchen first.
+
+**Supplies**
+Food location: bin under the stairs, about a week's worth left. Leash/carrier: hook by the front door. Cleaning supplies: bags in the lead drawer; towels for muddy paws by the back door.
+
+**Contacts**
+Owner: Sam, 555-0143. Backup: neighbour at number 12, 555-0155. Veterinarian: Example Veterinary Clinic, 555-0134, closed after 6 pm on weekdays. Emergency clinic: Example 24-hour Animal Hospital, 555-0188, about twenty minutes by car; address on the fridge.
+
+**Medication/treatment**
+One daily tablet with breakfast, exactly as written on the vet's printed instruction sheet (red folder, kitchen drawer). That sheet says what to do after a missed dose. Do not change the dose or give anything else.
+
+</div>
+
+<div class="no-print">
+
+## The blank sheet
+
+Printing this page gives you the blank checklist below, without the example or the guidance around it.
+
+</div>
 
 **Pet:** __________
 **Last reviewed:** __________
@@ -13307,6 +13468,31 @@ Emergency clinic: ____________________
 
 ### Medication/treatment
 Only copy current veterinarian/owner instructions here. Do not generate new medical directions.
+
+<div class="no-print">
+
+## How to fill in each part
+
+- **Pet:** the name, the species and one detail that identifies the animal, such as colour or size. If you have more than one animal, use one sheet each, because a combined sheet is where feeding amounts get swapped.
+- **Last reviewed:** the date you last read the sheet against the real routine. Diets, medication and habits change, so a sheet from last year's trip is the likeliest source of a mistake; reread it before every trip.
+- **Feeding:** give times and a measure the sitter can reproduce, such as a cup or a scoop, and say where the measure is. Say what the animal must not be given, and what to do if it leaves its food, such as note it down and tell you.
+- **Routine:** include the behaviour a stranger would not guess: a dog that bolts at the door, a cat that hides when a certain noise starts, an animal that must never be let out. Put those warnings first.
+- **Supplies:** where things are and when the food will run out, so that a sitter does not have to hunt or improvise.
+- **Contacts:** the vet's opening hours and, separately, the out-of-hours clinic with its address, because someone in a hurry needs a place as well as a number. Ask your vet's practice how they want to handle a sitter bringing in your animal, including who may agree to treatment, and write down what you decide.
+- **Medication/treatment:** point to the veterinarian's current written instructions or copy them word for word. Do not write a dose from memory. If your sitter has not given this medication before, show them in person first.
+
+## When to use this sheet, and when to use another
+
+- For one or two lines about a pet inside a broader visit, use the [house sitter checklist](/checklists/printable-house-sitter-checklist/) and keep this sheet for the animal itself.
+- To type the routine and get a tidy packet, use the [pet sitter instruction generator](/tools/pet-sitter-instruction-generator/).
+- Vaccination papers, microchip details and vet history are records, not instructions; see [organizing pet records](/guides/organize-pet-records/).
+- For people as well as animals, the [emergency contact sheet generator](/tools/emergency-contact-sheet-generator/) builds a separate contact page.
+
+## What this sheet does not cover
+
+It is not veterinary advice. It does not tell a sitter what is normal for a species or whether a symptom is serious; for that, the sitter should phone the veterinarian or the emergency clinic on the sheet. It does not replace boarding or kennel paperwork, pet insurance details or health records, and it cannot guarantee that a sitter will follow it. Anything about medication has to come from your veterinarian.
+
+</div>
 
 **CTA:** Review the sheet immediately before travel; do not assume last year's pet routine is still current.
 
@@ -13412,6 +13598,41 @@ Use checkmarks if the household wants them. Points, rewards and leaderboards are
 
 # Printable Annual Renewals Calendar
 
+<div class="no-print">
+
+A year of household renewals laid out by month, so that a cancellation window or a quote you needed to gather does not arrive as a surprise. A finished sheet is short: a row for each renewal that carries a date and a decision, and a named person against each. The blank calendar to print is further down this page; first, what a completed one looks like.
+
+## A finished sheet: example household
+
+These rows belong to an invented two-adult household. The services, dates and notes are illustrative only. They are not real policies, prices or recommendations, and they show how to fill the columns, not what you should renew.
+
+</div>
+
+<div class="no-print" tabindex="0" role="region" aria-label="Filled example renewals calendar" style="max-width:100%;overflow-x:auto">
+
+| Month | Renewal / obligation | Decision date | Due/renewal date | Owner | Notes |
+|---|---|---|---|---|---|
+| January | Home contents insurance | 12 Jan | 2 Feb | Sam | Renewal notice arrives mid-Jan. Check the cover amount against the inventory; get one other quote only if the price jumped. |
+| March | Annual video-streaming plan | 20 Mar | 10 Apr | Priya | Ask whether anyone watched it in the last three months. Cancel by the date in the plan terms, not the invoice date. |
+| April | Vehicle registration | 1 Apr | 30 Apr | Sam | Needs an inspection first where the area requires one, so book that before the decision date. |
+| July | Pest-control service contract | 1 Jul | 29 Jul | Priya | Renews automatically unless cancelled in writing. Ask the provider for the notice period and write it here. |
+| August | Broadband introductory price ends | 25 Aug | 24 Sep | Sam | Check what the provider offers now before the price changes; note what they said and when. |
+| October | Heating service plan | 3 Oct | 24 Oct | Priya | Book the annual visit before the cold weather. Keep last visit's report with the policy documents. |
+
+</div>
+
+<div class="no-print">
+
+Each row sits under the month of its decision date, not its due date. The contents insurance is due in February but is filed under January, because January is when someone has to open this sheet and do something.
+
+## The blank sheet
+
+Printing this page gives you the blank calendar below, without the example or the guidance around it.
+
+</div>
+
+<div tabindex="0" role="region" aria-label="Blank annual renewals calendar" style="max-width:100%;overflow-x:auto">
+
 | Month | Renewal / obligation | Decision date | Due/renewal date | Owner | Notes |
 |---|---|---|---|---|---|
 | January | | | | | |
@@ -13427,9 +13648,36 @@ Use checkmarks if the household wants them. Points, rewards and leaderboards are
 | November | | | | | |
 | December | | | | | |
 
-## Use decision dates
+</div>
 
-The decision date may be more important than the payment date. Give the household time to compare, cancel or gather documents.
+<div class="no-print">
+
+## What each column is for
+
+- **Month:** file the row under the month you must act, which is the month of the decision date. If the decision date and the due date fall in different months, the sheet follows the decision.
+- **Renewal / obligation:** name the thing and who provides it in words someone else would recognise. "Home contents insurance" works; "insurance" does not once there are three policies. One row per renewal, even when two land in the same month.
+- **Decision date:** the last day you can still change your mind and have it matter. Work backwards from the due date by however long the decision takes: a day for a streaming plan, several weeks for insurance, where you need the renewal notice, a second quote and time to read the differences.
+- **Due/renewal date:** copy it from the notice or terms, not from memory. If you cannot find it, write "find out" and set the decision date to the day you will look.
+- **Owner:** one name, the person who makes the decision, which is not always the person whose card is charged.
+- **Notes:** what you need in front of you to decide: the notice period, where the paperwork lives, the question to ask. Leave out policy numbers, card details and passwords; this sheet gets read aloud and left on tables.
+
+## Use decision dates: they matter more than payment dates
+
+By the payment date, most of the choices are gone: the plan has renewed, the cancellation window has closed, the quote you wanted would have taken a week. Payment dates are also the ones households already notice, because money moves. The decision date is the one nobody notices unless it is written down. A renewal with a payment date but no decision date is only a reminder that you have already missed the chance to choose.
+
+## When to use this sheet, and when to use another
+
+- Use it when you have more than a few yearly or multi-month renewals and want to see which months are crowded.
+- To turn a weekly or monthly price into a yearly figure before you decide, use the [annual subscription cost calculator](/tools/annual-subscription-cost-calculator/).
+- For a once-a-year review of everything else a household keeps on file, the [household annual review generator](/tools/household-annual-review-generator/) makes a dated checklist.
+- Warranties have their own end dates and are not renewals; see [how to track product warranties](/guides/how-to-track-product-warranties/).
+- If you would rather be shown renewals than check a sheet, the [FamilyBoard app](/app/) has a Subscriptions screen with a next-renewal date and a review-before-days setting. Its records stay in your browser; the [features overview](/features/) lists what each screen stores.
+
+## What this sheet does not cover
+
+It does not send reminders: a printed calendar only works if it is somewhere you will see it. It does not know your contracts, so notice periods and cancellation rules have to come from your own paperwork. It is a planning aid, not legal, tax or insurance advice, and it will not tell you whether a policy or plan is worth keeping.
+
+</div>
 
 **CTA:** Add the annual renewals to the digital dashboard if you want lead-time reminders instead of checking the sheet manually.
 
@@ -13535,6 +13783,44 @@ For renters, add landlord communications and the agreed inspection. For homeowne
 
 # Printable New Home Checklist
 
+<div class="no-print">
+
+Moving in produces a long list of small jobs that are easy to forget and hard to reconstruct later. This checklist sorts them into the first day, week and month. Below is what the list looks like partway through, with the notes that make a ticked box mean something; the blank copy to print comes after.
+
+## A partly finished checklist: example household
+
+This is an invented household nine days after moving into a rented flat. The providers, dates and notes are illustrative and do not describe any real company or lease.
+
+**First day** (all done)
+- [x] Confirm essential utilities/services. *Electricity and water working. Photographed both meters on arrival; internet engineer booked for Saturday.*
+- [x] Identify building/property contact where relevant. *Caretaker's number is on the lobby noticeboard; saved on the contacts page.*
+- [x] Keep keys/access records organized securely. *Three keys received, two held by us, one with the landlord's agent. Door codes not written down.*
+- [x] Check important household areas for obvious issues. *Photographed a stain on the bedroom ceiling and emailed the agent the same day.*
+
+**First week** (partly done)
+- [x] Add major appliances and systems to inventory. *Fridge, oven, washer and boiler; model labels photographed.*
+- [x] Locate official manuals. *Boiler and oven manuals found; washer manual downloaded from the maker's site.*
+- [ ] Record utility and service-provider contacts. *Still waiting for the water account number.*
+- [ ] Create a small initial maintenance list. *Not started: next free evening.*
+- [x] Build emergency contact sheet. *Done, stuck inside the cupboard door.*
+
+**First month** (not started; dates set)
+- [ ] Add meaningful purchase/warranty records. *Washer receipt is in the move folder.*
+- [ ] Review seasonal needs for the property. *Ask the agent about gutters and the boiler service history.*
+- [ ] Organize property/lease/purchase records. *Lease copy goes in the grey file.*
+- [ ] Create first household backup.
+- [ ] Schedule an annual home review date. *Proposed: the move-in anniversary.*
+
+</div>
+
+<div class="no-print">
+
+## The blank checklist
+
+Printing this page gives you the blank checklist below, without the example or the guidance around it.
+
+</div>
+
 ### First day
 - [ ] Confirm essential utilities/services.
 - [ ] Identify building/property contact where relevant.
@@ -13555,6 +13841,33 @@ For renters, add landlord communications and the agreed inspection. For homeowne
 - [ ] Create first household backup.
 - [ ] Schedule an annual home review date.
 
+<div class="no-print">
+
+## How to use each section
+
+- **First day** is about finding out what works and recording what you were handed, not fixing anything. "Confirm essential utilities" means checking that power, water and heating or cooling actually operate, and photographing meter readings and the home's condition on the day, because the date is evidence. A problem you report the same day is easier to separate from one you caused.
+- **Keys and access:** record how many keys exist and who holds each one. Do not write door or alarm codes on the sheet; keep them in a place you control.
+- **First week** builds the inventory. A photo of each appliance's model label is enough to start: it holds the model and serial number without a manual. Where a manual is missing, the maker's website usually offers a download.
+- **First month** is the slower part: purchase records, warranty paperwork and lease or purchase documents in one place. The final item matters most. A review date tied to something you will remember, such as the move-in anniversary, is more likely to happen than "sometime next year".
+
+## Renting or owning
+
+The sheet is written for both, and the difference is who you tell. If you rent, the building or property contact and the landlord are the first call for repairs; some leases and areas set a deadline for reporting damage that was there when you arrived, so read yours. If you own, the same items become your own to-do list, and the service-provider list becomes more important.
+
+## When to use this sheet, and when to use another
+
+- Before and during the move itself, use the [moving checklist](/checklists/printable-moving-checklist/), which runs from eight weeks out to the first week.
+- To turn the "add appliances to inventory" line into a proper record, use the [home inventory template](/templates/printable-home-inventory-template/).
+- Contacts from the first-week section go on the [service provider list](/templates/printable-service-provider-list/).
+- For the administrative side in more depth, the [moving house organizer](/guides/moving-house-organizer/) guide covers what to carry between the old and the new home.
+- The [maintenance tracker](/features/maintenance-tracker/) and [home inventory tracker](/features/home-inventory-tracker/) in the FamilyBoard app hold the same information in your browser instead of on paper.
+
+## What this checklist does not cover
+
+It is not a home inspection and will not find hidden defects. It does not set legal deadlines for deposits, condition reports or utility transfers, which differ by place and agreement. Safety-critical items, such as gas appliances, electrical faults and smoke or carbon monoxide alarms, are for qualified professionals and the manufacturer's instructions, not for a checkbox on a sheet.
+
+</div>
+
 **CTA:** Treat the checklist as a starting point. The real value begins when the new-home information becomes a long-term household record.
 
 ---
@@ -13568,6 +13881,66 @@ For renters, add landlord communications and the agreed inspection. For homeowne
 **Suggested internal links:** `/tools/home-handoff-summary-generator/`, `/guides/household-admin-backup-person/`, `/guides/family-continuity-plan/`, `/features/household-handoff/`
 
 # Printable Household Handoff Sheet
+
+<div class="no-print">
+
+A handoff sheet is for the stretch of time when someone other than the usual organizer keeps the household running. It is short on purpose: a month of dates, the jobs nobody notices, and where things are. Below is a completed one, then the blank to print.
+
+## A finished sheet: example household
+
+The people, dates and tasks here are invented. They illustrate how much a backup person needs, and notably how much they do not.
+
+**Handoff period / purpose:** Sam is away for work, 3 to 24 June; Priya covers and holds decisions for Sam where noted
+**Prepared by:** Sam
+**Last reviewed:** 1 June
+
+</div>
+
+<div class="no-print" tabindex="0" role="region" aria-label="Filled example next 30 days and recurring responsibilities" style="max-width:100%;overflow-x:auto">
+
+**Next 30 days**
+
+| Date | Obligation | Owner / next action | Notes |
+|---|---|---|---|
+| 9 Jun | Gutter cleaner visit, morning | Priya lets them in and checks the work. Pay by bank transfer after. | Quote agreed by email on 2 May; saved in the Home folder. |
+| 12 Jun | Car insurance renewal letter arrives | Priya files it, does not accept. Sam decides on return. | Decision date 20 Jun, renewal date 4 Jul. |
+| 16 Jun | School trip form and payment due | Priya | Form is on the fridge. |
+| 20 Jun | Broadband introductory price ends | Sam, from abroad | Call or chat with the provider; Priya has no need to act. |
+
+**Recurring household responsibilities**
+
+| Responsibility | Normally handled by | What the backup needs to know |
+|---|---|---|
+| Bins and recycling | Sam | Out on Tuesday evening. The recycling week is on the fridge calendar. |
+| Grocery order | Sam | Needs to be placed by Wednesday midday. Priya already has her own login. |
+| Plant watering | Sam | Sundays; the large fern twice a week in summer. |
+
+</div>
+
+<div class="no-print">
+
+**Current home issues**
+- Issue: dripping tap in the guest bathroom
+- Related asset/area: guest bathroom basin
+- Provider/contact: plumber on the service provider list
+- Next action: book only if it gets worse; otherwise leave it for Sam.
+
+**Pets / dependents**
+Juno: see the pet sitter sheet on the fridge. The neighbour at number 12 has a spare key if both of us are out.
+
+**Key household contacts**
+Building office, plumber, neighbour at number 12, Sam's phone (evenings, time difference noted).
+
+**Secure records**
+Passwords are in the password manager and Priya has her own login. Insurance documents are in the grey box file in the study.
+
+*Notice what is missing: no passwords, no account numbers, no medical history.*
+
+## The blank sheet
+
+Printing this page gives you the blank handoff sheet below, without the example or the guidance around it.
+
+</div>
 
 **Handoff period / purpose:** ____________________
 **Prepared by:** ____________________
@@ -13600,9 +13973,33 @@ Where important credentials/documents are managed: ____________________
 
 > Do not write passwords, full financial credentials or unnecessary private information on a handoff sheet.
 
-## How to test the handoff
+<div class="no-print">
 
-Give the sheet to the backup person and ask them to locate one service provider, one upcoming deadline and one emergency contact. If they still need the primary organizer to explain the system, update the handoff.
+## How to fill in each part
+
+- **Handoff period / purpose:** the dates, and what the backup is expected to do. "Covering" and "deciding" are different jobs; say which one it is.
+- **Next 30 days:** only things with a date, including things that arrive, such as a letter or a renewal notice, and not just events. In the Owner / next action cell, say whether the backup should do it, hold it for you, or call you. Copy dates from your calendar or from the [annual renewals calendar](/templates/printable-annual-renewals/).
+- **Recurring responsibilities:** the invisible work that the usual organizer does without thinking. For each, write how it is done and what it looks like when it has gone wrong, because "bins" is not enough if the collection day moves.
+- **Current home issues:** open problems, with the area, who to call and whether to act or wait. Without "wait", a helpful backup will fix something you wanted to leave.
+- **Pets / dependents:** a pointer to the care sheet, plus the practical facts, such as pick-up times. Do not use it as a medical history.
+- **Key household contacts and secure records:** say where things are, never what they are. A handoff sheet that lists where the password manager lives has done its job; one that lists a password has created a risk.
+
+## Test it
+
+Give the finished sheet to the backup person and ask them to find one service provider, one upcoming deadline and one emergency contact without asking you. If they need you to explain the system, the sheet has a gap; fix it before you leave, not from an airport.
+
+## When to use this sheet, and when to use another
+
+- For a sitter who only needs daily tasks for a few days, the [house sitter checklist](/checklists/printable-house-sitter-checklist/) is lighter.
+- Provider names live on the [service provider list](/templates/printable-service-provider-list/), and this sheet refers to it.
+- For planning who can step in at all, read [choosing a household backup person](/guides/household-admin-backup-person/) and the [family continuity plan](/guides/family-continuity-plan/).
+- The Handoff tab in the FamilyBoard app builds a similar sheet from records you have already entered; see [household handoff](/features/household-handoff/) for what it includes and what it always leaves out.
+
+## What this sheet does not cover
+
+It does not give anyone authority over your money, health or legal matters. Access to bank accounts, medical decisions and powers of attorney need formal arrangements made with the institutions or a qualified professional, and a handoff sheet is not one of them. It is also a snapshot: dates and routines change, so it goes out of date quickly and should be rewritten for each handoff.
+
+</div>
 
 **CTA:** Use the digital Handoff Summary Generator when you want the next-30-days section to update from live local household records.
 
