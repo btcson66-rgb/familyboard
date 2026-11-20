@@ -692,6 +692,19 @@ textarea {
   }
 }
 
+/* Markdown task-list boxes inherit the full-width form-field rules above; keep them checkbox-sized. */
+.editorial-content .task-list-item {
+  list-style: none;
+}
+.editorial-content input[type="checkbox"] {
+  width: 1.05rem;
+  min-height: 0;
+  height: 1.05rem;
+  padding: 0;
+  margin: 0 0.5rem 0 0;
+  vertical-align: -0.15em;
+}
+
 @media print {
   .skip-link,
   .site-header,
@@ -734,6 +747,9 @@ textarea {
   .editorial-content td {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+  .article.print-body-only > :not(.editorial-content) {
+    display: none !important;
   }
   .guide-workbench {
     break-before: page;

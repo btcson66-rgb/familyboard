@@ -16,12 +16,12 @@
     "headings": "One household dashboard, built around the work behind the calendar Today — the dashboard Assets — the inventory Maintenance — the recurring work Warranties — coverage windows Subscriptions — recurring costs Tasks — one-off and recurring responsibilities Emergency — contacts that stay local Documents — where things actually are Handoff and Display — for the rest of the household Settings — backups, storage and the master table What ties the twelve screens together"
   },
   {
-    "title": "Free Home Inventory Tracker App | Appliances, Serial Numbers & Warranties | FamilyBoard",
+    "title": "Home Inventory Tracker App: Free, Private, No Account",
     "description": "Track household appliances, electronics, serial numbers, purchase receipts, warranties, and maintenance history locally in your browser—free, private, no account required.",
     "route": "/features/home-inventory-tracker/",
     "cluster": "product",
     "keywords": "home inventory tracker",
-    "headings": "A useful home inventory is not a list of everything you own What an asset record actually holds Watch and Archive, not delete Why connect inventory to maintenance, warranties and documents A worked example Keep detail proportional to value Build it gradually, and know the limits Quick reference: what to write in each asset field What insurers say a home inventory is for Why local-first helps both claims readiness and privacy"
+    "headings": "A useful home inventory is not a list of everything you own What an asset record actually holds Watch and Archive, not delete Why connect inventory to maintenance, warranties and documents A worked example Keep detail proportional to value Build it gradually, and know the limits Quick reference: what to write in each asset field App or template: which do you need? What insurers say a home inventory is for Why local-first helps both claims readiness and privacy"
   },
   {
     "title": "Home Maintenance Tracker with Recurring Schedules and Service History | FamilyBoard",
@@ -208,12 +208,12 @@
     "headings": "Robot vacuum maintenance guide: filter, brushes and the battery that wears out on its own schedule The checklist The battery is a separate clock from everything else Why filters and brushes get confused with each other Sensors cause more stuck-robot problems than motors do What to record"
   },
   {
-    "title": "How to Make a Photo Home Inventory Without Creating an Unsearchable Camera Roll",
-    "description": "Use room photos, item close-ups and structured labels to create a home inventory that remains searchable and useful later.",
+    "title": "Photo Home Inventory: How to Photograph and Label Items",
+    "description": "How to photograph rooms and items, label the files and keep a photo home inventory findable. Record the details in a home inventory template.",
     "route": "/guides/photo-home-inventory/",
     "cluster": "inventory-warranty",
     "keywords": "photo home inventory",
-    "headings": "A photo home inventory is only as useful as your ability to find one photo again Three photo types, and when each one earns its place The walkthrough video is the fastest way to get real coverage An unlabeled photo is worth a fraction of a labeled one Review before you treat a photo as a permanent record Phone photos can embed more location data than you'd want to share You do not need to re-photograph the whole house on a schedule A realistic first session"
+    "headings": "A photo home inventory is only as useful as your ability to find one photo again Three photo types, and when each one earns its place The walkthrough video is the fastest way to get real coverage An unlabeled photo is worth a fraction of a labeled one Review before you treat a photo as a permanent record Phone photos can embed more location data than you'd want to share You do not need to re-photograph the whole house on a schedule Where the details go: a template, not the photo A realistic first session"
   },
   {
     "title": "How to Track Product Warranties and Warranty Claims | FamilyBoard",
@@ -376,8 +376,8 @@
     "headings": "Home Maintenance Cost Tracker How to enter costs, and what comes back What it deliberately doesn't do Keeping the numbers meaningful What to record with each line Pairing this with a repair-specific record Reviewing planned versus completed over time"
   },
   {
-    "title": "Free Home Inventory Checklist Generator | Room-by-Room Starter List",
-    "description": "Generate a selective room-by-room home inventory checklist for appliances, electronics, furniture, tools and valuable household items.",
+    "title": "Home Inventory Checklist Generator (Room by Room)",
+    "description": "Generate a room-by-room list of what to include in a home inventory, then record each item in the home inventory template for insurance.",
     "route": "/tools/home-inventory-checklist-generator/",
     "cluster": "tools",
     "keywords": "home inventory checklist generator",
@@ -392,16 +392,16 @@
     "headings": "Household Annual Review Generator What the generator checks Worked example Why this is different from a task list What \"test a backup export\" actually means here Making the review count Picking a consistent date to run it What to do if the review turns up a lot at once"
   },
   {
-    "title": "Free House Sitter Instructions Generator | Home, Pets, Contacts and Daily Tasks",
-    "description": "Generate a limited house-sitter packet with daily responsibilities, contacts, pets, deliveries and escalation steps without exposing unrelated household data.",
+    "title": "House Sitter Instructions Generator and Word Template",
+    "description": "Generate house sitter instructions online, or download a Word / Google Docs template (.docx) for contacts, daily routine and emergencies.",
     "route": "/tools/house-sitter-instruction-generator/",
     "cluster": "tools",
     "keywords": "house sitter instructions generator",
     "headings": "House Sitter Instructions Generator What it generates Worked example What deliberately isn't in this packet Keeping it role-scoped Before you hand it over A short walkthrough beats a packet alone"
   },
   {
-    "title": "Free Pet Sitter Instructions Generator | Routine, Supplies and Vet Contacts",
-    "description": "Create a pet-sitter care sheet with user-entered feeding, routine, supplies, veterinarian contacts and emergency escalation information.",
+    "title": "Pet Sitter Instructions Generator and Word Template",
+    "description": "Create a pet sitter care sheet online, or download a Word / Google Docs template (.docx) for feeding, routine, supplies, vet contacts and emergencies.",
     "route": "/tools/pet-sitter-instruction-generator/",
     "cluster": "tools",
     "keywords": "pet sitter instructions generator",
@@ -429,15 +429,23 @@
     "route": "/checklists/printable-seasonal-home-checklist/",
     "cluster": "printables",
     "keywords": "printable seasonal home checklist",
-    "headings": "Printable Seasonal Home Checklist Systems entering heavy use Systems leaving heavy use Exterior/property review Household operations Record update"
+    "headings": "Printable Seasonal Home Checklist Systems entering heavy use Systems leaving heavy use Exterior/property review Household operations Record update Need a ready-made winter list?"
   },
   {
-    "title": "Free Home Inventory Template | Printable PDF and CSV",
-    "description": "Download a free printable home inventory template in PDF or CSV (Excel) with no signup. Record room, item, brand/model, serial number, purchase date, and receipt references.",
+    "title": "Winter Home Maintenance Checklist (Printable PDF)",
+    "description": "Free printable winter home maintenance checklist: protect pipes before the first freeze, service heat, test smoke and CO alarms, clear gutters. Renter notes.",
+    "route": "/checklists/winter-home-maintenance-checklist/",
+    "cluster": "printables",
+    "keywords": "winter home maintenance checklist",
+    "headings": "Winter Home Maintenance Checklist Start with your climate The checklist Pipes and water Heating Alarms and safety Gutters, roof and outside Records Protecting pipes before the first freeze Heating system and filters Smoke and carbon monoxide alarms Gutters, roof and drainage If you rent: what differs Sources checked Keeping the checklist with your records"
+  },
+  {
+    "title": "Home Inventory Template for Insurance (PDF, Excel)",
+    "description": "Free home inventory template for insurance: a printable PDF plus an Excel / Google Sheets file with replacement-cost and receipt columns. No signup.",
     "route": "/templates/printable-home-inventory-template/",
     "cluster": "printables",
-    "keywords": "printable home inventory template",
-    "headings": "Printable Home Inventory Template Choose the format for your task Filled example: one room, two items Keep the completed copy private Optional additional fields What to record first What the official guidance says about inventory fields Paper now, local-first copy later"
+    "keywords": "home inventory template for insurance",
+    "headings": "Printable Home Inventory Template for Insurance Which download should you use? What an insurer needs to see after a loss How to fill it in, room by room Filled example: an invented household What to record first Keep a copy outside the home, and keep it private Update it when something changes Template, generator, photo guide or app: which one do you need?"
   },
   {
     "title": "Printable Home Service Provider List | Contractors and Household Contacts",
@@ -448,20 +456,20 @@
     "headings": "Printable Home Service Provider List A finished sheet: example household The blank sheet Useful categories What each column is for Judgement calls When to use this sheet, and when to use another What this sheet does not cover"
   },
   {
-    "title": "Printable House Sitter Checklist | Daily Home, Pet and Contact Instructions",
-    "description": "Print a house-sitter checklist for daily tasks, pets, plants, deliveries, waste, contacts and problem escalation.",
+    "title": "Printable House Sitter Checklist | Word and Google Docs",
+    "description": "Print a house sitter checklist, or download a Word / Google Docs template (.docx) for daily tasks, pets, plants, contacts and emergencies.",
     "route": "/checklists/printable-house-sitter-checklist/",
     "cluster": "printables",
     "keywords": "printable house sitter checklist",
-    "headings": "Printable House Sitter Checklist A finished sheet: example household The blank sheet Daily Scheduled days Contacts If something looks wrong How to fill in each part What not to write on a sheet that stays in the house When to use this sheet, and when to use another What this sheet does not cover"
+    "headings": "Printable House Sitter Checklist A finished sheet: example household The blank sheet Daily Scheduled days Contacts If something looks wrong How to fill in each part What not to write on a sheet that stays in the house When to use this sheet, and when to use another What this sheet does not cover Word and Google Docs version"
   },
   {
-    "title": "Printable Pet Sitter Checklist | Feeding, Routine, Supplies and Vet Contacts",
-    "description": "Print a pet-sitter checklist with owner-entered feeding, routine, supplies, veterinarian and emergency contacts.",
+    "title": "Printable Pet Sitter Checklist | Word and Google Docs",
+    "description": "Print a pet sitter checklist, or download a Word / Google Docs template (.docx) for feeding, routine, supplies, vet contacts and emergencies.",
     "route": "/checklists/printable-pet-sitter-checklist/",
     "cluster": "printables",
     "keywords": "printable pet sitter checklist",
-    "headings": "Printable Pet Sitter Checklist A finished sheet: example household The blank sheet Feeding Routine Supplies Contacts Medication/treatment How to fill in each part When to use this sheet, and when to use another What this sheet does not cover"
+    "headings": "Printable Pet Sitter Checklist A finished sheet: example household The blank sheet Feeding Routine Supplies Contacts Medication/treatment How to fill in each part When to use this sheet, and when to use another What this sheet does not cover Word and Google Docs version"
   },
   {
     "title": "Printable Annual Renewals Calendar | Household Services, Insurance and Memberships",

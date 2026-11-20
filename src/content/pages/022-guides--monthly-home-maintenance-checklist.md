@@ -13,6 +13,7 @@ lastReviewedAt: "2026-08-19"
 nextStep: "Save a recurring \"Household Monthly Review\" task in the maintenance tracker and log what you find directly on the asset it affects."
 related:
   - "/checklists/printable-monthly-home-checklist/"
+  - "/checklists/winter-home-maintenance-checklist/"
   - "/guides/household-monthly-review/"
   - "/guides/home-maintenance-records/"
   - "/features/home-dashboard/"
@@ -68,3 +69,5 @@ Before you stop, glance at what's due in the next 30 to 45 days. Annual subscrip
 ## How this is different from the quarterly review
 
 It's tempting to combine the monthly and quarterly checks into one longer list, but they answer different questions. The monthly check asks "is anything obviously wrong right now?" The quarterly review asks a slower question: does this problem keep coming back, and what does the next season need prepared in advance? A repeated finding — the same leak, the same noise, two months running — is exactly the kind of thing the monthly check will flag but shouldn't try to solve on its own; treat two consecutive monthly flags on the same item as a signal to open a real task rather than logging it a third time.
+
+When cold weather is a few weeks away, the monthly walk-through is also the moment to start the season's prep. The [winter home maintenance checklist](/checklists/winter-home-maintenance-checklist/) lists the pipe, heating, alarm and gutter jobs to finish before the first freeze.

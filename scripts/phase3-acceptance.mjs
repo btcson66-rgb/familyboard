@@ -49,8 +49,8 @@ for (const [slug, workbenchSlug] of reopened) {
 await assertEditorialSource(newSlug, "cleaning-schedule-generator", "## 官方來源與本次查核");
 
 const policy = JSON.parse(await readFile("src/config/indexability-policy.json", "utf8"));
-assert(policy.indexableRoutes.length === 109, `Expected 109 indexable routes, found ${policy.indexableRoutes.length}.`);
-assert(new Set(policy.indexableRoutes).size === 109, "Indexability policy contains duplicate routes.");
+assert(policy.indexableRoutes.length === 110, `Expected 110 indexable routes, found ${policy.indexableRoutes.length}.`);
+assert(new Set(policy.indexableRoutes).size === 110, "Indexability policy contains duplicate routes.");
 for (const route of requiredRoutes) assert(policy.indexableRoutes.includes(route), `${route} is missing from indexability policy.`);
 for (const route of duplicateRoutes) assert(!policy.indexableRoutes.includes(route), `${route} duplicate must remain noindex.`);
 assert(!policy.indexableRoutes.some((route) => /familyboard-.*-tutorial/.test(route)), "A product tutorial route entered the indexable policy.");
@@ -86,4 +86,4 @@ for (const route of ["/zh-tw/", "/zh-tw/checklists/"]) {
 const css = await readFile("src/styles/global.css", "utf8");
 assert(/tr[\s\S]*?break-inside:\s*avoid/.test(css), "Print CSS does not protect table rows from page breaks.");
 
-console.log("Phase 3 acceptance: 109 policy routes; 6 reopened guides + 1 language-exclusive checklist; duplicates noindex; workbenches, sources, print tables, canonicals and hreflang verified.");
+console.log("Phase 3 acceptance: 110 policy routes; 6 reopened guides + 1 language-exclusive checklist; duplicates noindex; workbenches, sources, print tables, canonicals and hreflang verified.");

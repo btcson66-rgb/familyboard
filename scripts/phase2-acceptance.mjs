@@ -52,7 +52,7 @@ for (const target of targetLinks) {
 }
 
 const assets = [
-  ["familyboard-home-inventory-template", 7],
+  ["familyboard-home-inventory-template", 9],
   ["familyboard-moving-checklist", 5],
 ];
 

@@ -104,15 +104,24 @@ const schemaType = redirectStub ? undefined
   : ['/guides/', '/checklists/'].includes(entry.data.route) ? 'Article'
   : ['/tools/', '/templates/'].includes(entry.data.route) || entry.data.pageType === 'tool' || entry.data.pageType === 'printable' ? 'TechArticle'
   : undefined;
-const downloads = {
-  '/templates/printable-home-inventory-template/': {
-    pdf: '/downloads/familyboard-home-inventory-template.pdf',
-    csv: '/downloads/familyboard-home-inventory-template.csv',
-  },
-  '/checklists/printable-moving-checklist/': {
-    pdf: '/downloads/familyboard-moving-checklist.pdf',
-    csv: '/downloads/familyboard-moving-checklist.csv',
-  },
+// Pages whose checklist lives in the article body: printing shows only that body, not the cards and worksheet table after it.
+const printBodyOnly = entry.data.route === '/checklists/winter-home-maintenance-checklist/';
+const sitterDocxLabel = 'Download Word / Google Docs template (.docx)';
+const downloads: Array<{ label: string; href: string; secondary?: boolean }> | undefined = {
+  '/templates/printable-home-inventory-template/': [
+    { label: 'Download PDF', href: '/downloads/familyboard-home-inventory-template.pdf' },
+    { label: 'Download Excel / Google Sheets (.xlsx)', href: '/downloads/familyboard-home-inventory-template.xlsx', secondary: true },
+    { label: 'Download CSV (Excel)', href: '/downloads/familyboard-home-inventory-template.csv', secondary: true },
+  ],
+  '/checklists/printable-moving-checklist/': [
+    { label: 'Download PDF', href: '/downloads/familyboard-moving-checklist.pdf' },
+    { label: 'Download CSV (Excel)', href: '/downloads/familyboard-moving-checklist.csv', secondary: true },
+  ],
+  '/checklists/winter-home-maintenance-checklist/': [{ label: 'Download PDF', href: '/downloads/familyboard-winter-home-maintenance-checklist.pdf' }],
+  '/tools/house-sitter-instruction-generator/': [{ label: sitterDocxLabel, href: '/downloads/familyboard-house-sitter-instructions-template.docx' }],
+  '/checklists/printable-house-sitter-checklist/': [{ label: sitterDocxLabel, href: '/downloads/familyboard-house-sitter-instructions-template.docx' }],
+  '/tools/pet-sitter-instruction-generator/': [{ label: sitterDocxLabel, href: '/downloads/familyboard-pet-sitter-instructions-template.docx' }],
+  '/checklists/printable-pet-sitter-checklist/': [{ label: sitterDocxLabel, href: '/downloads/familyboard-pet-sitter-instructions-template.docx' }],
 }[entry.data.route];
 ---
 <BaseLayout title={entry.data.title} description={entry.data.description} canonicalPath={redirectStub?.canonicalPath ?? entry.data.route} alternatePath={redirectStub ? undefined : alternatePath} languageSwitchPath={redirectStub ? undefined : pageIndexable ? (alternatePath ?? '/zh-tw/') : alternateEntry?.data.route} indexable={redirectStub?.indexable ?? pageIndexable} robots={redirectStub?.robots} pageType={redirectStub ? 'website' : pageType} schemaType={schemaType} publishedAt={entry.data.publishedAt} lastReviewedAt={entry.data.lastReviewedAt} faq={redirectStub ? [] : entry.data.faq} publicIntegrationsEnabled={redirectStub?.publicIntegrationsEnabled ?? true} redirectRefresh={redirectStub?.refreshContent}>
@@ -125,11 +134,10 @@ const downloads = {
   </div> : <>
   <Breadcrumbs route={entry.data.route} title={entry.data.title} />
   <div class="shell page-grid">
-    <article class="article">
+    <article class={printBodyOnly ? 'article print-body-only' : 'article'}>
       <div class="meta"><span class="byline"><a rel="author" href="/editorial-policy/">FamilyBoard Household Ops Editorial Team</a></span><span>Published and reviewed {entry.data.lastReviewedAt.toLocaleDateString('en-US', { dateStyle: 'long' })}</span><span>{entry.data.cluster.replace('-', ' ')}</span></div>
       {downloads && <div class="download-actions no-print" aria-label="Template downloads">
-        <a class="button" href={downloads.pdf} download>Download PDF</a>
-        <a class="button button-secondary" href={downloads.csv} download>Download CSV (Excel)</a>
+        {downloads.map((item) => <a class={item.secondary ? 'button button-secondary' : 'button'} href={item.href} download>{item.label}</a>)}
       </div>}
       <div class="editorial-content"><Content /></div>
       {entry.data.nextStep && <aside class="next-step"><h2>Next step in FamilyBoard</h2><p>{entry.data.nextStep}</p></aside>}

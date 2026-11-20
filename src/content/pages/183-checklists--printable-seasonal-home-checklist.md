@@ -12,6 +12,7 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Keep one completed seasonal sheet each quarter or save the confirmed items into recurring app tasks."
 related:
+  - "/checklists/winter-home-maintenance-checklist/"
   - "/guides/seasonal-home-maintenance-checklist/"
   - "/guides/spring-home-maintenance-checklist/"
   - "/guides/fall-home-maintenance-checklist/"
@@ -47,3 +48,11 @@ Use the same worksheet four times a year and let the actual tasks change with yo
 - [ ] Maintenance history updated.
 - [ ] Service-provider notes updated.
 - [ ] Backup created if significant changes were added.
+
+<div class="no-print">
+
+## Need a ready-made winter list?
+
+This worksheet is deliberately blank so it fits any climate. For winter, the [winter home maintenance checklist](/checklists/winter-home-maintenance-checklist/) already lists the pipe, heating, alarm and gutter tasks, explains what changes between a hard-freeze region and one where freezes are rare, and has notes for renters.
+
+</div>

@@ -543,12 +543,12 @@ The same Today data — tasks, events, upcoming maintenance — can be shown in 
 ## Page 004 — Home Inventory Tracker
 **Slug:** `/features/home-inventory-tracker/`
 **Primary intent:** find a home inventory tracker
-**Title tag:** `Free Home Inventory Tracker App | Appliances, Serial Numbers & Warranties | FamilyBoard`
+**Title tag:** `Home Inventory Tracker App: Free, Private, No Account`
 **Meta description:** `Track household appliances, electronics, serial numbers, purchase receipts, warranties, and maintenance history locally in your browser—free, private, no account required.`
 **Primary keyword concept:** home inventory tracker
 **Depth:** verified
 **Editorial review date:** 2026-11-08
-**Suggested internal links:** `/features/maintenance-tracker/`, `/features/warranty-tracker/`, `/features/household-documents-organizer/`, `/features/free-home-management-app/`
+**Suggested internal links:** `/templates/printable-home-inventory-template/`, `/features/maintenance-tracker/`, `/features/warranty-tracker/`, `/features/household-documents-organizer/`, `/features/free-home-management-app/`
 
 # A useful home inventory is not a list of everything you own
 
@@ -593,6 +593,10 @@ Add one room or one category at a time rather than trying to catalog the whole h
 | Serial number | Copy from the nameplate, checking 0 versus O | Often requested for a warranty claim or insurance report |
 | Purchase date | Use the receipt or order date | Anchors warranty and age calculations |
 | Notes | Where the receipt and manual are kept | Points to evidence without storing the file itself |
+
+## App or template: which do you need?
+
+This page is about the app: a place to keep assets together with their maintenance tasks, warranties and documents, in your browser. If you only need a one-time record to print or open in a spreadsheet, start with the [home inventory template for insurance](/templates/printable-home-inventory-template/), which has PDF, Excel and CSV downloads and a filled example. Many households fill in the template first and move the items they want to track into the app.
 
 ## What insurers say a home inventory is for
 
@@ -1603,7 +1607,7 @@ A renter typically owns only the condition-based, easily reversible tasks — sm
 **Title tag:** `Monthly Home Maintenance Checklist: A 30-Minute Household Review`
 **Meta description:** `Use a simple monthly home maintenance review to catch small issues, update records and keep recurring household work from piling up.`
 **Primary keyword concept:** monthly home maintenance checklist
-**Suggested internal links:** `/checklists/printable-monthly-home-checklist/`, `/guides/household-monthly-review/`, `/guides/home-maintenance-records/`, `/features/home-dashboard/`
+**Suggested internal links:** `/checklists/printable-monthly-home-checklist/`, `/checklists/winter-home-maintenance-checklist/`, `/guides/household-monthly-review/`, `/guides/home-maintenance-records/`, `/features/home-dashboard/`
 
 # A monthly home maintenance checklist should take about 30 minutes, not a full day
 
@@ -1647,6 +1651,8 @@ Before you stop, glance at what's due in the next 30 to 45 days. Annual subscrip
 
 It's tempting to combine the monthly and quarterly checks into one longer list, but they answer different questions. The monthly check asks "is anything obviously wrong right now?" The quarterly review asks a slower question: does this problem keep coming back, and what does the next season need prepared in advance? A repeated finding — the same leak, the same noise, two months running — is exactly the kind of thing the monthly check will flag but shouldn't try to solve on its own; treat two consecutive monthly flags on the same item as a signal to open a real task rather than logging it a third time.
 
+When cold weather is a few weeks away, the monthly walk-through is also the moment to start the season's prep. The [winter home maintenance checklist](/checklists/winter-home-maintenance-checklist/) lists the pipe, heating, alarm and gutter jobs to finish before the first freeze.
+
 **Contextual CTA:** Save a recurring "Household Monthly Review" task in the maintenance tracker and log what you find directly on the asset it affects.
 
 **FAQ:**
@@ -1669,7 +1675,7 @@ It's tempting to combine the monthly and quarterly checks into one longer list, 
 **Title tag:** `Quarterly Home Maintenance Checklist: Review the Systems Monthly Checks Miss`
 **Meta description:** `A quarterly household maintenance review for equipment records, recurring services, supplies, safety information and seasonal changes.`
 **Primary keyword concept:** quarterly home maintenance checklist
-**Suggested internal links:** `/guides/monthly-home-maintenance-checklist/`, `/guides/seasonal-home-maintenance-checklist/`, `/guides/home-maintenance-records/`, `/features/maintenance-tracker/`
+**Suggested internal links:** `/guides/monthly-home-maintenance-checklist/`, `/guides/seasonal-home-maintenance-checklist/`, `/checklists/winter-home-maintenance-checklist/`, `/guides/home-maintenance-records/`, `/features/maintenance-tracker/`
 
 # Quarterly maintenance is the bridge between monthly awareness and annual projects
 
@@ -1695,7 +1701,7 @@ The next season's prep list is genuinely different depending on where you live �
 - **Hot-humid climates:** before cooling season, have AC equipment checked and confirm condensate drains aren't clogged, since a blocked drain is a common cause of water damage in humid regions. Through the humid months, watch indoor humidity and ventilation closely using the range above, since mold risk here is a year-round concern rather than a seasonal one.
 - **Mild climates:** the seasonal swings are smaller, but exterior wood, paint, and irrigation systems still age with sun and occasional rain exposure — use the quieter season to catch up on exterior maintenance that colder or wetter climates have to schedule around weather windows.
 
-Manufacturer guidance for your specific equipment always overrides a generic list like this one where the two disagree.
+Manufacturer guidance for your specific equipment always overrides a generic list like this one where the two disagree. If the coming quarter is winter, the [printable winter home maintenance checklist](/checklists/winter-home-maintenance-checklist/) turns the cold-climate bullet above into a full list, with notes for renters and for regions where freezes are rare.
 
 ## Looking back before looking forward
 
@@ -5892,11 +5898,11 @@ Beyond a periodic review, treat any major purchase, renovation or received gift 
 ## Page 083 — Photo Home Inventory
 **Slug:** `/guides/photo-home-inventory/`
 **Primary intent:** make a photo-based inventory of household possessions
-**Title tag:** `How to Make a Photo Home Inventory Without Creating an Unsearchable Camera Roll`
-**Meta description:** `Use room photos, item close-ups and structured labels to create a home inventory that remains searchable and useful later.`
+**Title tag:** `Photo Home Inventory: How to Photograph and Label Items`
+**Meta description:** `How to photograph rooms and items, label the files and keep a photo home inventory findable. Record the details in a home inventory template.`
 **Primary keyword concept:** photo home inventory
 **Depth:** verified
-**Suggested internal links:** `/guides/room-by-room-home-inventory/`, `/guides/serial-number-tracker/`, `/guides/home-inventory-for-insurance/`, `/tools/room-inventory-generator/`
+**Suggested internal links:** `/templates/printable-home-inventory-template/`, `/guides/room-by-room-home-inventory/`, `/guides/serial-number-tracker/`, `/guides/home-inventory-for-insurance/`, `/tools/room-inventory-generator/`
 
 # A photo home inventory is only as useful as your ability to find one photo again
 
@@ -5935,6 +5941,10 @@ Most smartphone photos carry embedded EXIF metadata, including precise GPS coord
 Photo documentation isn't a monthly chore. The Triple-I guidance is to update after a real trigger — a move, a major purchase, a renovation, receiving or disposing of something significant — rather than on a fixed calendar that mostly just repeats photos of things that haven't changed. Treating "just bought something" as the update trigger, instead of "it's been six months," keeps the inventory current without turning it into a recurring photography assignment nobody wants to do.
 
 For a newly photographed purchase, capture the warranty's written start rule while the receipt is still easy to find. If the document supplies a date and term, the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) can produce a review date without guessing what the warranty covers.
+
+## Where the details go: a template, not the photo
+
+A photo shows what an item looked like; it does not hold the purchase price, the replacement cost or the serial number in a form you can add up. Write those in a [home inventory template for insurance](/templates/printable-home-inventory-template/) (printable PDF, Excel or CSV) and put each photo's file name in its Receipt / photo reference column. This guide is about taking and labeling the photos; the template is the record they support.
 
 ## A realistic first session
 
@@ -11978,14 +11988,14 @@ A printed binder works when the power is out or a phone is dead, which is exactl
 ## Page 165 — Home Inventory Checklist Generator
 **Slug:** `/tools/home-inventory-checklist-generator/`
 **Primary intent:** generate a room-based home inventory checklist
-**Title tag:** `Free Home Inventory Checklist Generator | Room-by-Room Starter List`
-**Meta description:** `Generate a selective room-by-room home inventory checklist for appliances, electronics, furniture, tools and valuable household items.`
+**Title tag:** `Home Inventory Checklist Generator (Room by Room)`
+**Meta description:** `Generate a room-by-room list of what to include in a home inventory, then record each item in the home inventory template for insurance.`
 **Primary keyword concept:** home inventory checklist generator
-**Suggested internal links:** `/guides/home-inventory-checklist/`, `/guides/room-by-room-home-inventory/`, `/tools/room-inventory-generator/`, `/features/home-inventory-tracker/`
+**Suggested internal links:** `/templates/printable-home-inventory-template/`, `/guides/room-by-room-home-inventory/`, `/tools/room-inventory-generator/`, `/features/home-inventory-tracker/`
 
 # Home Inventory Checklist Generator
 
-Starting a home inventory from a blank page is where most households give up before they finish one room. This generator gives you a room-by-room starting list so you're editing an existing checklist instead of inventing one from nothing.
+Starting a home inventory from a blank page is where most households give up before they finish one room. This generator gives you a room-by-room starting list so you're editing an existing checklist instead of inventing one from nothing. It answers one question: what should I look for in each room? To record the answers, use the [home inventory template for insurance](/templates/printable-home-inventory-template/), which is the printable PDF, Excel and CSV record with columns for serial number, price, replacement estimate and receipt reference.
 
 ## How the room list is built
 
@@ -12005,7 +12015,7 @@ A 300-item inventory attempted all at once is exactly the kind of project that s
 
 ## When the goal is insurance documentation
 
-If you're building this inventory in case you ever need to file an insurance claim, the fields worth prioritizing shift slightly: a photo of the item alongside its model and serial number matters more than a precise physical description, since an adjuster is trying to verify what existed and roughly what it was worth, not read a written inventory. Keep photos and the generated checklist together in the same record rather than as separate, disconnected files.
+If you're building this inventory in case you ever need to file an insurance claim, the fields worth prioritizing shift slightly: a photo of the item alongside its model and serial number matters more than a precise physical description, since an adjuster is trying to verify what existed and roughly what it was worth, not read a written inventory. Keep photos and the generated checklist together in the same record rather than as separate, disconnected files. The [home inventory template for insurance](/templates/printable-home-inventory-template/) has the columns for model, serial number, price and receipt, and the [photo home inventory guide](/guides/photo-home-inventory/) explains how to photograph and label what you list.
 
 ## Revisiting the inventory after you buy something new
 
@@ -12378,8 +12388,8 @@ A 3-day list and a 21-day list share the same six standard items, but what belon
 ## Page 173 — House Sitter Instruction Generator
 **Slug:** `/tools/house-sitter-instruction-generator/`
 **Primary intent:** create a house-sitter information packet
-**Title tag:** `Free House Sitter Instructions Generator | Home, Pets, Contacts and Daily Tasks`
-**Meta description:** `Generate a limited house-sitter packet with daily responsibilities, contacts, pets, deliveries and escalation steps without exposing unrelated household data.`
+**Title tag:** `House Sitter Instructions Generator and Word Template`
+**Meta description:** `Generate house sitter instructions online, or download a Word / Google Docs template (.docx) for contacts, daily routine and emergencies.`
 **Primary keyword concept:** house sitter instructions generator
 **Suggested internal links:** `/guides/house-sitter-information/`, `/checklists/printable-house-sitter-checklist/`, `/guides/travel-household-handoff/`, `/features/household-handoff/`
 
@@ -12421,6 +12431,14 @@ Even a well-written packet leaves gaps a five-minute conversation fills faster t
 - Q: Should I reuse the same packet for every trip?
   A: It's better to regenerate it each time and note the date, since routines and contacts change — a sitter working from year-old feeding instructions or an outdated phone number is worse off than one working from something current.
 
+<div class="no-print">
+
+## Word and Google Docs version
+
+If you would rather edit the packet in a word processor, download the [house sitter instructions template (.docx)](/downloads/familyboard-house-sitter-instructions-template.docx). It is a standard Word document with fill-in tables for the stay, the daily routine, the house, pets, scheduled visits, what to do if something looks wrong, and contacts. Open it in Word, or in Google Docs with File, then Open, then Upload, or by adding it to Google Drive and choosing Open with Google Docs. It is a blank template: nothing you type is sent to FamilyBoard. Leave alarm codes, lockbox codes and passwords out of it, as on the printed sheet.
+
+</div>
+
 **Contextual CTA:** Generate the packet, remove anything the sitter doesn't actually need, and hand over access instructions separately rather than printing them into this document.
 
 ---
@@ -12428,8 +12446,8 @@ Even a well-written packet leaves gaps a five-minute conversation fills faster t
 ## Page 174 — Pet Sitter Instruction Generator
 **Slug:** `/tools/pet-sitter-instruction-generator/`
 **Primary intent:** make a pet-sitter care sheet
-**Title tag:** `Free Pet Sitter Instructions Generator | Routine, Supplies and Vet Contacts`
-**Meta description:** `Create a pet-sitter care sheet with user-entered feeding, routine, supplies, veterinarian contacts and emergency escalation information.`
+**Title tag:** `Pet Sitter Instructions Generator and Word Template`
+**Meta description:** `Create a pet sitter care sheet online, or download a Word / Google Docs template (.docx) for feeding, routine, supplies, vet contacts and emergencies.`
 **Primary keyword concept:** pet sitter instructions generator
 **Suggested internal links:** `/guides/pet-sitter-information/`, `/checklists/printable-pet-sitter-checklist/`, `/guides/organize-pet-records/`, `/features/emergency-information-organizer/`
 
@@ -12474,6 +12492,14 @@ Beyond feeding and medical information, a line about how a pet actually behaves 
   A: A pointer to the veterinarian's current written instructions — for example, "insulin per vet's written schedule, see printed sheet" — rather than an attempt to describe the dose or schedule from memory. The field is meant to direct the sitter to the authoritative source, not to be that source itself.
 - Q: How often should I regenerate the sheet?
   A: Before every trip. Pet routines, diets, and medications can change between trips, and a sitter working from an outdated sheet is a real risk if something important has changed since the last version was printed.
+
+<div class="no-print">
+
+## Word and Google Docs version
+
+If you would rather edit the packet in a word processor, download the [pet sitter instructions template (.docx)](/downloads/familyboard-pet-sitter-instructions-template.docx). It is a standard Word document with fill-in tables for the pet profile, feeding, medications, walks and bathroom routine, safety rules, veterinary contacts and approved spending, and where supplies are kept. Open it in Word, or in Google Docs with File, then Open, then Upload, or by adding it to Google Drive and choosing Open with Google Docs. It is a blank template: nothing you type is sent to FamilyBoard. Leave alarm codes, lockbox codes and passwords out of it, and ask your veterinarian rather than this template about medication and health questions.
+
+</div>
 
 **Contextual CTA:** Generate the care sheet fresh before each trip, point the medication field to the vet's current written instructions, and confirm the routine still matches reality before handing it to the sitter.
 
@@ -12885,7 +12911,7 @@ If your monthly review repeatedly takes more than an hour, reduce the checklist 
 **Title tag:** `Printable Seasonal Home Checklist | Spring, Summer, Fall and Winter Planning`
 **Meta description:** `Print a four-season home planning worksheet that adapts to climate, equipment and household routines instead of prescribing one national checklist.`
 **Primary keyword concept:** printable seasonal home checklist
-**Suggested internal links:** `/guides/seasonal-home-maintenance-checklist/`, `/guides/spring-home-maintenance-checklist/`, `/guides/fall-home-maintenance-checklist/`, `/tools/home-maintenance-schedule-generator/`
+**Suggested internal links:** `/checklists/winter-home-maintenance-checklist/`, `/guides/seasonal-home-maintenance-checklist/`, `/guides/spring-home-maintenance-checklist/`, `/guides/fall-home-maintenance-checklist/`, `/tools/home-maintenance-schedule-generator/`
 
 # Printable Seasonal Home Checklist
 
@@ -12916,94 +12942,294 @@ Use the same worksheet four times a year and let the actual tasks change with yo
 - [ ] Service-provider notes updated.
 - [ ] Backup created if significant changes were added.
 
+<div class="no-print">
+
+## Need a ready-made winter list?
+
+This worksheet is deliberately blank so it fits any climate. For winter, the [winter home maintenance checklist](/checklists/winter-home-maintenance-checklist/) already lists the pipe, heating, alarm and gutter tasks, explains what changes between a hard-freeze region and one where freezes are rare, and has notes for renters.
+
+</div>
+
 **CTA:** Keep one completed seasonal sheet each quarter or save the confirmed items into recurring app tasks.
+
+---
+
+## Page 541 — Winter Home Maintenance Checklist
+**Slug:** `/checklists/winter-home-maintenance-checklist/`
+**Cluster:** printables
+**Page type:** printable
+**Primary intent:** print a winter home maintenance checklist
+**Title tag:** `Winter Home Maintenance Checklist (Printable PDF)`
+**Meta description:** `Free printable winter home maintenance checklist: protect pipes before the first freeze, service heat, test smoke and CO alarms, clear gutters. Renter notes.`
+**Primary keyword concept:** winter home maintenance checklist
+**Editorial review date:** 2026-11-20
+**Published date:** 2026-11-20
+**Content version:** 1
+**Suggested internal links:** `/checklists/printable-seasonal-home-checklist/`, `/guides/monthly-home-maintenance-checklist/`, `/guides/quarterly-home-maintenance-checklist/`, `/guides/power-outage-home-preparedness/`, `/guides/water-leak-response-home-records/`
+
+# Winter Home Maintenance Checklist
+
+<div class="no-print">
+
+This is a printable winter home maintenance checklist for a US house, condo or rental. Download the [PDF](/downloads/familyboard-winter-home-maintenance-checklist.pdf) or print this page: printing shows only the checklist below, not the explanations around it. Do the pipe and heat items before the first hard freeze, and mark off the rest as you go.
+
+**Quick summary:** Know where your main water shut-off is, insulate exposed pipes, disconnect garden hoses, have your heating system serviced, test smoke and carbon monoxide (CO) alarms, and clear gutters. What counts as a hard freeze, and how much pipe protection you need, depends on where you live, so read the climate section first.
+
+</div>
+
+<div class="no-print">
+
+## Start with your climate
+
+Winter advice is not the same in Minnesota and Texas. A house built for long, hard winters usually has its water lines inside heated walls and often has outdoor spigots designed for freezing weather. A house in a region where freezes are rare can have pipes in attics, garages or exterior walls with little protection, and a short deep freeze can do more damage there than a long cold winter does in the north. Check your own home rather than assuming.
+
+<section tabindex="0" aria-label="Winter advice by climate" style="max-width:100%;overflow-x:auto">
+
+| If you live in | The usual winter risk | Put first |
+|---|---|---|
+| A hard-freeze region (for example Minnesota, the Dakotas, northern New England, the Mountain West) | Weeks of sub-freezing weather, ice on roofs and gutters, heating system working hard | Furnace service, insulating pipes in unheated spaces, draining outdoor plumbing, gutters and drainage |
+| A region with occasional freezes (for example Texas, the Gulf Coast, much of the Southeast) | A few nights well below freezing that the house was not built for, plus outages | Pipe insulation, knowing the shut-off, covering outdoor spigots, a plan for dripping faucets and for power loss |
+| A mild region (for example coastal California, Hawaii, south Florida) | Freezes are rare; cold snaps and rain are the main events | Alarms, heating check, gutters and drainage, and a quick look at the forecast before any cold snap |
+
+</section>
+
+The examples are broad. Your local weather service forecast tells you when a freeze is coming; your home's plumbing layout tells you what is exposed.
+
+</div>
+
+## The checklist
+
+**Household:** __________ **Date:** __________ **Lowest temperature expected this winter:** __________
+
+### Pipes and water
+- [ ] Find the main water shut-off valve, test that it turns, and tell everyone in the household where it is.
+- [ ] Insulate exposed pipes in unheated areas: garage, crawl space, attic, basement corners and exterior walls.
+- [ ] Disconnect garden hoses from outdoor spigots, drain them and store them.
+- [ ] Shut off the indoor valve to each outdoor spigot if there is one, or cover the spigot.
+- [ ] Before a hard freeze: open cabinet doors under sinks on exterior walls and let faucets on exterior walls drip.
+- [ ] Keep the heat on if you travel. Write who will check the house: __________
+
+### Heating
+- [ ] Book the furnace, boiler or heat pump service: __________ (date)
+- [ ] Replace or clean the furnace filter as the manufacturer directs; next check: __________
+- [ ] Keep vents, radiators and baseboard heaters clear of furniture and curtains.
+- [ ] Fireplace or wood stove: chimney or flue inspected this year? __________
+- [ ] Never heat the home with a gas oven or stovetop.
+
+### Alarms and safety
+- [ ] Test every smoke alarm; replace batteries as the manufacturer directs.
+- [ ] Test every carbon monoxide alarm. Check the date on each one against the manufacturer's replacement date.
+- [ ] Confirm there is a CO alarm on every level and near sleeping areas.
+- [ ] Flashlights and spare batteries in a known place; phone numbers for the plumber, heating service and electric utility written down: __________
+
+### Gutters, roof and outside
+- [ ] Clear gutters and downspouts; check that water drains away from the foundation.
+- [ ] Look over the roof from the ground for missing or lifted shingles. Do not climb on a cold or wet roof.
+- [ ] Seal drafts around doors and windows with weather stripping or caulk.
+- [ ] Trim branches that could fall on the house or power lines in an ice storm, or schedule a professional.
+
+### Records
+- [ ] Write the service date and filter size in your household records.
+- [ ] Note any repair found today and who will do it: __________
+
+<div class="no-print">
+
+## Protecting pipes before the first freeze
+
+The pipes most at risk are the ones in places your heat does not reach: an unheated garage, crawl space, attic, or a wall on the outside of the house. The [Ready.gov winter preparedness page](https://www.ready.gov/winter-ready) lists insulating pipes among the ways to winterize a home, and the [CDC's winter weather safety page](https://www.cdc.gov/winter-weather/safety/index.html) says to insulate any water lines that run along exterior walls so your water supply will be less likely to freeze.
+
+- **Know the main shut-off.** If a pipe splits, shutting off the water at the main stops the flooding while you wait for a plumber. Find it in advance, make sure it turns, and label it. A [water leak record](/guides/water-leak-response-home-records/) helps you note what happened and who you called.
+- **Insulate what you can reach.** Foam sleeves made for pipes are sold at hardware stores. Cover pipes in the garage, crawl space, attic and along exterior walls, and the supply lines going to outdoor spigots if you can reach them.
+- **Hoses and outdoor spigots.** Water left in a hose can freeze and push back into the plumbing. Disconnect and drain hoses before the first freeze. If your outdoor spigot has an indoor shut-off valve, close it and open the spigot to drain; otherwise use an insulated cover.
+- **During a hard freeze.** Opening the cabinet doors under sinks on exterior walls lets warm room air reach the pipes, and a small steady drip from a faucet on an exterior wall keeps water moving. These are common precautions, not guarantees; a long or very hard freeze can still freeze pipes.
+- **If you are away.** Leave the heat on rather than turning it off to save money, and have someone check the house. A frozen pipe in an empty house can run for days before anyone sees it.
+- **If a faucet runs slow or not at all in a freeze,** a pipe may be frozen. Keep the faucet open, shut off the water at the main if you see a split or leak, and call a plumber. Do not use an open flame to thaw a pipe.
+
+## Heating system and filters
+
+Both the CDC and Ready.gov point at the heating system. The [CDC's winter weather safety page](https://www.cdc.gov/winter-weather/safety/index.html) says to have your furnace system and vent checked by a qualified technician each winter, and to have a chimney or flue inspected each year if you plan to use a fireplace or wood stove for emergency heat. Its [carbon monoxide page](https://www.cdc.gov/carbon-monoxide/about/index.html) says never to heat your house with a gas oven, and never to use a generator inside your home or garage, even with doors and windows open.
+
+Book the service early: the weeks after the first cold snap are when technicians are busiest. For forced-air systems, check the filter and change it when it is dirty or on the schedule in the manual. A clogged filter makes the system work harder. Keep furniture off vents and radiators so heat can circulate.
+
+If you use a generator during an outage, [Ready.gov](https://www.ready.gov/winter-weather) says to use generators and fuel only outdoors and at least 20 feet from windows, doors and attached garages. The [power outage preparedness guide](/guides/power-outage-home-preparedness/) covers the rest of an outage plan.
+
+## Smoke and carbon monoxide alarms
+
+Winter is when furnaces, fireplaces and space heaters run for months, so it is the right moment to test every alarm. The CDC's winter weather page says to test smoke and CO detectors monthly and replace batteries twice a year. Ready.gov says to install working carbon monoxide detectors on every level of your home, and the CDC says to install battery-operated or battery backup CO detectors near every sleeping area. The CDC also says to replace a CO detector following the manufacturer's instructions or every 5 years; check the date printed on yours.
+
+## Gutters, roof and drainage
+
+Clogged gutters hold water that can freeze into ice dams or spill against your foundation. Clear leaves and debris from gutters and downspouts, and make sure downspouts carry water away from the house. Ready.gov lists insulation, caulking and weather stripping among ways to prepare your home to keep out the cold; check door and window seals while you are looking around. How much ice and snow your roof handles depends on your region and roof, so use a roofing professional for anything that means climbing.
+
+## If you rent: what differs
+
+Much of this is shared between you and your landlord, and your lease and local rules decide who does what. Use the table as a starting point, not as a statement of anyone's legal duty.
+
+<section tabindex="0" aria-label="Winter tasks for renters" style="max-width:100%;overflow-x:auto">
+
+| Task | Often the renter's job | Often the landlord's or building's job |
+|---|---|---|
+| Know where the main shut-off is | Find out on move-in and tell the household | Show you the location and keep it accessible |
+| Garden hoses and the spigot on your patio or yard | Disconnect hoses you own and cover the spigot if allowed | Shut off or winterize outdoor plumbing the building controls |
+| Insulating exposed pipes | Report exposed pipes in unheated spaces in writing | Insulate pipes in common or unheated areas |
+| Furnace, boiler and filters | Change the filter if the lease says it is yours; report problems the day you notice | Service the heating system and vents |
+| Smoke and CO alarms | Test the ones in your unit and report any that fail | Install and replace alarms where the lease or local rules require it |
+| Gutters, roof and exterior | Report leaks, ice or sagging in writing | Clear gutters and repair the roof |
+| Travel in winter | Keep the heat on and tell the landlord if you will be away for long | Respond to freeze or leak reports quickly |
+
+</section>
+
+Keep copies of any message you send about a heating, pipe or alarm problem. Renters insurance and your lease can affect who pays for damage from a burst pipe, so read both.
+
+## Sources checked
+
+Checked on November 20, 2026. Each statement attributed above comes from these pages and goes no further than they do.
+
+- [Ready.gov: Winter weather](https://www.ready.gov/winter-weather) says to install working carbon monoxide detectors on every level of your home; to use generators and fuel only outdoors and at least 20 feet from windows, doors and attached garages; and not to heat your home with a gas stovetop or oven.
+- [Ready.gov: #WinterReady](https://www.ready.gov/winter-ready) says to winterize your home by insulating pipes, sealing drafts and checking heating systems, and to have a smoke alarm and carbon monoxide detectors with battery backups.
+- [CDC: Winter weather safety](https://www.cdc.gov/winter-weather/safety/index.html) says to insulate water lines along exterior walls, have the furnace system and vent checked each winter, inspect a chimney or flue each year, and test smoke and CO detectors monthly and replace batteries twice a year.
+- [CDC: About carbon monoxide](https://www.cdc.gov/carbon-monoxide/about/index.html) says to install CO detectors near every sleeping area, replace them per the manufacturer or every 5 years, never heat a house with a gas oven, and never run a generator inside a home or garage.
+
+Advice about dripping faucets, cabinet doors, hoses, gutters and renters is general home practice and is not attributed to any of these sources. This checklist is not an inspection and does not replace the advice of a licensed plumber, heating technician or your local building rules.
+
+## Keeping the checklist with your records
+
+Repeat this checklist each autumn and save the filled copy. The [seasonal home checklist](/checklists/printable-seasonal-home-checklist/) covers the other three seasons, the [monthly](/guides/monthly-home-maintenance-checklist/) and [quarterly](/guides/quarterly-home-maintenance-checklist/) maintenance guides cover what to check between seasons, and the free FamilyBoard app can keep your service dates and filter sizes in your own browser: no account, and the records stay on your device unless you export a backup.
+
+**FAQ:**
+- Q: When should I do a winter home maintenance checklist?
+  A: Do the pipe, heating and alarm items before the first hard freeze in your area, usually in autumn. In regions where freezes are rare, do them when your forecast first shows a freeze.
+- Q: How do I protect pipes from freezing?
+  A: Insulate exposed pipes in unheated spaces and along exterior walls, know where your main shut-off is, disconnect garden hoses, and during a hard freeze open cabinet doors on exterior walls and let a faucet drip. Keep the heat on if you travel. These steps reduce the risk; they do not eliminate it in a long or severe freeze.
+- Q: Do I need to do all of this if I rent?
+  A: Some of it. Renters can usually find the shut-off, disconnect hoses they own, test alarms in their unit and report problems in writing. Insulating common pipes, servicing the heating system and clearing gutters are usually the landlord's or building's jobs, but your lease controls.
+- Q: How often should I test smoke and carbon monoxide alarms?
+  A: The CDC's winter weather page says to test smoke and CO detectors monthly and replace batteries twice a year. Follow your alarm maker's instructions for the replacement date of the alarm itself.
+
+**CTA:** Print the checklist, book your heating service this week, and note the date in your household records.
 
 ---
 
 ## Page 184 — Printable Home Inventory Template
 **Slug:** `/templates/printable-home-inventory-template/`
-**Primary intent:** print a home inventory worksheet
-**Title tag:** `Free Home Inventory Template | Printable PDF and CSV`
-**Meta description:** `Download a free printable home inventory template in PDF or CSV (Excel) with no signup. Record room, item, brand/model, serial number, purchase date, and receipt references.`
-**Primary keyword concept:** printable home inventory template
-**Editorial review date:** 2026-11-08
-**Content version:** 2
+**Primary intent:** download a home inventory template for insurance
+**Title tag:** `Home Inventory Template for Insurance (PDF, Excel)`
+**Meta description:** `Free home inventory template for insurance: a printable PDF plus an Excel / Google Sheets file with replacement-cost and receipt columns. No signup.`
+**Primary keyword concept:** home inventory template for insurance
+**Editorial review date:** 2026-11-20
+**Content version:** 3
 **Suggested internal links:** `/guides/home-inventory-checklist/`, `/tools/home-inventory-checklist-generator/`, `/guides/photo-home-inventory/`, `/features/home-inventory-tracker/`
 
-# Printable Home Inventory Template
+# Printable Home Inventory Template for Insurance
 
-Start with one room and the items you would need to identify later. Download the blank [PDF worksheet](/downloads/familyboard-home-inventory-template.pdf) for handwriting, or the [CSV template](/downloads/familyboard-home-inventory-template.csv) for a spreadsheet. Both are free static files: no account, email address or household upload is required. You can use the template without opening the app.
+This is a free home inventory template built for the day you might have to tell an insurer what was in your home. Download the [printable PDF](/downloads/familyboard-home-inventory-template.pdf) to fill in by hand, the [Excel / Google Sheets workbook (.xlsx)](/downloads/familyboard-home-inventory-template.xlsx), or the [CSV file](/downloads/familyboard-home-inventory-template.csv). All three are static files: no account, no email address and no upload of your household details.
 
-**Quick summary:** A practical home inventory starts with seven core columns—**Room**, **Item**, **Brand / model**, **Serial number**, **Purchase date**, **Receipt / photo reference**, and **Notes**—focusing first on major appliances, electronics, tools, and vehicles rather than everyday consumables. Assign each item a short code (such as `ITEM-01`) so your worksheet rows match your receipt and label-photo filenames.
+**Quick summary:** For each item record the **room**, the **item**, its **brand and model**, **serial number**, **purchase date**, **purchase price**, your **replacement cost estimate**, a **receipt or photo reference**, and any **notes**. The Excel file adds running totals, a filled example from an invented household and a short how-to sheet. Work one room at a time and keep a copy outside the home.
 
-## Choose the format for your task
+## Which download should you use?
 
 <section tabindex="0" aria-label="Download format comparison" style="max-width:100%;overflow-x:auto">
 
-| Format | Best starting use | What it contains |
+| Format | Best for | What is inside |
 |---|---|---|
-| Printable PDF | Handwrite a room-by-room record | A landscape worksheet with blank rows and seven inventory columns |
-| CSV | Open in Excel or another spreadsheet | The same seven column headings and blank rows; it is not an Excel workbook with formulas |
-| Print this worksheet | Print the blank worksheet from this page | Use the browser print preview, check paper size and fit before printing |
+| PDF (US Letter, landscape) | Printing and filling in by hand | Nine columns and blank rows, one or two pages |
+| Excel workbook (.xlsx) | Excel, or Google Sheets (File, then Import, or open it from Google Drive) | An Inventory sheet with the same nine columns, dollar formatting and two running totals; an Example sheet with an invented household; a How to use sheet |
+| CSV | Any spreadsheet app, or importing into another tool | The same nine column headings and 20 blank rows. A CSV holds no formatting or formulas |
 
 </section>
 
-The blank download does not include the filled example below. Keep receipts and photos separately, and put a safe reference in the sheet rather than assuming a download stores attachments.
+The .xlsx file was generated by the FamilyBoard build as a standard Office Open XML workbook and checked by reading it back. Totals are ordinary spreadsheet formulas that add the price columns. The downloads do not store photos or receipts; they hold a reference to where you keep them.
 
-<section tabindex="0" aria-label="Blank home inventory table" style="max-width:100%;overflow-x:auto">
+## What an insurer needs to see after a loss
 
-| Room / 房間 | Item / 品項 | Brand / model / 品牌／型號 | Serial number / 序號 | Purchase date / 購買日期 | Receipt / photo reference / 收據／照片索引 | Notes / 備註 |
-|---|---|---|---|---|---|---|
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
+Your insurer's claim form and your policy decide exactly what is required, so read the claim instructions in your policy or ask your agent. What follows is what the Insurance Information Institute (Triple-I) says a useful inventory contains. Its [guide to creating a home inventory](https://www.iii.org/article/how-to-create-a-home-inventory) says to note where you bought each item, the make and model, and what you paid; to record serial numbers, which are usually found on the back or bottom of major appliances and electronic equipment; and to store sales receipts, purchase contracts and appraisals with your list as proof of value. It says an inventory can help you get an insurance claim settled faster.
+
+<section tabindex="0" aria-label="What to write in each column" style="max-width:100%;overflow-x:auto">
+
+| Column | What to write | Why it matters in a claim |
+|---|---|---|
+| Room | Where the item normally sits, such as Kitchen or Garage | Groups items the way you will walk through the house, and shows an item existed in a specific place |
+| Item | A plain description: "Refrigerator, French door, stainless" | Tells the reader what the item was without a photo |
+| Brand / model | Copy it from the label on the item | Lets someone price an equivalent item |
+| Serial number | Copy it from the label; check 0 versus O | Identifies one specific item, and is needed for theft reports and warranty questions |
+| Purchase date | The receipt or order date; leave blank if unknown | Shows age, and anchors warranty dates |
+| Purchase price (USD) | What you paid, from the receipt | Proof of value |
+| Replacement cost estimate (USD) | Your estimate of what a comparable new item costs today | Starts the conversation about how much coverage you need. It is your estimate, not an appraisal |
+| Receipt / photo reference | An item code such as ITEM-001 plus what you have: receipt, label photo, room photo | Points to the evidence without storing it in the sheet |
+| Notes | Condition, warranty end date, where the manual is | Anything that changes how the item is valued |
 
 </section>
 
-### Filled example: one room, two items
+Ask your insurer or agent whether your policy pays replacement cost or actual cash value for personal property, and whether valuables such as jewelry, collectibles or musical instruments have special limits or need a separate appraisal. The template records both what you paid and a replacement estimate so you have the numbers for that conversation; it cannot tell you what your policy pays.
 
-These rows are illustrative household records, not real purchases or product recommendations. The seven fields match the downloadable files.
+## How to fill it in, room by room
+
+1. **Pick one room and finish it.** Starting with a small contained area, such as a single closet or cabinet, is a realistic first session. A finished kitchen is worth more than a half-finished house.
+2. **Walk the room slowly with your phone camera first.** Triple-I suggests walking through while videotaping and describing the contents. Then photograph or label-photograph only the items that matter. The [photo home inventory guide](/guides/photo-home-inventory/) covers how to photograph so you can find the picture again.
+3. **Give each item a code.** ITEM-001, ITEM-002. Use the code in the file name of its receipt and photos, and write it in the Receipt / photo reference column.
+4. **Fill one row per significant item.** Large appliances, electronics, furniture, tools, jewelry, instruments, and anything costly to replace each get a row. Group low-value items, such as a shelf of paperbacks or a drawer of kitchen utensils, into one row with a rough count.
+5. **Write only what you know.** Leave a serial number or date blank rather than guessing. An unknown is honest; an invented serial number is worse than none.
+6. **Add the totals.** In the Excel file, the two cells beside the header add up your purchase prices and replacement estimates as you go.
+
+For a list of what to look for in each room before you start, the [home inventory checklist generator](/tools/home-inventory-checklist-generator/) builds a room-by-room starter list you can then record here.
+
+### Filled example: an invented household
+
+This is an example only. The household, brands, models and prices below are invented to show how specific an entry should be; they are not real purchases or recommendations. The same rows appear on the Example sheet of the Excel workbook.
 
 <section tabindex="0" aria-label="Filled home inventory example" style="max-width:100%;overflow-x:auto">
 
-| Room | Item | Brand / model | Serial number | Purchase date | Receipt / photo reference | Notes |
-|---|---|---|---|---|---|---|
-| Kitchen | Refrigerator | Model from appliance label | Ending 4821 | 2026-01-31 | ITEM-01 / receipt / label-photo | Check the written warranty start event |
-| Living room | Desk | Model unknown | Not available | Unknown | ITEM-02 / room-photo | Measure before moving; keep unknown fields blank |
+| Room | Item | Brand / model | Serial number | Purchase date | Price | Replacement estimate | Receipt / photo reference | Notes |
+|---|---|---|---|---|---|---|---|---|
+| Kitchen | Refrigerator, French door | Example Brand FD-26 | Ending 4821 | 2024-03-12 | $1,450 | $1,600 | ITEM-001: receipt, label photo | Retailer extended plan, ends 2027 |
+| Kitchen | Dishwasher | ExampleCo D100 | Ending 7730 | 2022-08-05 | $620 | $700 | ITEM-002: receipt, label photo | |
+| Living room | 55-inch television | Example Vision 55 | Ending 0192 | 2023-11-24 | $480 | $450 | ITEM-003: order email, photo | Replacement can be lower than what you paid |
+| Living room | Sofa, three-seat, gray | Model unknown | Not available | 2021-05 | $900 | $1,100 | ITEM-004: room photo | Unknown fields stay blank |
+| Bedroom 1 | Laptop | Example Book 14 | Ending 5568 | 2025-01-15 | $1,100 | $1,100 | ITEM-005: receipt, label photo | |
+| Garage | Cordless drill and battery set | ExampleTool DX | Not available | 2020-06 | $180 | $210 | ITEM-006: photo of tools on shelf | Small tools grouped in one row |
 
 </section>
 
-Give each item a code such as ITEM-01. Use that code in the receipt and photo filenames so another household member can find the source. Do not invent a purchase date, value or serial number to fill a cell.
-
-## Keep the completed copy private
-
-1. Save the downloaded file to a folder you control, then add only the details you need. Check a spreadsheet app's sync settings before entering household information.
-2. Keep original receipts, photos and complete identifiers in a protected location; use masked identifiers or location references on paper or shared copies.
-3. Save a second copy on another trusted device or storage location. A file on one laptop, or records in one browser, is not a backup by itself.
-4. Add a review date after a purchase, move or disposal. Share only the rows needed for the recipient's task.
-
-FamilyBoard does not receive values you write into the downloaded worksheet. The public page and static download still use a network connection. If you later use the private app, its records stay in that browser unless you export a backup; clearing browser storage can remove them.
-
-## Optional additional fields
-- Purchase price: __________
-- Warranty end: __________
-- Current household owner/user: __________
-- Service provider: __________
-- Storage/off-site location: __________
-
 ## What to record first
 
-Prioritize appliances, electronics, valuable items, tools, vehicles and home systems. Use photos for context and labels. If a serial number is difficult or unsafe to reach, leave it blank until service makes it accessible.
+Start with what would cost the most or take the longest to replace: major appliances, electronics, furniture, tools, jewelry and valuables, vehicles' paperwork, and home systems such as the water heater. Photograph a serial number label rather than reaching behind a heavy appliance; if a number is hard or unsafe to reach, leave it blank until a service visit makes it accessible. For a product whose written terms identify a start date and term, the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) gives a review date to copy into Notes.
 
-For a product whose written terms identify a start date and term, use the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) and copy the review date into the optional field. Keep the receipt or terms reference in the table so the calculation remains traceable.
+## Keep a copy outside the home, and keep it private
 
-## What the official guidance says about inventory fields
+Triple-I advises storing a copy of your paper inventory outside the home, for example in a safe deposit box or at a friend's or relative's home, and making at least one backup copy of the inventory document stored separately, such as on an external drive or in an online storage account. An inventory kept only in the house can be lost in the same event as the things it lists.
 
-Triple-I's [home inventory brochure](https://www.iii.org/article/brochure-home-inventory) says an inventory can help you buy the amount of insurance you need and get a claim settled faster, and suggests choosing a method that works for you, whether room by room or by category. It also advises keeping receipts and noting each item's cost, purchase date, make and model, and storing a copy outside the home. The template covers room, item, make and model, serial number, purchase date and receipt reference; write the price in the Notes column so a completed sheet carries everything that guidance asks for. Triple-I's [step-by-step article](https://www.iii.org/article/how-to-create-a-home-inventory) recommends starting with a small contained area, such as one cabinet or closet, which is a realistic way to fill the first page of this sheet before tackling the rest of the house. NAIC's [consumer alert on disaster preparedness](https://content.naic.org/article/consumer-insight-disaster-preparedness) is a reminder to keep copies of insurance documents in a waterproof container, which applies equally to a printed inventory.
+Because the sheet lists what is valuable and where it is, treat a completed copy like any financial record: do not email it carelessly, and share only the rows someone needs. FamilyBoard does not receive anything you type into the downloaded files. The page and downloads need a network connection to fetch; once saved, what you enter stays in your copy.
 
-## Paper now, local-first copy later
+## Update it when something changes
 
-A printed or CSV sheet works without any software, and a PDF you fill in by hand never touches a server. If you later move the rows into the FamilyBoard tracker, they are stored in your browser rather than on a FamilyBoard account, which keeps serial numbers and prices private but means you still need your own exported backup and an offsite copy of the sheet. Keep the paper original and one digital copy in different places.
+Triple-I advises adding significant new purchases to your list and making it a habit to record the item details and receipt while they are fresh. Re-check it after a move, a renovation or a major purchase, rather than on a fixed calendar.
+
+## Template, generator, photo guide or app: which one do you need?
+
+<section tabindex="0" aria-label="Choosing between the home inventory resources" style="max-width:100%;overflow-x:auto">
+
+| You want to | Use | What it does |
+|---|---|---|
+| Record items for insurance on paper or in a spreadsheet | This template (PDF, Excel, CSV) | The record itself: nine columns, a filled example and downloads |
+| Get a list of what to look for in each room | The [home inventory checklist generator](/tools/home-inventory-checklist-generator/) | A tool that builds a room-by-room starter list to record here |
+| Photograph and label items so the evidence is findable | The [photo home inventory guide](/guides/photo-home-inventory/) | A how-to for room sweeps, close-ups and file naming |
+| Keep items in a searchable app with maintenance and warranty history | The [home inventory tracker in FamilyBoard](/features/home-inventory-tracker/) | A free local-first app; records stay in your browser, no account |
+
+</section>
+
+If you later move rows into the app, they are stored in your browser rather than on a FamilyBoard account. That keeps serial numbers and prices private, but clearing browser data can remove them, so export a backup and keep a copy elsewhere.
+
+**FAQ:**
+- Q: Is there a home inventory template for insurance in Excel or Google Sheets?
+  A: Yes. The .xlsx download on this page opens in Excel and can be opened in Google Sheets. It has an Inventory sheet with columns for room, item, brand and model, serial number, purchase date, purchase price, replacement cost estimate, receipt or photo reference and notes, plus an example sheet from an invented household.
+- Q: Will my insurer accept this template?
+  A: Check with your insurer. Policies and claim procedures differ, and this template is not an insurer form. It collects the details that Triple-I says help support a claim: make and model, serial number, price, place of purchase and proof such as receipts. Many people keep it alongside whatever the insurer asks for at claim time.
+- Q: Do I need receipts for every item?
+  A: Receipts and appraisals are useful proof of value, so keep them for significant items. For things you cannot document, a photo or video of the item in place and a note of what you paid still help.
+- Q: What is the difference between purchase price and replacement cost estimate?
+  A: Purchase price is what you paid. Replacement cost estimate is your own estimate of what a comparable new item costs now. Which of the two matters for a claim depends on your policy, so ask your insurer or agent.
+- Q: Where should I keep the finished inventory?
+  A: Keep one copy where you can reach it and another outside the home, such as an online storage account, an external drive stored elsewhere, or with a trusted relative. Triple-I recommends keeping a copy outside the home.
 
 **CTA:** Use the digital tracker when you want maintenance, warranty and repair history attached to the same item.
 
@@ -13296,8 +13522,8 @@ Name: ____________________ Phone: ____________________
 ## Page 192 — Printable House Sitter Checklist
 **Slug:** `/checklists/printable-house-sitter-checklist/`
 **Primary intent:** print a concise house-sitter task list
-**Title tag:** `Printable House Sitter Checklist | Daily Home, Pet and Contact Instructions`
-**Meta description:** `Print a house-sitter checklist for daily tasks, pets, plants, deliveries, waste, contacts and problem escalation.`
+**Title tag:** `Printable House Sitter Checklist | Word and Google Docs`
+**Meta description:** `Print a house sitter checklist, or download a Word / Google Docs template (.docx) for daily tasks, pets, plants, contacts and emergencies.`
 **Primary keyword concept:** printable house sitter checklist
 **Suggested internal links:** `/tools/house-sitter-instruction-generator/`, `/guides/house-sitter-information/`, `/guides/travel-household-handoff/`, `/features/household-handoff/`
 
@@ -13392,6 +13618,14 @@ It does not choose, screen or vet a sitter, and it is not an agreement about pay
 
 </div>
 
+<div class="no-print">
+
+## Word and Google Docs version
+
+The printable sheet above is one page. If you would rather type your instructions and edit them later, download the [house sitter instructions template (.docx)](/downloads/familyboard-house-sitter-instructions-template.docx). It is a standard Word document with fill-in tables for the stay, the daily routine, the house, pets, scheduled visits, what to do if something looks wrong, and contacts. Open it in Word, or in Google Docs with File, then Open, then Upload, or by adding it to Google Drive and choosing Open with Google Docs. It is a blank template: nothing you type is sent to FamilyBoard. Leave alarm codes, lockbox codes and passwords out of it, as on the printed sheet.
+
+</div>
+
 **CTA:** Use the generator when the sitter needs more than a one-page checklist.
 
 ---
@@ -13399,8 +13633,8 @@ It does not choose, screen or vet a sitter, and it is not an agreement about pay
 ## Page 193 — Printable Pet Sitter Checklist
 **Slug:** `/checklists/printable-pet-sitter-checklist/`
 **Primary intent:** print a pet care handoff sheet
-**Title tag:** `Printable Pet Sitter Checklist | Feeding, Routine, Supplies and Vet Contacts`
-**Meta description:** `Print a pet-sitter checklist with owner-entered feeding, routine, supplies, veterinarian and emergency contacts.`
+**Title tag:** `Printable Pet Sitter Checklist | Word and Google Docs`
+**Meta description:** `Print a pet sitter checklist, or download a Word / Google Docs template (.docx) for feeding, routine, supplies, vet contacts and emergencies.`
 **Primary keyword concept:** printable pet sitter checklist
 **Suggested internal links:** `/tools/pet-sitter-instruction-generator/`, `/guides/pet-sitter-information/`, `/guides/organize-pet-records/`, `/features/emergency-information-organizer/`
 
@@ -13491,6 +13725,14 @@ Only copy current veterinarian/owner instructions here. Do not generate new medi
 ## What this sheet does not cover
 
 It is not veterinary advice. It does not tell a sitter what is normal for a species or whether a symptom is serious; for that, the sitter should phone the veterinarian or the emergency clinic on the sheet. It does not replace boarding or kennel paperwork, pet insurance details or health records, and it cannot guarantee that a sitter will follow it. Anything about medication has to come from your veterinarian.
+
+</div>
+
+<div class="no-print">
+
+## Word and Google Docs version
+
+The printable sheet above is one page. If you would rather type your instructions and edit them later, download the [pet sitter instructions template (.docx)](/downloads/familyboard-pet-sitter-instructions-template.docx). It is a standard Word document with fill-in tables for the pet profile, feeding, medications, walks and bathroom routine, safety rules, veterinary contacts and approved spending, and where supplies are kept. Open it in Word, or in Google Docs with File, then Open, then Upload, or by adding it to Google Drive and choosing Open with Google Docs. It is a blank template: nothing you type is sent to FamilyBoard. Leave alarm codes, lockbox codes and passwords out of it, and ask your veterinarian rather than this template about medication and health questions.
 
 </div>
 

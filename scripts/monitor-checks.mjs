@@ -6662,6 +6662,10 @@ export const checks = [
     require: ["可列印每月家庭檢查表", "居家狀況", '<html lang="zh-TW">', 'hreflang="en"'],
   },
   {
+    path: "/checklists/winter-home-maintenance-checklist/",
+    require: ["Winter Home Maintenance Checklist", "Pipes and water", "familyboard-winter-home-maintenance-checklist.pdf"],
+  },
+  {
     path: "/checklists/printable-seasonal-home-checklist/",
     require: ["Printable Seasonal Home Checklist", "Systems entering heavy use", 'hreflang="zh-TW"'],
   },

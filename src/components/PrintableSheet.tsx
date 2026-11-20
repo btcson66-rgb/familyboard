@@ -25,13 +25,15 @@ const columnsByRoute: Array<[RegExp, string[]]> = [
   [
     /printable-home-inventory-template/,
     [
-      "Room / 房間",
-      "Item / 品項",
-      "Brand / model / 品牌／型號",
-      "Serial number / 序號",
-      "Purchase date / 購買日期",
-      "Receipt / photo reference / 收據／照片索引",
-      "Notes / 備註",
+      "Room",
+      "Item",
+      "Brand / model",
+      "Serial number",
+      "Purchase date",
+      "Purchase price (USD)",
+      "Replacement cost estimate (USD)",
+      "Receipt / photo reference",
+      "Notes",
     ],
   ],
   [

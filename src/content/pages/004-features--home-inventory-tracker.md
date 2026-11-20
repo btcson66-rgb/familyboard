@@ -1,5 +1,5 @@
 ---
-title: "Free Home Inventory Tracker App | Appliances, Serial Numbers & Warranties | FamilyBoard"
+title: "Home Inventory Tracker App: Free, Private, No Account"
 description: "Track household appliances, electronics, serial numbers, purchase receipts, warranties, and maintenance history locally in your browser—free, private, no account required."
 route: "/features/home-inventory-tracker/"
 primaryIntent: "find a home inventory tracker"
@@ -12,6 +12,7 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-11-08"
 nextStep: "Add the first appliance or vehicle you'd hate to lose the receipt or serial number for, then export the master CSV from Settings to fill in purchase price and manual reference."
 related:
+  - "/templates/printable-home-inventory-template/"
   - "/features/maintenance-tracker/"
   - "/features/warranty-tracker/"
   - "/features/household-documents-organizer/"
@@ -70,6 +71,10 @@ Add one room or one category at a time rather than trying to catalog the whole h
 | Serial number | Copy from the nameplate, checking 0 versus O | Often requested for a warranty claim or insurance report |
 | Purchase date | Use the receipt or order date | Anchors warranty and age calculations |
 | Notes | Where the receipt and manual are kept | Points to evidence without storing the file itself |
+
+## App or template: which do you need?
+
+This page is about the app: a place to keep assets together with their maintenance tasks, warranties and documents, in your browser. If you only need a one-time record to print or open in a spreadsheet, start with the [home inventory template for insurance](/templates/printable-home-inventory-template/), which has PDF, Excel and CSV downloads and a filled example. Many households fill in the template first and move the items they want to track into the app.
 
 ## What insurers say a home inventory is for
 

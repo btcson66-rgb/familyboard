@@ -1,6 +1,6 @@
 ---
-title: "Printable House Sitter Checklist | Daily Home, Pet and Contact Instructions"
-description: "Print a house-sitter checklist for daily tasks, pets, plants, deliveries, waste, contacts and problem escalation."
+title: "Printable House Sitter Checklist | Word and Google Docs"
+description: "Print a house sitter checklist, or download a Word / Google Docs template (.docx) for daily tasks, pets, plants, contacts and emergencies."
 route: "/checklists/printable-house-sitter-checklist/"
 primaryIntent: "print a concise house-sitter task list"
 primaryKeyword: "printable house sitter checklist"
@@ -107,5 +107,13 @@ The sheet lies on a counter where visitors, delivery people and tradespeople can
 ## What this sheet does not cover
 
 It does not choose, screen or vet a sitter, and it is not an agreement about pay, liability or damage. Some home insurance policies attach conditions to an empty home or to who stays in it; the sheet cannot tell you what yours says, so check the policy wording or ask your insurer before you travel. Medical and veterinary details belong with the people qualified to give them, not on a sheet that anyone in the house can read.
+
+</div>
+
+<div class="no-print">
+
+## Word and Google Docs version
+
+The printable sheet above is one page. If you would rather type your instructions and edit them later, download the [house sitter instructions template (.docx)](/downloads/familyboard-house-sitter-instructions-template.docx). It is a standard Word document with fill-in tables for the stay, the daily routine, the house, pets, scheduled visits, what to do if something looks wrong, and contacts. Open it in Word, or in Google Docs with File, then Open, then Upload, or by adding it to Google Drive and choosing Open with Google Docs. It is a blank template: nothing you type is sent to FamilyBoard. Leave alarm codes, lockbox codes and passwords out of it, as on the printed sheet.
 
 </div>
