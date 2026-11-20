@@ -1,6 +1,6 @@
 ---
-title: "Printable Pet Sitter Checklist | Feeding, Routine, Supplies and Vet Contacts"
-description: "Print a pet-sitter checklist with owner-entered feeding, routine, supplies, veterinarian and emergency contacts."
+title: "Printable Pet Sitter Checklist | Word and Google Docs"
+description: "Print a pet sitter checklist, or download a Word / Google Docs template (.docx) for feeding, routine, supplies, vet contacts and emergencies."
 route: "/checklists/printable-pet-sitter-checklist/"
 primaryIntent: "print a pet care handoff sheet"
 primaryKeyword: "printable pet sitter checklist"
@@ -106,5 +106,13 @@ Only copy current veterinarian/owner instructions here. Do not generate new medi
 ## What this sheet does not cover
 
 It is not veterinary advice. It does not tell a sitter what is normal for a species or whether a symptom is serious; for that, the sitter should phone the veterinarian or the emergency clinic on the sheet. It does not replace boarding or kennel paperwork, pet insurance details or health records, and it cannot guarantee that a sitter will follow it. Anything about medication has to come from your veterinarian.
+
+</div>
+
+<div class="no-print">
+
+## Word and Google Docs version
+
+The printable sheet above is one page. If you would rather type your instructions and edit them later, download the [pet sitter instructions template (.docx)](/downloads/familyboard-pet-sitter-instructions-template.docx). It is a standard Word document with fill-in tables for the pet profile, feeding, medications, walks and bathroom routine, safety rules, veterinary contacts and approved spending, and where supplies are kept. Open it in Word, or in Google Docs with File, then Open, then Upload, or by adding it to Google Drive and choosing Open with Google Docs. It is a blank template: nothing you type is sent to FamilyBoard. Leave alarm codes, lockbox codes and passwords out of it, and ask your veterinarian rather than this template about medication and health questions.
 
 </div>

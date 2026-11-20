@@ -14,6 +14,7 @@ nextStep: "Use the quarterly review to clean up the maintenance tracker: close s
 related:
   - "/guides/monthly-home-maintenance-checklist/"
   - "/guides/seasonal-home-maintenance-checklist/"
+  - "/checklists/winter-home-maintenance-checklist/"
   - "/guides/home-maintenance-records/"
   - "/features/maintenance-tracker/"
 faq:
@@ -51,7 +52,7 @@ The next season's prep list is genuinely different depending on where you live â
 - **Hot-humid climates:** before cooling season, have AC equipment checked and confirm condensate drains aren't clogged, since a blocked drain is a common cause of water damage in humid regions. Through the humid months, watch indoor humidity and ventilation closely using the range above, since mold risk here is a year-round concern rather than a seasonal one.
 - **Mild climates:** the seasonal swings are smaller, but exterior wood, paint, and irrigation systems still age with sun and occasional rain exposure â€” use the quieter season to catch up on exterior maintenance that colder or wetter climates have to schedule around weather windows.
 
-Manufacturer guidance for your specific equipment always overrides a generic list like this one where the two disagree.
+Manufacturer guidance for your specific equipment always overrides a generic list like this one where the two disagree. If the coming quarter is winter, the [printable winter home maintenance checklist](/checklists/winter-home-maintenance-checklist/) turns the cold-climate bullet above into a full list, with notes for renters and for regions where freezes are rare.
 
 ## Looking back before looking forward
 

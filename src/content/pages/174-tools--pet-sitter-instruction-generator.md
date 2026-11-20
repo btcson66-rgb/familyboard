@@ -1,6 +1,6 @@
 ---
-title: "Free Pet Sitter Instructions Generator | Routine, Supplies and Vet Contacts"
-description: "Create a pet-sitter care sheet with user-entered feeding, routine, supplies, veterinarian contacts and emergency escalation information."
+title: "Pet Sitter Instructions Generator and Word Template"
+description: "Create a pet sitter care sheet online, or download a Word / Google Docs template (.docx) for feeding, routine, supplies, vet contacts and emergencies."
 route: "/tools/pet-sitter-instruction-generator/"
 primaryIntent: "make a pet-sitter care sheet"
 primaryKeyword: "pet sitter instructions generator"
@@ -24,7 +24,7 @@ faq:
   - question: "What should go in the medication reference field?"
     answer: "A pointer to the veterinarian's current written instructions — for example, \"insulin per vet's written schedule, see printed sheet\" — rather than an attempt to describe the dose or schedule from memory. The field is meant to direct the sitter to the authoritative source, not to be that source itself."
   - question: "How often should I regenerate the sheet?"
-    answer: "Before every trip. Pet routines, diets, and medications can change between trips, and a sitter working from an outdated sheet is a real risk if something important has changed since the last version was printed."
+    answer: "Before every trip. Pet routines, diets, and medications can change between trips, and a sitter working from an outdated sheet is a real risk if something important has changed since the last version was printed. <div class=\"no-print\"> ## Word and Google Docs version If you would rather edit the packet in a word processor, download the [pet sitter instructions template (.docx)](/downloads/familyboard-pet-sitter-instructions-template.docx). It is a standard Word document with fill-in tables for the pet profile, feeding, medications, walks and bathroom routine, safety rules, veterinary contacts and approved spending, and where supplies are kept. Open it in Word, or in Google Docs with File, then Open, then Upload, or by adding it to Google Drive and choosing Open with Google Docs. It is a blank template: nothing you type is sent to FamilyBoard. Leave alarm codes, lockbox codes and passwords out of it, and ask your veterinarian rather than this template about medication and health questions. </div>"
 contentVersion: 1
 ---
 # Pet Sitter Instructions Generator

@@ -1,95 +1,129 @@
 ---
-title: "Free Home Inventory Template | Printable PDF and CSV"
-description: "Download a free printable home inventory template in PDF or CSV (Excel) with no signup. Record room, item, brand/model, serial number, purchase date, and receipt references."
+title: "Home Inventory Template for Insurance (PDF, Excel)"
+description: "Free home inventory template for insurance: a printable PDF plus an Excel / Google Sheets file with replacement-cost and receipt columns. No signup."
 route: "/templates/printable-home-inventory-template/"
-primaryIntent: "print a home inventory worksheet"
-primaryKeyword: "printable home inventory template"
+primaryIntent: "download a home inventory template for insurance"
+primaryKeyword: "home inventory template for insurance"
 cluster: "printables"
 pageType: "printable"
 indexable: true
 depthVerified: false
 publishedAt: "2026-08-19"
-lastReviewedAt: "2026-11-08"
+lastReviewedAt: "2026-11-20"
 nextStep: "Use the digital tracker when you want maintenance, warranty and repair history attached to the same item."
 related:
   - "/guides/home-inventory-checklist/"
   - "/tools/home-inventory-checklist-generator/"
   - "/guides/photo-home-inventory/"
   - "/features/home-inventory-tracker/"
-faq: []
-contentVersion: 2
+faq:
+  - question: "Is there a home inventory template for insurance in Excel or Google Sheets?"
+    answer: "Yes. The .xlsx download on this page opens in Excel and can be opened in Google Sheets. It has an Inventory sheet with columns for room, item, brand and model, serial number, purchase date, purchase price, replacement cost estimate, receipt or photo reference and notes, plus an example sheet from an invented household."
+  - question: "Will my insurer accept this template?"
+    answer: "Check with your insurer. Policies and claim procedures differ, and this template is not an insurer form. It collects the details that Triple-I says help support a claim: make and model, serial number, price, place of purchase and proof such as receipts. Many people keep it alongside whatever the insurer asks for at claim time."
+  - question: "Do I need receipts for every item?"
+    answer: "Receipts and appraisals are useful proof of value, so keep them for significant items. For things you cannot document, a photo or video of the item in place and a note of what you paid still help."
+  - question: "What is the difference between purchase price and replacement cost estimate?"
+    answer: "Purchase price is what you paid. Replacement cost estimate is your own estimate of what a comparable new item costs now. Which of the two matters for a claim depends on your policy, so ask your insurer or agent."
+  - question: "Where should I keep the finished inventory?"
+    answer: "Keep one copy where you can reach it and another outside the home, such as an online storage account, an external drive stored elsewhere, or with a trusted relative. Triple-I recommends keeping a copy outside the home."
+contentVersion: 3
 ---
-# Printable Home Inventory Template
+# Printable Home Inventory Template for Insurance
 
-Start with one room and the items you would need to identify later. Download the blank [PDF worksheet](/downloads/familyboard-home-inventory-template.pdf) for handwriting, or the [CSV template](/downloads/familyboard-home-inventory-template.csv) for a spreadsheet. Both are free static files: no account, email address or household upload is required. You can use the template without opening the app.
+This is a free home inventory template built for the day you might have to tell an insurer what was in your home. Download the [printable PDF](/downloads/familyboard-home-inventory-template.pdf) to fill in by hand, the [Excel / Google Sheets workbook (.xlsx)](/downloads/familyboard-home-inventory-template.xlsx), or the [CSV file](/downloads/familyboard-home-inventory-template.csv). All three are static files: no account, no email address and no upload of your household details.
 
-**Quick summary:** A practical home inventory starts with seven core columns—**Room**, **Item**, **Brand / model**, **Serial number**, **Purchase date**, **Receipt / photo reference**, and **Notes**—focusing first on major appliances, electronics, tools, and vehicles rather than everyday consumables. Assign each item a short code (such as `ITEM-01`) so your worksheet rows match your receipt and label-photo filenames.
+**Quick summary:** For each item record the **room**, the **item**, its **brand and model**, **serial number**, **purchase date**, **purchase price**, your **replacement cost estimate**, a **receipt or photo reference**, and any **notes**. The Excel file adds running totals, a filled example from an invented household and a short how-to sheet. Work one room at a time and keep a copy outside the home.
 
-## Choose the format for your task
+## Which download should you use?
 
 <section tabindex="0" aria-label="Download format comparison" style="max-width:100%;overflow-x:auto">
 
-| Format | Best starting use | What it contains |
+| Format | Best for | What is inside |
 |---|---|---|
-| Printable PDF | Handwrite a room-by-room record | A landscape worksheet with blank rows and seven inventory columns |
-| CSV | Open in Excel or another spreadsheet | The same seven column headings and blank rows; it is not an Excel workbook with formulas |
-| Print this worksheet | Print the blank worksheet from this page | Use the browser print preview, check paper size and fit before printing |
+| PDF (US Letter, landscape) | Printing and filling in by hand | Nine columns and blank rows, one or two pages |
+| Excel workbook (.xlsx) | Excel, or Google Sheets (File, then Import, or open it from Google Drive) | An Inventory sheet with the same nine columns, dollar formatting and two running totals; an Example sheet with an invented household; a How to use sheet |
+| CSV | Any spreadsheet app, or importing into another tool | The same nine column headings and 20 blank rows. A CSV holds no formatting or formulas |
 
 </section>
 
-The blank download does not include the filled example below. Keep receipts and photos separately, and put a safe reference in the sheet rather than assuming a download stores attachments.
+The .xlsx file was generated by the FamilyBoard build as a standard Office Open XML workbook and checked by reading it back. Totals are ordinary spreadsheet formulas that add the price columns. The downloads do not store photos or receipts; they hold a reference to where you keep them.
 
-<section tabindex="0" aria-label="Blank home inventory table" style="max-width:100%;overflow-x:auto">
+## What an insurer needs to see after a loss
 
-| Room / 房間 | Item / 品項 | Brand / model / 品牌／型號 | Serial number / 序號 | Purchase date / 購買日期 | Receipt / photo reference / 收據／照片索引 | Notes / 備註 |
-|---|---|---|---|---|---|---|
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
+Your insurer's claim form and your policy decide exactly what is required, so read the claim instructions in your policy or ask your agent. What follows is what the Insurance Information Institute (Triple-I) says a useful inventory contains. Its [guide to creating a home inventory](https://www.iii.org/article/how-to-create-a-home-inventory) says to note where you bought each item, the make and model, and what you paid; to record serial numbers, which are usually found on the back or bottom of major appliances and electronic equipment; and to store sales receipts, purchase contracts and appraisals with your list as proof of value. It says an inventory can help you get an insurance claim settled faster.
+
+<section tabindex="0" aria-label="What to write in each column" style="max-width:100%;overflow-x:auto">
+
+| Column | What to write | Why it matters in a claim |
+|---|---|---|
+| Room | Where the item normally sits, such as Kitchen or Garage | Groups items the way you will walk through the house, and shows an item existed in a specific place |
+| Item | A plain description: "Refrigerator, French door, stainless" | Tells the reader what the item was without a photo |
+| Brand / model | Copy it from the label on the item | Lets someone price an equivalent item |
+| Serial number | Copy it from the label; check 0 versus O | Identifies one specific item, and is needed for theft reports and warranty questions |
+| Purchase date | The receipt or order date; leave blank if unknown | Shows age, and anchors warranty dates |
+| Purchase price (USD) | What you paid, from the receipt | Proof of value |
+| Replacement cost estimate (USD) | Your estimate of what a comparable new item costs today | Starts the conversation about how much coverage you need. It is your estimate, not an appraisal |
+| Receipt / photo reference | An item code such as ITEM-001 plus what you have: receipt, label photo, room photo | Points to the evidence without storing it in the sheet |
+| Notes | Condition, warranty end date, where the manual is | Anything that changes how the item is valued |
 
 </section>
 
-### Filled example: one room, two items
+Ask your insurer or agent whether your policy pays replacement cost or actual cash value for personal property, and whether valuables such as jewelry, collectibles or musical instruments have special limits or need a separate appraisal. The template records both what you paid and a replacement estimate so you have the numbers for that conversation; it cannot tell you what your policy pays.
 
-These rows are illustrative household records, not real purchases or product recommendations. The seven fields match the downloadable files.
+## How to fill it in, room by room
+
+1. **Pick one room and finish it.** Starting with a small contained area, such as a single closet or cabinet, is a realistic first session. A finished kitchen is worth more than a half-finished house.
+2. **Walk the room slowly with your phone camera first.** Triple-I suggests walking through while videotaping and describing the contents. Then photograph or label-photograph only the items that matter. The [photo home inventory guide](/guides/photo-home-inventory/) covers how to photograph so you can find the picture again.
+3. **Give each item a code.** ITEM-001, ITEM-002. Use the code in the file name of its receipt and photos, and write it in the Receipt / photo reference column.
+4. **Fill one row per significant item.** Large appliances, electronics, furniture, tools, jewelry, instruments, and anything costly to replace each get a row. Group low-value items, such as a shelf of paperbacks or a drawer of kitchen utensils, into one row with a rough count.
+5. **Write only what you know.** Leave a serial number or date blank rather than guessing. An unknown is honest; an invented serial number is worse than none.
+6. **Add the totals.** In the Excel file, the two cells beside the header add up your purchase prices and replacement estimates as you go.
+
+For a list of what to look for in each room before you start, the [home inventory checklist generator](/tools/home-inventory-checklist-generator/) builds a room-by-room starter list you can then record here.
+
+### Filled example: an invented household
+
+This is an example only. The household, brands, models and prices below are invented to show how specific an entry should be; they are not real purchases or recommendations. The same rows appear on the Example sheet of the Excel workbook.
 
 <section tabindex="0" aria-label="Filled home inventory example" style="max-width:100%;overflow-x:auto">
 
-| Room | Item | Brand / model | Serial number | Purchase date | Receipt / photo reference | Notes |
-|---|---|---|---|---|---|---|
-| Kitchen | Refrigerator | Model from appliance label | Ending 4821 | 2026-01-31 | ITEM-01 / receipt / label-photo | Check the written warranty start event |
-| Living room | Desk | Model unknown | Not available | Unknown | ITEM-02 / room-photo | Measure before moving; keep unknown fields blank |
+| Room | Item | Brand / model | Serial number | Purchase date | Price | Replacement estimate | Receipt / photo reference | Notes |
+|---|---|---|---|---|---|---|---|---|
+| Kitchen | Refrigerator, French door | Example Brand FD-26 | Ending 4821 | 2024-03-12 | $1,450 | $1,600 | ITEM-001: receipt, label photo | Retailer extended plan, ends 2027 |
+| Kitchen | Dishwasher | ExampleCo D100 | Ending 7730 | 2022-08-05 | $620 | $700 | ITEM-002: receipt, label photo | |
+| Living room | 55-inch television | Example Vision 55 | Ending 0192 | 2023-11-24 | $480 | $450 | ITEM-003: order email, photo | Replacement can be lower than what you paid |
+| Living room | Sofa, three-seat, gray | Model unknown | Not available | 2021-05 | $900 | $1,100 | ITEM-004: room photo | Unknown fields stay blank |
+| Bedroom 1 | Laptop | Example Book 14 | Ending 5568 | 2025-01-15 | $1,100 | $1,100 | ITEM-005: receipt, label photo | |
+| Garage | Cordless drill and battery set | ExampleTool DX | Not available | 2020-06 | $180 | $210 | ITEM-006: photo of tools on shelf | Small tools grouped in one row |
 
 </section>
 
-Give each item a code such as ITEM-01. Use that code in the receipt and photo filenames so another household member can find the source. Do not invent a purchase date, value or serial number to fill a cell.
-
-## Keep the completed copy private
-
-1. Save the downloaded file to a folder you control, then add only the details you need. Check a spreadsheet app's sync settings before entering household information.
-2. Keep original receipts, photos and complete identifiers in a protected location; use masked identifiers or location references on paper or shared copies.
-3. Save a second copy on another trusted device or storage location. A file on one laptop, or records in one browser, is not a backup by itself.
-4. Add a review date after a purchase, move or disposal. Share only the rows needed for the recipient's task.
-
-FamilyBoard does not receive values you write into the downloaded worksheet. The public page and static download still use a network connection. If you later use the private app, its records stay in that browser unless you export a backup; clearing browser storage can remove them.
-
-## Optional additional fields
-- Purchase price: __________
-- Warranty end: __________
-- Current household owner/user: __________
-- Service provider: __________
-- Storage/off-site location: __________
-
 ## What to record first
 
-Prioritize appliances, electronics, valuable items, tools, vehicles and home systems. Use photos for context and labels. If a serial number is difficult or unsafe to reach, leave it blank until service makes it accessible.
+Start with what would cost the most or take the longest to replace: major appliances, electronics, furniture, tools, jewelry and valuables, vehicles' paperwork, and home systems such as the water heater. Photograph a serial number label rather than reaching behind a heavy appliance; if a number is hard or unsafe to reach, leave it blank until a service visit makes it accessible. For a product whose written terms identify a start date and term, the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) gives a review date to copy into Notes.
 
-For a product whose written terms identify a start date and term, use the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) and copy the review date into the optional field. Keep the receipt or terms reference in the table so the calculation remains traceable.
+## Keep a copy outside the home, and keep it private
 
-## What the official guidance says about inventory fields
+Triple-I advises storing a copy of your paper inventory outside the home, for example in a safe deposit box or at a friend's or relative's home, and making at least one backup copy of the inventory document stored separately, such as on an external drive or in an online storage account. An inventory kept only in the house can be lost in the same event as the things it lists.
 
-Triple-I's [home inventory brochure](https://www.iii.org/article/brochure-home-inventory) says an inventory can help you buy the amount of insurance you need and get a claim settled faster, and suggests choosing a method that works for you, whether room by room or by category. It also advises keeping receipts and noting each item's cost, purchase date, make and model, and storing a copy outside the home. The template covers room, item, make and model, serial number, purchase date and receipt reference; write the price in the Notes column so a completed sheet carries everything that guidance asks for. Triple-I's [step-by-step article](https://www.iii.org/article/how-to-create-a-home-inventory) recommends starting with a small contained area, such as one cabinet or closet, which is a realistic way to fill the first page of this sheet before tackling the rest of the house. NAIC's [consumer alert on disaster preparedness](https://content.naic.org/article/consumer-insight-disaster-preparedness) is a reminder to keep copies of insurance documents in a waterproof container, which applies equally to a printed inventory.
+Because the sheet lists what is valuable and where it is, treat a completed copy like any financial record: do not email it carelessly, and share only the rows someone needs. FamilyBoard does not receive anything you type into the downloaded files. The page and downloads need a network connection to fetch; once saved, what you enter stays in your copy.
 
-## Paper now, local-first copy later
+## Update it when something changes
 
-A printed or CSV sheet works without any software, and a PDF you fill in by hand never touches a server. If you later move the rows into the FamilyBoard tracker, they are stored in your browser rather than on a FamilyBoard account, which keeps serial numbers and prices private but means you still need your own exported backup and an offsite copy of the sheet. Keep the paper original and one digital copy in different places.
+Triple-I advises adding significant new purchases to your list and making it a habit to record the item details and receipt while they are fresh. Re-check it after a move, a renovation or a major purchase, rather than on a fixed calendar.
+
+## Template, generator, photo guide or app: which one do you need?
+
+<section tabindex="0" aria-label="Choosing between the home inventory resources" style="max-width:100%;overflow-x:auto">
+
+| You want to | Use | What it does |
+|---|---|---|
+| Record items for insurance on paper or in a spreadsheet | This template (PDF, Excel, CSV) | The record itself: nine columns, a filled example and downloads |
+| Get a list of what to look for in each room | The [home inventory checklist generator](/tools/home-inventory-checklist-generator/) | A tool that builds a room-by-room starter list to record here |
+| Photograph and label items so the evidence is findable | The [photo home inventory guide](/guides/photo-home-inventory/) | A how-to for room sweeps, close-ups and file naming |
+| Keep items in a searchable app with maintenance and warranty history | The [home inventory tracker in FamilyBoard](/features/home-inventory-tracker/) | A free local-first app; records stay in your browser, no account |
+
+</section>
+
+If you later move rows into the app, they are stored in your browser rather than on a FamilyBoard account. That keeps serial numbers and prices private, but clearing browser data can remove them, so export a backup and keep a copy elsewhere.

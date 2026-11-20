@@ -1,6 +1,6 @@
 ---
-title: "Free House Sitter Instructions Generator | Home, Pets, Contacts and Daily Tasks"
-description: "Generate a limited house-sitter packet with daily responsibilities, contacts, pets, deliveries and escalation steps without exposing unrelated household data."
+title: "House Sitter Instructions Generator and Word Template"
+description: "Generate house sitter instructions online, or download a Word / Google Docs template (.docx) for contacts, daily routine and emergencies."
 route: "/tools/house-sitter-instruction-generator/"
 primaryIntent: "create a house-sitter information packet"
 primaryKeyword: "house sitter instructions generator"
@@ -24,7 +24,7 @@ faq:
   - question: "Why shouldn't I just give the sitter my full household records instead?"
     answer: "A sitter only needs what's relevant to caring for the home and any pets or plants while you're away — not your warranty documents, financial records, or anything else unrelated to that job. Generating a role-scoped packet and trimming it further keeps what you hand over limited to what's actually needed."
   - question: "Should I reuse the same packet for every trip?"
-    answer: "It's better to regenerate it each time and note the date, since routines and contacts change — a sitter working from year-old feeding instructions or an outdated phone number is worse off than one working from something current."
+    answer: "It's better to regenerate it each time and note the date, since routines and contacts change — a sitter working from year-old feeding instructions or an outdated phone number is worse off than one working from something current. <div class=\"no-print\"> ## Word and Google Docs version If you would rather edit the packet in a word processor, download the [house sitter instructions template (.docx)](/downloads/familyboard-house-sitter-instructions-template.docx). It is a standard Word document with fill-in tables for the stay, the daily routine, the house, pets, scheduled visits, what to do if something looks wrong, and contacts. Open it in Word, or in Google Docs with File, then Open, then Upload, or by adding it to Google Drive and choosing Open with Google Docs. It is a blank template: nothing you type is sent to FamilyBoard. Leave alarm codes, lockbox codes and passwords out of it, as on the printed sheet. </div>"
 contentVersion: 1
 ---
 # House Sitter Instructions Generator

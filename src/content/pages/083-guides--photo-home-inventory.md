@@ -1,6 +1,6 @@
 ---
-title: "How to Make a Photo Home Inventory Without Creating an Unsearchable Camera Roll"
-description: "Use room photos, item close-ups and structured labels to create a home inventory that remains searchable and useful later."
+title: "Photo Home Inventory: How to Photograph and Label Items"
+description: "How to photograph rooms and items, label the files and keep a photo home inventory findable. Record the details in a home inventory template."
 route: "/guides/photo-home-inventory/"
 primaryIntent: "make a photo-based inventory of household possessions"
 primaryKeyword: "photo home inventory"
@@ -12,6 +12,7 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Photograph one room today — a quick overview plus close-ups of its two or three highest-value items — then attach the important photos to structured records instead of leaving them in the camera roll."
 related:
+  - "/templates/printable-home-inventory-template/"
   - "/guides/room-by-room-home-inventory/"
   - "/guides/serial-number-tracker/"
   - "/guides/home-inventory-for-insurance/"
@@ -64,6 +65,10 @@ Most smartphone photos carry embedded EXIF metadata, including precise GPS coord
 Photo documentation isn't a monthly chore. The Triple-I guidance is to update after a real trigger — a move, a major purchase, a renovation, receiving or disposing of something significant — rather than on a fixed calendar that mostly just repeats photos of things that haven't changed. Treating "just bought something" as the update trigger, instead of "it's been six months," keeps the inventory current without turning it into a recurring photography assignment nobody wants to do.
 
 For a newly photographed purchase, capture the warranty's written start rule while the receipt is still easy to find. If the document supplies a date and term, the [warranty expiration date calculator](/tools/warranty-expiration-calculator/) can produce a review date without guessing what the warranty covers.
+
+## Where the details go: a template, not the photo
+
+A photo shows what an item looked like; it does not hold the purchase price, the replacement cost or the serial number in a form you can add up. Write those in a [home inventory template for insurance](/templates/printable-home-inventory-template/) (printable PDF, Excel or CSV) and put each photo's file name in its Receipt / photo reference column. This guide is about taking and labeling the photos; the template is the record they support.
 
 ## A realistic first session
 

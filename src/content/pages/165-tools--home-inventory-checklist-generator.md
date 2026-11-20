@@ -1,6 +1,6 @@
 ---
-title: "Free Home Inventory Checklist Generator | Room-by-Room Starter List"
-description: "Generate a selective room-by-room home inventory checklist for appliances, electronics, furniture, tools and valuable household items."
+title: "Home Inventory Checklist Generator (Room by Room)"
+description: "Generate a room-by-room list of what to include in a home inventory, then record each item in the home inventory template for insurance."
 route: "/tools/home-inventory-checklist-generator/"
 primaryIntent: "generate a room-based home inventory checklist"
 primaryKeyword: "home inventory checklist generator"
@@ -12,7 +12,7 @@ publishedAt: "2026-08-19"
 lastReviewedAt: "2026-08-19"
 nextStep: "Generate one room at a time, record model, serial number, and receipt location for anything under warranty, and finish that room before starting the next."
 related:
-  - "/guides/home-inventory-checklist/"
+  - "/templates/printable-home-inventory-template/"
   - "/guides/room-by-room-home-inventory/"
   - "/tools/room-inventory-generator/"
   - "/features/home-inventory-tracker/"
@@ -29,7 +29,7 @@ contentVersion: 1
 ---
 # Home Inventory Checklist Generator
 
-Starting a home inventory from a blank page is where most households give up before they finish one room. This generator gives you a room-by-room starting list so you're editing an existing checklist instead of inventing one from nothing.
+Starting a home inventory from a blank page is where most households give up before they finish one room. This generator gives you a room-by-room starting list so you're editing an existing checklist instead of inventing one from nothing. It answers one question: what should I look for in each room? To record the answers, use the [home inventory template for insurance](/templates/printable-home-inventory-template/), which is the printable PDF, Excel and CSV record with columns for serial number, price, replacement estimate and receipt reference.
 
 ## How the room list is built
 
@@ -49,7 +49,7 @@ A 300-item inventory attempted all at once is exactly the kind of project that s
 
 ## When the goal is insurance documentation
 
-If you're building this inventory in case you ever need to file an insurance claim, the fields worth prioritizing shift slightly: a photo of the item alongside its model and serial number matters more than a precise physical description, since an adjuster is trying to verify what existed and roughly what it was worth, not read a written inventory. Keep photos and the generated checklist together in the same record rather than as separate, disconnected files.
+If you're building this inventory in case you ever need to file an insurance claim, the fields worth prioritizing shift slightly: a photo of the item alongside its model and serial number matters more than a precise physical description, since an adjuster is trying to verify what existed and roughly what it was worth, not read a written inventory. Keep photos and the generated checklist together in the same record rather than as separate, disconnected files. The [home inventory template for insurance](/templates/printable-home-inventory-template/) has the columns for model, serial number, price and receipt, and the [photo home inventory guide](/guides/photo-home-inventory/) explains how to photograph and label what you list.
 
 ## Revisiting the inventory after you buy something new
 

@@ -1512,10 +1512,18 @@
     "redirectTo": ""
   },
   {
+    "route": "/checklists/winter-home-maintenance-checklist/",
+    "alternateRoute": "",
+    "indexable": true,
+    "lastReviewedAt": "2026-11-20",
+    "locale": "en",
+    "redirectTo": ""
+  },
+  {
     "route": "/templates/printable-home-inventory-template/",
     "alternateRoute": "/zh-tw/templates/printable-home-inventory-template/",
     "indexable": true,
-    "lastReviewedAt": "2026-11-08",
+    "lastReviewedAt": "2026-11-20",
     "locale": "en",
     "redirectTo": ""
   },
