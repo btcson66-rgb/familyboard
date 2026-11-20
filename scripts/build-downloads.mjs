@@ -3,6 +3,7 @@ import { createReadStream } from "node:fs";
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import { createServer } from "node:http";
 import { extname, join, normalize, resolve } from "node:path";
+import { houseSitterDocx, inventoryColumns, inventoryCsv, inventoryXlsx, petSitterDocx } from "./lib/download-content.mjs";
 
 const checkOnly = process.argv.includes("--check");
 const distRoot = resolve("dist");
@@ -14,20 +15,14 @@ const downloads = [
     route: "/templates/printable-home-inventory-template/",
     baseName: "familyboard-home-inventory-template",
     landscape: true,
-    columns: [
-      "Room / 房間",
-      "Item / 品項",
-      "Brand / model / 品牌／型號",
-      "Serial number / 序號",
-      "Purchase date / 購買日期",
-      "Receipt / photo reference / 收據／照片索引",
-      "Notes / 備註",
-    ],
+    paper: "Letter",
+    columns: inventoryColumns,
   },
   {
     route: "/checklists/printable-moving-checklist/",
     baseName: "familyboard-moving-checklist",
     landscape: false,
+    paper: "A4",
     columns: [
       "When / 時程",
       "Task / 工作",
@@ -35,6 +30,14 @@ const downloads = [
       "Contact / account / 聯絡／帳戶",
       "Complete / 完成",
     ],
+  },
+  {
+    route: "/checklists/winter-home-maintenance-checklist/",
+    baseName: "familyboard-winter-home-maintenance-checklist",
+    landscape: false,
+    paper: "Letter",
+    nativePrint: true,
+    pdfOnly: true,
   },
 ];
 
@@ -128,29 +131,31 @@ const browser = await chromium.launch();
 
 try {
   for (const item of downloads) {
-    const csv = csvBuffer(item.columns);
     const csvPath = join(outputRoot, `${item.baseName}.csv`);
-    const csvStatus = await writeOrCompare(csvPath, csv);
+    const csvStatus = item.pdfOnly ? "skipped" : await writeOrCompare(csvPath, item.baseName.includes("inventory") ? inventoryCsv(20) : csvBuffer(item.columns));
 
     const page = await browser.newPage();
     await page.goto(`${origin}${item.route}`, { waitUntil: "networkidle" });
     await page.waitForSelector(".download-printable .printable");
     await page.emulateMedia({ media: "print" });
-    await page.addStyleTag({
+    if (item.nativePrint) {
+      // The page's own print stylesheet already reduces the page to the checklist.
+      await page.addStyleTag({ content: `@page { size: ${item.paper} portrait; margin: 12mm; } body { font-size: 10pt; } .editorial-content h1 { font-size: 20pt; margin: 0 0 3mm; } .editorial-content h2 { font-size: 14pt; margin: 3mm 0 2mm; } .editorial-content h3 { font-size: 11pt; margin: 3mm 0 1mm; } .editorial-content p, .editorial-content li { margin: 0 0 1mm; line-height: 1.3; }` });
+    } else await page.addStyleTag({
       content: `
-        @page { size: A4 ${item.landscape ? "landscape" : "portrait"}; margin: 10mm; }
+        @page { size: ${item.paper} ${item.landscape ? "landscape" : "portrait"}; margin: 10mm; }
         .article > :not(.download-printable) { display: none !important; }
         .download-printable, .download-printable .printable { display: block !important; }
         .download-printable .printable { width: 100%; border: 0; box-shadow: none; padding: 0; }
         .download-printable h2 { margin: 0 0 4mm; font-size: 16pt; }
         .download-printable p { margin: 0 0 4mm; font-size: 9pt; }
-        .download-printable table { table-layout: fixed; margin: 0; font-size: ${item.landscape ? "7.5pt" : "8.5pt"}; }
+        .download-printable table { table-layout: fixed; margin: 0; font-size: ${item.landscape ? "7pt" : "8.5pt"}; }
         .download-printable th, .download-printable td { padding: 3px; overflow-wrap: anywhere; }
         .download-printable tr { break-inside: avoid; page-break-inside: avoid; }
       `,
     });
     const rawPdf = await page.pdf({
-      format: "A4",
+      format: item.paper,
       landscape: item.landscape,
       printBackground: true,
       preferCSSPageSize: true,
@@ -159,15 +164,25 @@ try {
     await page.close();
     const pdf = normalizePdfMetadata(rawPdf);
     const pageCount = (pdf.toString("latin1").match(/\/Type\s*\/Page\b/g) || []).length;
-    if (pageCount < 1 || pageCount > 2) {
-      throw new Error(`${item.baseName}.pdf has ${pageCount} pages; expected 1-2.`);
+    if (pageCount < 1 || pageCount > (item.maxPages ?? 2)) {
+      throw new Error(`${item.baseName}.pdf has ${pageCount} pages; expected 1-${item.maxPages ?? 2}.`);
     }
     if (pdf.length >= 500 * 1024) {
       throw new Error(`${item.baseName}.pdf is ${pdf.length} bytes; expected under 500 KB.`);
     }
     const pdfPath = join(outputRoot, `${item.baseName}.pdf`);
     const pdfStatus = await writeOrCompare(pdfPath, pdf);
+    if (item.baseName.includes("inventory")) {
+      const xlsxStatus = await writeOrCompare(join(outputRoot, `${item.baseName}.xlsx`), inventoryXlsx());
+      console.log(`${item.baseName}: XLSX ${xlsxStatus}`);
+    }
     console.log(`${item.baseName}: CSV ${csvStatus}; PDF ${pdfStatus}, ${pageCount} page(s), ${pdf.length} bytes`);
+  }
+  for (const [name, buffer] of [
+    ["familyboard-house-sitter-instructions-template.docx", houseSitterDocx()],
+    ["familyboard-pet-sitter-instructions-template.docx", petSitterDocx()],
+  ]) {
+    console.log(`${name}: ${await writeOrCompare(join(outputRoot, name), buffer)}`);
   }
 } finally {
   await browser.close();

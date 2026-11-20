@@ -94,7 +94,7 @@ test("public SEO, keyboard and eight production tools work", async ({
   await expect(page.locator(".result")).toContainText("Estimated term end");
 
   await page.goto("/templates/printable-home-inventory-template/");
-  await expect(page.locator(".printable thead th")).toHaveCount(7);
+  await expect(page.locator(".printable thead th")).toHaveCount(9);
   await expect(page.getByRole("link", { name: "Download PDF" })).toHaveAttribute("download", "");
   await expect(page.getByRole("link", { name: "Download CSV (Excel)" })).toHaveAttribute("download", "");
   await page.emulateMedia({ media: "print" });
